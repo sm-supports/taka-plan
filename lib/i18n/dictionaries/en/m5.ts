@@ -11,6 +11,9 @@ export const m5 = {
     addGoal: "Add a goal",
     removeGoal: "Remove goal",
     incomplete: "A goal needs a name, a cost and a number of years before it is saved.",
+    newGoal: "New goal",
+    saveGoal: "Save goal",
+    saved: "Your goals",
   },
 
   result: {
@@ -33,7 +36,12 @@ export const m5 = {
     totalMonthly: "All goals together",
     invalid: "This goal is missing something",
     empty: "No goals yet.",
+    goalsCount: "{n} goal(s)",
+    realAbove: "Beats inflation after tax",
+    perMonth: "a month",
   },
+
+  demoBanner: "Sample goals. Add your own to see your real numbers.",
 
   note: {
     noAllocationYet: "Long goals use fixed-income instruments only for now. Once the asset-allocation step is in, goals over five years away will use a mix with some equity.",
