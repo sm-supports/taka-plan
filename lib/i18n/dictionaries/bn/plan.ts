@@ -7,6 +7,17 @@ export const plan: Dictionary["plan"] = {
   subhead: "গুরুত্বের ক্রমে আপনার খাতগুলোতে ভাগ করা। কোনো কার্ডে চাপ দিয়ে বদলান; প্ল্যান সঙ্গে সঙ্গে বদলে যাবে।",
   emptyGoals: "এখনো কোনো লক্ষ্য নেই। একটি যোগ করুন — অবসরও একটি লক্ষ্য — প্ল্যান তার জন্য জায়গা করে দেবে।",
   builtOn: "রেট সংস্করণ {version}-এর ভিত্তিতে",
+  demoBanner: "এটি নমুনা সংখ্যায় বানানো একটি উদাহরণ প্ল্যান, আপনার নয়। নিজেরটা দেখতে ঠিকানা থেকে ?demo=1 সরান।",
+
+  why: {
+    headline: "মাসে {amount} সঞ্চয় কেন?",
+    bucket: "{bucket}-এ {amount} কেন?",
+  },
+
+  error: {
+    title: "আপনার প্ল্যান এখনো তৈরি হয়নি",
+    retry: "আবার চেষ্টা করুন",
+  },
 
   card: {
     amount: "পরিমাণ",
@@ -16,6 +27,7 @@ export const plan: Dictionary["plan"] = {
     open: "ক্যালকুলেটর খুলুন",
     priority: "অগ্রাধিকার {n}",
     perMonth: "{amount}/মাস",
+    goalTitle: "লক্ষ্য: {name}",
     bucket: {
       emergency: "জরুরি তহবিল",
       insurance: "বিমা",
