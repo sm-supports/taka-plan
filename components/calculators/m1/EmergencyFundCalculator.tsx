@@ -6,12 +6,11 @@
  * `?demo=1` renders the local fixture instead of the engine (see ./demo.ts).
  */
 import { useMemo } from "react";
-import { computeEmergencyFund, getRate, suggestMonths, type Dependent, type IncomeType, type M1Input, type M1Result } from "@taka/engine";
+import { computeEmergencyFund, getRate, suggestMonths, type Dependent, type IncomeType, type M1Input, type M1Result, type RatesSnapshot } from "@taka/engine";
 import { BigNumber } from "@/components/ui/BigNumber";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { ChoiceButtons } from "@/components/ui/ChoiceButtons";
-import { Disclaimer } from "@/components/ui/Disclaimer";
 import { ErrorCard } from "@/components/ui/ErrorCard";
 import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
@@ -25,15 +24,22 @@ import { useTakaStore } from "@/lib/store/store";
 import { calcErrorKey, type CalcErrorKey } from "../shared/engineError";
 import { DemoBanner, Field, FigureList, Section } from "../shared/Figures";
 import { useDemoMode, useToday } from "../shared/hooks";
-import { WhyButtonLocal } from "../shared/WhyButtonLocal";
+import { WhyButton } from "@/components/explain/WhyButton";
 import { M1_DEMO_INPUT, m1DemoResult } from "./demo";
-import { defaultBuildMonths, monthsBounds, suggestMonthsLocal } from "./suggest";
 
 /** UI bounds for the "build it over" slider (months). */
 const BUILD_MIN = 3;
 const BUILD_MAX = 36;
 
 const INCOME_TYPES: IncomeType[] = ["salaried", "freelance", "business"];
+
+/** Slider bounds for months of cover and the default build period, from the rates snapshot. */
+function monthsBounds(rates: RatesSnapshot): { min: number; max: number } {
+  return { min: getRate(rates, "emergency_min_months"), max: getRate(rates, "emergency_max_months") };
+}
+function defaultBuildMonths(rates: RatesSnapshot): number {
+  return getRate(rates, "emergency_build_months_default");
+}
 const DEPENDENTS: Dependent[] = ["partner", "children", "parents"];
 type DependentChoice = Dependent | "none";
 
@@ -68,14 +74,7 @@ export function EmergencyFundCalculator() {
   const depositLimit = useMemo(() => getRate(snapshot, "deposit_insurance_limit"), [snapshot]);
   const buildMonths = m1.buildMonths ?? buildDefault;
 
-  const suggested = useMemo(() => {
-    const suggestInput = { incomeType, dependents, soleEarner, hasHealthInsurance };
-    try {
-      return suggestMonths(suggestInput, snapshot);
-    } catch {
-      return suggestMonthsLocal(suggestInput, snapshot);
-    }
-  }, [incomeType, dependents, soleEarner, hasHealthInsurance, snapshot]);
+  const suggested = useMemo(() => suggestMonths({ incomeType, dependents, soleEarner, hasHealthInsurance }, snapshot), [incomeType, dependents, soleEarner, hasHealthInsurance, snapshot]);
   const months = m1.monthsOverride ?? suggested;
   const overridden = m1.monthsOverride !== undefined && m1.monthsOverride !== suggested;
 
@@ -196,7 +195,7 @@ export function EmergencyFundCalculator() {
                 }
                 caption={result.gap === 0 ? t("m1.result.full") : t("m1.result.monthsCoveredOf", { covered: f.number(result.monthsCovered, 1), months: f.number(result.months) })}
               />
-              <WhyButtonLocal explain={result.explain} />
+              <WhyButton explanation={result.explain} />
             </Card>
 
             <Card>
@@ -264,8 +263,6 @@ export function EmergencyFundCalculator() {
             </Card>
           </>
         )}
-
-        <Disclaimer variant="footer" />
       </Section>
     </div>
   );

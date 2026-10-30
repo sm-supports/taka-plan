@@ -25,8 +25,7 @@ describe("GET /api/rates", () => {
     const body = (await res.json()) as RatesSnapshot;
     expect(body.version).toBe(1);
     expect(body.publishedAt).toBe("2026-10-30");
-    expect(Object.keys(body.rows)).toHaveLength(63);
-    expect(RATE_KEYS.length).toBe(63);
+    expect(Object.keys(body.rows)).toHaveLength(RATE_KEYS.length);
     expect(() => assertSnapshot(body)).not.toThrow();
     expect(body.rows.inflation_cpi.value).toBe(0.0834);
   });
@@ -75,7 +74,7 @@ describe("GET /api/rates", () => {
     expect(res.headers.get("etag")).toBeNull();
     const body = (await res.json()) as RatesSnapshot;
     expect(body).toEqual(assertSnapshot(RATES_SEED));
-    expect(Object.keys(body.rows)).toHaveLength(63);
+    expect(Object.keys(body.rows)).toHaveLength(RATE_KEYS.length);
     expect(JSON.stringify(body)).not.toMatch(/simulated failure/);
   });
 

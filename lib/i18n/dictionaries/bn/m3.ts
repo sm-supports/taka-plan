@@ -2,7 +2,7 @@
 import type { Dictionary } from "../../types";
 
 export const m3: Dictionary["m3"] = {
-  title: "ঋণের স্বাস্থ্য পরীক্ষা",
+  title: "ঋণের অবস্থা যাচাই",
   intro: "প্রতিটি ঋণ আর কার্ড সুদের হার অনুযায়ী সাজান। সবচেয়ে দামিটা আগে শোধ করুন, আর শখের খরচের জন্য কখনো ঋণ নেবেন না।",
 
   input: {
@@ -35,7 +35,7 @@ export const m3: Dictionary["m3"] = {
     scenario: {
       title: "আমি কত ঋণ নিতে পারি?",
       annualRate: { label: "ঋণের সুদ (বছরে)", hint: "ব্যাংক যে হার বলেছে, অথবা পার্সোনাল লোনের জন্য আমাদের ধরা হার।" },
-      months: { label: "পরিশোধের মেয়াদ", hint: "মাসে।" },
+      months: { label: "পরিশোধের মেয়াদ", hint: "মাসের সংখ্যায় লিখুন।" },
     },
   },
 
@@ -58,7 +58,7 @@ export const m3: Dictionary["m3"] = {
     avalanche: "বেশি সুদেরটা আগে",
     snowball: "ছোট বকেয়াটা আগে",
     interestSaved: "বেশি সুদেরটা আগে শোধ করলে যত সুদ বাঁচে",
-    payoffMonths: "{months}-এ ঋণমুক্ত",
+    payoffMonths: "{months} পর ঋণমুক্ত",
     totalInterest: "মোট সুদ",
     minPayment: "ন্যূনতম কিস্তি",
     path: "ঋণের ফাঁদে আটকে গেছেন মনে হলে",

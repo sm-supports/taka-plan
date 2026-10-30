@@ -11,7 +11,7 @@ import { Term } from "@/components/ui/Term";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import type { TranslateParams } from "@/lib/i18n/types";
-import { WhyButton } from "./WhyButton";
+import { WhyButton } from "@/components/explain/WhyButton";
 
 export interface M3ResultsProps {
   input: M3Input;

@@ -21,7 +21,7 @@ export default defineConfig({
       },
       {
         resolve: { alias },
-        test: { name: "lib", include: ["lib/**/*.test.{ts,tsx}", "test/**/*.test.ts"], environment: "node" },
+        test: { name: "lib", include: ["lib/**/*.test.{ts,tsx}", "components/**/*.test.{ts,tsx}", "test/**/*.test.ts"], environment: "node" },
       },
       {
         resolve: {

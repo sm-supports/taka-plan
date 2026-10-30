@@ -26,6 +26,8 @@ describe("formatInput naming convention", () => {
     expect(formatInput("buildMonths", 12, fEn, tEn)).toBe("12");
     expect(formatInput("years", 2, fEn, tEn)).toBe("2");
     expect(formatInput("bumpNoHealth", 2, fEn, tEn)).toBe("2");
+    expect(formatInput("suggested", 10, fEn, tEn)).toBe("10");
+    expect(formatInput("base", 6, fEn, tEn)).toBe("6");
     expect(formatInput("max", 15, fBn, tBn)).toBe("১৫");
   });
 
@@ -38,6 +40,7 @@ describe("formatInput naming convention", () => {
     expect(formatInput("instrument", "dps", fEn, tEn)).toBe("DPS");
     expect(formatInput("instrument", "sanchayapatra_5y", fBn, tBn)).toBe("৫ বছর মেয়াদি সঞ্চয়পত্র");
     expect(formatInput("name", "Motorbike", fEn, tEn)).toBe("Motorbike");
+    expect(formatInput("source", "suggested", fEn, tEn)).toBe("suggested");
   });
 });
 
@@ -56,6 +59,13 @@ describe("formatStepParams", () => {
     const body = tBn("explain.m1.target.body", formatStepParams(step, fBn, tBn));
     expect(body).toContain("৳২৮,০০০ × ৮ = ৳২,২৪,০০০");
     expect(body).not.toMatch(/[0-9]/);
+  });
+
+  it("fills the m1.banks template with target ÷ limit", () => {
+    const banks: ExplainStep = { id: "m1.banks", inputs: { target: 250000, tier2: 225000, limit: 200000 }, raw: 1.25, rounded: 2, unit: "count" };
+    const body = tEn("explain.m1.banks.body", formatStepParams(banks, fEn, tEn));
+    expect(body).toContain("৳2,50,000 ÷ ৳2,00,000");
+    expect(body).not.toMatch(/\{\w+\}/);
   });
 
   it("formats results by unit", () => {

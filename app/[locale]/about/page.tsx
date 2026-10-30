@@ -31,7 +31,7 @@ import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/server";
 import { interpolate, translate } from "@/lib/i18n/translate";
 import type { Dictionary } from "@/lib/i18n/types";
-import { ABOUT_COPY, RATE_GROUPS, type RateGroupId } from "./copy";
+import { RATE_GROUPS, type RateGroupId } from "./copy";
 
 type Params = { params: Promise<{ locale: string }> };
 
@@ -62,7 +62,7 @@ function sourcePercent(value: number, digits: Digits): string {
 
 function formatValue(row: RateRow, snapshot: RatesSnapshot, locale: Locale, dict: Dictionary): string[] {
   const digits: Digits = locale === "bn" ? "bn" : "latn";
-  const copy = ABOUT_COPY[locale];
+  const copy = dict.about;
   switch (row.unit) {
     case "json": {
       if (row.key !== "tax_slabs") return [JSON.stringify(row.valueJson)];
@@ -94,7 +94,8 @@ function groupOf(key: RateKey): RateGroupId {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  return { title: `${ABOUT_COPY[locale].title} · Taka Plan` };
+  const dict = await getDictionary(locale);
+  return { title: `${dict.about.title} · Taka Plan` };
 }
 
 export default async function AboutPage({ params }: Params) {
@@ -102,7 +103,7 @@ export default async function AboutPage({ params }: Params) {
   if (!isLocale(locale)) notFound();
   const dict = await getDictionary(locale);
   const t = (key: string, p?: Record<string, string | number>) => translate(dict, key, p);
-  const copy = ABOUT_COPY[locale];
+  const copy = dict.about;
   const digits: Digits = locale === "bn" ? "bn" : "latn";
   const snapshot = assertSnapshot(RATES_SEED);
   const today = todayIso();

@@ -6,14 +6,14 @@
  *
  * Input names each step's `inputs` must provide (plus `{result}` = the step's rounded value):
  *
- *   m1.months    {base} {bumpIrregular} {bumpSoleEarner} {bumpNoHealth} {min} {max} {result}
+ *   m1.months    {base} {bumpIrregular} {bumpSoleEarner} {bumpNoHealth} {min} {max} {suggested} {source} {result}
  *   m1.target    {essentials} {months} {result}
  *   m1.gap       {target} {saved} {result}
  *   m1.monthly   {gap} {buildMonths} {result}
  *   m1.covered   {saved} {essentials} {result}
  *   m1.tier1     {essentials} {result}
  *   m1.tier2     {target} {tier1} {result}
- *   m1.banks     {tier2} {limit} {result}
+ *   m1.banks     {target} {tier2} {limit} {result}
  *
  *   m3.totalEmi       {emis} {cardMinimums} {result}
  *   m3.emiRatio       {totalEmi} {takeHome} {result}
@@ -69,7 +69,7 @@ export const explain = {
     },
     banks: {
       title: "Banks needed",
-      body: "Deposit insurance covers {limit} per bank, so the FDR money is split: {tier2} ÷ {limit}, rounded up, = {result} bank(s).",
+      body: "Deposit insurance covers {limit} per bank, and the whole fund sits in bank deposits, so the target is split: {target} ÷ {limit}, rounded up, = {result} bank(s).",
     },
   },
 
@@ -88,11 +88,11 @@ export const explain = {
     },
     maxLoan: {
       title: "Maximum affordable loan",
-      body: "The standard EMI formula run backwards. With a monthly rate of {monthlyRate} over {months}: {capacity} × (1 − (1 + {monthlyRate})^−{months}) ÷ {monthlyRate} = {result}. Add your own safety margin before you borrow.",
+      body: "The standard EMI formula run backwards. With a monthly rate of {monthlyRate} over {months} months: {capacity} × (1 − (1 + {monthlyRate})^−{months}) ÷ {monthlyRate} = {result}. Add your own safety margin before you borrow.",
     },
     scenarioEmi: {
       title: "Monthly EMI for this loan",
-      body: "The standard EMI formula. For {principal} at a monthly rate of {monthlyRate} over {months}: {principal} × {monthlyRate} ÷ (1 − (1 + {monthlyRate})^−{months}) = {result}.",
+      body: "The standard EMI formula. For {principal} at a monthly rate of {monthlyRate} over {months} months: {principal} × {monthlyRate} ÷ (1 − (1 + {monthlyRate})^−{months}) = {result}.",
     },
     interestSaved: {
       title: "Interest saved",
@@ -103,7 +103,7 @@ export const explain = {
   m4: {
     average: {
       title: "Average monthly income",
-      body: "Irregular income is smoothed over the last {months} months: {total} ÷ {months} = {result}. Salaried users skip this step; their take-home is used as is.",
+      body: "Income is averaged over the last {months} month(s): {total} ÷ {months} = {result}. For a fixed salary this is simply your take-home; freelancers and business owners should enter their last six months so swings even out.",
     },
     feasible: {
       title: "Most you could save",
@@ -130,7 +130,7 @@ export const explain = {
     },
     monthly: {
       title: "Monthly saving needed",
-      body: "The amount that grows to the future cost at a monthly rate of {monthlyRate} over {months}: {fv} × {monthlyRate} ÷ ((1 + {monthlyRate})^{months} − 1) = {result}.",
+      body: "The amount that grows to the future cost at a monthly rate of {monthlyRate} over {months} months: {fv} × {monthlyRate} ÷ ((1 + {monthlyRate})^{months} − 1) = {result}.",
     },
     real: {
       title: "Real return",

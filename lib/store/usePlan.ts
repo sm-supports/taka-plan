@@ -1,10 +1,12 @@
 "use client";
 // Computes the plan from store + rates on the client; never throws (engine stubs may).
 import { useMemo, useState } from "react";
+import { useShallow } from "zustand/shallow";
 import { computePlan, profileToPlanInput, type EngineError, type ISODate, type M1Input, type Plan } from "@taka/engine";
 import { useRates } from "../rates/useRates";
 import { selectPlanOverrides, selectProfile } from "./selectors";
 import { useTakaStore } from "./store";
+import type { TakaData } from "./types";
 
 export interface UsePlanResult {
   plan: Plan | null;
@@ -12,13 +14,21 @@ export interface UsePlanResult {
   today: ISODate;
 }
 
+function pickData(s: TakaData): TakaData {
+  const { schemaVersion, locale, onboarding, profile, m1, m3, m4, m5 } = s;
+  return { schemaVersion, locale, onboarding, profile, m1, m3, m4, m5 };
+}
+
 function todayISO(): ISODate {
   return new Date().toISOString().slice(0, 10);
 }
 
 export function usePlan(): UsePlanResult {
-  const profile = useTakaStore(selectProfile);
-  const data = useTakaStore((s) => s);
+  // selectProfile builds a new (flat) object per call; useShallow keeps zustand 5's useSyncExternalStore from looping.
+  const profile = useTakaStore(useShallow(selectProfile));
+  // selectPlanOverrides nests fresh objects, so it cannot be shallow-compared: pick the persisted slices
+  // (stable references until they change) and derive the overrides from them.
+  const data = useTakaStore(useShallow(pickData));
   const overrides = useMemo(() => selectPlanOverrides(data), [data]);
   const { snapshot } = useRates();
   // Fixed per mount so a midnight tick does not re-render the whole plan.

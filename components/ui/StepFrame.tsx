@@ -28,7 +28,7 @@ export function StepFrame({ step, total, title, hint, children, onBack, onNext, 
             <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M12 4l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            {t("common.back")}
+            {t("common.button.back")}
           </button>
         ) : (
           <span />
@@ -51,7 +51,7 @@ export function StepFrame({ step, total, title, hint, children, onBack, onNext, 
       {onNext && (
         <div className="sticky bottom-0 -mx-4 mt-6 border-t border-line bg-page/95 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur">
           <Button size="lg" fullWidth onClick={onNext} disabled={nextDisabled}>
-            {nextLabel ?? t("common.next")}
+            {nextLabel ?? t("common.button.next")}
           </Button>
         </div>
       )}

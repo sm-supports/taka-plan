@@ -2,7 +2,7 @@
 import type { Dictionary } from "../../types";
 
 export const m5: Dictionary["m5"] = {
-  title: "লক্ষ্য পরিকল্পনা",
+  title: "লক্ষ্যের পরিকল্পনা",
   intro: "সত্যিকারের লক্ষ্যের একটি অঙ্ক, একটি সময় আর আপনার বয়স থাকে। সবারই অন্তত একটি লক্ষ্য আছে: অবসর।",
 
   input: {

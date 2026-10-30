@@ -1,8 +1,10 @@
 "use client";
-/** Top bar: app name linking to the locale home, locale toggle on the right. */
+/** Top bar: app name linking to the locale home, rates version + offline badges, locale toggle on the right. */
 import Link from "next/link";
 import { useT } from "@/lib/i18n/useT";
 import { LocaleSwitch } from "./LocaleSwitch";
+import { OfflineBadge } from "./OfflineBadge";
+import { RatesVersionBadge } from "./RatesVersionBadge";
 
 export function Header() {
   const { t, locale } = useT();
@@ -16,7 +18,11 @@ export function Header() {
           </svg>
           {t("common.appName")}
         </Link>
-        <LocaleSwitch />
+        <div className="flex min-w-0 items-center gap-2">
+          <OfflineBadge />
+          <RatesVersionBadge className="justify-end text-right" />
+          <LocaleSwitch />
+        </div>
       </div>
     </header>
   );

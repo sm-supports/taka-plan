@@ -12,7 +12,6 @@ import { BigNumber } from "@/components/ui/BigNumber";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { ChoiceButtons } from "@/components/ui/ChoiceButtons";
-import { Disclaimer } from "@/components/ui/Disclaimer";
 import { ErrorCard } from "@/components/ui/ErrorCard";
 import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
@@ -25,9 +24,8 @@ import { useTakaStore } from "@/lib/store/store";
 import { calcErrorKey, type CalcErrorKey } from "../shared/engineError";
 import { DemoBanner, Field, FigureList, Section, type Figure } from "../shared/Figures";
 import { useDemoMode, useToday } from "../shared/hooks";
-import { WhyButtonLocal } from "../shared/WhyButtonLocal";
+import { WhyButton } from "@/components/explain/WhyButton";
 import { m4DemoInput, m4DemoResult, type M4DemoVariant } from "./demo";
-import { suggestedRateLocal } from "./suggest";
 
 /** UI bounds: savings rate slider in whole percent, payday as day of month. */
 const RATE_MIN_PCT = 0;
@@ -91,8 +89,8 @@ export function SaveFirstCalculator() {
   }, [demo, demoVariant, input, snapshot, today]);
   const result = outcome.result;
 
-  // The suggestion comes from the engine result; while the engine is a stub, from the same rule read off the snapshot.
-  const suggestedRate = result?.suggestedRate ?? suggestedRateLocal(baseInput, snapshot);
+  // The suggestion comes from the engine result; without one (engine error) the slider shows the stored or default rate.
+  const suggestedRate = result?.suggestedRate ?? m4.savingsRate ?? 0;
   const ratePct = Math.round((m4.savingsRate ?? suggestedRate) * 100);
   const overridden = m4.savingsRate !== undefined && Math.abs(m4.savingsRate - suggestedRate) >= 0.005;
 
@@ -204,7 +202,7 @@ export function SaveFirstCalculator() {
                   </span>
                 }
               />
-              <WhyButtonLocal explain={result.explain} />
+              <WhyButton explanation={result.explain} />
             </Card>
 
             <Card>
@@ -240,8 +238,6 @@ export function SaveFirstCalculator() {
             </Card>
           </>
         )}
-
-        <Disclaimer variant="footer" />
       </Section>
     </div>
   );

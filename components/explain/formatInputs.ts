@@ -3,8 +3,10 @@
  * the dictionary templates. No React: unit-testable and shared by WhyDrawer.
  *
  * Input naming convention (docs/ARCHITECTURE-CONTRACTS.md "Explain-template input names"):
- * names ending in Rate / inflation / tax / share → percent; months / years / count → plain
- * number; everything else → taka. Instrument ids (strings) are translated via common.instrument.
+ * names ending in Rate / inflation / tax / share (and nominal / afterTax / real) → percent;
+ * months / years / count and the m1.months month counts → plain number; everything else → taka.
+ * Instrument ids (strings) are translated via common.instrument; other strings (e.g. m1.months
+ * `source`) pass through unchanged.
  */
 import type { Assumption, ExplainStep, ExplainUnit, RateUnit } from "@taka/engine";
 import type { Formatters } from "@/lib/i18n/useFormat";
@@ -14,8 +16,8 @@ import type { TranslateParams } from "@/lib/i18n/types";
 const PERCENT_SUFFIX = /(rate|inflation|tax|share)$/i;
 const PERCENT_NAMES: ReadonlySet<string> = new Set(["nominal", "real", "afterTax"]);
 const NUMBER_SUFFIX = /(months|years|count)$/i;
-/** m1.months inputs: all whole months, shown as plain numbers. */
-const NUMBER_NAMES: ReadonlySet<string> = new Set(["base", "bumpIrregular", "bumpSoleEarner", "bumpNoHealth", "min", "max"]);
+/** m1.months inputs: all whole-month counts, shown as plain numbers. */
+const NUMBER_NAMES: ReadonlySet<string> = new Set(["base", "bumpIrregular", "bumpSoleEarner", "bumpNoHealth", "irregular", "soleEarner", "noInsurance", "min", "max", "suggested"]);
 
 const INSTRUMENT_IDS: ReadonlySet<string> = new Set([
   "savings_account",

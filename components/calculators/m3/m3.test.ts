@@ -1,55 +1,11 @@
-import { RATES_SEED, assertSnapshot, type Assumption, type ExplainStep } from "@taka/engine";
+import { RATES_SEED, assertSnapshot } from "@taka/engine";
 import { describe, expect, it } from "vitest";
-import { createFormatters } from "@/lib/i18n/useFormat";
-import { assumptionLabel, assumptionValue, formatByUnit, formatInput, stepParams } from "./explainFormat";
 import { engineErrorKey } from "./engineError";
 import { parsePercent } from "./percent";
 import { DEMO_M3_INPUT, buildDemoM3Result } from "./demo";
 
-const en = createFormatters("en");
-const bn = createFormatters("bn");
-const inst = (id: string) => `<${id}>`;
 const snapshot = assertSnapshot(RATES_SEED);
 const TODAY = "2026-10-30";
-
-describe("formatInput", () => {
-  it("formats by name suffix: rate/inflation/tax/share/nominal → percent, months/years/count → number, else taka", () => {
-    expect(formatInput("monthlyRate", 0.01, en, inst)).toBe("1.0%");
-    expect(formatInput("inflation", 0.08, en, inst)).toBe("8.0%");
-    expect(formatInput("tax", 0.1, en, inst)).toBe("10.0%");
-    expect(formatInput("afterTax", 0.10647, en, inst)).toBe("10.6%");
-    expect(formatInput("minShare", 0.6, en, inst)).toBe("60.0%");
-    expect(formatInput("nominal", 0.1183, en, inst)).toBe("11.8%");
-    expect(formatInput("months", 60, en, inst)).toBe("60 months");
-    expect(formatInput("buildMonths", 12, en, inst)).toBe("12 months");
-    expect(formatInput("years", 5, en, inst)).toBe("5");
-    expect(formatInput("takeHome", 120000, en, inst)).toBe("৳1,20,000");
-    expect(formatInput("instrument", "dps", en, inst)).toBe("<dps>");
-    expect(formatInput("takeHome", 120000, bn, inst)).toBe("৳১,২০,০০০");
-  });
-});
-
-describe("stepParams / formatByUnit", () => {
-  it("adds result by the step unit", () => {
-    const step: ExplainStep = { id: "m3.emiRatio", inputs: { totalEmi: 28000, takeHome: 120000 }, raw: 0.2333, rounded: 0.233, unit: "rate" };
-    expect(stepParams(step, en, inst)).toEqual({ totalEmi: "৳28,000", takeHome: "৳1,20,000", result: "23.3%" });
-    expect(formatByUnit(899000, "bdt", en)).toBe("৳8,99,000");
-    expect(formatByUnit(8, "months", bn)).toBe("৮ মাস");
-    expect(formatByUnit(2, "count", en)).toBe("2");
-  });
-});
-
-describe("assumption rows", () => {
-  const base: Assumption = { key: "emi_ratio_red", value: 0.4, unit: "ratio", labelEn: "EMI ratio red line", labelBn: "ইএমআই লাল সীমা", asOf: "2026-10-30", sourceUrl: "https://example.org", sourceName: "Taka Plan", stale: false, isAppAssumption: true };
-  it("formats value by row unit and picks the Bangla label only in bn", () => {
-    expect(assumptionValue(base, en)).toBe("40.0%");
-    expect(assumptionValue({ ...base, unit: "bdt", value: 200000 }, en)).toBe("৳2,00,000");
-    expect(assumptionValue({ ...base, unit: "json", value: null }, en)).toBeNull();
-    expect(assumptionLabel(base, "bn")).toBe("ইএমআই লাল সীমা");
-    expect(assumptionLabel(base, "en")).toBe("EMI ratio red line");
-    expect(assumptionLabel({ ...base, labelBn: null }, "bn")).toBe("EMI ratio red line");
-  });
-});
 
 describe("engineErrorKey", () => {
   it("maps stub, missing-rate, invalid-input and unknown errors", () => {

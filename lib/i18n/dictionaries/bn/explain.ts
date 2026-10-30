@@ -34,7 +34,7 @@ export const explain: Dictionary["explain"] = {
     },
     banks: {
       title: "কয়টি ব্যাংক লাগবে",
-      body: "আমানত বিমা প্রতি ব্যাংকে {limit} পর্যন্ত সুরক্ষা দেয়, তাই এফডিআরের টাকা ভাগ হয়: {tier2} ÷ {limit}, ওপরের দিকে পূর্ণ সংখ্যায় = {result}টি ব্যাংক।",
+      body: "আমানত বিমা প্রতি ব্যাংকে {limit} পর্যন্ত সুরক্ষা দেয়, আর পুরো তহবিলটাই ব্যাংকে জমা থাকে; তাই লক্ষ্যের অঙ্ক ভাগ হয়: {target} ÷ {limit}, ওপরের দিকে পূর্ণ সংখ্যায় = {result}টি ব্যাংক।",
     },
   },
 
@@ -53,11 +53,11 @@ export const explain: Dictionary["explain"] = {
     },
     maxLoan: {
       title: "সর্বোচ্চ কত ঋণ সামলাতে পারবেন",
-      body: "ইএমআইয়ের সাধারণ সূত্রটি উল্টো দিক থেকে চালানো। মাসিক সুদ {monthlyRate} হারে {months} মেয়াদে: {capacity} × (1 − (1 + {monthlyRate})^−{months}) ÷ {monthlyRate} = {result}। ঋণ নেওয়ার আগে নিজের মতো একটু নিরাপত্তার মার্জিন রাখুন।",
+      body: "ইএমআইয়ের সাধারণ সূত্রটি উল্টো দিক থেকে চালানো। মাসিক সুদ {monthlyRate} হারে {months} মাস মেয়াদে: {capacity} × (১ − (১ + {monthlyRate})^−{months}) ÷ {monthlyRate} = {result}। ঋণ নেওয়ার আগে নিজের মতো একটু নিরাপত্তার মার্জিন রাখুন।",
     },
     scenarioEmi: {
       title: "এই ঋণের মাসিক ইএমআই",
-      body: "ইএমআইয়ের সাধারণ সূত্র। {principal} টাকার জন্য মাসিক সুদ {monthlyRate} হারে {months} মেয়াদে: {principal} × {monthlyRate} ÷ (1 − (1 + {monthlyRate})^−{months}) = {result}।",
+      body: "ইএমআইয়ের সাধারণ সূত্র। {principal} টাকার জন্য মাসিক সুদ {monthlyRate} হারে {months} মাস মেয়াদে: {principal} × {monthlyRate} ÷ (১ − (১ + {monthlyRate})^−{months}) = {result}।",
     },
     interestSaved: {
       title: "যত সুদ বাঁচে",
@@ -68,7 +68,7 @@ export const explain: Dictionary["explain"] = {
   m4: {
     average: {
       title: "গড় মাসিক আয়",
-      body: "অনিয়মিত আয়কে শেষ {months} মাসে সমান করে নেওয়া: {total} ÷ {months} = {result}। চাকরিজীবীদের এই ধাপ লাগে না; তাঁদের টেক-হোম সরাসরি ধরা হয়।",
+      body: "শেষ {months} মাসের আয়ের গড়: {total} ÷ {months} = {result}। নির্দিষ্ট বেতন হলে এটিই আপনার টেক-হোম; ফ্রিল্যান্সার বা ব্যবসায়ী হলে শেষ ছয় মাসের আয় দিন, যাতে ওঠানামা সমান হয়ে যায়।",
     },
     feasible: {
       title: "সর্বোচ্চ যতটা সঞ্চয় সম্ভব",
@@ -87,7 +87,7 @@ export const explain: Dictionary["explain"] = {
   m5: {
     fv: {
       title: "লক্ষ্যের ভবিষ্যৎ খরচ",
-      body: "আজকের খরচকে লক্ষ্য পর্যন্ত প্রতি বছরের মূল্যস্ফীতি দিয়ে বাড়ানো: {cost} × (1 + {inflation})^{years} = {result}। সত্যিই যে অঙ্কে পৌঁছাতে হবে, এটা সেটাই।",
+      body: "আজকের খরচকে লক্ষ্য পর্যন্ত প্রতি বছরের মূল্যস্ফীতি দিয়ে বাড়ানো: {cost} × (১ + {inflation})^{years} = {result}। সত্যিই যে অঙ্কে পৌঁছাতে হবে, এটা সেটাই।",
     },
     rate: {
       title: "কর বাদে মুনাফা",
@@ -95,11 +95,11 @@ export const explain: Dictionary["explain"] = {
     },
     monthly: {
       title: "প্রতি মাসে যত সঞ্চয় লাগবে",
-      body: "মাসিক {monthlyRate} হারে {months} ধরে জমিয়ে ভবিষ্যৎ খরচে পৌঁছাতে যে অঙ্ক লাগে: {fv} × {monthlyRate} ÷ ((1 + {monthlyRate})^{months} − 1) = {result}।",
+      body: "মাসিক {monthlyRate} হারে {months} মাস ধরে জমিয়ে ভবিষ্যৎ খরচে পৌঁছাতে যে অঙ্ক লাগে: {fv} × {monthlyRate} ÷ ((১ + {monthlyRate})^{months} − ১) = {result}।",
     },
     real: {
       title: "প্রকৃত মুনাফা",
-      body: "প্রতি বছর আপনার টাকার কেনার ক্ষমতা কতটা বাড়ে: (1 + {afterTax}) ÷ (1 + {inflation}) − 1 = {result}। শূন্যের নিচে মানে সুদ দিলেও খাতটি মূল্যস্ফীতির কাছে হারছে।",
+      body: "প্রতি বছর আপনার টাকার কেনার ক্ষমতা কতটা বাড়ে: (১ + {afterTax}) ÷ (১ + {inflation}) − ১ = {result}। শূন্যের নিচে মানে সুদ দিলেও খাতটি মূল্যস্ফীতির কাছে হারছে।",
     },
   },
 

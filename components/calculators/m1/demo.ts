@@ -44,14 +44,14 @@ export function m1DemoResult(rates: RatesSnapshot, today: ISODate): M1Result {
     nextStep: "m1.next.splitBanks",
     explain: {
       steps: [
-        { id: "m1.months", inputs: { base: 6, bumpIrregular: 0, bumpSoleEarner: 2, bumpNoHealth: 2, min: 3, max: 15 }, raw: 10, rounded: 10, unit: "months" },
+        { id: "m1.months", inputs: { base: 6, bumpIrregular: 0, bumpSoleEarner: 2, bumpNoHealth: 2, min: 3, max: 15, suggested: 10, source: "suggested" }, raw: 10, rounded: 10, unit: "months" },
         { id: "m1.target", inputs: { essentials: 25000, months: 10 }, raw: 250000, rounded: 250000, unit: "bdt" },
         { id: "m1.gap", inputs: { target: 250000, saved: 50000 }, raw: 200000, rounded: 200000, unit: "bdt" },
         { id: "m1.monthly", inputs: { gap: 200000, buildMonths: 12 }, raw: 200000 / 12, rounded: 16700, unit: "bdt" },
         { id: "m1.covered", inputs: { saved: 50000, essentials: 25000 }, raw: 2, rounded: 2, unit: "months" },
         { id: "m1.tier1", inputs: { essentials: 25000 }, raw: 25000, rounded: 25000, unit: "bdt" },
         { id: "m1.tier2", inputs: { target: 250000, tier1: 25000 }, raw: 225000, rounded: 225000, unit: "bdt" },
-        { id: "m1.banks", inputs: { tier2: 225000, limit: 200000 }, raw: 1.125, rounded: 2, unit: "count" },
+        { id: "m1.banks", inputs: { target: 250000, tier2: 225000, limit: 200000 }, raw: 1.25, rounded: 2, unit: "count" },
       ],
       assumptions,
       notes: [],

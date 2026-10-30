@@ -11,14 +11,16 @@ import { WhyDrawer } from "./WhyDrawer";
 
 export interface WhyButtonProps {
   explanation: Explanation;
-  /** Drawer title, e.g. "Why ৳5,700 for Emergency fund?". */
-  title: string;
+  /** Drawer title, e.g. "Why ৳5,700 for Emergency fund?"; defaults to common.explain.title. */
+  title?: string;
+  /** Which step ids to show; defaults to every step in the explanation. */
+  stepIds?: readonly string[];
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   className?: string;
 }
 
-export function WhyButton({ explanation, title, open, onOpenChange, className }: WhyButtonProps) {
+export function WhyButton({ explanation, title, stepIds, open, onOpenChange, className }: WhyButtonProps) {
   const { t } = useT();
   const [internal, setInternal] = useState(false);
   const controlled = open !== undefined;
@@ -45,7 +47,7 @@ export function WhyButton({ explanation, title, open, onOpenChange, className }:
           {t("common.button.whyThisNumber")}
         </span>
       </Button>
-      <WhyDrawer explanation={explanation} title={title} open={shown} onClose={close} />
+      <WhyDrawer explanation={explanation} title={title ?? t("common.explain.title")} stepIds={stepIds} open={shown} onClose={close} />
     </>
   );
 }

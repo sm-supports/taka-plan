@@ -5,12 +5,11 @@ import { FakeRatesRepo } from "./fakeRatesRepo";
 const NOW = "2026-11-01T10:00:00.000Z";
 
 describe("FakeRatesRepo", () => {
-  it("getPublished returns the seed: version 1 with 63 rows", async () => {
+  it("getPublished returns the seed: version 1 with every RATE_KEYS row", async () => {
     const repo = new FakeRatesRepo();
     const s = await repo.getPublished();
     expect(s.version).toBe(1);
-    expect(Object.keys(s.rows)).toHaveLength(63);
-    expect(RATE_KEYS).toHaveLength(63);
+    expect(Object.keys(s.rows)).toHaveLength(RATE_KEYS.length);
     expect(await repo.getDraft()).toBeNull();
   });
 

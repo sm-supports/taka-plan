@@ -7,18 +7,17 @@
  *   ?term=<key>       opens the glossary sheet for that term;
  *   ?demo=1           renders the hand-built SAMPLE_PLAN fixture (components/plan/fixtures.ts)
  *                     instead of the user's plan, so the screen can be checked and screenshotted
- *                     before the engine lands. Harmless in production: it never touches the store
+ *                     with known numbers. Harmless in production: it never touches the store
  *                     and never runs the engine.
  */
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useShallow } from "zustand/shallow";
 import type { EngineError, Plan } from "@taka/engine";
-import { OfflineBadge } from "@/components/layout/OfflineBadge";
-import { RatesVersionBadge } from "@/components/layout/RatesVersionBadge";
 import { BucketList } from "@/components/plan/BucketList";
 import { PlanHeadline } from "@/components/plan/PlanHeadline";
 import { PlanSummary } from "@/components/plan/PlanSummary";
+import { calcErrorKey } from "@/components/calculators/shared/engineError";
 import { SAMPLE_PLAN } from "@/components/plan/fixtures";
 import { isTermKey } from "@/components/plan/terms";
 import { ErrorCard } from "@/components/ui/ErrorCard";
@@ -106,11 +105,7 @@ function PlanBody({ plan, error, demo }: PlanBodyProps) {
   return (
     <div className="flex flex-col gap-4">
       <header className="flex flex-col gap-2">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <h1 className="text-2xl font-bold text-text">{t("plan.title")}</h1>
-          <OfflineBadge />
-        </div>
-        <RatesVersionBadge />
+        <h1 className="text-2xl font-bold text-text">{t("plan.title")}</h1>
         {demo && (
           <p role="note" className="rounded-xl border border-status-amber/30 bg-status-amber-soft px-3 py-2 text-xs text-status-amber">
             {t("plan.demoBanner")}
@@ -119,7 +114,7 @@ function PlanBody({ plan, error, demo }: PlanBodyProps) {
       </header>
 
       {error ? (
-        <ErrorCard title={t("plan.error.title")} message={t("errors.engineNotReady")} />
+        <ErrorCard title={t("plan.error.title")} message={t(calcErrorKey(error))} />
       ) : plan ? (
         <>
           <PlanHeadline plan={plan} whyOpen={why === HEADLINE_WHY} onWhyOpenChange={(open) => onWhyChange(open ? HEADLINE_WHY : null)} />

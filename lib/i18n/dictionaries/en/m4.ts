@@ -55,6 +55,10 @@ export const m4 = {
     percentOfEachPayment: "The day a payment lands, move {percent} of it to a separate savings account before you spend any of it. Keep the share the same in big months and small ones; once the balance is steady, turn it into a DPS.",
   },
 
+  note: {
+    instrumentDps: "We suggest a DPS because it auto-debits on a fixed day, so the saving happens before you can spend it.",
+  },
+
   status: {
     red: "Saving nothing yet",
     amber: "Saving a little — keep going",

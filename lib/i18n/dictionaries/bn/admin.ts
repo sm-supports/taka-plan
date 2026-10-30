@@ -25,7 +25,7 @@ export const admin: Dictionary["admin"] = {
     value: "মান",
     unit: "একক",
     range: "পরিসর",
-    asOf: "তারিখ পর্যন্ত",
+    asOf: "তথ্যের তারিখ",
     nextReview: "পরের পর্যালোচনা",
     source: "সূত্র",
     sourceUrl: "সূত্রের লিংক",
@@ -81,7 +81,7 @@ export const admin: Dictionary["admin"] = {
   editor: {
     title: "{key} বদলান",
     value: "মান",
-    valueRate: "মান (শতাংশে, যেমন 11.83)",
+    valueRate: "মান (শতাংশে, যেমন ১১.৮৩)",
     valueBdt: "মান (টাকা)",
     valueNumber: "মান",
     valueJson: "মান (JSON)",

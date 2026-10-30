@@ -12,12 +12,12 @@ function count(db: SqliteD1, sql: string): number {
 }
 
 describe("D1RatesRepo over the real migrations", () => {
-  it("getPublished returns the seed snapshot (v1, 63 rows) and equals the bundled seed", async () => {
+  it("getPublished returns the seed snapshot (v1, every RATE_KEYS row) and equals the bundled seed", async () => {
     const repo = new D1RatesRepo(seededSqliteD1());
     const s = await repo.getPublished();
     expect(s.version).toBe(1);
     expect(s.publishedAt).toBe("2026-10-30");
-    expect(Object.keys(s.rows)).toHaveLength(63);
+    expect(Object.keys(s.rows)).toHaveLength(RATE_KEYS.length);
     expect(() => assertSnapshot(s)).not.toThrow();
     expect(s.rows).toEqual(assertSnapshot(RATES_SEED).rows);
     expect(await repo.getDraft()).toBeNull();

@@ -8,6 +8,7 @@ import {
   M1_STEP_IDS,
   M3_PATH_KEYS,
   M3_STEP_IDS,
+  M4_NOTE_KEYS,
   M4_STEP_IDS,
   M5_NOTE_KEYS,
   M5_STEP_IDS,
@@ -115,7 +116,7 @@ describe.each(names)("engine keys resolve in %s", (name) => {
     expectString(dict, `${explainKey(id)}.body`, name);
   });
 
-  it.each([...M1_RULE_KEYS, ...M1_NEXT_KEYS, ...M3_PATH_KEYS, ...M5_NOTE_KEYS, ...PLAN_REASON_KEYS, ...PLAN_NEXT_KEYS])("%s", (key) => {
+  it.each([...M1_RULE_KEYS, ...M1_NEXT_KEYS, ...M3_PATH_KEYS, ...M4_NOTE_KEYS, ...M5_NOTE_KEYS, ...PLAN_REASON_KEYS, ...PLAN_NEXT_KEYS])("%s", (key) => {
     expectString(dict, key, name);
   });
 
@@ -255,7 +256,7 @@ const LATIN_DIGIT = /[0-9]/;
 /** Latin words that must never appear in a Bangla string: the formatters emit লাখ / কোটি / মাস instead. */
 const LATIN_UNIT_WORDS = /\b(lakh|lakhs|lac|crore|crores|month|months)\b/i;
 /** Namespaces the i18n-bn slice has reviewed against the full checklist; extend as other files pass review. */
-const REVIEWED_BN_NAMESPACES = ["common", "terms", "errors"] as const;
+const REVIEWED_BN_NAMESPACES = ["common", "onboarding", "plan", "m1", "m3", "m4", "m5", "explain", "terms", "admin", "errors", "about"] as const;
 
 describe("Bangla digits and units", () => {
   const bnF = createFormatters("bn");
@@ -299,8 +300,9 @@ describe("Bangla digits and units", () => {
     expect(offenders).toEqual([]);
   });
 
-  it("reviewed bn namespaces contain no Latin digits", () => {
-    const offenders = REVIEWED_BN_NAMESPACES.flatMap((ns) => leafPaths(bn[ns], ns).filter((k) => LATIN_DIGIT.test(getPath(bn, k) as string)));
+  it("reviewed bn namespaces contain no Latin digits (placeholders such as {months} or {tier1} are fine)", () => {
+    const withoutSlots = (s: string) => s.replace(/\{\w+\}/g, "");
+    const offenders = REVIEWED_BN_NAMESPACES.flatMap((ns) => leafPaths(bn[ns], ns).filter((k) => LATIN_DIGIT.test(withoutSlots(getPath(bn, k) as string))));
     expect(offenders).toEqual([]);
   });
 

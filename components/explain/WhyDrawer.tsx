@@ -14,14 +14,17 @@ import { formatStepParams } from "./formatInputs";
 export interface WhyDrawerProps {
   explanation: Explanation;
   title: string;
+  /** Which step ids to show; defaults to every step in the explanation. */
+  stepIds?: readonly string[];
   open: boolean;
   onClose: () => void;
 }
 
-export function WhyDrawer({ explanation, title, open, onClose }: WhyDrawerProps) {
+export function WhyDrawer({ explanation, title, stepIds, open, onClose }: WhyDrawerProps) {
   const { t } = useT();
   const f = useFormat();
-  const { steps, assumptions, notes } = explanation;
+  const { assumptions, notes } = explanation;
+  const steps = stepIds ? explanation.steps.filter((s) => stepIds.includes(s.id)) : explanation.steps;
   return (
     <Sheet open={open} onClose={onClose} title={title}>
       {steps.length > 0 && (
