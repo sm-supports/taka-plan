@@ -1,7 +1,12 @@
 import type { Explanation } from "../explain";
 import type { Instrument, Money, Rate, Status } from "../types";
 
-export type GoalType = "general" | "education" | "health" | "wedding" | "vehicle" | "home" | "travel";
+export const GOAL_TYPES = ["general", "education", "health", "wedding", "vehicle", "home", "travel"] as const;
+export type GoalType = (typeof GOAL_TYPES)[number];
+
+/** Whole years away a goal may be (validation bounds, not a rate). */
+export const GOAL_YEARS_MIN = 1;
+export const GOAL_YEARS_MAX = 40;
 
 export interface Goal {
   id: string;
