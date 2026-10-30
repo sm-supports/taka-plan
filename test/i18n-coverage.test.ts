@@ -248,3 +248,86 @@ describe("createFormatters", () => {
     expect(bnF.asOf("2026-09-30")).toBe("সেপ্টেম্বর ২০২৬");
   });
 });
+
+/* ---- Bangla policy (i18n-bn slice; rules in docs/BANGLA-STYLE.md) ---- */
+
+const LATIN_DIGIT = /[0-9]/;
+/** Latin words that must never appear in a Bangla string: the formatters emit লাখ / কোটি / মাস instead. */
+const LATIN_UNIT_WORDS = /\b(lakh|lakhs|lac|crore|crores|month|months)\b/i;
+/** Namespaces the i18n-bn slice has reviewed against the full checklist; extend as other files pass review. */
+const REVIEWED_BN_NAMESPACES = ["common", "terms", "errors"] as const;
+
+describe("Bangla digits and units", () => {
+  const bnF = createFormatters("bn");
+
+  it.each([
+    ["taka grouped", bnF.taka(1250000)],
+    ["taka small", bnF.taka(500)],
+    ["taka zero", bnF.taka(0)],
+    ["taka negative", bnF.taka(-17800)],
+    ["taka signed", bnF.taka(9000, { sign: true })],
+    ["taka compact lakh", bnF.taka(900000, { compact: true })],
+    ["taka compact crore", bnF.taka(12_000_000, { compact: true })],
+    ["taka compact below lakh", bnF.taka(99_999, { compact: true })],
+    ["percent", bnF.percent(0.0834)],
+    ["percent negative", bnF.percent(-0.0147)],
+    ["percent 2dp", bnF.percent(0.1183, 2)],
+    ["percent 0dp", bnF.percent(0.6, 0)],
+    ["number", bnF.number(3)],
+    ["number decimals", bnF.number(72.3, 1)],
+    ["months whole", bnF.months(8)],
+    ["months fraction", bnF.months(2.5)],
+    ["asOf", bnF.asOf("2026-09-30")],
+    ["asOf december", bnF.asOf("2027-12-31")],
+  ])("%s → %s has no Latin digits", (_label, formatted) => {
+    expect(formatted).not.toMatch(LATIN_DIGIT);
+    expect(formatted).toMatch(/[০-৯]/);
+  });
+
+  it("compact Bangla amounts use লাখ / কোটি and months use মাস, never the Latin words", () => {
+    expect(bnF.taka(900000, { compact: true })).toBe("৳৯.০ লাখ");
+    expect(bnF.taka(12_000_000, { compact: true })).toBe("৳১.২ কোটি");
+    expect(bnF.months(8)).toBe("৮ মাস");
+    for (const s of [bnF.taka(900000, { compact: true }), bnF.taka(12_000_000, { compact: true }), bnF.months(8)]) {
+      expect(s).not.toMatch(LATIN_UNIT_WORDS);
+    }
+  });
+
+  it("no bn dictionary string contains the Latin words lakh / crore / month", () => {
+    const withoutSlots = (s: string) => s.replace(/\{\w+\}/g, "");
+    const offenders = leafPaths(bn).filter((k) => LATIN_UNIT_WORDS.test(withoutSlots(getPath(bn, k) as string)));
+    expect(offenders).toEqual([]);
+  });
+
+  it("reviewed bn namespaces contain no Latin digits", () => {
+    const offenders = REVIEWED_BN_NAMESPACES.flatMap((ns) => leafPaths(bn[ns], ns).filter((k) => LATIN_DIGIT.test(getPath(bn, k) as string)));
+    expect(offenders).toEqual([]);
+  });
+
+  it("reviewed bn namespaces use the formal আপনি register, never তুমি / তুই", () => {
+    const informal = /(^|[\s,।;—-])(তুমি|তোমার|তোমাকে|তুই|তোর|তোকে)([\s,।;—-]|$)/;
+    const offenders = REVIEWED_BN_NAMESPACES.flatMap((ns) => leafPaths(bn[ns], ns).filter((k) => informal.test(getPath(bn, k) as string)));
+    expect(offenders).toEqual([]);
+  });
+
+  it("the 13 glossary terms carry the agreed Bangla names", () => {
+    const expectedTitles: Record<string, string> = {
+      fdr: "এফডিআর",
+      dps: "ডিপিএস",
+      sanchayapatra: "সঞ্চয়পত্র",
+      bo_account: "বিও অ্যাকাউন্ট",
+      sum_insured: "বিমা অঙ্ক",
+      emi: "ইএমআই",
+      cib: "সিআইবি",
+      tbill: "ট্রেজারি বিল",
+      tbond: "ট্রেজারি বন্ড",
+      ladder: "এফডিআর ল্যাডার",
+      real_return: "প্রকৃত মুনাফা",
+      take_home: "টেক-হোম",
+      grace_period: "গ্রেস পিরিয়ড",
+    };
+    for (const term of TERMS) {
+      expect(getPath(bn, `terms.${term}.title`), term).toContain(expectedTitles[term]);
+    }
+  });
+});
