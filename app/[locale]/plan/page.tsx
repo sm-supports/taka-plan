@@ -1,17 +1,136 @@
 "use client";
-/** Placeholder plan screen so the shell can be seen; the ui-plan slice replaces it. */
-import { BigNumber } from "@/components/ui/BigNumber";
-import { Card } from "@/components/ui/Card";
+/**
+ * The plan screen: one number at the top, then bucket cards in priority order.
+ *
+ * Query switches:
+ *   ?why=<bucketKey>  opens that bucket's "Why this number?" drawer ("total" for the headline);
+ *   ?term=<key>       opens the glossary sheet for that term;
+ *   ?demo=1           renders the hand-built SAMPLE_PLAN fixture (components/plan/fixtures.ts)
+ *                     instead of the user's plan, so the screen can be checked and screenshotted
+ *                     before the engine lands. Harmless in production: it never touches the store
+ *                     and never runs the engine.
+ */
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useCallback, useEffect, useState } from "react";
+import { useShallow } from "zustand/shallow";
+import type { EngineError, Plan } from "@taka/engine";
+import { OfflineBadge } from "@/components/layout/OfflineBadge";
+import { RatesVersionBadge } from "@/components/layout/RatesVersionBadge";
+import { BucketList } from "@/components/plan/BucketList";
+import { PlanHeadline } from "@/components/plan/PlanHeadline";
+import { PlanSummary } from "@/components/plan/PlanSummary";
+import { SAMPLE_PLAN } from "@/components/plan/fixtures";
+import { isTermKey } from "@/components/plan/terms";
+import { ErrorCard } from "@/components/ui/ErrorCard";
+import { Skeleton } from "@/components/ui/Skeleton";
+import { TermSheet } from "@/components/ui/Term";
 import { useT } from "@/lib/i18n/useT";
+import { selectProfile } from "@/lib/store/selectors";
+import { useTakaStore } from "@/lib/store/store";
+import { usePlan } from "@/lib/store/usePlan";
+
+const HEADLINE_WHY = "total";
 
 export default function PlanPage() {
+  return (
+    <Suspense fallback={<Skeleton page />}>
+      <PlanScreen />
+    </Suspense>
+  );
+}
+
+function PlanScreen() {
+  const searchParams = useSearchParams();
+  const demo = searchParams.get("demo") === "1";
+  return demo ? <PlanBody plan={SAMPLE_PLAN} error={null} demo /> : <LivePlan />;
+}
+
+/** The user's own plan: redirects to onboarding without a profile; shows an error card when the engine throws. */
+function LivePlan() {
+  const { locale } = useT();
+  const router = useRouter();
+  // selectProfile builds a new object per call; useShallow keeps zustand 5's useSyncExternalStore from looping.
+  const profile = useTakaStore(useShallow(selectProfile));
+  const { plan, error } = usePlan();
+
+  const needsOnboarding = profile === null;
+  useEffect(() => {
+    if (needsOnboarding) router.replace(`/${locale}/start/1`);
+  }, [needsOnboarding, locale, router]);
+
+  if (needsOnboarding) return <Skeleton page />;
+  return <PlanBody plan={plan} error={error} demo={false} />;
+}
+
+interface PlanBodyProps {
+  plan: Plan | null;
+  error: EngineError | Error | null;
+  demo: boolean;
+}
+
+function PlanBody({ plan, error, demo }: PlanBodyProps) {
   const { t } = useT();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const whyParam = searchParams.get("why");
+  const termParam = searchParams.get("term");
+
+  // Drawer state starts from the URL and follows it; closing clears the param.
+  const [why, setWhy] = useState<string | null>(whyParam);
+  useEffect(() => setWhy(whyParam), [whyParam]);
+
+  const replaceParams = useCallback(
+    (patch: Record<string, string | null>) => {
+      const next = new URLSearchParams(searchParams.toString());
+      for (const [k, v] of Object.entries(patch)) {
+        if (v === null) next.delete(k);
+        else next.set(k, v);
+      }
+      const qs = next.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [router, pathname, searchParams],
+  );
+
+  const onWhyChange = useCallback(
+    (key: string | null) => {
+      setWhy(key);
+      if (key === null && whyParam !== null) replaceParams({ why: null });
+    },
+    [whyParam, replaceParams],
+  );
+
+  const closeTerm = useCallback(() => replaceParams({ term: null }), [replaceParams]);
+
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="text-2xl font-bold text-text">{t("common.appName")}</h1>
-      <Card>
-        <BigNumber value="—" caption={t("common.tagline")} />
-      </Card>
+      <header className="flex flex-col gap-2">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h1 className="text-2xl font-bold text-text">{t("plan.title")}</h1>
+          <OfflineBadge />
+        </div>
+        <RatesVersionBadge />
+        {demo && (
+          <p role="note" className="rounded-xl border border-status-amber/30 bg-status-amber-soft px-3 py-2 text-xs text-status-amber">
+            {t("plan.demoBanner")}
+          </p>
+        )}
+      </header>
+
+      {error ? (
+        <ErrorCard title={t("plan.error.title")} message={t("errors.engineNotReady")} />
+      ) : plan ? (
+        <>
+          <PlanHeadline plan={plan} whyOpen={why === HEADLINE_WHY} onWhyOpenChange={(open) => onWhyChange(open ? HEADLINE_WHY : null)} />
+          <BucketList plan={plan} why={why} onWhyChange={onWhyChange} />
+          <PlanSummary plan={plan} />
+        </>
+      ) : (
+        <Skeleton page />
+      )}
+
+      {isTermKey(termParam) && <TermSheet k={termParam} open onClose={closeTerm} />}
     </div>
   );
 }

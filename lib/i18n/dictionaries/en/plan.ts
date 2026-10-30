@@ -14,6 +14,17 @@ export const plan = {
   subhead: "Split across your buckets in priority order. Tap a card to adjust it; the plan updates live.",
   emptyGoals: "No goals yet. Add one — retirement counts — and the plan will make room for it.",
   builtOn: "Built on rates v{version}",
+  demoBanner: "Sample plan built from demo numbers, not yours. Remove ?demo=1 from the address to see your own.",
+
+  why: {
+    headline: "Why save {amount} a month?",
+    bucket: "Why {amount} for {bucket}?",
+  },
+
+  error: {
+    title: "Your plan is not ready yet",
+    retry: "Try again",
+  },
 
   card: {
     amount: "Amount",
@@ -23,6 +34,7 @@ export const plan = {
     open: "Open calculator",
     priority: "Priority {n}",
     perMonth: "{amount}/month",
+    goalTitle: "Goal: {name}",
     bucket: {
       emergency: "Emergency fund",
       insurance: "Insurance",
