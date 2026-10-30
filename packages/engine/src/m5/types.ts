@@ -44,8 +44,11 @@ export interface GoalResult {
   candidates: Instrument[];
   nominal: Rate;
   afterTax: Rate;
-  /** Fisher real return of the chosen instrument vs inflation_cpi. */
+  /** Fisher real return of the chosen instrument vs the inflation applied to this goal (`inflation`). */
   real: Rate;
+  /** Fisher real return vs today's inflation_cpi, for display only. */
+  realVsCpi: Rate;
+  /** real < 0: the after-tax return does not keep up with the goal's inflation. */
   belowInflation: boolean;
   monthly: { low: Money; base: Money; high: Money };
   months: number;

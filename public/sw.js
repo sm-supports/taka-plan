@@ -9,10 +9,13 @@
  *   everything else   network only
  *   activate  drop every other "taka-*" cache, then claim open clients
  *
- * Bump CACHE_VERSION whenever the precache list or a strategy changes; RegisterSW shows
- * the "new version" toast once the new worker has installed.
+ * CACHE_VERSION comes from the registration URL (`/sw.js?v=<build id>`, set by RegisterSW from
+ * the server's build id), so every deploy gets its own cache and the old one is dropped on
+ * activate. Bump SW_REVISION as well whenever the precache list or a strategy changes, so a
+ * strategy change invalidates the cache even if the build id were reused.
  */
-const CACHE_VERSION = "v1";
+const SW_REVISION = "r2";
+const CACHE_VERSION = ((new URL(self.location.href).searchParams.get("v") || "dev") + "-" + SW_REVISION).replace(/[^A-Za-z0-9._-]/g, "_");
 const CACHE_NAME = "taka-" + CACHE_VERSION;
 const PRECACHE_URLS = ["/", "/bn/plan", "/en/plan", "/manifest.webmanifest", "/api/rates"];
 const NAVIGATION_TIMEOUT_MS = 3000;

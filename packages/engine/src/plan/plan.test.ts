@@ -49,7 +49,7 @@ function m4Result(overrides: Partial<M4Result> = {}): M4Result {
 function m1Result(saved: number, overrides: Partial<M1Result> = {}): M1Result {
   const target = 240000;
   const gap = Math.max(0, target - saved);
-  // Rounded up to ৳100 so the fund is full inside the build period (PRD vector: 40 000 / 12 → 3 400).
+  // Mirrors M1: rounded UP to ৳100 so the fund is full inside the build period (240 000 / 12 → 20 000; 40 000 / 12 → 3 400).
   const monthlySaving = Math.ceil(gap / 12 / 100) * 100;
   return {
     suggestedMonths: 8,
@@ -101,8 +101,9 @@ function goalResult(goal: Goal, base: number, overrides: Partial<GoalResult> = {
     candidates: ["dps", "fdr_1y"],
     nominal: 0.09,
     afterTax: 0.081,
-    real: -0.002,
-    belowInflation: true,
+    real: 0.0009,
+    realVsCpi: -0.002,
+    belowInflation: false,
     monthly: { low: base * 0.9, base, high: base * 1.1 },
     months: goal.years * 12,
     status: "amber",
@@ -209,16 +210,22 @@ describe("profileToPlanInput", () => {
 });
 
 describe("computePlan", () => {
-  it("50 000 / 30 000, no savings: everything goes to the emergency fund", () => {
+  it("50 000 / 30 000, no savings: the emergency fund gets the 80% cap and the rest starts a DPS habit", () => {
     const plan = computePlan(baseInput(), rates, TODAY);
     expect(plan.monthlyTotal).toBe(10000);
-    expect(plan.buckets).toHaveLength(1);
+    // M1 wants 20 000 a month; the cap keeps 20% free so the plan never starves every other bucket.
+    expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([
+      ["emergency", 8000],
+      ["future", 2000],
+    ]);
     const [em] = plan.buckets;
-    expect(em).toMatchObject({ id: "emergency", priority: 1, amount: 10000, instrument: "savings_account", status: "red", module: "m1", demotedFromRed: false });
+    expect(em).toMatchObject({ id: "emergency", priority: 1, amount: 8000, instrument: "savings_account", status: "red", module: "m1", demotedFromRed: false });
     expect(em?.reasonKey).toBe("plan.reason.emergency");
-    expect(em?.reasonParams).toEqual({ amount: 10000, covered: 0, months: 8 });
+    expect(em?.reasonParams).toEqual({ amount: 8000, covered: 0, months: 8, instrument: "savings_account" });
     expect(em?.nextStepKey).toBe("plan.next.openSavings");
-    expect(plan.summary).toEqual({ emergencyShare: 1, monthsToEmergencyFull: 24, goalsShortfall: 0 });
+    expect(plan.summary).toEqual({ emergencyShare: 0.8, monthsToEmergencyFull: 30, goalsShortfall: 0 });
+    const share = plan.explain.steps.find((s) => s.id === "plan.emergencyShare");
+    expect(share).toMatchObject({ inputs: { total: 10000, minShare: 0.6, maxShare: 0.8, m1Monthly: 20000, gap: 240000 }, raw: 8000, rounded: 8000, unit: "bdt" });
     expect(plan.debt).toBeUndefined();
     expect(plan.goals).toBeUndefined();
     expect(mockedM3).not.toHaveBeenCalled();
@@ -236,7 +243,7 @@ describe("computePlan", () => {
     ]);
     const [em, future] = plan.buckets;
     expect(em).toMatchObject({ instrument: "fdr_3m", nextStepKey: "plan.next.fdrLadder", status: "amber" });
-    expect(em?.reasonParams).toEqual({ amount: 6000, covered: 6.7, months: 8 });
+    expect(em?.reasonParams).toEqual({ amount: 6000, covered: 6.7, months: 8, instrument: "fdr_3m" });
     expect(future).toMatchObject({ instrument: "dps", status: "green", reasonKey: "plan.reason.addGoal", nextStepKey: "plan.next.addGoal", module: "m5", priority: 2 });
     expect(plan.monthlyTotal).toBe(10000);
     expect(plan.summary.emergencyShare).toBe(0.6);
@@ -260,6 +267,8 @@ describe("computePlan", () => {
     expect(plan.summary.goalsShortfall).toBe(5300);
     expect(plan.goals?.goals).toHaveLength(1);
     expect(plan.monthlyTotal).toBe(10000);
+    const allocation = plan.explain.steps.filter((s) => s.id === "plan.goalAllocation");
+    expect(allocation).toEqual([{ id: "plan.goalAllocation", inputs: { goalId: "g-bike", need: 9300, goalsNeed: 9300, remaining: 4000 }, raw: 4000, rounded: 4000, unit: "bdt" }]);
     assertKeys(plan.buckets);
   });
 
@@ -281,7 +290,46 @@ describe("computePlan", () => {
     expect(plan.summary.goalsShortfall).toBe(8000);
     expect(plan.monthlyTotal).toBe(10000);
     expect(plan.buckets.some((x) => x.id === "future")).toBe(false);
+    // One allocation step per valid goal, after plan.goalsShare, with the unrounded share as raw.
+    const planSteps = plan.explain.steps.filter((s) => s.id.startsWith("plan."));
+    expect(planSteps.map((s) => s.id)).toEqual(["plan.total", "plan.emergencyShare", "plan.goalsShare", "plan.goalAllocation", "plan.goalAllocation"]);
+    const [allocA, allocB] = planSteps.filter((s) => s.id === "plan.goalAllocation");
+    expect(allocA).toMatchObject({ inputs: { goalId: "a", need: 3000, goalsNeed: 12000, remaining: 4000 }, raw: 1000, rounded: 1000, unit: "bdt" });
+    expect(allocB).toMatchObject({ inputs: { goalId: "b", need: 9000, goalsNeed: 12000, remaining: 4000 }, raw: 3000, rounded: 3000, unit: "bdt" });
     assertKeys(plan.buckets);
+  });
+
+  it("the emergency amount never exceeds the remaining gap, and the surplus goes to the future bucket", () => {
+    // 2 500 left to save: M1 wants 300 a month but the 60% floor would be 6 000.
+    mockedM1.mockReturnValue(m1Result(237500));
+    const plan = computePlan(baseInput(), rates, TODAY);
+    expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([
+      ["emergency", 2500],
+      ["future", 7500],
+    ]);
+    expect(plan.summary.monthsToEmergencyFull).toBe(1);
+    expect(plan.explain.steps.find((s) => s.id === "plan.emergencyShare")).toMatchObject({ inputs: { gap: 2500, m1Monthly: 300 }, raw: 2500, rounded: 2500 });
+  });
+
+  it("a goal that gets nothing is dropped instead of shown as a zero bucket", () => {
+    mockedM1.mockReturnValue(m1Result(0));
+    mockedM3.mockImplementation(() => m3Result([CARD_60K]));
+    const goal: Goal = { id: "g", name: "Trip", cost: 50000, years: 2, type: "travel" };
+    mockedM5.mockImplementation(() => m5Result([goalResult(goal, 1500)]));
+    // B 10 000 → emergency 8 000 (cap) → debt takes the last 2 000 → nothing for the goal.
+    const plan = computePlan(
+      baseInput({ profile: { ...PROFILE, hasDebt: true }, m3: { takeHome: 50000, essentials: 30000, savingsTarget: 0, loans: [], cards: [] }, m5: { goals: [goal], age: 28 } }),
+      rates,
+      TODAY,
+    );
+    expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([
+      ["emergency", 8000],
+      ["debt", 2000],
+    ]);
+    expect(plan.buckets.every((b) => b.amount > 0)).toBe(true);
+    expect(plan.summary.goalsShortfall).toBe(1500);
+    expect(plan.monthlyTotal).toBe(10000);
+    expect(plan.buckets[1]?.reasonParams.months).toBe(30); // 60 000 / 2 000
   });
 
   it("a goal that fits leaves the surplus in a future bucket so the whole amount is placed", () => {
@@ -310,7 +358,8 @@ describe("computePlan", () => {
     ]);
     const d = plan.buckets[1];
     expect(d).toMatchObject({ instrument: "loan_prepayment", status: "amber", module: "m3", refId: "c-1", nextStepKey: "plan.next.prepayDebt", reasonKey: "plan.reason.debt" });
-    expect(d?.reasonParams).toEqual({ amount: 4000, rate: 0.25, count: 1, months: 12 });
+    // months = ceil(60 000 / 4 000): what the allocated amount actually achieves, not the 12-month target.
+    expect(d?.reasonParams).toEqual({ amount: 4000, rate: 0.25, count: 1, months: 15 });
     expect(plan.debt).toBeDefined();
     const debtStep = plan.explain.steps.find((s) => s.id === "plan.debtShare");
     expect(debtStep?.inputs).toEqual({ remaining: 4000, headroom: 5000 });
@@ -329,6 +378,8 @@ describe("computePlan", () => {
       ["debt", 5000],
       ["future", 5000],
     ]);
+    expect(plan.buckets[0]?.nextStepKey).toBe("plan.next.keepFull");
+    expect(plan.buckets[1]?.reasonParams.months).toBe(12); // 60 000 / 5 000
   });
 
   it("one-red rule: emergency red and debt red → debt demoted to amber", () => {
@@ -369,19 +420,28 @@ describe("computePlan", () => {
       ["future", 10000],
     ]);
     const [em] = plan.buckets;
-    expect(em).toMatchObject({ status: "green", reasonKey: "plan.reason.emergencyFull", module: "m1", priority: 1, demotedFromRed: false });
+    expect(em).toMatchObject({ status: "green", reasonKey: "plan.reason.emergencyFull", nextStepKey: "plan.next.keepFull", instrument: "fdr_3m", module: "m1", priority: 1, demotedFromRed: false });
     expect(em?.reasonParams).toEqual({ months: 8 });
     expect(plan.summary).toEqual({ emergencyShare: 0, monthsToEmergencyFull: null, goalsShortfall: 0 });
+    expect(plan.explain.steps.find((s) => s.id === "plan.emergencyShare")).toMatchObject({ inputs: { total: 10000, minShare: 0.6, maxShare: 0.8, m1Monthly: 0, gap: 0 }, rounded: 0 });
     expect(plan.monthlyTotal).toBe(10000);
     assertKeys(plan.buckets);
   });
 
-  it("zero budget: emergency bucket of zero, no future bucket, share 0", () => {
+  it("zero budget: no buckets at all (a zero emergency bucket is only shown when the fund is full)", () => {
     mockedM4.mockReturnValue(m4Result({ savingsAmount: 0, savingsRate: 0 }));
     const plan = computePlan(baseInput(), rates, TODAY);
     expect(plan.monthlyTotal).toBe(0);
-    expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([["emergency", 0]]);
+    expect(plan.buckets).toEqual([]);
     expect(plan.summary).toEqual({ emergencyShare: 0, monthsToEmergencyFull: null, goalsShortfall: 0 });
+    expect(plan.explain.steps.find((s) => s.id === "plan.emergencyShare")).toMatchObject({ inputs: { total: 0, gap: 240000, m1Monthly: 20000 }, rounded: 0 });
+  });
+
+  it("zero budget with a full fund keeps the single keepFull bucket", () => {
+    mockedM4.mockReturnValue(m4Result({ savingsAmount: 0, savingsRate: 0 }));
+    mockedM1.mockReturnValue(m1Result(240000));
+    const plan = computePlan(baseInput(), rates, TODAY);
+    expect(plan.buckets.map((b) => [b.id, b.amount, b.nextStepKey])).toEqual([["emergency", 0, "plan.next.keepFull"]]);
   });
 
   it("insurance and retirement hooks reserve their need in priority order", () => {
@@ -414,6 +474,7 @@ describe("computePlan", () => {
     expect(plan.explain.steps.map((s) => s.id)).toEqual(expect.arrayContaining(["m4.amount", "m1.target", "m3.totalEmi", "m5.monthly"]));
     const keys = plan.explain.assumptions.map((a) => a.key);
     expect(keys).toContain("plan_emergency_min_share");
+    expect(keys).toContain("plan_emergency_max_share");
     expect(keys).toContain("debt_payoff_target_months");
     // B 15 000 → emergency 9 000 (60% floor) → debt 5 000 → 1 000 left for a goal needing 1 500.
     expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([
@@ -424,7 +485,7 @@ describe("computePlan", () => {
     const total = plan.explain.steps.find((s) => s.id === "plan.total");
     expect(total).toMatchObject({ inputs: { savings: 15000 }, rounded: 15000, unit: "bdt" });
     const share = plan.explain.steps.find((s) => s.id === "plan.emergencyShare");
-    expect(share).toMatchObject({ inputs: { total: 15000, minShare: 0.6, gap: 40000 }, rounded: 9000 });
+    expect(share).toMatchObject({ inputs: { total: 15000, minShare: 0.6, maxShare: 0.8, m1Monthly: 3400, gap: 40000 }, raw: 9000, rounded: 9000 });
     const goalsShare = plan.explain.steps.find((s) => s.id === "plan.goalsShare");
     expect(goalsShare).toMatchObject({ inputs: { remaining: 1000, goalsNeed: 1500 }, rounded: 1000 });
     expect(plan.summary.goalsShortfall).toBe(500);
@@ -433,6 +494,7 @@ describe("computePlan", () => {
   it("the emergency floor and the debt payoff months come from the rates snapshot, not literals", () => {
     const custom = structuredClone(rates);
     custom.rows.plan_emergency_min_share = { ...custom.rows.plan_emergency_min_share, value: 0.8 };
+    custom.rows.plan_emergency_max_share = { ...custom.rows.plan_emergency_max_share, value: 0.9 };
     custom.rows.debt_payoff_target_months = { ...custom.rows.debt_payoff_target_months, value: 24 };
     mockedM1.mockReturnValue(m1Result(200000));
     mockedM3.mockImplementation(() => m3Result([CARD_60K]));
@@ -442,7 +504,16 @@ describe("computePlan", () => {
       ["debt", 2000],
     ]);
     expect(plan.explain.steps.find((s) => s.id === "plan.debtShare")?.inputs).toEqual({ remaining: 2000, headroom: 2500 });
-    expect(plan.buckets[1]?.reasonParams.months).toBe(24);
+    expect(plan.buckets[1]?.reasonParams.months).toBe(30); // 60 000 / 2 000, not the 24-month target
+    expect(plan.explain.steps.find((s) => s.id === "plan.emergencyShare")?.inputs).toMatchObject({ minShare: 0.8, maxShare: 0.9 });
+  });
+
+  it("the emergency cap comes from plan_emergency_max_share", () => {
+    const custom = structuredClone(rates);
+    custom.rows.plan_emergency_max_share = { ...custom.rows.plan_emergency_max_share, value: 1 };
+    const plan = computePlan(baseInput(), custom, TODAY);
+    expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([["emergency", 10000]]);
+    expect(plan.summary.emergencyShare).toBe(1);
   });
 
   it("throws MISSING_RATE when a plan assumption row is absent", () => {

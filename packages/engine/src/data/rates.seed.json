@@ -255,7 +255,7 @@
       "asOf": "2026-10-25"
     },
     "equity_return_low": {
-      "labelBn": "শেয়ার রিটার্ন, নিম্ন",
+      "labelBn": "শেয়ার মুনাফা, নিম্ন",
       "note": "DSEX price-only +1.45%/yr over 10 years",
       "reviewedBy": "sajat",
       "isAppAssumption": true,
@@ -269,7 +269,7 @@
       "nextReview": "2027-06-30"
     },
     "equity_return_base": {
-      "labelBn": "শেয়ার রিটার্ন, ভিত্তি",
+      "labelBn": "শেয়ার মুনাফা, ভিত্তি",
       "note": "Set no higher than safe instruments",
       "reviewedBy": "sajat",
       "isAppAssumption": true,
@@ -283,7 +283,7 @@
       "nextReview": "2027-06-30"
     },
     "equity_return_high": {
-      "labelBn": "শেয়ার রিটার্ন, উচ্চ",
+      "labelBn": "শেয়ার মুনাফা, উচ্চ",
       "reviewedBy": "sajat",
       "isAppAssumption": true,
       "key": "equity_return_high",
@@ -296,7 +296,7 @@
       "nextReview": "2027-06-30"
     },
     "gold_return_base": {
-      "labelBn": "স্বর্ণ রিটার্ন, ভিত্তি (= মূল্যস্ফীতি)",
+      "labelBn": "সোনার মুনাফা, ভিত্তি (= মূল্যস্ফীতি)",
       "reviewedBy": "sajat",
       "isAppAssumption": true,
       "key": "gold_return_base",
@@ -309,7 +309,7 @@
       "nextReview": "2027-06-30"
     },
     "gold_22k_per_bhori": {
-      "labelBn": "স্বর্ণ, ২২ ক্যারেট প্রতি ভরি",
+      "labelBn": "সোনা, ২২ ক্যারেট প্রতি ভরি",
       "note": "+122% in 3 years, −16% from Jan 2026 peak",
       "reviewedBy": "sajat",
       "isAppAssumption": false,
@@ -403,7 +403,7 @@
       "nextReview": "2027-06-30"
     },
     "ups_return_fy2526": {
-      "labelBn": "সর্বজনীন পেনশন স্কিম রিটার্ন, ২০২৫-২৬",
+      "labelBn": "সর্বজনীন পেনশন স্কিম মুনাফা, ২০২৫-২৬",
       "note": "Policy-change risk; informational for M7",
       "reviewedBy": "sajat",
       "isAppAssumption": false,
@@ -663,7 +663,7 @@
       "nextReview": "2027-06-30"
     },
     "emergency_bump_no_health_insurance": {
-      "labelBn": "জরুরি তহবিল: স্বাস্থ্য বিমা না থাকলে বাড়তি মাস",
+      "labelBn": "জরুরি তহবিল: স্বাস্থ্যবিমা না থাকলে বাড়তি মাস",
       "reviewedBy": "sajat",
       "isAppAssumption": true,
       "key": "emergency_bump_no_health_insurance",
@@ -827,6 +827,19 @@
       "value": 0.6,
       "unit": "ratio",
       "labelEn": "Minimum share of monthly saving to the emergency fund until full",
+      "sourceName": "Taka Plan PRD (our assumption)",
+      "sourceUrl": "docs/PRD.md#the-plan-screen",
+      "asOf": "2026-10-30",
+      "nextReview": "2027-06-30"
+    },
+    "plan_emergency_max_share": {
+      "labelBn": "অন্য খাতে টাকা দরকার থাকলে জরুরি তহবিলে মাসিক সঞ্চয়ের সর্বোচ্চ অংশ",
+      "reviewedBy": "sajat",
+      "isAppAssumption": true,
+      "key": "plan_emergency_max_share",
+      "value": 0.8,
+      "unit": "ratio",
+      "labelEn": "Maximum share of monthly saving to the emergency fund while other buckets need money",
       "sourceName": "Taka Plan PRD (our assumption)",
       "sourceUrl": "docs/PRD.md#the-plan-screen",
       "asOf": "2026-10-30",

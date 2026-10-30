@@ -7,7 +7,7 @@ import { computeSaveFirst } from "../m4/save-first";
 import type { M4Input, M4Result } from "../m4/types";
 import { computeGoals } from "../m5/goal-planner";
 import type { Goal, GoalResult, M5Result } from "../m5/types";
-import { roundDecimals, roundMoney, sum } from "../money";
+import { clamp, roundDecimals, roundMoney, sum } from "../money";
 import type { RatesSnapshot } from "../rates";
 import { assertInput, isFiniteNumber, type Instrument, type ISODate, type Money, type Profile, type Status } from "../types";
 import type { Bucket, BucketInstrument, BucketModule, Plan, PlanInput, PlanOverrides, PlanSummary } from "./types";
@@ -89,6 +89,14 @@ interface BucketDraft {
   module: BucketModule;
 }
 
+/**
+ * Drop buckets that get nothing this month; the only zero-amount bucket shown is the emergency
+ * fund once it is full (`keepFull`), so the user sees that it is done.
+ */
+function dropEmpty(drafts: BucketDraft[], emergencyFull: boolean): BucketDraft[] {
+  return drafts.filter((d) => d.amount > 0 || (d.id === "emergency" && emergencyFull));
+}
+
 /** Number the drafts 1..n and apply the one-red rule: the red with the lowest priority number stays, later reds become amber. */
 function toBuckets(drafts: BucketDraft[]): Bucket[] {
   let redSeen = false;
@@ -130,6 +138,7 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
   assertProfile(input.profile);
   const ex = createExplain(rates, today);
   const minShare = ex.use("plan_emergency_min_share");
+  const maxShare = ex.use("plan_emergency_max_share");
   const payoffMonths = ex.use("debt_payoff_target_months");
   assertInput(payoffMonths > 0, "debt_payoff_target_months must be positive", { payoffMonths });
 
@@ -144,35 +153,43 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
   const drafts: BucketDraft[] = [];
   let remaining: Money = total;
 
-  // (1) Emergency fund: at least minShare of the monthly amount until it is full.
+  // (1) Emergency fund: the M1 monthly amount, kept between minShare and maxShare of the budget so
+  // other buckets are never starved, and never more than the remaining gap.
+  const emergencyFull = emergency.gap === 0;
+  const toSavingsAccount = emergency.saved < emergency.tiers.savingsAccount;
+  const emergencyInstrument: Instrument = toSavingsAccount ? "savings_account" : "fdr_3m";
   let emergencyAmount: Money = 0;
-  if (emergency.gap > 0) {
-    const rawFloor = minShare * total;
-    const floor = roundMoney(rawFloor, "monthly");
-    const raw = Math.min(total, Math.max(emergency.monthlySaving, rawFloor));
-    emergencyAmount = Math.min(total, Math.max(emergency.monthlySaving, floor));
-    ex.step({ id: "plan.emergencyShare", inputs: { total, minShare, gap: emergency.gap }, raw, rounded: emergencyAmount, unit: "bdt" });
-    const toSavingsAccount = emergency.saved < emergency.tiers.savingsAccount;
+  if (!emergencyFull) {
+    const clamped = clamp(emergency.monthlySaving, minShare * total, maxShare * total);
+    const raw = Math.min(emergency.gap, clamped);
+    emergencyAmount = Math.min(total, emergency.gap, roundMoney(clamped, "monthly"));
+    ex.step({
+      id: "plan.emergencyShare",
+      inputs: { total, minShare, maxShare, m1Monthly: emergency.monthlySaving, gap: emergency.gap },
+      raw,
+      rounded: emergencyAmount,
+      unit: "bdt",
+    });
     drafts.push({
       id: "emergency",
       amount: emergencyAmount,
-      instrument: toSavingsAccount ? "savings_account" : "fdr_3m",
+      instrument: emergencyInstrument,
       status: emergency.status,
       reasonKey: "plan.reason.emergency",
-      reasonParams: { amount: emergencyAmount, covered: emergency.monthsCovered, months: emergency.months },
+      reasonParams: { amount: emergencyAmount, covered: emergency.monthsCovered, months: emergency.months, instrument: emergencyInstrument },
       nextStepKey: toSavingsAccount ? "plan.next.openSavings" : "plan.next.fdrLadder",
       module: "m1",
     });
   } else {
-    ex.step({ id: "plan.emergencyShare", inputs: { total, minShare, gap: 0 }, raw: 0, rounded: 0, unit: "bdt" });
+    ex.step({ id: "plan.emergencyShare", inputs: { total, minShare, maxShare, m1Monthly: 0, gap: 0 }, raw: 0, rounded: 0, unit: "bdt" });
     drafts.push({
       id: "emergency",
       amount: 0,
-      instrument: "fdr_3m",
+      instrument: emergencyInstrument,
       status: "green",
       reasonKey: "plan.reason.emergencyFull",
       reasonParams: { months: emergency.months },
-      nextStepKey: "plan.next.fdrLadder",
+      nextStepKey: "plan.next.keepFull",
       module: "m1",
     });
   }
@@ -201,13 +218,15 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     const need = roundMoney(balance / payoffMonths, "monthly");
     const amount = Math.min(remaining, need);
     ex.step({ id: "plan.debtShare", inputs: { remaining, headroom: need }, raw: Math.min(remaining, balance / payoffMonths), rounded: amount, unit: "bdt" });
+    // Months actually needed at the allocated amount (the target months when nothing can be allocated).
+    const monthsNeeded = amount > 0 && balance > 0 ? Math.ceil(balance / amount) : payoffMonths;
     const draft: BucketDraft = {
       id: "debt",
       amount,
       instrument: "loan_prepayment",
       status: debt.status,
       reasonKey: "plan.reason.debt",
-      reasonParams: { amount, rate: highestRate(debt), count: debt.highInterestDebts.length, months: payoffMonths },
+      reasonParams: { amount, rate: highestRate(debt), count: debt.highInterestDebts.length, months: monthsNeeded },
       nextStepKey: "plan.next.prepayDebt",
       module: "m3",
     };
@@ -226,10 +245,12 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     const goalsNeed = sum(validGoals.map((g) => g.monthly.base));
     const available = remaining;
     let allocatedTotal: Money = 0;
+    const allocations: { goalId: string; need: Money; share: number; amount: Money }[] = [];
     for (const g of validGoals) {
       const need = g.monthly.base;
       const share = goalsNeed > 0 ? (available * need) / goalsNeed : 0;
       const amount = Math.max(0, Math.min(need, roundMoney(Math.min(need, share), "monthly"), remaining));
+      allocations.push({ goalId: g.goalId, need, share: Math.min(need, share), amount });
       allocatedTotal += amount;
       remaining = Math.max(0, remaining - amount);
       const goal = byId.get(g.goalId);
@@ -256,6 +277,9 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     if (validGoals.length > 0) {
       goalsShortfall = Math.max(0, goalsNeed - allocatedTotal);
       ex.step({ id: "plan.goalsShare", inputs: { remaining: available, goalsNeed }, raw: Math.min(available, goalsNeed), rounded: allocatedTotal, unit: "bdt" });
+      for (const a of allocations) {
+        ex.step({ id: "plan.goalAllocation", inputs: { goalId: a.goalId, need: a.need, goalsNeed, remaining: available }, raw: a.share, rounded: a.amount, unit: "bdt" });
+      }
     }
   }
 
@@ -276,7 +300,8 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     remaining = Math.max(0, remaining - amount);
   }
 
-  // (5) Nothing to aim at yet, or room to spare: start the habit in a DPS and ask for a goal.
+  // (5) Nothing to aim at yet, or room to spare: start the habit in a DPS and ask for a goal, so the
+  // buckets always add up to the budget. Omitted when nothing is left.
   if (remaining > 0) {
     drafts.push({
       id: "future",
@@ -291,7 +316,7 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     remaining = 0;
   }
 
-  const buckets = toBuckets(drafts);
+  const buckets = toBuckets(dropEmpty(drafts, emergencyFull));
   const monthlyTotal: Money = sum(buckets.map((b) => b.amount));
 
   const summary: PlanSummary = {

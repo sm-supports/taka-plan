@@ -7,6 +7,7 @@ import type { GoalType } from "@taka/engine";
 import { ChoiceButtons } from "@/components/ui/ChoiceButtons";
 import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
+import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { GOAL_TYPES, MAX_YEARS, MIN_YEARS, type GoalDraft } from "./goals";
 
@@ -20,6 +21,7 @@ export interface GoalEditorProps {
 
 export function GoalEditor({ id, draft, onChange, incompleteMessage }: GoalEditorProps) {
   const { t } = useT();
+  const { number } = useFormat();
   const nameEmpty = draft.name.trim().length === 0;
   return (
     <div className="flex flex-col gap-4">
@@ -44,7 +46,7 @@ export function GoalEditor({ id, draft, onChange, incompleteMessage }: GoalEdito
       <SliderWithNumber
         id={`${id}-years`}
         label={t("m5.input.years.label")}
-        hint={t("m5.input.years.hint", { min: MIN_YEARS, max: MAX_YEARS })}
+        hint={t("m5.input.years.hint", { min: number(MIN_YEARS), max: number(MAX_YEARS) })}
         value={draft.years}
         min={MIN_YEARS}
         max={MAX_YEARS}

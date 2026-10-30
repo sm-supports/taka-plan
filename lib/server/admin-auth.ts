@@ -25,10 +25,37 @@ export function constantTimeEqual(a: Uint8Array, b: Uint8Array): boolean {
   return diff === 0;
 }
 
-/** True when `input` matches ADMIN_PASSWORD. Both sides are hashed first; an unset password never matches. */
-export async function verifyPassword(input: string): Promise<boolean> {
+/** The value shipped in .dev.vars.example; only ever acceptable on a local dev host. */
+export const PLACEHOLDER_PASSWORD = "change-me";
+const LOCAL_HOSTS: ReadonlySet<string> = new Set(["localhost", "127.0.0.1", "[::1]", "::1"]);
+let warnedPlaceholder = false;
+
+/** True when the request URL's host is a local development host (localhost / loopback). */
+export function isLocalHost(requestUrl: string | undefined): boolean {
+  if (!requestUrl) return false;
+  try {
+    const host = new URL(requestUrl).hostname.toLowerCase();
+    return LOCAL_HOSTS.has(host) || host.endsWith(".localhost");
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * True when `input` matches ADMIN_PASSWORD. Both sides are hashed first; an unset password never
+ * matches, and the placeholder password from .dev.vars.example never matches off a local host
+ * (SEC-10), so a forgotten secret cannot open the admin in production.
+ */
+export async function verifyPassword(input: string, requestUrl?: string): Promise<boolean> {
   const expected = getAdminPassword();
   if (expected === undefined || typeof input !== "string") return false;
+  if (expected === PLACEHOLDER_PASSWORD && !isLocalHost(requestUrl)) {
+    if (!warnedPlaceholder) {
+      warnedPlaceholder = true;
+      console.warn("[admin] ADMIN_PASSWORD is still the placeholder; admin sign-in is disabled outside localhost");
+    }
+    return false;
+  }
   const [a, b] = await Promise.all([sha256(input), sha256(expected)]);
   return constantTimeEqual(new Uint8Array(a), new Uint8Array(b));
 }
@@ -71,21 +98,31 @@ export interface CookieGetter {
   get(name: string): { value: string } | undefined;
 }
 
-/** Reads `tp_admin` from a raw Cookie header. */
+/** Reads `tp_admin` from a raw Cookie header. A malformed percent-encoding counts as no cookie (never a 500). */
 export function readCookie(header: string | null | undefined, name: string): string | undefined {
   if (!header) return undefined;
   for (const part of header.split(";")) {
     const eq = part.indexOf("=");
     if (eq < 0) continue;
-    if (part.slice(0, eq).trim() === name) return decodeURIComponent(part.slice(eq + 1).trim());
+    if (part.slice(0, eq).trim() === name) {
+      try {
+        return decodeURIComponent(part.slice(eq + 1).trim());
+      } catch {
+        return undefined;
+      }
+    }
   }
   return undefined;
 }
 
 /** True when the Cookie header / cookie store carries a valid admin session. */
 export async function isAdmin(source: string | CookieGetter | null | undefined, now: number = Date.now()): Promise<boolean> {
-  const token = typeof source === "string" || source === null || source === undefined ? readCookie(source, ADMIN_COOKIE) : source.get(ADMIN_COOKIE)?.value;
-  return verifySessionToken(token, now);
+  try {
+    const token = typeof source === "string" || source === null || source === undefined ? readCookie(source, ADMIN_COOKIE) : source.get(ADMIN_COOKIE)?.value;
+    return await verifySessionToken(token, now);
+  } catch {
+    return false;
+  }
 }
 
 function cookieAttributes(secure: boolean): string {

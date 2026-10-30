@@ -66,8 +66,18 @@ export interface Plan {
   explain: Explanation;
 }
 
-export const PLAN_STEP_IDS = ["plan.total", "plan.emergencyShare", "plan.debtShare", "plan.goalsShare"] as const;
+export const PLAN_STEP_IDS = ["plan.total", "plan.emergencyShare", "plan.debtShare", "plan.goalsShare", "plan.goalAllocation"] as const;
 export type PlanStepId = (typeof PLAN_STEP_IDS)[number];
 
 export const PLAN_REASON_KEYS = ["plan.reason.emergency", "plan.reason.emergencyFull", "plan.reason.debt", "plan.reason.goal", "plan.reason.addGoal", "plan.reason.insurance"] as const;
-export const PLAN_NEXT_KEYS = ["plan.next.fdrLadder", "plan.next.openSavings", "plan.next.prepayDebt", "plan.next.dps", "plan.next.sanchayapatra", "plan.next.tbond", "plan.next.fdr", "plan.next.addGoal"] as const;
+export const PLAN_NEXT_KEYS = [
+  "plan.next.fdrLadder",
+  "plan.next.openSavings",
+  "plan.next.keepFull",
+  "plan.next.prepayDebt",
+  "plan.next.dps",
+  "plan.next.sanchayapatra",
+  "plan.next.tbond",
+  "plan.next.fdr",
+  "plan.next.addGoal",
+] as const;

@@ -111,7 +111,14 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
         <dl className="mt-3 flex flex-col divide-y divide-line">
           <Row label={t("m3.result.scenarioEmi")} value={f.taka(result.scenario.emi)} />
         </dl>
-        <p className="mt-2 text-sm leading-relaxed text-text-muted">{t("m3.result.maxLoanNote")}</p>
+        <p className="mt-2 text-sm leading-relaxed text-text-muted">
+          {t("m3.result.maxLoanNote", {
+            rate: f.percent(result.scenario.annualRate),
+            months: f.months(result.scenario.months),
+            emi: f.taka(result.scenario.emi),
+            loan: f.taka(result.maxAffordableLoan, { compact: true }),
+          })}
+        </p>
         <WhyButton explanation={allSteps} stepIds={["m3.capacity", "m3.maxLoan", "m3.scenarioEmi"]} className="mt-2" />
       </Card>
 

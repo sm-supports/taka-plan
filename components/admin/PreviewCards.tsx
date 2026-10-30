@@ -177,7 +177,8 @@ function BucketRow({ before, after, hasDraft }: { before: PreviewBucket; after: 
   const { t } = useT();
   const { taka } = useFormat();
   const name = t(`admin.preview.bucketName.${before.id}`) + (before.refId ? ` · ${before.refId}` : "");
-  const instrument = (i: PreviewBucket["instrument"]) => (i === "loan_prepayment" || i === "term_insurance" ? t(`admin.preview.instrumentExtra.${i}`) : t(`common.instrument.${i}`));
+  // common.instrument covers loan_prepayment and term_insurance too, so admin and app always show the same name.
+  const instrument = (i: PreviewBucket["instrument"]) => t(`common.instrument.${i}`);
   const amountChanged = after !== null && after.amount !== before.amount;
   const statusChanged = after !== null && after.status !== before.status;
   const instrumentChanged = after !== null && after.instrument !== before.instrument;

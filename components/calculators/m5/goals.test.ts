@@ -1,6 +1,6 @@
-import { RATES_SEED, assertSnapshot } from "@taka/engine";
+import { RATES_SEED, assertSnapshot, computeGoals } from "@taka/engine";
 import { describe, expect, it } from "vitest";
-import { DEMO_M5_INPUT, buildDemoM5Result } from "./demo";
+import { buildDemoM5Result, demoM5Input } from "./demo";
 import { EMPTY_DRAFT, applyOneRed, draftToGoal, isValidDraft } from "./goals";
 
 const snapshot = assertSnapshot(RATES_SEED);
@@ -35,7 +35,12 @@ describe("applyOneRed", () => {
 });
 
 describe("demo M5 fixture", () => {
-  const r = buildDemoM5Result(DEMO_M5_INPUT, snapshot, TODAY);
+  const r = buildDemoM5Result(demoM5Input("en"), snapshot, TODAY);
+  it("is the engine's own result and names the goals in the locale", () => {
+    expect(r).toEqual(computeGoals(demoM5Input("en"), snapshot, TODAY));
+    expect(demoM5Input("en").goals.map((g) => g.name)).toEqual(["Daughter's university", "Motorbike"]);
+    expect(demoM5Input("bn").goals.map((g) => g.name)).toEqual(["মেয়ের বিশ্ববিদ্যালয়", "মোটরবাইক"]);
+  });
   it("follows the contract: horizon, candidates, step ids, totals, notes", () => {
     const [edu, bike] = r.goals;
     expect(edu?.horizon).toBe("long");
@@ -44,14 +49,16 @@ describe("demo M5 fixture", () => {
     expect(edu?.inflation).toBe(0.1);
     expect(edu?.futureValue).toBe(3890500);
     expect(edu?.belowInflation).toBe(false);
-    expect(edu?.status).toBe("green");
+    // Long goals sit at amber until the asset-allocation step exists (engine rule).
+    expect(edu?.status).toBe("amber");
     expect(edu?.explain.notes).toEqual(["m5.note.noAllocationYet"]);
     expect(edu?.explain.steps.map((s) => s.id)).toEqual(["m5.fv", "m5.rate", "m5.monthly", "m5.real"]);
     expect(bike?.horizon).toBe("short");
     expect(bike?.instrument).toBe("dps");
-    expect(bike?.belowInflation).toBe(true);
-    expect(bike?.status).toBe("red");
-    expect(bike?.explain.notes).toEqual(["m5.note.belowInflation"]);
+    // DPS after tax (8.1%) beats the 8% projection the goal is priced with, but not today's 8.34% CPI.
+    expect(bike?.belowInflation).toBe(false);
+    expect(bike?.realVsCpi ?? 0).toBeLessThan(0);
+    expect(bike?.status).toBe("green");
     expect(r.totalMonthly).toBe((edu?.monthly.base ?? 0) + (bike?.monthly.base ?? 0));
     expect(r.usesAllocation).toBe(false);
   });
@@ -61,6 +68,7 @@ describe("demo M5 fixture", () => {
     expect(g?.futureValue).toBe(734500);
     expect(g?.instrument).toBe("sanchayapatra_5y");
     expect(g?.monthly.base).toBe(9300);
-    expect(Math.round((g?.real ?? 0) * 1000) / 1000).toBe(0.021);
+    expect(Math.round((g?.realVsCpi ?? 0) * 1000) / 1000).toBe(0.021);
+    expect(Math.round((g?.real ?? 0) * 1000) / 1000).toBe(0.025);
   });
 });

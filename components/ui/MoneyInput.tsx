@@ -1,5 +1,5 @@
 "use client";
-/** Taka text input: accepts Latin or Bangla digits and "12.5 lakh"; shows the formatted amount under the field. */
+/** Taka text input: accepts Latin or Bangla digits and "12.5 lakh"; the box shows the locale's digits; the formatted amount sits under the field. */
 import { useEffect, useId, useState } from "react";
 import { parseTakaInput } from "@taka/engine";
 import { useFormat } from "@/lib/i18n/useFormat";
@@ -20,20 +20,20 @@ export interface MoneyInputProps {
 }
 
 export function MoneyInput({ id, value, onChange, label, hint, error, min, max, placeholder, autoFocus, className }: MoneyInputProps) {
-  const { taka } = useFormat();
+  const { taka, inputDigits } = useFormat();
   const uid = useId();
   const hintId = `${id || uid}-hint`;
   const previewId = `${id || uid}-preview`;
   const errorId = `${id || uid}-error`;
-  const [text, setText] = useState<string>(() => (value === null ? "" : String(value)));
+  const [text, setText] = useState<string>(() => (value === null ? "" : inputDigits(String(value))));
 
   // Keep the box in sync when the value is changed from outside (e.g. a slider) and the text does not already parse to it.
   useEffect(() => {
     const parsed = parseTakaInput(text);
     if (value === null && text.trim() === "") return;
-    if (parsed !== value) setText(value === null ? "" : String(value));
+    if (parsed !== value) setText(value === null ? "" : inputDigits(String(value)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value]);
+  }, [value, inputDigits]);
 
   const parsed = parseTakaInput(text);
   const outOfRange = parsed !== null && ((min !== undefined && parsed < min) || (max !== undefined && parsed > max));
@@ -66,7 +66,8 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
           onChange={(e) => {
-            const next = e.target.value;
+            // Latin digits from a hardware keyboard are shown in the locale's script; parseTakaInput reads both.
+            const next = inputDigits(e.target.value);
             setText(next);
             onChange(parseTakaInput(next));
           }}

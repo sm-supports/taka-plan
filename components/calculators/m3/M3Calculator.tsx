@@ -2,7 +2,7 @@
 /**
  * M3 Debt health check page body. Inputs are prefilled from the store and every edit writes
  * back (profile take-home/essentials, loans, cards, extra monthly, borrowing scenario), so the
- * plan screen updates live. With `demo`, a fixture replaces the store and the stub engine.
+ * plan screen updates live. With `demo`, a sample input replaces the store.
  */
 import { useMemo, useState } from "react";
 import { computeDebtHealth, getRate, type Card as CardT, type Loan, type M3Input, type M3Result } from "@taka/engine";

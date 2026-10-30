@@ -182,6 +182,15 @@ describe.each(names)("engine keys resolve in %s", (name) => {
       "plan.summary.emergencyShare",
       "plan.summary.monthsToFull",
       "plan.summary.goalsShortfall",
+      "plan.demoBanner",
+      "plan.next.keepFull",
+      "plan.reason.emergency",
+      "plan.reason.debt",
+      "explain.plan.emergencyShare.title",
+      "explain.plan.emergencyShare.body",
+      "explain.plan.goalAllocation.title",
+      "explain.plan.goalAllocation.body",
+      "m3.result.maxLoanNote",
       "admin.action.publish",
       "admin.preview.profile.first_job",
       "admin.preview.profile.freelancer",
@@ -197,6 +206,16 @@ describe.each(names)("engine keys resolve in %s", (name) => {
     }
     expect(getPath(dict, "common.language.bn")).toBe("বাংলা");
     expect(getPath(dict, "common.language.en")).toBe("English");
+  });
+
+  it("plan templates carry the contract placeholders", () => {
+    const slots = (key: string) => [...new Set([...(getPath(dict, key) as string).matchAll(/\{(\w+)\}/g)].map((m) => m[1]))].sort();
+    expect(slots("explain.plan.emergencyShare.body")).toEqual(["gap", "m1Monthly", "maxShare", "minShare", "result", "total"]);
+    expect(slots("explain.plan.goalAllocation.body")).toEqual(["goalsNeed", "need", "remaining", "result"]);
+    expect(slots("plan.reason.emergency")).toEqual(["amount", "covered", "instrument", "months"]);
+    expect(slots("plan.reason.debt")).toEqual(["amount", "months", "rate"]);
+    expect(slots("m3.result.maxLoanNote")).toEqual(["emi", "loan", "months", "rate"]);
+    expect(getPath(dict, "plan.demoBanner")).not.toContain("?demo");
   });
 });
 

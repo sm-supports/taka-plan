@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { ChoiceButtons } from "@/components/ui/ChoiceButtons";
 import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
+import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { RateInput } from "./RateInput";
 
@@ -20,11 +21,12 @@ export interface LoanEditorProps {
 
 export function LoanEditor({ loan, index, onChange, onRemove }: LoanEditorProps) {
   const { t } = useT();
+  const { number } = useFormat();
   const id = `loan-${loan.id}`;
   return (
     <fieldset className="flex flex-col gap-4 rounded-card border border-line bg-surface p-4">
       <legend className="sr-only">
-        {t("m3.input.loans.title")} {index + 1}
+        {t("m3.input.loans.title")} {number(index + 1)}
       </legend>
       <ChoiceButtons<LoanType>
         label={t("m3.input.loans.type.label")}

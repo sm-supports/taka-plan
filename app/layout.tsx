@@ -15,12 +15,17 @@ export const viewport: Viewport = {
   themeColor: "#0b7f6d",
 };
 
+/** vinext sets __VINEXT_BUILD_ID on the server for production builds; BUILD_ID is an escape hatch for other hosts. */
+function buildId(): string {
+  return process.env.__VINEXT_BUILD_ID ?? process.env.BUILD_ID ?? "dev";
+}
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="bn">
       <body>
         {children}
-        <RegisterSW />
+        <RegisterSW buildId={buildId()} />
       </body>
     </html>
   );

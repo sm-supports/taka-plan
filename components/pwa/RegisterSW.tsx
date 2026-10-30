@@ -3,9 +3,20 @@
  * Registers /sw.js in production builds only (Vite inlines process.env.NODE_ENV, so the dev
  * build never touches the service worker) and shows a small "new version" toast when an updated
  * worker has installed behind a page that is already controlled. Sits outside [locale], so the
- * toast copy is bilingual and hardcoded.
+ * toast copy is bilingual and hardcoded. `buildId` (from the server layout) goes into the worker
+ * URL, so every deploy registers a new worker and `public/sw.js` names a new cache (P16).
  */
 import { useEffect, useState } from "react";
+
+export interface RegisterSWProps {
+  /** The deploy's build id; "dev" when unknown. */
+  buildId?: string;
+}
+
+export function serviceWorkerUrl(buildId: string | undefined): string {
+  const id = (buildId ?? "").trim() || "dev";
+  return `/sw.js?v=${encodeURIComponent(id)}`;
+}
 
 function watchInstall(worker: ServiceWorker, onInstalled: () => void): void {
   worker.addEventListener("statechange", () => {
@@ -13,7 +24,7 @@ function watchInstall(worker: ServiceWorker, onInstalled: () => void): void {
   });
 }
 
-export function RegisterSW() {
+export function RegisterSW({ buildId }: RegisterSWProps) {
   const [updateReady, setUpdateReady] = useState(false);
 
   useEffect(() => {
@@ -23,7 +34,7 @@ export function RegisterSW() {
     let disposed = false;
     const register = () => {
       navigator.serviceWorker
-        .register("/sw.js", { scope: "/" })
+        .register(serviceWorkerUrl(buildId), { scope: "/" })
         .then((registration) => {
           if (disposed) return;
           const markReady = () => setUpdateReady(true);
@@ -46,7 +57,7 @@ export function RegisterSW() {
       disposed = true;
       window.removeEventListener("load", register);
     };
-  }, []);
+  }, [buildId]);
 
   if (!updateReady) return null;
 

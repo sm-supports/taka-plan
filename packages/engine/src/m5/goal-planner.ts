@@ -92,6 +92,7 @@ function invalidGoalResult(g: Goal): GoalResult {
     nominal: 0,
     afterTax: 0,
     real: 0,
+    realVsCpi: 0,
     belowInflation: false,
     monthly: { low: 0, base: 0, high: 0 },
     months: 0,
@@ -155,7 +156,8 @@ export function computeGoal(goal: Goal, rates: RatesSnapshot, today: ISODate, ca
     unit: "rate",
   });
 
-  const monthlyRaw = sinkingFundMonthly(fv, base.afterTax, months);
+  // The sinking fund is sized from the unrounded future value; only the output is rounded.
+  const monthlyRaw = sinkingFundMonthly(fvRaw, base.afterTax, months);
   const monthlyBase = ex.step({
     id: "m5.monthly",
     inputs: { fv, monthlyRate: base.afterTax / 12, months },
@@ -163,11 +165,14 @@ export function computeGoal(goal: Goal, rates: RatesSnapshot, today: ISODate, ca
     rounded: roundMoney(monthlyRaw, "monthly"),
     unit: "bdt",
   });
-  const monthlyLow = roundMoney(sinkingFundMonthly(fv, low.afterTax, months), "monthly");
+  const monthlyLow = roundMoney(sinkingFundMonthly(fvRaw, low.afterTax, months), "monthly");
 
+  // Real return against the inflation this goal is priced with (education/health have their own rows);
+  // the CPI comparison is kept for display only.
+  const real = realReturn(base.afterTax, inflation);
+  ex.step({ id: "m5.real", inputs: { afterTax: base.afterTax, inflation }, raw: real, rounded: roundDecimals(real, 3), unit: "rate" });
   const cpi = ex.use("inflation_cpi");
-  const real = realReturn(base.afterTax, cpi);
-  ex.step({ id: "m5.real", inputs: { afterTax: base.afterTax, inflation: cpi }, raw: real, rounded: roundDecimals(real, 3), unit: "rate" });
+  const realVsCpi = realReturn(base.afterTax, cpi);
 
   const belowInflation = real < 0;
   let status: Status = "green";
@@ -190,6 +195,7 @@ export function computeGoal(goal: Goal, rates: RatesSnapshot, today: ISODate, ca
     nominal: base.nominal,
     afterTax: base.afterTax,
     real,
+    realVsCpi,
     belowInflation,
     // No equity in the MVP, so the "high" path equals the expected one.
     monthly: { low: monthlyLow, base: monthlyBase, high: monthlyBase },

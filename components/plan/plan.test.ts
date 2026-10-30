@@ -1,51 +1,44 @@
-import { PLAN_NEXT_KEYS, PLAN_REASON_KEYS, PLAN_STEP_IDS, roundMoney, type Bucket } from "@taka/engine";
+import { PLAN_NEXT_KEYS, PLAN_REASON_KEYS, PLAN_STEP_IDS, RATES_SEED, assertSnapshot, computePlan, roundMoney, type Bucket, type ExplainStep, type Plan } from "@taka/engine";
 import { describe, expect, it } from "vitest";
 import { en } from "@/lib/i18n/dictionaries/en";
 import { bn } from "@/lib/i18n/dictionaries/bn";
 import { getPath, translate } from "@/lib/i18n/translate";
 import { createFormatters } from "@/lib/i18n/useFormat";
 import { bucketExplanation, headlineExplanation } from "./explanationFor";
-import { SAMPLE_PLAN } from "./fixtures";
+import { DEMO_BUILD_MONTHS, DEMO_TODAY, samplePlan, samplePlanInput } from "./fixtures";
 import { bucketKey, bucketMatchesWhy, bucketReason, bucketTitle, formatReasonParams } from "./formatReason";
 import { calculatorPath, isTermKey, termForInstrument } from "./terms";
-
-// The engine's m5 helpers are stubs in this worktree; these are the contract formulas written out.
-const futureValue = (cost: number, inflation: number, years: number) => cost * (1 + inflation) ** years;
-const sinkingFundMonthly = (fv: number, annual: number, months: number) => {
-  const rm = annual / 12;
-  return (fv * rm) / ((1 + rm) ** months - 1);
-};
 
 const fEn = createFormatters("en");
 const fBn = createFormatters("bn");
 const tEn = (key: string, params?: Record<string, string | number>) => translate(en, key, params);
 const tBn = (key: string, params?: Record<string, string | number>) => translate(bn, key, params);
 
-describe("SAMPLE_PLAN fixture", () => {
-  it("sums its buckets to the monthly total, in priority order, with at most one red", () => {
+const SAMPLE_PLAN = samplePlan("en");
+const goalBuckets = (plan: Plan) => plan.buckets.filter((b) => b.id === "goal");
+
+describe("sample plan (engine over the firstJob profile)", () => {
+  it("is the engine's own output for the sample input, with the seed rates", () => {
+    const seed = assertSnapshot(RATES_SEED);
+    expect(SAMPLE_PLAN).toEqual(computePlan(samplePlanInput("en"), seed, DEMO_TODAY));
+    expect(SAMPLE_PLAN.budget.savingsAmount).toBe(roundMoney(45000 * 0.2, "monthly"));
+    expect(SAMPLE_PLAN.emergency.monthlySaving).toBe(roundMoney(SAMPLE_PLAN.emergency.gap / DEMO_BUILD_MONTHS, "monthly"));
+  });
+
+  it("sums its buckets to the monthly total, in priority order, with at most one visible red", () => {
     const total = SAMPLE_PLAN.buckets.reduce((s, b) => s + b.amount, 0);
     expect(total).toBe(SAMPLE_PLAN.monthlyTotal);
-    expect(SAMPLE_PLAN.buckets.map((b) => b.priority)).toEqual([1, 2, 3]);
+    expect(SAMPLE_PLAN.monthlyTotal).toBe(SAMPLE_PLAN.budget.savingsAmount);
+    expect(SAMPLE_PLAN.buckets.map((b) => b.priority)).toEqual(SAMPLE_PLAN.buckets.map((_, i) => i + 1));
     const visibleReds = SAMPLE_PLAN.buckets.filter((b) => b.status === "red" && !b.demotedFromRed);
     expect(visibleReds).toHaveLength(1);
     expect(visibleReds[0]!.id).toBe("emergency");
-    expect(SAMPLE_PLAN.buckets.some((b) => b.demotedFromRed)).toBe(true);
+    expect(goalBuckets(SAMPLE_PLAN)).toHaveLength(2);
   });
 
-  it("matches the engine formulas for the numbers it hard-codes", () => {
-    const { emergency, budget } = SAMPLE_PLAN;
-    expect(budget.savingsAmount).toBe(roundMoney(45000 * 0.2, "monthly"));
-    expect(emergency.target).toBe(28000 * 8);
-    expect(emergency.monthlySaving).toBe(roundMoney((28000 * 8 - 20000) / 36, "monthly"));
-    // Plan split: emergency = min(B, max(m1.monthly, 60% of B)); the rest to goals ∝ monthly.base.
-    const emergencyShare = Math.min(budget.savingsAmount, Math.max(emergency.monthlySaving, 0.6 * budget.savingsAmount));
-    expect(SAMPLE_PLAN.buckets[0]!.amount).toBe(emergencyShare);
-    const bike = SAMPLE_PLAN.goals!.goals[0]!;
-    expect(bike.futureValue).toBe(roundMoney(futureValue(250000, 0.08, 2), "lump"));
-    expect(bike.monthly.base).toBe(roundMoney(sinkingFundMonthly(futureValue(250000, 0.08, 2), 0.081, 24), "monthly"));
-    const wedding = SAMPLE_PLAN.goals!.goals[1]!;
-    expect(wedding.monthly.base).toBe(roundMoney(sinkingFundMonthly(futureValue(600000, 0.08, 4), 0.1183 * 0.9, 48), "monthly"));
-    expect(SAMPLE_PLAN.summary.goalsShortfall).toBe(bike.monthly.base + wedding.monthly.base - (budget.savingsAmount - emergencyShare));
+  it("names its goals in the locale", () => {
+    expect(goalBuckets(SAMPLE_PLAN).map((b) => b.reasonParams.name)).toEqual(["Motorbike", "Wedding"]);
+    expect(goalBuckets(samplePlan("bn")).map((b) => b.reasonParams.name)).toEqual(["মোটরবাইক", "বিয়ে"]);
   });
 
   it("only uses dictionary keys that exist in both languages", () => {
@@ -73,11 +66,24 @@ describe("SAMPLE_PLAN fixture", () => {
 });
 
 describe("bucket reasons", () => {
-  const [emergency, bike, wedding] = SAMPLE_PLAN.buckets as [Bucket, Bucket, Bucket];
+  const emergency: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.emergency", reasonParams: { amount: 5700, covered: 0.7, months: 8, instrument: "fdr_3m" } };
+  const bike: Pick<Bucket, "id" | "refId" | "reasonKey" | "reasonParams"> = {
+    id: "goal",
+    refId: "g-bike",
+    reasonKey: "plan.reason.goal",
+    reasonParams: { name: "Motorbike", amount: 1500, need: 11200, instrument: "dps", fv: 291500, years: 2 },
+  };
+  const wedding: Pick<Bucket, "id" | "refId" | "reasonKey" | "reasonParams"> = {
+    id: "goal",
+    refId: "g-wedding",
+    reasonKey: "plan.reason.goal",
+    reasonParams: { name: "বিয়ে", amount: 1800, need: 13700, instrument: "sanchayapatra_5y", fv: 816500, years: 4 },
+  };
 
-  it("formats emergency params as taka / plain numbers", () => {
-    expect(formatReasonParams(emergency, fEn, tEn)).toEqual({ amount: "৳5,700", covered: "0.7", months: "8" });
-    expect(bucketReason(emergency, fEn, tEn)).toBe("Emergency fund — ৳5,700/month into a 3-month FDR ladder — you have 0.7 of 8 months covered");
+  it("formats emergency params as taka / plain numbers and translates the instrument (P2: same name as the Where line)", () => {
+    expect(formatReasonParams(emergency, fEn, tEn)).toEqual({ amount: "৳5,700", covered: "0.7", months: "8", instrument: "3-month FDR" });
+    expect(bucketReason(emergency, fEn, tEn)).toBe("Emergency fund — ৳5,700/month into 3-month FDR — you have 0.7 of 8 months covered");
+    expect(bucketReason({ ...emergency, reasonParams: { ...emergency.reasonParams, instrument: "savings_account" } }, fBn, tBn)).toContain("সেভিংস অ্যাকাউন্ট-এ মাসে ৳৫,৭০০");
   });
 
   it("translates the goal instrument and adds the years unit", () => {
@@ -88,26 +94,31 @@ describe("bucket reasons", () => {
     expect(bnReason).not.toMatch(/[0-9]/);
   });
 
-  it("formats debt reasons with a percent rate and a months duration", () => {
-    const debt: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.debt", reasonParams: { rate: 0.25, amount: 5000, months: 12 } };
-    expect(bucketReason(debt, fEn, tEn)).toBe("High-interest debt at 25.0% — ৳5,000/month on top of your EMI — cleared in about 12 months");
+  it("formats debt reasons with a percent rate, a months duration and a plain count", () => {
+    const debt: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.debt", reasonParams: { rate: 0.25, amount: 5000, months: 14, count: 2 } };
+    expect(formatReasonParams(debt, fEn, tEn).count).toBe("2");
+    expect(bucketReason(debt, fEn, tEn)).toBe("High-interest debt at 25.0% — ৳5,000/month on top of your EMI — cleared in about 14 months at this pace");
   });
 
   it("titles goal buckets by goal name and the rest by bucket", () => {
-    expect(bucketTitle(emergency, tEn)).toBe("Emergency fund");
-    expect(bucketTitle(bike, tEn)).toBe("Goal: Motorbike");
-    expect(bucketTitle(bike, tBn)).toBe("লক্ষ্য: Motorbike");
+    const [first, second] = goalBuckets(SAMPLE_PLAN) as [Bucket, Bucket];
+    expect(bucketTitle(SAMPLE_PLAN.buckets[0]!, tEn)).toBe("Emergency fund");
+    expect(bucketTitle(first, tEn)).toBe("Goal: Motorbike");
+    expect(bucketTitle(second, tEn)).toBe("Goal: Wedding");
+    expect(bucketTitle(goalBuckets(samplePlan("bn"))[0]!, tBn)).toBe("লক্ষ্য: মোটরবাইক");
   });
 
   it("keys buckets for ?why= and matches by key, refId or unique id", () => {
-    expect(bucketKey(emergency)).toBe("emergency");
-    expect(bucketKey(bike)).toBe("goal:g-bike");
-    expect(bucketMatchesWhy(emergency, "emergency")).toBe(true);
-    expect(bucketMatchesWhy(bike, "goal:g-bike")).toBe(true);
-    expect(bucketMatchesWhy(bike, "g-bike")).toBe(true);
-    expect(bucketMatchesWhy(bike, "goal")).toBe(false);
-    expect(bucketMatchesWhy(wedding, "g-bike")).toBe(false);
-    expect(bucketMatchesWhy(emergency, null)).toBe(false);
+    const emergencyBucket = SAMPLE_PLAN.buckets[0]!;
+    const [first, second] = goalBuckets(SAMPLE_PLAN) as [Bucket, Bucket];
+    expect(bucketKey(emergencyBucket)).toBe("emergency");
+    expect(bucketKey(first)).toBe("goal:g-bike");
+    expect(bucketMatchesWhy(emergencyBucket, "emergency")).toBe(true);
+    expect(bucketMatchesWhy(first, "goal:g-bike")).toBe(true);
+    expect(bucketMatchesWhy(first, "g-bike")).toBe(true);
+    expect(bucketMatchesWhy(first, "goal")).toBe(false);
+    expect(bucketMatchesWhy(second, "g-bike")).toBe(false);
+    expect(bucketMatchesWhy(emergencyBucket, null)).toBe(false);
   });
 });
 
@@ -120,14 +131,38 @@ describe("explanations per figure", () => {
   });
 
   it("emergency bucket = m1 steps + plan.emergencyShare; goal bucket = that goal's m5 steps + plan.goalsShare", () => {
-    const [emergency, bike, wedding] = SAMPLE_PLAN.buckets as [Bucket, Bucket, Bucket];
+    const emergency = SAMPLE_PLAN.buckets[0]!;
+    const [bike, wedding] = goalBuckets(SAMPLE_PLAN) as [Bucket, Bucket];
     const e = bucketExplanation(SAMPLE_PLAN, emergency);
     expect(e.steps.map((s) => s.id)).toEqual([...SAMPLE_PLAN.emergency.explain.steps.map((s) => s.id), "plan.emergencyShare"]);
     expect(e.assumptions.some((a) => a.key === "plan_emergency_min_share")).toBe(true);
     const g = bucketExplanation(SAMPLE_PLAN, bike);
     expect(g.steps.filter((s) => s.id.startsWith("m5.")).length).toBe(4);
-    expect(g.notes).toContain("m5.note.belowInflation");
-    expect(bucketExplanation(SAMPLE_PLAN, wedding).notes).toEqual([]);
+    expect(g.steps.map((s) => s.id)).toContain("plan.goalsShare");
+    expect(g.notes).toEqual(SAMPLE_PLAN.goals!.goals[0]!.explain.notes);
+    expect(bucketExplanation(SAMPLE_PLAN, wedding).notes).toEqual(SAMPLE_PLAN.goals!.goals[1]!.explain.notes);
+  });
+
+  it("a goal bucket's drawer includes only the plan.goalAllocation step whose goalId is its refId (P7)", () => {
+    const [bike, wedding] = goalBuckets(SAMPLE_PLAN) as [Bucket, Bucket];
+    // The engine's own steps first.
+    const own = bucketExplanation(SAMPLE_PLAN, bike).steps.filter((s) => s.id === "plan.goalAllocation");
+    expect(own.map((s) => s.inputs.goalId)).toEqual([bike.refId]);
+    expect(own[0]!.rounded).toBe(bike.amount);
+    const alloc = (goalId: string, rounded: number): ExplainStep => ({ id: "plan.goalAllocation", inputs: { goalId, need: 11200, goalsNeed: 24900, remaining: 3300 }, raw: rounded, rounded, unit: "bdt" });
+    const withAllocation: Plan = {
+      ...SAMPLE_PLAN,
+      explain: { ...SAMPLE_PLAN.explain, steps: [...SAMPLE_PLAN.explain.steps.filter((s) => s.id !== "plan.goalAllocation"), alloc(bike.refId!, 1500), alloc(wedding.refId!, 1800)] },
+    };
+    const bikeSteps = bucketExplanation(withAllocation, bike).steps.filter((s) => s.id === "plan.goalAllocation");
+    expect(bikeSteps).toHaveLength(1);
+    expect(bikeSteps[0]!.inputs.goalId).toBe(bike.refId);
+    expect(bikeSteps[0]!.rounded).toBe(1500);
+    const weddingSteps = bucketExplanation(withAllocation, wedding).steps.filter((s) => s.id === "plan.goalAllocation");
+    expect(weddingSteps).toHaveLength(1);
+    expect(weddingSteps[0]!.rounded).toBe(1800);
+    // Non-goal buckets never pick up an allocation step.
+    expect(bucketExplanation(withAllocation, withAllocation.buckets[0]!).steps.some((s) => s.id === "plan.goalAllocation")).toBe(false);
   });
 });
 

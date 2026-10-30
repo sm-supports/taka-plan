@@ -1,9 +1,9 @@
 /**
  * Plan screen. `reason.*` and `next.*` cover PLAN_REASON_KEYS / PLAN_NEXT_KEYS.
  * Reason params (all pre-formatted strings):
- *   emergency:     {amount} {covered} {months}
+ *   emergency:     {amount} {covered} {months} {instrument}
  *   emergencyFull: {months}
- *   debt:          {rate} {amount} {months}
+ *   debt:          {rate} {amount} {months} (+ count)
  *   goal:          {name} {amount} {instrument} {fv} {years}
  *   addGoal:       —
  *   insurance:     {amount}
@@ -14,7 +14,7 @@ export const plan = {
   subhead: "Split across your buckets in priority order. Tap a card to adjust it; the plan updates live.",
   emptyGoals: "No goals yet. Add one — retirement counts — and the plan will make room for it.",
   builtOn: "Built on rates v{version}",
-  demoBanner: "Sample plan built from demo numbers, not yours. Remove ?demo=1 from the address to see your own.",
+  demoBanner: "Sample plan built from demo numbers, not yours. Open the plan without the demo switch to see your own.",
 
   why: {
     headline: "Why save {amount} a month?",
@@ -54,9 +54,9 @@ export const plan = {
   },
 
   reason: {
-    emergency: "Emergency fund — {amount}/month into a 3-month FDR ladder — you have {covered} of {months} months covered",
+    emergency: "Emergency fund — {amount}/month into {instrument} — you have {covered} of {months} months covered",
     emergencyFull: "Emergency fund — full at {months} months of essentials — keep it topped up after any use",
-    debt: "High-interest debt at {rate} — {amount}/month on top of your EMI — cleared in about {months}",
+    debt: "High-interest debt at {rate} — {amount}/month on top of your EMI — cleared in about {months} at this pace",
     goal: "{name} — {amount}/month into {instrument} — you will need {fv} in {years}",
     addGoal: "Add a goal — every plan needs at least one, and retirement counts",
     insurance: "Insurance — {amount}/month set aside for term life and health cover",
@@ -71,5 +71,6 @@ export const plan = {
     tbond: "Ask your bank to register you for treasury auctions and bid for a 5- or 10-year bond; you can also buy an already-issued bond through a BO account.",
     fdr: "Visit any scheduled bank with your NID and TIN; ask for a 1-year FDR and keep the receipt somewhere safe.",
     addGoal: "Tap “Add a goal”, give it a name, its cost in today's taka and how many years away it is.",
+    keepFull: "Your fund is full: leave it where it is. After any withdrawal, put the same amount back before any other saving, so it is whole again.",
   },
 } as const;

@@ -140,8 +140,8 @@ export const admin = {
       future: "Future",
     },
     instrumentExtra: {
-      loan_prepayment: "Loan prepayment",
-      term_insurance: "Term insurance",
+      loan_prepayment: "Extra loan payment",
+      term_insurance: "Term life insurance",
     },
   },
 

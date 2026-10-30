@@ -4,7 +4,7 @@ import { en } from "@/lib/i18n/dictionaries/en";
 import { bn } from "@/lib/i18n/dictionaries/bn";
 import { translate } from "@/lib/i18n/translate";
 import { createFormatters } from "@/lib/i18n/useFormat";
-import { assumptionLabel, formatAssumptionValue, formatByUnit, formatInput, formatStepParams, isExternalUrl } from "./formatInputs";
+import { assumptionLabel, formatAssumptionValue, formatByUnit, formatInput, formatStepParams, isExternalUrl, isHiddenInput } from "./formatInputs";
 
 const fEn = createFormatters("en");
 const fBn = createFormatters("bn");
@@ -17,6 +17,7 @@ describe("formatInput naming convention", () => {
     expect(formatInput("inflation", 0.08, fEn, tEn)).toBe("8.0%");
     expect(formatInput("tax", 0.1, fEn, tEn)).toBe("10.0%");
     expect(formatInput("minShare", 0.6, fEn, tEn)).toBe("60.0%");
+    expect(formatInput("maxShare", 0.8, fBn, tBn)).toBe("৮০.০%");
     expect(formatInput("nominal", 0.1183, fEn, tEn)).toBe("11.8%");
     expect(formatInput("afterTax", 0.081, fEn, tEn)).toBe("8.1%");
   });
@@ -34,6 +35,15 @@ describe("formatInput naming convention", () => {
   it("taka for everything else, with Bangla digits in bn", () => {
     expect(formatInput("essentials", 28000, fEn, tEn)).toBe("৳28,000");
     expect(formatInput("target", 224000, fBn, tBn)).toBe("৳২,২৪,০০০");
+    // plan.emergencyShare / plan.goalAllocation inputs are all amounts.
+    for (const name of ["m1Monthly", "need", "goalsNeed", "remaining", "gap", "total"]) {
+      expect(formatInput(name, 5700, fEn, tEn), name).toBe("৳5,700");
+    }
+  });
+
+  it("hides reference ids such as goalId instead of formatting them", () => {
+    expect(isHiddenInput("goalId")).toBe(true);
+    expect(isHiddenInput("goalsNeed")).toBe(false);
   });
 
   it("translates instrument ids and passes other strings through", () => {
@@ -66,6 +76,22 @@ describe("formatStepParams", () => {
     const body = tEn("explain.m1.banks.body", formatStepParams(banks, fEn, tEn));
     expect(body).toContain("৳2,50,000 ÷ ৳2,00,000");
     expect(body).not.toMatch(/\{\w+\}/);
+  });
+
+  it("fills plan.emergencyShare and plan.goalAllocation templates, leaving goalId out", () => {
+    const share: ExplainStep = { id: "plan.emergencyShare", inputs: { total: 9000, minShare: 0.6, maxShare: 0.8, m1Monthly: 5700, gap: 204000 }, raw: 5700, rounded: 5700, unit: "bdt" };
+    const shareBody = tEn("explain.plan.emergencyShare.body", formatStepParams(share, fEn, tEn));
+    expect(shareBody).toContain("60.0% and 80.0%");
+    expect(shareBody).toContain("৳5,700 a month");
+    expect(shareBody).not.toMatch(/\{\w+\}/);
+
+    const alloc: ExplainStep = { id: "plan.goalAllocation", inputs: { goalId: "g-bike", need: 11200, goalsNeed: 24900, remaining: 3300 }, raw: 1484.3, rounded: 1500, unit: "bdt" };
+    const params = formatStepParams(alloc, fBn, tBn);
+    expect(params).not.toHaveProperty("goalId");
+    const allocBody = tBn("explain.plan.goalAllocation.body", params);
+    expect(allocBody).toContain("৳৩,৩০০ × ৳১১,২০০ ÷ ৳২৪,৯০০ = ৳১,৫০০");
+    expect(allocBody).not.toMatch(/[0-9]/);
+    expect(allocBody).not.toContain("g-bike");
   });
 
   it("formats results by unit", () => {

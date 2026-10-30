@@ -25,6 +25,46 @@ describe("seed snapshot", () => {
     const { inflation_cpi: _drop, ...rest } = snapshot.rows;
     expect(() => assertSnapshot({ ...snapshot, rows: rest })).toThrow(/missing/);
   });
+
+  describe("value bounds by unit", () => {
+    const withRow = (key: keyof typeof snapshot.rows, patch: Record<string, unknown>) => ({
+      ...snapshot,
+      rows: { ...snapshot.rows, [key]: { ...snapshot.rows[key], ...patch } },
+    });
+    const bad = (key: keyof typeof snapshot.rows, patch: Record<string, unknown>, field = "value") =>
+      expect(() => assertSnapshot(withRow(key, patch))).toThrow(new RegExp(`row "${key}": bad ${field}`));
+
+    it("rejects a 5.0 FDR rate (rates and ratios must be 0..1)", () => {
+      bad("fdr_1y_rate", { value: 5 });
+      bad("fdr_1y_rate", { value: -0.01 });
+      bad("fdr_1y_rate", { value: Number.NaN });
+      bad("fdr_1y_rate", { value: null });
+      bad("fdr_1y_rate", { value: "0.075" });
+      bad("plan_emergency_min_share", { value: 1.5 });
+      expect(() => assertSnapshot(withRow("fdr_1y_rate", { value: 1 }))).not.toThrow();
+      expect(() => assertSnapshot(withRow("fdr_1y_rate", { value: 0 }))).not.toThrow();
+    });
+
+    it("rejects a string tax_slabs and malformed slabs (json rows need an object or array)", () => {
+      bad("tax_slabs", { valueJson: "[]" }, "valueJson");
+      bad("tax_slabs", { valueJson: null }, "valueJson");
+      bad("tax_slabs", { valueJson: undefined }, "valueJson");
+      bad("tax_slabs", { valueJson: [] }, "valueJson");
+      bad("tax_slabs", { valueJson: [{ width: 300000, rate: 1.5 }] }, "valueJson");
+      bad("tax_slabs", { valueJson: [{ width: "300000", rate: 0.1 }] }, "valueJson");
+      bad("tax_slabs", { valueJson: { width: null, rate: 0.1 } }, "valueJson");
+      expect(() => assertSnapshot(withRow("tax_slabs", { valueJson: [{ width: null, rate: 0.3 }] }))).not.toThrow();
+    });
+
+    it("rejects negative taka amounts and out-of-range periods", () => {
+      bad("deposit_insurance_limit", { value: -1 });
+      bad("emergency_build_months_default", { value: 0 });
+      bad("emergency_build_months_default", { value: 1201 });
+      bad("life_expectancy", { value: -5 });
+      expect(() => assertSnapshot(withRow("deposit_insurance_limit", { value: 0 }))).not.toThrow();
+      expect(() => assertSnapshot(withRow("emergency_build_months_default", { value: 1200 }))).not.toThrow();
+    });
+  });
 });
 
 describe("real returns (PRD vectors)", () => {

@@ -1,5 +1,5 @@
 "use client";
-/** Bottom drawer dialog: backdrop, Escape to close, focus kept inside, body scroll locked while open. */
+/** Bottom drawer dialog: backdrop, Escape to close, focus kept inside, body scroll locked while open. Text is always left-aligned, whatever the trigger's alignment. */
 import { useEffect, useId, useRef, type ReactNode } from "react";
 import { useT } from "@/lib/i18n/useT";
 
@@ -69,10 +69,10 @@ export function Sheet({ open, onClose, title, children }: SheetProps) {
         aria-modal="true"
         aria-labelledby={titleId}
         tabIndex={-1}
-        className="relative flex max-h-[85dvh] w-full max-w-md flex-col rounded-t-2xl bg-surface shadow-xl sm:rounded-2xl"
+        className="relative flex max-h-[85dvh] w-full max-w-md flex-col rounded-t-2xl bg-surface text-left shadow-xl sm:rounded-2xl"
       >
         <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3">
-          <h2 id={titleId} className="text-lg font-bold text-text">
+          <h2 id={titleId} className="text-left text-lg font-bold text-text">
             {title}
           </h2>
           <button type="button" onClick={onClose} aria-label={t("common.button.close")} className="tap -mr-2 inline-flex items-center justify-center rounded-xl text-text-muted hover:bg-surface-muted">
@@ -81,7 +81,7 @@ export function Sheet({ open, onClose, title, children }: SheetProps) {
             </svg>
           </button>
         </div>
-        <div className="overflow-y-auto px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] text-base text-text">{children}</div>
+        <div className="overflow-y-auto px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] text-left text-base text-text">{children}</div>
       </div>
     </div>
   );

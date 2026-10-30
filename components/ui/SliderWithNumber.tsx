@@ -1,5 +1,5 @@
 "use client";
-/** Range slider paired with a typed-number box (typed value wins); shows the formatted value. */
+/** Range slider paired with a typed-number box (typed value wins, Bangla or Latin digits); shows the formatted value. */
 import { useEffect, useId, useState } from "react";
 import { fromBanglaDigits } from "@taka/engine";
 import { useFormat } from "@/lib/i18n/useFormat";
@@ -28,17 +28,18 @@ export function SliderWithNumber({ id, value, onChange, min, max, step, label, h
   const sliderId = id ?? `${uid}-slider`;
   const boxId = `${sliderId}-box`;
   const hintId = `${sliderId}-hint`;
-  const { number } = useFormat();
+  const { number, inputDigits } = useFormat();
   const fmt = format ?? ((n: number) => number(n, Number.isInteger(step) ? 0 : 1));
-  const [text, setText] = useState(String(value));
+  const [text, setText] = useState(() => inputDigits(String(value)));
 
   useEffect(() => {
     const parsed = Number(fromBanglaDigits(text));
-    if (!Number.isFinite(parsed) || parsed !== value) setText(String(value));
+    if (!Number.isFinite(parsed) || parsed !== value) setText(inputDigits(String(value)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value]);
+  }, [value, inputDigits]);
 
-  const commitText = (raw: string) => {
+  const commitText = (typed: string) => {
+    const raw = inputDigits(typed);
     setText(raw);
     const n = Number(fromBanglaDigits(raw).replace(/[,\s]/g, ""));
     if (raw.trim() !== "" && Number.isFinite(n)) onChange(clamp(n, min, max));
@@ -72,7 +73,7 @@ export function SliderWithNumber({ id, value, onChange, min, max, step, label, h
           aria-valuetext={`${fmt(value)}${unitLabel ? ` ${unitLabel}` : ""}`}
           onChange={(e) => {
             const n = Number(e.target.value);
-            setText(String(n));
+            setText(inputDigits(String(n)));
             onChange(n);
           }}
           className="min-w-0 flex-1"
@@ -84,7 +85,7 @@ export function SliderWithNumber({ id, value, onChange, min, max, step, label, h
           aria-label={label}
           value={text}
           onChange={(e) => commitText(e.target.value)}
-          onBlur={() => setText(String(value))}
+          onBlur={() => setText(inputDigits(String(value)))}
           className="tap w-24 rounded-xl border border-line bg-surface px-3 py-2 text-center text-lg font-semibold tabular-nums focus:border-brand-500"
         />
       </div>

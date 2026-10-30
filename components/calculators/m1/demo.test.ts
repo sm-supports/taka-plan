@@ -1,12 +1,12 @@
-/** The M1 demo fixture must look exactly like what the engine returns. */
+/** The M1 demo fixture is the engine run over the contract vector. */
 import { describe, expect, it } from "vitest";
-import { M1_NEXT_KEYS, M1_RULE_KEYS, M1_STEP_IDS, RATES_SEED, assertSnapshot } from "@taka/engine";
+import { M1_NEXT_KEYS, M1_RULE_KEYS, M1_STEP_IDS, RATES_SEED, assertSnapshot, computeEmergencyFund } from "@taka/engine";
 import { bn } from "@/lib/i18n/dictionaries/bn";
 import { en } from "@/lib/i18n/dictionaries/en";
 import { getPath, translate } from "@/lib/i18n/translate";
 import { createFormatters } from "@/lib/i18n/useFormat";
 import { formatStepParams } from "@/components/explain/formatInputs";
-import { m1DemoResult } from "./demo";
+import { M1_DEMO_INPUT, m1DemoResult } from "./demo";
 
 const snapshot = assertSnapshot(RATES_SEED);
 const today = "2026-10-30";
@@ -14,6 +14,10 @@ const slots = (s: string) => [...s.matchAll(/\{(\w+)\}/g)].map((m) => m[1]!);
 
 describe("m1 demo fixture", () => {
   const r = m1DemoResult(snapshot, today);
+
+  it("is the engine's own result for the demo input", () => {
+    expect(r).toEqual(computeEmergencyFund(M1_DEMO_INPUT, snapshot, today));
+  });
 
   it("matches the contract vector", () => {
     expect(r.months).toBe(10);

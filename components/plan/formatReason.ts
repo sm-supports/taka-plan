@@ -13,10 +13,10 @@ import type { TranslateParams } from "@/lib/i18n/types";
 type Kind = "taka" | "percent" | "number" | "months" | "years" | "instrument" | "text";
 
 const BY_REASON: Record<string, Record<string, Kind>> = {
-  "plan.reason.emergency": { amount: "taka", covered: "number", months: "number" },
+  "plan.reason.emergency": { amount: "taka", covered: "number", months: "number", instrument: "instrument" },
   "plan.reason.emergencyFull": { months: "number" },
-  "plan.reason.debt": { rate: "percent", amount: "taka", months: "months" },
-  "plan.reason.goal": { name: "text", amount: "taka", instrument: "instrument", fv: "taka", years: "years" },
+  "plan.reason.debt": { rate: "percent", amount: "taka", months: "months", count: "number" },
+  "plan.reason.goal": { name: "text", amount: "taka", need: "taka", instrument: "instrument", fv: "taka", years: "years" },
   "plan.reason.addGoal": {},
   "plan.reason.insurance": { amount: "taka" },
 };

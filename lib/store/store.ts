@@ -45,10 +45,11 @@ export const useTakaStore = create<TakaState>()(
       completeOnboarding: () => set((s) => ({ onboarding: { ...s.onboarding, completed: true } })),
       markDisclaimerSeen: () => set((s) => ({ onboarding: { ...s.onboarding, disclaimerSeen: true } })),
       setM1: (patch) => set((s) => ({ m1: { ...s.m1, ...patch } })),
-      addLoan: (l) => set((s) => ({ m3: { ...s.m3, loans: [...s.m3.loans, l] } })),
+      // Adding a loan or card means the user has debt, whatever onboarding said: the plan must include M3.
+      addLoan: (l) => set((s) => ({ m3: { ...s.m3, loans: [...s.m3.loans, l] }, profile: { ...s.profile, hasDebt: true } })),
       updateLoan: (id, patch) => set((s) => ({ m3: { ...s.m3, loans: patchById(s.m3.loans, id, patch) } })),
       removeLoan: (id) => set((s) => ({ m3: { ...s.m3, loans: s.m3.loans.filter((l) => l.id !== id) } })),
-      addCard: (c) => set((s) => ({ m3: { ...s.m3, cards: [...s.m3.cards, c] } })),
+      addCard: (c) => set((s) => ({ m3: { ...s.m3, cards: [...s.m3.cards, c] }, profile: { ...s.profile, hasDebt: true } })),
       updateCard: (id, patch) => set((s) => ({ m3: { ...s.m3, cards: patchById(s.m3.cards, id, patch) } })),
       removeCard: (id) => set((s) => ({ m3: { ...s.m3, cards: s.m3.cards.filter((c) => c.id !== id) } })),
       setM3: (patch) => set((s) => ({ m3: { ...s.m3, ...patch } })),

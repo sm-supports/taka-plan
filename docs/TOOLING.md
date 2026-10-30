@@ -16,7 +16,7 @@ nvm install 24 && nvm use
 
 | Task | Command | Verified |
 | --- | --- | --- |
-| Dev server (port 3001) | `npm run dev` | boots in ~5 s; `/api/hello`, `/api/health` answer |
+| Dev server (port 3001) | `npm run dev` | boots in ~5 s; `/api/health` and `/api/rates` answer |
 | Worker binding types | `npx cf workers types` → `.cloudflare/types/index.d.ts` | `Env` is inferred from `cloudflare.config.ts` |
 | Local D1 migrations | `npm run db:migrate:local` | applies `migrations/*.sql` into `.cloudflare/state/v3/d1`, which is the same store the dev server reads (health route shows `publishedVersion: 1`) |
 | Query local D1 | `npx cf d1 raw 00000000-0000-4000-8000-000000000001 --sql "SELECT 1" --local --persist-to .cloudflare/state` | works without login |
@@ -55,14 +55,15 @@ Owned by the pwa-ci slice. Verified against `npm run build && npx vite preview` 
 | `app/manifest.ts` | `MetadataRoute.Manifest` served by vinext at **`/manifest.webmanifest`** (`application/manifest+json`); vinext injects `<link rel="manifest">` into every page. Colours come from `app/globals.css` tokens (`--color-page` background, `--color-brand-600` theme). |
 | `public/icons/` | `icon-192.png`, `icon-512.png`, `maskable-512.png` (generated once from `icon.svg`, committed) and `icon.svg` (hand-written). The favicon (`app/icon.png`, a vinext metadata route) belongs to the app-shell slice, not here. The PNGs were rendered by a dependency-free generator kept out of the repo; recover it with `git show 6a16a89:scripts/gen-icons.mjs` if the colours change. |
 | `public/sw.js` | Hand-written service worker, no workbox. Served from the assets binding at `/sw.js` (`text/javascript`). |
-| `components/pwa/RegisterSW.tsx` | Registers `/sw.js` only in production bundles (`process.env.NODE_ENV` is inlined by Vite, so the dev server never registers anything) and shows a bilingual "new version — tap to reload" toast when a newer worker has installed behind a controlled page. Mounted once in `app/layout.tsx`. |
+| `components/pwa/RegisterSW.tsx` | Registers `/sw.js?v=<build id>` only in production bundles (`process.env.NODE_ENV` is inlined by Vite, so the dev server never registers anything) and shows a bilingual "new version — tap to reload" toast when a newer worker has installed behind a controlled page. Mounted once in `app/layout.tsx`, which reads the build id on the server (`process.env.__VINEXT_BUILD_ID`, else `BUILD_ID`, else `"dev"`). |
+| `proxy.ts` | vinext middleware (Next 16 `proxy` convention): sets `X-Content-Type-Options`, `Referrer-Policy` and `Permissions-Policy` on every routed response and `Content-Security-Policy: frame-ancestors 'none'` under `/admin` (logic in `lib/server/security-headers.ts`, which `lib/server/http.ts#json` also applies to API responses). Static files (`/_next/static`, icons, `sw.js`, manifest) are excluded by the matcher. vinext discovers the file when the dev server starts (`findMiddlewareFile` runs in Vite's `config` hook), so **restart `npm run dev` after adding or renaming it**; then verify with `curl -I http://localhost:3001/bn/plan` and `curl -I http://localhost:3001/admin`. Gap: until a restart, a dev server that was already running serves pages without these headers; `test/security-headers.test.ts` covers the logic. |
 | `scripts/check-bundle.mjs` | First-paint JavaScript budget (`npm run check:bundle`). |
 | `e2e/onboarding.spec.ts`, `e2e/offline.spec.ts` | Playwright smoke tests (see below). |
 | `.github/workflows/ci.yml` | GitHub Actions: `check`, `e2e`, `deploy`. |
 
 ### Service worker strategy (`public/sw.js`)
 
-- `CACHE_VERSION` names the cache (`taka-v1`). Bump it whenever the precache list or a strategy changes; `activate` deletes every other `taka-*` cache and calls `clients.claim()`.
+- `CACHE_VERSION` names the cache: `taka-<build id>-<SW_REVISION>`, where the build id comes from the worker's own URL (`/sw.js?v=…`, registered by `RegisterSW`) and `SW_REVISION` is a constant in `sw.js`. A new deploy therefore registers a new worker URL and gets a fresh cache automatically; `activate` deletes every other `taka-*` cache and calls `clients.claim()`. Bump `SW_REVISION` by hand whenever the precache list or a strategy changes (the only manual step left). If a host ever serves the app without a build id, the cache is `taka-dev-<revision>` and only the revision bump invalidates it.
 - **install**: precaches `/`, `/bn/plan`, `/en/plan`, `/manifest.webmanifest`, `/api/rates`. Each URL is fetched independently; a failure (offline, route not deployed yet) skips that URL instead of failing the install. Redirected responses are re-wrapped so the Cache API can answer a navigation with them.
 - **navigations**: network-first with a 3 s timeout, then the cached page itself, then the cached same-locale `/plan` shell (locale from the first path segment, default `bn`). Successful query-free loads of a precached URL or `/{locale}/plan` refresh the cache; a load with a search string (`/bn/plan?demo=1`) is served but never stored, so the shell entry (keyed by pathname) stays the plain page.
 - `/_next/static/*`: cache-first (content-hashed, immutable).

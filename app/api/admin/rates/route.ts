@@ -27,6 +27,13 @@ type PatchField = (typeof PATCH_FIELDS)[number];
 const STRING_FIELDS: ReadonlySet<PatchField> = new Set<PatchField>(["labelEn", "labelBn", "sourceName", "sourceUrl", "asOf", "reviewedBy", "nextReview", "note"]);
 const NUMBER_FIELDS: ReadonlySet<PatchField> = new Set<PatchField>(["value", "rangeLow", "rangeHigh"]);
 const REQUIRED_FIELDS: ReadonlySet<PatchField> = new Set<PatchField>(["labelEn", "sourceName", "sourceUrl", "asOf", "reviewedBy", "nextReview"]);
+/** A source is a web link or a path into this repo's docs; anything else (javascript:, data:, …) is refused. */
+const SOURCE_URL_PREFIX = /^(https?:\/\/|docs\/)/i;
+
+/** JSON rows hold an object or an array; a scalar or null would break getTaxSlabs-style readers. */
+export function isJsonValue(v: unknown): v is Record<string, unknown> | unknown[] {
+  return typeof v === "object" && v !== null;
+}
 
 /** Keeps only known fields with plausible types; assertSnapshot does the semantic checks. */
 function sanitisePatch(raw: unknown): RatePatch {
@@ -43,6 +50,8 @@ function sanitisePatch(raw: unknown): RatePatch {
     }
     if (STRING_FIELDS.has(f) && typeof v !== "string") throw new HttpError(400, "BAD_PATCH", `${f} must be a string`);
     if (NUMBER_FIELDS.has(f) && (typeof v !== "number" || !Number.isFinite(v))) throw new HttpError(400, "BAD_PATCH", `${f} must be a finite number`);
+    if (f === "valueJson" && !isJsonValue(v)) throw new HttpError(400, "BAD_PATCH", "valueJson must be an object or an array");
+    if (f === "sourceUrl" && !SOURCE_URL_PREFIX.test((v as string).trim())) throw new HttpError(400, "BAD_PATCH", "sourceUrl must start with https://, http:// or docs/");
     patch[f] = typeof v === "string" ? v.trim() : v;
   }
   if (Object.keys(patch).length === 0) throw new HttpError(400, "BAD_PATCH", "patch is empty");
@@ -88,6 +97,8 @@ export async function PUT(req: Request): Promise<Response> {
     const before = await repo.getDraft();
     if (!before) throw new HttpError(500, "NO_DRAFT", "Draft vanished");
     const oldRow = before.rows[key];
+    // A JSON-unit row can never lose its JSON value.
+    if (oldRow.unit === "json" && "valueJson" in patch && !isJsonValue(patch.valueJson)) throw new HttpError(400, "BAD_PATCH", "valueJson must be an object or an array");
 
     // Validate the would-be draft first so an invalid edit never reaches the store.
     try {

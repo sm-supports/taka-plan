@@ -13,7 +13,7 @@ export async function POST(req: Request): Promise<Response> {
     requireCsrf(req);
     const body = await readJson<{ password?: unknown }>(req);
     const password = typeof body?.password === "string" ? body.password : "";
-    if (!(await verifyPassword(password))) {
+    if (!(await verifyPassword(password, req.url))) {
       await new Promise((r) => setTimeout(r, FAIL_DELAY_MS));
       return httpError(401, "BAD_PASSWORD", "Wrong password");
     }

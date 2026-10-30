@@ -33,9 +33,10 @@
  *   m5.real      {afterTax} {inflation} {result}
  *
  *   plan.total           {savings} {result}
- *   plan.emergencyShare  {total} {minShare} {gap} {result}
- *   plan.debtShare       {remaining} {headroom} {result}
+ *   plan.emergencyShare  {total} {minShare} {maxShare} {m1Monthly} {gap} {result}
+ *   plan.debtShare       {remaining} {headroom} {result}   (headroom = the payoff need: Σ balance ÷ target months)
  *   plan.goalsShare      {remaining} {goalsNeed} {result}
+ *   plan.goalAllocation  {need} {goalsNeed} {remaining} {result}   (+ goalId, never shown)
  */
 export const explain = {
   m1: {
@@ -145,15 +146,19 @@ export const explain = {
     },
     emergencyShare: {
       title: "Share to the emergency fund",
-      body: "Until the fund is full, at least {minShare} of the monthly amount goes to it, and never more than the {gap} still to save: {total} × {minShare} = {result}. The rest starts your investing habit today.",
+      body: "Until the fund is full, the emergency fund takes what its calculator asks for, {m1Monthly} a month, but kept between {minShare} and {maxShare} of your monthly amount ({total}) so the other buckets still get something. It never takes more than the {gap} still to save: {result}.",
     },
     debtShare: {
       title: "Share to high-interest debt",
-      body: "What is left after the emergency fund goes to any debt above the high-interest line, up to your headroom: min({remaining}, {headroom}) = {result}.",
+      body: "What is left after the emergency fund goes to any debt above the high-interest line, up to the payoff need (all high-interest balances ÷ the target months): min({remaining}, {headroom}) = {result}.",
     },
     goalsShare: {
       title: "Share to goals",
       body: "Whatever remains funds your goals: min({remaining}, {goalsNeed}) = {result}. If it is less than the goals need, the plan shows the shortfall.",
+    },
+    goalAllocation: {
+      title: "Share to this goal",
+      body: "This goal needs {need} a month and all your goals together need {goalsNeed}. The {remaining} left after the buckets above is split in that proportion: {remaining} × {need} ÷ {goalsNeed} = {result}.",
     },
   },
 } as const;

@@ -91,7 +91,7 @@ export const admin: Dictionary["admin"] = {
     labelBn: "নাম (বাংলা)",
     sourceName: "সূত্রের নাম",
     sourceUrl: "সূত্রের লিংক",
-    asOf: "তারিখ পর্যন্ত (YYYY-MM-DD)",
+    asOf: "তথ্যের তারিখ (YYYY-MM-DD)",
     reviewedBy: "পর্যালোচনা করেছেন",
     nextReview: "পরের পর্যালোচনা (YYYY-MM-DD)",
     note: "সারির নোট",
@@ -109,7 +109,7 @@ export const admin: Dictionary["admin"] = {
       family_with_debt: "ঋণসহ পরিবার",
     },
     profileNote: {
-      first_job: "চাকরিজীবী, হাতে পাওয়া ৳৪৫,০০০, ঋণ নেই",
+      first_job: "চাকরিজীবী, টেক-হোম ৳৪৫,০০০, ঋণ নেই",
       freelancer: "অনিয়মিত আয়, গড়ে ৳৯০,০০০, সঙ্গী আছে",
       family_with_debt: "দুই উপার্জনকারী, ৳১,২০,০০০, বাড়ির ঋণ ও কার্ডের বকেয়া",
     },
@@ -142,8 +142,8 @@ export const admin: Dictionary["admin"] = {
       future: "ভবিষ্যৎ",
     },
     instrumentExtra: {
-      loan_prepayment: "ঋণ আগাম পরিশোধ",
-      term_insurance: "টার্ম বিমা",
+      loan_prepayment: "ঋণের বাড়তি কিস্তি",
+      term_insurance: "টার্ম লাইফ বিমা",
     },
   },
 

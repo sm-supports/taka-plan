@@ -61,7 +61,7 @@ export const m3 = {
     minPayment: "Minimum payment",
     path: "If you feel trapped",
     emiRatioNote: "Bangladesh Bank sets no fixed limit. We flag anything above {threshold} of take-home because little is left to save or absorb a shock.",
-    maxLoanNote: "The exact formula gives about ৳9.0 lakh for a ৳20,000 monthly EMI at 12% over 5 years. Banks also look at your income and record, so add your own safety margin before you borrow.",
+    maxLoanNote: "The exact formula gives about {loan} for a {emi} monthly EMI at {rate} over {months}. Banks also look at your income and record, so add your own safety margin before you borrow.",
     primaryFlag: "Most urgent",
     otherFlags: "Also worth fixing",
     cardLabel: "Credit card",

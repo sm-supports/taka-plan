@@ -6,7 +6,8 @@
  * names ending in Rate / inflation / tax / share (and nominal / afterTax / real) → percent;
  * months / years / count and the m1.months month counts → plain number; everything else → taka.
  * Instrument ids (strings) are translated via common.instrument; other strings (e.g. m1.months
- * `source`) pass through unchanged.
+ * `source`) pass through unchanged. Reference ids such as plan.goalAllocation's `goalId` are
+ * never shown: they only tell the UI which bucket a step belongs to.
  */
 import type { Assumption, ExplainStep, ExplainUnit, RateUnit } from "@taka/engine";
 import type { Formatters } from "@/lib/i18n/useFormat";
@@ -18,6 +19,12 @@ const PERCENT_NAMES: ReadonlySet<string> = new Set(["nominal", "real", "afterTax
 const NUMBER_SUFFIX = /(months|years|count)$/i;
 /** m1.months inputs: all whole-month counts, shown as plain numbers. */
 const NUMBER_NAMES: ReadonlySet<string> = new Set(["base", "bumpIrregular", "bumpSoleEarner", "bumpNoHealth", "irregular", "soleEarner", "noInsurance", "min", "max", "suggested"]);
+/** Inputs that identify something (a goal id) rather than describe a quantity: omitted from the template params. */
+const HIDDEN_NAMES: ReadonlySet<string> = new Set(["goalId"]);
+
+export function isHiddenInput(name: string): boolean {
+  return HIDDEN_NAMES.has(name);
+}
 
 const INSTRUMENT_IDS: ReadonlySet<string> = new Set([
   "savings_account",
@@ -61,10 +68,13 @@ export function formatByUnit(value: number, unit: ExplainUnit, f: Formatters): s
   }
 }
 
-/** Every step input formatted, plus `result` = the rounded value in the step's unit. */
+/** Every step input formatted (hidden ids left out), plus `result` = the rounded value in the step's unit. */
 export function formatStepParams(step: ExplainStep, f: Formatters, t: TFunction): TranslateParams {
   const out: TranslateParams = {};
-  for (const [name, v] of Object.entries(step.inputs)) out[name] = formatInput(name, v, f, t);
+  for (const [name, v] of Object.entries(step.inputs)) {
+    if (isHiddenInput(name)) continue;
+    out[name] = formatInput(name, v, f, t);
+  }
   out.result = formatByUnit(step.rounded, step.unit, f);
   return out;
 }

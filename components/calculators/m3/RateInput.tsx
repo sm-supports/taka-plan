@@ -18,16 +18,16 @@ export interface RateInputProps {
 export function RateInput({ id, value, onChange, label, hint, placeholder, className }: RateInputProps) {
   const uid = useId();
   const hintId = `${id || uid}-hint`;
-  const { percent } = useFormat();
-  const [text, setText] = useState<string>(() => percentText(value));
+  const { percent, inputDigits } = useFormat();
+  const [text, setText] = useState<string>(() => inputDigits(percentText(value)));
 
   // Keep the box in sync when the value changes from outside and the text does not already parse to it.
   useEffect(() => {
     const parsed = parsePercent(text);
     if (value === null && text.trim() === "") return;
-    if (parsed !== value) setText(percentText(value));
+    if (parsed !== value) setText(inputDigits(percentText(value)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value]);
+  }, [value, inputDigits]);
 
   const parsed = parsePercent(text);
   const invalid = text.trim() !== "" && parsed === null;
@@ -53,7 +53,7 @@ export function RateInput({ id, value, onChange, label, hint, placeholder, class
           aria-invalid={invalid || undefined}
           aria-describedby={hint ? hintId : undefined}
           onChange={(e) => {
-            const next = e.target.value;
+            const next = inputDigits(e.target.value);
             setText(next);
             onChange(parsePercent(next));
           }}

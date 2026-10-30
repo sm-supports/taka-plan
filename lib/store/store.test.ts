@@ -60,6 +60,7 @@ describe("useTakaStore", () => {
     st.removeGoal(id);
     expect(useTakaStore.getState().m5.goals).toEqual([]);
     st.addLoan({ id: "l1", type: "home", outstanding: 1, annualRate: 0.1, emi: 1, monthsLeft: 1 });
+    expect(useTakaStore.getState().profile.hasDebt).toBe(true);
     st.completeOnboarding();
     expect(selectOnboardingDone(useTakaStore.getState())).toBe(true);
     st.reset();
@@ -102,11 +103,25 @@ describe("useTakaStore", () => {
     });
     expect(o.m5).toEqual({ goals: [{ id: "g-edu", name: "Daughter's university", cost: 1500000, years: 10, type: "education" }], age: 36 });
 
-    // No debt flag → no m3 even with loans listed; soleEarner defaults to dependents.length > 0.
+    // Listed loans or cards feed the plan even when onboarding said "no debt" (P5); soleEarner defaults to dependents.length > 0.
     st.setProfile({ hasDebt: false });
     st.setM1({ soleEarner: undefined });
     const o2 = selectPlanOverrides(useTakaStore.getState());
-    expect(o2.m3).toBeUndefined();
+    expect(o2.m3).toBeDefined();
+    expect(selectProfile(useTakaStore.getState())?.hasDebt).toBe(true);
     expect(o2.m1.soleEarner).toBe(true);
+
+    // With no loans or cards left, the onboarding answer stands.
+    st.removeLoan("l-home");
+    st.removeCard("c-1");
+    expect(selectPlanOverrides(useTakaStore.getState()).m3).toBeUndefined();
+    expect(selectProfile(useTakaStore.getState())?.hasDebt).toBe(false);
+  });
+
+  it("addLoan / addCard flip profile.hasDebt to true", () => {
+    const st = useTakaStore.getState();
+    st.setProfile({ hasDebt: false });
+    st.addCard({ id: "c-2", balance: 0, limit: 0, paysInFull: true });
+    expect(useTakaStore.getState().profile.hasDebt).toBe(true);
   });
 });

@@ -1,4 +1,4 @@
-import { RATES_SEED, assertSnapshot } from "@taka/engine";
+import { M3_STEP_IDS, RATES_SEED, assertSnapshot, computeDebtHealth } from "@taka/engine";
 import { describe, expect, it } from "vitest";
 import { engineErrorKey } from "./engineError";
 import { parsePercent } from "./percent";
@@ -29,12 +29,15 @@ describe("parsePercent", () => {
 
 describe("demo M3 fixture", () => {
   const r = buildDemoM3Result(DEMO_M3_INPUT, snapshot, TODAY);
+  it("is the engine's own result for the demo input", () => {
+    expect(r).toEqual(computeDebtHealth(DEMO_M3_INPUT, snapshot, TODAY));
+  });
   it("follows the contract: one red, demoted reds amber, step ids match M3_STEP_IDS", () => {
     expect(r.flags.filter((f) => f.status === "red")).toHaveLength(1);
     expect(r.primaryFlag?.id).toBe("card_carried");
     expect(r.flags.find((f) => f.id === "emi_ratio")).toMatchObject({ status: "amber", demotedFromRed: true });
     expect(r.flags.find((f) => f.id === "card_utilisation")).toMatchObject({ status: "amber", demotedFromRed: false });
-    expect(r.explain.steps.map((s) => s.id)).toEqual(["m3.totalEmi", "m3.emiRatio", "m3.capacity", "m3.maxLoan", "m3.scenarioEmi", "m3.interestSaved"]);
+    expect(r.explain.steps.map((s) => s.id)).toEqual([...M3_STEP_IDS]);
     expect(r.totalEmi).toBe(29800);
     expect(r.emiCapacity).toBe(34500);
     expect(r.headroom).toBe(4700);

@@ -2,7 +2,8 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { SAMPLE_PROFILE_IDS } from "@taka/engine";
 import { FakeRatesRepo } from "@/test/fakes/fakeRatesRepo";
 import { setRatesRepoForTests } from "@/lib/server/env";
-import { ADMIN_COOKIE, createSessionCookie, isAdmin, readCookie, verifyPassword, verifySessionToken } from "@/lib/server/admin-auth";
+import { ADMIN_COOKIE, PLACEHOLDER_PASSWORD, createSessionCookie, isAdmin, isLocalHost, readCookie, verifyPassword, verifySessionToken } from "@/lib/server/admin-auth";
+import { env } from "cloudflare:workers";
 import type { AdminRatesResponse, PreviewResponse } from "@/components/admin/types";
 import { POST as login } from "./login/route";
 import { POST as logout } from "./logout/route";
@@ -56,6 +57,31 @@ describe("admin-auth", () => {
     expect(await isAdmin(`other=1; ${ADMIN_COOKIE}=${token}`, now)).toBe(true);
     expect(await isAdmin({ get: (n) => (n === ADMIN_COOKIE ? { value: token } : undefined) }, now)).toBe(true);
     expect(await isAdmin(null, now)).toBe(false);
+  });
+
+  it("treats a malformed cookie as not signed in instead of throwing (SEC-1)", async () => {
+    expect(readCookie(`${ADMIN_COOKIE}=%E0%A4%A`, ADMIN_COOKIE)).toBeUndefined();
+    expect(await isAdmin(`${ADMIN_COOKIE}=%E0%A4%A`)).toBe(false);
+    expect(await isAdmin({ get: () => { throw new Error("cookie store broke"); } })).toBe(false);
+    setRatesRepoForTests(new FakeRatesRepo());
+    expect((await getRates(get("rates", { cookie: `${ADMIN_COOKIE}=%ZZ` }))).status).toBe(401);
+    setRatesRepoForTests(null);
+  });
+
+  it("refuses the placeholder password off localhost (SEC-10)", async () => {
+    const stub = env as unknown as { ADMIN_PASSWORD: string };
+    const real = stub.ADMIN_PASSWORD;
+    stub.ADMIN_PASSWORD = PLACEHOLDER_PASSWORD;
+    try {
+      expect(isLocalHost("http://localhost:3001/api/admin/login")).toBe(true);
+      expect(isLocalHost("http://127.0.0.1/x")).toBe(true);
+      expect(isLocalHost("https://taka-plan.example.workers.dev/api/admin/login")).toBe(false);
+      expect(await verifyPassword(PLACEHOLDER_PASSWORD, "http://localhost:3001/api/admin/login")).toBe(true);
+      expect(await verifyPassword(PLACEHOLDER_PASSWORD, "https://taka-plan.example.workers.dev/api/admin/login")).toBe(false);
+      expect(await verifyPassword(PLACEHOLDER_PASSWORD)).toBe(false);
+    } finally {
+      stub.ADMIN_PASSWORD = real;
+    }
   });
 });
 
@@ -132,6 +158,29 @@ describe("admin routes", () => {
     expect(all.draft?.version).toBe(2);
     expect(all.changeLog.map((e) => e.action)).toEqual(["edit", "create_draft"]);
     expect(all.changeLog[0]).toMatchObject({ key: "inflation_cpi", version: 2, note: "monthly review" });
+  });
+
+  it("PUT rates rejects bad source URLs and non-object JSON values with 400 (SEC-4, SEC-7)", async () => {
+    const auth = await signIn();
+    for (const sourceUrl of ["javascript:alert(1)", "ftp://x", "PRD.md", "data:text/html,hi", ""]) {
+      const res = await putRates(put("rates", { key: "inflation_cpi", patch: { sourceUrl } }, auth));
+      expect(res.status, sourceUrl).toBe(400);
+    }
+    for (const sourceUrl of ["https://www.bb.org.bd/", "http://example.org/rates", "docs/PRD.md#rates"]) {
+      expect((await putRates(put("rates", { key: "inflation_cpi", patch: { sourceUrl } }, auth))).status, sourceUrl).toBe(200);
+    }
+    for (const valueJson of [null, 1, "slabs", true]) {
+      expect((await putRates(put("rates", { key: "tax_slabs", patch: { valueJson } }, auth))).status, String(valueJson)).toBe(400);
+    }
+    expect((await putRates(put("rates", { key: "tax_slabs", patch: { valueJson: [{ width: null, rate: 0.1 }] } }, auth))).status).toBe(200);
+  });
+
+  it("rejects bodies over 64 KB with 413 (SEC-5)", async () => {
+    const auth = await signIn();
+    const huge = { key: "inflation_cpi", patch: { note: "x".repeat(70 * 1024) } };
+    expect((await putRates(put("rates", huge, auth))).status).toBe(413);
+    const lying = new Request(`${BASE}/rates`, { method: "PUT", headers: { ...CSRF, ...auth, "content-length": String(10 * 1024 * 1024) }, body: JSON.stringify({ key: "inflation_cpi", patch: { value: 0.09 } }) });
+    expect((await putRates(lying)).status).toBe(413);
   });
 
   it("PUT rates rejects unknown keys, bad patches and invalid rows with 400", async () => {

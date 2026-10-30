@@ -17,6 +17,16 @@ export function roundMoney(x: number, kind: RoundKind): Money {
   return Math.round(x / step) * step;
 }
 
+/**
+ * Round UP to the step of `kind`. Used where rounding down would break a promise,
+ * e.g. the M1 monthly saving must fill the gap inside the build period.
+ */
+export function roundMoneyUp(x: number, kind: RoundKind): Money {
+  if (!Number.isFinite(x)) return 0;
+  const step = STEP[kind];
+  return Math.ceil(x / step) * step;
+}
+
 export function roundTo(x: number, step: number): number {
   if (!Number.isFinite(x) || step <= 0) return 0;
   return Math.round(x / step) * step;

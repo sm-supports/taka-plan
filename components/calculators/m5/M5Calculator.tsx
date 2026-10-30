@@ -2,7 +2,7 @@
 /**
  * M5 Goal planner page body. Saved goals come from the store and edit in place (valid patches
  * only); a new goal lives in a local draft until name, cost and years are all valid (PRD).
- * With `demo`, a fixture replaces the store and the stub engine.
+ * With `demo`, a localized sample input replaces the store.
  */
 import { useMemo, useState } from "react";
 import { computeGoals, type Goal, type M5Input, type M5Result } from "@taka/engine";
@@ -15,7 +15,7 @@ import { useT } from "@/lib/i18n/useT";
 import { useRates } from "@/lib/rates/useRates";
 import { makeId, useTakaStore } from "@/lib/store/store";
 import { engineErrorKey, todayISO } from "@/components/calculators/m3/engineError";
-import { DEMO_M5_INPUT, buildDemoM5Result } from "./demo";
+import { buildDemoM5Result, demoM5Input } from "./demo";
 import { GoalEditor } from "./GoalEditor";
 import { GoalResultCard } from "./GoalResultCard";
 import { EMPTY_DRAFT, applyOneRed, draftToGoal, isValidDraft, type GoalDraft } from "./goals";
@@ -28,7 +28,7 @@ export interface M5CalculatorProps {
 const FALLBACK_AGE = 30;
 
 export function M5Calculator({ demo = false }: M5CalculatorProps) {
-  const { t } = useT();
+  const { t, locale } = useT();
   const f = useFormat();
   const { snapshot } = useRates();
   const [today] = useState(todayISO);
@@ -44,7 +44,7 @@ export function M5Calculator({ demo = false }: M5CalculatorProps) {
   /** Per saved goal, the in-progress edit (may be temporarily invalid; only valid states are written). */
   const [edits, setEdits] = useState<Record<string, GoalDraft>>({});
 
-  const input: M5Input = useMemo(() => (demo ? DEMO_M5_INPUT : { goals, age: age ?? FALLBACK_AGE }), [demo, goals, age]);
+  const input: M5Input = useMemo(() => (demo ? demoM5Input(locale) : { goals, age: age ?? FALLBACK_AGE }), [demo, locale, goals, age]);
 
   const computed = useMemo<{ result: M5Result | null; errorKey: string | null }>(() => {
     try {

@@ -1,6 +1,6 @@
 "use client";
 
-import { formatAsOf, formatMonths, formatNumber, formatPercent, formatTaka, type Digits, type ISODate, type Money, type Rate } from "@taka/engine";
+import { formatAsOf, formatMonths, formatNumber, formatPercent, formatTaka, toBanglaDigits, type Digits, type ISODate, type Money, type Rate } from "@taka/engine";
 import { useMemo } from "react";
 import type { Locale } from "./config";
 import { useI18nContext } from "./provider";
@@ -21,6 +21,8 @@ export interface Formatters {
   number: (n: number, decimals?: number) => string;
   months: (m: number) => string;
   asOf: (iso: ISODate) => string;
+  /** Text typed or shown in an input box, with its digits in the locale's script (Bangla digits in bn, unchanged in en). */
+  inputDigits: (s: string) => string;
 }
 
 /** Pure factory, usable on the server or in tests. */
@@ -34,6 +36,7 @@ export function createFormatters(locale: Locale): Formatters {
     number: (n, decimals) => formatNumber(n, { digits, decimals }),
     months: (m) => formatMonths(m, locale),
     asOf: (iso) => formatAsOf(iso, locale),
+    inputDigits: (s) => (digits === "bn" ? toBanglaDigits(s) : s),
   };
 }
 

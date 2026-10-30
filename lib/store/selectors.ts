@@ -5,9 +5,19 @@ import type { TakaData } from "./types";
 /** Rough default savings target (20% of take-home) when the M4 result is not yet known. */
 const ROUGH_SAVINGS_SHARE = 0.2;
 
-/** The complete onboarding profile, or null while any answer is missing or invalid. */
+/** True when the user has listed at least one loan or card, whatever onboarding said. */
+export function selectHasDebtItems(s: TakaData): boolean {
+  return s.m3.loans.length > 0 || s.m3.cards.length > 0;
+}
+
+/**
+ * The complete onboarding profile, or null while any answer is missing or invalid.
+ * `hasDebt` is true as soon as a loan or card exists, so a "no debt" onboarding answer never hides
+ * debt the user added later in M3 (the engine only runs M3 when the profile says hasDebt).
+ */
 export function selectProfile(s: TakaData): Profile | null {
-  const { age, incomeType, takeHome, essentials, dependents, hasDebt } = s.profile;
+  const { age, incomeType, takeHome, essentials, dependents } = s.profile;
+  const hasDebt = s.profile.hasDebt === undefined ? undefined : s.profile.hasDebt || selectHasDebtItems(s);
   if (typeof age !== "number" || !Number.isFinite(age)) return null;
   if (incomeType === undefined) return null;
   if (typeof takeHome !== "number" || !(takeHome > 0)) return null;
@@ -55,10 +65,9 @@ export function selectPlanOverrides(s: TakaData): PlanOverrides {
     ...(s.m4.last6Incomes !== undefined ? { last6Incomes: s.m4.last6Incomes } : {}),
   };
 
-  const hasDebtItems = s.m3.loans.length > 0 || s.m3.cards.length > 0;
-  const m3: M3Input | undefined =
-    p.hasDebt && hasDebtItems
-      ? {
+  // Any listed loan or card feeds the plan, regardless of the onboarding hasDebt answer (P5).
+  const m3: M3Input | undefined = selectHasDebtItems(s)
+    ? {
           takeHome,
           essentials,
           savingsTarget: Math.round(takeHome * ROUGH_SAVINGS_SHARE),
@@ -67,7 +76,7 @@ export function selectPlanOverrides(s: TakaData): PlanOverrides {
           ...(s.m3.extraMonthly !== undefined ? { extraMonthly: s.m3.extraMonthly } : {}),
           ...(s.m3.scenario !== undefined ? { scenario: s.m3.scenario } : {}),
         }
-      : undefined;
+    : undefined;
 
   const m5: M5Input | undefined = s.m5.goals.length > 0 && p.age !== undefined ? { goals: s.m5.goals, age: p.age } : undefined;
 

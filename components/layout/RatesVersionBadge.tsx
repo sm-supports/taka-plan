@@ -11,8 +11,10 @@ export function RatesVersionBadge({ className }: { className?: string }) {
   const { asOf, number } = useFormat();
   const { snapshot, version, staleKeys } = useRates();
   return (
-    <span className={cn("inline-flex flex-wrap items-center gap-1.5 text-xs text-text-muted", className)}>
-      <span>{t("common.ratesVersion", { version: number(version), asOf: asOf(snapshot.publishedAt) })}</span>
+    <span className={cn("inline-flex min-w-0 flex-wrap items-center gap-1.5 text-xs text-text-muted", className)}>
+      <span className="min-w-0 truncate" title={t("common.ratesVersion", { version: number(version), asOf: asOf(snapshot.publishedAt) })}>
+        {t("common.ratesVersion", { version: number(version), asOf: asOf(snapshot.publishedAt) })}
+      </span>
       {staleKeys.length > 0 && <StaleTag kind="stale" />}
     </span>
   );

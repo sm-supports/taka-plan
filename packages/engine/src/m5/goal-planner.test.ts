@@ -61,13 +61,19 @@ describe("computeGoals (PRD vectors)", () => {
     expect(g.monthly.base).toBe(9300);
     expect(g.monthly.high).toBe(9300);
     const monthlyStep = g.explain.steps.find((s) => s.id === "m5.monthly")!;
+    // Sized from the unrounded FV (734 664.04), not the ৳500-rounded 734 500 shown.
+    const fvRaw = futureValue(500000, 0.08, 5);
+    expect(monthlyStep.raw).toBeCloseTo(sinkingFundMonthly(fvRaw, 0.1183 * 0.9, 60), 6);
     expect(Math.abs(monthlyStep.raw - 9326)).toBeLessThanOrEqual(100);
     expect(monthlyStep.rounded).toBe(9300);
+    expect(monthlyStep.inputs.fv).toBe(734500);
     // Low path: the 5-year bond (8.5% → 7.65% after tax) needs more each month.
-    const lowRaw = sinkingFundMonthly(734500, instrumentAfterTax(snapshot, "tbond_5y"), 60);
+    const lowRaw = sinkingFundMonthly(fvRaw, instrumentAfterTax(snapshot, "tbond_5y"), 60);
     expect(g.monthly.low).toBe(roundMoney(lowRaw, "monthly"));
     expect(g.monthly.low).toBeGreaterThan(g.monthly.base);
-    expect(g.real).toBeCloseTo(0.0213, 3);
+    // Real return is judged against the goal's own inflation (8% projection); the CPI figure is for display.
+    expect(g.real).toBeCloseTo(1.10647 / 1.08 - 1, 4);
+    expect(g.realVsCpi).toBeCloseTo(0.0213, 3);
     expect(g.belowInflation).toBe(false);
     expect(g.status).toBe("green");
     expect(g.explain.notes).toEqual([]);
@@ -78,14 +84,15 @@ describe("computeGoals (PRD vectors)", () => {
     const g = computeGoal(goal(), snapshot, TODAY, ["fdr_1y"]);
     expect(g.instrument).toBe("fdr_1y");
     expect(g.afterTax).toBeCloseTo(0.0675, 6);
-    expect(g.real).toBeCloseTo(-0.0147, 3);
+    expect(g.real).toBeCloseTo(1.0675 / 1.08 - 1, 4);
+    expect(g.realVsCpi).toBeCloseTo(-0.0147, 3);
     expect(g.belowInflation).toBe(true);
     expect(g.status).toBe("red");
     expect(g.explain.notes).toEqual(["m5.note.belowInflation"]);
     expect(g.monthly.low).toBe(g.monthly.base);
   });
 
-  it("2-year goal → short horizon, DPS wins at 9% → 8.1% after tax", () => {
+  it("2-year goal → short horizon, DPS wins at 9% → 8.1% after tax, just above the 8% projection", () => {
     const g = computeGoals({ goals: [goal({ years: 2, cost: 200000 })], age: 30 }, snapshot, TODAY).goals[0]!;
     expect(g.horizon).toBe("short");
     expect(g.candidates).toEqual(["fdr_1y", "dps", "tbill_91d"]);
@@ -96,13 +103,30 @@ describe("computeGoals (PRD vectors)", () => {
     expect(fv).toBe(233500);
     expect(g.futureValue).toBe(fv);
     expect(g.months).toBe(24);
-    expect(g.monthly.base).toBe(roundMoney(sinkingFundMonthly(fv, 0.081, 24), "monthly"));
+    const fvRaw = futureValue(200000, 0.08, 2);
+    expect(g.monthly.base).toBe(roundMoney(sinkingFundMonthly(fvRaw, 0.081, 24), "monthly"));
     expect(g.monthly.base).toBe(9000);
-    expect(g.monthly.low).toBe(roundMoney(sinkingFundMonthly(fv, instrumentAfterTax(snapshot, "fdr_1y"), 24), "monthly"));
-    // 8.1% after tax is still under the 8.34% CPI, so the app says so in red.
-    expect(g.real).toBeCloseTo((1.081 / 1.0834) - 1, 6);
+    expect(g.monthly.low).toBe(roundMoney(sinkingFundMonthly(fvRaw, instrumentAfterTax(snapshot, "fdr_1y"), 24), "monthly"));
+    // 8.1% after tax beats the 8% the goal is inflated with, so it is not below inflation (green);
+    // against today's 8.34% CPI it is slightly negative, which realVsCpi reports for display.
+    expect(g.real).toBeCloseTo(1.081 / 1.08 - 1, 6);
+    expect(g.realVsCpi).toBeCloseTo(1.081 / 1.0834 - 1, 6);
+    expect(g.belowInflation).toBe(false);
+    expect(g.status).toBe("green");
+  });
+
+  it("a goal priced with 10% inflation is below inflation when the after-tax return is under 10%", () => {
+    // Education at 10%: the 1-year FDR (6.75% after tax) loses ground even though Sanchayapatra would not.
+    const g = computeGoal(goal({ type: "education", years: 4 }), snapshot, TODAY, ["fdr_1y"]);
+    expect(g.inflation).toBe(0.1);
+    expect(g.real).toBeCloseTo(1.0675 / 1.1 - 1, 6);
     expect(g.belowInflation).toBe(true);
     expect(g.status).toBe("red");
+    const realStep = g.explain.steps.find((s) => s.id === "m5.real")!;
+    expect(realStep.inputs.afterTax).toBeCloseTo(0.0675, 6);
+    expect(realStep.inputs.inflation).toBe(0.1);
+    // Sanchayapatra (10.647%) clears 10%, so the same goal is not below inflation.
+    expect(computeGoal(goal({ type: "education", years: 4 }), snapshot, TODAY).belowInflation).toBe(false);
   });
 
   it("10-year education goal of 15 lakh → 10% inflation, long horizon, amber with the allocation note", () => {
@@ -148,6 +172,7 @@ describe("computeGoals (PRD vectors)", () => {
       expect(g.months).toBe(0);
       expect(g.afterTax).toBe(0);
       expect(g.real).toBe(0);
+      expect(g.realVsCpi).toBe(0);
       expect(g.candidates).toEqual([]);
       expect(g.status).toBe("red");
       expect(g.explain).toEqual({ steps: [], assumptions: [], notes: [] });
@@ -174,7 +199,8 @@ describe("computeGoals (PRD vectors)", () => {
     expect(Object.keys(byId["m5.monthly"]!.inputs)).toEqual(["fv", "monthlyRate", "months"]);
     expect(byId["m5.monthly"]!.inputs.monthlyRate).toBeCloseTo(0.10647 / 12, 8);
     expect(Object.keys(byId["m5.real"]!.inputs)).toEqual(["afterTax", "inflation"]);
-    expect(byId["m5.real"]!.rounded).toBe(0.021);
+    expect(byId["m5.real"]!.inputs.inflation).toBe(0.08);
+    expect(byId["m5.real"]!.rounded).toBe(0.025);
     for (const s of g.explain.steps) {
       expect(Number.isFinite(s.raw)).toBe(true);
       expect(Number.isFinite(s.rounded)).toBe(true);

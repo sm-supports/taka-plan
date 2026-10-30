@@ -19,7 +19,7 @@ export function TermSheet({ k, open, onClose }: TermSheetProps) {
   const { t } = useT();
   return (
     <Sheet open={open} onClose={onClose} title={t(`terms.${k}.title`)}>
-      <p className="whitespace-pre-line leading-relaxed">{t(`terms.${k}.body`)}</p>
+      <p className="whitespace-pre-line text-left leading-relaxed">{t(`terms.${k}.body`)}</p>
     </Sheet>
   );
 }

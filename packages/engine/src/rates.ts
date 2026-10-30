@@ -73,6 +73,7 @@ export const RATE_KEYS = [
   // app policy: M4, plan, M5
   "savings_rate_default",
   "plan_emergency_min_share",
+  "plan_emergency_max_share",
   "debt_payoff_target_months",
   "goal_inflation_education",
   "goal_inflation_health",
@@ -197,6 +198,48 @@ export function staleKeys(s: RatesSnapshot, today: ISODate): RateKey[] {
 
 const UNITS: ReadonlySet<string> = new Set(["rate", "bdt", "years", "months", "ratio", "json"]);
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
+/** Upper bound for month and year rows (100 years). */
+const MAX_PERIOD = 1200;
+
+function isPlainObjectOrArray(x: unknown): boolean {
+  return typeof x === "object" && x !== null;
+}
+
+function isTaxSlab(x: unknown): x is TaxSlab {
+  if (typeof x !== "object" || x === null) return false;
+  const s = x as Partial<TaxSlab>;
+  const widthOk = s.width === null || (typeof s.width === "number" && Number.isFinite(s.width) && s.width > 0);
+  const rateOk = typeof s.rate === "number" && Number.isFinite(s.rate) && s.rate >= 0 && s.rate <= 1;
+  return widthOk && rateOk;
+}
+
+/**
+ * Value bounds by unit, so a typo in the admin table (7.5 instead of 0.075) cannot reach the engine:
+ * rate and ratio 0..1 (1 = 100%), bdt ≥ 0, months/years in (0, 1200], json a non-null object or array
+ * (tax_slabs: an array of {width: number|null, rate: 0..1}).
+ */
+function checkValueByUnit(key: string, r: Partial<RateRow>, bad: (field: string) => EngineError): void {
+  if (r.unit === "json") {
+    if (!isPlainObjectOrArray(r.valueJson)) throw bad("valueJson");
+    if (key === "tax_slabs" && !(Array.isArray(r.valueJson) && r.valueJson.length > 0 && r.valueJson.every(isTaxSlab))) throw bad("valueJson");
+    return;
+  }
+  const v = r.value;
+  if (typeof v !== "number" || !Number.isFinite(v)) throw bad("value");
+  switch (r.unit) {
+    case "rate":
+    case "ratio":
+      if (v < 0 || v > 1) throw bad("value");
+      return;
+    case "bdt":
+      if (v < 0) throw bad("value");
+      return;
+    case "months":
+    case "years":
+      if (v <= 0 || v > MAX_PERIOD) throw bad("value");
+      return;
+  }
+}
 
 /** Runtime validation for snapshots arriving from the API, localStorage or the admin draft. */
 export function assertSnapshot(x: unknown): RatesSnapshot {
@@ -214,9 +257,8 @@ export function assertSnapshot(x: unknown): RatesSnapshot {
     const bad = (field: string) => new EngineError("INVALID_INPUT", `row "${key}": bad ${field}`, { key, field });
     if (r.key !== key) throw bad("key");
     if (!UNITS.has(String(r.unit))) throw bad("unit");
-    const hasValue = typeof r.value === "number" && Number.isFinite(r.value);
-    if (!hasValue && r.valueJson === undefined) throw bad("value");
-    if (r.unit === "json" && r.valueJson === undefined) throw bad("valueJson");
+    if (r.value !== null && r.value !== undefined && typeof r.value !== "number") throw bad("value");
+    checkValueByUnit(key, r, bad);
     for (const f of ["labelEn", "sourceName", "sourceUrl", "reviewedBy"] as const) if (typeof r[f] !== "string" || r[f].length === 0) throw bad(f);
     for (const f of ["asOf", "nextReview"] as const) if (typeof r[f] !== "string" || !ISO.test(r[f])) throw bad(f);
     if (typeof r.isAppAssumption !== "boolean") throw bad("isAppAssumption");

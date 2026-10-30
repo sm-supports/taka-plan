@@ -9,13 +9,14 @@ export interface HealthBody {
   db: DbStatus;
   publishedVersion: number | null;
   ratesSource: RatesSource;
-  /** Failure message when D1 could not serve; omitted when healthy. */
-  detail?: string;
+  /** Why /api/rates is on the bundled seed; a short code, never the raw error (SEC-6). Omitted when healthy. */
+  detail?: "missing-table" | "query-failed";
 }
 
 export async function GET(): Promise<Response> {
-  const { db, publishedVersion, source, detail } = await loadRates();
+  const { db, publishedVersion, source } = await loadRates();
   const body: HealthBody = { ok: true, db, publishedVersion, ratesSource: source };
-  if (detail !== undefined) body.detail = detail;
+  if (db === "missing-table") body.detail = "missing-table";
+  else if (db === "error") body.detail = "query-failed";
   return json(body, { headers: { "Cache-Control": "no-store" } });
 }

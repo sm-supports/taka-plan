@@ -1,12 +1,12 @@
-/** The M4 demo fixtures must look exactly like what the engine returns. */
+/** The M4 demo fixtures are the engine run over the contract vectors. */
 import { describe, expect, it } from "vitest";
-import { M4_STEP_IDS, RATES_SEED, assertSnapshot } from "@taka/engine";
+import { M4_STEP_IDS, RATES_SEED, assertSnapshot, computeSaveFirst } from "@taka/engine";
 import { bn } from "@/lib/i18n/dictionaries/bn";
 import { en } from "@/lib/i18n/dictionaries/en";
 import { getPath, translate } from "@/lib/i18n/translate";
 import { createFormatters } from "@/lib/i18n/useFormat";
 import { formatStepParams } from "@/components/explain/formatInputs";
-import { M4_DEMO_INPUT, m4DemoResult } from "./demo";
+import { M4_DEMO_INPUT, m4DemoInput, m4DemoResult } from "./demo";
 
 const snapshot = assertSnapshot(RATES_SEED);
 const today = "2026-10-30";
@@ -15,6 +15,7 @@ const slots = (s: string) => [...s.matchAll(/\{(\w+)\}/g)].map((m) => m[1]!);
 describe("m4 demo fixtures", () => {
   it.each(["salaried", "freelance"] as const)("%s variant matches the contract vector and the step ids", (variant) => {
     const r = m4DemoResult(snapshot, today, variant);
+    expect(r).toEqual(computeSaveFirst(m4DemoInput(variant), snapshot, today));
     expect(r.averageIncome).toBe(50000);
     expect(r.savingsAmount).toBe(10000);
     expect(r.expensesAllowed).toBe(40000);

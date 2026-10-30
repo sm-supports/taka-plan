@@ -1,5 +1,5 @@
 import { createExplain } from "../explain";
-import { clamp, roundDecimals, roundMoney } from "../money";
+import { clamp, roundDecimals, roundMoney, roundMoneyUp } from "../money";
 import { getRate, type RateKey, type RatesSnapshot } from "../rates";
 import { assertInput, isFiniteNumber, type ISODate, type Status } from "../types";
 import { M1_NEXT_KEYS, M1_RULE_KEYS, type M1Input, type M1Result, type M1StepId, type M1Tiers } from "./types";
@@ -103,10 +103,11 @@ export function computeEmergencyFund(input: M1Input, rates: RatesSnapshot, today
   const gapRaw = Math.max(0, target - saved);
   const gap = step("m1.gap", { target, saved }, gapRaw, roundMoney(gapRaw, "exact"), "bdt");
 
-  // Step 4: monthly saving over the build period.
+  // Step 4: monthly saving over the build period. Rounded UP to ৳100 so the fund is full
+  // within buildMonths (monthsToFull ≤ buildMonths); rounding to nearest could add a 13th month.
   const buildMonths = input.buildMonths ?? explain.use("emergency_build_months_default");
   const monthlyRaw = gap / buildMonths;
-  const monthlySaving = step("m1.monthly", { gap, buildMonths }, monthlyRaw, roundMoney(monthlyRaw, "monthly"), "bdt");
+  const monthlySaving = step("m1.monthly", { gap, buildMonths }, monthlyRaw, roundMoneyUp(monthlyRaw, "monthly"), "bdt");
 
   // Step 5: months already covered.
   const coveredRaw = saved / essentials;
@@ -114,9 +115,9 @@ export function computeEmergencyFund(input: M1Input, rates: RatesSnapshot, today
 
   const monthsToFull = gap === 0 || monthlySaving <= 0 ? null : Math.ceil(gap / monthlySaving);
 
-  // Steps 6–8: where to keep it.
+  // Steps 6–8: where to keep it. Tier 1 is exactly one month of essentials (whole taka, not ৳500 steps).
   const tier1Raw = essentials * TIER1_MONTHS;
-  const savingsAccount = step("m1.tier1", { essentials, months: TIER1_MONTHS }, tier1Raw, roundMoney(tier1Raw, "lump"), "bdt");
+  const savingsAccount = step("m1.tier1", { essentials, months: TIER1_MONTHS }, tier1Raw, roundMoney(tier1Raw, "exact"), "bdt");
   const tier2Raw = Math.max(0, target - savingsAccount);
   const fdrLadder = step("m1.tier2", { target, tier1: savingsAccount }, tier2Raw, roundMoney(tier2Raw, "exact"), "bdt");
   const fdrPerSlice = roundMoney(fdrLadder / FDR_LADDER_SLICES, "lump");

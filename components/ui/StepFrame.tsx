@@ -1,6 +1,7 @@
 "use client";
 /** One-question-per-screen frame: progress dots, title, hint, body and a sticky bottom CTA. */
 import type { ReactNode } from "react";
+import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { Button } from "./Button";
 import { cn } from "./cn";
@@ -20,6 +21,7 @@ export interface StepFrameProps {
 
 export function StepFrame({ step, total, title, hint, children, onBack, onNext, nextLabel, nextDisabled, className }: StepFrameProps) {
   const { t } = useT();
+  const { number } = useFormat();
   return (
     <section className={cn("flex min-h-[calc(100dvh-8rem)] flex-col", className)} aria-labelledby="step-title">
       <div className="flex items-center justify-between py-2">
@@ -33,7 +35,7 @@ export function StepFrame({ step, total, title, hint, children, onBack, onNext, 
         ) : (
           <span />
         )}
-        <ol className="flex items-center gap-1.5" aria-label={`${step} / ${total}`}>
+        <ol className="flex items-center gap-1.5" aria-label={`${number(step)} / ${number(total)}`}>
           {Array.from({ length: total }, (_, i) => (
             <li
               key={i}

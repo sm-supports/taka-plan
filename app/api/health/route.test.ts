@@ -25,13 +25,14 @@ describe("GET /api/health", () => {
     expect(body.db).toBe("error");
     expect(body.publishedVersion).toBeNull();
     expect(body.ratesSource).toBe("fallback");
-    expect(body.detail).toMatch(/simulated failure/);
+    expect(body.detail).toBe("query-failed");
+    expect(JSON.stringify(body)).not.toMatch(/simulated failure/);
   });
 
   it("reports missing-table when the database is not migrated", async () => {
     setRatesRepoForTests(new ThrowingRatesRepo(missingTableError()));
     const body = (await (await GET()).json()) as HealthBody;
-    expect(body).toMatchObject({ ok: true, db: "missing-table", publishedVersion: null, ratesSource: "fallback" });
+    expect(body).toMatchObject({ ok: true, db: "missing-table", publishedVersion: null, ratesSource: "fallback", detail: "missing-table" });
   });
 
   it("reports db ok but no published version (fallback) on a migrated, empty table", async () => {
@@ -45,6 +46,7 @@ describe("GET /api/health", () => {
     setRatesRepoForTests(empty);
     const body = (await (await GET()).json()) as HealthBody;
     expect(body).toMatchObject({ ok: true, db: "ok", publishedVersion: null, ratesSource: "fallback" });
+    expect(body.detail).toBeUndefined();
   });
 
   it("reports error when no repo is configured (D1 binding missing)", async () => {

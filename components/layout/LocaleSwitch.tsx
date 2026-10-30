@@ -32,7 +32,7 @@ export function LocaleSwitch() {
       onClick={onClick}
       lang={next}
       aria-label={nextLabel}
-      className="tap inline-flex items-center justify-center rounded-xl border border-line bg-surface px-3 text-sm font-semibold text-text hover:bg-surface-muted"
+      className="tap inline-flex shrink-0 items-center justify-center rounded-xl border border-line bg-surface px-3 text-sm font-semibold text-text hover:bg-surface-muted"
     >
       {nextLabel}
     </button>

@@ -18,8 +18,8 @@ export interface NumberBoxProps {
 }
 
 export function NumberBox({ id, value, onChange, label, unit, placeholder, invalid, describedBy, className }: NumberBoxProps) {
-  const { number } = useFormat();
-  const [text, setText] = useState<string>(() => (value === null ? "" : String(value)));
+  const { number, inputDigits } = useFormat();
+  const [text, setText] = useState<string>(() => (value === null ? "" : inputDigits(String(value))));
 
   // Follow outside changes (decade shortcut) unless the box already reads as that value.
   useEffect(() => {
@@ -27,9 +27,9 @@ export function NumberBox({ id, value, onChange, label, unit, placeholder, inval
       if (text.trim() !== "" && parseAgeInput(text) !== null) setText("");
       return;
     }
-    if (parseAgeInput(text) !== value) setText(String(value));
+    if (parseAgeInput(text) !== value) setText(inputDigits(String(value)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value]);
+  }, [value, inputDigits]);
 
   const parsed = parseAgeInput(text);
 
@@ -50,7 +50,7 @@ export function NumberBox({ id, value, onChange, label, unit, placeholder, inval
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
           onChange={(e) => {
-            const nextText = e.target.value;
+            const nextText = inputDigits(e.target.value);
             setText(nextText);
             onChange(parseAgeInput(nextText));
           }}

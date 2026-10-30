@@ -5,25 +5,26 @@
  * Query switches:
  *   ?why=<bucketKey>  opens that bucket's "Why this number?" drawer ("total" for the headline);
  *   ?term=<key>       opens the glossary sheet for that term;
- *   ?demo=1           renders the hand-built SAMPLE_PLAN fixture (components/plan/fixtures.ts)
- *                     instead of the user's plan, so the screen can be checked and screenshotted
- *                     with known numbers. Harmless in production: it never touches the store
- *                     and never runs the engine.
+ *   ?demo=1           renders the sample plan (components/plan/fixtures.ts: the engine run over a
+ *                     fixed profile with the current rates) instead of the user's plan, so the screen
+ *                     can be checked and screenshotted with known numbers. Harmless in production:
+ *                     it never touches the store.
  */
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { Suspense, useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
 import type { EngineError, Plan } from "@taka/engine";
 import { BucketList } from "@/components/plan/BucketList";
 import { PlanHeadline } from "@/components/plan/PlanHeadline";
 import { PlanSummary } from "@/components/plan/PlanSummary";
 import { calcErrorKey } from "@/components/calculators/shared/engineError";
-import { SAMPLE_PLAN } from "@/components/plan/fixtures";
+import { samplePlan } from "@/components/plan/fixtures";
 import { isTermKey } from "@/components/plan/terms";
 import { ErrorCard } from "@/components/ui/ErrorCard";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { TermSheet } from "@/components/ui/Term";
 import { useT } from "@/lib/i18n/useT";
+import { useRates } from "@/lib/rates/useRates";
 import { selectProfile } from "@/lib/store/selectors";
 import { useTakaStore } from "@/lib/store/store";
 import { usePlan } from "@/lib/store/usePlan";
@@ -41,7 +42,15 @@ export default function PlanPage() {
 function PlanScreen() {
   const searchParams = useSearchParams();
   const demo = searchParams.get("demo") === "1";
-  return demo ? <PlanBody plan={SAMPLE_PLAN} error={null} demo /> : <LivePlan />;
+  return demo ? <DemoPlan /> : <LivePlan />;
+}
+
+/** The sample plan: the engine over a fixed profile with the live rates snapshot; never touches the store. */
+function DemoPlan() {
+  const { locale } = useT();
+  const { snapshot } = useRates();
+  const plan = useMemo(() => samplePlan(locale, snapshot), [locale, snapshot]);
+  return <PlanBody plan={plan} error={null} demo />;
 }
 
 /** The user's own plan: redirects to onboarding without a profile; shows an error card when the engine throws. */

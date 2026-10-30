@@ -108,12 +108,12 @@ describe("computeEmergencyFund (PRD vectors)", () => {
     {
       name: "custom buildMonths changes the monthly amount",
       input: { ...vector, buildMonths: 24 },
-      expected: { monthlySaving: 8300, monthsToFull: 25 },
+      expected: { monthlySaving: 8400, monthsToFull: 24 },
     },
     {
       name: "savings past the insurance limit and more than one bank needed → split banks",
       input: { ...vector, liquidSavings: 210000 },
-      expected: { gap: 40000, monthlySaving: 3300, banksNeeded: 2, status: "amber", nextStep: "m1.next.splitBanks" },
+      expected: { gap: 40000, monthlySaving: 3400, banksNeeded: 2, status: "amber", nextStep: "m1.next.splitBanks" },
     },
     {
       name: "very large buffer → Sanchayapatra third layer",
@@ -137,10 +137,23 @@ describe("computeEmergencyFund (PRD vectors)", () => {
   it("rounds tier amounts at the output boundary only", () => {
     const r = computeEmergencyFund({ ...vector, essentials: 27300, monthsOverride: 7 }, rates, today);
     expect(r.target).toBe(191100);
-    expect(r.tiers.savingsAccount).toBe(27500); // lump → nearest ৳500
-    expect(r.tiers.fdrLadder).toBe(163600);
-    expect(r.tiers.fdrPerSlice).toBe(54500); // 54 533.3 → nearest ৳500
-    expect(r.monthlySaving).toBe(11800); // (191 100 − 50 000) / 12 = 11 758.3 → nearest ৳100
+    expect(r.tiers.savingsAccount).toBe(27300); // exactly one month of essentials
+    expect(r.tiers.fdrLadder).toBe(163800);
+    expect(r.tiers.fdrPerSlice).toBe(54500); // 54 600 → nearest ৳500
+    expect(r.monthlySaving).toBe(11800); // (191 100 − 50 000) / 12 = 11 758.3 → up to ৳100
+  });
+
+  it("rounds the monthly saving up so the fund is full inside the build period", () => {
+    const cases: M1Input[] = [vector, { ...vector, buildMonths: 24 }, { ...vector, liquidSavings: 210000 }, { ...vector, essentials: 27300, monthsOverride: 7 }];
+    for (const input of cases) {
+      const r = computeEmergencyFund(input, rates, today);
+      const buildMonths = input.buildMonths ?? 12;
+      expect(r.monthlySaving * buildMonths).toBeGreaterThanOrEqual(r.gap);
+      expect(r.monthsToFull).not.toBeNull();
+      expect(r.monthsToFull!).toBeLessThanOrEqual(buildMonths);
+      expect(r.monthlySaving % 100).toBe(0);
+    }
+    expect(computeEmergencyFund({ ...vector, liquidSavings: 210000 }, rates, today).monthlySaving).toBe(3400); // 40 000 / 12 = 3 333.3 → 3 400
   });
 
   it("lists every rule, with the Sanchayapatra layer only for very large buffers", () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { clamp, mean, pct, roundDecimals, roundMoney, sum } from "./money";
+import { clamp, mean, pct, roundDecimals, roundMoney, roundMoneyUp, sum } from "./money";
 
 describe("roundMoney", () => {
   it("rounds lump sums to the nearest ৳500", () => {
@@ -18,6 +18,18 @@ describe("roundMoney", () => {
     expect(roundMoney(26000.4, "exact")).toBe(26000);
     expect(roundMoney(Number.NaN, "exact")).toBe(0);
     expect(roundMoney(Number.POSITIVE_INFINITY, "lump")).toBe(0);
+  });
+});
+
+describe("roundMoneyUp", () => {
+  it("rounds up to the step so a monthly amount fills its gap inside the build period", () => {
+    expect(roundMoneyUp(200000 / 12, "monthly")).toBe(16700);
+    expect(roundMoneyUp(40000 / 12, "monthly")).toBe(3400);
+    expect(roundMoneyUp(200000 / 24, "monthly")).toBe(8400);
+    expect(roundMoneyUp(16700, "monthly")).toBe(16700);
+    expect(roundMoneyUp(249, "lump")).toBe(500);
+    expect(roundMoneyUp(26000.4, "exact")).toBe(26001);
+    expect(roundMoneyUp(Number.NaN, "monthly")).toBe(0);
   });
 });
 
