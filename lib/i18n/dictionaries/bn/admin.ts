@@ -9,6 +9,14 @@ export const admin: Dictionary["admin"] = {
     submit: "সাইন ইন",
     failed: "পাসওয়ার্ড ভুল।",
     signOut: "সাইন আউট",
+    hint: "পাসওয়ার্ডটি ADMIN_PASSWORD সিক্রেট (লোকালে: .dev.vars)।",
+  },
+
+  nav: {
+    rates: "রেট",
+    preview: "প্রিভিউ",
+    log: "পরিবর্তনের তালিকা",
+    backToApp: "অ্যাপে ফিরুন",
   },
 
   table: {
@@ -26,6 +34,12 @@ export const admin: Dictionary["admin"] = {
     ourAssumption: "আমাদের অনুমান",
     stale: "পর্যালোচনার তারিখ পেরিয়েছে",
     empty: "এখনো কোনো সারি নেই।",
+    edited: "খসড়ায় বদলানো হয়েছে",
+    filter: "কী বা নাম দিয়ে খুঁজুন",
+    showing: "{total} সারির মধ্যে {shown}",
+    staleCount: "পর্যালোচনার তারিখ পেরিয়েছে: {count}",
+    noStale: "কোনো সারির পর্যালোচনার তারিখ পেরোয়নি",
+    publishedWas: "প্রকাশিত: {value}",
   },
 
   action: {
@@ -37,6 +51,13 @@ export const admin: Dictionary["admin"] = {
     previewFirst: "আগে প্রিভিউ দেখুন",
     preview: "প্রিভিউ",
     newDraft: "খসড়া শুরু করুন",
+    reload: "আবার লোড করুন",
+    loadMore: "আরও দেখুন",
+    why: "এই সংখ্যাটা কেন?",
+    confirmPublish: "সংস্করণ {version} প্রকাশ করবেন? পাঁচ মিনিটের মধ্যে সব ব্যবহারকারী এই রেট পাবেন।",
+    confirmDiscard: "খসড়া সংস্করণ {version} বাতিল করবেন? এর সব পরিবর্তন হারিয়ে যাবে।",
+    yesPublish: "হ্যাঁ, সংস্করণ {version} প্রকাশ করুন",
+    yesDiscard: "হ্যাঁ, সংস্করণ {version} বাতিল করুন",
   },
 
   state: {
@@ -46,6 +67,38 @@ export const admin: Dictionary["admin"] = {
     unsaved: "সেভ না করা পরিবর্তন",
     saved: "সেভ হয়েছে",
     publishedAt: "প্রকাশিত {date}",
+    loading: "লোড হচ্ছে…",
+    error: "কিছু একটা ভুল হয়েছে: {message}",
+    previewRequired: "প্রকাশের আগে প্রিভিউ খুলুন।",
+    previewSeen: "প্রিভিউ দেখা হয়েছে।",
+    publishedNow: "সংস্করণ {version} প্রকাশিত হয়েছে। পাঁচ মিনিটের মধ্যে ব্যবহারকারীরা পাবেন।",
+    discarded: "খসড়া বাতিল হয়েছে।",
+    rowSaved: "{key} খসড়া সংস্করণ {version}-এ সেভ হয়েছে।",
+    publishNote: "প্রকাশের নোট (ঐচ্ছিক)",
+    draftExplainer: "আপনি খসড়া দেখছেন। প্রকাশ না করা পর্যন্ত প্রকাশিত রেট (সংস্করণ {version}) চালু থাকবে।",
+  },
+
+  editor: {
+    title: "{key} বদলান",
+    value: "মান",
+    valueRate: "মান (শতাংশে, যেমন 11.83)",
+    valueBdt: "মান (টাকা)",
+    valueNumber: "মান",
+    valueJson: "মান (JSON)",
+    rangeLow: "পরিসরের নিচের সীমা",
+    rangeHigh: "পরিসরের উপরের সীমা",
+    labelEn: "নাম (ইংরেজি)",
+    labelBn: "নাম (বাংলা)",
+    sourceName: "সূত্রের নাম",
+    sourceUrl: "সূত্রের লিংক",
+    asOf: "তারিখ পর্যন্ত (YYYY-MM-DD)",
+    reviewedBy: "পর্যালোচনা করেছেন",
+    nextReview: "পরের পর্যালোচনা (YYYY-MM-DD)",
+    note: "সারির নোট",
+    changeNote: "কেন এই পরিবর্তন? (পরিবর্তনের তালিকায় যাবে)",
+    current: "এখন: {value}",
+    invalidJson: "সঠিক JSON লিখুন।",
+    unchanged: "কিছু বদলায়নি।",
   },
 
   preview: {
@@ -55,6 +108,11 @@ export const admin: Dictionary["admin"] = {
       freelancer: "ফ্রিল্যান্সার",
       family_with_debt: "ঋণসহ পরিবার",
     },
+    profileNote: {
+      first_job: "চাকরিজীবী, হাতে পাওয়া ৳৪৫,০০০, ঋণ নেই",
+      freelancer: "অনিয়মিত আয়, গড়ে ৳৯০,০০০, সঙ্গী আছে",
+      family_with_debt: "দুই উপার্জনকারী, ৳১,২০,০০০, বাড়ির ঋণ ও কার্ডের বকেয়া",
+    },
     published: "প্রকাশিত",
     draft: "খসড়া",
     changed: "বদলেছে",
@@ -63,6 +121,30 @@ export const admin: Dictionary["admin"] = {
     bucket: "খাত",
     before: "আগে",
     after: "পরে",
+    noDraft: "এখনো কোনো খসড়া নেই। প্রিভিউ শুধু প্রকাশিত রেট দেখাচ্ছে; তুলনা করতে একটি সারি বদলান।",
+    engineNotReady: "এই বিল্ডে প্ল্যান ইঞ্জিন এখনো যুক্ত হয়নি। যুক্ত হলে সংখ্যা দেখা যাবে।",
+    engineError: "এই প্রোফাইলে ইঞ্জিন ব্যর্থ হয়েছে: {message}",
+    changedKeys: "খসড়ায় যেসব সারির মান বদলেছে: {count}",
+    noChangedKeys: "খসড়ায় কোনো মান বদলায়নি",
+    emergencyTarget: "জরুরি তহবিলের লক্ষ্য",
+    goalMonthly: "লক্ষ্য: {id}",
+    statusChange: "{before} → {after}",
+    seen: "খসড়া সংস্করণ {version}-এর প্রিভিউ দেখা হয়েছে। রেট পাতা থেকে প্রকাশ করতে পারেন।",
+    why: "এই সংখ্যাগুলো কেন?",
+    whyBody:
+      "প্রতিটি কার্ড একটি নির্দিষ্ট নমুনা প্রোফাইলে পুরো প্ল্যান ইঞ্জিন চালায়, একবার প্রকাশিত রেট (সংস্করণ {published}) দিয়ে আর একবার খসড়া (সংস্করণ {draft}) দিয়ে, আজকের তারিখ {today} ধরে। শুধু যেসব সারির মান বদলেছে সেগুলোই কোনো সংখ্যা বদলাতে পারে; সেগুলো উপরে তালিকায় আছে।",
+    whyBodyNoDraft: "প্রতিটি কার্ড একটি নির্দিষ্ট নমুনা প্রোফাইলে প্রকাশিত রেট (সংস্করণ {published}) দিয়ে পুরো প্ল্যান ইঞ্জিন চালায়, আজকের তারিখ {today} ধরে।",
+    bucketName: {
+      emergency: "জরুরি তহবিল",
+      insurance: "বিমা",
+      debt: "ঋণ",
+      goal: "লক্ষ্য",
+      future: "ভবিষ্যৎ",
+    },
+    instrumentExtra: {
+      loan_prepayment: "ঋণ আগাম পরিশোধ",
+      term_insurance: "টার্ম বিমা",
+    },
   },
 
   changeLog: {
@@ -75,6 +157,14 @@ export const admin: Dictionary["admin"] = {
     to: "এখন",
     note: "নোট",
     empty: "এখনো কোনো পরিবর্তন নেই।",
+    end: "এটুকুই।",
+    action: {
+      create_draft: "খসড়া তৈরি",
+      edit: "সারি বদলানো",
+      publish: "প্রকাশিত",
+      discard_draft: "খসড়া বাতিল",
+    },
+    fields: "বদলেছে: {fields}",
   },
 
   validation: {
