@@ -1,5 +1,5 @@
 "use client";
-/** Locale home: forwards to the plan when onboarding is done, else to the first question. */
+/** Locale home: forwards to the plan when onboarding is done, else to the question the user was on. */
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Skeleton } from "@/components/ui/Skeleton";
@@ -11,11 +11,12 @@ export default function LocaleHome() {
   const { locale } = useT();
   const hydrated = useHydrated();
   const completed = useTakaStore((s) => s.onboarding.completed);
+  const step = useTakaStore((s) => s.onboarding.step);
 
   useEffect(() => {
     if (!hydrated) return;
-    router.replace(completed ? `/${locale}/plan` : `/${locale}/start/1`);
-  }, [hydrated, completed, locale, router]);
+    router.replace(completed ? `/${locale}/plan` : `/${locale}/start/${step}`);
+  }, [hydrated, completed, step, locale, router]);
 
   return <Skeleton page />;
 }
