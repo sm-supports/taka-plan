@@ -1,9 +1,11 @@
 name: CI
 
+# Pull requests run `check` + `e2e`; pushes to main run both and then `deploy`.
+# (Pull requests only, not every branch push, so a PR branch is not checked twice.)
 on:
   pull_request:
   push:
-    branches: ["**"]
+    branches: [main]
 
 env:
   CF_SEND_TELEMETRY: "false"
@@ -25,7 +27,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npx cf workers types
+      # `npm run typecheck` runs `cf workers types` itself before tsc.
       - run: npm run typecheck
       - run: npm test
       - run: npx cf build

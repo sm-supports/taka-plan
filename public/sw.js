@@ -77,13 +77,19 @@ function withTimeout(promise, ms) {
   });
 }
 
-/** Network first; on failure or a slow network, the cached page itself, then the same-locale plan shell. */
+/**
+ * Network first; on failure or a slow network, the cached page itself, then the same-locale plan shell.
+ *
+ * Shell entries are keyed by pathname only, so only a query-free load may refresh one: a page
+ * rendered for `/bn/plan?demo=1` (or any other search string) is served but never stored, which
+ * keeps the offline shell the plain `/bn/plan` HTML.
+ */
 async function handleNavigation(request, url) {
   const cache = await caches.open(CACHE_NAME);
   try {
     const response = await withTimeout(fetch(request), NAVIGATION_TIMEOUT_MS);
     const isShell = PRECACHE_URLS.includes(url.pathname) || /^\/(bn|en)\/plan$/.test(url.pathname);
-    if (response.ok && isShell) cache.put(url.pathname, cacheable(response.clone())).catch(() => {});
+    if (response.ok && isShell && url.search === "") cache.put(url.pathname, cacheable(response.clone())).catch(() => {});
     return response;
   } catch (_) {
     const exact = await cache.match(url.pathname);

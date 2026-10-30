@@ -49,8 +49,7 @@ Owned by the pwa-ci slice. Verified against `npm run build && npx vite preview` 
 | File | What it does |
 | --- | --- |
 | `app/manifest.ts` | `MetadataRoute.Manifest` served by vinext at **`/manifest.webmanifest`** (`application/manifest+json`); vinext injects `<link rel="manifest">` into every page. Colours come from `app/globals.css` tokens (`--color-page` background, `--color-brand-600` theme). |
-| `app/icon.svg` | Favicon via vinext's metadata file routes (served at `/icon.svg`, `<link rel="icon">` injected). |
-| `public/icons/` | `icon-192.png`, `icon-512.png`, `maskable-512.png` (generated), `icon.svg` (hand-written). Regenerate the PNGs with `node scripts/gen-icons.mjs` (tiny PNG encoder over `node:zlib`, no dependencies). |
+| `public/icons/` | `icon-192.png`, `icon-512.png`, `maskable-512.png` (generated once from `icon.svg`, committed) and `icon.svg` (hand-written). The favicon (`app/icon.png`, a vinext metadata route) belongs to the app-shell slice, not here. The PNGs were rendered by a dependency-free generator kept out of the repo; recover it with `git show 6a16a89:scripts/gen-icons.mjs` if the colours change. |
 | `public/sw.js` | Hand-written service worker, no workbox. Served from the assets binding at `/sw.js` (`text/javascript`). |
 | `components/pwa/RegisterSW.tsx` | Registers `/sw.js` only in production bundles (`process.env.NODE_ENV` is inlined by Vite, so the dev server never registers anything) and shows a bilingual "new version — tap to reload" toast when a newer worker has installed behind a controlled page. Mounted once in `app/layout.tsx`. |
 | `scripts/check-bundle.mjs` | First-paint JavaScript budget (`npm run check:bundle`). |
@@ -61,7 +60,7 @@ Owned by the pwa-ci slice. Verified against `npm run build && npx vite preview` 
 
 - `CACHE_VERSION` names the cache (`taka-v1`). Bump it whenever the precache list or a strategy changes; `activate` deletes every other `taka-*` cache and calls `clients.claim()`.
 - **install**: precaches `/`, `/bn/plan`, `/en/plan`, `/manifest.webmanifest`, `/api/rates`. Each URL is fetched independently; a failure (offline, route not deployed yet) skips that URL instead of failing the install. Redirected responses are re-wrapped so the Cache API can answer a navigation with them.
-- **navigations**: network-first with a 3 s timeout, then the cached page itself, then the cached same-locale `/plan` shell (locale from the first path segment, default `bn`). Successful loads of a precached URL or `/{locale}/plan` refresh the cache.
+- **navigations**: network-first with a 3 s timeout, then the cached page itself, then the cached same-locale `/plan` shell (locale from the first path segment, default `bn`). Successful query-free loads of a precached URL or `/{locale}/plan` refresh the cache; a load with a search string (`/bn/plan?demo=1`) is served but never stored, so the shell entry (keyed by pathname) stays the plain page.
 - `/_next/static/*`: cache-first (content-hashed, immutable).
 - `/api/rates`: stale-while-revalidate (cached copy answers immediately, network refreshes the cache).
 - `/admin*` and `/api/admin*`: never intercepted, never cached. Everything else: network only (no `respondWith`).
@@ -84,11 +83,12 @@ npm run build && npm run start                                      # then, in a
 BASE_URL=http://localhost:3001 npx playwright test e2e/offline.spec.ts
 ```
 
-- `onboarding.spec.ts`: `/` → English → five answers (28 / 50 000 / 30 000 / no one / no debt) → `/en/plan`, asserts at most 8 taps (the one-time disclaimer "I understand" is not counted), then the header locale switch and a Bangla digit on the page. Without `E2E_EXPECT_PLAN=1` the plan page may still show the `errors.engineNotReady` message.
+- `onboarding.spec.ts`: `/` → English → five answers (28 / 50 000 / 30 000 / no one / no debt) → `/en/plan`, asserts at most 8 taps (the one-time disclaimer "I understand" is not counted), then the header locale switch and a Bangla digit on the page. Without `E2E_EXPECT_PLAN=1` the plan page may still show the `errors.engineNotReady` message, and the test **skips** (does not fail) when `/en/start/1` shows no question input because `app/[locale]/start/[step]` is not landed yet.
 - `offline.spec.ts`: skipped unless `BASE_URL` is set (the service worker registers only in production builds). Waits for the worker to control the page and for `/bn/plan` to land in the `taka-*` cache, then `context.setOffline(true)`, reloads, and asserts the reload was answered by the service worker and the headline is still on the page.
 
 ### CI (`.github/workflows/ci.yml`)
 
-- `check` (every push and pull request): `npm ci` → `npx cf workers types` → `npm run typecheck` → `npm test` → `npx cf build` → `npx cf deploy --prebuilt --mode production --dry-run` (needs no login; `D1_DATABASE_ID` comes from repository **variables**).
+- Triggers: every pull request, and pushes to `main` (not every branch, so a PR branch is not checked twice).
+- `check`: `npm ci` → `npm run typecheck` (which runs `cf workers types` itself) → `npm test` → `npx cf build` → `npx cf deploy --prebuilt --mode production --dry-run` (needs no login; `D1_DATABASE_ID` comes from repository **variables**).
 - `e2e` (`continue-on-error: true` while the UI slices land): installs Chromium, migrates the local D1, runs the onboarding spec against the dev server, then builds, starts the preview on :3001 in the background, runs the offline spec and `npm run check:bundle` against it. The Playwright report is uploaded as an artifact.
 - `deploy` (push to `main`, after `check`): `npx cf build && npx cf deploy --prebuilt --mode production` with secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` and variable `D1_DATABASE_ID`. Remote D1 migrations (`npm run db:migrate:remote`) stay a manual step until the token scopes are proven; `/api/rates` serves the bundled seed with `X-Rates-Source: fallback` meanwhile.
