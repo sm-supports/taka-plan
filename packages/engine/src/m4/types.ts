@@ -39,3 +39,7 @@ export interface M4Result {
 
 export const M4_STEP_IDS = ["m4.average", "m4.feasible", "m4.amount", "m4.expenses"] as const;
 export type M4StepId = (typeof M4_STEP_IDS)[number];
+
+/** Free-text notes the module may attach (dictionary keys under m4.note.*). */
+export const M4_NOTE_KEYS = ["m4.note.instrumentDps"] as const;
+export type M4NoteKey = (typeof M4_NOTE_KEYS)[number];
