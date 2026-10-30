@@ -1,6 +1,6 @@
 // In-memory RatesRepo with the same draft/publish/change-log semantics as D1RatesRepo.
 import { RATES_SEED, assertSnapshot, type RateKey, type RateRow, type RatesSnapshot } from "@taka/engine";
-import { applyPatch, type ChangeLogEntry, type RatePatch, type RatesRepo } from "@/lib/server/db";
+import { NoPublishedVersionError, applyPatch, type ChangeLogEntry, type RatePatch, type RatesRepo } from "@/lib/server/db";
 
 interface FakeVersion {
   version: number;
@@ -49,7 +49,7 @@ export class FakeRatesRepo implements RatesRepo {
 
   async getPublished(): Promise<RatesSnapshot> {
     const v = this.find("published");
-    if (!v) throw new Error("No published rates version");
+    if (!v) throw new NoPublishedVersionError();
     return this.snapshot(v);
   }
 
