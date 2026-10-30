@@ -2,14 +2,27 @@
 export const m4 = {
   title: "Save-first budget",
   intro: "Flip the equation. Save first on payday; spend what is left. The habit matters more than the amount.",
+  demo: "Sample numbers for preview only. Your own inputs are not used on this view.",
+
+  section: {
+    inputs: "Your numbers",
+    result: "Your save-first budget",
+    where: "Where it goes",
+    nextStep: "Next step",
+  },
 
   input: {
     takeHome: { label: "Monthly take-home", hint: "What actually lands in your account." },
     essentials: { label: "Monthly essential spending", hint: "Rent, food, utilities, transport, school fees, support to parents, EMIs." },
     incomeType: { label: "How you earn", hint: "Freelancers and business owners save a share of each payment instead of a fixed sum." },
-    savingsRate: { label: "Savings rate", hint: "We suggest {suggested} of take-home. Lower it to any amount you can actually keep up." },
+    savingsRate: {
+      label: "Savings rate",
+      hint: "We suggest {suggested} of take-home. Lower it to any amount you can actually keep up.",
+      suggested: "Suggested: {rate}",
+      useSuggested: "Use the suggestion",
+    },
     payday: { label: "Day your salary lands", hint: "We will suggest a transfer the day after, before the money gets spent." },
-    last6Incomes: { label: "Last six months' income", hint: "One figure per month. We use the average as your take-home." },
+    last6Incomes: { label: "Last six months' income", hint: "One figure per month. We use the average as your take-home.", month: "Month {n}" },
   },
 
   result: {
@@ -24,6 +37,7 @@ export const m4 = {
     expensesAllowed: "Left to spend",
     essentialsShortfall: "Essentials over budget by",
     essentialsShortfallHint: "Your essentials are higher than what is left after saving. Lower the rate, or look for one essential to trim.",
+    modeLabel: "How you save",
     mode: {
       fixed: "A fixed amount every month",
       percentOfEachPayment: "A share of every payment you receive",
@@ -33,6 +47,12 @@ export const m4 = {
     instrumentHint: "A DPS auto-debits on a fixed day, so the saving happens before you can spend it.",
     transferDay: "Standing transfer on day {day} of each month",
     transferDayUnknown: "Tell us your payday and we will suggest a transfer date.",
+  },
+
+  next: {
+    dps: "Ask your bank to open a DPS with auto-debit on day {day} of each month, the day after your salary lands. Any amount is fine; the habit matters more than the size.",
+    dpsNoPayday: "Ask your bank to open a DPS with auto-debit on the day after your salary lands. Any amount is fine; the habit matters more than the size.",
+    percentOfEachPayment: "The day a payment lands, move {percent} of it to a separate savings account before you spend any of it. Keep the share the same in big months and small ones; once the balance is steady, turn it into a DPS.",
   },
 
   status: {

@@ -2,6 +2,14 @@
 export const m1 = {
   title: "Emergency fund",
   intro: "Money you can reach within a day or two when income stops or a bill lands. Size it to your family, not to a fixed rule.",
+  demo: "Sample numbers for preview only. Your own inputs are not used on this view.",
+
+  section: {
+    inputs: "Your numbers",
+    result: "Your emergency fund",
+    rules: "Rules for this money",
+    nextStep: "Next step",
+  },
 
   input: {
     essentials: {
@@ -31,6 +39,8 @@ export const m1 = {
     months: {
       label: "Months of cover",
       hint: "We suggest a starting point; slide to what feels right for your family, from {min} to {max} months.",
+      suggested: "Suggested: {months}",
+      useSuggested: "Use the suggestion",
     },
     buildMonths: {
       label: "Build it over",
@@ -56,6 +66,7 @@ export const m1 = {
       fdrLadder: "3-month FDR ladder",
       fdrLadderHint: "The rest, in three FDRs opened a month apart so one matures every month.",
       fdrPerSlice: "Each FDR",
+      fdrSlices: "Three FDRs of {amount} each, one opened every month.",
       banksNeeded: "Banks to spread across",
       banksNeededHint: "Deposit insurance covers only {limit} per bank, so keep no more than that in any one bank.",
       sanchayapatraLayer: "Third layer: Sanchayapatra",
