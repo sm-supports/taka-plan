@@ -1,0 +1,20 @@
+// Taka Plan calculation engine. Pure TypeScript: no React, no DOM, no I/O.
+export * from "./types";
+export * from "./money";
+export * from "./format";
+export * from "./rates";
+export * from "./explain";
+export * from "./m1/types";
+export * from "./m1/emergency-fund";
+export * from "./m3/types";
+export * from "./m3/emi";
+export * from "./m3/payoff";
+export * from "./m3/debt-health";
+export * from "./m4/types";
+export * from "./m4/save-first";
+export * from "./m5/types";
+export * from "./m5/goal-planner";
+export * from "./plan/types";
+export * from "./plan/plan";
+export * from "./fixtures/profiles";
+export { default as RATES_SEED } from "./data/rates.seed.json";
