@@ -7,6 +7,14 @@ export const admin = {
     submit: "Sign in",
     failed: "Wrong password.",
     signOut: "Sign out",
+    hint: "The password is the ADMIN_PASSWORD secret (locally: .dev.vars).",
+  },
+
+  nav: {
+    rates: "Rates",
+    preview: "Preview",
+    log: "Change log",
+    backToApp: "Back to the app",
   },
 
   table: {
@@ -24,6 +32,12 @@ export const admin = {
     ourAssumption: "Our assumption",
     stale: "Past review date",
     empty: "No rows yet.",
+    edited: "Edited in draft",
+    filter: "Filter by key or label",
+    showing: "{shown} of {total} rows",
+    staleCount: "Past review date: {count}",
+    noStale: "No rows past their review date",
+    publishedWas: "Published: {value}",
   },
 
   action: {
@@ -35,6 +49,13 @@ export const admin = {
     previewFirst: "Preview first",
     preview: "Preview",
     newDraft: "Start a draft",
+    reload: "Reload",
+    loadMore: "Load more",
+    why: "Why this number?",
+    confirmPublish: "Publish v{version}? Every user gets these rates within five minutes.",
+    confirmDiscard: "Discard draft v{version}? Every edit in it is lost.",
+    yesPublish: "Yes, publish v{version}",
+    yesDiscard: "Yes, discard v{version}",
   },
 
   state: {
@@ -44,6 +65,38 @@ export const admin = {
     unsaved: "Unsaved changes",
     saved: "Saved",
     publishedAt: "Published {date}",
+    loading: "Loading…",
+    error: "Something went wrong: {message}",
+    previewRequired: "Open the preview before publishing.",
+    previewSeen: "Preview checked.",
+    publishedNow: "Published v{version}. Users get it within five minutes.",
+    discarded: "Draft discarded.",
+    rowSaved: "{key} saved to draft v{version}.",
+    publishNote: "Publish note (optional)",
+    draftExplainer: "You are looking at the draft. The published rates (v{version}) stay live until you publish.",
+  },
+
+  editor: {
+    title: "Edit {key}",
+    value: "Value",
+    valueRate: "Value (per cent, e.g. 11.83)",
+    valueBdt: "Value (taka)",
+    valueNumber: "Value",
+    valueJson: "Value (JSON)",
+    rangeLow: "Range low",
+    rangeHigh: "Range high",
+    labelEn: "Label (English)",
+    labelBn: "Label (Bangla)",
+    sourceName: "Source name",
+    sourceUrl: "Source URL",
+    asOf: "As of (YYYY-MM-DD)",
+    reviewedBy: "Reviewed by",
+    nextReview: "Next review (YYYY-MM-DD)",
+    note: "Row note",
+    changeNote: "Why this change? (goes in the change log)",
+    current: "Now: {value}",
+    invalidJson: "Enter valid JSON.",
+    unchanged: "Nothing changed.",
   },
 
   preview: {
@@ -53,6 +106,11 @@ export const admin = {
       freelancer: "Freelancer",
       family_with_debt: "Family with debt",
     },
+    profileNote: {
+      first_job: "Salaried, ৳45,000 take-home, no debt",
+      freelancer: "Irregular income, ৳90,000 average, partner",
+      family_with_debt: "Two earners, ৳1,20,000, home loan and a carried card",
+    },
     published: "Published",
     draft: "Draft",
     changed: "Changed",
@@ -61,6 +119,30 @@ export const admin = {
     bucket: "Bucket",
     before: "Before",
     after: "After",
+    noDraft: "No draft yet. The preview shows the published rates only; edit a row to compare.",
+    engineNotReady: "The plan engine is not wired into this build yet. Numbers appear once it lands.",
+    engineError: "The engine failed for this profile: {message}",
+    changedKeys: "Rows with a changed value in the draft: {count}",
+    noChangedKeys: "No values changed in the draft",
+    emergencyTarget: "Emergency fund target",
+    goalMonthly: "Goal: {id}",
+    statusChange: "{before} → {after}",
+    seen: "Preview checked for draft v{version}. You can publish from the rates page.",
+    why: "Why these numbers?",
+    whyBody:
+      "Each card runs the full plan engine over a fixed sample profile, once with the published rates (v{published}) and once with the draft (v{draft}), for today, {today}. Only rows whose value changed can move a number; they are listed at the top.",
+    whyBodyNoDraft: "Each card runs the full plan engine over a fixed sample profile with the published rates (v{published}) for today, {today}.",
+    bucketName: {
+      emergency: "Emergency fund",
+      insurance: "Insurance",
+      debt: "Debt",
+      goal: "Goal",
+      future: "Future",
+    },
+    instrumentExtra: {
+      loan_prepayment: "Loan prepayment",
+      term_insurance: "Term insurance",
+    },
   },
 
   changeLog: {
@@ -73,6 +155,14 @@ export const admin = {
     to: "To",
     note: "Note",
     empty: "No changes yet.",
+    end: "That is everything.",
+    action: {
+      create_draft: "Draft created",
+      edit: "Row edited",
+      publish: "Published",
+      discard_draft: "Draft discarded",
+    },
+    fields: "Changed: {fields}",
   },
 
   validation: {
