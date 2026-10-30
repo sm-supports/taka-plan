@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-lc", "export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; nvm use 24 >/dev/null; export CF_SEND_TELEMETRY=false; npm run dev"],
+      "port": 3001
+    },
+    {
+      "name": "preview",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-lc", "export NVM_DIR=\"$HOME/.nvm\"; . \"$NVM_DIR/nvm.sh\"; nvm use 24 >/dev/null; export CF_SEND_TELEMETRY=false; npm run build && npm run start"],
+      "port": 3001
+    }
+  ]
+}
