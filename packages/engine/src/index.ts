@@ -9,6 +9,7 @@ export * from "./m1/emergency-fund";
 export * from "./m3/types";
 export * from "./m3/emi";
 export * from "./m3/payoff";
+export * from "./m3/flags";
 export * from "./m3/debt-health";
 export * from "./m4/types";
 export * from "./m4/save-first";

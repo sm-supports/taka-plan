@@ -65,7 +65,7 @@ export function computeDebtHealth(input: M3Input, rates: RatesSnapshot, today: I
   const highInterestThreshold = ex.use("high_interest_debt_threshold");
 
   const cashBuffer = input.cashBuffer ?? input.takeHome * ex.use("cash_buffer_share");
-  const scenario: LoanScenario = input.scenario ?? { annualRate: ex.use("personal_loan_rate_default"), months: 60 };
+  const scenario: LoanScenario = input.scenario ?? { annualRate: ex.use("personal_loan_rate_default"), months: ex.use("personal_loan_tenure_default_months") };
   const cardRate = (c: Card): number => c.annualRate ?? ex.use("credit_card_rate_cap");
 
   // Carried cards: balance > 0 and not paid in full inside the grace period.

@@ -53,7 +53,7 @@
       "value": 0.02,
       "unit": "rate",
       "labelEn": "Savings account interest",
-      "sourceName": "Bank rate sheets (Southeast Bank, Bank Asia, NRB Bank)",
+      "sourceName": "Published deposit rate sheets of three private banks",
       "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
       "asOf": "2026-09-30",
       "nextReview": "2027-01-31"
@@ -68,7 +68,7 @@
       "value": 0.07,
       "unit": "rate",
       "labelEn": "FDR, 3 months",
-      "sourceName": "Bank rate sheets (Southeast Bank, Bank Asia, NRB Bank)",
+      "sourceName": "Published deposit rate sheets of three private banks",
       "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
       "asOf": "2026-09-30",
       "nextReview": "2027-01-31"
@@ -83,7 +83,7 @@
       "value": 0.075,
       "unit": "rate",
       "labelEn": "FDR, 1 year",
-      "sourceName": "Bank rate sheets (Southeast Bank, Bank Asia, NRB Bank)",
+      "sourceName": "Published deposit rate sheets of three private banks",
       "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
       "asOf": "2026-09-30",
       "nextReview": "2027-01-31"
@@ -98,7 +98,7 @@
       "value": 0.09,
       "unit": "rate",
       "labelEn": "DPS (monthly deposit scheme)",
-      "sourceName": "Bank rate sheets (Southeast Bank, Bank Asia, NRB Bank)",
+      "sourceName": "Published deposit rate sheets of three private banks",
       "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
       "asOf": "2026-09-30",
       "nextReview": "2027-01-31"
@@ -870,6 +870,19 @@
       "sourceUrl": "docs/PRD.md#m5-goal-planner",
       "asOf": "2026-10-30",
       "nextReview": "2027-06-30"
+    },
+    "personal_loan_tenure_default_months": {
+      "key": "personal_loan_tenure_default_months",
+      "value": 60,
+      "unit": "months",
+      "labelEn": "Default loan tenure for the affordability scenario",
+      "labelBn": "সামর্থ্য হিসাবের ডিফল্ট ঋণের মেয়াদ",
+      "sourceName": "Taka Plan PRD (our assumption)",
+      "sourceUrl": "docs/PRD.md#m3-debt-health-check",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
     }
   }
 }

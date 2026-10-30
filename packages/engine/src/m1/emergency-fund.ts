@@ -80,9 +80,9 @@ export function computeEmergencyFund(input: M1Input, rates: RatesSnapshot, today
     "m1.months",
     {
       base: mb.base,
-      irregular: mb.irregular,
-      soleEarner: mb.soleEarner,
-      noInsurance: mb.noInsurance,
+      bumpIrregular: mb.irregular,
+      bumpSoleEarner: mb.soleEarner,
+      bumpNoHealth: mb.noInsurance,
       min: mb.min,
       max: mb.max,
       suggested: mb.suggested,
@@ -122,7 +122,7 @@ export function computeEmergencyFund(input: M1Input, rates: RatesSnapshot, today
   const fdrPerSlice = roundMoney(fdrLadder / FDR_LADDER_SLICES, "lump");
   const limit = explain.use("deposit_insurance_limit");
   const banksRaw = target / limit;
-  const banksNeeded = step("m1.banks", { target, limit }, banksRaw, Math.max(1, Math.ceil(banksRaw)), "count");
+  const banksNeeded = step("m1.banks", { target, tier2: fdrLadder, limit }, banksRaw, Math.max(1, Math.ceil(banksRaw)), "count");
   const largeBuffer = explain.use("emergency_large_buffer_threshold");
   const sanchayapatraLayer = target > largeBuffer;
 

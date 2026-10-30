@@ -199,7 +199,7 @@ describe("computeEmergencyFund (explanation)", () => {
     expect(monthly?.rounded).toBe(16700);
     expect(monthly?.inputs).toEqual({ gap: 200000, buildMonths: 12 });
     const months = r.explain.steps.find((s) => s.id === "m1.months");
-    expect(months?.inputs).toMatchObject({ base: 6, irregular: 0, soleEarner: 2, noInsurance: 2, min: 3, max: 15, suggested: 10, source: "suggested" });
+    expect(months?.inputs).toMatchObject({ base: 6, bumpIrregular: 0, bumpSoleEarner: 2, bumpNoHealth: 2, min: 3, max: 15, suggested: 10, source: "suggested" });
     expect(computeEmergencyFund({ ...vector, monthsOverride: 5 }, rates, today).explain.steps[0]?.inputs).toMatchObject({ source: "override", suggested: 10 });
   });
 

@@ -32,6 +32,10 @@ Set `CF_SEND_TELEMETRY=false` to silence cf telemetry. Non-interactive cf prompt
 
 ## Gotchas
 
+- Inside git worktrees created by agent tooling, a hook may refuse commands that source `nvm.sh`; use `export PATH="$HOME/.nvm/versions/node/v24.22.2/bin:$PATH"` instead.
+- Build output lives under `.cloudflare/output/v0/workers/default/{bundle,assets}` (not `dist/`). The bare scaffold's client JS was 441 KB raw / 133 KB gzip (React 19 + RSC runtime), so our own code has roughly 160 KB of compressed transfer budget under the PRD's 300 KB target.
+- `migrations/0002_seed_rates.sql` is regenerated from the seed JSON; after changing the seed before launch, run `npm run db:reset:local && npm run db:migrate:local` and restart the dev server (the Worker keeps the old SQLite file open).
+
 - `cf d1 … --local` defaults to `~/Library/Preferences/cloudflare/state/v3`, **not** the project. Always pass `--persist-to .cloudflare/state` (the npm scripts do) so the dev server sees the data.
 - `cf build` runs Vite directly and ignores npm pre/post scripts. Anything the build needs (seed migration, `public/sw.js`) must be committed, not generated at build time.
 - `cloudflare.config.ts` is function-form: `mode === "production"` reads `D1_DATABASE_ID` from the environment; every other mode uses the fixed local id above. Set `D1_DATABASE_ID` **before** the first `cf deploy` so cf does not auto-provision a second database.

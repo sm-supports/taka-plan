@@ -69,6 +69,7 @@ export const RATE_KEYS = [
   "card_utilisation_amber",
   "high_interest_debt_threshold",
   "personal_loan_rate_default",
+  "personal_loan_tenure_default_months",
   // app policy: M4, plan, M5
   "savings_rate_default",
   "plan_emergency_min_share",

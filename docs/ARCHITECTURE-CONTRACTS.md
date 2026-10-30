@@ -129,14 +129,14 @@ The engine's `ExplainStep.inputs` must supply exactly these names (the UI format
 
 | Step id | inputs |
 | --- | --- |
-| m1.months | base, bumpIrregular, bumpSoleEarner, bumpNoHealth, min, max |
+| m1.months | base, bumpIrregular, bumpSoleEarner, bumpNoHealth, min, max (+ suggested, source) — month counts, format as plain numbers |
 | m1.target | essentials, months |
 | m1.gap | target, saved |
 | m1.monthly | gap, buildMonths |
 | m1.covered | saved, essentials |
 | m1.tier1 | essentials |
 | m1.tier2 | target, tier1 |
-| m1.banks | tier2, limit |
+| m1.banks | target, tier2, limit (banksNeeded = ceil(target ÷ limit): the whole fund sits in deposits) |
 | m3.totalEmi | emis, cardMinimums |
 | m3.emiRatio | totalEmi, takeHome |
 | m3.capacity | takeHome, savings, essentials, buffer |
@@ -172,3 +172,13 @@ Units: pass raw numbers; the UI formats by the step's `unit` and by name (names 
 - `lib/server/db.ts`: `RatesRepo`, `D1RatesRepo`, `ChangeLogEntry`, `RatePatch`, `applyPatch`. `lib/server/env.ts`: `getEnv`, `getRatesRepo`, `setRatesRepoForTests`, `getAdminPassword`. `lib/server/http.ts`: `json`, `httpError`, `readJson`, `HttpError`, `toResponse`. `test/fakes/fakeRatesRepo.ts`: `FakeRatesRepo`.
 - `lib/i18n`: `config.ts` (`locales`, `defaultLocale`, `isLocale`, `resolveLocale`, `LOCALE_COOKIE`), `server.ts` (`getDictionary`, `localeFromCookie`), `provider.tsx` (`I18nProvider`), `useT.ts` (`useT()` → `{ t, locale, dict }`), `useFormat.ts` (`useFormat()`, `createFormatters(locale)`), `translate.ts` (`translate`, `getPath`, `interpolate`).
 
+
+## Integration notes (Stage 2, as built)
+
+- **M1 rounding:** target, gap, saved and fdrLadder are whole taka ("exact"); savingsAccount and fdrPerSlice "lump" (৳500); monthlySaving "monthly" (৳100). Status uses the 1-dp monthsCovered shown to the user. The 15-month cap is unreachable with the seed (6+3+2+2 = 13); the cap is only tested with a raised base row.
+- **M3:** emiRatio includes carried-card minimums (flags vector: (20000+6000+3000)/60000 = 0.4833). Scenario defaults come from `personal_loan_rate_default` and `personal_loan_tenure_default_months`. `highInterestDebts` uses a strict `>` on the threshold. A debt whose minimum never covers interest runs to 600 months and is omitted from `order`.
+- **M4:** status amber when the rate is squeezed below `savings_rate_default` or the user picks a rate below the suggestion; always attaches note `m4.note.instrumentDps`; m4.average is emitted for everyone (months = 1 for salaried).
+- **M5:** short-horizon goals come out red with the launch seed (DPS 9% → 8.1% after tax < 8.34% CPI). Horizon thresholds (3/5 years) and the 1–40 year bounds are validation constants, not rate rows.
+- **plan:** a `future` bucket (DPS, plan.reason.addGoal) absorbs any surplus so monthlyTotal always equals the M4 savings amount. Emergency amount follows the spec exactly (not capped at the remaining gap). The full-emergency bucket reuses `plan.next.fdrLadder`.
+- **d1-api:** `/api/health` → `{ ok, db, publishedVersion, ratesSource, detail? }`; `/api/rates` ETag is the quoted strong form `"v<n>"`; fallback has no ETag and `Cache-Control: no-store`.
+- **Explain formatting (UI):** names ending in rate/inflation/tax/share plus nominal/afterTax/real/monthlyRate → percent; months/years/count and the m1.months inputs → plain numbers; Instrument ids → `common.instrument.*`; everything else taka.
