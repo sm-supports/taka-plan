@@ -19,6 +19,14 @@ export interface PlanInput {
   retirement?: { monthlyNeed: Money };
 }
 
+/** Per-module overrides layered on top of the onboarding defaults in profileToPlanInput. */
+export interface PlanOverrides {
+  m1?: Partial<M1Input>;
+  m3?: Partial<M3Input>;
+  m4?: Partial<M4Input>;
+  m5?: M5Input;
+}
+
 export type BucketId = "emergency" | "insurance" | "debt" | "goal" | "future";
 export type BucketInstrument = Instrument | "loan_prepayment" | "term_insurance";
 export type BucketModule = "m1" | "m2" | "m3" | "m5" | "m7";
