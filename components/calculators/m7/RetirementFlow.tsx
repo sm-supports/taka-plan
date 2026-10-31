@@ -18,6 +18,8 @@ import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { useTakaStore } from "@/lib/store/store";
 import type { M7State } from "@/lib/store/types";
+import { usePlan } from "@/lib/store/usePlan";
+import { defaultM7Savings } from "./input";
 
 type StepId = "mode" | "age" | "retirementAge" | "spending" | "savings" | "monthlySaving" | "retireeType" | "otherIncome" | "sex";
 
@@ -52,11 +54,12 @@ export function RetirementFlow({ onDone }: { onDone: () => void }) {
   const retireMax = Math.max(retireMin, RETIREMENT_AGE_MAX);
   const retirementAge = m7.retirementAge ?? Math.min(retireMax, Math.max(retireMin, defaultRetire));
 
+  const { plan } = usePlan();
   const moneyValue = (key: MoneyKey): number | null => {
     const stored = m7[key];
     if (stored !== undefined) return stored;
     if (key === "monthlySpending") return profile.essentials ?? null;
-    if (key === "savings") return m1.liquidSavings ?? null;
+    if (key === "savings") return defaultM7Savings(m1.liquidSavings ?? null, plan?.emergency.target);
     if (key === "otherMonthlyIncome") return 0;
     return null;
   };

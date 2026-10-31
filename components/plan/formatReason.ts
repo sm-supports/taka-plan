@@ -24,6 +24,10 @@ const BY_REASON: Record<string, Record<string, Kind>> = {
   // planTo and lastsTo are ages, not money (the by-name fallback would format them as taka).
   "plan.reason.retirement": { amount: "taka", need: "taka", planTo: "number", lastsTo: "number" },
   "plan.reason.retirementShort": { amount: "taka", need: "taka", planTo: "number", lastsTo: "number" },
+  "plan.reason.retirementShortNoAge": { amount: "taka", need: "taka", planTo: "number", lastsTo: "number" },
+  "plan.reason.retirementNone": { amount: "taka", need: "taka", planTo: "number", lastsTo: "number" },
+  "plan.reason.debtNever": { rate: "percent", amount: "taka", months: "months", count: "number", neverAtPace: "number" },
+  "plan.reason.debtNone": { rate: "percent", amount: "taka", months: "months", count: "number", neverAtPace: "number" },
   "plan.reason.future": { amount: "taka", instrument: "instrument" },
 };
 
@@ -68,10 +72,20 @@ function formatOne(kind: Kind, value: number | string, f: Formatters, t: TFuncti
  * engine sent those params), and "so your money lasts to {planTo}" otherwise.
  */
 export function reasonKeyFor(bucket: Pick<Bucket, "reasonKey" | "reasonParams">): string {
+  const { amount, need, lastsTo, neverAtPace } = bucket.reasonParams;
+  // A bucket kept with nothing in it this month (not green): say so rather than "৳0/month into …".
+  const empty = amount === 0;
   if (bucket.reasonKey === "plan.reason.retirement") {
-    const { amount, need, lastsTo } = bucket.reasonParams;
-    if (typeof amount === "number" && typeof need === "number" && typeof lastsTo === "number" && amount < need) return "plan.reason.retirementShort";
+    if (typeof need === "number" && typeof amount === "number" && amount < need) {
+      if (empty) return "plan.reason.retirementNone";
+      return typeof lastsTo === "number" ? "plan.reason.retirementShort" : "plan.reason.retirementShortNoAge";
+    }
   }
+  if (bucket.reasonKey === "plan.reason.debt") {
+    if (empty) return "plan.reason.debtNone";
+    if (neverAtPace) return "plan.reason.debtNever";
+  }
+  if (bucket.reasonKey === "plan.reason.insurance" && empty) return "plan.reason.insuranceNone";
   return bucket.reasonKey;
 }
 

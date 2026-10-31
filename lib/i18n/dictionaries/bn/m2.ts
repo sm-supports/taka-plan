@@ -185,6 +185,8 @@ export const m2: Dictionary["m2"] = {
     keepHint: "মেয়াদ শেষে পাবেন।",
     alternative: "টার্ম বিমা আর বাকি টাকা সঞ্চয়",
     alternativeHint: "প্রতিটি প্রিমিয়ামের বাকি টাকা {instrument}-এ, বাকি {years} ধরে।",
+    atLeast: "অন্তত {amount}",
+    surrenderPart: "এর মধ্যে সারেন্ডার মূল্য থেকে {amount}, মেয়াদ শেষ পর্যন্ত বাড়িয়ে ধরা।",
     termPremium: "একই অঙ্কের টার্ম বিমা, বছরে",
     remaining: "আর যত বছর দিতে হবে",
     irr: "পলিসির বার্ষিক মুনাফা",

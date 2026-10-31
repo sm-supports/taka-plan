@@ -115,6 +115,21 @@ describe("bucket reasons", () => {
     expect(bucketReason(funded, fEn, tEn)).toBe("Retirement — ৳9,000/month so your money lasts to age 100");
   });
 
+  it("says when a debt never clears, and when a kept bucket has nothing this month", () => {
+    const never: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.debt", reasonParams: { amount: 2000, rate: 0.3, count: 1, neverAtPace: 1 } };
+    expect(bucketReason(never, fEn, tEn)).toContain("at this pace it never clears");
+    expect(bucketReason(never, fEn, tEn)).not.toContain("{months}");
+    expect(bucketReason({ ...never, reasonParams: { ...never.reasonParams, amount: 0 } }, fEn, tEn)).toContain("nothing fits this month yet");
+    expect(bucketReason({ reasonKey: "plan.reason.insurance", reasonParams: { amount: 0 } }, fEn, tEn)).toContain("nothing fits this month yet");
+    expect(bucketReason({ reasonKey: "plan.reason.retirement", reasonParams: { amount: 0, need: 9000, planTo: 100 } }, fEn, tEn)).toBe("Retirement — nothing fits this month yet of the ৳9,000 a month you need");
+    expect(bucketReason({ reasonKey: "plan.reason.retirement", reasonParams: { amount: 3000, need: 9000, planTo: 100 } }, fEn, tEn)).toBe("Retirement — ৳3,000/month of the ৳9,000 you need");
+    for (const r of [never, { reasonKey: "plan.reason.retirement", reasonParams: { amount: 0, need: 9000, planTo: 100 } }]) {
+      const bnText = bucketReason(r, fBn, tBn);
+      expect(bnText).not.toMatch(/[0-9{]/);
+      expect(bnText.endsWith("।")).toBe(true);
+    }
+  });
+
   it("names the country's product in the next step", () => {
     expect(bucketNextStep({ nextStepKey: "plan.next.dps" }, tEn)).toContain("open a recurring deposit");
     const names = { label: (s: string) => s, prose: (s: string) => (s === "dps" ? "DPS" : s) };

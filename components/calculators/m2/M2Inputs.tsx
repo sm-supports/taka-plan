@@ -77,7 +77,8 @@ export function M2Inputs({ input, defaultCoverToAge, defaultIncomeShare }: M2Inp
         />
       </Field>
 
-      {(covered.includes("child") || input.dependents.includes("children")) && (
+      {/* The youngest child's age only shortens life cover when children are the only dependents. */}
+      {input.dependents.length > 0 && input.dependents.every((d) => d === "children") && (
         <CountInput
           id="m2-youngestChildAge"
           value={m2.youngestChildAge ?? null}

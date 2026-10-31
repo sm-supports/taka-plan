@@ -24,7 +24,7 @@ import { DemoBanner, Field, Section } from "../shared/Figures";
 import { useDemoMode, useToday } from "../shared/hooks";
 import { m7DemoInput } from "./demo";
 import { IncomeSources } from "./IncomeSources";
-import { buildM7Input, shiftedStart, START_SHIFT_YEARS, withoutSources } from "./input";
+import { buildM7Input, defaultM7Savings, shiftedStart, START_SHIFT_YEARS, withoutSources } from "./input";
 import { RETIREMENT_AGE_MAX, RetirementFlow } from "./RetirementFlow";
 import { RetirementResult } from "./RetirementResult";
 
@@ -56,14 +56,16 @@ export function RetirementCalculator() {
   const setProfile = useTakaStore((s) => s.setProfile);
   const { plan } = usePlan();
   const allocation = plan?.allocation?.weights;
+  // Same default as the plan: only the liquid savings above the emergency-fund target count.
+  const savingsDefault = defaultM7Savings(m1.liquidSavings ?? null, plan?.emergency.target);
 
   // Decided once per visit: the store is rehydrated before this mounts (HydrationGate).
   const [phase, setPhase] = useState<Phase>(() => (hasOverrideAnswers(m7) ? "calculator" : "flow"));
 
   const input = useMemo<M7Input | null>(() => {
     if (demo) return m7DemoInput(demo);
-    return buildM7Input(m7, { age: profile.age ?? null, essentials: profile.essentials ?? null, liquidSavings: m1.liquidSavings ?? null }, allocation);
-  }, [demo, m7, profile.age, profile.essentials, m1.liquidSavings, allocation]);
+    return buildM7Input(m7, { age: profile.age ?? null, essentials: profile.essentials ?? null, liquidSavings: savingsDefault }, allocation);
+  }, [demo, m7, profile.age, profile.essentials, savingsDefault, allocation]);
 
   const outcome = useMemo<Outcome>(() => {
     if (!input) return EMPTY;
@@ -187,7 +189,7 @@ export function RetirementCalculator() {
   const retirementAge = m7.retirementAge ?? Math.min(retireMax, Math.max(retireMin, defaultRetire));
   const sexChoice: SexChoice = m7.sex ?? "unknown";
   const spending = m7.monthlySpending ?? profile.essentials ?? null;
-  const savings = m7.savings ?? m1.liquidSavings ?? null;
+  const savings = m7.savings ?? savingsDefault;
   const loweredBy = outcome.result && outcome.baseline !== null ? Math.max(0, outcome.baseline - outcome.result.targets.plan.monthlySaving) : null;
 
   const pick =

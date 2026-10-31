@@ -2,7 +2,7 @@
 /**
  * Plain sentences under the cards: emergency share, months to full, goals shortfall and the
  * retirement shortfall. The "no goals yet" line only shows when the plan has neither goals nor a
- * retirement bucket (retirement is a goal).
+ * retirement bucket (retirement is a goal). Modules left out of the plan get their note here.
  */
 import type { Plan } from "@taka/engine";
 import { iso } from "@/components/ui/bidi";
@@ -15,6 +15,8 @@ export function PlanSummary({ plan }: { plan: Plan }) {
   const { emergencyShare, monthsToEmergencyFull, goalsShortfall, retirementShortfall } = plan.summary;
   const hasGoals = (plan.goals?.goals.length ?? 0) > 0;
   const hasRetirement = plan.buckets.some((b) => b.id === "retirement") || plan.retirement !== undefined;
+  // A module whose answers no longer fit the profile is left out of the plan with a note (plan.note.*).
+  const planNotes = plan.explain.notes.filter((n) => n.startsWith("plan.note."));
   return (
     <section aria-labelledby="plan-summary" className="rounded-card bg-surface-muted px-4 py-3 text-sm leading-relaxed text-text-muted">
       <h2 id="plan-summary" className="text-xs font-semibold uppercase tracking-wide text-text-faint">
@@ -39,6 +41,11 @@ export function PlanSummary({ plan }: { plan: Plan }) {
             {t("plan.summary.retirementShortfall", { amount: iso(f.money(retirementShortfall)) })}
           </li>
         )}
+        {planNotes.map((n) => (
+          <li key={n} dir="auto" className="font-medium text-status-amber" data-testid="plan-note">
+            {t(n)}
+          </li>
+        ))}
       </ul>
     </section>
   );

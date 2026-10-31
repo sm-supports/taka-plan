@@ -125,7 +125,7 @@ export function M2Calculator() {
         {result && input && (
           <>
             <M2Results input={input} result={result} coverToAge={coverToAge} />
-            <PolicyChecker check={result.policyCheck} explanation={result.explain} readOnly={demo} demoDraft={demo ? policyToDraft(M2_DEMO_INPUT.policy) : undefined} />
+            <PolicyChecker check={result.policyCheck} notes={result.notes} explanation={result.explain} readOnly={demo} demoDraft={demo ? policyToDraft(M2_DEMO_INPUT.policy) : undefined} />
             <InsurerChecklist items={result.checklist} />
             {!demo && (
               <>

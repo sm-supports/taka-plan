@@ -37,7 +37,10 @@ export function M2Results({ input, result, coverToAge }: M2ResultsProps) {
   const premiumCaptionKey =
     result.monthlyPremiumNeed === 0 || (!buyLife && !buyHealth) ? "m2.premium.captionNone" : buyLife && buyHealth ? "m2.premium.caption" : buyLife ? "m2.premium.captionLife" : "m2.premium.captionHealth";
   // Notes already shown inside the life card are not repeated in "Good to know".
-  const notes = result.notes.filter((k) => !(k === "m2.note.noDependents" && !life.needed) && !(k === "m2.note.debtsOnly" && life.needed));
+  // The policy notes sit with the policy checker.
+  const notes = result.notes.filter(
+    (k) => !(k === "m2.note.noDependents" && !life.needed) && !(k === "m2.note.debtsOnly" && life.needed) && k !== "m2.note.policyMatured" && k !== "m2.note.policyNoSurrender",
+  );
 
   return (
     <>

@@ -65,6 +65,8 @@ function YearsBox({ id, label, value, onChange, max }: { id: string; label: stri
 
 export interface PolicyCheckerProps {
   check: M2PolicyCheck | undefined;
+  /** The M2 result's notes: the policy ones (matured, no surrender value) are shown here. */
+  notes?: readonly string[];
   explanation: Explanation;
   /** Demo: show the fixture's numbers, write nothing. */
   readOnly?: boolean;
@@ -72,7 +74,7 @@ export interface PolicyCheckerProps {
   demoDraft?: PolicyDraft;
 }
 
-export function PolicyChecker({ check, explanation, readOnly, demoDraft }: PolicyCheckerProps) {
+export function PolicyChecker({ check, notes = [], explanation, readOnly, demoDraft }: PolicyCheckerProps) {
   const { t } = useT();
   const f = useFormat();
   const names = useProductName();
@@ -140,6 +142,13 @@ export function PolicyChecker({ check, explanation, readOnly, demoDraft }: Polic
 
         {!complete && <p className="text-sm font-medium text-text-muted">{t("m2.policy.incomplete")}</p>}
 
+        {/* A fully paid policy has nothing left to compare (no policyCheck). */}
+        {complete && !check && notes.includes("m2.note.policyMatured") && (
+          <p className="text-base leading-relaxed text-text" data-testid="m2-policy-matured">
+            {t("m2.note.policyMatured")}
+          </p>
+        )}
+
         {complete && check && (
           <>
             <div className="grid grid-cols-2 gap-3" data-testid="m2-policy-compare">
@@ -150,11 +159,19 @@ export function PolicyChecker({ check, explanation, readOnly, demoDraft }: Polic
               </Card>
               <Card className="flex flex-col gap-1 p-3">
                 <span className="text-sm font-semibold text-text">{t("m2.policy.alternative")}</span>
-                <span className="text-xl font-bold tabular-nums text-brand-700">{f.money(check.investDifferenceFV)}</span>
+                <span className="text-xl font-bold tabular-nums text-brand-700">
+                  {check.lowerBound ? t("m2.policy.atLeast", { amount: f.money(check.investDifferenceFV) }) : f.money(check.investDifferenceFV)}
+                </span>
                 <span className="text-xs text-text-muted">{t("m2.policy.alternativeHint", { instrument, years: years(check.remainingYears) })}</span>
+                {check.surrenderValueFV > 0 && <span className="text-xs text-text-muted">{t("m2.policy.surrenderPart", { amount: f.money(check.surrenderValueFV) })}</span>}
               </Card>
             </div>
             <p className="text-base leading-relaxed text-text">{t(`m2.policy.verdict.${check.verdict}`, { amount: f.money(Math.abs(check.difference)) })}</p>
+            {check.lowerBound && notes.includes("m2.note.policyNoSurrender") && (
+              <p className="text-sm leading-relaxed text-text-muted" data-testid="m2-policy-lower-bound">
+                {t("m2.note.policyNoSurrender")}
+              </p>
+            )}
             <FigureList
               items={[
                 { key: "irr", label: t("m2.policy.irr"), value: f.percent(check.policyIrr), hint: t("m2.policy.irrHint") },

@@ -188,6 +188,8 @@ export const m2 = {
     keepHint: "Paid at the end of the term.",
     alternative: "Term cover plus saving the difference",
     alternativeHint: "The rest of each premium goes into {instrument} for the {years} left.",
+    atLeast: "At least {amount}",
+    surrenderPart: "Includes {amount} from the surrender value, grown to the end.",
     termPremium: "Term cover for the same amount, each year",
     remaining: "Years left to pay",
     irr: "The policy's yearly return",
