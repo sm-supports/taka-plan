@@ -49,7 +49,7 @@ export const M2_M6_M7_KEYS = [
 ];
 
 /** Plan policy keys added after the M2/M6/M7 batch (migration 0005). */
-export const PLAN_V2_KEYS = ["plan_insurance_max_share_with_debt"];
+export const PLAN_V2_KEYS = ["plan_insurance_max_share_with_debt", "insurance_child_independent_age"];
 
 /** Every batch of rows, in migration order. A new batch of keys means a new entry and a new file. */
 export const ROW_BATCHES = [

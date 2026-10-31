@@ -296,6 +296,8 @@ export const m7 = {
     supportRatio: "Fewer working-age people will support each older person in the coming decades, so your own savings matter more.",
     lock: "Keep this money for later life only. Touching it early is the most common reason a plan falls short.",
     startEarlier: "Starting earlier lowers the monthly amount a lot, because the money has longer to grow.",
+    noStatutoryGratuity: "We have no gratuity law on record for your country, so only your employer's own days count. Check your contract or ask your employer.",
+    lowCaseInflation: "The low case assumes your money only keeps up with prices in retirement, with no real return on top.",
   },
 
   option: {

@@ -65,5 +65,7 @@ export const SAMPLE_PROFILES: Record<SampleProfileId, PlanInput> = {
       monthlySaving: 0,
       sources: { providentFund: { balance: 300000, monthlyContribution: 12000, rate: 0.09 } },
     },
+    // Savings came from M1's default, so only what sits above the emergency-fund target counts for M7.
+    m7SavingsDefault: true,
   },
 };

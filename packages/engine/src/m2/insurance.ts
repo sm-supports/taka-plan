@@ -31,8 +31,13 @@ const DEFAULT_PARENTS = 2;
 /** Policy check: within 5% of the maturity value the two paths count as similar. */
 const SIMILAR_SHARE = 0.05;
 /** IRR search interval. */
-const IRR_LO = -0.5;
+const IRR_LO = -0.99;
 const IRR_HI = 1;
+/** Rule of thumb for total life cover against yearly take-home (outside it → m2.note.multipleOutsideBand). */
+const MULTIPLE_BAND_LOW = 10;
+const MULTIPLE_BAND_HIGH = 15;
+/** Used when health_cover_weights is unusable: every person counts as one hospital stay. */
+const EQUAL_WEIGHTS: HealthCoverWeights = { self: 1, partner: 1, child: 1, parent: 1 };
 
 const AGE_MIN = 15;
 const AGE_MAX = 100;
@@ -57,6 +62,7 @@ function validatePolicy(p: ExistingPolicy): void {
     yearsPaid: p.yearsPaid,
     termYears: p.termYears,
   });
+  if (p.surrenderValue !== undefined) assertInput(money(p.surrenderValue), "policy.surrenderValue must be zero or more", { surrenderValue: p.surrenderValue });
 }
 
 function validate(input: M2Input): void {
@@ -73,6 +79,11 @@ function validate(input: M2Input): void {
   for (const k of ["childrenCount", "parentsCount"] as const) {
     const v = input[k];
     if (v !== undefined) assertInput(Number.isInteger(v) && v >= 0 && v <= COUNT_MAX, `${k} must be a whole number from 0 to ${COUNT_MAX}`, { [k]: v });
+  }
+  if (input.youngestChildAge !== undefined) {
+    assertInput(isFiniteNumber(input.youngestChildAge) && input.youngestChildAge >= 0 && input.youngestChildAge <= PERSON_AGE_MAX, `youngestChildAge must be between 0 and ${PERSON_AGE_MAX}`, {
+      youngestChildAge: input.youngestChildAge,
+    });
   }
   if (input.parentAge !== undefined) {
     assertInput(isFiniteNumber(input.parentAge) && input.parentAge >= 0 && input.parentAge <= PERSON_AGE_MAX, `parentAge must be between 0 and ${PERSON_AGE_MAX}`, { parentAge: input.parentAge });
@@ -106,6 +117,19 @@ export function growingAnnuityPV(payment: Money, r: Rate, g: Rate, years: number
   return (payment / (r - g)) * (1 - ((1 + g) / (1 + r)) ** years);
 }
 
+/**
+ * Present value of `payment` paid at the start of each of `years` years at `r` (annuity due):
+ * payment × (1 − (1 + r)^−years) / r × (1 + r); r = 0 → payment × years. With a real rate this is the
+ * value today of a need that rises with prices.
+ */
+export function annuityDuePV(payment: Money, r: Rate, years: number): number {
+  assertInput(isFiniteNumber(payment) && isFiniteNumber(r) && isFiniteNumber(years), "annuityDuePV needs finite inputs", { payment, r, years });
+  assertInput(r > -1, "annuityDuePV needs a rate above −100%", { r });
+  if (years <= 0 || payment === 0) return 0;
+  if (Math.abs(r) < 1e-12) return payment * years;
+  return ((payment * (1 - (1 + r) ** -years)) / r) * (1 + r);
+}
+
 /** Future value of `payment` paid at the start of each year for `years` years at `r` (annuity due). */
 export function annuityDueFV(payment: Money, r: Rate, years: number): number {
   assertInput(isFiniteNumber(payment) && isFiniteNumber(r) && isFiniteNumber(years), "annuityDueFV needs finite inputs", { payment, r, years });
@@ -115,14 +139,17 @@ export function annuityDueFV(payment: Money, r: Rate, years: number): number {
 }
 
 /**
- * Internal rate of return of `premium` paid at the start of each of `termYears` years against
- * `maturity` received at the end of the term, by bisection on −50%…100%. No root there → 0.
+ * Marginal internal rate of return of keeping a policy: `surrender` given up now and `premium` paid at
+ * the start of each of `years` years, against `maturity` received after `years` years, by bisection
+ * on −99%…100%. Nothing back (maturity 0) → −100%; nothing paid → 0; no root in the interval → the
+ * nearer end (−100% or 100%).
  */
-export function policyIrr(premium: Money, termYears: number, maturity: Money): Rate {
-  if (!(premium > 0) || !(termYears > 0)) return 0;
+export function policyIrr(premium: Money, years: number, maturity: Money, surrender: Money = 0): Rate {
+  if (!(years > 0) || !(premium > 0 || surrender > 0)) return 0;
+  if (!(maturity > 0)) return -1;
   const npv = (r: number): number => {
-    let pv = maturity / (1 + r) ** termYears;
-    for (let t = 0; t < termYears; t++) pv -= premium / (1 + r) ** t;
+    let pv = maturity / (1 + r) ** years - surrender;
+    for (let t = 0; t < years; t++) pv -= premium / (1 + r) ** t;
     return pv;
   };
   let lo = IRR_LO;
@@ -132,7 +159,8 @@ export function policyIrr(premium: Money, termYears: number, maturity: Money): R
   if (!Number.isFinite(fLo) || !Number.isFinite(fHi)) return 0;
   if (fLo === 0) return lo;
   if (fHi === 0) return hi;
-  if (Math.sign(fLo) === Math.sign(fHi)) return 0;
+  // NPV falls as the rate rises: both negative → worse than −99%, both positive → better than 100%.
+  if (Math.sign(fLo) === Math.sign(fHi)) return fLo < 0 ? -1 : IRR_HI;
   for (let i = 0; i < 200 && hi - lo > 1e-12; i++) {
     const mid = (lo + hi) / 2;
     const fMid = npv(mid);
@@ -156,11 +184,11 @@ export function bandFor(bands: readonly PremiumBand[], age: number): PremiumBand
   throw new EngineError("MISSING_RATE", "premium table has no bands");
 }
 
-/** A JSON row when it exists and has the expected shape (recorded as an assumption); else undefined. */
+/** A JSON row when it exists and has the expected shape (then recorded as an assumption); else undefined. */
 function readTable<T>(ex: ExplainBuilder, rates: RatesSnapshot, key: RateKey): T | undefined {
-  if (rates.rows[key] === undefined) return undefined;
-  const row = ex.useRow(key);
-  return jsonShapeOk(key, row.valueJson) ? (row.valueJson as T) : undefined;
+  const raw = rates.rows[key];
+  if (raw === undefined || !jsonShapeOk(key, raw.valueJson)) return undefined;
+  return ex.useRow(key).valueJson as T;
 }
 
 /** People to cover: kinds from healthCovered (or self + dependents), children and parents by count. */
@@ -217,21 +245,31 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
 
   // ── Life cover ───────────────────────────────────────────────────────────────
   const coverToAge = input.coverToAge ?? ex.use("insurance_cover_to_age");
-  const yearsRaw = coverToAge - age;
-  const yearsCovered = step("m2.years", { ageYears: age, coverToAgeYears: coverToAge }, yearsRaw, Math.max(0, yearsRaw), "years");
+  // Children stop depending on the income around insurance_child_independent_age: with children among
+  // the dependents and the youngest child's age known, cover runs until then if that comes first.
+  const childIndependentAge = ex.use("insurance_child_independent_age");
+  const childYears = input.dependents.includes("children") && input.youngestChildAge !== undefined ? childIndependentAge - input.youngestChildAge : null;
+  const yearsRaw = childYears === null ? coverToAge - age : Math.min(coverToAge - age, childYears);
+  const yearsCovered = step(
+    "m2.years",
+    { ageYears: age, coverToAgeYears: coverToAge, youngestChildAgeYears: input.youngestChildAge ?? 0, childIndependentAgeYears: childIndependentAge },
+    yearsRaw,
+    Math.max(0, yearsRaw),
+    "years",
+  );
 
   const incomeShare = input.incomeShare ?? ex.use("insurance_income_share");
   const inflation = ex.use("inflation_projection");
-  const fdr = instrumentNominal(rates, "fdr_1y");
-  const nominal = ex.use(fdr.rateKey);
-  const tax = ex.use(fdr.taxKey);
-  const discount = applyTax(nominal, tax);
+  // The family's lump sum sits in safe fixed income (after tax) while the need rises with prices, so
+  // it is valued at the real safe return; the first year's need is paid straight away (annuity due).
+  const safeAfterTax = ex.use("fixed_income_return_base");
+  const realRate = (1 + safeAfterTax) / (1 + inflation) - 1;
   const yearlyNeed = takeHome * 12 * incomeShare;
   // Only dependents need the income replaced; debts alone are covered as a lump.
-  const incomeNeedRaw = hasDependents ? growingAnnuityPV(yearlyNeed, discount, inflation, yearsCovered) : 0;
+  const incomeNeedRaw = hasDependents ? annuityDuePV(yearlyNeed, realRate, yearsCovered) : 0;
   const incomeNeed = step(
     "m2.incomeNeed",
-    { takeHome, incomeShare, yearlyNeed, inflation, nominal, tax, afterTax: discount, coveredYears: yearsCovered },
+    { takeHome, incomeShare, yearlyNeed, inflation, afterTax: safeAfterTax, realRate, coveredYears: yearsCovered },
     incomeNeedRaw,
     round(incomeNeedRaw, "lump"),
   );
@@ -243,6 +281,10 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
     coverRaw,
     round(coverRaw, "lump"),
   );
+
+  const annualTakeHome = takeHome * 12;
+  const incomeMultiple = annualTakeHome > 0 ? roundDecimals(lifeCover / annualTakeHome, 1) : 0;
+  if (hasDependents && lifeCover > 0 && annualTakeHome > 0 && (incomeMultiple < MULTIPLE_BAND_LOW || incomeMultiple > MULTIPLE_BAND_HIGH)) ex.note("m2.note.multipleOutsideBand");
 
   const lifeGapRaw = Math.max(0, lifeCover - input.existingLifeCover);
   const lifeGap = step("m2.lifeGap", { cover: lifeCover, existingLifeCover: input.existingLifeCover }, lifeGapRaw, round(lifeGapRaw, "lump"));
@@ -256,8 +298,7 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
   const perStayRaw = hospitalCost * appliedShare;
   const perStay = step("m2.perStay", { hospitalCost, oopShare, publicFloorShare, appliedShare }, perStayRaw, round(perStayRaw, "lump"));
 
-  const weights = readTable<HealthCoverWeights>(ex, rates, "health_cover_weights");
-  if (!weights) throw new EngineError("MISSING_RATE", 'Rates row "health_cover_weights" is missing or malformed', { key: "health_cover_weights" });
+  const weights = readTable<HealthCoverWeights>(ex, rates, "health_cover_weights") ?? EQUAL_WEIGHTS;
   const people = coveredPeople(input);
   const weightSum = people.reduce((t, p) => t + weights[p], 0);
   const targetRaw = perStay * weightSum;
@@ -284,6 +325,7 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
   );
 
   const healthTable = readTable<HealthPremiumTable>(ex, rates, "health_premium_table");
+  if (!healthTable && healthGap > 0) ex.note("m2.note.noHealthPriceTable");
   let healthLowRaw = 0;
   let healthHighRaw = 0;
   if (healthTable && weightSum > 0 && healthGap > 0) {
@@ -309,9 +351,14 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
 
   // ── Policy check ─────────────────────────────────────────────────────────────
   let policyCheck: M2PolicyCheck | undefined;
-  if (input.policy) {
+  if (input.policy && input.policy.termYears - input.policy.yearsPaid <= 0) {
+    // Every premium is paid: nothing is left to decide, so there is no comparison.
+    ex.note("m2.note.policyMatured");
+  } else if (input.policy) {
     const p = input.policy;
     const remainingYears = p.termYears - p.yearsPaid;
+    const fdr = instrumentNominal(rates, "fdr_1y");
+    const discount = applyTax(ex.use(fdr.rateKey), ex.use(fdr.taxKey));
     const termMid = (lifeBand.low + lifeBand.high) / 2;
     const termRaw = termTable ? (p.sumAssured / termPer) * termMid * smokerMultiple : 0;
     const termPremiumYearly = step(
@@ -321,21 +368,29 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
       round(termRaw, "monthly"),
     );
 
+    // Stopping today: the surrender value (unknown after premiums were paid → 0, a lower bound) is
+    // invested at the safe rate along with the yearly difference.
+    const surrenderValue = p.surrenderValue ?? 0;
+    const lowerBound = p.surrenderValue === undefined && p.yearsPaid > 0;
+    if (lowerBound) ex.note("m2.note.policyNoSurrender");
+    const surrenderRaw = surrenderValue * (1 + discount) ** remainingYears;
+    const surrenderValueFV = round(surrenderRaw, "lump");
     const yearlyDifference = Math.max(0, p.annualPremium - termPremiumYearly);
-    const investRaw = annuityDueFV(yearlyDifference, discount, remainingYears);
+    const investRaw = surrenderRaw + annuityDueFV(yearlyDifference, discount, remainingYears);
     const investDifferenceFV = step(
       "m2.policyInvest",
-      { annualPremium: p.annualPremium, termPremium: termPremiumYearly, yearlyDifference, afterTax: discount, remainingYears },
+      { annualPremium: p.annualPremium, termPremium: termPremiumYearly, yearlyDifference, afterTax: discount, remainingYears, surrenderValue, surrenderValueFV },
       investRaw,
       round(investRaw, "lump"),
     );
 
     const policyMaturity = round(p.expectedMaturity, "exact");
     const difference = investDifferenceFV - policyMaturity;
-    const irrRaw = policyIrr(p.annualPremium, p.termYears, p.expectedMaturity);
+    // The return on what keeping the policy still costs: the surrender value given up and the premiums left.
+    const irrRaw = policyIrr(p.annualPremium, remainingYears, p.expectedMaturity, surrenderValue);
     const irr = step(
       "m2.policyIrr",
-      { annualPremium: p.annualPremium, termYears: p.termYears, expectedMaturity: policyMaturity, investValue: investDifferenceFV, difference },
+      { annualPremium: p.annualPremium, termYears: p.termYears, remainingYears, surrenderValue, expectedMaturity: policyMaturity, investValue: investDifferenceFV, difference },
       irrRaw,
       roundDecimals(irrRaw, 4),
       "rate",
@@ -343,7 +398,9 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
 
     const verdict: M2PolicyCheck["verdict"] =
       difference === 0 || Math.abs(difference) < SIMILAR_SHARE * policyMaturity ? "similar" : difference > 0 ? "termPlusInvestAhead" : "policyAhead";
-    policyCheck = { remainingYears, termPremiumYearly, investDifferenceFV, policyMaturity, difference, policyIrr: irr, verdict };
+    policyCheck = { remainingYears, termPremiumYearly, investDifferenceFV, surrenderValueFV, lowerBound, policyMaturity, difference, policyIrr: irr, verdict };
+  }
+  if (input.policy) {
     ex.note("m2.note.policyNotAdvice");
     ex.note("m2.note.separateInvesting");
   }
@@ -353,14 +410,13 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
   const regulatorUrl = rates.country?.institutions.insuranceRegulator?.url ?? "";
   const checklist: M2ChecklistItem[] = M2_CHECK_KEYS.map((key) => ({ key, params: { claimSettlement, regulatorUrl } }));
 
-  const annualTakeHome = takeHome * 12;
   const life: M2LifeResult = {
     needed,
     yearsCovered,
     incomeNeed,
     cover: lifeCover,
     gap: lifeGap,
-    incomeMultiple: annualTakeHome > 0 ? roundDecimals(lifeCover / annualTakeHome, 1) : 0,
+    incomeMultiple,
     premiumYearly: lifePremium,
     status: needed ? gapStatus(lifeGap, lifeCover) : "green",
   };

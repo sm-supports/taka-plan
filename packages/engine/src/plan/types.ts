@@ -24,6 +24,12 @@ export interface PlanInput {
   m6?: M6Input;
   /** M7 retirement inputs; its monthly saving becomes the retirement bucket. */
   m7?: M7Input;
+  /**
+   * True when m7.savings is the M1 liquid-savings default (profileToPlanInput sets it when the user
+   * gave no savings figure): computePlan then counts only max(0, savings − M1 target), since the
+   * emergency fund is not retirement money.
+   */
+  m7SavingsDefault?: boolean;
   /** M2 hook (explicit override of the computed premium). */
   insurance?: { monthlyPremiumNeed: Money };
   /** M6 hook (explicit override of the computed weights). */
@@ -93,6 +99,15 @@ export interface Plan {
   summary: PlanSummary;
   explain: Explanation;
 }
+
+/**
+ * Reason params added in v2 (numbers; the UI formats them):
+ *   plan.reason.debt        {amount, rate, count} + {months} when the debts clear (minimums plus the
+ *                           amount, with interest), else {neverAtPace: 1}
+ *   plan.reason.retirement  {amount, need, planTo} + {lastsTo} (age the money lasts to at `amount`;
+ *                           = planTo when fully funded; absent when it cannot be worked out)
+ */
+export const PLAN_NOTE_KEYS = ["plan.note.insuranceSkipped", "plan.note.allocationSkipped", "plan.note.retirementSkipped"] as const;
 
 export const PLAN_STEP_IDS = ["plan.total", "plan.emergencyShare", "plan.debtShare", "plan.goalsShare", "plan.goalAllocation"] as const;
 export type PlanStepId = (typeof PLAN_STEP_IDS)[number];

@@ -2,8 +2,8 @@
  * "Why this number?" entries for M2 steps (explain.m2.<step>). Placeholders are the input names
  * computeInsurance passes to each step (packages/engine/src/m2/insurance.ts), plus {result}:
  *
- *   m2.years          {ageYears} {coverToAgeYears} {result}
- *   m2.incomeNeed     {takeHome} {incomeShare} {yearlyNeed} {inflation} {nominal} {tax} {afterTax} {coveredYears} {result}
+ *   m2.years          {ageYears} {coverToAgeYears} {youngestChildAgeYears} {childIndependentAgeYears} {result}
+ *   m2.incomeNeed     {takeHome} {incomeShare} {yearlyNeed} {inflation} {afterTax} {realRate} {coveredYears} {result}
  *   m2.lifeCover      {incomeNeed} {debts} {educationGoals} {liquidSavings} {investments} {result}
  *   m2.lifeGap        {cover} {existingLifeCover} {result}
  *   m2.perStay        {hospitalCost} {oopShare} {publicFloorShare} {appliedShare} {result}
@@ -13,17 +13,17 @@
  *   m2.healthPremium  {gap} {peopleCount} {per} {premiumLow} {premiumHigh} {result}
  *   m2.monthlyNeed    {lifePremium} {healthPremium} {months} {result}
  *   m2.policyTerm     {sumAssured} {per} {bandLow} {bandHigh} {smokerMultipleCount} {result}
- *   m2.policyInvest   {annualPremium} {termPremium} {yearlyDifference} {afterTax} {remainingYears} {result}
- *   m2.policyIrr      {annualPremium} {termYears} {expectedMaturity} {investValue} {difference} {result}
+ *   m2.policyInvest   {annualPremium} {termPremium} {yearlyDifference} {afterTax} {remainingYears} {surrenderValue} {surrenderValueFV} {result}
+ *   m2.policyIrr      {annualPremium} {termYears} {remainingYears} {surrenderValue} {expectedMaturity} {investValue} {difference} {result}
  */
 export const explainM2 = {
   years: {
     title: "Years of cover",
-    body: "Life cover runs from your age today, {ageYears}, until age {coverToAgeYears}, when the family usually no longer depends on your income: {result} years. It never goes below zero.",
+    body: "Life cover runs from your age today, {ageYears}, until age {coverToAgeYears}, when the family usually no longer depends on your income, or until your youngest child turns {childIndependentAgeYears} if you gave the child's age and that comes first: {result} years. It never goes below zero.",
   },
   incomeNeed: {
     title: "Income to replace",
-    body: "The family would need {incomeShare} of your take-home {takeHome} a month: {yearlyNeed} a year. That need grows with prices at {inflation} a year for {coveredYears} years. Money paid out today could earn a safe {nominal} before tax, {afterTax} after {tax} tax, so today's lump sum that pays all those years is {result}.",
+    body: "The family would need {incomeShare} of your take-home {takeHome} a month: {yearlyNeed} a year. That need grows with prices at {inflation} a year for {coveredYears} years. Money set aside today in safe savings could earn {afterTax} after tax, which is {realRate} a year more than prices rise, so the lump sum today that pays every year's need, starting now, is {result}.",
   },
   lifeCover: {
     title: "Life cover needed",
@@ -63,10 +63,10 @@ export const explainM2 = {
   },
   policyInvest: {
     title: "Saving the difference",
-    body: "Your premium {annualPremium} minus the term premium {termPremium} leaves {yearlyDifference} a year. Put at the start of each of the {remainingYears} years left into a safe deposit earning {afterTax} after tax, it grows to {result}.",
+    body: "If you stopped now, what the insurer pays back, {surrenderValue}, grows to {surrenderValueFV} in a safe deposit earning {afterTax} after tax. Your premium {annualPremium} minus the term premium {termPremium} leaves {yearlyDifference} a year; put into the same deposit at the start of each of the {remainingYears} years left, all together it comes to {result}.",
   },
   policyIrr: {
     title: "The policy's yearly return",
-    body: "Paying {annualPremium} a year for {termYears} years to get {expectedMaturity} at the end is like earning {result} a year. Saving the difference instead would reach {investValue}, a difference of {difference}.",
+    body: "Keeping the policy means giving up {surrenderValue} today and paying {annualPremium} a year for the {remainingYears} years left of {termYears}, to get {expectedMaturity} at the end: like earning {result} a year on that money. Stopping and saving the difference instead would reach {investValue}, a difference of {difference}.",
   },
 } as const;

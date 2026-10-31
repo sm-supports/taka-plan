@@ -204,6 +204,10 @@ export const m2 = {
     noTermSold: "We have no price table for pure term cover in your country, so the life premium shows as zero. Ask insurers for a term quote.",
     separateInvesting: "Keep insurance and investing apart: cover is a cost, like rent, and saving for the future is done on its own.",
     policyNotAdvice: "This is a rough comparison, not advice to stop or keep any policy. Stopping a policy early often loses money, so ask the insurer what you would get back before you change anything.",
+    policyNoSurrender: "You did not enter what the insurer would pay back if you stopped today, so we count it as zero. Stopping looks worse here than it really is: ask the insurer for the surrender value and add it.",
+    policyMatured: "Every premium on this policy is already paid, so there is nothing left to compare. Collect the maturity value when it is due.",
+    multipleOutsideBand: "A common rule of thumb is life cover of ten to fifteen times your yearly take-home. Yours is outside that range because of your family, debts and savings; the figure above is worked out for you.",
+    noHealthPriceTable: "We have no price table for health insurance in your country, so the health premium shows as zero. Ask insurers for a quote for the cover above.",
   },
 
   check: {

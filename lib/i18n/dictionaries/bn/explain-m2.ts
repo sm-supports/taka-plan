@@ -3,11 +3,11 @@ import type { Dictionary } from "../../types";
 export const explainM2: Dictionary["explain"]["m2"] = {
   years: {
     title: "যত বছরের বিমা",
-    body: "জীবন বিমা চলবে আপনার আজকের বয়স {ageYears} থেকে {coverToAgeYears} বছর বয়স পর্যন্ত, যখন পরিবার সাধারণত আর আপনার আয়ের ওপর নির্ভর করে না: {result} বছর। এটা কখনো শূন্যের নিচে যায় না।",
+    body: "জীবন বিমা চলবে আপনার আজকের বয়স {ageYears} থেকে {coverToAgeYears} বছর বয়স পর্যন্ত, যখন পরিবার সাধারণত আর আপনার আয়ের ওপর নির্ভর করে না; সবচেয়ে ছোট সন্তানের বয়স দিলে আর সে আগে {childIndependentAgeYears} বছরে পৌঁছালে, ততদিন পর্যন্ত: {result} বছর। এটা কখনো শূন্যের নিচে যায় না।",
   },
   incomeNeed: {
     title: "যতটা আয়ের বদলে টাকা লাগবে",
-    body: "পরিবারের লাগবে আপনার মাসিক টেক-হোম {takeHome}-এর {incomeShare}: বছরে {yearlyNeed}। দাম বাড়ার সঙ্গে এই দরকার বছরে {inflation} হারে বাড়বে, {coveredYears} বছর ধরে। আজ পাওয়া টাকা নিরাপদে কর বাদ দেওয়ার আগে {nominal}, {tax} কর বাদে {afterTax} মুনাফা দিতে পারে, তাই ওই সব বছরের খরচ চালাতে আজ এককালীন লাগবে {result}।",
+    body: "পরিবারের লাগবে আপনার মাসিক টেক-হোম {takeHome}-এর {incomeShare}: বছরে {yearlyNeed}। দাম বাড়ার সঙ্গে এই দরকার বছরে {inflation} হারে বাড়বে, {coveredYears} বছর ধরে। আজ নিরাপদ সঞ্চয়ে রাখা টাকা কর বাদে {afterTax} মুনাফা দিতে পারে, যা দাম বাড়ার চেয়ে বছরে {realRate} বেশি; তাই এখন থেকে প্রতি বছরের খরচ চালাতে আজ এককালীন লাগবে {result}।",
   },
   lifeCover: {
     title: "যত জীবন বিমা দরকার",
@@ -47,10 +47,10 @@ export const explainM2: Dictionary["explain"]["m2"] = {
   },
   policyInvest: {
     title: "বাকি টাকা সঞ্চয় করলে",
-    body: "আপনার প্রিমিয়াম {annualPremium} থেকে টার্ম প্রিমিয়াম {termPremium} বাদ দিলে বছরে থাকে {yearlyDifference}। বাকি {remainingYears} বছরের প্রতি বছরের শুরুতে এটা কর বাদে {afterTax} মুনাফার নিরাপদ আমানতে রাখলে হয় {result}।",
+    body: "এখন বন্ধ করলে বিমা কোম্পানি যা ফেরত দেবে, {surrenderValue}, কর বাদে {afterTax} মুনাফার নিরাপদ আমানতে বেড়ে হয় {surrenderValueFV}। আপনার প্রিমিয়াম {annualPremium} থেকে টার্ম প্রিমিয়াম {termPremium} বাদ দিলে বছরে থাকে {yearlyDifference}; বাকি {remainingYears} বছরের প্রতি বছরের শুরুতে এটা একই আমানতে রাখলে সব মিলিয়ে হয় {result}।",
   },
   policyIrr: {
     title: "পলিসির বার্ষিক মুনাফা",
-    body: "{termYears} বছর ধরে বছরে {annualPremium} দিয়ে মেয়াদ শেষে {expectedMaturity} পাওয়া মানে বছরে প্রায় {result} মুনাফা। এর বদলে বাকি টাকা সঞ্চয় করলে হতো {investValue}, পার্থক্য {difference}।",
+    body: "পলিসি রাখা মানে আজ {surrenderValue} ছেড়ে দেওয়া আর {termYears} বছরের মধ্যে বাকি {remainingYears} বছর ধরে বছরে {annualPremium} দেওয়া, শেষে {expectedMaturity} পাওয়ার জন্য: এই টাকায় বছরে প্রায় {result} মুনাফার মতো। এর বদলে বন্ধ করে বাকি টাকা সঞ্চয় করলে হতো {investValue}, পার্থক্য {difference}।",
   },
 };

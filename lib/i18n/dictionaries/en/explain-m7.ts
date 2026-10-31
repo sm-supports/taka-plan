@@ -4,14 +4,15 @@
  * plus {result}. A step the working and retired paths share uses only the names both send:
  *
  *   m7.spendingAtRetirement  {monthlySpending} {inflation} {retireInYears} {result}
- *                            (+ working: rentMonthly, rentAtRetirement; retired: otherMonthlyIncome)
+ *                            (+ working: rentMonthly, rentAtRetirement)
  *   m7.corpusContrast        {spendingAtRetirement} {returnRate} {inflation} {retiredForYears} {result}
  *   m7.corpusPlan            {spendingAtRetirement} {returnRate} {inflation} {retiredForYears} {result}
  *   m7.savingsFv             {savings} {accumulationRate} {retireInYears} {result}
  *   m7.providentFund         {balance} {monthlyContribution} {fundRate} {retireInYears} {result}
  *   m7.gratuity              {basicMonthly} {daysPerMonthCount} {daysCount} {serviceYears} {result}
- *   m7.fixedPensions         {publicPensionMonthly} {fixedPensionMonthly} {returnRate} {retiredForYears} {result}
- *   m7.gap                   {corpus} {result}  (+ working: savingsFv, providentFund, gratuity, fixedPensions; retired: savings)
+ *   m7.fixedPensions         {publicPensionMonthly} {fixedPensionMonthly} {returnRate} {retiredForYears} {pensionFromAgeYears} {result}
+ *                            (only when a pension or, retired, other income was added; also providentFund / gratuity)
+ *   m7.gap                   {corpus} {fixedPensions} {result}  (+ working: savingsFv, providentFund, gratuity; retired: savings)
  *   m7.monthly               {gap} {monthlyRate} {savingMonths} {result}
  *   m7.withdrawal            {savings} {returnRate} {inflation} {retiredForYears} {result}
  *   m7.safePot               {firstYear} {potYears} {result}
@@ -19,7 +20,7 @@
 export const explainM7 = {
   spendingAtRetirement: {
     title: "Spending in your first year of retirement",
-    body: "Today's spending of {monthlySpending} a month, times 12, grown by prices at {inflation} a year for the {retireInYears} years until you stop: 12 × {monthlySpending} × (1 + {inflation})^{retireInYears}. Rent you receive, or other income once retired, comes off first, since it also rises with prices. Result: {result} a year.",
+    body: "Today's spending of {monthlySpending} a month, times 12, grown by prices at {inflation} a year for the {retireInYears} years until you stop: 12 × {monthlySpending} × (1 + {inflation})^{retireInYears}. Rent you receive comes off first, since it also rises with prices. Result: {result} a year.",
   },
   corpusContrast: {
     title: "Target to the comparison age",
@@ -43,7 +44,7 @@ export const explainM7 = {
   },
   fixedPensions: {
     title: "Fixed pensions, valued when you stop",
-    body: "A public pension of {publicPensionMonthly} and other fixed pensions of {fixedPensionMonthly} a month, paid for {retiredForYears} years without rising with prices, are worth this much at {returnRate}: {result}. That is why their buying power shrinks over a long retirement.",
+    body: "A public pension of {publicPensionMonthly} a month from age {pensionFromAgeYears} and other fixed income of {fixedPensionMonthly} a month, paid until your plan-to age ({retiredForYears} years of retirement) without rising with prices, are worth this much when you stop, at {returnRate}: {result}. That is why their buying power shrinks over a long retirement.",
   },
   gap: {
     title: "Still to build",
