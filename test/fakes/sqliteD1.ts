@@ -3,6 +3,8 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { DatabaseSync, type SQLInputValue } from "node:sqlite";
+import type { CountryProfile } from "@taka/engine";
+import { insertPublishedCountries } from "@/lib/server/country-db";
 import type { D1Like, D1ResultLike, D1StatementLike } from "@/lib/server/db";
 
 class SqliteStatement implements D1StatementLike {
@@ -82,7 +84,14 @@ export class SqliteD1 implements D1Like {
   }
 }
 
-/** A fresh in-memory database with the schema and the seeded version 1 applied. */
+/** A fresh in-memory database with the schema, the seeded rates version 1 and the (empty) country tables. */
 export function seededSqliteD1(): SqliteD1 {
-  return new SqliteD1().migrate("0001_schema.sql", "0002_seed_rates.sql", "0003_rates_m2_m6_m7.sql");
+  return new SqliteD1().migrate("0001_schema.sql", "0002_seed_rates.sql", "0003_rates_m2_m6_m7.sql", "0004_countries.sql");
+}
+
+/** `seededSqliteD1()` plus the given country profiles inserted as published version 1. */
+export async function seededCountriesD1(profiles: readonly CountryProfile[]): Promise<SqliteD1> {
+  const db = seededSqliteD1();
+  await insertPublishedCountries(db, profiles);
+  return db;
 }

@@ -162,11 +162,11 @@ function EditorBody({ row, onClose, onSaved }: { row: RateRow } & Omit<RateRowEd
   );
 }
 
-function inputClass(error: string | undefined, extra?: string): string {
+export function inputClass(error: string | undefined, extra?: string): string {
   return cn("tap w-full rounded-xl border bg-surface px-3 py-2 text-base", error ? "border-status-red" : "border-line focus:border-brand-500", extra);
 }
 
-function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: React.ReactNode }) {
+export function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-1">
       <label htmlFor={id} className="text-sm font-semibold">

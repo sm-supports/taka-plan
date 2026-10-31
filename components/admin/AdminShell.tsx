@@ -1,5 +1,5 @@
 "use client";
-/** Admin chrome: English dictionary provider, top bar with the three sections and sign-out. */
+/** Admin chrome: English dictionary provider, top bar with the admin sections and sign-out. */
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, type ReactNode } from "react";
@@ -29,6 +29,7 @@ const LINKS = [
   { href: "/admin", key: "admin.nav.rates" },
   { href: "/admin/preview", key: "admin.nav.preview" },
   { href: "/admin/log", key: "admin.nav.log" },
+  { href: "/admin/countries", key: "admin.nav.countries" },
 ] as const;
 
 export function AdminShell({ children }: { children: ReactNode }) {
