@@ -41,6 +41,16 @@ browser (PWA)                    Cloudflare Pages                           D1 (
 
 Cloudflare Pages builds the GitHub repository on every push (`main` → production, other branches → previews) with `npm run build` into `dist/client`; settings, bindings and the admin secret are in [DEPLOY.md](DEPLOY.md). GitHub Actions (`.github/workflows/ci.yml`) only typechecks, tests, builds and runs the browser tests on the local Pages runtime.
 
+## Version 2 (31 Oct 2026)
+
+Contracts and rules for v2 are in [CONTRACTS-V2.md](CONTRACTS-V2.md); the PRDs are [PRD-insurance.md](PRD-insurance.md), [PRD-allocation.md](PRD-allocation.md) and [PRD-retirement.md](PRD-retirement.md).
+
+- **Countries.** Onboarding asks the country first, then that country's language(s) or English. Every country has a researched `CountryProfile` (`packages/engine/src/data/countries/<CC>.json`, every figure with source, as-of date and status sourced / assumption / missing, plus `absent` when research confirmed something does not exist). `withCountry` (engine `country/overlay.ts`) turns the Bangladesh rates snapshot into the selected country's: own figure → regional median (`_regions.json`, generated at build) → global median → flagged fallback; never a Bangladesh interest rate for another country. Currency formatting and rounding steps follow the country. D1 holds the same data (`country_versions`, `country_fields`, seeded by `0006_seed_countries.sql`), edited per country in `/admin/countries`; the client prefers the API copy, then the static file shipped with the build. Countries without researched data show a notice.
+- **New modules.** M2 insurance & health (`m2/`), M6 asset mix (`m6/`) and M7 retirement & family (`m7/`) are pure engine modules with "Why this number?" steps, wired into the plan (order: emergency → insurance (capped at half of what is left while high-interest debt is open) → debt → goals and retirement sharing what is left → long-term mix). A failing optional module drops its bucket with a note instead of breaking the plan. Screens at `/{locale}/m2`, `/m6`, `/m7`, opened from "Complete your plan".
+- **Drafts.** "Start from the beginning" (after any successful result) keeps the old answers as a draft; identical answers (by a hash of the engine-relevant input) never create a second draft; at most 20, named drafts are never dropped. `/{locale}/drafts` lists them.
+- **Languages.** 12 locales (bn, en, hi, ur, ar, es, fr, pt, id, zh, ru, sw); ar and ur are right-to-left. The ten new ones are agent translations, each checked by a second agent, and still need native-speaker review.
+- **Offline.** The service worker caches every visited page and RSC payload and precaches the plan page in all locales.
+
 ## Out of scope in this cut
 
 M2 insurance, M6 allocation, M7 retirement (the engine keeps hooks in `PlanInput`), phone sign-in and saved plans, reminders, share images, halal mode, analytics (a no-op `track()` keeps call sites ready).
