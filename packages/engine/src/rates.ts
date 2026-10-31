@@ -83,6 +83,7 @@ export const RATE_KEYS = [
   // app policy and country data: M2 insurance and health
   "insurance_income_share",
   "insurance_cover_to_age",
+  "insurance_child_independent_age",
   "insurance_term_premium_table",
   "health_hospitalisation_cost",
   "health_premium_table",

@@ -91,4 +91,10 @@ export const plan = {
     retirement: "Open the retirement plan: see what you need to live on your own money to 100, and which income sources lower it.",
     allocation: "Open the asset mix: it splits long-term money across fixed income, shares and gold for your age.",
   },
+
+  note: {
+    insuranceSkipped: "Your insurance answers could not be worked out with your current profile, so insurance is left out of this plan for now. Open the insurance check to update them.",
+    allocationSkipped: "Your asset-mix answers could not be worked out with your current profile, so the plan uses fixed income for now. Open the asset mix to update them.",
+    retirementSkipped: "Your retirement answers no longer fit your profile (for example, your age changed), so retirement is left out of this plan for now. Open the retirement plan to update them.",
+  },
 } as const;

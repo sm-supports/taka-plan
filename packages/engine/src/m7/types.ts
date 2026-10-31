@@ -6,13 +6,20 @@
  *     Gap = Corpus − FV(savings) − FV(PF) − gratuity − PV(fixed pensions as a level annuity)
  *     M = Gap × r_m / ((1 + r_m)^(12(R − A)) − 1) − current monthly saving's share already counted
  *     Always computed for L = plan-to age (default 100) and L = plan_contrast_age (80).
- * F2  Income sources: PF grown at the user's own rate; gratuity = basic × days/daysPerMonth × years
- *     (gratuity_rule, or the employer's days if higher); public pension valued as a level annuity
- *     (fixed amount, so its buying power shrinks); rent subtracted from spending; old-age allowance
- *     and family support shown, never counted.
+ * F2  Income sources: PF grown at the user's own rate; gratuity = basic × days/daysPerMonth × counted
+ *     years (completed years, a part year over six months counts; gratuity_rule's higher days once
+ *     service exceeds afterYears, or the employer's days if higher; no rule (null) → the employer's
+ *     days alone, note m7.note.noStatutoryGratuity); public pension valued as a level annuity from the
+ *     scheme's pensionFromAge P, discounted to R (P > R) or with the payments before R saved at the
+ *     accumulation return (P < R); no scheme row (null) → no projection, a known expectedMonthly still
+ *     counts; other fixed pensions as a level annuity from R; rent subtracted from spending; old-age
+ *     allowance and family support shown, never counted (no allowance rows → nothing shown).
  * F3  Long-horizon bucket follows the M6 age rule (equity −1 point a year after 30).
- * F4  W_1 = Savings × (r − i) / (1 − ((1 + i)/(1 + r))^(L − A)), rising with inflation; two-pot rule
- *     keeps withdrawal_safe_pot_years of withdrawals in safe instruments.
+ * F4  W_1 = Savings × (r − i) / (1 − ((1 + i)/(1 + r))^(L − A)), rising with inflation, for the low /
+ *     base / high retirement returns; other monthly income is a fixed amount (level annuity, not
+ *     inflation-linked); two-pot rule keeps withdrawal_safe_pot_years of withdrawals in safe instruments.
+ * Rounding (PRD): monthly results to the currency's lump step (BDT 500, saving rounded up, withdrawals
+ * down) and corpus / gap figures to 200 lump steps (BDT 1 lakh); income values and the chart to the lump step.
  * The year-by-year simulation reaches exactly zero at the plan-to age when the plan is fully funded.
  */
 import type { Explanation } from "../explain";
@@ -91,7 +98,7 @@ export interface M7Target {
 export interface M7IncomeValues {
   providentFundAtRetirement: Money;
   gratuity: Money;
-  /** Present value at retirement of fixed pensions (public scheme + other fixed). */
+  /** Present value at retirement of fixed pensions (public scheme + other fixed; retired: other monthly income). */
   fixedPensionsValue: Money;
   publicPensionMonthly: Money;
   rentAtRetirementYearly: Money;
@@ -177,6 +184,8 @@ export const M7_NOTE_KEYS = [
   "m7.note.supportRatio",
   "m7.note.lock",
   "m7.note.startEarlier",
+  "m7.note.noStatutoryGratuity",
+  "m7.note.lowCaseInflation",
 ] as const;
 
 export const M7_OPTION_KEYS = [

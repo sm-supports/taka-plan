@@ -7,8 +7,10 @@
  *    Horizon < allocation_no_equity_years → equity 0 (its share moves to fixed income);
  *    horizon < allocation_cash_only_years → 100% fixed income in deposits or bills only.
  * F3 instrument map per bucket from the country's available product slots.
- * F4 trade_b = w_b × (ΣV + N) − V_b; new money goes to under-weight buckets first and sales are only
- *    proposed when new money cannot close the gap; drift > allocation_drift_band triggers it.
+ * F4 trade_b = w_b × (ΣV + N) − V_b; new money N is water-filled into the under-weight buckets against
+ *    w_b × (ΣV + N) first; no sales when that leaves every bucket within allocation_drift_band, or when
+ *    N + 12 × monthly would (the "within 12 months" rule); otherwise the full trades with sales.
+ *    Drift > allocation_drift_band triggers it.
  * F5 r_mix = Σ w_b r_b per case; r_m = (1 + r_mix)^(1/12) − 1; FV = M × ((1 + r_m)^(12n) − 1) / r_m
  *    (+ lump × (1 + r_mix)^n), and in today's money ÷ (1 + inflation_projection)^n.
  */
@@ -96,7 +98,7 @@ export interface M6Rebalance {
   drift: Record<AllocationBucket, Rate>;
   /** Some bucket drifted beyond allocation_drift_band. */
   triggered: boolean;
-  /** New money alone closes the gap (no sales). */
+  /** No sales: new money (or new money plus the next 12 monthly amounts) brings every bucket within the band. */
   newMoneyOnly: boolean;
 }
 

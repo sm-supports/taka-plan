@@ -108,12 +108,21 @@ function toAllocation(m: Record<AllocationBucket, number>): Allocation {
   return { equity: m.equity / W, gold: m.gold / W, fixedIncome: m.fixedIncome / W };
 }
 
-/** F2 target weights for an age and profile (no horizon rule). Used by M5 and M7 as the allocation hook. */
+/** Gold that cannot be bought in this country moves to fixed income (no empty bucket). */
+function withoutUnavailableGold(milli: Record<AllocationBucket, number>, rates: Pick<RatesSnapshot, "country">): Record<AllocationBucket, number> {
+  if (!(rates.country?.unavailable ?? []).includes("gold") || milli.gold === 0) return milli;
+  return { equity: milli.equity, gold: 0, fixedIncome: milli.fixedIncome + milli.gold };
+}
+
+/**
+ * F2 target weights for an age and profile, without the horizon rule (that rule is about one pot of
+ * money, not the plan's long-term money). Used by the plan as the M5 / M7 allocation hook.
+ */
 export function allocationWeights(age: number, profile: RiskProfile, rates: RatesSnapshot, goldShare?: Rate): Allocation {
   assertAge(age);
   assertProfile(profile);
   if (goldShare !== undefined) assertInput(isFiniteNumber(goldShare), "goldShare must be a number", { goldShare });
-  return toAllocation(weightsBreakdown(age, profile, plainReaders(rates), goldShare).milli);
+  return toAllocation(withoutUnavailableGold(weightsBreakdown(age, profile, plainReaders(rates), goldShare).milli, rates));
 }
 
 function isRiskAnswer(x: unknown): boolean {
@@ -198,6 +207,41 @@ const RETURN_KEYS: Record<Case, Record<AllocationBucket, RateKey>> = {
   high: { equity: "equity_return_high", gold: "gold_return_high", fixedIncome: "fixed_income_return_high" },
 };
 
+/**
+ * Water-fill: share `pool` across the buckets below their target (`target_b − held_b`) so the largest
+ * shortfalls are closed first and the shortfalls left are equal (that keeps the largest drift as small
+ * as possible). Σ(target − held) = pool, so the pool never exceeds the positive shortfalls.
+ */
+export function waterFill(held: BucketAmounts, targets: BucketAmounts, pool: Money): BucketAmounts {
+  const out: BucketAmounts = { equity: 0, gold: 0, fixedIncome: 0 };
+  if (!(pool > 0)) return out;
+  const deficits = ALLOCATION_BUCKETS.map((b) => ({ b, d: targets[b] - held[b] }))
+    .filter((x) => x.d > 0)
+    .sort((a, b) => b.d - a.d);
+  const positive = deficits.reduce((t, x) => t + x.d, 0);
+  if (positive <= pool) {
+    for (const x of deficits) out[x.b] = x.d;
+    return out;
+  }
+  // Level λ with Σ max(0, d − λ) = pool: try the top k deficits in turn.
+  let level = 0;
+  let sumTop = 0;
+  for (let k = 0; k < deficits.length; k++) {
+    sumTop += deficits[k]!.d;
+    level = (sumTop - pool) / (k + 1);
+    const next = deficits[k + 1]?.d ?? 0;
+    if (level >= next) break;
+  }
+  for (const x of deficits) out[x.b] = Math.max(0, x.d - level);
+  return out;
+}
+
+/** Largest |weight after the buys − target weight| over the buckets. */
+function driftAfter(held: BucketAmounts, buys: BucketAmounts, total: Money, w: Allocation): number {
+  if (!(total > 0)) return 0;
+  return Math.max(...ALLOCATION_BUCKETS.map((b) => Math.abs((held[b] + buys[b]) / total - w[b])));
+}
+
 /** Round each trade and make them sum to the rounded new money (remainder on the largest trade). */
 function roundTrades(raw: BucketAmounts, newMoney: Money, steps: RoundSteps): BucketAmounts {
   const out = { equity: roundMoney(raw.equity, "lump", steps), gold: roundMoney(raw.gold, "lump", steps), fixedIncome: roundMoney(raw.fixedIncome, "lump", steps) };
@@ -242,13 +286,8 @@ export function computeAllocation(input: M6Input, rates: RatesSnapshot, today: I
   } else if (wb.capApplied) {
     ex.note("m6.note.capApplied");
   }
-  // Gold that cannot be bought in this country moves to fixed income (no empty bucket).
   const unavailableSlots = rates.country?.unavailable ?? [];
-  if (unavailableSlots.includes("gold") && milli.gold > 0) {
-    milli.fixedIncome += milli.gold;
-    milli.gold = 0;
-  }
-  const weights = toAllocation(milli);
+  const weights = toAllocation(withoutUnavailableGold(milli, rates));
   const equityRaw = horizonRule === "none" ? wb.equity : 0;
   const goldRaw = horizonRule === "cashOnly" || unavailableSlots.includes("gold") ? 0 : wb.gold;
   ex.step({
@@ -332,19 +371,18 @@ export function computeAllocation(input: M6Input, rates: RatesSnapshot, today: I
     for (const b of ALLOCATION_BUCKETS) drift[b] = held > 0 ? roundDecimals(v[b] / held - weights[b], 6) : 0;
     const triggered = ALLOCATION_BUCKETS.some((b) => Math.abs(drift[b]) > band);
 
-    let rawTrades = fullTrades;
-    let newMoneyOnly = ALLOCATION_BUCKETS.every((b) => fullTrades[b] >= 0);
-    if (!newMoneyOnly && newMoney > 0) {
-      // Gap of each under-weight bucket against today's holdings; new money goes to those buckets
-      // in proportion to their gap. If it covers every gap, nothing needs selling.
-      const gap = {} as BucketAmounts;
-      for (const b of ALLOCATION_BUCKETS) gap[b] = Math.max(0, weights[b] * held - v[b]);
-      const gapTotal = gap.equity + gap.gold + gap.fixedIncome;
-      if (gapTotal > 0 && gapTotal <= newMoney + 1e-6) {
-        rawTrades = { equity: (newMoney * gap.equity) / gapTotal, gold: (newMoney * gap.gold) / gapTotal, fixedIncome: (newMoney * gap.fixedIncome) / gapTotal };
-        newMoneyOnly = true;
-      }
-    }
+    // Rule order (PRD F4): new money goes to the under-weight buckets first (water-filled against the
+    // targets on holdings + new money). Nothing is sold when that leaves every bucket within the drift
+    // band, or when the next 12 months of the monthly amount would (new money now, the monthly amount
+    // after it, both to the under-weight buckets). Otherwise the full trades, with sales.
+    const targetsOn = (total: Money): BucketAmounts => ({ equity: weights.equity * total, gold: weights.gold * total, fixedIncome: weights.fixedIncome * total });
+    const EPS = 1e-9;
+    const buys = waterFill(v, targetsOn(totalRaw), newMoney);
+    const yearPool = newMoney + 12 * input.monthly;
+    const yearTotal = held + yearPool;
+    const newMoneyOnly =
+      driftAfter(v, buys, totalRaw, weights) <= band + EPS || (input.monthly > 0 && driftAfter(v, waterFill(v, targetsOn(yearTotal), yearPool), yearTotal, weights) <= band + EPS);
+    const rawTrades = newMoneyOnly ? buys : fullTrades;
     if (!newMoneyOnly) ex.note("m6.note.exitCosts");
     const trades = roundTrades(rawTrades, newMoney, steps);
     const total = roundMoney(totalRaw, "lump", steps);

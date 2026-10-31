@@ -3,11 +3,11 @@
  *
  * FV = C × (1 + i)^n, monthly = FV × rm / ((1 + rm)^months − 1).
  * Short and medium goals (and long goals without an M6 allocation) are priced at the best
- * fixed-income candidate after tax. With an allocation (the M6 hook), long goals are priced at the mix:
- *   r_mix = w_fi × r_fi + w_equity × r_equity + w_gold × r_gold
- * base case: the best available fixed-income slot after tax (sanchayapatra_5y, else tbond_10y, else
- * fdr_1y), equity_return_base and gold_return_base (no withholding tax on equity or gold);
- * low / high cases: fixed_income_return_*, equity_return_* and gold_return_*.
+ * fixed-income candidate after tax, rm = annual / 12. With an allocation (the M6 hook), long goals are
+ * priced at the mix exactly as M6 F5 prices it:
+ *   r_mix = w_fi × fixed_income_return_* + w_equity × equity_return_* + w_gold × gold_return_*
+ * for the low, base and high cases (fixed_income_return_* is already after tax; no withholding tax on
+ * equity or gold), with the effective monthly rate rm = (1 + r_mix)^(1/12) − 1 like M6 and M7.
  * Every rate comes from the snapshot through the explain builder so "Why this number?"
  * lists each assumption; maths stays unrounded until the output boundary.
  */
@@ -24,11 +24,16 @@ export function futureValue(cost: Money, inflation: Rate, years: number): number
   return cost * (1 + inflation) ** years;
 }
 
-/** FV × rm / ((1 + rm)^n − 1), rm = annual/12. rm = 0 → FV / n. months ≤ 0 → INVALID_INPUT. */
-export function sinkingFundMonthly(fv: Money, annualAfterTax: Rate, months: number): number {
+/** Monthly rate for an annual one: annual / 12 (deposit convention) or (1 + annual)^(1/12) − 1 (effective, the M6 mix). */
+export function monthlyRateFor(annual: Rate, effective = false): Rate {
+  return effective ? (1 + annual) ** (1 / 12) - 1 : annual / 12;
+}
+
+/** FV × rm / ((1 + rm)^n − 1), rm = annual/12 (or the effective monthly rate). rm = 0 → FV / n. months ≤ 0 → INVALID_INPUT. */
+export function sinkingFundMonthly(fv: Money, annualAfterTax: Rate, months: number, effective = false): number {
   assertInput(isFiniteNumber(fv) && isFiniteNumber(annualAfterTax) && isFiniteNumber(months), "sinkingFundMonthly needs finite inputs", { fv, annualAfterTax, months });
   assertInput(months > 0, "sinkingFundMonthly needs months > 0", { months });
-  const rm = annualAfterTax / 12;
+  const rm = monthlyRateFor(annualAfterTax, effective);
   if (rm === 0) return fv / months;
   return (fv * rm) / ((1 + rm) ** months - 1);
 }
@@ -193,6 +198,8 @@ interface Pricing {
   low: Rate;
   /** After-tax return of the "high" path (the lower monthly saving). */
   high: Rate;
+  /** Mix pricing compounds monthly at the effective rate (M6 F5). */
+  effective: boolean;
 }
 
 /** Best fixed-income candidate (highest after tax; ties → first listed); the lowest gives the "low" path. */
@@ -212,50 +219,53 @@ function priceCandidates(ex: ExplainBuilder, rates: RatesSnapshot, list: readonl
     unit: "rate",
   });
   // Fixed income only, so the "high" path equals the expected one.
-  return { instrument: base.instrument, candidates: [...list], nominal: base.nominal, afterTax: base.afterTax, low: low.afterTax, high: base.afterTax };
+  return { instrument: base.instrument, candidates: [...list], nominal: base.nominal, afterTax: base.afterTax, low: low.afterTax, high: base.afterTax, effective: false };
 }
 
-/** M6 F5 blended return for the base, low and high cases; every row goes through the builder. */
+/** M6 F5 blended return for the base, low and high cases (the same rows M6 uses); every row goes through the builder. */
 function priceMix(ex: ExplainBuilder, rates: RatesSnapshot, w: Allocation): Pricing {
-  const fi = priceCandidate(ex, rates, mixFixedIncomeSlot(rates));
-  const equity = ex.use("equity_return_base");
-  const gold = ex.use("gold_return_base");
-  const nominal = w.fixedIncome * fi.nominal + w.equity * equity + w.gold * gold;
-  const afterTax = w.fixedIncome * fi.afterTax + w.equity * equity + w.gold * gold;
-  const lowMix = w.fixedIncome * ex.use("fixed_income_return_low") + w.equity * ex.use("equity_return_low") + w.gold * ex.use("gold_return_low");
-  const highMix = w.fixedIncome * ex.use("fixed_income_return_high") + w.equity * ex.use("equity_return_high") + w.gold * ex.use("gold_return_high");
+  const mixAt = (c: "low" | "base" | "high") => ({
+    fixedIncome: ex.use(`fixed_income_return_${c}`),
+    equity: ex.use(`equity_return_${c}`),
+    gold: ex.use(`gold_return_${c}`),
+  });
+  const blend = (r: { fixedIncome: Rate; equity: Rate; gold: Rate }) => w.fixedIncome * r.fixedIncome + w.equity * r.equity + w.gold * r.gold;
+  const base = mixAt("base");
+  // fixed_income_return_* is already after tax and equity / gold carry no withholding tax.
+  const afterTax = blend(base);
+  const lowMix = blend(mixAt("low"));
+  const highMix = blend(mixAt("high"));
   const instrument = dominantSlot(w, rates);
   ex.step({
     id: "m5.rate",
     inputs: {
       instrument,
-      nominal,
-      // Only the fixed-income part is taxed at source, so the blended tax is nominal → after tax.
-      tax: nominal > 0 ? 1 - afterTax / nominal : 0,
+      nominal: afterTax,
+      tax: 0,
       fixedIncomeShare: w.fixedIncome,
       equityShare: w.equity,
       goldShare: w.gold,
-      fixedIncomeRate: fi.afterTax,
-      equityRate: equity,
-      goldRate: gold,
+      fixedIncomeRate: base.fixedIncome,
+      equityRate: base.equity,
+      goldRate: base.gold,
     },
     raw: afterTax,
     rounded: roundDecimals(afterTax, 3),
     unit: "rate",
   });
   const candidates: Instrument[] = [];
-  if (w.fixedIncome > 0) candidates.push(fi.instrument);
+  if (w.fixedIncome > 0) candidates.push(mixFixedIncomeSlot(rates));
   if (w.equity > 0) candidates.push("equity_fund");
   if (w.gold > 0) candidates.push("gold");
   return {
     instrument,
     candidates,
-    nominal,
+    nominal: afterTax,
     afterTax,
-    // The base case uses today's best fixed-income rate, which can sit outside the generic
-    // fixed_income_return_low..high band: keep low ≤ base ≤ high so the range reads the right way.
+    // Keep low ≤ base ≤ high even if an admin edit puts a case row out of order.
     low: Math.min(lowMix, afterTax),
     high: Math.max(highMix, afterTax),
+    effective: true,
   };
 }
 
@@ -284,16 +294,16 @@ export function computeGoal(goal: Goal, rates: RatesSnapshot, today: ISODate, ca
   const priced = mix ? priceMix(ex, rates, mix) : priceCandidates(ex, rates, list, first as Instrument);
 
   // The sinking fund is sized from the unrounded future value; only the output is rounded.
-  const monthlyRaw = sinkingFundMonthly(fvRaw, priced.afterTax, months);
+  const monthlyRaw = sinkingFundMonthly(fvRaw, priced.afterTax, months, priced.effective);
   const monthlyBase = ex.step({
     id: "m5.monthly",
-    inputs: { fv, monthlyRate: priced.afterTax / 12, months },
+    inputs: { fv, monthlyRate: monthlyRateFor(priced.afterTax, priced.effective), months },
     raw: monthlyRaw,
     rounded: roundMoney(monthlyRaw, "monthly", R),
     unit: "bdt",
   });
-  const monthlyLow = roundMoney(sinkingFundMonthly(fvRaw, priced.low, months), "monthly", R);
-  const monthlyHigh = priced.high === priced.afterTax ? monthlyBase : roundMoney(sinkingFundMonthly(fvRaw, priced.high, months), "monthly", R);
+  const monthlyLow = roundMoney(sinkingFundMonthly(fvRaw, priced.low, months, priced.effective), "monthly", R);
+  const monthlyHigh = priced.high === priced.afterTax ? monthlyBase : roundMoney(sinkingFundMonthly(fvRaw, priced.high, months, priced.effective), "monthly", R);
 
   // Real return against the inflation this goal is priced with (education/health have their own rows);
   // the CPI comparison is kept for display only.

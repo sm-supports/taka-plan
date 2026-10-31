@@ -3,11 +3,13 @@
  * so these formulas are ours, every default a rates row flagged "our assumption":
  *
  * Life cover (only when someone depends on the income, or debts would pass to the family):
- *   yearsCovered = max(0, coverToAge − age)
- *   incomeNeed   = PV of (takeHome × 12 × incomeShare) growing at inflation_projection for yearsCovered
- *                  years, discounted at the after-tax 1-year term-deposit rate (growing annuity)
+ *   yearsCovered = max(0, min(coverToAge − age, insurance_child_independent_age − youngestChildAge))
+ *                  (the child term only when children are dependents and the youngest child's age is known)
+ *   ρ            = (1 + fixed_income_return_base) / (1 + inflation_projection) − 1   (real safe return, after tax)
+ *   incomeNeed   = takeHome × 12 × incomeShare × (1 − (1 + ρ)^−n) / ρ × (1 + ρ)  (annuity due at ρ; ρ = 0 → × n)
  *   lifeCover    = incomeNeed + debts + educationGoals − liquidSavings − investments
  *   lifeGap      = max(0, lifeCover − existingLifeCover)            (rounded "lump")
+ *   m2.note.multipleOutsideBand when lifeCover ÷ yearly take-home falls outside 10–15× (rule of thumb).
  *
  * Health cover (everyone):
  *   perStay      = health_hospitalisation_cost, scaled by max(health_public_cover_floor, oop_health_share)
@@ -19,11 +21,16 @@
  *   health = Σ over people: (perPersonCover / per) × band(personAge)
  *   monthlyPremiumNeed = (life.mid + health.mid) / 12                  (rounded "monthly"; feeds the plan)
  *
- * Policy check (an existing savings-type policy, never a recommendation to cancel):
+ * Policy check (an existing savings-type policy, never a recommendation to cancel), r = after-tax
+ * 1-year term-deposit rate, n = termYears − yearsPaid (n = 0 → no check, note m2.note.policyMatured):
  *   termPremium  = sumAssured / per × band(age) (mid)
- *   investFV     = FV of (annualPremium − termPremium) yearly for remainingYears at the after-tax
- *                  1-year term-deposit rate
- *   policyIrr    = internal rate of return of the premiums against the expected maturity value
+ *   stop paying  = surrenderValue × (1 + r)^n + FV of (annualPremium − termPremium) at the start of each
+ *                  of the n years at r                                  (investDifferenceFV)
+ *   keep paying  = expectedMaturity
+ *   policyIrr    = marginal IRR of (−surrenderValue now, −annualPremium at the start of each of the n
+ *                  years, +expectedMaturity after n years); maturity 0 → −100%
+ *   No surrender value after premiums were paid → it counts as 0 and the comparison is a lower bound for
+ *   stopping (lowerBound, note m2.note.policyNoSurrender).
  */
 import type { Explanation } from "../explain";
 import type { Dependent, Money, Rate, Status } from "../types";
@@ -106,8 +113,13 @@ export interface M2HealthResult {
 export interface M2PolicyCheck {
   remainingYears: number;
   termPremiumYearly: Money;
-  /** Value of investing (policy premium − term premium) each year at the safe after-tax rate. */
+  /** Value of the stop-paying path: the surrender value grown at the safe after-tax rate plus investing
+   * (policy premium − term premium) each remaining year at that rate. */
   investDifferenceFV: Money;
+  /** The surrender value part of investDifferenceFV (0 when unknown). */
+  surrenderValueFV: Money;
+  /** True when the surrender value was unknown after premiums were paid: stopping looks worse than it is. */
+  lowerBound: boolean;
   policyMaturity: Money;
   /** investDifferenceFV − policyMaturity. Positive = term plus investing comes out ahead. */
   difference: Money;
@@ -161,6 +173,10 @@ export const M2_NOTE_KEYS = [
   "m2.note.noTermSold",
   "m2.note.separateInvesting",
   "m2.note.policyNotAdvice",
+  "m2.note.policyNoSurrender",
+  "m2.note.policyMatured",
+  "m2.note.multipleOutsideBand",
+  "m2.note.noHealthPriceTable",
 ] as const;
 
 export const M2_CHECK_KEYS = [

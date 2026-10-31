@@ -22,8 +22,11 @@ describe("computePlan with the real engine and seed", () => {
     for (const b of plan.buckets) {
       expect(PLAN_REASON_KEYS).toContain(b.reasonKey);
       expect(PLAN_NEXT_KEYS).toContain(b.nextStepKey);
-      // No zero-amount buckets while the emergency fund is still being built.
-      expect(b.amount).toBeGreaterThan(0);
+      // While the fund is being built, only an unfunded insurance, debt or retirement need shows at zero.
+      if (b.amount === 0) {
+        expect(["insurance", "debt", "retirement"]).toContain(b.id);
+        expect(b.status).not.toBe("green");
+      }
       expect(b.amount % 100).toBe(0);
     }
     expect(plan.buckets.reduce((s, b) => s + b.amount, 0)).toBe(plan.monthlyTotal);
@@ -44,9 +47,10 @@ describe("computePlan with the real engine and seed", () => {
     expect(plan.budget.savingsAmount).toBe(9000);
     expect(plan.emergency).toMatchObject({ months: 8, target: 224000, saved: 20000, gap: 204000, monthlySaving: 17000, monthsCovered: 0.7, status: "red" });
     expect(plan.emergency.tiers.savingsAccount).toBe(28000);
+    // The motorbike gets 1 800 of its 11 200: amber (was green, which ignored the shortfall).
     expect(plan.buckets.map((b) => [b.id, b.amount, b.instrument, b.status, b.nextStepKey])).toEqual([
       ["emergency", 7200, "savings_account", "red", "plan.next.openSavings"],
-      ["goal", 1800, "dps", "green", "plan.next.dps"],
+      ["goal", 1800, "dps", "amber", "plan.next.dps"],
     ]);
     expect(plan.buckets[0]?.reasonParams).toEqual({ amount: 7200, covered: 0.7, months: 8, instrument: "savings_account" });
     expect(plan.buckets[1]?.reasonParams).toMatchObject({ name: "Motorbike", amount: 1800, need: 11200, instrument: "dps", fv: 291500, years: 2 });
@@ -88,36 +92,43 @@ describe("computePlan with the real engine and seed", () => {
     expect(plan.budget.savingsAmount).toBe(24000);
     expect(plan.emergency).toMatchObject({ months: 8, target: 600000, gap: 500000, monthlySaving: 41700, monthsCovered: 1.3, status: "amber" });
     expect(plan.debt?.highInterestDebts.map((d) => d.id)).toEqual(["c-1"]);
-    // M2: 24 years of 120 000 × 12 × income share + debts + education − savings − 20 lakh group cover
-    // leaves a 2.80 crore life gap and a 13.09 lakh family health gap → 16 700 a month of premiums.
-    expect(plan.insurance).toMatchObject({ monthlyPremiumNeed: 16700, status: "red", life: { gap: 27953000, status: "red" }, health: { people: 5, gap: 1309000 } });
+    // M2: 24 years of 120 000 × 12 × 0.7 at the real safe return (annuity due) + debts + education − savings
+    // − 20 lakh group cover leaves a 2.49 crore life gap (was 2.80 crore) and a 13.09 lakh family health gap
+    // → 15 500 a month of premiums (was 16 700).
+    expect(plan.insurance).toMatchObject({ monthlyPremiumNeed: 15500, status: "red", life: { gap: 24912000, status: "red" }, health: { people: 5, gap: 1309000 } });
     // Insurance comes before debt but, with a 25% card open, may take only half of the 4 800 left
-    // (plan_insurance_max_share_with_debt 0.5): the card keeps shrinking at 2 400 a month (25 months).
+    // (plan_insurance_max_share_with_debt 0.5): with the card's minimum plus 2 400 a month it clears
+    // in 13 months with interest (was 25 = 60 000 / 2 400).
+    // Retirement gets nothing: it stays on the plan as a zero bucket (red, shown amber by the one-red rule).
     expect(plan.buckets.map((b) => [b.id, b.refId, b.amount, b.status, b.demotedFromRed])).toEqual([
       ["emergency", undefined, 19200, "amber", false],
       ["insurance", undefined, 2400, "red", false],
       ["debt", "c-1", 2400, "amber", true],
+      ["retirement", undefined, 0, "amber", true],
     ]);
     expect(plan.buckets[1]).toMatchObject({ instrument: "term_insurance", reasonKey: "plan.reason.insurance", reasonParams: { amount: 2400 }, nextStepKey: "plan.next.insurance", module: "m2" });
-    expect(plan.buckets[2]?.reasonParams).toMatchObject({ amount: 2400, months: 25 });
-    // M7 runs (nothing is left for its bucket): 1 39 500 a month to fund spending to 100; at today's
-    // zero saving the money runs out at 63.
-    expect(plan.retirement).toMatchObject({ monthlyNeed: 139500, planToAge: 100, verdict: { kind: "runsOut", age: 63, status: "red" } });
-    expect(plan.buckets.some((b) => b.id === "goal" || b.id === "retirement" || b.id === "future")).toBe(false);
-    expect(plan.summary).toEqual({ emergencyShare: 0.8, monthsToEmergencyFull: 27, goalsShortfall: 18300 });
+    expect(plan.buckets[2]?.reasonParams).toMatchObject({ amount: 2400, months: 13 });
+    // M7 runs with savings above the emergency-fund target only (100 000 − 600 000 → 0, was 100 000):
+    // 1 40 500 a month to fund spending to 100 (was 1 39 500, now rounded up to ৳500); at zero saving
+    // the money runs out at 63.
+    expect(plan.retirement).toMatchObject({ monthlyNeed: 140500, planToAge: 100, verdict: { kind: "runsOut", age: 63, status: "red" } });
+    expect(plan.buckets[3]).toMatchObject({ instrument: "equity_fund", reasonParams: { amount: 0, need: 140500, planTo: 100, lastsTo: 63 } });
+    expect(plan.buckets.some((b) => b.id === "goal" || b.id === "future")).toBe(false);
+    expect(plan.summary).toEqual({ emergencyShare: 0.8, monthsToEmergencyFull: 27, goalsShortfall: 18300, retirementShortfall: 140500 });
     expect(plan.explain.steps.find((s) => s.id === "plan.goalsShare")).toMatchObject({ inputs: { remaining: 0, goalsNeed: 18300 }, rounded: 0 });
     expect(plan.monthlyTotal).toBe(24000);
   });
 
-  it("familyWithDebt without M2: the card gets the 4 800 (13 months at that pace)", () => {
+  it("familyWithDebt without M2: the card gets the 4 800 (9 months at that pace)", () => {
     const { m2: _m2, ...withoutInsurance } = SAMPLE_PROFILES.familyWithDebt;
     const plan = computePlan(withoutInsurance, rates, today);
     expect(plan.buckets.map((b) => [b.id, b.refId, b.amount, b.status])).toEqual([
       ["emergency", undefined, 19200, "amber"],
       ["debt", "c-1", 4800, "red"],
+      ["retirement", undefined, 0, "amber"],
     ]);
-    // 60 000 at 4 800 a month → 13 months, not the 12-month target.
-    expect(plan.buckets[1]?.reasonParams).toEqual({ amount: 4800, rate: 0.25, count: 1, months: 13 });
+    // 60 000 at 25%, the card minimum plus 4 800 a month → 9 months with interest (was 13 = 60 000 / 4 800).
+    expect(plan.buckets[1]?.reasonParams).toEqual({ amount: 4800, rate: 0.25, count: 1, months: 9 });
   });
 
   it("onboarding answers only (50 000 / 30 000, no goals, no debt): 8 000 to the fund and 2 000 to a future DPS", () => {
@@ -165,15 +176,16 @@ describe("computePlan with the real engine and seed", () => {
     const fixed = fixedOnly.goals?.goals[0];
     const mixed = plan.goals?.goals[0];
     expect(fixed).toMatchObject({ instrument: "sanchayapatra_5y", monthly: { low: 17800, base: 14400, high: 14400 }, status: "amber" });
-    // 0.3 × 10.647% (Sanchayapatra after tax) + 0.6 × 9% (equity) + 0.1 × 8% (gold) = 9.394%: lower than the
-    // certificate alone with today's Bangladesh rates, so the mix needs more a month, with a real range.
-    expect(mixed?.afterTax).toBeCloseTo(0.093941, 6);
-    expect(mixed).toMatchObject({ instrument: "equity_fund", candidates: ["sanchayapatra_5y", "equity_fund", "gold"], monthly: { low: 27200, base: 16200, high: 11800 }, status: "green" });
+    // Priced like M6: 0.3 × 8.5% (fixed_income_return_base) + 0.6 × 9% (equity) + 0.1 × 8% (gold) = 8.75%
+    // at the effective monthly rate (was 9.394% with Sanchayapatra's after-tax rate at r / 12).
+    expect(mixed?.afterTax).toBeCloseTo(0.0875, 6);
+    expect(mixed).toMatchObject({ instrument: "equity_fund", candidates: ["sanchayapatra_5y", "equity_fund", "gold"], monthly: { low: 27300, base: 17700, high: 12600 }, status: "green" });
     expect(mixed?.explain.notes).not.toContain("m5.note.noAllocationYet");
     expect(plan.goals?.usesAllocation).toBe(true);
-    expect(plan.buckets.map((b) => [b.id, b.amount, b.instrument, b.nextStepKey])).toEqual([
-      ["emergency", 0, "fdr_3m", "plan.next.keepFull"],
-      ["goal", 10000, "equity_fund", "plan.next.allocation"],
+    // 10 000 of the 17 700 the goal needs → amber.
+    expect(plan.buckets.map((b) => [b.id, b.amount, b.instrument, b.status, b.nextStepKey])).toEqual([
+      ["emergency", 0, "fdr_3m", "green", "plan.next.keepFull"],
+      ["goal", 10000, "equity_fund", "amber", "plan.next.allocation"],
     ]);
 
     // No goal: the whole budget goes to the mix's largest bucket, with the asset mix as the next step.
@@ -190,19 +202,24 @@ describe("computePlan with the real engine and seed", () => {
     expect(input.m1.hasHealthInsurance).toBe(true);
     expect(input.m2).toMatchObject({ age: 28, dependents: ["partner"], takeHome: 50000, smoker: false, liquidSavings: 300000, debts: 0, educationGoals: 0, existingLifeCover: 0, existingHealthCover: 300000 });
     expect(input.m7).toEqual({ mode: "working", age: 28, monthlySpending: 30000, savings: 300000, monthlySaving: 0 });
+    expect(input.m7SavingsDefault).toBe(true);
     const plan = computePlan(input, rates, today);
-    expect(plan.insurance?.monthlyPremiumNeed).toBe(4000);
-    expect(plan.retirement?.monthlyNeed).toBe(51400);
-    // Both modules are red (life gap above half the cover; money runs out before 80): the one-red rule
-    // keeps insurance, the earlier bucket, and shows retirement as amber.
+    // Life cover at the real safe return: 3 400 a month of premiums (was 4 000).
+    expect(plan.insurance?.monthlyPremiumNeed).toBe(3400);
+    // M7 counts only the 60 000 above the 2.4 lakh emergency fund (was all 3 lakh): 53 500 a month
+    // (was 51 400; now rounded up to ৳500).
+    expect(plan.retirement?.monthlyNeed).toBe(53500);
+    // Insurance is red (life gap above half the cover); retirement gets 6 600 of 53 500: amber, and at
+    // that saving the money lasts to 64.
     expect(plan.insurance?.status).toBe("red");
     expect(plan.retirement?.verdict.status).toBe("red");
     expect(plan.buckets.map((b) => [b.id, b.amount, b.instrument, b.status, b.demotedFromRed, b.nextStepKey, b.module])).toEqual([
       ["emergency", 0, "fdr_3m", "green", false, "plan.next.keepFull", "m1"],
-      ["insurance", 4000, "term_insurance", "red", false, "plan.next.insurance", "m2"],
-      ["retirement", 6000, "dps", "amber", true, "plan.next.retirement", "m7"],
+      ["insurance", 3400, "term_insurance", "red", false, "plan.next.insurance", "m2"],
+      ["retirement", 6600, "equity_fund", "amber", false, "plan.next.retirement", "m7"],
     ]);
-    expect(plan.buckets[2]?.reasonParams).toEqual({ amount: 6000, planTo: 100 });
+    expect(plan.buckets[2]?.reasonParams).toEqual({ amount: 6600, need: 53500, planTo: 100, lastsTo: 64 });
+    expect(plan.summary.retirementShortfall).toBe(46900);
     expect(plan.monthlyTotal).toBe(10000);
   });
 

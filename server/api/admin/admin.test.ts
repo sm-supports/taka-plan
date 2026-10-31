@@ -243,6 +243,7 @@ describe("admin routes", () => {
       ["emergency", 19200, "fdr_3m"],
       ["insurance", 2400, "term_insurance"],
       ["debt", 2400, "loan_prepayment"],
+      ["retirement", 0, "equity_fund"],
     ]);
 
     await putRates(put("rates", { key: "dps_rate", patch: { value: 0.1 } }, auth));
