@@ -1,8 +1,13 @@
 "use client";
-/** M6 Asset mix: placeholder until the m6 UI slice lands. */
-import { useT } from "@/lib/i18n/useT";
+/** M6 Asset mix page. Suspense because the calculator reads `?demo=` via useSearchParams. */
+import { Suspense } from "react";
+import { M6Calculator } from "@/components/calculators/m6/M6Calculator";
+import { Skeleton } from "@/components/ui/Skeleton";
 
 export default function M6Page() {
-  const { t } = useT();
-  return <h1 className="text-2xl font-semibold">{t("m6.title")}</h1>;
+  return (
+    <Suspense fallback={<Skeleton page />}>
+      <M6Calculator />
+    </Suspense>
+  );
 }
