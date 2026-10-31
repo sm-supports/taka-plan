@@ -1,0 +1,569 @@
+{
+  "schemaVersion": 1,
+  "code": "BD",
+  "iso3": "BGD",
+  "nameEn": "Bangladesh",
+  "nameNative": "বাংলাদেশ",
+  "region": "south_asia",
+  "languages": [
+    "bn",
+    "en"
+  ],
+  "currency": {
+    "code": "BDT",
+    "symbol": "৳",
+    "decimals": 2,
+    "compact": "lakh_crore",
+    "usdRate": {
+      "value": 123.99,
+      "status": "sourced",
+      "sourceName": "Bangladesh Bank (weighted average rate)",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/econdata/exchangerate",
+      "asOf": "2026-10-29"
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0834,
+      "status": "sourced",
+      "sourceName": "UNB / BBS",
+      "sourceUrl": "https://unb.com.bd/category/Business/food-inflation-rises-pushes-up-overall-inflation-in-september/197246",
+      "asOf": "2026-09-30",
+      "note": "September 2026 point to point (BBS); food 7.22%, non-food 9.30%."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BBS CPI via UNB (Sep 2026: 8.34%)",
+      "sourceUrl": "https://unb.com.bd/category/Business/food-inflation-rises-pushes-up-overall-inflation-in-september/197246",
+      "asOf": "2026-10-31",
+      "note": "CPI has run at 8-10% for three years and Bangladesh Bank's 5-6% goal is not yet credible, so we plan with 8%, the current rate rounded down."
+    },
+    "policy_rate": {
+      "value": 0.095,
+      "status": "sourced",
+      "sourceName": "UNB",
+      "sourceUrl": "https://unb.com.bd/category/Business/bb-unveils-first-quarterly-monetary-policy-keeps-policy-rate-unchanged-at-95/196649",
+      "asOf": "2026-09-30",
+      "note": "Repo rate held at 9.50% in the Oct-Dec 2026 quarterly statement (SLF 11.00%, SDF 7.50%)."
+    },
+    "savings_account_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of three private banks",
+      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
+      "asOf": "2026-09-30",
+      "note": "Typical 2%; range 1.25%-3% across published rate sheets."
+    },
+    "fdr_3m_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of three private banks",
+      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
+      "asOf": "2026-09-30",
+      "note": "Typical 7%; range 6.25%-8%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.075,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of three private banks",
+      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
+      "asOf": "2026-09-30",
+      "note": "Typical 7.5%; range 6.75%-8.25%."
+    },
+    "dps_rate": {
+      "value": 0.09,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of three private banks",
+      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
+      "asOf": "2026-09-30",
+      "note": "5-year DPS typical 9%; range 8.25%-10.5%."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0616,
+      "status": "sourced",
+      "sourceName": "Bangladesh Bank",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/econdata/intrate",
+      "asOf": "2026-08-31"
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.1183,
+      "status": "sourced",
+      "sourceName": "Financial Express (DNS Jul–Dec 2026 rates)",
+      "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
+      "asOf": "2026-07-01",
+      "note": "5-year Bangladesh Sanchayapatra, Jul-Dec 2026, holdings up to the tier cap; 11.80% above it."
+    },
+    "tbill_91d_rate": {
+      "value": 0.085,
+      "status": "sourced",
+      "sourceName": "Bangladesh Bank auctions",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "asOf": "2026-10-26",
+      "note": "Auction cut-off 8.56%"
+    },
+    "tbond_5y_rate": {
+      "value": 0.085,
+      "status": "sourced",
+      "sourceName": "Bangladesh Bank auctions",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "asOf": "2026-10-14",
+      "note": "Auction cut-off 8.47%"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0925,
+      "status": "sourced",
+      "sourceName": "Bangladesh Bank auctions",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "asOf": "2026-10-25",
+      "note": "Auction cut-off 9.27%"
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "TRW",
+      "sourceUrl": "https://trw.co/withholding-tax-bangladesh/",
+      "asOf": "2026-10-20"
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Daily Observer",
+      "sourceUrl": "https://observerbd.com/news/582881",
+      "asOf": "2026-07-11"
+    },
+    "deposit_insurance_limit": {
+      "value": 200000,
+      "status": "sourced",
+      "sourceName": "BSS",
+      "sourceUrl": "https://www.bssnews.net/js-session/376349",
+      "asOf": "2026-04-10",
+      "note": "Deposit Protection Bill 2026 raised cover from Tk 100,000 to Tk 200,000 per depositor."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.25,
+      "status": "sourced",
+      "sourceName": "UNB (Bangladesh Bank circular)",
+      "sourceUrl": "https://unb.com.bd/category/Business/bangladesh-bank-raises-credit-card-loan-limit-to-tk-40-lakh/181670",
+      "asOf": "2026-03-15"
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Dhaka Stock Exchange (DSEX)",
+      "sourceUrl": "https://www.dse.com.bd/",
+      "asOf": "2026-10-31",
+      "note": "DSEX rose only about 1.5% a year (price only) over the last 10 years."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Dhaka Stock Exchange (DSEX); Sanchayapatra and T-bill after tax",
+      "sourceUrl": "https://www.dse.com.bd/",
+      "asOf": "2026-10-31",
+      "note": "Weak 10-year DSEX record, so the base is kept below the 10.6% after-tax Sanchayapatra rate and within 4 points of the 7.65% after-tax T-bill."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Dhaka Stock Exchange (DSEX)",
+      "sourceUrl": "https://www.dse.com.bd/",
+      "asOf": "2026-10-31",
+      "note": "A recovery case with dividends and earnings growth near nominal GDP growth."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BAJUS gold prices via Financial Express",
+      "sourceUrl": "https://thefinancialexpress.com.bd/trade/gold-prices-cut-by-tk-3324-per-bhori-in-bangladesh",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall in taka terms for years when dollar gold falls and the taka is stable."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BAJUS gold prices via Financial Express",
+      "sourceUrl": "https://thefinancialexpress.com.bd/trade/gold-prices-cut-by-tk-3324-per-bhori-in-bangladesh",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend plus expected taka depreciation, set equal to the 8% inflation assumption."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BAJUS gold prices via Financial Express",
+      "sourceUrl": "https://thefinancialexpress.com.bd/trade/gold-prices-cut-by-tk-3324-per-bhori-in-bangladesh",
+      "asOf": "2026-10-31",
+      "note": "Strong dollar gold plus faster taka depreciation, as in 2022-2024."
+    },
+    "fixed_income_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank FDR and T-bill rates after tax",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "asOf": "2026-10-31",
+      "note": "1-year FDR 7.5% less 10% tax is 6.75%, rounded down."
+    },
+    "fixed_income_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Sanchayapatra, DPS and T-bill rates after tax",
+      "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
+      "asOf": "2026-10-31",
+      "note": "Blend of DPS (8.1% after tax), T-bills (7.65%) and Sanchayapatra (10.6%) after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Sanchayapatra rates after tax",
+      "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
+      "asOf": "2026-10-31",
+      "note": "5-year Sanchayapatra 11.83% less 10% tax is about 10.6%."
+    },
+    "life_claim_settlement_rate": {
+      "value": 0.57,
+      "status": "sourced",
+      "sourceName": "Financial Express (IDRA)",
+      "sourceUrl": "https://thefinancialexpress.com.bd/stock/idra-targets-75pc-claim-settlement-rate-amid-tk-70b-backlog",
+      "asOf": "2026-06-30",
+      "note": "৳70 bn unpaid"
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published pure-term premium tables found; one 2025 worked example (age 35, non-smoker, 20-year term) gives about Tk 3.9 per Tk 1,000 of cover (insurancenews24.com). The rates seed carries a placeholder table."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical cost of one major private hospital stay published; HIES 2022 analysis gives a yearly average out-of-pocket hospitalisation cost of USD 538 in private facilities (BMC Cost Effectiveness and Resource Allocation, 2025), which is not a major-stay figure. The rates seed carries a placeholder."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published individual health insurance premium tables found; standalone health cover is sold only by non-life insurers and is thin. The rates seed carries a placeholder table."
+    },
+    "oop_health_share": {
+      "value": 0.793,
+      "status": "sourced",
+      "sourceName": "World Bank WDI",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BD",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BBS CPI via UNB",
+      "sourceUrl": "https://unb.com.bd/category/Business/food-inflation-rises-pushes-up-overall-inflation-in-september/197246",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series is published; we plan with 10%, about 2 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BBS CPI via UNB",
+      "sourceUrl": "https://unb.com.bd/category/Business/food-inflation-rises-pushes-up-overall-inflation-in-september/197246",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series is published; we plan with 10%, about 2 points above general inflation."
+    },
+    "life_expectancy": {
+      "value": 72.3,
+      "status": "sourced",
+      "sourceName": "Prothom Alo / BBS SVRS 2023",
+      "sourceUrl": "https://en.prothomalo.com/bangladesh/cqjsjk3buz",
+      "asOf": "2023-12-31",
+      "note": "BBS SVRS 2023; men 70.8, women 73.8. UN WPP/World Bank give 74.9 for 2024."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.6,
+            "men": 18.5,
+            "women": 20.7,
+            "projected": 21.2,
+            "projectedMen": 19.9,
+            "projectedWomen": 22.5
+          },
+          {
+            "age": 65,
+            "total": 16,
+            "men": 15.1,
+            "women": 16.9,
+            "projected": 17.4
+          },
+          {
+            "age": 70,
+            "total": 13
+          },
+          {
+            "age": 80,
+            "total": 8.9,
+            "projected": 8.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "BBS SVRS 2020 life table; UN WPP 2026 projection",
+      "sourceUrl": "https://georank.org/life-expectancy/bangladesh",
+      "asOf": "2026-10-30",
+      "note": "Explainer only; never the plan-to age"
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 9.6
+          },
+          {
+            "year": 2040,
+            "value": 6.9
+          },
+          {
+            "year": 2065,
+            "value": 3.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "PopulationPyramid.net (UN WPP 2024, medium variant)",
+      "sourceUrl": "https://www.populationpyramid.net/bangladesh/2040/",
+      "asOf": "2026-10-31",
+      "note": "People aged 15-64 per person 65+, computed from the UN WPP 2024 age structure; World Bank old-age dependency 10.15 (2025) gives 9.9."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Bangladesh Labour Act 2006, s.28",
+      "sourceUrl": "https://cdn2.ogrlegal.com/files/labour/act/Bangladesh-Labour-Act-2006_English-Upto-2018.pdf",
+      "asOf": "2026-10-30"
+    },
+    "retirement_age_government": {
+      "value": 59,
+      "status": "sourced",
+      "sourceName": "Daily Observer (Public Servants (Retirement) Act 1974, amended 2011)",
+      "sourceUrl": "https://observerbd.com/news/494603",
+      "asOf": "2024-10-12",
+      "note": "Raised from 57 to 59 in 2011."
+    },
+    "retirement_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank FDR rates after tax",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "asOf": "2026-10-31",
+      "note": "1-year FDR 7.5% less 10% tax, rounded down."
+    },
+    "retirement_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Bangladesh Bank T-bill auctions; 10% withholding on securities interest",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "asOf": "2026-10-31",
+      "note": "91-day T-bill 8.5% less the 10% withholding on securities interest is 7.65%, so the base is held at 7.5%; the rates seed uses 10% based on Sanchayapatra."
+    },
+    "retirement_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Sanchayapatra rates after tax",
+      "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
+      "asOf": "2026-10-31",
+      "note": "A retiree holding Pensioner or 5-year Sanchayapatra within the caps earns about 10.6% after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Sanchayapatra, DSEX and gold assumptions",
+      "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
+      "asOf": "2026-10-31",
+      "note": "Mostly fixed income with weak equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Sanchayapatra, DSEX and gold assumptions",
+      "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
+      "asOf": "2026-10-31",
+      "note": "Balanced mix of Sanchayapatra/DPS (about 8.5% after tax), equity (9%) and gold (8%)."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Sanchayapatra, DSEX and gold assumptions",
+      "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
+      "asOf": "2026-10-31",
+      "note": "Equity recovery and full use of Sanchayapatra caps."
+    },
+    "old_age_allowance_monthly": {
+      "value": 700,
+      "status": "sourced",
+      "sourceName": "TBS, Jun 2026",
+      "sourceUrl": "https://www.tbsnews.net/node/1460791",
+      "asOf": "2026-07-01",
+      "note": "Tk 1,000 over age 90; means-tested; never counted in the plan"
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 62,
+        "over90Monthly": 1000,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Department of Social Services",
+      "sourceUrl": "https://dss.kushtia.gov.bd/",
+      "asOf": "2026-07-01",
+      "note": "Income ceiling may be outdated"
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": 45,
+        "afterYears": 10,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Bangladesh Labour Act 2006, s.2(10)",
+      "sourceUrl": "https://cdn2.ogrlegal.com/files/labour/act/Bangladesh-Labour-Act-2006_English-Upto-2018.pdf",
+      "asOf": "2026-10-30"
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 50,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": 80,
+        "inflationLinked": false,
+        "taxFree": true,
+        "projections": [
+          {
+            "monthlyContribution": 1000,
+            "years": 10,
+            "monthlyPension": 1530
+          },
+          {
+            "monthlyContribution": 1000,
+            "years": 42,
+            "monthlyPension": 34465
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "upension.gov.bd / Prothom Alo, Sep 2026",
+      "sourceUrl": "https://www.upension.gov.bd/Public/PensionBriefEn",
+      "asOf": "2026-09-30",
+      "note": "No guaranteed rate; fixed amount for life"
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "সঞ্চয়ী হিসাব",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "এফডিআর",
+      "localNameEn": "FDR (3-month fixed deposit)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "এফডিআর",
+      "localNameEn": "FDR (1-year fixed deposit)"
+    },
+    "dps": {
+      "available": true,
+      "localName": "ডিপিএস",
+      "localNameEn": "DPS (deposit pension scheme)"
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "পাঁচ বছর মেয়াদি বাংলাদেশ সঞ্চয়পত্র",
+      "localNameEn": "5-year Bangladesh Sanchayapatra",
+      "sourceUrl": "https://nationalsavings.gov.bd/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "ট্রেজারি বিল",
+      "localNameEn": "Treasury bill",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "ট্রেজারি বন্ড",
+      "localNameEn": "Treasury bond",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "ট্রেজারি বন্ড",
+      "localNameEn": "Treasury bond",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "মিউচুয়াল ফান্ড",
+      "localNameEn": "Mutual fund",
+      "note": "Diversified open-end funds only; no index funds or ETFs trade in Bangladesh."
+    },
+    "gold": {
+      "available": true,
+      "localName": "সোনা",
+      "localNameEn": "Gold",
+      "note": "Bought as jewellery or bars; priced per bhori by BAJUS."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bangladesh Bank",
+      "url": "https://www.bb.org.bd/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Development and Regulatory Authority",
+      "url": "https://idra.org.bd/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Development and Regulatory Authority (complaints)",
+      "url": "https://idra.org.bd/",
+      "note": "Complaints about insurers go to IDRA."
+    },
+    "pensionScheme": {
+      "name": "Universal Pension Scheme (National Pension Authority)",
+      "url": "https://www.upension.gov.bd/"
+    },
+    "oldAgeAllowance": {
+      "name": "Department of Social Services (old-age allowance)",
+      "url": "https://dss.gov.bd/"
+    },
+    "publicHealthCover": {
+      "name": "Directorate General of Health Services (public hospitals)",
+      "url": "https://dghs.gov.bd/",
+      "note": "No national health insurance; public hospitals charge low fees."
+    },
+    "depositInsurance": {
+      "name": "Deposit protection funds (Bangladesh Bank)",
+      "url": "https://www.bb.org.bd/"
+    },
+    "statistics": {
+      "name": "Bangladesh Bureau of Statistics",
+      "url": "https://bbs.gov.bd/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

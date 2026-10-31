@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "code": "FJ",
+  "iso3": "FJI",
+  "nameEn": "Fiji",
+  "nameNative": "Viti",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en",
+    "hi",
+    "fj"
+  ],
+  "currency": {
+    "code": "FJD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.2528,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji statistics table 8.8 (daily exchange rates)",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/8.8-Exchange-Rates-Daily-9.xlsx",
+      "asOf": "2026-10-27",
+      "note": "FJD 1 = USD 0.4439, so FJD 2.25 per US dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.068,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji statistics table 7.1 (Fiji Bureau of Statistics CPI)",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/7.1-Consumer-Price-Index.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year CPI 6.8% in September 2026 (7.6% in August), driven by fuel prices; Trading Economics reports the same figure."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "RBF inflation objective (around 3%); CPI average 2022-2026",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2019/05/Monetary-Policy-in-Fiji_Newspaper-Article.pdf",
+      "asOf": "2026-10-31",
+      "note": "The RBF aims for inflation around 3% and the 2022-2026 average is roughly 3%, so we plan with 3.5% to allow for the import-price shocks seen in 2022 and 2026."
+    },
+    "policy_rate": {
+      "value": 0.0025,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji, Press Release No. 31/2026",
+      "sourceUrl": "https://www.rbf.gov.fj/press-release-no-31-rbf-monetary-policy-stance-remains-unchanged/",
+      "asOf": "2026-10-29",
+      "note": "Overnight Policy Rate held at 0.25%."
+    },
+    "savings_account_rate": {
+      "value": 0.0031,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji statistics table 2.8 (commercial banks' savings deposit rate)",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.8-Commercial-Banks-Lending-and-Deposit-Rates.xlsx",
+      "asOf": "2026-08-31",
+      "note": "Weighted average savings deposit rate 0.31% in August 2026; one large bank's posted savings rate is 0.05%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0015,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji statistics table 2.9 (carded time deposit rates)",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.9-Commercial-Banks-Time-Deposit-Rates.xlsx",
+      "asOf": "2026-08-31",
+      "note": "Carded 3-month rate range across banks 0.05-0.25%; midpoint used. Negotiated rates for large deposits run up to 2.7%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0015,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji statistics table 2.9 (carded time deposit rates)",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.9-Commercial-Banks-Time-Deposit-Rates.xlsx",
+      "asOf": "2026-08-31",
+      "note": "Carded 12-month rate range across banks 0.05-0.25%; midpoint used. Negotiated rates for large deposits run up to 3.55%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched RBF rate tables and bank rate pages: Fiji banks do not publish a monthly recurring deposit (DPS-style) product rate."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0171,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=FJ",
+      "asOf": "2024-12-31",
+      "note": "RBF table 2.8 shows the weighted average time deposit rate at 2.01% and savings at 0.31% in August 2026; it has no combined average."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji, Viti Bond 2026-2027 FAQ",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-08-10",
+      "note": "Viti Bond (government retail bond) 5-year coupon 3.00% (7-year 3.50%, 10-year 4.00%); FJD 1,000 to 200,000 per fiscal year; interest paid quarterly."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0025,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji statistics table 4.1 (Treasury bill 91-day rate)",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/4.1-Money-Capital-Markets-Interest-Rates-Yield-Rates.xlsx",
+      "asOf": "2026-08-31",
+      "note": "91-day Treasury bill tender rate 0.25% in August 2026; the 30 September 2026 government yield curve shows 0.30% at 3 months."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0206,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji government yield curve, 30 September 2026",
+      "sourceUrl": "https://www.rbf.gov.fj/download/720/september/52123/yield-curve-30-september-2026.xlsx",
+      "asOf": "2026-09-30"
+    },
+    "tbond_10y_rate": {
+      "value": 0.039,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji government yield curve, 30 September 2026",
+      "sourceUrl": "https://www.rbf.gov.fj/download/720/september/52123/yield-curve-30-september-2026.xlsx",
+      "asOf": "2026-09-30"
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Fiji Revenue and Customs Service, Resident Interest Withholding Tax",
+      "sourceUrl": "https://frcs.org.fj/?p=29315",
+      "asOf": "2026-04-29",
+      "note": "10% final withholding tax; individuals with gross income up to FJD 30,000 and eligible pensioners can apply for exemption."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Fiji, Viti Bond 2026-2027 FAQ",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-08-10",
+      "note": "Interest on Viti Bonds is exempt from income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched RBF, IMF and World Bank material: no deposit insurance scheme for Fiji was found, and no source stating its absence."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.205,
+      "status": "sourced",
+      "sourceName": "Posted credit card rate of a large commercial bank in Fiji",
+      "sourceUrl": "https://www.anz.com/fiji/en/interest-rates/",
+      "asOf": "2026-09-23",
+      "note": "No legal cap found; standard card rate 20.50% p.a. at one large bank."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Viti Bond 5-year 3.00% tax-free; 1-year government yield 1.25%",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case near the tax-free Viti Bond rate, since the local exchange is small and illiquid."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Viti Bond 5-year 3.00% tax-free; 1-year government yield 1.25%",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-10-31",
+      "note": "Safe tax-free rate of 3% plus a 3.5-point premium; the local market is thin, so the premium is kept below 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Viti Bond 5-year 3.00% tax-free; 1-year government yield 1.25%",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case if dividend yields and local listed-company growth hold up as in recent years."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (FJD per USD broadly stable at 2.1-2.3 for a decade)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=FJ",
+      "asOf": "2026-10-31",
+      "note": "Low case for gold in FJD: weak dollar gold price and a stable peg-basket currency."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (FJD per USD broadly stable at 2.1-2.3 for a decade)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=FJ",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus little expected FJD depreciation under the basket peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (FJD per USD broadly stable at 2.1-2.3 for a decade)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=FJ",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and some FJD weakening."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0014,
+      "status": "assumption",
+      "sourceName": "RBF carded 12-month deposit rate after 10% RIWT",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.9-Commercial-Banks-Time-Deposit-Rates.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: carded 1-year deposit of about 0.15% less 10% withholding tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Viti Bond 5-year 3.00% tax-free; 1-year government yield 1.25%",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free Viti Bonds (3%) and short government paper or deposits (0.3-1.25%)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Viti Bond 5-year 3.00% tax-free; 1-year government yield 1.25%",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: all in tax-free 5-year Viti Bonds at 3%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched RBF insurance annual reports and news: no industry-wide life claim settlement ratio is published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in Fiji, but no published per-1,000 premium rates by age were found; insurers quote individually."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for private hospital surgery costs in Suva: no published typical bill found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 100000,
+        "bands": [
+          {
+            "maxAge": 35,
+            "low": 652,
+            "high": 981
+          },
+          {
+            "maxAge": 50,
+            "low": 1088,
+            "high": 1460
+          },
+          {
+            "maxAge": 65,
+            "low": 2014,
+            "high": 4263
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Published premium table of a Fiji medical insurer (comprehensive plan, FJD 120,000 limit per condition)",
+      "sourceUrl": "https://www.bsplife.com.fj/wp-content/uploads/2025/10/Straight-Spread-Premier-Care-Brochure.pdf",
+      "asOf": "2025-10-01",
+      "note": "Single annual premiums scaled to 100,000 cover (19-23: 783; 24-38: 1,083-1,177; 39-53: 1,306-1,752; 54-64+: 2,417-5,116 per 120,000). Entry to age 55, cover ends at 65; no band beyond 65."
+    },
+    "oop_health_share": {
+      "value": 0.0831,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=FJ",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "RBF CPI table 7.1; headline CPI average",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/7.1-Consumer-Price-Index.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No separate medical CPI is published in the RBF table, so we plan with headline projection plus one point for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "RBF CPI table 7.1; headline CPI average",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/7.1-Consumer-Price-Index.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No separate education CPI is published in the RBF table, so we plan with headline projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 67.463,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=FJ",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 67.8 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.0,
+            "men": 13.5,
+            "women": 16.4
+          },
+          {
+            "age": 65,
+            "total": 12.0,
+            "men": 10.8,
+            "women": 13.2
+          },
+          {
+            "age": 70,
+            "total": 9.4,
+            "men": 8.4,
+            "women": 10.4
+          },
+          {
+            "age": 80,
+            "total": 5.3,
+            "men": 4.7,
+            "women": 5.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/fiji/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 10.0
+          },
+          {
+            "year": 2040,
+            "value": 8.2
+          },
+          {
+            "year": 2065,
+            "value": 4.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/fiji/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 9.97 (2025, World Bank), 12.2 (2040) and 20.4 (2065, populationpyramid.net/fiji/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Fiji Sun: FNPF retirement withdrawal age stays at 55",
+      "sourceUrl": "https://fijisun.com.fj/news/nation/retirement-withdrawal-age-stays-at-55-dpm-prasad-clarifies",
+      "asOf": "2025-08-31",
+      "note": "FNPF full withdrawal age is 55 for men and women; no statutory private-sector retirement age."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Fiji Times: civil service retirement age revised to 60",
+      "sourceUrl": "https://www.fijitimes.com.fj/?p=622432",
+      "asOf": "2023-01-01",
+      "note": "Civil Service (General) (Amendment) Regulations 2023: retirement at 60, optional at 55; extensions to 62 for scarce-skill posts."
+    },
+    "retirement_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "RBF government yield curve 30 Sep 2026 (3-month 0.30%, 1-year 1.25%)",
+      "sourceUrl": "https://www.rbf.gov.fj/download/720/september/52123/yield-curve-30-september-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: short government paper and deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.0125,
+      "status": "assumption",
+      "sourceName": "RBF government yield curve 30 Sep 2026 (1-year 1.25%)",
+      "sourceUrl": "https://www.rbf.gov.fj/download/720/september/52123/yield-curve-30-september-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the 1-year government yield, the best safe 1-year rate available."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Viti Bond 5-year 3.00% tax-free; 1-year government yield 1.25%",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered tax-free Viti Bonds at 3%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "FNPF credited 8.75% (2025) and 9.5% (2026); safe rates 1-4%",
+      "sourceUrl": "https://fijisun.com.fj/news/economy/fnpf-declares-95-interest-payout",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if FNPF crediting rates fall back toward bond yields."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "FNPF credited 8.75% (2025) and 9.5% (2026); safe rates 1-4%",
+      "sourceUrl": "https://fijisun.com.fj/news/economy/fnpf-declares-95-interest-payout",
+      "asOf": "2026-10-31",
+      "note": "Base case well below recent record FNPF credits, closer to its long-run 6-7% record."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "FNPF credited 8.75% (2025) and 9.5% (2026); safe rates 1-4%",
+      "sourceUrl": "https://fijisun.com.fj/news/economy/fnpf-declares-95-interest-payout",
+      "asOf": "2026-10-31",
+      "note": "High case near recent FNPF credited rates."
+    },
+    "old_age_allowance_monthly": {
+      "value": 115,
+      "status": "sourced",
+      "sourceName": "Fiji Times: 2023-2024 Budget social welfare allowance increases",
+      "sourceUrl": "https://www.fijitimes.com.fj/?p=663261",
+      "asOf": "2023-08-01",
+      "note": "Social Pension Scheme FJD 115 a month at 65-69 and 125 at 70+; the 2025-26 budget added 5% for all welfare recipients (exact new amounts not found)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Fijivillage: Social Pension Scheme eligibility clarified by the Ministry",
+      "sourceUrl": "https://www.fijivillage.com/news/sayed-khaiyum-raises-concerns-over-social-pension-cuts-kiran-clarifies-eligibility-87075d/",
+      "asOf": "2026-10-26",
+      "note": "Citizens 65+ who do not receive an FNPF pension or other superannuation, subject to eligibility (asset) checks; higher rate from 70. 59,918 recipients in 2025-26."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Fiji's Employment Relations Act has no statutory gratuity or end-of-service payment for private employees; retirement savings run through FNPF."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Fiji Sun: FNPF retirement withdrawal age stays at 55",
+      "sourceUrl": "https://fijisun.com.fj/news/nation/retirement-withdrawal-age-stays-at-55-dpm-prasad-clarifies",
+      "asOf": "2025-08-31",
+      "note": "FNPF is a defined-contribution provident fund: 8% employee plus 10% employer (employer cut to 8% for 12 months from 1 August 2026); lump sum or pension from 55; balances credited 9.5% for 2025-26."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.8-Commercial-Banks-Lending-and-Deposit-Rates.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.9-Commercial-Banks-Time-Deposit-Rates.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "1-year term deposit",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.9-Commercial-Banks-Time-Deposit-Rates.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product is published by Fiji banks."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Viti Bond",
+      "localNameEn": "Viti Bond (government retail bond)",
+      "note": "Sold by the RBF for the Government; 5, 7 and 10 years; tax-free interest.",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/08/FAQ-Viti-Bond-2026-2027.pdf"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government Treasury bill",
+      "note": "Issued by tender through the RBF; mainly bought by institutions.",
+      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/4.1-Money-Capital-Markets-Interest-Rates-Yield-Rates.xlsx"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Fiji Government Bond",
+      "localNameEn": "Fiji Infrastructure/Development Bond",
+      "sourceUrl": "https://www.rbf.gov.fj/download/720/september/52123/yield-curve-30-september-2026.xlsx"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Fiji Government Bond",
+      "localNameEn": "Fiji Infrastructure/Development Bond",
+      "sourceUrl": "https://www.rbf.gov.fj/download/720/september/52123/yield-curve-30-september-2026.xlsx"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trust (mutual fund)",
+      "note": "Locally managed unit trusts invest in shares on the small local exchange and fixed income."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": "Gold jewellery and bullion",
+      "note": "No legal restriction on buying gold; mainly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of Fiji",
+      "url": "https://www.rbf.gov.fj/"
+    },
+    "insuranceRegulator": {
+      "name": "Reserve Bank of Fiji (insurance supervision)",
+      "url": "https://www.rbf.gov.fj/"
+    },
+    "insuranceComplaints": {
+      "name": "Reserve Bank of Fiji complaints management",
+      "url": "https://www.rbf.gov.fj/core-functions/financial-system-development/complaints-management-and-market-conduct/"
+    },
+    "pensionScheme": {
+      "name": "Fiji National Provident Fund (FNPF)",
+      "url": "https://www.myfnpf.com.fj/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Pension Scheme, Ministry of Women, Children and Social Protection",
+      "url": "https://www.mwcsp.gov.fj/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health and Medical Services (public hospitals)",
+      "url": "https://www.health.gov.fj/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Fiji Bureau of Statistics",
+      "url": "https://www.statsfiji.gov.fj/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

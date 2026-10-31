@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 import seed from "../data/rates.seed.json";
 import { roundMoney } from "../money";
-import { assertSnapshot, instrumentAfterTax } from "../rates";
-import { computeGoal, computeGoals, futureValue, horizonFor, instrumentsFor, isValidGoal, sinkingFundMonthly } from "./goal-planner";
+import { assertSnapshot, instrumentAfterTax, type RatesSnapshot } from "../rates";
+import { computeGoal, computeGoals, dominantSlot, futureValue, horizonFor, instrumentsFor, isValidGoal, mixFixedIncomeSlot, sinkingFundMonthly } from "./goal-planner";
 import { M5_STEP_IDS, type Goal } from "./types";
 
 const snapshot = assertSnapshot(seed);
@@ -38,8 +38,78 @@ describe("formulas", () => {
     expect(instrumentsFor("short")).toEqual(["fdr_1y", "dps", "tbill_91d"]);
     expect(instrumentsFor("medium")).toEqual(["sanchayapatra_5y", "tbond_5y"]);
     expect(instrumentsFor("long")).toEqual(["sanchayapatra_5y", "tbond_10y"]);
-    expect(instrumentsFor("long", { equity: 0.5, fixedIncome: 0.4, gold: 0.1 })).toEqual([]);
+    // With an allocation a long goal is priced at the mix: its slots with a weight above zero.
+    expect(instrumentsFor("long", { equity: 0.5, fixedIncome: 0.4, gold: 0.1 })).toEqual(["sanchayapatra_5y", "tbond_10y", "equity_fund", "gold"]);
+    expect(instrumentsFor("long", { equity: 0, fixedIncome: 1, gold: 0 })).toEqual(["sanchayapatra_5y", "tbond_10y"]);
     expect(instrumentsFor("short", { equity: 0.5, fixedIncome: 0.4, gold: 0.1 })).toEqual(["fdr_1y", "dps", "tbill_91d"]);
+  });
+
+  it("mixFixedIncomeSlot prefers Sanchayapatra, then the 10-year bond, then a 1-year deposit; dominantSlot picks the largest bucket", () => {
+    expect(mixFixedIncomeSlot(snapshot)).toBe("sanchayapatra_5y");
+    const noCertificate = { country: { unavailable: ["sanchayapatra_5y"] } } as unknown as RatesSnapshot;
+    expect(mixFixedIncomeSlot(noCertificate)).toBe("tbond_10y");
+    const depositsOnly = { country: { unavailable: ["sanchayapatra_5y", "tbond_10y"] } } as unknown as RatesSnapshot;
+    expect(mixFixedIncomeSlot(depositsOnly)).toBe("fdr_1y");
+    expect(dominantSlot({ equity: 0.6, gold: 0.1, fixedIncome: 0.3 }, snapshot)).toBe("equity_fund");
+    expect(dominantSlot({ equity: 0.45, gold: 0.1, fixedIncome: 0.45 }, snapshot)).toBe("sanchayapatra_5y");
+    expect(dominantSlot({ equity: 0.2, gold: 0.5, fixedIncome: 0.3 }, noCertificate)).toBe("gold");
+  });
+});
+
+describe("long goals priced at the M6 mix", () => {
+  const MIX = { equity: 0.6, gold: 0.1, fixedIncome: 0.3 };
+  const home = goal({ id: "home", name: "Home", cost: 2000000, years: 15, type: "home" });
+
+  it("blends the after-tax fixed income with untaxed equity and gold; low and high use the generic cases", () => {
+    const g = computeGoal(home, snapshot, TODAY, undefined, MIX);
+    // base 0.3 × 10.647% + 0.6 × 9% + 0.1 × 8%; nominal uses Sanchayapatra's 11.83% before tax.
+    expect(g.afterTax).toBeCloseTo(0.3 * 0.10647 + 0.6 * 0.09 + 0.1 * 0.08, 10);
+    expect(g.nominal).toBeCloseTo(0.3 * 0.1183 + 0.6 * 0.09 + 0.1 * 0.08, 10);
+    expect(g).toMatchObject({ instrument: "equity_fund", candidates: ["sanchayapatra_5y", "equity_fund", "gold"], horizon: "long", status: "green" });
+    const fvRaw = futureValue(2000000, 0.08, 15);
+    const low = 0.3 * 0.065 + 0.6 * 0.02 + 0.1 * 0.02;
+    const high = 0.3 * 0.105 + 0.6 * 0.14 + 0.1 * 0.12;
+    expect(g.monthly.base).toBe(roundMoney(sinkingFundMonthly(fvRaw, g.afterTax, 180), "monthly"));
+    expect(g.monthly.low).toBe(roundMoney(sinkingFundMonthly(fvRaw, low, 180), "monthly"));
+    expect(g.monthly.high).toBe(roundMoney(sinkingFundMonthly(fvRaw, high, 180), "monthly"));
+    expect(g.monthly).toEqual({ low: 27200, base: 16200, high: 11800 });
+    expect(g.explain.notes).toEqual([]);
+    const rate = g.explain.steps.find((s) => s.id === "m5.rate");
+    expect(rate?.inputs).toMatchObject({ instrument: "equity_fund", fixedIncomeShare: 0.3, equityShare: 0.6, goldShare: 0.1, equityRate: 0.09, goldRate: 0.08 });
+    // nominal × (1 − blended tax) = after tax, so the step's formula adds up.
+    expect((rate!.inputs.nominal as number) * (1 - (rate!.inputs.tax as number))).toBeCloseTo(g.afterTax, 10);
+    const keys = g.explain.assumptions.map((a) => a.key);
+    expect(keys).toEqual(expect.arrayContaining(["sanchayapatra_5y_rate", "tax_sanchayapatra_profit", "equity_return_base", "gold_return_base", "fixed_income_return_low", "fixed_income_return_high", "equity_return_low", "equity_return_high", "gold_return_low", "gold_return_high"]));
+    expect(keys).not.toContain("tax_bank_interest");
+  });
+
+  it("keeps low ≤ base ≤ high even when today's fixed-income rate beats the generic high case", () => {
+    const g = computeGoal(home, snapshot, TODAY, undefined, { equity: 0, gold: 0, fixedIncome: 1 });
+    // 10.647% after tax > fixed_income_return_high (10.5%): high falls back to the base.
+    expect(g.monthly.high).toBe(g.monthly.base);
+    expect(g.monthly.low).toBeGreaterThan(g.monthly.base);
+    expect(g.instrument).toBe("sanchayapatra_5y");
+  });
+
+  it("only long goals use the mix; computeGoals reports usesAllocation", () => {
+    const short = goal({ id: "s", years: 2, cost: 200000 });
+    const out = computeGoals({ goals: [short, home], age: 30 }, snapshot, TODAY, MIX);
+    expect(out.usesAllocation).toBe(true);
+    expect(out.goals[0]).toEqual(computeGoal(short, snapshot, TODAY));
+    expect(out.goals[1]?.instrument).toBe("equity_fund");
+    expect(computeGoals({ goals: [short], age: 30 }, snapshot, TODAY, MIX).usesAllocation).toBe(false);
+    // Explicit candidates win over the allocation.
+    expect(computeGoal(home, snapshot, TODAY, ["fdr_1y"], MIX).instrument).toBe("fdr_1y");
+    expect(() => computeGoals({ goals: [home], age: 30 }, snapshot, TODAY, { equity: 0.6, gold: 0.6, fixedIncome: 0 })).toThrow(/add up to 1/);
+  });
+
+  it("never applies interest tax to equity_fund or gold candidates", () => {
+    const g = computeGoal(home, snapshot, TODAY, ["equity_fund", "gold"]);
+    expect(g.instrument).toBe("equity_fund");
+    expect(g.afterTax).toBe(instrumentAfterTax(snapshot, "equity_fund"));
+    expect(g.afterTax).toBe(0.09);
+    expect(g.explain.steps.find((s) => s.id === "m5.rate")?.inputs.tax).toBe(0);
+    expect(g.explain.assumptions.map((a) => a.key)).not.toContain("tax_bank_interest");
   });
 });
 

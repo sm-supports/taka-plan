@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "code": "IN",
+  "iso3": "IND",
+  "nameEn": "India",
+  "nameNative": "भारत",
+  "region": "south_asia",
+  "languages": [
+    "hi",
+    "en",
+    "bn",
+    "te",
+    "mr"
+  ],
+  "currency": {
+    "code": "INR",
+    "symbol": "₹",
+    "decimals": 2,
+    "compact": "lakh_crore",
+    "usdRate": {
+      "value": 95.2492,
+      "status": "sourced",
+      "sourceName": "RBI home page, FBIL reference rate INR per USD",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "asOf": "2026-10-30",
+      "note": "As at 1 pm, 30 October 2026. 2025 average 87.16 (World Bank)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0554,
+      "status": "sourced",
+      "sourceName": "MoSPI All-India CPI (base 2024), provisional, via DD News",
+      "sourceUrl": "https://ddindia.co.in/2026/10/retail-inflation-rises-to-5-54-in-september/",
+      "asOf": "2026-09-30",
+      "note": "September 2026 year-on-year, provisional (August final 4.83%). MoSPI PDF could not be opened (certificate error), so read via the public broadcaster's report."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "RBI target 4% (2-6% band); 5-year CPI average; RBI FY27 projection 5.2%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=IN",
+      "asOf": "2026-10-31",
+      "note": "CPI averaged about 5% over 2021-2025 and the RBI projects 5.2% for FY27, so we plan with 5% rather than the 4% target."
+    },
+    "policy_rate": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of India, current policy repo rate",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "asOf": "2026-10-07",
+      "note": "Raised 25 bp from 5.25% at the MPC meeting of 5-7 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of India home page, savings deposit rate (major banks)",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "asOf": "2026-10-30"
+    },
+    "fdr_3m_rate": {
+      "value": 0.049,
+      "status": "sourced",
+      "sourceName": "Largest public-sector bank card rate, 46-179 days, via Upstox",
+      "sourceUrl": "https://upstox.com/news/personal-finance/investing/sbi-fd-and-rd-interest-rates-for-october-2026-latest-rates-highest-returns-and-rbi-mpc-impact/article-201400/",
+      "asOf": "2026-10-09",
+      "note": "General public, deposits below Rs 3 crore. Private banks pay up to about 0.5 point more."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0625,
+      "status": "sourced",
+      "sourceName": "Largest public-sector bank card rate, 1 to under 2 years, via Upstox",
+      "sourceUrl": "https://upstox.com/news/personal-finance/investing/sbi-fd-and-rd-interest-rates-for-october-2026-latest-rates-highest-returns-and-rbi-mpc-impact/article-201400/",
+      "asOf": "2026-10-09",
+      "note": "RBI home page shows 6.00%-6.75% for term deposits over 1 year at major banks; the Post Office 1-year time deposit pays 6.9%."
+    },
+    "dps_rate": {
+      "value": 0.0605,
+      "status": "sourced",
+      "sourceName": "Largest public-sector bank recurring deposit (5-10 year term rate), via Upstox",
+      "sourceUrl": "https://upstox.com/news/personal-finance/investing/sbi-fd-and-rd-interest-rates-for-october-2026-latest-rates-highest-returns-and-rbi-mpc-impact/article-201400/",
+      "asOf": "2026-10-09",
+      "note": "Bank recurring deposits earn the term-deposit rate for the tenure. The Post Office 5-year recurring deposit pays 6.7% (Oct-Dec 2026)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0656,
+      "status": "sourced",
+      "sourceName": "RBI, weighted average domestic term deposit rate on outstanding deposits of SCBs",
+      "sourceUrl": "https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63702",
+      "asOf": "2026-08-31",
+      "note": "Fresh deposits averaged 5.67% in August 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.077,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance small savings rates for Oct-Dec 2026 (National Savings Certificate), via Business Today",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30",
+      "asOf": "2026-10-01",
+      "note": "NSC, 5 years, compounded annually, paid at maturity. Senior Citizens' Savings Scheme pays 8.2%, PPF 7.1%."
+    },
+    "tbill_91d_rate": {
+      "value": 0.059337,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of India, 91-day T-bill cut-off at the last auction",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "asOf": "2026-10-29",
+      "note": "182-day 6.5493%, 364-day 6.69%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.071645,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of India, 6.36% GS 2031 yield",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "asOf": "2026-10-29",
+      "note": "About 5 years to maturity."
+    },
+    "tbond_10y_rate": {
+      "value": 0.073888,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of India, 6.94% GS 2036 yield",
+      "sourceUrl": "https://www.rbi.org.in/",
+      "asOf": "2026-10-29",
+      "note": "10-year benchmark."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "TDS on bank interest, Income-tax Act 2025 s.393(1) (was s.194A), via TaxGarden",
+      "sourceUrl": "https://taxgarden.in/blog/tds-on-bank-fd-interest-fy-2026-27",
+      "asOf": "2026-04-01",
+      "note": "10% withheld (20% without PAN) when interest from one bank exceeds Rs 50,000 a year (Rs 1 lakh for 60+). Interest is finally taxed at the slab rate (0-30%)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No flat or withholding rate: NSC interest is added to income and taxed at the individual's slab rate (0-30%), with no TDS; under the old regime yearly interest is deemed reinvested and counts for the 80C deduction. Searched Morningstar India, tax guides."
+    },
+    "deposit_insurance_limit": {
+      "value": 500000,
+      "status": "sourced",
+      "sourceName": "DICGC cover per depositor per bank, as stated in a bank explainer (Aug 2026)",
+      "sourceUrl": "https://www.indusind.bank.in/iblogs/fixed-deposit/fd-insurance-limit-explained-how-and-why-it-matters-for-investors/",
+      "asOf": "2026-08-17",
+      "note": "Rs 5 lakh including interest, unchanged since 4 Feb 2020. dicgc.org.in refused the connection; raising the limit has been discussed but no change found."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.42,
+      "status": "sourced",
+      "sourceName": "Card-rate comparison, CardTrail (no RBI cap)",
+      "sourceUrl": "https://www.cardtrail.in/glossary/glossary-apr-credit-card-india/",
+      "asOf": "2026-10-31",
+      "note": "No legal cap (the Supreme Court set aside a 30% consumer-forum cap in 2024). Major banks charge about 3.2%-3.6% a month, 38%-42% a year, plus GST."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Nifty 50 TRI trailing returns (1-year -0.4%, 3-year about 9.5%); after-tax safe rate",
+      "sourceUrl": "https://www.axismf.com/1/5/1423/1484/1778/1782/Presentation_Axis_Nifty_50_Index_Fund_August_26_pdf_f20cd30d92.pdf",
+      "asOf": "2026-10-31",
+      "note": "Recent years were weak, so the low case is about the after-tax safe rate."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Nifty 50 TRI 10-year CAGR about 12% (Aug 2026); after-tax NSC/10-year G-sec about 6.7-6.9%",
+      "sourceUrl": "https://www.axismf.com/1/5/1423/1484/1778/1782/Presentation_Axis_Nifty_50_Index_Fund_August_26_pdf_f20cd30d92.pdf",
+      "asOf": "2026-10-31",
+      "note": "The index earned about 12% a year over 10 years, but we cap the base at the after-tax safe rate plus about 3 points."
+    },
+    "equity_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Nifty 50 TRI 10- and 15-year CAGR about 12-12.4%",
+      "sourceUrl": "https://www.axismf.com/1/5/1423/1484/1778/1782/Presentation_Axis_Nifty_50_Index_Fund_August_26_pdf_f20cd30d92.pdf",
+      "asOf": "2026-10-31",
+      "note": "A repeat of the long-run index record plus a little."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Rupee gold 10-year CAGR about 13-15%; INR per USD (FBIL)",
+      "sourceUrl": "https://www.ipomarket.in/news/gold-rate-india-history-10-years",
+      "asOf": "2026-10-31",
+      "note": "Gold can lose value in rupees for years after a bull run like 2016-2026."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Dollar gold long-run trend about 4-5% plus rupee depreciation about 3% a year",
+      "sourceUrl": "https://www.ipomarket.in/news/gold-rate-india-history-10-years",
+      "asOf": "2026-10-31",
+      "note": "Rupee gold returned about 13-15% a year over 2016-2026 in an exceptional rally; long-run we expect dollar gold plus rupee depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Rupee gold 10-year CAGR about 13-15%",
+      "sourceUrl": "https://www.ipomarket.in/news/gold-rate-india-history-10-years",
+      "asOf": "2026-10-31",
+      "note": "Close to the last decade's record."
+    },
+    "fixed_income_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank 1-year deposit 6.25% less 10% tax",
+      "sourceUrl": "https://upstox.com/news/personal-finance/investing/sbi-fd-and-rd-interest-rates-for-october-2026-latest-rates-highest-returns-and-rbi-mpc-impact/article-201400/",
+      "asOf": "2026-10-31",
+      "note": "Bank deposits after tax at 10% give about 5.6%; lower if taxed at higher slabs."
+    },
+    "fixed_income_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Post Office 1-year TD 6.9%, NSC 7.7%, 364-day T-bill 6.69%, less tax",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30",
+      "asOf": "2026-10-31",
+      "note": "A mix of bank deposits, government bills and small savings after tax at about 10%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Senior Citizens' Savings Scheme 8.2%, NSC 7.7%, less tax",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30",
+      "asOf": "2026-10-31",
+      "note": "Best government savings schemes after tax at about 10%."
+    },
+    "life_claim_settlement_rate": {
+      "value": 0.9832,
+      "status": "sourced",
+      "sourceName": "IRDAI Handbook on Indian Insurance Statistics 2024-25, individual death claims by number, via Insurance Business Asia",
+      "sourceUrl": "https://www.insurancebusinessmag.com/asia/news/life-insurance/what-indias-claims-settlement-ratio-doesnt-tell-brokers-586054.aspx",
+      "asOf": "2025-03-31",
+      "note": "By amount 97.18%. IRDAI site not read directly."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 1000,
+        "smokerMultiplier": 1.7,
+        "bands": [
+          {
+            "maxAge": 30,
+            "low": 0.8,
+            "high": 1.5
+          },
+          {
+            "maxAge": 40,
+            "low": 1.5,
+            "high": 2.5
+          },
+          {
+            "maxAge": 50,
+            "low": 2.2,
+            "high": 4.5
+          },
+          {
+            "maxAge": 65,
+            "low": 4.8,
+            "high": 12
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Online term-plan premium guides for Rs 1 crore cover (StockCalc FY2026-27; Ditto Oct 2026)",
+      "sourceUrl": "https://stockcalc.in/calculator/term-insurance/1-crore-coverage",
+      "asOf": "2026-10-31",
+      "note": "Rs 1 crore cover, 30-year term, non-smoker: about Rs 7,800-14,600 at 30, 15,000-25,300 at 40, 32,800 at 46-50, 48,300 at 51-55, 71,300 at 56-60 (per 1,000: divide by 10,000). Upper ends of the 50 and 65 bands extrapolated from the 56-60 quote; smokers pay about 1.7x. Insurers' names omitted."
+    },
+    "health_hospitalisation_cost": {
+      "value": 50508,
+      "status": "sourced",
+      "sourceName": "NSS 80th round (2025) health survey, average out-of-pocket spend per hospitalisation in private hospitals, via Counterview",
+      "sourceUrl": "https://www.counterview.in/2026/04/high-privatisation-in-gujarats.html",
+      "asOf": "2025-12-31",
+      "note": "Excludes childbirth. All hospitals Rs 34,064, public Rs 6,631 (Business Today). A surgical stay in a private hospital usually costs more."
+    },
+    "health_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 100000,
+        "bands": [
+          {
+            "maxAge": 35,
+            "low": 800,
+            "high": 1100
+          },
+          {
+            "maxAge": 50,
+            "low": 1800,
+            "high": 2500
+          },
+          {
+            "maxAge": 65,
+            "low": 2500,
+            "high": 4000
+          },
+          {
+            "maxAge": 120,
+            "low": 3000,
+            "high": 5000
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Indicative individual health-insurance premiums for Rs 10 lakh cover (insurer and broker guides, 2026)",
+      "sourceUrl": "https://algatesinsurance.in/health-insurance-premium-calculator-india/",
+      "asOf": "2026-10-31",
+      "note": "Rs 10 lakh cover: about Rs 8,000 at 25 and Rs 10,850 at 30; Rs 18,300-22,000 at 45; Rs 15,000-35,000 at 45-60; senior plans about Rs 18,500-25,000 at 65 and Rs 30,000+ for many 60+ buyers. Before GST; varies by city and health."
+    },
+    "oop_health_share": {
+      "value": 0.4389,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS (WHO GHED)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=IN",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "MoSPI CPI health 1.40% (Sep 2026, new base); headline CPI plan 5%",
+      "sourceUrl": "https://ddindia.co.in/2026/10/retail-inflation-rises-to-5-54-in-september/",
+      "asOf": "2026-10-31",
+      "note": "The new-series health CPI is unusually low; hospital and insurance costs have long risen faster than headline prices, so we plan with 3 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "MoSPI CPI education services 3.94% (Sep 2026)",
+      "sourceUrl": "https://ddindia.co.in/2026/10/retail-inflation-rises-to-5-54-in-september/",
+      "asOf": "2026-10-31",
+      "note": "Private school and college fees rise faster than the education CPI, so we plan with 2 points above general inflation."
+    },
+    "life_expectancy": {
+      "value": 72.235,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN (UN WPP)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IN",
+      "asOf": "2024-12-31",
+      "note": "Men 70.7, women 73.9. India's own SRS 2020-24 life table gives 70.6 (pulled down by the 2020-21 pandemic years)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.6,
+            "men": 17.5,
+            "women": 19.8
+          },
+          {
+            "age": 65,
+            "total": 15.3,
+            "men": 14.5,
+            "women": 16.3
+          },
+          {
+            "age": 70,
+            "total": 12.5,
+            "men": 11.8,
+            "women": 13.2
+          },
+          {
+            "age": 80,
+            "total": 8.1,
+            "men": 7.8,
+            "women": 8.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Registrar General of India, SRS Abridged Life Tables 2020-24 (published May 2026)",
+      "sourceUrl": "https://censusindia.gov.in/nada/index.php/catalog/47148",
+      "asOf": "2022-07-01",
+      "note": "Expectation of life at the start of each age interval, total, India, 2020-24 (mid-period date)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.3
+          },
+          {
+            "year": 2040,
+            "value": 6.1
+          },
+          {
+            "year": 2065,
+            "value": 3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025: 10.8) and UN WPP 2024 medium variant via PopulationPyramid.net (2040: 16.3, 2065: 33.4)",
+      "sourceUrl": "https://www.populationpyramid.net/india/2040/",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio."
+    },
+    "retirement_age_default": {
+      "value": 58,
+      "status": "sourced",
+      "sourceName": "EPFO Employees' Pension Scheme 1995: superannuation pension age, via Kanakkupillai",
+      "sourceUrl": "https://www.kanakkupillai.com/learn/eps-95-pension-scheme/",
+      "asOf": "2025-06-19",
+      "note": "Same for men and women; needs 10 years of service; early pension from 50 at 4% less per year. Many private employers retire staff at 58-60."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Central government FR 56(a); Lok Sabha reply, via Gconnect",
+      "sourceUrl": "https://www.gconnect.in/orders-in-brief/retirement-benefits/centre-clarification-retirement-age.html",
+      "asOf": "2019-11-27",
+      "note": "Central government employees retire at 60; some states and cadres differ (e.g. some teachers and doctors 62-65)."
+    },
+    "retirement_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank 1-year deposit 6.25% less tax",
+      "sourceUrl": "https://upstox.com/news/personal-finance/investing/sbi-fd-and-rd-interest-rates-for-october-2026-latest-rates-highest-returns-and-rbi-mpc-impact/article-201400/",
+      "asOf": "2026-10-31",
+      "note": "Plain bank deposits after 10% tax, or higher slab tax."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Post Office 1-year TD 6.9% and 364-day T-bill 6.69%, less 10% tax",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30",
+      "asOf": "2026-10-31",
+      "note": "Equal to the after-tax 1-year government deposit and bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Senior Citizens' Savings Scheme 8.2% less tax",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30",
+      "asOf": "2026-10-31",
+      "note": "Retirees who fill the SCSS limit earn about 7.4% after 10% tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate; Nifty 50 TRI weak recent years",
+      "sourceUrl": "https://www.axismf.com/1/5/1423/1484/1778/1782/Presentation_Axis_Nifty_50_Index_Fund_August_26_pdf_f20cd30d92.pdf",
+      "asOf": "2026-10-31",
+      "note": "A balanced mix earning little more than safe deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Mix of equity base 10% and fixed income base 6%",
+      "sourceUrl": "https://www.axismf.com/1/5/1423/1484/1778/1782/Presentation_Axis_Nifty_50_Index_Fund_August_26_pdf_f20cd30d92.pdf",
+      "asOf": "2026-10-31",
+      "note": "Roughly half equity and half safe fixed income over a working life."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Equity high 13%, fixed income high 7%",
+      "sourceUrl": "https://www.axismf.com/1/5/1423/1484/1778/1782/Presentation_Axis_Nifty_50_Index_Fund_August_26_pdf_f20cd30d92.pdf",
+      "asOf": "2026-10-31",
+      "note": "A growth-tilted mix in a good decade."
+    },
+    "old_age_allowance_monthly": {
+      "value": 200,
+      "status": "sourced",
+      "sourceName": "PIB backgrounder on NSAP: Indira Gandhi National Old Age Pension Scheme central assistance",
+      "sourceUrl": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025117686801.pdf",
+      "asOf": "2025-11-17",
+      "note": "Central share Rs 200 a month at 60-79 and Rs 500 at 80+, for people in BPL families. States add Rs 50-5,700; PIB says the average pension is around Rs 1,100 in many states."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "PIB backgrounder on NSAP (IGNOAPS)",
+      "sourceUrl": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025117686801.pdf",
+      "asOf": "2025-11-17",
+      "note": "Age 60+ in below-poverty-line families; central amount rises to Rs 500 at 80 (not 90)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 15,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 26
+      },
+      "status": "sourced",
+      "sourceName": "Code on Social Security 2020 s.53 (in force 21 Nov 2025), via Taxmann",
+      "sourceUrl": "https://www.taxmann.com/post/blog/analysis-gratuity-under-code-on-social-security/",
+      "asOf": "2025-11-21",
+      "note": "15 days' wages per completed year, monthly wage / 26; after 5 years' continuous service (1 year for fixed-term employees, waived on death or disability); capped at a ceiling notified by the government."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 40,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": false,
+        "projections": [
+          {
+            "monthlyContribution": 42,
+            "years": 42,
+            "monthlyPension": 1000
+          },
+          {
+            "monthlyContribution": 210,
+            "years": 42,
+            "monthlyPension": 5000
+          },
+          {
+            "monthlyContribution": 1454,
+            "years": 20,
+            "monthlyPension": 5000
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Atal Pension Yojana (PFRDA) contribution chart, via Indian Pay Calculator",
+      "sourceUrl": "https://www.indianpaycalculator.in/govt-news/atal-pension-yojana-apy-guaranteed-5000-pension-2026",
+      "asOf": "2026-06-26",
+      "note": "Guaranteed fixed pension Rs 1,000-5,000 a month from 60, then to the spouse for life; the corpus (Rs 1.7-8.5 lakh) goes to the nominee after both die. Not open to income-tax payers since Oct 2022. Contributions deductible under the old regime; pension is taxable. Formal-sector workers are in EPF/EPS instead."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "बचत खाता",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.rbi.org.in/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "सावधि जमा",
+      "localNameEn": "Fixed deposit (FD)",
+      "note": "Banks and the Post Office offer terms from 7 days.",
+      "sourceUrl": "https://upstox.com/news/personal-finance/investing/sbi-fd-and-rd-interest-rates-for-october-2026-latest-rates-highest-returns-and-rbi-mpc-impact/article-201400/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "सावधि जमा",
+      "localNameEn": "Fixed deposit (FD)",
+      "note": "Post Office Time Deposit (1-5 years) is the government equivalent.",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30"
+    },
+    "dps": {
+      "available": true,
+      "localName": "आवर्ती जमा",
+      "localNameEn": "Recurring deposit (RD)",
+      "note": "Banks and the Post Office (5-year RD, 6.7%).",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30"
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "राष्ट्रीय बचत पत्र",
+      "localNameEn": "National Savings Certificate (NSC)",
+      "note": "5-year government certificate sold at post offices; also Kisan Vikas Patra, PPF and the Senior Citizens' Savings Scheme.",
+      "sourceUrl": "https://www.businesstoday.in/personal-finance/story/small-savings-scheme-interest-rates-unchanged-for-q3-fy27-check-ppf-scss-ssy-rates-558892-2026-09-30"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "ट्रेज़री बिल",
+      "localNameEn": "Treasury bill",
+      "note": "Individuals can bid through the RBI Retail Direct portal.",
+      "sourceUrl": "https://rbiretaildirect.org.in/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "सरकारी प्रतिभूति",
+      "localNameEn": "Government security (G-Sec)",
+      "note": "Through RBI Retail Direct or a broker.",
+      "sourceUrl": "https://rbiretaildirect.org.in/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "सरकारी प्रतिभूति",
+      "localNameEn": "Government security (G-Sec)",
+      "note": "Through RBI Retail Direct or a broker.",
+      "sourceUrl": "https://rbiretaildirect.org.in/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "म्यूचुअल फंड",
+      "localNameEn": "Mutual fund / index fund",
+      "note": "SEBI-regulated; Nifty 50 index funds are widely available.",
+      "sourceUrl": "https://www.sebi.gov.in/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "सोना",
+      "localNameEn": "Gold (coins and bars)",
+      "note": "Physical gold is legal and widely bought; BIS hallmarking applies. New Sovereign Gold Bond issues have stopped."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of India",
+      "url": "https://www.rbi.org.in/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Regulatory and Development Authority of India (IRDAI)",
+      "url": "https://irdai.gov.in/"
+    },
+    "insuranceComplaints": {
+      "name": "Council for Insurance Ombudsmen",
+      "url": "https://www.cioins.co.in/",
+      "note": "Complain to the insurer first; IRDAI's Bima Bharosa portal also takes complaints."
+    },
+    "pensionScheme": {
+      "name": "Atal Pension Yojana (PFRDA)",
+      "url": "https://www.pfrda.org.in/",
+      "note": "Formal-sector workers are covered by EPFO (https://www.epfindia.gov.in/); NPS is open to all."
+    },
+    "oldAgeAllowance": {
+      "name": "National Social Assistance Programme (IGNOAPS)",
+      "url": "https://nsap.nic.in/"
+    },
+    "publicHealthCover": {
+      "name": "Ayushman Bharat PM-JAY",
+      "url": "https://pmjay.gov.in/",
+      "note": "Rs 5 lakh a year per family for eligible poorer households and for everyone aged 70+."
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance and Credit Guarantee Corporation (DICGC)",
+      "url": "https://www.dicgc.org.in/"
+    },
+    "statistics": {
+      "name": "Ministry of Statistics and Programme Implementation (MoSPI)",
+      "url": "https://www.mospi.gov.in/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

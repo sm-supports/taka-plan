@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 1,
+  "code": "KP",
+  "iso3": "PRK",
+  "nameEn": "North Korea",
+  "nameNative": "조선민주주의인민공화국",
+  "region": "east_asia_pacific",
+  "languages": [
+    "ko"
+  ],
+  "currency": {
+    "code": "KPW",
+    "symbol": "₩",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 69200,
+      "status": "sourced",
+      "sourceName": "Daily NK market survey, Pyongyang (informal market rate)",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-25",
+      "note": "Informal market rate, down from 71,200 two weeks earlier; the official state rate is not published regularly and is far stronger. Used because prices and savings follow the market rate."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "North Korea publishes no consumer price index; Daily NK market surveys show rice in Pyongyang rising from about 18,000 to 51,700 won/kg between January and October 2026 and the won falling from about 35,000 to 69,200 per dollar."
+    },
+    "inflation_projection": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Daily NK market price and exchange-rate surveys (2026)",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "With no official CPI and the market won losing about half its value against the dollar in 2026 after years near 8,000 per dollar, 25% a year is a rounded planning figure between the calm and crisis periods."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of the DPRK publishes no policy rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current published rate; Daily NK (Oct 2023) reported provincial bank savings products paying 4% to 9% depending on branch."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month deposit rate."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate; Daily NK (Oct 2023) reported 1- to 10-year savings products at 4% to 9% by branch."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recurring deposit product documented."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average deposit rate; World Bank FR.INR.DPST has no value for North Korea."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificates currently sold to individuals (the 2003 'People's Life Bonds' were a one-off)."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No treasury bill market."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government bond market."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government bond market."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Taxation in North Korea (Wikipedia, citing the 1974 law 'On Abolishing the Tax System')",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Taxation_in_North_Korea",
+      "asOf": "1974-04-01",
+      "note": "Personal income taxes were abolished in 1974; the state raises revenue through enterprise levies and fees instead."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No consumer credit card market; the domestic cash cards carry no credit."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No stock market; capped by reported savings rates (4-9%, 2023)",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Low case; no local equity market exists and foreign investment is not open to residents."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "No stock market; global equity in won terms capped at the reported 4% savings floor plus 4 points",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "North Korea has no stock exchange; a global index in won would track currency depreciation, but the base is held to the safe-rate cap."
+    },
+    "equity_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Global equity in won terms",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "High case reflecting continued won depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Gold in won terms; Daily NK exchange-rate surveys",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "Low case if the market won stabilises as it did in 2019-2023."
+    },
+    "gold_return_base": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend about 5% plus expected won depreciation about 20%",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "Gold priced in won follows the dollar gold price plus the market won's fall against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.4,
+      "status": "assumption",
+      "sourceName": "Gold in won terms; 2026 won depreciation",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "High case for a repeat of 2026, when the market won roughly halved against the dollar."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Reported provincial bank savings rates 4-9% (Daily NK, 2023)",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Low case allows for frozen or unpaid interest and withdrawal limits."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Reported provincial bank savings rates 4-9% (Daily NK, 2023); no tax on interest",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Base at the bottom of the reported 4-9% range, since rates vary by branch and access to deposits is unreliable."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Reported provincial bank savings rates 4-9% (Daily NK, 2023)",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "High case in the middle of the reported range."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The state insurer publishes no claim statistics."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Insurance is a state monopoly; no term life premium rates are published."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Health care is officially free; no published figure for actual out-of-pocket costs, which defector surveys say are common."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No private health insurance market."
+    },
+    "oop_health_share": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank SH.XPD.OOPC.CH.ZS and WHO GHED have no value for North Korea."
+    },
+    "goal_inflation_health": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Headline planning inflation (no medical price index)",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI exists, so health costs use the 25% headline planning rate."
+    },
+    "goal_inflation_education": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Headline planning inflation (no education price index)",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "No education CPI exists, so education costs use the 25% headline planning rate."
+    },
+    "life_expectancy": {
+      "value": 73.7,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN (UN WPP estimate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KP",
+      "asOf": "2024-12-31",
+      "note": "Men 71.6, women 75.9 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 65,
+            "total": 15.92
+          },
+          {
+            "age": 80,
+            "total": 6.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via Measured World",
+      "sourceUrl": "https://measuredworld.com/countries/north-korea/mortality/life-expectancy-progression",
+      "asOf": "2024-12-31",
+      "note": "Secondary source reproducing UN WPP 2024; ages 60 and 70 and sex breakdown not found (WHO GHO API unavailable)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.4
+          },
+          {
+            "year": 2040,
+            "value": 3.1
+          },
+          {
+            "year": 2065,
+            "value": 2.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via PopulationPyramid.net; World Bank SP.POP.DPND.OL",
+      "sourceUrl": "https://www.populationpyramid.net/dem-peoples-republic-of-korea/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 18.6 (2025, World Bank), 31.8 (2040) and 41.6 (2065, populationpyramid.net)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Korea Times (13 May 2026) on North Korea's Labour Law and its 2024 revision",
+      "sourceUrl": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20260513/n-korea-extends-retirement-age-for-office-workers-by-3-years-amid-population-aging",
+      "asOf": "2026-05-13",
+      "note": "Manual workers and farmers: men 60, women 55 (1978 Labour Law, unchanged in 2024). Office workers: men 63, women 58 since the 2024 revision."
+    },
+    "retirement_age_government": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Korea Times (13 May 2026) on North Korea's 2024 Labour Law revision",
+      "sourceUrl": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20260513/n-korea-extends-retirement-age-for-office-workers-by-3-years-amid-population-aging",
+      "asOf": "2026-05-13",
+      "note": "Office workers eligible for the state pension: men 63, women 58 (raised from 60 and 55 in 2024)."
+    },
+    "retirement_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Reported provincial bank savings rates 4-9% (Daily NK, 2023)",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Low case allows for unpaid interest or restricted withdrawals."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Reported provincial bank savings rates 4-9% (Daily NK, 2023); no tax on interest",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Held at the bottom of the reported deposit range, the only safe instrument."
+    },
+    "retirement_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Reported provincial bank savings rates 4-9% (Daily NK, 2023)",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "High case in the middle of the reported range."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Reported savings rates and won-priced gold",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a mix of bank savings and hard assets."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Reported savings rates (4-9%) and won-priced gold",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Mix of 4% savings and some gold or foreign currency held as a hedge."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Won-priced gold and foreign currency",
+      "sourceUrl": "https://www.dailynk.com/english/north-korea-rice-prices-record-50000-won/",
+      "asOf": "2026-10-31",
+      "note": "High case where savings are mostly held in gold or dollars as the won falls."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No separate non-contributory social pension documented; the state pension is tied to years of work and KIHASA reports it largely no longer functions."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension documented."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity documented."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Korea Times (13 May 2026) on North Korea's Labour Law (Article 74, state elderly pension)",
+      "sourceUrl": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20260513/n-korea-extends-retirement-age-for-office-workers-by-3-years-amid-population-aging",
+      "asOf": "2026-05-13",
+      "note": "State elderly pension for men from 60 and women from 55 with enough years of work (office workers 63/58 since 2024); amounts are not published, no indexation is documented and KIHASA reports the system largely no longer functions."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "저금",
+      "localNameEn": "Savings deposit",
+      "note": "State and provincial bank savings accounts exist; trust and access are limited.",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/"
+    },
+    "fdr_3m": {
+      "available": false,
+      "localName": null,
+      "note": "No short-term fixed deposit documented."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed-term savings",
+      "note": "Provincial banks offer 1- to 10-year savings products (2023 report).",
+      "sourceUrl": "https://www.dailynk.com/english/kangwon-province-banks-offer-new-savings-products-promising-flexible-withdrawals/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No retail government bonds on sale."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No stock market or investment funds."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "note": "No legal retail market for gold bars or coins documented."
+    }
+  },
+  "institutions": {
+    "centralBank": null,
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": null
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

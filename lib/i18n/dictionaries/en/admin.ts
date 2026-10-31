@@ -138,6 +138,7 @@ export const admin = {
       insurance: "Insurance",
       debt: "Debt",
       goal: "Goal",
+      retirement: "Retirement",
       future: "Future",
     },
     instrumentExtra: {

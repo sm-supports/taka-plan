@@ -2,15 +2,21 @@ import { roundingFor } from "../country/overlay";
 import { createExplain, mergeExplanations, type Explanation } from "../explain";
 import { computeEmergencyFund } from "../m1/emergency-fund";
 import type { M1Input, M1Result } from "../m1/types";
+import { computeInsurance } from "../m2/insurance";
+import type { M2Input, M2Result } from "../m2/types";
 import { computeDebtHealth } from "../m3/debt-health";
 import type { M3Input, M3Result } from "../m3/types";
 import { computeSaveFirst } from "../m4/save-first";
 import type { M4Input, M4Result } from "../m4/types";
-import { computeGoals } from "../m5/goal-planner";
-import type { Goal, GoalResult, M5Result } from "../m5/types";
+import { computeGoals, dominantSlot } from "../m5/goal-planner";
+import type { Allocation, Goal, GoalResult, M5Input, M5Result } from "../m5/types";
+import { computeAllocation } from "../m6/allocation";
+import type { M6Input, M6Result, M6RiskAnswers, RiskAnswer } from "../m6/types";
+import { computeRetirement } from "../m7/retirement";
+import type { M7Input, M7Result } from "../m7/types";
 import { clamp, roundDecimals, roundMoney, sum } from "../money";
-import type { RatesSnapshot } from "../rates";
-import { assertInput, isFiniteNumber, type Instrument, type ISODate, type Money, type Profile, type Status } from "../types";
+import { getRate, type RatesSnapshot } from "../rates";
+import { assertInput, isFiniteNumber, type IncomeType, type Instrument, type ISODate, type Money, type Profile, type Status } from "../types";
 import type { Bucket, BucketInstrument, BucketModule, Plan, PlanInput, PlanOverrides, PlanSummary } from "./types";
 
 const INCOME_TYPES: ReadonlySet<string> = new Set(["salaried", "freelance", "business"]);
@@ -31,22 +37,83 @@ export function assertProfile(profile: Profile): void {
   assertInput(typeof profile.hasDebt === "boolean", "hasDebt must be true or false", { hasDebt: profile.hasDebt });
 }
 
+function isPlainObject(x: unknown): x is Record<string, unknown> {
+  return typeof x === "object" && x !== null && !Array.isArray(x);
+}
+
+/**
+ * Presence rule for the m2 / m6 / m7 override slices: the slice counts as the user's own answers
+ * when at least one key holds a defined value (a nested object such as M6's `risk` counts only
+ * when it holds a defined value itself). The store has no "started" flag, so an untouched
+ * calculator ({} in the store) never adds its module to the plan.
+ */
+export function hasOverrideAnswers(slice: unknown): boolean {
+  if (!isPlainObject(slice)) return false;
+  return Object.values(slice).some((v) => v !== undefined && (!isPlainObject(v) || hasOverrideAnswers(v)));
+}
+
+/** The slice without its undefined keys, so spreading it never wipes a default. */
+function definedOnly<T extends object>(slice: T | undefined): Partial<T> {
+  const out: Partial<T> = {};
+  if (!slice) return out;
+  for (const [k, v] of Object.entries(slice)) if (v !== undefined) (out as Record<string, unknown>)[k] = v;
+  return out;
+}
+
+/** Card balance the user carries from month to month (feeds M6's gate). */
+function carriesCardDebt(m3: Pick<M3Input, "cards"> | undefined): boolean {
+  return (m3?.cards ?? []).some((c) => !c.paysInFull && c.balance > 0);
+}
+
+/**
+ * Default answers to the four M6 risk questions when the user left some out: age band and income
+ * stability follow the profile, the horizon answer follows horizonYears, and the reaction to a 20%
+ * fall defaults to the middle answer ("wait").
+ */
+const DEFAULT_REACTION: RiskAnswer = 1;
+/** Years the plan's long-term money is invested for when M6 has no horizon answer (beyond allocation_no_equity_years). */
+export const DEFAULT_ALLOCATION_HORIZON_YEARS = 10;
+
+function ageBandAnswer(age: number): RiskAnswer {
+  return age >= 50 ? 0 : age >= 35 ? 1 : 2;
+}
+
+function incomeStabilityAnswer(incomeType: IncomeType): RiskAnswer {
+  return incomeType === "business" ? 0 : incomeType === "freelance" ? 1 : 2;
+}
+
+function horizonAnswer(years: number): RiskAnswer {
+  return years < 5 ? 0 : years <= 10 ? 1 : 2;
+}
+
 /**
  * Fill PRD defaults from the five onboarding answers: sole earner when there are dependents,
  * no health insurance, no liquid savings, m3 only when the user said they have debt.
  * `m3.savingsTarget` is left at 0 here and filled from the M4 amount inside computePlan.
+ *
+ * M2, M6 and M7 join the plan only when their override slice holds the user's own answers
+ * (hasOverrideAnswers). Their other fields default from the profile and the other modules:
+ * - M2: age, dependents and take-home from the profile; debts = M3 loan and card balances;
+ *   educationGoals = today's cost of the M5 education goals; liquidSavings from M1; no existing
+ *   cover; non-smoker. M1's hasHealthInsurance (when not set) follows M2's existing health cover.
+ * - M6: age from the profile, missing risk answers derived (see above), horizonYears
+ *   DEFAULT_ALLOCATION_HORIZON_YEARS, no lump sum or monthly amount; the gate is refined in computePlan.
+ * - M7: working, age from the profile, monthlySpending = the profile's monthly essentials,
+ *   savings = M1 liquid savings, no current monthly saving.
  */
 export function profileToPlanInput(profile: Profile, overrides: PlanOverrides = {}): PlanInput {
   assertProfile(profile);
   const { takeHome, essentials, incomeType, dependents, age } = profile;
+  const m2Answers = hasOverrideAnswers(overrides.m2) ? definedOnly(overrides.m2) : undefined;
   const m1: M1Input = {
     essentials,
     incomeType,
     dependents,
     soleEarner: dependents.length > 0,
-    hasHealthInsurance: false,
+    // Mirrors M2Result.hasHealthCover (existing health cover > 0) when the user answered M2.
+    hasHealthInsurance: (m2Answers?.existingHealthCover ?? 0) > 0,
     liquidSavings: 0,
-    ...overrides.m1,
+    ...definedOnly(overrides.m1),
   };
   const m4: M4Input = { takeHome, essentials, incomeType, ...overrides.m4 };
   const input: PlanInput = { profile, m1, m4 };
@@ -54,7 +121,53 @@ export function profileToPlanInput(profile: Profile, overrides: PlanOverrides = 
     const m3: M3Input = { takeHome, essentials, savingsTarget: 0, loans: [], cards: [], ...overrides.m3 };
     input.m3 = m3;
   }
-  input.m5 = overrides.m5 ?? { goals: [], age };
+  const m5: M5Input = overrides.m5 ?? { goals: [], age };
+  input.m5 = m5;
+
+  if (m2Answers) {
+    const debts = input.m3 ? sum(input.m3.loans.map((l) => l.outstanding)) + sum(input.m3.cards.map((c) => c.balance)) : 0;
+    const educationGoals = sum(m5.goals.filter((g) => g.type === "education" && isFiniteNumber(g.cost) && g.cost > 0).map((g) => g.cost));
+    const m2: M2Input = {
+      age,
+      dependents,
+      takeHome,
+      smoker: false,
+      liquidSavings: m1.liquidSavings,
+      existingLifeCover: 0,
+      debts,
+      educationGoals,
+      existingHealthCover: 0,
+      ...m2Answers,
+    };
+    input.m2 = m2;
+  }
+
+  if (hasOverrideAnswers(overrides.m6)) {
+    const { risk: riskAnswers, ...rest } = definedOnly(overrides.m6);
+    const horizonYears = rest.horizonYears ?? DEFAULT_ALLOCATION_HORIZON_YEARS;
+    const given = definedOnly(riskAnswers);
+    const risk: M6RiskAnswers = {
+      ageBand: given.ageBand ?? ageBandAnswer(age),
+      incomeStability: given.incomeStability ?? incomeStabilityAnswer(incomeType),
+      horizon: given.horizon ?? horizonAnswer(horizonYears),
+      reaction: given.reaction ?? DEFAULT_REACTION,
+    };
+    const m6: M6Input = {
+      age,
+      lumpSum: 0,
+      monthly: 0,
+      ...rest,
+      risk,
+      horizonYears,
+      gate: rest.gate ?? { hasEmergencyFund: false, hasCardDebt: carriesCardDebt(input.m3) },
+    };
+    input.m6 = m6;
+  }
+
+  if (hasOverrideAnswers(overrides.m7)) {
+    const m7: M7Input = { mode: "working", age, monthlySpending: essentials, savings: m1.liquidSavings, monthlySaving: 0, ...definedOnly(overrides.m7) };
+    input.m7 = m7;
+  }
   return input;
 }
 
@@ -150,7 +263,16 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
 
   const emergency: M1Result = computeEmergencyFund(input.m1, rates, today);
   const debt: M3Result | undefined = input.m3 ? computeDebtHealth({ ...input.m3, savingsTarget: input.m3.savingsTarget || total }, rates, today) : undefined;
-  const goals: M5Result | undefined = input.m5 && input.m5.goals.length > 0 ? computeGoals(input.m5, rates, today) : undefined;
+  const insurance: M2Result | undefined = input.m2 ? computeInsurance(input.m2, rates, today) : undefined;
+  // M6's gate is what this plan's own M1 and M3 say, whatever the caller put there.
+  const allocationResult: M6Result | undefined = input.m6
+    ? computeAllocation({ ...input.m6, gate: { hasEmergencyFund: emergency.gap === 0, hasCardDebt: carriesCardDebt(input.m3) } }, rates, today)
+    : undefined;
+  // An explicit allocation hook wins over the computed weights.
+  const allocation: Allocation | undefined = input.allocation ?? allocationResult?.weights;
+  const goals: M5Result | undefined =
+    input.m5 && input.m5.goals.length > 0 ? (allocation ? computeGoals(input.m5, rates, today, allocation) : computeGoals(input.m5, rates, today)) : undefined;
+  const retirement: M7Result | undefined = input.m7 ? computeRetirement(retirementInput(input.m7, allocation, rates), rates, today) : undefined;
 
   const drafts: BucketDraft[] = [];
   let remaining: Money = total;
@@ -197,18 +319,19 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
   }
   remaining = Math.max(0, remaining - emergencyAmount);
 
-  // (2) Insurance premiums (M2 hook; absent in the MVP).
-  if (input.insurance) {
-    const need = roundMoney(Math.max(0, input.insurance.monthlyPremiumNeed), "monthly", R);
+  // (2) Insurance premiums: M2's monthly premium need (an explicit input.insurance hook wins).
+  const premiumNeed = input.insurance?.monthlyPremiumNeed ?? insurance?.monthlyPremiumNeed;
+  if (premiumNeed !== undefined) {
+    const need = roundMoney(Math.max(0, premiumNeed), "monthly", R);
     const amount = Math.min(remaining, need);
     drafts.push({
       id: "insurance",
       amount,
       instrument: "term_insurance",
-      status: amount >= need ? "green" : "amber",
+      status: insurance ? insurance.status : amount >= need ? "green" : "amber",
       reasonKey: "plan.reason.insurance",
       reasonParams: { amount },
-      nextStepKey: "plan.next.openSavings",
+      nextStepKey: "plan.next.insurance",
       module: "m2",
     });
     remaining = Math.max(0, remaining - amount);
@@ -271,7 +394,8 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
           fv: g.futureValue,
           years: goal?.years ?? roundDecimals(g.months / 12, 1),
         },
-        nextStepKey: nextStepForInstrument(g.instrument),
+        // A long goal priced at the M6 mix is bought bucket by bucket: the next step is the asset mix.
+        nextStepKey: allocation && g.horizon === "long" ? "plan.next.allocation" : nextStepForInstrument(g.instrument),
         module: "m5",
       });
       goalExplains.push(g.explain);
@@ -285,35 +409,40 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     }
   }
 
-  // Retirement (M7 hook; absent in the MVP).
-  if (input.retirement) {
-    const need = roundMoney(Math.max(0, input.retirement.monthlyNeed), "monthly", R);
+  // The long-term instrument: the allocation's largest bucket, or a DPS habit without one.
+  const longTermInstrument: Instrument = allocation ? dominantSlot(allocation, rates) : "dps";
+
+  // (5) Retirement: M7's monthly saving to the plan-to age (an explicit input.retirement hook wins).
+  const retirementNeed = input.retirement?.monthlyNeed ?? retirement?.monthlyNeed;
+  if (retirementNeed !== undefined) {
+    const need = roundMoney(Math.max(0, retirementNeed), "monthly", R);
     const amount = Math.min(remaining, need);
     drafts.push({
-      id: "future",
+      id: "retirement",
       amount,
-      instrument: "dps",
-      status: amount >= need ? "green" : "amber",
-      reasonKey: "plan.reason.addGoal",
-      reasonParams: {},
-      nextStepKey: "plan.next.dps",
+      instrument: longTermInstrument,
+      status: retirement ? retirement.verdict.status : amount >= need ? "green" : "amber",
+      reasonKey: "plan.reason.retirement",
+      reasonParams: { amount, planTo: retirement?.planToAge ?? ex.use("plan_to_age") },
+      nextStepKey: "plan.next.retirement",
       module: "m7",
     });
     remaining = Math.max(0, remaining - amount);
   }
 
-  // (5) Nothing to aim at yet, or room to spare: start the habit in a DPS and ask for a goal, so the
-  // buckets always add up to the budget. Omitted when nothing is left.
+  // (6) Room to spare (or nothing to aim at yet): long-term savings so the buckets always add up to the
+  // budget; with an allocation it follows the mix (M6), otherwise it starts a DPS habit and asks for a
+  // goal. Omitted when nothing is left.
   if (remaining > 0) {
     drafts.push({
       id: "future",
       amount: remaining,
-      instrument: "dps",
+      instrument: longTermInstrument,
       status: "green",
-      reasonKey: "plan.reason.addGoal",
-      reasonParams: {},
-      nextStepKey: "plan.next.addGoal",
-      module: "m5",
+      reasonKey: "plan.reason.future",
+      reasonParams: { amount: remaining, instrument: longTermInstrument },
+      nextStepKey: allocation ? "plan.next.allocation" : "plan.next.addGoal",
+      module: allocation ? "m6" : "m5",
     });
     remaining = 0;
   }
@@ -327,6 +456,8 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     goalsShortfall,
   };
 
+  // M2 / M6 / M7 explanations stay on plan.insurance / allocation / retirement (each bucket's
+  // "Why this number?" picks its own); they join plan.explain once their dictionaries exist.
   const parts: Explanation[] = [ex.done(), budget.explain, emergency.explain];
   if (debt) parts.push(debt.explain);
   parts.push(...goalExplains);
@@ -335,5 +466,23 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
   const plan: Plan = { monthlyTotal, buckets, emergency, budget, summary, explain };
   if (debt) plan.debt = debt;
   if (goals) plan.goals = goals;
+  if (insurance) plan.insurance = insurance;
+  if (allocationResult) plan.allocation = allocationResult;
+  if (retirement) plan.retirement = retirement;
   return plan;
+}
+
+/**
+ * The M7 input the plan runs: the plan's allocation as the accumulation mix when the user set none
+ * (no allocation → M7's retirement_accumulation_return_* default), and "retired" for a working-mode
+ * user already at or past the default retirement age with none of their own (no saving years left).
+ */
+function retirementInput(m7: M7Input, allocation: Allocation | undefined, rates: RatesSnapshot): M7Input {
+  const out: M7Input = { ...m7 };
+  if (out.allocation === undefined && allocation !== undefined) out.allocation = allocation;
+  if (out.mode === "working" && out.retirementAge === undefined) {
+    const defaultAge = getRate(rates, out.retireeType === "government" ? "retirement_age_government" : "retirement_age_default");
+    if (out.age >= defaultAge) out.mode = "retired";
+  }
+  return out;
 }

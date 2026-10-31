@@ -19,6 +19,9 @@ const BY_REASON: Record<string, Record<string, Kind>> = {
   "plan.reason.goal": { name: "text", amount: "taka", need: "taka", instrument: "instrument", fv: "taka", years: "years" },
   "plan.reason.addGoal": {},
   "plan.reason.insurance": { amount: "taka" },
+  // planTo is an age, not money (the by-name fallback would format it as taka).
+  "plan.reason.retirement": { amount: "taka", planTo: "number" },
+  "plan.reason.future": { amount: "taka", instrument: "instrument" },
 };
 
 function fallbackKind(name: string, value: number | string): Kind {

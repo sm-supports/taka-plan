@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "code": "LK",
+  "iso3": "LKA",
+  "nameEn": "Sri Lanka",
+  "nameNative": "ශ්‍රී ලංකාව",
+  "region": "south_asia",
+  "languages": [
+    "si",
+    "ta",
+    "en"
+  ],
+  "currency": {
+    "code": "LKR",
+    "symbol": "Rs",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 332.5,
+      "status": "sourced",
+      "sourceName": "Interbank spot USD/LKR close, via EconomyNext",
+      "sourceUrl": "https://economynext.com/sri-lanka-rupee-closes-at-332-50-62-to-us-dollar-spot-bond-yields-steady-288371/",
+      "asOf": "2026-10-30",
+      "note": "CBSL's indicative spot page loads dynamically and could not be read; 2025 average 300.85 (World Bank PA.NUS.FCRF)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.083,
+      "status": "sourced",
+      "sourceName": "Department of Census and Statistics, CCPI (2021=100) year-on-year",
+      "sourceUrl": "https://www.statistics.gov.lk/WebReleases/CCPI_20261030E",
+      "asOf": "2026-10-31",
+      "note": "October 2026; September 8.0%. NCPI (national) 8.1% in September 2026. Above the CBSL 5% target (band 3-7%) for four months."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "CBSL inflation target 5% (band 3-7%); CCPI 8.3% in Oct 2026",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/press/pr/press_20260526_Monetary_Policy_Review_No_3_2026_e_Hi7x2.pdf",
+      "asOf": "2026-10-31",
+      "note": "The CBSL targets 5% but inflation swung from 70% (2022) to deflation (2025) and is now 8.3%, so we plan with 6%, a point above the target."
+    },
+    "policy_rate": {
+      "value": 0.0875,
+      "status": "sourced",
+      "sourceName": "Central Bank of Sri Lanka, Overnight Policy Rate (Monetary Policy Review No. 3 of 2026)",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/press/pr/press_20260526_Monetary_Policy_Review_No_3_2026_e_Hi7x2.pdf",
+      "asOf": "2026-05-26",
+      "note": "Raised 100 bp to 8.75% on 25 May 2026 and held on 30 September 2026 (CBSL Weekly Economic Indicators, 30 Oct 2026). SDFR 8.25%, SLFR 9.25%."
+    },
+    "savings_account_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "CBSL Weekly Economic Indicators: state savings bank savings deposit rate",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-09-30",
+      "note": "Commercial bank savings rates range 0.10%-9.00% (September 2026); the state savings bank's 3.00% is a typical ordinary rate."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CBSL weekly indicators publish only 1-year fixed deposit rates and averages; no typical 3-month rate found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0725,
+      "status": "sourced",
+      "sourceName": "CBSL Weekly Economic Indicators: state savings bank 1-year fixed deposit rate",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-09-30",
+      "note": "Commercial banks' 1-year FD range 2.50%-12.50%; average weighted new fixed deposit rate (AWNFDR) 8.52% in September 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring-deposit rate is published by CBSL. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0762,
+      "status": "sourced",
+      "sourceName": "CBSL Weekly Economic Indicators: Average Weighted Deposit Rate (AWDR)",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-09-30",
+      "note": "AWFDR (fixed deposits) 9.40%; AWNDR (new deposits) 7.79%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals found; individuals buy Treasury bills and bonds through primary dealers. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0934,
+      "status": "sourced",
+      "sourceName": "CBSL Weekly Economic Indicators (PDMO): 91-day Treasury bill primary market yield",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-28",
+      "note": "182-day 9.44%, 364-day 9.95%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1182,
+      "status": "sourced",
+      "sourceName": "CBSL Weekly Economic Indicators (PDMO): Treasury bond secondary market average yield, 5-6 years",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-29",
+      "note": "Under-5-year bucket 11.61%."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1285,
+      "status": "sourced",
+      "sourceName": "CBSL Weekly Economic Indicators (PDMO): Treasury bond auction weighted average yield, 15-Aug-2036 (9 years 9 months)",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-29",
+      "note": "Secondary market 8-10 year average 12.31%."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Inland Revenue Department tax chart 2025/26: WHT/AIT on interest to resident individuals",
+      "sourceUrl": "https://www.ird.gov.lk/en/publications/SitePages/tax_chart_2526.aspx?menuid=140408",
+      "asOf": "2025-04-01",
+      "note": "10% withheld from 1 April 2025; interest is part of taxable income (6%-36% slabs, Rs 1.8 million personal relief) and the WHT is creditable."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for this slot. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "deposit_insurance_limit": {
+      "value": 1100000,
+      "status": "sourced",
+      "sourceName": "Central Bank of Sri Lanka, Sri Lanka Deposit Insurance Scheme: current coverage",
+      "sourceUrl": "https://www.cbsl.gov.lk/sri-lanka-deposit-insurance-scheme",
+      "asOf": "2026-10-31",
+      "note": "Rs 1.1 million per depositor per institution; the page gives no effective date."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current CBSL cap or typical card rate found on CBSL pages reachable by direct link. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBSL Weekly Economic Indicators: ASPI 22,840 (Oct 2025) to 20,142 (Oct 2026)",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "The index fell 12% in the past year and is volatile, so the low case is below the after-tax deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "After-tax 364-day T-bill about 9% (9.95% less 10% WHT); ASPI record",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "About 2 points above the after-tax safe rate, as the market is small and volatile."
+    },
+    "equity_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "ASPI rally 2024-2026; Treasury bond yields about 12-13%",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "A strong decade for Colombo shares, still near local bond yields plus a premium."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBSL: rupee depreciation 6.8% year to date (Oct 2026)",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall in dollars while the rupee is stable."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Dollar gold long-run trend about 4-5% plus rupee depreciation about 4-5% a year",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "The rupee has lost value against the dollar most years, which lifts gold in rupees."
+    },
+    "gold_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Rupee depreciation episodes (2022, 2026)",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "A currency crisis like 2022 sends rupee gold up sharply."
+    },
+    "fixed_income_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "State savings bank 1-year FD 7.25% less 10% WHT",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "Ordinary bank deposits after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "AWNFDR 8.52% and 364-day T-bill 9.95%, less 10% WHT",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "A mix of fixed deposits and Treasury bills after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "364-day T-bill 9.95% and bonds 11-13%, less 10% WHT",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "Treasury bills and short bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "IRCSL publishes market statistics but no industry claim settlement ratio was found on reachable pages. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published premium guide or regulator data was found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical private hospital stay cost found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium guide found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "oop_health_share": {
+      "value": 0.5481,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS (WHO GHED)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LK",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "DCS CCPI health index 190.2 (Oct 2025) to 195.1 (Oct 2026), +2.6%; +95% since 2021",
+      "sourceUrl": "https://www.statistics.gov.lk/WebReleases/CCPI_20261030E",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose about 13% a year through the 2022 crisis and 2.6% last year; we plan with 2 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "DCS CCPI (2021=100); headline 8.3%",
+      "sourceUrl": "https://www.statistics.gov.lk/WebReleases/CCPI_20261030E",
+      "asOf": "2026-10-31",
+      "note": "No separate education series in the release; private tuition and school fees usually rise faster than headline prices."
+    },
+    "life_expectancy": {
+      "value": 77.672,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN (UN WPP)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LK",
+      "asOf": "2024-12-31",
+      "note": "Men 74.4, women 80.7."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "DCS life tables (2011-2013) pages returned no data and the WHO GHO API was down (HTTP 500). Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.3
+          },
+          {
+            "year": 2040,
+            "value": 3.8
+          },
+          {
+            "year": 2065,
+            "value": 2.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025: 19.0) and UN WPP 2024 medium variant via PopulationPyramid.net (2040: 26.2, 2065: 40.0)",
+      "sourceUrl": "https://www.populationpyramid.net/sri-lanka/2040/",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Central Bank of Sri Lanka, Employees' Provident Fund: retirement benefit age",
+      "sourceUrl": "https://www.cbsl.gov.lk/en/employees-provident-fund",
+      "asOf": "2026-10-31",
+      "note": "EPF benefits can be claimed at 55 (men) and 50 (women); EPF pays a lump sum, not a pension. Private employers' retirement age is commonly 60."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Department of Pensions site refused connections; no official statement of the public-service retirement age read. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "State savings bank 1-year FD 7.25% less 10% WHT",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "Plain deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "364-day T-bill 9.95% and AWNFDR 8.52%, less 10% WHT",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "Below the after-tax 1-year bill rate of about 9%, allowing for rates falling back."
+    },
+    "retirement_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "364-day T-bill 9.95% less 10% WHT",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "Roughly the current after-tax 1-year Treasury bill rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "After-tax deposit rates; volatile ASPI",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "A balanced mix that earns little more than deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Mix of equity base 11% and fixed income base 7.5%",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "Roughly half equity and half safe fixed income over a working life."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Equity high 15%, fixed income high 9%",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
+      "asOf": "2026-10-31",
+      "note": "A growth-tilted mix in a good decade."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The elderly allowance is paid through the Aswesuma programme (Welfare Benefits Board), but the reachable WBB pages give no current amount. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Welfare Benefits Board pages give no eligibility ages for the elderly allowance. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Sri Lanka has a Payment of Gratuity Act (No. 12 of 1983), but the Department of Labour site was down for maintenance and the rule could not be read. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 59,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Sri Lanka Social Security Board, Surekuma pension scheme",
+      "sourceUrl": "https://www.ssb.gov.lk/",
+      "asOf": "2026-10-31",
+      "note": "Voluntary contributory pension for informal and self-employed workers, join at 18-59, pension from 60. The page states no indexation, contribution amounts or projections. Formal-sector workers get a lump sum from EPF (https://epf.lk/) instead."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "ඉතිරි කිරීමේ ගිණුම",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "ස්ථාවර තැන්පතු",
+      "localNameEn": "Fixed deposit",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "ස්ථාවර තැන්පතු",
+      "localNameEn": "Fixed deposit",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard recurring-deposit product or rate found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate; individuals buy Treasury bills and bonds instead."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "භාණ්ඩාගාර බිල්පත්",
+      "localNameEn": "Treasury bill",
+      "note": "Individuals buy through primary dealers.",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "භාණ්ඩාගාර බැඳුම්කර",
+      "localNameEn": "Treasury bond",
+      "note": "Individuals buy through primary dealers.",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "භාණ්ඩාගාර බැඳුම්කර",
+      "localNameEn": "Treasury bond",
+      "note": "Individuals buy through primary dealers.",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "ඒකක භාර",
+      "localNameEn": "Unit trust",
+      "note": "Regulated by the Securities and Exchange Commission of Sri Lanka.",
+      "sourceUrl": "https://www.sec.gov.lk/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "රත්‍රන්",
+      "localNameEn": "Gold (jewellery, coins and bars)"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Sri Lanka",
+      "url": "https://www.cbsl.gov.lk/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Regulatory Commission of Sri Lanka",
+      "url": "https://ircsl.gov.lk/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Ombudsman of Sri Lanka",
+      "url": "https://www.insuranceombudsman.lk/",
+      "note": "Free; complain to the insurer first."
+    },
+    "pensionScheme": {
+      "name": "Sri Lanka Social Security Board",
+      "url": "https://www.ssb.gov.lk/",
+      "note": "Formal-sector workers: Employees' Provident Fund (https://epf.lk/)."
+    },
+    "oldAgeAllowance": {
+      "name": "Welfare Benefits Board (Aswesuma)",
+      "url": "https://www.wbb.gov.lk/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (free public hospital care)",
+      "url": "https://www.health.gov.lk/"
+    },
+    "depositInsurance": {
+      "name": "Sri Lanka Deposit Insurance Scheme (CBSL)",
+      "url": "https://www.cbsl.gov.lk/sri-lanka-deposit-insurance-scheme"
+    },
+    "statistics": {
+      "name": "Department of Census and Statistics",
+      "url": "https://www.statistics.gov.lk/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

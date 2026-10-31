@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "code": "AF",
+  "iso3": "AFG",
+  "nameEn": "Afghanistan",
+  "nameNative": "افغانستان",
+  "region": "south_asia",
+  "languages": [
+    "fa",
+    "ps",
+    "uz",
+    "tk"
+  ],
+  "currency": {
+    "code": "AFN",
+    "symbol": "؋",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 65.01,
+      "status": "sourced",
+      "sourceName": "Da Afghanistan Bank (transfer buy/sell mid rate)",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Transfer buy 64.96, sell 65.06 AFN per USD."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.078,
+      "status": "sourced",
+      "sourceName": "Trading Economics (NSIA CPI)",
+      "sourceUrl": "https://tradingeconomics.com/afghanistan/inflation-cpi",
+      "asOf": "2026-08-31",
+      "note": "August 2026 year on year; secondary source because the NSIA site could not be reached. CPI was -6.6% in 2024 (World Bank)."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "NSIA CPI via Trading Economics; World Bank FP.CPI.TOTL.ZG",
+      "sourceUrl": "https://tradingeconomics.com/afghanistan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Da Afghanistan Bank publishes no inflation target and CPI swung from -6.6% (2024) to 7.8% (Aug 2026), so we plan with a rounded 5% long-run rate."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Da Afghanistan Bank sets no policy rate: interest-based instruments (including capital-note auctions) ended with the move to interest-free banking. Searched DAB site, news, Central Banking."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Da Afghanistan Bank ended interest-based banking (all bank business is conducted without interest under Hanafi jurisprudence); no published deposit or profit rates found. Searched DAB, bank sites, news."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Da Afghanistan Bank ended interest-based banking (all bank business is conducted without interest under Hanafi jurisprudence); no published deposit or profit rates found. Searched DAB, bank sites, news."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Da Afghanistan Bank ended interest-based banking (all bank business is conducted without interest under Hanafi jurisprudence); no published deposit or profit rates found. Searched DAB, bank sites, news."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Da Afghanistan Bank ended interest-based banking (all bank business is conducted without interest under Hanafi jurisprudence); no published deposit or profit rates found. Searched DAB, bank sites, news."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Da Afghanistan Bank ended interest-based banking (all bank business is conducted without interest under Hanafi jurisprudence); no published deposit or profit rates found. World Bank FR.INR.DPST has no value for Afghanistan."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond is sold to individuals in Afghanistan."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No treasury bills are issued; DAB capital notes (bank-only) were interest-based and are no longer auctioned."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government bonds are issued in Afghanistan."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government bonds are issued in Afghanistan."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "Income Tax Law 2009, Article 46 (ARD unofficial translation)",
+      "sourceUrl": "https://www.acbar.org/upload/1493209950200.pdf",
+      "asOf": "2009-03-18",
+      "note": "Legal persons withhold 20% from interest; in practice banks now pay no interest under the interest ban."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; the Income Tax Law 2009 excludes interest on State bonds from gross income, but no such bonds are issued."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Afghanistan Deposits Protection Fund (a DAB department) exists, but no per-depositor cover amount could be found; DAB pages returned 403."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card interest cap or typical rate found; interest-based lending is banned."
+    },
+    "equity_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Global equity index in afghani terms (no local stock market)",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Afghanistan has no stock exchange or retail funds, so equity means a global index held in afghani terms, which can lose value when the afghani strengthens (it rose from about 89 to 65 per dollar since 2022)."
+    },
+    "equity_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Global equity index in afghani terms (no local stock market)",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "With no safe local interest rate (0%), the base is capped at 4 points above it; hard access to global funds and afghani swings justify a low figure."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Global equity index in afghani terms (no local stock market)",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Roughly the long-run nominal dollar return of global equities with a stable afghani."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Da Afghanistan Bank exchange rates; dollar gold trend",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "A strengthening afghani can offset dollar gold gains for years, as in 2022-2026."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Da Afghanistan Bank exchange rates; dollar gold trend",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4-5% a year with little expected afghani depreciation, roughly matching the 5% inflation assumption."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Da Afghanistan Bank exchange rates; dollar gold trend",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold strength plus renewed afghani depreciation (it averaged about 5% a year in 2010-2020)."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Interest ban on bank deposits",
+      "sourceUrl": "https://afintl.com/en/202412295022",
+      "asOf": "2026-10-31",
+      "note": "Banks pay no interest and no government securities are sold, so safe money earns nothing."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Interest ban on bank deposits",
+      "sourceUrl": "https://afintl.com/en/202412295022",
+      "asOf": "2026-10-31",
+      "note": "No interest-bearing deposits or government securities exist for individuals; we assume cash-like safe savings earn 0%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Interest ban on bank deposits",
+      "sourceUrl": "https://afintl.com/en/202412295022",
+      "asOf": "2026-10-31",
+      "note": "Allows for modest profit shares on Islamic investment deposits if banks begin publishing them."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry claim settlement data published by the General Directorate of Takaful and Insurance; life insurance volume is negligible (Axco)."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail term life market: only one insurer has offered life cover, as a special case (Moore Afghanistan insurance overview); no premium quotes found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical private hospital stay cost published; one news anecdote cites AFN 150,000 for a lung surgery at a Kabul private hospital (8am.media), too thin to use."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail private health insurance market with published premiums found."
+    },
+    "oop_health_share": {
+      "value": 0.771,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AF",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NSIA CPI via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/afghanistan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series found; we use the 5% inflation assumption plus 2 points for import-dependent medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NSIA CPI via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/afghanistan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series found; we use the 5% inflation assumption plus 2 points for private schooling costs."
+    },
+    "life_expectancy": {
+      "value": 66.289,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AF",
+      "asOf": "2024-12-31",
+      "note": "Men 64.7, women 67.8 (World Bank 2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.8,
+            "men": 15.9,
+            "women": 17.6
+          },
+          {
+            "age": 65,
+            "total": 13.4,
+            "men": 12.6,
+            "women": 14.0
+          },
+          {
+            "age": 70,
+            "total": 10.4,
+            "men": 9.8,
+            "women": 10.8
+          },
+          {
+            "age": 80,
+            "total": 5.7,
+            "men": 5.4,
+            "women": 5.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "georank.org (UN World Population Prospects)",
+      "sourceUrl": "https://georank.org/life-expectancy/afghanistan",
+      "asOf": "2026-07-08",
+      "note": "Remaining years = expected age at death by current age minus that age; explainer only."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 22.6
+          },
+          {
+            "year": 2040,
+            "value": 18.8
+          },
+          {
+            "year": 2065,
+            "value": 10.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "PopulationPyramid.net (UN WPP 2024, medium variant)",
+      "sourceUrl": "https://www.populationpyramid.net/afghanistan/2040/",
+      "asOf": "2026-10-31",
+      "note": "People aged 15-64 per person 65+, computed from the UN WPP 2024 age structure; World Bank old-age dependency 4.41 (2025) gives 22.7."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Pajhwok (Labour Law, Article 138)",
+      "sourceUrl": "https://pajhwok.com/?p=411494",
+      "asOf": "2021-07-29",
+      "note": "Mandatory retirement age for employees is 65; private workers get a lump sum of 10 months' last pay rather than a pension (US SSA, May 2024)."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Pajhwok (Labour Law, Article 138; civil service commission)",
+      "sourceUrl": "https://pajhwok.com/?p=411494",
+      "asOf": "2021-07-29",
+      "note": "Civil servants: 65 or 40 years of service; a decree extended it by two years in some institutions (Amu TV)."
+    },
+    "retirement_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Interest ban on bank deposits",
+      "sourceUrl": "https://afintl.com/en/202412295022",
+      "asOf": "2026-10-31",
+      "note": "Safe money earns nothing without interest-bearing deposits or bills."
+    },
+    "retirement_return_base": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Interest ban on bank deposits",
+      "sourceUrl": "https://afintl.com/en/202412295022",
+      "asOf": "2026-10-31",
+      "note": "Kept at the after-tax safe rate, which is 0% because banks pay no interest and no government securities are sold."
+    },
+    "retirement_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Interest ban on bank deposits",
+      "sourceUrl": "https://afintl.com/en/202412295022",
+      "asOf": "2026-10-31",
+      "note": "Allows for a small gold share or Islamic deposit profit."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Mix of cash, gold and global equity (assumption)",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "A cash-heavy mix earns nothing in a weak case."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Mix of cash, gold and global equity (assumption)",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Balanced mix of 0% cash, 5% gold and 4% global equity in afghani terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Mix of cash, gold and global equity (assumption)",
+      "sourceUrl": "https://www.dab.gov.af/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Gold and global equity high cases with a stable afghani."
+    },
+    "old_age_allowance_monthly": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, International Update May 2024",
+      "sourceUrl": "https://www.ssa.gov/policy/docs/progdesc/intl_update/2024-05/index.html",
+      "asOf": "2024-05-31",
+      "note": "No non-contributory old-age pension; the SSA says Afghanistan lacks any programme giving long-term old-age benefits to many residents (page read via search excerpts; direct fetch blocked)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension exists (US SSA, May 2024), so no eligibility rules."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No days-per-year gratuity: private employers must pay 10 months of last monthly earnings as a lump sum when a worker leaves at 65 (US SSA, May 2024), which does not fit the per-year rule."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The public-sector pension scheme (8% employee, 8% state, age 65) was suspended in 2021 and ended in 2024; payments to about 150,000 existing retirees resumed from Aug 2025 (Arab News), but no scheme takes new members and private workers have never had one."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب پس‌انداز",
+      "localNameEn": "Savings account",
+      "note": "Interest-free; banks follow Islamic banking rules and publish no profit rates.",
+      "sourceUrl": "https://afintl.com/en/202412295022"
+    },
+    "fdr_3m": {
+      "available": false,
+      "localName": null,
+      "note": "Interest-bearing term deposits ended with the interest ban.",
+      "sourceUrl": "https://afintl.com/en/202412295022"
+    },
+    "fdr_1y": {
+      "available": false,
+      "localName": null,
+      "note": "Interest-bearing term deposits ended with the interest ban.",
+      "sourceUrl": "https://afintl.com/en/202412295022"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No recurring deposit schemes with a stated return."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate for individuals."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No treasury bills; DAB capital notes were for banks only and are no longer auctioned."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government bonds."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No government bonds."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No stock exchange or retail mutual funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "طلا",
+      "localNameEn": "Gold",
+      "note": "Physical gold is widely bought and held."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Da Afghanistan Bank",
+      "url": "https://www.dab.gov.af/"
+    },
+    "insuranceRegulator": {
+      "name": "General Directorate of Takaful and Insurance, Ministry of Finance",
+      "url": "https://mof.gov.af/en/node/2390"
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Public Health (free care at public hospitals)",
+      "url": "https://moph.gov.af/en",
+      "note": "Public hospitals report free surgery; no national health insurance."
+    },
+    "depositInsurance": {
+      "name": "Afghanistan Deposits Protection Fund (Da Afghanistan Bank)",
+      "url": "https://www.dab.gov.af/node/1868"
+    },
+    "statistics": {
+      "name": "National Statistics and Information Authority",
+      "url": "https://nsia.gov.af/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

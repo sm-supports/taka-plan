@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 1,
+  "code": "BT",
+  "iso3": "BTN",
+  "nameEn": "Bhutan",
+  "nameNative": "འབྲུག་ཡུལ་",
+  "region": "south_asia",
+  "languages": [
+    "dz",
+    "ne",
+    "en"
+  ],
+  "currency": {
+    "code": "BTN",
+    "symbol": "Nu.",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 95.03,
+      "status": "sourced",
+      "sourceName": "Trading Economics (USD/BTN)",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/currency",
+      "asOf": "2026-10-30",
+      "note": "Ngultrum is pegged at par to the Indian rupee; RMA site unreachable. cldr.json lists INR for BT, corrected to BTN."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0551,
+      "status": "sourced",
+      "sourceName": "Trading Economics (National Statistics Bureau CPI)",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/inflation-cpi",
+      "asOf": "2026-08-31",
+      "note": "August 2026 year on year, down from 6.83% in July; secondary source because the NSB CPI page could not be reached."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "NSB CPI via Trading Economics; World Bank FP.CPI.TOTL.ZG",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The ngultrum is pegged to the Indian rupee, so inflation tracks India's 4% target plus a margin; Bhutan's CPI averaged about 5% over five years (3.6% in 2025, 5.5% in Aug 2026)."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The RMA has no confirmed published policy rate; an interest rate corridor was still being developed with IMF help in 2025. Trading Economics lists a 'policy rate' of 5.37% (Sep 2026) that we could not confirm with the RMA, whose site failed TLS checks."
+    },
+    "savings_account_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of two large banks; Kuensel (Mar 2026)",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-03-19",
+      "note": "About 4.5% at most banks; up to 4.75%-5.5% on some account tiers. Savings interest is not taxed."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0475,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of two large banks",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2024-07-01",
+      "note": "3 months to under 1 year: 4.50%-5.00%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.056,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of two large banks",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2024-07-01",
+      "note": "1 to under 2 years: 4.50%-6.75%; 5-year fixed deposits pay 7.75%-8.00%."
+    },
+    "dps_rate": {
+      "value": 0.08,
+      "status": "sourced",
+      "sourceName": "Published deposit rate sheets of two large banks (recurring deposits)",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2024-07-01",
+      "note": "Recurring deposits of about 5 years: 7.25%-8.50%."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
+      "asOf": "2025-12-31"
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals; citizens can bid for RGoB bonds instead (see tbond_10y_rate)."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "RGoB treasury bills are auctioned by the RMA (open to Bhutanese persons and entities), but no recent 91-day yield was found; RMA site unreachable."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year RGoB bond series found; recent issues were 7, 10 and 12 years."
+    },
+    "tbond_10y_rate": {
+      "value": 0.065,
+      "status": "sourced",
+      "sourceName": "Bhutan Broadcasting Service (RGoB bond issue)",
+      "sourceUrl": "https://www.bbs.bt/?p=181100",
+      "asOf": "2025-11-20",
+      "note": "Coupon of the latest 10-year RGoB bond (Nu 1.25bn); coupons since 2020 range 3%-6.5%."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "The Bhutanese (Income Tax Act of Bhutan 2025)",
+      "sourceUrl": "https://thebhutanese.bt/major-changes-in-bhutans-income-tax-from-2026-explained/",
+      "asOf": "2026-01-01",
+      "note": "10% on fixed deposit interest above Nu 400,000 a year from 1 Jan 2026; savings and recurring deposit interest is not taxed, and banks withhold provisionally (DRC notification, 29 Jul 2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; RGoB bond interest is not PIT-taxable but coupons carry 5% TDS (2023 bond offer document)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover amount found; RMA site unreachable."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card rate cap or typical rate found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Royal Securities Exchange of Bhutan",
+      "sourceUrl": "https://rsebl.org.bt/",
+      "asOf": "2026-10-31",
+      "note": "A small, illiquid exchange with few listed firms and a weak, patchy index record."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Royal Securities Exchange of Bhutan; bank deposit rates",
+      "sourceUrl": "https://rsebl.org.bt/",
+      "asOf": "2026-10-31",
+      "note": "Kept below the 5.6% untaxed 1-year deposit rate plus 4 points because the local market is thin and its 10-year record weak."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Royal Securities Exchange of Bhutan",
+      "sourceUrl": "https://rsebl.org.bt/",
+      "asOf": "2026-10-31",
+      "note": "A case where dividends from hydropower and banking stocks grow with nominal GDP."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Ngultrum per US dollar (pegged to the Indian rupee)",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/currency",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold can stall for years while the rupee peg stays stable."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Ngultrum per US dollar (pegged to the Indian rupee)",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/currency",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4-5% plus 2-3% a year of rupee (and so ngultrum) depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Ngultrum per US dollar (pegged to the Indian rupee)",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/currency",
+      "asOf": "2026-10-31",
+      "note": "Strong dollar gold plus faster rupee depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bank deposit rate sheets",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Short fixed deposits and savings at 4.5%, untaxed for most savers."
+    },
+    "fixed_income_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank deposit rate sheets; RGoB bond coupons",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Blend of 1-year (5.6%) and 5-year (7.75%-8%) deposits and the 6.5% 10-year bond, mostly untaxed below the Nu 400,000 exemption."
+    },
+    "fixed_income_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank deposit rate sheets",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Long fixed and recurring deposits at about 8%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry life claim settlement ratio published by the RMA found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published pure-term life premium quotes found; web search budget ran out before insurer rate sheets could be checked."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public health care is free; no typical private or referral hospital stay cost found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No private health insurance premium tables found."
+    },
+    "oop_health_share": {
+      "value": 0.255,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BT",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NSB CPI via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI found; public care is free, so we add 1 point to the 5% inflation assumption for private and Indian referral costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NSB CPI via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/bhutan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI found; we add 2 points to the 5% inflation assumption for private and overseas study costs."
+    },
+    "life_expectancy": {
+      "value": 73.262,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BT",
+      "asOf": "2024-12-31",
+      "note": "Men 71.6, women 75.3 (World Bank 2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.0,
+            "men": 17.8,
+            "women": 20.3
+          },
+          {
+            "age": 65,
+            "total": 15.2,
+            "men": 14.2,
+            "women": 16.3
+          },
+          {
+            "age": 70,
+            "total": 11.8,
+            "men": 11.0,
+            "women": 12.7
+          },
+          {
+            "age": 80,
+            "total": 6.4,
+            "men": 5.9,
+            "women": 6.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "georank.org (UN World Population Prospects)",
+      "sourceUrl": "https://georank.org/life-expectancy/bhutan",
+      "asOf": "2026-07-08",
+      "note": "Remaining years = expected age at death by current age minus that age; explainer only."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 10.8
+          },
+          {
+            "year": 2040,
+            "value": 7.1
+          },
+          {
+            "year": 2065,
+            "value": 2.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "PopulationPyramid.net (UN WPP 2024, medium variant)",
+      "sourceUrl": "https://www.populationpyramid.net/bhutan/2040/",
+      "asOf": "2026-10-31",
+      "note": "People aged 15-64 per person 65+, computed from the UN WPP 2024 age structure; World Bank old-age dependency 9.08 (2025) gives 11.0."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory private-sector retirement age found; the Labour and Employment Act 2007 (s.99) gives gratuity and provident fund on retirement but leaves ages to rules. Corporate employees in NPPF follow agency rules."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Pension and Provident Fund, Annual Report 2024",
+      "sourceUrl": "https://www.nppf.org.bt/wp-content/uploads/2025/07/Annual-Report_2024.pdf",
+      "asOf": "2024-12-31",
+      "note": "Civil service normal retirement age is set by rank: 57, 59, 60 or 63; 60 shown as the middle case."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bank deposit rate sheets",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Savings and short deposits at 4.5%."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank deposit rate sheets",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Kept at the typical 1-year deposit rate (about 5.6%, untaxed below Nu 400,000 of interest a year)."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank deposit rate sheets; RGoB bond coupons",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Laddered 5-year deposits and RGoB bonds at 6.5%-8%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Deposits, RSEB equity and gold (assumption)",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Mostly deposits with weak equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Deposits, RSEB equity and gold (assumption)",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Balanced mix of long deposits (about 6.5%), local equity (7.5%) and gold (7%)."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Deposits, RSEB equity and gold (assumption)",
+      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Long deposits at 8% with equity and gold high cases."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found; elderly support is through royal kidu grants. Could not confirm a source stating none."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour and Employment Act 2007 (s.99-101) entitles retiring employees to gratuity but sets the amount in rules we could not read; the formula is reportedly one month's last basic pay per year of service (unverified)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "National Pension and Provident Fund, Annual Report 2024",
+      "sourceUrl": "https://www.nppf.org.bt/wp-content/uploads/2025/07/Annual-Report_2024.pdf",
+      "asOf": "2024-12-31",
+      "note": "Civil service plan: 40% of last basic pay after at least 23 years; normal retirement age 57-63 by rank; yearly adjustment by CPI capped at 5%; minimum pension Nu 5,510. Covers civil servants, armed forces and state corporations only."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://bnb.bt/interest-rates/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit (3 months)",
+      "sourceUrl": "https://bnb.bt/interest-rates/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit (1 year)",
+      "sourceUrl": "https://bnb.bt/interest-rates/"
+    },
+    "dps": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "sourceUrl": "https://bnb.bt/interest-rates/"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate; citizens can buy RGoB bonds."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "RGoB treasury bill",
+      "note": "Auctioned by the RMA; open to Bhutanese persons and entities.",
+      "sourceUrl": "https://mof.gov.bt/call-for-tenders-for-government-treasury-bills/"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No 5-year RGoB bond series found."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "RGoB government bond",
+      "note": "10-year issues; Bhutanese citizens may subscribe.",
+      "sourceUrl": "https://www.bbs.bt/?p=181100"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No retail mutual or index fund found; listed shares trade on the Royal Securities Exchange of Bhutan."
+    },
+    "gold": {
+      "available": true,
+      "localName": "གསེར",
+      "localNameEn": "Gold",
+      "note": "Mostly bought as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Royal Monetary Authority of Bhutan",
+      "url": "https://www.rma.org.bt/"
+    },
+    "insuranceRegulator": {
+      "name": "Royal Monetary Authority of Bhutan (insurance supervision)",
+      "url": "https://www.rma.org.bt/"
+    },
+    "insuranceComplaints": {
+      "name": "Royal Monetary Authority of Bhutan (financial consumer complaints)",
+      "url": "https://www.rma.org.bt/"
+    },
+    "pensionScheme": {
+      "name": "National Pension and Provident Fund",
+      "url": "https://www.nppf.org.bt/",
+      "note": "Covers civil servants, armed forces and state corporations; private employees use provident fund schemes."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (free public health care)",
+      "url": "https://www.moh.gov.bt/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Statistics Bureau",
+      "url": "https://www.nsb.gov.bt/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -120,6 +120,32 @@ describe("useTakaStore", () => {
     expect(selectProfile(useTakaStore.getState())?.hasDebt).toBe(false);
   });
 
+  it("selectPlanOverrides passes M2 / M6 / M7 answers only once the user has answered something there", () => {
+    const st = useTakaStore.getState();
+    st.setProfile({ age: 36, incomeType: "salaried", takeHome: 120000, essentials: 75000, dependents: ["partner"], hasDebt: false });
+    const before = selectPlanOverrides(useTakaStore.getState());
+    expect(before.m2).toBeUndefined();
+    expect(before.m6).toBeUndefined();
+    expect(before.m7).toBeUndefined();
+    expect(before.m1.hasHealthInsurance).toBe(false);
+
+    // An empty risk object or undefined values are not answers.
+    st.setM6({ risk: {}, goldShare: undefined });
+    expect(selectPlanOverrides(useTakaStore.getState()).m6).toBeUndefined();
+
+    st.setM2({ smoker: false, existingHealthCover: 300000, existingLifeCover: undefined });
+    st.setM6({ risk: { reaction: 2 }, horizonYears: 15 });
+    st.setM7({ planToAge: 95, monthlySaving: 5000 });
+    const o = selectPlanOverrides(useTakaStore.getState());
+    expect(o.m2).toEqual({ smoker: false, existingHealthCover: 300000 });
+    expect(o.m6).toEqual({ risk: { reaction: 2 }, horizonYears: 15 });
+    expect(o.m7).toEqual({ planToAge: 95, monthlySaving: 5000 });
+    // M2's existing health cover answers M1's question until the user answers it in M1.
+    expect(o.m1.hasHealthInsurance).toBe(true);
+    st.setM1({ hasHealthInsurance: false });
+    expect(selectPlanOverrides(useTakaStore.getState()).m1.hasHealthInsurance).toBe(false);
+  });
+
   it("addLoan / addCard flip profile.hasDebt to true", () => {
     const st = useTakaStore.getState();
     st.setProfile({ hasDebt: false });

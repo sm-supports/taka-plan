@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "code": "KR",
+  "iso3": "KOR",
+  "nameEn": "South Korea",
+  "nameNative": "대한민국",
+  "region": "east_asia_pacific",
+  "languages": [
+    "ko"
+  ],
+  "currency": {
+    "code": "KRW",
+    "symbol": "₩",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1335.3,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, KRW per USD (매매기준율)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/731Y001/D/20261026/20261030/0000001",
+      "asOf": "2026-10-30",
+      "note": "World Bank 2025 average was 1,422.4."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.029,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, consumer price index (all items, 2020=100), from Ministry of Data and Statistics",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202509/202609/0",
+      "asOf": "2026-09-30",
+      "note": "Index 117.06 (Sep 2025) to 120.43 (Sep 2026) = 2.9% year on year."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Bank of Korea 2% target; CPI averaged 3.1% a year 2021-2025 (ECOS annual index 100 to 116.61)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/A/2020/2025/0",
+      "asOf": "2026-10-31",
+      "note": "The 2% target is credible but inflation has run near 3% and the bank is raising rates, so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Bank of Korea base rate (ECOS 722Y001)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/722Y001/M/202606/202610/0101000",
+      "asOf": "2026-10-22",
+      "note": "Raised to 2.75% in July and 3.00% in August 2026; held at 3.00% on 22 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.001,
+      "status": "sourced",
+      "sourceName": "Dealsite (Nov 2024): low-cost demand deposits pay about 0.1% a year",
+      "sourceUrl": "https://dealsite.co.kr/articles/131688",
+      "asOf": "2024-11-20",
+      "note": "Ordinary demand (passbook) deposits at commercial banks pay about 0.1%; internet-bank parking accounts pay around 2% with conditions."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0316,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, deposit banks' new time deposits under 6 months (weighted average)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2111",
+      "asOf": "2026-09-30",
+      "note": "Series covers all maturities under 6 months; 2.97% in August."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0357,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, deposit banks' new 1-year time deposits (weighted average)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118",
+      "asOf": "2026-09-30",
+      "note": "Major banks' headline 1-year rates were 3.50-3.60% in October 2026."
+    },
+    "dps_rate": {
+      "value": 0.0315,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, deposit banks' new installment savings (정기적금, weighted average)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA212",
+      "asOf": "2026-09-30",
+      "note": "Volatile month to month (3.99% July, 3.72% August) because of promotional products."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0345,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, deposit banks' savings-type deposits, new transactions (weighted average)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2",
+      "asOf": "2026-09-30",
+      "note": "Balance-basis total deposit rate was 2.20% at end-August 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.04325,
+      "status": "sourced",
+      "sourceName": "Ministry of Economy and Finance October 2026 retail government bond issue (via SBS Biz)",
+      "sourceUrl": "https://biz.sbs.co.kr/amp/article/20000337585",
+      "asOf": "2026-10-15",
+      "note": "5-year retail government bond: 4.275% coupon (September 5-year auction rate) plus 0.05 point bonus, compounded and paid at maturity; 10-year 4.79%, 20-year 4.95%."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0318,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, Monetary Stabilization Bond 91-day yield",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/817Y002/D/20261026/20261030/010400000",
+      "asOf": "2026-10-30",
+      "note": "Korea issues no regular 91-day treasury bill; the central bank's 91-day bond is the standard 3-month government rate."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0387,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, 5-year Korea Treasury Bond yield",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/817Y002/D/20261026/20261030/010200001",
+      "asOf": "2026-10-30",
+      "note": "3.865% on 30 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0401,
+      "status": "sourced",
+      "sourceName": "Bank of Korea ECOS, 10-year Korea Treasury Bond yield",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/817Y002/D/20261026/20261030/010210000",
+      "asOf": "2026-10-30",
+      "note": "4.008% on 30 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.154,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: Korea, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/republic-of-korea/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "14% national plus 1.4% local income tax withheld at source; final unless interest and dividends exceed KRW 20 million a year."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.154,
+      "status": "sourced",
+      "sourceName": "Newsis (Mar 2023) on retail government bond tax rules",
+      "sourceUrl": "https://www.newsis.com/view/NISX20230330_0002247546",
+      "asOf": "2023-03-30",
+      "note": "Interest is taxed separately at 14% (plus 1.4% local tax) on up to KRW 200 million per person if held to maturity; early redemption loses the benefit."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000000,
+      "status": "sourced",
+      "sourceName": "Korea Deposit Insurance Corporation",
+      "sourceUrl": "https://www.kdic.or.kr/",
+      "asOf": "2025-09-01",
+      "note": "Raised from KRW 50 million to KRW 100 million (principal plus interest) per depositor per institution from 1 September 2025."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "Regulation on the maximum interest rate under the Interest Limitation Act",
+      "sourceUrl": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B4%EC%9E%90%EC%A0%9C%ED%95%9C%EB%B2%95_%EC%A0%9C2%EC%A1%B0%EC%A0%9C1%ED%95%AD%EC%9D%98_%EC%B5%9C%EA%B3%A0%EC%9D%B4%EC%9E%90%EC%9C%A8%EC%97%90_%EA%B4%80%ED%95%9C_%EA%B7%9C%EC%A0%95",
+      "asOf": "2021-07-07",
+      "note": "Legal maximum interest rate of 20% a year since July 2021, which also caps card loans and revolving balances."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "KOSPI 2,008 (31 Oct 2016) to 2,399 (30 Dec 2024): about 2% a year price return before the 2025-26 rally (ECOS 802Y001)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/802Y001/D/20241223/20241231/0001000",
+      "asOf": "2026-10-31",
+      "note": "Low case matching KOSPI's weak 2016-2024 record before the recent rally."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Safe rate plus 4 points: 1-year time deposit 3.57% and 1-year government bond 3.59% before 15.4% tax (about 3.0% after tax)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/817Y002/D/20261026/20261030/010190000",
+      "asOf": "2026-10-31",
+      "note": "KOSPI's 10-year price gain (about 11% a year to 5,731 in Oct 2026) comes mostly from a 2025-26 rally, so the base is capped at the after-tax safe rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "KOSPI 2,008 (31 Oct 2016) to 5,731 (30 Oct 2026), about 11% a year price return (ECOS 802Y001)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/802Y001/D/20261026/20261030/0001000",
+      "asOf": "2026-10-31",
+      "note": "High case near the full 10-year KOSPI record including the recent rally."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold in won; USD/KRW from Bank of Korea ECOS",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/731Y001/D/20261026/20261030/0000001",
+      "asOf": "2026-10-31",
+      "note": "Low case if gold stalls and the won strengthens, as it did in 2026."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Long-run USD gold trend about 5% plus about 1% expected won depreciation",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/731Y001/D/20261026/20261030/0000001",
+      "asOf": "2026-10-31",
+      "note": "Gold in won follows the dollar gold price plus mild long-run won depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Gold in won; strong-decade case",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/731Y001/D/20261026/20261030/0000001",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold decade or a weaker won."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "1-year time deposit 3.57% and 1-year government bond 3.59% before 15.4% tax (about 3.0% after tax)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118",
+      "asOf": "2026-10-31",
+      "note": "Low case if the base rate falls back to 2% and deposit rates follow."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "1-year time deposit 3.57% and 1-year government bond 3.59% before 15.4% tax (about 3.0% after tax)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118",
+      "asOf": "2026-10-31",
+      "note": "Base equal to the after-tax 1-year deposit rate (3.57% x 0.846)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.037,
+      "status": "assumption",
+      "sourceName": "5-year retail government bond 4.325% taxed at 15.4% (about 3.66%)",
+      "sourceUrl": "https://biz.sbs.co.kr/amp/article/20000337585",
+      "asOf": "2026-10-31",
+      "note": "High case locking in retail government bonds or 5-10 year treasury yields after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Industry-wide life claim settlement ratio not found in this research pass (the Financial Supervisory Service publishes non-payment ratios by insurer)."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Indicative term life (정기보험) premium rates per KRW 1,000 of cover not found from a published source in this research pass."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Typical out-of-pocket cost of a major hospital stay not found from a published source in this research pass (National Health Insurance covers most costs with 20% inpatient coinsurance plus non-covered items)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private indemnity health insurance (실손보험) is priced per policy, not per amount of cover; no published premium table per KRW 100,000 found."
+    },
+    "oop_health_share": {
+      "value": 0.337,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KR",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Health CPI rose about 1.1% a year 2020-2025 (ECOS 901Y009, item F)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/A/2020/2025/F",
+      "asOf": "2026-10-31",
+      "note": "Measured medical prices rise slowly under NHI fee controls, but non-covered care and ageing push spending faster, so health costs use the 2.5% headline planning rate."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Education CPI rose about 1.6% a year 2020-2025 (ECOS 901Y009, item J)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/A/2020/2025/J",
+      "asOf": "2026-10-31",
+      "note": "Education CPI is low, but private tutoring spending grows faster, so 3% is used."
+    },
+    "life_expectancy": {
+      "value": 83.6,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KR",
+      "asOf": "2024-12-31",
+      "note": "Men 80.8, women 86.6 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 65,
+            "total": 21.68
+          },
+          {
+            "age": 80,
+            "total": 10.59
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via Measured World",
+      "sourceUrl": "https://measuredworld.com/countries/south-korea/mortality/life-expectancy-progression",
+      "asOf": "2024-12-31",
+      "note": "Secondary source reproducing UN WPP 2024; ages 60 and 70 and sex breakdown not found in this pass."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.4
+          },
+          {
+            "year": 2040,
+            "value": 1.7
+          },
+          {
+            "year": 2065,
+            "value": 1.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via PopulationPyramid.net; World Bank SP.POP.DPND.OL",
+      "sourceUrl": "https://www.populationpyramid.net/republic-of-korea/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 29.3 (2025, World Bank), 57.9 (2040) and 97.6 (2065, populationpyramid.net/republic-of-korea/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "National Pension pension age schedule (Korean Wikipedia, National Pension of South Korea)",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension starts at 63 for those born 1961-64, 64 for 1965-68 and 65 from 1969 (reached in 2033); the legal minimum mandatory retirement age in firms is 60."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "State Public Officials Act, Article 74",
+      "sourceUrl": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EB%B2%95/%EC%A0%9C74%EC%A1%B0",
+      "asOf": "2009-01-01",
+      "note": "Public officials retire at 60 unless another law says otherwise, on 30 June or 31 December of that year."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "1-year time deposit 3.57% and 1-year government bond 3.59% before 15.4% tax (about 3.0% after tax)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118",
+      "asOf": "2026-10-31",
+      "note": "Low case if deposit rates fall back with the base rate."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "1-year time deposit 3.57% and 1-year government bond 3.59% before 15.4% tax (about 3.0% after tax)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118",
+      "asOf": "2026-10-31",
+      "note": "Held at the after-tax 1-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Retail government bonds and laddered treasury bonds after 15.4% tax",
+      "sourceUrl": "https://biz.sbs.co.kr/amp/article/20000337585",
+      "asOf": "2026-10-31",
+      "note": "High case for locking in 5-10 year government bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Mix of deposits (3.0% after tax) and equity low case (3%)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix in a weak decade."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Mix of after-tax safe rate 3% and equity base 7%",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118",
+      "asOf": "2026-10-31",
+      "note": "About half equity at 7% and half safe assets at 3%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Mix with equity at the high case 11%",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/802Y001/D/20261026/20261030/0001000",
+      "asOf": "2026-10-31",
+      "note": "High case if equities repeat their recent 10-year record."
+    },
+    "old_age_allowance_monthly": {
+      "value": 349700,
+      "status": "sourced",
+      "sourceName": "Ministry of Health and Welfare, Basic Pension (기초연금) 2026 standard amount",
+      "sourceUrl": "https://basicpension.mohw.go.kr/",
+      "asOf": "2026-01-01",
+      "note": "Standard monthly amount for a single recipient in 2026; couples receive 20% less each."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Pensions in South Korea (Wikipedia); Ministry of Health and Welfare Basic Pension site",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pensions_in_South_Korea",
+      "asOf": "2026-01-01",
+      "note": "Basic Pension goes to people 65+ in the bottom 70% by income and assets; 2026 selection threshold KRW 2.47 million a month for a single person (basicpension.mohw.go.kr)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Employee Retirement Benefit Security Act, Article 8",
+      "sourceUrl": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EA%B7%BC%EB%A1%9C%EC%9E%90%ED%87%B4%EC%A7%81%EA%B8%89%EC%97%AC_%EB%B3%B4%EC%9E%A5%EB%B2%95/%EC%A0%9C8%EC%A1%B0",
+      "asOf": "2026-10-31",
+      "note": "At least 30 days of average wages per year of continuous service (average wage = last 3 months' pay / calendar days); many employers use a DB or DC retirement pension instead."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 59,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "National Pension (Korean Wikipedia, National Pension of South Korea)",
+      "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88",
+      "asOf": "2026-10-31",
+      "note": "Residents 18 to under 60 must join; pension age 63 for those born 1961-64, rising to 65; benefits are adjusted yearly by CPI and taxed as pension income; the 2025 reform raises contributions from 9% toward 13% of pay from 2026."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "보통예금",
+      "localNameEn": "Ordinary demand deposit",
+      "sourceUrl": "https://dealsite.co.kr/articles/131688"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "정기예금 (3개월)",
+      "localNameEn": "3-month time deposit",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2111"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "정기예금",
+      "localNameEn": "Time deposit",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA2118"
+    },
+    "dps": {
+      "available": true,
+      "localName": "정기적금",
+      "localNameEn": "Installment savings",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/121Y002/M/202607/202609/BEABAA212"
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "개인투자용 국채",
+      "localNameEn": "Retail government bonds for individuals",
+      "note": "Sold monthly in 3, 5, 10 and 20-year terms; interest compounds and is paid at maturity.",
+      "sourceUrl": "https://biz.sbs.co.kr/amp/article/20000337585"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "통화안정증권 (91일)",
+      "localNameEn": "Monetary Stabilization Bond (91-day)",
+      "note": "No regular 91-day treasury bill; central bank bonds trade through brokerages.",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/817Y002/D/20261026/20261030/010400000"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "국고채 (5년)",
+      "localNameEn": "Korea Treasury Bond (5-year)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/817Y002/D/20261026/20261030/010200001"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "국고채 (10년)",
+      "localNameEn": "Korea Treasury Bond (10-year)",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/817Y002/D/20261026/20261030/010210000"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "인덱스펀드·ETF",
+      "localNameEn": "Index funds and ETFs"
+    },
+    "gold": {
+      "available": true,
+      "localName": "금 (골드바·KRX 금시장)",
+      "localNameEn": "Gold bars and KRX Gold Market"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Korea",
+      "url": "https://www.bok.or.kr/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Commission",
+      "url": "https://www.fsc.go.kr/",
+      "note": "Supervision is carried out by the Financial Supervisory Service."
+    },
+    "insuranceComplaints": {
+      "name": "Financial Supervisory Service (complaints and dispute mediation)",
+      "url": "https://www.fss.or.kr/"
+    },
+    "pensionScheme": {
+      "name": "National Pension Service",
+      "url": "https://www.nps.or.kr/"
+    },
+    "oldAgeAllowance": {
+      "name": "Basic Pension (Ministry of Health and Welfare)",
+      "url": "https://basicpension.mohw.go.kr/"
+    },
+    "publicHealthCover": {
+      "name": "National Health Insurance Service",
+      "url": "https://www.nhis.or.kr/"
+    },
+    "depositInsurance": {
+      "name": "Korea Deposit Insurance Corporation",
+      "url": "https://www.kdic.or.kr/"
+    },
+    "statistics": {
+      "name": "Ministry of Data and Statistics (formerly Statistics Korea)",
+      "url": "https://mods.go.kr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

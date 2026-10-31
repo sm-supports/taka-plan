@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 1,
+  "code": "PK",
+  "iso3": "PAK",
+  "nameEn": "Pakistan",
+  "nameNative": "پاکستان",
+  "region": "south_asia",
+  "languages": [
+    "ur",
+    "pa",
+    "en",
+    "ps",
+    "sd"
+  ],
+  "currency": {
+    "code": "PKR",
+    "symbol": "Rs",
+    "decimals": 2,
+    "compact": "lakh_crore",
+    "usdRate": {
+      "value": 276.672,
+      "status": "sourced",
+      "sourceName": "Trading Economics USD/PKR",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/currency",
+      "asOf": "2026-10-30",
+      "note": "Market rate; State Bank of Pakistan site blocked automated access. World Bank 2025 average 281.1"
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.103,
+      "status": "sourced",
+      "sourceName": "Pakistan Bureau of Statistics, Monthly Review on Price Indices, September 2026",
+      "sourceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Monthly-Review-September2026.pdf",
+      "asOf": "2026-09-30",
+      "note": "National CPI year-on-year; urban 10.1%, rural 10.5%"
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "State Bank of Pakistan 5-7% target; CPI 10.3% (Sep 2026); 5-year CPI average above 10%",
+      "sourceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Monthly-Review-September2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Above the 5-7% target because inflation has missed it in most recent years, but below the 5-year average that includes the 2023 spike."
+    },
+    "policy_rate": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "Trading Economics (State Bank of Pakistan decision of 26 October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/interest-rate",
+      "asOf": "2026-10-26",
+      "note": "Raised 50 basis points from 11.5%; secondary source because sbp.org.pk blocked automated access"
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "sbp.org.pk (minimum savings deposit rate rule and deposit rate statistics) blocked automated access; no other current source found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched State Bank of Pakistan deposit rate statistics; site blocked automated access and no other current source found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched State Bank of Pakistan deposit rate statistics; site blocked automated access and no other current source found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical rate for bank recurring deposit schemes found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0575,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=PK",
+      "asOf": "2021-12-31",
+      "note": "Latest World Bank value is for 2021 and is outdated; current State Bank of Pakistan figure not reachable"
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.1212,
+      "status": "sourced",
+      "sourceName": "National Savings Pakistan, profit rates w.e.f. 21 October 2026",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-21",
+      "note": "Regular Income Certificate (5 years, monthly profit); Behbood and Pensioners' Benefit accounts 12.96%; Special Savings Certificates (3 years) 12% to 12.8%"
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "State Bank of Pakistan auction results blocked automated access; secondary sources showed only stale 3-month yields."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1267,
+      "status": "sourced",
+      "sourceName": "Investing.com Pakistan government bond yields",
+      "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds",
+      "asOf": "2026-10-30",
+      "note": "Secondary market yield; secondary source"
+    },
+    "tbond_10y_rate": {
+      "value": 0.1279,
+      "status": "sourced",
+      "sourceName": "Investing.com Pakistan government bond yields",
+      "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds",
+      "asOf": "2026-10-30",
+      "note": "Secondary market yield; Trading Economics also shows 12.79%"
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Pakistan, Individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/pakistan/individual/income-determination",
+      "asOf": "2026-08-24",
+      "note": "Final tax 20% on bank deposit interest for individuals with total income up to PKR 5 million; doubled for inactive taxpayers"
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "National Savings Pakistan, profit rates w.e.f. 21 October 2026",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-21",
+      "note": "15% withholding for filers, 30% for non-filers; PwC lists 15% final tax on interest from other sources"
+    },
+    "deposit_insurance_limit": {
+      "value": 500000,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Deposit insurance (Deposit Protection Corporation)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Deposit_insurance",
+      "asOf": "2026-10-31",
+      "note": "Rs 500,000 per depositor per bank; Deposit Protection Corporation site blocked automated access, so check for a later increase"
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate found; State Bank of Pakistan site blocked automated access."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "KSE-100 index 166,409 on 2026-10-30 versus about 40,000 ten years earlier; all-time high 191,033 in January 2026",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case allows for long flat spells like 2017-2020."
+    },
+    "equity_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "KSE-100 10-year record (about 15% a year in price) and after-tax safe rate about 10%",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Capped at the after-tax safe rate (about 10%) plus 3 points despite the strong 10-year index record."
+    },
+    "equity_return_high": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "KSE-100 10-year record plus dividends",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case close to the 10-year price trend."
+    },
+    "gold_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend and rupee depreciation",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with modest rupee depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend plus expected rupee depreciation",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/currency",
+      "asOf": "2026-10-31",
+      "note": "About 4% dollar gold trend plus about 6% expected rupee depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend plus faster rupee depreciation",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/currency",
+      "asOf": "2026-10-31",
+      "note": "High case with strong gold and faster depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "National Savings short-term certificates 11.12% less 15% tax",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "Low case: short-term certificates after tax at lower future rates."
+    },
+    "fixed_income_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "National Savings Regular Income Certificate 12.12% less 15% tax",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "Base case: 5-year government savings certificates after filer tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Behbood certificates 12.96% less 15% tax",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "High case using the senior and pensioner schemes."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for an industry-wide life claim settlement ratio from the Securities and Exchange Commission of Pakistan; none found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in Pakistan but no published premium tables or regulator premium data were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credible published typical private hospital stay cost found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age found."
+    },
+    "oop_health_share": {
+      "value": 0.529,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PK",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "PBS health CPI group +7.9% year on year (Sep 2026) with headline 10.3%",
+      "sourceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Monthly-Review-September2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Medical costs track or exceed headline inflation, so we plan above the 8% general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "PBS education CPI group +7.8% year on year (Sep 2026)",
+      "sourceUrl": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Monthly-Review-September2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Private school and university fees have risen faster than the 8% general assumption over time."
+    },
+    "life_expectancy": {
+      "value": 67.8,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN (UN WPP)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PK",
+      "asOf": "2024-12-31",
+      "note": "Men 65.5, women 70.3"
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 65,
+            "total": 13.9,
+            "men": 12.9,
+            "women": 14.8,
+            "projected": 14.5
+          },
+          {
+            "age": 80,
+            "total": 5.8,
+            "men": 5.4,
+            "women": 6.1,
+            "projected": 6.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 (via Our World in Data)",
+      "sourceUrl": "https://ourworldindata.org/grapher/remaining-life-expectancy-at-different-ages?country=~PAK",
+      "asOf": "2025-07-01",
+      "note": "2025 estimates; projected = 2050 medium variant; ages 60 and 70 not published in this series"
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.6
+          },
+          {
+            "year": 2040,
+            "value": 11.8
+          },
+          {
+            "year": 2065,
+            "value": 7.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 old-age dependency ratio (via Our World in Data)",
+      "sourceUrl": "https://ourworldindata.org/grapher/age-dependency-ratio-old?country=~PAK",
+      "asOf": "2025-07-01",
+      "note": "100 / old-age dependency ratio (7.3 in 2025, 8.5 in 2040, 13.4 in 2065, medium variant)"
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Employees' Old-Age Benefits Institution",
+      "sourceUrl": "https://www.eobi.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension at 60 for men, 55 for women, with 15 years of contributions"
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not reach a primary or secondary page stating the civil servants' superannuation age (Civil Servants Act 1973)."
+    },
+    "retirement_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "National Savings short-term certificates after 15% tax",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "Low case if savings rates fall toward the inflation target."
+    },
+    "retirement_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "National Savings 1-year short-term certificate 11.72% less 15% tax (9.96%)",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "Kept below the after-tax 1-year government savings rate because bill and deposit rates were not reachable."
+    },
+    "retirement_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Behbood and Pensioners' Benefit accounts 12.96% less 15% tax",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "High case using the scheme reserved for seniors and pensioners."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Balanced mix of savings certificates and KSE-100 equity",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Balanced mix: half fixed income (10%), half equity (13%)",
+      "sourceUrl": "https://savings.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "Close to the average of the base fixed-income and equity cases, rounded down."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Balanced mix with high-case equity",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age pension found; the Benazir Income Support Programme is household income support, not an old-age pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age pension found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "WageIndicator Pakistan (Standing Orders Ordinance 1968, S.O. 12)",
+      "sourceUrl": "https://wageindicator.org/en-pk/work-in-pakistan/labour-law/contracts-and-dismissals/notice-and-severance/",
+      "asOf": "2026-04-03",
+      "note": "30 days' wages per completed year of service; not paid on dismissal for misconduct"
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Employees' Old-Age Benefits Institution",
+      "sourceUrl": "https://www.eobi.gov.pk/",
+      "asOf": "2026-10-31",
+      "note": "EOBI: employer 5% plus employee 1% of minimum wage; pension 2% of average wage per year of contribution after 15 years; minimum Rs 11,500 a month from January 2025; women from 55; raised by government decision, not indexed"
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "بچت کھاتہ",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "میعادی ڈپازٹ",
+      "localNameEn": "Term deposit"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "میعادی ڈپازٹ",
+      "localNameEn": "Term deposit"
+    },
+    "dps": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "Some banks offer monthly recurring savings plans"
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "قومی بچت سرٹیفکیٹ",
+      "localNameEn": "Regular Income Certificate (National Savings)",
+      "note": "5-year certificate with monthly profit; Behbood Savings Certificates for seniors and widows",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "ٹریژری بل",
+      "localNameEn": "Market Treasury Bill",
+      "note": "Individuals can buy through bank investor portfolio securities accounts"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Pakistan Investment Bond",
+      "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Pakistan Investment Bond",
+      "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "میوچل فنڈ",
+      "localNameEn": "Mutual fund",
+      "note": "Open-end equity and index funds regulated by the Securities and Exchange Commission of Pakistan"
+    },
+    "gold": {
+      "available": true,
+      "localName": "سونا",
+      "localNameEn": "Gold",
+      "note": "Sold mainly as jewellery and tola bars"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "State Bank of Pakistan",
+      "url": "https://www.sbp.org.pk/"
+    },
+    "insuranceRegulator": {
+      "name": "Securities and Exchange Commission of Pakistan",
+      "url": "https://www.secp.gov.pk/"
+    },
+    "insuranceComplaints": {
+      "name": "Federal Insurance Ombudsman",
+      "url": "https://www.fio.gov.pk/"
+    },
+    "pensionScheme": {
+      "name": "Employees' Old-Age Benefits Institution",
+      "url": "https://www.eobi.gov.pk/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Sehat Sahulat Program",
+      "url": "https://www.pmhealthprogram.gov.pk/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Protection Corporation",
+      "url": "https://www.dpc.org.pk/"
+    },
+    "statistics": {
+      "name": "Pakistan Bureau of Statistics",
+      "url": "https://www.pbs.gov.pk/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 1,
+  "code": "ID",
+  "iso3": "IDN",
+  "nameEn": "Indonesia",
+  "nameNative": "Indonesia",
+  "region": "east_asia_pacific",
+  "languages": [
+    "id",
+    "jv",
+    "su",
+    "en"
+  ],
+  "currency": {
+    "code": "IDR",
+    "symbol": "Rp",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 17985,
+      "status": "sourced",
+      "sourceName": "Bank Indonesia Board of Governors press release, 21 October 2026",
+      "sourceUrl": "https://www.bi.go.id/en/publikasi/ruang-media/news-release/Pages/sp_2823326.aspx",
+      "asOf": "2026-10-20",
+      "note": "Rupiah at Rp 17,985 per US dollar on 20 October 2026."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0328,
+      "status": "sourced",
+      "sourceName": "Bank Indonesia Board of Governors press release (BPS CPI)",
+      "sourceUrl": "https://www.bi.go.id/en/publikasi/ruang-media/news-release/Pages/sp_2823326.aspx",
+      "asOf": "2026-09-30",
+      "note": "CPI 3.28% year on year in September 2026 (core 2.84%), per BPS release of 1 October 2026."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank Indonesia inflation target 2.5% plus or minus 1% (2026-2027); 2021-2025 CPI average about 2.7%",
+      "sourceUrl": "https://www.bi.go.id/en/publikasi/ruang-media/news-release/Pages/sp_2823326.aspx",
+      "asOf": "2026-10-31",
+      "note": "Target midpoint is 2.5%, but the 5-year average and the weak rupiah argue for planning slightly above it at 3%."
+    },
+    "policy_rate": {
+      "value": 0.0575,
+      "status": "sourced",
+      "sourceName": "Bank Indonesia Board of Governors press release, 21 October 2026",
+      "sourceUrl": "https://www.bi.go.id/en/publikasi/ruang-media/news-release/Pages/sp_2823326.aspx",
+      "asOf": "2026-10-21",
+      "note": "BI-Rate held at 5.75%; deposit facility raised to 5.00%, lending facility 6.50%."
+    },
+    "savings_account_rate": {
+      "value": 0.005,
+      "status": "sourced",
+      "sourceName": "Industry.co.id survey of large-bank savings rates",
+      "sourceUrl": "https://www.industry.co.id/read/155665/bunga-tabungan-bank-2026-perbandingan-konvensional-vs-digital-mana-paling-untung",
+      "asOf": "2026-09-09",
+      "note": "Regular savings accounts at large state and private banks pay about 0.5-1% a year, most at 0.5%; interest is taxed 20% at source."
+    },
+    "fdr_3m_rate": {
+      "value": 0.026,
+      "status": "sourced",
+      "sourceName": "Fortune Indonesia survey of the four largest banks' deposit rates",
+      "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg",
+      "asOf": "2026-10-27",
+      "note": "3-month rupiah deposit: 2.25-3.00% across the four largest banks (mean about 2.6%); BI data for all banks show 5.8% for new 3-month deposits in August 2026, lifted by special rates."
+    },
+    "fdr_1y_rate": {
+      "value": 0.026,
+      "status": "sourced",
+      "sourceName": "Fortune Indonesia survey of the four largest banks' deposit rates",
+      "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg",
+      "asOf": "2026-10-27",
+      "note": "12-month rupiah deposit: 2.50-3.00% across the four largest banks (mean about 2.6%). LPS guarantees only deposits paying up to 3.75%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks sell monthly time-savings plans (tabungan berjangka), but no typical published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0266,
+      "status": "sourced",
+      "sourceName": "OJK, weighted average rupiah third-party funds rate (via Infobank)",
+      "sourceUrl": "https://infobanknews.com/ojk-nilai-tren-penurunan-suku-bunga-kredit-bank-berlanjut",
+      "asOf": "2026-03-31",
+      "note": "Weighted average across current, savings and time deposits; World Bank FR.INR.DPST (time deposits) was 5.41% for 2025. Rates rose after BI hikes from June 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.058,
+      "status": "sourced",
+      "sourceName": "Kontan: Government issues ORI029 retail bond",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-01-26",
+      "note": "ORI029 retail government bond: 3-year 5.45%, 6-year 5.80% fixed; Rp 1 million minimum. The July 2026 ORI030 reportedly paid about 6.9-7.0% (not confirmed from the official notice)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.06555,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Indonesia 3-month bill yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/3-month-bill-yield",
+      "asOf": "2026-10-30",
+      "note": "Primary DJPPR auction results were not reachable."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0752,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Indonesia 5-year government bond yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/government-bond-yield",
+      "asOf": "2026-10-30"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0764,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Indonesia 10-year government bond yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/government-bond-yield",
+      "asOf": "2026-10-30"
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Indonesia individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/indonesia/individual/income-determination",
+      "asOf": "2026-06-11",
+      "note": "Final income tax of 20% on interest from savings and time deposits."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Bareksa: ORI030 schedule and terms",
+      "sourceUrl": "https://www.bareksa.com/berita/sbn/2026-06-29/jadwal-lengkap-ori030-kupon-diumumkan-3-juli-penawaran-dibuka-6-juli-2026",
+      "asOf": "2026-06-29",
+      "note": "Retail government bond (ORI/SR) coupons carry 10% final income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 2000000000,
+      "status": "sourced",
+      "sourceName": "Industry.co.id, citing LPS deposit guarantee",
+      "sourceUrl": "https://www.industry.co.id/read/152894/bunga-deposito-juli-2026-perbandingan-bri-bni-mandiri-bca-mana-paling-untung",
+      "asOf": "2026-07-10",
+      "note": "LPS guarantees up to Rp 2 billion per depositor per bank, only if the deposit rate does not exceed the LPS guarantee rate (3.75% for commercial banks to 31 January 2027). The LPS site was not reachable."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.21,
+      "status": "sourced",
+      "sourceName": "Cermati, citing Bank Indonesia credit card rate cap",
+      "sourceUrl": "https://www.cermati.com/artikel/suku-bunga-kartu-kredit-di-indonesia",
+      "asOf": "2025-10-20",
+      "note": "Bank Indonesia cap of 1.75% a month (about 21% a year) since 1 July 2021 (Kompas TV, 26 May 2021)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Retail government bond ORI029 5.8% less 10% tax (5.2%); IDX record",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-10-31",
+      "note": "Low case reflecting the IDX Composite's weak decade in local currency."
+    },
+    "equity_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Retail government bond ORI029 5.8% less 10% tax (5.2%); IDX record",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-10-31",
+      "note": "After-tax safe rate of about 5.2% plus a 3.3-point premium, kept modest because the main index's 10-year record is weak."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Retail government bond ORI029 5.8% less 10% tax (5.2%); IDX record",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-10-31",
+      "note": "High case close to nominal GDP growth plus dividends."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (rupiah per USD, 2025 average 16,478; 17,985 on 20 Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ID",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with modest rupiah weakening."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (rupiah per USD, 2025 average 16,478; 17,985 on 20 Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ID",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4-5% plus about 3% a year of rupiah depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (rupiah per USD, 2025 average 16,478; 17,985 on 20 Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ID",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and faster rupiah depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.021,
+      "status": "assumption",
+      "sourceName": "Large-bank 1-year deposit 2.6% less 20% final tax",
+      "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits only, after the 20% final tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Mix of deposits and retail government bonds after tax",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-10-31",
+      "note": "Base case: about two thirds retail government bonds (5.2% after tax) and one third deposits (2.1%)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Government bond yields 7.5-7.6% less 10% tax",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in current government bond yields after the 10% final tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "OJK insurance statistics were not reachable and no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in Indonesia, but no published per-1,000-rupiah premium rates by age were found within this research pass."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health premium table by age was found; most people are covered by JKN (BPJS Kesehatan)."
+    },
+    "oop_health_share": {
+      "value": 0.3108,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ID",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BPS CPI; Bank Indonesia inflation target 2.5% plus or minus 1%",
+      "sourceUrl": "https://www.bi.go.id/en/publikasi/ruang-media/news-release/Pages/sp_2823326.aspx",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI figure was retrieved; we plan with headline plus 1.5 points for private hospital and drug costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BPS CPI; Bank Indonesia inflation target 2.5% plus or minus 1%",
+      "sourceUrl": "https://www.bi.go.id/en/publikasi/ruang-media/news-release/Pages/sp_2823326.aspx",
+      "asOf": "2026-10-31",
+      "note": "No education CPI figure was retrieved; we plan with headline plus 1 point for private school fees."
+    },
+    "life_expectancy": {
+      "value": 71.288,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ID",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 71.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.1,
+            "men": 16.5,
+            "women": 19.6
+          },
+          {
+            "age": 65,
+            "total": 14.6,
+            "men": 13.2,
+            "women": 15.8
+          },
+          {
+            "age": 70,
+            "total": 11.3,
+            "men": 10.3,
+            "women": 12.3
+          },
+          {
+            "age": 80,
+            "total": 6.3,
+            "men": 5.8,
+            "women": 6.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/indonesia/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.0
+          },
+          {
+            "year": 2040,
+            "value": 5.6
+          },
+          {
+            "year": 2065,
+            "value": 3.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/indonesia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 11.06 (2025, World Bank), 18.0 (2040) and 28.6 (2065, populationpyramid.net/indonesia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 59,
+      "status": "sourced",
+      "sourceName": "Wikipedia: Retirement age (Indonesia), citing PP 45/2015",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2025-01-01",
+      "note": "Jaminan Pensiun age started at 56 in 2015 and rises one year every three years (59 from 2025, 60 from 2028) to 65 in 2043; same for men and women. JHT lump sum at 56."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servant (ASN) retirement ages could not be confirmed from a reachable official or secondary page in this pass."
+    },
+    "retirement_return_low": {
+      "value": 0.021,
+      "status": "assumption",
+      "sourceName": "Large-bank 1-year deposit 2.6% less 20% final tax",
+      "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposits only after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "3-month government bill 6.55% less 10% tax (5.9%); retail bonds 5.2% after tax",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case below the after-tax government bill rate, for a mix of retail government bonds and deposits."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Retail government bonds and bills after tax",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "High case mostly in government bills and retail bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Retail government bond ORI029 5.8% less 10% tax (5.2%); IDX record",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if equities match bonds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Retail government bond ORI029 5.8% less 10% tax (5.2%); IDX record",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half equity at 8.5% and half fixed income at 5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Retail government bond ORI029 5.8% less 10% tax (5.2%); IDX record",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun",
+      "asOf": "2026-10-31",
+      "note": "High case with the equity high case."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Indonesia has no universal non-contributory old-age pension; poor elderly receive means-tested household aid (PKH elderly component, ATENSI), but current amounts could not be confirmed from a reachable source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No universal social pension; eligibility rules for the PKH elderly component could not be confirmed from a reachable source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Severance (pesangon) on retirement exists under Government Regulation 35/2021 (months of wages by years of service plus a long-service award), but no reachable source was read in this pass and the capped formula does not map cleanly to days per year."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 59,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "BPJS Ketenagakerjaan, Jaminan Pensiun for wage earners",
+      "sourceUrl": "https://www.bpjsketenagakerjaan.go.id/penerima-upah.html",
+      "asOf": "2026-01-01",
+      "note": "Jaminan Pensiun: 2% employer plus 1% employee on wages up to Rp 10,547,400; monthly pension after 15 years of contributions, Rp 411,400 to 4,932,300 a month in 2026 (limits raised yearly). Pension age 59 from 2025 (Wikipedia, PP 45/2015). Separate JHT savings: 3.7% employer plus 2% employee."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Tabungan",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.industry.co.id/read/155665/bunga-tabungan-bank-2026-perbandingan-konvensional-vs-digital-mana-paling-untung"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Deposito berjangka",
+      "localNameEn": "Time deposit (3 months)",
+      "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Deposito berjangka",
+      "localNameEn": "Time deposit (12 months)",
+      "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Tabungan berjangka",
+      "localNameEn": "Time-savings plan",
+      "note": "Fixed monthly deposits for a set term; offered by most banks."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Obligasi Negara Ritel (ORI) / Sukuk Ritel (SR)",
+      "localNameEn": "Retail government bonds",
+      "note": "Sold online several times a year from Rp 1 million; ORI is tradable, SR is sharia-compliant; coupon tax 10%.",
+      "sourceUrl": "https://investasi.kontan.co.id/news/pemerintah-terbitkan-ori029-tawarkan-kupon-tetap-545-580-per-tahun"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Surat Perbendaharaan Negara (SPN)",
+      "localNameEn": "Treasury bills",
+      "note": "Sold at auction; retail investors buy through brokers or bank secondary markets.",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/3-month-bill-yield"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Surat Utang Negara (SUN)",
+      "localNameEn": "Government bonds",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/government-bond-yield"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Surat Utang Negara (SUN)",
+      "localNameEn": "Government bonds",
+      "sourceUrl": "https://tradingeconomics.com/indonesia/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Reksa dana saham / reksa dana indeks",
+      "localNameEn": "Equity or index mutual fund",
+      "note": "Regulated by OJK; widely sold online from small amounts."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Emas batangan",
+      "localNameEn": "Gold bars",
+      "note": "Gold bars and coins are freely bought; also sold in small grams via pawnshop and bank gold savings."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank Indonesia",
+      "url": "https://www.bi.go.id/"
+    },
+    "insuranceRegulator": {
+      "name": "Otoritas Jasa Keuangan (OJK)",
+      "url": "https://www.ojk.go.id/"
+    },
+    "insuranceComplaints": {
+      "name": "OJK consumer complaints (Kontak OJK 157)",
+      "url": "https://kontak157.ojk.go.id/"
+    },
+    "pensionScheme": {
+      "name": "BPJS Ketenagakerjaan (Jaminan Pensiun and Jaminan Hari Tua)",
+      "url": "https://www.bpjsketenagakerjaan.go.id/"
+    },
+    "oldAgeAllowance": {
+      "name": "Kementerian Sosial (elderly social assistance)",
+      "url": "https://kemensos.go.id/",
+      "note": "No universal social pension; means-tested aid only."
+    },
+    "publicHealthCover": {
+      "name": "BPJS Kesehatan (Jaminan Kesehatan Nasional)",
+      "url": "https://www.bpjs-kesehatan.go.id/"
+    },
+    "depositInsurance": {
+      "name": "Lembaga Penjamin Simpanan (LPS)",
+      "url": "https://www.lps.go.id/"
+    },
+    "statistics": {
+      "name": "Badan Pusat Statistik (BPS)",
+      "url": "https://www.bps.go.id/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}
