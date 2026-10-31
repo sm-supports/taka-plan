@@ -10,7 +10,7 @@ const COUNTS = ["rent", "food", "utilities", "transport", "school", "parents", "
 
 export function StepEssentials({ profile, setProfile, validation }: Onboarding) {
   const { t } = useT();
-  const { taka } = useFormat();
+  const { money } = useFormat();
   const essentials = typeof profile.essentials === "number" ? profile.essentials : null;
   const takeHome = typeof profile.takeHome === "number" ? profile.takeHome : null;
   const showError = essentials !== null && !validation.ok && validation.error === "positiveAmount";
@@ -24,7 +24,7 @@ export function StepEssentials({ profile, setProfile, validation }: Onboarding) 
         value={essentials}
         onChange={(n) => setProfile({ essentials: n ?? undefined })}
         label={t("onboarding.step.3.label")}
-        hint={takeHome !== null ? t("onboarding.step.3.takeHomeReminder", { amount: taka(takeHome) }) : undefined}
+        hint={takeHome !== null ? t("onboarding.step.3.takeHomeReminder", { amount: money(takeHome) }) : undefined}
         placeholder={t("onboarding.step.3.placeholder")}
         error={showError ? t("onboarding.validation.positiveAmount") : undefined}
         autoFocus
@@ -32,7 +32,7 @@ export function StepEssentials({ profile, setProfile, validation }: Onboarding) 
       {showWarning && <Notice tone="amber">{t("onboarding.validation.essentialsAboveIncome")}</Notice>}
       {leftOver !== null && !showWarning && (
         <p className="text-sm font-medium text-text-muted" aria-live="polite">
-          {t("onboarding.step.3.leftOver", { amount: taka(leftOver) })}
+          {t("onboarding.step.3.leftOver", { amount: money(leftOver) })}
         </p>
       )}
       <section className="rounded-card border border-line bg-surface-muted p-4" aria-labelledby="counts-title">

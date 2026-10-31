@@ -1,9 +1,9 @@
 "use client";
-// Computes the plan from store + rates on the client; never throws (engine stubs may).
+// Computes the plan from store + country-overlaid rates on the client; never throws (engine stubs may).
 import { useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
 import { computePlan, profileToPlanInput, type EngineError, type ISODate, type M1Input, type Plan } from "@taka/engine";
-import { useRates } from "../rates/useRates";
+import { useCountryRates } from "../country/useCountry";
 import { selectPlanOverrides, selectProfile } from "./selectors";
 import { useTakaStore } from "./store";
 import type { TakaData } from "./types";
@@ -31,7 +31,7 @@ export function usePlan(): UsePlanResult {
   // (stable references until they change) and derive the overrides from them.
   const data = useTakaStore(useShallow(pickData));
   const overrides = useMemo(() => selectPlanOverrides(data), [data]);
-  const { snapshot } = useRates();
+  const snapshot = useCountryRates();
   // Fixed per mount so a midnight tick does not re-render the whole plan.
   const [today] = useState(todayISO);
 

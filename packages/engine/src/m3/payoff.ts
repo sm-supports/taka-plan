@@ -1,4 +1,4 @@
-import { roundMoney } from "../money";
+import { roundMoney, type RoundSteps } from "../money";
 import { assertInput, isFiniteNumber, type Money } from "../types";
 import type { DebtSummary, PayoffPlan } from "./types";
 
@@ -42,8 +42,10 @@ function compareTargets(strategy: PayoffStrategy): (a: OpenDebt, b: OpenDebt) =>
  * Interest is accumulated unrounded and rounded once ("interest") at the end.
  * If the debts are not cleared within `maxMonths`, `months` = maxMonths and
  * `order` lists only the debts cleared so far.
+ * `steps` = the currency's rounding steps (`roundingFor(rates)`); omitted = taka steps.
  */
-export function simulatePayoff(debts: DebtSummary[], extraMonthly: Money, strategy: PayoffStrategy, maxMonths = 600): PayoffPlan {
+export function simulatePayoff(debts: DebtSummary[], extraMonthly: Money, strategy: PayoffStrategy, maxMonths = 600, steps?: RoundSteps): PayoffPlan {
+  const R = steps;
   assertInput(Array.isArray(debts), "debts must be an array", { debts });
   assertInput(isFiniteNumber(extraMonthly) && extraMonthly >= 0, "extraMonthly must be a finite amount ≥ 0", { extraMonthly });
   assertInput(Number.isInteger(maxMonths) && maxMonths > 0, "maxMonths must be a positive integer", { maxMonths });
@@ -95,5 +97,5 @@ export function simulatePayoff(debts: DebtSummary[], extraMonthly: Money, strate
     open = open.filter((d) => d.balance >= CLEARED_BELOW);
   }
 
-  return { order, months, totalInterest: roundMoney(totalInterest, "interest") };
+  return { order, months, totalInterest: roundMoney(totalInterest, "interest", R) };
 }

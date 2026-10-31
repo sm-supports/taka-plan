@@ -23,7 +23,7 @@ export function PlanSummary({ plan }: { plan: Plan }) {
             <li>{t("plan.summary.monthsToFull", { months: f.months(monthsToEmergencyFull) })}</li>
           </>
         )}
-        {hasGoals ? <li>{goalsShortfall > 0 ? t("plan.summary.goalsShortfall", { amount: f.taka(goalsShortfall) }) : t("plan.summary.noShortfall")}</li> : <li>{t("plan.emptyGoals")}</li>}
+        {hasGoals ? <li>{goalsShortfall > 0 ? t("plan.summary.goalsShortfall", { amount: f.money(goalsShortfall) }) : t("plan.summary.noShortfall")}</li> : <li>{t("plan.emptyGoals")}</li>}
       </ul>
     </section>
   );

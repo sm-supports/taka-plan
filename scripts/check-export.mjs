@@ -41,6 +41,11 @@ const LOCALES = ["bn", "en", "hi", "ur", "ar", "es", "fr", "pt", "id", "zh", "ru
 const PAGES = ["", "/plan", "/drafts", "/m1", "/m3", "/m4", "/m5", "/about", "/start/1", "/start/2", "/start/3", "/start/4", "/start/5"];
 const required = ["index.html", "404.html", "admin.html", "admin/log.html", "admin/preview.html", "_headers", "_routes.json", "manifest.webmanifest", "sw.js"];
 for (const l of LOCALES) for (const p of PAGES) required.push(`${l}${p}.html`);
+// Country data (scripts/copy-country-data.mjs): once any profile is published, the picker's index must be too.
+const countryOut = path.join(out, "data/countries");
+if (existsSync(path.join(root, "public/data/countries")) || (existsSync(countryOut) && readdirSync(countryOut).some((n) => /^[A-Z]{2}\.json$/.test(n)))) {
+  required.push("data/countries/index.json");
+}
 for (const f of required) if (!existsSync(path.join(out, f))) problems.push(`missing dist/client/${f}`);
 
 // 4. Functions may only run for /api/*; everything else must stay static.

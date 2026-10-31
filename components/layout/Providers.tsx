@@ -1,6 +1,7 @@
 "use client";
-/** Client provider stack for a locale segment: i18n → rates → hydration gate. */
+/** Client provider stack for a locale segment: i18n → rates → country → hydration gate. */
 import type { ReactNode } from "react";
+import { CountryProvider } from "@/lib/country/provider";
 import type { Locale } from "@/lib/i18n/config";
 import { I18nProvider } from "@/lib/i18n/provider";
 import type { Dictionary } from "@/lib/i18n/types";
@@ -17,7 +18,9 @@ export function Providers({ locale, dict, children }: ProvidersProps) {
   return (
     <I18nProvider locale={locale} dict={dict}>
       <RatesProvider>
-        <HydrationGate>{children}</HydrationGate>
+        <CountryProvider>
+          <HydrationGate>{children}</HydrationGate>
+        </CountryProvider>
       </RatesProvider>
     </I18nProvider>
   );

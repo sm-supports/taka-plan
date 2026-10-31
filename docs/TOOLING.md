@@ -67,9 +67,23 @@ Set `WRANGLER_SEND_METRICS=false` to silence wrangler telemetry.
 ### Service worker strategy (`public/sw.js`)
 
 - `CACHE_VERSION` names the cache: `taka-<build id>-<SW_REVISION>`, where the build id comes from the worker's own URL (`/sw.js?v=…`) and `SW_REVISION` is a constant in `sw.js`. A new deploy registers a new worker URL and gets a fresh cache; `activate` deletes every other `taka-*` cache and calls `clients.claim()`. Bump `SW_REVISION` by hand whenever the precache list or a strategy changes.
-- **install**: precaches `/`, `/bn/plan`, `/en/plan`, `/manifest.webmanifest`, `/api/rates`. A failure skips that URL instead of failing the install.
+- **install**: precaches `/`, `/bn/plan`, `/en/plan`, `/manifest.webmanifest`, `/api/rates`, `/data/countries/index.json`. A failure skips that URL instead of failing the install.
 - **navigations**: network-first with a 3 s timeout, then the cached page, then the cached same-locale `/plan` shell. Loads with a search string are served but never stored.
-- `/_next/static/*`: cache-first (content-hashed, immutable). `/api/rates`: stale-while-revalidate. `/admin*` and `/api/admin*`: never intercepted, never cached.
+- `/_next/static/*`: cache-first (content-hashed, immutable). `/api/rates`: stale-while-revalidate. `/data/countries/*` and `/api/countries/*`: stale-while-revalidate keyed by the full URL. `/admin*` and `/api/admin*`: never intercepted, never cached.
+
+## Countries (runtime)
+
+| Piece | What it does |
+| --- | --- |
+| `scripts/copy-country-data.mjs` | First step of `npm run build`. Copies `packages/engine/src/data/countries/<CC>.json`, `index.json` and `_regions.json` (never `_global/`) to `public/data/countries/` (gitignored), minified; writes `index.json` from the profiles when the research left none (same mapping as the engine's `indexEntryFor`, kept in step by `lib/country/copy-country-data.test.ts`). No profile files: does nothing and removes a stale output. |
+| `public/_headers` | `/data/countries/*`: `public, max-age=3600, stale-while-revalidate=86400`. |
+| `scripts/check-export.mjs` | Requires `dist/client/data/countries/index.json` once any profile is published. |
+| `lib/country/bundled.ts` | Bundles `data/countries/BD.json` through `import.meta.glob` (matches nothing, without error, while the file is absent), else `FIXTURE_BD`. |
+| `lib/country/provider.tsx` | `<CountryProvider>` (inside `<RatesProvider>`, `components/layout/Providers.tsx`): for `store.country` takes the bundled BD profile (BD only), the localStorage copy `taka-plan.country.<CC>`, then `/data/countries/<CC>.json` and `/api/countries/<CC>` together (either may 404); the newest by `researchedAt`, then version, wins and is stored. `_regions.json` is optional (`taka-plan.country._regions`). Bangladesh is shown until a profile arrives and when the code has no data (`source: "fallback"`). |
+| `lib/country/useCountry.ts` | `useCountry()` → `{ code, profile, context, snapshot, loading, source, regions }`; `useCountryRates()` → the overlaid snapshot (`withCountry`) that `usePlan` and every calculator read. `useRates()` stays for the version and staleness badges. |
+| `lib/i18n/useFormat.ts` | `money()` and `parseMoney()` follow the country's currency (`formatMoney` / `parseMoneyInput` in the engine); `taka()` is always taka. |
+
+Try a country locally: put a profile in `packages/engine/src/data/countries/IN.json`, run `node scripts/copy-country-data.mjs` (`npm run dev` does not run it; `npm run build` does), and set `country` in the `taka-plan.v1` localStorage entry (until the picker lands).
 
 ### Bundle budget
 

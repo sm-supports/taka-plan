@@ -13,7 +13,7 @@ import { Card } from "@/components/ui/Card";
 import { ErrorCard } from "@/components/ui/ErrorCard";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
-import { useRates } from "@/lib/rates/useRates";
+import { useCountryRates } from "@/lib/country/useCountry";
 import { makeId, useTakaStore } from "@/lib/store/store";
 import { engineErrorKey, todayISO } from "@/components/calculators/m3/engineError";
 import { buildDemoM5Result, demoM5Input } from "./demo";
@@ -31,7 +31,7 @@ const FALLBACK_AGE = 30;
 export function M5Calculator({ demo = false }: M5CalculatorProps) {
   const { t, locale } = useT();
   const f = useFormat();
-  const { snapshot } = useRates();
+  const snapshot = useCountryRates();
   const [today] = useState(todayISO);
 
   const age = useTakaStore((s) => s.profile.age);
@@ -95,7 +95,7 @@ export function M5Calculator({ demo = false }: M5CalculatorProps) {
       {/* Headline: all goals together */}
       {computed.result && computed.result.goals.some((g) => g.valid) && (
         <Card>
-          <BigNumber label={t("m5.result.totalMonthly")} value={f.taka(computed.result.totalMonthly)} caption={t("m5.result.goalsCount", { n: f.number(computed.result.goals.filter((g) => g.valid).length) })} />
+          <BigNumber label={t("m5.result.totalMonthly")} value={f.money(computed.result.totalMonthly)} caption={t("m5.result.goalsCount", { n: f.number(computed.result.goals.filter((g) => g.valid).length) })} />
         </Card>
       )}
       {!computed.result && <ErrorCard title={t("m5.title")} message={t(computed.errorKey ?? "errors.generic")} />}
@@ -114,7 +114,7 @@ export function M5Calculator({ demo = false }: M5CalculatorProps) {
               <details className="rounded-card border border-line bg-surface">
                 <summary className="tap flex cursor-pointer items-center justify-between gap-3 px-4 py-3 text-base font-semibold text-text">
                   <span>
-                    {g.name} · {f.taka(g.cost, { compact: true })} · {f.number(g.years)} {t(g.years === 1 ? "common.unit.year" : "common.unit.years")}
+                    {g.name} · {f.money(g.cost, { compact: true })} · {f.number(g.years)} {t(g.years === 1 ? "common.unit.year" : "common.unit.years")}
                   </span>
                   <span className="text-sm font-medium text-brand-700">{t("common.button.edit")}</span>
                 </summary>

@@ -1,3 +1,4 @@
+import { roundingFor } from "../country/overlay";
 import { createExplain } from "../explain";
 import { roundDecimals, roundMoney, sum } from "../money";
 import type { RatesSnapshot } from "../rates";
@@ -56,6 +57,7 @@ function validate(input: M3Input): void {
  */
 export function computeDebtHealth(input: M3Input, rates: RatesSnapshot, today: ISODate): M3Result {
   validate(input);
+  const R = roundingFor(rates);
   const ex = createExplain(rates, today);
 
   // Policy rows. Thresholds are always recorded so "Why this number?" can show them.
@@ -85,9 +87,9 @@ export function computeDebtHealth(input: M3Input, rates: RatesSnapshot, today: I
 
   // "How much could I borrow?" scenario on the headroom.
   const maxLoanRaw = maxLoan(headroomRaw, scenario.annualRate, scenario.months);
-  const maxAffordableLoan = roundMoney(maxLoanRaw, "lump");
+  const maxAffordableLoan = roundMoney(maxLoanRaw, "lump", R);
   const scenarioEmiRaw = emi(maxAffordableLoan, scenario.annualRate, scenario.months);
-  const scenarioEmi = roundMoney(scenarioEmiRaw, "monthly");
+  const scenarioEmi = roundMoney(scenarioEmiRaw, "monthly", R);
 
   // Flags and the one-red rule.
   const rawFlags = buildFlags({ cards: input.cards, emiRatio, rawCapacity }, { cardUtilisationAmber, emiRatioRed });
@@ -100,23 +102,23 @@ export function computeDebtHealth(input: M3Input, rates: RatesSnapshot, today: I
   const debts: DebtSummary[] = [...input.loans.map(loanSummary), ...carriedCards.map(cardSummary)];
   const highInterestDebts = debts
     .filter((d) => d.annualRate > highInterestThreshold)
-    .map((d) => ({ ...d, minPayment: roundMoney(d.minPayment, "exact") }));
+    .map((d) => ({ ...d, minPayment: roundMoney(d.minPayment, "exact", R) }));
 
   // Payoff: avalanche vs snowball with the extra amount (default: headroom).
   const extraMonthly = input.extraMonthly ?? headroomRaw;
-  const avalanche = simulatePayoff(debts, extraMonthly, "avalanche");
-  const snowball = simulatePayoff(debts, extraMonthly, "snowball");
+  const avalanche = simulatePayoff(debts, extraMonthly, "avalanche", undefined, R);
+  const snowball = simulatePayoff(debts, extraMonthly, "snowball", undefined, R);
   const interestSavedRaw = Math.max(0, snowball.totalInterest - avalanche.totalInterest);
-  const interestSaved = roundMoney(interestSavedRaw, "interest");
+  const interestSaved = roundMoney(interestSavedRaw, "interest", R);
 
   // Explanation steps, in M3_STEP_IDS order.
-  const totalEmi = ex.step({ id: "m3.totalEmi", inputs: { emis: loanEmis, cardMinimums }, raw: totalEmiRaw, rounded: roundMoney(totalEmiRaw, "exact"), unit: "bdt" });
+  const totalEmi = ex.step({ id: "m3.totalEmi", inputs: { emis: loanEmis, cardMinimums }, raw: totalEmiRaw, rounded: roundMoney(totalEmiRaw, "exact", R), unit: "bdt" });
   ex.step({ id: "m3.emiRatio", inputs: { totalEmi, takeHome: input.takeHome }, raw: emiRatio, rounded: roundDecimals(emiRatio, 3), unit: "rate" });
   const emiCapacity = ex.step({
     id: "m3.capacity",
     inputs: { takeHome: input.takeHome, savings: input.savingsTarget, essentials: input.essentials, buffer: cashBuffer },
     raw: rawCapacity,
-    rounded: roundMoney(emiCapacityRaw, "monthly"),
+    rounded: roundMoney(emiCapacityRaw, "monthly", R),
     unit: "bdt",
   });
   const monthlyRate = scenario.annualRate / 12;
@@ -134,7 +136,7 @@ export function computeDebtHealth(input: M3Input, rates: RatesSnapshot, today: I
     totalEmi,
     emiRatio,
     emiCapacity,
-    headroom: roundMoney(headroomRaw, "monthly"),
+    headroom: roundMoney(headroomRaw, "monthly", R),
     maxAffordableLoan,
     scenario: { annualRate: scenario.annualRate, months: scenario.months, emi: scenarioEmi },
     flags,

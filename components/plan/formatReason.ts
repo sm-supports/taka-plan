@@ -34,7 +34,7 @@ function formatOne(kind: Kind, value: number | string, f: Formatters, t: TFuncti
   if (typeof value === "string") return kind === "instrument" ? t(`common.instrument.${value}`) : value;
   switch (kind) {
     case "taka":
-      return f.taka(value);
+      return f.money(value);
     case "percent":
       return f.percent(value);
     case "number":

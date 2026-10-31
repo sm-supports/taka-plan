@@ -20,7 +20,7 @@ import { Term } from "@/components/ui/Term";
 import { YesNo } from "@/components/ui/YesNo";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
-import { useRates } from "@/lib/rates/useRates";
+import { useCountryRates } from "@/lib/country/useCountry";
 import { useTakaStore } from "@/lib/store/store";
 import { calcErrorKey, type CalcErrorKey } from "../shared/engineError";
 import { DemoBanner, Field, FigureList, Section } from "../shared/Figures";
@@ -52,7 +52,7 @@ interface Outcome {
 export function EmergencyFundCalculator() {
   const { t } = useT();
   const f = useFormat();
-  const { snapshot } = useRates();
+  const snapshot = useCountryRates();
   const today = useToday();
   const demo = useDemoMode();
 
@@ -190,7 +190,7 @@ export function EmergencyFundCalculator() {
                 label={t("m1.result.monthlySaving")}
                 value={
                   <>
-                    {f.taka(result.monthlySaving)}
+                    {f.money(result.monthlySaving)}
                     <span className="ml-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
                   </>
                 }
@@ -202,9 +202,9 @@ export function EmergencyFundCalculator() {
             <Card>
               <FigureList
                 items={[
-                  { key: "target", label: t("m1.result.target"), value: f.taka(result.target), hint: t("m1.result.suggestedMonths", { months: f.months(result.suggestedMonths) }) },
-                  { key: "saved", label: t("m1.result.saved"), value: f.taka(result.saved) },
-                  { key: "gap", label: t("m1.result.gap"), value: f.taka(result.gap) },
+                  { key: "target", label: t("m1.result.target"), value: f.money(result.target), hint: t("m1.result.suggestedMonths", { months: f.months(result.suggestedMonths) }) },
+                  { key: "saved", label: t("m1.result.saved"), value: f.money(result.saved) },
+                  { key: "gap", label: t("m1.result.gap"), value: f.money(result.gap) },
                   { key: "covered", label: t("m1.result.monthsCovered"), value: f.months(result.monthsCovered) },
                   { key: "toFull", label: t("m1.input.buildMonths.label"), value: result.monthsToFull === null ? t("m1.result.full") : t("m1.result.monthsToFull", { months: f.months(result.monthsToFull) }) },
                 ]}
@@ -214,7 +214,7 @@ export function EmergencyFundCalculator() {
             <h3 className="text-base font-bold text-text">{t("m1.result.tiers.title")}</h3>
 
             <Card header={<span className="text-base font-semibold text-text">{t("m1.result.tiers.savingsAccount")}</span>}>
-              <div className="text-2xl font-bold tabular-nums text-brand-700">{f.taka(result.tiers.savingsAccount)}</div>
+              <div className="text-2xl font-bold tabular-nums text-brand-700">{f.money(result.tiers.savingsAccount)}</div>
               <p className="mt-1 text-sm text-text-muted">{t("m1.result.tiers.savingsAccountHint")}</p>
             </Card>
 
@@ -225,13 +225,13 @@ export function EmergencyFundCalculator() {
                 </span>
               }
             >
-              <div className="text-2xl font-bold tabular-nums text-brand-700">{f.taka(result.tiers.fdrLadder)}</div>
+              <div className="text-2xl font-bold tabular-nums text-brand-700">{f.money(result.tiers.fdrLadder)}</div>
               <p className="mt-1 text-sm text-text-muted">{t("m1.result.tiers.fdrLadderHint")}</p>
               <FigureList
                 className="mt-3"
                 items={[
-                  { key: "slice", label: t("m1.result.tiers.fdrPerSlice"), value: f.taka(result.tiers.fdrPerSlice), hint: t("m1.result.tiers.fdrSlices", { amount: f.taka(result.tiers.fdrPerSlice) }) },
-                  { key: "banks", label: t("m1.result.tiers.banksNeeded"), value: f.number(result.tiers.banksNeeded), hint: t("m1.result.tiers.banksNeededHint", { limit: f.taka(depositLimit, { compact: true }) }) },
+                  { key: "slice", label: t("m1.result.tiers.fdrPerSlice"), value: f.money(result.tiers.fdrPerSlice), hint: t("m1.result.tiers.fdrSlices", { amount: f.money(result.tiers.fdrPerSlice) }) },
+                  { key: "banks", label: t("m1.result.tiers.banksNeeded"), value: f.number(result.tiers.banksNeeded), hint: t("m1.result.tiers.banksNeededHint", { limit: f.money(depositLimit, { compact: true }) }) },
                 ]}
               />
             </Card>

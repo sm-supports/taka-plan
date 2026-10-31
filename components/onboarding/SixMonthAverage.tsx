@@ -16,7 +16,7 @@ export interface SixMonthAverageProps {
 
 export function SixMonthAverage({ onUse }: SixMonthAverageProps) {
   const { t } = useT();
-  const { taka, number } = useFormat();
+  const { money, number } = useFormat();
   const stored = useTakaStore((s) => s.m4.last6Incomes);
   const setM4 = useTakaStore((s) => s.setM4);
   const [open, setOpen] = useState(false);
@@ -59,7 +59,7 @@ export function SixMonthAverage({ onUse }: SixMonthAverageProps) {
       {average !== null && (
         <div className="mt-4 flex flex-col gap-2">
           <p className="text-base font-semibold text-brand-700" aria-live="polite">
-            {t("onboarding.step.2.average.result", { amount: taka(average) })}
+            {t("onboarding.step.2.average.result", { amount: money(average) })}
           </p>
           <Button
             fullWidth
@@ -70,7 +70,7 @@ export function SixMonthAverage({ onUse }: SixMonthAverageProps) {
               setOpen(false);
             }}
           >
-            {t("onboarding.step.2.average.use", { amount: taka(average) })}
+            {t("onboarding.step.2.average.use", { amount: money(average) })}
           </Button>
         </div>
       )}

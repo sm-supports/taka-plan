@@ -1,3 +1,4 @@
+import { roundingFor } from "../country/overlay";
 import { createExplain } from "../explain";
 import { clamp, roundDecimals, roundMoney, roundMoneyUp } from "../money";
 import { getRate, type RateKey, type RatesSnapshot } from "../rates";
@@ -61,6 +62,7 @@ function validate(input: M1Input): void {
 
 export function computeEmergencyFund(input: M1Input, rates: RatesSnapshot, today: ISODate): M1Result {
   validate(input);
+  const R = roundingFor(rates);
   const explain = createExplain(rates, today);
   const step = (id: M1StepId, inputs: Record<string, number | string>, raw: number, rounded: number, unit: "bdt" | "months" | "count") =>
     explain.step({ id, inputs, raw, rounded, unit });
@@ -95,19 +97,19 @@ export function computeEmergencyFund(input: M1Input, rates: RatesSnapshot, today
 
   // Step 2: target.
   const essentials = input.essentials;
-  const saved = roundMoney(input.liquidSavings, "exact");
+  const saved = roundMoney(input.liquidSavings, "exact", R);
   const targetRaw = essentials * months;
-  const target = step("m1.target", { essentials, months }, targetRaw, roundMoney(targetRaw, "exact"), "bdt");
+  const target = step("m1.target", { essentials, months }, targetRaw, roundMoney(targetRaw, "exact", R), "bdt");
 
   // Step 3: gap.
   const gapRaw = Math.max(0, target - saved);
-  const gap = step("m1.gap", { target, saved }, gapRaw, roundMoney(gapRaw, "exact"), "bdt");
+  const gap = step("m1.gap", { target, saved }, gapRaw, roundMoney(gapRaw, "exact", R), "bdt");
 
-  // Step 4: monthly saving over the build period. Rounded UP to ৳100 so the fund is full
+  // Step 4: monthly saving over the build period. Rounded UP to the monthly step (৳100 in taka) so the fund is full
   // within buildMonths (monthsToFull ≤ buildMonths); rounding to nearest could add a 13th month.
   const buildMonths = input.buildMonths ?? explain.use("emergency_build_months_default");
   const monthlyRaw = gap / buildMonths;
-  const monthlySaving = step("m1.monthly", { gap, buildMonths }, monthlyRaw, roundMoneyUp(monthlyRaw, "monthly"), "bdt");
+  const monthlySaving = step("m1.monthly", { gap, buildMonths }, monthlyRaw, roundMoneyUp(monthlyRaw, "monthly", R), "bdt");
 
   // Step 5: months already covered.
   const coveredRaw = saved / essentials;
@@ -117,15 +119,18 @@ export function computeEmergencyFund(input: M1Input, rates: RatesSnapshot, today
 
   // Steps 6–8: where to keep it. Tier 1 is exactly one month of essentials (whole taka, not ৳500 steps).
   const tier1Raw = essentials * TIER1_MONTHS;
-  const savingsAccount = step("m1.tier1", { essentials, months: TIER1_MONTHS }, tier1Raw, roundMoney(tier1Raw, "exact"), "bdt");
+  const savingsAccount = step("m1.tier1", { essentials, months: TIER1_MONTHS }, tier1Raw, roundMoney(tier1Raw, "exact", R), "bdt");
   const tier2Raw = Math.max(0, target - savingsAccount);
-  const fdrLadder = step("m1.tier2", { target, tier1: savingsAccount }, tier2Raw, roundMoney(tier2Raw, "exact"), "bdt");
-  const fdrPerSlice = roundMoney(fdrLadder / FDR_LADDER_SLICES, "lump");
+  const fdrLadder = step("m1.tier2", { target, tier1: savingsAccount }, tier2Raw, roundMoney(tier2Raw, "exact", R), "bdt");
+  const fdrPerSlice = roundMoney(fdrLadder / FDR_LADDER_SLICES, "lump", R);
   const limit = explain.use("deposit_insurance_limit");
   const banksRaw = target / limit;
   const banksNeeded = step("m1.banks", { target, tier2: fdrLadder, limit }, banksRaw, Math.max(1, Math.ceil(banksRaw)), "count");
   const largeBuffer = explain.use("emergency_large_buffer_threshold");
-  const sanchayapatraLayer = target > largeBuffer;
+  // The government-certificate third layer is a Bangladesh rule (Sanchayapatra); other countries skip it.
+  const country = rates.country;
+  const certificateLayerApplies = (country === undefined || country.code === "BD") && !(country?.unavailable.includes("sanchayapatra_5y") ?? false);
+  const sanchayapatraLayer = certificateLayerApplies && target > largeBuffer;
 
   const tiers: M1Tiers = { savingsAccount, fdrLadder, fdrPerSlice, banksNeeded, sanchayapatraLayer };
 
