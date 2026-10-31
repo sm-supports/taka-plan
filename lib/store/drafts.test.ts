@@ -22,6 +22,9 @@ describe("drafts", () => {
   it("empty answers are not saved", () => {
     expect(isEmptyAnswers(base)).toBe(true);
     expect(isEmptyAnswers({ ...base, country: "US" })).toBe(true);
+    // The defaults question 1 writes on its own are not answers.
+    expect(isEmptyAnswers({ ...base, profile: { age: 30, incomeType: "salaried", dependents: [], hasDebt: false } })).toBe(true);
+    expect(isEmptyAnswers({ ...base, profile: { age: 31, incomeType: "salaried", dependents: [], hasDebt: false } })).toBe(false);
     expect(upsertDraft([], base, "2026-10-31T00:00:00Z", () => "d1")).toEqual({ drafts: [], id: null });
   });
 

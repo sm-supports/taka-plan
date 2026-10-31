@@ -8,7 +8,6 @@ import { EMPTY_ANSWERS, INITIAL_DATA, type Draft, type DraftAnswers, type TakaDa
 import { PROFILE_DEFAULTS } from "@/lib/onboarding/validate";
 import {
   autoDraftLabel,
-  CLEAR_DEFAULTS_PATCH,
   cleanDraftName,
   currentHash,
   DRAFT_NAME_MAX,
@@ -109,8 +108,7 @@ describe("onboarding defaults only", () => {
     expect(onlyOnboardingDefaults(full)).toBe(false);
   });
 
-  it("the clearing patch leaves nothing to save", () => {
-    const cleared = { ...base, profile: { ...PROFILE_DEFAULTS, ...CLEAR_DEFAULTS_PATCH } };
-    expect(saveOutcome(stateWith(cleared))).toBe("none");
+  it("answers that are only the onboarding defaults leave nothing to save", () => {
+    expect(saveOutcome(stateWith({ ...base, profile: { ...PROFILE_DEFAULTS } }))).toBe("none");
   });
 });

@@ -6,9 +6,11 @@
  * - A draft is identified by a hash of its normalised answers: list item ids, empty values and the
  *   UI language are ignored, so the same answers typed again (or in another language) match.
  * - Saving answers whose hash already exists only refreshes that draft's updatedAt; it never adds.
- * - Empty answers (nothing filled in yet) are never saved.
+ * - Empty answers (nothing filled in yet, or only the defaults question 1 writes on its own:
+ *   age 30, salaried, no dependents, no debt) are never saved.
  * - At most MAX_DRAFTS are kept; the least recently updated is dropped first.
  */
+import { PROFILE_DEFAULTS } from "../onboarding/validate";
 import type { Draft, DraftAnswers } from "./types";
 
 export const MAX_DRAFTS = 20;
@@ -52,10 +54,21 @@ export function hashAnswers(a: DraftAnswers): string {
   return h1.toString(16).padStart(8, "0") + h2.toString(16).padStart(8, "0");
 }
 
-/** True when nothing has been answered yet (the country alone does not count). */
+/** The profile with the onboarding defaults removed (a default the user never changed is not an answer). */
+function withoutDefaults(profile: DraftAnswers["profile"]): DraftAnswers["profile"] {
+  const out: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(profile)) {
+    const d = (PROFILE_DEFAULTS as Record<string, unknown>)[k];
+    if (d !== undefined && JSON.stringify(v) === JSON.stringify(d)) continue;
+    out[k] = v;
+  }
+  return out as DraftAnswers["profile"];
+}
+
+/** True when nothing has been answered yet (the country, language and onboarding defaults alone do not count). */
 export function isEmptyAnswers(a: DraftAnswers): boolean {
-  const { locale: _l, country: _c, ...rest } = a;
-  return normalise(rest) === undefined;
+  const { locale: _l, country: _c, profile, ...rest } = a;
+  return normalise({ ...rest, profile: withoutDefaults(profile) }) === undefined;
 }
 
 /**

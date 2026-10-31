@@ -77,26 +77,13 @@ export function currentHash(s: TakaData): string | null {
   return isEmptyAnswers(a) ? null : hashAnswers(a);
 }
 
-const DEFAULT_KEYS = Object.keys(PROFILE_DEFAULTS) as Array<keyof typeof PROFILE_DEFAULTS>;
-
 /**
- * True when the only answers are the onboarding defaults the first question writes on its own
- * (age 30, salaried, no dependents, no debt) and nothing else: the user has typed nothing yet.
- * Opening a draft from that state must not keep those defaults as a draft of their own.
+ * True when the only answers are the onboarding defaults the first question writes on its own.
+ * The store treats those as empty (lib/store/drafts.ts isEmptyAnswers), so they never become a draft.
  */
 export function onlyOnboardingDefaults(a: DraftAnswers): boolean {
-  if (isEmptyAnswers(a)) return true;
-  const profile = a.profile as Record<string, unknown>;
-  for (const [k, v] of Object.entries(profile)) {
-    if (v === undefined) continue;
-    if (!(DEFAULT_KEYS as string[]).includes(k)) return false;
-    if (JSON.stringify(v) !== JSON.stringify(PROFILE_DEFAULTS[k as keyof typeof PROFILE_DEFAULTS])) return false;
-  }
-  return isEmptyAnswers({ ...a, profile: {} });
+  return isEmptyAnswers(a);
 }
-
-/** The profile patch that clears the onboarding defaults (setProfile merges, and undefined values are never saved). */
-export const CLEAR_DEFAULTS_PATCH: Partial<Record<keyof typeof PROFILE_DEFAULTS, undefined>> = Object.fromEntries(DEFAULT_KEYS.map((k) => [k, undefined]));
 
 /** "2026-10-31T09:12:00.000Z" → "2026-10-31" for useFormat().asOf. */
 export function isoDatePart(iso: string): string {

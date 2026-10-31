@@ -18,7 +18,7 @@ import { useT } from "@/lib/i18n/useT";
 import { useTakaStore } from "@/lib/store/store";
 import type { Draft } from "@/lib/store/types";
 import { DraftCard } from "./DraftCard";
-import { CLEAR_DEFAULTS_PATCH, currentAnswers, currentHash, draftLabel, isoDatePart, onlyOnboardingDefaults, saveOutcome } from "./label";
+import { currentAnswers, currentHash, draftLabel, isoDatePart, onlyOnboardingDefaults, saveOutcome } from "./label";
 import { showDraftToast } from "./toast";
 
 /** How long Open stays disabled after a tap (covers the navigation; a remount resets it anyway). */
@@ -49,7 +49,6 @@ export function DraftsList({ variant }: DraftsListProps) {
     if (opening !== null) return;
     setOpening(d.id);
     const store = useTakaStore.getState();
-    if (onlyOnboardingDefaults(currentAnswers(store))) store.setProfile(CLEAR_DEFAULTS_PATCH);
     const outcome = saveOutcome(useTakaStore.getState());
     store.openDraft(d.id);
     if (outcome === "new") showDraftToast(t("common.drafts.saved"));
