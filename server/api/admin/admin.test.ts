@@ -234,9 +234,15 @@ describe("admin routes", () => {
     expect(noDraft.changedKeys).toEqual([]);
     for (const p of noDraft.profiles) {
       expect(p.draft).toBeNull();
-      // Either a real summary or the engine-not-ready marker until the plan engine lands.
-      expect("error" in p.published ? p.published.error : typeof p.published.monthlyTotal).toMatch(/engine-not-ready|number/);
+      // Every module the sample profiles answer (M1–M7) is wired: a real summary, never an error marker.
+      expect("error" in p.published ? p.published.error : typeof p.published.monthlyTotal).toBe("number");
     }
+    // familyWithDebt answered the insurance check: its premium takes what the fund leaves, before the card.
+    const family = noDraft.profiles.find((p) => p.id === "familyWithDebt")?.published;
+    expect(family && !("error" in family) ? family.buckets.map((b) => [b.id, b.amount, b.instrument]) : family).toEqual([
+      ["emergency", 19200, "fdr_3m"],
+      ["insurance", 4800, "term_insurance"],
+    ]);
 
     await putRates(put("rates", { key: "dps_rate", patch: { value: 0.1 } }, auth));
     await putRates(put("rates", { key: "tax_slabs", patch: { valueJson: [{ width: null, rate: 0.1 }] } }, auth));

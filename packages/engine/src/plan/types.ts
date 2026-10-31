@@ -4,7 +4,7 @@ import type { M2Input, M2Result } from "../m2/types";
 import type { M3Input, M3Result } from "../m3/types";
 import type { M4Input, M4Result } from "../m4/types";
 import type { Allocation, M5Input, M5Result } from "../m5/types";
-import type { M6Input, M6Result } from "../m6/types";
+import type { M6Input, M6Result, M6RiskAnswers } from "../m6/types";
 import type { M7Input, M7Result } from "../m7/types";
 import type { Instrument, Money, Profile, Rate, Status } from "../types";
 
@@ -16,7 +16,11 @@ export interface PlanInput {
   m5?: M5Input;
   /** M2 insurance & health inputs; when present the plan computes M2 and reserves its premium. */
   m2?: M2Input;
-  /** M6 asset allocation inputs; its weights become the allocation hook for M5 and M7. */
+  /**
+   * M6 asset allocation inputs; its weights become the allocation hook for M5 long-horizon goals and
+   * M7's accumulation return. computePlan replaces `gate` with what its own M1 and M3 results say
+   * (emergency fund full, card balance carried).
+   */
   m6?: M6Input;
   /** M7 retirement inputs; its monthly saving becomes the retirement bucket. */
   m7?: M7Input;
@@ -28,14 +32,21 @@ export interface PlanInput {
   retirement?: { monthlyNeed: Money };
 }
 
-/** Per-module overrides layered on top of the onboarding defaults in profileToPlanInput. */
+/** M6 answers: like Partial<M6Input>, except that the four risk answers may be given one by one. */
+export type M6Overrides = Partial<Omit<M6Input, "risk">> & { risk?: Partial<M6RiskAnswers> };
+
+/**
+ * Per-module overrides layered on top of the onboarding defaults in profileToPlanInput.
+ * m2 / m6 / m7 build a full module input only when the slice holds at least one answer
+ * (hasOverrideAnswers); an empty or absent slice leaves that module out of the plan.
+ */
 export interface PlanOverrides {
   m1?: Partial<M1Input>;
   m3?: Partial<M3Input>;
   m4?: Partial<M4Input>;
   m5?: M5Input;
   m2?: Partial<M2Input>;
-  m6?: Partial<M6Input>;
+  m6?: M6Overrides;
   m7?: Partial<M7Input>;
 }
 

@@ -1,5 +1,5 @@
 // Pure selectors turning store data into engine inputs. No React, no I/O.
-import type { M1Input, M3Input, M4Input, M5Input, Profile } from "@taka/engine";
+import { hasOverrideAnswers, type M1Input, type M2Input, type M3Input, type M4Input, type M5Input, type M6Overrides, type M7Input, type Profile } from "@taka/engine";
 import type { TakaData } from "./types";
 
 /** Rough default savings target (20% of take-home) when the M4 result is not yet known. */
@@ -36,6 +36,20 @@ export interface PlanOverrides {
   m3?: M3Input;
   m4: M4Input;
   m5?: M5Input;
+  /** Present only when the user answered something in the insurance check (hasOverrideAnswers). */
+  m2?: Partial<M2Input>;
+  /** Present only when the user answered something in the asset mix. */
+  m6?: M6Overrides;
+  /** Present only when the user answered something in the retirement plan. */
+  m7?: Partial<M7Input>;
+}
+
+/** The slice without undefined keys, or undefined when it holds no answer (the engine's presence rule). */
+function answered<T extends object>(slice: T): Partial<T> | undefined {
+  if (!hasOverrideAnswers(slice)) return undefined;
+  const out: Partial<T> = {};
+  for (const [k, v] of Object.entries(slice)) if (v !== undefined) (out as Record<string, unknown>)[k] = v;
+  return out;
 }
 
 /** Builds the PlanInput module sections from profile + per-module state, filling PRD defaults. */
@@ -44,13 +58,18 @@ export function selectPlanOverrides(s: TakaData): PlanOverrides {
   const dependents = p.dependents ?? [];
   const takeHome = p.takeHome ?? 0;
   const essentials = p.essentials ?? 0;
+  // M2State, M6State and M7State use the engine's field names, so each slice maps 1:1.
+  const m2 = answered(s.m2);
+  const m6 = answered(s.m6);
+  const m7 = answered(s.m7);
 
   const m1: Partial<M1Input> = {
     ...(p.essentials !== undefined ? { essentials: p.essentials } : {}),
     ...(p.incomeType !== undefined ? { incomeType: p.incomeType } : {}),
     dependents,
     soleEarner: s.m1.soleEarner ?? dependents.length > 0,
-    hasHealthInsurance: s.m1.hasHealthInsurance ?? false,
+    // Unset → what the insurance check says (existing health cover > 0, as M2's hasHealthCover).
+    hasHealthInsurance: s.m1.hasHealthInsurance ?? (m2?.existingHealthCover ?? 0) > 0,
     liquidSavings: s.m1.liquidSavings ?? 0,
     ...(s.m1.monthsOverride !== undefined ? { monthsOverride: s.m1.monthsOverride } : {}),
     ...(s.m1.buildMonths !== undefined ? { buildMonths: s.m1.buildMonths } : {}),
@@ -80,5 +99,5 @@ export function selectPlanOverrides(s: TakaData): PlanOverrides {
 
   const m5: M5Input | undefined = s.m5.goals.length > 0 && p.age !== undefined ? { goals: s.m5.goals, age: p.age } : undefined;
 
-  return { m1, ...(m3 ? { m3 } : {}), m4, ...(m5 ? { m5 } : {}) };
+  return { m1, ...(m3 ? { m3 } : {}), m4, ...(m5 ? { m5 } : {}), ...(m2 ? { m2 } : {}), ...(m6 ? { m6 } : {}), ...(m7 ? { m7 } : {}) };
 }

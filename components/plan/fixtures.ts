@@ -7,6 +7,8 @@
  *   - a second goal, a wedding (৳6,00,000 in 4 years), so there are three cards.
  * Goal names follow the locale. The emergency fund (0.7 of 8 months covered) is the one red card;
  * the goals are green (their chosen instruments beat the inflation each goal is priced with).
+ * The profile's asset-mix answers (M6, growth) ride along as plan.allocation; both goals are
+ * under 5 years away, so neither is priced at the mix and no money is left for a future bucket.
  */
 import { assertSnapshot, computePlan, RATES_SEED, SAMPLE_PROFILES, type ISODate, type Plan, type PlanInput, type RatesSnapshot } from "@taka/engine";
 import type { Locale } from "@/lib/i18n/config";
@@ -29,6 +31,7 @@ export function samplePlanInput(locale: Locale): PlanInput {
     profile: first.profile,
     m1: { ...first.m1, buildMonths: DEMO_BUILD_MONTHS },
     m4: first.m4,
+    ...(first.m6 ? { m6: first.m6 } : {}),
     m5: {
       age: first.profile.age,
       goals: [

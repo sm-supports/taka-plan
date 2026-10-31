@@ -212,10 +212,16 @@ const INSTRUMENT_KEYS: Record<Instrument, { rateKey: RateKey; taxKey: RateKey }>
   tbill_91d: { rateKey: "tbill_91d_rate", taxKey: "tax_bank_interest" },
   tbond_5y: { rateKey: "tbond_5y_rate", taxKey: "tax_bank_interest" },
   tbond_10y: { rateKey: "tbond_10y_rate", taxKey: "tax_bank_interest" },
-  // M6: equity and gold returns are modelled as total return with no withholding tax applied here.
+  // Equity and gold returns are modelled as a total return: their taxKey is never applied
+  // (see taxedAtSource; every consumer must go through it or instrumentAfterTax).
   equity_fund: { rateKey: "equity_return_base", taxKey: "tax_bank_interest" },
   gold: { rateKey: "gold_return_base", taxKey: "tax_bank_interest" },
 };
+
+/** False for equity_fund and gold: no withholding tax is deducted from their (total) return. */
+export function taxedAtSource(i: Instrument): boolean {
+  return i !== "equity_fund" && i !== "gold";
+}
 
 export function instrumentKeys(i: Instrument): { rateKey: RateKey; taxKey: RateKey } {
   return INSTRUMENT_KEYS[i];
@@ -228,7 +234,7 @@ export function instrumentNominal(s: RatesSnapshot, i: Instrument): { rate: Rate
 
 export function instrumentAfterTax(s: RatesSnapshot, i: Instrument): Rate {
   const { rate, taxKey } = instrumentNominal(s, i);
-  if (i === "equity_fund" || i === "gold") return rate;
+  if (!taxedAtSource(i)) return rate;
   return afterTax(rate, getRate(s, taxKey));
 }
 

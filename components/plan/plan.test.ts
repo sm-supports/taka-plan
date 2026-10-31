@@ -1,4 +1,17 @@
-import { PLAN_NEXT_KEYS, PLAN_REASON_KEYS, PLAN_STEP_IDS, RATES_SEED, assertSnapshot, computePlan, roundMoney, type Bucket, type ExplainStep, type Plan } from "@taka/engine";
+import {
+  PLAN_NEXT_KEYS,
+  PLAN_REASON_KEYS,
+  PLAN_STEP_IDS,
+  RATES_SEED,
+  SAMPLE_PROFILES,
+  assertSnapshot,
+  computePlan,
+  profileToPlanInput,
+  roundMoney,
+  type Bucket,
+  type ExplainStep,
+  type Plan,
+} from "@taka/engine";
 import { describe, expect, it } from "vitest";
 import { en } from "@/lib/i18n/dictionaries/en";
 import { bn } from "@/lib/i18n/dictionaries/bn";
@@ -100,6 +113,18 @@ describe("bucket reasons", () => {
     expect(bucketReason(debt, fEn, tEn)).toBe("High-interest debt at 25.0% — ৳5,000/month on top of your EMI — cleared in about 14 months at this pace");
   });
 
+  it("formats retirement (age, not money), future and insurance reasons in both languages", () => {
+    const retirement: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.retirement", reasonParams: { amount: 6000, planTo: 100 } };
+    expect(formatReasonParams(retirement, fEn, tEn)).toEqual({ amount: "৳6,000", planTo: "100" });
+    expect(bucketReason(retirement, fEn, tEn)).toBe("Retirement — ৳6,000/month so your money lasts to age 100");
+    expect(bucketReason(retirement, fBn, tBn)).not.toMatch(/[0-9]/);
+    const future: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.future", reasonParams: { amount: 10000, instrument: "equity_fund" } };
+    expect(bucketReason(future, fEn, tEn)).toBe(`Long-term savings — ৳10,000/month into ${tEn("common.instrument.equity_fund")} until you add a goal`);
+    const insurance: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.insurance", reasonParams: { amount: 4800 } };
+    expect(bucketReason(insurance, fEn, tEn)).toBe("Insurance — ৳4,800/month set aside for term life and health cover");
+    expect(bucketTitle({ id: "retirement", reasonParams: {} }, tEn)).toBe("Retirement");
+  });
+
   it("titles goal buckets by goal name and the rest by bucket", () => {
     const [first, second] = goalBuckets(SAMPLE_PLAN) as [Bucket, Bucket];
     expect(bucketTitle(SAMPLE_PLAN.buckets[0]!, tEn)).toBe("Emergency fund");
@@ -163,6 +188,31 @@ describe("explanations per figure", () => {
     expect(weddingSteps[0]!.rounded).toBe(1800);
     // Non-goal buckets never pick up an allocation step.
     expect(bucketExplanation(withAllocation, withAllocation.buckets[0]!).steps.some((s) => s.id === "plan.goalAllocation")).toBe(false);
+  });
+});
+
+describe("explanations for the M2 / M6 / M7 buckets", () => {
+  const seed = assertSnapshot(RATES_SEED);
+  const family = computePlan(SAMPLE_PROFILES.familyWithDebt, seed, DEMO_TODAY);
+  const spare = computePlan(profileToPlanInput(SAMPLE_PROFILES.firstJob.profile, { m1: { liquidSavings: 300000 }, m6: { horizonYears: 20 } }), seed, DEMO_TODAY);
+
+  it("insurance = M2's steps + plan.total; retirement = M7's steps + plan.total", () => {
+    const insurance = family.buckets.find((b) => b.id === "insurance")!;
+    const ids = bucketExplanation(family, insurance).steps.map((s) => s.id);
+    expect(ids).toEqual([...family.insurance!.explain.steps.map((s) => s.id), "plan.total"]);
+    const retirementBucket: Bucket = { ...insurance, id: "retirement", module: "m7", reasonKey: "plan.reason.retirement", nextStepKey: "plan.next.retirement" };
+    expect(bucketExplanation(family, retirementBucket).steps.map((s) => s.id)).toEqual([...family.retirement!.explain.steps.map((s) => s.id), "plan.total"]);
+  });
+
+  it("a future bucket that follows the mix leads with M6's steps", () => {
+    const future = spare.buckets.find((b) => b.id === "future")!;
+    expect(future).toMatchObject({ module: "m6", nextStepKey: "plan.next.allocation" });
+    const ids = bucketExplanation(spare, future).steps.map((s) => s.id);
+    expect(ids.slice(0, spare.allocation!.explain.steps.length)).toEqual(spare.allocation!.explain.steps.map((s) => s.id));
+    expect(ids).toContain("m4.amount");
+    // The demo plan carries firstJob's allocation but no future bucket.
+    expect(SAMPLE_PLAN.allocation?.profile).toBe("growth");
+    expect(SAMPLE_PLAN.buckets.some((b) => b.id === "future")).toBe(false);
   });
 });
 

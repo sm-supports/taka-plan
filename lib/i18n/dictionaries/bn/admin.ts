@@ -139,6 +139,7 @@ export const admin: Dictionary["admin"] = {
       insurance: "বিমা",
       debt: "ঋণ",
       goal: "লক্ষ্য",
+      retirement: "অবসর",
       future: "ভবিষ্যৎ",
     },
     instrumentExtra: {

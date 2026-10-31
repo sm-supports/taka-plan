@@ -50,7 +50,8 @@ export function bucketExplanation(plan: Plan, bucket: Bucket): Explanation {
       return mergeExplanations([goal?.explain ?? EMPTY, planSteps(plan, ["plan.goalsShare", "plan.goalAllocation"], forGoal(bucket.refId))]);
     }
     case "future":
-      return mergeExplanations([plan.budget.explain, planSteps(plan, ["plan.goalsShare"])]);
+      // With an allocation the spare money follows the M6 mix, so its steps lead.
+      return mergeExplanations([...(bucket.module === "m6" && plan.allocation ? [plan.allocation.explain] : []), plan.budget.explain, planSteps(plan, ["plan.goalsShare"])]);
     case "insurance":
       return mergeExplanations([plan.insurance?.explain ?? EMPTY, planSteps(plan, ["plan.total"])]);
     case "retirement":
