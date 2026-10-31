@@ -1,5 +1,46 @@
+/**
+ * Country and language steps on "/". "/" sits outside the [locale] segment and imports this object
+ * directly (not the whole dictionary), so it stays small.
+ */
+export const onboardingEntry = {
+  country: {
+    title: "Where do you live?",
+    subtitle: "We use your country's currency, rates and savings products.",
+    searchLabel: "Search for your country",
+    searchPlaceholder: "Country name, in English or your language",
+    suggested: "Suggested",
+    all: "All countries",
+    results: "Matching countries",
+    noMatch: "No country matches “{query}”.",
+    currency: "Currency: {code}",
+    current: "Current choice",
+    changeLater: "You can change your country and language any time.",
+    intro: "Five quick questions, then your monthly savings plan. No account needed.",
+    disclaimer: "Estimates for education only; not financial, tax or legal advice.",
+    region: {
+      south_asia: "South Asia",
+      east_asia_pacific: "East Asia and Pacific",
+      europe_central_asia: "Europe and Central Asia",
+      latin_america_caribbean: "Latin America and the Caribbean",
+      middle_east_north_africa: "Middle East and North Africa",
+      north_america: "North America",
+      sub_saharan_africa: "Sub-Saharan Africa",
+    },
+  },
+  language: {
+    title: "Which language would you like?",
+    subtitle: "You can switch at any time from the menu at the top.",
+    country: "Country: {country}",
+    notAvailable: "Your language is not available yet; English is used.",
+    changeCountry: "Change country",
+  },
+} as const;
+
 /** Five quick questions, one per screen. */
 export const onboarding = {
+  country: onboardingEntry.country,
+  language: onboardingEntry.language,
+
   languagePick: {
     title: "Which language would you like?",
     subtitle: "You can switch at any time.",

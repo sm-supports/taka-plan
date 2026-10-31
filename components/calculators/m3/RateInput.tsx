@@ -58,11 +58,11 @@ export function RateInput({ id, value, onChange, label, hint, placeholder, class
             onChange(parsePercent(next));
           }}
           className={cn(
-            "tap w-full rounded-xl border bg-surface py-3 pl-4 pr-12 text-2xl font-semibold tabular-nums text-text placeholder:font-normal placeholder:text-text-faint",
+            "tap w-full rounded-xl border bg-surface py-3 ps-4 pe-12 text-2xl font-semibold tabular-nums text-text placeholder:font-normal placeholder:text-text-faint",
             invalid ? "border-status-red" : "border-line focus:border-brand-500",
           )}
         />
-        <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-xl font-semibold text-text-muted" aria-hidden="true">
+        <span className="pointer-events-none absolute inset-y-0 end-4 flex items-center text-xl font-semibold text-text-muted" aria-hidden="true">
           %
         </span>
       </div>

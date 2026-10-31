@@ -1,7 +1,45 @@
 // TODO(bn-review): reviewed by i18n-bn slice
 import type { Dictionary } from "../../types";
 
+/** Country and language steps on "/" (imported there directly; see en/onboarding.ts). */
+export const onboardingEntry: Pick<Dictionary["onboarding"], "country" | "language"> = {
+  country: {
+    title: "আপনি কোন দেশে থাকেন?",
+    subtitle: "আপনার দেশের মুদ্রা, সুদের হার আর সঞ্চয়ের পণ্য ধরে হিসাব হবে।",
+    searchLabel: "আপনার দেশ খুঁজুন",
+    searchPlaceholder: "দেশের নাম, ইংরেজিতে বা নিজের ভাষায়",
+    suggested: "প্রস্তাবিত",
+    all: "সব দেশ",
+    results: "মিলে যাওয়া দেশ",
+    noMatch: "“{query}” নামে কোনো দেশ পাওয়া যায়নি।",
+    currency: "মুদ্রা: {code}",
+    current: "বর্তমান পছন্দ",
+    changeLater: "দেশ আর ভাষা যেকোনো সময় বদলাতে পারবেন।",
+    intro: "পাঁচটি ছোট প্রশ্ন, তারপরই আপনার মাসিক সঞ্চয়ের প্ল্যান। কোনো অ্যাকাউন্ট লাগবে না।",
+    disclaimer: "শুধু শেখার জন্য অনুমান; আর্থিক, কর বা আইনি পরামর্শ নয়।",
+    region: {
+      south_asia: "দক্ষিণ এশিয়া",
+      east_asia_pacific: "পূর্ব এশিয়া ও প্রশান্ত মহাসাগরীয় অঞ্চল",
+      europe_central_asia: "ইউরোপ ও মধ্য এশিয়া",
+      latin_america_caribbean: "লাতিন আমেরিকা ও ক্যারিবীয় অঞ্চল",
+      middle_east_north_africa: "মধ্যপ্রাচ্য ও উত্তর আফ্রিকা",
+      north_america: "উত্তর আমেরিকা",
+      sub_saharan_africa: "সাহারার দক্ষিণের আফ্রিকা",
+    },
+  },
+  language: {
+    title: "কোন ভাষায় দেখতে চান?",
+    subtitle: "ওপরের মেনু থেকে যেকোনো সময় বদলাতে পারবেন।",
+    country: "দেশ: {country}",
+    notAvailable: "আপনার ভাষা এখনো যোগ হয়নি; ইংরেজিতে দেখানো হবে।",
+    changeCountry: "দেশ বদলান",
+  },
+};
+
 export const onboarding: Dictionary["onboarding"] = {
+  country: onboardingEntry.country,
+  language: onboardingEntry.language,
+
   languagePick: {
     title: "কোন ভাষায় দেখতে চান?",
     subtitle: "যেকোনো সময় বদলাতে পারবেন।",

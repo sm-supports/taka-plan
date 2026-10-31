@@ -26,8 +26,8 @@ export function StepFrame({ step, total, title, hint, children, onBack, onNext, 
     <section className={cn("flex min-h-[calc(100dvh-8rem)] flex-col", className)} aria-labelledby="step-title">
       <div className="flex items-center justify-between py-2">
         {onBack ? (
-          <button type="button" onClick={onBack} className="tap -ml-2 inline-flex items-center gap-1 rounded-xl px-2 text-sm font-medium text-text-muted hover:bg-surface-muted">
-            <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <button type="button" onClick={onBack} className="tap -ms-2 inline-flex items-center gap-1 rounded-xl px-2 text-sm font-medium text-text-muted hover:bg-surface-muted">
+            <svg className="flip-rtl h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M12 4l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             {t("common.button.back")}

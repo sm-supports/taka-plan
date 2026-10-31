@@ -50,10 +50,24 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Bangla glyphs have tall ascenders/descenders: give lines a little more room. */
-[lang="bn"],
-[lang="bn"] body {
+/* Bangla glyphs have tall ascenders/descenders: give lines a little more room (:lang matches bn-BD too). */
+:lang(bn) {
   line-height: 1.7;
+}
+
+/* Right-to-left scripts. Layout uses logical utilities (ms-/me-, ps-/pe-, start-/end-, text-start/end,
+   rounded-s/e, border-s/e), so only fonts, line height and directional icons need care here. */
+:lang(ar) {
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Naskh Arabic", "Noto Sans Arabic", Tahoma, sans-serif;
+}
+:lang(ur) {
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, -apple-system, "Segoe UI", "Noto Naskh Arabic", Tahoma, sans-serif;
+  /* Nastaliq stacks letters diagonally: it needs much taller lines. */
+  line-height: 2;
+}
+/* Chevrons and other icons that point "back" or "forward" mirror in RTL. */
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
 }
 
 a {

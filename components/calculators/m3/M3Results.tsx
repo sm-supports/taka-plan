@@ -128,7 +128,7 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
           <p className="text-sm text-text-muted">{t("m3.result.payoffOrderHint")}</p>
           {input.extraMonthly !== undefined && <p className="mt-1 text-sm text-text-muted">{t("m3.result.extraUsed", { amount: f.taka(input.extraMonthly) })}</p>}
           <h3 className="mt-3 font-semibold text-text">{t("m3.result.avalanche")}</h3>
-          <ol className="mt-1 list-decimal pl-5 text-base text-text">
+          <ol className="mt-1 list-decimal ps-5 text-base text-text">
             {result.avalanche.order.map((id) => (
               <li key={id}>{debtLabel(id)}</li>
             ))}
@@ -156,7 +156,7 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
 
       {/* Debt-trap path */}
       <Card header={<h2 className="text-lg font-bold text-text">{t("m3.result.path")}</h2>}>
-        <ol className="flex list-decimal flex-col gap-2 pl-5 text-base leading-relaxed text-text">
+        <ol className="flex list-decimal flex-col gap-2 ps-5 text-base leading-relaxed text-text">
           {result.debtTrapPath.map((key) => (
             <li key={key}>{t(key)}</li>
           ))}

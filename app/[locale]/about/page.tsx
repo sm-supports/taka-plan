@@ -49,6 +49,16 @@ const STEPS: ReadonlyArray<{ module: "m1" | "m2" | "m3" | "m4" | "m5" | "m6" | "
 /** Two instruments whose real return makes the "after tax, after inflation" point (PRD: +2.1% vs −1.5%). */
 const EXAMPLE_INSTRUMENTS: readonly Instrument[] = ["sanchayapatra_5y", "fdr_1y"];
 
+/** Bangla digits in bn; Latin digits everywhere else. */
+function digitsFor(locale: Locale): Digits {
+  return locale === "bn" ? "bn" : "latn";
+}
+
+/** Bangla rate labels in bn (English when a row has none); English labels in every other locale until rows carry their own. */
+function labelFor(row: RateRow, locale: Locale): string {
+  return locale === "bn" ? (row.labelBn ?? row.labelEn) : row.labelEn;
+}
+
 function todayIso(): string {
   return new Date().toISOString().slice(0, 10);
 }
@@ -61,7 +71,7 @@ function sourcePercent(value: number, digits: Digits): string {
 }
 
 function formatValue(row: RateRow, snapshot: RatesSnapshot, locale: Locale, dict: Dictionary): string[] {
-  const digits: Digits = locale === "bn" ? "bn" : "latn";
+  const digits = digitsFor(locale);
   const copy = dict.about;
   switch (row.unit) {
     case "json": {
@@ -104,12 +114,15 @@ export default async function AboutPage({ params }: Params) {
   const dict = await getDictionary(locale);
   const t = (key: string, p?: Record<string, string | number>) => translate(dict, key, p);
   const copy = dict.about;
-  const digits: Digits = locale === "bn" ? "bn" : "latn";
+  const digits = digitsFor(locale);
   const snapshot = assertSnapshot(RATES_SEED);
   const today = todayIso();
 
+  // Rows that only apply to Bangladesh (tax slabs, Sanchayapatra tiers, ...) are hidden once a country is overlaid.
+  const notApplicable = new Set<RateKey>(snapshot.country?.notApplicable ?? []);
   const grouped = new Map<RateGroupId, RateRow[]>();
   for (const key of RATE_KEYS) {
+    if (notApplicable.has(key)) continue;
     const row = snapshot.rows[key];
     const id = groupOf(key);
     const list = grouped.get(id) ?? [];
@@ -171,15 +184,15 @@ export default async function AboutPage({ params }: Params) {
           <p className="text-sm text-text-muted">{copy.method.exampleCaption}</p>
           <table className="mt-2 w-full text-sm">
             <thead>
-              <tr className="text-left text-xs text-text-muted">
-                <th scope="col" className="py-1 pr-2 font-medium" />
-                <th scope="col" className="py-1 pr-2 text-right font-medium">
+              <tr className="text-start text-xs text-text-muted">
+                <th scope="col" className="py-1 pe-2 font-medium" />
+                <th scope="col" className="py-1 pe-2 text-end font-medium">
                   {t("common.headline")}
                 </th>
-                <th scope="col" className="py-1 pr-2 text-right font-medium">
+                <th scope="col" className="py-1 pe-2 text-end font-medium">
                   {t("common.afterTax")}
                 </th>
-                <th scope="col" className="py-1 text-right font-medium">
+                <th scope="col" className="py-1 text-end font-medium">
                   {t("common.afterInflation")}
                 </th>
               </tr>
@@ -187,12 +200,12 @@ export default async function AboutPage({ params }: Params) {
             <tbody>
               {example.map((row) => (
                 <tr key={row.instrument} className="border-t border-line">
-                  <th scope="row" className="py-2 pr-2 text-left font-medium text-text">
+                  <th scope="row" className="py-2 pe-2 text-start font-medium text-text">
                     {t(`common.instrument.${row.instrument}`)}
                   </th>
-                  <td className="py-2 pr-2 text-right tabular-nums">{sourcePercent(row.headline, digits)}</td>
-                  <td className="py-2 pr-2 text-right tabular-nums">{formatPercent(row.afterTax, { digits })}</td>
-                  <td className={`py-2 text-right font-semibold tabular-nums ${row.real < 0 ? "text-status-red" : "text-status-green"}`}>{formatPercent(row.real, { digits })}</td>
+                  <td className="py-2 pe-2 text-end tabular-nums">{sourcePercent(row.headline, digits)}</td>
+                  <td className="py-2 pe-2 text-end tabular-nums">{formatPercent(row.afterTax, { digits })}</td>
+                  <td className={`py-2 text-end font-semibold tabular-nums ${row.real < 0 ? "text-status-red" : "text-status-green"}`}>{formatPercent(row.real, { digits })}</td>
                 </tr>
               ))}
             </tbody>
@@ -218,7 +231,7 @@ export default async function AboutPage({ params }: Params) {
               <ul className="flex flex-col gap-2">
                 {rows.map((row) => {
                   const stale = isStale(row, today);
-                  const label = locale === "bn" ? (row.labelBn ?? row.labelEn) : row.labelEn;
+                  const label = labelFor(row, locale);
                   const values = formatValue(row, snapshot, locale, dict);
                   const isHttp = /^https?:\/\//.test(row.sourceUrl);
                   return (
@@ -233,7 +246,7 @@ export default async function AboutPage({ params }: Params) {
                         </div>
                         <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
                           <dt className="text-text-muted">{copy.sources.value}</dt>
-                          <dd className="font-semibold text-text tabular-nums">
+                          <dd className="min-w-0 font-semibold text-text tabular-nums [overflow-wrap:anywhere]">
                             {values.length === 1 ? (
                               values[0]
                             ) : (
@@ -283,7 +296,7 @@ export default async function AboutPage({ params }: Params) {
 
         <h3 className="mt-2 text-base font-semibold text-text">{copy.sources.unverifiedHeading}</h3>
         <p className="leading-relaxed text-text">{copy.sources.unverifiedIntro}</p>
-        <ul className="list-disc space-y-1 pl-5 text-text">
+        <ul className="list-disc space-y-1 ps-5 text-text">
           {copy.sources.unverified.map((item) => (
             <li key={item}>{item}</li>
           ))}

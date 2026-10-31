@@ -51,7 +51,7 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
         </p>
       )}
       <div className="relative">
-        <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-xl font-semibold text-text-muted" aria-hidden="true">
+        <span className="pointer-events-none absolute inset-y-0 start-4 flex items-center text-xl font-semibold text-text-muted" aria-hidden="true">
           ৳
         </span>
         <input
@@ -72,7 +72,7 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
             onChange(parseTakaInput(next));
           }}
           className={cn(
-            "tap w-full rounded-xl border bg-surface py-3 pl-10 pr-4 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
+            "tap w-full rounded-xl border bg-surface py-3 ps-10 pe-4 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
             invalid ? "border-status-red" : "border-line focus:border-brand-500",
           )}
         />

@@ -60,7 +60,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
               </svg>
               {t("admin.title")}
             </Link>
-            <Button variant="ghost" onClick={signOut} loading={signingOut} className="-mr-2">
+            <Button variant="ghost" onClick={signOut} loading={signingOut} className="-me-2">
               {t("admin.login.signOut")}
             </Button>
           </div>

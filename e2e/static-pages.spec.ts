@@ -16,8 +16,11 @@ test("/ shows the picker for a new visitor and redirects by cookie for a returni
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
-  await expect(page.getByRole("button", { name: "English" })).toBeVisible();
-  await context.addCookies([{ name: "tp_locale", value: "en", url: page.url() }]);
+  await expect(page.getByRole("searchbox")).toBeVisible(); // the country picker
+  await context.addCookies([
+    { name: "tp_country", value: "BD", url: page.url() },
+    { name: "tp_locale", value: "en", url: page.url() },
+  ]);
   await page.goto("/");
   await expect.poll(() => new URL(page.url()).pathname, { timeout: 10_000 }).toMatch(/^\/en(\/|$)/);
   expect(errors).toEqual([]);

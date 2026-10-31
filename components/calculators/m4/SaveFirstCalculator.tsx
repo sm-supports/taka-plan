@@ -190,7 +190,7 @@ export function SaveFirstCalculator() {
                 value={
                   <>
                     {f.taka(result.savingsAmount)}
-                    <span className="ml-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
+                    <span className="ms-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
                   </>
                 }
                 caption={

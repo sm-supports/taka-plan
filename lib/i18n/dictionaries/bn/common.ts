@@ -105,6 +105,9 @@ export const common: Dictionary["common"] = {
     en: "English",
     pick: "ভাষা বেছে নিন",
   },
+  languageMenu: "ভাষা: {language}",
+  changeCountry: "দেশ বদলান",
+  countryLink: "দেশ {country}। দেশ বদলান",
 
   incomeType: {
     salaried: "চাকরিজীবী",
