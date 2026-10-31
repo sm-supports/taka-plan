@@ -1,21 +1,18 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { ADMIN_CSP, SECURITY_HEADERS, applySecurityHeaders, isAdminPath } from "@/lib/server/security-headers";
+import { FRAME_CSP, SECURITY_HEADERS, applySecurityHeaders } from "@/lib/server/security-headers";
 import { json } from "@/lib/server/http";
 
 describe("security headers (SEC-8)", () => {
-  it("sets nosniff, referrer and permissions policies on every path, and the admin CSP only under /admin", () => {
-    const page = applySecurityHeaders(new Headers(), "/bn/plan");
+  it("sets nosniff, referrer, permissions and frame-ancestors 'none' policies", () => {
+    const page = applySecurityHeaders(new Headers());
     for (const [name, value] of Object.entries(SECURITY_HEADERS)) expect(page.get(name)).toBe(value);
-    expect(page.get("Content-Security-Policy")).toBeNull();
-    expect(applySecurityHeaders(new Headers(), "/admin").get("Content-Security-Policy")).toBe(ADMIN_CSP);
-    expect(applySecurityHeaders(new Headers(), "/admin/preview").get("Content-Security-Policy")).toBe(ADMIN_CSP);
-    expect(applySecurityHeaders(new Headers(), "/administrator").get("Content-Security-Policy")).toBeNull();
-    expect(isAdminPath("/api/admin/rates")).toBe(false);
+    expect(page.get("Content-Security-Policy")).toBe("frame-ancestors 'none'");
+    expect(FRAME_CSP).toBe("frame-ancestors 'none'");
   });
 
   it("never overrides a header a handler already set", () => {
-    const h = applySecurityHeaders(new Headers({ "Referrer-Policy": "no-referrer" }), "/admin");
+    const h = applySecurityHeaders(new Headers({ "Referrer-Policy": "no-referrer" }));
     expect(h.get("Referrer-Policy")).toBe("no-referrer");
   });
 
@@ -24,6 +21,7 @@ describe("security headers (SEC-8)", () => {
     expect(res.headers.get("x-content-type-options")).toBe("nosniff");
     expect(res.headers.get("referrer-policy")).toBe("strict-origin-when-cross-origin");
     expect(res.headers.get("permissions-policy")).toBe("camera=(), microphone=(), geolocation=()");
+    expect(res.headers.get("content-security-policy")).toBe("frame-ancestors 'none'");
   });
 });
 
@@ -53,7 +51,16 @@ describe("public/_headers (static pages on Cloudflare Pages)", () => {
     for (const [name, value] of Object.entries(SECURITY_HEADERS)) expect(all!.get(name.toLowerCase())).toBe(value);
   });
 
-  it("forbids framing the admin pages", () => {
-    for (const path of ["/admin", "/admin/*"]) expect(rules.get(path)?.get("content-security-policy")).toBe(ADMIN_CSP);
+  it("forbids framing every page, public ones included (S9)", () => {
+    expect(rules.get("/*")?.get("content-security-policy")).toBe("frame-ancestors 'none'");
+  });
+
+  it("keeps the admin noindex rules and never repeats a /* header in them (Pages would comma-join it)", () => {
+    const all = rules.get("/*")!;
+    for (const path of ["/admin", "/admin/*"]) {
+      const r = rules.get(path);
+      expect(r?.get("x-robots-tag")).toBe("noindex");
+      for (const name of r!.keys()) expect(all.has(name), `${path} repeats ${name}`).toBe(false);
+    }
   });
 });

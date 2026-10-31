@@ -20,6 +20,9 @@ import {
 } from "@taka/engine";
 import type { ChangeLogEntry, D1Like, D1ResultLike } from "./db";
 import type { CountryMetaPatch, CountryRepo, CountrySummary, StoredCountry } from "./country-repo";
+import { META_PATCH_KEYS, assertFieldLimits, pickJsonShape, todayUtc } from "./country-clean";
+
+export { META_PATCH_KEYS };
 
 /** Thrown when a country has neither a published version nor (where relevant) a draft. */
 export class CountryNotFoundError extends Error {
@@ -41,9 +44,6 @@ const CC = /^[A-Z]{2}$/;
 const FIELD_KEY_SET: ReadonlySet<string> = new Set(COUNTRY_FIELD_KEYS);
 const MAX_LOG_PAGE = 500;
 
-/** The CountryProfile keys an admin may patch (identity code, iso3, region and schemaVersion are fixed). */
-export const META_PATCH_KEYS = ["nameEn", "nameNative", "languages", "currency", "instruments", "institutions", "researchedAt", "reviewedBy"] as const satisfies readonly (keyof CountryMetaPatch)[];
-
 let units: Record<RateKey, RateUnit> | null = null;
 /** Unit of every rate key, from the bundled seed (computed once per isolate). */
 export function countryUnits(): Record<RateKey, RateUnit> {
@@ -62,11 +62,14 @@ export function isCountryFieldKey(key: unknown): key is RateKey {
 /**
  * Validates one figure for `code`/`key` and returns a clean copy holding only CountryField properties
  * (`valueJson` and `note` only when set), so stray properties never reach the database or the log.
+ * On top of the engine validator: source and note length caps, a real `asOf` at most a year ahead
+ * (country-clean.ts), and JSON values reduced to the keys their shape knows.
  */
-export function cleanCountryField(code: CountryCode, key: RateKey, raw: unknown): CountryField {
+export function cleanCountryField(code: CountryCode, key: RateKey, raw: unknown, today: string = todayUtc()): CountryField {
   if (!isCountryFieldKey(key)) throw new Error(`"${String(key)}" is not a country field key`);
   const unit = countryUnits()[key];
   const f = assertCountryField(code, key, unit, raw);
+  assertFieldLimits(`fields.${key}`, f, today);
   const live = f.status !== "missing";
   const out: CountryField = {
     value: live && unit !== "json" && typeof f.value === "number" ? f.value : null,
@@ -75,7 +78,7 @@ export function cleanCountryField(code: CountryCode, key: RateKey, raw: unknown)
     sourceUrl: f.sourceUrl,
     asOf: f.asOf,
   };
-  if (live && unit === "json" && f.valueJson !== undefined && f.valueJson !== null) out.valueJson = f.valueJson;
+  if (live && unit === "json" && f.valueJson !== undefined && f.valueJson !== null) out.valueJson = pickJsonShape(key, f.valueJson);
   if (typeof f.note === "string" && f.note.length > 0) out.note = f.note;
   return out;
 }

@@ -13,7 +13,7 @@ describe("GET /api/health", () => {
     expect(res.status).toBe(200);
     expect(res.headers.get("cache-control")).toBe("no-store");
     const body = (await res.json()) as HealthBody;
-    expect(body).toEqual({ ok: true, db: "ok", publishedVersion: 1, ratesSource: "d1" });
+    expect(body).toEqual({ ok: true, db: "ok", publishedVersion: 1, ratesSource: "d1", admin: "ok" });
   });
 
   it("reports db error and ratesSource fallback when the repo throws, staying ok (liveness)", async () => {
@@ -47,6 +47,23 @@ describe("GET /api/health", () => {
     const body = (await (await GET()).json()) as HealthBody;
     expect(body).toMatchObject({ ok: true, db: "ok", publishedVersion: null, ratesSource: "fallback" });
     expect(body.detail).toBeUndefined();
+  });
+
+  it("reports invalid-snapshot with a readable reason when the published version is missing rows (S7)", async () => {
+    const partial = new FakeRatesRepo();
+    const real = partial.getPublished.bind(partial);
+    partial.getPublished = async () => {
+      const s = await real();
+      const { gratuity_rule: _g, support_ratio: _s, ...rows } = s.rows;
+      return { ...s, rows: rows as typeof s.rows };
+    };
+    setRatesRepoForTests(partial);
+    const res = await GET();
+    const body = (await res.json()) as HealthBody;
+    expect(body).toMatchObject({ ok: true, db: "invalid-snapshot", publishedVersion: 1, ratesSource: "fallback", detail: "invalid-snapshot" });
+    expect(body.reason).toMatch(/^rates table missing rows: /);
+    expect(body.reason).toContain("gratuity_rule");
+    expect(body.reason).toContain("support_ratio");
   });
 
   it("reports error when no repo is configured (D1 binding missing)", async () => {

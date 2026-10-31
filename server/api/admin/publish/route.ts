@@ -1,4 +1,5 @@
 import { assertSnapshot } from "@taka/engine";
+import { cleanNote } from "@/lib/server/country-clean";
 import { getRatesRepo } from "@/lib/server/env";
 import { HttpError, json, readJson, toResponse } from "@/lib/server/http";
 import { NO_STORE, nowIso, requireAdmin, requireCsrf } from "../shared";
@@ -11,7 +12,7 @@ export async function POST(req: Request): Promise<Response> {
     await requireAdmin(req);
     requireCsrf(req);
     const body = await readJson<{ note?: unknown }>(req);
-    const note = typeof body?.note === "string" && body.note.trim().length > 0 ? body.note.trim() : null;
+    const note = cleanNote(body);
     const repo = getRatesRepo();
     const draft = await repo.getDraft();
     if (!draft) throw new HttpError(409, "NO_DRAFT", "There is no draft to publish");

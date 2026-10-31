@@ -1,4 +1,5 @@
 import { assertSnapshot, isRateKey, type RateRow } from "@taka/engine";
+import { cleanNote } from "@/lib/server/country-clean";
 import { applyPatch, type RatePatch } from "@/lib/server/db";
 import { getRatesRepo } from "@/lib/server/env";
 import { HttpError, json, readJson, toResponse } from "@/lib/server/http";
@@ -89,7 +90,7 @@ export async function PUT(req: Request): Promise<Response> {
     const key = typeof body?.key === "string" ? body.key : "";
     if (!isRateKey(key)) throw new HttpError(400, "BAD_KEY", `Unknown rates key "${key}"`);
     const patch = sanitisePatch(body.patch);
-    const note = typeof body.note === "string" && body.note.trim().length > 0 ? body.note.trim() : null;
+    const note = cleanNote(body);
 
     const repo = getRatesRepo();
     const now = nowIso();

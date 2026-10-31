@@ -29,7 +29,7 @@ function get(path: string, headers: Record<string, string> = {}): Request {
 }
 
 async function signIn(): Promise<Record<string, string>> {
-  const res = await login(post("login", { password: "test-pass" }));
+  const res = await login(post("login", { password: "test-pass-123456" }));
   expect(res.status).toBe(204);
   const token = readCookie(res.headers.get("set-cookie")!.split(";")[0], ADMIN_COOKIE);
   return { cookie: `${ADMIN_COOKIE}=${token}` };
@@ -140,10 +140,13 @@ describe("admin country routes", () => {
       expect(await errorCode(res), JSON.stringify(body)).toBe(code);
     }
     expect(await repo.getDraft("IN")).toBeNull();
-    // An invalid meta value is checked against the whole profile; the draft keeps the old value.
+    // An invalid meta value is refused before any draft exists; with a draft, the draft keeps the old value.
     const badMeta = await putCountry(put("countries/IN", { meta: { languages: ["Hindi"] } }, auth), "IN");
     expect(badMeta.status).toBe(400);
     expect(await errorCode(badMeta)).toBe("INVALID_META");
+    expect(await repo.getDraft("IN")).toBeNull();
+    await putCountry(put("countries/IN", { field: "fdr_1y_rate", value: FDR }, auth), "IN");
+    expect((await putCountry(put("countries/IN", { meta: { languages: ["Hindi"] } }, auth), "IN")).status).toBe(400);
     expect((await repo.getDraft("IN"))?.profile.languages).toEqual(FIXTURE_IN.languages);
     // Unknown country.
     expect((await putCountry(put("countries/FR", { field: "fdr_1y_rate", value: FDR }, auth), "FR")).status).toBe(404);

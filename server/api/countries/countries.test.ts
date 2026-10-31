@@ -1,11 +1,12 @@
+import { existsSync } from "node:fs";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { FIXTURE_IN, FIXTURE_US } from "@taka/engine";
 import { setCountryRepoForTests } from "@/lib/server/env";
 import type { CountryRepo } from "@/lib/server/country-repo";
+import { parseCountryBody } from "@/lib/country/loader";
 import { FakeCountryRepo, ThrowingCountryRepo } from "@/test/fakes/fakeCountryRepo";
-import type { PublicCountryList, PublicCountryResponse } from "@/components/admin/countryTypes";
+import type { PublicCountryResponse } from "@/components/admin/countryTypes";
 import { GET as getCountry } from "./profile/route";
-import { GET as listCountries } from "./route";
 import { countryEtag, parseCountryCode } from "./shared";
 
 const NOW = "2026-11-01T10:00:00.000Z";
@@ -47,9 +48,9 @@ describe("GET /api/countries/:code", () => {
     expect(res.headers.get("x-country-source")).toBe("d1");
     expect(res.headers.get("content-type")).toMatch(/application\/json/);
     const body = (await res.json()) as PublicCountryResponse;
-    expect(body.version).toBe(1);
-    const { version: _v, ...profile } = body;
-    expect(profile).toEqual(FIXTURE_IN);
+    // Wrapped like StoredCountry (S1), never a flat profile.
+    expect(Object.keys(body).sort()).toEqual(["profile", "status", "version"]);
+    expect(body).toEqual({ version: 1, status: "published", profile: FIXTURE_IN });
   });
 
   it("accepts a lower-case code and rejects malformed ones with 400", async () => {
@@ -85,7 +86,7 @@ describe("GET /api/countries/:code", () => {
     expect(res.headers.get("etag")).toBe('"IN-v2"');
     const body = (await res.json()) as PublicCountryResponse;
     expect(body.version).toBe(2);
-    expect(body.fields.policy_rate?.value).toBe(0.055);
+    expect(body.profile.fields.policy_rate?.value).toBe(0.055);
     expect((await getCountry(request("IN", { "If-None-Match": '"IN-v2"' }), "IN")).status).toBe(304);
   });
 
@@ -119,25 +120,29 @@ describe("GET /api/countries/:code", () => {
   });
 });
 
-describe("GET /api/countries", () => {
-  it("lists published countries with version and counts, and no draft state", async () => {
-    await fake.ensureDraft("US", NOW);
-    const res = await listCountries();
-    expect(res.status).toBe(200);
-    expect(res.headers.get("cache-control")).toBe(CACHE);
-    const body = (await res.json()) as PublicCountryList;
-    expect(body.countries).toEqual([
-      { code: "IN", version: 1, sourced: 0, assumption: 13, missing: 1 },
-      { code: "US", version: 1, sourced: 0, assumption: 10, missing: 1 },
-    ]);
-    expect(JSON.stringify(body)).not.toMatch(/hasDraft/);
+describe("client contract (S1)", () => {
+  it("the real handler output parses with lib/country/loader.ts parseCountryBody, version included", async () => {
+    const v = await fake.ensureDraft("IN", NOW);
+    await fake.updateField("IN", v, "policy_rate", { value: 0.055, status: "sourced", sourceName: "RBI", sourceUrl: "https://www.rbi.org.in/", asOf: "2026-10-01" }, null, NOW);
+    await fake.publish("IN", null, NOW, "admin");
+    const body: unknown = await (await getCountry(request("IN"), "IN")).json();
+    const loaded = parseCountryBody(body, "api", "IN");
+    expect(loaded.version).toBe(2);
+    expect(loaded.source).toBe("api");
+    expect(loaded.profile.code).toBe("IN");
+    expect(loaded.profile.fields.policy_rate?.value).toBe(0.055);
+    // A profile for another country than the URL is refused by the client.
+    expect(() => parseCountryBody(body, "api", "US")).toThrow();
   });
+});
 
-  it("503 with no-store on a D1 failure", async () => {
-    setCountryRepoForTests(new ThrowingCountryRepo());
-    const res = await listCountries();
-    expect(res.status).toBe(503);
-    expect(res.headers.get("cache-control")).toBe("no-store");
+describe("GET /api/countries (S5)", () => {
+  it("has no public list route: no handler module and no Pages Function", () => {
+    expect(existsSync("server/api/countries/route.ts")).toBe(false);
+    expect(existsSync("functions/api/countries/index.ts")).toBe(false);
+    expect(existsSync("functions/api/countries/[code].ts")).toBe(true);
+    // The list stays available to the admin only (401 without a session).
+    expect(existsSync("functions/api/admin/countries/index.ts")).toBe(true);
   });
 });
 

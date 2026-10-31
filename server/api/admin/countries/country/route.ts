@@ -1,17 +1,16 @@
 // GET/PUT /api/admin/countries/:code: one country's published + draft profile, and draft edits.
-import { isEngineError } from "@taka/engine";
-import { META_PATCH_KEYS, cleanCountryField, isCountryFieldKey } from "@/lib/server/country-db";
-import type { CountryMetaPatch } from "@/lib/server/country-repo";
+import { assertCountryProfile, isEngineError, type CountryField, type CountryProfile } from "@taka/engine";
+import { assertProfileSize, cleanMetaPatch, cleanNote } from "@/lib/server/country-clean";
+import { CountryNotFoundError, applyMetaPatch, cleanCountryField, countryUnits, isCountryFieldKey, metaOf } from "@/lib/server/country-db";
 import { getCountryRepo } from "@/lib/server/env";
 import { HttpError, json, readJson } from "@/lib/server/http";
 import type { AdminCountryResponse } from "@/components/admin/countryTypes";
-import { countryErrorResponse, noteOf, parseCountryCode } from "@/server/api/countries/shared";
-import { NO_STORE, nowIso, requireAdmin, requireCsrf } from "../../shared";
+import { countryErrorResponse, parseCountryCode } from "@/server/api/countries/shared";
+import { NO_STORE, nowIso, requireAdmin, requireCsrf, todayIso } from "../../shared";
 
 export const dynamic = "force-dynamic";
 
 const LOG_PAGE = 50;
-const META_KEY_SET: ReadonlySet<string> = new Set(META_PATCH_KEYS);
 
 /** GET → { code, published, draft, changeLog (this country, last 50) }; `?before=<id>` pages the log. 404 for an unknown country. */
 export async function GET(req: Request, rawCode: string): Promise<Response> {
@@ -30,27 +29,17 @@ export async function GET(req: Request, rawCode: string): Promise<Response> {
   }
 }
 
-/** Keeps only the patchable meta keys; anything else (code, iso3, region, fields, …) is a 400. */
-function sanitiseMeta(raw: unknown): CountryMetaPatch {
-  if (typeof raw !== "object" || raw === null || Array.isArray(raw)) throw new HttpError(400, "BAD_PATCH", "meta must be an object");
-  const patch: Record<string, unknown> = {};
-  for (const [k, v] of Object.entries(raw)) {
-    if (!META_KEY_SET.has(k)) throw new HttpError(400, "BAD_PATCH", `meta.${k} cannot be edited`);
-    if (v === undefined) continue;
-    if (v === null) throw new HttpError(400, "BAD_PATCH", `meta.${k} cannot be empty`);
-    patch[k] = v;
-  }
-  if (Object.keys(patch).length === 0) throw new HttpError(400, "BAD_PATCH", "meta patch is empty");
-  return patch as CountryMetaPatch;
-}
-
 function invalid(code: string, e: unknown): HttpError {
+  if (e instanceof HttpError) return e;
   return new HttpError(400, code, e instanceof Error ? e.message : "Invalid value");
 }
 
 /**
  * PUT { field, value: CountryField, note } or { meta: CountryMetaPatch, note } → edits the draft
  * (creating it from the published version when absent) and returns that country's draft.
+ * The edit is cleaned (lib/server/country-clean.ts) and the profile it would produce is validated
+ * and size-capped (48 KB, 413 PROFILE_TOO_LARGE) before anything is written, so a rejected edit
+ * never creates a draft.
  */
 export async function PUT(req: Request, rawCode: string): Promise<Response> {
   try {
@@ -58,34 +47,50 @@ export async function PUT(req: Request, rawCode: string): Promise<Response> {
     requireCsrf(req);
     const code = parseCountryCode(rawCode);
     const body = await readJson<{ field?: unknown; value?: unknown; meta?: unknown; note?: unknown }>(req);
-    if (typeof body !== "object" || body === null) throw new HttpError(400, "BAD_REQUEST", "Body must be an object");
+    if (typeof body !== "object" || body === null || Array.isArray(body)) throw new HttpError(400, "BAD_REQUEST", "Body must be an object");
     const hasField = body.field !== undefined;
     const hasMeta = body.meta !== undefined;
     if (hasField === hasMeta) throw new HttpError(400, "BAD_REQUEST", "Send either { field, value } or { meta }");
-    const note = noteOf(body);
+    const note = cleanNote(body);
+    const today = todayIso();
     const repo = getCountryRepo();
 
+    let candidate: (base: CountryProfile) => CountryProfile;
+    let apply: (version: number) => Promise<unknown>;
     if (hasField) {
       if (!isCountryFieldKey(body.field)) throw new HttpError(400, "BAD_FIELD", `"${String(body.field)}" is not a country field`);
       const field = body.field;
-      // Validate before touching D1 so an invalid edit never creates a draft.
-      let value;
+      let value: CountryField;
       try {
-        value = cleanCountryField(code, field, body.value);
+        value = cleanCountryField(code, field, body.value, today);
       } catch (e) {
         throw invalid("INVALID_FIELD", e);
       }
-      const version = await repo.ensureDraft(code, nowIso());
-      await repo.updateField(code, version, field, value, note, nowIso());
+      candidate = (base) => ({ ...base, fields: { ...base.fields, [field]: value } });
+      apply = (version) => repo.updateField(code, version, field, value, note, nowIso());
     } else {
-      const patch = sanitiseMeta(body.meta);
-      const version = await repo.ensureDraft(code, nowIso());
-      try {
-        await repo.updateMeta(code, version, patch, note, nowIso());
-      } catch (e) {
-        if (isEngineError(e)) throw invalid("INVALID_META", e);
-        throw e;
-      }
+      const patch = cleanMetaPatch(body.meta, today);
+      candidate = (base) => {
+        try {
+          return assertCountryProfile({ ...applyMetaPatch(metaOf(base), patch), code, fields: base.fields }, countryUnits());
+        } catch (e) {
+          throw invalid("INVALID_META", e);
+        }
+      };
+      apply = (version) => repo.updateMeta(code, version, patch, note, nowIso());
+    }
+
+    // The profile this edit would produce, checked before D1 is written.
+    const base = (await repo.getDraft(code)) ?? (await repo.getPublished(code));
+    if (!base) throw new CountryNotFoundError(code);
+    assertProfileSize(candidate(base.profile));
+
+    const version = await repo.ensureDraft(code, nowIso());
+    try {
+      await apply(version);
+    } catch (e) {
+      if (isEngineError(e)) throw invalid(hasField ? "INVALID_FIELD" : "INVALID_META", e);
+      throw e;
     }
     const draft = await repo.getDraft(code);
     if (!draft) throw new HttpError(409, "NO_DRAFT", "The draft was published or discarded meanwhile");
