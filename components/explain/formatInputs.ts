@@ -10,7 +10,7 @@
  * `source`) pass through unchanged. Reference ids such as plan.goalAllocation's `goalId` are
  * never shown: they only tell the UI which bucket a step belongs to.
  */
-import type { Assumption, ExplainStep, ExplainUnit, RateUnit } from "@taka/engine";
+import { displaySourceName, type Assumption, type ExplainStep, type ExplainUnit, type RateUnit } from "@taka/engine";
 import type { Formatters } from "@/lib/i18n/useFormat";
 import type { TFunction } from "@/lib/i18n/useT";
 import type { TranslateParams } from "@/lib/i18n/types";
@@ -98,9 +98,19 @@ export function formatAssumptionValue(value: number | null, unit: RateUnit, f: F
   }
 }
 
-/** Bangla label when the row has one and the UI is in Bangla; English otherwise. */
-export function assumptionLabel(a: Assumption, locale: string): string {
-  return locale === "bn" && a.labelBn ? a.labelBn : a.labelEn;
+/**
+ * Bangla label when the row has one and the UI is in Bangla; English otherwise. Outside Bangladesh
+ * the overlay (withCountry) has already replaced both with neutral labels (NEUTRAL_LABELS), so no
+ * "Sanchayapatra" or "Bangladesh Bank" label reaches another country.
+ */
+export function assumptionLabel(a: Pick<Assumption, "labelEn" | "labelBn">, locale: string): string {
+  const bn = locale === "bn" && typeof a.labelBn === "string" ? a.labelBn.trim() : "";
+  return bn || a.labelEn;
+}
+
+/** Source name to show: "Taka Plan (our assumption)" for our own docs/ sources, else the row's source. */
+export function assumptionSource(a: Pick<Assumption, "sourceName" | "sourceUrl">): string {
+  return displaySourceName(a.sourceName, a.sourceUrl);
 }
 
 /** Only real web links get an anchor; "docs/PRD.md#…" style sources are shown as plain text. */

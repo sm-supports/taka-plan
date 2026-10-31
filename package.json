@@ -27,7 +27,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev --port 3001",
-    "build": "node scripts/copy-country-data.mjs && vite build && node scripts/check-export.mjs",
+    "build": "node scripts/gen-region-defaults.mjs && node scripts/copy-country-data.mjs && vite build && node scripts/check-export.mjs",
     "preview": "wrangler pages dev dist/client --port 8788 --compatibility-date 2026-10-23 --d1 DB=00000000-0000-4000-8000-000000000001 --persist-to .wrangler/state",
     "typecheck": "tsc --noEmit && tsc -p packages/engine/tsconfig.json --noEmit",
     "test": "vitest run",

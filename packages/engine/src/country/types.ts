@@ -32,6 +32,13 @@ export interface CountryField {
   /** Date the figure refers to (YYYY-MM-DD). */
   asOf: ISODate;
   note?: string | null;
+  /**
+   * Only with status "missing": the research found that the thing itself does not exist in the
+   * country (no gratuity law, no public pension, no old-age allowance, no term-life market), not
+   * merely that no figure was published. The overlay applies it as "none" (JSON null, 0, or the
+   * product slot unavailable). Without it, "missing" means "could not find it".
+   */
+  absent?: boolean;
 }
 
 /** How money is written in this country. Formatting itself uses Intl with the user's locale. */
@@ -87,7 +94,7 @@ export interface CountryProfile {
   /** Name in the main local language and script. */
   nameNative: string;
   region: Region;
-  /** ISO 639-1 codes of widely used languages, most used first (official or not). */
+  /** ISO 639-1 (two-letter) or, for languages without one, ISO 639-3 (three-letter) codes of widely used languages, most used first (official or not). */
   languages: string[];
   currency: CurrencyInfo;
   /** Researched figures by rate key (see COUNTRY_FIELD_KEYS). Keys not listed fall back (overlay.ts). */
@@ -137,5 +144,13 @@ export interface CountryContext {
   institutions: CountryInstitutions;
 }
 
-/** Regional fallback figures (data/countries/_regions.json), computed from sourced countries. */
-export type RegionDefaults = Partial<Record<Region, Partial<Record<RateKey, CountryField>>>>;
+/** Keys of data/countries/_regions.json: every region, plus "global" (the median over all countries). */
+export const REGION_DEFAULT_KEYS = [...REGIONS, "global"] as const;
+export type RegionDefaultKey = (typeof REGION_DEFAULT_KEYS)[number];
+
+/**
+ * Regional fallback figures (data/countries/_regions.json, written by scripts/gen-region-defaults.mjs):
+ * per-region and global medians of the sourced figures. Money-valued figures (unit "bdt") are in
+ * US dollars here; the overlay converts them with each country's dollar rate.
+ */
+export type RegionDefaults = Partial<Record<RegionDefaultKey, Partial<Record<RateKey, CountryField>>>>;

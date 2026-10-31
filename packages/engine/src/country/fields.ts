@@ -3,6 +3,7 @@
  * The research workflow, the validator, the D1 country tables and the admin editor all read this list.
  */
 import type { RateKey } from "../rates";
+import type { Instrument } from "../types";
 
 export type FieldKind =
   /** Published fact for the country (central bank, statistics office, regulator, WHO, World Bank, UN). */
@@ -102,3 +103,85 @@ export const BANGLADESH_ONLY_KEYS: readonly RateKey[] = [
   "tax_bank_interest_no_return",
   "proof_of_return_threshold",
 ] as const;
+
+/**
+ * Neutral row labels for every country field, used outside Bangladesh so no Bangladeshi name
+ * ("Bangladesh Bank", "Sanchayapatra", "FDR", "DPS", "Universal Pension Scheme") leaks into
+ * another country's rates. Bangladesh keeps the labels of its own rates table.
+ */
+export const NEUTRAL_LABELS: Readonly<Partial<Record<RateKey, { en: string; bn: string }>>> = {
+  inflation_cpi: { en: "Inflation (consumer prices, year on year)", bn: "মূল্যস্ফীতি (ভোক্তা মূল্য, বছরওয়ারি)" },
+  inflation_projection: { en: "Inflation used for projections", bn: "প্রক্ষেপণে ব্যবহৃত মূল্যস্ফীতি" },
+  policy_rate: { en: "Central bank policy rate", bn: "কেন্দ্রীয় ব্যাংকের নীতি সুদহার" },
+  savings_account_rate: { en: "Savings account interest", bn: "সেভিংস অ্যাকাউন্ট সুদ" },
+  fdr_3m_rate: { en: "Term deposit, 3 months", bn: "মেয়াদি আমানত, ৩ মাস" },
+  fdr_1y_rate: { en: "Term deposit, 1 year", bn: "মেয়াদি আমানত, ১ বছর" },
+  dps_rate: { en: "Monthly recurring deposit", bn: "মাসিক কিস্তির সঞ্চয় (রেকারিং ডিপোজিট)" },
+  bank_deposit_avg_rate: { en: "Average bank deposit rate", bn: "গড় ব্যাংক আমানত সুদহার" },
+  sanchayapatra_5y_rate: { en: "Government savings certificate, about 5 years", bn: "সরকারি সঞ্চয় সার্টিফিকেট, প্রায় ৫ বছর" },
+  tbill_91d_rate: { en: "Treasury bill, 3 months", bn: "ট্রেজারি বিল, ৩ মাস" },
+  tbond_5y_rate: { en: "Government bond, 5 years", bn: "সরকারি বন্ড, ৫ বছর" },
+  tbond_10y_rate: { en: "Government bond, 10 years", bn: "সরকারি বন্ড, ১০ বছর" },
+  tax_bank_interest: { en: "Tax on bank interest", bn: "ব্যাংক সুদের উপর কর" },
+  tax_sanchayapatra_profit: { en: "Tax on savings-certificate returns", bn: "সঞ্চয় সার্টিফিকেটের মুনাফার উপর কর" },
+  deposit_insurance_limit: { en: "Deposit insurance per depositor, per bank", bn: "আমানত বিমা, প্রতি আমানতকারী প্রতি ব্যাংক" },
+  credit_card_rate_cap: { en: "Credit card interest (legal cap or typical rate)", bn: "ক্রেডিট কার্ডের সুদ (আইনি সীমা বা সাধারণ হার)" },
+  equity_return_low: { en: "Equity return, low case", bn: "শেয়ার মুনাফা, কম ক্ষেত্রে" },
+  equity_return_base: { en: "Equity return, base case", bn: "শেয়ার মুনাফা, ভিত্তি" },
+  equity_return_high: { en: "Equity return, high case", bn: "শেয়ার মুনাফা, বেশি ক্ষেত্রে" },
+  gold_return_low: { en: "Gold return, low case", bn: "সোনার মুনাফা, কম ক্ষেত্রে" },
+  gold_return_base: { en: "Gold return, base case", bn: "সোনার মুনাফা, ভিত্তি" },
+  gold_return_high: { en: "Gold return, high case", bn: "সোনার মুনাফা, বেশি ক্ষেত্রে" },
+  fixed_income_return_low: { en: "Safe fixed-income return after tax, low case", bn: "নিরাপদ স্থির আয়ের মুনাফা কর-পরবর্তী, কম ক্ষেত্রে" },
+  fixed_income_return_base: { en: "Safe fixed-income return after tax, base case", bn: "নিরাপদ স্থির আয়ের মুনাফা কর-পরবর্তী, ভিত্তি" },
+  fixed_income_return_high: { en: "Safe fixed-income return after tax, high case", bn: "নিরাপদ স্থির আয়ের মুনাফা কর-পরবর্তী, বেশি ক্ষেত্রে" },
+  life_claim_settlement_rate: { en: "Life-insurer claim settlement rate", bn: "জীবন বিমা দাবি নিষ্পত্তির হার" },
+  insurance_term_premium_table: { en: "Indicative yearly term-life premium per 1,000 of cover, by age", bn: "বয়স অনুযায়ী প্রতি ১,০০০ বিমা অঙ্কে আনুমানিক বার্ষিক টার্ম প্রিমিয়াম" },
+  health_hospitalisation_cost: { en: "Typical cost of one major hospital stay", bn: "একবার বড় হাসপাতাল ভর্তির সাধারণ খরচ" },
+  health_premium_table: { en: "Indicative yearly health-insurance premium per 100,000 of cover, by age", bn: "বয়স অনুযায়ী প্রতি ১,০০,০০০ কভারে আনুমানিক বার্ষিক স্বাস্থ্য বিমা প্রিমিয়াম" },
+  oop_health_share: { en: "Out-of-pocket share of health spending", bn: "স্বাস্থ্য ব্যয়ে নিজ পকেটের অংশ" },
+  goal_inflation_health: { en: "Inflation for health goals", bn: "স্বাস্থ্য লক্ষ্যের মূল্যস্ফীতি" },
+  goal_inflation_education: { en: "Inflation for education goals", bn: "শিক্ষা লক্ষ্যের মূল্যস্ফীতি" },
+  life_expectancy: { en: "Life expectancy at birth", bn: "জন্মকালীন প্রত্যাশিত আয়ু" },
+  life_table_remaining: { en: "Remaining years of life at 60, 65, 70 and 80", bn: "৬০, ৬৫, ৭০ ও ৮০ বছর বয়সে বাকি আয়ু" },
+  support_ratio: { en: "Working-age people per elderly person", bn: "প্রতি প্রবীণের বিপরীতে কর্মক্ষম মানুষ" },
+  retirement_age_default: { en: "Pension age, private sector", bn: "পেনশনের বয়স, বেসরকারি খাত" },
+  retirement_age_government: { en: "Retirement age, government service", bn: "অবসরের বয়স, সরকারি চাকরি" },
+  retirement_return_low: { en: "Return in retirement after tax, low case", bn: "অবসরে কর-পরবর্তী মুনাফা, কম ক্ষেত্রে" },
+  retirement_return_base: { en: "Return in retirement after tax, base case", bn: "অবসরে কর-পরবর্তী মুনাফা, ভিত্তি" },
+  retirement_return_high: { en: "Return in retirement after tax, high case", bn: "অবসরে কর-পরবর্তী মুনাফা, বেশি ক্ষেত্রে" },
+  retirement_accumulation_return_low: { en: "Return before retirement, low case", bn: "অবসরের আগে মুনাফা, কম ক্ষেত্রে" },
+  retirement_accumulation_return_base: { en: "Return before retirement, base case", bn: "অবসরের আগে মুনাফা, ভিত্তি" },
+  retirement_accumulation_return_high: { en: "Return before retirement, high case", bn: "অবসরের আগে মুনাফা, বেশি ক্ষেত্রে" },
+  old_age_allowance_monthly: { en: "Basic old-age (social) pension a month", bn: "মাসিক বয়স্ক ভাতা (সামাজিক পেনশন)" },
+  old_age_allowance_eligibility: { en: "Basic old-age (social) pension eligibility", bn: "বয়স্ক ভাতার (সামাজিক পেনশন) যোগ্যতা" },
+  gratuity_rule: { en: "Statutory gratuity or end-of-service benefit", bn: "আইনি গ্র্যাচুইটি বা চাকরি শেষের সুবিধা" },
+  public_pension_scheme: { en: "Public pension scheme rules", bn: "সরকারি পেনশন স্কিমের নিয়ম" },
+};
+
+/**
+ * Keys where "unknown" stays unknown: when a country has no usable figure the row becomes null
+ * (JSON null, or no numeric value), never a regional or Bangladeshi rule, and M7 leaves the
+ * gratuity, public pension or old-age allowance out. Only `absent: true` turns them into "none".
+ */
+export const UNKNOWN_MEANS_NULL: readonly RateKey[] = ["gratuity_rule", "public_pension_scheme", "old_age_allowance_monthly", "old_age_allowance_eligibility"];
+
+/** The product slot each instrument rate key prices (the rate side of rates.ts INSTRUMENT_KEYS). */
+export const PRODUCT_RATE_SLOTS: Readonly<Partial<Record<RateKey, Instrument>>> = {
+  savings_account_rate: "savings_account",
+  fdr_3m_rate: "fdr_3m",
+  fdr_1y_rate: "fdr_1y",
+  dps_rate: "dps",
+  sanchayapatra_5y_rate: "sanchayapatra_5y",
+  tbill_91d_rate: "tbill_91d",
+  tbond_5y_rate: "tbond_5y",
+  tbond_10y_rate: "tbond_10y",
+};
+
+/** What the app shows as the source of a row we chose ourselves (a docs/ source). */
+export const OUR_ASSUMPTION_SOURCE = "Taka Plan (our assumption)";
+
+/** Source name to display: "Taka Plan (our assumption)" for our own docs/ sources (and empty names), else the name. */
+export function displaySourceName(sourceName: string, sourceUrl: string): string {
+  return /^docs\//.test(sourceUrl) || sourceName.trim() === "" ? OUR_ASSUMPTION_SOURCE : sourceName;
+}

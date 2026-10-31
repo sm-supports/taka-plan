@@ -1,0 +1,1565 @@
+{
+  "south_asia": {
+    "inflation_cpi": {
+      "value": 0.0707,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "inflation_projection": {
+      "value": 0.0525,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "policy_rate": {
+      "value": 0.0875,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-26",
+      "note": "Median of 5 sourced countries in South Asia."
+    },
+    "savings_account_rate": {
+      "value": 0.0263,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 6 sourced countries in South Asia."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0475,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-09",
+      "note": "Median of 5 sourced countries in South Asia."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0625,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-09",
+      "note": "Median of 5 sourced countries in South Asia."
+    },
+    "dps_rate": {
+      "value": 0.0703,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-09",
+      "note": "Median of 4 sourced countries in South Asia."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0575,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-09-30",
+      "note": "Median of 7 sourced countries in South Asia."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0977,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-21",
+      "note": "Median of 4 sourced countries in South Asia."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0593,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-29",
+      "note": "Median of 5 sourced countries in South Asia."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1016,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 4 sourced countries in South Asia."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0925,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 5 sourced countries in South Asia."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-20",
+      "note": "Median of 7 sourced countries in South Asia."
+    },
+    "deposit_insurance_limit": {
+      "value": 3263,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 5 sourced countries in South Asia, in US dollars."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 3 sourced countries in South Asia."
+    },
+    "equity_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "equity_return_base": {
+      "value": 0.0825,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "gold_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "gold_return_high": {
+      "value": 0.115,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0475,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0625,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "fixed_income_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "life_claim_settlement_rate": {
+      "value": 0.81,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-06-30",
+      "note": "Median of 3 sourced countries in South Asia."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 1000,
+        "smokerMultiplier": 1.7,
+        "bands": [
+          {
+            "maxAge": 30,
+            "low": 0.8,
+            "high": 1.5
+          },
+          {
+            "maxAge": 40,
+            "low": 1.5,
+            "high": 2.5
+          },
+          {
+            "maxAge": 50,
+            "low": 2.2,
+            "high": 4.5
+          },
+          {
+            "maxAge": 65,
+            "low": 4.8,
+            "high": 12
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Table from India, the only sourced table in South Asia."
+    },
+    "health_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 100000,
+        "bands": [
+          {
+            "maxAge": 35,
+            "low": 800,
+            "high": 1100
+          },
+          {
+            "maxAge": 50,
+            "low": 1800,
+            "high": 2500
+          },
+          {
+            "maxAge": 65,
+            "low": 2500,
+            "high": 4000
+          },
+          {
+            "maxAge": 120,
+            "low": 3000,
+            "high": 5000
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Table from India, the only sourced table in South Asia."
+    },
+    "oop_health_share": {
+      "value": 0.539,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2023-12-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "goal_inflation_health": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "goal_inflation_education": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "life_expectancy": {
+      "value": 72.3,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2024-12-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 65,
+            "total": 14,
+            "men": 13.2,
+            "women": 14.7,
+            "projected": 16.3
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.6,
+            "women": 6.1,
+            "projected": 7
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-07-08",
+      "note": "Table from Nepal, the median of 5 sourced countries in South Asia."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 10.8
+          },
+          {
+            "year": 2040,
+            "value": 7.1
+          },
+          {
+            "year": 2065,
+            "value": 2.3
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Table from Bhutan, the median of 7 sourced countries in South Asia."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 7 sourced countries in South Asia."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-02",
+      "note": "Median of 5 sourced countries in South Asia."
+    },
+    "retirement_return_low": {
+      "value": 0.0475,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "retirement_return_base": {
+      "value": 0.0575,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 8 sourced countries in South Asia."
+    }
+  },
+  "east_asia_pacific": {
+    "inflation_cpi": {
+      "value": 0.0314,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 30 sourced countries in East Asia and Pacific."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 23 sourced countries in East Asia and Pacific."
+    },
+    "savings_account_rate": {
+      "value": 0.0033,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 19 sourced countries in East Asia and Pacific."
+    },
+    "fdr_3m_rate": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 19 sourced countries in East Asia and Pacific."
+    },
+    "fdr_1y_rate": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 19 sourced countries in East Asia and Pacific."
+    },
+    "dps_rate": {
+      "value": 0.0176,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-09-30",
+      "note": "Median of 3 sourced countries in East Asia and Pacific."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0158,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-07",
+      "note": "Median of 22 sourced countries in East Asia and Pacific."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-11-02",
+      "note": "Median of 5 sourced countries in East Asia and Pacific."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0308,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 14 sourced countries in East Asia and Pacific."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0334,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 12 sourced countries in East Asia and Pacific."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0401,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 15 sourced countries in East Asia and Pacific."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 23 sourced countries in East Asia and Pacific."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in East Asia and Pacific."
+    },
+    "deposit_insurance_limit": {
+      "value": 68882,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 14 sourced countries in East Asia and Pacific, in US dollars."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.205,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 9 sourced countries in East Asia and Pacific."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0129,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "fixed_income_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "health_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 100000,
+        "bands": [
+          {
+            "maxAge": 35,
+            "low": 652,
+            "high": 981
+          },
+          {
+            "maxAge": 50,
+            "low": 1088,
+            "high": 1460
+          },
+          {
+            "maxAge": 65,
+            "low": 2014,
+            "high": 4263
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2025-10-01",
+      "note": "Table from Fiji, the only sourced table in East Asia and Pacific."
+    },
+    "oop_health_share": {
+      "value": 0.122,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2024-12-31",
+      "note": "Median of 29 sourced countries in East Asia and Pacific."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "life_expectancy": {
+      "value": 71.7,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-07-08",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.9,
+            "men": 16.2,
+            "women": 21.1
+          },
+          {
+            "age": 65,
+            "total": 15.4,
+            "men": 13.2,
+            "women": 17.2
+          },
+          {
+            "age": 70,
+            "total": 12.3,
+            "men": 10.5,
+            "women": 13.6
+          },
+          {
+            "age": 80,
+            "total": 7,
+            "men": 6.1,
+            "women": 7.6
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Table from Mongolia, the median of 27 sourced countries in East Asia and Pacific."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.1
+          },
+          {
+            "year": 2040,
+            "value": 6.2
+          },
+          {
+            "year": 2065,
+            "value": 3.8
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2025-12-31",
+      "note": "Table from Myanmar, the median of 30 sourced countries in East Asia and Pacific."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Median of 27 sourced countries in East Asia and Pacific."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Median of 15 sourced countries in East Asia and Pacific."
+    },
+    "retirement_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "retirement_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 31 sourced countries in East Asia and Pacific."
+    }
+  },
+  "europe_central_asia": {
+    "inflation_cpi": {
+      "value": 0.0369,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-29",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "savings_account_rate": {
+      "value": 0.0041,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-09-30",
+      "note": "Median of 9 sourced countries in Europe and Central Asia."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0167,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-09-30",
+      "note": "Median of 5 sourced countries in Europe and Central Asia."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0214,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 11 sourced countries in Europe and Central Asia."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0176,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-09-30",
+      "note": "Median of 11 sourced countries in Europe and Central Asia."
+    },
+    "tbill_91d_rate": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 6 sourced countries in Europe and Central Asia."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0472,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 4 sourced countries in Europe and Central Asia."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0409,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 9 sourced countries in Europe and Central Asia."
+    },
+    "tax_bank_interest": {
+      "value": 0.185,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 12 sourced countries in Europe and Central Asia."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 7 sourced countries in Europe and Central Asia."
+    },
+    "deposit_insurance_limit": {
+      "value": 111719,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 11 sourced countries in Europe and Central Asia, in US dollars."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 6 sourced countries in Europe and Central Asia."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "fixed_income_return_low": {
+      "value": 0.011,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "fixed_income_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "oop_health_share": {
+      "value": 0.179,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2024-12-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "life_expectancy": {
+      "value": 81.9,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 23.3,
+            "men": 22.2,
+            "women": 24.3
+          },
+          {
+            "age": 65,
+            "total": 19.1,
+            "men": 18.2,
+            "women": 19.9
+          },
+          {
+            "age": 70,
+            "total": 15,
+            "men": 14.4,
+            "women": 15.6
+          },
+          {
+            "age": 80,
+            "total": 8.5,
+            "men": 8,
+            "women": 8.9
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Table from Albania, the median of 12 sourced countries in Europe and Central Asia."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.07
+          },
+          {
+            "year": 2040,
+            "value": 2.07
+          },
+          {
+            "year": 2065,
+            "value": 1.7
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-01-01",
+      "note": "Table from Austria, the median of 13 sourced countries in Europe and Central Asia."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 5 sourced countries in Europe and Central Asia."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "retirement_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 13 sourced countries in Europe and Central Asia."
+    }
+  },
+  "global": {
+    "inflation_cpi": {
+      "value": 0.037,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 51 sourced countries worldwide."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "policy_rate": {
+      "value": 0.0275,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 41 sourced countries worldwide."
+    },
+    "savings_account_rate": {
+      "value": 0.0046,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 34 sourced countries worldwide."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0167,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 29 sourced countries worldwide."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0215,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 35 sourced countries worldwide."
+    },
+    "dps_rate": {
+      "value": 0.0333,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-09",
+      "note": "Median of 8 sourced countries worldwide."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.021,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-07",
+      "note": "Median of 40 sourced countries worldwide."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0545,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-11-02",
+      "note": "Median of 10 sourced countries worldwide."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0298,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 25 sourced countries worldwide."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0442,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 20 sourced countries worldwide."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0438,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-30",
+      "note": "Median of 29 sourced countries worldwide."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 42 sourced countries worldwide."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 22 sourced countries worldwide."
+    },
+    "deposit_insurance_limit": {
+      "value": 74682,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 30 sourced countries worldwide, in US dollars."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 18 sourced countries worldwide."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "gold_return_low": {
+      "value": 0.0125,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "gold_return_high": {
+      "value": 0.0875,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0135,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "life_claim_settlement_rate": {
+      "value": 0.89,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-06-30",
+      "note": "Median of 4 sourced countries worldwide."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 1000,
+        "smokerMultiplier": 1.7,
+        "bands": [
+          {
+            "maxAge": 30,
+            "low": 0.8,
+            "high": 1.5
+          },
+          {
+            "maxAge": 40,
+            "low": 1.5,
+            "high": 2.5
+          },
+          {
+            "maxAge": 50,
+            "low": 2.2,
+            "high": 4.5
+          },
+          {
+            "maxAge": 65,
+            "low": 4.8,
+            "high": 12
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Table from India, the only sourced table worldwide."
+    },
+    "health_hospitalisation_cost": {
+      "value": 530,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2025-12-31",
+      "note": "Median of 3 sourced countries worldwide, in US dollars."
+    },
+    "health_premium_table": {
+      "value": null,
+      "valueJson": {
+        "per": 100000,
+        "bands": [
+          {
+            "maxAge": 35,
+            "low": 652,
+            "high": 981
+          },
+          {
+            "maxAge": 50,
+            "low": 1088,
+            "high": 1460
+          },
+          {
+            "maxAge": 65,
+            "low": 2014,
+            "high": 4263
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Table from Fiji, the median of 2 sourced countries worldwide."
+    },
+    "oop_health_share": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2024-12-31",
+      "note": "Median of 50 sourced countries worldwide."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "life_expectancy": {
+      "value": 74,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 65,
+            "total": 15.92
+          },
+          {
+            "age": 80,
+            "total": 6.7
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Table from North Korea, the median of 44 sourced countries worldwide."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.5
+          },
+          {
+            "year": 2040,
+            "value": 6.2
+          },
+          {
+            "year": 2065,
+            "value": 7.1
+          }
+        ]
+      },
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Table from Tonga, the median of 50 sourced countries worldwide."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Median of 47 sourced countries worldwide."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-12-31",
+      "note": "Median of 25 sourced countries worldwide."
+    },
+    "retirement_return_low": {
+      "value": 0.0124,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "retirement_return_high": {
+      "value": 0.0325,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.0275,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/CONTRACTS-V2.md",
+      "asOf": "2026-10-31",
+      "note": "Median of 52 sourced countries worldwide."
+    }
+  }
+}
