@@ -242,9 +242,15 @@ export function computeAllocation(input: M6Input, rates: RatesSnapshot, today: I
   } else if (wb.capApplied) {
     ex.note("m6.note.capApplied");
   }
+  // Gold that cannot be bought in this country moves to fixed income (no empty bucket).
+  const unavailableSlots = rates.country?.unavailable ?? [];
+  if (unavailableSlots.includes("gold") && milli.gold > 0) {
+    milli.fixedIncome += milli.gold;
+    milli.gold = 0;
+  }
   const weights = toAllocation(milli);
   const equityRaw = horizonRule === "none" ? wb.equity : 0;
-  const goldRaw = horizonRule === "cashOnly" ? 0 : wb.gold;
+  const goldRaw = horizonRule === "cashOnly" || unavailableSlots.includes("gold") ? 0 : wb.gold;
   ex.step({
     id: "m6.equity",
     inputs: {
@@ -270,8 +276,10 @@ export function computeAllocation(input: M6Input, rates: RatesSnapshot, today: I
 
   // F3 instrument map.
   const instruments = instrumentsFor(weights, horizonRule, horizonYears, input.directShares === true, rates.country?.unavailable ?? []);
-  ex.note("m6.note.noIndexFund");
-  ex.note("m6.note.neverBreakCertificates");
+  // Bangladesh-specific advice: no index fund is sold there, and savings certificates lose rate if cashed early.
+  const isBangladesh = rates.country === undefined || rates.country.code === "BD";
+  if (isBangladesh) ex.note("m6.note.noIndexFund");
+  if (!unavailableSlots.includes("sanchayapatra_5y")) ex.note("m6.note.neverBreakCertificates");
 
   // F5 projection.
   const years = input.projectionYears ?? horizonYears;

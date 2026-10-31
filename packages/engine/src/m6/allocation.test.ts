@@ -216,7 +216,7 @@ describe("computeAllocation: instrument map (F3)", () => {
     expect(eq?.howToKeys).toEqual(["m6.howto.directShares"]);
   });
 
-  it("drops slots the country lacks: gold unavailable → no product; certificate unavailable → first alternative", () => {
+  it("drops slots the country lacks: gold unavailable → its share moves to fixed income; certificate unavailable → first alternative", () => {
     const profile = {
       ...FIXTURE_US,
       instruments: { ...FIXTURE_US.instruments, gold: { available: false, localName: null }, sanchayapatra_5y: { available: false, localName: null } },
@@ -224,10 +224,14 @@ describe("computeAllocation: instrument map (F3)", () => {
     const us = withCountry(rates, profile, { bdUsdRate: 122 });
     expect(us.country?.unavailable).toEqual(expect.arrayContaining(["gold", "sanchayapatra_5y", "dps"]));
     const r = run({ lumpSum: 12_345 }, us);
-    expect(r.instruments.find((c) => c.bucket === "gold")).toEqual({ bucket: "gold", primary: null, alternatives: [], howToKeys: ["m6.howto.gold"] });
+    expect(r.weights).toEqual({ equity: 0.45, gold: 0, fixedIncome: 0.55 });
+    expect(r.instruments.find((c) => c.bucket === "gold")).toBeUndefined();
     expect(r.instruments.find((c) => c.bucket === "fixedIncome")).toEqual({ bucket: "fixedIncome", primary: "tbill_91d", alternatives: ["tbond_5y", "fdr_1y"], howToKeys: ["m6.howto.fixedIncome"] });
-    // Dollar rounding steps (lump 5): 12,345 → 5,555 / 1,235 / 5,555.
-    expect(r.amounts.lump).toEqual({ equity: 5_555, gold: 1_235, fixedIncome: 5_555 });
+    // Dollar rounding steps (lump 5): 12,345 → 5,555 equity, 6,790 fixed income.
+    expect(r.amounts.lump).toEqual({ equity: 5_555, gold: 0, fixedIncome: 6_790 });
+    // Bangladesh-only notes are not shown for the US without a savings certificate.
+    expect(r.notes).not.toContain("m6.note.noIndexFund");
+    expect(r.notes).not.toContain("m6.note.neverBreakCertificates");
   });
 });
 
