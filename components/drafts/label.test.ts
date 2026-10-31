@@ -9,10 +9,12 @@ import { PROFILE_DEFAULTS } from "@/lib/onboarding/validate";
 import {
   autoDraftLabel,
   cleanDraftName,
+  countryName,
   currentHash,
   DRAFT_NAME_MAX,
   draftFacts,
   draftLabel,
+  draftUpdatedAt,
   hasAnswers,
   isoDatePart,
   onlyOnboardingDefaults,
@@ -21,8 +23,8 @@ import {
 
 const tEn = (k: string, p?: Record<string, string | number>) => translate(en, k, p);
 const tBn = (k: string, p?: Record<string, string | number>) => translate(bn, k, p);
-const fEn = createFormatters("en");
-const fBn = createFormatters("bn");
+const fEn = { ...createFormatters("en"), locale: "en" as const };
+const fBn = { ...createFormatters("bn"), locale: "bn" as const };
 
 const base: DraftAnswers = { country: "BD", locale: "en", ...EMPTY_ANSWERS };
 const goal = (id: string) => ({ id, name: "Bike", cost: 200000, years: 2, type: "vehicle" as const });
@@ -38,20 +40,22 @@ function stateWith(a: Partial<DraftAnswers>, drafts: Draft[] = []): TakaData {
 
 describe("draft labels", () => {
   it("builds the auto label from country, age, take-home and goals", () => {
-    expect(autoDraftLabel(full, tEn, fEn)).toBe("BD · Age 28 · ৳50,000/month · 2 goals");
-    expect(autoDraftLabel({ ...full, m5: { goals: [goal("g1")] } }, tEn, fEn)).toBe("BD · Age 28 · ৳50,000/month · 1 goal");
+    expect(autoDraftLabel(full, tEn, fEn)).toBe("Bangladesh · Age 28 · ৳50,000/month · 2 goals");
+    expect(autoDraftLabel({ ...full, m5: { goals: [goal("g1")] } }, tEn, fEn)).toBe("Bangladesh · Age 28 · ৳50,000/month · 1 goal");
+    // The insurance check, asset mix and retirement plan are named once they hold answers.
+    expect(autoDraftLabel({ ...full, m2: { smoker: true }, m6: { risk: {} }, m7: { planToAge: 90 } }, tEn, fEn)).toBe("Bangladesh · Age 28 · ৳50,000/month · 2 goals · Insurance · Retirement");
   });
 
   it("uses Bangla digits in Bangla", () => {
     const label = autoDraftLabel(full, tBn, fBn);
-    expect(label).toBe("BD · বয়স ২৮ · মাসে ৳৫০,০০০ · ২টি লক্ষ্য");
+    expect(label).toBe("বাংলাদেশ · বয়স ২৮ · মাসে ৳৫০,০০০ · ২টি লক্ষ্য");
     expect(label).not.toMatch(/[0-9]/);
   });
 
   it("leaves out facts the draft does not have", () => {
-    expect(autoDraftLabel({ ...base, country: "IN", profile: { age: 40 } }, tEn, fEn)).toBe("IN · Age 40");
-    expect(autoDraftLabel({ ...base, profile: { takeHome: 0 } }, tEn, fEn)).toBe("BD");
-    expect(draftFacts({ ...base, profile: { age: Number.NaN } })).toEqual({ country: "BD", age: null, takeHome: null, goals: 0 });
+    expect(autoDraftLabel({ ...base, country: "IN", profile: { age: 40 } }, tEn, fEn)).toBe("India · Age 40");
+    expect(autoDraftLabel({ ...base, profile: { takeHome: 0 } }, tEn, fEn)).toBe("Bangladesh");
+    expect(draftFacts({ ...base, profile: { age: Number.NaN } })).toEqual({ country: "BD", age: null, takeHome: null, goals: 0, m2: false, m6: false, m7: false });
   });
 
   it("prefers the user's name, ignoring blank names", () => {
@@ -64,6 +68,21 @@ describe("draft labels", () => {
     expect(cleanDraftName("  my   plan  ")).toBe("my plan");
     expect(cleanDraftName("x".repeat(60))).toHaveLength(DRAFT_NAME_MAX);
     expect(cleanDraftName("   ")).toBe("");
+  });
+
+  it("shows the day and time a draft was updated, with Bangla digits in Bangla", () => {
+    expect(draftUpdatedAt("2026-10-31T09:12:00.000Z", "en", "UTC")).toBe("Oct 31, 2026, 09:12 AM");
+    const bnText = draftUpdatedAt("2026-10-31T15:05:00.000Z", "bn", "UTC");
+    expect(bnText).toContain("৩১");
+    expect(bnText).toContain("১৫:০৫");
+    expect(bnText).not.toMatch(/[0-9]|AM|PM/);
+    expect(draftUpdatedAt("garbage", "en")).toBe("garbage");
+  });
+
+  it("names the country in the UI language", () => {
+    expect(countryName("IN", "en")).toBe("India");
+    expect(countryName("IN", "bn")).toBe("ভারত");
+    expect(countryName("XK", "en")).toBe("Kosovo");
   });
 
   it("takes the ISO date part for the formatter", () => {

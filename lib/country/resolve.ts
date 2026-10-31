@@ -55,3 +55,15 @@ export function contextOf(s: RatesSnapshot): CountryContext {
   if (!s.country) throw new Error("snapshot has no country context; build it with overlaySnapshot()");
   return s.country;
 }
+
+/**
+ * What the banner under the header says about the chosen country (components/layout/CountryNotice):
+ * "missing" when there is no researched profile for it (Bangladesh is shown instead, also once the
+ * network has answered with nothing), "partial" when its context lists regional or converted
+ * fallback figures, else "none". While the first copy is still loading nothing is said.
+ */
+export function countryNoticeKind(c: { code: string; profileCode: string; source: string; loading: boolean; fallbackKeys: readonly string[] }): "none" | "missing" | "partial" {
+  if (c.source === "fallback" || (!c.loading && c.profileCode !== c.code)) return "missing";
+  if (c.profileCode === c.code && c.fallbackKeys.length > 0) return "partial";
+  return "none";
+}

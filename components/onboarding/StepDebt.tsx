@@ -1,5 +1,5 @@
 "use client";
-/** Question 5: loans or carried card balances, yes/no, then a short recap before "See my plan". */
+/** Question 5: loans or carried card balances, yes/no, then a recap of all five answers before "See my plan". */
 import { YesNo } from "@/components/ui/YesNo";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
@@ -7,13 +7,19 @@ import { Notice } from "./Notice";
 import type { Onboarding } from "./useOnboarding";
 
 export function StepDebt({ profile, setProfile }: Onboarding) {
-  const { t } = useT();
+  const { t, locale } = useT();
   const { money, number } = useFormat();
   const hasDebt = typeof profile.hasDebt === "boolean" ? profile.hasDebt : null;
   const recap = [
     typeof profile.age === "number" ? t("onboarding.summary.age", { age: number(profile.age) }) : null,
     typeof profile.takeHome === "number" ? t("onboarding.summary.takeHome", { amount: money(profile.takeHome) }) : null,
     typeof profile.essentials === "number" ? t("onboarding.summary.essentials", { amount: money(profile.essentials) }) : null,
+    Array.isArray(profile.dependents)
+      ? profile.dependents.length > 0
+        ? t("onboarding.summary.dependents", { list: profile.dependents.map((d) => t(`common.dependent.${d}`)).join(locale === "ar" || locale === "ur" ? "، " : ", ") })
+        : t("onboarding.summary.noDependents")
+      : null,
+    hasDebt === null ? null : t(hasDebt ? "onboarding.summary.debt" : "onboarding.summary.noDebt"),
   ].filter((x): x is string => x !== null);
 
   return (

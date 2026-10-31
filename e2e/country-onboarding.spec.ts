@@ -50,11 +50,11 @@ test("India offers Hindi (and Bangla, Urdu) plus English", async ({ page }) => {
   await expect(page.locator("html")).toHaveAttribute("lang", "hi-IN");
 });
 
-test("United States is suggested and offers Spanish and English only", async ({ page }) => {
+test("United States is suggested and offers English (its main language) first, then Spanish", async ({ page }) => {
   await openPicker(page);
   await expect(page.getByRole("region", { name: "Suggested" }).locator('button[data-country="US"]')).toBeVisible();
   await pickCountry(page, "US");
-  await expect(languageButtons(page)).toHaveText(["Español", "English"]);
+  await expect(languageButtons(page)).toHaveText(["English", "Español"]);
   await page.getByRole("button", { name: "English", exact: true }).click();
   await expect(page).toHaveURL(/\/en\/start\/1$/);
 });
@@ -116,7 +116,7 @@ test("change country from the header, then the language menu offers the new coun
     { name: "tp_locale", value: "en", url: baseURL! },
   ]);
   await page.goto("/en/about");
-  const countryLink = page.getByRole("link", { name: "Country BD. Change country" });
+  const countryLink = page.getByRole("link", { name: "Country Bangladesh. Change country" });
   await expect(countryLink).toBeVisible();
   await countryLink.click();
   await expect.poll(() => new URL(page.url()).search).toBe("?change=country");
@@ -130,7 +130,7 @@ test("change country from the header, then the language menu offers the new coun
 
   // Language menu: India's languages plus English; switching keeps the path and the query string.
   await page.goto("/en/plan?demo=1");
-  await expect(page.getByRole("link", { name: "Country IN. Change country" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Country India. Change country" })).toBeVisible();
   const menuButton = page.getByRole("button", { name: "Language: English" });
   await menuButton.click();
   await expect(menuButton).toHaveAttribute("aria-expanded", "true");

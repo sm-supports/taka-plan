@@ -31,6 +31,8 @@ test("client navigation fetches the exported .txt RSC payload", async ({ page })
   page.on("request", (r) => { if (r.url().endsWith(".txt")) txt.push(new URL(r.url()).pathname); });
   await page.goto("/en/about");
   await expect(page.locator("h1")).toBeVisible();
+  // Click only once the page has hydrated: an early click is a full page load, which fetches no .txt.
+  await page.waitForLoadState("networkidle", { timeout: 20_000 }).catch(() => {});
   await page.getByRole("link", { name: /plan/i }).last().click();
   await expect.poll(() => new URL(page.url()).pathname).toBe("/en/start/1"); // no profile yet: plan forwards to onboarding
   expect(txt).toEqual(expect.arrayContaining(["/en/plan.txt", "/en/start/1.txt"]));

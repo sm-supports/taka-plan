@@ -1,10 +1,19 @@
 "use client";
 // Zustand store persisted to localStorage; SSR-safe (no window access at module eval).
+// Resilient by design: a blocked or throwing localStorage falls back to memory, a corrupted blob
+// starts fresh (and is kept aside under CORRUPT_KEY), every persisted field is shape-checked
+// (lib/store/validate.ts), and another tab's writes are picked up through "storage" events.
 import { useEffect, useState } from "react";
 import { create } from "zustand";
-import { createJSONStorage, persist, type StateStorage } from "zustand/middleware";
+import { persist, type PersistStorage, type StateStorage, type StorageValue } from "zustand/middleware";
 import { upsertDraft } from "./drafts";
 import { EMPTY_ANSWERS, INITIAL_DATA, type DraftAnswers, type OnboardingState, type TakaData, type TakaState } from "./types";
+import { sanitizeData } from "./validate";
+
+/** localStorage key of the store. It keeps its v1 name so existing users' answers are found and migrated in place. */
+export const STORE_KEY = "taka-plan.v1";
+/** Where an unreadable blob is set aside (once) instead of being silently overwritten. */
+export const CORRUPT_KEY = `${STORE_KEY}.corrupt`;
 
 /** In-memory Storage used on the server and when localStorage is unavailable. */
 function memoryStorage(): StateStorage {
@@ -18,12 +27,87 @@ function memoryStorage(): StateStorage {
 
 const fallback = memoryStorage();
 
-/** Resolves localStorage lazily so RSC/SSR never touches `window`. */
+/** window.localStorage, or null on the server or when merely touching it throws (privacy modes, blocked site data). */
+function local(): Storage | null {
+  try {
+    return typeof window === "undefined" ? null : window.localStorage;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Resolves localStorage lazily so RSC/SSR never touches `window`. Every call is wrapped: when
+ * localStorage is missing or throws (SecurityError, QuotaExceededError) the in-memory copy answers
+ * instead, so the app keeps working for the rest of the visit.
+ */
 export const safeLocalStorage: StateStorage = {
-  getItem: (k) => (typeof window === "undefined" ? fallback.getItem(k) : window.localStorage.getItem(k)),
-  setItem: (k, v) => (typeof window === "undefined" ? fallback.setItem(k, v) : window.localStorage.setItem(k, v)),
-  removeItem: (k) => (typeof window === "undefined" ? fallback.removeItem(k) : window.localStorage.removeItem(k)),
+  getItem: (k) => {
+    try {
+      const ls = local();
+      if (ls) return ls.getItem(k);
+    } catch {
+      // fall through to memory
+    }
+    return fallback.getItem(k) as string | null;
+  },
+  setItem: (k, v) => {
+    fallback.setItem(k, v);
+    try {
+      local()?.setItem(k, v);
+    } catch {
+      // quota or privacy mode: the memory copy holds it for this visit
+    }
+  },
+  removeItem: (k) => {
+    fallback.removeItem(k);
+    try {
+      local()?.removeItem(k);
+    } catch {
+      // ignore
+    }
+  },
 };
+
+/**
+ * JSON storage over `raw` that never throws: an unparsable value reads as "nothing stored" (the
+ * broken text is copied to CORRUPT_KEY first, once), and write errors are swallowed.
+ */
+export function resilientJSONStorage<S>(raw: () => StateStorage): PersistStorage<S> {
+  return {
+    getItem: (name) => {
+      let text: string | null = null;
+      try {
+        text = raw().getItem(name) as string | null;
+        if (text === null) return null;
+        const parsed = JSON.parse(text) as unknown;
+        if (typeof parsed !== "object" || parsed === null) throw new Error("not an object");
+        return parsed as StorageValue<S>;
+      } catch {
+        try {
+          if (text !== null && raw().getItem(CORRUPT_KEY) === null) raw().setItem(CORRUPT_KEY, text);
+        } catch {
+          // ignore
+        }
+        return null;
+      }
+    },
+    setItem: (name, value) => {
+      try {
+        raw().setItem(name, JSON.stringify(value));
+      } catch {
+        // ignore
+      }
+    },
+    removeItem: (name) => {
+      try {
+        raw().removeItem(name);
+      } catch {
+        // ignore
+      }
+    },
+  };
+}
 
 /** Replace one item in a list by id, leaving others untouched. */
 function patchById<T extends { id: string }>(list: T[], id: string, patch: Partial<T>): T[] {
@@ -48,23 +132,29 @@ function nowIso(): string {
   return new Date().toISOString();
 }
 
-/** v1 → v2: Bangladesh as the country, empty M2/M6/M7 slices, no drafts. Unknown versions start fresh. */
+/**
+ * Persisted blob → current TakaData. v1 → v2: Bangladesh as the country, empty M2/M6/M7 slices,
+ * no drafts. v2 (and anything newer) keeps its answers. Every field is shape-checked either way
+ * (lib/store/validate.ts): a field with the wrong type is dropped, a slice that is not an object
+ * starts from its initial value. Unknown (older or missing) versions start fresh.
+ */
 export function migrateState(persisted: unknown, version: number): TakaData {
-  const p = (persisted ?? {}) as Partial<TakaData> & Record<string, unknown>;
-  if (version >= 2) return { ...INITIAL_DATA, ...p, schemaVersion: 2 } as TakaData;
-  if (version === 1) {
-    return {
-      ...INITIAL_DATA,
-      ...p,
-      schemaVersion: 2,
-      country: "BD",
-      m2: {},
-      m6: {},
-      m7: {},
-      drafts: [],
-    } as TakaData;
-  }
+  const p = (typeof persisted === "object" && persisted !== null ? persisted : {}) as Record<string, unknown>;
+  if (version >= 2) return sanitizeData(p);
+  if (version === 1) return sanitizeData({ ...p, country: "BD", m2: {}, m6: {}, m7: {}, drafts: [] });
   return { ...INITIAL_DATA };
+}
+
+/* ---- hydration status ---- */
+
+let hydrationFailed = false;
+const failureListeners = new Set<() => void>();
+
+/** Called by persist after every (re)hydration; an error still counts as "done", so the app never waits forever. */
+function afterRehydrate(_state: unknown, error: unknown): void {
+  if (!error) return;
+  hydrationFailed = true;
+  for (const cb of failureListeners) cb();
 }
 
 export const useTakaStore = create<TakaState>()(
@@ -99,6 +189,13 @@ export const useTakaStore = create<TakaState>()(
           const onboarding: OnboardingState = { step: 1, completed: false, disclaimerSeen: s.onboarding.disclaimerSeen };
           return { ...EMPTY_ANSWERS, drafts, onboarding };
         }),
+      switchCountry: (country) =>
+        set((s) => {
+          if (country === s.country) return {};
+          const { drafts } = upsertDraft(s.drafts, answersOf(s), nowIso(), () => makeId("draft"));
+          const onboarding: OnboardingState = { step: 1, completed: false, disclaimerSeen: s.onboarding.disclaimerSeen };
+          return { ...EMPTY_ANSWERS, country, drafts, onboarding };
+        }),
       openDraft: (id) =>
         set((s) => {
           const target = s.drafts.find((d) => d.id === id);
@@ -114,27 +211,50 @@ export const useTakaStore = create<TakaState>()(
       reset: () => set({ ...INITIAL_DATA }),
     }),
     {
-      // The key keeps its v1 name so existing users' answers are found and migrated in place.
-      name: "taka-plan.v1",
+      name: STORE_KEY,
       version: 2,
-      storage: createJSONStorage(() => safeLocalStorage),
+      storage: resilientJSONStorage<TakaData>(() => safeLocalStorage),
       partialize: (s: TakaState): TakaData => partialize(s),
       // Actions are re-attached by persist after migration; only the data half is returned here.
       migrate: (persisted, version) => migrateState(persisted, version) as TakaState,
+      // Same-version blobs skip `migrate`, so they are shape-checked here. Nothing stored → keep the current state.
+      merge: (persisted, current) => (persisted === undefined || persisted === null ? current : { ...current, ...sanitizeData(persisted) }),
+      onRehydrateStorage: () => afterRehydrate,
     },
   ),
 );
 
-/** True once persist has rehydrated from storage; false during SSR and first client render. */
+/** True once persist has rehydrated from storage (or given up on it); false during SSR and first client render. */
 export function useHydrated(): boolean {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
-    const unsub = useTakaStore.persist.onFinishHydration(() => setHydrated(true));
-    setHydrated(useTakaStore.persist.hasHydrated());
-    return unsub;
+    const done = () => setHydrated(true);
+    const unsub = useTakaStore.persist.onFinishHydration(done);
+    failureListeners.add(done);
+    if (useTakaStore.persist.hasHydrated() || hydrationFailed) done();
+    return () => {
+      unsub();
+      failureListeners.delete(done);
+    };
   }, []);
   return hydrated;
 }
+
+/* ---- other tabs ---- */
+
+/** Rehydrates when another tab wrote (or cleared) the store, so a stale tab never overwrites newer answers or drafts. */
+export function onStorageEvent(e: Pick<StorageEvent, "key">): void {
+  if (e.key === STORE_KEY || e.key === null) void useTakaStore.persist.rehydrate();
+}
+
+/** Listens for other tabs' writes on `target` (window in the app); returns the unsubscribe. */
+export function syncAcrossTabs(target: Pick<EventTarget, "addEventListener" | "removeEventListener">): () => void {
+  const handler = (e: Event) => onStorageEvent(e as StorageEvent);
+  target.addEventListener("storage", handler);
+  return () => target.removeEventListener("storage", handler);
+}
+
+if (typeof window !== "undefined") syncAcrossTabs(window);
 
 /** Collision-resistant id for loans, cards and goals: prefix + time + random, base36. */
 export function makeId(prefix: string): string {

@@ -142,24 +142,77 @@ export function regionOfTag(tag: string): string | undefined {
   return undefined;
 }
 
+/** True for a Bangla language tag ("bn", "bn-BD", "bn-IN"). */
+export function isBanglaTag(tag: string): boolean {
+  return /^bn(?:[-_]|$)/i.test(tag);
+}
+
+/** Time zones that mean Bangladesh (Asia/Dacca is the old IANA name). */
+const BD_TIME_ZONES = new Set(["Asia/Dhaka", "Asia/Dacca"]);
+
 /**
  * Suggested countries: the tp_country cookie first, then each browser language's region
- * (navigator.languages, e.g. "bn-BD" → BD), without duplicates or unknown codes. At most `max`.
+ * (navigator.languages, e.g. "bn-BD" → BD) with Bangladesh for any Bangla language ("bn",
+ * "bn-IN" → IN, BD), then Bangladesh for the Asia/Dhaka time zone; without duplicates or unknown
+ * codes. At most `max`.
  */
-export function suggestCountries(input: { cookie?: string | null; languages?: readonly string[] }, list: readonly CountryIndexEntry[], max = 3): CountryIndexEntry[] {
+export function suggestCountries(
+  input: { cookie?: string | null; languages?: readonly string[]; timeZone?: string | null },
+  list: readonly CountryIndexEntry[],
+  max = 3,
+): CountryIndexEntry[] {
   const out: CountryIndexEntry[] = [];
   const add = (code: string | undefined) => {
     const e = findCountry(code, list);
     if (e && !out.includes(e) && out.length < max) out.push(e);
   };
   add(input.cookie ?? undefined);
-  for (const tag of input.languages ?? []) add(regionOfTag(tag));
+  for (const tag of input.languages ?? []) {
+    add(regionOfTag(tag));
+    if (isBanglaTag(tag)) add("BD");
+  }
+  if (input.timeZone && BD_TIME_ZONES.has(input.timeZone)) add("BD");
   return out;
 }
 
-/** The locales the UI offers for a country: its translated languages, then English (bn/en when unknown). */
+/**
+ * The order the language step and the header menu offer a country's locales in. `entry.locales`
+ * lists translated languages before English; English moves to the front when it is the country's
+ * main language (US, GB, AU, CA, NZ, IE, SG...) or when the main language has no translation yet
+ * (Germany, Austria and Switzerland keep English first rather than French; Malaysia English
+ * before Chinese). Taiwan still offers zh first: our zh is Simplified Chinese, and Taiwan writes
+ * Traditional, but it is the closest translation we have.
+ */
+export function orderedLocales(entry: Pick<CountryIndexEntry, "languages" | "locales">): Locale[] {
+  const main = entry.languages[0];
+  const translatedMain = !!main && main !== "en" && (entry.locales as readonly string[]).includes(main);
+  if (translatedMain || !entry.locales.includes("en")) return [...entry.locales];
+  return ["en", ...entry.locales.filter((l) => l !== "en")];
+}
+
+/** The locales the UI offers for a country, in the order it offers them (bn/en when unknown). */
 export function localesForCountry(code: string | null | undefined): Locale[] {
-  return findCountry(code)?.locales ?? ["bn", "en"];
+  const e = findCountry(code);
+  return e ? orderedLocales(e) : ["bn", "en"];
+}
+
+/** Narrow currency symbol for an ISO 4217 code ("BDT" → "৳", "INR" → "₹"); the code itself when Intl has none. */
+export function currencySymbol(code: string | undefined): string {
+  if (!code) return "৳";
+  try {
+    return new Intl.NumberFormat("en", { style: "currency", currency: code, currencyDisplay: "narrowSymbol" }).formatToParts(0).find((p) => p.type === "currency")?.value ?? code;
+  } catch {
+    return code;
+  }
+}
+
+/** A country's name in the language `tag` from Intl ("IN" in "bn" → "ভারত"); `fallback` when Intl has none. */
+export function regionName(code: string, tag: string, fallback: string): string {
+  try {
+    return new Intl.DisplayNames([tag], { type: "region" }).of(code) ?? fallback;
+  } catch {
+    return fallback;
+  }
 }
 
 /* ---- cookies (client only) ---- */

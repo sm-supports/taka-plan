@@ -1,6 +1,7 @@
 // localStorage copies of the country profiles and regional figures seen, so the app works offline.
 import type { CountryCode, RegionDefaults } from "@taka/engine";
-import { parseCountryBody, parseRegions, type LoadedCountry } from "./loader";
+import { BASE_CODE, parseCountryBody, parseRegions, type LoadedCountry } from "./loader";
+import { mergeEntry, type CountryEntry } from "./resolve";
 
 export const COUNTRY_STORAGE_PREFIX = "taka-plan.country.";
 export const REGIONS_STORAGE_KEY = `${COUNTRY_STORAGE_PREFIX}_regions`;
@@ -35,6 +36,46 @@ export function saveStoredCountry(c: LoadedCountry): void {
   } catch {
     // ignore
   }
+}
+
+/**
+ * What the provider knows before any network answer: the stored copies of `code` and Bangladesh.
+ * Read synchronously for the provider's first render, so a returning user's currency shows at once.
+ */
+export function initialEntries(code: CountryCode): Record<CountryCode, CountryEntry> {
+  const out: Record<CountryCode, CountryEntry> = {};
+  for (const c of new Set([code, BASE_CODE])) {
+    const stored = loadStoredCountry(c);
+    if (stored) out[c] = mergeEntry(undefined, stored, false);
+  }
+  return out;
+}
+
+/**
+ * Removes the stored copies of every country except `keep` (the current country and Bangladesh),
+ * so localStorage holds at most two profiles however many countries were tried. Regional figures
+ * stay. Returns the codes removed.
+ */
+export function pruneStoredCountries(keep: readonly CountryCode[]): CountryCode[] {
+  const removed: CountryCode[] = [];
+  try {
+    const s = storage();
+    if (!s) return removed;
+    const keys: string[] = [];
+    for (let i = 0; i < s.length; i++) {
+      const k = s.key(i);
+      if (k && k.startsWith(COUNTRY_STORAGE_PREFIX) && k !== REGIONS_STORAGE_KEY) keys.push(k);
+    }
+    for (const k of keys) {
+      const code = k.slice(COUNTRY_STORAGE_PREFIX.length);
+      if (keep.includes(code)) continue;
+      s.removeItem(k);
+      removed.push(code);
+    }
+  } catch {
+    // ignore
+  }
+  return removed;
 }
 
 export function loadStoredRegions(): RegionDefaults | null {

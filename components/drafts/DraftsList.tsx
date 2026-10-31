@@ -6,23 +6,30 @@
  * - variant "page": the /{locale}/drafts screen.
  *
  * Open saves the current answers as a draft (the store's rule: deduplicated, never empty) and loads
- * the chosen one, then goes to the plan when its profile is complete, else to question 1. When the
- * only current answers are the onboarding defaults (nothing typed yet after starting over), those
- * are cleared first so they are not kept as a draft of their own.
+ * the chosen one, then goes to the plan when its profile is complete, else to question 1. When
+ * saving the current answers would push the oldest unnamed draft out (the cap), a confirm sheet
+ * names it first. Opening a draft of another country rewrites the tp_country cookie, and each
+ * draft's amounts are written in its own country's currency.
  */
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { useFormat } from "@/lib/i18n/useFormat";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { currencySymbol, setCountryCookie } from "@/lib/country/index-data";
+import { createFormatters, useFormat, type Formatters } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
+import { MAX_DRAFTS } from "@/lib/store/drafts";
 import { useTakaStore } from "@/lib/store/store";
 import type { Draft } from "@/lib/store/types";
+import { ConfirmSheet } from "./ConfirmSheet";
 import { DraftCard } from "./DraftCard";
-import { currentAnswers, currentHash, draftLabel, isoDatePart, onlyOnboardingDefaults, saveOutcome } from "./label";
+import { currencyCodeOf, currentHash, draftLabel, draftToDrop, draftUpdatedAt, saveOutcome } from "./label";
 import { showDraftToast } from "./toast";
 
 /** How long Open stays disabled after a tap (covers the navigation; a remount resets it anyway). */
 const OPEN_GUARD_MS = 1500;
+
+/** Currencies written in lakh and crore (the rest use international grouping). */
+const LAKH_CRORE = new Set(["BDT", "INR", "PKR", "NPR"]);
 
 export interface DraftsListProps {
   variant: "section" | "page";
@@ -37,6 +44,7 @@ export function DraftsList({ variant }: DraftsListProps) {
   const renameDraft = useTakaStore((s) => s.renameDraft);
   const deleteDraft = useTakaStore((s) => s.deleteDraft);
   const [opening, setOpening] = useState<string | null>(null);
+  const [pending, setPending] = useState<{ draft: Draft; drop: Draft } | null>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -45,15 +53,42 @@ export function DraftsList({ variant }: DraftsListProps) {
     return () => clearTimeout(id);
   }, [opening]);
 
-  const onOpen = (d: Draft) => {
-    if (opening !== null) return;
+  /** One formatter per currency: a draft's amounts are in its own country's currency, whatever is selected now. */
+  const formatters = useMemo(() => {
+    const cache = new Map<string, Formatters>();
+    return (code: string): Formatters => {
+      const currency = currencyCodeOf(code);
+      if (currency === f.currency.code) return f;
+      let x = cache.get(currency);
+      if (!x) {
+        x = createFormatters(locale, { code: currency, symbol: currencySymbol(currency), decimals: 2, compact: LAKH_CRORE.has(currency) ? "lakh_crore" : "intl" });
+        cache.set(currency, x);
+      }
+      return x;
+    };
+  }, [f, locale]);
+
+  const labelOf = (d: Draft) => {
+    const fd = formatters(d.answers.country);
+    return draftLabel(d, t, { locale, money: (n) => fd.money(n), number: (n) => fd.number(n) });
+  };
+
+  const open = (d: Draft) => {
     setOpening(d.id);
     const store = useTakaStore.getState();
-    const outcome = saveOutcome(useTakaStore.getState());
+    const outcome = saveOutcome(store);
     store.openDraft(d.id);
+    const after = useTakaStore.getState();
+    setCountryCookie(after.country);
     if (outcome === "new") showDraftToast(t("common.drafts.saved"));
-    const complete = useTakaStore.getState().onboarding.completed;
-    router.push(complete ? `/${locale}/plan` : `/${locale}/start/1`);
+    router.push(after.onboarding.completed ? `/${locale}/plan` : `/${locale}/start/1`);
+  };
+
+  const onOpen = (d: Draft) => {
+    if (opening !== null) return;
+    const drop = draftToDrop(useTakaStore.getState());
+    if (drop && drop.id !== d.id) setPending({ draft: d, drop });
+    else open(d);
   };
 
   const onDelete = (d: Draft) => {
@@ -74,8 +109,8 @@ export function DraftsList({ variant }: DraftsListProps) {
           <DraftCard
             key={d.id}
             draft={d}
-            label={draftLabel(d, t, f)}
-            updated={t("common.drafts.updated", { date: f.asOf(isoDatePart(d.updatedAt)) })}
+            label={labelOf(d)}
+            updated={t("common.drafts.updated", { date: draftUpdatedAt(d.updatedAt, locale) })}
             current={d.hash === hash}
             busy={opening !== null}
             onOpen={() => onOpen(d)}
@@ -85,6 +120,24 @@ export function DraftsList({ variant }: DraftsListProps) {
         ))}
       </ul>
     );
+
+  const confirm = (
+    <ConfirmSheet
+      open={pending !== null}
+      title={t("common.drafts.openTitle")}
+      body={pending ? `${t("common.drafts.startOverHint")} ${t("common.drafts.capWarning", { max: f.number(MAX_DRAFTS), label: labelOf(pending.drop) })}` : ""}
+      confirmLabel={t("common.drafts.openConfirm")}
+      cancelLabel={t("common.drafts.cancel")}
+      busy={opening !== null}
+      onConfirm={() => {
+        if (!pending) return;
+        const d = pending.draft;
+        setPending(null);
+        open(d);
+      }}
+      onCancel={() => setPending(null)}
+    />
+  );
 
   if (variant === "page") {
     return (
@@ -99,6 +152,7 @@ export function DraftsList({ variant }: DraftsListProps) {
         <Link href={`/${locale}/plan`} className="tap inline-flex min-h-12 items-center justify-center rounded-xl border border-line bg-surface px-4 text-base font-semibold text-text hover:bg-surface-muted">
           {t("common.drafts.backToPlan")}
         </Link>
+        {confirm}
       </div>
     );
   }
@@ -120,6 +174,7 @@ export function DraftsList({ variant }: DraftsListProps) {
           {t("common.drafts.seeAll")}
         </Link>
       </div>
+      {confirm}
     </details>
   );
 }

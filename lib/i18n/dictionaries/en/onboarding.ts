@@ -34,12 +34,22 @@ export const onboardingEntry = {
     notAvailable: "Your language is not available yet; English is used.",
     changeCountry: "Change country",
   },
+  /** "/" when the user picks another country while answers exist: the amounts are in the old currency. */
+  switchCountry: {
+    title: "Start fresh for {country}?",
+    body: "Your answers are in {currency}. Starting fresh for {country} keeps your current answers as a draft, so you can open them again any time.",
+    capWarning: "You already have {max} drafts, so the oldest one without a name will be removed.",
+    confirm: "Start fresh",
+    cancel: "Keep my answers",
+    saved: "Saved as a draft",
+  },
 } as const;
 
 /** Five quick questions, one per screen. */
 export const onboarding = {
   country: onboardingEntry.country,
   language: onboardingEntry.language,
+  switchCountry: onboardingEntry.switchCountry,
 
   languagePick: {
     title: "Which language would you like?",
@@ -140,6 +150,11 @@ export const onboarding = {
     age: "Age {age}",
     takeHome: "Take-home {amount}",
     essentials: "Essentials {amount}",
+    /** {list}: the people who depend on the user, already joined ("Partner, Children"). */
+    dependents: "Depend on you: {list}",
+    noDependents: "No one depends on you",
+    debt: "Has loans or card debt",
+    noDebt: "No debt",
   },
 
   cta: {

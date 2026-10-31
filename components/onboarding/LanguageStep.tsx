@@ -1,6 +1,7 @@
 "use client";
 /**
- * Step 2 on "/": the chosen country's languages that the app is translated into, then English,
+ * Step 2 on "/": the chosen country's languages that the app is translated into and English, in
+ * orderedLocales order (English first where it is the main language or the main one is untranslated),
  * as very large buttons labelled in their own language. When the country's main language is not
  * translated yet, a short note says English is used. "Change country" goes back to step 1.
  */
@@ -8,7 +9,7 @@ import { LOCALE_META, type Locale } from "@/lib/i18n/config";
 import { onboardingEntry as BN } from "@/lib/i18n/dictionaries/bn/onboarding";
 import { onboardingEntry as EN } from "@/lib/i18n/dictionaries/en/onboarding";
 import { interpolate } from "@/lib/i18n/translate";
-import type { CountryIndexEntry } from "@/lib/country/index-data";
+import { orderedLocales, type CountryIndexEntry } from "@/lib/country/index-data";
 import { Logo } from "./CountryPicker";
 
 export interface LanguageStepProps {
@@ -70,7 +71,7 @@ export function LanguageStep({ country, bilingual, busy, onPick, onChangeCountry
       )}
 
       <div className="mt-8 flex flex-col gap-4" role="group" aria-label={EN.language.title}>
-        {country.locales.map((l, i) => {
+        {orderedLocales(country).map((l, i) => {
           const meta = LOCALE_META[l];
           return (
             <button

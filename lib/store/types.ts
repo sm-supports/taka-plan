@@ -163,6 +163,11 @@ export interface TakaActions {
    * instead of duplicating it), then clears the answers. Country, language and the disclaimer stay.
    */
   startOver(): void;
+  /**
+   * A different country mid-plan: the answers are amounts in the old currency, so they are kept as a
+   * draft (startOver's rule) and cleared, then `code` becomes the country. Same country: no-op.
+   */
+  switchCountry(code: CountryCode): void;
   /** Saves the current answers as a draft (deduplicated), then loads draft `id` as the current answers. */
   openDraft(id: string): void;
   renameDraft(id: string, name: string): void;

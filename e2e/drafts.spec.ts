@@ -82,6 +82,8 @@ test("start from the beginning keeps deduplicated drafts that can be opened, ren
 
   await page.goto("/en/start/1");
   await page.waitForLoadState("networkidle", { timeout: 20_000 }).catch(() => {});
+  // The question and the one-time disclaimer render together once the store has hydrated: wait for that first.
+  await expect(page.locator(TEXT_INPUT).first()).toBeVisible({ timeout: 15_000 });
   const accept = page.getByRole("button", { name: "I understand", exact: true });
   if (await accept.isVisible({ timeout: 3_000 }).catch(() => false)) await accept.click();
 
@@ -91,7 +93,7 @@ test("start from the beginning keeps deduplicated drafts that can be opened, ren
   await next(page, 1);
   await expect(page.locator(TEXT_INPUT).first()).toHaveValue("");
   await draftCount(page, 1);
-  await expect(page.getByTestId("draft-card").first()).toContainText("BD · Age 28 · ৳50,000/month");
+  await expect(page.getByTestId("draft-card").first()).toContainText("Bangladesh · Age 28 · ৳50,000/month");
 
   // 2. The same answers again: still one draft.
   await page.goto("/en/start/1");
@@ -145,6 +147,8 @@ test("calculator results offer start from the beginning; the sample plan does no
   await expect(page.getByTestId("drafts-section")).toHaveCount(0);
 
   await page.goto("/en/start/1");
+  // The question and the one-time disclaimer render together once the store has hydrated: wait for that first.
+  await expect(page.locator(TEXT_INPUT).first()).toBeVisible({ timeout: 15_000 });
   const accept = page.getByRole("button", { name: "I understand", exact: true });
   if (await accept.isVisible({ timeout: 3_000 }).catch(() => false)) await accept.click();
   await onboard(page, A);

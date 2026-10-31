@@ -1,6 +1,8 @@
 /**
- * Onboarding smoke: country → language → five questions → plan, in at most nine taps
- * (the country and language picks on "/" count as taps).
+ * Onboarding smoke: country → language → disclaimer → five questions → plan, in at most ten taps.
+ * Every tap a new user makes counts: country and language on "/" (2), "I understand" on the
+ * one-time disclaimer (1), then Next on questions 1–3 (3), "No one" + Next on question 4 (2) and
+ * "No debt" + "See my plan" on question 5 (2). The budget was nine while the disclaimer went uncounted.
  *
  * Runs against the local Pages preview by default (playwright.config.ts starts it) or BASE_URL.
  * Set E2E_EXPECT_PLAN=1 once the engine is wired to require the "Save ৳X a month" headline;
@@ -9,7 +11,7 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
 
 const EXPECT_PLAN = process.env.E2E_EXPECT_PLAN === "1";
-const MAX_CLICKS = 9;
+const MAX_CLICKS = 10;
 
 /** Counts every tap so the test can assert the PRD's "plan in a handful of taps" promise. */
 class Tapper {
@@ -39,7 +41,7 @@ class Tapper {
   }
 }
 
-test("English onboarding reaches the plan in nine taps or fewer, then switches to Bangla digits", async ({ page }) => {
+test("English onboarding reaches the plan in ten taps or fewer, then switches to Bangla digits", async ({ page }) => {
   const tapper = new Tapper(page);
 
   await page.goto("/");
@@ -50,9 +52,9 @@ test("English onboarding reaches the plan in nine taps or fewer, then switches t
   await tapper.tap(page.getByRole("button", { name: "English", exact: true }));
   await expect(page).toHaveURL(/\/en\/start\/1/);
 
-  // One-time disclaimer gate on the first question: not counted as a question tap.
+  // One-time disclaimer gate on the first question: a real tap for a new user, so it counts.
   const accept = page.getByRole("button", { name: "I understand", exact: true });
-  if (await accept.isVisible({ timeout: 2_000 }).catch(() => false)) await accept.click();
+  if (await accept.isVisible({ timeout: 2_000 }).catch(() => false)) await tapper.tap(accept);
 
   // Until the onboarding slice lands app/[locale]/start/[step], /en/start/1 has no question
   // input. Skip (not fail) in that case unless the plan is explicitly expected.

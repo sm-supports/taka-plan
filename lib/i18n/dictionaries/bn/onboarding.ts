@@ -2,7 +2,7 @@
 import type { Dictionary } from "../../types";
 
 /** Country and language steps on "/" (imported there directly; see en/onboarding.ts). */
-export const onboardingEntry: Pick<Dictionary["onboarding"], "country" | "language"> = {
+export const onboardingEntry: Pick<Dictionary["onboarding"], "country" | "language" | "switchCountry"> = {
   country: {
     title: "আপনি কোন দেশে থাকেন?",
     subtitle: "আপনার দেশের মুদ্রা, সুদের হার আর সঞ্চয়ের পণ্য ধরে হিসাব হবে।",
@@ -34,11 +34,20 @@ export const onboardingEntry: Pick<Dictionary["onboarding"], "country" | "langua
     notAvailable: "আপনার ভাষা এখনো যোগ হয়নি; ইংরেজিতে দেখানো হবে।",
     changeCountry: "দেশ বদলান",
   },
+  switchCountry: {
+    title: "{country}-এর জন্য নতুন করে শুরু করবেন?",
+    body: "আপনার উত্তরগুলো {currency}-এ লেখা। {country}-এর জন্য নতুন করে শুরু করলে এখনকার উত্তরগুলো খসড়া হিসেবে রাখা থাকবে, পরে যেকোনো সময় আবার খুলতে পারবেন।",
+    capWarning: "আপনার {max}টি খসড়া আগেই আছে, তাই নাম না দেওয়া সবচেয়ে পুরোনো খসড়াটি মুছে যাবে।",
+    confirm: "নতুন করে শুরু করুন",
+    cancel: "উত্তরগুলো রেখে দিন",
+    saved: "খসড়া হিসেবে রাখা হয়েছে।",
+  },
 };
 
 export const onboarding: Dictionary["onboarding"] = {
   country: onboardingEntry.country,
   language: onboardingEntry.language,
+  switchCountry: onboardingEntry.switchCountry,
 
   languagePick: {
     title: "কোন ভাষায় দেখতে চান?",
@@ -139,6 +148,10 @@ export const onboarding: Dictionary["onboarding"] = {
     age: "বয়স {age}",
     takeHome: "টেক-হোম {amount}",
     essentials: "অত্যাবশ্যক খরচ {amount}",
+    dependents: "আপনার ওপর নির্ভরশীল: {list}",
+    noDependents: "আপনার ওপর কেউ নির্ভরশীল নন",
+    debt: "ঋণ বা কার্ডের বকেয়া আছে",
+    noDebt: "কোনো ঋণ নেই",
   },
 
   cta: {

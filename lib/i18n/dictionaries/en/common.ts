@@ -213,11 +213,26 @@ export const common = {
     deleteTitle: "Delete this draft?",
     deleteBody: "It is removed from this phone and cannot be brought back.",
     deleteConfirm: "Yes, delete",
+    /** Shown before saving would push the oldest unnamed draft out (lib/store/drafts.ts capDrafts). */
+    capWarning: "You already have {max} drafts, so the oldest one without a name, “{label}”, will be removed. Give a draft a name to keep it.",
+    openTitle: "Open this draft?",
+    openConfirm: "Yes, open it",
     label: {
       age: "Age {age}",
       takeHome: "{amount}/month",
       goalsOne: "{count} goal",
       goalsOther: "{count} goals",
+      m2: "Insurance",
+      m6: "Investments",
+      m7: "Retirement",
     },
+  },
+
+  /** Banner under the header about the chosen country's data (components/layout/CountryNotice). */
+  countryNotice: {
+    noData: "We don't have researched figures for {country} yet, so amounts use Bangladesh's figures and taka.",
+    changeCountry: "Change country",
+    someFallback: "Some figures for {country} are regional estimates, not its own.",
+    about: "Where the numbers come from",
   },
 } as const;

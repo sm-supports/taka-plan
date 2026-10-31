@@ -1,20 +1,6 @@
 // Pure loading logic for country profiles: validation, "which copy is newest", and the two network
 // sources (the static file from the build, then the D1 API). No React; the provider wires it up.
-import {
-  assertCountryField,
-  assertCountryProfile,
-  isRateKey,
-  RATES_SEED,
-  REGIONS,
-  unitsFrom,
-  type CountryCode,
-  type CountryField,
-  type CountryProfile,
-  type RateKey,
-  type RateUnit,
-  type Region,
-  type RegionDefaults,
-} from "@taka/engine";
+import { assertCountryProfile, parseRegionDefaults, RATES_SEED, unitsFrom, type CountryCode, type CountryProfile, type RateKey, type RateUnit, type RegionDefaults } from "@taka/engine";
 
 /** Where the active profile came from. "fallback" = no data for the chosen country, Bangladesh shown. */
 export type CountrySource = "bundled" | "stored" | "static" | "api" | "fallback";
@@ -48,25 +34,49 @@ export function normaliseCode(code: unknown): CountryCode | null {
   return /^[A-Z]{2}$/.test(c) ? c : null;
 }
 
+function versionOf(x: unknown): number {
+  return typeof x === "number" && Number.isFinite(x) && x >= 0 ? x : 0;
+}
+
 /**
- * Reads a profile body: a bare CountryProfile (static file) or `{ version, profile }` (API, see
- * lib/server/country-repo.ts StoredCountry). Throws when the profile is invalid or not `expected`.
+ * Reads a profile body in any of its shapes:
+ * - `{ version, status?, profile }`: the API (GET /api/countries/:code) and the localStorage copy;
+ * - a bare CountryProfile, optionally with a top-level `version` (static files from the build).
+ * Throws when the profile is invalid or not `expected`.
  */
 export function parseCountryBody(body: unknown, source: CountrySource, expected?: CountryCode): LoadedCountry {
-  const wrapped = typeof body === "object" && body !== null && "profile" in body ? (body as { profile: unknown; version?: unknown }) : null;
-  const profile = assertCountryProfile(wrapped ? wrapped.profile : body, seedUnits());
+  if (typeof body !== "object" || body === null) throw new Error("country body is not an object");
+  const o = body as Record<string, unknown>;
+  const wrapped = "profile" in o && typeof o.profile === "object" && o.profile !== null;
+  let raw: unknown = wrapped ? o.profile : body;
+  let version = versionOf(o.version);
+  if (!wrapped && "version" in o) {
+    // A bare profile carrying its published version: read it, keep it out of the profile itself.
+    const { version: _v, ...rest } = o;
+    raw = rest;
+  } else if (wrapped && version === 0) {
+    version = versionOf((o.profile as Record<string, unknown>).version);
+  }
+  const profile = assertCountryProfile(raw, seedUnits());
   if (expected && profile.code !== expected) throw new Error(`country file for ${expected} holds ${profile.code}`);
-  const v = wrapped && typeof wrapped.version === "number" && Number.isFinite(wrapped.version) ? wrapped.version : 0;
-  return { profile, version: v, source };
+  return { profile, version, source };
 }
 
-/** Newer = later researchedAt, then higher version. Ties keep `a`. */
+/**
+ * On a tie (same researchedAt and version) the copy closest to the server wins: the API, then this
+ * build's static file and bundled profile, and the localStorage copy last. A copy saved by an
+ * earlier build therefore never shadows the current one for ever.
+ */
+const SOURCE_RANK: Record<CountrySource, number> = { api: 4, static: 3, bundled: 2, stored: 1, fallback: 0 };
+
+/** Newer = later researchedAt, then higher version, then the fresher source (SOURCE_RANK). Full ties keep `a`. */
 export function isNewer(b: LoadedCountry, a: LoadedCountry): boolean {
   if (b.profile.researchedAt !== a.profile.researchedAt) return b.profile.researchedAt > a.profile.researchedAt;
-  return b.version > a.version;
+  if (b.version !== a.version) return b.version > a.version;
+  return SOURCE_RANK[b.source] > SOURCE_RANK[a.source];
 }
 
-/** The newest of the candidates (first wins ties); null when none. */
+/** The newest of the candidates (isNewer; the first wins full ties); null when none. */
 export function pickNewest(candidates: readonly (LoadedCountry | null | undefined)[]): LoadedCountry | null {
   let best: LoadedCountry | null = null;
   for (const c of candidates) if (c && (best === null || isNewer(c, best))) best = c;
@@ -75,23 +85,8 @@ export function pickNewest(candidates: readonly (LoadedCountry | null | undefine
 
 /** Keeps the well-formed regional figures and drops the rest (the file is optional and advisory). */
 export function parseRegions(body: unknown): RegionDefaults {
-  const out: RegionDefaults = {};
-  if (typeof body !== "object" || body === null) return out;
-  const u = seedUnits();
-  for (const [region, fields] of Object.entries(body as Record<string, unknown>)) {
-    if (!(REGIONS as readonly string[]).includes(region) || typeof fields !== "object" || fields === null) continue;
-    const kept: Partial<Record<RateKey, CountryField>> = {};
-    for (const [key, f] of Object.entries(fields as Record<string, unknown>)) {
-      if (!isRateKey(key)) continue;
-      try {
-        kept[key] = assertCountryField(`region ${region}`, key, u[key], f);
-      } catch {
-        // skip one bad figure, keep the others
-      }
-    }
-    out[region as Region] = kept;
-  }
-  return out;
+  // The engine's parser knows every group the file may hold (the seven regions and "global").
+  return parseRegionDefaults(body, seedUnits());
 }
 
 /** Taka per US dollar from a Bangladesh profile. */
