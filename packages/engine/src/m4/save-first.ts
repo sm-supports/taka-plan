@@ -1,3 +1,4 @@
+import { roundingFor } from "../country/overlay";
 import { createExplain } from "../explain";
 import { mean, roundDecimals, roundMoney, sum } from "../money";
 import type { RatesSnapshot } from "../rates";
@@ -17,6 +18,7 @@ const DAYS_IN_MONTH = 31;
  */
 export function computeSaveFirst(input: M4Input, rates: RatesSnapshot, today: ISODate): M4Result {
   validate(input);
+  const R = roundingFor(rates);
   const ex = createExplain(rates, today);
 
   // m4.average: smoothed income (freelance/business) or take-home as is.
@@ -26,7 +28,7 @@ export function computeSaveFirst(input: M4Input, rates: RatesSnapshot, today: IS
     id: "m4.average",
     inputs: { months: incomes.length, total: sum(incomes) },
     raw: rawAverage,
-    rounded: roundMoney(rawAverage, "exact"),
+    rounded: roundMoney(rawAverage, "exact", R),
     unit: "bdt",
   });
   assertInput(averageIncome > 0, "average income must be greater than zero", { averageIncome });
@@ -51,7 +53,7 @@ export function computeSaveFirst(input: M4Input, rates: RatesSnapshot, today: IS
     id: "m4.amount",
     inputs: { average: averageIncome, rate: savingsRate },
     raw: rawAmount,
-    rounded: roundMoney(rawAmount, "monthly"),
+    rounded: roundMoney(rawAmount, "monthly", R),
     unit: "bdt",
   });
 
@@ -61,11 +63,11 @@ export function computeSaveFirst(input: M4Input, rates: RatesSnapshot, today: IS
     id: "m4.expenses",
     inputs: { average: averageIncome, savings: savingsAmount },
     raw: rawExpenses,
-    rounded: roundMoney(rawExpenses, "exact"),
+    rounded: roundMoney(rawExpenses, "exact", R),
     unit: "bdt",
   });
 
-  const essentialsShortfall = roundMoney(Math.max(0, input.essentials - expensesAllowed), "exact");
+  const essentialsShortfall = roundMoney(Math.max(0, input.essentials - expensesAllowed), "exact", R);
 
   const mode = input.incomeType === "salaried" ? "fixed" : "percentOfEachPayment";
   // The instrument is fixed to a DPS in the MVP (auto-debit on a set day); say so in "Why this number?".

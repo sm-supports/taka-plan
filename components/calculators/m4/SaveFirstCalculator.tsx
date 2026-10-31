@@ -19,7 +19,7 @@ import { StatusPill } from "@/components/ui/StatusPill";
 import { Term } from "@/components/ui/Term";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
-import { useRates } from "@/lib/rates/useRates";
+import { useCountryRates } from "@/lib/country/useCountry";
 import { useTakaStore } from "@/lib/store/store";
 import { calcErrorKey, type CalcErrorKey } from "../shared/engineError";
 import { DemoBanner, Field, FigureList, Section, type Figure } from "../shared/Figures";
@@ -48,7 +48,7 @@ function padIncomes(list: readonly Money[] | undefined): Array<Money | null> {
 export function SaveFirstCalculator() {
   const { t } = useT();
   const f = useFormat();
-  const { snapshot } = useRates();
+  const snapshot = useCountryRates();
   const today = useToday();
   const demo = useDemoMode();
   const demoVariant: M4DemoVariant = demo === "freelance" || demo === "business" ? "freelance" : "salaried";
@@ -105,14 +105,14 @@ export function SaveFirstCalculator() {
   const figures: Figure[] = result
     ? [
         ...(result.mode === "percentOfEachPayment" || result.explain.steps.some((s) => s.id === "m4.average" && Number(s.inputs.months) > 1)
-          ? [{ key: "avg", label: t("m4.result.averageIncome"), value: f.taka(result.averageIncome) }]
+          ? [{ key: "avg", label: t("m4.result.averageIncome"), value: f.money(result.averageIncome) }]
           : []),
         { key: "rate", label: t("m4.result.savingsRate"), value: f.percent(result.savingsRate) },
         { key: "suggested", label: t("m4.result.suggestedRate"), value: f.percent(result.suggestedRate) },
         { key: "feasible", label: t("m4.result.feasibleRate"), value: f.percent(result.feasibleRate), hint: t("m4.result.feasibleRateHint") },
-        { key: "expenses", label: t("m4.result.expensesAllowed"), value: f.taka(result.expensesAllowed) },
+        { key: "expenses", label: t("m4.result.expensesAllowed"), value: f.money(result.expensesAllowed) },
         ...(result.essentialsShortfall > 0
-          ? [{ key: "shortfall", label: t("m4.result.essentialsShortfall"), value: f.taka(result.essentialsShortfall), hint: t("m4.result.essentialsShortfallHint") }]
+          ? [{ key: "shortfall", label: t("m4.result.essentialsShortfall"), value: f.money(result.essentialsShortfall), hint: t("m4.result.essentialsShortfallHint") }]
           : []),
       ]
     : [];
@@ -189,7 +189,7 @@ export function SaveFirstCalculator() {
                 label={t("m4.result.savingsAmount")}
                 value={
                   <>
-                    {f.taka(result.savingsAmount)}
+                    {f.money(result.savingsAmount)}
                     <span className="ml-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
                   </>
                 }
@@ -197,7 +197,7 @@ export function SaveFirstCalculator() {
                   <span className="flex flex-col gap-0.5">
                     <span className="text-xs font-medium uppercase tracking-wide text-text-faint">{t("m4.result.equationLabel")}</span>
                     <span className="font-semibold tabular-nums text-text">
-                      {t("m4.result.equation", { income: f.taka(result.averageIncome), savings: f.taka(result.savingsAmount), expenses: f.taka(result.expensesAllowed) })}
+                      {t("m4.result.equation", { income: f.money(result.averageIncome), savings: f.money(result.savingsAmount), expenses: f.money(result.expensesAllowed) })}
                     </span>
                   </span>
                 }

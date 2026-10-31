@@ -1,7 +1,6 @@
 "use client";
-/** Taka text input: accepts Latin or Bangla digits and "12.5 lakh"; the box shows the locale's digits; the formatted amount sits under the field. */
+/** Money text input in the selected country's currency: accepts any script's digits, grouping and "12.5 lakh" / "2.5m"; the box shows the locale's digits; the formatted amount sits under the field. */
 import { useEffect, useId, useState } from "react";
-import { parseTakaInput } from "@taka/engine";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { cn } from "./cn";
 
@@ -20,7 +19,10 @@ export interface MoneyInputProps {
 }
 
 export function MoneyInput({ id, value, onChange, label, hint, error, min, max, placeholder, autoFocus, className }: MoneyInputProps) {
-  const { taka, inputDigits } = useFormat();
+  const { money, parseMoney, inputDigits, currency } = useFormat();
+  const symbol = currency.symbol;
+  // Room for the symbol inside the box: "৳", "$" fit pl-10; "Rs", "KSh", "R$" need more.
+  const padLeft = symbol.length <= 1 ? "pl-10" : symbol.length === 2 ? "pl-14" : "pl-16";
   const uid = useId();
   const hintId = `${id || uid}-hint`;
   const previewId = `${id || uid}-preview`;
@@ -29,13 +31,13 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
 
   // Keep the box in sync when the value is changed from outside (e.g. a slider) and the text does not already parse to it.
   useEffect(() => {
-    const parsed = parseTakaInput(text);
+    const parsed = parseMoney(text);
     if (value === null && text.trim() === "") return;
     if (parsed !== value) setText(value === null ? "" : inputDigits(String(value)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [value, inputDigits]);
+  }, [value, inputDigits, parseMoney]);
 
-  const parsed = parseTakaInput(text);
+  const parsed = parseMoney(text);
   const outOfRange = parsed !== null && ((min !== undefined && parsed < min) || (max !== undefined && parsed > max));
   const invalid = Boolean(error) || (text.trim() !== "" && parsed === null) || outOfRange;
   const describedBy = [hint ? hintId : null, parsed !== null ? previewId : null, error ? errorId : null].filter(Boolean).join(" ") || undefined;
@@ -52,7 +54,7 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
       )}
       <div className="relative">
         <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-xl font-semibold text-text-muted" aria-hidden="true">
-          ৳
+          {symbol}
         </span>
         <input
           id={id}
@@ -66,20 +68,21 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
           onChange={(e) => {
-            // Latin digits from a hardware keyboard are shown in the locale's script; parseTakaInput reads both.
+            // Latin digits from a hardware keyboard are shown in the locale's script; parseMoney reads any script.
             const next = inputDigits(e.target.value);
             setText(next);
-            onChange(parseTakaInput(next));
+            onChange(parseMoney(next));
           }}
           className={cn(
-            "tap w-full rounded-xl border bg-surface py-3 pl-10 pr-4 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
+            "tap w-full rounded-xl border bg-surface py-3 pr-4 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
+            padLeft,
             invalid ? "border-status-red" : "border-line focus:border-brand-500",
           )}
         />
       </div>
       {parsed !== null && !invalid && (
         <p id={previewId} className="text-sm text-brand-700" aria-live="polite">
-          = {taka(parsed)}
+          = {money(parsed)}
         </p>
       )}
       {error ? (
@@ -88,7 +91,7 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
         </p>
       ) : outOfRange ? (
         <p id={errorId} role="alert" className="text-sm text-status-red">
-          {min !== undefined && max !== undefined ? `${taka(min)} – ${taka(max)}` : min !== undefined ? `≥ ${taka(min)}` : max !== undefined ? `≤ ${taka(max)}` : null}
+          {min !== undefined && max !== undefined ? `${money(min)} – ${money(max)}` : min !== undefined ? `≥ ${money(min)}` : max !== undefined ? `≤ ${money(max)}` : null}
         </p>
       ) : null}
     </div>

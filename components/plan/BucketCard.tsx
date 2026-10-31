@@ -27,7 +27,7 @@ export function BucketCard({ plan, bucket, whyOpen, onWhyOpenChange }: BucketCar
   const { t, locale } = useT();
   const f = useFormat();
   const title = bucketTitle(bucket, t);
-  const amount = f.taka(bucket.amount);
+  const amount = f.money(bucket.amount);
   const instrumentLabel = t(`common.instrument.${bucket.instrument}`);
   const termKey = termForInstrument(bucket.instrument, bucket.id);
   const href = calculatorPath(bucket.module, locale);

@@ -5,6 +5,7 @@
  * Every rate comes from the snapshot through the explain builder so "Why this number?"
  * lists each assumption; maths stays unrounded until the output boundary.
  */
+import { roundingFor } from "../country/overlay";
 import { createExplain, type ExplainBuilder } from "../explain";
 import { roundDecimals, roundMoney, sum } from "../money";
 import { afterTax as applyTax, instrumentNominal, isRateKey, realReturn, type RateKey, type RatesSnapshot } from "../rates";
@@ -57,6 +58,23 @@ export function instrumentsFor(h: Horizon, allocation?: Allocation): Instrument[
       if (allocation) return [];
       return [...LONG_CANDIDATES_MVP];
   }
+}
+
+/** Fallbacks, in order, when a country has none of a horizon's candidates. */
+const FALLBACK_CANDIDATES: readonly Instrument[] = ["fdr_1y", "savings_account"];
+
+/**
+ * Drops the product slots the snapshot's country does not have (`rates.country.unavailable`).
+ * When that empties a non-empty list, the first available fallback (1-year term deposit, then a
+ * savings account) is used, so every goal keeps a priced instrument. An empty list stays empty.
+ */
+export function availableCandidates(list: readonly Instrument[], rates: Pick<RatesSnapshot, "country">): Instrument[] {
+  const unavailable = rates.country?.unavailable ?? [];
+  if (list.length === 0 || unavailable.length === 0) return [...list];
+  const kept = list.filter((i) => !unavailable.includes(i));
+  if (kept.length > 0) return kept;
+  const fallback = FALLBACK_CANDIDATES.find((i) => !unavailable.includes(i)) ?? "savings_account";
+  return [fallback];
 }
 
 const GOAL_TYPE_SET: ReadonlySet<string> = new Set(GOAL_TYPES);
@@ -129,15 +147,16 @@ function priceCandidate(ex: ExplainBuilder, rates: RatesSnapshot, instrument: In
 export function computeGoal(goal: Goal, rates: RatesSnapshot, today: ISODate, candidates?: readonly Instrument[]): GoalResult {
   assertInput(isValidGoal(goal), "goal is not valid", { goalId: goal.id });
   const horizon = horizonFor(goal.years);
-  const list = candidates ?? instrumentsFor(horizon);
+  const list = availableCandidates(candidates ?? instrumentsFor(horizon), rates);
   const first = list[0];
   if (first === undefined) throw new EngineError("INVALID_INPUT", "no candidate instruments for this goal", { goalId: goal.id, horizon });
 
+  const R = roundingFor(rates);
   const ex = createExplain(rates, today);
 
   const inflation = ex.use(inflationKeyFor(goal.type, rates));
   const fvRaw = futureValue(goal.cost, inflation, goal.years);
-  const fv = ex.step({ id: "m5.fv", inputs: { cost: goal.cost, inflation, years: goal.years }, raw: fvRaw, rounded: roundMoney(fvRaw, "lump"), unit: "bdt" });
+  const fv = ex.step({ id: "m5.fv", inputs: { cost: goal.cost, inflation, years: goal.years }, raw: fvRaw, rounded: roundMoney(fvRaw, "lump", R), unit: "bdt" });
   const months = goal.years * 12;
 
   // Highest after-tax return wins (ties → first listed); the lowest gives the "low" path.
@@ -162,10 +181,10 @@ export function computeGoal(goal: Goal, rates: RatesSnapshot, today: ISODate, ca
     id: "m5.monthly",
     inputs: { fv, monthlyRate: base.afterTax / 12, months },
     raw: monthlyRaw,
-    rounded: roundMoney(monthlyRaw, "monthly"),
+    rounded: roundMoney(monthlyRaw, "monthly", R),
     unit: "bdt",
   });
-  const monthlyLow = roundMoney(sinkingFundMonthly(fvRaw, low.afterTax, months), "monthly");
+  const monthlyLow = roundMoney(sinkingFundMonthly(fvRaw, low.afterTax, months), "monthly", R);
 
   // Real return against the inflation this goal is priced with (education/health have their own rows);
   // the CPI comparison is kept for display only.
@@ -207,10 +226,11 @@ export function computeGoal(goal: Goal, rates: RatesSnapshot, today: ISODate, ca
 
 export function computeGoals(input: M5Input, rates: RatesSnapshot, today: ISODate): M5Result {
   assertInput(typeof input === "object" && input !== null && Array.isArray(input.goals), "M5Input.goals must be an array");
+  const R = roundingFor(rates);
   const goals = input.goals.map((g) => (isValidGoal(g) ? computeGoal(g, rates, today) : invalidGoalResult(g)));
   return {
     goals,
-    totalMonthly: roundMoney(sum(goals.filter((g) => g.valid).map((g) => g.monthly.base)), "exact"),
+    totalMonthly: roundMoney(sum(goals.filter((g) => g.valid).map((g) => g.monthly.base)), "exact", R),
     usesAllocation: false,
   };
 }

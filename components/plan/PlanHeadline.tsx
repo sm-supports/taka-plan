@@ -16,8 +16,8 @@ export interface PlanHeadlineProps {
 
 export function PlanHeadline({ plan, whyOpen, onWhyOpenChange }: PlanHeadlineProps) {
   const { t } = useT();
-  const { taka } = useFormat();
-  const amount = taka(plan.monthlyTotal);
+  const { money } = useFormat();
+  const amount = money(plan.monthlyTotal);
   return (
     <Card className="flex flex-col items-center gap-3">
       <BigNumber value={t("plan.headline", { amount })} caption={t("plan.subhead")} />

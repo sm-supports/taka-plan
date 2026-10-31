@@ -1,3 +1,4 @@
+import { roundingFor } from "../country/overlay";
 import { createExplain, mergeExplanations, type Explanation } from "../explain";
 import { computeEmergencyFund } from "../m1/emergency-fund";
 import type { M1Input, M1Result } from "../m1/types";
@@ -136,6 +137,7 @@ function highestRate(debt: M3Result): number {
 
 export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODate): Plan {
   assertProfile(input.profile);
+  const R = roundingFor(rates);
   const ex = createExplain(rates, today);
   const minShare = ex.use("plan_emergency_min_share");
   const maxShare = ex.use("plan_emergency_max_share");
@@ -162,7 +164,7 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
   if (!emergencyFull) {
     const clamped = clamp(emergency.monthlySaving, minShare * total, maxShare * total);
     const raw = Math.min(emergency.gap, clamped);
-    emergencyAmount = Math.min(total, emergency.gap, roundMoney(clamped, "monthly"));
+    emergencyAmount = Math.min(total, emergency.gap, roundMoney(clamped, "monthly", R));
     ex.step({
       id: "plan.emergencyShare",
       inputs: { total, minShare, maxShare, m1Monthly: emergency.monthlySaving, gap: emergency.gap },
@@ -197,7 +199,7 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
 
   // (2) Insurance premiums (M2 hook; absent in the MVP).
   if (input.insurance) {
-    const need = roundMoney(Math.max(0, input.insurance.monthlyPremiumNeed), "monthly");
+    const need = roundMoney(Math.max(0, input.insurance.monthlyPremiumNeed), "monthly", R);
     const amount = Math.min(remaining, need);
     drafts.push({
       id: "insurance",
@@ -215,7 +217,7 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
   // (3) High-interest debt: clear the balances over debt_payoff_target_months.
   if (debt && debt.highInterestDebts.length > 0) {
     const balance = sum(debt.highInterestDebts.map((d) => d.balance));
-    const need = roundMoney(balance / payoffMonths, "monthly");
+    const need = roundMoney(balance / payoffMonths, "monthly", R);
     const amount = Math.min(remaining, need);
     ex.step({ id: "plan.debtShare", inputs: { remaining, headroom: need }, raw: Math.min(remaining, balance / payoffMonths), rounded: amount, unit: "bdt" });
     // Months actually needed at the allocated amount (the target months when nothing can be allocated).
@@ -249,7 +251,7 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
     for (const g of validGoals) {
       const need = g.monthly.base;
       const share = goalsNeed > 0 ? (available * need) / goalsNeed : 0;
-      const amount = Math.max(0, Math.min(need, roundMoney(Math.min(need, share), "monthly"), remaining));
+      const amount = Math.max(0, Math.min(need, roundMoney(Math.min(need, share), "monthly", R), remaining));
       allocations.push({ goalId: g.goalId, need, share: Math.min(need, share), amount });
       allocatedTotal += amount;
       remaining = Math.max(0, remaining - amount);
@@ -285,7 +287,7 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
 
   // Retirement (M7 hook; absent in the MVP).
   if (input.retirement) {
-    const need = roundMoney(Math.max(0, input.retirement.monthlyNeed), "monthly");
+    const need = roundMoney(Math.max(0, input.retirement.monthlyNeed), "monthly", R);
     const amount = Math.min(remaining, need);
     drafts.push({
       id: "future",

@@ -8,12 +8,12 @@ import type { Onboarding } from "./useOnboarding";
 
 export function StepDebt({ profile, setProfile }: Onboarding) {
   const { t } = useT();
-  const { taka, number } = useFormat();
+  const { money, number } = useFormat();
   const hasDebt = typeof profile.hasDebt === "boolean" ? profile.hasDebt : null;
   const recap = [
     typeof profile.age === "number" ? t("onboarding.summary.age", { age: number(profile.age) }) : null,
-    typeof profile.takeHome === "number" ? t("onboarding.summary.takeHome", { amount: taka(profile.takeHome) }) : null,
-    typeof profile.essentials === "number" ? t("onboarding.summary.essentials", { amount: taka(profile.essentials) }) : null,
+    typeof profile.takeHome === "number" ? t("onboarding.summary.takeHome", { amount: money(profile.takeHome) }) : null,
+    typeof profile.essentials === "number" ? t("onboarding.summary.essentials", { amount: money(profile.essentials) }) : null,
   ].filter((x): x is string => x !== null);
 
   return (

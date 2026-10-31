@@ -5,6 +5,7 @@
  *   navigate  network-first with a 3 s timeout, then the cached same-locale /plan shell
  *   /_next/static/*   cache-first (content-hashed, immutable)
  *   /api/rates        stale-while-revalidate
+ *   /data/countries/*, /api/countries/*   stale-while-revalidate, keyed by full URL (country profiles)
  *   /admin*, /api/admin*   never cached, never intercepted
  *   everything else   network only
  *   activate  drop every other "taka-*" cache, then claim open clients
@@ -14,15 +15,16 @@
  * activate. Bump SW_REVISION as well whenever the precache list or a strategy changes, so a
  * strategy change invalidates the cache even if the build id were reused.
  */
-const SW_REVISION = "r2";
+const SW_REVISION = "r3";
 const CACHE_VERSION = ((new URL(self.location.href).searchParams.get("v") || "dev") + "-" + SW_REVISION).replace(/[^A-Za-z0-9._-]/g, "_");
 const CACHE_NAME = "taka-" + CACHE_VERSION;
-const PRECACHE_URLS = ["/", "/bn/plan", "/en/plan", "/manifest.webmanifest", "/api/rates"];
+const PRECACHE_URLS = ["/", "/bn/plan", "/en/plan", "/manifest.webmanifest", "/api/rates", "/data/countries/index.json"];
 const NAVIGATION_TIMEOUT_MS = 3000;
 const LOCALES = ["bn", "en"];
 const DEFAULT_LOCALE = "bn";
 const STATIC_PREFIX = "/_next/static/";
 const RATES_PATH = "/api/rates";
+const COUNTRY_PREFIXES = ["/data/countries/", "/api/countries/"];
 const NEVER_CACHE_PREFIXES = ["/admin", "/api/admin"];
 
 /** Strips the `redirected` flag so a cached response can answer a navigation (redirect mode "manual"). */
@@ -112,12 +114,13 @@ async function cacheFirst(request) {
   return response;
 }
 
-async function staleWhileRevalidate(request) {
+/** Cached copy under `key` at once (refreshed in the background); the network when there is none. */
+async function staleWhileRevalidate(request, key) {
   const cache = await caches.open(CACHE_NAME);
-  const hit = await cache.match(RATES_PATH);
+  const hit = await cache.match(key);
   const refresh = fetch(request)
     .then((response) => {
-      if (response.ok) cache.put(RATES_PATH, response.clone()).catch(() => {});
+      if (response.ok) cache.put(key, response.clone()).catch(() => {});
       return response;
     })
     .catch(() => null);
@@ -142,7 +145,11 @@ self.addEventListener("fetch", (event) => {
     return;
   }
   if (url.pathname === RATES_PATH) {
-    event.respondWith(staleWhileRevalidate(request));
+    event.respondWith(staleWhileRevalidate(request, RATES_PATH));
+    return;
+  }
+  if (COUNTRY_PREFIXES.some((prefix) => url.pathname.startsWith(prefix))) {
+    event.respondWith(staleWhileRevalidate(request, url.href));
     return;
   }
   // Everything else: network only (no respondWith → default browser fetch).

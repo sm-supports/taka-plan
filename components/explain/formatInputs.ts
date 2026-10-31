@@ -4,7 +4,8 @@
  *
  * Input naming convention (docs/ARCHITECTURE-CONTRACTS.md "Explain-template input names"):
  * names ending in Rate / inflation / tax / share (and nominal / afterTax / real) → percent;
- * months / years / count and the m1.months month counts → plain number; everything else → taka.
+ * months / years / count and the m1.months month counts → plain number; everything else → money in
+ * the selected country's currency (f.money; unit "bdt" means local currency, the name is historical).
  * Instrument ids (strings) are translated via common.instrument; other strings (e.g. m1.months
  * `source`) pass through unchanged. Reference ids such as plan.goalAllocation's `goalId` are
  * never shown: they only tell the UI which bucket a step belongs to.
@@ -50,14 +51,14 @@ export function formatInput(name: string, value: number | string, f: Formatters,
   if (typeof value === "string") return isInstrumentId(value) ? t(`common.instrument.${value}`) : value;
   if (PERCENT_SUFFIX.test(name) || PERCENT_NAMES.has(name)) return f.percent(value);
   if (NUMBER_SUFFIX.test(name) || NUMBER_NAMES.has(name)) return f.number(value, Number.isInteger(value) ? 0 : 1);
-  return f.taka(value);
+  return f.money(value);
 }
 
 /** Format a value by an ExplainStep unit (the step's `rounded` result). */
 export function formatByUnit(value: number, unit: ExplainUnit, f: Formatters): string {
   switch (unit) {
     case "bdt":
-      return f.taka(value);
+      return f.money(value);
     case "rate":
       return f.percent(value);
     case "months":
@@ -87,7 +88,7 @@ export function formatAssumptionValue(value: number | null, unit: RateUnit, f: F
     case "ratio":
       return f.percent(value);
     case "bdt":
-      return f.taka(value);
+      return f.money(value);
     case "months":
       return f.months(value);
     case "years":

@@ -47,7 +47,8 @@ function localiseDigits(s: string, digits: Digits): string {
   return digits === "bn" ? toBanglaDigits(s) : s;
 }
 
-export function formatTaka(n: Money, o: FormatTakaOptions): string {
+/** Lakh/crore style (South Asia): "৳12,50,000", compact "৳12.5 lakh" / "৳১.২ কোটি". */
+function formatLakhCrore(n: number, symbol: string, o: { digits: Digits; words: "bn" | "en"; compact?: boolean; sign?: boolean }): string {
   const neg = n < 0;
   const abs = Math.abs(n);
   let body: string;
@@ -55,13 +56,90 @@ export function formatTaka(n: Money, o: FormatTakaOptions): string {
     const isCrore = abs >= CRORE;
     const v = abs / (isCrore ? CRORE : LAKH);
     const num = (Math.round(v * 10) / 10).toFixed(1);
-    const unit = o.digits === "bn" ? (isCrore ? "কোটি" : "লাখ") : isCrore ? "crore" : "lakh";
+    const unit = o.words === "bn" ? (isCrore ? "কোটি" : "লাখ") : isCrore ? "crore" : "lakh";
     body = `${localiseDigits(num, o.digits)} ${unit}`;
   } else {
     body = localiseDigits(groupIndian(abs), o.digits);
   }
   const sign = neg ? "−" : o.sign ? "+" : "";
-  return `${sign}৳${body}`;
+  return `${sign}${symbol}${body}`;
+}
+
+export function formatTaka(n: Money, o: FormatTakaOptions): string {
+  return formatLakhCrore(n, "৳", { digits: o.digits, words: o.digits === "bn" ? "bn" : "en", compact: o.compact, sign: o.sign });
+}
+
+/** How a currency is written: the shape of `CountryContext.currency` without the dollar rate. */
+export interface MoneyCurrency {
+  /** ISO 4217 code ("BDT", "INR", "USD"). */
+  code: string;
+  /** Narrow local symbol ("৳", "₹", "$"); used by the lakh/crore style and by input parsing. */
+  symbol: string;
+  /** Minor-unit digits; informational only, the app never shows minor units. */
+  decimals: number;
+  compact: "lakh_crore" | "intl";
+}
+
+export interface FormatMoneyOptions {
+  currency: MoneyCurrency;
+  /** BCP-47 tag of the UI locale ("bn-BD", "en", "hi-IN", "fr"). */
+  locale: string;
+  digits: Digits;
+  /** Short form for big numbers: "৳12.5 lakh" (lakh/crore currencies in bn/en), else Intl compact ("$1.3M"). */
+  compact?: boolean;
+  /** Always show a leading + or −. */
+  sign?: boolean;
+}
+
+/** The currency of Bangladesh, written exactly as formatTaka writes it. */
+export const BDT_CURRENCY: MoneyCurrency = { code: "BDT", symbol: "৳", decimals: 2, compact: "lakh_crore" };
+
+function languageOf(tag: string): string {
+  return (tag.split(/[-_]/)[0] ?? "").toLowerCase();
+}
+
+const NUMBER_FORMATS = new Map<string, Intl.NumberFormat>();
+
+function numberFormat(locale: string, options: Intl.NumberFormatOptions): Intl.NumberFormat {
+  const key = `${locale}|${JSON.stringify(options)}`;
+  let f = NUMBER_FORMATS.get(key);
+  if (!f) {
+    try {
+      f = new Intl.NumberFormat(locale, options);
+    } catch {
+      // Unknown tag or currency code in this runtime: English, and the code itself when it is malformed.
+      const currency = typeof options.currency === "string" && /^[A-Za-z]{3}$/.test(options.currency) ? options.currency : undefined;
+      f = new Intl.NumberFormat("en", currency ? { ...options, currency } : { ...options, style: "decimal", currency: undefined });
+    }
+    NUMBER_FORMATS.set(key, f);
+  }
+  return f;
+}
+
+/**
+ * Money in any currency, whole units only. Lakh/crore currencies (BDT, INR, PKR, NPR) shown in
+ * Bangla or English keep the Bangladeshi style ("৳12,50,000", "₹12.5 lakh"; formatTaka's output
+ * for BDT); everything else uses Intl.NumberFormat with the locale's grouping and a narrow symbol
+ * ("$1,250,000", "1 250 000 €") and Intl compact notation ("$1.3M"). Negatives use the minus sign (−).
+ */
+export function formatMoney(n: Money, o: FormatMoneyOptions): string {
+  const value = Number.isFinite(n) ? n : 0;
+  const lang = languageOf(o.locale);
+  if (o.currency.compact === "lakh_crore" && (lang === "bn" || lang === "en")) {
+    return formatLakhCrore(value, o.currency.symbol, { digits: o.digits, words: lang === "bn" ? "bn" : "en", compact: o.compact, sign: o.sign });
+  }
+  const f = numberFormat(o.locale, {
+    style: "currency",
+    currency: o.currency.code,
+    currencyDisplay: "narrowSymbol",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: o.compact ? 1 : 0,
+    notation: o.compact ? "compact" : "standard",
+    signDisplay: o.sign ? "always" : "auto",
+    numberingSystem: o.digits === "bn" ? "beng" : "latn",
+  });
+  const shown = o.compact ? value : Math.round(value);
+  return f.format(Object.is(shown, -0) ? 0 : shown).replace(/-/g, "−");
 }
 
 export function formatPercent(r: Rate, o: { digits: Digits; decimals?: number }): string {
@@ -98,17 +176,87 @@ export function formatAsOf(iso: ISODate, locale: Locale): string {
   return locale === "bn" ? `${name} ${toBanglaDigits(year)}` : `${name} ${year}`;
 }
 
+/** First code point of each native digit set read in typed amounts: Bangla, Arabic-Indic, Extended Arabic-Indic (Urdu, Persian), Devanagari. */
+const DIGIT_BLOCKS = [0x09e6, 0x0660, 0x06f0, 0x0966] as const;
+
+/** Any native digit (see DIGIT_BLOCKS) → Latin. */
+export function toLatinDigits(s: string): string {
+  return s.replace(/[০-৯٠-٩۰-۹०-९]/g, (ch) => {
+    const code = ch.charCodeAt(0);
+    for (const start of DIGIT_BLOCKS) if (code >= start && code <= start + 9) return String(code - start);
+    return ch;
+  });
+}
+
+/** Multiplier words: only words that mean one thing in every language we read. */
+const UNIT_WORDS: readonly (readonly [RegExp, number])[] = [
+  [/^(lakh|lakhs|lac|lacs|লাখ|লক্ষ|लाख)$/u, LAKH],
+  [/^(crore|crores|cr|কোটি|करोड़|करोड)$/u, CRORE],
+  [/^(k|thousand|হাজার|हज़ार|हजार)$/u, 1_000],
+  [/^(m|mn|million|millions)$/u, 1_000_000],
+  [/^(bn|billion|billions)$/u, 1_000_000_000],
+];
+
+export interface ParseMoneyOptions {
+  /** Local currency symbol to ignore when it is not a Unicode currency sign ("Rs", "KSh", "R$"). */
+  symbol?: string;
+  /**
+   * Accepted for symmetry with formatMoney. Every script (Latin, Bangla, Arabic-Indic, Devanagari)
+   * and both decimal marks are read whatever the locale.
+   */
+  locale?: string;
+  digits?: Digits;
+}
+
+/** Resolve "," and "." in a digits-and-marks string: grouping marks are dropped, the decimal mark becomes ".". */
+function normaliseSeparators(t: string, hasUnit: boolean): string | null {
+  const commas = t.split(",").length - 1;
+  const dots = t.split(".").length - 1;
+  if (commas === 0 && dots === 0) return t;
+  if (commas > 0 && dots > 0) {
+    // Both present: the one written last is the decimal mark and appears once ("1,250.5", "1.250,5").
+    const dec = t.lastIndexOf(",") > t.lastIndexOf(".") ? "," : ".";
+    if ((dec === "," ? commas : dots) > 1) return null;
+    return t.split(dec === "," ? "." : ",").join("").replace(dec, ".");
+  }
+  const mark = commas > 0 ? "," : ".";
+  if ((commas || dots) > 1) return t.split(mark).join("");
+  // One mark: exactly three digits after it is grouping ("1,250", "1.250"); amounts are whole
+  // units. Otherwise, or before a multiplier word ("1.250 lakh"), it is the decimal mark.
+  const after = t.length - t.indexOf(mark) - 1;
+  return after === 3 && !hasUnit ? t.replace(mark, "") : t.replace(mark, ".");
+}
+
 /**
- * Parse user-typed taka: "12,50,000", "১২৫০০০", "12.5 lakh", "১.২ কোটি", "৳ 5000".
- * Returns whole taka, or null when nothing numeric is present.
+ * Parse a typed amount in any supported script: "12,50,000", "১২৫০০০", "١٢٥٠٠٠", "१२५०००", "12.5 lakh",
+ * "১.২ কোটি", "৳ 5000", "$1,250,000", "1 250 000 €", "1.250.000", "2.5m", "50k".
+ * Returns whole units, or null when the text is not one amount.
  */
-export function parseTakaInput(s: string): Money | null {
-  const t = fromBanglaDigits(s).toLowerCase().replace(/[৳,\s]/g, "");
-  const m = /^([+-]?\d*\.?\d+)(lakh|lac|lakhs|লাখ|লক্ষ|crore|cr|কোটি|k|thousand|হাজার)?$/.exec(t);
+export function parseMoneyInput(s: string, o: ParseMoneyOptions = {}): Money | null {
+  let t = toLatinDigits(s).toLowerCase();
+  if (o.symbol && !/^\p{Sc}+$/u.test(o.symbol)) t = t.split(o.symbol.toLowerCase()).join(" ");
+  // Currency signs, spaces (with no-break and narrow ones), apostrophes and the Arabic thousands mark are not part of the number.
+  t = t
+    .replace(/[\p{Sc}\s  '’٬]/gu, "")
+    .replace(/٫/g, ".")
+    .replace(/[−–]/g, "-");
+  const m = /^([+-]?[\d.,]*\d[\d.,]*)(\p{L}[\p{L}\p{M}]*)?$/u.exec(t);
   if (!m) return null;
-  const n = Number(m[1]);
+  const word = m[2];
+  const numText = normaliseSeparators(m[1] ?? "", word !== undefined);
+  if (numText === null || !/^[+-]?(\d+\.?\d*|\.\d+)$/.test(numText)) return null;
+  const n = Number(numText);
   if (!Number.isFinite(n)) return null;
-  const unit = m[2];
-  const mult = !unit ? 1 : /^(lakh|lac|lakhs|লাখ|লক্ষ)$/.test(unit) ? LAKH : /^(crore|cr|কোটি)$/.test(unit) ? CRORE : 1000;
+  let mult = 1;
+  if (word !== undefined) {
+    const hit = UNIT_WORDS.find(([re]) => re.test(word));
+    if (!hit) return null;
+    mult = hit[1];
+  }
   return Math.round(n * mult);
+}
+
+/** Taka input: the same parser, kept for existing callers. */
+export function parseTakaInput(s: string): Money | null {
+  return parseMoneyInput(s);
 }

@@ -1,5 +1,20 @@
 import { describe, expect, it } from "vitest";
-import { formatAsOf, formatMonths, formatNumber, formatPercent, formatTaka, fromBanglaDigits, groupIndian, parseTakaInput, toBanglaDigits } from "./format";
+import {
+  BDT_CURRENCY,
+  formatAsOf,
+  formatMoney,
+  formatMonths,
+  formatNumber,
+  formatPercent,
+  formatTaka,
+  fromBanglaDigits,
+  groupIndian,
+  parseMoneyInput,
+  parseTakaInput,
+  toBanglaDigits,
+  toLatinDigits,
+  type MoneyCurrency,
+} from "./format";
 
 describe("digits and grouping", () => {
   it("converts digits both ways", () => {
@@ -71,5 +86,98 @@ describe("parseTakaInput", () => {
     expect(parseTakaInput("")).toBeNull();
     expect(parseTakaInput("abc")).toBeNull();
     expect(parseTakaInput("12 taka 50")).toBeNull();
+  });
+});
+
+const INR: MoneyCurrency = { code: "INR", symbol: "₹", decimals: 2, compact: "lakh_crore" };
+const USD: MoneyCurrency = { code: "USD", symbol: "$", decimals: 2, compact: "intl" };
+const JPY: MoneyCurrency = { code: "JPY", symbol: "¥", decimals: 0, compact: "intl" };
+const EUR: MoneyCurrency = { code: "EUR", symbol: "€", decimals: 2, compact: "intl" };
+const spaces = (s: string) => s.replace(/[  ]/g, " ");
+
+describe("formatMoney", () => {
+  it("BDT in bn and en is exactly formatTaka", () => {
+    for (const n of [0, 9000, 45000, 899000, 1250000, 12000000, -1500]) {
+      for (const compact of [false, true]) {
+        expect(formatMoney(n, { currency: BDT_CURRENCY, locale: "en", digits: "latn", compact })).toBe(formatTaka(n, { digits: "latn", compact }));
+        expect(formatMoney(n, { currency: BDT_CURRENCY, locale: "bn-BD", digits: "bn", compact })).toBe(formatTaka(n, { digits: "bn", compact }));
+      }
+    }
+    expect(formatMoney(1500, { currency: BDT_CURRENCY, locale: "en", digits: "latn", sign: true })).toBe("+৳1,500");
+  });
+
+  it("INR uses lakh grouping and lakh/crore words", () => {
+    expect(formatMoney(1250000, { currency: INR, locale: "en", digits: "latn" })).toBe("₹12,50,000");
+    expect(formatMoney(1250000, { currency: INR, locale: "en", digits: "latn", compact: true })).toBe("₹12.5 lakh");
+    expect(formatMoney(12000000, { currency: INR, locale: "bn-BD", digits: "bn", compact: true })).toBe("₹১.২ কোটি");
+    // Hindi: Intl's own Indian grouping and compact words.
+    expect(formatMoney(1250000, { currency: INR, locale: "hi-IN", digits: "latn" })).toBe("₹12,50,000");
+    expect(spaces(formatMoney(1250000, { currency: INR, locale: "hi-IN", digits: "latn", compact: true }))).toBe("₹12.5 लाख");
+  });
+
+  it("USD, JPY and EUR use the locale's grouping and no minor units", () => {
+    expect(formatMoney(1250000, { currency: USD, locale: "en", digits: "latn" })).toBe("$1,250,000");
+    expect(formatMoney(1249.6, { currency: USD, locale: "en", digits: "latn" })).toBe("$1,250");
+    expect(formatMoney(1250000.4, { currency: JPY, locale: "en", digits: "latn" })).toBe("¥1,250,000");
+    expect(spaces(formatMoney(1250000, { currency: EUR, locale: "fr", digits: "latn" }))).toBe("1 250 000 €");
+  });
+
+  it("compact uses Intl notation outside lakh/crore", () => {
+    expect(formatMoney(1250000, { currency: USD, locale: "en", digits: "latn", compact: true })).toBe("$1.3M");
+    expect(formatMoney(45000, { currency: USD, locale: "en", digits: "latn", compact: true })).toBe("$45K");
+    expect(spaces(formatMoney(1250000, { currency: EUR, locale: "fr", digits: "latn", compact: true }))).toBe("1,3 M €");
+  });
+
+  it("signs: the minus sign for negatives, + on request", () => {
+    expect(formatMoney(-1500, { currency: USD, locale: "en", digits: "latn" })).toBe("−$1,500");
+    expect(formatMoney(1500, { currency: USD, locale: "en", digits: "latn", sign: true })).toBe("+$1,500");
+    expect(formatMoney(-1500, { currency: INR, locale: "en", digits: "latn" })).toBe("−₹1,500");
+    expect(formatMoney(-0.2, { currency: USD, locale: "en", digits: "latn" })).toBe("$0");
+  });
+
+  it("Bangla digits for any currency, and a safe fallback for a malformed code", () => {
+    expect(formatMoney(1250000, { currency: USD, locale: "bn-BD", digits: "bn" })).toContain("১২,৫০,০০০");
+    expect(formatMoney(1000, { currency: { ...USD, code: "??" }, locale: "en", digits: "latn" })).toBe("1,000");
+  });
+});
+
+describe("parseMoneyInput", () => {
+  it("reads every script", () => {
+    expect(toLatinDigits("১২৩ ١٢٣ ۱۲۳ १२३")).toBe("123 123 123 123");
+    expect(parseMoneyInput("١٢٥٠٠٠")).toBe(125000);
+    expect(parseMoneyInput("۱۲۵۰۰۰")).toBe(125000);
+    expect(parseMoneyInput("१२,५०,०००")).toBe(1250000);
+    expect(parseMoneyInput("১২,৫০,০০০")).toBe(1250000);
+  });
+
+  it("ignores symbols and grouping in any style", () => {
+    expect(parseMoneyInput("₹12,50,000")).toBe(1250000);
+    expect(parseMoneyInput("$1,250,000")).toBe(1250000);
+    expect(parseMoneyInput("1 250 000 €")).toBe(1250000);
+    expect(parseMoneyInput("1 250 000 €")).toBe(1250000);
+    expect(parseMoneyInput("1.250.000")).toBe(1250000);
+    expect(parseMoneyInput("1'250'000")).toBe(1250000);
+    expect(parseMoneyInput("1.250.000,50")).toBe(1250001);
+    expect(parseMoneyInput("1,250,000.40")).toBe(1250000);
+    expect(parseMoneyInput("1,250")).toBe(1250);
+    expect(parseMoneyInput("12.5")).toBe(13);
+    expect(parseMoneyInput("Rs 5,000", { symbol: "Rs" })).toBe(5000);
+    expect(parseMoneyInput("KSh 5000", { symbol: "KSh" })).toBe(5000);
+  });
+
+  it("reads multiplier words", () => {
+    expect(parseMoneyInput("12.5 lakh")).toBe(1250000);
+    expect(parseMoneyInput("2 करोड़")).toBe(20000000);
+    expect(parseMoneyInput("5 हज़ार")).toBe(5000);
+    expect(parseMoneyInput("2.5m")).toBe(2500000);
+    expect(parseMoneyInput("1.2 million")).toBe(1200000);
+    expect(parseMoneyInput("50K")).toBe(50000);
+  });
+
+  it("rejects text that is not one amount", () => {
+    expect(parseMoneyInput("")).toBeNull();
+    expect(parseMoneyInput("1,2.3,4")).toBeNull();
+    expect(parseMoneyInput("12 taka 50")).toBeNull();
+    expect(parseMoneyInput("5 apples")).toBeNull();
   });
 });

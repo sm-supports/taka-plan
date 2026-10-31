@@ -54,23 +54,23 @@ export function GoalResultCard({ name, result, shown }: GoalResultCardProps) {
           <div className="rounded-xl bg-brand-50 p-3 text-center">
             <p className="text-sm font-medium text-text-muted">{t("m5.result.monthly")}</p>
             <p className="mt-0.5 text-3xl font-bold tabular-nums text-brand-700">
-              {f.taka(result.monthly.base)}
+              {f.money(result.monthly.base)}
               <span className="ml-1 text-base font-medium text-text-muted">{t("common.unit.perMonth")}</span>
             </p>
             <p className="mt-1 text-sm text-text-muted">{t("m5.result.months", { months: f.months(result.months) })}</p>
           </div>
 
           <dl className="flex flex-col divide-y divide-line">
-            <Row label={t("m5.result.futureValue")} value={t("m5.result.futureValueIn", { fv: f.taka(result.futureValue, { compact: true }), years: yearsLabel })} hint={`${t("m5.result.inflation")}: ${f.percent(result.inflation)}`} />
+            <Row label={t("m5.result.futureValue")} value={t("m5.result.futureValueIn", { fv: f.money(result.futureValue, { compact: true }), years: yearsLabel })} hint={`${t("m5.result.inflation")}: ${f.percent(result.inflation)}`} />
             <Row label={t("m5.result.horizon")} value={t(`common.horizon.${result.horizon}`)} />
             <Row
               label={t("m5.result.instrument")}
               value={term ? <Term k={term}>{instrumentName}</Term> : instrumentName}
               hint={others.length > 0 ? `${t("m5.result.candidates")}: ${others.map((c) => t(`common.instrument.${c}`)).join(", ")}` : undefined}
             />
-            <Row label={t("m5.result.monthlyLow")} value={f.taka(result.monthly.low)} />
-            <Row label={t("m5.result.monthlyBase")} value={f.taka(result.monthly.base)} />
-            <Row label={t("m5.result.monthlyHigh")} value={f.taka(result.monthly.high)} />
+            <Row label={t("m5.result.monthlyLow")} value={f.money(result.monthly.low)} />
+            <Row label={t("m5.result.monthlyBase")} value={f.money(result.monthly.base)} />
+            <Row label={t("m5.result.monthlyHigh")} value={f.money(result.monthly.high)} />
             <Row label={t("m5.result.nominal")} value={f.percent(result.nominal)} />
             <Row label={t("m5.result.afterTax")} value={f.percent(result.afterTax)} />
             <Row label={<Term k="real_return">{t("m5.result.real")}</Term>} value={f.percent(result.real)} strong={!result.belowInflation} />

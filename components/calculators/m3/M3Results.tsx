@@ -45,9 +45,9 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
 
   const debtLabel = (id: string): string => {
     const loan = input.loans.find((l) => l.id === id);
-    if (loan) return `${t(`common.loanType.${loan.type}`)} · ${f.taka(loan.outstanding)} · ${f.percent(loan.annualRate)}`;
+    if (loan) return `${t(`common.loanType.${loan.type}`)} · ${f.money(loan.outstanding)} · ${f.percent(loan.annualRate)}`;
     const card = input.cards.find((c) => c.id === id);
-    if (card) return `${t("m3.result.cardLabel")} · ${f.taka(card.balance)} · ${f.percent(card.annualRate ?? cardCap)}`;
+    if (card) return `${t("m3.result.cardLabel")} · ${f.money(card.balance)} · ${f.percent(card.annualRate ?? cardCap)}`;
     return id;
   };
 
@@ -93,10 +93,10 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
       {/* EMI numbers */}
       <Card header={<h2 className="text-lg font-bold text-text">{t("m3.result.numbers")}</h2>}>
         <dl className="flex flex-col divide-y divide-line">
-          <Row label={<Term k="emi">{t("m3.result.totalEmi")}</Term>} value={f.taka(result.totalEmi)} />
+          <Row label={<Term k="emi">{t("m3.result.totalEmi")}</Term>} value={f.money(result.totalEmi)} />
           <Row label={t("m3.result.emiRatio")} value={f.percent(result.emiRatio)} hint={t("m3.result.emiRatioNote", { threshold: f.percent(emiRatioRed, 0) })} />
-          <Row label={t("m3.result.emiCapacity")} value={f.taka(result.emiCapacity)} hint={t("m3.result.emiCapacityHint")} />
-          <Row label={t("m3.result.headroom")} value={f.taka(result.headroom)} hint={t("m3.result.headroomHint")} />
+          <Row label={t("m3.result.emiCapacity")} value={f.money(result.emiCapacity)} hint={t("m3.result.emiCapacityHint")} />
+          <Row label={t("m3.result.headroom")} value={f.money(result.headroom)} hint={t("m3.result.headroomHint")} />
         </dl>
         <WhyButton explanation={allSteps} stepIds={["m3.totalEmi", "m3.emiRatio", "m3.capacity"]} className="mt-2" />
       </Card>
@@ -105,18 +105,18 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
       <Card header={<h2 className="text-lg font-bold text-text">{t("m3.result.borrow")}</h2>}>
         <BigNumber
           label={t("m3.result.maxAffordableLoan")}
-          value={f.taka(result.maxAffordableLoan, { compact: true })}
+          value={f.money(result.maxAffordableLoan, { compact: true })}
           caption={t("m3.result.scenario", { rate: f.percent(result.scenario.annualRate), months: f.months(result.scenario.months) })}
         />
         <dl className="mt-3 flex flex-col divide-y divide-line">
-          <Row label={t("m3.result.scenarioEmi")} value={f.taka(result.scenario.emi)} />
+          <Row label={t("m3.result.scenarioEmi")} value={f.money(result.scenario.emi)} />
         </dl>
         <p className="mt-2 text-sm leading-relaxed text-text-muted">
           {t("m3.result.maxLoanNote", {
             rate: f.percent(result.scenario.annualRate),
             months: f.months(result.scenario.months),
-            emi: f.taka(result.scenario.emi),
-            loan: f.taka(result.maxAffordableLoan, { compact: true }),
+            emi: f.money(result.scenario.emi),
+            loan: f.money(result.maxAffordableLoan, { compact: true }),
           })}
         </p>
         <WhyButton explanation={allSteps} stepIds={["m3.capacity", "m3.maxLoan", "m3.scenarioEmi"]} className="mt-2" />
@@ -126,7 +126,7 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
       {hasDebt && (
         <Card header={<h2 className="text-lg font-bold text-text">{t("m3.result.payoffOrder")}</h2>}>
           <p className="text-sm text-text-muted">{t("m3.result.payoffOrderHint")}</p>
-          {input.extraMonthly !== undefined && <p className="mt-1 text-sm text-text-muted">{t("m3.result.extraUsed", { amount: f.taka(input.extraMonthly) })}</p>}
+          {input.extraMonthly !== undefined && <p className="mt-1 text-sm text-text-muted">{t("m3.result.extraUsed", { amount: f.money(input.extraMonthly) })}</p>}
           <h3 className="mt-3 font-semibold text-text">{t("m3.result.avalanche")}</h3>
           <ol className="mt-1 list-decimal pl-5 text-base text-text">
             {result.avalanche.order.map((id) => (
@@ -134,9 +134,9 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
             ))}
           </ol>
           <dl className="mt-3 flex flex-col divide-y divide-line">
-            <Row label={t("m3.result.payoffMonths", { months: f.months(result.avalanche.months) })} value={`${t("m3.result.totalInterest")}: ${f.taka(result.avalanche.totalInterest)}`} />
-            <Row label={t("m3.result.compare")} value={`${t("m3.result.snowball")}: ${f.taka(result.snowball.totalInterest)}`} />
-            <Row label={t("m3.result.interestSaved")} value={f.taka(result.interestSaved)} strong />
+            <Row label={t("m3.result.payoffMonths", { months: f.months(result.avalanche.months) })} value={`${t("m3.result.totalInterest")}: ${f.money(result.avalanche.totalInterest)}`} />
+            <Row label={t("m3.result.compare")} value={`${t("m3.result.snowball")}: ${f.money(result.snowball.totalInterest)}`} />
+            <Row label={t("m3.result.interestSaved")} value={f.money(result.interestSaved)} strong />
           </dl>
           {result.highInterestDebts.length > 0 && (
             <div className="mt-3">
@@ -144,7 +144,7 @@ export function M3Results({ input, result, snapshot }: M3ResultsProps) {
               <ul className="mt-1 flex flex-col gap-1 text-sm text-text">
                 {result.highInterestDebts.map((d) => (
                   <li key={d.id}>
-                    {debtLabel(d.id)} · {t("m3.result.minPayment")} {f.taka(d.minPayment)}
+                    {debtLabel(d.id)} · {t("m3.result.minPayment")} {f.money(d.minPayment)}
                   </li>
                 ))}
               </ul>

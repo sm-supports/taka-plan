@@ -13,7 +13,7 @@ import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
-import { useRates } from "@/lib/rates/useRates";
+import { useCountryRates } from "@/lib/country/useCountry";
 import { makeId, useTakaStore } from "@/lib/store/store";
 import { CardEditor } from "./CardEditor";
 import { DEMO_M3_INPUT, buildDemoM3Result } from "./demo";
@@ -33,7 +33,7 @@ const SCENARIO_DEFAULT_MONTHS = 60;
 export function M3Calculator({ demo = false }: M3CalculatorProps) {
   const { t } = useT();
   const f = useFormat();
-  const { snapshot } = useRates();
+  const snapshot = useCountryRates();
   const [today] = useState(todayISO);
 
   const profile = useTakaStore((s) => s.profile);
@@ -121,7 +121,7 @@ export function M3Calculator({ demo = false }: M3CalculatorProps) {
             onChange={(n) => !demo && n !== null && n >= 0 && setProfile({ essentials: n })}
           />
           <p className="text-sm text-text-muted">
-            {t("m3.input.savingsTarget.label")}: <span className="font-semibold text-text">{f.taka(input.savingsTarget)}</span> — {t("m3.input.savingsTarget.hint")}
+            {t("m3.input.savingsTarget.label")}: <span className="font-semibold text-text">{f.money(input.savingsTarget)}</span> — {t("m3.input.savingsTarget.hint")}
           </p>
         </div>
       </Card>
