@@ -1,8 +1,14 @@
 // TODO(bn-review): reviewed by i18n-bn slice
 // Input names per step are documented in ../en/explain.ts; the placeholders here must match.
 import type { Dictionary } from "../../types";
+import { explainM2 } from "./explain-m2";
+import { explainM6 } from "./explain-m6";
+import { explainM7 } from "./explain-m7";
 
 export const explain: Dictionary["explain"] = {
+  m2: explainM2,
+  m6: explainM6,
+  m7: explainM7,
   m1: {
     months: {
       title: "কত মাসের খরচ",

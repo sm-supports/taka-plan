@@ -1,3 +1,6 @@
+import { explainM2 } from "./explain-m2";
+import { explainM6 } from "./explain-m6";
+import { explainM7 } from "./explain-m7";
 /**
  * "Why this number?" — one { title, body } per engine ExplainStep id, keyed by the id's last
  * segment (step "m1.target" → explain.m1.target). The `body` is a plain-words explanation
@@ -39,6 +42,9 @@
  *   plan.goalAllocation  {need} {goalsNeed} {remaining} {result}   (+ goalId, never shown)
  */
 export const explain = {
+  m2: explainM2,
+  m6: explainM6,
+  m7: explainM7,
   m1: {
     months: {
       title: "Months of cover",
