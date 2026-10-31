@@ -50,8 +50,11 @@ describe("withCountry", () => {
     const s = withCountry(base, FIXTURE_IN, opts);
     expect(getRate(s, "fdr_1y_rate")).toBe(0.067);
     expect(s.rows.fdr_1y_rate.isAppAssumption).toBe(true); // fixture figures are assumptions
-    // Missing term premium table: no regional figure given, so the base row is kept and flagged.
-    expect(s.country?.fallbackKeys).toContain("insurance_term_premium_table");
+    // Missing term premium table means no term-life market: the row becomes "none", not a fallback.
+    expect(s.rows.insurance_term_premium_table.valueJson).toBeNull();
+    expect(s.country?.fallbackKeys).not.toContain("insurance_term_premium_table");
+    // A key the country did not report at all still falls back (flagged).
+    expect(s.country?.fallbackKeys).toContain("health_premium_table");
     // App-policy money threshold converted from taka at 84/122.
     expect(getRate(s, "emergency_large_buffer_threshold")).toBe(Math.round((getRate(base, "emergency_large_buffer_threshold") * 84) / 122));
     expect(s.country?.notApplicable).toEqual([...BANGLADESH_ONLY_KEYS]);
