@@ -200,3 +200,19 @@ describe("D1CountryRepo storage details", () => {
     expect(JSON.parse(meta.meta)).not.toHaveProperty("fields");
   });
 });
+
+describe("absent flag round trip (D1)", () => {
+  it("stores and reads absent: true only with status missing", async () => {
+    const { seededCountriesD1 } = await import("./sqliteD1");
+    const { D1CountryRepo } = await import("@/lib/server/country-db");
+    const { FIXTURE_IN } = await import("@taka/engine");
+    const db = await seededCountriesD1([FIXTURE_IN]);
+    const repo = new D1CountryRepo(db);
+    const v = await repo.ensureDraft("IN", "2026-10-31T00:00:00.000Z");
+    await repo.updateField("IN", v, "gratuity_rule", { value: null, status: "missing", sourceName: "Labour code", sourceUrl: "https://example.org/law", asOf: "2026-10-01", absent: true }, null, "2026-10-31T00:00:01.000Z");
+    const draft = await repo.getDraft("IN");
+    expect(draft?.profile.fields.gratuity_rule?.absent).toBe(true);
+    await repo.updateField("IN", v, "gratuity_rule", { value: null, status: "missing", sourceName: "", sourceUrl: "", asOf: "2026-10-01" }, null, "2026-10-31T00:00:02.000Z");
+    expect((await repo.getDraft("IN"))?.profile.fields.gratuity_rule?.absent).toBeUndefined();
+  });
+});

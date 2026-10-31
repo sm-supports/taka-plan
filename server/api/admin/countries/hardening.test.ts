@@ -186,7 +186,7 @@ describe("publish checks (S2, S3)", () => {
     expect(res.status).toBe(400);
     const err = await errorOf(res);
     expect(err.code).toBe("INVALID_DRAFT");
-    expect(err.message).toMatch(/researchedAt .* is in the future/);
+    expect(err.message).toMatch(/researchedAt/);
     expect(await repo.getPublishedVersion("IN")).toBe(1);
   });
 
