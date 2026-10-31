@@ -1,0 +1,9496 @@
+{
+ "fetchedAt": "2026-10-31",
+ "source": "Unicode CLDR 46 (cldr-core, cldr-numbers-full)",
+ "sourceUrl": "https://cldr.unicode.org/",
+ "territories": {
+  "AC": {
+   "currency": "SHP",
+   "currencyName": "St. Helena Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 99,
+     "official": false
+    }
+   ]
+  },
+  "AD": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ca",
+     "percent": 51,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 43,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 6.8,
+     "official": false
+    }
+   ]
+  },
+  "AE": {
+   "currency": "AED",
+   "currencyName": "United Arab Emirates Dirham",
+   "symbol": "AED",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 78,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 50,
+     "official": false
+    },
+    {
+     "lang": "ml",
+     "percent": 7,
+     "official": false
+    },
+    {
+     "lang": "ps",
+     "percent": 2.9,
+     "official": false
+    },
+    {
+     "lang": "bal",
+     "percent": 2.3,
+     "official": false
+    },
+    {
+     "lang": "fa",
+     "percent": 1.9,
+     "official": false
+    }
+   ]
+  },
+  "AF": {
+   "currency": "AFN",
+   "currencyName": "Afghan Afghani",
+   "symbol": "؋",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fa",
+     "percent": 50,
+     "official": true
+    },
+    {
+     "lang": "ps",
+     "percent": 43,
+     "official": true
+    },
+    {
+     "lang": "haz",
+     "percent": 5.9,
+     "official": false
+    },
+    {
+     "lang": "uz",
+     "percent": 4.7,
+     "official": true
+    },
+    {
+     "lang": "tk",
+     "percent": 1.7,
+     "official": true
+    },
+    {
+     "lang": "prd",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "bgn",
+     "percent": 0.63,
+     "official": false
+    },
+    {
+     "lang": "kaa",
+     "percent": 0.0084,
+     "official": false
+    },
+    {
+     "lang": "ug",
+     "percent": 0.0075,
+     "official": false
+    },
+    {
+     "lang": "kk",
+     "percent": 0.005,
+     "official": false
+    }
+   ]
+  },
+  "AG": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 86,
+     "official": true
+    },
+    {
+     "lang": "pt",
+     "percent": 1.6,
+     "official": false
+    }
+   ]
+  },
+  "AI": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 95,
+     "official": true
+    }
+   ]
+  },
+  "AL": {
+   "currency": "ALL",
+   "currencyName": "Albanian Lek",
+   "symbol": "ALL",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "sq",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "el",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "mk",
+     "percent": 0.47,
+     "official": false
+    }
+   ]
+  },
+  "AM": {
+   "currency": "AMD",
+   "currencyName": "Armenian Dram",
+   "symbol": "֏",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "hy",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "ku",
+     "percent": 3.3,
+     "official": false
+    },
+    {
+     "lang": "az",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "AO": {
+   "currency": "AOA",
+   "currencyName": "Angolan Kwanza",
+   "symbol": "Kz",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pt",
+     "percent": 67,
+     "official": true
+    },
+    {
+     "lang": "umb",
+     "percent": 29,
+     "official": false
+    },
+    {
+     "lang": "kmb",
+     "percent": 25,
+     "official": false
+    },
+    {
+     "lang": "ln",
+     "percent": 0.67,
+     "official": false
+    }
+   ]
+  },
+  "AR": {
+   "currency": "ARS",
+   "currencyName": "Argentine Peso",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 7,
+     "official": false
+    },
+    {
+     "lang": "cy",
+     "percent": 0.066,
+     "official": false
+    },
+    {
+     "lang": "gn",
+     "percent": 0.047,
+     "official": false
+    }
+   ]
+  },
+  "AS": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sm",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 97,
+     "official": true
+    }
+   ]
+  },
+  "AT": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "de",
+     "percent": 97,
+     "official": true
+    },
+    {
+     "lang": "bar",
+     "percent": 95,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 73,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 9,
+     "official": false
+    },
+    {
+     "lang": "hr",
+     "percent": 1.2,
+     "official": true
+    },
+    {
+     "lang": "sl",
+     "percent": 0.37,
+     "official": true
+    },
+    {
+     "lang": "hu",
+     "percent": 0.26,
+     "official": true
+    }
+   ]
+  },
+  "AU": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 96,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 2.1,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "wbp",
+     "percent": 0.0093,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.0082,
+     "official": false
+    }
+   ]
+  },
+  "AW": {
+   "currency": "AWG",
+   "currencyName": "Aruban Florin",
+   "symbol": "AWG",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "nl",
+     "percent": 97,
+     "official": true
+    },
+    {
+     "lang": "pap",
+     "percent": 61,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 2.4,
+     "official": false
+    }
+   ]
+  },
+  "AX": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sv",
+     "percent": 99,
+     "official": true
+    }
+   ]
+  },
+  "AZ": {
+   "currency": "AZN",
+   "currencyName": "Azerbaijani Manat",
+   "symbol": "₼",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "az",
+     "percent": 89,
+     "official": true
+    },
+    {
+     "lang": "az",
+     "percent": 9.9,
+     "official": true
+    },
+    {
+     "lang": "tly",
+     "percent": 9.8,
+     "official": false
+    },
+    {
+     "lang": "ku",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "ttt",
+     "percent": 0.22,
+     "official": false
+    },
+    {
+     "lang": "tkr",
+     "percent": 0.16,
+     "official": false
+    }
+   ]
+  },
+  "BA": {
+   "currency": "BAM",
+   "currencyName": "Bosnia-Herzegovina Convertible Mark",
+   "symbol": "KM",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "bs",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "bs",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 45,
+     "official": false
+    },
+    {
+     "lang": "hr",
+     "percent": 12,
+     "official": true
+    },
+    {
+     "lang": "sr",
+     "percent": 10,
+     "official": true
+    },
+    {
+     "lang": "sr",
+     "percent": 10,
+     "official": true
+    }
+   ]
+  },
+  "BB": {
+   "currency": "BBD",
+   "currencyName": "Barbadian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "BD": {
+   "currency": "BDT",
+   "currencyName": "Bangladeshi Taka",
+   "symbol": "৳",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "bn",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 18,
+     "official": false
+    },
+    {
+     "lang": "rkt",
+     "percent": 6.5,
+     "official": false
+    },
+    {
+     "lang": "syl",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "rhg",
+     "percent": 0.53,
+     "official": false
+    },
+    {
+     "lang": "ccp",
+     "percent": 0.22,
+     "official": false
+    },
+    {
+     "lang": "my",
+     "percent": 0.21,
+     "official": false
+    },
+    {
+     "lang": "grt",
+     "percent": 0.073,
+     "official": false
+    },
+    {
+     "lang": "mro",
+     "percent": 0.018,
+     "official": false
+    },
+    {
+     "lang": "mni",
+     "percent": 0.011,
+     "official": false
+    }
+   ]
+  },
+  "BE": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 59,
+     "official": false
+    },
+    {
+     "lang": "nl",
+     "percent": 55,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 38,
+     "official": true
+    },
+    {
+     "lang": "de",
+     "percent": 22,
+     "official": true
+    },
+    {
+     "lang": "vls",
+     "percent": 10,
+     "official": false
+    },
+    {
+     "lang": "wa",
+     "percent": 5.8,
+     "official": false
+    }
+   ]
+  },
+  "BF": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "mos",
+     "percent": 40,
+     "official": false
+    },
+    {
+     "lang": "dyu",
+     "percent": 32,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 22,
+     "official": true
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "BG": {
+   "currency": "BGN",
+   "currencyName": "Bulgarian Lev",
+   "symbol": "BGN",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "bg",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 25,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 23,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 8,
+     "official": false
+    }
+   ]
+  },
+  "BH": {
+   "currency": "BHD",
+   "currencyName": "Bahraini Dinar",
+   "symbol": "BHD",
+   "decimals": 3,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 87,
+     "official": true
+    },
+    {
+     "lang": "ml",
+     "percent": 3.3,
+     "official": false
+    }
+   ]
+  },
+  "BI": {
+   "currency": "BIF",
+   "currencyName": "Burundian Franc",
+   "symbol": "BIF",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "rn",
+     "percent": 63,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 59,
+     "official": true
+    },
+    {
+     "lang": "sw",
+     "percent": 0.047,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 0.046,
+     "official": true
+    }
+   ]
+  },
+  "BJ": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 35,
+     "official": true
+    },
+    {
+     "lang": "fon",
+     "percent": 25,
+     "official": false
+    },
+    {
+     "lang": "yo",
+     "percent": 6.7,
+     "official": false
+    },
+    {
+     "lang": "blo",
+     "percent": 0.3,
+     "official": false
+    }
+   ]
+  },
+  "BL": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 97,
+     "official": true
+    }
+   ]
+  },
+  "BM": {
+   "currency": "BMD",
+   "currencyName": "Bermudan Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 92,
+     "official": true
+    }
+   ]
+  },
+  "BN": {
+   "currency": "BND",
+   "currencyName": "Brunei Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ms",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "ms",
+     "percent": 5,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 1.6,
+     "official": false
+    }
+   ]
+  },
+  "BO": {
+   "currency": "BOB",
+   "currencyName": "Bolivian Boliviano",
+   "symbol": "Bs",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 61,
+     "official": true
+    },
+    {
+     "lang": "qu",
+     "percent": 32,
+     "official": true
+    },
+    {
+     "lang": "ay",
+     "percent": 20,
+     "official": true
+    },
+    {
+     "lang": "gn",
+     "percent": 0.45,
+     "official": false
+    },
+    {
+     "lang": "aro",
+     "percent": 0.0009,
+     "official": false
+    }
+   ]
+  },
+  "BQ": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pap",
+     "percent": 81,
+     "official": false
+    },
+    {
+     "lang": "nl",
+     "percent": 8,
+     "official": true
+    }
+   ]
+  },
+  "BR": {
+   "currency": "BRL",
+   "currencyName": "Brazilian Real",
+   "symbol": "R$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pt",
+     "percent": 91,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 8,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 0.84,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 0.28,
+     "official": false
+    },
+    {
+     "lang": "vec",
+     "percent": 0.24,
+     "official": true
+    },
+    {
+     "lang": "ja",
+     "percent": 0.21,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 0.036,
+     "official": false
+    },
+    {
+     "lang": "kgp",
+     "percent": 0.024,
+     "official": false
+    },
+    {
+     "lang": "ko",
+     "percent": 0.021,
+     "official": false
+    },
+    {
+     "lang": "yrl",
+     "percent": 0.01,
+     "official": false
+    },
+    {
+     "lang": "gub",
+     "percent": 0.0084,
+     "official": false
+    },
+    {
+     "lang": "xav",
+     "percent": 0.0045,
+     "official": false
+    }
+   ]
+  },
+  "BS": {
+   "currency": "BSD",
+   "currencyName": "Bahamian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "BT": {
+   "currency": "INR",
+   "currencyName": "Indian Rupee",
+   "symbol": "₹",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "dz",
+     "percent": 47,
+     "official": true
+    },
+    {
+     "lang": "ne",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "tsj",
+     "percent": 15,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "lep",
+     "percent": 3.9,
+     "official": false
+    }
+   ]
+  },
+  "BV": {
+   "currency": "NOK",
+   "currencyName": "Norwegian Krone",
+   "symbol": "kr",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "und",
+     "percent": 100,
+     "official": false
+    }
+   ]
+  },
+  "BW": {
+   "currency": "BWP",
+   "currencyName": "Botswanan Pula",
+   "symbol": "P",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 81,
+     "official": true
+    },
+    {
+     "lang": "tn",
+     "percent": 62,
+     "official": true
+    },
+    {
+     "lang": "af",
+     "percent": 0.24,
+     "official": false
+    }
+   ]
+  },
+  "BY": {
+   "currency": "BYN",
+   "currencyName": "Belarusian Ruble",
+   "symbol": "BYN",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "be",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 12,
+     "official": true
+    }
+   ]
+  },
+  "BZ": {
+   "currency": "BZD",
+   "currencyName": "Belize Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 28,
+     "official": false
+    }
+   ]
+  },
+  "CA": {
+   "currency": "CAD",
+   "currencyName": "Canadian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 86,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 30,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 1.8,
+     "official": false
+    },
+    {
+     "lang": "yue",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "pa",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "fil",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 0.91,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 0.78,
+     "official": false
+    },
+    {
+     "lang": "ur",
+     "percent": 0.76,
+     "official": false
+    },
+    {
+     "lang": "fa",
+     "percent": 0.65,
+     "official": false
+    },
+    {
+     "lang": "pt",
+     "percent": 0.61,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 0.56,
+     "official": false
+    },
+    {
+     "lang": "hi",
+     "percent": 0.5,
+     "official": false
+    },
+    {
+     "lang": "ta",
+     "percent": 0.49,
+     "official": false
+    },
+    {
+     "lang": "vi",
+     "percent": 0.49,
+     "official": false
+    },
+    {
+     "lang": "pl",
+     "percent": 0.46,
+     "official": false
+    },
+    {
+     "lang": "ko",
+     "percent": 0.45,
+     "official": false
+    },
+    {
+     "lang": "gu",
+     "percent": 0.36,
+     "official": false
+    },
+    {
+     "lang": "el",
+     "percent": 0.33,
+     "official": false
+    },
+    {
+     "lang": "ro",
+     "percent": 0.27,
+     "official": false
+    },
+    {
+     "lang": "bn",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "pdt",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "uk",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "sr",
+     "percent": 0.17,
+     "official": false
+    },
+    {
+     "lang": "nl",
+     "percent": 0.15,
+     "official": false
+    },
+    {
+     "lang": "ja",
+     "percent": 0.14,
+     "official": false
+    },
+    {
+     "lang": "hu",
+     "percent": 0.13,
+     "official": false
+    },
+    {
+     "lang": "so",
+     "percent": 0.13,
+     "official": false
+    },
+    {
+     "lang": "hr",
+     "percent": 0.12,
+     "official": false
+    },
+    {
+     "lang": "iu",
+     "percent": 0.12,
+     "official": true
+    },
+    {
+     "lang": "iu",
+     "percent": 0.12,
+     "official": true
+    },
+    {
+     "lang": "tr",
+     "percent": 0.1,
+     "official": false
+    },
+    {
+     "lang": "oj",
+     "percent": 0.063,
+     "official": false
+    },
+    {
+     "lang": "ojs",
+     "percent": 0.04,
+     "official": false
+    },
+    {
+     "lang": "chp",
+     "percent": 0.034,
+     "official": true
+    },
+    {
+     "lang": "moe",
+     "percent": 0.032,
+     "official": false
+    },
+    {
+     "lang": "cr",
+     "percent": 0.023,
+     "official": true
+    },
+    {
+     "lang": "mic",
+     "percent": 0.02,
+     "official": false
+    },
+    {
+     "lang": "atj",
+     "percent": 0.017,
+     "official": false
+    },
+    {
+     "lang": "bla",
+     "percent": 0.013,
+     "official": false
+    },
+    {
+     "lang": "crk",
+     "percent": 0.011,
+     "official": false
+    },
+    {
+     "lang": "den",
+     "percent": 0.0059,
+     "official": true
+    },
+    {
+     "lang": "dgr",
+     "percent": 0.0055,
+     "official": true
+    },
+    {
+     "lang": "csw",
+     "percent": 0.0046,
+     "official": false
+    },
+    {
+     "lang": "moh",
+     "percent": 0.0045,
+     "official": false
+    },
+    {
+     "lang": "nsk",
+     "percent": 0.0036,
+     "official": false
+    },
+    {
+     "lang": "dak",
+     "percent": 0.0031,
+     "official": false
+    },
+    {
+     "lang": "clc",
+     "percent": 0.0022,
+     "official": false
+    },
+    {
+     "lang": "crg",
+     "percent": 0.0018,
+     "official": false
+    },
+    {
+     "lang": "hur",
+     "percent": 0.0018,
+     "official": false
+    },
+    {
+     "lang": "war",
+     "percent": 0.0018,
+     "official": false
+    },
+    {
+     "lang": "lil",
+     "percent": 0.0014,
+     "official": false
+    },
+    {
+     "lang": "oka",
+     "percent": 0.0013,
+     "official": false
+    },
+    {
+     "lang": "pqm",
+     "percent": 0.0013,
+     "official": false
+    },
+    {
+     "lang": "crl",
+     "percent": 0.001,
+     "official": false
+    },
+    {
+     "lang": "kwk",
+     "percent": 0.001,
+     "official": false
+    },
+    {
+     "lang": "gwi",
+     "percent": 0.0007,
+     "official": true
+    }
+   ]
+  },
+  "CC": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ms",
+     "percent": 84,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 17,
+     "official": true
+    }
+   ]
+  },
+  "CD": {
+   "currency": "CDF",
+   "currencyName": "Congolese Franc",
+   "symbol": "CDF",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sw",
+     "percent": 50,
+     "official": true
+    },
+    {
+     "lang": "lua",
+     "percent": 9.6,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 3.8,
+     "official": true
+    },
+    {
+     "lang": "ln",
+     "percent": 3.1,
+     "official": true
+    },
+    {
+     "lang": "lu",
+     "percent": 2.3,
+     "official": false
+    },
+    {
+     "lang": "kg",
+     "percent": 1.5,
+     "official": true
+    },
+    {
+     "lang": "lol",
+     "percent": 0.61,
+     "official": false
+    },
+    {
+     "lang": "rw",
+     "percent": 0.38,
+     "official": false
+    }
+   ]
+  },
+  "CF": {
+   "currency": "XAF",
+   "currencyName": "Central African CFA Franc",
+   "symbol": "FCFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 49,
+     "official": true
+    },
+    {
+     "lang": "sg",
+     "percent": 49,
+     "official": true
+    },
+    {
+     "lang": "ln",
+     "percent": 0.24,
+     "official": false
+    }
+   ]
+  },
+  "CG": {
+   "currency": "XAF",
+   "currencyName": "Central African CFA Franc",
+   "symbol": "FCFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 84,
+     "official": true
+    },
+    {
+     "lang": "ln",
+     "percent": 2.4,
+     "official": false
+    }
+   ]
+  },
+  "CH": {
+   "currency": "CHF",
+   "currencyName": "Swiss Franc",
+   "symbol": "CHF",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "de",
+     "percent": 73,
+     "official": true
+    },
+    {
+     "lang": "gsw",
+     "percent": 65,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 61,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 21,
+     "official": true
+    },
+    {
+     "lang": "it",
+     "percent": 4.3,
+     "official": true
+    },
+    {
+     "lang": "lmo",
+     "percent": 4.1,
+     "official": false
+    },
+    {
+     "lang": "pt",
+     "percent": 3.4,
+     "official": false
+    },
+    {
+     "lang": "rm",
+     "percent": 0.5,
+     "official": true
+    },
+    {
+     "lang": "rmo",
+     "percent": 0.29,
+     "official": false
+    },
+    {
+     "lang": "wae",
+     "percent": 0.11,
+     "official": false
+    }
+   ]
+  },
+  "CI": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 49,
+     "official": true
+    },
+    {
+     "lang": "bci",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "sef",
+     "percent": 4.3,
+     "official": false
+    },
+    {
+     "lang": "dnj",
+     "percent": 4,
+     "official": false
+    },
+    {
+     "lang": "kfo",
+     "percent": 0.23,
+     "official": false
+    },
+    {
+     "lang": "bqv",
+     "percent": 0.17,
+     "official": false
+    }
+   ]
+  },
+  "CK": {
+   "currency": "NZD",
+   "currencyName": "New Zealand Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "CL": {
+   "currency": "CLP",
+   "currencyName": "Chilean Peso",
+   "symbol": "$",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 9.5,
+     "official": false
+    },
+    {
+     "lang": "arn",
+     "percent": 1.5,
+     "official": false
+    }
+   ]
+  },
+  "CM": {
+   "currency": "XAF",
+   "currencyName": "Central African CFA Franc",
+   "symbol": "FCFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 68,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 38,
+     "official": true
+    },
+    {
+     "lang": "bum",
+     "percent": 4.6,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 3.6,
+     "official": false
+    },
+    {
+     "lang": "ewo",
+     "percent": 3.1,
+     "official": false
+    },
+    {
+     "lang": "ybb",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "bbj",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "nnh",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "bkm",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "bas",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "bax",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "byv",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "mua",
+     "percent": 1,
+     "official": false
+    },
+    {
+     "lang": "maf",
+     "percent": 0.74,
+     "official": false
+    },
+    {
+     "lang": "bfd",
+     "percent": 0.57,
+     "official": false
+    },
+    {
+     "lang": "bss",
+     "percent": 0.54,
+     "official": false
+    },
+    {
+     "lang": "kkj",
+     "percent": 0.54,
+     "official": false
+    },
+    {
+     "lang": "dua",
+     "percent": 0.48,
+     "official": false
+    },
+    {
+     "lang": "mgo",
+     "percent": 0.47,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.39,
+     "official": false
+    },
+    {
+     "lang": "jgo",
+     "percent": 0.34,
+     "official": false
+    },
+    {
+     "lang": "ksf",
+     "percent": 0.32,
+     "official": false
+    },
+    {
+     "lang": "ken",
+     "percent": 0.25,
+     "official": false
+    },
+    {
+     "lang": "agq",
+     "percent": 0.14,
+     "official": false
+    },
+    {
+     "lang": "ha",
+     "percent": 0.14,
+     "official": false
+    },
+    {
+     "lang": "nmg",
+     "percent": 0.029,
+     "official": false
+    },
+    {
+     "lang": "yav",
+     "percent": 0.0074,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "CN": {
+   "currency": "CNY",
+   "currencyName": "Chinese Yuan",
+   "symbol": "¥",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "zh",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "wuu",
+     "percent": 6,
+     "official": false
+    },
+    {
+     "lang": "yue",
+     "percent": 5.2,
+     "official": false
+    },
+    {
+     "lang": "yue",
+     "percent": 5.2,
+     "official": false
+    },
+    {
+     "lang": "hsn",
+     "percent": 2.9,
+     "official": false
+    },
+    {
+     "lang": "hak",
+     "percent": 2.3,
+     "official": false
+    },
+    {
+     "lang": "nan",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "gan",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "ii",
+     "percent": 0.6,
+     "official": false
+    },
+    {
+     "lang": "ug",
+     "percent": 0.55,
+     "official": true
+    },
+    {
+     "lang": "za",
+     "percent": 0.31,
+     "official": true
+    },
+    {
+     "lang": "mn",
+     "percent": 0.26,
+     "official": true
+    },
+    {
+     "lang": "bo",
+     "percent": 0.2,
+     "official": true
+    },
+    {
+     "lang": "ko",
+     "percent": 0.15,
+     "official": true
+    },
+    {
+     "lang": "kk",
+     "percent": 0.085,
+     "official": false
+    },
+    {
+     "lang": "lis",
+     "percent": 0.045,
+     "official": false
+    },
+    {
+     "lang": "ky",
+     "percent": 0.034,
+     "official": false
+    },
+    {
+     "lang": "nxq",
+     "percent": 0.024,
+     "official": false
+    },
+    {
+     "lang": "khb",
+     "percent": 0.019,
+     "official": false
+    },
+    {
+     "lang": "tdd",
+     "percent": 0.019,
+     "official": false
+    },
+    {
+     "lang": "lcp",
+     "percent": 0.0058,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 0.0045,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.004,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 0.001,
+     "official": false
+    },
+    {
+     "lang": "vi",
+     "percent": 0.0005,
+     "official": false
+    },
+    {
+     "lang": "uz",
+     "percent": 0.0004,
+     "official": false
+    },
+    {
+     "lang": "lzh",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "CO": {
+   "currency": "COP",
+   "currencyName": "Colombian Peso",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "guc",
+     "percent": 0.27,
+     "official": false
+    },
+    {
+     "lang": "yrl",
+     "percent": 0.006,
+     "official": false
+    }
+   ]
+  },
+  "CR": {
+   "currency": "CRC",
+   "currencyName": "Costa Rican Colón",
+   "symbol": "₡",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 95,
+     "official": true
+    }
+   ]
+  },
+  "CU": {
+   "currency": "CUP",
+   "currencyName": "Cuban Peso",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "CV": {
+   "currency": "CVE",
+   "currencyName": "Cape Verdean Escudo",
+   "symbol": "CVE",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "kea",
+     "percent": 91,
+     "official": false
+    },
+    {
+     "lang": "pt",
+     "percent": 76,
+     "official": true
+    }
+   ]
+  },
+  "CW": {
+   "currency": "XCG",
+   "currencyName": "Caribbean guilder",
+   "symbol": "Cg.",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pap",
+     "percent": 81,
+     "official": true
+    },
+    {
+     "lang": "nl",
+     "percent": 8,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 3.7,
+     "official": false
+    }
+   ]
+  },
+  "CX": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 83,
+     "official": true
+    }
+   ]
+  },
+  "CY": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "el",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 73,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 23,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 7,
+     "official": false
+    },
+    {
+     "lang": "hy",
+     "percent": 0.21,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.098,
+     "official": false
+    }
+   ]
+  },
+  "CZ": {
+   "currency": "CZK",
+   "currencyName": "Czech Koruna",
+   "symbol": "Kč",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "cs",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 27,
+     "official": false
+    },
+    {
+     "lang": "sk",
+     "percent": 16,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 15,
+     "official": false
+    },
+    {
+     "lang": "pl",
+     "percent": 0.49,
+     "official": false
+    }
+   ]
+  },
+  "DE": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "de",
+     "percent": 91,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 64,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 18,
+     "official": false
+    },
+    {
+     "lang": "bar",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "nds",
+     "percent": 12,
+     "official": false
+    },
+    {
+     "lang": "nl",
+     "percent": 9,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 7,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 6,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 6,
+     "official": false
+    },
+    {
+     "lang": "vmf",
+     "percent": 6,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 2.5,
+     "official": false
+    },
+    {
+     "lang": "gsw",
+     "percent": 2.3,
+     "official": false
+    },
+    {
+     "lang": "da",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "swg",
+     "percent": 1,
+     "official": false
+    },
+    {
+     "lang": "hr",
+     "percent": 0.79,
+     "official": false
+    },
+    {
+     "lang": "ku",
+     "percent": 0.66,
+     "official": false
+    },
+    {
+     "lang": "el",
+     "percent": 0.38,
+     "official": false
+    },
+    {
+     "lang": "ksh",
+     "percent": 0.3,
+     "official": false
+    },
+    {
+     "lang": "pl",
+     "percent": 0.29,
+     "official": false
+    },
+    {
+     "lang": "hsb",
+     "percent": 0.016,
+     "official": false
+    },
+    {
+     "lang": "frr",
+     "percent": 0.012,
+     "official": true
+    },
+    {
+     "lang": "dsb",
+     "percent": 0.0083,
+     "official": false
+    },
+    {
+     "lang": "frs",
+     "percent": 0.0024,
+     "official": false
+    },
+    {
+     "lang": "stq",
+     "percent": 0.0012,
+     "official": false
+    },
+    {
+     "lang": "pfl",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "DG": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 99,
+     "official": true
+    }
+   ]
+  },
+  "DJ": {
+   "currency": "DJF",
+   "currencyName": "Djiboutian Franc",
+   "symbol": "DJF",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "aa",
+     "percent": 42,
+     "official": false
+    },
+    {
+     "lang": "so",
+     "percent": 41,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 7.3,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 2.1,
+     "official": true
+    }
+   ]
+  },
+  "DK": {
+   "currency": "DKK",
+   "currencyName": "Danish Krone",
+   "symbol": "kr",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "da",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 86,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 47,
+     "official": true
+    },
+    {
+     "lang": "sv",
+     "percent": 13,
+     "official": false
+    },
+    {
+     "lang": "fo",
+     "percent": 0.38,
+     "official": false
+    },
+    {
+     "lang": "kl",
+     "percent": 0.12,
+     "official": true
+    },
+    {
+     "lang": "jut",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "DM": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 94,
+     "official": true
+    }
+   ]
+  },
+  "DO": {
+   "currency": "DOP",
+   "currencyName": "Dominican Peso",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 78,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 0.074,
+     "official": false
+    }
+   ]
+  },
+  "DZ": {
+   "currency": "DZD",
+   "currencyName": "Algerian Dinar",
+   "symbol": "DZD",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "arq",
+     "percent": 83,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 74,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 20,
+     "official": true
+    },
+    {
+     "lang": "kab",
+     "percent": 7.8,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 7,
+     "official": false
+    }
+   ]
+  },
+  "EA": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 98,
+     "official": true
+    }
+   ]
+  },
+  "EC": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 96,
+     "official": true
+    },
+    {
+     "lang": "qu",
+     "percent": 17,
+     "official": true
+    },
+    {
+     "lang": "qug",
+     "percent": 5.7,
+     "official": false
+    }
+   ]
+  },
+  "EE": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "et",
+     "percent": 71,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 56,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 50,
+     "official": false
+    },
+    {
+     "lang": "fi",
+     "percent": 21,
+     "official": false
+    },
+    {
+     "lang": "vro",
+     "percent": 5.7,
+     "official": false
+    },
+    {
+     "lang": "ie",
+     "percent": 0.0001,
+     "official": false
+    }
+   ]
+  },
+  "EG": {
+   "currency": "EGP",
+   "currencyName": "Egyptian Pound",
+   "symbol": "E£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 94,
+     "official": true
+    },
+    {
+     "lang": "arz",
+     "percent": 64,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 35,
+     "official": false
+    },
+    {
+     "lang": "el",
+     "percent": 0.061,
+     "official": false
+    }
+   ]
+  },
+  "EH": {
+   "currency": "MAD",
+   "currencyName": "Moroccan Dirham",
+   "symbol": "MAD",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "ER": {
+   "currency": "ERN",
+   "currencyName": "Eritrean Nakfa",
+   "symbol": "ERN",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ti",
+     "percent": 60,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 59,
+     "official": true
+    },
+    {
+     "lang": "tig",
+     "percent": 18,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 4.9,
+     "official": true
+    },
+    {
+     "lang": "aa",
+     "percent": 3.6,
+     "official": false
+    },
+    {
+     "lang": "ssy",
+     "percent": 3.6,
+     "official": false
+    },
+    {
+     "lang": "byn",
+     "percent": 1.3,
+     "official": false
+    }
+   ]
+  },
+  "ES": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 24,
+     "official": false
+    },
+    {
+     "lang": "ca",
+     "percent": 17,
+     "official": true
+    },
+    {
+     "lang": "gl",
+     "percent": 7,
+     "official": true
+    },
+    {
+     "lang": "eu",
+     "percent": 2,
+     "official": true
+    },
+    {
+     "lang": "ast",
+     "percent": 1.3,
+     "official": true
+    },
+    {
+     "lang": "ext",
+     "percent": 0.49,
+     "official": false
+    },
+    {
+     "lang": "an",
+     "percent": 0.052,
+     "official": false
+    },
+    {
+     "lang": "oc",
+     "percent": 0.01,
+     "official": true
+    }
+   ]
+  },
+  "ET": {
+   "currency": "ETB",
+   "currencyName": "Ethiopian Birr",
+   "symbol": "ETB",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 43,
+     "official": false
+    },
+    {
+     "lang": "am",
+     "percent": 33,
+     "official": true
+    },
+    {
+     "lang": "om",
+     "percent": 32,
+     "official": false
+    },
+    {
+     "lang": "so",
+     "percent": 6,
+     "official": false
+    },
+    {
+     "lang": "ti",
+     "percent": 6,
+     "official": false
+    },
+    {
+     "lang": "sid",
+     "percent": 3.5,
+     "official": false
+    },
+    {
+     "lang": "wal",
+     "percent": 1.8,
+     "official": false
+    },
+    {
+     "lang": "aa",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "gez",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "EU": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": []
+  },
+  "FI": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fi",
+     "percent": 94,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 70,
+     "official": false
+    },
+    {
+     "lang": "sv",
+     "percent": 44,
+     "official": true
+    },
+    {
+     "lang": "de",
+     "percent": 18,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 0.81,
+     "official": false
+    },
+    {
+     "lang": "et",
+     "percent": 0.11,
+     "official": false
+    },
+    {
+     "lang": "rmf",
+     "percent": 0.089,
+     "official": false
+    },
+    {
+     "lang": "se",
+     "percent": 0.036,
+     "official": false
+    },
+    {
+     "lang": "smn",
+     "percent": 0.011,
+     "official": false
+    },
+    {
+     "lang": "sms",
+     "percent": 0.011,
+     "official": true
+    }
+   ]
+  },
+  "FJ": {
+   "currency": "FJD",
+   "currencyName": "Fijian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 94,
+     "official": true
+    },
+    {
+     "lang": "hi",
+     "percent": 44,
+     "official": false
+    },
+    {
+     "lang": "hif",
+     "percent": 41,
+     "official": true
+    },
+    {
+     "lang": "fj",
+     "percent": 39,
+     "official": true
+    },
+    {
+     "lang": "rtm",
+     "percent": 0.26,
+     "official": false
+    }
+   ]
+  },
+  "FK": {
+   "currency": "FKP",
+   "currencyName": "Falkland Islands Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 77,
+     "official": true
+    }
+   ]
+  },
+  "FM": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 57,
+     "official": true
+    },
+    {
+     "lang": "chk",
+     "percent": 30,
+     "official": false
+    },
+    {
+     "lang": "pon",
+     "percent": 23,
+     "official": false
+    },
+    {
+     "lang": "kos",
+     "percent": 8,
+     "official": false
+    },
+    {
+     "lang": "yap",
+     "percent": 6.6,
+     "official": false
+    },
+    {
+     "lang": "uli",
+     "percent": 3,
+     "official": false
+    }
+   ]
+  },
+  "FO": {
+   "currency": "DKK",
+   "currencyName": "Danish Krone",
+   "symbol": "kr",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fo",
+     "percent": 95,
+     "official": true
+    }
+   ]
+  },
+  "FR": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 39,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 13,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "oc",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "pt",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "pcd",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "gsw",
+     "percent": 0.91,
+     "official": false
+    },
+    {
+     "lang": "br",
+     "percent": 0.83,
+     "official": false
+    },
+    {
+     "lang": "co",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.19,
+     "official": false
+    },
+    {
+     "lang": "ca",
+     "percent": 0.17,
+     "official": false
+    },
+    {
+     "lang": "eu",
+     "percent": 0.13,
+     "official": false
+    },
+    {
+     "lang": "nl",
+     "percent": 0.13,
+     "official": false
+    },
+    {
+     "lang": "frp",
+     "percent": 0.094,
+     "official": false
+    },
+    {
+     "lang": "ia",
+     "percent": 0.0002,
+     "official": false
+    }
+   ]
+  },
+  "GA": {
+   "currency": "XAF",
+   "currencyName": "Central African CFA Franc",
+   "symbol": "FCFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 63,
+     "official": true
+    },
+    {
+     "lang": "puu",
+     "percent": 9,
+     "official": false
+    }
+   ]
+  },
+  "GB": {
+   "currency": "GBP",
+   "currencyName": "British Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 23,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 9,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 8,
+     "official": false
+    },
+    {
+     "lang": "pl",
+     "percent": 4,
+     "official": false
+    },
+    {
+     "lang": "pa",
+     "percent": 3.6,
+     "official": false
+    },
+    {
+     "lang": "ur",
+     "percent": 3.5,
+     "official": false
+    },
+    {
+     "lang": "ta",
+     "percent": 3.2,
+     "official": false
+    },
+    {
+     "lang": "gu",
+     "percent": 2.9,
+     "official": false
+    },
+    {
+     "lang": "sco",
+     "percent": 2.5,
+     "official": false
+    },
+    {
+     "lang": "cy",
+     "percent": 1.3,
+     "official": true
+    },
+    {
+     "lang": "ro",
+     "percent": 0.8,
+     "official": false
+    },
+    {
+     "lang": "bn",
+     "percent": 0.4,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.3,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 0.3,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "lt",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "pt",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "so",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "ga",
+     "percent": 0.15,
+     "official": true
+    },
+    {
+     "lang": "gd",
+     "percent": 0.11,
+     "official": true
+    },
+    {
+     "lang": "kw",
+     "percent": 0.0029,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "GD": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 96,
+     "official": true
+    }
+   ]
+  },
+  "GE": {
+   "currency": "GEL",
+   "currencyName": "Georgian Lari",
+   "symbol": "₾",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ka",
+     "percent": 86,
+     "official": true
+    },
+    {
+     "lang": "xmf",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 9,
+     "official": false
+    },
+    {
+     "lang": "hy",
+     "percent": 7,
+     "official": false
+    },
+    {
+     "lang": "ab",
+     "percent": 2.2,
+     "official": true
+    },
+    {
+     "lang": "os",
+     "percent": 2.2,
+     "official": true
+    },
+    {
+     "lang": "ku",
+     "percent": 0.89,
+     "official": false
+    }
+   ]
+  },
+  "GF": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 77,
+     "official": true
+    },
+    {
+     "lang": "gcr",
+     "percent": 26,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 2.5,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 2.4,
+     "official": false
+    }
+   ]
+  },
+  "GG": {
+   "currency": "GBP",
+   "currencyName": "British Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "GH": {
+   "currency": "GHS",
+   "currencyName": "Ghanaian Cedi",
+   "symbol": "GH₵",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ak",
+     "percent": 39,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 21,
+     "official": true
+    },
+    {
+     "lang": "ee",
+     "percent": 11,
+     "official": true
+    },
+    {
+     "lang": "abr",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "gur",
+     "percent": 3.5,
+     "official": false
+    },
+    {
+     "lang": "ada",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "gaa",
+     "percent": 2.8,
+     "official": true
+    },
+    {
+     "lang": "nzi",
+     "percent": 1,
+     "official": false
+    },
+    {
+     "lang": "ha",
+     "percent": 0.86,
+     "official": false
+    },
+    {
+     "lang": "saf",
+     "percent": 0.012,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "GI": {
+   "currency": "GIP",
+   "currencyName": "Gibraltar Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 80,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 50,
+     "official": false
+    }
+   ]
+  },
+  "GL": {
+   "currency": "DKK",
+   "currencyName": "Danish Krone",
+   "symbol": "kr",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "kl",
+     "percent": 84,
+     "official": true
+    },
+    {
+     "lang": "da",
+     "percent": 14,
+     "official": false
+    }
+   ]
+  },
+  "GM": {
+   "currency": "GMD",
+   "currencyName": "Gambian Dalasi",
+   "symbol": "GMD",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 40,
+     "official": true
+    },
+    {
+     "lang": "man",
+     "percent": 29,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "GN": {
+   "currency": "GNF",
+   "currencyName": "Guinean Franc",
+   "symbol": "FG",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 29,
+     "official": true
+    },
+    {
+     "lang": "ff",
+     "percent": 26,
+     "official": false
+    },
+    {
+     "lang": "man",
+     "percent": 23,
+     "official": false
+    },
+    {
+     "lang": "sus",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "nqo",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "kpe",
+     "percent": 3.8,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "GP": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 90,
+     "official": true
+    }
+   ]
+  },
+  "GQ": {
+   "currency": "XAF",
+   "currencyName": "Central African CFA Franc",
+   "symbol": "FCFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 87,
+     "official": true
+    },
+    {
+     "lang": "fan",
+     "percent": 51,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 8.8,
+     "official": true
+    },
+    {
+     "lang": "bvb",
+     "percent": 7.9,
+     "official": false
+    },
+    {
+     "lang": "pt",
+     "percent": 0.0001,
+     "official": true
+    }
+   ]
+  },
+  "GR": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "el",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 51,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 9,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "pnt",
+     "percent": 3.7,
+     "official": false
+    },
+    {
+     "lang": "mk",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "bg",
+     "percent": 0.27,
+     "official": false
+    },
+    {
+     "lang": "sq",
+     "percent": 0.096,
+     "official": false
+    },
+    {
+     "lang": "tsd",
+     "percent": 0.0019,
+     "official": false
+    }
+   ]
+  },
+  "GS": {
+   "currency": "GBP",
+   "currencyName": "British Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "und",
+     "percent": 100,
+     "official": false
+    }
+   ]
+  },
+  "GT": {
+   "currency": "GTQ",
+   "currencyName": "Guatemalan Quetzal",
+   "symbol": "Q",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "quc",
+     "percent": 7,
+     "official": true
+    }
+   ]
+  },
+  "GU": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 91,
+     "official": true
+    },
+    {
+     "lang": "ch",
+     "percent": 22,
+     "official": true
+    }
+   ]
+  },
+  "GW": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "pt",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "knf",
+     "percent": 2.6,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "GY": {
+   "currency": "GYD",
+   "currencyName": "Guyanaese Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "HK": {
+   "currency": "HKD",
+   "currencyName": "Hong Kong Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "zh",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "yue",
+     "percent": 90,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 51,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 5,
+     "official": false
+    }
+   ]
+  },
+  "HM": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "und",
+     "percent": 100,
+     "official": false
+    }
+   ]
+  },
+  "HN": {
+   "currency": "HNL",
+   "currencyName": "Honduran Lempira",
+   "symbol": "L",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 78,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 0.44,
+     "official": false
+    }
+   ]
+  },
+  "HR": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "hr",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 49,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 1.6,
+     "official": true
+    },
+    {
+     "lang": "vec",
+     "percent": 0.7,
+     "official": true
+    }
+   ]
+  },
+  "HT": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ht",
+     "percent": 81,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 4.7,
+     "official": true
+    }
+   ]
+  },
+  "HU": {
+   "currency": "HUF",
+   "currencyName": "Hungarian Forint",
+   "symbol": "Ft",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "hu",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 20,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 18,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "ro",
+     "percent": 0.99,
+     "official": false
+    },
+    {
+     "lang": "hr",
+     "percent": 0.32,
+     "official": false
+    },
+    {
+     "lang": "sk",
+     "percent": 0.12,
+     "official": false
+    },
+    {
+     "lang": "sl",
+     "percent": 0.051,
+     "official": false
+    }
+   ]
+  },
+  "IC": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 98,
+     "official": true
+    }
+   ]
+  },
+  "ID": {
+   "currency": "IDR",
+   "currencyName": "Indonesian Rupiah",
+   "symbol": "Rp",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "id",
+     "percent": 64,
+     "official": true
+    },
+    {
+     "lang": "jv",
+     "percent": 34,
+     "official": false
+    },
+    {
+     "lang": "su",
+     "percent": 12,
+     "official": false
+    },
+    {
+     "lang": "mad",
+     "percent": 6.3,
+     "official": false
+    },
+    {
+     "lang": "ms",
+     "percent": 3.4,
+     "official": false
+    },
+    {
+     "lang": "min",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "bew",
+     "percent": 2.1,
+     "official": false
+    },
+    {
+     "lang": "ban",
+     "percent": 1.8,
+     "official": false
+    },
+    {
+     "lang": "bug",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "bjn",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "ace",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "ms",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "sas",
+     "percent": 0.97,
+     "official": false
+    },
+    {
+     "lang": "bbc",
+     "percent": 0.92,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 0.92,
+     "official": false
+    },
+    {
+     "lang": "mak",
+     "percent": 0.73,
+     "official": false
+    },
+    {
+     "lang": "ljp",
+     "percent": 0.69,
+     "official": false
+    },
+    {
+     "lang": "rej",
+     "percent": 0.46,
+     "official": false
+    },
+    {
+     "lang": "gor",
+     "percent": 0.41,
+     "official": false
+    },
+    {
+     "lang": "nij",
+     "percent": 0.37,
+     "official": false
+    },
+    {
+     "lang": "kge",
+     "percent": 0.32,
+     "official": false
+    },
+    {
+     "lang": "aoz",
+     "percent": 0.27,
+     "official": false
+    },
+    {
+     "lang": "kvr",
+     "percent": 0.14,
+     "official": false
+    },
+    {
+     "lang": "lbw",
+     "percent": 0.13,
+     "official": false
+    },
+    {
+     "lang": "gay",
+     "percent": 0.12,
+     "official": false
+    },
+    {
+     "lang": "rob",
+     "percent": 0.11,
+     "official": false
+    },
+    {
+     "lang": "mdr",
+     "percent": 0.092,
+     "official": false
+    },
+    {
+     "lang": "sxn",
+     "percent": 0.092,
+     "official": false
+    },
+    {
+     "lang": "sly",
+     "percent": 0.054,
+     "official": false
+    },
+    {
+     "lang": "mwv",
+     "percent": 0.024,
+     "official": false
+    }
+   ]
+  },
+  "IE": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "ga",
+     "percent": 22,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 17,
+     "official": false
+    }
+   ]
+  },
+  "IL": {
+   "currency": "ILS",
+   "currencyName": "Israeli New Shekel",
+   "symbol": "₪",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "he",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 85,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 20,
+     "official": true
+    },
+    {
+     "lang": "apc",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "ro",
+     "percent": 3.7,
+     "official": false
+    },
+    {
+     "lang": "yi",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "pl",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "lad",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "hu",
+     "percent": 1,
+     "official": false
+    },
+    {
+     "lang": "am",
+     "percent": 0.59,
+     "official": false
+    },
+    {
+     "lang": "ti",
+     "percent": 0.11,
+     "official": false
+    },
+    {
+     "lang": "ml",
+     "percent": 0.085,
+     "official": false
+    }
+   ]
+  },
+  "IM": {
+   "currency": "GBP",
+   "currencyName": "British Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "gv",
+     "percent": 1.8,
+     "official": true
+    }
+   ]
+  },
+  "IN": {
+   "currency": "INR",
+   "currencyName": "Indian Rupee",
+   "symbol": "₹",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "hi",
+     "percent": 41,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 19,
+     "official": true
+    },
+    {
+     "lang": "bn",
+     "percent": 8.1,
+     "official": true
+    },
+    {
+     "lang": "te",
+     "percent": 7.2,
+     "official": true
+    },
+    {
+     "lang": "mr",
+     "percent": 7,
+     "official": true
+    },
+    {
+     "lang": "ta",
+     "percent": 5.9,
+     "official": true
+    },
+    {
+     "lang": "ur",
+     "percent": 5,
+     "official": true
+    },
+    {
+     "lang": "gu",
+     "percent": 4.5,
+     "official": true
+    },
+    {
+     "lang": "kn",
+     "percent": 3.7,
+     "official": true
+    },
+    {
+     "lang": "ml",
+     "percent": 3.2,
+     "official": true
+    },
+    {
+     "lang": "or",
+     "percent": 3.2,
+     "official": true
+    },
+    {
+     "lang": "pa",
+     "percent": 2.8,
+     "official": true
+    },
+    {
+     "lang": "bho",
+     "percent": 2.3,
+     "official": false
+    },
+    {
+     "lang": "awa",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "as",
+     "percent": 1.3,
+     "official": true
+    },
+    {
+     "lang": "bgc",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "mag",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "mai",
+     "percent": 1.2,
+     "official": true
+    },
+    {
+     "lang": "mwr",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "hne",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "dcc",
+     "percent": 0.99,
+     "official": false
+    },
+    {
+     "lang": "bjj",
+     "percent": 0.56,
+     "official": false
+    },
+    {
+     "lang": "ne",
+     "percent": 0.56,
+     "official": true
+    },
+    {
+     "lang": "sat",
+     "percent": 0.55,
+     "official": true
+    },
+    {
+     "lang": "wtm",
+     "percent": 0.46,
+     "official": false
+    },
+    {
+     "lang": "rkt",
+     "percent": 0.43,
+     "official": false
+    },
+    {
+     "lang": "ks",
+     "percent": 0.41,
+     "official": true
+    },
+    {
+     "lang": "knn",
+     "percent": 0.37,
+     "official": false
+    },
+    {
+     "lang": "kok",
+     "percent": 0.32,
+     "official": true
+    },
+    {
+     "lang": "swv",
+     "percent": 0.28,
+     "official": false
+    },
+    {
+     "lang": "gbm",
+     "percent": 0.27,
+     "official": false
+    },
+    {
+     "lang": "lmn",
+     "percent": 0.27,
+     "official": false
+    },
+    {
+     "lang": "sd",
+     "percent": 0.26,
+     "official": true
+    },
+    {
+     "lang": "gon",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "kfy",
+     "percent": 0.22,
+     "official": false
+    },
+    {
+     "lang": "doi",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "kru",
+     "percent": 0.19,
+     "official": false
+    },
+    {
+     "lang": "sck",
+     "percent": 0.18,
+     "official": false
+    },
+    {
+     "lang": "wbq",
+     "percent": 0.18,
+     "official": false
+    },
+    {
+     "lang": "xnr",
+     "percent": 0.16,
+     "official": false
+    },
+    {
+     "lang": "khn",
+     "percent": 0.15,
+     "official": false
+    },
+    {
+     "lang": "tcy",
+     "percent": 0.15,
+     "official": false
+    },
+    {
+     "lang": "wbr",
+     "percent": 0.15,
+     "official": false
+    },
+    {
+     "lang": "brx",
+     "percent": 0.14,
+     "official": false
+    },
+    {
+     "lang": "sd",
+     "percent": 0.14,
+     "official": true
+    },
+    {
+     "lang": "noe",
+     "percent": 0.13,
+     "official": false
+    },
+    {
+     "lang": "bhb",
+     "percent": 0.12,
+     "official": false
+    },
+    {
+     "lang": "mni",
+     "percent": 0.11,
+     "official": false
+    },
+    {
+     "lang": "hi",
+     "percent": 0.1,
+     "official": false
+    },
+    {
+     "lang": "raj",
+     "percent": 0.1,
+     "official": false
+    },
+    {
+     "lang": "hoc",
+     "percent": 0.099,
+     "official": false
+    },
+    {
+     "lang": "mtr",
+     "percent": 0.097,
+     "official": false
+    },
+    {
+     "lang": "unr",
+     "percent": 0.094,
+     "official": false
+    },
+    {
+     "lang": "bhi",
+     "percent": 0.092,
+     "official": false
+    },
+    {
+     "lang": "hoj",
+     "percent": 0.082,
+     "official": false
+    },
+    {
+     "lang": "kha",
+     "percent": 0.08,
+     "official": true
+    },
+    {
+     "lang": "kfr",
+     "percent": 0.075,
+     "official": false
+    },
+    {
+     "lang": "grt",
+     "percent": 0.053,
+     "official": false
+    },
+    {
+     "lang": "unx",
+     "percent": 0.048,
+     "official": false
+    },
+    {
+     "lang": "bfy",
+     "percent": 0.037,
+     "official": false
+    },
+    {
+     "lang": "srx",
+     "percent": 0.035,
+     "official": false
+    },
+    {
+     "lang": "saz",
+     "percent": 0.029,
+     "official": false
+    },
+    {
+     "lang": "ccp",
+     "percent": 0.028,
+     "official": false
+    },
+    {
+     "lang": "bfq",
+     "percent": 0.023,
+     "official": false
+    },
+    {
+     "lang": "njo",
+     "percent": 0.023,
+     "official": false
+    },
+    {
+     "lang": "ria",
+     "percent": 0.013,
+     "official": false
+    },
+    {
+     "lang": "bo",
+     "percent": 0.011,
+     "official": false
+    },
+    {
+     "lang": "bpy",
+     "percent": 0.0068,
+     "official": false
+    },
+    {
+     "lang": "bft",
+     "percent": 0.0062,
+     "official": false
+    },
+    {
+     "lang": "bra",
+     "percent": 0.0041,
+     "official": false
+    },
+    {
+     "lang": "lep",
+     "percent": 0.0035,
+     "official": false
+    },
+    {
+     "lang": "kxv",
+     "percent": 0.0029,
+     "official": false
+    },
+    {
+     "lang": "btv",
+     "percent": 0.0026,
+     "official": false
+    },
+    {
+     "lang": "lif",
+     "percent": 0.0026,
+     "official": false
+    },
+    {
+     "lang": "lah",
+     "percent": 0.0025,
+     "official": false
+    },
+    {
+     "lang": "sa",
+     "percent": 0.0012,
+     "official": true
+    },
+    {
+     "lang": "kht",
+     "percent": 0.0006,
+     "official": false
+    },
+    {
+     "lang": "dv",
+     "percent": 0.0003,
+     "official": false
+    },
+    {
+     "lang": "dz",
+     "percent": 0.0002,
+     "official": false
+    }
+   ]
+  },
+  "IO": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "IQ": {
+   "currency": "IQD",
+   "currencyName": "Iraqi Dinar",
+   "symbol": "IQD",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 68,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 35,
+     "official": false
+    },
+    {
+     "lang": "ckb",
+     "percent": 20,
+     "official": true
+    },
+    {
+     "lang": "az",
+     "percent": 1.8,
+     "official": true
+    },
+    {
+     "lang": "fa",
+     "percent": 0.87,
+     "official": false
+    },
+    {
+     "lang": "lrc",
+     "percent": 0.61,
+     "official": false
+    },
+    {
+     "lang": "syr",
+     "percent": 0.5,
+     "official": false
+    }
+   ]
+  },
+  "IR": {
+   "currency": "IRR",
+   "currencyName": "Iranian Rial",
+   "symbol": "IRR",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fa",
+     "percent": 75,
+     "official": true
+    },
+    {
+     "lang": "az",
+     "percent": 24,
+     "official": false
+    },
+    {
+     "lang": "mzn",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "glk",
+     "percent": 4.6,
+     "official": false
+    },
+    {
+     "lang": "ckb",
+     "percent": 3.9,
+     "official": false
+    },
+    {
+     "lang": "sdh",
+     "percent": 3.7,
+     "official": false
+    },
+    {
+     "lang": "tk",
+     "percent": 2.8,
+     "official": false
+    },
+    {
+     "lang": "lrc",
+     "percent": 2.1,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "bal",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "rmt",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "bqi",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "luz",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "lki",
+     "percent": 0.76,
+     "official": false
+    },
+    {
+     "lang": "kaa",
+     "percent": 0.67,
+     "official": false
+    },
+    {
+     "lang": "bgn",
+     "percent": 0.56,
+     "official": false
+    },
+    {
+     "lang": "prd",
+     "percent": 0.5,
+     "official": false
+    },
+    {
+     "lang": "hy",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "ps",
+     "percent": 0.16,
+     "official": false
+    },
+    {
+     "lang": "ka",
+     "percent": 0.071,
+     "official": false
+    },
+    {
+     "lang": "gbz",
+     "percent": 0.0091,
+     "official": false
+    },
+    {
+     "lang": "kk",
+     "percent": 0.0034,
+     "official": false
+    }
+   ]
+  },
+  "IS": {
+   "currency": "ISK",
+   "currencyName": "Icelandic Króna",
+   "symbol": "kr",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "is",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "da",
+     "percent": 0.62,
+     "official": false
+    }
+   ]
+  },
+  "IT": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "it",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 34,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 6.3,
+     "official": true
+    },
+    {
+     "lang": "lmo",
+     "percent": 5.7,
+     "official": false
+    },
+    {
+     "lang": "sc",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "vec",
+     "percent": 1.3,
+     "official": true
+    },
+    {
+     "lang": "nap",
+     "percent": 0.97,
+     "official": false
+    },
+    {
+     "lang": "lij",
+     "percent": 0.86,
+     "official": false
+    },
+    {
+     "lang": "scn",
+     "percent": 0.82,
+     "official": false
+    },
+    {
+     "lang": "sdc",
+     "percent": 0.17,
+     "official": false
+    },
+    {
+     "lang": "sl",
+     "percent": 0.17,
+     "official": false
+    },
+    {
+     "lang": "fur",
+     "percent": 0.06,
+     "official": false
+    },
+    {
+     "lang": "egl",
+     "percent": 0.05,
+     "official": false
+    },
+    {
+     "lang": "lld",
+     "percent": 0.048,
+     "official": false
+    },
+    {
+     "lang": "ca",
+     "percent": 0.035,
+     "official": false
+    },
+    {
+     "lang": "el",
+     "percent": 0.035,
+     "official": false
+    },
+    {
+     "lang": "pms",
+     "percent": 0.01,
+     "official": false
+    },
+    {
+     "lang": "hr",
+     "percent": 0.0057,
+     "official": false
+    },
+    {
+     "lang": "mhn",
+     "percent": 0.0023,
+     "official": false
+    },
+    {
+     "lang": "rgn",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "JE": {
+   "currency": "GBP",
+   "currencyName": "British Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 95,
+     "official": true
+    }
+   ]
+  },
+  "JM": {
+   "currency": "JMD",
+   "currencyName": "Jamaican Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "jam",
+     "percent": 95,
+     "official": false
+    }
+   ]
+  },
+  "JO": {
+   "currency": "JOD",
+   "currencyName": "Jordanian Dinar",
+   "symbol": "JOD",
+   "decimals": 3,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "apc",
+     "percent": 66,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 45,
+     "official": false
+    }
+   ]
+  },
+  "JP": {
+   "currency": "JPY",
+   "currencyName": "Japanese Yen",
+   "symbol": "¥",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "ja",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "ryu",
+     "percent": 0.77,
+     "official": false
+    },
+    {
+     "lang": "ko",
+     "percent": 0.52,
+     "official": false
+    }
+   ]
+  },
+  "KE": {
+   "currency": "KES",
+   "currencyName": "Kenyan Shilling",
+   "symbol": "KES",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sw",
+     "percent": 66,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 19,
+     "official": true
+    },
+    {
+     "lang": "ki",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "luy",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "luo",
+     "percent": 9.8,
+     "official": false
+    },
+    {
+     "lang": "kam",
+     "percent": 7.6,
+     "official": false
+    },
+    {
+     "lang": "kln",
+     "percent": 7.6,
+     "official": false
+    },
+    {
+     "lang": "guz",
+     "percent": 4.9,
+     "official": false
+    },
+    {
+     "lang": "mer",
+     "percent": 4,
+     "official": false
+    },
+    {
+     "lang": "mas",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "ebu",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "so",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "dav",
+     "percent": 0.82,
+     "official": false
+    },
+    {
+     "lang": "teo",
+     "percent": 0.74,
+     "official": false
+    },
+    {
+     "lang": "pko",
+     "percent": 0.69,
+     "official": false
+    },
+    {
+     "lang": "om",
+     "percent": 0.47,
+     "official": false
+    },
+    {
+     "lang": "saq",
+     "percent": 0.46,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.046,
+     "official": false
+    },
+    {
+     "lang": "pa",
+     "percent": 0.017,
+     "official": false
+    },
+    {
+     "lang": "gu",
+     "percent": 0.0086,
+     "official": false
+    }
+   ]
+  },
+  "KG": {
+   "currency": "KGS",
+   "currencyName": "Kyrgystani Som",
+   "symbol": "⃀",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ky",
+     "percent": 48,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 36,
+     "official": true
+    },
+    {
+     "lang": "kaa",
+     "percent": 0.019,
+     "official": false
+    }
+   ]
+  },
+  "KH": {
+   "currency": "KHR",
+   "currencyName": "Cambodian Riel",
+   "symbol": "៛",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "km",
+     "percent": 89,
+     "official": true
+    },
+    {
+     "lang": "cja",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "kdt",
+     "percent": 0.11,
+     "official": false
+    }
+   ]
+  },
+  "KI": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "gil",
+     "percent": 60,
+     "official": true
+    }
+   ]
+  },
+  "KM": {
+   "currency": "KMF",
+   "currencyName": "Comorian Franc",
+   "symbol": "CF",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 66,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 56,
+     "official": true
+    },
+    {
+     "lang": "zdj",
+     "percent": 37,
+     "official": true
+    },
+    {
+     "lang": "wni",
+     "percent": 34,
+     "official": true
+    }
+   ]
+  },
+  "KN": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    }
+   ]
+  },
+  "KP": {
+   "currency": "KPW",
+   "currencyName": "North Korean Won",
+   "symbol": "₩",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "ko",
+     "percent": 88,
+     "official": true
+    }
+   ]
+  },
+  "KR": {
+   "currency": "KRW",
+   "currencyName": "South Korean Won",
+   "symbol": "₩",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "ko",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "KW": {
+   "currency": "KWD",
+   "currencyName": "Kuwaiti Dinar",
+   "symbol": "KWD",
+   "decimals": 3,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "KY": {
+   "currency": "KYD",
+   "currencyName": "Cayman Islands Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    }
+   ]
+  },
+  "KZ": {
+   "currency": "KZT",
+   "currencyName": "Kazakhstani Tenge",
+   "symbol": "₸",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ru",
+     "percent": 72,
+     "official": true
+    },
+    {
+     "lang": "kk",
+     "percent": 64,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 15,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 6.4,
+     "official": false
+    },
+    {
+     "lang": "ug",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "kaa",
+     "percent": 0.018,
+     "official": false
+    }
+   ]
+  },
+  "LA": {
+   "currency": "LAK",
+   "currencyName": "Laotian Kip",
+   "symbol": "₭",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "lo",
+     "percent": 69,
+     "official": true
+    },
+    {
+     "lang": "kjg",
+     "percent": 5.8,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "kdt",
+     "percent": 0.96,
+     "official": false
+    }
+   ]
+  },
+  "LB": {
+   "currency": "LBP",
+   "currencyName": "Lebanese Pound",
+   "symbol": "L£",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "apc",
+     "percent": 100,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 86,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 40,
+     "official": false
+    },
+    {
+     "lang": "hy",
+     "percent": 5.2,
+     "official": false
+    },
+    {
+     "lang": "ku",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 0.37,
+     "official": false
+    }
+   ]
+  },
+  "LC": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 90,
+     "official": true
+    }
+   ]
+  },
+  "LI": {
+   "currency": "CHF",
+   "currencyName": "Swiss Franc",
+   "symbol": "CHF",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "de",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "gsw",
+     "percent": 85,
+     "official": true
+    },
+    {
+     "lang": "wae",
+     "percent": 3.2,
+     "official": false
+    }
+   ]
+  },
+  "LK": {
+   "currency": "LKR",
+   "currencyName": "Sri Lankan Rupee",
+   "symbol": "Rs",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "si",
+     "percent": 68,
+     "official": true
+    },
+    {
+     "lang": "ta",
+     "percent": 15,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 10,
+     "official": false
+    }
+   ]
+  },
+  "LR": {
+   "currency": "LRD",
+   "currencyName": "Liberian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 83,
+     "official": true
+    },
+    {
+     "lang": "kpe",
+     "percent": 14,
+     "official": false
+    },
+    {
+     "lang": "vai",
+     "percent": 2.6,
+     "official": false
+    },
+    {
+     "lang": "men",
+     "percent": 0.48,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "vai",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "LS": {
+   "currency": "ZAR",
+   "currencyName": "South African Rand",
+   "symbol": "R",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "st",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 27,
+     "official": true
+    },
+    {
+     "lang": "zu",
+     "percent": 14,
+     "official": false
+    },
+    {
+     "lang": "ss",
+     "percent": 2.4,
+     "official": false
+    },
+    {
+     "lang": "xh",
+     "percent": 0.99,
+     "official": false
+    }
+   ]
+  },
+  "LT": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "lt",
+     "percent": 86,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 80,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 38,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 14,
+     "official": false
+    },
+    {
+     "lang": "sgs",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "LU": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 87,
+     "official": true
+    },
+    {
+     "lang": "lb",
+     "percent": 67,
+     "official": true
+    },
+    {
+     "lang": "de",
+     "percent": 63,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 56,
+     "official": false
+    },
+    {
+     "lang": "pt",
+     "percent": 16,
+     "official": false
+    }
+   ]
+  },
+  "LV": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "lv",
+     "percent": 61,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 46,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 38,
+     "official": false
+    },
+    {
+     "lang": "ltg",
+     "percent": 8.9,
+     "official": false
+    }
+   ]
+  },
+  "LY": {
+   "currency": "LYD",
+   "currencyName": "Libyan Dinar",
+   "symbol": "LYD",
+   "decimals": 3,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 74,
+     "official": true
+    }
+   ]
+  },
+  "MA": {
+   "currency": "MAD",
+   "currencyName": "Moroccan Dirham",
+   "symbol": "MAD",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ary",
+     "percent": 87,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 62,
+     "official": true
+    },
+    {
+     "lang": "zgh",
+     "percent": 22,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 20,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 14,
+     "official": false
+    },
+    {
+     "lang": "tzm",
+     "percent": 9.8,
+     "official": true
+    },
+    {
+     "lang": "shi",
+     "percent": 8.7,
+     "official": false
+    },
+    {
+     "lang": "shi",
+     "percent": 8.7,
+     "official": false
+    },
+    {
+     "lang": "rif",
+     "percent": 4.9,
+     "official": false
+    },
+    {
+     "lang": "rif",
+     "percent": 4.9,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 0.065,
+     "official": false
+    }
+   ]
+  },
+  "MC": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 99,
+     "official": true
+    }
+   ]
+  },
+  "MD": {
+   "currency": "MDL",
+   "currencyName": "Moldovan Leu",
+   "symbol": "MDL",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ro",
+     "percent": 63,
+     "official": true
+    },
+    {
+     "lang": "uk",
+     "percent": 14,
+     "official": false
+    },
+    {
+     "lang": "bg",
+     "percent": 9.4,
+     "official": false
+    },
+    {
+     "lang": "gag",
+     "percent": 3.3,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 3,
+     "official": false
+    }
+   ]
+  },
+  "ME": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sr",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "sq",
+     "percent": 7.9,
+     "official": false
+    },
+    {
+     "lang": "sr",
+     "percent": 5,
+     "official": false
+    }
+   ]
+  },
+  "MF": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "MG": {
+   "currency": "MGA",
+   "currencyName": "Malagasy Ariary",
+   "symbol": "Ar",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "mg",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 69,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 18,
+     "official": true
+    }
+   ]
+  },
+  "MH": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "mh",
+     "percent": 73,
+     "official": true
+    }
+   ]
+  },
+  "MK": {
+   "currency": "MKD",
+   "currencyName": "Macedonian Denar",
+   "symbol": "MKD",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "mk",
+     "percent": 67,
+     "official": true
+    },
+    {
+     "lang": "sq",
+     "percent": 25,
+     "official": true
+    },
+    {
+     "lang": "tr",
+     "percent": 3.5,
+     "official": false
+    }
+   ]
+  },
+  "ML": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "bm",
+     "percent": 46,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 46,
+     "official": true
+    },
+    {
+     "lang": "ffm",
+     "percent": 7.7,
+     "official": false
+    },
+    {
+     "lang": "snk",
+     "percent": 5.9,
+     "official": false
+    },
+    {
+     "lang": "mwk",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "ses",
+     "percent": 3.4,
+     "official": false
+    },
+    {
+     "lang": "tmh",
+     "percent": 2.1,
+     "official": false
+    },
+    {
+     "lang": "bm",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "khq",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "dtm",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "kao",
+     "percent": 1,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.9,
+     "official": false
+    },
+    {
+     "lang": "bmq",
+     "percent": 0.86,
+     "official": false
+    },
+    {
+     "lang": "bze",
+     "percent": 0.85,
+     "official": false
+    }
+   ]
+  },
+  "MM": {
+   "currency": "MMK",
+   "currencyName": "Myanmar Kyat",
+   "symbol": "K",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "my",
+     "percent": 64,
+     "official": true
+    },
+    {
+     "lang": "shn",
+     "percent": 6.4,
+     "official": false
+    },
+    {
+     "lang": "kac",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "rhg",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "mnw",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.022,
+     "official": false
+    },
+    {
+     "lang": "kht",
+     "percent": 0.0074,
+     "official": false
+    }
+   ]
+  },
+  "MN": {
+   "currency": "MNT",
+   "currencyName": "Mongolian Tugrik",
+   "symbol": "₮",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "mn",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "kk",
+     "percent": 7.2,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 0.12,
+     "official": false
+    },
+    {
+     "lang": "ug",
+     "percent": 0.03,
+     "official": false
+    }
+   ]
+  },
+  "MO": {
+   "currency": "MOP",
+   "currencyName": "Macanese Pataca",
+   "symbol": "MOP",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "zh",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "pt",
+     "percent": 5,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 2.3,
+     "official": false
+    }
+   ]
+  },
+  "MP": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 97,
+     "official": true
+    },
+    {
+     "lang": "ch",
+     "percent": 18,
+     "official": false
+    }
+   ]
+  },
+  "MQ": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 98,
+     "official": true
+    }
+   ]
+  },
+  "MR": {
+   "currency": "MRU",
+   "currencyName": "Mauritanian Ouguiya",
+   "symbol": "MRU",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 85,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 5.7,
+     "official": false
+    },
+    {
+     "lang": "wo",
+     "percent": 0.23,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "MS": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 64,
+     "official": true
+    }
+   ]
+  },
+  "MT": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "mt",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 88,
+     "official": true
+    },
+    {
+     "lang": "it",
+     "percent": 56,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 11,
+     "official": false
+    }
+   ]
+  },
+  "MU": {
+   "currency": "MUR",
+   "currencyName": "Mauritian Rupee",
+   "symbol": "Rs",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "mfe",
+     "percent": 90,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 72,
+     "official": true
+    },
+    {
+     "lang": "bho",
+     "percent": 27,
+     "official": false
+    },
+    {
+     "lang": "ur",
+     "percent": 5.2,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 3,
+     "official": true
+    },
+    {
+     "lang": "ta",
+     "percent": 2.5,
+     "official": false
+    }
+   ]
+  },
+  "MV": {
+   "currency": "MVR",
+   "currencyName": "Maldivian Rufiyaa",
+   "symbol": "MVR",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "dv",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 75,
+     "official": false
+    }
+   ]
+  },
+  "MW": {
+   "currency": "MWK",
+   "currencyName": "Malawian Kwacha",
+   "symbol": "MWK",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 63,
+     "official": true
+    },
+    {
+     "lang": "ny",
+     "percent": 63,
+     "official": true
+    },
+    {
+     "lang": "tum",
+     "percent": 8.4,
+     "official": false
+    },
+    {
+     "lang": "tog",
+     "percent": 0.98,
+     "official": false
+    },
+    {
+     "lang": "zu",
+     "percent": 0.33,
+     "official": false
+    }
+   ]
+  },
+  "MX": {
+   "currency": "MXN",
+   "currencyName": "Mexican Peso",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 83,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 13,
+     "official": false
+    },
+    {
+     "lang": "yua",
+     "percent": 0.67,
+     "official": false
+    },
+    {
+     "lang": "nhe",
+     "percent": 0.39,
+     "official": false
+    },
+    {
+     "lang": "nhw",
+     "percent": 0.39,
+     "official": false
+    },
+    {
+     "lang": "maz",
+     "percent": 0.34,
+     "official": false
+    },
+    {
+     "lang": "nch",
+     "percent": 0.19,
+     "official": false
+    },
+    {
+     "lang": "vec",
+     "percent": 0.0019,
+     "official": true
+    },
+    {
+     "lang": "sei",
+     "percent": 0.0007,
+     "official": false
+    }
+   ]
+  },
+  "MY": {
+   "currency": "MYR",
+   "currencyName": "Malaysian Ringgit",
+   "symbol": "RM",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ms",
+     "percent": 75,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 21,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "ta",
+     "percent": 4.2,
+     "official": false
+    },
+    {
+     "lang": "iba",
+     "percent": 2.5,
+     "official": false
+    },
+    {
+     "lang": "jv",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "zmi",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "dtp",
+     "percent": 0.56,
+     "official": false
+    },
+    {
+     "lang": "ml",
+     "percent": 0.15,
+     "official": false
+    },
+    {
+     "lang": "bug",
+     "percent": 0.079,
+     "official": false
+    },
+    {
+     "lang": "bjn",
+     "percent": 0.014,
+     "official": false
+    }
+   ]
+  },
+  "MZ": {
+   "currency": "MZN",
+   "currencyName": "Mozambican Metical",
+   "symbol": "MZN",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pt",
+     "percent": 27,
+     "official": true
+    },
+    {
+     "lang": "vmw",
+     "percent": 13,
+     "official": false
+    },
+    {
+     "lang": "ndc",
+     "percent": 9.9,
+     "official": false
+    },
+    {
+     "lang": "ts",
+     "percent": 7.9,
+     "official": false
+    },
+    {
+     "lang": "ngl",
+     "percent": 6.8,
+     "official": false
+    },
+    {
+     "lang": "seh",
+     "percent": 4.6,
+     "official": false
+    },
+    {
+     "lang": "mgh",
+     "percent": 4.5,
+     "official": false
+    },
+    {
+     "lang": "rng",
+     "percent": 3.4,
+     "official": false
+    },
+    {
+     "lang": "ny",
+     "percent": 2.6,
+     "official": false
+    },
+    {
+     "lang": "yao",
+     "percent": 2.4,
+     "official": false
+    },
+    {
+     "lang": "sw",
+     "percent": 0.028,
+     "official": false
+    },
+    {
+     "lang": "zu",
+     "percent": 0.0054,
+     "official": false
+    }
+   ]
+  },
+  "NA": {
+   "currency": "ZAR",
+   "currencyName": "South African Rand",
+   "symbol": "R",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "af",
+     "percent": 75,
+     "official": false
+    },
+    {
+     "lang": "kj",
+     "percent": 35,
+     "official": false
+    },
+    {
+     "lang": "ng",
+     "percent": 21,
+     "official": false
+    },
+    {
+     "lang": "naq",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "hz",
+     "percent": 9.1,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 7,
+     "official": true
+    },
+    {
+     "lang": "de",
+     "percent": 0.9,
+     "official": false
+    },
+    {
+     "lang": "tn",
+     "percent": 0.56,
+     "official": false
+    }
+   ]
+  },
+  "NC": {
+   "currency": "XPF",
+   "currencyName": "CFP Franc",
+   "symbol": "CFPF",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 96,
+     "official": true
+    }
+   ]
+  },
+  "NE": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "ha",
+     "percent": 41,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 29,
+     "official": true
+    },
+    {
+     "lang": "dje",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "fuq",
+     "percent": 7,
+     "official": false
+    },
+    {
+     "lang": "tmh",
+     "percent": 6,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.21,
+     "official": false
+    },
+    {
+     "lang": "twq",
+     "percent": 0.03,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "NF": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 96,
+     "official": true
+    }
+   ]
+  },
+  "NG": {
+   "currency": "NGN",
+   "currencyName": "Nigerian Naira",
+   "symbol": "₦",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 53,
+     "official": true
+    },
+    {
+     "lang": "pcm",
+     "percent": 21,
+     "official": false
+    },
+    {
+     "lang": "ha",
+     "percent": 13,
+     "official": false
+    },
+    {
+     "lang": "ig",
+     "percent": 13,
+     "official": false
+    },
+    {
+     "lang": "yo",
+     "percent": 13,
+     "official": true
+    },
+    {
+     "lang": "fuv",
+     "percent": 6.7,
+     "official": false
+    },
+    {
+     "lang": "tiv",
+     "percent": 1.6,
+     "official": false
+    },
+    {
+     "lang": "efi",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "ibb",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "ha",
+     "percent": 1,
+     "official": false
+    },
+    {
+     "lang": "bin",
+     "percent": 0.71,
+     "official": false
+    },
+    {
+     "lang": "kaj",
+     "percent": 0.21,
+     "official": false
+    },
+    {
+     "lang": "kcg",
+     "percent": 0.093,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.071,
+     "official": false
+    },
+    {
+     "lang": "cch",
+     "percent": 0.021,
+     "official": false
+    },
+    {
+     "lang": "amo",
+     "percent": 0.0087,
+     "official": false
+    },
+    {
+     "lang": "ann",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "NI": {
+   "currency": "NIO",
+   "currencyName": "Nicaraguan Córdoba",
+   "symbol": "C$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 78,
+     "official": true
+    }
+   ]
+  },
+  "NL": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "nl",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 90,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 71,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 29,
+     "official": false
+    },
+    {
+     "lang": "nds",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "li",
+     "percent": 5.5,
+     "official": false
+    },
+    {
+     "lang": "fy",
+     "percent": 4.3,
+     "official": true
+    },
+    {
+     "lang": "gos",
+     "percent": 3.6,
+     "official": false
+    },
+    {
+     "lang": "id",
+     "percent": 1.8,
+     "official": false
+    },
+    {
+     "lang": "zea",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "rif",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 1.2,
+     "official": false
+    }
+   ]
+  },
+  "NO": {
+   "currency": "NOK",
+   "currencyName": "Norwegian Krone",
+   "symbol": "kr",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "nb",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "no",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "nn",
+     "percent": 25,
+     "official": true
+    },
+    {
+     "lang": "se",
+     "percent": 0.29,
+     "official": true
+    }
+   ]
+  },
+  "NP": {
+   "currency": "NPR",
+   "currencyName": "Nepalese Rupee",
+   "symbol": "Rs",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ne",
+     "percent": 44,
+     "official": true
+    },
+    {
+     "lang": "mai",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "bho",
+     "percent": 6.8,
+     "official": false
+    },
+    {
+     "lang": "new",
+     "percent": 3.3,
+     "official": false
+    },
+    {
+     "lang": "jml",
+     "percent": 3.2,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "dty",
+     "percent": 2.5,
+     "official": false
+    },
+    {
+     "lang": "awa",
+     "percent": 2.2,
+     "official": false
+    },
+    {
+     "lang": "thl",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "bap",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "tdg",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "thr",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "lif",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "mgp",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "thq",
+     "percent": 1,
+     "official": false
+    },
+    {
+     "lang": "mrd",
+     "percent": 0.83,
+     "official": false
+    },
+    {
+     "lang": "bfy",
+     "percent": 0.54,
+     "official": false
+    },
+    {
+     "lang": "xsr",
+     "percent": 0.52,
+     "official": false
+    },
+    {
+     "lang": "rjs",
+     "percent": 0.44,
+     "official": false
+    },
+    {
+     "lang": "taj",
+     "percent": 0.43,
+     "official": false
+    },
+    {
+     "lang": "hi",
+     "percent": 0.42,
+     "official": false
+    },
+    {
+     "lang": "gvr",
+     "percent": 0.29,
+     "official": false
+    },
+    {
+     "lang": "bo",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "tkt",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "tdh",
+     "percent": 0.12,
+     "official": false
+    },
+    {
+     "lang": "bn",
+     "percent": 0.094,
+     "official": false
+    },
+    {
+     "lang": "unr",
+     "percent": 0.018,
+     "official": false
+    },
+    {
+     "lang": "lep",
+     "percent": 0.0091,
+     "official": false
+    }
+   ]
+  },
+  "NR": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "na",
+     "percent": 70,
+     "official": true
+    }
+   ]
+  },
+  "NU": {
+   "currency": "NZD",
+   "currencyName": "New Zealand Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 56,
+     "official": true
+    },
+    {
+     "lang": "niu",
+     "percent": 56,
+     "official": true
+    }
+   ]
+  },
+  "NZ": {
+   "currency": "NZD",
+   "currencyName": "New Zealand Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    },
+    {
+     "lang": "mi",
+     "percent": 2.8,
+     "official": true
+    }
+   ]
+  },
+  "OM": {
+   "currency": "OMR",
+   "currencyName": "Omani Rial",
+   "symbol": "OMR",
+   "decimals": 3,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 81,
+     "official": true
+    },
+    {
+     "lang": "bal",
+     "percent": 4.9,
+     "official": false
+    },
+    {
+     "lang": "fa",
+     "percent": 0.94,
+     "official": false
+    }
+   ]
+  },
+  "PA": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 69,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 14,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 0.13,
+     "official": false
+    }
+   ]
+  },
+  "PE": {
+   "currency": "PEN",
+   "currencyName": "Peruvian Sol",
+   "symbol": "PEN",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 73,
+     "official": true
+    },
+    {
+     "lang": "qu",
+     "percent": 15,
+     "official": true
+    },
+    {
+     "lang": "ay",
+     "percent": 1.6,
+     "official": false
+    }
+   ]
+  },
+  "PF": {
+   "currency": "XPF",
+   "currencyName": "CFP Franc",
+   "symbol": "CFPF",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 61,
+     "official": true
+    },
+    {
+     "lang": "ty",
+     "percent": 31,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 7.8,
+     "official": false
+    }
+   ]
+  },
+  "PG": {
+   "currency": "PGK",
+   "currencyName": "Papua New Guinean Kina",
+   "symbol": "PGK",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "tpi",
+     "percent": 71,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 50,
+     "official": true
+    },
+    {
+     "lang": "ho",
+     "percent": 2.1,
+     "official": true
+    }
+   ]
+  },
+  "PH": {
+   "currency": "PHP",
+   "currencyName": "Philippine Peso",
+   "symbol": "₱",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 64,
+     "official": true
+    },
+    {
+     "lang": "fil",
+     "percent": 60,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 31,
+     "official": false
+    },
+    {
+     "lang": "ceb",
+     "percent": 24,
+     "official": true
+    },
+    {
+     "lang": "ilo",
+     "percent": 9.6,
+     "official": true
+    },
+    {
+     "lang": "hil",
+     "percent": 8.4,
+     "official": true
+    },
+    {
+     "lang": "bik",
+     "percent": 3,
+     "official": false
+    },
+    {
+     "lang": "war",
+     "percent": 2.9,
+     "official": true
+    },
+    {
+     "lang": "fbl",
+     "percent": 2.3,
+     "official": false
+    },
+    {
+     "lang": "pam",
+     "percent": 2.3,
+     "official": false
+    },
+    {
+     "lang": "pag",
+     "percent": 1.4,
+     "official": true
+    },
+    {
+     "lang": "mdh",
+     "percent": 1.2,
+     "official": true
+    },
+    {
+     "lang": "tsg",
+     "percent": 1.1,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 0.73,
+     "official": false
+    },
+    {
+     "lang": "cps",
+     "percent": 0.66,
+     "official": false
+    },
+    {
+     "lang": "krj",
+     "percent": 0.39,
+     "official": false
+    },
+    {
+     "lang": "bto",
+     "percent": 0.28,
+     "official": false
+    },
+    {
+     "lang": "hnn",
+     "percent": 0.016,
+     "official": false
+    },
+    {
+     "lang": "tbw",
+     "percent": 0.0085,
+     "official": false
+    },
+    {
+     "lang": "bku",
+     "percent": 0.0068,
+     "official": false
+    }
+   ]
+  },
+  "PK": {
+   "currency": "PKR",
+   "currencyName": "Pakistani Rupee",
+   "symbol": "Rs",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ur",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "pa",
+     "percent": 70,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 50,
+     "official": true
+    },
+    {
+     "lang": "lah",
+     "percent": 40,
+     "official": false
+    },
+    {
+     "lang": "ps",
+     "percent": 16,
+     "official": false
+    },
+    {
+     "lang": "sd",
+     "percent": 15,
+     "official": false
+    },
+    {
+     "lang": "skr",
+     "percent": 12,
+     "official": false
+    },
+    {
+     "lang": "bal",
+     "percent": 2.6,
+     "official": false
+    },
+    {
+     "lang": "hno",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "brh",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "fa",
+     "percent": 0.66,
+     "official": false
+    },
+    {
+     "lang": "bgn",
+     "percent": 0.57,
+     "official": false
+    },
+    {
+     "lang": "hnd",
+     "percent": 0.41,
+     "official": false
+    },
+    {
+     "lang": "tg",
+     "percent": 0.33,
+     "official": false
+    },
+    {
+     "lang": "gju",
+     "percent": 0.2,
+     "official": false
+    },
+    {
+     "lang": "bft",
+     "percent": 0.18,
+     "official": false
+    },
+    {
+     "lang": "kvx",
+     "percent": 0.16,
+     "official": false
+    },
+    {
+     "lang": "khw",
+     "percent": 0.15,
+     "official": false
+    },
+    {
+     "lang": "mvy",
+     "percent": 0.14,
+     "official": false
+    },
+    {
+     "lang": "gjk",
+     "percent": 0.11,
+     "official": false
+    },
+    {
+     "lang": "kxp",
+     "percent": 0.11,
+     "official": false
+    },
+    {
+     "lang": "ks",
+     "percent": 0.069,
+     "official": false
+    },
+    {
+     "lang": "trw",
+     "percent": 0.053,
+     "official": false
+    },
+    {
+     "lang": "btv",
+     "percent": 0.019,
+     "official": false
+    }
+   ]
+  },
+  "PL": {
+   "currency": "PLN",
+   "currencyName": "Polish Zloty",
+   "symbol": "zł",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pl",
+     "percent": 96,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 33,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 19,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 18,
+     "official": false
+    },
+    {
+     "lang": "szl",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "be",
+     "percent": 0.58,
+     "official": false
+    },
+    {
+     "lang": "uk",
+     "percent": 0.39,
+     "official": false
+    },
+    {
+     "lang": "csb",
+     "percent": 0.13,
+     "official": true
+    },
+    {
+     "lang": "sli",
+     "percent": 0.031,
+     "official": false
+    },
+    {
+     "lang": "lt",
+     "percent": 0.021,
+     "official": true
+    },
+    {
+     "lang": "prg",
+     "percent": 0.0001,
+     "official": false
+    }
+   ]
+  },
+  "PM": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 3.7,
+     "official": false
+    }
+   ]
+  },
+  "PN": {
+   "currency": "NZD",
+   "currencyName": "New Zealand Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 92,
+     "official": true
+    }
+   ]
+  },
+  "PR": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 87,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 49,
+     "official": true
+    }
+   ]
+  },
+  "PS": {
+   "currency": "JOD",
+   "currencyName": "Jordanian Dinar",
+   "symbol": "JOD",
+   "decimals": 3,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "apc",
+     "percent": 87,
+     "official": false
+    }
+   ]
+  },
+  "PT": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pt",
+     "percent": 96,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 27,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 15,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 10,
+     "official": false
+    },
+    {
+     "lang": "gl",
+     "percent": 0.14,
+     "official": false
+    }
+   ]
+  },
+  "PW": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pau",
+     "percent": 74,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 8.6,
+     "official": true
+    }
+   ]
+  },
+  "PY": {
+   "currency": "PYG",
+   "currencyName": "Paraguayan Guarani",
+   "symbol": "₲",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "gn",
+     "percent": 80,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 3.2,
+     "official": true
+    },
+    {
+     "lang": "de",
+     "percent": 2.9,
+     "official": false
+    }
+   ]
+  },
+  "QA": {
+   "currency": "QAR",
+   "currencyName": "Qatari Riyal",
+   "symbol": "QAR",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 89,
+     "official": true
+    },
+    {
+     "lang": "fa",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "ml",
+     "percent": 0.25,
+     "official": false
+    }
+   ]
+  },
+  "RE": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 89,
+     "official": true
+    },
+    {
+     "lang": "rcf",
+     "percent": 71,
+     "official": false
+    },
+    {
+     "lang": "ta",
+     "percent": 15,
+     "official": false
+    }
+   ]
+  },
+  "RO": {
+   "currency": "RON",
+   "currencyName": "Romanian Leu",
+   "symbol": "lei",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ro",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 31,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "es",
+     "percent": 10,
+     "official": false
+    },
+    {
+     "lang": "hu",
+     "percent": 6.6,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 0.21,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 0.13,
+     "official": false
+    },
+    {
+     "lang": "sr",
+     "percent": 0.12,
+     "official": false
+    },
+    {
+     "lang": "bg",
+     "percent": 0.037,
+     "official": false
+    },
+    {
+     "lang": "el",
+     "percent": 0.023,
+     "official": false
+    },
+    {
+     "lang": "pl",
+     "percent": 0.015,
+     "official": false
+    }
+   ]
+  },
+  "RS": {
+   "currency": "RSD",
+   "currencyName": "Serbian Dinar",
+   "symbol": "RSD",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "sr",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "sr",
+     "percent": 99,
+     "official": true
+    },
+    {
+     "lang": "sq",
+     "percent": 19,
+     "official": false
+    },
+    {
+     "lang": "hu",
+     "percent": 4.8,
+     "official": true
+    },
+    {
+     "lang": "ro",
+     "percent": 2.1,
+     "official": true
+    },
+    {
+     "lang": "hr",
+     "percent": 0.93,
+     "official": true
+    },
+    {
+     "lang": "sk",
+     "percent": 0.85,
+     "official": true
+    },
+    {
+     "lang": "uk",
+     "percent": 0,
+     "official": true
+    }
+   ]
+  },
+  "RU": {
+   "currency": "RUB",
+   "currencyName": "Russian Ruble",
+   "symbol": "₽",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ru",
+     "percent": 94,
+     "official": true
+    },
+    {
+     "lang": "tt",
+     "percent": 1.4,
+     "official": true
+    },
+    {
+     "lang": "ba",
+     "percent": 1.3,
+     "official": true
+    },
+    {
+     "lang": "cv",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "hy",
+     "percent": 0.84,
+     "official": false
+    },
+    {
+     "lang": "ce",
+     "percent": 0.66,
+     "official": true
+    },
+    {
+     "lang": "av",
+     "percent": 0.39,
+     "official": true
+    },
+    {
+     "lang": "udm",
+     "percent": 0.38,
+     "official": true
+    },
+    {
+     "lang": "chm",
+     "percent": 0.37,
+     "official": false
+    },
+    {
+     "lang": "os",
+     "percent": 0.32,
+     "official": false
+    },
+    {
+     "lang": "sah",
+     "percent": 0.32,
+     "official": true
+    },
+    {
+     "lang": "kbd",
+     "percent": 0.31,
+     "official": true
+    },
+    {
+     "lang": "myv",
+     "percent": 0.31,
+     "official": true
+    },
+    {
+     "lang": "dar",
+     "percent": 0.26,
+     "official": false
+    },
+    {
+     "lang": "bua",
+     "percent": 0.22,
+     "official": false
+    },
+    {
+     "lang": "mdf",
+     "percent": 0.21,
+     "official": true
+    },
+    {
+     "lang": "kum",
+     "percent": 0.2,
+     "official": true
+    },
+    {
+     "lang": "kv",
+     "percent": 0.18,
+     "official": true
+    },
+    {
+     "lang": "lez",
+     "percent": 0.18,
+     "official": true
+    },
+    {
+     "lang": "krc",
+     "percent": 0.17,
+     "official": true
+    },
+    {
+     "lang": "inh",
+     "percent": 0.16,
+     "official": true
+    },
+    {
+     "lang": "tyv",
+     "percent": 0.13,
+     "official": true
+    },
+    {
+     "lang": "az",
+     "percent": 0.093,
+     "official": true
+    },
+    {
+     "lang": "ady",
+     "percent": 0.088,
+     "official": true
+    },
+    {
+     "lang": "krl",
+     "percent": 0.082,
+     "official": false
+    },
+    {
+     "lang": "lbe",
+     "percent": 0.078,
+     "official": true
+    },
+    {
+     "lang": "koi",
+     "percent": 0.045,
+     "official": true
+    },
+    {
+     "lang": "mrj",
+     "percent": 0.021,
+     "official": false
+    },
+    {
+     "lang": "alt",
+     "percent": 0.014,
+     "official": false
+    },
+    {
+     "lang": "fi",
+     "percent": 0.012,
+     "official": false
+    },
+    {
+     "lang": "sr",
+     "percent": 0.0036,
+     "official": false
+    },
+    {
+     "lang": "vep",
+     "percent": 0.0026,
+     "official": false
+    },
+    {
+     "lang": "mn",
+     "percent": 0.0015,
+     "official": false
+    },
+    {
+     "lang": "kaa",
+     "percent": 0.0006,
+     "official": false
+    },
+    {
+     "lang": "izh",
+     "percent": 0.0001,
+     "official": false
+    },
+    {
+     "lang": "cu",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "vot",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "RW": {
+   "currency": "RWF",
+   "currencyName": "Rwandan Franc",
+   "symbol": "RF",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "rw",
+     "percent": 77,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 15,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 0.017,
+     "official": true
+    }
+   ]
+  },
+  "SA": {
+   "currency": "SAR",
+   "currencyName": "Saudi Riyal",
+   "symbol": "SAR",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "ars",
+     "percent": 3,
+     "official": false
+    }
+   ]
+  },
+  "SB": {
+   "currency": "SBD",
+   "currencyName": "Solomon Islands Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "pis",
+     "percent": 82,
+     "official": false
+    },
+    {
+     "lang": "rug",
+     "percent": 1.4,
+     "official": false
+    }
+   ]
+  },
+  "SC": {
+   "currency": "SCR",
+   "currencyName": "Seychellois Rupee",
+   "symbol": "SCR",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "crs",
+     "percent": 98,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 60,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 38,
+     "official": true
+    }
+   ]
+  },
+  "SD": {
+   "currency": "SDG",
+   "currencyName": "Sudanese Pound",
+   "symbol": "SDG",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 61,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 61,
+     "official": true
+    },
+    {
+     "lang": "bej",
+     "percent": 5.4,
+     "official": false
+    },
+    {
+     "lang": "fvr",
+     "percent": 2.7,
+     "official": false
+    },
+    {
+     "lang": "ha",
+     "percent": 1.8,
+     "official": false
+    },
+    {
+     "lang": "mls",
+     "percent": 0.99,
+     "official": false
+    },
+    {
+     "lang": "fia",
+     "percent": 0.83,
+     "official": false
+    },
+    {
+     "lang": "zag",
+     "percent": 0.51,
+     "official": false
+    }
+   ]
+  },
+  "SE": {
+   "currency": "SEK",
+   "currencyName": "Swedish Krona",
+   "symbol": "kr",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sv",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 86,
+     "official": false
+    },
+    {
+     "lang": "fi",
+     "percent": 2.2,
+     "official": true
+    },
+    {
+     "lang": "fit",
+     "percent": 0.55,
+     "official": false
+    },
+    {
+     "lang": "se",
+     "percent": 0.33,
+     "official": false
+    },
+    {
+     "lang": "rmu",
+     "percent": 0.09,
+     "official": false
+    },
+    {
+     "lang": "yi",
+     "percent": 0.028,
+     "official": false
+    },
+    {
+     "lang": "smj",
+     "percent": 0.014,
+     "official": false
+    },
+    {
+     "lang": "sma",
+     "percent": 0.0028,
+     "official": false
+    },
+    {
+     "lang": "ia",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "SG": {
+   "currency": "SGD",
+   "currencyName": "Singapore Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 77,
+     "official": true
+    },
+    {
+     "lang": "ms",
+     "percent": 14,
+     "official": true
+    },
+    {
+     "lang": "ta",
+     "percent": 2.1,
+     "official": true
+    },
+    {
+     "lang": "ml",
+     "percent": 0.17,
+     "official": false
+    },
+    {
+     "lang": "pa",
+     "percent": 0.16,
+     "official": false
+    }
+   ]
+  },
+  "SH": {
+   "currency": "SHP",
+   "currencyName": "St. Helena Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 68,
+     "official": true
+    }
+   ]
+  },
+  "SI": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sl",
+     "percent": 87,
+     "official": true
+    },
+    {
+     "lang": "hr",
+     "percent": 61,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 59,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 42,
+     "official": false
+    },
+    {
+     "lang": "vec",
+     "percent": 1.4,
+     "official": true
+    },
+    {
+     "lang": "hu",
+     "percent": 0.44,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 0.19,
+     "official": false
+    }
+   ]
+  },
+  "SJ": {
+   "currency": "NOK",
+   "currencyName": "Norwegian Krone",
+   "symbol": "kr",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "nb",
+     "percent": 51,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 41,
+     "official": false
+    }
+   ]
+  },
+  "SK": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sk",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "cs",
+     "percent": 47,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 26,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 22,
+     "official": false
+    },
+    {
+     "lang": "hu",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "uk",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "pl",
+     "percent": 0.93,
+     "official": false
+    }
+   ]
+  },
+  "SL": {
+   "currency": "SLE",
+   "currencyName": "Sierra Leonean Leone",
+   "symbol": "SLE",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "kri",
+     "percent": 95,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 35,
+     "official": true
+    },
+    {
+     "lang": "men",
+     "percent": 27,
+     "official": false
+    },
+    {
+     "lang": "tem",
+     "percent": 26,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "SM": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "it",
+     "percent": 89,
+     "official": true
+    },
+    {
+     "lang": "eo",
+     "percent": 0.85,
+     "official": false
+    }
+   ]
+  },
+  "SN": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "wo",
+     "percent": 70,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 39,
+     "official": true
+    },
+    {
+     "lang": "ff",
+     "percent": 21,
+     "official": true
+    },
+    {
+     "lang": "srr",
+     "percent": 11,
+     "official": true
+    },
+    {
+     "lang": "dyo",
+     "percent": 2.6,
+     "official": true
+    },
+    {
+     "lang": "sav",
+     "percent": 1.5,
+     "official": true
+    },
+    {
+     "lang": "mfv",
+     "percent": 0.77,
+     "official": true
+    },
+    {
+     "lang": "bjt",
+     "percent": 0.61,
+     "official": true
+    },
+    {
+     "lang": "snf",
+     "percent": 0.24,
+     "official": true
+    },
+    {
+     "lang": "knf",
+     "percent": 0.21,
+     "official": true
+    },
+    {
+     "lang": "bsc",
+     "percent": 0.097,
+     "official": true
+    },
+    {
+     "lang": "mey",
+     "percent": 0.038,
+     "official": true
+    },
+    {
+     "lang": "tnr",
+     "percent": 0.018,
+     "official": true
+    },
+    {
+     "lang": "ff",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "SO": {
+   "currency": "SOS",
+   "currencyName": "Somali Shilling",
+   "symbol": "SOS",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "so",
+     "percent": 78,
+     "official": true
+    },
+    {
+     "lang": "ar",
+     "percent": 34,
+     "official": true
+    },
+    {
+     "lang": "sw",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "om",
+     "percent": 0.42,
+     "official": false
+    }
+   ]
+  },
+  "SR": {
+   "currency": "SRD",
+   "currencyName": "Surinamese Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "nl",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "srn",
+     "percent": 68,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.36,
+     "official": false
+    }
+   ]
+  },
+  "SS": {
+   "currency": "SSP",
+   "currencyName": "South Sudanese Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 27,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 27,
+     "official": true
+    },
+    {
+     "lang": "nus",
+     "percent": 5.6,
+     "official": false
+    }
+   ]
+  },
+  "ST": {
+   "currency": "STN",
+   "currencyName": "São Tomé & Príncipe Dobra",
+   "symbol": "Db",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pt",
+     "percent": 85,
+     "official": true
+    }
+   ]
+  },
+  "SV": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 89,
+     "official": true
+    }
+   ]
+  },
+  "SX": {
+   "currency": "XCG",
+   "currencyName": "Caribbean guilder",
+   "symbol": "Cg.",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 68,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 11,
+     "official": false
+    },
+    {
+     "lang": "vic",
+     "percent": 6.7,
+     "official": false
+    },
+    {
+     "lang": "nl",
+     "percent": 3.4,
+     "official": true
+    }
+   ]
+  },
+  "SY": {
+   "currency": "SYP",
+   "currencyName": "Syrian Pound",
+   "symbol": "£",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "apc",
+     "percent": 85,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 80,
+     "official": true
+    },
+    {
+     "lang": "ku",
+     "percent": 8,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 5.9,
+     "official": true
+    },
+    {
+     "lang": "hy",
+     "percent": 1.8,
+     "official": false
+    },
+    {
+     "lang": "syr",
+     "percent": 0.084,
+     "official": false
+    }
+   ]
+  },
+  "SZ": {
+   "currency": "SZL",
+   "currencyName": "Swazi Lilangeni",
+   "symbol": "SZL",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 80,
+     "official": true
+    },
+    {
+     "lang": "ss",
+     "percent": 58,
+     "official": true
+    },
+    {
+     "lang": "zu",
+     "percent": 6.8,
+     "official": false
+    },
+    {
+     "lang": "ts",
+     "percent": 1.7,
+     "official": false
+    }
+   ]
+  },
+  "TA": {
+   "currency": "GBP",
+   "currencyName": "British Pound",
+   "symbol": "£",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 99,
+     "official": false
+    }
+   ]
+  },
+  "TC": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    }
+   ]
+  },
+  "TD": {
+   "currency": "XAF",
+   "currencyName": "Central African CFA Franc",
+   "symbol": "FCFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 26,
+     "official": true
+    },
+    {
+     "lang": "ar",
+     "percent": 17,
+     "official": true
+    }
+   ]
+  },
+  "TF": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 100,
+     "official": false
+    }
+   ]
+  },
+  "TG": {
+   "currency": "XOF",
+   "currencyName": "West African CFA Franc",
+   "symbol": "F CFA",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "fr",
+     "percent": 61,
+     "official": true
+    },
+    {
+     "lang": "ee",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "ife",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "blo",
+     "percent": 0.15,
+     "official": false
+    }
+   ]
+  },
+  "TH": {
+   "currency": "THB",
+   "currencyName": "Thai Baht",
+   "symbol": "฿",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "th",
+     "percent": 80,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 27,
+     "official": false
+    },
+    {
+     "lang": "tts",
+     "percent": 24,
+     "official": false
+    },
+    {
+     "lang": "nod",
+     "percent": 9.6,
+     "official": false
+    },
+    {
+     "lang": "sou",
+     "percent": 8,
+     "official": false
+    },
+    {
+     "lang": "mfa",
+     "percent": 5,
+     "official": false
+    },
+    {
+     "lang": "zh",
+     "percent": 1.8,
+     "official": false
+    },
+    {
+     "lang": "kxm",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "kdt",
+     "percent": 0.48,
+     "official": false
+    },
+    {
+     "lang": "mnw",
+     "percent": 0.17,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.098,
+     "official": false
+    },
+    {
+     "lang": "shn",
+     "percent": 0.096,
+     "official": false
+    },
+    {
+     "lang": "lcp",
+     "percent": 0.01,
+     "official": false
+    },
+    {
+     "lang": "lwl",
+     "percent": 0.01,
+     "official": false
+    }
+   ]
+  },
+  "TJ": {
+   "currency": "TJS",
+   "currencyName": "Tajikistani Somoni",
+   "symbol": "TJS",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "tg",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 12,
+     "official": false
+    },
+    {
+     "lang": "fa",
+     "percent": 0.78,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.0096,
+     "official": false
+    }
+   ]
+  },
+  "TK": {
+   "currency": "NZD",
+   "currencyName": "New Zealand Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 78,
+     "official": true
+    },
+    {
+     "lang": "tkl",
+     "percent": 78,
+     "official": true
+    }
+   ]
+  },
+  "TL": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "pt",
+     "percent": 59,
+     "official": true
+    },
+    {
+     "lang": "tet",
+     "percent": 59,
+     "official": true
+    }
+   ]
+  },
+  "TM": {
+   "currency": "TMT",
+   "currencyName": "Turkmenistani Manat",
+   "symbol": "TMT",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "tk",
+     "percent": 70,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 12,
+     "official": false
+    },
+    {
+     "lang": "uz",
+     "percent": 9,
+     "official": false
+    },
+    {
+     "lang": "ku",
+     "percent": 0.4,
+     "official": false
+    },
+    {
+     "lang": "kaa",
+     "percent": 0.1,
+     "official": false
+    }
+   ]
+  },
+  "TN": {
+   "currency": "TND",
+   "currencyName": "Tunisian Dinar",
+   "symbol": "TND",
+   "decimals": 3,
+   "languages": [
+    {
+     "lang": "aeb",
+     "percent": 90,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 74,
+     "official": true
+    }
+   ]
+  },
+  "TO": {
+   "currency": "TOP",
+   "currencyName": "Tongan Paʻanga",
+   "symbol": "T$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "to",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 28,
+     "official": true
+    }
+   ]
+  },
+  "TR": {
+   "currency": "TRY",
+   "currencyName": "Turkish Lira",
+   "symbol": "₺",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "tr",
+     "percent": 93,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 17,
+     "official": false
+    },
+    {
+     "lang": "ku",
+     "percent": 5.5,
+     "official": false
+    },
+    {
+     "lang": "apc",
+     "percent": 5.2,
+     "official": false
+    },
+    {
+     "lang": "zza",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "kbd",
+     "percent": 0.77,
+     "official": false
+    },
+    {
+     "lang": "az",
+     "percent": 0.74,
+     "official": false
+    },
+    {
+     "lang": "az",
+     "percent": 0.65,
+     "official": false
+    },
+    {
+     "lang": "ar",
+     "percent": 0.56,
+     "official": false
+    },
+    {
+     "lang": "bgx",
+     "percent": 0.46,
+     "official": false
+    },
+    {
+     "lang": "bg",
+     "percent": 0.42,
+     "official": false
+    },
+    {
+     "lang": "ady",
+     "percent": 0.39,
+     "official": false
+    },
+    {
+     "lang": "kiu",
+     "percent": 0.19,
+     "official": false
+    },
+    {
+     "lang": "kaa",
+     "percent": 0.1,
+     "official": false
+    },
+    {
+     "lang": "hy",
+     "percent": 0.056,
+     "official": false
+    },
+    {
+     "lang": "ka",
+     "percent": 0.056,
+     "official": false
+    },
+    {
+     "lang": "lzz",
+     "percent": 0.028,
+     "official": false
+    },
+    {
+     "lang": "sr",
+     "percent": 0.028,
+     "official": false
+    },
+    {
+     "lang": "sq",
+     "percent": 0.021,
+     "official": false
+    },
+    {
+     "lang": "ab",
+     "percent": 0.0048,
+     "official": false
+    },
+    {
+     "lang": "el",
+     "percent": 0.0048,
+     "official": false
+    },
+    {
+     "lang": "tru",
+     "percent": 0.0036,
+     "official": false
+    },
+    {
+     "lang": "uz",
+     "percent": 0.0024,
+     "official": false
+    },
+    {
+     "lang": "ky",
+     "percent": 0.0014,
+     "official": false
+    },
+    {
+     "lang": "kk",
+     "percent": 0.0007,
+     "official": false
+    }
+   ]
+  },
+  "TT": {
+   "currency": "TTD",
+   "currencyName": "Trinidad & Tobago Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 88,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 0.29,
+     "official": false
+    }
+   ]
+  },
+  "TV": {
+   "currency": "AUD",
+   "currencyName": "Australian Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "tvl",
+     "percent": 85,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 9.1,
+     "official": true
+    }
+   ]
+  },
+  "TW": {
+   "currency": "TWD",
+   "currencyName": "New Taiwan Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "zh",
+     "percent": 95,
+     "official": true
+    },
+    {
+     "lang": "trv",
+     "percent": 0.02,
+     "official": false
+    }
+   ]
+  },
+  "TZ": {
+   "currency": "TZS",
+   "currencyName": "Tanzanian Shilling",
+   "symbol": "TZS",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sw",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 69,
+     "official": true
+    },
+    {
+     "lang": "suk",
+     "percent": 8.7,
+     "official": false
+    },
+    {
+     "lang": "nym",
+     "percent": 3.3,
+     "official": false
+    },
+    {
+     "lang": "kde",
+     "percent": 2.5,
+     "official": false
+    },
+    {
+     "lang": "bez",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "ksb",
+     "percent": 1.7,
+     "official": false
+    },
+    {
+     "lang": "mas",
+     "percent": 1.5,
+     "official": false
+    },
+    {
+     "lang": "mgy",
+     "percent": 1.4,
+     "official": false
+    },
+    {
+     "lang": "asa",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "lag",
+     "percent": 0.87,
+     "official": false
+    },
+    {
+     "lang": "jmc",
+     "percent": 0.74,
+     "official": false
+    },
+    {
+     "lang": "rof",
+     "percent": 0.74,
+     "official": false
+    },
+    {
+     "lang": "vun",
+     "percent": 0.74,
+     "official": false
+    },
+    {
+     "lang": "rwk",
+     "percent": 0.22,
+     "official": false
+    },
+    {
+     "lang": "sbp",
+     "percent": 0.2,
+     "official": false
+    }
+   ]
+  },
+  "UA": {
+   "currency": "UAH",
+   "currencyName": "Ukrainian Hryvnia",
+   "symbol": "₴",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "uk",
+     "percent": 65,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 46,
+     "official": true
+    },
+    {
+     "lang": "pl",
+     "percent": 2.4,
+     "official": false
+    },
+    {
+     "lang": "yi",
+     "percent": 1.3,
+     "official": false
+    },
+    {
+     "lang": "rue",
+     "percent": 1.2,
+     "official": false
+    },
+    {
+     "lang": "be",
+     "percent": 0.83,
+     "official": false
+    },
+    {
+     "lang": "crh",
+     "percent": 0.56,
+     "official": false
+    },
+    {
+     "lang": "ro",
+     "percent": 0.52,
+     "official": false
+    },
+    {
+     "lang": "bg",
+     "percent": 0.49,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 0.42,
+     "official": false
+    },
+    {
+     "lang": "hu",
+     "percent": 0.37,
+     "official": false
+    },
+    {
+     "lang": "el",
+     "percent": 0.02,
+     "official": false
+    }
+   ]
+  },
+  "UG": {
+   "currency": "UGX",
+   "currencyName": "Ugandan Shilling",
+   "symbol": "UGX",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "sw",
+     "percent": 75,
+     "official": true
+    },
+    {
+     "lang": "lg",
+     "percent": 13,
+     "official": false
+    },
+    {
+     "lang": "nyn",
+     "percent": 6.3,
+     "official": false
+    },
+    {
+     "lang": "cgg",
+     "percent": 5.4,
+     "official": false
+    },
+    {
+     "lang": "xog",
+     "percent": 5.3,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 3.9,
+     "official": true
+    },
+    {
+     "lang": "teo",
+     "percent": 3.9,
+     "official": false
+    },
+    {
+     "lang": "laj",
+     "percent": 3.8,
+     "official": false
+    },
+    {
+     "lang": "ach",
+     "percent": 3.7,
+     "official": false
+    },
+    {
+     "lang": "myx",
+     "percent": 2.9,
+     "official": false
+    },
+    {
+     "lang": "rw",
+     "percent": 2.1,
+     "official": false
+    },
+    {
+     "lang": "ttj",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "hi",
+     "percent": 0.0045,
+     "official": false
+    }
+   ]
+  },
+  "UM": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 100,
+     "official": true
+    }
+   ]
+  },
+  "US": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 96,
+     "official": true
+    },
+    {
+     "lang": "es",
+     "percent": 9.6,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 0.69,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 0.56,
+     "official": false
+    },
+    {
+     "lang": "de",
+     "percent": 0.47,
+     "official": false
+    },
+    {
+     "lang": "fil",
+     "percent": 0.42,
+     "official": false
+    },
+    {
+     "lang": "it",
+     "percent": 0.34,
+     "official": false
+    },
+    {
+     "lang": "vi",
+     "percent": 0.34,
+     "official": false
+    },
+    {
+     "lang": "ko",
+     "percent": 0.3,
+     "official": false
+    },
+    {
+     "lang": "ru",
+     "percent": 0.24,
+     "official": false
+    },
+    {
+     "lang": "nv",
+     "percent": 0.05,
+     "official": false
+    },
+    {
+     "lang": "yi",
+     "percent": 0.049,
+     "official": false
+    },
+    {
+     "lang": "pdc",
+     "percent": 0.039,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.035,
+     "official": false
+    },
+    {
+     "lang": "haw",
+     "percent": 0.0089,
+     "official": true
+    },
+    {
+     "lang": "frc",
+     "percent": 0.0084,
+     "official": false
+    },
+    {
+     "lang": "chr",
+     "percent": 0.0077,
+     "official": false
+    },
+    {
+     "lang": "esu",
+     "percent": 0.0063,
+     "official": false
+    },
+    {
+     "lang": "dak",
+     "percent": 0.0059,
+     "official": false
+    },
+    {
+     "lang": "cho",
+     "percent": 0.0033,
+     "official": false
+    },
+    {
+     "lang": "lkt",
+     "percent": 0.0024,
+     "official": false
+    },
+    {
+     "lang": "ik",
+     "percent": 0.0023,
+     "official": false
+    },
+    {
+     "lang": "mus",
+     "percent": 0.0012,
+     "official": false
+    },
+    {
+     "lang": "cad",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "cic",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "io",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "jbo",
+     "percent": 0,
+     "official": false
+    },
+    {
+     "lang": "osa",
+     "percent": 0,
+     "official": false
+    }
+   ]
+  },
+  "UY": {
+   "currency": "UYU",
+   "currencyName": "Uruguayan Peso",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 88,
+     "official": true
+    }
+   ]
+  },
+  "UZ": {
+   "currency": "UZS",
+   "currencyName": "Uzbekistani Som",
+   "symbol": "UZS",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "uz",
+     "percent": 85,
+     "official": true
+    },
+    {
+     "lang": "uz",
+     "percent": 15,
+     "official": true
+    },
+    {
+     "lang": "ru",
+     "percent": 14,
+     "official": false
+    },
+    {
+     "lang": "kaa",
+     "percent": 2.1,
+     "official": false
+    },
+    {
+     "lang": "tr",
+     "percent": 0.62,
+     "official": false
+    }
+   ]
+  },
+  "VA": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "it",
+     "percent": 82,
+     "official": true
+    },
+    {
+     "lang": "la",
+     "percent": 82,
+     "official": false
+    }
+   ]
+  },
+  "VC": {
+   "currency": "XCD",
+   "currencyName": "East Caribbean Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 96,
+     "official": true
+    }
+   ]
+  },
+  "VE": {
+   "currency": "VES",
+   "currencyName": "Venezuelan Bolívar",
+   "symbol": "VES",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "es",
+     "percent": 82,
+     "official": true
+    },
+    {
+     "lang": "yrl",
+     "percent": 0.0064,
+     "official": false
+    }
+   ]
+  },
+  "VG": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 98,
+     "official": true
+    }
+   ]
+  },
+  "VI": {
+   "currency": "USD",
+   "currencyName": "US Dollar",
+   "symbol": "$",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 75,
+     "official": true
+    }
+   ]
+  },
+  "VN": {
+   "currency": "VND",
+   "currencyName": "Vietnamese Dong",
+   "symbol": "₫",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "vi",
+     "percent": 86,
+     "official": true
+    },
+    {
+     "lang": "zh",
+     "percent": 1.1,
+     "official": false
+    },
+    {
+     "lang": "blt",
+     "percent": 0.69,
+     "official": false
+    },
+    {
+     "lang": "hnj",
+     "percent": 0.17,
+     "official": false
+    },
+    {
+     "lang": "cjm",
+     "percent": 0.089,
+     "official": false
+    }
+   ]
+  },
+  "VU": {
+   "currency": "VUV",
+   "currencyName": "Vanuatu Vatu",
+   "symbol": "VUV",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "bi",
+     "percent": 90,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 83,
+     "official": true
+    },
+    {
+     "lang": "fr",
+     "percent": 50,
+     "official": true
+    }
+   ]
+  },
+  "WF": {
+   "currency": "XPF",
+   "currencyName": "CFP Franc",
+   "symbol": "CFPF",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "wls",
+     "percent": 59,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 48,
+     "official": true
+    },
+    {
+     "lang": "fud",
+     "percent": 30,
+     "official": false
+    }
+   ]
+  },
+  "WS": {
+   "currency": "WST",
+   "currencyName": "Samoan Tala",
+   "symbol": "WST",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sm",
+     "percent": 100,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 2.1,
+     "official": true
+    }
+   ]
+  },
+  "XK": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sq",
+     "percent": 92,
+     "official": true
+    },
+    {
+     "lang": "aln",
+     "percent": 74,
+     "official": false
+    },
+    {
+     "lang": "sr",
+     "percent": 5,
+     "official": true
+    },
+    {
+     "lang": "sr",
+     "percent": 5,
+     "official": true
+    }
+   ]
+  },
+  "YE": {
+   "currency": "YER",
+   "currencyName": "Yemeni Rial",
+   "symbol": "YER",
+   "decimals": 0,
+   "languages": [
+    {
+     "lang": "ar",
+     "percent": 74,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 9,
+     "official": false
+    }
+   ]
+  },
+  "YT": {
+   "currency": "EUR",
+   "currencyName": "Euro",
+   "symbol": "€",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "swb",
+     "percent": 88,
+     "official": false
+    },
+    {
+     "lang": "fr",
+     "percent": 57,
+     "official": true
+    },
+    {
+     "lang": "buc",
+     "percent": 23,
+     "official": false
+    },
+    {
+     "lang": "sw",
+     "percent": 1.4,
+     "official": false
+    }
+   ]
+  },
+  "ZA": {
+   "currency": "ZAR",
+   "currencyName": "South African Rand",
+   "symbol": "R",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "en",
+     "percent": 31,
+     "official": true
+    },
+    {
+     "lang": "zu",
+     "percent": 24,
+     "official": true
+    },
+    {
+     "lang": "xh",
+     "percent": 18,
+     "official": true
+    },
+    {
+     "lang": "af",
+     "percent": 13,
+     "official": true
+    },
+    {
+     "lang": "nso",
+     "percent": 9.4,
+     "official": true
+    },
+    {
+     "lang": "tn",
+     "percent": 8.2,
+     "official": true
+    },
+    {
+     "lang": "st",
+     "percent": 7.9,
+     "official": true
+    },
+    {
+     "lang": "ts",
+     "percent": 4.4,
+     "official": true
+    },
+    {
+     "lang": "ss",
+     "percent": 2.7,
+     "official": true
+    },
+    {
+     "lang": "ve",
+     "percent": 2.3,
+     "official": true
+    },
+    {
+     "lang": "hi",
+     "percent": 2,
+     "official": false
+    },
+    {
+     "lang": "nr",
+     "percent": 1.6,
+     "official": true
+    },
+    {
+     "lang": "sw",
+     "percent": 0.0017,
+     "official": false
+    }
+   ]
+  },
+  "ZM": {
+   "currency": "ZMW",
+   "currencyName": "Zambian Kwacha",
+   "symbol": "ZK",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "bem",
+     "percent": 31,
+     "official": false
+    },
+    {
+     "lang": "en",
+     "percent": 16,
+     "official": true
+    },
+    {
+     "lang": "ny",
+     "percent": 15,
+     "official": false
+    },
+    {
+     "lang": "loz",
+     "percent": 6,
+     "official": false
+    }
+   ]
+  },
+  "ZW": {
+   "currency": "ZWG",
+   "currencyName": "Zimbabwean Gold",
+   "symbol": "ZWG",
+   "decimals": 2,
+   "languages": [
+    {
+     "lang": "sn",
+     "percent": 81,
+     "official": true
+    },
+    {
+     "lang": "en",
+     "percent": 42,
+     "official": true
+    },
+    {
+     "lang": "nd",
+     "percent": 12,
+     "official": true
+    },
+    {
+     "lang": "mxc",
+     "percent": 6.5,
+     "official": false
+    },
+    {
+     "lang": "ndc",
+     "percent": 6.1,
+     "official": false
+    },
+    {
+     "lang": "kck",
+     "percent": 5.3,
+     "official": false
+    },
+    {
+     "lang": "ny",
+     "percent": 1.9,
+     "official": false
+    },
+    {
+     "lang": "ve",
+     "percent": 0.64,
+     "official": false
+    },
+    {
+     "lang": "tn",
+     "percent": 0.22,
+     "official": false
+    }
+   ]
+  }
+ }
+}

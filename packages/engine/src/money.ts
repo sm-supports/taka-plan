@@ -11,9 +11,15 @@ export type RoundKind = "lump" | "monthly" | "exact" | "interest";
 
 const STEP: Record<RoundKind, number> = { lump: 500, monthly: 100, interest: 100, exact: 1 };
 
-export function roundMoney(x: number, kind: RoundKind): Money {
+/**
+ * Rounding steps per kind in local currency units. Pass `roundingFor(rates)` (country/overlay.ts) so
+ * other currencies round sensibly; omitted = taka steps.
+ */
+export type RoundSteps = Record<RoundKind, number>;
+
+export function roundMoney(x: number, kind: RoundKind, steps: RoundSteps = STEP): Money {
   if (!Number.isFinite(x)) return 0;
-  const step = STEP[kind];
+  const step = steps[kind] > 0 ? steps[kind] : STEP[kind];
   return Math.round(x / step) * step;
 }
 
@@ -21,9 +27,9 @@ export function roundMoney(x: number, kind: RoundKind): Money {
  * Round UP to the step of `kind`. Used where rounding down would break a promise,
  * e.g. the M1 monthly saving must fill the gap inside the build period.
  */
-export function roundMoneyUp(x: number, kind: RoundKind): Money {
+export function roundMoneyUp(x: number, kind: RoundKind, steps: RoundSteps = STEP): Money {
   if (!Number.isFinite(x)) return 0;
-  const step = STEP[kind];
+  const step = steps[kind] > 0 ? steps[kind] : STEP[kind];
   return Math.ceil(x / step) * step;
 }
 
