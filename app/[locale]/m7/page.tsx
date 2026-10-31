@@ -1,8 +1,13 @@
 "use client";
-/** M7 Retirement & family: placeholder until the m7 UI slice lands. */
-import { useT } from "@/lib/i18n/useT";
+/** M7 Retirement & family ("Plan to 100"). Suspense because the calculator reads `?demo=` via useSearchParams. */
+import { Suspense } from "react";
+import { RetirementCalculator } from "@/components/calculators/m7/RetirementCalculator";
+import { Skeleton } from "@/components/ui/Skeleton";
 
 export default function M7Page() {
-  const { t } = useT();
-  return <h1 className="text-2xl font-semibold">{t("m7.title")}</h1>;
+  return (
+    <Suspense fallback={<Skeleton page />}>
+      <RetirementCalculator />
+    </Suspense>
+  );
 }
