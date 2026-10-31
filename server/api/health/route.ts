@@ -1,6 +1,6 @@
 // GET /api/health: liveness plus the state of the rates table and which source /api/rates serves.
 import { json } from "@/lib/server/http";
-import { loadRates, type DbStatus, type RatesSource } from "@/app/api/rates/load";
+import { loadRates, type DbStatus, type RatesSource } from "@/server/api/rates/load";
 
 export const dynamic = "force-dynamic";
 

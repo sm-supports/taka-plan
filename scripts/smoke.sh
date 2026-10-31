@@ -1,9 +1,9 @@
 #!/bin/sh
 # Smoke test against a running dev/preview server: /api/health must report a healthy D1
-# and /api/rates must serve a published version from it. Usage: PORT=3001 sh scripts/smoke.sh
+# and /api/rates must serve a published version from it. Usage: PORT=8788 sh scripts/smoke.sh
 set -u
 
-BASE="http://localhost:${PORT:-3001}"
+BASE="http://localhost:${PORT:-8788}"
 TMP=$(mktemp -d 2>/dev/null || mktemp -d -t taka-smoke)
 trap 'rm -rf "$TMP"' EXIT
 

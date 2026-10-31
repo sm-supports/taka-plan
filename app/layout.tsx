@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Taka Plan",
   description: "A free Bangla/English personal-finance planner for Bangladesh: a full savings plan from five questions in under three minutes, no account needed.",
   applicationName: "Taka Plan",
+  manifest: "/manifest.webmanifest",
 };
 
 export const viewport: Viewport = {

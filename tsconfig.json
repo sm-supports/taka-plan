@@ -38,12 +38,12 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".cloudflare/types"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
+    ".wrangler",
     ".vinext",
     "e2e"
   ]

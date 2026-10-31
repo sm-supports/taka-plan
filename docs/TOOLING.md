@@ -1,99 +1,89 @@
-# Tooling notes (verified 30 Oct 2026)
+# Tooling notes (verified 31 Oct 2026)
 
-Pinned: vinext 1.4.0 · @vinext/cloudflare 1.3.0 · cf 1.0.0-beta.26 · @cloudflare/vite-plugin 2.0.0-beta.v.8 · vite 8.3.0 · react 19.3.1 · typescript 7.0.2 · vitest 5.0.5 · @playwright/test 1.64.1 · zustand 5.0.16.
+Pinned: vinext 1.4.0 · wrangler 4.156.0 · vite 8.3.0 · react 19.3.1 · typescript 7.0.2 · vitest 5.0.5 · @playwright/test 1.64.1 · zustand 5.0.16.
+
+Hosting is **Cloudflare Pages** (static export + Pages Functions for `/api/*`), built by Pages from the GitHub repository. There is no Cloudflare Worker and no `cf` CLI any more; see [DEPLOY.md](DEPLOY.md) for the production setup and why.
 
 ## Node
 
-`cf` requires Node `^22.23 || ^24.22 || ^26.12`. Use nvm:
+`.nvmrc` pins 24.22.2 (`engines.node >= 24.22`). Use nvm:
 
 ```bash
-nvm install 24 && nvm use
+nvm install && nvm use
 ```
-
-`.nvmrc` pins 24. `engines.node >= 24.22` in package.json.
 
 ## Daily commands
 
-| Task | Command | Verified |
+| Task | Command | Notes |
 | --- | --- | --- |
-| Dev server (port 3001) | `npm run dev` | boots in ~5 s; `/api/health` and `/api/rates` answer |
-| Worker binding types | `npx cf workers types` → `.cloudflare/types/index.d.ts` | `Env` is inferred from `cloudflare.config.ts` |
-| Local D1 migrations | `npm run db:migrate:local` | applies `migrations/*.sql` into `.cloudflare/state/v3/d1`, which is the same store the dev server reads (health route shows `publishedVersion: 1`) |
-| Query local D1 | `npx cf d1 raw 00000000-0000-4000-8000-000000000001 --sql "SELECT 1" --local --persist-to .cloudflare/state` | works without login |
+| Dev server (port 3001) | `npm run dev` | Fast UI work. **No `/api/*` here**: the app falls back to the bundled rates seed and the admin cannot sign in. Use the preview for anything that needs the API. |
+| Production build | `npm run build` | `vite build` (static export to `dist/client`) then `scripts/check-export.mjs` |
+| Pages preview (port 8788) | `npm run preview` | `wrangler pages dev dist/client` with Functions, local D1 and `.dev.vars`: the same runtime as production |
+| Local D1 migrations | `npm run db:migrate:local` | applies `migrations/*.sql` into `.wrangler/state` (the store `npm run preview` reads) via `config/wrangler.local.toml` |
+| Query local D1 | `npx wrangler d1 execute taka-plan --local -c config/wrangler.local.toml --persist-to .wrangler/state --command "SELECT COUNT(*) FROM rates"` | no login needed |
 | Reset local D1 | `npm run db:reset:local` then migrate again | |
 | Regenerate seed migration | `npm run rates:gen-seed` after editing `packages/engine/src/data/rates.seed.json` | |
-| Typecheck | `npm run typecheck` | tsc 7 (Go port) |
-| Unit tests | `npm test` | Vitest projects: engine, lib, api |
-| E2E | `npm run test:e2e` | starts the dev server itself |
-| Production build | `npm run build` then `npm run start` (Vite preview of the built Worker) | |
-| Deploy dry run (no login) | `npx cf build && npx cf deploy --prebuilt --mode production --dry-run` | |
+| Typecheck | `npm run typecheck` | tsc 7 (Go port), app + engine tsconfigs |
+| Unit tests | `npm test` | Vitest projects: engine, lib, api (`server/api/**`) |
+| Smoke | `npm run smoke` | against the preview on :8788 (`PORT=…` to change) |
+| E2E | `npm run test:e2e` | starts `npm run preview` itself; build and migrate first |
+| Bundle budget | `npm run check:bundle` | against a running preview |
+| Compile Functions only | `npx wrangler pages functions build --outdir /tmp/fn` | what the Pages build does with `functions/` |
 
-Set `CF_SEND_TELEMETRY=false` to silence cf telemetry. Non-interactive cf prompts (e.g. migrations confirm) auto-accept when `CI=1`.
+First run on a fresh clone:
+
+```bash
+nvm use && npm ci && cp .dev.vars.example .dev.vars
+npm run db:migrate:local && npm run build && npm run preview
+```
+
+Set `WRANGLER_SEND_METRICS=false` to silence wrangler telemetry.
 
 ## Gotchas
 
+- **No `wrangler.toml` (or `cloudflare.config.ts`) in the project root.** vinext treats either file as a Cloudflare *Workers* project and then fails the build with "Missing @cloudflare/vite-plugin". The local wrangler configs therefore live in `config/` and are passed with `-c`; `wrangler pages dev` gets its settings as flags (see the `preview` script). Production bindings live in the Pages project (DEPLOY.md).
+- vinext's static export **skips** a page without failing when it turns dynamic (`cookies()`, `headers()`, awaited `searchParams`, `force-dynamic`). `scripts/check-export.mjs` fails the build instead, using `dist/server/vinext-prerender.json`, and checks every expected page file. Pages must read query strings with `useSearchParams` in a client component inside `<Suspense>` (see `/m3`, `/m5`), and dynamic segments need `generateStaticParams` (`[locale]`, `start/[step]`).
+- Anything that needs the request (locale redirect at `/`, the admin session) runs in the browser: `/` reads the `tp_locale` cookie client-side, and `/admin` asks `GET /api/admin/session`.
+- `public/_routes.json` limits Functions to `/api/*`; every page, chunk, icon and `sw.js` is a plain static file (no Functions request quota or CPU used).
+- Security headers: static responses get them from `public/_headers`; API responses from `json()` in `lib/server/http.ts`. `test/security-headers.test.ts` keeps both in sync with `lib/server/security-headers.ts`. Pages does not apply `_headers` to Functions responses.
+- `check-export.mjs` deletes `dist/client/.vite` (the Vite manifest) so it is never published.
+- `migrations/0002_seed_rates.sql` is regenerated from the seed JSON; after changing the seed, run `npm run db:reset:local && npm run db:migrate:local` and restart the preview.
+- Secrets for local runs come from `.dev.vars` (copy `.dev.vars.example`; the placeholder `change-me` works only on localhost). Never commit it.
+- Wrangler's local runtime supports compatibility dates up to 2026-10-23 (workerd 1.20261023), hence the pinned date.
+- npm 11 does not run dependency install scripts by default; wrangler/workerd/esbuild still work because their platform binaries come from optional dependencies.
+- `vitest.config.ts` is deliberately separate from `vite.config.ts`: tests must not boot vinext.
 - Inside git worktrees created by agent tooling, a hook may refuse commands that source `nvm.sh`; use `export PATH="$HOME/.nvm/versions/node/v24.22.2/bin:$PATH"` instead.
-- Build output lives under `.cloudflare/output/v0/workers/default/{bundle,assets}` (not `dist/`). The bare scaffold's client JS was 441 KB raw / 133 KB gzip (React 19 + RSC runtime), so our own code has roughly 160 KB of compressed transfer budget under the PRD's 300 KB target.
-- `migrations/0002_seed_rates.sql` is regenerated from the seed JSON; after changing the seed before launch, run `npm run db:reset:local && npm run db:migrate:local` and restart the dev server (the Worker keeps the old SQLite file open).
+- The Claude desktop "preview" launcher (`.claude/launch.json`) runs a login shell whose cwd is not accessible on this external volume (`getcwd: Operation not permitted`); start servers from a normal shell instead.
 
-- `cf d1 … --local` defaults to `~/Library/Preferences/cloudflare/state/v3`, **not** the project. Always pass `--persist-to .cloudflare/state` (the npm scripts do) so the dev server sees the data.
-- `cf build` runs Vite directly and ignores npm pre/post scripts. Anything the build needs (seed migration, `public/sw.js`) must be committed, not generated at build time.
-- `cloudflare.config.ts` is function-form: `mode === "production"` reads `D1_DATABASE_ID` from the environment; every other mode uses the fixed local id above. Set `D1_DATABASE_ID` **before** the first `cf deploy` so cf does not auto-provision a second database.
-- Secrets for local dev come from `.dev.vars` (copy `.dev.vars.example`). Never commit it.
-- `vitest.config.ts` is deliberately separate from `vite.config.ts`: tests must not boot vinext or the Cloudflare plugin.
-- The Claude desktop "preview" launcher (`.claude/launch.json`) runs a login shell whose cwd is not accessible on this external volume (`getcwd: Operation not permitted`); start the dev server from a normal shell instead.
-- First remote deploy needs `cf auth login` (browser OAuth) run by a person; `wrangler login` does not carry over.
-
-## PWA and CI
-
-Owned by the pwa-ci slice. Verified against `npm run build && npx vite preview` (vinext 1.4.0) on 30 Oct 2026.
-
-### Files
+## PWA
 
 | File | What it does |
 | --- | --- |
-| `app/manifest.ts` | `MetadataRoute.Manifest` served by vinext at **`/manifest.webmanifest`** (`application/manifest+json`); vinext injects `<link rel="manifest">` into every page. Colours come from `app/globals.css` tokens (`--color-page` background, `--color-brand-600` theme). |
-| `public/icons/` | `icon-192.png`, `icon-512.png`, `maskable-512.png` (generated once from `icon.svg`, committed) and `icon.svg` (hand-written). The favicon (`app/icon.png`, a vinext metadata route) belongs to the app-shell slice, not here. The PNGs were rendered by a dependency-free generator kept out of the repo; recover it with `git show 6a16a89:scripts/gen-icons.mjs` if the colours change. |
-| `public/sw.js` | Hand-written service worker, no workbox. Served from the assets binding at `/sw.js` (`text/javascript`). |
-| `components/pwa/RegisterSW.tsx` | Registers `/sw.js?v=<build id>` only in production bundles (`process.env.NODE_ENV` is inlined by Vite, so the dev server never registers anything) and shows a bilingual "new version — tap to reload" toast when a newer worker has installed behind a controlled page. Mounted once in `app/layout.tsx`, which reads the build id on the server (`process.env.__VINEXT_BUILD_ID`, else `BUILD_ID`, else `"dev"`). |
-| `proxy.ts` | vinext middleware (Next 16 `proxy` convention): sets `X-Content-Type-Options`, `Referrer-Policy` and `Permissions-Policy` on every routed response and `Content-Security-Policy: frame-ancestors 'none'` under `/admin` (logic in `lib/server/security-headers.ts`, which `lib/server/http.ts#json` also applies to API responses). Static files (`/_next/static`, icons, `sw.js`, manifest) are excluded by the matcher. vinext discovers the file when the dev server starts (`findMiddlewareFile` runs in Vite's `config` hook), so **restart `npm run dev` after adding or renaming it**; then verify with `curl -I http://localhost:3001/bn/plan` and `curl -I http://localhost:3001/admin`. Gap: until a restart, a dev server that was already running serves pages without these headers; `test/security-headers.test.ts` covers the logic. |
-| `scripts/check-bundle.mjs` | First-paint JavaScript budget (`npm run check:bundle`). |
-| `e2e/onboarding.spec.ts`, `e2e/offline.spec.ts` | Playwright smoke tests (see below). |
-| `.github/workflows/ci.yml` | GitHub Actions: `check`, `e2e`, `deploy`. |
+| `public/manifest.webmanifest` | Static web app manifest (`application/manifest+json` via `public/_headers`); `app/layout.tsx` links it. Colours mirror `app/globals.css` (`--color-page` background, `--color-brand-600` theme). |
+| `public/icons/` | `icon-192.png`, `icon-512.png`, `maskable-512.png` (generated once from `icon.svg`, committed) and `icon.svg`. The PNG generator is kept out of the repo; recover it with `git show 6a16a89:scripts/gen-icons.mjs` if the colours change. |
+| `public/sw.js` | Hand-written service worker, no workbox. |
+| `components/pwa/RegisterSW.tsx` | Registers `/sw.js?v=<build id>` only in production bundles and shows a bilingual "new version — tap to reload" toast. The build id is read in `app/layout.tsx` at build time (`process.env.__VINEXT_BUILD_ID`, else `BUILD_ID`, else `"dev"`) and baked into the exported HTML. |
 
 ### Service worker strategy (`public/sw.js`)
 
-- `CACHE_VERSION` names the cache: `taka-<build id>-<SW_REVISION>`, where the build id comes from the worker's own URL (`/sw.js?v=…`, registered by `RegisterSW`) and `SW_REVISION` is a constant in `sw.js`. A new deploy therefore registers a new worker URL and gets a fresh cache automatically; `activate` deletes every other `taka-*` cache and calls `clients.claim()`. Bump `SW_REVISION` by hand whenever the precache list or a strategy changes (the only manual step left). If a host ever serves the app without a build id, the cache is `taka-dev-<revision>` and only the revision bump invalidates it.
-- **install**: precaches `/`, `/bn/plan`, `/en/plan`, `/manifest.webmanifest`, `/api/rates`. Each URL is fetched independently; a failure (offline, route not deployed yet) skips that URL instead of failing the install. Redirected responses are re-wrapped so the Cache API can answer a navigation with them.
-- **navigations**: network-first with a 3 s timeout, then the cached page itself, then the cached same-locale `/plan` shell (locale from the first path segment, default `bn`). Successful query-free loads of a precached URL or `/{locale}/plan` refresh the cache; a load with a search string (`/bn/plan?demo=1`) is served but never stored, so the shell entry (keyed by pathname) stays the plain page.
-- `/_next/static/*`: cache-first (content-hashed, immutable).
-- `/api/rates`: stale-while-revalidate (cached copy answers immediately, network refreshes the cache).
-- `/admin*` and `/api/admin*`: never intercepted, never cached. Everything else: network only (no `respondWith`).
+- `CACHE_VERSION` names the cache: `taka-<build id>-<SW_REVISION>`, where the build id comes from the worker's own URL (`/sw.js?v=…`) and `SW_REVISION` is a constant in `sw.js`. A new deploy registers a new worker URL and gets a fresh cache; `activate` deletes every other `taka-*` cache and calls `clients.claim()`. Bump `SW_REVISION` by hand whenever the precache list or a strategy changes.
+- **install**: precaches `/`, `/bn/plan`, `/en/plan`, `/manifest.webmanifest`, `/api/rates`. A failure skips that URL instead of failing the install.
+- **navigations**: network-first with a 3 s timeout, then the cached page, then the cached same-locale `/plan` shell. Loads with a search string are served but never stored.
+- `/_next/static/*`: cache-first (content-hashed, immutable). `/api/rates`: stale-while-revalidate. `/admin*` and `/api/admin*`: never intercepted, never cached.
 
 ### Bundle budget
 
-```bash
-npm run build && npm run start                       # production preview on :3001
-BASE_URL=http://localhost:3001 npm run check:bundle  # BASE_URL defaults to :3001
-```
-
-Loads `/bn/plan?demo=1` and `/` in Playwright's Chromium (375 px, cache disabled, service worker blocked) and sums the transfer size of every script response via CDP (`Network.loadingFinished` `encodedDataLength`). Vite preview sends no `Content-Encoding`, so in that case the script reports the gzip size of each body as the transfer size (that is what Cloudflare's edge sends). Fails with exit 1 above `BUNDLE_LIMIT` (default 300 000 bytes). Always run it against a production build; the dev server serves unminified modules. Baseline on 30 Oct 2026 (stub plan page): ~161 KB gzip / ~531 KB raw for `/bn/plan`, ~150 KB gzip for `/`.
+Loads `/bn/plan?demo=1` and `/` in Playwright's Chromium (375 px, cache disabled, service worker blocked) and sums the transfer size of every script response via CDP. When the server sends no `Content-Encoding` (local preview), the gzip size of each body is used, which is what Cloudflare's edge sends. Fails above `BUNDLE_LIMIT` (default 300 000 bytes). 31 Oct 2026 on the Pages preview: 189 KB for the two pages' scripts.
 
 ### E2E
 
-```bash
-npm run test:e2e                                                    # onboarding spec; Playwright starts the dev server on :3001
-E2E_EXPECT_PLAN=1 npm run test:e2e                                  # once the engine is wired: require the "Save …" headline
-npm run build && npm run start                                      # then, in another shell:
-BASE_URL=http://localhost:3001 npx playwright test e2e/offline.spec.ts
-```
+- `onboarding.spec.ts`: `/` → English → five answers → `/en/plan` in at most 8 taps, then the locale switch and a Bangla digit.
+- `offline.spec.ts`: waits for the service worker to control the page and cache `/bn/plan`, goes offline, reloads, and asserts the service worker answered.
+- `static-pages.spec.ts`: the client-side locale redirect at `/`, client navigation through the exported `.txt` RSC payloads, the 404 page for an unknown locale, and the admin gate (wrong password, sign-in, sign-out). The admin password comes from `E2E_ADMIN_PASSWORD` or `.dev.vars`.
 
-- `onboarding.spec.ts`: `/` → English → five answers (28 / 50 000 / 30 000 / no one / no debt) → `/en/plan`, asserts at most 8 taps (the one-time disclaimer "I understand" is not counted), then the header locale switch and a Bangla digit on the page. Without `E2E_EXPECT_PLAN=1` the plan page may still show the `errors.engineNotReady` message, and the test **skips** (does not fail) when `/en/start/1` shows no question input because `app/[locale]/start/[step]` is not landed yet.
-- `offline.spec.ts`: skipped unless `BASE_URL` is set (the service worker registers only in production builds). Waits for the worker to control the page and for `/bn/plan` to land in the `taka-*` cache, then `context.setOffline(true)`, reloads, and asserts the reload was answered by the service worker and the headline is still on the page.
+## CI (`.github/workflows/ci.yml`)
 
-### CI (`.github/workflows/ci.yml`)
-
-- Triggers: every pull request, and pushes to `main` (not every branch, so a PR branch is not checked twice).
-- `check`: `npm ci` → `npm run typecheck` (which runs `cf workers types` itself) → `npm test` → `npx cf build` → `npx cf deploy --prebuilt --mode production --dry-run` (needs no login; `D1_DATABASE_ID` comes from repository **variables**).
-- `e2e` (`continue-on-error: true` while the UI slices land): installs Chromium, migrates the local D1, runs the onboarding spec against the dev server, then builds, starts the preview on :3001 in the background, runs the offline spec and `npm run check:bundle` against it. The Playwright report is uploaded as an artifact.
-- `deploy` (push to `main`, after `check`): `npx cf build && npx cf deploy --prebuilt --mode production` with secrets `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` and variable `D1_DATABASE_ID`. Remote D1 migrations (`npm run db:migrate:remote`) stay a manual step until the token scopes are proven; `/api/rates` serves the bundled seed with `X-Rates-Source: fallback` meanwhile.
+- Triggers: every pull request, and pushes to `main`.
+- `check`: `npm ci` → typecheck → unit tests → `npm run build` (with the export guard) → `wrangler pages functions build`.
+- `e2e`: installs Chromium, migrates the local D1, builds, starts `npm run preview` in the background, then `npm run smoke`, all Playwright specs and the bundle budget. The Playwright report is uploaded as an artifact.
+- No deploy job: Cloudflare Pages builds and deploys the repository itself (DEPLOY.md). GitHub holds no Cloudflare credentials.

@@ -1,7 +1,7 @@
 "use client";
 /** Admin chrome: English dictionary provider, top bar with the three sections and sign-out. */
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/components/ui/cn";
@@ -9,6 +9,7 @@ import { I18nProvider } from "@/lib/i18n/provider";
 import type { Dictionary } from "@/lib/i18n/types";
 import { useT } from "@/lib/i18n/useT";
 import { adminApi, clearPreviewSeen } from "./api";
+import { useAdminSession } from "./AdminGate";
 
 export interface AdminProvidersProps {
   dict: Dictionary;
@@ -33,7 +34,7 @@ const LINKS = [
 export function AdminShell({ children }: { children: ReactNode }) {
   const { t } = useT();
   const pathname = usePathname();
-  const router = useRouter();
+  const session = useAdminSession();
   const [signingOut, setSigningOut] = useState(false);
 
   async function signOut() {
@@ -41,7 +42,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
     try {
       await adminApi.logout();
       clearPreviewSeen();
-      router.refresh();
+      await session.refresh();
     } finally {
       setSigningOut(false);
     }

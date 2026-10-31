@@ -1,14 +1,14 @@
 "use client";
 /** Password-only sign-in. On success the server layout re-renders with the cookie set. */
-import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import { useT } from "@/lib/i18n/useT";
 import { AdminApiError, adminApi, errorMessage } from "./api";
+import { useAdminSession } from "./AdminGate";
 
 export function LoginForm() {
   const { t } = useT();
-  const router = useRouter();
+  const session = useAdminSession();
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -21,7 +21,7 @@ export function LoginForm() {
     try {
       await adminApi.login(password);
       setPassword("");
-      router.refresh();
+      await session.refresh();
     } catch (err) {
       setError(err instanceof AdminApiError && err.status === 401 ? t("admin.login.failed") : t("admin.state.error", { message: errorMessage(err) }));
       setBusy(false);

@@ -1,0 +1,16 @@
+# Local-only wrangler config for D1 migrations and `wrangler pages dev`.
+#
+# It lives in config/ on purpose: vinext treats any wrangler.toml / cloudflare.config.ts in the
+# project root as a Cloudflare *Workers* project and then refuses the static export that
+# Cloudflare Pages serves. Production settings (D1 binding, compatibility date, ADMIN_PASSWORD
+# secret) live in the Pages project itself; see docs/DEPLOY.md.
+#
+# The local database id below is a placeholder; wrangler keeps the data in .wrangler/state.
+name = "taka-plan"
+compatibility_date = "2026-10-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "taka-plan"
+database_id = "00000000-0000-4000-8000-000000000001"
+migrations_dir = "../migrations"

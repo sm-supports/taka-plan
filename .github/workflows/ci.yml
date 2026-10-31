@@ -1,15 +1,16 @@
 name: CI
 
-# Pull requests run `check` + `e2e`; pushes to main run both and then `deploy`.
-# (Pull requests only, not every branch push, so a PR branch is not checked twice.)
+# GitHub Actions only checks the code. Deploys are done by Cloudflare Pages itself: the Pages
+# project is connected to this repository and builds every push (main = production, other
+# branches = preview). See docs/DEPLOY.md.
 on:
   pull_request:
   push:
     branches: [main]
 
 env:
-  CF_SEND_TELEMETRY: "false"
   CI: "1"
+  WRANGLER_SEND_METRICS: "false"
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
@@ -17,7 +18,7 @@ concurrency:
 
 jobs:
   check:
-    name: Typecheck, unit tests, build, deploy dry-run
+    name: Typecheck, unit tests, static export, Functions build
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -27,20 +28,17 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      # `npm run typecheck` runs `cf workers types` itself before tsc.
       - run: npm run typecheck
       - run: npm test
-      - run: npx cf build
-      - name: Deploy dry run
-        run: npx cf deploy --prebuilt --mode production --dry-run
-        env:
-          D1_DATABASE_ID: ${{ vars.D1_DATABASE_ID }}
+      # vite build + scripts/check-export.mjs (fails if any page dropped out of the export).
+      - run: npm run build
+      - name: Pages Functions compile
+        run: npx wrangler pages functions build --outdir "$RUNNER_TEMP/functions-out"
 
   e2e:
-    name: Playwright, offline and bundle budget
+    name: Playwright on the Pages runtime, bundle budget
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -48,30 +46,21 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npx cf workers types
       - run: npx playwright install --with-deps chromium
       - run: cp .dev.vars.example .dev.vars
       - run: npm run db:migrate:local
-      - name: Onboarding e2e (dev server)
-        run: npm run test:e2e
-      - name: Production build
-        run: npm run build
-      - name: Start production preview
+      - run: npm run build
+      - name: Start the Pages preview (static export + Functions + local D1)
         run: |
-          npm run start > preview.log 2>&1 &
-          for i in $(seq 1 60); do
-            if curl -fsS http://localhost:3001/api/health > /dev/null; then exit 0; fi
+          npm run preview > preview.log 2>&1 &
+          for i in $(seq 1 90); do
+            if curl -fsS http://localhost:8788/api/health > /dev/null; then exit 0; fi
             sleep 1
           done
           echo "preview did not come up"; cat preview.log; exit 1
-      - name: Offline e2e (production preview)
-        run: npx playwright test e2e/offline.spec.ts
-        env:
-          BASE_URL: http://localhost:3001
-      - name: Bundle budget
-        run: npm run check:bundle
-        env:
-          BASE_URL: http://localhost:3001
+      - run: npm run smoke
+      - run: npx playwright test
+      - run: npm run check:bundle
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -82,27 +71,3 @@ jobs:
             preview.log
           if-no-files-found: ignore
           retention-days: 7
-
-  deploy:
-    name: Deploy to Cloudflare
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: check
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    environment: production
-    env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      D1_DATABASE_ID: ${{ vars.D1_DATABASE_ID }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-          cache: npm
-      - run: npm ci
-      - run: npx cf workers types
-      - run: npx cf build
-      # Remote D1 migrations are applied by a person (npm run db:migrate:remote) until the
-      # first deploy has proven the token scopes; the API falls back to the bundled seed meanwhile.
-      - run: npx cf deploy --prebuilt --mode production

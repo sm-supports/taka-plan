@@ -1,27 +1,26 @@
-// The only file that touches `cloudflare:workers`. Tests swap the repo via setRatesRepoForTests.
-import { env } from "cloudflare:workers";
-import { D1RatesRepo, type RatesRepo } from "./db";
+// Bindings arrive on the Pages Functions context; functions/api/_middleware.ts calls bindEnv() per request.
+import { D1RatesRepo, type D1Like, type RatesRepo } from "./db";
 
-interface TakaEnv {
-  DB: D1Database;
+export interface TakaEnv {
+  DB?: D1Like;
   ADMIN_PASSWORD?: string;
 }
 
+let current: TakaEnv = {};
+export function bindEnv(env: TakaEnv): void {
+  current = env;
+}
 export function getEnv(): TakaEnv {
-  return env as unknown as TakaEnv;
+  return current;
 }
 
 let override: RatesRepo | null = null;
-
-/** Inject an in-memory repo for route-handler tests; pass null to restore D1. */
 export function setRatesRepoForTests(repo: RatesRepo | null): void {
   override = repo;
 }
-
 export function getRatesRepo(): RatesRepo {
-  return override ?? new D1RatesRepo(getEnv().DB);
+  return override ?? new D1RatesRepo(getEnv().DB as D1Like);
 }
-
 export function getAdminPassword(): string | undefined {
   const p = getEnv().ADMIN_PASSWORD;
   return p && p.length > 0 ? p : undefined;

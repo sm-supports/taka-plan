@@ -24,10 +24,8 @@ export default defineConfig({
         test: { name: "lib", include: ["lib/**/*.test.{ts,tsx}", "components/**/*.test.{ts,tsx}", "test/**/*.test.ts"], environment: "node" },
       },
       {
-        resolve: {
-          alias: [...alias, { find: "cloudflare:workers", replacement: path.join(root, "test/stubs/cloudflare-workers.ts") }],
-        },
-        test: { name: "api", include: ["app/api/**/*.test.ts"], environment: "node" },
+        resolve: { alias },
+        test: { name: "api", include: ["server/api/**/*.test.ts"], environment: "node", setupFiles: ["test/stubs/bind-env.ts"] },
       },
     ],
   },

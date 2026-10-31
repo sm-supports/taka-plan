@@ -1,0 +1,10 @@
+# Used only by `npm run db:migrate:remote` to apply migrations/ to the production D1 database.
+# The id is not a secret. Lives in config/ for the same reason as wrangler.local.toml.
+name = "taka-plan"
+compatibility_date = "2026-10-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "taka-plan"
+database_id = "3ef54377-b581-44fd-baf8-438aa5247226"
+migrations_dir = "../migrations"

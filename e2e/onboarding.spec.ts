@@ -1,7 +1,7 @@
 /**
  * Onboarding smoke: language pick → five questions → plan, in at most eight taps.
  *
- * Runs against the dev server by default (playwright.config.ts starts it) or BASE_URL.
+ * Runs against the local Pages preview by default (playwright.config.ts starts it) or BASE_URL.
  * Set E2E_EXPECT_PLAN=1 once the engine is wired to require the "Save ৳X a month" headline;
  * until then the plan page may show the engineNotReady message instead.
  */

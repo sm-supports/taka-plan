@@ -1,4 +1,4 @@
-// Response headers every HTML / JSON response should carry (SEC-8). Pure: shared by proxy.ts and the route helpers.
+// Response headers every HTML / JSON response should carry (SEC-8). Pure: API responses get them from json() in lib/server/http.ts; static pages get the same values from public/_headers (kept in sync by test/security-headers.test.ts).
 
 export const SECURITY_HEADERS: Readonly<Record<string, string>> = {
   "X-Content-Type-Options": "nosniff",

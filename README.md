@@ -1,11 +1,19 @@
-# vinext app
+# Taka Plan
 
-This project was created with create-vinext-app.
+A free, mobile-first Bangla/English personal-finance planner for Bangladesh: five questions, one monthly savings plan, and calculators for an emergency fund, debt health, save-first budgeting and goals. Built with [vinext](https://github.com/cloudflare/vinext) as a static export, hosted on Cloudflare Pages with Pages Functions and D1 for the rates API.
 
-## Scripts
+- Product spec: [docs/PRD.md](docs/PRD.md)
+- Architecture: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- Commands and gotchas: [docs/TOOLING.md](docs/TOOLING.md)
+- Deployment: [docs/DEPLOY.md](docs/DEPLOY.md)
 
-- `pnpm run dev` starts the vinext dev server.
-- `pnpm run build` builds the Cloudflare Worker output.
-- `pnpm run start` previews the built Worker locally.
-- `pnpm run deploy` deploys the Cloudflare Worker.
+## Quick start
 
+```bash
+nvm use && npm ci && cp .dev.vars.example .dev.vars
+npm run db:migrate:local
+npm run build && npm run preview   # http://localhost:8788, same runtime as production
+npm run dev                        # http://localhost:3001, fast UI work without the API
+```
+
+Taka Plan gives general information, not financial advice.

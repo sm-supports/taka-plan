@@ -7,14 +7,14 @@
 // without Content-Encoding (Vite preview does), the transfer size is estimated as gzip of the body,
 // which is what Cloudflare's edge sends to a phone.
 //
-// Run against a PRODUCTION build (`npm run build && npm run start`), not the dev server: dev
+// Run against a PRODUCTION build (`npm run build && npm run preview`), not the dev server: dev
 // serves unminified modules and would always fail.
-//   BASE_URL=http://localhost:3001 node scripts/check-bundle.mjs
+//   BASE_URL=http://localhost:8788 node scripts/check-bundle.mjs
 //   BUNDLE_LIMIT=300000 overrides the byte budget.
 import { gzipSync } from "node:zlib";
 import { chromium } from "@playwright/test";
 
-const BASE_URL = (process.env.BASE_URL ?? "http://localhost:3001").replace(/\/$/, "");
+const BASE_URL = (process.env.BASE_URL ?? "http://localhost:8788").replace(/\/$/, "");
 const LIMIT = Number(process.env.BUNDLE_LIMIT ?? 300_000);
 const PAGES = ["/bn/plan?demo=1", "/"];
 const SETTLE_MS = 750;
@@ -132,6 +132,6 @@ async function main() {
 
 main().catch((error) => {
   console.error(`Bundle check could not run against ${BASE_URL}: ${error instanceof Error ? error.message : String(error)}`);
-  console.error("Start a production preview first: npm run build && npm run start");
+  console.error("Start a production preview first: npm run build && npm run preview");
   process.exit(1);
 });

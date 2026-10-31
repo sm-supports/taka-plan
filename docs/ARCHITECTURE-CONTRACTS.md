@@ -1,5 +1,7 @@
 # Architecture contracts (Stage 0)
 
+> **Superseded hosting notes (31 Oct 2026):** the app now ships as a static export on Cloudflare Pages with Pages Functions for `/api/*` (see [ARCHITECTURE.md](ARCHITECTURE.md) and [DEPLOY.md](DEPLOY.md)). Mentions below of `cloudflare.config.ts`, the `cf` CLI, `app/api/**` route handlers, `proxy.ts` and Workers deploys describe the original build; the engine, rates and i18n contracts are unchanged. Route handlers now live in `server/api/**`.
+
 Extracted from the approved build plan. Every Stage 1 slice codes against the contracts below; the TypeScript files under `packages/engine/src`, `lib/store`, `lib/rates`, `lib/server` and `lib/i18n` are the source of truth where they differ.
 
 ## Architecture

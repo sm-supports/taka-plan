@@ -1,10 +1,9 @@
 /**
  * Offline smoke: the plan shell still renders with the network cut.
  *
- * Needs a PRODUCTION preview because the service worker registers only in production builds:
- *   npm run build && npm run start          # serves the built Worker on port 3001
- *   BASE_URL=http://localhost:3001 npx playwright test e2e/offline.spec.ts
- * Without BASE_URL (dev server) the test is skipped.
+ * Needs a PRODUCTION build because the service worker registers only in production builds:
+ *   npm run build && npx playwright test e2e/offline.spec.ts   # playwright.config.ts starts `npm run preview`
+ * Skipped when BASE_URL is unset (it is always set by playwright.config.ts).
  */
 import { expect, test } from "@playwright/test";
 
@@ -14,7 +13,7 @@ const EXPECT_PLAN = process.env.E2E_EXPECT_PLAN === "1";
 const HEADLINE = EXPECT_PLAN ? /সঞ্চয় করুন/ : /সঞ্চয় করুন|টাকা প্ল্যান/;
 
 test.describe("offline", () => {
-  test.skip(!BASE_URL, "needs BASE_URL pointing at a production preview (npm run build && npm run start)");
+  test.skip(!BASE_URL, "needs BASE_URL pointing at a production build (npm run build && npm run preview)");
 
   test("plan page renders after going offline", async ({ page, context }) => {
     await page.goto("/bn/plan?demo=1");

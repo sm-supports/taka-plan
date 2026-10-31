@@ -3,7 +3,7 @@ import { SAMPLE_PROFILE_IDS } from "@taka/engine";
 import { FakeRatesRepo } from "@/test/fakes/fakeRatesRepo";
 import { setRatesRepoForTests } from "@/lib/server/env";
 import { ADMIN_COOKIE, PLACEHOLDER_PASSWORD, createSessionCookie, isAdmin, isLocalHost, readCookie, verifyPassword, verifySessionToken } from "@/lib/server/admin-auth";
-import { env } from "cloudflare:workers";
+import { testEnv as env } from "@/test/stubs/test-env";
 import type { AdminRatesResponse, PreviewResponse } from "@/components/admin/types";
 import { POST as login } from "./login/route";
 import { POST as logout } from "./logout/route";
@@ -11,6 +11,7 @@ import { GET as getRates, PUT as putRates } from "./rates/route";
 import { POST as publish } from "./publish/route";
 import { POST as discard } from "./discard/route";
 import { GET as preview } from "./preview/route";
+import { GET as session } from "./session/route";
 
 const BASE = "http://localhost/api/admin";
 const CSRF = { "content-type": "application/json", "x-requested-with": "taka-admin" };
@@ -106,6 +107,15 @@ describe("admin routes", () => {
 
     const https = await login(new Request("https://example.com/api/admin/login", { method: "POST", headers: CSRF, body: JSON.stringify({ password: "test-pass" }) }));
     expect(https.headers.get("set-cookie")).toContain("; Secure");
+  });
+
+  it("session: admin false without a cookie or with a forged one, true after sign-in, never cached", async () => {
+    const anon = await session(get("session"));
+    expect(anon.status).toBe(200);
+    expect(anon.headers.get("cache-control")).toBe("no-store");
+    expect(await anon.json()).toEqual({ admin: false });
+    expect(await (await session(get("session", { cookie: `${ADMIN_COOKIE}=9999999999999.${"0".repeat(64)}` }))).json()).toEqual({ admin: false });
+    expect(await (await session(get("session", await signIn()))).json()).toEqual({ admin: true });
   });
 
   it("login without the CSRF header is 403", async () => {
