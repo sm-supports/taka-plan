@@ -39,7 +39,7 @@ if (existsSync(reportPath)) {
 // 3. The pages and files the app and the service worker rely on.
 const LOCALES = ["bn", "en", "hi", "ur", "ar", "es", "fr", "pt", "id", "zh", "ru", "sw"];
 const PAGES = ["", "/plan", "/m1", "/m3", "/m4", "/m5", "/about", "/start/1", "/start/2", "/start/3", "/start/4", "/start/5"];
-const required = ["index.html", "404.html", "admin.html", "admin/log.html", "admin/preview.html", "_headers", "_routes.json", "manifest.webmanifest", "sw.js"];
+const required = ["index.html", "404.html", "admin.html", "admin/log.html", "admin/preview.html", "admin/countries.html", "_headers", "_routes.json", "manifest.webmanifest", "sw.js"];
 for (const l of LOCALES) for (const p of PAGES) required.push(`${l}${p}.html`);
 for (const f of required) if (!existsSync(path.join(out, f))) problems.push(`missing dist/client/${f}`);
 

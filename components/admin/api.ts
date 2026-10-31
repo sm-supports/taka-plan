@@ -1,6 +1,7 @@
 "use client";
 // Fetch helpers for /api/admin/*: same-origin, cookie-based, CSRF header on every mutation.
 import type { RatesSnapshot } from "@taka/engine";
+import type { AdminCountryList, AdminCountryResponse, CountryPreviewResponse, EditCountryRequest, StoredCountry } from "./countryTypes";
 import type { AdminRatesResponse, EditRowRequest, PreviewResponse } from "./types";
 
 export class AdminApiError extends Error {
@@ -41,6 +42,16 @@ async function send<T>(method: "POST" | "PUT", path: string, body: unknown): Pro
   if (res.status === 204) return undefined as T;
   return (await res.json()) as T;
 }
+
+/** /api/admin/countries/* (one country per call). */
+export const countryApi = {
+  list: () => getJson<AdminCountryList>("/api/admin/countries"),
+  get: (code: string) => getJson<AdminCountryResponse>(`/api/admin/countries/${encodeURIComponent(code)}`),
+  edit: (code: string, body: EditCountryRequest) => send<StoredCountry>("PUT", `/api/admin/countries/${encodeURIComponent(code)}`, body),
+  publish: (code: string, note: string) => send<{ version: number }>("POST", `/api/admin/countries/${encodeURIComponent(code)}/publish`, { note }),
+  discard: (code: string) => send<void>("POST", `/api/admin/countries/${encodeURIComponent(code)}/discard`, {}),
+  preview: (code: string) => getJson<CountryPreviewResponse>(`/api/admin/countries/${encodeURIComponent(code)}/preview`),
+};
 
 export const adminApi = {
   login: (password: string) => send<void>("POST", "/api/admin/login", { password }),

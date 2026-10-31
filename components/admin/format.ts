@@ -73,3 +73,10 @@ export function formatWhen(iso: string): string {
 export function keyWords(key: string): string {
   return key.replace(/_/g, " ");
 }
+
+/** JSON with object keys sorted, so key order never counts as a change. */
+export function stableJson(x: unknown): string {
+  return JSON.stringify(x ?? null, (_k, v: unknown) =>
+    v && typeof v === "object" && !Array.isArray(v) ? Object.fromEntries(Object.entries(v as Record<string, unknown>).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))) : v,
+  );
+}

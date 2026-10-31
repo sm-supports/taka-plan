@@ -80,7 +80,8 @@ describe("D1RatesRepo over the real migrations", () => {
   });
 
   it("ensureDraft throws when nothing is published and leaves no partial rows", async () => {
-    const db = new SqliteD1().migrate("0001_schema.sql");
+    // Schema only (0004 adds change_log.country, which the rates log queries filter on).
+    const db = new SqliteD1().migrate("0001_schema.sql", "0004_countries.sql");
     await expect(new D1RatesRepo(db).ensureDraft(NOW)).rejects.toThrow(/No published rates version/);
     expect(count(db, "SELECT COUNT(*) AS n FROM rate_versions")).toBe(0);
     expect(count(db, "SELECT COUNT(*) AS n FROM change_log")).toBe(0);

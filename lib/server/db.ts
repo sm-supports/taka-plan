@@ -129,7 +129,7 @@ const SQL = {
     SELECT ?, 'admin', 'create_draft', d.version, NULL, NULL, NULL, 'copied from v' || p.version
     FROM rate_versions d, rate_versions p
     WHERE d.status = 'draft' AND p.status = 'published'
-      AND NOT EXISTS (SELECT 1 FROM change_log l WHERE l.action = 'create_draft' AND l.version = d.version)`,
+      AND NOT EXISTS (SELECT 1 FROM change_log l WHERE l.action = 'create_draft' AND l.version = d.version AND l.country IS NULL)`,
   // updateRow: only rows of a version that is still a draft can change (published versions are immutable).
   updateDraftRow: `UPDATE rates SET value = ?, value_json = ?, range_low = ?, range_high = ?, label_en = ?, label_bn = ?, source_name = ?, source_url = ?, as_of = ?, reviewed_by = ?, next_review = ?, note = ?
     WHERE version = ? AND key = ?
@@ -154,8 +154,9 @@ const SQL = {
   logIfGone: `INSERT INTO change_log (at, actor, action, version, key, old_value, new_value, note)
     SELECT ?, 'admin', 'discard_draft', ?, NULL, NULL, NULL, NULL
     WHERE NOT EXISTS (SELECT 1 FROM rate_versions WHERE version = ?)`,
-  changeLog: `SELECT ${LOG_COLUMNS} FROM change_log ORDER BY id DESC LIMIT ?`,
-  changeLogBefore: `SELECT ${LOG_COLUMNS} FROM change_log WHERE id < ? ORDER BY id DESC LIMIT ?`,
+  // Rates entries only: country edits share the table but carry their code (migrations/0004_countries.sql).
+  changeLog: `SELECT ${LOG_COLUMNS} FROM change_log WHERE country IS NULL ORDER BY id DESC LIMIT ?`,
+  changeLogBefore: `SELECT ${LOG_COLUMNS} FROM change_log WHERE country IS NULL AND id < ? ORDER BY id DESC LIMIT ?`,
 } as const;
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
