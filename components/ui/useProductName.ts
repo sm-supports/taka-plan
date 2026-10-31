@@ -1,9 +1,11 @@
 "use client";
 /**
  * The selected country's name for a product slot, so shared copy can say "{product}" instead of a
- * Bangladesh product name (CD5). Bangla copy keeps the glossary names in the bn dictionary; every
- * other language uses the country's English product name when the country data has one, else the
- * generic term from the dictionary (common.instrument.* for labels, common.productProse.* in prose).
+ * Bangladesh product name (CD5). Bangla copy keeps the glossary names in the bn dictionary. English
+ * uses the country's English product name when the country data has one; a UI language that is the
+ * country's main language uses the country's local name; any other language uses the translated
+ * generic term from the dictionary (common.instrument.* for labels, common.productProse.* in prose),
+ * so no English name ever lands inside a translated sentence.
  */
 import type { Instrument } from "@taka/engine";
 import { useCountry } from "@/lib/country/useCountry";
@@ -31,8 +33,16 @@ export interface ProductNames {
 
 export function useProductName(): ProductNames {
   const { t, locale } = useT();
-  const { context } = useCountry();
-  const english = (slot: Instrument): string | null => (locale === "bn" ? null : (context.instrumentNames?.[slot]?.en ?? null));
+  const { context, profile } = useCountry();
+  const mainLanguage = profile?.languages?.[0];
+  const english = (slot: Instrument): string | null => {
+    if (locale === "bn") return null;
+    const names = context.instrumentNames?.[slot];
+    if (!names) return null;
+    if (locale === "en") return names.en ?? null;
+    // The country's own name only when the UI speaks the country's main language.
+    return locale === mainLanguage ? (names.local ?? null) : null;
+  };
   return {
     // Bangladesh labels stay the dictionary's ("3-month FDR", "5-year treasury bond"), which are more
     // precise than the country file's; only the savings-certificate slot, generic in the dictionary,

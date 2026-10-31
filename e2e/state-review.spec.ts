@@ -53,6 +53,8 @@ async function cookie(context: BrowserContext, name: string): Promise<string | u
 }
 
 const HEADLINE = /Save ৳[\d,]+ a month/;
+/** The plan headline in any language: an amount in taka (the headline wording is translated). */
+const ANY_HEADLINE = /৳\s?[\d,]+/;
 
 test.describe("switching country mid-plan", () => {
   test("asks first, keeps the answers as a draft, and writes nothing until the language is picked", async ({ page, context }) => {
@@ -253,7 +255,7 @@ test.describe("offline", () => {
       expect(r?.ok()).toBe(true);
       expect(r?.fromServiceWorker()).toBe(true);
       await expect(page.locator("html")).toHaveAttribute("lang", "hi-IN");
-      await expect(page.getByText(HEADLINE).first()).toBeVisible({ timeout: 15_000 });
+      await expect(page.getByText(ANY_HEADLINE).first()).toBeVisible({ timeout: 15_000 });
     } finally {
       await context.setOffline(false);
     }
