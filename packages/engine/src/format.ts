@@ -183,9 +183,20 @@ export function formatNumber(n: number, o: { digits: Digits; decimals?: number }
   return localiseDigits(v, o.digits);
 }
 
+/** Intl tags for the locales whose month words come from Intl (Latin digits everywhere). */
+const INTL_TAGS: Partial<Record<Locale, string>> = { hi: "hi-IN-u-nu-latn", ur: "ur-PK-u-nu-latn", ar: "ar-u-nu-latn", es: "es", fr: "fr", pt: "pt", id: "id-ID", zh: "zh-Hans", ru: "ru", sw: "sw" };
+
 export function formatMonths(m: number, locale: Locale): string {
   const v = Number.isInteger(m) ? String(m) : (Math.round(m * 10) / 10).toFixed(1);
   if (locale === "bn") return `${toBanglaDigits(v)} মাস`;
+  const tag = INTL_TAGS[locale];
+  if (tag) {
+    try {
+      return new Intl.NumberFormat(tag, { style: "unit", unit: "month", unitDisplay: "long", maximumFractionDigits: 1 }).format(Number(v));
+    } catch {
+      // Older runtimes without unit formatting fall through to English.
+    }
+  }
   return `${v} ${m === 1 ? "month" : "months"}`;
 }
 
@@ -198,6 +209,14 @@ export function formatAsOf(iso: ISODate, locale: Locale): string {
   if (!m) return iso;
   const year = m[1] ?? "";
   const month = Number(m[2]) - 1;
+  const tag = INTL_TAGS[locale];
+  if (tag && month >= 0 && month < 12) {
+    try {
+      return new Intl.DateTimeFormat(tag, { month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(Date.UTC(Number(year), month, 15)));
+    } catch {
+      // fall through to English
+    }
+  }
   const name = (locale === "bn" ? MONTHS_BN : MONTHS_EN)[month];
   if (!name) return iso;
   return locale === "bn" ? `${name} ${toBanglaDigits(year)}` : `${name} ${year}`;

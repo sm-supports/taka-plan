@@ -272,3 +272,24 @@ describe("parseMoneyInput currency tokens", () => {
     expect(parseMoneyInput("2 مليون")).toBe(2000000);
   });
 });
+
+describe("months and as-of dates in every locale", () => {
+  it("uses the locale's own words outside bn and en, with Latin digits", () => {
+    expect(formatMonths(3, "en")).toBe("3 months");
+    expect(formatMonths(1, "en")).toBe("1 month");
+    expect(formatMonths(3, "bn")).toBe("৩ মাস");
+    for (const l of ["hi", "ur", "ar", "es", "fr", "pt", "id", "zh", "ru", "sw"] as const) {
+      const s = formatMonths(14, l);
+      expect(s, l).toMatch(/14/);
+      expect(s, l).not.toMatch(/months/);
+      const d = formatAsOf("2026-09-30", l);
+      expect(d, l).toMatch(/2026/);
+    }
+    expect(formatAsOf("2026-09-30", "zh")).toBe("2026年9月");
+    expect(formatAsOf("2026-09-30", "fr")).toMatch(/sept/);
+    expect(formatAsOf("2026-09-30", "en")).toBe("Sep 2026");
+    expect(formatMonths(14, "ru")).toMatch(/месяц/);
+    expect(formatMonths(14, "es")).toMatch(/meses/);
+  });
+});
+
