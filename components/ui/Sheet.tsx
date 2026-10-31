@@ -72,7 +72,7 @@ export function Sheet({ open, onClose, title, children }: SheetProps) {
         className="relative flex max-h-[85dvh] w-full max-w-md flex-col rounded-t-2xl bg-surface text-start shadow-xl sm:rounded-2xl"
       >
         <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3">
-          <h2 id={titleId} className="text-start text-lg font-bold text-text">
+          <h2 id={titleId} dir="auto" className="text-start text-lg font-bold text-text">
             {title}
           </h2>
           <button type="button" onClick={onClose} aria-label={t("common.button.close")} className="tap -me-2 inline-flex items-center justify-center rounded-xl text-text-muted hover:bg-surface-muted">

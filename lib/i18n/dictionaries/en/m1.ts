@@ -34,7 +34,7 @@ export const m1 = {
     },
     liquidSavings: {
       label: "Savings you can reach today",
-      hint: "Cash, savings accounts and FDRs you could cash within a few days. Not Sanchayapatra, shares or gold.",
+      hint: "Cash, savings accounts and deposits you could cash within a few days. Not money in a {product}, shares or gold.",
     },
     months: {
       label: "Months of cover",
@@ -69,22 +69,22 @@ export const m1 = {
       fdrSlices: "Three FDRs of {amount} each, one opened every month.",
       banksNeeded: "Banks to spread across",
       banksNeededHint: "Deposit insurance covers only {limit} per bank, so keep no more than that in any one bank.",
-      sanchayapatraLayer: "Third layer: Sanchayapatra",
-      sanchayapatraLayerHint: "Your buffer is large enough that part of it can sit in Sanchayapatra, which pays more but costs a penalty if cashed early.",
+      sanchayapatraLayer: "Third layer: {product}",
+      sanchayapatraLayerHint: "Your buffer is large enough that part of it can sit in a {product}, which pays more but costs a penalty if cashed early.",
     },
   },
 
   rule: {
     noStocks: "No shares or equity funds for this money. It must be there, at full value, on a bad day.",
-    sanchayapatraThirdLayer: "Sanchayapatra is only a third layer for a very large buffer: it pays more, but cashing it early costs you part of the profit.",
+    sanchayapatraThirdLayer: "A {product} is only a third layer for a very large buffer: it pays more, but cashing it early costs you part of the profit.",
     cardBridge: "A credit card can bridge the one or two days an FDR takes to cash — only if you pay the bill in full inside the grace period.",
     refill: "Used the fund? Refill it before you put money anywhere else.",
     notAnEmergency: "A holiday, a phone or a wedding gift is not an emergency. Save for those as goals.",
   },
 
   next: {
-    openSavings: "Open a savings account at any scheduled bank with your NID; move one month of essentials into it and set up the standing transfer for the rest.",
-    fdrLadder: "Visit any scheduled bank with your NID and TIN; ask for a 3-month FDR. Open one each month for three months so one matures every month.",
+    openSavings: "Open a savings account at any bank with your national ID; move one month of essentials into it and set up the standing transfer for the rest.",
+    fdrLadder: "Visit any bank with your national ID and tax number; ask for a 3-month {product}. Open one each month for three months so one matures every month.",
     splitBanks: "Your fund is bigger than the deposit-insurance limit for one bank. Open FDRs at a second bank so no bank holds more than the limit.",
     full: "Your fund is full. Keep the FDRs rolling, and refill the fund after any withdrawal before saving elsewhere.",
   },

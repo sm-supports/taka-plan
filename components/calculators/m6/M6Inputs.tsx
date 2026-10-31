@@ -14,7 +14,7 @@ import { useT } from "@/lib/i18n/useT";
 import type { M6State } from "@/lib/store/types";
 import { Field, Section } from "../shared/Figures";
 import { answerOrder } from "./M6Flow";
-import { HORIZON_MAX, HORIZON_MIN, RISK_KEYS, type RiskKey } from "./input";
+import { HORIZON_MAX, HORIZON_MIN, horizonAnswerFor, RISK_KEYS, type RiskKey } from "./input";
 
 export interface M6InputsProps {
   /** What the engine runs with. */
@@ -39,7 +39,7 @@ export function M6Inputs({ input, storedRisk, suggestedProfile, goldBounds, noEq
 
   return (
     <Section title={t("m6.section.inputs")} id="m6-inputs">
-      {RISK_KEYS.map((k) => (
+      {RISK_KEYS.filter((k) => k !== "horizon").map((k) => (
         <Field key={k} id={`m6-${k}`} label={t(`m6.input.${k}.label`)}>
           <ChoiceButtons<string>
             label={t(`m6.input.${k}.label`)}
@@ -85,7 +85,7 @@ export function M6Inputs({ input, storedRisk, suggestedProfile, goldBounds, noEq
       <SliderWithNumber
         id="m6-horizon"
         value={input.horizonYears}
-        onChange={(n) => write({ horizonYears: n })}
+        onChange={(n) => write({ horizonYears: n, risk: { ...storedRisk, horizon: horizonAnswerFor(n) } })}
         min={HORIZON_MIN}
         max={HORIZON_MAX}
         step={1}

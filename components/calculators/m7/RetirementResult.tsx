@@ -18,6 +18,7 @@ import {
   type SupportRatio,
 } from "@taka/engine";
 import { WhyButton } from "@/components/explain/WhyButton";
+import { localizeName } from "@/components/explain/localizeName";
 import { BigNumber } from "@/components/ui/BigNumber";
 import { Card } from "@/components/ui/Card";
 import { StatusPill } from "@/components/ui/StatusPill";
@@ -51,6 +52,20 @@ export interface RetirementResultProps {
   mixUsed?: boolean;
 }
 
+/**
+ * The plan's explain steps without the income sources the person has not added: no provident fund,
+ * gratuity or pension step reading "৳0" for something they never told us about.
+ */
+export function planStepsFor(result: M7Result): readonly M7StepId[] {
+  const inc = result.income;
+  return PLAN_STEPS.filter(
+    (id) =>
+      !(id === "m7.providentFund" && !(inc.providentFundAtRetirement > 0)) &&
+      !(id === "m7.gratuity" && !(inc.gratuity > 0)) &&
+      !(id === "m7.fixedPensions" && !(inc.fixedPensionsValue > 0) && !(inc.publicPensionMonthly > 0)),
+  );
+}
+
 export function verdictKey(kind: M7Result["verdict"]["kind"]): string {
   return `m7.result.verdict.${kind}`;
 }
@@ -80,7 +95,7 @@ export function RetirementResult({ result, input, earlier, later, mixUsed }: Ret
             label={t("m7.result.headline")}
             value={
               <>
-                {f.money(result.targets.plan.monthlySaving)}
+                <bdi>{f.money(result.targets.plan.monthlySaving)}</bdi>
                 <span className="ms-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
               </>
             }
@@ -92,7 +107,7 @@ export function RetirementResult({ result, input, earlier, later, mixUsed }: Ret
           />
           <p className="text-sm text-text-muted">{t("m7.result.currentSaving", { amount: f.money(input.monthlySaving) })}</p>
           {mixUsed && <p className="text-xs text-text-faint">{t("m7.result.mixUsed")}</p>}
-          <WhyButton explanation={result.explain} stepIds={PLAN_STEPS} />
+          <WhyButton explanation={result.explain} stepIds={planStepsFor(result)} />
         </Card>
       ) : (
         <RetiredHeadline result={result} input={input} verdict={verdict} />
@@ -113,8 +128,21 @@ export function RetirementResult({ result, input, earlier, later, mixUsed }: Ret
         </Card>
       )}
 
+      {!working && result.withdrawal?.monthlyRange && (
+        <Card header={<h3 className="text-base font-semibold text-text">{t("m7.retired.range.title")}</h3>} data-testid="m7-withdrawal-range">
+          <FigureList
+            items={[
+              { key: "low", label: t("m7.retired.range.low"), value: t("m7.result.shift.perMonth", { amount: f.money(result.withdrawal.monthlyRange.low) }) },
+              { key: "base", label: t("m7.result.range.base"), value: t("m7.result.shift.perMonth", { amount: f.money(result.withdrawal.monthlyRange.base) }) },
+              { key: "high", label: t("m7.result.range.high"), value: t("m7.result.shift.perMonth", { amount: f.money(result.withdrawal.monthlyRange.high) }) },
+            ]}
+          />
+          <p className="mt-2 text-xs text-text-faint">{t("m7.retired.range.hint")}</p>
+        </Card>
+      )}
+
       <Card header={<h3 className="text-base font-semibold text-text">{t("m7.result.chart.title")}</h3>}>
-        <p className="mb-3 text-sm text-text-muted">{t("m7.result.chart.hint")}</p>
+        <p className="mb-3 text-sm text-text-muted">{t(working ? "m7.result.chart.hint" : "m7.retired.chartHint")}</p>
         <LongevityChart points={result.simulation} retirementAge={result.retirementAge} contrastAge={contrastAge} verdict={result.verdict} verdictText={verdictText} />
         <div className="mt-3 flex justify-center">{verdict}</div>
       </Card>
@@ -146,7 +174,7 @@ export function RetirementResult({ result, input, earlier, later, mixUsed }: Ret
       )}
 
       <Card className="border-brand-200 bg-brand-50" header={<h3 className="text-base font-semibold text-brand-900">{t("m7.bucket.title")}</h3>} data-testid="m7-bucket">
-        <p className="text-sm leading-relaxed text-brand-900">{t("m7.bucket.body", { retirementAge: f.number(result.retirementAge) })}</p>
+        <p className="text-sm leading-relaxed text-brand-900">{working ? t("m7.bucket.body", { retirementAge: f.number(result.retirementAge) }) : t("m7.bucket.bodyRetired")}</p>
         {working && <p className="mt-2 text-sm font-medium text-brand-900">{t("m7.bucket.lock", { retirementAge: f.number(result.retirementAge) })}</p>}
         <Link href={`/${locale}/m6`} className="tap mt-3 inline-flex min-h-12 items-center rounded-xl px-1 text-base font-semibold text-brand-700 underline underline-offset-2">
           {t("m7.bucket.link")}
@@ -193,7 +221,7 @@ function ContrastCard({ result }: { result: M7Result }) {
             <div className={emphasis ? "text-xl font-bold tabular-nums text-brand-700" : "text-xl font-bold tabular-nums text-text"} data-testid={`m7-target-${key}-monthly`}>
               {f.money(target.monthlySaving)}
             </div>
-            <WhyButton explanation={result.explain} stepIds={key === "plan" ? PLAN_STEPS : CONTRAST_STEPS} className="mt-1 -ms-2 px-2" />
+            <WhyButton explanation={result.explain} stepIds={key === "plan" ? planStepsFor(result) : CONTRAST_STEPS} className="mt-1 -ms-2 px-2" short />
           </div>
         ))}
       </div>
@@ -223,7 +251,7 @@ function RetiredHeadline({ result, input, verdict }: { result: M7Result; input: 
           label={t("m7.retired.headline")}
           value={
             <>
-              {f.money(w.monthly)}
+              <bdi>{f.money(w.monthly)}</bdi>
               <span className="ms-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
             </>
           }
@@ -338,7 +366,7 @@ function shownOnly(result: M7Result, t: ReturnType<typeof useT>["t"], f: ReturnT
 }
 
 function LifeTableCard({ rates }: { rates: ReturnType<typeof useCountryRates> }) {
-  const { t } = useT();
+  const { t, locale } = useT();
   const f = useFormat();
   const row = rates.rows.life_table_remaining;
   const table = row?.valueJson as LifeTableRemaining | undefined;
@@ -398,7 +426,7 @@ function LifeTableCard({ rates }: { rates: ReturnType<typeof useCountryRates> })
               </tbody>
             </table>
           </div>
-          {row && <p className="mt-2 text-xs text-text-faint">{t("m7.lifeTable.source", { source: row.sourceName, date: f.asOf(row.asOf) })}</p>}
+          {row && <p className="mt-2 text-xs text-text-faint">{t("m7.lifeTable.source", { source: localizeName(row.sourceName, locale), date: f.asOf(row.asOf) })}</p>}
         </>
       )}
       {firstPoint && lastPoint && (

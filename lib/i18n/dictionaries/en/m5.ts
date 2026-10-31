@@ -5,7 +5,7 @@ export const m5 = {
 
   input: {
     name: { label: "Goal name", hint: "Daughter's university, a flat deposit, Hajj, a car…", placeholder: "What are you saving for?" },
-    cost: { label: "Cost in today's taka", hint: "What it would cost if you paid today. We add inflation for you." },
+    cost: { label: "Cost in today's money", hint: "What it would cost if you paid today. We add inflation for you." },
     years: { label: "Years away", hint: "Whole years from now, {min} to {max}." },
     type: { label: "Type of goal", hint: "Education and health costs rise faster than general prices, so they get their own inflation rate." },
     addGoal: "Add a goal",

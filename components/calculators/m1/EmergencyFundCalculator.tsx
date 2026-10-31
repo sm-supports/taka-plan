@@ -17,6 +17,7 @@ import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { Term } from "@/components/ui/Term";
+import { useProductName } from "@/components/ui/useProductName";
 import { YesNo } from "@/components/ui/YesNo";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
@@ -55,6 +56,9 @@ export function EmergencyFundCalculator() {
   const snapshot = useCountryRates();
   const today = useToday();
   const demo = useDemoMode();
+  const names = useProductName();
+  // The savings-certificate slot's local name, for the copy that mentions it ({product}).
+  const certificate = { product: names.prose("sanchayapatra_5y") };
 
   const profile = useTakaStore((s) => s.profile);
   const m1 = useTakaStore((s) => s.m1);
@@ -150,7 +154,7 @@ export function EmergencyFundCalculator() {
           <YesNo label={t("m1.input.hasHealthInsurance.label")} value={hasHealthInsurance} onChange={(v) => setM1({ hasHealthInsurance: v })} yesLabel={t("common.yes")} noLabel={t("common.no")} />
         </Field>
 
-        <MoneyInput id="m1-liquid" value={liquidSavings} onChange={(n) => setM1({ liquidSavings: n ?? undefined })} label={t("m1.input.liquidSavings.label")} hint={t("m1.input.liquidSavings.hint")} min={0} />
+        <MoneyInput id="m1-liquid" value={liquidSavings} onChange={(n) => setM1({ liquidSavings: n ?? undefined })} label={t("m1.input.liquidSavings.label")} hint={t("m1.input.liquidSavings.hint", certificate)} min={0} />
 
         <div className="flex flex-col gap-1.5">
           <SliderWithNumber
@@ -190,7 +194,7 @@ export function EmergencyFundCalculator() {
                 label={t("m1.result.monthlySaving")}
                 value={
                   <>
-                    {f.money(result.monthlySaving)}
+                    <bdi>{f.money(result.monthlySaving)}</bdi>
                     <span className="ms-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
                   </>
                 }
@@ -240,16 +244,16 @@ export function EmergencyFundCalculator() {
               <Card
                 header={
                   <span className="text-base font-semibold text-text">
-                    <Term k="sanchayapatra">{t("m1.result.tiers.sanchayapatraLayer")}</Term>
+                    <Term k="sanchayapatra">{t("m1.result.tiers.sanchayapatraLayer", certificate)}</Term>
                   </span>
                 }
               >
-                <p className="text-sm text-text-muted">{t("m1.result.tiers.sanchayapatraLayerHint")}</p>
+                <p className="text-sm text-text-muted">{t("m1.result.tiers.sanchayapatraLayerHint", certificate)}</p>
               </Card>
             )}
 
             <Card className="border-brand-200 bg-brand-50" header={<span className="text-base font-semibold text-brand-900">{t("m1.section.nextStep")}</span>}>
-              <p className="text-base leading-relaxed text-brand-900">{t(result.nextStep)}</p>
+              <p className="text-base leading-relaxed text-brand-900">{t(result.nextStep, { product: names.prose(result.nextStep === "m1.next.fdrLadder" ? "fdr_3m" : "sanchayapatra_5y") })}</p>
             </Card>
 
             <Card header={<span className="text-base font-semibold text-text">{t("m1.section.rules")}</span>}>
@@ -257,7 +261,7 @@ export function EmergencyFundCalculator() {
                 {result.rules.map((k) => (
                   <li key={k} className="flex gap-2">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true" />
-                    <span>{t(k)}</span>
+                    <span>{t(k, certificate)}</span>
                   </li>
                 ))}
               </ul>

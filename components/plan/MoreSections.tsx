@@ -39,8 +39,10 @@ export function MoreSections({ plan }: { plan: Plan }) {
               <Card>
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex min-w-0 flex-col gap-1">
-                    <span className="text-base font-semibold text-text">{t(`plan.more.${s}.title`)}</span>
-                    <span className="text-sm text-text-muted">
+                    <span dir="auto" className="text-base font-semibold text-text">
+                      {t(`common.module.${s}`)}
+                    </span>
+                    <span dir="auto" className="text-sm text-text-muted">
                       {amount !== null ? t("plan.more.reserved", { amount: f.money(amount) }) : t(`plan.more.${s}.body`)}
                     </span>
                   </div>

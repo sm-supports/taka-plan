@@ -7,17 +7,18 @@ import { cn } from "@/components/ui/cn";
 import { useCountry } from "@/lib/country/useCountry";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
+import { localizeName } from "@/components/explain/localizeName";
 
 function InstitutionLink({ text, inst }: { text: string; inst: Institution }) {
   return (
-    <a href={inst.url} target="_blank" rel="noopener noreferrer" className="mt-1 block text-sm font-medium text-brand-700 underline underline-offset-2">
+    <a href={inst.url} target="_blank" rel="noopener noreferrer" className="ms-8 inline-flex min-h-12 items-center text-sm font-medium text-brand-700 underline underline-offset-2">
       {text}
     </a>
   );
 }
 
 export function InsurerChecklist({ items }: { items: M2ChecklistItem[] }) {
-  const { t } = useT();
+  const { t, locale } = useT();
   const f = useFormat();
   const { context } = useCountry();
   const regulator = context.institutions.insuranceRegulator ?? null;
@@ -34,7 +35,9 @@ export function InsurerChecklist({ items }: { items: M2ChecklistItem[] }) {
           const params = { claimSettlement: typeof claim === "number" ? f.percent(claim, 0) : String(claim ?? "") };
           const on = ticked.has(item.key);
           return (
-            <li key={item.key} className="flex gap-3">
+            <li key={item.key} className="flex flex-col">
+              {/* The whole row is the label, so the tap target is the full width and at least 48 px tall. */}
+              <label htmlFor={`m2-check-${item.key}`} className="flex min-h-12 cursor-pointer items-start gap-3 py-1.5">
               <input
                 id={`m2-check-${item.key}`}
                 type="checkbox"
@@ -47,15 +50,12 @@ export function InsurerChecklist({ items }: { items: M2ChecklistItem[] }) {
                     return next;
                   })
                 }
-                className="mt-1 h-5 w-5 shrink-0 accent-brand-600"
+                className="mt-0.5 h-5 w-5 shrink-0 accent-brand-600"
               />
-              <div className="min-w-0">
-                <label htmlFor={`m2-check-${item.key}`} className={cn("text-sm leading-relaxed", on ? "text-text-muted line-through" : "text-text")}>
-                  {t(item.key, params)}
-                </label>
-                {item.key === "m2.check.regulator" && regulator && <InstitutionLink text={t("m2.checklist.regulatorLink", { name: regulator.name })} inst={regulator} />}
-                {item.key === "m2.check.complaints" && complaints && <InstitutionLink text={t("m2.checklist.complaintsLink", { name: complaints.name })} inst={complaints} />}
-              </div>
+                <span className={cn("min-w-0 text-sm leading-relaxed", on ? "text-text-muted line-through" : "text-text")}>{t(item.key, params)}</span>
+              </label>
+              {item.key === "m2.check.regulator" && regulator && <InstitutionLink text={t("m2.checklist.regulatorLink", { name: localizeName(regulator.name, locale) })} inst={regulator} />}
+              {item.key === "m2.check.complaints" && complaints && <InstitutionLink text={t("m2.checklist.complaintsLink", { name: localizeName(complaints.name, locale) })} inst={complaints} />}
             </li>
           );
         })}

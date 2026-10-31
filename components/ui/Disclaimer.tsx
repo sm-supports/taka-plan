@@ -14,12 +14,18 @@ export interface DisclaimerProps {
 export function Disclaimer({ variant, onAccept, open = true }: DisclaimerProps) {
   const { t } = useT();
   if (variant === "footer") {
-    return <p className="text-xs leading-relaxed text-text-faint">{t("common.disclaimer.short")}</p>;
+    return (
+      <p dir="auto" className="text-xs leading-relaxed text-text-faint">
+        {t("common.disclaimer.short")}
+      </p>
+    );
   }
   const accept = onAccept ?? (() => undefined);
   return (
     <Sheet open={open} onClose={accept} title={t("common.disclaimer.title")}>
-      <p className="whitespace-pre-line leading-relaxed">{t("common.disclaimer.body")}</p>
+      <p dir="auto" className="whitespace-pre-line leading-relaxed">
+        {t("common.disclaimer.body")}
+      </p>
       <Button size="lg" fullWidth className="mt-5" onClick={accept}>
         {t("common.disclaimer.accept")}
       </Button>

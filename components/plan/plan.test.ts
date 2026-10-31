@@ -19,7 +19,7 @@ import { getPath, translate } from "@/lib/i18n/translate";
 import { createFormatters } from "@/lib/i18n/useFormat";
 import { bucketExplanation, headlineExplanation } from "./explanationFor";
 import { DEMO_BUILD_MONTHS, DEMO_TODAY, samplePlan, samplePlanInput } from "./fixtures";
-import { bucketKey, bucketMatchesWhy, bucketReason, bucketTitle, formatReasonParams } from "./formatReason";
+import { bucketKey, bucketMatchesWhy, bucketNextStep, bucketReason, bucketTitle, formatReasonParams } from "./formatReason";
 import { calculatorPath, isTermKey, termForInstrument } from "./terms";
 
 const fEn = createFormatters("en");
@@ -93,14 +93,40 @@ describe("bucket reasons", () => {
     reasonParams: { name: "বিয়ে", amount: 1800, need: 13700, instrument: "sanchayapatra_5y", fv: 816500, years: 4 },
   };
 
-  it("formats emergency params as taka / plain numbers and translates the instrument (P2: same name as the Where line)", () => {
-    expect(formatReasonParams(emergency, fEn, tEn)).toEqual({ amount: "৳5,700", covered: "0.7", months: "8", instrument: "3-month FDR" });
-    expect(bucketReason(emergency, fEn, tEn)).toBe("Emergency fund — ৳5,700/month into 3-month FDR — you have 0.7 of 8 months covered");
+  it("formats emergency params as taka / plain numbers and puts the instrument inside the sentence", () => {
+    expect(formatReasonParams(emergency, fEn, tEn)).toEqual({ amount: "৳5,700", covered: "0.7", months: "8", instrument: "3-month fixed deposits" });
+    expect(bucketReason(emergency, fEn, tEn)).toBe("Emergency fund — ৳5,700/month into 3-month fixed deposits — you have 0.7 of 8 months covered");
+    // Lower case with an article, never "into Savings account".
+    expect(bucketReason({ ...emergency, reasonParams: { ...emergency.reasonParams, instrument: "savings_account" } }, fEn, tEn)).toContain("into a savings account");
     expect(bucketReason({ ...emergency, reasonParams: { ...emergency.reasonParams, instrument: "savings_account" } }, fBn, tBn)).toContain("সেভিংস অ্যাকাউন্ট-এ মাসে ৳৫,৭০০");
+    // With the country's product names (Bangladesh: "FDR (3-month fixed deposit)" → "FDR").
+    const names = { label: (s: string) => s, prose: (s: string) => (s === "fdr_3m" ? "FDR" : s) };
+    expect(bucketReason(emergency, fEn, tEn, names)).toContain("into 3-month FDRs");
+  });
+
+  it("uses the shortfall wording when the plan cannot fit the retirement need", () => {
+    const short: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.retirement", reasonParams: { amount: 2000, need: 9000, planTo: 100, lastsTo: 71 } };
+    expect(bucketReason(short, fEn, tEn)).toBe("Retirement — ৳2,000/month of the ৳9,000 you need — lasts to age 71");
+    const bnShort = bucketReason(short, fBn, tBn);
+    expect(bnShort).not.toMatch(/[0-9]/);
+    expect(bnShort.split("—")).toHaveLength(2);
+    expect(bnShort.endsWith("।")).toBe(true);
+    const funded = { ...short, reasonParams: { amount: 9000, need: 9000, planTo: 100, lastsTo: 100 } };
+    expect(bucketReason(funded, fEn, tEn)).toBe("Retirement — ৳9,000/month so your money lasts to age 100");
+  });
+
+  it("names the country's product in the next step", () => {
+    expect(bucketNextStep({ nextStepKey: "plan.next.dps" }, tEn)).toContain("open a recurring deposit");
+    const names = { label: (s: string) => s, prose: (s: string) => (s === "dps" ? "DPS" : s) };
+    expect(bucketNextStep({ nextStepKey: "plan.next.dps" }, tEn, names)).toContain("open a DPS");
+    expect(bucketNextStep({ nextStepKey: "plan.next.sanchayapatra" }, tBn)).toContain("৫ বছর মেয়াদি সঞ্চয়পত্র চান");
+    for (const key of ["plan.next.fdrLadder", "plan.next.fdr", "plan.next.sanchayapatra", "plan.next.tbond", "plan.next.openSavings", "plan.next.dps"]) {
+      expect(bucketNextStep({ nextStepKey: key }, tEn)).not.toMatch(/\{product\}|NID|TIN|scheduled|Sanchayapatra/);
+    }
   });
 
   it("translates the goal instrument and adds the years unit", () => {
-    expect(bucketReason(bike, fEn, tEn)).toBe("Motorbike — ৳1,500/month into DPS — you will need ৳2,91,500 in 2 years");
+    expect(bucketReason(bike, fEn, tEn)).toBe("Motorbike — ৳1,500/month into a recurring deposit — you will need ৳2,91,500 in 2 years");
     const bnReason = bucketReason(wedding, fBn, tBn);
     expect(bnReason).toContain("৫ বছর মেয়াদি সঞ্চয়পত্র-এ মাসে ৳১,৮০০");
     expect(bnReason).toContain("৪ বছর পর লাগবে ৳৮,১৬,৫০০");
@@ -119,7 +145,7 @@ describe("bucket reasons", () => {
     expect(bucketReason(retirement, fEn, tEn)).toBe("Retirement — ৳6,000/month so your money lasts to age 100");
     expect(bucketReason(retirement, fBn, tBn)).not.toMatch(/[0-9]/);
     const future: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.future", reasonParams: { amount: 10000, instrument: "equity_fund" } };
-    expect(bucketReason(future, fEn, tEn)).toBe(`Long-term savings — ৳10,000/month into ${tEn("common.instrument.equity_fund")} until you add a goal`);
+    expect(bucketReason(future, fEn, tEn)).toBe("Long-term savings — ৳10,000/month into an open-end equity fund until you add a goal");
     const insurance: Pick<Bucket, "reasonKey" | "reasonParams"> = { reasonKey: "plan.reason.insurance", reasonParams: { amount: 4800 } };
     expect(bucketReason(insurance, fEn, tEn)).toBe("Insurance — ৳4,800/month set aside for term life and health cover");
     expect(bucketTitle({ id: "retirement", reasonParams: {} }, tEn)).toBe("Retirement");
@@ -196,12 +222,13 @@ describe("explanations for the M2 / M6 / M7 buckets", () => {
   const family = computePlan(SAMPLE_PROFILES.familyWithDebt, seed, DEMO_TODAY);
   const spare = computePlan(profileToPlanInput(SAMPLE_PROFILES.firstJob.profile, { m1: { liquidSavings: 300000 }, m6: { horizonYears: 20 } }), seed, DEMO_TODAY);
 
-  it("insurance = M2's steps + plan.total; retirement = M7's steps + plan.total", () => {
+  it("insurance = M2's steps + plan.total; retirement = M7's steps + the split steps that leave its amount", () => {
     const insurance = family.buckets.find((b) => b.id === "insurance")!;
     const ids = bucketExplanation(family, insurance).steps.map((s) => s.id);
     expect(ids).toEqual([...family.insurance!.explain.steps.map((s) => s.id), "plan.total"]);
     const retirementBucket: Bucket = { ...insurance, id: "retirement", module: "m7", reasonKey: "plan.reason.retirement", nextStepKey: "plan.next.retirement" };
-    expect(bucketExplanation(family, retirementBucket).steps.map((s) => s.id)).toEqual([...family.retirement!.explain.steps.map((s) => s.id), "plan.total"]);
+    const splitIds = family.explain.steps.map((s) => s.id).filter((id) => ["plan.total", "plan.emergencyShare", "plan.debtShare", "plan.goalsShare", "plan.retirementShare"].includes(id));
+    expect(bucketExplanation(family, retirementBucket).steps.map((s) => s.id)).toEqual([...family.retirement!.explain.steps.map((s) => s.id), ...splitIds]);
   });
 
   it("a future bucket that follows the mix leads with M6's steps", () => {

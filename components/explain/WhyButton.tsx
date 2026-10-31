@@ -18,9 +18,11 @@ export interface WhyButtonProps {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
   className?: string;
+  /** Narrow columns: show the short "Why?" (the accessible name stays "Why this number?"). */
+  short?: boolean;
 }
 
-export function WhyButton({ explanation, title, stepIds, open, onOpenChange, className }: WhyButtonProps) {
+export function WhyButton({ explanation, title, stepIds, open, onOpenChange, className, short }: WhyButtonProps) {
   const { t } = useT();
   const [internal, setInternal] = useState(false);
   const controlled = open !== undefined;
@@ -37,14 +39,21 @@ export function WhyButton({ explanation, title, stepIds, open, onOpenChange, cla
 
   return (
     <>
-      <Button variant="ghost" className={className} onClick={() => setOpen(true)} aria-haspopup="dialog" aria-expanded={shown}>
-        <span className="inline-flex items-center gap-1.5">
-          <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <Button
+        variant="ghost"
+        className={className}
+        onClick={() => setOpen(true)}
+        aria-haspopup="dialog"
+        aria-expanded={shown}
+        aria-label={short ? t("common.button.whyThisNumber") : undefined}
+      >
+        <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+          <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
             <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             <circle cx="12" cy="17" r="1" fill="currentColor" />
           </svg>
-          {t("common.button.whyThisNumber")}
+          <span dir="auto">{short ? t("common.button.why") : t("common.button.whyThisNumber")}</span>
         </span>
       </Button>
       <WhyDrawer explanation={explanation} title={title ?? t("common.explain.title")} stepIds={stepIds} open={shown} onClose={close} />

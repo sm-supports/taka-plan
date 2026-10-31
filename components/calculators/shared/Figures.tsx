@@ -13,7 +13,9 @@ export interface SectionProps {
 export function Section({ title, children, className, id }: SectionProps) {
   return (
     <section id={id} className={cn("flex flex-col gap-4", className)} aria-label={title}>
-      <h2 className="text-lg font-bold text-text">{title}</h2>
+      <h2 dir="auto" className="text-lg font-bold text-text">
+        {title}
+      </h2>
       {children}
     </section>
   );
@@ -33,10 +35,18 @@ export function FigureList({ items, className }: { items: Figure[]; className?: 
       {items.map((it) => (
         <div key={it.key} className="flex items-start justify-between gap-4 py-2.5">
           <div className="min-w-0">
-            <dt className="text-sm font-medium text-text-muted">{it.label}</dt>
-            {it.hint && <p className="mt-0.5 text-xs text-text-faint">{it.hint}</p>}
+            <dt dir="auto" className="text-sm font-medium text-text-muted">
+              {it.label}
+            </dt>
+            {it.hint && (
+              <p dir="auto" className="mt-0.5 text-xs text-text-faint">
+                {it.hint}
+              </p>
+            )}
           </div>
-          <dd className="shrink-0 text-base font-semibold tabular-nums text-text">{it.value}</dd>
+          <dd className="shrink-0 text-base font-semibold tabular-nums text-text">
+            <bdi>{it.value}</bdi>
+          </dd>
         </div>
       ))}
     </dl>
@@ -56,10 +66,14 @@ export function DemoBanner({ text }: { text: string }) {
 export function Field({ id, label, hint, children }: { id: string; label: string; hint?: string; children: ReactNode }) {
   return (
     <div className="flex flex-col gap-1.5" role="group" aria-labelledby={`${id}-label`}>
-      <span id={`${id}-label`} className="text-base font-semibold text-text">
+      <span id={`${id}-label`} dir="auto" className="text-base font-semibold text-text">
         {label}
       </span>
-      {hint && <p className="text-sm text-text-muted">{hint}</p>}
+      {hint && (
+        <p dir="auto" className="text-sm text-text-muted">
+          {hint}
+        </p>
+      )}
       {children}
     </div>
   );

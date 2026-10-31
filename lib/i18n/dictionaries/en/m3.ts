@@ -27,7 +27,7 @@ export const m3 = {
       empty: "No cards added.",
       balance: { label: "Balance owed", hint: "The amount on your latest statement." },
       limit: { label: "Card limit", hint: "The maximum the bank lets you spend." },
-      annualRate: { label: "Interest rate (a year)", hint: "Leave blank to use the Bangladesh Bank cap." },
+      annualRate: { label: "Interest rate (a year)", hint: "Leave blank to use the legal or typical card rate." },
       paysInFull: { label: "Do you pay the full bill every month, inside the grace period?", hint: "If yes, the card costs you nothing. If no, it is the most expensive money you have." },
     },
     scenario: {
@@ -60,7 +60,7 @@ export const m3 = {
     totalInterest: "Total interest",
     minPayment: "Minimum payment",
     path: "If you feel trapped",
-    emiRatioNote: "Bangladesh Bank sets no fixed limit. We flag anything above {threshold} of take-home because little is left to save or absorb a shock.",
+    emiRatioNote: "Lenders set their own limits. We flag anything above {threshold} of take-home because little is left to save or absorb a shock.",
     maxLoanNote: "The exact formula gives about {loan} for a {emi} monthly EMI at {rate} over {months}. Banks also look at your income and record, so add your own safety margin before you borrow.",
     primaryFlag: "Most urgent",
     otherFlags: "Also worth fixing",
@@ -89,7 +89,7 @@ export const m3 = {
     },
     emi_ratio: {
       title: "EMIs above {threshold} of take-home",
-      body: "{value} of your take-home goes to EMIs. Bangladesh Bank sets no fixed limit; we flag anything above {threshold} because little is left to save or absorb a shock.",
+      body: "{value} of your take-home goes to EMIs. Lenders set their own limits; we flag anything above {threshold} because little is left to save or absorb a shock.",
     },
     negative_capacity: {
       title: "No room for any EMI",

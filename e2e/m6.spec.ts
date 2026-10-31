@@ -71,16 +71,22 @@ test("asset mix: flow, bar, projection, rebalancer and the plan's link", async (
   await expect(page.getByText("You carry no card debt.")).toBeVisible();
   await next(page, "Continue anyway");
 
-  // 2. Four risk questions, one per screen; age band and income are prefilled from the profile.
+  // 2. Three risk questions and the horizon in years, one per screen; age band and income are prefilled from the profile.
   await expect(page.getByRole("heading", { level: 1, name: "Which age group are you in?" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Under 35" })).toHaveAttribute("aria-pressed", "true");
   await next(page);
   await expect(page.getByRole("heading", { level: 1, name: "How steady is your income?" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Salaried" })).toHaveAttribute("aria-pressed", "true");
   await next(page);
+  // The horizon is asked once, in years; the risk answer is derived from it (they cannot disagree).
   await expect(page.getByRole("heading", { level: 1, name: "When will you need this money?" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Next", exact: true })).toBeDisabled();
-  await page.getByRole("button", { name: "In 5 to 10 years" }).click();
+  const horizonBox = page.getByRole("textbox", { name: "Years until you need the money" });
+  await horizonBox.fill("3");
+  await horizonBox.press("Enter");
+  await expect(page.getByTestId("m6-horizon-band")).toContainText("Within 5 years");
+  await horizonBox.fill("8");
+  await horizonBox.press("Enter");
+  await expect(page.getByTestId("m6-horizon-band")).toContainText("In 5 to 10 years");
   await next(page);
   await expect(page.getByRole("heading", { level: 1, name: /If your investments fell 20% in a year/ })).toBeVisible();
   await page.getByRole("button", { name: "Sell, to stop the loss" }).click();

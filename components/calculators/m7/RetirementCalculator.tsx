@@ -93,7 +93,7 @@ export function RetirementCalculator() {
   const header = (
     <header>
       <h1 className="text-2xl font-bold text-text">{t("m7.title")}</h1>
-      <p className="mt-1 text-base text-text-muted">{t("m7.intro")}</p>
+      <p className="mt-1 text-base text-text-muted">{t((input?.mode ?? m7.mode) === "retired" ? "m7.introRetired" : "m7.intro")}</p>
       {demo && <DemoBanner text={t("m7.demo")} />}
     </header>
   );
@@ -129,11 +129,30 @@ export function RetirementCalculator() {
 
   if (phase === "flow") return <RetirementFlow onDone={() => setPhase("result")} />;
 
+  // The plan-to age, shown with the first result as well as on the full page.
+  const planMin = getRate(rates, "plan_to_age_min");
+  const planMax = getRate(rates, "plan_to_age_max");
+  const planTo = m7.planToAge ?? getRate(rates, "plan_to_age");
+  const planToSlider = (
+    <SliderWithNumber
+      id="m7-plan-to"
+      value={planTo}
+      onChange={(n) => setM7({ planToAge: n })}
+      min={planMin}
+      max={planMax}
+      step={1}
+      label={t("m7.input.planToAge.label")}
+      hint={t("m7.input.planToAge.hint", { min: f.number(planMin), max: f.number(planMax) })}
+      unitLabel={t("common.unit.years")}
+    />
+  );
+
   if (phase === "result") {
     return (
       <div className="flex flex-col gap-8">
         {header}
         <Section title={t("m7.section.result")} id="m7-result">
+          {planToSlider}
           {resultBlock}
           <div className="flex flex-col gap-2">
             {input?.mode !== "retired" && (
@@ -162,9 +181,6 @@ export function RetirementCalculator() {
   // ---- Returning visit: every field on one page. ----
   const mode: M7Mode = m7.mode ?? "working";
   const age = profile.age ?? null;
-  const planMin = getRate(rates, "plan_to_age_min");
-  const planMax = getRate(rates, "plan_to_age_max");
-  const planTo = m7.planToAge ?? getRate(rates, "plan_to_age");
   const defaultRetire = getRate(rates, m7.retireeType === "government" ? "retirement_age_government" : "retirement_age_default");
   const retireMin = Math.min(M7_AGE_MAX - 1, (age ?? M7_AGE_MIN) + 1);
   const retireMax = Math.max(retireMin, Math.min(RETIREMENT_AGE_MAX, planTo - 1));
@@ -251,17 +267,7 @@ export function RetirementCalculator() {
           </>
         )}
 
-        <SliderWithNumber
-          id="m7-plan-to"
-          value={planTo}
-          onChange={(n) => setM7({ planToAge: n })}
-          min={planMin}
-          max={planMax}
-          step={1}
-          label={t("m7.input.planToAge.label")}
-          hint={t("m7.input.planToAge.hint", { min: f.number(planMin), max: f.number(planMax) })}
-          unitLabel={t("common.unit.years")}
-        />
+        {planToSlider}
       </Section>
 
       <Section title={t("m7.section.sources")} id="m7-sources">

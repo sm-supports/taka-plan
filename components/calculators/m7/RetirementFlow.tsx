@@ -12,6 +12,7 @@ import { ChoiceButtons } from "@/components/ui/ChoiceButtons";
 import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
 import { StepFrame } from "@/components/ui/StepFrame";
+import { useProductName } from "@/components/ui/useProductName";
 import { useCountryRates } from "@/lib/country/useCountry";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
@@ -30,6 +31,7 @@ type MoneyKey = "monthlySpending" | "savings" | "monthlySaving" | "otherMonthlyI
 
 export function RetirementFlow({ onDone }: { onDone: () => void }) {
   const { t } = useT();
+  const names = useProductName();
   const f = useFormat();
   const rates = useCountryRates();
   const profile = useTakaStore((s) => s.profile);
@@ -159,7 +161,7 @@ export function RetirementFlow({ onDone }: { onDone: () => void }) {
     case "savings": {
       const key = mode === "retired" ? "m7.flow.retiredSavings" : "m7.flow.savings";
       return (
-        <StepFrame {...frame} title={t(`${key}.title`)} hint={t(`${key}.hint`)} onNext={nextMoney("savings")} nextDisabled={moneyValue("savings") === null}>
+        <StepFrame {...frame} title={t(`${key}.title`)} hint={t(`${key}.hint`, { product: names.prose("sanchayapatra_5y") })} onNext={nextMoney("savings")} nextDisabled={moneyValue("savings") === null}>
           <MoneyInput key="m7-flow-savings" id="m7-flow-savings" value={moneyValue("savings")} onChange={(n) => setM7({ savings: n ?? undefined })} label={t(`${key}.label`)} min={0} autoFocus />
         </StepFrame>
       );

@@ -16,6 +16,7 @@ const STEP_ASSUMPTIONS: Record<string, readonly string[]> = {
   "plan.debtShare": ["high_interest_debt_threshold", "debt_payoff_target_months"],
   "plan.goalsShare": [],
   "plan.goalAllocation": [],
+  "plan.retirementShare": [],
 };
 
 /** The plan-level explanation reduced to the named split steps and their rows (module notes stay with their module). */
@@ -55,6 +56,8 @@ export function bucketExplanation(plan: Plan, bucket: Bucket): Explanation {
     case "insurance":
       return mergeExplanations([plan.insurance?.explain ?? EMPTY, planSteps(plan, ["plan.total"])]);
     case "retirement":
-      return mergeExplanations([plan.retirement?.explain ?? EMPTY, planSteps(plan, ["plan.total"])]);
+      // The bucket's amount is what is left after the earlier buckets (capped at the need), so the
+      // split steps that leave that remainder come with it.
+      return mergeExplanations([plan.retirement?.explain ?? EMPTY, planSteps(plan, ["plan.total", "plan.emergencyShare", "plan.debtShare", "plan.goalsShare", "plan.retirementShare"])]);
   }
 }

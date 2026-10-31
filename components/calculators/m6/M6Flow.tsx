@@ -17,7 +17,7 @@ import { cn } from "@/components/ui/cn";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { useTakaStore } from "@/lib/store/store";
-import { HORIZON_MAX, HORIZON_MIN, RISK_ANSWERS, yearsForHorizonAnswer, type Gate, type RiskKey } from "./input";
+import { HORIZON_MAX, HORIZON_MIN, horizonAnswerFor, RISK_ANSWERS, yearsForHorizonAnswer, type Gate, type RiskKey } from "./input";
 
 const STEPS = ["gate", "ageBand", "incomeStability", "horizon", "reaction", "amounts"] as const;
 type Step = (typeof STEPS)[number];
@@ -45,7 +45,7 @@ function GateRow({ ok, okText, badText, href, linkText }: { ok: boolean; okText:
         {ok ? okText : badText}
       </p>
       {!ok && (
-        <Link href={href} className="mt-1 inline-flex min-h-10 items-center text-sm font-semibold text-status-amber underline">
+        <Link href={href} className="mt-1 inline-flex min-h-12 items-center text-sm font-semibold text-status-amber underline">
           {linkText}
         </Link>
       )}
@@ -65,24 +65,25 @@ export function M6Flow({ gate, prefill, noEquityYears, cashOnlyYears, onDone }: 
   const answerFor = (k: RiskKey): RiskAnswer | null => risk[k] ?? (k === "ageBand" ? prefill.ageBand : k === "incomeStability" ? prefill.incomeStability : null);
   const setRisk = (k: RiskKey, v: RiskAnswer) => setM6({ risk: { ...useTakaStore.getState().m6.risk, [k]: v } });
 
-  const [horizonYears, setHorizonYears] = useState<number>(() => m6.horizonYears ?? yearsForHorizonAnswer(risk.horizon));
-  const [horizonTouched, setHorizonTouched] = useState(m6.horizonYears !== undefined);
+  // The horizon is asked once, in years; the risk answer is derived from it so the two never disagree.
+  const [horizonYears, setHorizonYears] = useState<number>(() => m6.horizonYears ?? yearsForHorizonAnswer(risk.horizon ?? 1));
   const lumpSum = m6.lumpSum ?? null;
   const monthly = m6.monthly ?? null;
   const hasAmount = (lumpSum ?? 0) > 0 || (monthly ?? 0) > 0;
 
   const back = index > 0 ? () => setIndex(index - 1) : undefined;
   const next = () => {
-    if (step === "ageBand" || step === "incomeStability" || step === "horizon" || step === "reaction") {
+    if (step === "ageBand" || step === "incomeStability" || step === "reaction") {
       const v = answerFor(step);
       if (v === null) return;
       // Confirming a prefilled answer makes it the user's own.
       if (risk[step] === undefined) setRisk(step, v);
-      if (step === "horizon" && !horizonTouched && m6.horizonYears === undefined) setHorizonYears(yearsForHorizonAnswer(v));
+    }
+    if (step === "horizon") {
+      setM6({ horizonYears, risk: { ...useTakaStore.getState().m6.risk, horizon: horizonAnswerFor(horizonYears) } });
     }
     if (step === "amounts") {
       if (!hasAmount) return;
-      setM6({ horizonYears });
       onDone();
       return;
     }
@@ -106,7 +107,7 @@ export function M6Flow({ gate, prefill, noEquityYears, cashOnlyYears, onDone }: 
         ) : (
           <div className="flex flex-col gap-2 rounded-xl border border-line bg-surface p-4" data-testid="gate-check">
             <p className="text-base text-text">{t("m6.needProfile")}</p>
-            <Link href={`/${locale}/start/1`} className="inline-flex min-h-10 items-center font-semibold text-brand-700 underline">
+            <Link href={`/${locale}/start/1`} className="inline-flex min-h-12 items-center font-semibold text-brand-700 underline">
               {t("m6.startLink")}
             </Link>
           </div>
@@ -121,14 +122,21 @@ export function M6Flow({ gate, prefill, noEquityYears, cashOnlyYears, onDone }: 
         <div className="flex flex-col gap-5">
           <MoneyInput id="m6-flow-lump" value={lumpSum} onChange={(n) => setM6({ lumpSum: n ?? undefined })} label={t("m6.input.lumpSum.label")} hint={t("m6.input.lumpSum.hint")} min={0} />
           <MoneyInput id="m6-flow-monthly" value={monthly} onChange={(n) => setM6({ monthly: n ?? undefined })} label={t("m6.input.monthly.label")} hint={t("m6.input.monthly.hint")} min={0} />
+          {!hasAmount && <p className="text-sm text-text-muted">{t("m6.flow.amounts.needOne")}</p>}
+        </div>
+      </StepFrame>
+    );
+  }
+
+  if (step === "horizon") {
+    const band = horizonAnswerFor(horizonYears);
+    return (
+      <StepFrame {...common} title={t("m6.flow.horizon.title")} hint={t("m6.flow.horizon.hint")}>
+        <div className="flex flex-col gap-3">
           <SliderWithNumber
             id="m6-flow-horizon"
             value={horizonYears}
-            onChange={(n) => {
-              setHorizonTouched(true);
-              setHorizonYears(n);
-              setM6({ horizonYears: n });
-            }}
+            onChange={(n) => setHorizonYears(n)}
             min={HORIZON_MIN}
             max={HORIZON_MAX}
             step={1}
@@ -136,7 +144,9 @@ export function M6Flow({ gate, prefill, noEquityYears, cashOnlyYears, onDone }: 
             hint={t("m6.input.horizonYears.hint", { noEquity: f.number(noEquityYears), cashOnly: f.number(cashOnlyYears) })}
             unitLabel={t(horizonYears === 1 ? "common.unit.year" : "common.unit.years")}
           />
-          {!hasAmount && <p className="text-sm text-text-muted">{t("m6.flow.amounts.needOne")}</p>}
+          <p className="text-sm font-medium text-brand-700" aria-live="polite" data-testid="m6-horizon-band">
+            {t("m6.flow.horizon.band", { band: t(`m6.answer.horizon.${band}`) })}
+          </p>
         </div>
       </StepFrame>
     );

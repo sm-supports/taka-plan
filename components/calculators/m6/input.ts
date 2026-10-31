@@ -31,6 +31,11 @@ export function yearsForHorizonAnswer(a: RiskAnswer | undefined): number {
   return a === 0 ? 3 : a === 1 ? 7 : 15;
 }
 
+/** The horizon answer for a number of years (under 5 → 0, 5–10 → 1, over 10 → 2): one source, so the two cannot contradict. */
+export function horizonAnswerFor(years: number): RiskAnswer {
+  return years < 5 ? 0 : years <= 10 ? 1 : 2;
+}
+
 /** A card balance carried from month to month (the engine's gate rule). */
 export function carriesCardDebt(cards: readonly Card[]): boolean {
   return cards.some((c) => !c.paysInFull && c.balance > 0);
@@ -75,7 +80,7 @@ export function filledRisk(m6: M6State, age: number, incomeType: IncomeType, hor
   return {
     ageBand: r.ageBand ?? ageBandFor(age),
     incomeStability: r.incomeStability ?? incomeAnswerFor(incomeType),
-    horizon: r.horizon ?? (horizonYears < 5 ? 0 : horizonYears <= 10 ? 1 : 2),
+    horizon: r.horizon ?? horizonAnswerFor(horizonYears),
     reaction: r.reaction ?? 1,
   };
 }

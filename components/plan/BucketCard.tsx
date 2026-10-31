@@ -4,16 +4,18 @@
  * the concrete next step, a link to its calculator and "Why this number?".
  */
 import Link from "next/link";
-import type { Bucket, Plan } from "@taka/engine";
+import type { Bucket, Instrument, Plan } from "@taka/engine";
 import { WhyButton } from "@/components/explain/WhyButton";
 import { Card } from "@/components/ui/Card";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { Term } from "@/components/ui/Term";
+import { useProductName } from "@/components/ui/useProductName";
 import { cn } from "@/components/ui/cn";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { bucketExplanation } from "./explanationFor";
-import { bucketReason, bucketTitle } from "./formatReason";
+import { isInstrumentId } from "@/components/explain/formatInputs";
+import { bucketNextStep, bucketReason, bucketTitle } from "./formatReason";
 import { calculatorPath, termForInstrument } from "./terms";
 
 export interface BucketCardProps {
@@ -26,12 +28,15 @@ export interface BucketCardProps {
 export function BucketCard({ plan, bucket, whyOpen, onWhyOpenChange }: BucketCardProps) {
   const { t, locale } = useT();
   const f = useFormat();
+  const names = useProductName();
   const title = bucketTitle(bucket, t);
   const amount = f.money(bucket.amount);
-  const instrumentLabel = t(`common.instrument.${bucket.instrument}`);
+  const instrumentLabel = isInstrumentId(bucket.instrument) ? names.label(bucket.instrument as Instrument) : t(`common.instrument.${bucket.instrument}`);
   const termKey = termForInstrument(bucket.instrument, bucket.id);
   const href = calculatorPath(bucket.module, locale);
   const urgent = bucket.status === "red" && !bucket.demotedFromRed;
+  // The amount sits in its own <bdi>, so an RTL number format cannot set the direction of "/month".
+  const [perMonthBefore = "", perMonthAfter = ""] = t("plan.card.perMonth", { amount: "\u0000" }).split("\u0000");
 
   return (
     <Card
@@ -40,26 +45,40 @@ export function BucketCard({ plan, bucket, whyOpen, onWhyOpenChange }: BucketCar
         <>
           <div className="min-w-0">
             <div className="text-xs font-medium text-text-faint">{t("plan.card.priority", { n: f.number(bucket.priority) })}</div>
-            <h2 className="text-lg font-bold leading-snug text-text">{title}</h2>
+            <h2 dir="auto" className="text-lg font-bold leading-snug text-text">
+              {title}
+            </h2>
           </div>
           <StatusPill status={bucket.status} demotedFromRed={bucket.demotedFromRed} className="shrink-0 items-end text-end" />
         </>
       }
     >
-      <div className="text-3xl font-bold tabular-nums text-brand-700">{t("plan.card.perMonth", { amount })}</div>
+      <div className="text-3xl font-bold tabular-nums text-brand-700">
+        <bdi>
+          {perMonthBefore}
+          <bdi>{amount}</bdi>
+          {perMonthAfter}
+        </bdi>
+      </div>
 
       <dl className="mt-3 flex flex-col gap-2 text-sm">
         <div className="flex gap-2">
           <dt className="w-20 shrink-0 text-text-muted">{t("plan.card.instrument")}</dt>
-          <dd className="font-medium text-text">{termKey ? <Term k={termKey}>{instrumentLabel}</Term> : instrumentLabel}</dd>
+          <dd dir="auto" className="font-medium text-text">
+            {termKey ? <Term k={termKey}>{instrumentLabel}</Term> : instrumentLabel}
+          </dd>
         </div>
         <div className="flex gap-2">
           <dt className="w-20 shrink-0 text-text-muted">{t("plan.card.reason")}</dt>
-          <dd className="text-text">{bucketReason(bucket, f, t)}</dd>
+          <dd dir="auto" className="text-text">
+            {bucketReason(bucket, f, t, names)}
+          </dd>
         </div>
         <div className="flex gap-2">
           <dt className="w-20 shrink-0 text-text-muted">{t("plan.card.nextStep")}</dt>
-          <dd className="text-text">{t(bucket.nextStepKey)}</dd>
+          <dd dir="auto" className="text-text">
+            {bucketNextStep(bucket, t, names)}
+          </dd>
         </div>
       </dl>
 

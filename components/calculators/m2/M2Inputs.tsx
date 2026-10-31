@@ -8,6 +8,7 @@ import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { useTakaStore } from "@/lib/store/store";
 import { Field, Section } from "../shared/Figures";
+import { CountInput } from "../m7/CountInput";
 import {
   COVER_TO_AGE_MAX,
   COVER_TO_AGE_MIN,
@@ -75,6 +76,19 @@ export function M2Inputs({ input, defaultCoverToAge, defaultIncomeShare }: M2Inp
           onChange={(patch) => setM2(patch)}
         />
       </Field>
+
+      {(covered.includes("child") || input.dependents.includes("children")) && (
+        <CountInput
+          id="m2-youngestChildAge"
+          value={m2.youngestChildAge ?? null}
+          onChange={(n) => setM2({ youngestChildAge: n ?? undefined })}
+          label={t("m2.input.youngestChildAge.label")}
+          hint={t("m2.input.youngestChildAge.hint")}
+          min={0}
+          max={30}
+          unitLabel={t("common.unit.years")}
+        />
+      )}
 
       {covered.includes("parent") && (
         <SliderWithNumber

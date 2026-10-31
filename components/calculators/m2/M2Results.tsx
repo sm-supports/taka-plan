@@ -31,6 +31,13 @@ export function M2Results({ input, result, coverToAge }: M2ResultsProps) {
   const { life, health } = result;
   const yearsLabel = (n: number) => `${f.number(n)} ${t(n === 1 ? "common.unit.year" : "common.unit.years")}`;
   const range = (low: number, high: number) => t("m2.premium.range", { low: f.money(low), high: f.money(high) });
+  // The premium caption names only the covers that are still to buy.
+  const buyLife = life.needed && life.gap > 0;
+  const buyHealth = health.gap > 0;
+  const premiumCaptionKey =
+    result.monthlyPremiumNeed === 0 || (!buyLife && !buyHealth) ? "m2.premium.captionNone" : buyLife && buyHealth ? "m2.premium.caption" : buyLife ? "m2.premium.captionLife" : "m2.premium.captionHealth";
+  // Notes already shown inside the life card are not repeated in "Good to know".
+  const notes = result.notes.filter((k) => !(k === "m2.note.noDependents" && !life.needed) && !(k === "m2.note.debtsOnly" && life.needed));
 
   return (
     <>
@@ -53,8 +60,8 @@ export function M2Results({ input, result, coverToAge }: M2ResultsProps) {
           {result.notes.includes("m2.note.debtsOnly") && <p className="mt-3 text-sm leading-relaxed text-text-muted">{t("m2.note.debtsOnly")}</p>}
         </Card>
       ) : (
-        <Card data-testid="m2-life" header={<CardTitle>{t("m2.life.notNeeded")}</CardTitle>}>
-          <StatusPill status="green">{t("m2.life.status.green")}</StatusPill>
+        <Card data-testid="m2-life" header={<CardTitle>{t("m2.life.title")}</CardTitle>}>
+          <StatusPill status="green">{t("m2.life.notNeeded")}</StatusPill>
           <p className="mt-3 text-base leading-relaxed text-text">{t("m2.note.noDependents")}</p>
         </Card>
       )}
@@ -62,7 +69,7 @@ export function M2Results({ input, result, coverToAge }: M2ResultsProps) {
       <Card data-testid="m2-health" header={<CardTitle>{t("m2.health.title")}</CardTitle>}>
         <div className="flex flex-col items-center gap-3 text-center">
           <StatusPill status={health.status}>{t(`m2.health.status.${health.status}`)}</StatusPill>
-          <BigNumber label={t("m2.health.label")} value={f.money(health.target)} caption={t("m2.health.caption", { people: f.number(health.people) })} />
+          <BigNumber label={t("m2.health.label")} value={f.money(health.target)} caption={t(health.people === 1 ? "m2.health.captionOne" : "m2.health.caption", { people: f.number(health.people) })} />
           <WhyButton explanation={result.explain} stepIds={HEALTH_STEPS} title={t("m2.health.why", { amount: f.money(health.target) })} />
         </div>
         <FigureList
@@ -81,11 +88,11 @@ export function M2Results({ input, result, coverToAge }: M2ResultsProps) {
             label={t("m2.premium.monthly")}
             value={
               <>
-                {f.money(result.monthlyPremiumNeed)}
+                <bdi>{f.money(result.monthlyPremiumNeed)}</bdi>
                 <span className="ms-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
               </>
             }
-            caption={t("m2.premium.caption")}
+            caption={t(premiumCaptionKey)}
           />
           <WhyButton explanation={result.explain} stepIds={PREMIUM_STEPS} title={t("m2.premium.why", { amount: f.money(result.monthlyPremiumNeed) })} />
         </div>
@@ -113,10 +120,10 @@ export function M2Results({ input, result, coverToAge }: M2ResultsProps) {
         <p className="mt-2 text-xs font-medium text-status-amber">{t("m2.premium.indicative")}</p>
       </Card>
 
-      {result.notes.length > 0 && (
+      {notes.length > 0 && (
         <Card header={<CardTitle>{t("m2.section.notes")}</CardTitle>}>
           <ul className="flex flex-col gap-2 text-sm leading-relaxed text-text-muted" data-testid="m2-notes">
-            {result.notes.map((k) => (
+            {notes.map((k) => (
               <li key={k} className="flex gap-2">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden="true" />
                 <span>{t(k)}</span>

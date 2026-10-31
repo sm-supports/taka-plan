@@ -59,19 +59,21 @@ export function buildM2Input(data: TakaData): M2Input | null {
   return profileToPlanInput(profile, { ...overrides, m1, m2 }).m2 ?? null;
 }
 
-/** The five policy-checker boxes, each possibly empty while the user types. */
+/** The five policy-checker boxes plus the optional surrender value, each possibly empty while the user types. */
 export interface PolicyDraft {
   annualPremium: number | null;
   sumAssured: number | null;
   termYears: number | null;
   yearsPaid: number | null;
   expectedMaturity: number | null;
+  /** Optional: what the insurer pays today if the policy is stopped. */
+  surrenderValue?: number | null;
 }
 
-export const EMPTY_POLICY: PolicyDraft = { annualPremium: null, sumAssured: null, termYears: null, yearsPaid: null, expectedMaturity: null };
+export const EMPTY_POLICY: PolicyDraft = { annualPremium: null, sumAssured: null, termYears: null, yearsPaid: null, expectedMaturity: null, surrenderValue: null };
 
 export function policyToDraft(p: ExistingPolicy | undefined): PolicyDraft {
-  return p ? { ...p } : EMPTY_POLICY;
+  return p ? { ...p, surrenderValue: p.surrenderValue ?? null } : EMPTY_POLICY;
 }
 
 /** A complete, engine-valid policy, or null. */
@@ -81,5 +83,6 @@ export function draftToPolicy(d: PolicyDraft): ExistingPolicy | null {
   if (!(annualPremium > 0) || sumAssured < 0 || expectedMaturity < 0) return null;
   if (!Number.isInteger(termYears) || termYears < 1 || termYears > POLICY_TERM_MAX) return null;
   if (!Number.isInteger(yearsPaid) || yearsPaid < 0 || yearsPaid > termYears) return null;
-  return { annualPremium, sumAssured, termYears, yearsPaid, expectedMaturity };
+  const sv = d.surrenderValue;
+  return { annualPremium, sumAssured, termYears, yearsPaid, expectedMaturity, ...(sv !== null && sv !== undefined && sv >= 0 ? { surrenderValue: sv } : {}) };
 }

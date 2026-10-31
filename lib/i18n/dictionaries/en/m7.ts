@@ -6,6 +6,7 @@
 export const m7 = {
   title: "Retirement & family",
   intro: "How much to put aside so you can live on your own money, on your own terms, to 100.",
+  introRetired: "How much you can take out of your savings each month so your money lasts, on your own terms, to 100.",
   demo: "Sample numbers for preview only. Your own inputs are not used on this view.",
 
   flow: {
@@ -30,7 +31,7 @@ export const m7 = {
     },
     savings: {
       title: "What have you saved and invested so far?",
-      hint: "Savings, FDRs, Sanchayapatra, funds and shares you would keep for later life. Not your home, and not your provident fund (that comes later).",
+      hint: "Savings, deposits, {product}, funds and shares you would keep for later life. Not your home, and not your provident fund (that comes later).",
       label: "Savings and investments today",
     },
     monthlySaving: {
@@ -105,7 +106,7 @@ export const m7 = {
     },
     planToAge: {
       label: "Plan to age",
-      hint: "We plan to 100 by default. Slide between {min} and {max}; the plan never stops sooner.",
+      hint: "We plan to 100 by default. You can lower it to {min}, never below, or raise it to {max}.",
     },
     spending: {
       label: "Household spending a month, today",
@@ -245,6 +246,12 @@ export const m7 = {
   retired: {
     headline: "You can take out each month",
     caption: "That is {firstYear} in the first year, rising with prices each year after, and it lasts to {planTo}.",
+    chartHint: "Your savings year by year at the withdrawal above, in the money of each year.",
+    range: {
+      title: "What you can take out, depending on returns",
+      low: "If returns only match inflation",
+      hint: "Long projections are never exact; we show a range and round every figure.",
+    },
     runsOut: "At your spending of {spending} a month from savings, the money would last to about {age}.",
     lasts: "At your spending of {spending} a month from savings, the money lasts to {planTo}.",
     target: {
@@ -264,6 +271,7 @@ export const m7 = {
   bucket: {
     title: "Where should this money go?",
     body: "Money for later life needs a home that outlasts any one company. Where no broad index fund is sold, the plan builds the nearest thing from three parts: a diversified open-end fund through a monthly plan for growth; government-backed income such as the public pension scheme, savings certificates and treasury bonds; and a mix that gets safer every year as you get closer to {retirementAge}.",
+    bodyRetired: "Money for the rest of your life needs a home that outlasts any one company. Keep the next few years of withdrawals in deposits and treasury bills you can reach quickly, and the rest in government-backed income such as savings certificates and treasury bonds, with a small part in a diversified open-end fund for growth.",
     lock: "Mark this money “not before {retirementAge}” and leave it alone until then.",
     link: "See your asset mix",
   },
@@ -286,7 +294,7 @@ export const m7 = {
   backToPlan: "Back to my plan",
 
   note: {
-    planTo100: "The plan runs to 100 by default because many people who reach 60 live well past 80. You can slide it, but never below the minimum.",
+    planTo100: "The plan runs to 100 by default because many people who reach 60 live well past 80. You can lower it, but never below 85.",
     lifeAt60: "Life expectancy at birth mixes in every age from childhood on, so it looks low. Someone who reaches 60 can expect about twenty more years on average, and half live longer.",
     womenLiveLonger: "Women live about two years longer on average, so a couple's plan should cover the wife's longer retirement.",
     familyNotCounted: "Help from family is never counted: your children will have their own families and costs. Treat it as a bonus, not a plan.",

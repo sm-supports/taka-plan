@@ -45,10 +45,14 @@ export function StepFrame({ step, total, title, hint, children, onBack, onNext, 
           ))}
         </ol>
       </div>
-      <h1 id="step-title" className="mt-3 text-2xl font-bold text-text">
+      <h1 id="step-title" dir="auto" className="mt-3 text-2xl font-bold text-text">
         {title}
       </h1>
-      {hint && <p className="mt-1 text-base text-text-muted">{hint}</p>}
+      {hint && (
+        <p dir="auto" className="mt-1 text-base text-text-muted">
+          {hint}
+        </p>
+      )}
       <div className="mt-5 flex-1">{children}</div>
       {onNext && (
         <div className="sticky bottom-0 -mx-4 mt-6 border-t border-line bg-page/95 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur">

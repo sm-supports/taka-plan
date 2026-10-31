@@ -20,6 +20,7 @@ export const common = {
     back: "Back",
     seePlan: "See my plan",
     whyThisNumber: "Why this number?",
+    why: "Why?",
     close: "Close",
     edit: "Edit",
     save: "Save",
@@ -43,12 +44,12 @@ export const common = {
 
   module: {
     m1: "Emergency fund",
-    m2: "Insurance needs",
+    m2: "Insurance & health",
     m3: "Debt health check",
     m4: "Save-first budget",
     m5: "Goal planner",
-    m6: "Asset allocation",
-    m7: "Retirement to 100",
+    m6: "Asset mix",
+    m7: "Retirement & family",
     plan: "Your plan",
   },
 
@@ -57,7 +58,7 @@ export const common = {
     fdr_3m: "3-month FDR",
     fdr_1y: "1-year FDR",
     dps: "DPS",
-    sanchayapatra_5y: "5-year Sanchayapatra",
+    sanchayapatra_5y: "Government savings certificate",
     tbill_91d: "91-day treasury bill",
     tbond_5y: "5-year treasury bond",
     tbond_10y: "10-year treasury bond",
@@ -65,6 +66,36 @@ export const common = {
     gold: "Gold (22K bars or coins)",
     loan_prepayment: "Extra loan payment",
     term_insurance: "Term life insurance",
+  },
+
+  /** Product names inside a sentence, when the country data has none (useProductName). */
+  productProse: {
+    savings_account: "savings account",
+    fdr_3m: "fixed deposit",
+    fdr_1y: "fixed deposit",
+    dps: "recurring deposit",
+    sanchayapatra_5y: "government savings certificate",
+    tbill_91d: "treasury bill",
+    tbond_5y: "government bond",
+    tbond_10y: "government bond",
+    equity_fund: "equity fund",
+    gold: "gold",
+  },
+
+  /** An instrument inside a sentence ("into {instrument}"); {product} is the country's product name. */
+  instrumentInline: {
+    savings_account: "a {product}",
+    fdr_3m: "3-month {product}s",
+    fdr_1y: "a 1-year {product}",
+    dps: "a {product}",
+    sanchayapatra_5y: "a {product}",
+    tbill_91d: "91-day {product}s",
+    tbond_5y: "a 5-year {product}",
+    tbond_10y: "a 10-year {product}",
+    equity_fund: "an open-end equity fund",
+    gold: "gold bars or coins",
+    loan_prepayment: "extra loan payments",
+    term_insurance: "term life insurance",
   },
 
   unit: {
@@ -82,6 +113,7 @@ export const common = {
   ratesVersion: "Rates v{version}, {asOf}",
   mayBeOutdated: "May be outdated",
   ourAssumption: "Our assumption",
+  ourSource: "Taka Plan (our assumption)",
   source: "Source",
   asOf: "As of {date}",
   range: "Range {low}–{high}",
@@ -94,7 +126,7 @@ export const common = {
       "Estimates for education only; not financial, tax or legal advice. Rates change — check with your bank or insurer before acting. Past returns don't predict future returns.",
     title: "Before you start",
     body:
-      "Taka Plan gives estimates for education only. It is not financial, tax or legal advice, and it never names a bank, fund or insurer. Rates and tax rules in Bangladesh change several times a year, so check with your bank or insurer before acting on any number here. Past returns don't predict future returns. Your answers stay on your phone unless you choose to save a plan.",
+      "Taka Plan gives estimates for education only. It is not financial, tax or legal advice, and it never names a bank, fund or insurer. Rates and tax rules change several times a year, so check with your bank or insurer before acting on any number here. Past returns don't predict future returns. Your answers stay on your phone unless you choose to save a plan.",
     accept: "I understand",
   },
 

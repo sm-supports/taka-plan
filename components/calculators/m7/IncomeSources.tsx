@@ -15,6 +15,7 @@ import { useCountry, useCountryRates } from "@/lib/country/useCountry";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { useTakaStore } from "@/lib/store/store";
+import { localizeName } from "@/components/explain/localizeName";
 import { RateInput } from "../m3/RateInput";
 import { CountInput } from "./CountInput";
 
@@ -59,7 +60,7 @@ export interface IncomeSourcesProps {
 }
 
 export function IncomeSources({ mode, sex, loweredBy }: IncomeSourcesProps) {
-  const { t } = useT();
+  const { t, locale } = useT();
   const f = useFormat();
   const rates = useCountryRates();
   const { context } = useCountry();
@@ -140,8 +141,8 @@ export function IncomeSources({ mode, sex, loweredBy }: IncomeSourcesProps) {
             <>
               {scheme && (
                 <p className="text-sm text-text-muted">
-                  <a href={scheme.url} target="_blank" rel="noopener noreferrer" className="font-medium text-brand-700 underline underline-offset-2">
-                    {t("m7.sources.pension.scheme", { name: scheme.name })}
+                  <a href={scheme.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center font-medium text-brand-700 underline underline-offset-2">
+                    {t("m7.sources.pension.scheme", { name: localizeName(scheme.name, locale) })}
                   </a>
                 </p>
               )}

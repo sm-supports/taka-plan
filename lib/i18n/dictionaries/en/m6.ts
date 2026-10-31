@@ -37,7 +37,8 @@ export const m6 = {
     },
     horizon: {
       title: "When will you need this money?",
-      hint: "Money you need soon should not sit in shares.",
+      hint: "Slide to the number of years. Money you need soon should not sit in shares.",
+      band: "That counts as: {band}.",
     },
     reaction: {
       title: "If your investments fell 20% in a year, you would…",
@@ -164,6 +165,7 @@ export const m6 = {
     none: "No change",
     target: "Target {share}",
     drift: "Now {current}, {drift} from target",
+    points: "{value} points",
     triggered: "At least one part is more than {band} away from target: time to rebalance.",
     withinBand: "Every part is within {band} of target. Rebalance once a year anyway.",
     newMoneyOnly: "New money alone closes the gap: nothing needs selling.",

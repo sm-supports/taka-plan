@@ -42,7 +42,7 @@ export function GateWarnings({ keys }: { keys: readonly string[] }) {
       {keys.map((k) => (
         <div key={k} role="note" className="rounded-xl border border-status-amber/30 bg-status-amber-soft px-3 py-2.5 text-sm text-status-amber">
           <p>{t(k)}</p>
-          <Link href={k === "m6.gate.cardDebt" ? `/${locale}/m3` : `/${locale}/m1`} className="mt-1 inline-flex min-h-10 items-center font-semibold underline">
+          <Link href={k === "m6.gate.cardDebt" ? `/${locale}/m3` : `/${locale}/m1`} className="mt-1 inline-flex min-h-12 items-center font-semibold underline">
             {t(k === "m6.gate.cardDebt" ? "m6.flow.gate.openDebt" : "m6.flow.gate.openEmergency")}
           </Link>
         </div>

@@ -51,6 +51,14 @@ export function Rebalancer({ result, holdings, newMoney, driftBand, onHoldings, 
   }
 
   const held = holdings ? holdings.equity + holdings.gold + holdings.fixedIncome : 0;
+  /** A share difference in percentage points with its sign: "+5.0 points", "−2.5 points". */
+  const points = (share: number, decimals = 1) => {
+    const n = Math.round(share * 100 * 10 ** decimals) / 10 ** decimals;
+    const sign = n > 0 ? "+" : n < 0 ? "−" : "";
+    return t("m6.rebalance.points", { value: `${sign}${f.number(Math.abs(n), decimals)}` });
+  };
+  const bandPoints = Math.round(driftBand * 1000) / 10;
+  const band = t("m6.rebalance.points", { value: f.number(bandPoints, Number.isInteger(bandPoints) ? 0 : 1) });
 
   return (
     <Card
@@ -86,7 +94,10 @@ export function Rebalancer({ result, holdings, newMoney, driftBand, onHoldings, 
         />
       </div>
 
-      {r && (
+      {r && (() => {
+        const hasTrade = BAR_ORDER.some((b) => r.trades[b] !== 0);
+        const hasSale = BAR_ORDER.some((b) => r.trades[b] < 0);
+        return (
         <div className="mt-5 flex flex-col gap-3" data-testid="rebalance-result">
           <p className="text-sm font-semibold text-text">{t("m6.rebalance.total", { amount: f.money(r.total) })}</p>
           <ul className="flex flex-col divide-y divide-line">
@@ -104,7 +115,7 @@ export function Rebalancer({ result, holdings, newMoney, driftBand, onHoldings, 
                     </span>
                     <span className="text-xs text-text-muted">
                       {t("m6.rebalance.target", { share: f.percent(target, weightDecimals(target)) })}
-                      {held > 0 && <> · {t("m6.rebalance.drift", { current: f.percent(current), drift: f.percent(r.drift[b]) })}</>}
+                      {held > 0 && <> · {t("m6.rebalance.drift", { current: f.percent(current), drift: points(r.drift[b]) })}</>}
                     </span>
                   </span>
                   <span data-testid="trade" className={cn("shrink-0 text-base font-bold tabular-nums", trade > 0 ? "text-status-green" : trade < 0 ? "text-status-red" : "text-text-muted")}>
@@ -114,15 +125,22 @@ export function Rebalancer({ result, holdings, newMoney, driftBand, onHoldings, 
               );
             })}
           </ul>
-          <p className="text-sm text-text">{r.triggered ? t("m6.rebalance.triggered", { band: f.percent(driftBand, 0) }) : t("m6.rebalance.withinBand", { band: f.percent(driftBand, 0) })}</p>
+          {r.triggered ? (
+            <p className="text-sm text-text">{t("m6.rebalance.triggered", { band })}</p>
+          ) : (
+            // "Within the band" only when nothing is proposed; with a trade on screen it would contradict it.
+            !hasTrade && <p className="text-sm text-text">{t("m6.rebalance.withinBand", { band })}</p>
+          )}
           {r.newMoneyOnly ? (
             <p role="status" data-testid="new-money-only" className="rounded-xl bg-status-green-soft px-3 py-2 text-sm font-medium text-status-green">
               {t("m6.rebalance.newMoneyOnly")}
             </p>
           ) : (
-            <p role="note" className="rounded-xl border border-status-amber/30 bg-status-amber-soft px-3 py-2 text-sm text-status-amber">
-              {t("m6.rebalance.sellNote")} {result.notes.includes(EXIT_NOTE) ? t(EXIT_NOTE) : null}
-            </p>
+            hasSale && (
+              <p role="note" className="rounded-xl border border-status-amber/30 bg-status-amber-soft px-3 py-2 text-sm text-status-amber">
+                {t("m6.rebalance.sellNote")} {result.notes.includes(EXIT_NOTE) ? t(EXIT_NOTE) : null}
+              </p>
+            )
           )}
           {result.notes.includes(CERTIFICATE_NOTE) && <p className="text-sm text-text-muted">{t(CERTIFICATE_NOTE)}</p>}
           <div className="flex flex-wrap items-center justify-between gap-2">
@@ -134,7 +152,8 @@ export function Rebalancer({ result, holdings, newMoney, driftBand, onHoldings, 
             <WhyButton explanation={result.explain} stepIds={["m6.trade"]} title={t("m6.rebalance.why")} className="ms-auto" />
           </div>
         </div>
-      )}
+        );
+      })()}
     </Card>
   );
 }

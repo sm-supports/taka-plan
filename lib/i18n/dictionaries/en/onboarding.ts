@@ -70,7 +70,7 @@ export const onboarding = {
       title: "What is your monthly take-home?",
       hint: "The amount that actually lands in your account after tax and provident fund.",
       hintFreelance: "Irregular income? Add up the last six months and divide by six.",
-      placeholder: "Take-home in taka",
+      placeholder: "Take-home in your currency",
       label: "Monthly take-home",
       incomeTypeLabel: "How do you earn?",
       incomeTypeHint: {
@@ -91,7 +91,7 @@ export const onboarding = {
     3: {
       title: "How much do you spend on essentials each month?",
       hint: "Rent, food, utilities, transport, school fees, support to parents and any EMIs you already pay. Leave out eating out, shopping and holidays.",
-      placeholder: "Essential spending in taka",
+      placeholder: "Essential spending in your currency",
       label: "Monthly essential spending",
       countsTitle: "What counts as essential",
       counts: {

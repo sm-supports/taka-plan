@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { MoneyInput } from "@/components/ui/MoneyInput";
 import { cn } from "@/components/ui/cn";
-import { useCountry } from "@/lib/country/useCountry";
+import { useProductName } from "@/components/ui/useProductName";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { useTakaStore } from "@/lib/store/store";
@@ -73,9 +73,9 @@ export interface PolicyCheckerProps {
 }
 
 export function PolicyChecker({ check, explanation, readOnly, demoDraft }: PolicyCheckerProps) {
-  const { t, locale } = useT();
+  const { t } = useT();
   const f = useFormat();
-  const { context } = useCountry();
+  const names = useProductName();
   const stored = useTakaStore((s) => s.m2.policy);
   const setM2 = useTakaStore((s) => s.setM2);
   const [draft, setDraft] = useState<PolicyDraft>(() => demoDraft ?? policyToDraft(stored));
@@ -96,9 +96,9 @@ export function PolicyChecker({ check, explanation, readOnly, demoDraft }: Polic
     setM2({ policy: undefined });
   };
 
-  // Local name of the safe deposit the difference goes into (the 1-year term deposit slot).
-  const names = context.instrumentNames.fdr_1y;
-  const instrument = (locale === "bn" ? names?.local : names?.en) ?? names?.local ?? t("common.instrument.fdr_1y");
+  // The safe deposit the difference goes into (the 1-year term deposit slot), named as sold locally,
+  // in a phrase that fits the sentence (no brackets inside the hint's own wording).
+  const instrument = t("common.instrumentInline.fdr_1y", { product: names.prose("fdr_1y") });
   const years = (n: number) => `${f.number(n)} ${t(n === 1 ? "common.unit.year" : "common.unit.years")}`;
 
   return (
@@ -127,6 +127,14 @@ export function PolicyChecker({ check, explanation, readOnly, demoDraft }: Polic
           onChange={(n) => edit({ expectedMaturity: n })}
           label={t("m2.policy.expectedMaturity.label")}
           hint={t("m2.policy.expectedMaturity.hint")}
+          min={0}
+        />
+        <MoneyInput
+          id="m2-policy-surrender"
+          value={draft.surrenderValue ?? null}
+          onChange={(n) => edit({ surrenderValue: n })}
+          label={t("m2.policy.surrenderValue.label")}
+          hint={t("m2.policy.surrenderValue.hint")}
           min={0}
         />
 

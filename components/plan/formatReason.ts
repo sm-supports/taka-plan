@@ -4,8 +4,10 @@
  * reason (emergency `months` is a plain count; debt `months` is a duration), so the mapping is
  * per reason key, with a by-name fallback for keys this file does not know yet.
  */
-import type { Bucket } from "@taka/engine";
+import type { Bucket, Instrument } from "@taka/engine";
 import { isInstrumentId } from "@/components/explain/formatInputs";
+import type { ProductNames } from "@/components/ui/useProductName";
+import { iso } from "@/components/ui/bidi";
 import type { Formatters } from "@/lib/i18n/useFormat";
 import type { TFunction } from "@/lib/i18n/useT";
 import type { TranslateParams } from "@/lib/i18n/types";
@@ -19,8 +21,9 @@ const BY_REASON: Record<string, Record<string, Kind>> = {
   "plan.reason.goal": { name: "text", amount: "taka", need: "taka", instrument: "instrument", fv: "taka", years: "years" },
   "plan.reason.addGoal": {},
   "plan.reason.insurance": { amount: "taka" },
-  // planTo is an age, not money (the by-name fallback would format it as taka).
-  "plan.reason.retirement": { amount: "taka", planTo: "number" },
+  // planTo and lastsTo are ages, not money (the by-name fallback would format them as taka).
+  "plan.reason.retirement": { amount: "taka", need: "taka", planTo: "number", lastsTo: "number" },
+  "plan.reason.retirementShort": { amount: "taka", need: "taka", planTo: "number", lastsTo: "number" },
   "plan.reason.future": { amount: "taka", instrument: "instrument" },
 };
 
@@ -33,13 +36,19 @@ function fallbackKind(name: string, value: number | string): Kind {
   return "taka";
 }
 
-function formatOne(kind: Kind, value: number | string, f: Formatters, t: TFunction): string {
-  if (typeof value === "string") return kind === "instrument" ? t(`common.instrument.${value}`) : value;
+/** An instrument inside a sentence ("into a savings account", "into 3-month FDRs"), with the country's product name. */
+function instrumentInline(id: string, t: TFunction, names?: ProductNames): string {
+  const product = names && isInstrumentId(id) ? names.prose(id as Instrument) : isInstrumentId(id) ? t(`common.productProse.${id}`) : "";
+  return t(`common.instrumentInline.${id}`, { product });
+}
+
+function formatOne(kind: Kind, value: number | string, f: Formatters, t: TFunction, names?: ProductNames): string {
+  if (typeof value === "string") return kind === "instrument" ? instrumentInline(value, t, names) : value;
   switch (kind) {
     case "taka":
-      return f.money(value);
+      return iso(f.money(value));
     case "percent":
-      return f.percent(value);
+      return iso(f.percent(value));
     case "number":
       return f.number(value, Number.isInteger(value) ? 0 : 1);
     case "months":
@@ -47,24 +56,54 @@ function formatOne(kind: Kind, value: number | string, f: Formatters, t: TFuncti
     case "years":
       return `${f.number(value)} ${t(value === 1 ? "common.unit.year" : "common.unit.years")}`;
     case "instrument":
-      return t(`common.instrument.${String(value)}`);
+      return instrumentInline(String(value), t, names);
     case "text":
       return String(value);
   }
 }
 
-export function formatReasonParams(bucket: Pick<Bucket, "reasonKey" | "reasonParams">, f: Formatters, t: TFunction): TranslateParams {
-  const kinds = BY_REASON[bucket.reasonKey] ?? {};
+/**
+ * The dictionary key for a bucket's reason. The engine sends one retirement key; the card says
+ * "… of the {need} you need — lasts to {lastsTo}" when the plan cannot fit the whole need (and the
+ * engine sent those params), and "so your money lasts to {planTo}" otherwise.
+ */
+export function reasonKeyFor(bucket: Pick<Bucket, "reasonKey" | "reasonParams">): string {
+  if (bucket.reasonKey === "plan.reason.retirement") {
+    const { amount, need, lastsTo } = bucket.reasonParams;
+    if (typeof amount === "number" && typeof need === "number" && typeof lastsTo === "number" && amount < need) return "plan.reason.retirementShort";
+  }
+  return bucket.reasonKey;
+}
+
+export function formatReasonParams(bucket: Pick<Bucket, "reasonKey" | "reasonParams">, f: Formatters, t: TFunction, names?: ProductNames): TranslateParams {
+  const kinds = BY_REASON[reasonKeyFor(bucket)] ?? BY_REASON[bucket.reasonKey] ?? {};
   const out: TranslateParams = {};
   for (const [name, v] of Object.entries(bucket.reasonParams)) {
-    out[name] = formatOne(kinds[name] ?? fallbackKind(name, v), v, f, t);
+    out[name] = formatOne(kinds[name] ?? fallbackKind(name, v), v, f, t, names);
   }
   return out;
 }
 
 /** The translated one-line reason for a bucket card. */
-export function bucketReason(bucket: Pick<Bucket, "reasonKey" | "reasonParams">, f: Formatters, t: TFunction): string {
-  return t(bucket.reasonKey, formatReasonParams(bucket, f, t));
+export function bucketReason(bucket: Pick<Bucket, "reasonKey" | "reasonParams">, f: Formatters, t: TFunction, names?: ProductNames): string {
+  return t(reasonKeyFor(bucket), formatReasonParams(bucket, f, t, names));
+}
+
+/** Which product a next-step string names as {product}. */
+const NEXT_STEP_PRODUCT: Record<string, Instrument> = {
+  "plan.next.fdrLadder": "fdr_3m",
+  "plan.next.fdr": "fdr_1y",
+  "plan.next.dps": "dps",
+  "plan.next.sanchayapatra": "sanchayapatra_5y",
+  "plan.next.tbond": "tbond_5y",
+  "plan.next.openSavings": "savings_account",
+};
+
+/** The translated next step for a bucket card, with the country's product name. */
+export function bucketNextStep(bucket: Pick<Bucket, "nextStepKey">, t: TFunction, names?: ProductNames): string {
+  const slot = NEXT_STEP_PRODUCT[bucket.nextStepKey];
+  const product = slot ? (names ? names.prose(slot) : t(`common.productProse.${slot}`)) : "";
+  return t(bucket.nextStepKey, { product });
 }
 
 /** Card title: the bucket name, or "Goal: <name>" when the bucket is one goal. */

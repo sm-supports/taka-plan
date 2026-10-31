@@ -87,7 +87,7 @@ export const explain = {
     },
     emiRatio: {
       title: "EMIs as a share of take-home",
-      body: "Total EMIs divided by take-home: {totalEmi} ÷ {takeHome} = {result}. Bangladesh Bank sets no fixed limit; we flag a high share because little is left to save.",
+      body: "Total EMIs divided by take-home: {totalEmi} ÷ {takeHome} = {result}. Lenders set their own limits; we flag a high share because little is left to save.",
     },
     capacity: {
       title: "EMI capacity",

@@ -19,7 +19,9 @@ export function TermSheet({ k, open, onClose }: TermSheetProps) {
   const { t } = useT();
   return (
     <Sheet open={open} onClose={onClose} title={t(`terms.${k}.title`)}>
-      <p className="whitespace-pre-line text-start leading-relaxed">{t(`terms.${k}.body`)}</p>
+      <p dir="auto" className="whitespace-pre-line text-start leading-relaxed">
+        {t(`terms.${k}.body`)}
+      </p>
     </Sheet>
   );
 }
@@ -33,7 +35,9 @@ export function Term({ k, children }: TermProps) {
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
         aria-expanded={open}
-        className="inline cursor-help rounded-sm border-b border-dotted border-current py-1 font-medium text-brand-700 hover:bg-brand-50"
+        // Inline, so it flows with the sentence; the vertical padding (which does not move the line) and a
+        // little horizontal padding (cancelled by the negative margin) give a tap target of at least 48 px.
+        className="-mx-1.5 inline cursor-help rounded-md px-2.5 py-3.5 font-medium text-brand-700 underline decoration-dotted underline-offset-4 hover:decoration-solid"
       >
         {children}
       </button>
