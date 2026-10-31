@@ -11,7 +11,7 @@ import { useTakaStore } from "@/lib/store/store";
 
 const ONE_YEAR = 60 * 60 * 24 * 365;
 
-const COPY: Record<Locale, { label: string; choose: string; change: string; intro: string; disclaimer: string }> = {
+const COPY: Record<"bn" | "en", { label: string; choose: string; change: string; intro: string; disclaimer: string }> = {
   bn: {
     label: "বাংলা",
     choose: "ভাষা বেছে নিন",

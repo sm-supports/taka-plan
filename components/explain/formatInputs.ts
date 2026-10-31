@@ -98,7 +98,7 @@ export function formatAssumptionValue(value: number | null, unit: RateUnit, f: F
 }
 
 /** Bangla label when the row has one and the UI is in Bangla; English otherwise. */
-export function assumptionLabel(a: Assumption, locale: "bn" | "en"): string {
+export function assumptionLabel(a: Assumption, locale: string): string {
   return locale === "bn" && a.labelBn ? a.labelBn : a.labelEn;
 }
 

@@ -17,6 +17,11 @@ export interface Formatters {
   /** Bangla mode always uses Bangla digits (PRD). */
   digits: Digits;
   taka: (n: Money, o?: TakaOptions) => string;
+  /**
+   * Money in the user's currency. New code calls this, never `taka`: until the country runtime
+   * lands it is an alias of `taka`; afterwards it formats the selected country's currency.
+   */
+  money: (n: Money, o?: TakaOptions) => string;
   percent: (r: Rate, decimals?: number) => string;
   number: (n: number, decimals?: number) => string;
   months: (m: number) => string;
@@ -32,6 +37,7 @@ export function createFormatters(locale: Locale): Formatters {
     locale,
     digits,
     taka: (n, o) => formatTaka(n, { digits, compact: o?.compact, sign: o?.sign }),
+    money: (n, o) => formatTaka(n, { digits, compact: o?.compact, sign: o?.sign }),
     percent: (r, decimals) => formatPercent(r, { digits, decimals }),
     number: (n, decimals) => formatNumber(n, { digits, decimals }),
     months: (m) => formatMonths(m, locale),

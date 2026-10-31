@@ -1,3 +1,5 @@
+import type { CountryContext } from "./country/types";
+import { jsonShapeOk } from "./rates-json";
 import { EngineError, type ISODate, type Instrument, type Rate } from "./types";
 
 /** Every assumption the engine may read. Keep in sync with data/rates.seed.json (rates.test.ts asserts it). */
@@ -77,6 +79,48 @@ export const RATE_KEYS = [
   "debt_payoff_target_months",
   "goal_inflation_education",
   "goal_inflation_health",
+  // app policy and country data: M2 insurance and health
+  "insurance_income_share",
+  "insurance_cover_to_age",
+  "insurance_term_premium_table",
+  "health_hospitalisation_cost",
+  "health_premium_table",
+  "health_cover_weights",
+  "health_public_cover_floor",
+  // app policy: M6 asset allocation
+  "allocation_profiles",
+  "allocation_gold_default",
+  "allocation_gold_min",
+  "allocation_gold_max",
+  "allocation_equity_cap",
+  "allocation_drift_band",
+  "allocation_no_equity_years",
+  "allocation_cash_only_years",
+  "fixed_income_return_low",
+  "fixed_income_return_base",
+  "fixed_income_return_high",
+  "gold_return_low",
+  "gold_return_high",
+  // M7 retirement and family
+  "retirement_age_default",
+  "retirement_age_government",
+  "retirement_return_low",
+  "retirement_return_base",
+  "retirement_return_high",
+  "retirement_accumulation_return_low",
+  "retirement_accumulation_return_base",
+  "retirement_accumulation_return_high",
+  "plan_to_age_min",
+  "plan_to_age_max",
+  "plan_contrast_age",
+  "old_age_allowance_monthly",
+  "old_age_allowance_eligibility",
+  "gratuity_rule",
+  "public_pension_scheme",
+  "pensioner_sanchayapatra_cap",
+  "life_table_remaining",
+  "support_ratio",
+  "withdrawal_safe_pot_years",
 ] as const;
 
 export type RateKey = (typeof RATE_KEYS)[number];
@@ -108,6 +152,11 @@ export interface RatesSnapshot {
   version: number;
   publishedAt: ISODate;
   rows: Record<RateKey, RateRow>;
+  /**
+   * Set by withCountry (country/overlay.ts) once the user's country is applied. Absent = Bangladesh
+   * defaults (taka, BDT rounding). Never stored in D1 or the rates API.
+   */
+  country?: CountryContext;
 }
 
 export interface TaxSlab {
@@ -222,6 +271,7 @@ function checkValueByUnit(key: string, r: Partial<RateRow>, bad: (field: string)
   if (r.unit === "json") {
     if (!isPlainObjectOrArray(r.valueJson)) throw bad("valueJson");
     if (key === "tax_slabs" && !(Array.isArray(r.valueJson) && r.valueJson.length > 0 && r.valueJson.every(isTaxSlab))) throw bad("valueJson");
+    if (!jsonShapeOk(key, r.valueJson)) throw bad("valueJson");
     return;
   }
   const v = r.value;

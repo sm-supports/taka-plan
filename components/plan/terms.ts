@@ -32,15 +32,15 @@ export function termForInstrument(instrument: BucketInstrument, bucket: BucketId
   return INSTRUMENT_TERM[instrument];
 }
 
-/** Calculator route per module; M2 and M7 are not built yet, so those buckets get no link. */
+/** Calculator route per module. */
 export function calculatorPath(module: BucketModule, locale: string): string | null {
   switch (module) {
     case "m1":
+    case "m2":
     case "m3":
     case "m5":
-      return `/${locale}/${module}`;
-    case "m2":
+    case "m6":
     case "m7":
-      return null;
+      return `/${locale}/${module}`;
   }
 }

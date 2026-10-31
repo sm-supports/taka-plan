@@ -176,10 +176,11 @@ describe("terms and routes", () => {
     expect(isTermKey("nope")).toBe(false);
   });
 
-  it("links m1 / m3 / m5 and nothing for m2 / m7", () => {
+  it("links every module to its calculator route", () => {
     expect(calculatorPath("m1", "bn")).toBe("/bn/m1");
     expect(calculatorPath("m5", "en")).toBe("/en/m5");
-    expect(calculatorPath("m2", "en")).toBeNull();
-    expect(calculatorPath("m7", "bn")).toBeNull();
+    expect(calculatorPath("m2", "en")).toBe("/en/m2");
+    expect(calculatorPath("m6", "hi")).toBe("/hi/m6");
+    expect(calculatorPath("m7", "bn")).toBe("/bn/m7");
   });
 });

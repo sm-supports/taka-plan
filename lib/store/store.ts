@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { create } from "zustand";
 import { createJSONStorage, persist, type StateStorage } from "zustand/middleware";
-import { INITIAL_DATA, type TakaData, type TakaState } from "./types";
+import { upsertDraft } from "./drafts";
+import { EMPTY_ANSWERS, INITIAL_DATA, type DraftAnswers, type OnboardingState, type TakaData, type TakaState } from "./types";
 
 /** In-memory Storage used on the server and when localStorage is unavailable. */
 function memoryStorage(): StateStorage {
@@ -29,10 +30,41 @@ function patchById<T extends { id: string }>(list: T[], id: string, patch: Parti
   return list.map((x) => (x.id === id ? { ...x, ...patch, id } : x));
 }
 
-/** Strip the action functions so only data is persisted. */
-function partialize(s: TakaState): TakaData {
-  const { schemaVersion, locale, onboarding, profile, m1, m3, m4, m5 } = s;
-  return { schemaVersion, locale, onboarding, profile, m1, m3, m4, m5 };
+/** Strip the action functions so only data is persisted. Every TakaData field must be listed here. */
+export function partialize(s: TakaData): TakaData {
+  const { schemaVersion, country, locale, onboarding, profile, m1, m2, m3, m4, m5, m6, m7, drafts } = s;
+  return { schemaVersion, country, locale, onboarding, profile, m1, m2, m3, m4, m5, m6, m7, drafts };
+}
+
+/** The current answers, as a draft would keep them. */
+export function answersOf(s: TakaData): DraftAnswers {
+  const { country, locale, profile, m1, m2, m3, m4, m5, m6, m7 } = s;
+  return { country, locale, profile, m1, m2, m3, m4, m5, m6, m7 };
+}
+
+const PROFILE_FIELDS = ["age", "incomeType", "takeHome", "essentials", "dependents", "hasDebt"] as const;
+
+function nowIso(): string {
+  return new Date().toISOString();
+}
+
+/** v1 → v2: Bangladesh as the country, empty M2/M6/M7 slices, no drafts. Unknown versions start fresh. */
+export function migrateState(persisted: unknown, version: number): TakaData {
+  const p = (persisted ?? {}) as Partial<TakaData> & Record<string, unknown>;
+  if (version >= 2) return { ...INITIAL_DATA, ...p, schemaVersion: 2 } as TakaData;
+  if (version === 1) {
+    return {
+      ...INITIAL_DATA,
+      ...p,
+      schemaVersion: 2,
+      country: "BD",
+      m2: {},
+      m6: {},
+      m7: {},
+      drafts: [],
+    } as TakaData;
+  }
+  return { ...INITIAL_DATA };
 }
 
 export const useTakaStore = create<TakaState>()(
@@ -57,15 +89,38 @@ export const useTakaStore = create<TakaState>()(
       addGoal: (g) => set((s) => ({ m5: { goals: [...s.m5.goals, g] } })),
       updateGoal: (id, patch) => set((s) => ({ m5: { goals: patchById(s.m5.goals, id, patch) } })),
       removeGoal: (id) => set((s) => ({ m5: { goals: s.m5.goals.filter((g) => g.id !== id) } })),
+      setCountry: (country) => set({ country }),
+      setM2: (patch) => set((s) => ({ m2: { ...s.m2, ...patch } })),
+      setM6: (patch) => set((s) => ({ m6: { ...s.m6, ...patch } })),
+      setM7: (patch) => set((s) => ({ m7: { ...s.m7, ...patch } })),
+      startOver: () =>
+        set((s) => {
+          const { drafts } = upsertDraft(s.drafts, answersOf(s), nowIso(), () => makeId("draft"));
+          const onboarding: OnboardingState = { step: 1, completed: false, disclaimerSeen: s.onboarding.disclaimerSeen };
+          return { ...EMPTY_ANSWERS, drafts, onboarding };
+        }),
+      openDraft: (id) =>
+        set((s) => {
+          const target = s.drafts.find((d) => d.id === id);
+          if (!target) return {};
+          const { drafts } = upsertDraft(s.drafts, answersOf(s), nowIso(), () => makeId("draft"));
+          const a = target.answers;
+          const complete = PROFILE_FIELDS.every((k) => a.profile[k] !== undefined);
+          const onboarding: OnboardingState = { step: complete ? 5 : 1, completed: complete, disclaimerSeen: s.onboarding.disclaimerSeen };
+          return { ...EMPTY_ANSWERS, ...a, locale: s.locale, drafts, onboarding };
+        }),
+      renameDraft: (id, name) => set((s) => ({ drafts: s.drafts.map((d) => (d.id === id ? { ...d, name: name.trim() || undefined } : d)) })),
+      deleteDraft: (id) => set((s) => ({ drafts: s.drafts.filter((d) => d.id !== id) })),
       reset: () => set({ ...INITIAL_DATA }),
     }),
     {
+      // The key keeps its v1 name so existing users' answers are found and migrated in place.
       name: "taka-plan.v1",
-      version: 1,
+      version: 2,
       storage: createJSONStorage(() => safeLocalStorage),
-      partialize,
-      // Stub for future schema versions: today there is only v1.
-      migrate: (persisted, _version) => persisted as TakaData,
+      partialize: (s: TakaState): TakaData => partialize(s),
+      // Actions are re-attached by persist after migration; only the data half is returned here.
+      migrate: (persisted, version) => migrateState(persisted, version) as TakaState,
     },
   ),
 );

@@ -14,9 +14,10 @@ export interface UsePlanResult {
   today: ISODate;
 }
 
+/** Every persisted slice (same list as partialize in store.ts), so any answer change recomputes the plan. */
 function pickData(s: TakaData): TakaData {
-  const { schemaVersion, locale, onboarding, profile, m1, m3, m4, m5 } = s;
-  return { schemaVersion, locale, onboarding, profile, m1, m3, m4, m5 };
+  const { schemaVersion, country, locale, onboarding, profile, m1, m2, m3, m4, m5, m6, m7, drafts } = s;
+  return { schemaVersion, country, locale, onboarding, profile, m1, m2, m3, m4, m5, m6, m7, drafts };
 }
 
 function todayISO(): ISODate {

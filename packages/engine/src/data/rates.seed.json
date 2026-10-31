@@ -896,6 +896,672 @@
       "reviewedBy": "sajat",
       "nextReview": "2027-06-30",
       "isAppAssumption": true
+    },
+    "insurance_income_share": {
+      "key": "insurance_income_share",
+      "unit": "ratio",
+      "value": 0.7,
+      "labelEn": "Share of income the family would need replaced",
+      "labelBn": "পরিবারের যে আয় পূরণ করা দরকার, তার অংশ",
+      "sourceName": "Bima Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "insurance_cover_to_age": {
+      "key": "insurance_cover_to_age",
+      "unit": "years",
+      "value": 60,
+      "labelEn": "Life cover runs until age",
+      "labelBn": "জীবন বিমা যে বয়স পর্যন্ত",
+      "sourceName": "Bima Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "Dependents usually stop relying on the earner around 60 (Varsity ep. 2, 6:09)"
+    },
+    "insurance_term_premium_table": {
+      "key": "insurance_term_premium_table",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "per": 1000,
+        "smokerMultiplier": 1.6,
+        "bands": [
+          {
+            "maxAge": 30,
+            "low": 2,
+            "high": 4
+          },
+          {
+            "maxAge": 40,
+            "low": 3,
+            "high": 6
+          },
+          {
+            "maxAge": 50,
+            "low": 6,
+            "high": 12
+          },
+          {
+            "maxAge": 65,
+            "low": 12,
+            "high": 25
+          }
+        ]
+      },
+      "labelEn": "Indicative yearly term-life premium per 1,000 of cover, non-smoker, by age",
+      "labelBn": "বয়স অনুযায়ী প্রতি ১,০০০ বিমা অঙ্কে আনুমানিক বার্ষিক টার্ম প্রিমিয়াম",
+      "sourceName": "Bima Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "Placeholder until the country research confirms local quotes"
+    },
+    "health_hospitalisation_cost": {
+      "key": "health_hospitalisation_cost",
+      "unit": "bdt",
+      "value": 300000,
+      "labelEn": "Typical cost of one major hospital stay",
+      "labelBn": "একবার বড় হাসপাতাল ভর্তির সাধারণ খরচ",
+      "sourceName": "Bima Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "Placeholder until the country research confirms it"
+    },
+    "health_premium_table": {
+      "key": "health_premium_table",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "per": 100000,
+        "bands": [
+          {
+            "maxAge": 35,
+            "low": 1500,
+            "high": 3000
+          },
+          {
+            "maxAge": 50,
+            "low": 2500,
+            "high": 5000
+          },
+          {
+            "maxAge": 65,
+            "low": 5000,
+            "high": 10000
+          },
+          {
+            "maxAge": 120,
+            "low": 9000,
+            "high": 18000
+          }
+        ]
+      },
+      "labelEn": "Indicative yearly health-insurance premium per 1,00,000 of cover, by age",
+      "labelBn": "বয়স অনুযায়ী প্রতি ১,০০,০০০ কভারে আনুমানিক বার্ষিক স্বাস্থ্য বিমা প্রিমিয়াম",
+      "sourceName": "Bima Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "Placeholder until the country research confirms local quotes"
+    },
+    "health_cover_weights": {
+      "key": "health_cover_weights",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "self": 1,
+        "partner": 1,
+        "child": 0.5,
+        "parent": 1.5
+      },
+      "labelEn": "Health cover per person, as a multiple of one hospital stay",
+      "labelBn": "প্রতিজনের স্বাস্থ্য কভার, একবার হাসপাতাল খরচের গুণিতকে",
+      "sourceName": "Bima Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "health_public_cover_floor": {
+      "key": "health_public_cover_floor",
+      "unit": "ratio",
+      "value": 0.3,
+      "labelEn": "Minimum share of hospital cost to insure where public cover is broad",
+      "labelBn": "সরকারি সেবা বিস্তৃত হলেও হাসপাতাল খরচের যে ন্যূনতম অংশ বিমা করা উচিত",
+      "sourceName": "Bima Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "allocation_profiles": {
+      "key": "allocation_profiles",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "careful": {
+          "e0": 0.3,
+          "emin": 0.1
+        },
+        "balanced": {
+          "e0": 0.45,
+          "emin": 0.15
+        },
+        "growth": {
+          "e0": 0.6,
+          "emin": 0.2
+        }
+      },
+      "labelEn": "Equity share to age 30 and floor, by risk profile",
+      "labelBn": "ঝুঁকির ধরন অনুযায়ী ৩০ বছর পর্যন্ত শেয়ারের অংশ ও সর্বনিম্ন অংশ",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "allocation_gold_default": {
+      "key": "allocation_gold_default",
+      "unit": "ratio",
+      "value": 0.1,
+      "labelEn": "Gold share of the mix",
+      "labelBn": "মিশ্রণে সোনার অংশ",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "allocation_gold_min": {
+      "key": "allocation_gold_min",
+      "unit": "ratio",
+      "value": 0.05,
+      "labelEn": "Lowest gold share allowed",
+      "labelBn": "সোনার সর্বনিম্ন অংশ",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "allocation_gold_max": {
+      "key": "allocation_gold_max",
+      "unit": "ratio",
+      "value": 0.15,
+      "labelEn": "Highest gold share allowed",
+      "labelBn": "সোনার সর্বোচ্চ অংশ",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "allocation_equity_cap": {
+      "key": "allocation_equity_cap",
+      "unit": "ratio",
+      "value": 0.7,
+      "labelEn": "Highest equity share allowed",
+      "labelBn": "শেয়ারের সর্বোচ্চ অংশ",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "70% ceiling from Varsity ep. 6, 4:16"
+    },
+    "allocation_drift_band": {
+      "key": "allocation_drift_band",
+      "unit": "ratio",
+      "value": 0.05,
+      "labelEn": "Drift from target that triggers a rebalance",
+      "labelBn": "লক্ষ্য থেকে যতটা সরে গেলে পুনর্বিন্যাস",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "allocation_no_equity_years": {
+      "key": "allocation_no_equity_years",
+      "unit": "years",
+      "value": 5,
+      "labelEn": "Money needed within this many years gets no equity",
+      "labelBn": "যত বছরের মধ্যে লাগবে সেই টাকায় শেয়ার নয়",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "allocation_cash_only_years": {
+      "key": "allocation_cash_only_years",
+      "unit": "years",
+      "value": 1,
+      "labelEn": "Money needed within this many years stays in deposits or bills",
+      "labelBn": "যত বছরের মধ্যে লাগবে সেই টাকা শুধু আমানত বা ট্রেজারি বিলে",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "fixed_income_return_low": {
+      "key": "fixed_income_return_low",
+      "unit": "rate",
+      "value": 0.065,
+      "labelEn": "Fixed-income return after tax, low case",
+      "labelBn": "স্থির আয়ের মুনাফা কর-পরবর্তী, কম ক্ষেত্রে",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "fixed_income_return_base": {
+      "key": "fixed_income_return_base",
+      "unit": "rate",
+      "value": 0.085,
+      "labelEn": "Fixed-income return after tax, base case",
+      "labelBn": "স্থির আয়ের মুনাফা কর-পরবর্তী, ভিত্তি",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "fixed_income_return_high": {
+      "key": "fixed_income_return_high",
+      "unit": "rate",
+      "value": 0.105,
+      "labelEn": "Fixed-income return after tax, high case",
+      "labelBn": "স্থির আয়ের মুনাফা কর-পরবর্তী, বেশি ক্ষেত্রে",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "gold_return_low": {
+      "key": "gold_return_low",
+      "unit": "rate",
+      "value": 0.02,
+      "labelEn": "Gold return, low case",
+      "labelBn": "সোনার মুনাফা, কম ক্ষেত্রে",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "gold_return_high": {
+      "key": "gold_return_high",
+      "unit": "rate",
+      "value": 0.12,
+      "labelEn": "Gold return, high case",
+      "labelBn": "সোনার মুনাফা, বেশি ক্ষেত্রে",
+      "sourceName": "Mix Check PRD (our assumption)",
+      "sourceUrl": "docs/PRD-allocation.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "retirement_age_default": {
+      "key": "retirement_age_default",
+      "unit": "years",
+      "value": 60,
+      "labelEn": "Retirement age, private sector",
+      "labelBn": "অবসরের বয়স, বেসরকারি খাত",
+      "sourceName": "Bangladesh Labour Act 2006, s.28",
+      "sourceUrl": "https://cdn2.ogrlegal.com/files/labour/act/Bangladesh-Labour-Act-2006_English-Upto-2018.pdf",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false
+    },
+    "retirement_age_government": {
+      "key": "retirement_age_government",
+      "unit": "years",
+      "value": 59,
+      "labelEn": "Retirement age, government service",
+      "labelBn": "অবসরের বয়স, সরকারি চাকরি",
+      "sourceName": "Plan to 100 PRD (Bangladesh retirement landscape)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false
+    },
+    "retirement_return_low": {
+      "key": "retirement_return_low",
+      "unit": "rate",
+      "value": 0.08,
+      "labelEn": "Return in retirement after tax, low case",
+      "labelBn": "অবসরে কর-পরবর্তী মুনাফা, কম ক্ষেত্রে",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "retirement_return_base": {
+      "key": "retirement_return_base",
+      "unit": "rate",
+      "value": 0.1,
+      "labelEn": "Return in retirement after tax, base case",
+      "labelBn": "অবসরে কর-পরবর্তী মুনাফা, ভিত্তি",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "Kept no higher than the safe-instrument rate after tax"
+    },
+    "retirement_return_high": {
+      "key": "retirement_return_high",
+      "unit": "rate",
+      "value": 0.11,
+      "labelEn": "Return in retirement after tax, high case",
+      "labelBn": "অবসরে কর-পরবর্তী মুনাফা, বেশি ক্ষেত্রে",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "retirement_accumulation_return_low": {
+      "key": "retirement_accumulation_return_low",
+      "unit": "rate",
+      "value": 0.06,
+      "labelEn": "Return before retirement, low case",
+      "labelBn": "অবসরের আগে মুনাফা, কম ক্ষেত্রে",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "retirement_accumulation_return_base": {
+      "key": "retirement_accumulation_return_base",
+      "unit": "rate",
+      "value": 0.09,
+      "labelEn": "Return before retirement, base case",
+      "labelBn": "অবসরের আগে মুনাফা, ভিত্তি",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "Used until the user builds an asset mix (M6)"
+    },
+    "retirement_accumulation_return_high": {
+      "key": "retirement_accumulation_return_high",
+      "unit": "rate",
+      "value": 0.11,
+      "labelEn": "Return before retirement, high case",
+      "labelBn": "অবসরের আগে মুনাফা, বেশি ক্ষেত্রে",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "plan_to_age_min": {
+      "key": "plan_to_age_min",
+      "unit": "years",
+      "value": 85,
+      "labelEn": "Lowest plan-to age on the slider",
+      "labelBn": "পরিকল্পনার সর্বনিম্ন বয়স",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "plan_to_age_max": {
+      "key": "plan_to_age_max",
+      "unit": "years",
+      "value": 105,
+      "labelEn": "Highest plan-to age on the slider",
+      "labelBn": "পরিকল্পনার সর্বোচ্চ বয়স",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "plan_contrast_age": {
+      "key": "plan_contrast_age",
+      "unit": "years",
+      "value": 80,
+      "labelEn": "Contrast age shown beside the plan",
+      "labelBn": "তুলনার জন্য দেখানো বয়স",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
+    },
+    "old_age_allowance_monthly": {
+      "key": "old_age_allowance_monthly",
+      "unit": "bdt",
+      "value": 700,
+      "labelEn": "Old-age allowance a month",
+      "labelBn": "মাসিক বয়স্ক ভাতা",
+      "sourceName": "TBS, Jun 2026",
+      "sourceUrl": "https://www.tbsnews.net/node/1460791",
+      "asOf": "2026-07-01",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false,
+      "note": "Tk 1,000 over age 90; means-tested; never counted in the plan"
+    },
+    "old_age_allowance_eligibility": {
+      "key": "old_age_allowance_eligibility",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 62,
+        "over90Monthly": 1000,
+        "meansTested": true
+      },
+      "labelEn": "Old-age allowance eligibility",
+      "labelBn": "বয়স্ক ভাতার যোগ্যতা",
+      "sourceName": "Department of Social Services",
+      "sourceUrl": "https://dss.kushtia.gov.bd/",
+      "asOf": "2026-07-01",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false,
+      "note": "Income ceiling may be outdated"
+    },
+    "gratuity_rule": {
+      "key": "gratuity_rule",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": 45,
+        "afterYears": 10,
+        "daysPerMonth": 30
+      },
+      "labelEn": "Gratuity: days of last wages per year of service",
+      "labelBn": "গ্র্যাচুইটি: চাকরির প্রতি বছরে শেষ মজুরির দিন",
+      "sourceName": "Bangladesh Labour Act 2006, s.2(10)",
+      "sourceUrl": "https://cdn2.ogrlegal.com/files/labour/act/Bangladesh-Labour-Act-2006_English-Upto-2018.pdf",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false
+    },
+    "public_pension_scheme": {
+      "key": "public_pension_scheme",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 50,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": 80,
+        "inflationLinked": false,
+        "taxFree": true,
+        "projections": [
+          {
+            "monthlyContribution": 1000,
+            "years": 10,
+            "monthlyPension": 1530
+          },
+          {
+            "monthlyContribution": 1000,
+            "years": 42,
+            "monthlyPension": 34465
+          }
+        ]
+      },
+      "labelEn": "Universal Pension Scheme rules and official projections",
+      "labelBn": "সর্বজনীন পেনশন স্কিমের নিয়ম ও সরকারি প্রক্ষেপণ",
+      "sourceName": "upension.gov.bd / Prothom Alo, Sep 2026",
+      "sourceUrl": "https://www.upension.gov.bd/Public/PensionBriefEn",
+      "asOf": "2026-09-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false,
+      "note": "No guaranteed rate; fixed amount for life"
+    },
+    "pensioner_sanchayapatra_cap": {
+      "key": "pensioner_sanchayapatra_cap",
+      "unit": "bdt",
+      "value": 5000000,
+      "labelEn": "Pensioner Sanchayapatra limit (government retirees only)",
+      "labelBn": "পেনশনার সঞ্চয়পত্রের সীমা (শুধু সরকারি অবসরপ্রাপ্ত)",
+      "sourceName": "UNB, Mar 2025",
+      "sourceUrl": "https://unb.com.bd/category/bangladesh/pensioner-sanchayapatra-in-bangladesh-revised-profit-rates-in-2025/154533",
+      "asOf": "2025-03-31",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false
+    },
+    "life_table_remaining": {
+      "key": "life_table_remaining",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.6,
+            "men": 18.5,
+            "women": 20.7,
+            "projected": 21.2,
+            "projectedMen": 19.9,
+            "projectedWomen": 22.5
+          },
+          {
+            "age": 65,
+            "total": 16,
+            "men": 15.1,
+            "women": 16.9,
+            "projected": 17.4
+          },
+          {
+            "age": 70,
+            "total": 13
+          },
+          {
+            "age": 80,
+            "total": 8.9,
+            "projected": 8.1
+          }
+        ]
+      },
+      "labelEn": "Remaining years of life at 60, 65, 70 and 80",
+      "labelBn": "৬০, ৬৫, ৭০ ও ৮০ বছর বয়সে বাকি আয়ু",
+      "sourceName": "BBS SVRS 2020 life table; UN WPP 2026 projection",
+      "sourceUrl": "https://georank.org/life-expectancy/bangladesh",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false,
+      "note": "Explainer only; never the plan-to age"
+    },
+    "support_ratio": {
+      "key": "support_ratio",
+      "unit": "json",
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2022,
+            "value": 11
+          },
+          {
+            "year": 2040,
+            "value": 6
+          },
+          {
+            "year": 2065,
+            "value": 3
+          }
+        ]
+      },
+      "labelEn": "Working-age people per elderly person",
+      "labelBn": "প্রতি প্রবীণের বিপরীতে কর্মক্ষম মানুষ",
+      "sourceName": "TBS, Sep 2022",
+      "sourceUrl": "https://www.tbsnews.net/node/506314",
+      "asOf": "2022-09-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": false
+    },
+    "withdrawal_safe_pot_years": {
+      "key": "withdrawal_safe_pot_years",
+      "unit": "years",
+      "value": 3,
+      "labelEn": "Years of withdrawals kept in safe, quick instruments",
+      "labelBn": "যত বছরের উত্তোলন নিরাপদ, দ্রুত পাওয়া যায় এমন জায়গায়",
+      "sourceName": "Plan to 100 PRD (our assumption)",
+      "sourceUrl": "docs/PRD-retirement.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true
     }
   }
 }

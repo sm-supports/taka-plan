@@ -24,9 +24,10 @@ import {
   type Instrument,
   type LoanType,
   type Status,
+  LOCALES,
 } from "@taka/engine";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
+import { defaultLocale, isLocale, LOCALE_META, locales } from "@/lib/i18n/config";
 import { bn } from "@/lib/i18n/dictionaries/bn";
 import { en } from "@/lib/i18n/dictionaries/en";
 import { getDictionary } from "@/lib/i18n/server";
@@ -64,18 +65,35 @@ function expectString(dict: unknown, key: string, name: string) {
 const explainKey = (stepId: string) => `explain.${stepId}`;
 
 describe("i18n config", () => {
-  it("has bn as the default and recognises both locales", () => {
-    expect(locales).toEqual(["bn", "en"]);
+  it("has bn as the default and the same twelve locales as the engine", () => {
+    expect([...locales]).toEqual([...LOCALES]);
+    expect(locales).toHaveLength(12);
     expect(defaultLocale).toBe("bn");
     expect(isLocale("bn")).toBe(true);
     expect(isLocale("en")).toBe(true);
-    expect(isLocale("fr")).toBe(false);
+    expect(isLocale("fr")).toBe(true);
+    expect(isLocale("de")).toBe(false);
     expect(isLocale(undefined)).toBe(false);
+    for (const l of locales) expect(LOCALE_META[l].nativeName.length).toBeGreaterThan(0);
+    expect(LOCALE_META.ar.dir).toBe("rtl");
+    expect(LOCALE_META.ur.dir).toBe("rtl");
   });
 
   it("getDictionary loads each locale", async () => {
     expect(await getDictionary("en")).toBe(en);
     expect(await getDictionary("bn")).toBe(bn);
+    for (const l of locales) expect(await getDictionary(l)).toBeTruthy();
+  });
+
+  it("every locale's dictionary has exactly the English key set and placeholders", async () => {
+    const enKeys = leafPaths(en).sort();
+    const slots = (s: string) => [...s.matchAll(/\{(\w+)\}/g)].map((m) => m[1]).sort();
+    for (const l of locales) {
+      const d = await getDictionary(l);
+      expect(leafPaths(d).sort(), `${l} key set`).toEqual(enKeys);
+      const bad = enKeys.filter((k) => JSON.stringify(slots(getPath(en, k) as string)) !== JSON.stringify(slots(getPath(d, k) as string)));
+      expect(bad, `${l} placeholders`).toEqual([]);
+    }
   });
 });
 

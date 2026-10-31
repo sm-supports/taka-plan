@@ -3,9 +3,19 @@
  * This package is pure TypeScript: no React, no DOM, no I/O.
  */
 
-export type Locale = "bn" | "en";
+/** UI languages. bn and en are complete; the others are translated from en (see docs/TOOLING.md). */
+export const LOCALES = ["bn", "en", "hi", "ur", "ar", "es", "fr", "pt", "id", "zh", "ru", "sw"] as const;
+export type Locale = (typeof LOCALES)[number];
 
-/** Whole taka. The engine never produces paisa. */
+/** ISO 3166-1 alpha-2 country code, upper case ("BD"). */
+export type CountryCode = string;
+
+/** ISO 4217 currency code, upper case ("BDT"). */
+export type CurrencyCode = string;
+
+export type Sex = "male" | "female";
+
+/** Whole units of the user's currency (taka for Bangladesh). The engine never produces minor units. */
 export type Money = number;
 
 /** Decimal rate: 0.08 means 8% a year. */

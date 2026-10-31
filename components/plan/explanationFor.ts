@@ -52,6 +52,8 @@ export function bucketExplanation(plan: Plan, bucket: Bucket): Explanation {
     case "future":
       return mergeExplanations([plan.budget.explain, planSteps(plan, ["plan.goalsShare"])]);
     case "insurance":
-      return planSteps(plan, ["plan.total"]);
+      return mergeExplanations([plan.insurance?.explain ?? EMPTY, planSteps(plan, ["plan.total"])]);
+    case "retirement":
+      return mergeExplanations([plan.retirement?.explain ?? EMPTY, planSteps(plan, ["plan.total"])]);
   }
 }

@@ -7,6 +7,8 @@
  *   goal:          {name} {amount} {instrument} {fv} {years}
  *   addGoal:       —
  *   insurance:     {amount}
+ *   retirement:    {amount} {planTo}
+ *   future:        {amount} {instrument}
  */
 export const plan = {
   title: "Your plan",
@@ -40,6 +42,7 @@ export const plan = {
       insurance: "Insurance",
       debt: "Debt payoff",
       goal: "Goal",
+      retirement: "Retirement",
       future: "Future",
     },
   },
@@ -60,6 +63,8 @@ export const plan = {
     goal: "{name} — {amount}/month into {instrument} — you will need {fv} in {years}",
     addGoal: "Add a goal — every plan needs at least one, and retirement counts",
     insurance: "Insurance — {amount}/month set aside for term life and health cover",
+    retirement: "Retirement — {amount}/month so your money lasts to age {planTo}",
+    future: "Long-term savings — {amount}/month into {instrument} until you add a goal",
   },
 
   next: {
@@ -72,5 +77,8 @@ export const plan = {
     fdr: "Visit any scheduled bank with your NID and TIN; ask for a 1-year FDR and keep the receipt somewhere safe.",
     addGoal: "Tap “Add a goal”, give it a name, its cost in today's taka and how many years away it is.",
     keepFull: "Your fund is full: leave it where it is. After any withdrawal, put the same amount back before any other saving, so it is whole again.",
+    insurance: "Open the insurance check: it works out the life and health cover your family needs and what it should roughly cost.",
+    retirement: "Open the retirement plan: see what you need to live on your own money to 100, and which income sources lower it.",
+    allocation: "Open the asset mix: it splits long-term money across fixed income, shares and gold for your age.",
   },
 } as const;
