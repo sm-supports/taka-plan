@@ -53,7 +53,31 @@ export function countryIndexSync(): CountryIndexEntry[] {
   return cached ?? COUNTRY_INDEX;
 }
 
-/** Fetches /data/countries/index.json once per page load; falls back to the bundled list on any failure. */
+function union<T>(a: readonly T[], b: readonly T[]): T[] {
+  const out = [...a];
+  for (const x of b) if (!out.includes(x)) out.push(x);
+  return out;
+}
+
+/**
+ * The bundled list of every country, updated from the researched index where a country has been
+ * researched. Researched data can be partial (research runs country by country), so it never shrinks
+ * the list; languages and locales are the union, with English always last.
+ */
+export function mergeCountryIndex(researched: readonly CountryIndexEntry[], bundled: readonly CountryIndexEntry[] = COUNTRY_INDEX): CountryIndexEntry[] {
+  const byCode = new Map(researched.map((e) => [e.code, e]));
+  const merged = bundled.map((b) => {
+    const r = byCode.get(b.code);
+    if (!r) return b;
+    const locales = union(r.locales.filter((l) => l !== "en"), b.locales.filter((l) => l !== "en"));
+    return { ...b, ...r, languages: union(r.languages, b.languages), locales: [...locales, "en" as const] };
+  });
+  const known = new Set(bundled.map((b) => b.code));
+  for (const r of researched) if (!known.has(r.code)) merged.push(r);
+  return merged;
+}
+
+/** Fetches /data/countries/index.json once per page load and merges it into the bundled list; the bundled list alone on any failure. */
 export function loadCountryIndex(fetcher: typeof fetch = globalThis.fetch): Promise<CountryIndexEntry[]> {
   if (cached) return Promise.resolve(cached);
   if (pending) return pending;
@@ -62,7 +86,7 @@ export function loadCountryIndex(fetcher: typeof fetch = globalThis.fetch): Prom
     .then(async (r) => {
       if (!r.ok || !(r.headers.get("content-type") ?? "").includes("json")) return COUNTRY_INDEX;
       const data: unknown = await r.json();
-      return looksLikeIndex(data) ? data : COUNTRY_INDEX;
+      return looksLikeIndex(data) ? mergeCountryIndex(data) : COUNTRY_INDEX;
     })
     .catch(() => COUNTRY_INDEX)
     .then((list) => {

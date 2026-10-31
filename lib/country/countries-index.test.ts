@@ -81,10 +81,12 @@ describe("suggestions", () => {
 describe("loadCountryIndex", () => {
   afterEach(() => resetCountryIndexCache());
 
-  it("prefers a valid fetched index", async () => {
+  it("merges a valid fetched index into the full bundled list", async () => {
     const one = [{ code: "BD", nameEn: "Bangladesh", nameNative: "বাংলাদেশ", region: "south_asia", currency: "BDT", languages: ["bn"], locales: ["bn", "en"] }];
     const fetcher = (async () => new Response(JSON.stringify(one), { headers: { "content-type": "application/json" } })) as typeof fetch;
-    expect(await loadCountryIndex(fetcher)).toEqual(one);
+    const list = await loadCountryIndex(fetcher);
+    expect(list).toHaveLength(COUNTRY_INDEX.length);
+    expect(list.find((e) => e.code === "BD")?.locales).toEqual(["bn", "en"]);
   });
 
   it("falls back to the bundled list on a 404, HTML or a malformed file", async () => {
@@ -100,3 +102,20 @@ describe("loadCountryIndex", () => {
     expect(await loadCountryIndex(offline)).toBe(COUNTRY_INDEX);
   });
 });
+
+describe("mergeCountryIndex", () => {
+  it("keeps every bundled country when only some are researched, and unions languages", async () => {
+    const { mergeCountryIndex, COUNTRY_INDEX: all } = await import("./index-data");
+    const india = all.find((e) => e.code === "IN")!;
+    const researched = [{ ...india, nameNative: "भारत गणराज्य", languages: ["hi", "en", "te"], locales: ["hi" as const, "en" as const] }];
+    const merged = mergeCountryIndex(researched);
+    expect(merged).toHaveLength(all.length);
+    const m = merged.find((e) => e.code === "IN")!;
+    expect(m.nameNative).toBe("भारत गणराज्य");
+    expect(m.locales[0]).toBe("hi");
+    expect(m.locales[m.locales.length - 1]).toBe("en");
+    expect(m.locales).toEqual(expect.arrayContaining(india.locales));
+    expect(m.languages.slice(0, 3)).toEqual(["hi", "en", "te"]);
+  });
+});
+

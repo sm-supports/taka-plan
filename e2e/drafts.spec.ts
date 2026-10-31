@@ -137,6 +137,8 @@ test("start from the beginning keeps deduplicated drafts that can be opened, ren
 });
 
 test("calculator results offer start from the beginning; the sample plan does not", async ({ page }) => {
+  // Long flow (onboarding plus four calculator pages): give it more than the default 60 s on a busy machine.
+  test.setTimeout(150_000);
   await page.goto("/en/plan?demo=1");
   await expect(page.getByText(HEADLINE).first()).toBeVisible();
   await expect(page.getByTestId("start-over")).toHaveCount(0);
