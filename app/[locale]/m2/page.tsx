@@ -1,8 +1,13 @@
 "use client";
-/** M2 Insurance & health: placeholder until the m2 UI slice lands. */
-import { useT } from "@/lib/i18n/useT";
+/** M2 Insurance & health page. Suspense because the calculator reads `?demo=` via useSearchParams. */
+import { Suspense } from "react";
+import { M2Calculator } from "@/components/calculators/m2/M2Calculator";
+import { Skeleton } from "@/components/ui/Skeleton";
 
 export default function M2Page() {
-  const { t } = useT();
-  return <h1 className="text-2xl font-semibold">{t("m2.title")}</h1>;
+  return (
+    <Suspense fallback={<Skeleton page />}>
+      <M2Calculator />
+    </Suspense>
+  );
 }
