@@ -55,12 +55,12 @@ export function NumberBox({ id, value, onChange, label, unit, placeholder, inval
             onChange(parseAgeInput(nextText));
           }}
           className={cn(
-            "tap w-full rounded-xl border bg-surface py-3 pl-4 pr-20 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
+            "tap w-full rounded-xl border bg-surface py-3 ps-4 pe-20 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
             invalid ? "border-status-red" : "border-line focus:border-brand-500",
           )}
         />
         {unit && (
-          <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-base font-medium text-text-muted" aria-hidden="true">
+          <span className="pointer-events-none absolute inset-y-0 end-4 flex items-center text-base font-medium text-text-muted" aria-hidden="true">
             {unit}
           </span>
         )}

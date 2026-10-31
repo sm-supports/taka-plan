@@ -191,7 +191,7 @@ export function EmergencyFundCalculator() {
                 value={
                   <>
                     {f.money(result.monthlySaving)}
-                    <span className="ml-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
+                    <span className="ms-1 text-lg font-medium text-text-muted">{t("common.unit.perMonth")}</span>
                   </>
                 }
                 caption={result.gap === 0 ? t("m1.result.full") : t("m1.result.monthsCoveredOf", { covered: f.number(result.monthsCovered, 1), months: f.number(result.months) })}

@@ -103,6 +103,11 @@ export const common = {
     en: "English",
     pick: "Choose language",
   },
+  /** Header language menu button: {language} is the current language's own name. */
+  languageMenu: "Language: {language}",
+  changeCountry: "Change country",
+  /** Header country link: {country} is the country code shown in the header. */
+  countryLink: "Country {country}. Change country",
 
   incomeType: {
     salaried: "Salaried",

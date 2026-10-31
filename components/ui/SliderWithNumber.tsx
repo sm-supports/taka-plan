@@ -53,7 +53,7 @@ export function SliderWithNumber({ id, value, onChange, min, max, step, label, h
         </label>
         <output htmlFor={sliderId} className="text-lg font-bold tabular-nums text-brand-700" aria-live="polite">
           {fmt(value)}
-          {unitLabel ? <span className="ml-1 text-sm font-medium text-text-muted">{unitLabel}</span> : null}
+          {unitLabel ? <span className="ms-1 text-sm font-medium text-text-muted">{unitLabel}</span> : null}
         </output>
       </div>
       {hint && (

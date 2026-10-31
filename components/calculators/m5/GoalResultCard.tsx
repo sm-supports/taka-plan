@@ -55,7 +55,7 @@ export function GoalResultCard({ name, result, shown }: GoalResultCardProps) {
             <p className="text-sm font-medium text-text-muted">{t("m5.result.monthly")}</p>
             <p className="mt-0.5 text-3xl font-bold tabular-nums text-brand-700">
               {f.money(result.monthly.base)}
-              <span className="ml-1 text-base font-medium text-text-muted">{t("common.unit.perMonth")}</span>
+              <span className="ms-1 text-base font-medium text-text-muted">{t("common.unit.perMonth")}</span>
             </p>
             <p className="mt-1 text-sm text-text-muted">{t("m5.result.months", { months: f.months(result.months) })}</p>
           </div>
@@ -96,7 +96,7 @@ function Row({ label, value, hint, strong }: { label: React.ReactNode; value: Re
     <div className="flex flex-col gap-0.5 py-2.5">
       <div className="flex items-start justify-between gap-3">
         <dt className="text-base text-text">{label}</dt>
-        <dd className={`shrink-0 text-right text-base tabular-nums ${strong ? "font-bold text-brand-700" : "font-semibold text-text"}`}>{value}</dd>
+        <dd className={`shrink-0 text-end text-base tabular-nums ${strong ? "font-bold text-brand-700" : "font-semibold text-text"}`}>{value}</dd>
       </div>
       {hint && <p className="text-sm text-text-muted">{hint}</p>}
     </div>

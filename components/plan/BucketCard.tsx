@@ -42,7 +42,7 @@ export function BucketCard({ plan, bucket, whyOpen, onWhyOpenChange }: BucketCar
             <div className="text-xs font-medium text-text-faint">{t("plan.card.priority", { n: f.number(bucket.priority) })}</div>
             <h2 className="text-lg font-bold leading-snug text-text">{title}</h2>
           </div>
-          <StatusPill status={bucket.status} demotedFromRed={bucket.demotedFromRed} className="shrink-0 items-end text-right" />
+          <StatusPill status={bucket.status} demotedFromRed={bucket.demotedFromRed} className="shrink-0 items-end text-end" />
         </>
       }
     >

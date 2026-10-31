@@ -135,7 +135,7 @@ function CountryList({ list, error, onReload, onPick }: { list: CountrySummary[]
               <button
                 type="button"
                 onClick={() => onPick(c.code)}
-                className="tap flex w-full flex-col gap-1 rounded-card border border-line bg-surface p-3 text-left shadow-sm hover:bg-surface-muted"
+                className="tap flex w-full flex-col gap-1 rounded-card border border-line bg-surface p-3 text-start shadow-sm hover:bg-surface-muted"
               >
                 <span className="flex w-full items-center justify-between gap-2">
                   <span className="font-semibold">
@@ -197,7 +197,7 @@ function CountryDetail({ code, onBack }: { code: CountryCode; onBack: () => void
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <Button variant="ghost" onClick={onBack} className="-ml-2">
+        <Button variant="ghost" onClick={onBack} className="-ms-2">
           ← {t("admin.countries.back")}
         </Button>
         <h1 className="text-2xl font-bold">

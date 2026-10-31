@@ -41,7 +41,7 @@ export function ChoiceButtons<V extends string = string>({ options, value, onCha
             aria-pressed={on}
             onClick={() => toggle(o.value)}
             className={cn(
-              "tap flex min-h-14 flex-col items-start justify-center rounded-xl border px-4 py-3 text-left transition-colors",
+              "tap flex min-h-14 flex-col items-start justify-center rounded-xl border px-4 py-3 text-start transition-colors",
               on ? "border-brand-600 bg-brand-50 text-brand-900" : "border-line bg-surface text-text hover:bg-surface-muted",
             )}
           >

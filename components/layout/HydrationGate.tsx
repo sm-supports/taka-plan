@@ -6,11 +6,12 @@
  */
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
+import { locales } from "@/lib/i18n/config";
 import { useHydrated } from "@/lib/store/store";
 import { Skeleton } from "@/components/ui/Skeleton";
 
-/** Routes whose content does not depend on the persisted store. */
-const STORE_FREE = /^\/(bn|en)\/about(\/|$)/;
+/** Routes whose content does not depend on the persisted store, in every locale. */
+const STORE_FREE = new RegExp(`^/(${locales.join("|")})/about(/|$)`);
 
 export function HydrationGate({ children }: { children: ReactNode }) {
   const hydrated = useHydrated();

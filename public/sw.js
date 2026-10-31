@@ -20,7 +20,9 @@ const CACHE_VERSION = ((new URL(self.location.href).searchParams.get("v") || "de
 const CACHE_NAME = "taka-" + CACHE_VERSION;
 const PRECACHE_URLS = ["/", "/bn/plan", "/en/plan", "/manifest.webmanifest", "/api/rates", "/data/countries/index.json"];
 const NAVIGATION_TIMEOUT_MS = 3000;
-const LOCALES = ["bn", "en"];
+const LOCALES = ["bn", "en", "hi", "ur", "ar", "es", "fr", "pt", "id", "zh", "ru", "sw"];
+/** Keep in sync with LOCALE_PREFIX in lib/i18n/config.ts. */
+const PLAN_SHELL = new RegExp("^/(" + LOCALES.join("|") + ")/plan$");
 const DEFAULT_LOCALE = "bn";
 const STATIC_PREFIX = "/_next/static/";
 const RATES_PATH = "/api/rates";
@@ -93,7 +95,7 @@ async function handleNavigation(request, url) {
   const cache = await caches.open(CACHE_NAME);
   try {
     const response = await withTimeout(fetch(request), NAVIGATION_TIMEOUT_MS);
-    const isShell = PRECACHE_URLS.includes(url.pathname) || /^\/(bn|en)\/plan$/.test(url.pathname);
+    const isShell = PRECACHE_URLS.includes(url.pathname) || PLAN_SHELL.test(url.pathname);
     if (response.ok && isShell && url.search === "") cache.put(url.pathname, cacheable(response.clone())).catch(() => {});
     return response;
   } catch (_) {

@@ -1,5 +1,6 @@
 /**
- * Onboarding smoke: language pick → five questions → plan, in at most eight taps.
+ * Onboarding smoke: country → language → five questions → plan, in at most nine taps
+ * (the country and language picks on "/" count as taps).
  *
  * Runs against the local Pages preview by default (playwright.config.ts starts it) or BASE_URL.
  * Set E2E_EXPECT_PLAN=1 once the engine is wired to require the "Save ৳X a month" headline;
@@ -8,7 +9,7 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
 
 const EXPECT_PLAN = process.env.E2E_EXPECT_PLAN === "1";
-const MAX_CLICKS = 8;
+const MAX_CLICKS = 9;
 
 /** Counts every tap so the test can assert the PRD's "plan in a handful of taps" promise. */
 class Tapper {
@@ -38,13 +39,14 @@ class Tapper {
   }
 }
 
-test("English onboarding reaches the plan in eight taps or fewer, then switches to Bangla digits", async ({ page }) => {
+test("English onboarding reaches the plan in nine taps or fewer, then switches to Bangla digits", async ({ page }) => {
   const tapper = new Tapper(page);
 
   await page.goto("/");
-  // The language buttons are client components: wait for hydration (dev serves modules lazily)
+  // The picker is a client component: wait for hydration (dev serves modules lazily)
   // so the first tap is a real tap, not a click on static HTML.
   await page.waitForLoadState("networkidle", { timeout: 20_000 }).catch(() => {});
+  await tapper.tap(page.locator('button[data-country="BD"]'));
   await tapper.tap(page.getByRole("button", { name: "English", exact: true }));
   await expect(page).toHaveURL(/\/en\/start\/1/);
 
@@ -87,8 +89,9 @@ test("English onboarding reaches the plan in eight taps or fewer, then switches 
   }
   expect(tapper.clicks, `taps needed to reach the plan (max ${MAX_CLICKS})`).toBeLessThanOrEqual(MAX_CLICKS);
 
-  // Locale switch in the header: the toggle is labelled with the language it switches TO.
-  await page.getByRole("button", { name: "বাংলা", exact: true }).click();
+  // Language menu in the header: open it, pick Bangla (Bangladesh offers বাংলা and English).
+  await page.getByRole("button", { name: "Language: English" }).click();
+  await page.getByRole("button", { name: /^বাংলা/ }).click();
   await expect(page).toHaveURL(/\/bn\/plan/);
   await expect(body).toContainText(/[০-৯]/);
 });

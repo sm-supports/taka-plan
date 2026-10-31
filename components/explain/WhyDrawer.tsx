@@ -64,7 +64,7 @@ export function WhyDrawer({ explanation, title, stepIds, open, onClose }: WhyDra
       {notes.length > 0 && (
         <section className="mt-6" aria-label={t("common.explain.notes")}>
           <h3 className="text-xs font-semibold uppercase tracking-wide text-text-muted">{t("common.explain.notes")}</h3>
-          <ul className="mt-2 flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed text-text-muted">
+          <ul className="mt-2 flex list-disc flex-col gap-2 ps-5 text-sm leading-relaxed text-text-muted">
             {notes.map((n) => (
               <li key={n}>{t(n)}</li>
             ))}

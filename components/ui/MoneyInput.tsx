@@ -21,8 +21,8 @@ export interface MoneyInputProps {
 export function MoneyInput({ id, value, onChange, label, hint, error, min, max, placeholder, autoFocus, className }: MoneyInputProps) {
   const { money, parseMoney, inputDigits, currency } = useFormat();
   const symbol = currency.symbol;
-  // Room for the symbol inside the box: "৳", "$" fit pl-10; "Rs", "KSh", "R$" need more.
-  const padLeft = symbol.length <= 1 ? "pl-10" : symbol.length === 2 ? "pl-14" : "pl-16";
+  // Room for the symbol inside the box: "৳", "$" fit ps-10; "Rs", "KSh", "R$" need more.
+  const padLeft = symbol.length <= 1 ? "ps-10" : symbol.length === 2 ? "ps-14" : "ps-16";
   const uid = useId();
   const hintId = `${id || uid}-hint`;
   const previewId = `${id || uid}-preview`;
@@ -53,7 +53,7 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
         </p>
       )}
       <div className="relative">
-        <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center text-xl font-semibold text-text-muted" aria-hidden="true">
+        <span className="pointer-events-none absolute inset-y-0 start-4 flex items-center text-xl font-semibold text-text-muted" aria-hidden="true">
           {symbol}
         </span>
         <input
@@ -74,7 +74,7 @@ export function MoneyInput({ id, value, onChange, label, hint, error, min, max, 
             onChange(parseMoney(next));
           }}
           className={cn(
-            "tap w-full rounded-xl border bg-surface py-3 pr-4 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
+            "tap w-full rounded-xl border bg-surface py-3 pe-4 text-2xl font-semibold tabular-nums text-text placeholder:text-text-faint placeholder:font-normal",
             padLeft,
             invalid ? "border-status-red" : "border-line focus:border-brand-500",
           )}

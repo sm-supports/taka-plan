@@ -66,7 +66,7 @@ export function RegisterSW({ buildId }: RegisterSWProps) {
       <button
         type="button"
         onClick={() => window.location.reload()}
-        className="pointer-events-auto min-h-12 w-full max-w-md rounded-2xl bg-brand-900 px-4 py-3 text-left text-sm font-semibold text-white shadow-lg"
+        className="pointer-events-auto min-h-12 w-full max-w-md rounded-2xl bg-brand-900 px-4 py-3 text-start text-sm font-semibold text-white shadow-lg"
       >
         <span lang="bn">নতুন সংস্করণ এসেছে — রিলোড করতে চাপুন</span>
         <span aria-hidden="true"> · </span>
