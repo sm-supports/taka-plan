@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "code": "AM",
+  "iso3": "ARM",
+  "nameEn": "Armenia",
+  "nameNative": "Հայաստան",
+  "region": "europe_central_asia",
+  "languages": [
+    "hy",
+    "ru",
+    "en"
+  ],
+  "currency": {
+    "code": "AMD",
+    "symbol": "֏",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 360.14,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, official exchange rate",
+      "sourceUrl": "https://www.cba.am/en/",
+      "asOf": "2026-10-30",
+      "note": "AMD 360.14 per USD; World Bank 2025 average 387.01."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.043,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia (home page, 12-month inflation)",
+      "sourceUrl": "https://www.cba.am/en/",
+      "asOf": "2026-09-30",
+      "note": "12-month CPI inflation 4.3% in September 2026 (4.4% in August, Trading Economics)."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "CBA 3% inflation target; CPI 4.3% (Sep 2026); IMF WEO 4.6% (2026), 3.0% from 2029",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/ARM",
+      "asOf": "2026-10-31",
+      "note": "The 3% target is credible over time but inflation is above it now, so 3.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.0675,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, policy (refinancing) rate",
+      "sourceUrl": "https://www.cba.am/en/",
+      "asOf": "2026-09-15",
+      "note": "Raised by 25 bp to 6.75% on 15 September 2026 (date from Trading Economics); next decision 3 November 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBA deposit rate series covers term deposits only; no typical rate on ordinary savings/demand accounts was found."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0813,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, interest rates on attracted deposits (61-90 days, AMD)",
+      "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on new AMD deposits of 61-90 days in September 2026 (file 11_Deposit_rates_eng.xlsx); 91-180 days 7.71%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0864,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, interest rates on attracted deposits (181 days-1 year, AMD)",
+      "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on new AMD deposits of 181 days to 1 year in September 2026; over 1 year 9.43%. USD deposits pay about 3.3%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0778,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, average interest rate on attracted AMD deposits (up to 1 year and more)",
+      "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221",
+      "asOf": "2026-09-30",
+      "note": "September 2026 weighted average for new AMD deposits; World Bank FR.INR.DPST 8.03% (2025)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Saving coupon bonds (3 months to 25 years, tax-exempt) are sold only to individuals through Treasury Direct, but the sales system listed no bonds on sale and no current coupon rate was published; the 5-year government yield curve point was 8.15% on 30 Oct 2026."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0677,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, treasury bill yield curve (90 days, ACT/360)",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-30",
+      "note": "From YC_ENG.xlsx; the 364-day bill sold at a 6.75% weighted average in September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0815,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, treasury bond yield curve (5-year yield to maturity)",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-30",
+      "note": "Nelson-Siegel curve built from government bond quotes; spot 8.23%."
+    },
+    "tbond_10y_rate": {
+      "value": 0.087,
+      "status": "sourced",
+      "sourceName": "Central Bank of Armenia, treasury bond yield curve (10-year yield to maturity)",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-30",
+      "note": "Spot 8.92%."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Armenia, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/armenia/individual/taxes-on-personal-income",
+      "asOf": "2026-06-30",
+      "note": "Interest, if not exempt, is taxed at 20% from 1 January 2023, withheld by the bank."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Armenia, Treasury Direct (saving bonds)",
+      "sourceUrl": "https://minfin.am/en/page/treasury_direct_/",
+      "asOf": "2026-10-31",
+      "note": "Income from government securities bought through Treasury Direct, including saving bonds, is exempt from any taxation."
+    },
+    "deposit_insurance_limit": {
+      "value": 16000000,
+      "status": "sourced",
+      "sourceName": "Deposit Guarantee Fund of Armenia",
+      "sourceUrl": "https://www.adgf.am/en",
+      "asOf": "2026-10-31",
+      "note": "AMD 16,000,000 for dram-only deposits; AMD 7,000,000 for foreign-currency-only deposits."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate could be read from CBA sources."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (AMD per USD 387 in 2025); CBA rate 360.14 on 30 Oct 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AM",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund in dram terms if shares are weak and the dram keeps appreciating; the local exchange is too small for a diversified fund."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "1-year government bond 7.21% (tax-free) and 1-year deposit 8.64% less 20% tax = 6.9%; global equity in AMD",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "Armenia has no meaningful local equity market, so the base case is a global index in dram terms, about 2 points over the tax-free 1-year government yield and within the 4-point cap."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Global equity long-run record plus dram depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AM",
+      "asOf": "2026-10-31",
+      "note": "High case with strong global shares and a weaker dram."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (AMD per USD 387 in 2025, 360 in Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AM",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stronger dram."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (AMD per USD 387 in 2025, 360 in Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AM",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4-5% plus about 1% a year of dram weakness over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (AMD per USD 387 in 2025, 360 in Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AM",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker dram."
+    },
+    "fixed_income_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "3-month T-bill 6.77% (tax-free); 61-90 day deposits 8.13% less 20% tax = 6.5%",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short bills or deposits after tax, allowing for policy rate cuts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.068,
+      "status": "assumption",
+      "sourceName": "1-year deposit 8.64% less 20% tax = 6.9%; 1-year government yield 7.21% tax-free",
+      "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year deposits after tax or 1-year government securities."
+    },
+    "fixed_income_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "5-year government yield 8.15% (tax-free through Treasury Direct)",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "High case: 5-year government bonds held to maturity."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found; the life insurance market in Armenia is very small."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates by age were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age band were found."
+    },
+    "oop_health_share": {
+      "value": 0.8047,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AM",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "CBA CPI 4.3% (Sep 2026); 3.5% planning inflation",
+      "sourceUrl": "https://www.cba.am/en/",
+      "asOf": "2026-10-31",
+      "note": "No Armenian medical price index was read, so we plan with the 3.5% projection plus one point; most health costs are paid out of pocket."
+    },
+    "goal_inflation_education": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "CBA CPI 4.3% (Sep 2026); 3.5% planning inflation",
+      "sourceUrl": "https://www.cba.am/en/",
+      "asOf": "2026-10-31",
+      "note": "No Armenian education price index was read, so we plan with the 3.5% projection plus one point for fees."
+    },
+    "life_expectancy": {
+      "value": 78.32,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AM",
+      "asOf": "2024-12-31",
+      "note": "Men 75.1, women 81.7."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.1,
+            "men": 17.8,
+            "women": 22.4
+          },
+          {
+            "age": 65,
+            "total": 16.6,
+            "men": 14.3,
+            "women": 18.2
+          },
+          {
+            "age": 70,
+            "total": 12.8,
+            "men": 11.3,
+            "women": 14.3
+          },
+          {
+            "age": 80,
+            "total": 7.1,
+            "men": 6.4,
+            "women": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/armenia/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 4.61
+          },
+          {
+            "year": 2040,
+            "value": 3.23
+          },
+          {
+            "year": 2065,
+            "value": 1.87
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/armenia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 21.7 (2025, World Bank), 31.0 (2040) and 53.5 (2065, populationpyramid.net/armenia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Retirement age (Armenia)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Pension age 63 for men and women; secondary source because the Ministry of Labour and Social Affairs pension pages render without text."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The age limit for civil servants could not be confirmed from an official or secondary source."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "3-month T-bill 6.77% (tax-free)",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short government bills if rates fall."
+    },
+    "retirement_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "1-year deposit 8.64% less 20% tax = 6.9%; 1-year government yield 7.21%",
+      "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax 1-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "5-year government yield 8.15% (tax-free)",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of government bonds up to 5 years."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "1-year government yield 7.21%; global equity low case 5%",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag and the dram strengthens."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "5-year government yield 8.15%; global equity base 9% in AMD",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half global equity at 9% and half dram government bonds at about 7%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "10-year government yield 8.70%; global equity high case 12%",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Armenia pays an old-age social pension to people without enough insurance record, but its current amount could not be read on the Ministry of Labour and Social Affairs site (pages render without text)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The eligibility age of the old-age social pension could not be confirmed from an official source (Wikipedia says 63, which matches the labour pension age)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees was found in the Armenian Labour Code; severance applies only to dismissal."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Wikipedia, Pensions in Armenia; Wikipedia, Retirement age",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pensions_in_Armenia",
+      "asOf": "2026-10-31",
+      "note": "State labour pension from 63 plus a mandatory funded pension for those born after 1973 (5% of pay, or 10% minus AMD 25,000 above AMD 500,000, with state co-financing; administered via cda.am). No automatic inflation indexation rule was found; amounts change by government decision. Secondary source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Խնայողական հաշիվ",
+      "localNameEn": "Savings account",
+      "note": "No published typical rate."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Ժամկետային ավանդ",
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Ժամկետային ավանդ",
+      "localNameEn": "1-year term deposit",
+      "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Խնայողական պարտատոմսեր",
+      "localNameEn": "Saving coupon bonds",
+      "note": "Sold only to individuals through Treasury Direct, 3 months to 25 years, tax-exempt; none were on sale when checked.",
+      "sourceUrl": "https://minfin.am/en/page/treasury_direct_/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Կարճաժամկետ պետական պարտատոմսեր",
+      "localNameEn": "Treasury bills",
+      "note": "Individuals can buy through Treasury Direct; income tax-exempt.",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Միջնաժամկետ պետական պարտատոմսեր",
+      "localNameEn": "Medium-term government coupon bonds",
+      "note": "Up to 10% of each issue is offered through Treasury Direct.",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Երկարաժամկետ պետական պարտատոմսեր",
+      "localNameEn": "Long-term government coupon bonds",
+      "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Կամավոր կենսաթոշակային ֆոնդ",
+      "localNameEn": "Voluntary pension fund",
+      "note": "There is no liquid local stock market; diversified equity exposure is mainly through pension funds or foreign funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ոսկե ձուլակտոր",
+      "localNameEn": "Gold bars",
+      "note": "No restriction on buying physical gold was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Armenia",
+      "url": "https://www.cba.am/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Armenia (insurance supervision)",
+      "url": "https://www.cba.am/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial System Mediator",
+      "url": "https://fsm.am/"
+    },
+    "pensionScheme": {
+      "name": "Ministry of Labour and Social Affairs – pensions",
+      "url": "https://welfare.gov.am/en/pensions-1",
+      "note": "Funded pension accounts: Central Depository of Armenia (cda.am)."
+    },
+    "oldAgeAllowance": {
+      "name": "Old-age social pension (Ministry of Labour and Social Affairs)",
+      "url": "https://welfare.gov.am/en/pensions-1"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health – state-guaranteed basic benefits package",
+      "url": "https://www.moh.am/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund of Armenia",
+      "url": "https://www.adgf.am/en"
+    },
+    "statistics": {
+      "name": "Statistical Committee of the Republic of Armenia (Armstat)",
+      "url": "https://www.armstat.am/en/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

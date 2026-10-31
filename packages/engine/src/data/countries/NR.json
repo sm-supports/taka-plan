@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 1,
+  "code": "NR",
+  "iso3": "NRU",
+  "nameEn": "Nauru",
+  "nameNative": "Naoero",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en",
+    "na"
+  ],
+  "currency": {
+    "code": "AUD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.4223,
+      "status": "sourced",
+      "sourceName": "Trading Economics, AUD/USD exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/australia/currency",
+      "asOf": "2026-10-30",
+      "note": "AUD 1 = USD 0.7031, so about AUD 1.42 per US dollar; World Bank 2025 average 1.552. Nauru uses the Australian dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.044,
+      "status": "sourced",
+      "sourceName": "Nauru Bureau of Statistics, CPI March 2025 quarter",
+      "sourceUrl": "https://stats.gov.nr/2026/06/10/consumer-price-index-march-2025/",
+      "asOf": "2025-03-31",
+      "note": "CPI up 4.4% in the year to March 2025 (latest release, published June 2026). The 2026-27 Budget (IMF WEO April 2026) gives period-average inflation of 6.1% for 2024-25 and 5.5% for 2025-26."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "2026-27 Budget Paper 1 (IMF WEO April 2026): CPI 4.2% for 2026-27; IMF WEO path to 2.5% by 2030",
+      "sourceUrl": "https://naurufinance.info/wp-content/uploads/2026/08/BP1_Final_Jul_26_22.07_Website-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "Nauru imports almost everything and uses the Australian dollar, so inflation should settle toward Australia's 2-3% band plus import-cost shocks; 3.5% is used."
+    },
+    "policy_rate": {
+      "value": 0.046,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Reserve Bank of Australia cash rate target)",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
+      "asOf": "2026-09-29",
+      "note": "Nauru has no central bank and uses the Australian dollar; the RBA cash rate (raised to 4.60% on 29 September 2026) is the policy rate for its currency."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The only bank presence is a CommBank agency (since August 2025) offering basic and online saver accounts; no Nauru-specific interest rate is published."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No term deposits are listed for Nauru customers at the CommBank agency, the only bank on the island."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No term deposits are listed for Nauru customers at the CommBank agency, the only bank on the island."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product exists in Nauru."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit rate statistics are published for Nauru (no central bank; World Bank FR.INR.DPST has no Nauru data)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Nauru issues no government savings certificates or retail bonds."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Nauru issues no treasury bills; government debt is external loans only (2026-27 Budget Paper 1)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Nauru issues no domestic government bonds."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Nauru issues no domestic government bonds."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Nauru Revenue Office pages cover Employment and Services Tax and Business Tax; no rule on individuals' bank interest was found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists in Nauru."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Nauru deposit insurance scheme was found; whether Australia's Financial Claims Scheme covers deposits taken through the CommBank Nauru agency is not stated on its page."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card products or rate cap for Nauru were found; the CommBank agency lists only debit cards."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No local stock market; global equity in AUD terms. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund held from Nauru in Australian dollars after a weak decade."
+    },
+    "equity_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "No local stock market; global equity in AUD terms. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "No local exchange exists, so base equity is a global index in AUD, held to the safe rate (about 0.5%) plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "No local stock market; global equity in AUD terms. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "High case near the long-run return of global shares in Australian dollars."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "AUD/USD 0.703 (30 Oct 2026); World Bank AUD per USD 1.55 in 2025",
+      "sourceUrl": "https://tradingeconomics.com/australia/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger Australian dollar."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "AUD/USD 0.703 (30 Oct 2026); World Bank AUD per USD 1.55 in 2025",
+      "sourceUrl": "https://tradingeconomics.com/australia/currency",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus little expected AUD depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "AUD/USD 0.703 (30 Oct 2026); World Bank AUD per USD 1.55 in 2025",
+      "sourceUrl": "https://tradingeconomics.com/australia/currency",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker Australian dollar."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: cash held in a basic account earning nothing."
+    },
+    "fixed_income_return_base": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: a saver account at a low rate; no term deposits or government paper are sold locally."
+    },
+    "fixed_income_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "High case: online saver with bonus interest, if available to Nauru customers."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No insurance regulator or published life insurance claims data exists for Nauru."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No local term life insurance market was found in Nauru."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public health care is free for citizens at the Republic of Nauru Hospital, with referral to Australia; no private hospital cost data exists."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No private health insurance market was found in Nauru."
+    },
+    "oop_health_share": {
+      "value": 0.0073,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NR",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending is 0.73% of current health expenditure; care is free for citizens."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Nauru Bureau of Statistics CPI (4.4% to March 2025); free public health care",
+      "sourceUrl": "https://stats.gov.nr/2026/06/10/consumer-price-index-march-2025/",
+      "asOf": "2026-10-31",
+      "note": "Care is free for citizens, so health costs to plan for move with general prices; the headline projection is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Nauru Bureau of Statistics CPI (4.4% to March 2025)",
+      "sourceUrl": "https://stats.gov.nr/2026/06/10/consumer-price-index-march-2025/",
+      "asOf": "2026-10-31",
+      "note": "No education price index is published; the headline projection is used."
+    },
+    "life_expectancy": {
+      "value": 62.279,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NR",
+      "asOf": "2024-12-31",
+      "note": "Men 60.4, women 64.2."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "UN WPP life tables are not published on the secondary sites read for Nauru (populationpyramid.net has no Nauru page) and WHO GHO does not cover it."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 19.88
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=NR",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio 5.03 (2025). No 2040 or 2065 projection was found on the sources read."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Nauru Superannuation Scheme page does not state a withdrawal or retirement age, and no statutory retirement age was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public service retirement age for Nauru was found on the Ministry of Finance site."
+    },
+    "retirement_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: cash earning nothing."
+    },
+    "retirement_return_base": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at what a basic saver account is likely to pay; no term deposits or government paper exist locally."
+    },
+    "retirement_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "High case: online saver with bonus interest."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No local market; balanced global mix in AUD. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of global shares and cash."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local market; balanced global mix in AUD. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global shares at 4.5% and half cash at 0.5-1%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "No local market; balanced global mix in AUD. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning global mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 867,
+      "status": "sourced",
+      "sourceName": "Government of Naoero, 2026-27 Budget Speech (revised aged pension rates)",
+      "sourceUrl": "https://naurufinance.info/wp-content/uploads/2026/07/APPROPRIATION-BILL-2026-SRS_V07.pdf",
+      "asOf": "2026-07-20",
+      "note": "Aged pension AUD 400 at 60-69, 500 at 70-74 and 600 at 75+ (from the 2025 Truuk Memorial revision). The speech does not give the period; the Social Welfare Division page lists the earlier rates (250/300) as fortnightly, so 400 a fortnight = about 867 a month."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Nauru Ministry of Finance, Social Welfare Division (Aged Pension)",
+      "sourceUrl": "https://naurufinance.info/social-welfare-division/",
+      "asOf": "2026-10-31",
+      "note": "Residents over 60, living in Nauru; not means tested, but people with another regular income such as a job are not eligible. Higher rates from 70 and 75."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service benefit for private employees was found for Nauru."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Nauru Superannuation Scheme (employer 10% from 1 February 2026, employee 5%) is a provident fund; its withdrawal age and payout rules are not stated on the Ministry of Finance page."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "localNameEn": "Saver account (bank agency)",
+      "note": "Offered through the bank agency that opened in August 2025.",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html"
+    },
+    "fdr_3m": {
+      "available": false,
+      "localName": null,
+      "note": "No term deposits are offered to Nauru customers.",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html"
+    },
+    "fdr_1y": {
+      "available": false,
+      "localName": null,
+      "note": "No term deposits are offered to Nauru customers.",
+      "sourceUrl": "https://www.commbank.com.au/nauru.html"
+    },
+    "dps": {
+      "available": false,
+      "localName": null
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificates or retail bonds."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "The government issues no domestic securities.",
+      "sourceUrl": "https://naurufinance.info/wp-content/uploads/2026/08/BP1_Final_Jul_26_22.07_Website-1.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "sourceUrl": "https://naurufinance.info/wp-content/uploads/2026/08/BP1_Final_Jul_26_22.07_Website-1.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "sourceUrl": "https://naurufinance.info/wp-content/uploads/2026/08/BP1_Final_Jul_26_22.07_Website-1.pdf"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No local stock exchange or locally sold funds; residents would have to invest abroad."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "note": "No local gold bullion dealer was found; no legal restriction is known."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of Australia (Nauru uses the Australian dollar and has no central bank)",
+      "url": "https://www.rba.gov.au/"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Nauru Superannuation Scheme (Ministry of Finance)",
+      "url": "https://naurufinance.info/superannuation-arrangements/"
+    },
+    "oldAgeAllowance": {
+      "name": "Aged Pension, Social Welfare Division (Ministry of Finance)",
+      "url": "https://naurufinance.info/social-welfare-division/"
+    },
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Nauru Bureau of Statistics",
+      "url": "https://stats.gov.nr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

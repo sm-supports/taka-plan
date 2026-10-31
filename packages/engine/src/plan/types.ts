@@ -76,6 +76,8 @@ export interface PlanSummary {
   emergencyShare: Rate;
   monthsToEmergencyFull: number | null;
   goalsShortfall: Money;
+  /** Monthly retirement saving needed minus what the plan could fit (0 when funded or not answered). */
+  retirementShortfall?: Money;
 }
 
 export interface Plan {

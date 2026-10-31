@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "code": "AD",
+  "iso3": "AND",
+  "nameEn": "Andorra",
+  "nameNative": "Andorra",
+  "region": "europe_central_asia",
+  "languages": [
+    "ca",
+    "es",
+    "fr"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank, euro reference exchange rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "USD 1.1172 per EUR, so EUR 0.8951 per US dollar; World Bank 2025 average 0.887. Andorra uses the euro under a monetary agreement with the EU."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.024,
+      "status": "sourced",
+      "sourceName": "IMF World Economic Outlook (DataMapper), Andorra inflation, average consumer prices",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/AND",
+      "asOf": "2025-12-31",
+      "note": "2025 average 2.4% (end-2025 2.7%); the IMF projects 4.0% for 2026. Secondary source because the Andorra statistics portal (estadistica.ad) is a script-only map application that could not be read; the World Bank has no CPI series for Andorra."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% euro area target; IMF WEO Andorra CPI 2.4% (2025), 4.0% (2026 proj.), 2.0% from 2029",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/AND",
+      "asOf": "2026-10-31",
+      "note": "Andorra uses the euro, so the ECB 2% target anchors inflation, but Andorran prices have run above the euro area, so 2.5% is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Andorra uses the euro under a monetary agreement with the EU and has no own policy rate; ECB deposit facility 2.50%, main refinancing 2.65% from 16 September 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published savings account rates for Andorran banks were found; the AFA site lists no deposit rate statistics."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rates for Andorran banks were found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rates for Andorran banks were found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average deposit rate is published for Andorra (no World Bank FR.INR.DPST series, no AFA statistics found)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found in Andorra."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Andorran treasury bill yield was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published Andorran 5-year government bond yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published Andorran 10-year government bond yield was found."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Taxation in Andorra (personal income tax on savings income)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Taxation_in_Andorra",
+      "asOf": "2026-10-31",
+      "note": "The first EUR 3,000 of savings/investment income a year is exempt and the rest is taxed at 10%; secondary source because the Government tax pages could not be read."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no government savings certificate in Andorra; any bond interest would fall under the 10% savings income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Andorran Financial Authority (AFA), Fons andorrà de garantia de dipòsits (FAGADI)",
+      "sourceUrl": "https://www.afa.ad/ca/fons-de-garantia",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per institution."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate for Andorra was found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity in euro terms; ECB deposit rate 2.50%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund in euros if world shares are weak; Andorra has no stock market."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility 2.50% less 10% savings tax = 2.25%; global equity in euro terms",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Andorra has no stock market, so the base case is a global index in euros, kept within 4 points of the after-tax euro safe rate of about 2.25%."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Global equity long-run record in euro terms",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run global equity returns in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB euro reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold and a stronger euro."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ECB euro reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected euro trend against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "ECB euro reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker euro."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility 2.50%; Andorran bank deposit rates not published",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits paying well below the ECB rate, after 10% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility 2.50% less 10% savings tax = 2.25%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: euro term deposits a little below the ECB rate, after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "ECB main refinancing rate 2.65%; euro government bonds",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: longer euro government bonds held to maturity after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found from the AFA."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates by age were found for Andorra."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found; CASS reimburses most of hospital costs."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private (complementary) health insurance premiums by age band were found."
+    },
+    "oop_health_share": {
+      "value": 0.1115,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AD",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "IMF WEO Andorra CPI; 2.5% planning inflation",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/AND",
+      "asOf": "2026-10-31",
+      "note": "No Andorran medical price index could be read, so we plan with the 2.5% projection plus one point for medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "IMF WEO Andorra CPI; 2.5% planning inflation",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/AND",
+      "asOf": "2026-10-31",
+      "note": "No Andorran education price index could be read, so we plan with the 2.5% projection plus one point for fees."
+    },
+    "life_expectancy": {
+      "value": 84.19,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AD",
+      "asOf": "2024-12-31",
+      "note": "Men 82.3, women 86.2."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "populationpyramid.net (UN WPP) has no Andorra page and the Andorra statistics portal could not be read; no life table at ages 60-80 was found."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 4.34
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.POP.DPND.OL",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=AD",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio of 23.1 (2025). UN WPP projections for 2040 and 2065 could not be read for Andorra."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "CASS (Caixa Andorrana de Seguretat Social), retirement pension",
+      "sourceUrl": "https://www.cass.ad/prestacio-economica-jubilacio",
+      "asOf": "2026-10-31",
+      "note": "Ordinary retirement age 65 for men and women; early retirement from 61 with more than 480 months of contributions (7% reduction per year early); 180 months minimum."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for Andorran public servants under the civil service law could not be confirmed; they draw the CASS pension from 65."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility 2.50%; Andorran deposit rates not published",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility 2.50% less 10% savings tax = 2.25%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax euro safe rate because Andorran 1-year deposit rates are not published."
+    },
+    "retirement_return_high": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "ECB main refinancing 2.65%; euro government bonds",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of euro government bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility 2.50%; global equity in euros",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility 2.50%; global equity base 6% in euros",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half global equity at 6% and half euro fixed income at about 2.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Global equity high case 8% in euros",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Andorra has a means-tested solidarity pension for the elderly (Decree of 7-10-2020) and a non-contributory old-age pension law of 1988, but the amount could not be read on the Government or BOPA pages."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The eligibility age and means test of the solidarity pension for the elderly could not be read (BOPA decree page did not render)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees was found in Andorra; severance applies only to dismissal."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "CASS (Caixa Andorrana de Seguretat Social), retirement pension",
+      "sourceUrl": "https://www.cass.ad/prestacio-economica-jubilacio",
+      "asOf": "2026-10-31",
+      "note": "Compulsory points-based CASS pension from 65 (early from 61), at least 180 months of contributions; 5-15 years gives a lump-sum capital updated by CPI. No automatic yearly indexation of pensions was stated, so it is treated as not inflation-linked."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'estalvi",
+      "localNameEn": "Savings account",
+      "note": "No published rates found."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dipòsit a termini de 3 mesos",
+      "localNameEn": "3-month term deposit",
+      "note": "No published rates found."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dipòsit a termini d'1 any",
+      "localNameEn": "1-year term deposit",
+      "note": "No published rates found."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring deposit product found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No treasury bill market for individuals was found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "Deute públic",
+      "localNameEn": "Government bonds",
+      "note": "Government debt is placed with banks and institutional investors; no retail market or published yield was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": "Deute públic",
+      "localNameEn": "Government bonds",
+      "note": "No retail market or published yield was found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Organisme d'inversió col·lectiva",
+      "localNameEn": "Collective investment fund",
+      "note": "Funds supervised by the AFA; no local stock exchange, so equity funds invest abroad.",
+      "sourceUrl": "https://www.afa.ad/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or físic",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Andorran Financial Authority (Autoritat Financera Andorrana)",
+      "url": "https://www.afa.ad/",
+      "note": "Andorra has no central bank; it uses the euro (ECB policy) and the AFA supervises banks."
+    },
+    "insuranceRegulator": {
+      "name": "Andorran Financial Authority (AFA) – insurance supervision",
+      "url": "https://www.afa.ad/ca/entitats-supervisades/assegurances"
+    },
+    "insuranceComplaints": {
+      "name": "Andorran Financial Authority (AFA) – complaints",
+      "url": "https://www.afa.ad/ca/consumidors/reclamacions"
+    },
+    "pensionScheme": {
+      "name": "Caixa Andorrana de Seguretat Social (CASS) – retirement pension",
+      "url": "https://www.cass.ad/prestacio-economica-jubilacio"
+    },
+    "oldAgeAllowance": {
+      "name": "Solidarity pension for the elderly (Govern d'Andorra)",
+      "url": "https://www.govern.ad/ca/tematiques/ajuts-i-subvencions/gent-gran"
+    },
+    "publicHealthCover": {
+      "name": "Caixa Andorrana de Seguretat Social (CASS) – health cover",
+      "url": "https://www.cass.ad/"
+    },
+    "depositInsurance": {
+      "name": "Fons andorrà de garantia de dipòsits (FAGADI)",
+      "url": "https://www.afa.ad/ca/fons-de-garantia"
+    },
+    "statistics": {
+      "name": "Departament d'Estadística, Govern d'Andorra",
+      "url": "https://www.estadistica.ad/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

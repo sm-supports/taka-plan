@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "code": "WS",
+  "iso3": "WSM",
+  "nameEn": "Samoa",
+  "nameNative": "Sāmoa",
+  "region": "east_asia_pacific",
+  "languages": [
+    "sm",
+    "en"
+  ],
+  "currency": {
+    "code": "WST",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.7646,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa daily exchange rates",
+      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "asOf": "2026-10-30",
+      "note": "WST 1 = USD 0.36171 on 30 October 2026, so 2.76 tala per US dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.036,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa statistics table 2 (Samoa Bureau of Statistics headline CPI)",
+      "sourceUrl": "https://cbs.gov.ws/media/T2---Headline---CPI---August---2026.xlsx",
+      "asOf": "2026-08-31",
+      "note": "Headline CPI up 3.6% on a year earlier in August 2026 (5.7% in June); the annual-average rate the CBS headlines was 1.2% in August and September 2026."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Central Bank of Samoa Monetary Policy Statement 2026/2027 (inflation reference around 3%)",
+      "sourceUrl": "https://cbs.gov.ws/media/MPS-2026-2027.pdf",
+      "asOf": "2026-10-31",
+      "note": "The CBS aims for annual average inflation around 3% in line with trading partners, and recent prices have swung from -2% to +6%, so we plan with 3.5%."
+    },
+    "policy_rate": {
+      "value": 0.0318,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa (official interest rate, home page key indicators)",
+      "sourceUrl": "https://www.cbs.gov.ws/",
+      "asOf": "2026-08-31",
+      "note": "Official interest rate (weighted average yield on CBS securities) 3.18% in August 2026; the 2026/27 Monetary Policy Statement gives 3.42% at end April 2026 against a neutral 2-3% range."
+    },
+    "savings_account_rate": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa statistics table A14 (interest rates)",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-06-30",
+      "note": "Commercial bank savings deposit rates range 0-2.00%; midpoint used."
+    },
+    "fdr_3m_rate": {
+      "value": 0.01875,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa statistics table A14 (interest rates)",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-06-30",
+      "note": "3-month time deposit rates range 1.50-2.25% across banks; midpoint used."
+    },
+    "fdr_1y_rate": {
+      "value": 0.02875,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa statistics table A14 (interest rates)",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-06-30",
+      "note": "12-month time deposit rates range 2.75-3.00% across banks; midpoint used (24 months 3.5%)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched CBS rate tables and bank pages: no monthly recurring deposit (DPS-style) product rate is published in Samoa."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0163,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa statistics table A14 (interest rates)",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-06-30",
+      "note": "Commercial banks' weighted average deposit rate 1.63% in June 2026 (1.61% in April per the 2026/27 Monetary Policy Statement)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals found in Samoa."
+    },
+    "tbill_91d_rate": {
+      "value": 0.033,
+      "status": "sourced",
+      "sourceName": "Central Bank of Samoa, tender results T-17/2026 (CBS Securities)",
+      "sourceUrl": "https://cbs.gov.ws/media/Results-------------T17-------26-----------22-------October-----------2026.pdf",
+      "asOf": "2026-10-22",
+      "note": "91-day CBS Securities weighted average yield 3.30% (182-day 3.69%). Samoa has no regular government Treasury bills; CBS Securities are open to registered members of the public from SAT 1,000."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regular Samoa Government bond issues or published yields found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regular Samoa Government bond issues or published yields found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ministry of Revenue information sheet IS01 (2026) lists a withholding tax on interest income of resident individuals but does not state the rate; the Income Tax Act schedule was not reachable."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government retail savings bond for individuals found, so no specific tax rule applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched CBS publications: no deposit insurance scheme for Samoa found, and no source stating its absence."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate found in CBS tables (only overall lending rates, about 8.4% weighted average)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local stock market; CBS 182-day securities 3.69% and 12-month deposits 2.75-3.00%",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global equity fund in tala, near the safe rate."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "No local stock market; CBS 182-day securities 3.69% and 12-month deposits 2.75-3.00%",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Samoa has no stock exchange, so equity is a global index fund in tala terms: about 6%, within 4 points of the roughly 2.5-3% after-tax safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "No local stock market; global equities in tala terms",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat their long-run record of about 9% with a stable tala."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "CBS daily exchange rates (tala per US dollar about 2.6 in 2016 and 2.76 in October 2026)",
+      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold under a stable basket-pegged tala."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBS daily exchange rates (tala per US dollar about 2.6 in 2016 and 2.76 in October 2026)",
+      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus little expected tala depreciation under the basket peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "CBS daily exchange rates (tala per US dollar about 2.6 in 2016 and 2.76 in October 2026)",
+      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and some tala weakening."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "CBS table A14: 3-month deposits 1.50-2.25%",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: short time deposits, allowing for the withholding tax on resident interest."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBS table A14: 12-month deposits 2.75-3.00%; CBS 91-day securities 3.30%",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year deposits and short CBS Securities, less withholding tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBS table A14: 24-month deposits 3.5%; CBS 182-day securities 3.69%",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: 2-year deposits or 182-day CBS Securities, less withholding tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched CBS insurance supervision material: no industry-wide life claim settlement ratio published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance is sold in Samoa, but no published per-1,000 term premium rates by age were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical private hospital bill found for Samoa; public hospital care is heavily subsidised."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table found for Samoa."
+    },
+    "oop_health_share": {
+      "value": 0.1342,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=WS",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "CBS headline CPI table (no health sub-index published there)",
+      "sourceUrl": "https://cbs.gov.ws/media/T2---Headline---CPI---August---2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI found, so we plan with the 3.5% headline projection plus one point for imported medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBS headline CPI table (no education sub-index published there)",
+      "sourceUrl": "https://cbs.gov.ws/media/T2---Headline---CPI---August---2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No education CPI found, so we plan with the headline projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 71.826,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=WS",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 72.1 for 2026 (men 70.2, women 74.1)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.5,
+            "men": 16.9,
+            "women": 20.0
+          },
+          {
+            "age": 65,
+            "total": 14.9,
+            "men": 13.5,
+            "women": 16.2
+          },
+          {
+            "age": 70,
+            "total": 11.7,
+            "men": 10.6,
+            "women": 12.7
+          },
+          {
+            "age": 80,
+            "total": 6.6,
+            "men": 6.0,
+            "women": 7.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/samoa/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.2
+          },
+          {
+            "year": 2040,
+            "value": 7.2
+          },
+          {
+            "year": 2065,
+            "value": 8.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/samoa/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 10.86 (2025, World Bank), 13.8 (2040) and 11.9 (2065, populationpyramid.net/samoa/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Samoa National Provident Fund: members guide",
+      "sourceUrl": "https://www.npf.ws/members-guide",
+      "asOf": "2026-10-31",
+      "note": "SNPF members can take their savings as a lump sum or a lifetime pension at 55; no statutory private-sector retirement age found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for the Samoa public service retirement age: no reachable official source found."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "CBS table A14: 3-month deposits 1.50-2.25%",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after withholding tax."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBS table A14: 12-month deposits 2.75-3.00%",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the 1-year deposit rate to allow for withholding tax on interest."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBS table A14: 24-month deposits 3.5%; SNPF lifetime pension option",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: 2-year deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "SNPF: interest credited not less than 4% a year; 7-year average 7%",
+      "sourceUrl": "https://www.npf.ws/member-faqs",
+      "asOf": "2026-10-31",
+      "note": "Low case at SNPF's statutory minimum crediting rate of 4%."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "SNPF: interest credited not less than 4% a year; 7-year average 7%",
+      "sourceUrl": "https://www.npf.ws/member-faqs",
+      "asOf": "2026-10-31",
+      "note": "Base case between SNPF's 4% floor and its 7% average of the last seven years."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "SNPF: interest credited not less than 4% a year; 7-year average 7%",
+      "sourceUrl": "https://www.npf.ws/member-faqs",
+      "asOf": "2026-10-31",
+      "note": "High case at SNPF's recent 7% average crediting rate."
+    },
+    "old_age_allowance_monthly": {
+      "value": 300,
+      "status": "sourced",
+      "sourceName": "Samoa National Provident Fund: Senior Citizens Benefit Fund",
+      "sourceUrl": "https://www.npf.ws/scbf",
+      "asOf": "2026-10-31",
+      "note": "Monthly pension of WST 300 for life, plus free inter-island ferry travel, free consultations and medicines at government hospitals and pharmacies."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Samoa National Provident Fund: Senior Citizens Benefit Fund",
+      "sourceUrl": "https://www.npf.ws/scbf",
+      "asOf": "2026-10-31",
+      "note": "Citizens or permanent residents aged 65 and over who live in Samoa; the page lists no income or asset test."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service payment for private employees found in Samoa's Labour and Employment Relations Act material; retirement savings run through SNPF."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Samoa National Provident Fund: members guide",
+      "sourceUrl": "https://www.npf.ws/members-guide",
+      "asOf": "2026-10-31",
+      "note": "Compulsory provident fund: 10% employee plus 10% employer; at 55 members take a lump sum or a fortnightly lifetime pension funded from 75% of net contributions (spouse receives half for up to 10 years); interest credited at no less than 4% a year."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "1-year term deposit",
+      "sourceUrl": "https://cbs.gov.ws/media/A14-Interest-Rates-8.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product is published by Samoa banks."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "CBS Securities",
+      "localNameEn": "Central Bank of Samoa Securities (14 to 365 days)",
+      "note": "Central bank bills sold by fortnightly tender; open to registered members of the public from SAT 1,000; used here in place of government Treasury bills.",
+      "sourceUrl": "https://cbs.gov.ws/media/CBS-Securities-Prospectus.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular government bond issues to the public found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular government bond issues to the public found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trust (managed fund)",
+      "note": "Samoa has no stock exchange; a locally managed unit trust and offshore funds are the main pooled options."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "note": "No legal restriction on buying gold; mainly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Samoa",
+      "url": "https://www.cbs.gov.ws/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Samoa (insurance supervision)",
+      "url": "https://www.cbs.gov.ws/"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of Samoa",
+      "url": "https://www.cbs.gov.ws/",
+      "note": "No separate insurance ombudsman found; complaints go to the insurer, then the Central Bank."
+    },
+    "pensionScheme": {
+      "name": "Samoa National Provident Fund (SNPF)",
+      "url": "https://www.npf.ws/"
+    },
+    "oldAgeAllowance": {
+      "name": "Senior Citizens Benefit Fund (administered by SNPF)",
+      "url": "https://www.npf.ws/scbf"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (government hospitals; free consultations for seniors)",
+      "url": "https://www.health.gov.ws/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Samoa Bureau of Statistics",
+      "url": "https://www.sbs.gov.ws/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

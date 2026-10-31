@@ -41,6 +41,8 @@ export interface ExistingPolicy {
   yearsPaid: number;
   /** Maturity value the insurer illustrates (guaranteed plus expected bonus). */
   expectedMaturity: Money;
+  /** What the insurer pays today if the policy is stopped (surrender or paid-up value). Unknown → the comparison is labelled a lower bound. */
+  surrenderValue?: Money;
 }
 
 export interface M2Input {
@@ -51,6 +53,8 @@ export interface M2Input {
   /** Number of children / parents to cover; default 1 child and 2 parents when the dependent is chosen. */
   childrenCount?: number;
   parentsCount?: number;
+  /** Age of the youngest child; life cover then runs until that child is self-supporting (or coverToAge, whichever first). */
+  youngestChildAge?: number;
   /** Ages used for parents' health premiums; default age + 28. */
   parentAge?: number;
   smoker: boolean;

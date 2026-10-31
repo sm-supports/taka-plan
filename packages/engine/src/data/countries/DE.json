@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "code": "DE",
+  "iso3": "DEU",
+  "nameEn": "Germany",
+  "nameNative": "Deutschland",
+  "region": "europe_central_asia",
+  "languages": [
+    "de",
+    "en",
+    "fr",
+    "nl",
+    "it"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.028,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Destatis CPI, October 2026 preliminary)",
+      "sourceUrl": "https://tradingeconomics.com/germany/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Destatis flash estimate published 30 October 2026: CPI up 2.8% year on year (3.3% in September); final figure due 11 November 2026; secondary source because destatis.de was not read directly. World Bank 2025 average 2.2%."
+    },
+    "inflation_projection": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; German CPI 2.8% (Oct 2026), 2.2% in 2025 (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/germany/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The ECB 2% target is credible, but German inflation has run slightly above it since 2021, so 2.2% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Germany uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0051,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: German banks, overnight deposits from households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight deposits (Tagesgeld, current accounts) in Germany, August 2026; savings deposits at up to 3 months' notice (Sparbuch) paid 0.73%."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/Bundesbank MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.28% in August 2026); no 3-month Festgeld rate from an official source was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0228,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: German banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.64% and over 2 years 2.72% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks sell monthly savings plans (Banksparplan) and building societies sell Bausparverträge, but no average rate from an official source was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0176,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: German banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits; household overnight deposits paid 0.51%. World Bank FR.INR.DPST has no Germany figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Germany stopped selling federal savings bonds (Bundesschatzbriefe) and Finanzierungsschätze to individuals in 2013; no retail government savings certificate exists."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0251,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Germany 3-month bill yield",
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Market yield on 3-month federal Treasury discount paper (Bubills); 6-month 2.68%, 52-week 2.89%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0311,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Germany 5-year federal bond yield",
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield",
+      "asOf": "2026-10-30"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0332,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Germany 10-year Bund yield",
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term (10-year) convergence yield for Germany was 3.47% in September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.26375,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Germany income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/germany/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Flat withholding tax (Abgeltungsteuer) of 25% plus 5.5% solidarity surcharge = 26.375%, plus church tax for church members; the first EUR 1,000 of investment income a year (EUR 2,000 for couples) is tax-free."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals in Germany, so no specific tax rate applies."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "sourceUrl": "https://www.edb-banken.de/",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per customer per bank; up to EUR 500,000 for six months after certain life events (home sale, marriage, divorce, retirement, severance, death). Savings and cooperative banks are covered by their own protection schemes."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.0939,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: German banks, revolving loans, overdrafts and credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.A2Z.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "No legal cap beyond the general ban on usurious interest; figure is the average rate on revolving loans, overdrafts and extended credit card credit combined (no card-only series)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "DAX 25,818 on 30 Oct 2026, up 7.8% in a year (Trading Economics); after-tax safe rate about 1.7%",
+      "sourceUrl": "https://tradingeconomics.com/germany/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: German shares earn little more than safe savings over a long period, as in 2000-2012."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "DAX performance index (Trading Economics); 3-month Bubill 2.51% less 26.375% = 1.85%",
+      "sourceUrl": "https://tradingeconomics.com/germany/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The DAX (a total-return index) has a strong 10-year record (about 10,600 in late 2016 to 25,818), but the base is held to the after-tax safe rate plus about 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "DAX performance index (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/germany/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified equity fund matching long-run global equity returns of about 7-8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar; gains are tax-free after one year."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Household savings deposits at notice 0.73% (ECB MFI statistics); online overnight accounts pay more",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L23.D.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after tax, with rates drifting lower."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0165,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.28% less 26.375% = 1.68%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: just under the after-tax 1-year term deposit rate (the yearly tax-free allowance can lift this for small savers)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.024,
+      "status": "assumption",
+      "sourceName": "Germany 10-year Bund 3.32% less 26.375% = 2.4% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long federal bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BaFin and the German insurance association (GDV) do not publish an industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (Risikolebensversicherung) is widely sold, but no published premium table per EUR 1,000 of cover by age was found; comparison sites were not read."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Statutory health insurance covers hospital stays with a patient co-payment of EUR 10 a day (up to 28 days a year); no official figure for a typical out-of-pocket cost of a major private or mid-range hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance (PKV) is priced by age at entry and benefit tariff, not per sum insured, and no published premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1071,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DE",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Germany, health: 2.3% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.DE.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices rise close to headline inflation, but health insurance contributions and private care costs rise faster, so 3.5% is used for planning."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Germany, education: 5.0% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.DE.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Public schooling and university tuition are mostly free, but fee-paying education (childcare, private schools, courses) has risen well above headline inflation, so 4% is used."
+    },
+    "life_expectancy": {
+      "value": 81.9,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/germany",
+      "asOf": "2026-12-31",
+      "note": "Men 79.6, women 84.1 (UN WPP estimate for 2026); World Bank 2024 figure 80.8."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.3,
+            "men": 22.5,
+            "women": 26.0
+          },
+          {
+            "age": 65,
+            "total": 20.2,
+            "men": 18.7,
+            "women": 21.7
+          },
+          {
+            "age": 70,
+            "total": 16.3,
+            "men": 15.0,
+            "women": 17.5
+          },
+          {
+            "age": 80,
+            "total": 9.2,
+            "men": 8.4,
+            "women": 9.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/germany",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.63
+          },
+          {
+            "year": 2040,
+            "value": 1.95
+          },
+          {
+            "year": 2065,
+            "value": 1.86
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/germany/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 38.0 (2025, World Bank), 51.3 (2040) and 53.9 (2065, populationpyramid.net/germany/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Sozialgesetzbuch VI, sections 35 and 235 (gesetze-im-internet.de)",
+      "sourceUrl": "https://www.gesetze-im-internet.de/sgb_6/__235.html",
+      "asOf": "2026-10-31",
+      "note": "Standard pension age (Regelaltersgrenze) 67 for people born from 1964; transitional ages 66 years 4 months (born 1960), 66 y 6 m (1961), 66 y 8 m (1962), 66 y 10 m (1963); same for men and women; minimum 5 insurance years."
+    },
+    "retirement_age_government": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Bundesbeamtengesetz section 51 (gesetze-im-internet.de)",
+      "sourceUrl": "https://www.gesetze-im-internet.de/bbg_2009/__51.html",
+      "asOf": "2026-10-31",
+      "note": "Federal civil servants (Beamte) reach the regular age limit at 67, phased in by birth year like the statutory pension; state civil servants follow similar state laws."
+    },
+    "retirement_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Household savings deposits at notice 0.73% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L23.D.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.0165,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.28% less 26.375% = 1.68%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "Germany 10-year Bund 3.32% less 26.375% = 2.4% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer federal bonds after tax, slightly below the 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.7%; DAX record (Trading Economics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.7%; equity base 5.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.7-2.4% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax 10-year Bund 2.4%; equity high 7.5%",
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 563,
+      "status": "sourced",
+      "sourceName": "Sozialgesetzbuch XII, Anlage zu section 28 (Regelbedarfsstufe 1, from 1 January 2026)",
+      "sourceUrl": "https://www.gesetze-im-internet.de/sgb_12/anlage.html",
+      "asOf": "2026-01-01",
+      "note": "Grundsicherung im Alter is means-tested: the standard need for a single adult is EUR 563 a month, and reasonable rent and heating costs are paid on top, less the person's own income and assets."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Sozialgesetzbuch XII section 41 (gesetze-im-internet.de)",
+      "sourceUrl": "https://www.gesetze-im-internet.de/sgb_12/__41.html",
+      "asOf": "2026-10-31",
+      "note": "From the standard pension age (67 for people born from 1964, phased in for earlier years), for people habitually resident in Germany who cannot cover their needs from income and assets."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Germany has no general statutory gratuity or end-of-service payment; a severance of half a month's pay per year of service applies only when the employer offers it in a redundancy dismissal (section 1a Kündigungsschutzgesetz) or under a settlement or social plan."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Sozialgesetzbuch VI section 68 (pension value adjustment) and section 35 (gesetze-im-internet.de)",
+      "sourceUrl": "https://www.gesetze-im-internet.de/sgb_6/__68.html",
+      "asOf": "2026-10-31",
+      "note": "Compulsory statutory pension insurance (Deutsche Rentenversicherung) for employees; the pension value is adjusted each 1 July with gross wages per employee, damped by the contribution-rate and sustainability factors, so it is wage-linked rather than price-indexed; pensions are taxed as income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Tagesgeldkonto / Sparbuch",
+      "localNameEn": "Instant-access savings account / passbook savings",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Festgeld",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Festgeld",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Banksparplan / Bausparvertrag",
+      "localNameEn": "Bank savings plan / building-society savings contract",
+      "note": "Regular monthly saving; Bausparverträge can attract state savings premiums for lower incomes."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Federal savings bonds (Bundesschatzbriefe) were discontinued in 2013."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Unverzinsliche Schatzanweisungen (Bubills)",
+      "localNameEn": "Federal Treasury discount paper",
+      "note": "Auctioned by the Finance Agency mainly to institutions; can be bought through a bank or broker.",
+      "sourceUrl": "https://www.deutsche-finanzagentur.de/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bundesobligation",
+      "localNameEn": "Five-year federal note"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bundesanleihe",
+      "localNameEn": "Federal bond (Bund)",
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Investmentfonds / Indexfonds (ETF)",
+      "localNameEn": "Mutual funds and index funds (ETF)",
+      "note": "Widely available, often through monthly ETF savings plans; gains taxed at 26.375% with partial exemptions for equity funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Goldbarren und Goldmünzen",
+      "localNameEn": "Gold bars and coins",
+      "note": "Investment gold is VAT-free and gains are tax-free after one year of holding."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Deutsche Bundesbank",
+      "url": "https://www.bundesbank.de/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin)",
+      "url": "https://www.bafin.de/"
+    },
+    "insuranceComplaints": {
+      "name": "Versicherungsombudsmann",
+      "url": "https://www.versicherungsombudsmann.de/",
+      "note": "Free ombudsman for disputes with insurers; complaints can also go to BaFin. Private health insurance has its own PKV ombudsman."
+    },
+    "pensionScheme": {
+      "name": "Deutsche Rentenversicherung (statutory pension insurance)",
+      "url": "https://www.deutsche-rentenversicherung.de/"
+    },
+    "oldAgeAllowance": {
+      "name": "Grundsicherung im Alter (means-tested basic income in old age)",
+      "url": "https://www.gesetze-im-internet.de/sgb_12/__41.html"
+    },
+    "publicHealthCover": {
+      "name": "Gesetzliche Krankenversicherung (GKV-Spitzenverband)",
+      "url": "https://www.gkv-spitzenverband.de/"
+    },
+    "depositInsurance": {
+      "name": "Entschädigungseinrichtung deutscher Banken (EdB)",
+      "url": "https://www.edb-banken.de/"
+    },
+    "statistics": {
+      "name": "Statistisches Bundesamt (Destatis)",
+      "url": "https://www.destatis.de/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

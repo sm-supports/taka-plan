@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "code": "TO",
+  "iso3": "TON",
+  "nameEn": "Tonga",
+  "nameNative": "Tonga",
+  "region": "east_asia_pacific",
+  "languages": [
+    "to",
+    "en"
+  ],
+  "currency": {
+    "code": "TOP",
+    "symbol": "T$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.3952,
+      "status": "sourced",
+      "sourceName": "National Reserve Bank of Tonga daily exchange rates (USD/TOP mid 0.4175)",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/exchange-rates",
+      "asOf": "2026-10-30",
+      "note": "TOP 1 = USD 0.4175, so TOP 2.40 per US dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.121,
+      "status": "sourced",
+      "sourceName": "Tonga Statistics Department (headline annual inflation)",
+      "sourceUrl": "https://tongastats.gov.to/",
+      "asOf": "2026-09-30",
+      "note": "Annual inflation 12.1% in September 2026; NRBT reports 9.3% in July 2026, driven by imported fuel and domestic food prices."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "NRBT 5% inflation reference rate (press release 27 August 2026)",
+      "sourceUrl": "https://www.reservebank.to/index.php/news/public-notice-tonga-maintains-neutral-stance-while-strengthening-monetary-policy-transmission",
+      "asOf": "2026-10-31",
+      "note": "The NRBT steers by a 5% inflation reference rate and recent inflation has swung between about 2% and 12%, so we plan with the 5% reference."
+    },
+    "policy_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "National Reserve Bank of Tonga, monetary policy press release",
+      "sourceUrl": "https://www.reservebank.to/index.php/news/public-notice-tonga-maintains-neutral-stance-while-strengthening-monetary-policy-transmission",
+      "asOf": "2026-08-27",
+      "note": "Policy rate held at 2% within a 0-4% interest rate corridor; statutory reserve deposit ratio 15%."
+    },
+    "savings_account_rate": {
+      "value": 0.0249,
+      "status": "sourced",
+      "sourceName": "National Reserve Bank of Tonga, Monetary Policy Data July 2026 (savings deposit rate)",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Weighted average savings deposit rate 2.49%; posted rates vary from 0.2% to 5% by bank and balance (NRBT bank comparison, May 2026)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "National Reserve Bank of Tonga, comparison of banks' interest rates (as of May 2026)",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fsystems/banks_feeschargesinterestrates_comparisons_feb24.pdf",
+      "asOf": "2026-05-31",
+      "note": "Posted 3-month rates for deposits under TOP 100,000 at the four banks: 0.35%, 0.75%, 1.25% and 3.50%; median 1.0%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0332,
+      "status": "sourced",
+      "sourceName": "National Reserve Bank of Tonga, Monetary Policy Data July 2026 (12-month term deposit rate)",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Weighted average 12-month term deposit rate 3.32%; posted 1-year rates range 0.50% to 4.00% across banks (May 2026)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product appears in the NRBT comparison of banks' products (May 2026)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0152,
+      "status": "sourced",
+      "sourceName": "National Reserve Bank of Tonga, Monetary Policy Data July 2026 (weighted average deposit rate)",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-07-31"
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched NRBT pages: government bonds are listed by series, but no separate retail savings bond or certificate for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No treasury bills are on issue per the NRBT government bonds page; NRBT Notes are central bank paper for banks."
+    },
+    "tbond_5y_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "National Reserve Bank of Tonga, government bonds on issue (Series No.6 2026/2031)",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/government-bonds",
+      "asOf": "2026-09-18",
+      "note": "Most 5-year government bonds issued in 2025-2026 carry 2.50-3.00% coupons; the latest 5-year series (18 September 2026) pays 3.00%."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NRBT government bonds page lists no 10-year series; the longest tenor on issue is 7 years (2.50%)."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Ministry of Revenue and Customs, withholding tax guidance",
+      "sourceUrl": "https://www.revenue.gov.to/non-residents-and-visitors",
+      "asOf": "2026-10-31",
+      "note": "Resident companies paying interest to a resident person (other than a financial institution) withhold 10% of the gross interest; no specific exemption for bank deposits was found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail savings certificate exists; tax treatment of government bond interest was not stated on the NRBT or Revenue pages."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme was found on NRBT pages."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The NRBT bank comparison lists credit card fees but no card interest rate; no legal cap was found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in pa'anga terms; NRBT Monetary Policy Data July 2026: 12-month term deposit 3.32%; 5-year government bond coupon 3.00%",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund in pa'anga after a weak decade for world shares."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in pa'anga terms; NRBT Monetary Policy Data July 2026: 12-month term deposit 3.32%; 5-year government bond coupon 3.00%",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "There is no local stock market, so the base is a global index in pa'anga, capped at the after-tax 12-month deposit (about 3%) plus under 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in pa'anga terms; NRBT Monetary Policy Data July 2026: 12-month term deposit 3.32%; 5-year government bond coupon 3.00%",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run world equity returns plus mild pa'anga weakening."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "NRBT exchange rate (USD/TOP about 0.42, stable over 2025-2026 under a basket peg)",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case for gold in pa'anga: weak dollar gold price and a stable basket-pegged currency."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "NRBT exchange rate (USD/TOP about 0.42, stable over 2025-2026 under a basket peg)",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus slight expected pa'anga depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NRBT exchange rate (USD/TOP about 0.42, stable over 2025-2026 under a basket peg)",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and some pa'anga weakening."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "NRBT savings deposit rate 2.49% less 10% withholding",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits at about 2.5% before a 10% withholding tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "NRBT Monetary Policy Data July 2026: 12-month term deposit 3.32%; 5-year government bond coupon 3.00%",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 12-month deposits (3.32%) after 10% withholding and 5-year government bonds at 2.5-3.0%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "NRBT Monetary Policy Data July 2026: 12-month term deposit 3.32%; 5-year government bond coupon 3.00%",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: the better posted 1-year deposit rates and 6-year government bonds at 3.5%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio for Tonga was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates for Tonga were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical private hospital bill for Tonga was found; most care is at public hospitals."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table for Tonga was found."
+    },
+    "oop_health_share": {
+      "value": 0.0586,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TO",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NRBT 5% inflation reference rate; no medical sub-index found",
+      "sourceUrl": "https://www.reservebank.to/index.php/news/public-notice-tonga-maintains-neutral-stance-while-strengthening-monetary-policy-transmission",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI figure was found, so we plan with the 5% headline projection plus one point."
+    },
+    "goal_inflation_education": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "NRBT 5% inflation reference rate; no education sub-index found",
+      "sourceUrl": "https://www.reservebank.to/index.php/news/public-notice-tonga-maintains-neutral-stance-while-strengthening-monetary-policy-transmission",
+      "asOf": "2026-10-31",
+      "note": "No education CPI figure was found, so we plan with the 5% headline projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 73.07,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TO",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 73.4 for 2026 (men 69.8, women 76.8)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.1,
+            "men": 16.9,
+            "women": 21.3
+          },
+          {
+            "age": 65,
+            "total": 15.6,
+            "men": 13.7,
+            "women": 17.4
+          },
+          {
+            "age": 70,
+            "total": 12.3,
+            "men": 10.8,
+            "women": 13.7
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 6.2,
+            "women": 7.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/tonga/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.5
+          },
+          {
+            "year": 2040,
+            "value": 6.2
+          },
+          {
+            "year": 2065,
+            "value": 7.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/tonga/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 11.76 (2025, World Bank), 16.1 (2040) and 14.1 (2065, populationpyramid.net/tonga/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Retirement Benefits Fund (NRBF)",
+      "sourceUrl": "https://www.nrbf.to/",
+      "asOf": "2026-10-31",
+      "note": "NRBF retirement benefit is paid when a member aged 60-70 stops work; no separate statutory private-sector retirement age was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official source for the civil service retirement age was readable; government staff are covered by a separate Retirement Fund."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "NRBT savings deposit rate 2.49% less 10% withholding",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "NRBT Monetary Policy Data July 2026: 12-month term deposit 3.32%; 5-year government bond coupon 3.00%",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax 12-month deposit rate (3.32% less 10% = 2.99%)."
+    },
+    "retirement_return_high": {
+      "value": 0.032,
+      "status": "assumption",
+      "sourceName": "NRBT Monetary Policy Data July 2026: 12-month term deposit 3.32%; 5-year government bond coupon 3.00%",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered 5-6 year government bonds at 3.0-3.5% and better bank rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits/bonds (about 3%) and global equity",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix mostly in local deposits and bonds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits/bonds (about 3%) and global equity",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: half local fixed income at about 2.8% and half global equity at 6.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits/bonds (about 3%) and global equity",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fmarkets/mpd/mpd_jul2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with a larger, well-performing global equity share."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Tonga runs a Social Welfare Scheme for the elderly (payments shown on the NRBF welfare page), but no official page stating the current monthly amount was readable."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The eligibility age for Tonga's elderly welfare scheme was not stated on any official page we could read."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service payment for private employees was found; retirement savings run through NRBF."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 70,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "National Retirement Benefits Fund (NRBF)",
+      "sourceUrl": "https://www.nrbf.to/",
+      "asOf": "2026-10-31",
+      "note": "Defined-contribution fund for employees aged 18-70: 5% employee plus 7.5% employer; benefits from 60 as lump sum, instalments or both; voluntary contributors allowed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fsystems/banks_feeschargesinterestrates_comparisons_feb24.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fsystems/banks_feeschargesinterestrates_comparisons_feb24.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "12-month term deposit",
+      "sourceUrl": "https://www.reservebank.to/data/docs/fsystems/banks_feeschargesinterestrates_comparisons_feb24.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring deposit product listed in the NRBT bank comparison."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No separate retail savings bond; government bonds are listed by NRBT (see tbond_5y).",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/government-bonds"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No treasury bills on issue; NRBT Notes are for banks."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Government of Tonga bond",
+      "note": "Issued through the NRBT in 2- to 7-year series; 5-year coupons 2.5-3.0%.",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/government-bonds"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No 10-year series on issue; longest is 7 years.",
+      "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/government-bonds"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No local stock exchange or locally offered mutual funds found."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "No legal restriction on buying gold was found; mainly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Reserve Bank of Tonga",
+      "url": "https://www.reservebank.to/"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "National Retirement Benefits Fund (NRBF)",
+      "url": "https://www.nrbf.to/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Welfare Scheme for the elderly (payments via NRBF)",
+      "url": "https://www.nrbf.to/welfare.php"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (public hospitals)",
+      "url": "https://www.health.gov.to/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Tonga Statistics Department",
+      "url": "https://tongastats.gov.to/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

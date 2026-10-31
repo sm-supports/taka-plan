@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "code": "NZ",
+  "iso3": "NZL",
+  "nameEn": "New Zealand",
+  "nameNative": "New Zealand",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en",
+    "mi"
+  ],
+  "currency": {
+    "code": "NZD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.7765,
+      "status": "sourced",
+      "sourceName": "Trading Economics, NZD/USD exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/currency",
+      "asOf": "2026-10-30",
+      "note": "NZD 1 = USD 0.5629, so about NZD 1.78 per US dollar; World Bank 2025 average 1.72."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.037,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Stats NZ CPI, September 2026 quarter)",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI 3.7% to the September 2026 quarter (4.1% to June); secondary source because the Stats NZ release page renders without figures."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "RBNZ 1-3% target (2% midpoint); CPI 3.7% in Q3 2026, 2.8% in 2025 (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The 1-3% target is credible over the long run but inflation has run above the midpoint, so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.0275,
+      "status": "sourced",
+      "sourceName": "Trading Economics (RBNZ Official Cash Rate decision)",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/interest-rate",
+      "asOf": "2026-10-28",
+      "note": "OCR held at 2.75% on 28 October 2026 (4-3 vote); secondary source because rbnz.govt.nz refused automated access."
+    },
+    "savings_account_rate": {
+      "value": 0.0015,
+      "status": "sourced",
+      "sourceName": "interest.co.nz savings (call) account rate table",
+      "sourceUrl": "https://www.interest.co.nz/saving/call-account",
+      "asOf": "2026-10-31",
+      "note": "Ordinary call/savings accounts at large banks pay about 0.05-0.25%; midpoint used. Online and bonus saver accounts pay more."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0295,
+      "status": "sourced",
+      "sourceName": "interest.co.nz term deposit rate table (under 1 year)",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-9-months",
+      "asOf": "2026-10-31",
+      "note": "Major banks' 3-month rates 2.85-3.05%; midpoint used. Table date not shown; read 31 October 2026."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0403,
+      "status": "sourced",
+      "sourceName": "interest.co.nz term deposit rate table (1-5 years)",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "Major banks' 1-year rates 4.00-4.05%; 5-year 4.70-5.00%. Table date not shown; read 31 October 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "New Zealand banks do not offer a monthly recurring deposit (DPS-style) product; regular saving is done through savings accounts and KiwiSaver."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.03945,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NZ",
+      "asOf": "2025-12-31",
+      "note": "Trading Economics shows an RBNZ deposit rate series at 4.79% for September 2026, which looks like a term-deposit series rather than an all-deposit average."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Kiwi Bonds (retail government bonds, 6 months to 4 years) exist, but the Debt Management site refused automated access and no current rate was found elsewhere."
+    },
+    "tbill_91d_rate": {
+      "value": 0.032,
+      "status": "sourced",
+      "sourceName": "Trading Economics, New Zealand 3-month bill yield",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/3-month-bill-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary source; RBNZ wholesale rate tables refused automated access."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "RBNZ table B2 and the NZDM site refused automated access and no 5-year government bond yield was found on secondary sources read (the 2-year was 3.75% and the 10-year 4.82% on 30 Oct 2026)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0482,
+      "status": "sourced",
+      "sourceName": "Trading Economics, New Zealand 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "2-year yield 3.75% the same day."
+    },
+    "tax_bank_interest": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, New Zealand personal income tax rates",
+      "sourceUrl": "https://taxsummaries.pwc.com/new-zealand/individual/taxes-on-personal-income",
+      "asOf": "2026-07-06",
+      "note": "Interest is taxed at the saver's marginal rate (10.5%, 17.5%, 30%, 33% or 39%) through resident withholding tax; 30% (income NZD 53,501-78,100) used as the typical earner rate."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, New Zealand personal income tax rates",
+      "sourceUrl": "https://taxsummaries.pwc.com/new-zealand/individual/taxes-on-personal-income",
+      "asOf": "2026-07-06",
+      "note": "Kiwi Bond interest is ordinary taxable interest at the marginal rate; 30% used as the typical rate."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Deposit insurance (New Zealand Depositor Compensation Scheme)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Deposit_insurance",
+      "asOf": "2025-07-01",
+      "note": "Depositor Compensation Scheme under the Deposit Takers Act 2023: NZD 100,000 per depositor per licensed deposit taker from 1 July 2025; secondary source because rbnz.govt.nz refused automated access."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2095,
+      "status": "sourced",
+      "sourceName": "interest.co.nz credit card rate table",
+      "sourceUrl": "https://www.interest.co.nz/borrowing/credit-cards",
+      "asOf": "2026-10-31",
+      "note": "No legal cap; 20.95% is the most common standard purchase rate at major banks (low-rate cards 12.9-13.9%)."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "NZX 50 gross index 13,797 (30 Oct 2026), up 1.8% in a year",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case after a weak few years for the NZX 50, roughly the after-tax term deposit rate plus a small premium."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Major-bank 1-year term deposit 4.0% less 30% RWT = 2.8%; NZX 50 gross index",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "After-tax safe rate of 2.8% plus a 3.7-point premium, kept under 4 points because the NZX 50 has been flat recently."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "NZX 50 gross index long-run record (base 1,880.85 in Dec 2000 to 13,797 in Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case near the NZX 50 gross index's roughly 8% a year since 2000."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (NZD per USD 1.72 in 2025); NZD/USD 0.563 on 30 Oct 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NZ",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stable or stronger New Zealand dollar."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (NZD per USD 1.72 in 2025); NZD/USD 0.563 on 30 Oct 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NZ",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus about 1% a year of NZD weakness against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (NZD per USD 1.72 in 2025); NZD/USD 0.563 on 30 Oct 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NZ",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker NZD."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Major-bank 3-month term deposit 2.95% less 30% RWT",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-9-months",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short term deposits after 30% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "Major-bank 1-year term deposit 4.0% less 30% RWT = 2.8%",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year term deposits after 30% resident withholding tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "Major-bank 5-year term deposit 4.70-5.00% less 30% RWT",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in 5-year term deposits after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio published by the RBNZ, FMA or the Financial Services Council was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is widely sold in New Zealand, but no published per-1,000 premium table by age was found; insurers quote individually."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical private hospital bill was found; public hospital care is free for residents."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NZ private health insurance is priced per plan with annual limits rather than per sum insured, and no age-banded premium table was found."
+    },
+    "oop_health_share": {
+      "value": 0.1269,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NZ",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "RBNZ 1-3% target; headline CPI 3.7% (Q3 2026)",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The Stats NZ health group figure could not be read, so we plan with the headline projection plus one point for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "RBNZ 1-3% target; headline CPI 3.7% (Q3 2026)",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The Stats NZ education group figure could not be read, so we plan with the headline projection plus one point for fees."
+    },
+    "life_expectancy": {
+      "value": 82.01,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NZ",
+      "asOf": "2024-12-31",
+      "note": "Men 80.4, women 83.7; UN WPP 2024 (via populationpyramid.net) gives 82.5 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.2,
+            "men": 24.1,
+            "women": 26.3
+          },
+          {
+            "age": 65,
+            "total": 20.9,
+            "men": 19.9,
+            "women": 21.9
+          },
+          {
+            "age": 70,
+            "total": 16.8,
+            "men": 15.9,
+            "women": 17.7
+          },
+          {
+            "age": 80,
+            "total": 9.5,
+            "men": 8.9,
+            "women": 10.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/new-zealand/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.66
+          },
+          {
+            "year": 2040,
+            "value": 2.72
+          },
+          {
+            "year": 2065,
+            "value": 2.17
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/new-zealand/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 27.3 (2025, World Bank), 36.7 (2040) and 46.0 (2065, populationpyramid.net/new-zealand/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Work and Income, NZ Superannuation",
+      "sourceUrl": "https://www.workandincome.govt.nz/products/a-z-benefits/nz-superannuation.html",
+      "asOf": "2026-07-13",
+      "note": "NZ Super is paid from 65 to men and women; there is no compulsory retirement age for private-sector workers."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Mandatory retirement (New Zealand)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mandatory_retirement",
+      "asOf": "2026-10-31",
+      "note": "No compulsory retirement age for public servants; 65 is the normal retirement age because NZ Super starts then (judges retire at 70)."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Major-bank 3-month term deposit 2.95% less 30% RWT",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-9-months",
+      "asOf": "2026-10-31",
+      "note": "Low case: short term deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "Major-bank 1-year term deposit 4.0% less 30% RWT = 2.8%",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "Major-bank 5-year term deposit 4.70-5.00% less 30% RWT",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered 5-year term deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Major-bank 1-year term deposit 4.0% less 30% RWT = 2.8%; NZX 50 gross index",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced KiwiSaver-style mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Major-bank 1-year term deposit 4.0% less 30% RWT = 2.8%; NZX 50 gross index",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6.5% and half fixed income at about 3.5% pre-tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Major-bank 1-year term deposit 4.0% less 30% RWT = 2.8%; NZX 50 gross index",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 2805,
+      "status": "sourced",
+      "sourceName": "Work and Income, benefit rates from 1 April 2026 (NZ Superannuation)",
+      "sourceUrl": "https://www.workandincome.govt.nz/products/benefit-rates/benefit-rates-april-2026.html",
+      "asOf": "2026-04-01",
+      "note": "NZ Super single living alone NZD 647.37 a week gross (555.15 net at tax code M) = about 2,805 a month gross; married couples get 492.14 a week each gross."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Wikipedia, Superannuation in New Zealand; Work and Income NZ Super page",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Superannuation_in_New_Zealand",
+      "asOf": "2026-07-13",
+      "note": "Universal, not means-tested: age 65 and 10 years' residence after age 20 (5 after 50); the amount is taxable."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "New Zealand employment law has no statutory gratuity or end-of-service payment; redundancy pay is only by contract."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Wikipedia, Superannuation in New Zealand; Work and Income NZ Super page",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Superannuation_in_New_Zealand",
+      "asOf": "2026-07-13",
+      "note": "NZ Super is a tax-funded flat pension from 65 (no contributions), adjusted yearly with prices and held at 65-66% of the net average wage for a couple; it is taxable. KiwiSaver is the voluntary contributory scheme (employee 3-10%, employer 3%)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "localNameEn": "Savings (call) account",
+      "sourceUrl": "https://www.interest.co.nz/saving/call-account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-9-months"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "1-year term deposit",
+      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring deposit product; KiwiSaver and savings accounts fill this role."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Kiwi Bonds",
+      "localNameEn": "Kiwi Bonds (retail government bonds)",
+      "note": "Sold to individuals by New Zealand Debt Management for 6 months to 4 years; interest taxable."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "New Zealand Government Treasury bill",
+      "note": "Sold by tender, mainly to institutions.",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/3-month-bill-yield"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "New Zealand Government Bond",
+      "localNameEn": "Nominal government bond"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "New Zealand Government Bond",
+      "localNameEn": "Nominal government bond",
+      "sourceUrl": "https://tradingeconomics.com/new-zealand/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Managed fund",
+      "localNameEn": "Managed fund / KiwiSaver fund / index fund",
+      "note": "Retail index and managed funds (many as PIEs taxed at 10.5-28%) are widely available."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold bullion",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of New Zealand – Te Pūtea Matua",
+      "url": "https://www.rbnz.govt.nz/"
+    },
+    "insuranceRegulator": {
+      "name": "Reserve Bank of New Zealand (insurer prudential supervision); Financial Markets Authority (conduct)",
+      "url": "https://www.rbnz.govt.nz/regulation-and-supervision/insurers"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance & Financial Services Ombudsman",
+      "url": "https://www.ifso.nz/"
+    },
+    "pensionScheme": {
+      "name": "NZ Superannuation (Work and Income)",
+      "url": "https://www.workandincome.govt.nz/products/a-z-benefits/nz-superannuation.html"
+    },
+    "oldAgeAllowance": {
+      "name": "NZ Superannuation (universal, non-contributory)",
+      "url": "https://www.workandincome.govt.nz/products/a-z-benefits/nz-superannuation.html"
+    },
+    "publicHealthCover": {
+      "name": "Health New Zealand – Te Whatu Ora (free public hospital care)",
+      "url": "https://www.tewhatuora.govt.nz/"
+    },
+    "depositInsurance": {
+      "name": "Depositor Compensation Scheme (Reserve Bank of New Zealand)",
+      "url": "https://www.rbnz.govt.nz/regulation-and-supervision/depositor-compensation-scheme"
+    },
+    "statistics": {
+      "name": "Stats NZ – Tatauranga Aotearoa",
+      "url": "https://www.stats.govt.nz/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

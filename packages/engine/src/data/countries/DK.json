@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "code": "DK",
+  "iso3": "DNK",
+  "nameEn": "Denmark",
+  "nameNative": "Danmark",
+  "region": "europe_central_asia",
+  "languages": [
+    "da",
+    "en",
+    "de",
+    "sv"
+  ],
+  "currency": {
+    "code": "DKK",
+    "symbol": "kr.",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 6.6895,
+      "status": "sourced",
+      "sourceName": "Danmarks Nationalbank daily exchange rates (USD)",
+      "sourceUrl": "https://www.nationalbanken.dk/api/currencyratesxml?lang=en",
+      "asOf": "2026-10-30",
+      "note": "DKK 668.95 per USD 100; World Bank 2025 average 6.62."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.022,
+      "status": "sourced",
+      "sourceName": "Danmarks Statistik, PRIS01 consumer price index (annual change)",
+      "sourceUrl": "https://www.statbank.dk/PRIS01",
+      "asOf": "2026-09-30",
+      "note": "CPI up 2.2% year on year in September 2026 (2.0% in August); World Bank 2025 average 1.9%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Krone pegged to the euro (ECB 2% target); Danish CPI 2021-2025 average 3.2%, 1.9% in 2025",
+      "sourceUrl": "https://www.statbank.dk/PRIS9",
+      "asOf": "2026-10-31",
+      "note": "The fixed-exchange-rate policy ties Danish inflation to the euro area, so the ECB 2% target is used; recent years outside the 2022 spike were close to 2%."
+    },
+    "policy_rate": {
+      "value": 0.021,
+      "status": "sourced",
+      "sourceName": "Danmarks Nationalbank current-account rate (StatBank DNRENTD)",
+      "sourceUrl": "https://www.statbank.dk/DNRENTD",
+      "asOf": "2026-10-29",
+      "note": "Current-account and certificates-of-deposit rate 2.10%, lending rate 2.25%; raised from 1.85% in early September 2026 alongside the ECB."
+    },
+    "savings_account_rate": {
+      "value": 0.004,
+      "status": "sourced",
+      "sourceName": "Danmarks Nationalbank MFI statistics (DNRUIPI): household transferable (on-demand) deposits in DKK, outstanding",
+      "sourceUrl": "https://www.statbank.dk/DNRUIPI",
+      "asOf": "2026-09-30",
+      "note": "Average 0.40% on households' on-demand DKK deposits; deposits with notice paid 1.21%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0167,
+      "status": "sourced",
+      "sourceName": "Danmarks Nationalbank MFI statistics (DNRNIPI): new household time deposits in DKK, up to 3 months",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI",
+      "asOf": "2026-09-30",
+      "note": "New business effective rate, September 2026 (1.48% in August)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0196,
+      "status": "sourced",
+      "sourceName": "Danmarks Nationalbank MFI statistics (DNRNIPI): new household time deposits in DKK, over 3 months up to 1 year",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI",
+      "asOf": "2026-09-30",
+      "note": "New business effective rate, September 2026; 1-2 years paid 2.23%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Danish banks do not offer a standard monthly recurring deposit product with a published rate; regular saving goes into ordinary or notice savings accounts or tax-favoured schemes (aldersopsparing, børneopsparing)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0053,
+      "status": "sourced",
+      "sourceName": "Danmarks Nationalbank MFI statistics (DNRUIPI): all household DKK deposits, outstanding",
+      "sourceUrl": "https://www.statbank.dk/DNRUIPI",
+      "asOf": "2026-09-30",
+      "note": "Average effective rate on all outstanding household deposits in DKK; World Bank FR.INR.DPST has no Denmark figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Denmark has no retail government savings certificate or savings bond sold to individuals; government bonds are bought through banks on the market."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bills (skatkammerbeviser) are issued by Danmarks Nationalbank for the state, but no current 3-month yield could be read; worldgovernmentbonds.com loads yields by script."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year Danish government bond yield was found: Trading Economics shows only 2- and 10-year yields and worldgovernmentbonds.com could not be read."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0312,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Denmark 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term convergence yield for Denmark was 3.29% in September 2026; the 2-year yield was 2.79%."
+    },
+    "tax_bank_interest": {
+      "value": 0.37,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Denmark taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/denmark/individual/taxes-on-personal-income",
+      "asOf": "2026-06-25",
+      "note": "No final withholding: interest is positive net capital income, taxed at average municipal tax 25.05% plus bottom tax 12.01% (about 37%), up to 42% for high incomes."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; interest on government bonds is taxed as ordinary capital income (about 37-42%)."
+    },
+    "deposit_insurance_limit": {
+      "value": 747350,
+      "status": "sourced",
+      "sourceName": "Finansiel Stabilitet, Garantiformuen (Danish deposit guarantee scheme)",
+      "sourceUrl": "https://fs.dk/en/deposit-guarantee-fund/how-are-my-deposits-covered",
+      "asOf": "2026-10-30",
+      "note": "Cover is the equivalent of EUR 100,000 per depositor per institution, converted at the ECB rate of DKK 7.4735 per euro (30 Oct 2026); EUR 150,000 for 6 months after life events, pension savings fully covered."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Danish law caps the cost of consumer credit (annual percentage rate ceiling), but the statutory text on retsinformation.dk could not be read; Nationalbanken's credit-card interest series for households is confidential ('..'). Overdrafts and revolving credit to households averaged 4.62% in September 2026."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Copenhagen stock index 1,633 on 30 Oct 2026, 45% below its June 2024 high of 2,967",
+      "sourceUrl": "https://tradingeconomics.com/denmark/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Danish shares, concentrated in a few large health-care and shipping companies, return little more than safe deposits."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Copenhagen index (Trading Economics); 1-year deposit 1.96% less 37% tax = 1.2%",
+      "sourceUrl": "https://tradingeconomics.com/denmark/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base capped near the after-tax safe rate plus about 4 points because the index has fallen sharply since 2024 and depends on a handful of companies."
+    },
+    "equity_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Copenhagen index; long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/denmark/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified equity fund matching long-run global equity returns of about 7% in kroner."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); DKK pegged to the euro",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the krone."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the krone (pegged to the euro) is assumed stable against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in krone terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Household notice deposits 1.21% less 37% capital income tax (Nationalbanken DNRUIPI)",
+      "sourceUrl": "https://www.statbank.dk/DNRUIPI",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after tax, with rates drifting lower."
+    },
+    "fixed_income_return_base": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "New household deposits 3-12 months 1.96% less 37% tax = 1.2% (Nationalbanken DNRNIPI)",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI",
+      "asOf": "2026-10-31",
+      "note": "Base case: after-tax 1-year term deposit rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Denmark 10-year government bond 3.12% less 37% tax = 2.0%",
+      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long government or mortgage bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Finanstilsynet and Forsikring & Pension do not publish an industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (risikolivsforsikring) is sold, mostly through labour-market pension schemes, but no published premium table per DKK 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital treatment is free at the point of use in the public regional hospitals; no official figure for the out-of-pocket cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance (sundhedsforsikring) is mostly an employer benefit with flat premiums, not priced per DKK 100,000 of cover; no published premium table was found."
+    },
+    "oop_health_share": {
+      "value": 0.1387,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DK",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Danmarks Statistik PRIS01, health (COICOP 06): +1.4% year on year in September 2026",
+      "sourceUrl": "https://www.statbank.dk/PRIS01",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices rise slowly because most care is public and free, but private dental, physiotherapy and medicine costs are planned at 3%, a point above headline inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Danmarks Statistik PRIS01, education (COICOP 10): +4.1% year on year in September 2026",
+      "sourceUrl": "https://www.statbank.dk/PRIS01",
+      "asOf": "2026-10-31",
+      "note": "Public education is free; the fees people do pay (private schools, courses) are rising about 4% a year, which is used for planning."
+    },
+    "life_expectancy": {
+      "value": 82.25,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DK",
+      "asOf": "2024-12-31",
+      "note": "Danmarks Statistik life table 2024-2025 (HISB8): men 80.25, women 83.90."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.3,
+            "men": 22.85,
+            "women": 25.74
+          },
+          {
+            "age": 65,
+            "total": 20.1,
+            "men": 18.72,
+            "women": 21.39
+          },
+          {
+            "age": 70,
+            "total": 16.1,
+            "men": 14.98,
+            "women": 17.3
+          },
+          {
+            "age": 80,
+            "total": 9.2,
+            "men": 8.45,
+            "women": 9.99
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Danmarks Statistik, life table 2024-2025 (HISB8, middellevetid)",
+      "sourceUrl": "https://www.statbank.dk/HISB8",
+      "asOf": "2025-12-31",
+      "note": "Official tables are by sex only; total is the simple average of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 3.01
+          },
+          {
+            "year": 2040,
+            "value": 2.41
+          },
+          {
+            "year": 2065,
+            "value": 2.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Danmarks Statistik, population projection 2026 (FRDK126)",
+      "sourceUrl": "https://www.statbank.dk/FRDK126",
+      "asOf": "2026-01-01",
+      "note": "People aged 15-64 divided by people 65+ in the official 2026 projection; World Bank 2025 old-age dependency 33.4 gives 3.0."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "borger.dk, folkepensionsalder",
+      "sourceUrl": "https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension",
+      "asOf": "2026-10-31",
+      "note": "Folkepension age is 67 for people born 1 July 1955 to 31 December 1962, then 68 (born 1963-66), 69 (1967-70) and 70 (born 1971 or later); same for men and women."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Most public employees are on ordinary contracts and follow the folkepension age; the separate retirement rule for tenured civil servants (tjenestemænd) could not be confirmed from a readable official source."
+    },
+    "retirement_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Household notice deposits 1.21% less 37% tax",
+      "sourceUrl": "https://www.statbank.dk/DNRUIPI",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "New household deposits 3-12 months 1.96% less 37% tax = 1.2%",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Denmark 10-year government bond 3.12% less 37% tax = 2.0%",
+      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer government and mortgage bonds after tax, slightly below the 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.2%; Copenhagen index record",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.2%; equity base 5%",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5% and half safe fixed income at about 1.2-2% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "After-tax 10-year bond 2.0%; equity high 7%",
+      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 7544,
+      "status": "sourced",
+      "sourceName": "borger.dk, folkepension rates 2026 (grundbeløb)",
+      "sourceUrl": "https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension",
+      "asOf": "2026-01-01",
+      "note": "Basic amount of the residence-based folkepension, DKK 7,544 a month before tax in 2026; a means-tested pension supplement adds up to DKK 8,729 (single) or 4,467 (couple)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "borger.dk, folkepension (age, residence and income rules)",
+      "sourceUrl": "https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension",
+      "asOf": "2026-10-31",
+      "note": "Not contributory: needs Danish citizenship or 10 years' residence between 15 and pension age (full rate after 40 years). The basic amount is not reduced by other income; only the supplement is income-tested."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No per-year gratuity: the Salaried Employees Act (funktionærloven s.2a) gives a lump severance of 1, 2 or 3 months' pay after 12, 15 or 18 years of service, which does not fit a days-per-year rule; holiday pay is separate."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "borger.dk (folkepension) and lifeindenmark.borger.dk (ATP Livslang Pension)",
+      "sourceUrl": "https://lifeindenmark.borger.dk/pension/atp-livslang-pension",
+      "asOf": "2026-10-31",
+      "note": "Two public tiers: the residence-based folkepension and the compulsory ATP lifetime pension (contributions from age 16, one-third employee, two-thirds employer, paid from pension age, can be deferred 10 years). Folkepension is adjusted yearly by the rate-adjustment percentage; both are taxed as income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Opsparingskonto",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.statbank.dk/DNRUIPI"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Tidsindskud",
+      "localNameEn": "Time deposit (3 months)",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Tidsindskud",
+      "localNameEn": "Time deposit (1 year)",
+      "sourceUrl": "https://www.statbank.dk/DNRNIPI"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard recurring-deposit product; regular saving goes into savings accounts or tax-favoured schemes."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate or bond sold directly to individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Skatkammerbeviser",
+      "localNameEn": "Treasury bills",
+      "note": "Issued for the state by Danmarks Nationalbank, mainly to institutions."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Statsobligationer",
+      "localNameEn": "Danish government bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Statsobligationer",
+      "localNameEn": "Danish government bonds",
+      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Investeringsforeninger",
+      "localNameEn": "Investment funds / index funds (ETF)",
+      "note": "Retail investment funds are widely available; gains taxed as share income (27%/42%), or 17% inside an aktiesparekonto."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Guldbarrer og guldmønter",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Danmarks Nationalbank",
+      "url": "https://www.nationalbanken.dk/en"
+    },
+    "insuranceRegulator": {
+      "name": "Finanstilsynet (Danish Financial Supervisory Authority)",
+      "url": "https://www.dfsa.dk/"
+    },
+    "insuranceComplaints": {
+      "name": "Ankenævnet for Forsikring (Insurance Complaints Board)",
+      "url": "https://www.ankeforsikring.dk/"
+    },
+    "pensionScheme": {
+      "name": "ATP Livslang Pension",
+      "url": "https://lifeindenmark.borger.dk/pension/atp-livslang-pension",
+      "note": "Compulsory supplementary lifetime pension alongside the folkepension."
+    },
+    "oldAgeAllowance": {
+      "name": "Folkepension (state pension, paid by Udbetaling Danmark)",
+      "url": "https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension"
+    },
+    "publicHealthCover": {
+      "name": "Public health insurance (sygesikring), regional health services",
+      "url": "https://www.sundhed.dk/"
+    },
+    "depositInsurance": {
+      "name": "Garantiformuen, Finansiel Stabilitet",
+      "url": "https://fs.dk/en/deposit-guarantee-fund/about-the-danish-deposit-guarantee-scheme"
+    },
+    "statistics": {
+      "name": "Danmarks Statistik (Statistics Denmark)",
+      "url": "https://www.dst.dk/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

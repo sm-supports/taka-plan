@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "TH",
+  "iso3": "THA",
+  "nameEn": "Thailand",
+  "nameNative": "ประเทศไทย",
+  "region": "east_asia_pacific",
+  "languages": [
+    "th",
+    "en"
+  ],
+  "currency": {
+    "code": "THB",
+    "symbol": "฿",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 33.765,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/THB (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/thailand/currency",
+      "asOf": "2026-10-30",
+      "note": "World Bank PA.NUS.FCRF gives 32.88 for 2025."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0282,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing Ministry of Commerce headline CPI (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/thailand/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Headline CPI 2.82% year on year in September 2026 (2.53% in August); core 1.50%. The Commerce Ministry expects 1.8-2.2% for 2026."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank of Thailand inflation target range 1-3%",
+      "sourceUrl": "https://www.bot.or.th/en/our-roles/monetary-policy/mpc-publication/policy-interest-rate.html",
+      "asOf": "2026-10-31",
+      "note": "We plan with the midpoint of the BOT's 1-3% target range, close to recent averages."
+    },
+    "policy_rate": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, MPC decisions table (as of 28 October 2026)",
+      "sourceUrl": "https://www.bot.or.th/en/our-roles/monetary-policy/mpc-publication/policy-interest-rate.html",
+      "asOf": "2026-10-28",
+      "note": "The MPC held the 1-day bilateral repurchase rate at 1.00% on 28 October 2026 (cut to 1.00% on 25 February 2026)."
+    },
+    "savings_account_rate": {
+      "value": 0.001,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, FM_RT_001_S4 Interest Rates in Financial Market (commercial bank deposit rates)",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-09-30",
+      "note": "Savings deposit rates range 0.10% (minimum, typical at large banks) to 1.75% (maximum) in September 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.007,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, FM_RT_001_S4 Interest Rates in Financial Market (commercial bank deposit rates)",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-09-30",
+      "note": "3-month time deposits 0.50-0.90% in September 2026; midpoint used."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0108,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, FM_RT_001_S4 Interest Rates in Financial Market (commercial bank deposit rates)",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-09-30",
+      "note": "12-month time deposits 0.75-1.40% in September 2026; midpoint used."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks offer tax-free monthly fixed deposits (24-36 months), but no average or range is published by the BOT."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0077,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, FM_RT_001_S4 Interest Rates in Financial Market (time deposits weighted average)",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-08-31",
+      "note": "Weighted average time deposit rate 0.77% in August 2026; World Bank FR.INR.DPST gives 1.15% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Public Debt Management Office sells government savings bonds to individuals in periodic issues, but its site could not be reached in this pass, so the current rate is not reported."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0097,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, FM_RT_001_S4 Interest Rates in Financial Market (T-bill and government bond yield)",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-09-30",
+      "note": "3-month government yield 0.97% in September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0173,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, FM_RT_001_S4 Interest Rates in Financial Market (T-bill and government bond yield)",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-09-30"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0231,
+      "status": "sourced",
+      "sourceName": "Bank of Thailand, FM_RT_001_S4 Interest Rates in Financial Market (T-bill and government bond yield)",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-09-30",
+      "note": "Trading Economics shows 2.09% on 30 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Thailand individual income determination (secondary source)",
+      "sourceUrl": "https://taxsummaries.pwc.com/thailand/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Interest from bank deposits is subject to 15% withholding tax, which residents may treat as final or credit against progressive tax. Some savings-account interest is exempt up to a yearly limit (not confirmed in this pass)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax treatment of government savings bond interest was not confirmed from a reachable official page in this pass."
+    },
+    "deposit_insurance_limit": {
+      "value": 1000000,
+      "status": "sourced",
+      "sourceName": "Deposit Protection Agency, coverage limit",
+      "sourceUrl": "https://www.dpa.or.th/coverage-limit",
+      "asOf": "2026-10-31",
+      "note": "1 million baht per depositor per financial institution, all accounts and branches combined."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BOT credit card interest ceiling could not be confirmed from a reachable official page in this pass."
+    },
+    "equity_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "Low case near the after-tax safe rate; the SET index has a weak 10-year record."
+    },
+    "equity_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "After-tax safe rate of about 0.9% plus a 3.6-point premium, kept modest because the SET index has gone nowhere over ten years."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "High case for a diversified Thai and global equity mix."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Trading Economics USD/THB 33.77 (30 Oct 2026), baht down 4.3% on the year",
+      "sourceUrl": "https://tradingeconomics.com/thailand/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable baht."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Trading Economics USD/THB 33.77 (30 Oct 2026), baht down 4.3% on the year",
+      "sourceUrl": "https://tradingeconomics.com/thailand/currency",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4% plus slight baht depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Trading Economics USD/THB 33.77 (30 Oct 2026), baht down 4.3% on the year",
+      "sourceUrl": "https://tradingeconomics.com/thailand/currency",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker baht."
+    },
+    "fixed_income_return_low": {
+      "value": 0.006,
+      "status": "assumption",
+      "sourceName": "BOT 3-month time deposits 0.50-0.90% less 15% tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "Low case: short time deposits after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.009,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "Base case: 12-month deposits and 1-year government paper after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.0147,
+      "status": "assumption",
+      "sourceName": "BOT 5-year government yield 1.73% (Sep 2026) less 15% tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in 5-year government bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found from the Office of Insurance Commission in this pass."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published per-1,000-baht premium rates by age were retrieved in this pass."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major private hospital stay was retrieved; most people are covered by the Universal Coverage Scheme, Social Security or the civil servant scheme."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates per 100,000 baht of cover were retrieved in this pass."
+    },
+    "oop_health_share": {
+      "value": 0.0993,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TH",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Thailand target 1-3%; no medical CPI retrieved",
+      "sourceUrl": "https://www.bot.or.th/en/our-roles/monetary-policy/mpc-publication/policy-interest-rate.html",
+      "asOf": "2026-10-31",
+      "note": "Private medical costs usually rise faster than general prices, so we plan 2 points above the 2% target midpoint."
+    },
+    "goal_inflation_education": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Bank of Thailand target 1-3%; no education CPI retrieved",
+      "sourceUrl": "https://www.bot.or.th/en/our-roles/monetary-policy/mpc-publication/policy-interest-rate.html",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is free to grade 12, so we plan slightly above the 2% target midpoint for private and tertiary costs."
+    },
+    "life_expectancy": {
+      "value": 76.56,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TH",
+      "asOf": "2024-12-31",
+      "note": "Men 72.3, women 81.0."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 23.6,
+            "men": 21.4,
+            "women": 25.7
+          },
+          {
+            "age": 65,
+            "total": 19.8,
+            "men": 17.8,
+            "women": 21.5
+          },
+          {
+            "age": 70,
+            "total": 16.0,
+            "men": 14.5,
+            "women": 17.4
+          },
+          {
+            "age": 80,
+            "total": 9.7,
+            "men": 8.9,
+            "women": 10.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/thailand/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 4.34
+          },
+          {
+            "year": 2040,
+            "value": 2.45
+          },
+          {
+            "year": 2065,
+            "value": 1.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/thailand/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 23.02 (2025, World Bank), 40.8 (2040) and 58.7 (2065, populationpyramid.net/thailand/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Social Security Office, old-age benefit conditions",
+      "sourceUrl": "https://www.sso.go.th/wpr/main/privilege/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1_sub_category_list-text-photo_1_125_695",
+      "asOf": "2026-10-31",
+      "note": "Social Security old-age pension from age 55 after at least 180 months of contributions, once insured employment ends; men and women alike."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Retirement age (secondary source)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Thai civil servants retire at 60 (university presidents may work beyond 60)."
+    },
+    "retirement_return_low": {
+      "value": 0.006,
+      "status": "assumption",
+      "sourceName": "BOT 3-month time deposits 0.50-0.90% less 15% tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "Low case: short time deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.009,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "Base case at the after-tax 12-month deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.0147,
+      "status": "assumption",
+      "sourceName": "BOT 5-year government yield 1.73% (Sep 2026) less 15% tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered 5-year government bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if equities only match bonds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half equity at 4.5% and half bonds at 1-1.7%, with tax-advantaged funds where possible."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
+      "asOf": "2026-10-31",
+      "note": "High case with the equity high case."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Thailand pays a monthly old-age allowance (เบี้ยยังชีพผู้สูงอายุ) through local governments under a 2009 Interior Ministry regulation, but the current amounts could not be confirmed from a reachable official page in this pass."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility for the old-age allowance could not be confirmed from a reachable official page in this pass."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Protection Act sets severance pay in tiers by length of service rather than days per year; the tiers were not confirmed from a reachable official page in this pass."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Social Security Office, old-age benefit conditions",
+      "sourceUrl": "https://www.sso.go.th/wpr/main/privilege/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1_sub_category_list-text-photo_1_125_695",
+      "asOf": "2026-10-31",
+      "note": "Social Security Fund (Section 33 employees): pension from 55 with at least 180 months of contributions and insured employment ended; fewer months give a lump sum. No automatic indexation was found; pension formula and tax treatment not confirmed in this pass."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "บัญชีเงินฝากออมทรัพย์",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "เงินฝากประจำ 3 เดือน",
+      "localNameEn": "3-month fixed deposit",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "เงินฝากประจำ 12 เดือน",
+      "localNameEn": "12-month fixed deposit",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG"
+    },
+    "dps": {
+      "available": true,
+      "localName": "เงินฝากประจำปลอดภาษี",
+      "localNameEn": "Tax-free monthly fixed deposit",
+      "note": "Monthly fixed-deposit plans offered by many banks; terms and tax-free limits vary and were not confirmed in this pass."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "พันธบัตรออมทรัพย์",
+      "localNameEn": "Government savings bond",
+      "note": "Issued periodically by the Public Debt Management Office for individuals, in several tenors."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "ตั๋วเงินคลัง",
+      "localNameEn": "Treasury bill",
+      "note": "Treasury bills are auctioned to institutions; individuals rarely have access.",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "พันธบัตรรัฐบาล 5 ปี",
+      "localNameEn": "5-year government bond",
+      "note": "Individuals can buy government bonds through banks in the secondary market.",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "พันธบัตรรัฐบาล 10 ปี",
+      "localNameEn": "10-year government bond",
+      "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "กองทุนรวมดัชนี",
+      "localNameEn": "Index mutual fund",
+      "note": "Diversified equity and index mutual funds are widely sold, including tax-advantaged retirement and ESG funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ทองคำแท่ง",
+      "localNameEn": "Gold bar",
+      "note": "Gold bars and ornaments are freely bought at gold shops."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Thailand",
+      "url": "https://www.bot.or.th/"
+    },
+    "insuranceRegulator": {
+      "name": "Office of Insurance Commission (OIC)",
+      "url": "https://www.oic.or.th/"
+    },
+    "insuranceComplaints": {
+      "name": "Office of Insurance Commission (complaints)",
+      "url": "https://www.oic.or.th/"
+    },
+    "pensionScheme": {
+      "name": "Social Security Office",
+      "url": "https://www.sso.go.th/"
+    },
+    "oldAgeAllowance": {
+      "name": "Department of Older Persons",
+      "url": "https://www.dop.go.th/th",
+      "note": "The allowance is paid through local administrative organisations."
+    },
+    "publicHealthCover": {
+      "name": "National Health Security Office (Universal Coverage Scheme)",
+      "url": "https://www.nhso.go.th/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Protection Agency",
+      "url": "https://www.dpa.or.th/"
+    },
+    "statistics": {
+      "name": "National Statistical Office",
+      "url": "https://www.nso.go.th/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

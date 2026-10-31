@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "code": "VU",
+  "iso3": "VUT",
+  "nameEn": "Vanuatu",
+  "nameNative": "Vanuatu",
+  "region": "east_asia_pacific",
+  "languages": [
+    "bi",
+    "en",
+    "fr"
+  ],
+  "currency": {
+    "code": "VUV",
+    "symbol": "VT",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 120.32,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VU",
+      "asOf": "2025-12-31",
+      "note": "2025 average; the IMF 2025 Article IV quotes VT 121.95 per dollar on 12 Aug 2025. RBV site unreachable."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.012,
+      "status": "sourced",
+      "sourceName": "Vanuatu Bureau of Statistics, Consumer Price Index June quarter 2026",
+      "sourceUrl": "https://vbos.gov.vu/index.php/en/statistics/economic-statistics/consumer-price-index",
+      "asOf": "2026-06-30",
+      "note": "National CPI up 1.2% on the June quarter of 2025 (1.4% on the quarter)."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "RBV inflation target range 0-4% (IMF 2025 Article IV); VBOS CPI history",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
+      "asOf": "2026-10-31",
+      "note": "We plan with 3%, inside the RBV 0-4% target range and above recent 1% readings, because Vanuatu CPI has swung widely after cyclones and in 2022-2023."
+    },
+    "policy_rate": {
+      "value": 0.0275,
+      "status": "sourced",
+      "sourceName": "IMF 2025 Article IV staff report (RBV policy rate)",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
+      "asOf": "2025-08-12",
+      "note": "RBV policy rate unchanged at 2.75% since tightening in 2024Q3; RBV site was not reachable (certificate error), so a secondary source is used and a later change cannot be ruled out."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank savings rates are not published on the bank pages we could read, and RBV interest rate statistics were unreachable (certificate error)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term deposits (1 month to 1 year) are sold, but no published rate could be read; RBV statistics unreachable."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term deposits (1 month to 1 year) are sold, but no published rate could be read; RBV statistics unreachable."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or rate found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0031,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2025-12-31",
+      "note": "0.31% for 2025, down from 0.62% in 2024."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vanuatu has no government savings certificate or retail savings bond."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No treasury bills issued yet; the IMF 2025 Article IV says the government plans to issue T-bills for the first time."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Domestic government bonds exist (IMF: longer-term bonds yield 7-9%), but we found no published 5-year yield."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Domestic government bonds exist (IMF: longer-term bonds yield 7-9%), but we found no published 10-year yield."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Vanuatu Foreign Investment Promotion Agency, Low Tax Jurisdiction",
+      "sourceUrl": "https://investvanuatu.vu/untapped-potential/low-tax-jurisdiction/",
+      "asOf": "2026-10-31",
+      "note": "No personal income tax and no withholding taxes, so bank interest is untaxed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Vanuatu Foreign Investment Promotion Agency, Low Tax Jurisdiction",
+      "sourceUrl": "https://investvanuatu.vu/untapped-potential/low-tax-jurisdiction/",
+      "asOf": "2026-10-31",
+      "note": "No savings certificate exists; with no personal income tax, interest on government bonds is also untaxed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "We found no deposit insurance scheme in Vanuatu, but could not confirm it from an official page (RBV site unreachable)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate found."
+    },
+    "equity_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in vatu terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "Vanuatu has no stock exchange, so equity means foreign funds; a lost decade for global shares in vatu terms is the low case."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Global equity index in vatu terms, capped at the safe rate plus 4 points",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "No local market, so base is a global index in vatu terms, held to the assumed 1% safe rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Global equity index long-run return in vatu terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "High case near the long-run global equity return with a stable basket-pegged vatu."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; basket-managed vatu (IMF 2025 Article IV)",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall for a decade; the vatu is managed against a currency basket."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; basket-managed vatu (IMF 2025 Article IV)",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 5% with little expected vatu depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; basket-managed vatu (IMF 2025 Article IV)",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle."
+    },
+    "fixed_income_return_low": {
+      "value": 0.003,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "Low case at the average deposit rate of 0.31%. Safe vatu rates: World Bank average deposit rate 0.31% (2025), RBV policy rate 2.75%, no tax on interest; published bank term-deposit rates could not be read; government bonds yield 7-9% but are sold in large lots and held mostly by the provident fund and RBV."
+    },
+    "fixed_income_return_base": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate; RBV policy rate (IMF 2025 Article IV)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "Base case of 1%, between the 0.31% average deposit rate and the 2.75% policy rate, since term deposits pay more than the average. Safe vatu rates: World Bank average deposit rate 0.31% (2025), RBV policy rate 2.75%, no tax on interest; published bank term-deposit rates could not be read; government bonds yield 7-9% but are sold in large lots and held mostly by the provident fund and RBV."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "RBV policy rate (IMF 2025 Article IV)",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
+      "asOf": "2026-10-31",
+      "note": "High case near the policy rate, for savers who reach better term deposit rates. Safe vatu rates: World Bank average deposit rate 0.31% (2025), RBV policy rate 2.75%, no tax on interest; published bank term-deposit rates could not be read; government bonds yield 7-9% but are sold in large lots and held mostly by the provident fund and RBV."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim settlement ratio published; RBV insurance supervision pages unreachable."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Very small insurance market; no published term life premium rates or premium guide found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found; public hospital care is heavily subsidised."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates found."
+    },
+    "oop_health_share": {
+      "value": 0.084,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=VU",
+      "asOf": "2023-12-31",
+      "note": "8.4% for 2023."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "VBOS CPI health sub-index, June quarter 2026",
+      "sourceUrl": "https://vbos.gov.vu/index.php/en/statistics/economic-statistics/consumer-price-index",
+      "asOf": "2026-10-31",
+      "note": "Health CPI rose 11.1% in the year to June 2026 (private consultation and check-up fees), so we plan 2 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "VBOS CPI education sub-index, June quarter 2026",
+      "sourceUrl": "https://vbos.gov.vu/index.php/en/statistics/economic-statistics/consumer-price-index",
+      "asOf": "2026-10-31",
+      "note": "Education CPI rose 7.8% in the year to June 2026 (school fees), so we plan 2 points above general inflation."
+    },
+    "life_expectancy": {
+      "value": 71.7,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=VU",
+      "asOf": "2024-12-31",
+      "note": "Men 69.6, women 74.1 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.2,
+            "men": 16.7,
+            "women": 19.9
+          },
+          {
+            "age": 65,
+            "total": 14.6,
+            "men": 13.4,
+            "women": 16.1
+          },
+          {
+            "age": 70,
+            "total": 11.4,
+            "men": 10.5,
+            "women": 12.6
+          },
+          {
+            "age": 80,
+            "total": 6.3,
+            "men": 5.9,
+            "women": 6.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/vanuatu",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age (2026); secondary source."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.2
+          },
+          {
+            "year": 2040,
+            "value": 10.5
+          },
+          {
+            "year": 2065,
+            "value": 6.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL; UN WPP 2024 medium variant (via populationpyramid.net)",
+      "sourceUrl": "https://www.populationpyramid.net/vanuatu/2040/",
+      "asOf": "2024-07-31",
+      "note": "100 / old-age dependency ratio: 7.6 in 2025 (World Bank), 9.5 in 2040 and 14.9 in 2065 (UN WPP 2024)."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Vanuatu National Provident Fund, Withdrawals (VNPF Act Cap 189)",
+      "sourceUrl": "https://www.vnpf.com.vu/withdrawals.html",
+      "asOf": "2026-10-31",
+      "note": "Members can withdraw their savings at 55 (up to 50% at 47); there is no statutory pension age beyond this."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public Service Act retirement age could not be read (PacLII blocked); not confirmed."
+    },
+    "retirement_return_low": {
+      "value": 0.003,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "Low case at the average deposit rate. Safe vatu rates: World Bank average deposit rate 0.31% (2025), RBV policy rate 2.75%, no tax on interest; published bank term-deposit rates could not be read; government bonds yield 7-9% but are sold in large lots and held mostly by the provident fund and RBV."
+    },
+    "retirement_return_base": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate; RBV policy rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "Base case of 1%, kept modest because no 1-year deposit or bill rate could be confirmed. Safe vatu rates: World Bank average deposit rate 0.31% (2025), RBV policy rate 2.75%, no tax on interest; published bank term-deposit rates could not be read; government bonds yield 7-9% but are sold in large lots and held mostly by the provident fund and RBV."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "RBV policy rate (IMF 2025 Article IV)",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
+      "asOf": "2026-10-31",
+      "note": "High case near the policy rate. Safe vatu rates: World Bank average deposit rate 0.31% (2025), RBV policy rate 2.75%, no tax on interest; published bank term-deposit rates could not be read; government bonds yield 7-9% but are sold in large lots and held mostly by the provident fund and RBV."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Mix of vatu deposits and global equity funds",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "About 40% equity at the low case and 60% deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Mix of vatu deposits and global equity funds",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "About half global equity at 5% and half deposits near 1%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Mix of vatu deposits, global equity and VNPF-style returns",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU",
+      "asOf": "2026-10-31",
+      "note": "About 60% equity at the high case and 40% higher-yield fixed income."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "We found no non-contributory old-age pension in Vanuatu, but could not confirm it from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Act [Cap 160] provides a severance allowance, but we could not read the current text (PacLII blocked), so the days per year are not confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 10,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Vanuatu National Provident Fund, Withdrawals and Voluntary Membership pages",
+      "sourceUrl": "https://www.vnpf.com.vu/withdrawals.html",
+      "asOf": "2026-10-31",
+      "note": "VNPF is a provident fund paying a lump sum at 55, not an annuity; voluntary members can join from age 10 with VT 1,000 a month; interest is declared yearly (5% recently quoted on the VNPF site)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.bsp.com.vu/personal-banking/savings-accounts-term-deposits/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Term deposit",
+      "note": "Banks offer terms from one month to one year.",
+      "sourceUrl": "https://www.bsp.com.vu/personal-banking/savings-accounts-term-deposits/term-deposit/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Term deposit",
+      "note": "Banks offer terms from one month to one year.",
+      "sourceUrl": "https://www.bsp.com.vu/personal-banking/savings-accounts-term-deposits/term-deposit/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit scheme found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No treasury bills yet; first issue planned (IMF 2025 Article IV).",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Government bond",
+      "note": "Domestic bonds are issued in large lots and held mainly by the provident fund and RBV; smaller lots are planned.",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Government bond",
+      "note": "Domestic bonds are issued in large lots and held mainly by the provident fund and RBV.",
+      "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No stock exchange or locally sold retail funds; only foreign funds bought abroad."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No local bullion dealers found; gold would have to be bought abroad."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of Vanuatu (RBV)",
+      "url": "https://www.rbv.gov.vu/"
+    },
+    "insuranceRegulator": {
+      "name": "Reserve Bank of Vanuatu (insurance supervision)",
+      "url": "https://www.rbv.gov.vu/",
+      "note": "RBV supervises insurers under the Insurance Act; site could not be read during research."
+    },
+    "insuranceComplaints": {
+      "name": "Reserve Bank of Vanuatu",
+      "url": "https://www.rbv.gov.vu/",
+      "note": "No insurance ombudsman found; complaints go to the insurer, then the regulator."
+    },
+    "pensionScheme": {
+      "name": "Vanuatu National Provident Fund (VNPF)",
+      "url": "https://www.vnpf.com.vu/",
+      "note": "Mandatory provident fund for employees; lump sum from age 55."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (public hospitals and health centres)",
+      "url": "https://moh.gov.vu/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Vanuatu Bureau of Statistics (VBOS)",
+      "url": "https://vbos.gov.vu/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

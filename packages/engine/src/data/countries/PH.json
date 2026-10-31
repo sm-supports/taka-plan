@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "code": "PH",
+  "iso3": "PHL",
+  "nameEn": "Philippines",
+  "nameNative": "Pilipinas",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en",
+    "tl"
+  ],
+  "currency": {
+    "code": "PHP",
+    "symbol": "₱",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 64.061,
+      "status": "sourced",
+      "sourceName": "BSP Selected Economic and Financial Indicators (30 October 2026)",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-29",
+      "note": "Peso per US dollar, closing rate on 29 October 2026 (October 1-29 average 63.06)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.072,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Philippine Statistics Authority CPI)",
+      "sourceUrl": "https://tradingeconomics.com/philippines/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: headline inflation 7.2% year on year in September 2026 (6.1% in August); PSA site returned HTTP 403. The BSP indicators sheet gives a January-September 2026 average of 5.4%."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BSP inflation target 2-4%; CPI 2021-2025 average about 4.1% (BSP indicators sheet)",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "The BSP targets 3% plus or minus one point, but inflation averaged about 4.1% in 2021-2025 and is running above target in 2026, so we plan with the top of the band, 4%."
+    },
+    "policy_rate": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "BSP Selected Economic and Financial Indicators (30 October 2026)",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-23",
+      "note": "Monetary Board raised the Target RRP rate by 50 basis points to 5.50% effective 23 October 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched BSP statistics (deposit rate tables blocked) and large bank rate pages (not reachable): no current typical savings rate found; large banks have historically paid well under 1% on regular savings."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BSP time deposit rates by tenor could not be retrieved (data files blocked, HTTP 403) and bank rate pages were not reachable; the BSP average for all time deposit maturities is in bank_deposit_avg_rate."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BSP time deposit rates by tenor could not be retrieved (data files blocked, HTTP 403) and bank rate pages were not reachable; the BSP average for all time deposit maturities is in bank_deposit_avg_rate."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Pag-IBIG MP2 (government 5-year voluntary savings with flexible monthly payments) declares a yearly dividend, but the Pag-IBIG site blocked access (verification screen) so the latest rate could not be read."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0434,
+      "status": "sourced",
+      "sourceName": "BSP Selected Economic and Financial Indicators (30 October 2026)",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-07",
+      "note": "Average bank interest rate on time deposits, all maturities, for the week ending 7 October 2026 (January-September 2026 average 3.72%). Savings deposits pay much less."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Retail Treasury Bonds (RTBs) are sold to individuals by the Bureau of the Treasury, but the Treasury site returned empty pages and no current RTB coupon could be confirmed."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0626,
+      "status": "sourced",
+      "sourceName": "BSP Selected Economic and Financial Indicators (30 October 2026)",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-26",
+      "note": "91-day T-bill auction rate 6.26% on 26 October 2026 (182-day 6.43%, 364-day 6.58%)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No source for the current 5-year benchmark yield was reachable (BVAL and Bureau of the Treasury pages blocked or empty)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0815,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Philippines 10-year government bond yield)",
+      "sourceUrl": "https://tradingeconomics.com/philippines/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary source; the page also shows 8.06% for the same date in its history table."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: Philippines, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/philippines/individual/income-determination",
+      "asOf": "2026-07-02",
+      "note": "Philippine-source interest is subject to a 20% final tax; long-term deposits (5 years or more) can be exempt under conditions; foreign currency deposit interest is taxed at 15%."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: Philippines, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/philippines/individual/income-determination",
+      "asOf": "2026-07-02",
+      "note": "Retail Treasury Bond interest is Philippine-source interest, taxed at the 20% final tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 1000000,
+      "status": "sourced",
+      "sourceName": "Philippine Deposit Insurance Corporation",
+      "sourceUrl": "https://www.pdic.gov.ph/",
+      "asOf": "2025-03-15",
+      "note": "Maximum deposit insurance coverage PHP 1 million per depositor per bank, effective 15 March 2025."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.24,
+      "status": "sourced",
+      "sourceName": "BSP Circular No. 1098, Series of 2020 (ceiling on credit card interest)",
+      "sourceUrl": "https://www.bsp.gov.ph/Regulations/Issuances/2020/c1098.pdf",
+      "asOf": "2020-11-03",
+      "note": "Annual cap of 24% (2% a month), effective 3 November 2020, subject to BSP review every six months; later revisions to the cap could not be checked."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BSP indicators: PSE composite index 5,706 on 29 Oct 2026 vs 6,854 average in 2021; 364-day T-bill 6.58%",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case below the after-tax bill rate, since the PSE index is lower now than five and ten years ago."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BSP indicators: PSE composite index 5,706 on 29 Oct 2026 vs 6,854 average in 2021; 364-day T-bill 6.58% (5.3% after 20% tax)",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "After-tax 1-year bill rate of about 5.3% plus a premium under 2 points, kept low because the local index has a negative 10-year price record."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BSP indicators: PSE composite index and price-earnings ratio 9.9 in 2026",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case if valuations (P/E near 10, a decade low) recover toward their long-run level."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BSP indicators: peso per US dollar averaged 49.3 in 2021 and 63.1 in October 2026",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold and a stable peso."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BSP indicators: peso per US dollar averaged 49.3 in 2021 and 63.1 in October 2026",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus peso depreciation of about 2-3% a year."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BSP indicators: peso per US dollar averaged 49.3 in 2021 and 63.1 in October 2026",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and faster peso depreciation, as in 2026."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BSP indicators: average time deposit rate 4.34% less 20% final tax",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank time deposits at about 4.3% less the 20% final tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BSP indicators: 91-day to 364-day T-bills 6.26-6.58%; time deposits 4.34%; 20% final tax",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of time deposits and Treasury bills or Retail Treasury Bonds after the 20% final tax, allowing for rates falling back from 2026 highs."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "10-year government bond yield 8.15% less 20% final tax",
+      "sourceUrl": "https://tradingeconomics.com/philippines/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in long government bonds at about 8% (6.5% after tax)."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Insurance Commission site returned HTTP 403; no industry-wide life claim settlement ratio found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in the Philippines, but no published per-1,000 premium rates by age could be reached; insurers quote individually."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for typical private hospital bills: no reachable published figure (PhilHealth case-rate pages were not accessible)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published HMO or health insurance premium table by age could be reached."
+    },
+    "oop_health_share": {
+      "value": 0.4436,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PH",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Trading Economics (PSA CPI): health inflation 5.0% in August 2026",
+      "sourceUrl": "https://tradingeconomics.com/philippines/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose about 5% a year in 2026; we plan with 6% for private hospital and medicine costs above headline."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Trading Economics (PSA CPI): education inflation 4.0% in June and 1.9% in July 2026",
+      "sourceUrl": "https://tradingeconomics.com/philippines/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education CPI runs near headline, but private tuition rises faster, so we plan with 5%."
+    },
+    "life_expectancy": {
+      "value": 69.946,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PH",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 70.2 for 2026 (men 67.2, women 73.2)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.6,
+            "men": 15.9,
+            "women": 19.3
+          },
+          {
+            "age": 65,
+            "total": 14.2,
+            "men": 12.7,
+            "women": 15.4
+          },
+          {
+            "age": 70,
+            "total": 11.0,
+            "men": 9.9,
+            "women": 12.0
+          },
+          {
+            "age": 80,
+            "total": 6.1,
+            "men": 5.6,
+            "women": 6.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/philippines/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 11.7
+          },
+          {
+            "year": 2040,
+            "value": 7.9
+          },
+          {
+            "year": 2065,
+            "value": 4.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/philippines/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 8.53 (2025, World Bank), 12.6 (2040) and 25.3 (2065, populationpyramid.net/philippines/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Social Security System: retirement benefit",
+      "sourceUrl": "https://www.sss.gov.ph/retirement-benefit/",
+      "asOf": "2026-10-31",
+      "note": "SSS pension from 60 if separated from work (optional), or at 65 regardless (technical retirement), with at least 120 monthly contributions. Labor Code (RA 7641): optional retirement at 60, compulsory at 65. Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Republic Act No. 8291 (GSIS Act of 1997), Section 13 (via Lawphil)",
+      "sourceUrl": "https://lawphil.net/statutes/repacts/ra1997/ra_8291_1997.html",
+      "asOf": "1997-05-30",
+      "note": "Compulsory retirement at 65; optional retirement from 60 with at least 15 years of service."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BSP indicators: average time deposit rate 4.34% less 20% final tax",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: time deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BSP indicators: 364-day T-bill 6.58% (5.26% after 20% final tax)",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case below the after-tax 1-year T-bill rate of about 5.3%, allowing for rates easing from 2026 highs."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "10-year government bond yield 8.15% less 20% final tax",
+      "sourceUrl": "https://tradingeconomics.com/philippines/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered Retail Treasury Bonds and long government bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BSP indicators: T-bill rates, PSE index record",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix given the weak local equity record."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BSP indicators: T-bill rates, PSE index record",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half equity at 7% and half safe fixed income at 4.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BSP indicators: T-bill rates, PSE index record",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case if equities recover from decade-low valuations."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1000,
+      "status": "sourced",
+      "sourceName": "Republic Act No. 11916 (Social Pension for Indigent Senior Citizens) via Lawphil",
+      "sourceUrl": "https://lawphil.net/statutes/repacts/ra2022/ra_11916_2022.html",
+      "asOf": "2022-07-30",
+      "note": "Indigent senior citizens receive a monthly stipend of not less than PHP 1,000 (doubled from PHP 500), paid through DSWD."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Republic Act No. 11916 (Social Pension for Indigent Senior Citizens) via Lawphil",
+      "sourceUrl": "https://lawphil.net/statutes/repacts/ra2022/ra_11916_2022.html",
+      "asOf": "2022-07-30",
+      "note": "Senior citizens are people aged 60 and over (RA 7432 as amended); the stipend is only for seniors who qualify as indigent under DSWD's means test."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 22.5,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 26
+      },
+      "status": "sourced",
+      "sourceName": "Republic Act No. 7641 (Retirement Pay Law, Labor Code Art. 302) via Lawphil",
+      "sourceUrl": "https://lawphil.net/statutes/repacts/ra1992/ra_7641_1992.html",
+      "asOf": "1992-12-09",
+      "note": "Where no company plan exists, employees retiring at 60-65 with at least 5 years' service get half a month's salary per year: 15 days plus 1/12 of the 13th-month pay plus 5 days' service incentive leave = 22.5 days. Daily rate taken as monthly salary / 26 working days (common practice for a six-day week)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Social Security System: retirement benefit",
+      "sourceUrl": "https://www.sss.gov.ph/retirement-benefit/",
+      "asOf": "2026-10-31",
+      "note": "SSS is a defined-benefit pension for private, self-employed and OFW members: from 60 (separated) or 65, with 120 monthly contributions; minimum pension PHP 1,200 (10 years' credited service) or 2,400 (20 years); 13th-month pension each December; the SSS page describes no automatic inflation indexing."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "Peso savings accounts are standard; balances up to PHP 1 million per bank are insured by PDIC."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Time deposit",
+      "localNameEn": "3-month time deposit"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Time deposit",
+      "localNameEn": "1-year time deposit"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Pag-IBIG MP2",
+      "localNameEn": "Modified Pag-IBIG 2 (government voluntary 5-year savings)",
+      "note": "Government (Pag-IBIG Fund) voluntary savings scheme with a 5-year term and flexible monthly payments; dividends declared yearly; not a bank product."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Retail Treasury Bond",
+      "localNameEn": "Retail Treasury Bond (RTB)",
+      "note": "Sold by the Bureau of the Treasury to individuals in periodic offerings through banks; coupon set at each issue."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government Treasury bill",
+      "note": "Auctioned weekly by the Bureau of the Treasury; individuals usually buy through banks.",
+      "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Fixed Rate Treasury Note",
+      "localNameEn": "Fixed Rate Treasury Note (FXTN)"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Fixed Rate Treasury Note",
+      "localNameEn": "Fixed Rate Treasury Note (FXTN)",
+      "sourceUrl": "https://tradingeconomics.com/philippines/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit Investment Trust Fund",
+      "localNameEn": "UITF or mutual fund (equity index fund)",
+      "note": "Bank-run UITFs and SEC-registered mutual funds, including PSEi index funds, are sold to retail investors."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ginto",
+      "localNameEn": "Gold",
+      "note": "Gold jewellery and bullion can be bought legally from dealers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bangko Sentral ng Pilipinas",
+      "url": "https://www.bsp.gov.ph/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Commission",
+      "url": "https://www.insurance.gov.ph/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Commission (public assistance and complaints)",
+      "url": "https://www.insurance.gov.ph/",
+      "note": "No separate insurance ombudsman; the Commission handles policyholder complaints."
+    },
+    "pensionScheme": {
+      "name": "Social Security System (SSS)",
+      "url": "https://www.sss.gov.ph/",
+      "note": "Government employees are covered by GSIS (https://www.gsis.gov.ph/)."
+    },
+    "oldAgeAllowance": {
+      "name": "Social Pension for Indigent Senior Citizens, Department of Social Welfare and Development",
+      "url": "https://www.dswd.gov.ph/"
+    },
+    "publicHealthCover": {
+      "name": "PhilHealth (Philippine Health Insurance Corporation)",
+      "url": "https://www.philhealth.gov.ph/"
+    },
+    "depositInsurance": {
+      "name": "Philippine Deposit Insurance Corporation",
+      "url": "https://www.pdic.gov.ph/"
+    },
+    "statistics": {
+      "name": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "code": "MM",
+  "iso3": "MMR",
+  "nameEn": "Myanmar",
+  "nameNative": "မြန်မာ",
+  "region": "east_asia_pacific",
+  "languages": [
+    "my",
+    "en"
+  ],
+  "currency": {
+    "code": "MMK",
+    "symbol": "K",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3723.7,
+      "status": "sourced",
+      "sourceName": "Central Bank of Myanmar bank-customer market rate (CSO statistics overview)",
+      "sourceUrl": "https://www.csostat.gov.mm/",
+      "asOf": "2026-10-29",
+      "note": "CBM bank-customer market rate MMK 3,723.70 and money-changer rate 3,670 per dollar; the CBM reference rate is fixed at 2,100 but most transactions use the market rate."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.246,
+      "status": "sourced",
+      "sourceName": "World Bank Myanmar Economic Monitor press release (16 June 2026)",
+      "sourceUrl": "https://www.worldbank.org/en/news/press-release/2026/06/16/myanmar-s-economy-shows-tentative-stabilization-but-fuel-shock-intensifies-pressures",
+      "asOf": "2026-04-30",
+      "note": "24.6% year on year in April 2026 after a fuel-price shock; the CSO's own series (via Trading Economics) stops at Q2 2023. IMF WEO: 21.1% for 2025, 20% forecast for 2026."
+    },
+    "inflation_projection": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "IMF WEO projections (16% in 2027, 10% in 2028, 7.8% from 2029); no credible inflation target",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MMR",
+      "asOf": "2026-10-31",
+      "note": "CPI averaged over 20% in 2022-2025 and the IMF expects a slow decline, so we plan with 12% as a long-run average."
+    },
+    "policy_rate": {
+      "value": 0.09,
+      "status": "sourced",
+      "sourceName": "Central Bank of Myanmar, Central Bank Rate (home page)",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "9% a year; CBM also sets a 7% minimum deposit rate and a 15% maximum lending rate."
+    },
+    "savings_account_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Central Bank of Myanmar, minimum bank deposit rate (home page)",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "CBM sets a 7% floor on bank deposit rates; savings accounts at large banks typically pay at or near the floor."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank fixed deposit rate pages could not be read; the CBM minimum deposit rate is 7%."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank fixed deposit rate pages could not be read; the CBM minimum deposit rate is 7%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit scheme or published rate found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0583,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MM",
+      "asOf": "2020-12-31",
+      "note": "5.83% for 2020, the latest World Bank figure; the CBM minimum deposit rate has since risen to 7%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current government savings certificate or retail savings bond for individuals found."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0599,
+      "status": "sourced",
+      "sourceName": "Central Bank of Myanmar, market weighted average accepted rates at the treasury bill auction (3-month)",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bill%20List%20%26%20Graph%20%2814.6.23%29_1.pdf",
+      "asOf": "2023-05-31",
+      "note": "5.993% at the second May 2023 auction, the latest figure published on the CBM site (6-month 6.54%, 12-month 7.32%). The central bank rate has since risen from 7% to 9%, so current yields are likely higher."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0849,
+      "status": "sourced",
+      "sourceName": "Central Bank of Myanmar, market weighted average accepted yields at the treasury bond auction (3.5-5.5 years, 7.5% coupon)",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bond%20List%20%26%20Graph%20%2814.6.23%29_2.pdf",
+      "asOf": "2023-04-30",
+      "note": "8.493% in April 2023, the latest 5-year-band figure published on the CBM site."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Myanmar issues treasury bonds of up to about 5 years; no 10-year bond found."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Myanmar, withholding taxes (reviewed 9 September 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/myanmar/corporate/withholding-taxes",
+      "asOf": "2026-09-09",
+      "note": "No withholding tax on interest paid to residents (15% for non-residents); non-employment income up to MMK 4.8 million a year is tax-free."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "We could not find an official page describing a deposit insurance scheme or limit for Myanmar."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "Central Bank of Myanmar, maximum bank lending rate (home page)",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "CBM caps bank lending rates at 15% a year; we treat this as the cap on bank card credit."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Yangon Stock Exchange record; CBM deposit floor",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "The Yangon Stock Exchange has very few listings and a weak record, so the low case is far below deposit rates."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "CBM minimum deposit rate 7% (untaxed) plus a small premium",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "Thin market with a weak 10-year record, so base set only 2 points above the 7% safe deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "CBM minimum deposit rate plus a full equity premium",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "High case if listings deepen and returns keep pace with inflation."
+    },
+    "gold_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; kyat market rate (CSO statistics overview)",
+      "sourceUrl": "https://www.csostat.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "Low case if gold stalls in dollars and the kyat holds near 3,700 per dollar."
+    },
+    "gold_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend plus expected kyat depreciation; 24-carat gold at MMK 7.1 million per tikal (CSO, 29 Oct 2026)",
+      "sourceUrl": "https://www.csostat.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "About 4% dollar gold trend plus about 9% a year kyat depreciation from the inflation gap with the US."
+    },
+    "gold_return_high": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend plus expected kyat depreciation",
+      "sourceUrl": "https://www.csostat.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle with fast kyat depreciation, as in 2021-2024."
+    },
+    "fixed_income_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Treasury bill auction yields (CBM)",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bill%20List%20%26%20Graph%20%2814.6.23%29_1.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case near the last published 3-month bill yield. Safe MMK rates: CBM minimum bank deposit rate 7% (central bank rate 9%); last published auction yields 6.0% for 3-month bills and 8.5% for 3.5-5.5-year bonds (May 2023); no withholding tax on interest for residents."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CBM minimum deposit rate (7%, untaxed for residents)",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "Base case at the 7% deposit floor. Safe MMK rates: CBM minimum bank deposit rate 7% (central bank rate 9%); last published auction yields 6.0% for 3-month bills and 8.5% for 3.5-5.5-year bonds (May 2023); no withholding tax on interest for residents."
+    },
+    "fixed_income_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Treasury bond auction yields (CBM)",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bond%20List%20%26%20Graph%20%2814.6.23%29_2.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case near the last published 5-year bond yield. Safe MMK rates: CBM minimum bank deposit rate 7% (central bank rate 9%); last published auction yields 6.0% for 3-month bills and 8.5% for 3.5-5.5-year bonds (May 2023); no withholding tax on interest for residents."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No claim settlement ratio published by the insurance supervisor found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates in kyat found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age found."
+    },
+    "oop_health_share": {
+      "value": 0.711,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MM",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "IMF WEO CPI projections; no medical CPI read",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MMR",
+      "asOf": "2026-10-31",
+      "note": "With 71% of health spending out of pocket and many medicines imported, we plan 2 points above long-run inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "IMF WEO CPI projections; no education CPI read",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MMR",
+      "asOf": "2026-10-31",
+      "note": "We plan 1 point above long-run inflation for private school and tuition fees."
+    },
+    "life_expectancy": {
+      "value": 67.1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MM",
+      "asOf": "2024-12-31",
+      "note": "Men 64.0, women 70.4 (2024); UN WPP 2026 gives 67.5."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.9,
+            "men": 15.5,
+            "women": 18.1
+          },
+          {
+            "age": 65,
+            "total": 13.5,
+            "men": 12.3,
+            "women": 14.4
+          },
+          {
+            "age": 70,
+            "total": 10.4,
+            "men": 9.5,
+            "women": 11.1
+          },
+          {
+            "age": 80,
+            "total": 5.7,
+            "men": 5.3,
+            "women": 6.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/myanmar",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age; secondary source because the WHO GHO API was unavailable."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.1
+          },
+          {
+            "year": 2040,
+            "value": 6.2
+          },
+          {
+            "year": 2065,
+            "value": 3.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
+      "sourceUrl": "https://www.populationpyramid.net/myanmar/2040/",
+      "asOf": "2024-07-31",
+      "note": "100 / old-age dependency ratio: 11.0 in 2025 (World Bank), 16.1 in 2040 and 26.0 in 2065 (UN WPP 2024)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Security Board site was not reachable; the old-age pension under the Social Security Law 2012 has not been confirmed as in operation."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No reachable official page with the civil-service retirement age found."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Treasury bill auction yields (CBM)",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bill%20List%20%26%20Graph%20%2814.6.23%29_1.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case near the last published 3-month bill yield. Safe MMK rates: CBM minimum bank deposit rate 7% (central bank rate 9%); last published auction yields 6.0% for 3-month bills and 8.5% for 3.5-5.5-year bonds (May 2023); no withholding tax on interest for residents."
+    },
+    "retirement_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CBM minimum deposit rate (7%, untaxed for residents)",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "Base case at the 7% deposit floor, the after-tax safe rate. Safe MMK rates: CBM minimum bank deposit rate 7% (central bank rate 9%); last published auction yields 6.0% for 3-month bills and 8.5% for 3.5-5.5-year bonds (May 2023); no withholding tax on interest for residents."
+    },
+    "retirement_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Treasury bond auction yields (CBM)",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bond%20List%20%26%20Graph%20%2814.6.23%29_2.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case between the deposit floor and bond yields. Safe MMK rates: CBM minimum bank deposit rate 7% (central bank rate 9%); last published auction yields 6.0% for 3-month bills and 8.5% for 3.5-5.5-year bonds (May 2023); no withholding tax on interest for residents."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Mix of kyat deposits, gold and local equity",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "About 40% growth assets at the low case, 60% deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Mix of kyat deposits, gold and local equity",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "About half growth assets at 9% and half deposits at 7%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Mix of kyat deposits, gold and local equity",
+      "sourceUrl": "https://www.cbm.gov.mm/",
+      "asOf": "2026-10-31",
+      "note": "About 60% growth assets at the high case and 40% bonds."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Department of Social Welfare site refused access, so we could not confirm whether a social pension is paid or its amount."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Current age rules for the social pension could not be confirmed from an official page."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity per year of service for private employees found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Security Board site was not reachable; we could not confirm the terms or operation of the old-age pension under the Social Security Law 2012."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "ငွေစုစာရင်း",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.cbm.gov.mm/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "ပုံသေငွေအပ်စာရင်း",
+      "localNameEn": "Fixed deposit",
+      "note": "Banks must pay at least the 7% CBM minimum deposit rate.",
+      "sourceUrl": "https://www.cbm.gov.mm/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "ပုံသေငွေအပ်စာရင်း",
+      "localNameEn": "Fixed deposit",
+      "note": "Banks must pay at least the 7% CBM minimum deposit rate.",
+      "sourceUrl": "https://www.cbm.gov.mm/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit scheme found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No current government savings certificate or retail savings bond found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "ငွေတိုက်လက်မှတ်",
+      "localNameEn": "Treasury bill",
+      "note": "Auctioned by the CBM, mainly to banks.",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bill%20List%20%26%20Graph%20%2814.6.23%29_1.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "ငွေတိုက်စာချုပ်",
+      "localNameEn": "Treasury bond",
+      "note": "2- to 5-year bonds auctioned by the CBM.",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bond%20List%20%26%20Graph%20%2814.6.23%29_2.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year government bond issued."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail mutual or index funds; the Yangon Stock Exchange has only a few listed shares."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ရွှေ",
+      "localNameEn": "Gold",
+      "note": "Gold is widely bought at gold shops; the CSO publishes the 24-carat price per tikal.",
+      "sourceUrl": "https://www.csostat.gov.mm/"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Myanmar (CBM)",
+      "url": "https://www.cbm.gov.mm/"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Social Security Board, Ministry of Labour",
+      "url": "https://www.ssb.gov.mm/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (public hospitals)",
+      "url": "https://www.mohs.gov.mm/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Central Statistical Organization (CSO)",
+      "url": "https://www.csostat.gov.mm/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

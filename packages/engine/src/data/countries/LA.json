@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "code": "LA",
+  "iso3": "LAO",
+  "nameEn": "Laos",
+  "nameNative": "ລາວ",
+  "region": "east_asia_pacific",
+  "languages": [
+    "lo"
+  ],
+  "currency": {
+    "code": "LAK",
+    "symbol": "₭",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 22518,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/LAK market rate",
+      "sourceUrl": "https://tradingeconomics.com/laos/currency",
+      "asOf": "2026-10-30",
+      "note": "Bank of the Lao PDR reference rate page could not be read (certificate error); World Bank 2025 average was 20,444 (PA.NUS.FCRF)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.077,
+      "status": "sourced",
+      "sourceName": "Lao Statistics Bureau, consumer price index",
+      "sourceUrl": "https://www.lsb.gov.la/",
+      "asOf": "2026-10-31",
+      "note": "7.7% year on year in October 2026 (CPI 279.5), down from 7.8% in September."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "ADB Asian Development Outlook September 2026 forecasts (8.0% 2026, 6.5% 2027); Bank of the Lao PDR",
+      "sourceUrl": "https://www.adb.org/where-we-work/lao-pdr/economy",
+      "asOf": "2026-10-31",
+      "note": "Inflation was above 20% in 2022-2024 and is easing toward ADB's 6.5% forecast for 2027, so we plan with a rounded 6% rather than the distorted 5-year average."
+    },
+    "policy_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Bank of the Lao PDR Monetary Policy Committee decision of 20 August 2026 (Laotian Times)",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-08-20",
+      "note": "7-day base interest rate cut from 8% to 7%; secondary source because the BOL website certificate could not be verified."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Bank of the Lao PDR site (unreachable, certificate error) and large bank rate pages (only 2019 and 2021 PDF rate sheets found); no current kip savings rate found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current published kip 3-month fixed deposit rate found; bank rate sheets online date from 2019-2021, before the 2022-2024 inflation and rate rises."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current published kip 1-year fixed deposit rate found; bank rate sheets online date from 2019-2021."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or rate found; large banks list only savings and fixed deposits."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank FR.INR.DPST for Laos stops at 2010 (3%), far too old; no recent weighted average deposit rate found."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standing government savings certificate; the Bank of the Lao PDR and Ministry of Finance have sold occasional short-term savings bonds to residents (e.g. 6-month bonds at 15% in 2023), with no current issue found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 91-day treasury bill yield found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 5-year kip government bond yield found; government bonds are issued irregularly via the Lao Securities Exchange."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 10-year kip government bond yield found."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Lao PDR, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/lao-pdr/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Interest on bank deposits and bonds is not subject to personal income tax."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Lao PDR, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/lao-pdr/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "No savings certificate exists; interest on bonds is not subject to personal income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A Deposit Protection Fund exists in Laos, but its website was unreachable and no current cover limit per depositor could be read."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate found."
+    },
+    "equity_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Lao Securities Exchange record; Bank of the Lao PDR policy rate",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "The Lao Securities Exchange is very small and its index has fallen over the past decade, so the low case is zero in kip terms."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Policy rate 7% plus a small premium; weak local index record",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "With a weak, illiquid local market we set the base only about 1 point above the 7% policy rate, well within 4 points of the tax-free safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Policy rate plus a full equity premium",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "High case if listings deepen and returns keep pace with kip inflation."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; kip exchange rate (22,518 per USD, Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/laos/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold flat in dollars with mild kip depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; kip exchange rate (22,518 per USD, Oct 2026, vs 20,444 average in 2025)",
+      "sourceUrl": "https://tradingeconomics.com/laos/currency",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 5% plus about 4% a year of expected kip depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; kip exchange rate history",
+      "sourceUrl": "https://tradingeconomics.com/laos/currency",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle combined with renewed kip weakness."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of the Lao PDR policy rate (7%); tax-free deposit interest",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "Low case well below the policy rate, as banks pay less on short deposits. Safe LAK rates: no current published bank deposit rates found; Bank of the Lao PDR 7-day base rate 7% (Aug 2026); interest on deposits and bonds is exempt from personal income tax; inflation 7.7% (Oct 2026)."
+    },
+    "fixed_income_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of the Lao PDR policy rate (7%); tax-free deposit interest",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 7% policy rate since no current bank deposit rates could be verified. Safe LAK rates: no current published bank deposit rates found; Bank of the Lao PDR 7-day base rate 7% (Aug 2026); interest on deposits and bonds is exempt from personal income tax; inflation 7.7% (Oct 2026)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of the Lao PDR policy rate (7%); tax-free deposit and bond interest",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "High case at the policy rate, reachable with longer fixed deposits or government bonds. Safe LAK rates: no current published bank deposit rates found; Bank of the Lao PDR 7-day base rate 7% (Aug 2026); interest on deposits and bonds is exempt from personal income tax; inflation 7.7% (Oct 2026)."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry claim settlement ratio published by the Ministry of Finance insurance supervisor was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates or credible premium guide in kip found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates found."
+    },
+    "oop_health_share": {
+      "value": 0.448,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LA",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Lao Statistics Bureau CPI; Laotian Times report that health and medicine prices rose in Sep 2026",
+      "sourceUrl": "https://laotiantimes.com/2026/09/29/laos-inflation-rises-to-7-8-percent-in-september-as-education-utility-costs-climb/",
+      "asOf": "2026-10-31",
+      "note": "No health sub-index figure was published; with 45% of health spending out of pocket we plan 2 points above the 6% inflation projection."
+    },
+    "goal_inflation_education": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Lao Statistics Bureau CPI education group, +18.8% year on year in Sep 2026 (Laotian Times)",
+      "sourceUrl": "https://laotiantimes.com/2026/09/29/laos-inflation-rises-to-7-8-percent-in-september-as-education-utility-costs-climb/",
+      "asOf": "2026-10-31",
+      "note": "Education prices are rising far faster than the headline CPI, so we plan 4 points above the inflation projection."
+    },
+    "life_expectancy": {
+      "value": 69.2,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LA",
+      "asOf": "2024-12-31",
+      "note": "Men 67.0, women 71.5 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.4,
+            "men": 16.3,
+            "women": 18.6
+          },
+          {
+            "age": 65,
+            "total": 13.9,
+            "men": 13.0,
+            "women": 14.8
+          },
+          {
+            "age": 70,
+            "total": 10.7,
+            "men": 10.0,
+            "women": 11.4
+          },
+          {
+            "age": 80,
+            "total": 5.8,
+            "men": 5.5,
+            "women": 6.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/laos",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age (2026); secondary source for UN WPP."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.5
+          },
+          {
+            "year": 2040,
+            "value": 9.4
+          },
+          {
+            "year": 2065,
+            "value": 4.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net)",
+      "sourceUrl": "https://www.populationpyramid.net/lao-peoples-democratic-republic/2040/",
+      "asOf": "2024-07-31",
+      "note": "100 / old-age dependency ratio: 7.4 in 2025, 10.6 in 2040 and 23.6 in 2065."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Lao pension rules effective 2 June 2025 (Laotian Times)",
+      "sourceUrl": "https://laotiantimes.com/2025/06/23/lao-pension-rules-updated-25-year-contribution-required/",
+      "asOf": "2025-06-02",
+      "note": "Full pension at 60 with 25 years of social security contributions; the rules allow retirement from 57 for men and 55 for women in some circumstances."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Lao pension rules effective 2 June 2025 (Laotian Times)",
+      "sourceUrl": "https://laotiantimes.com/2025/06/23/lao-pension-rules-updated-25-year-contribution-required/",
+      "asOf": "2025-06-02",
+      "note": "Civil servants are covered by the same national social security scheme; the article does not give a separate civil-service age, so verify (women may retire from 55)."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of the Lao PDR policy rate (7%); tax-free deposit interest",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "Low case for kip deposits in retirement. Safe LAK rates: no current published bank deposit rates found; Bank of the Lao PDR 7-day base rate 7% (Aug 2026); interest on deposits and bonds is exempt from personal income tax; inflation 7.7% (Oct 2026)."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of the Lao PDR policy rate (7%); tax-free deposit interest",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "Base case below the policy rate, as a stand-in for the tax-free 1-year deposit rate that could not be verified. Safe LAK rates: no current published bank deposit rates found; Bank of the Lao PDR 7-day base rate 7% (Aug 2026); interest on deposits and bonds is exempt from personal income tax; inflation 7.7% (Oct 2026)."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of the Lao PDR policy rate (7%)",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "High case at the policy rate. Safe LAK rates: no current published bank deposit rates found; Bank of the Lao PDR 7-day base rate 7% (Aug 2026); interest on deposits and bonds is exempt from personal income tax; inflation 7.7% (Oct 2026)."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Mix of kip deposits and local equity",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits, equity flat."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Mix of kip deposits and local equity",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "About half equity at 8% and half deposits near 5.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Mix of kip deposits and local equity",
+      "sourceUrl": "https://laotiantimes.com/2026/08/21/laos-cuts-7-day-base-interest-rate-to-7-as-economic-risks-persist/",
+      "asOf": "2026-10-31",
+      "note": "About 60% equity at the high case and 40% deposits or bonds."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found; the national social security scheme pays only contributory pensions and lump sums."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Law provides severance only when a contract is terminated; no statutory end-of-service gratuity on retirement found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Lao pension rules effective 2 June 2025 (Laotian Times)",
+      "sourceUrl": "https://laotiantimes.com/2025/06/23/lao-pension-rules-updated-25-year-contribution-required/",
+      "asOf": "2025-06-02",
+      "note": "National social security pension (LSSO): full pension at 60 with 25 years of contributions, 1% cut per missing year down to 23 years; otherwise a lump sum of 85% x 1.5 months of final salary per contribution year. No automatic indexation is described."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "ເງິນຝາກປະຢັດ",
+      "localNameEn": "Savings deposit"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "ເງິນຝາກມີກຳນົດ",
+      "localNameEn": "Fixed-term deposit",
+      "note": "Banks offer kip fixed deposits from 3 to 60 months; current rates not published online."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "ເງິນຝາກມີກຳນົດ",
+      "localNameEn": "Fixed-term deposit"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No common monthly recurring deposit product found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standing government savings certificate; occasional short-term savings bonds have been sold to residents.",
+      "sourceUrl": "https://laotiantimes.com/2023/09/06/bol-to-issue-third-phase-of-government-bonds-worth-lak-3-trillion/"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail treasury bill market found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "ພັນທະບັດລັດຖະບານ",
+      "localNameEn": "Government bond",
+      "note": "Government bonds are issued irregularly via the Lao Securities Exchange; no regular 5-year retail issue."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year kip government bond for retail investors found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail mutual or index funds found; the Lao Securities Exchange lists only a few companies."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ຄຳ",
+      "localNameEn": "Gold",
+      "note": "Gold is widely bought from gold shops."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of the Lao PDR (BOL)",
+      "url": "https://www.bol.gov.la/"
+    },
+    "insuranceRegulator": {
+      "name": "Ministry of Finance (insurance supervision)",
+      "url": "https://www.mof.gov.la/"
+    },
+    "insuranceComplaints": {
+      "name": "Ministry of Finance (insurance supervision)",
+      "url": "https://www.mof.gov.la/",
+      "note": "No separate insurance ombudsman found; complaints go to the Ministry of Finance."
+    },
+    "pensionScheme": {
+      "name": "Lao Social Security Organization (LSSO)",
+      "url": "https://www.lsso.gov.la/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (National Health Insurance)",
+      "url": "https://www.moh.gov.la/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Lao Statistics Bureau (LSB)",
+      "url": "https://www.lsb.gov.la/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

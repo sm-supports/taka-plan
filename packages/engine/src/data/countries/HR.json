@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "code": "HR",
+  "iso3": "HRV",
+  "nameEn": "Croatia",
+  "nameNative": "Hrvatska",
+  "region": "europe_central_asia",
+  "languages": [
+    "hr",
+    "en",
+    "it"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172, so about EUR 0.895 per US dollar; Croatia adopted the euro on 1 January 2023. World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.047,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Croatian Bureau of Statistics CPI, September 2026 final)",
+      "sourceUrl": "https://tradingeconomics.com/croatia/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI 4.7% year on year in September 2026 (4.2% in August), final figure released 15 October 2026; secondary source because podaci.dzs.hr was not read directly. World Bank 2025 average 3.7%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Croatian CPI 4.7% (Sep 2026), 3.7% in 2025 (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/croatia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Croatia uses the euro and the ECB targets 2%, but Croatian inflation has run well above the euro-area average since euro adoption, so 3% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, deposit facility rate",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV",
+      "asOf": "2026-09-16",
+      "note": "Croatia has used the euro since 2023; ECB deposit facility rate 2.50% (main refinancing rate 2.65%) from 16 September 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0002,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Croatian banks, household overnight deposits (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 0.02% on household sight (a vista) deposits in August 2026; notice deposits up to 3 months paid 2.04%."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/HNB MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.29% in August 2026); hnb.hr was unreachable and no 3-month rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0129,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Croatian banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 0.94% and over 2 years 0.82% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Croatia's regular-deposit savings product is housing savings (stambena štednja) at building societies with a state premium; no current average rate was found from an official source."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0129,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Croatian banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST last reported 1.35% for 2014."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year retail government savings bond rate found; the Ministry of Finance sells 91-day treasury bills to citizens (2.75% in September 2026) and has issued occasional retail 'narodna obveznica' bonds, but no current issue or rate was read."
+    },
+    "tbill_91d_rate": {
+      "value": 0.026,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Croatia, final terms of the 91-day treasury bill issue RHMF-T-651N",
+      "sourceUrl": "https://mfin.gov.hr/UserDocsImages/dokumenti/javni-dug/Ponuda%20trez%20zapisa/rujan%202026/Objava%20o%20kona%C4%8Dnim%20uvjetima%20izdanja_15.9.26.pdf",
+      "asOf": "2026-09-15",
+      "note": "Competitive round annual yield 2.60%; the non-competitive retail round, taken up by about 37,000 investors, yielded 2.75%. Issued 17 September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Croatian government bond yield found: Trading Economics shows only the 10-year yield and the Ministry of Finance bond pages read gave no secondary-market yields."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0414,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Croatia 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
+      "asOf": "2026-10-29",
+      "note": "ECB long-term (10-year) convergence yield for Croatia was 3.59% in September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Croatia income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/croatia/individual/income-determination",
+      "asOf": "2026-08-27",
+      "note": "12% final tax on interest; interest on current and sight accounts paying no more than 0.5% a year is exempt."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Croatia income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/croatia/individual/income-determination",
+      "asOf": "2026-08-27",
+      "note": "Interest on bonds and on debt securities of the Republic of Croatia, including treasury bills, is excluded from taxable interest income."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Croatian Deposit Insurance Agency (HAOD), secured amount",
+      "sourceUrl": "https://www.haod.hr/en/deposit-insurance/-secured-amount",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per credit institution, including accrued interest."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Croatian consumer credit law sets a maximum contractual interest rate published by the HNB, but hnb.hr was unreachable and no current figure or typical card rate was found."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "CROBEX 4,471 on 30 Oct 2026, up 17% in a year but still below its 2007 peak of 5,393",
+      "sourceUrl": "https://tradingeconomics.com/croatia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Croatian shares earn little more than tax-free treasury bills over long periods, as in the 17 years since the 2007 peak."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "CROBEX (Trading Economics); 91-day treasury bill 2.6% tax-free",
+      "sourceUrl": "https://tradingeconomics.com/croatia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5 points over the tax-free treasury bill rate, kept modest because the CROBEX is small, illiquid and has not regained its 2007 high."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "CROBEX (Trading Economics); global equity long-run returns",
+      "sourceUrl": "https://tradingeconomics.com/croatia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified euro equity fund matching long-run global equity returns of about 8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.011,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.29% less 12% tax (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after the 12% interest tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Ministry of Finance 91-day treasury bills 2.60-2.75%, tax-free",
+      "sourceUrl": "https://mfin.gov.hr/istaknute-teme/javni-dug/trezorski-zapisi-poziv-na-aukciju/191",
+      "asOf": "2026-10-31",
+      "note": "Base case: rolling tax-free retail treasury bills, slightly below the September 2026 yield as ECB rates may ease."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Croatia 10-year government bond 4.14%, interest tax-free",
+      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding longer Croatian government bonds, whose interest is untaxed, below the current 10-year yield."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "HANFA and the Croatian Insurance Bureau publish premium and claims totals but no industry life claim settlement ratio could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (rizično životno osiguranje) is sold, but no published premium table or regulator data on term premiums per sum insured was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by HZZO compulsory insurance, with co-payments covered by supplementary insurance (dopunsko osiguranje); no official figure for a typical out-of-pocket private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Supplementary and private health insurance are sold at flat premiums, not per sum insured, and no premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.0938,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=HR",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Croatia, health: 4.3% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.HR.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices rise about as fast as Croatia's above-target headline inflation; 4.5% is used for planning."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Croatia, education: -1.0% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.HR.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "The education index fell in 2025 because public schooling and textbooks are free, so private education costs are assumed to rise a little above general inflation at 3.5%."
+    },
+    "life_expectancy": {
+      "value": 79.1,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/croatia",
+      "asOf": "2026-12-31",
+      "note": "Men 76.0, women 82.1 (UN WPP estimate for 2026); World Bank 2024 figure 78.9."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.0,
+            "men": 19.6,
+            "women": 24.0
+          },
+          {
+            "age": 65,
+            "total": 18.0,
+            "men": 15.9,
+            "women": 19.7
+          },
+          {
+            "age": 70,
+            "total": 14.3,
+            "men": 12.5,
+            "women": 15.6
+          },
+          {
+            "age": 80,
+            "total": 7.9,
+            "men": 6.7,
+            "women": 8.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/croatia",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.66
+          },
+          {
+            "year": 2040,
+            "value": 2.12
+          },
+          {
+            "year": 2065,
+            "value": 1.71
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/croatia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 37.7 (2025, World Bank), 47.1 (2040) and 58.4 (2065, populationpyramid.net/croatia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Croatian Pension Insurance Institute (HZMO), old-age pension",
+      "sourceUrl": "https://www.mirovinsko.hr/hr/starosna-mirovina/166",
+      "asOf": "2026-10-31",
+      "note": "Men 65 with at least 15 years of insurance; women 64 years 0 months in 2026, rising to 65 from 1 January 2030. The Labour Act also ends employment at 65 with 15 years of pension service unless agreed otherwise."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Civil Servants Act (Zakon o državnim službenicima, NN 155/23, 85/24), Article 152",
+      "sourceUrl": "https://www.zakon.hr/z/108/zakon-o-drzavnim-sluzbenicima",
+      "asOf": "2024-07-20",
+      "note": "Civil service ends by law at 65 with at least 15 years of pension service; it can be extended by agreement up to age 67."
+    },
+    "retirement_return_low": {
+      "value": 0.011,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.29% less 12% tax",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Ministry of Finance 91-day treasury bills 2.60-2.75%, tax-free",
+      "sourceUrl": "https://mfin.gov.hr/istaknute-teme/javni-dug/trezorski-zapisi-poziv-na-aukciju/191",
+      "asOf": "2026-10-31",
+      "note": "Base case capped just below the tax-free retail treasury bill yield."
+    },
+    "retirement_return_high": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "Croatia 10-year government bond 4.14%, interest tax-free",
+      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of tax-free Croatian government bonds, below the current 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Treasury bills 2.6% tax-free; CROBEX record",
+      "sourceUrl": "https://mfin.gov.hr/istaknute-teme/javni-dug/trezorski-zapisi-poziv-na-aukciju/191",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Treasury bills 2.6% tax-free; equity base 6%",
+      "sourceUrl": "https://mfin.gov.hr/istaknute-teme/javni-dug/trezorski-zapisi-poziv-na-aukciju/191",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6% and half tax-free government paper at about 2.5-3.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "10-year bond 4.14% tax-free; equity high 8%",
+      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 160.22,
+      "status": "sourced",
+      "sourceName": "HZMO, national benefit for older persons (nacionalna naknada za starije osobe)",
+      "sourceUrl": "https://www.mirovinsko.hr/hr/nacionalna-naknada-za-starije-osobe/1518",
+      "asOf": "2026-01-01",
+      "note": "EUR 160.22 a month from 1 January 2026 for people aged 65+ with no pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "HZMO, national benefit for older persons",
+      "sourceUrl": "https://www.mirovinsko.hr/hr/nacionalna-naknada-za-starije-osobe/1518",
+      "asOf": "2026-01-01",
+      "note": "Croatian citizens aged 65+ with 10 years' continuous residence, no pension, and household income per member below EUR 320.44 a month (twice the benefit)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 10,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Labour Act (Zakon o radu), Article 126",
+      "sourceUrl": "https://www.zakon.hr/z/307/Zakon-o-radu",
+      "asOf": "2026-10-31",
+      "note": "Severance (otpremnina) only on dismissal by the employer after 2 years' continuous service: at least one third of average monthly pay per year of service (about 10 days), capped at 6 months' pay; not paid on retirement at 65 with 15 years of pension service."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Croatian Pension Insurance Institute (HZMO)",
+      "sourceUrl": "https://www.mirovinsko.hr/en/how-is-your-pension-determined/188",
+      "asOf": "2026-10-31",
+      "note": "Compulsory pay-as-you-go first pillar plus a mandatory second-pillar fund; pensions are adjusted on 1 January and 1 July by a mix of consumer-price inflation and average gross wage growth. Women's pension age reaches 65 in 2030."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Štedni račun (a vista štednja)",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Oročena štednja",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Oročena štednja",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Stambena štednja",
+      "localNameEn": "Housing savings (building society)",
+      "note": "Regular saving with building societies, with a state incentive on yearly deposits."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": "Narodna obveznica",
+      "localNameEn": "Retail government bond",
+      "note": "No standing 5-year savings bond for individuals; the government issues occasional retail bonds and sells 91-day treasury bills to citizens, with interest tax-free.",
+      "sourceUrl": "https://mfin.gov.hr/istaknute-teme/javni-dug/trezorski-zapisi-poziv-na-aukciju/191"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Trezorski zapisi",
+      "localNameEn": "Treasury bills of the Ministry of Finance",
+      "note": "Citizens can subscribe in a non-competitive retail round.",
+      "sourceUrl": "https://mfin.gov.hr/istaknute-teme/javni-dug/trezorski-zapisi-poziv-na-aukciju/191"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obveznice Republike Hrvatske",
+      "localNameEn": "Republic of Croatia government bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obveznice Republike Hrvatske",
+      "localNameEn": "Republic of Croatia government bonds",
+      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Investicijski fond",
+      "localNameEn": "Investment fund (UCITS) / index fund",
+      "note": "Gains on financial assets held over two years are not taxed."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Investicijsko zlato",
+      "localNameEn": "Investment gold bars and coins",
+      "note": "No restriction on buying physical gold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Hrvatska narodna banka (Croatian National Bank)",
+      "url": "https://www.hnb.hr/",
+      "note": "Part of the Eurosystem since 2023; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Hrvatska agencija za nadzor financijskih usluga (HANFA)",
+      "url": "https://www.hanfa.hr/"
+    },
+    "insuranceComplaints": {
+      "name": "HANFA, consumer complaints",
+      "url": "https://www.hanfa.hr/potrosaci/prituzbe-potrosaca/"
+    },
+    "pensionScheme": {
+      "name": "Hrvatski zavod za mirovinsko osiguranje (HZMO)",
+      "url": "https://www.mirovinsko.hr/"
+    },
+    "oldAgeAllowance": {
+      "name": "Nacionalna naknada za starije osobe (national benefit for older persons)",
+      "url": "https://www.mirovinsko.hr/hr/nacionalna-naknada-za-starije-osobe/1518"
+    },
+    "publicHealthCover": {
+      "name": "Hrvatski zavod za zdravstveno osiguranje (HZZO)",
+      "url": "https://hzzo.hr/"
+    },
+    "depositInsurance": {
+      "name": "Hrvatska agencija za osiguranje depozita (HAOD)",
+      "url": "https://www.haod.hr/"
+    },
+    "statistics": {
+      "name": "Državni zavod za statistiku (Croatian Bureau of Statistics)",
+      "url": "https://podaci.dzs.hr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

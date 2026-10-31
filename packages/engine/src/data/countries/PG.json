@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "code": "PG",
+  "iso3": "PNG",
+  "nameEn": "Papua New Guinea",
+  "nameNative": "Papua Niugini",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en",
+    "ho"
+  ],
+  "currency": {
+    "code": "PGK",
+    "symbol": "K",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 4.1227,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF (official exchange rate, period average)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=PG",
+      "asOf": "2025-12-31",
+      "note": "2025 average 4.12 kina per US dollar; Trading Economics shows 4.55 on 30 October 2026. Bank of PNG site unreachable (HTTP 403)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.022,
+      "status": "sourced",
+      "sourceName": "Trading Economics (PNG National Statistical Office quarterly CPI)",
+      "sourceUrl": "https://tradingeconomics.com/papua-new-guinea/inflation-cpi",
+      "asOf": "2026-06-30",
+      "note": "Secondary source: headline CPI 2.2% year on year in the June quarter 2026 (same as March). The NSO site shows a 3.5% figure for the September 2026 quarter without saying whether it is annual; the Bank of PNG site could not be reached (HTTP 403)."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank FP.CPI.TOTL.ZG (PNG CPI 4.4% in 2025); NSO/Trading Economics 2.2% in mid-2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=PG",
+      "asOf": "2026-10-31",
+      "note": "The Bank of PNG has no numeric inflation target, and CPI has averaged roughly 4-5% over the last five years with a gradually weakening kina, so we plan with 4.5%."
+    },
+    "policy_rate": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Bank of PNG Kina Facility Rate)",
+      "sourceUrl": "https://tradingeconomics.com/papua-new-guinea/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: Kina Facility Rate 5.00% (unchanged at the September 2026 reading); the Bank of PNG site returned HTTP 403."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Bank of PNG (site blocked, HTTP 403) and large bank pages: savings rates are only published in a schedule we could not read; one bank advertises tiered savings 'up to 1.25%' plus bonus, which is not a typical rate."
+    },
+    "fdr_3m_rate": {
+      "value": 0.006,
+      "status": "sourced",
+      "sourceName": "Posted weekly term deposit rates of a large PNG commercial bank",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-26",
+      "note": "3-month rate 0.60% for K5,000-99,999 (0.70% from K500,000). Bank of PNG statistics could not be reached."
+    },
+    "fdr_1y_rate": {
+      "value": 0.009,
+      "status": "sourced",
+      "sourceName": "Posted weekly term deposit rates of a large PNG commercial bank",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-26",
+      "note": "12-month rate 0.90% for K5,000-99,999 (0.95-1.20% for larger amounts); another large bank advertises term deposits 'up to 2.00%'."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched bank savings and term deposit pages: no monthly recurring deposit (DPS-style) product with a published rate was found in PNG."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.002625,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=PG",
+      "asOf": "2024-12-31",
+      "note": "0.26% in 2024; Bank of PNG statistical tables could not be reached for a fresher figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for a PNG government retail savings bond for individuals: none found; government securities are sold by Bank of PNG tender, mainly to institutions. Bank of PNG site unreachable (HTTP 403)."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank of PNG auction results could not be reached (HTTP 403) and no secondary source with a current Treasury bill yield was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank of PNG Inscribed Stock tender results could not be reached (HTTP 403); no secondary source found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank of PNG Inscribed Stock tender results could not be reached (HTTP 403); no secondary source found."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: Papua New Guinea, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/papua-new-guinea/individual/income-determination",
+      "asOf": "2026-09-23",
+      "note": "Interest withholding tax of 15% on interest paid by financial institutions; for residents it is creditable against the final tax (residents pay 0% on the first PGK 20,000 of taxable income)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government retail savings bond for individuals found, so no specific tax rule applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for a PNG deposit insurance or deposit protection scheme: none in operation was found, and no source stating its absence was reachable."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap found; large banks do not publish card interest rates on their card pages (rates are in fee schedules we could not read)."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Posted 1-year term deposit 0.90% less 15% withholding (about 0.8% after tax); small, illiquid PNGX market",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case near the after-tax deposit rate because the local exchange (PNGX) has only a handful of thinly traded listings."
+    },
+    "equity_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Posted 1-year term deposit 0.90% less 15% withholding (about 0.8% after tax); small, illiquid PNGX market",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "After-tax safe rate of about 0.8% plus a premium kept below 4 points, since the local market's 10-year record is short and illiquid."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Posted 1-year term deposit 0.90% less 15% withholding; superannuation funds' 10-year average crediting rate about 6%",
+      "sourceUrl": "https://www.nambawansuper.com.pg/",
+      "asOf": "2026-10-31",
+      "note": "High case if dividend-paying resource and bank shares keep their recent record."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (kina per USD rose from about 3.3 in 2016 to 4.1 in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=PG",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price with slower kina depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (kina per USD rose from about 3.3 in 2016 to 4.1 in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=PG",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus kina depreciation of about 2-3% a year under the managed crawl."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (kina per USD rose from about 3.3 in 2016 to 4.1 in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=PG",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and faster kina depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "Posted 3-month and 1-year term deposit rates (0.60-0.90%) less 15% withholding",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: short term deposits after the 15% interest withholding tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Posted 1-year term deposit 0.90% less 15% withholding",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year term deposits at about 0.9% less 15% withholding tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.0125,
+      "status": "assumption",
+      "sourceName": "Posted 5-year term deposit 1.20-1.70% less 15% withholding",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits at about 1.45% less withholding tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Office of the Insurance Commissioner site has an expired certificate and no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in PNG, but no published per-1,000 premium rates by age were found; insurers quote individually."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for private hospital surgery or stay costs in Port Moresby: no published typical bill found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table for PNG was found; plans are mainly sold to employer groups."
+    },
+    "oop_health_share": {
+      "value": 0.0855,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PG",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "World Bank FP.CPI.TOTL.ZG; NSO quarterly CPI",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=PG",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series found, so we plan with the 4.5% headline projection plus one point for private and imported medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank FP.CPI.TOTL.ZG; NSO quarterly CPI",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=PG",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series found, so we plan with the headline projection plus half a point for school fees."
+    },
+    "life_expectancy": {
+      "value": 66.256,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PG",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 66.5 for 2026 (men 64.0, women 69.5)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.3,
+            "men": 14.8,
+            "women": 17.8
+          },
+          {
+            "age": 65,
+            "total": 12.9,
+            "men": 11.8,
+            "women": 14.2
+          },
+          {
+            "age": 70,
+            "total": 10.1,
+            "men": 9.2,
+            "women": 11.0
+          },
+          {
+            "age": 80,
+            "total": 5.7,
+            "men": 5.3,
+            "women": 6.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/papua-new-guinea/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 17.6
+          },
+          {
+            "year": 2040,
+            "value": 11.4
+          },
+          {
+            "year": 2065,
+            "value": 6.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/papua-new-guinea/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 5.67 (2025, World Bank), 8.8 (2040) and 14.6 (2065, populationpyramid.net/papua-new-guinea/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Nasfund (licensed superannuation fund): accessing your super",
+      "sourceUrl": "https://www.nasfund.com.pg/superannuation/about-superannuation/accessing-your-super",
+      "asOf": "2026-10-31",
+      "note": "Superannuation can be withdrawn in full on reaching the retirement (preservation) age of 55 under the Superannuation (General Provisions) Act 2000; the same page also mentions 65. No statutory private-sector retirement age."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for the PNG public service retirement age: no reachable official source (Department of Personnel Management) was found."
+    },
+    "retirement_return_low": {
+      "value": 0.004,
+      "status": "assumption",
+      "sourceName": "Posted 3-month term deposit 0.60% less 15% withholding",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after withholding tax."
+    },
+    "retirement_return_base": {
+      "value": 0.0075,
+      "status": "assumption",
+      "sourceName": "Posted 1-year term deposit 0.90% less 15% withholding",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate, the best published safe 1-year rate."
+    },
+    "retirement_return_high": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Posted 5-year term deposit 1.20-1.70% less 15% withholding",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered longer term deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Superannuation fund 10-year average crediting rate about 6% (2015-2025)",
+      "sourceUrl": "https://www.nambawansuper.com.pg/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if crediting rates fall toward deposit rates plus inflation."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Superannuation fund 10-year average crediting rate about 6% (2015-2025)",
+      "sourceUrl": "https://www.nambawansuper.com.pg/",
+      "asOf": "2026-10-31",
+      "note": "Base case a little below the 10-year 6% average crediting rate of PNG's largest super fund."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Superannuation fund 10-year average crediting rate about 6% (2015-2025)",
+      "sourceUrl": "https://www.nambawansuper.com.pg/",
+      "asOf": "2026-10-31",
+      "note": "High case near the funds' long-run record."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for a national non-contributory old-age pension in PNG: none found at national level (some provinces have run their own schemes); no source stating the amount or its absence was reachable."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national social pension found, so no eligibility rule."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service payment for private employees found in PNG employment law; retirement savings run through compulsory superannuation."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Nasfund (licensed superannuation fund): accessing your super",
+      "sourceUrl": "https://www.nasfund.com.pg/superannuation/about-superannuation/accessing-your-super",
+      "asOf": "2026-10-31",
+      "note": "Compulsory defined-contribution superannuation: employee 6% and employer 8.4% for employers with more than 15 staff (nambawansuper.com.pg/employers/employer-responsibilities); lump-sum withdrawal from 55; exit tax falls to 0% after 15 years of membership."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "sourceUrl": "https://www.bsp.com.pg/personal-banking/savings-accounts-and-term-deposits/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Term deposit",
+      "localNameEn": "1-year term deposit",
+      "sourceUrl": "https://www.kinabank.com.pg/weekly-interest-rates/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product is published by PNG banks."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government retail savings bond for individuals found; Treasury bills and Inscribed Stock are sold by Bank of PNG tender."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government Treasury bill",
+      "note": "Sold by Bank of PNG tender, mainly to institutions; 91-day bills are not always on offer."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Inscribed Stock",
+      "localNameEn": "Government Inscribed Stock (bond)",
+      "note": "Sold by Bank of PNG tender, mainly to institutions."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Inscribed Stock",
+      "localNameEn": "Government Inscribed Stock (bond)",
+      "note": "Sold by Bank of PNG tender, mainly to institutions."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trust (managed fund)",
+      "note": "A few locally managed unit trusts invest in shares on the small PNGX exchange and fixed income."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "note": "PNG is a gold producer; buying gold is legal, mainly as jewellery or from licensed dealers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Papua New Guinea",
+      "url": "https://www.bankpng.gov.pg/",
+      "note": "Also supervises superannuation funds."
+    },
+    "insuranceRegulator": {
+      "name": "Office of the Insurance Commissioner",
+      "url": "https://www.oic.gov.pg/"
+    },
+    "insuranceComplaints": {
+      "name": "Office of the Insurance Commissioner",
+      "url": "https://www.oic.gov.pg/",
+      "note": "No separate insurance ombudsman found; complaints go to the insurer, then the Commissioner."
+    },
+    "pensionScheme": {
+      "name": "Compulsory superannuation (Superannuation (General Provisions) Act 2000), supervised by the Bank of PNG",
+      "url": "https://www.bankpng.gov.pg/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Department of Health (public hospitals and health centres)",
+      "url": "https://www.health.gov.pg/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Statistical Office of Papua New Guinea",
+      "url": "https://www.nso.gov.pg/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

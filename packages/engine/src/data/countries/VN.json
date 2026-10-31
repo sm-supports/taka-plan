@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "code": "VN",
+  "iso3": "VNM",
+  "nameEn": "Vietnam",
+  "nameNative": "Việt Nam",
+  "region": "east_asia_pacific",
+  "languages": [
+    "vi",
+    "en"
+  ],
+  "currency": {
+    "code": "VND",
+    "symbol": "₫",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 25803.5,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/VND interbank rate",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/currency",
+      "asOf": "2026-10-30",
+      "note": "Market rate on 30 Oct 2026; the World Bank 2024 average was 24,165. SBV central rate page is script-rendered."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0508,
+      "status": "sourced",
+      "sourceName": "General Statistics Office of Vietnam (NSO), key indicators: CPI September 2026",
+      "sourceUrl": "https://www.nso.gov.vn/",
+      "asOf": "2026-09-30",
+      "note": "CPI up 5.08% on September 2025 (4.89% in August)."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Recent CPI (NSO, Trading Economics); World Bank FP.CPI.TOTL.ZG (3.3% in 2025)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "CPI was 3.3% in 2025 but about 5% in 2026; we plan with a rounded 4% between the two."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "State Bank of Vietnam refinancing rate (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Refinancing rate 4.50%, unchanged; SBV site is script-rendered, so a secondary source is used."
+    },
+    "savings_account_rate": {
+      "value": 0.001,
+      "status": "sourced",
+      "sourceName": "Published VND rates for individuals at a large state-owned commercial bank (demand deposit)",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-21",
+      "note": "0.1% a year on demand deposits, effective 21 Oct 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.024,
+      "status": "sourced",
+      "sourceName": "Published VND term deposit rates for individuals at a large state-owned commercial bank (3 months)",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-21",
+      "note": "2.4% for 3 and 5 months; 2.1% for 1-2 months; effective 21 Oct 2026."
+    },
+    "fdr_1y_rate": {
+      "value": 0.054,
+      "status": "sourced",
+      "sourceName": "Published VND term deposit rates for individuals at a large state-owned commercial bank (12 months)",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-21",
+      "note": "5.4% for 12-18 months, 5.5% for 24-36 months; effective 21 Oct 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks sell accumulative savings plans with monthly deposits (tiết kiệm tích lũy), but we could not read a published rate (bank pages are script-rendered)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0478,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VN",
+      "asOf": "2023-12-31",
+      "note": "4.78% for 2023 (latest available)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vietnam has no government savings certificate or retail savings bond for individuals."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The State Treasury rarely issues treasury bills and no current 91-day yield is published."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable published 5-year government bond yield found (HNX and bond yield pages are script-rendered)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0458,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Vietnam 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "4.58% on 30 Oct 2026; secondary source."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Vietnam individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/vietnam/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Interest on deposits with credit institutions and banks is non-taxable income."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No savings certificate exists; PwC lists investment income (interest) as taxable but does not say how government bond interest is treated."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Deposit Insurance of Vietnam (div.gov.vn) pages read did not state the payout limit per depositor (the Deposit Insurance Law 2025 and payout procedures pages were read)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card rates and no published typical rate found."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "VN-Index record (Trading Economics); after-tax 1-year deposit 5.4%",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The VN-Index is volatile (all-time high 1,936.55 in May 2026, 1,741.62 on 30 Oct 2026), so the low case is just below the deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 5.4% plus an equity premium",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "Base case about 3.6 points above the tax-free 1-year deposit rate, within the 4-point limit, given a strong but volatile 10-year index record."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "VN-Index long-run record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case if the market keeps its long-run growth and earns an emerging-market upgrade."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; USD/VND trend (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/currency",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall for a decade, and local gold bar prices carry a premium that can shrink."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; USD/VND trend (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/currency",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 5% plus about 2% a year of dong depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; USD/VND trend (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/currency",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle and faster dong depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.024,
+      "status": "assumption",
+      "sourceName": "Large-bank VND term deposit rates",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "Low case at the 3-month deposit rate. Safe VND rates: demand 0.1%, 3-month 2.4%, 12-month 5.4%, 24-36 month 5.5% at a large state-owned bank (21 Oct 2026); deposit interest is tax-exempt; 10-year government bond 4.58%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.054,
+      "status": "assumption",
+      "sourceName": "Large-bank VND term deposit rates",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "Base case at the tax-free 12-month deposit rate. Safe VND rates: demand 0.1%, 3-month 2.4%, 12-month 5.4%, 24-36 month 5.5% at a large state-owned bank (21 Oct 2026); deposit interest is tax-exempt; 10-year government bond 4.58%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Large-bank and smaller-bank VND term deposit rates",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "High case a little above the large-bank 24-36 month rate, as smaller banks pay more. Safe VND rates: demand 0.1%, 3-month 2.4%, 12-month 5.4%, 24-36 month 5.5% at a large state-owned bank (21 Oct 2026); deposit interest is tax-exempt; 10-year government bond 4.58%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life insurance claim settlement ratio published by the Ministry of Finance insurance supervisor was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Pure term life cover is sold, but we found no published premium rates or credible premium guide in dong."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major private hospital stay found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates found."
+    },
+    "oop_health_share": {
+      "value": 0.392,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=VN",
+      "asOf": "2023-12-31",
+      "note": "39.2% for 2023."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NSO CPI health sub-index (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health CPI rose 1.47% in the year to September 2026 because public fees are state-set, but private care costs rise faster, so we plan 2 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "NSO CPI education sub-index (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education CPI rose 2.93% in the year to September 2026 after public school tuition waivers; private school fees rise faster, so we plan 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 74.7,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=VN",
+      "asOf": "2024-12-31",
+      "note": "Men 70.1, women 79.4 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.5,
+            "men": 18.6,
+            "women": 23.8
+          },
+          {
+            "age": 65,
+            "total": 17.6,
+            "men": 15.0,
+            "women": 19.6
+          },
+          {
+            "age": 70,
+            "total": 14.0,
+            "men": 11.7,
+            "women": 15.6
+          },
+          {
+            "age": 80,
+            "total": 8.1,
+            "men": 6.4,
+            "women": 9.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/vietnam",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age (2026); secondary source."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 7.1
+          },
+          {
+            "year": 2040,
+            "value": 4.2
+          },
+          {
+            "year": 2065,
+            "value": 2.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL; UN WPP 2024 medium variant (via populationpyramid.net)",
+      "sourceUrl": "https://www.populationpyramid.net/viet-nam/2040/",
+      "asOf": "2024-07-31",
+      "note": "100 / old-age dependency ratio: 14.0 in 2025 (World Bank), 23.6 in 2040 and 41.3 in 2065 (UN WPP 2024)."
+    },
+    "retirement_age_default": {
+      "value": 61.5,
+      "status": "sourced",
+      "sourceName": "Ministry of Labour, Invalids and Social Affairs (via Trading Economics), retirement age men",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/retirement-age-men",
+      "asOf": "2026-12-31",
+      "note": "Men 61 years 6 months in 2026 (61.25 in 2025); women 57 (56.67 before). Ages are rising each year under the Labour Code 2019 roadmap towards 62 for men and 60 for women."
+    },
+    "retirement_age_government": {
+      "value": 61.5,
+      "status": "sourced",
+      "sourceName": "Ministry of Labour, Invalids and Social Affairs (via Trading Economics), retirement age men",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/retirement-age-men",
+      "asOf": "2026-12-31",
+      "note": "The Labour Code 2019 roadmap applies to public employees too: men 61.5 and women 57 in 2026."
+    },
+    "retirement_return_low": {
+      "value": 0.024,
+      "status": "assumption",
+      "sourceName": "Large-bank VND term deposit rates",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "Low case at the 3-month deposit rate. Safe VND rates: demand 0.1%, 3-month 2.4%, 12-month 5.4%, 24-36 month 5.5% at a large state-owned bank (21 Oct 2026); deposit interest is tax-exempt; 10-year government bond 4.58%."
+    },
+    "retirement_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Large-bank VND term deposit rates",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "Base case just under the tax-free 12-month deposit rate of 5.4%. Safe VND rates: demand 0.1%, 3-month 2.4%, 12-month 5.4%, 24-36 month 5.5% at a large state-owned bank (21 Oct 2026); deposit interest is tax-exempt; 10-year government bond 4.58%."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Large-bank VND term deposit rates",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "High case at the 24-36 month deposit rate. Safe VND rates: demand 0.1%, 3-month 2.4%, 12-month 5.4%, 24-36 month 5.5% at a large state-owned bank (21 Oct 2026); deposit interest is tax-exempt; 10-year government bond 4.58%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Mix of VND deposits, bonds and equity funds",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "About 40% equity at the low case and 60% deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Mix of VND deposits, bonds and equity funds",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "About half equity at 9% and half deposits near 5.4%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Mix of VND deposits, bonds and equity funds",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet",
+      "asOf": "2026-10-31",
+      "note": "About 60% equity at the high case and 40% deposits and bonds."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The 2024 Social Insurance Law added a social pension allowance for older people without a pension, but we could not read an official page giving the current monthly amount."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility ages and means test for the social pension allowance could not be confirmed from a readable official page."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code 2019 provides a severance allowance for years not covered by unemployment insurance, but we could not read the legal text to confirm the days per year."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vietnam Social Security runs compulsory and voluntary social insurance (pension age 61.5 for men and 57 for women in 2026), but the entry age, indexation and minimum years under the 2024 law could not be confirmed from a readable page."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Tiền gửi không kỳ hạn",
+      "localNameEn": "Demand savings deposit",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Tiền gửi tiết kiệm có kỳ hạn",
+      "localNameEn": "Term savings deposit",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Tiền gửi tiết kiệm có kỳ hạn",
+      "localNameEn": "Term savings deposit",
+      "sourceUrl": "https://bidv.com.vn/ServicesBIDV/InterestDetailServlet"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Tiết kiệm tích lũy",
+      "localNameEn": "Accumulative savings (monthly deposits)",
+      "note": "Offered by many banks; no published average rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Treasury bills are rarely issued and not sold to individuals."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Trái phiếu Chính phủ",
+      "localNameEn": "Government bond",
+      "note": "Auctioned to institutions; individuals can buy on the secondary market through securities firms."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Trái phiếu Chính phủ",
+      "localNameEn": "Government bond",
+      "note": "Auctioned to institutions; individuals can buy on the secondary market through securities firms.",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Quỹ mở",
+      "localNameEn": "Open-ended fund",
+      "note": "Open-ended funds and ETFs tracking the VN-Index are sold to retail investors.",
+      "sourceUrl": "https://tradingeconomics.com/vietnam/stock-market"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Vàng miếng",
+      "localNameEn": "Gold bars",
+      "note": "Gold bars and rings are widely bought from licensed gold traders and banks."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "State Bank of Vietnam (SBV)",
+      "url": "https://www.sbv.gov.vn/"
+    },
+    "insuranceRegulator": {
+      "name": "Ministry of Finance, Insurance Supervisory Authority",
+      "url": "https://www.mof.gov.vn/"
+    },
+    "insuranceComplaints": {
+      "name": "Ministry of Finance, Insurance Supervisory Authority",
+      "url": "https://www.mof.gov.vn/",
+      "note": "No insurance ombudsman; complaints go to the insurer, then the Ministry of Finance."
+    },
+    "pensionScheme": {
+      "name": "Vietnam Social Security (social insurance pension)",
+      "url": "https://baohiemxahoi.gov.vn/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Vietnam Social Security (social health insurance)",
+      "url": "https://baohiemxahoi.gov.vn/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance of Vietnam (DIV)",
+      "url": "https://div.gov.vn/"
+    },
+    "statistics": {
+      "name": "General Statistics Office (National Statistics Office), Ministry of Finance",
+      "url": "https://www.nso.gov.vn/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

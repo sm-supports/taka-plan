@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 1,
+  "code": "BY",
+  "iso3": "BLR",
+  "nameEn": "Belarus",
+  "nameNative": "Беларусь",
+  "region": "europe_central_asia",
+  "languages": [
+    "ru",
+    "be"
+  ],
+  "currency": {
+    "code": "BYN",
+    "symbol": "Br",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.9462,
+      "status": "sourced",
+      "sourceName": "National Bank of the Republic of Belarus, official USD rate (API)",
+      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2",
+      "asOf": "2026-10-31",
+      "note": "Official rate BYN 2.9462 per US dollar on 31 October 2026; World Bank 2025 average 3.07."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.046,
+      "status": "sourced",
+      "sourceName": "National Statistical Committee of Belarus, main socio-economic indicators January-September 2026",
+      "sourceUrl": "https://www.belstat.gov.by/upload-belstat/upload-belstat-excel/Oficial_statistika/2026/express_info-2609-en.xlsx",
+      "asOf": "2026-09-30",
+      "note": "CPI September 2026 was 104.6% of September 2025 (103.6% of December 2025)."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "National Bank medium-term inflation target about 5%; CPI 4.6% (Sep 2026), 6.6% in 2025 (World Bank)",
+      "sourceUrl": "https://www.belstat.gov.by/upload-belstat/upload-belstat-excel/Oficial_statistika/2026/express_info-2609-en.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Inflation has run near or a little above the National Bank's target with price controls in place, so 6% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.0925,
+      "status": "sourced",
+      "sourceName": "National Bank of the Republic of Belarus, refinancing rate (API)",
+      "sourceUrl": "https://api.nbrb.by/refinancingrate?ondate=2026-10-31",
+      "asOf": "2026-06-01",
+      "note": "Refinancing rate 9.25% since 1 June 2026 (still in force on 31 October 2026)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average demand-deposit rate found; a comparison site notes demand rates of about 0.01-1% (applied on early withdrawal) and nbrb.by refused connections."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month BYN term deposit rate found: nbrb.by was unreachable and the comparison site lists only multi-term ranges."
+    },
+    "fdr_1y_rate": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "myfin.by deposit comparison (Belarusian ruble deposits)",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "Advertised 12-13 month BYN irrevocable deposits paid about 11.9-12.6% on 31 October 2026; these are the better offers, so typical rates may be lower."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit scheme found; some BYN deposits accept top-ups."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0592,
+      "status": "sourced",
+      "sourceName": "IMF International Financial Statistics (MFS_IR), Belarus deposit rate",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/BLR..M",
+      "asOf": "2026-09-30",
+      "note": "September 2026; World Bank 2025 annual value 6.76%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ministry of Finance bonds for individuals exist, but minfin.by was unreachable and no current rate was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 91-day government bill yield found; minfin.by and nbrb.by refused connections."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield found; minfin.by and nbrb.by refused connections."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield found; Belarus issues few long BYN bonds."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Tax on deposit interest depends on term and currency under the Tax Code; nalog.gov.by and pravo.by were unreachable and PwC has no Belarus summary, so the rate could not be confirmed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Tax treatment of Ministry of Finance bonds for individuals could not be confirmed (nalog.gov.by and pravo.by unreachable)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Wikipedia (Deposit insurance) says the Agency for Deposit Compensation guarantees 100% of individuals' deposits with no fixed cap; adc.by was unreachable to confirm current limits for foreign-currency deposits."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate found; the average lending rate was 9.98% in September 2026 (IMF IFS)."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Global equity index in US dollar terms; BYN 2.95 per USD (NBRB)",
+      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2",
+      "asOf": "2026-10-31",
+      "note": "Belarus has no liquid local stock market, so equity is a global index in rubles; low case is a weak decade for world shares with mild ruble depreciation."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return in USD plus about 3% a year expected ruble depreciation; 1-year BYN deposit about 12%",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "Base on a global index in Belarusian ruble terms: about 7% in dollars plus about 3% depreciation, below the deposit rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return in USD plus ruble depreciation",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "High case: strong world shares plus faster ruble depreciation, as in 2020-2024."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold flat in dollars after its spike with a stable ruble."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); BYN 2.95 per USD",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4% a year plus about 3% expected ruble depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold's 2005-2025 trend continues and the ruble weakens faster."
+    },
+    "fixed_income_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 5.92% (IMF IFS, Sep 2026)",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/BLR..M",
+      "asOf": "2026-10-31",
+      "note": "Low case: the average across all deposits, including low-paying ones."
+    },
+    "fixed_income_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by); refinancing rate 9.25%",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "Base case set below advertised 1-year rates because rates are expected to fall toward the refinancing rate and tax may apply to some deposits."
+    },
+    "fixed_income_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by)",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in current 1-year and longer BYN deposits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance (insurance supervisor) site was unreachable; no industry claim settlement ratio found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium quotes were found for Belarus."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public hospital care is free in state facilities; no typical out-of-pocket cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published voluntary health insurance premium table found."
+    },
+    "oop_health_share": {
+      "value": 0.2848,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BY",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CPI 4.6% (Sep 2026) and 6.6% (2025); no published medical CPI read",
+      "sourceUrl": "https://www.belstat.gov.by/upload-belstat/upload-belstat-excel/Oficial_statistika/2026/express_info-2609-en.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Medical goods and paid services usually rise faster than headline prices held down by price controls, so 7% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CPI 4.6% (Sep 2026) and 6.6% (2025); no published education CPI read",
+      "sourceUrl": "https://www.belstat.gov.by/upload-belstat/upload-belstat-excel/Oficial_statistika/2026/express_info-2609-en.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Paid tuition fees tend to rise faster than headline CPI, so 7% is used."
+    },
+    "life_expectancy": {
+      "value": 74.37,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BY",
+      "asOf": "2024-12-31",
+      "note": "Men 69.7, women 79.2 (2024); UN WPP estimate for 2026 is 75.0."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.8,
+            "men": 16.5,
+            "women": 22.4
+          },
+          {
+            "age": 65,
+            "total": 16.4,
+            "men": 13.5,
+            "women": 18.3
+          },
+          {
+            "age": 70,
+            "total": 13.1,
+            "men": 10.9,
+            "women": 14.4
+          },
+          {
+            "age": 80,
+            "total": 7.4,
+            "men": 6.4,
+            "women": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/belarus",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.6
+          },
+          {
+            "year": 2040,
+            "value": 2.75
+          },
+          {
+            "year": 2065,
+            "value": 1.81
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/belarus/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 27.8 (2025, World Bank), 36.4 (2040) and 55.2 (2065, populationpyramid.net/belarus/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Retirement age (Belarus)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Men 63, women 58; secondary source because the Ministry of Labour and Social Protection Fund sites were unreachable."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No source read states a separate retirement age for civil servants; official legal sites were unreachable."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 5.92% (IMF IFS)",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/BLR..M",
+      "asOf": "2026-10-31",
+      "note": "Low case: average deposit returns."
+    },
+    "retirement_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by); refinancing rate 9.25%",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "Base case kept well below the 1-year deposit rate because rates are expected to fall and tax may apply."
+    },
+    "retirement_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by)",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in current long BYN deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Average deposit 5.9%; global equity low case 6%",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/BLR..M",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of BYN deposits and global shares."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Fixed income base 9%; global equity base 10% in BYN terms",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half BYN deposits and half global shares in ruble terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Fixed income high 11%; global equity high 13%",
+      "sourceUrl": "https://myfin.by/vklady",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A social pension exists for people without a labour pension, but mintrud.gov.by and ssf.gov.by were unreachable and no current amount was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility ages for the social pension could not be confirmed; official sites were unreachable."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service benefit on retirement was found in sources read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The labour pension (Social Protection Fund) pays from 63 for men and 58 for women, but indexation and tax rules could not be confirmed because ssf.gov.by and mintrud.gov.by were unreachable."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Вклад до востребования",
+      "localNameEn": "Demand deposit",
+      "note": "Pays close to zero; most saving is done in term deposits."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Срочный вклад",
+      "localNameEn": "Term deposit (3 months)",
+      "sourceUrl": "https://myfin.by/vklady"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Безотзывный срочный вклад",
+      "localNameEn": "Irrevocable term deposit (1 year)",
+      "sourceUrl": "https://myfin.by/vklady"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit scheme; some term deposits accept top-ups."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Облигации Министерства финансов для физических лиц",
+      "localNameEn": "Ministry of Finance bonds for individuals",
+      "note": "Rates and tax treatment could not be confirmed."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 91-day bill market for individuals was found."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Государственные облигации",
+      "localNameEn": "Government bonds",
+      "note": "Traded on the Belarusian Currency and Stock Exchange, mostly by banks."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 10-year BYN government bond found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Investment fund",
+      "note": "The local stock market is very small and no widely available diversified retail fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Мерные слитки",
+      "localNameEn": "Gold bars",
+      "note": "Banks sell investment gold bars and coins."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of the Republic of Belarus",
+      "url": "https://www.nbrb.by/"
+    },
+    "insuranceRegulator": {
+      "name": "Ministry of Finance of the Republic of Belarus (insurance supervision)",
+      "url": "https://www.minfin.gov.by/"
+    },
+    "insuranceComplaints": {
+      "name": "Ministry of Finance of the Republic of Belarus (insurance supervision)",
+      "url": "https://www.minfin.gov.by/"
+    },
+    "pensionScheme": {
+      "name": "Social Protection Fund (labour pensions)",
+      "url": "https://ssf.gov.by/"
+    },
+    "oldAgeAllowance": {
+      "name": "Ministry of Labour and Social Protection (social pension)",
+      "url": "https://www.mintrud.gov.by/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (free care in state facilities)",
+      "url": "https://minzdrav.gov.by/"
+    },
+    "depositInsurance": {
+      "name": "Agency for Deposit Compensation",
+      "url": "https://www.adc.by/"
+    },
+    "statistics": {
+      "name": "National Statistical Committee of the Republic of Belarus",
+      "url": "https://www.belstat.gov.by/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "MY",
+  "iso3": "MYS",
+  "nameEn": "Malaysia",
+  "nameNative": "Malaysia",
+  "region": "east_asia_pacific",
+  "languages": [
+    "ms",
+    "en",
+    "zh",
+    "ta"
+  ],
+  "currency": {
+    "code": "MYR",
+    "symbol": "RM",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 4.0635,
+      "status": "sourced",
+      "sourceName": "Bank Negara Malaysia, MYR/USD noon midrate",
+      "sourceUrl": "https://www.bnm.gov.my/",
+      "asOf": "2026-10-30",
+      "note": "Midrate shown on the BNM home page on 31 Oct 2026 (latest business day 30 Oct); Trading Economics close 4.057."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.018,
+      "status": "sourced",
+      "sourceName": "Department of Statistics Malaysia CPI (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/malaysia/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "1.8% year on year in September 2026, down from 1.9% in August; core 1.7%. DOSM release page returned an error, so a secondary source is used."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "5-year CPI average (2021-2025 about 2.3%); Bank Negara Malaysia has no numeric target",
+      "sourceUrl": "https://tradingeconomics.com/malaysia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "CPI averaged about 2.3% over 2021-2025 and BNM expects prices to stay elevated on energy costs, so we plan with a rounded 2.5%."
+    },
+    "policy_rate": {
+      "value": 0.0275,
+      "status": "sourced",
+      "sourceName": "Bank Negara Malaysia Monetary Policy Statement, 3 September 2026",
+      "sourceUrl": "https://www.bnm.gov.my/-/monetary-policy-statement-03092026",
+      "asOf": "2026-09-03",
+      "note": "Overnight Policy Rate held at 2.75%."
+    },
+    "savings_account_rate": {
+      "value": 0.0025,
+      "status": "sourced",
+      "sourceName": "Published basic savings account rate of a large commercial bank",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/savings-and-current-accounts-interest-rates/",
+      "asOf": "2021-02-11",
+      "note": "0.25% on all balances, effective 11 February 2021 and still shown in October 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0165,
+      "status": "sourced",
+      "sourceName": "Published fixed deposit board rates of a large commercial bank (3 months)",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
+      "asOf": "2026-09-22",
+      "note": "1.65% a year, effective 22 September 2026; promotional and online rates can be higher."
+    },
+    "fdr_1y_rate": {
+      "value": 0.018,
+      "status": "sourced",
+      "sourceName": "Published fixed deposit board rates of a large commercial bank (12 months)",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
+      "asOf": "2026-09-22",
+      "note": "1.80% a year, effective 22 September 2026; 24- and 60-month online fixed deposits 1.95%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No common monthly recurring deposit product with a published rate found; Malaysians save monthly through fixed deposits, unit trusts or EPF voluntary contributions."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0242,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MY",
+      "asOf": "2025-12-31",
+      "note": "2.42% average for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Malaysia has no standing government savings certificate for individuals; the last retail government sukuk (Sukuk Prihatin) was a one-off 2020 issue."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0298,
+      "status": "sourced",
+      "sourceName": "Bank Negara Malaysia, government securities yield (Malaysian Treasury Bills, up to 3 months)",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-30",
+      "note": "Last traded rate 2.98%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0368,
+      "status": "sourced",
+      "sourceName": "Bank Negara Malaysia, MGS benchmark yields (conventional, Jun-2031)",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-30"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0389,
+      "status": "sourced",
+      "sourceName": "Bank Negara Malaysia, MGS benchmark yields (conventional, Oct-2036)",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-30"
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Malaysia, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/malaysia/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Interest on deposits with licensed banks and financial institutions is tax-exempt for individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Malaysia, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/malaysia/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "No savings certificate exists; interest from certain bonds and securities (including government securities) is exempt."
+    },
+    "deposit_insurance_limit": {
+      "value": 250000,
+      "status": "sourced",
+      "sourceName": "Perbadanan Insurans Deposit Malaysia (PIDM), Deposit Insurance System",
+      "sourceUrl": "https://www.pidm.gov.my/general/how-we-protect-you/dis",
+      "asOf": "2026-10-31",
+      "note": "RM250,000 per depositor per member bank; Islamic and conventional deposits are protected separately."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BNM sets a maximum credit card finance charge in its credit card policy document, but we could not reach the document or a page stating the current figure."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "FBM KLCI 10-year record; 5-year MGS 3.68%",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-31",
+      "note": "The KLCI has made little price progress over the past decade, so the low case is a dividend-like 3%."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "5-year MGS 3.68% plus a modest premium; weak KLCI 10-year record",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-31",
+      "note": "Base set about 3 points above the tax-free government bond yield, below the 4-point limit, because the local index record is weak."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Long-run Malaysian and regional equity returns",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-31",
+      "note": "High case with a full equity premium over government bonds."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; ringgit exchange rate (BNM)",
+      "sourceUrl": "https://www.bnm.gov.my/",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall for a decade, and the ringgit has strengthened in 2026."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; ringgit exchange rate (BNM midrate 4.06 per USD)",
+      "sourceUrl": "https://www.bnm.gov.my/",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 5% plus about 0.5% a year of ringgit depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; ringgit exchange rate (BNM)",
+      "sourceUrl": "https://www.bnm.gov.my/",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle."
+    },
+    "fixed_income_return_low": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Fixed deposit board rates (tax-free)",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
+      "asOf": "2026-10-31",
+      "note": "Low case at the 1-year board rate. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Treasury bill and MGS yields (BNM)",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case near the 3-month treasury bill yield, reachable through fixed deposit promotions, bond funds and money market funds. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+    },
+    "fixed_income_return_high": {
+      "value": 0.037,
+      "status": "assumption",
+      "sourceName": "5-year MGS yield (BNM)",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-31",
+      "note": "High case at the 5-year government bond yield. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio published by Bank Negara Malaysia or the life insurance association was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is widely sold, but we could not read published premium rates or a credible premium guide in ringgit."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published medical insurance premium rates by age found."
+    },
+    "oop_health_share": {
+      "value": 0.371,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MY",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Headline CPI (DOSM via Trading Economics); private medical cost trend",
+      "sourceUrl": "https://tradingeconomics.com/malaysia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The health CPI covers subsidised public care, but private hospital and insurance costs have risen much faster, so we plan about 3.5 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Headline CPI (DOSM via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/malaysia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is largely free while private and tertiary fees rise faster, so we plan 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 76.8,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MY",
+      "asOf": "2024-12-31",
+      "note": "Men 74.4, women 79.5 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.5,
+            "men": 20.1,
+            "women": 23.0
+          },
+          {
+            "age": 65,
+            "total": 17.7,
+            "men": 16.5,
+            "women": 18.9
+          },
+          {
+            "age": 70,
+            "total": 14.2,
+            "men": 13.2,
+            "women": 15.2
+          },
+          {
+            "age": 80,
+            "total": 8.7,
+            "men": 8.0,
+            "women": 9.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/malaysia",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age; secondary source for UN WPP."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.8
+          },
+          {
+            "year": 2040,
+            "value": 5.7
+          },
+          {
+            "year": 2065,
+            "value": 2.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net)",
+      "sourceUrl": "https://www.populationpyramid.net/malaysia/2040/",
+      "asOf": "2024-07-31",
+      "note": "100 / old-age dependency ratio: 11.4 in 2025, 17.6 in 2040 and 38.7 in 2065."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Employees Provident Fund (Malaysia), Wikipedia summary of the Minimum Retirement Age Act 2012",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
+      "asOf": "2013-07-01",
+      "note": "Minimum retirement age for private employees is 60; full EPF withdrawal is allowed from 55. Secondary source."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Employees Provident Fund (Malaysia), Wikipedia (official retirement age 60)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
+      "asOf": "2012-01-01",
+      "note": "Civil servants' compulsory retirement age is 60; secondary source."
+    },
+    "retirement_return_low": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Fixed deposit board rates (tax-free)",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
+      "asOf": "2026-10-31",
+      "note": "Low case at the 1-year fixed deposit board rate. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+    },
+    "retirement_return_base": {
+      "value": 0.029,
+      "status": "assumption",
+      "sourceName": "3-month treasury bill yield 2.98% (BNM)",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case just under the tax-free government bill rate. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+    },
+    "retirement_return_high": {
+      "value": 0.037,
+      "status": "assumption",
+      "sourceName": "5-year MGS yield (BNM)",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
+      "asOf": "2026-10-31",
+      "note": "High case at the 5-year government bond yield. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "EPF dividend record (5.35%-6.30% in 2021-2025); MGS yields",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix with weak equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "EPF dividend record (5.35%-6.30% in 2021-2025); MGS yields",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
+      "asOf": "2026-10-31",
+      "note": "Half equity at 6.5% and half bonds near 3.5%, a little below EPF's recent dividends."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "EPF dividend record (6.15% for 2025)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
+      "asOf": "2026-10-31",
+      "note": "High case slightly above EPF's recent dividend rates."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bantuan Warga Emas (Social Welfare Department) pays a monthly allowance to poor elderly people, but the JKM website was unreachable and we could not read the current amount."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bantuan Warga Emas is means-tested and for older people (60+); could not read the official criteria page (JKM site unreachable)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Act 1955 gives termination and lay-off benefits only when employment is ended by the employer; there is no statutory end-of-service gratuity on retirement."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Employees Provident Fund (Malaysia), Wikipedia",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
+      "asOf": "2025-12-31",
+      "note": "EPF is a provident fund, not a pension: employees pay 11% and employers 12-13% of wages; the retirement account can be withdrawn from 55. Dividends: 6.15% for 2025, 6.30% for 2024; legal minimum 2.5%."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Akaun simpanan",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/savings-and-current-accounts-interest-rates/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Simpanan tetap",
+      "localNameEn": "Fixed deposit",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Simpanan tetap",
+      "localNameEn": "Fixed deposit",
+      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No common monthly recurring deposit product."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standing government savings certificate for individuals."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bil Perbendaharaan Malaysia",
+      "localNameEn": "Malaysian Treasury Bill",
+      "note": "Sold at auction to institutions; individuals reach them only through money market funds.",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Sekuriti Kerajaan Malaysia",
+      "localNameEn": "Malaysian Government Securities",
+      "note": "Individuals can buy MGS through some banks' bond counters or bond funds.",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Sekuriti Kerajaan Malaysia",
+      "localNameEn": "Malaysian Government Securities",
+      "sourceUrl": "https://www.bnm.gov.my/government-securities-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Dana unit amanah",
+      "localNameEn": "Unit trust fund",
+      "note": "Unit trusts and exchange-traded funds are widely sold to retail investors."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Emas",
+      "localNameEn": "Gold",
+      "note": "Gold bars and coins are sold by jewellers and banks."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank Negara Malaysia (BNM)",
+      "url": "https://www.bnm.gov.my/"
+    },
+    "insuranceRegulator": {
+      "name": "Bank Negara Malaysia (BNM)",
+      "url": "https://www.bnm.gov.my/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Markets Ombudsman Service (FMOS)",
+      "url": "https://www.fmos.org.my/"
+    },
+    "pensionScheme": {
+      "name": "Employees Provident Fund (EPF / KWSP)",
+      "url": "https://www.kwsp.gov.my/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Welfare Department (JKM), Bantuan Warga Emas",
+      "url": "https://www.jkm.gov.my/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health Malaysia (subsidised public hospitals and clinics)",
+      "url": "https://www.moh.gov.my/"
+    },
+    "depositInsurance": {
+      "name": "Perbadanan Insurans Deposit Malaysia (PIDM)",
+      "url": "https://www.pidm.gov.my/"
+    },
+    "statistics": {
+      "name": "Department of Statistics Malaysia (DOSM)",
+      "url": "https://www.dosm.gov.my/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

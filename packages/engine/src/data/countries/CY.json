@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "code": "CY",
+  "iso3": "CYP",
+  "nameEn": "Cyprus",
+  "nameNative": "Κύπρος",
+  "region": "europe_central_asia",
+  "languages": [
+    "el",
+    "en",
+    "tr"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0369,
+      "status": "sourced",
+      "sourceName": "Trading Economics (CYSTAT CPI, September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/cyprus/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI 3.69% year on year in September 2026 (3.52% in August), released 8 October 2026; secondary source because cystat.gov.cy was not read directly. World Bank 2025 average only 0.1%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Cyprus CPI 3.69% (Sep 2026) after 0.1% in 2025",
+      "sourceUrl": "https://tradingeconomics.com/cyprus/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Cyprus inflation has swung between near zero and almost 4% in two years, so 2.5% (slightly above the ECB 2% target) is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, deposit facility rate",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV",
+      "asOf": "2026-09-16",
+      "note": "Cyprus uses the euro; ECB deposit facility rate 2.50% (main refinancing rate 2.65%) from 16 September 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Cypriot banks, household overnight deposits (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 0.00% on household overnight deposits in August 2026; notice deposits up to 3 months paid 0.03%."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/CBC MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.35% in August 2026); no 3-month rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0135,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Cypriot banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 0.51% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published average rate was found for Cyprus."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0086,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Cypriot banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST has no Cyprus figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Public Debt Management Office sells retail government bonds to individuals, but its pages on gov.cy refused automated access and no current rate was read."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Cyprus auctions 13-week treasury bills, but the Public Debt Management Office pages (gov.cy) refused automated access and no recent auction yield was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Cyprus government bond yield found; Trading Economics shows no Cyprus bond data and only the ECB 10-year convergence yield was available."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0392,
+      "status": "sourced",
+      "sourceName": "ECB long-term interest rate for convergence purposes (10-year government bond), Cyprus",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.CY.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-09-30",
+      "note": "Monthly average for September 2026 (3.62% in August)."
+    },
+    "tax_bank_interest": {
+      "value": 0.17,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Cyprus taxes on personal income (Special Defence Contribution)",
+      "sourceUrl": "https://taxsummaries.pwc.com/cyprus/individual/taxes-on-personal-income",
+      "asOf": "2026-08-04",
+      "note": "Interest is exempt from income tax but bears 17% Special Defence Contribution for Cyprus-resident, Cyprus-domiciled individuals; non-domiciled residents are exempt."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Cyprus taxes on personal income (Special Defence Contribution)",
+      "sourceUrl": "https://taxsummaries.pwc.com/cyprus/individual/taxes-on-personal-income",
+      "asOf": "2026-08-04",
+      "note": "Reduced 3% SDC on interest from Cyprus government bonds (from 2026 also other EU government bonds); PwC does not say expressly that retail savings bonds are included."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Central Bank of Cyprus, Deposit Guarantee and Resolution of Credit and Other Institutions Scheme",
+      "sourceUrl": "https://www.centralbank.cy/en/deposit-guarantee-investors-compensation-schemes/deposit-guarantee-and-resolution-of-credit-and-other-institutions-scheme",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per credit institution, including accrued interest."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.116,
+      "status": "sourced",
+      "sourceName": "Central Bank of Cyprus, reference interest rate under article 314A of the Penal Code",
+      "sourceUrl": "https://www.centralbank.cy/en/reference-interest-rates",
+      "asOf": "2026-10-30",
+      "note": "Charging a borrower interest above this quarterly reference rate is a criminal offence, so it works as a legal ceiling on lending rates including cards (11.32% from 31 July 2026, 11.60% from 30 October 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CSE General index 308 on 30 Oct 2026, about 95% below its October 2007 peak of 5,575",
+      "sourceUrl": "https://tradingeconomics.com/cyprus/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Cypriot shares, a tiny bank-heavy market that collapsed in 2008-2013, earn little more than deposits."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CSE General index (Trading Economics); after-tax 1-year deposit 1.1%",
+      "sourceUrl": "https://tradingeconomics.com/cyprus/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case kept within 4 points of the after-tax safe rate because the local index has a very weak long record; most savers would use a diversified euro equity fund."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "CSE General index (Trading Economics); global equity long-run returns",
+      "sourceUrl": "https://tradingeconomics.com/cyprus/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified euro equity fund matching long-run global equity returns of about 7-8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC, with rates drifting lower",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits after tax if rates fall further."
+    },
+    "fixed_income_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC = 1.1%; 10-year bond 3.92% less 3% SDC",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly term deposits at about 1.1% after tax with some government bonds taxed at only 3%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Cyprus 10-year government bond 3.92% less 3% SDC = 3.8%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.CY.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long Cyprus government bonds after the reduced 3% contribution."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Companies Control Service and the Insurance Association of Cyprus do not publish an industry life claim settlement ratio that could be found; gov.cy pages refused automated access."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published premium table or regulator data on term premiums per sum insured was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by the General Healthcare System (GeSY) with small co-payments; no official figure for a typical out-of-pocket private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is sold mainly as GeSY top-up cover at flat premiums; no premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1794,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CY",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending fell sharply after GeSY started in 2019-2020."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Cyprus, health: 0.9% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.CY.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices are held down by GeSY fixed fees, but medical costs usually outrun headline inflation over decades, so 3.5% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Cyprus, education: 3.3% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.CY.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Education prices (largely private schools and universities) rise faster than headline inflation; 4% is used for planning."
+    },
+    "life_expectancy": {
+      "value": 82.2,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/cyprus",
+      "asOf": "2026-12-31",
+      "note": "Men 80.2, women 84.1 (UN WPP estimate for 2026); World Bank 2024 figure 81.8."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 23.9,
+            "men": 22.4,
+            "women": 25.4
+          },
+          {
+            "age": 65,
+            "total": 19.6,
+            "men": 18.2,
+            "women": 21.0
+          },
+          {
+            "age": 70,
+            "total": 15.7,
+            "men": 14.4,
+            "women": 16.8
+          },
+          {
+            "age": 80,
+            "total": 8.9,
+            "men": 8.1,
+            "women": 9.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/cyprus",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 4.62
+          },
+          {
+            "year": 2040,
+            "value": 3.25
+          },
+          {
+            "year": 2065,
+            "value": 1.64
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/cyprus/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 21.6 (2025, World Bank), 30.8 (2040) and 61.1 (2065, populationpyramid.net/cyprus/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Cyprus (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/788be1e1-a21f-42a7-a201-a90e5e913bea_en",
+      "asOf": "2026-07-31",
+      "note": "Pensionable age 65 for men and women; a statutory pension can start at 63 with a 12% lifelong reduction (6% a year early) if insurance conditions are met."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servants have their own pension scheme; no official page stating their current retirement age could be read (gov.cy refused automated access)."
+    },
+    "retirement_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC, with rates drifting lower",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits after tax if rates fall further."
+    },
+    "retirement_return_base": {
+      "value": 0.011,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC = 1.1%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate, as no treasury bill yield was found."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Cyprus 10-year government bond 3.92% less 3% SDC = 3.8%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.CY.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of Cyprus government and retail bonds taxed at 3%, below the current 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.1%; CSE General record",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax deposits 1.1%, government bonds 3.8% after SDC; equity base 5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5% and half deposits and bonds at about 1.5-3.5% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "10-year bond 3.8% after SDC; equity high 7.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.CY.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The social pension is 81% of the full basic statutory pension (European Commission guide, July 2026), plus a 13th payment in December, but no page stating the 2026 euro amount could be read (gov.cy refused automated access)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Cyprus (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/788be1e1-a21f-42a7-a201-a90e5e913bea_en",
+      "asOf": "2026-07-31",
+      "note": "Residents aged 65+ with at least 20 years' legal residence in the EU/EEA/Switzerland since age 40 (or 35 years since 18); not income-tested, but reduced by any other pension and not paid if that pension is at least the social pension rate."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Cyprus pays statutory redundancy compensation from the Redundancy Fund under the Termination of Employment Law, scaled by weeks of wages per year of service, but no official page with the current scale could be read (gov.cy refused automated access); there is no general retirement gratuity."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Cyprus (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/788be1e1-a21f-42a7-a201-a90e5e913bea_en",
+      "asOf": "2026-07-31",
+      "note": "Compulsory Social Insurance Scheme (employee and employer 8.8% each in 2026, rising every five years to 2039, per PwC); pensions are readjusted every year by insurable-earnings growth and the price index."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Λογαριασμός ταμιευτηρίου",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Προθεσμιακή κατάθεση",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Προθεσμιακή κατάθεση",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring deposit scheme with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Ομόλογα Λιανικής",
+      "localNameEn": "Government retail bonds",
+      "note": "Sold to individuals by the Public Debt Management Office; interest bears the reduced 3% Special Defence Contribution. Current rate not found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Γραμμάτια Δημοσίου 13 εβδομάδων",
+      "localNameEn": "13-week treasury bills",
+      "note": "Auctioned mainly to banks and institutions."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Κυβερνητικά ομόλογα",
+      "localNameEn": "Republic of Cyprus government bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Κυβερνητικά ομόλογα",
+      "localNameEn": "Republic of Cyprus government bonds",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.CY.L.L40.CI.0000.EUR.N.Z"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Αμοιβαίο κεφάλαιο (ΟΣΕΚΑ)",
+      "localNameEn": "Mutual fund (UCITS) / index fund",
+      "note": "EU UCITS funds and ETFs are sold to retail investors."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Επενδυτικός χρυσός",
+      "localNameEn": "Investment gold bars and coins",
+      "note": "No restriction on buying physical gold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Κεντρική Τράπεζα της Κύπρου (Central Bank of Cyprus)",
+      "url": "https://www.centralbank.cy/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Companies Control Service (Ministry of Finance)",
+      "url": "https://www.mof.gov.cy/mof/iccs/iccs.nsf/index_en/index_en",
+      "note": "Ministry of Finance pages now redirect to gov.cy and were not reachable during research."
+    },
+    "insuranceComplaints": {
+      "name": "Financial Ombudsman of the Republic of Cyprus",
+      "url": "https://financialombudsman.org.cy/"
+    },
+    "pensionScheme": {
+      "name": "Social Insurance Services (Ministry of Labour)",
+      "url": "https://www.gov.cy/mlsi/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social pension (Social Insurance Services)",
+      "url": "https://www.gov.cy/mlsi/"
+    },
+    "publicHealthCover": {
+      "name": "General Healthcare System (ΓεΣΥ / GeSY), Health Insurance Organisation",
+      "url": "https://www.gesy.org.cy/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee and Resolution of Credit and Other Institutions Scheme",
+      "url": "https://www.centralbank.cy/en/deposit-guarantee-investors-compensation-schemes/deposit-guarantee-and-resolution-of-credit-and-other-institutions-scheme"
+    },
+    "statistics": {
+      "name": "Cyprus Statistical Service (CYSTAT)",
+      "url": "https://www.cystat.gov.cy/en/default"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

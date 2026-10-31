@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "code": "TV",
+  "iso3": "TUV",
+  "nameEn": "Tuvalu",
+  "nameNative": "Tuvalu",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en"
+  ],
+  "currency": {
+    "code": "AUD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.4205,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, AUD/USD 0.7040 (Tuvalu uses the Australian dollar)",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-30",
+      "note": "1 / 0.7040 US dollars per Australian dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.024,
+      "status": "sourced",
+      "sourceName": "Tuvalu Central Statistics Division, Consumer Price Index Q3 2026",
+      "sourceUrl": "https://stats.gov.tv/download/30/consumer-price-index/2299/consumer-price-index-q3-2026",
+      "asOf": "2026-09-30",
+      "note": "Annual inflation (Q3 2025 to Q3 2026) 2.4%; 12-month average inflation 3.4%."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Tuvalu CPI average annual inflation (Q3): 4.3% 2021, 11.1% 2022, 9.5% 2023, 1.9% 2024, 1.0% 2025, 3.4% 2026; Australian dollar user",
+      "sourceUrl": "https://stats.gov.tv/download/30/consumer-price-index/2299/consumer-price-index-q3-2026",
+      "asOf": "2026-10-31",
+      "note": "Tuvalu uses the Australian dollar (RBA target 2-3%) but import, food and fuel shocks push its CPI higher, so we plan with 3.5%, below the shock-inflated 5-year average."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Tuvalu has no central bank and uses the Australian dollar; the Reserve Bank of Australia cash rate applies indirectly."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Tuvalu's only commercial bank publishes no rate sheet online (its old website is now a parked domain); no official rate table found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate found for Tuvalu."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate found for Tuvalu."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product rate found for Tuvalu."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank WDI has no FR.INR.DPST value for Tuvalu and there is no central bank publishing one."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail bond for individuals found; the 2026-27 budget shows debt only from external lenders."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic treasury bills found in the 2026-27 national budget."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bonds found in the 2026-27 national budget."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bonds found in the 2026-27 national budget."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Revenue and Customs Department page gives no rule on interest income; no withholding rate was confirmed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists in Tuvalu."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme was found for Tuvalu."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card rate or legal cap was found for Tuvalu."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund in Australian dollars after a weak decade for world shares."
+    },
+    "equity_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "There is no local stock market, so the base is a global index in Australian dollars, capped at an assumed 1% safe rate plus under 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run world equity returns in Australian dollars."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "RBA exchange rates (AUD/USD 0.7040 on 30 October 2026)",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-31",
+      "note": "Low case for gold in Australian dollars with a firm Australian dollar."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "RBA exchange rates (AUD/USD 0.7040 on 30 October 2026)",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4% plus slight Australian dollar depreciation over time."
+    },
+    "gold_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "RBA exchange rates (AUD/USD 0.7040 on 30 October 2026)",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker Australian dollar."
+    },
+    "fixed_income_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings deposits at well under 1%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits around 1%, as at comparable single-bank Pacific AUD markets; no Tuvalu rate is published."
+    },
+    "fixed_income_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "High case if local term deposit rates follow Australian rates up."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim statistics for Tuvalu were found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No term life insurance market with published rates was found in Tuvalu."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical out-of-pocket hospital bill was found; public care and the overseas medical referral scheme are government funded."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No private health insurance premium table for Tuvalu was found."
+    },
+    "oop_health_share": {
+      "value": 0.0004,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TV",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending is 0.04% of current health expenditure; the government funds health care, including AUD 11.4 million for overseas medical referrals in 2026-27."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Tuvalu CPI Q3 2026 report (no separate medical index figure)",
+      "sourceUrl": "https://stats.gov.tv/download/30/consumer-price-index/2299/consumer-price-index-q3-2026",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI figure is published, so we plan with the 3.5% headline projection plus one point."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Tuvalu CPI Q3 2026 report (education prices rose within the Miscellaneous group)",
+      "sourceUrl": "https://stats.gov.tv/download/30/consumer-price-index/2299/consumer-price-index-q3-2026",
+      "asOf": "2026-10-31",
+      "note": "No education CPI figure is published, so we plan with the 3.5% headline projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 67.259,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TV",
+      "asOf": "2024-12-31",
+      "note": "Men 63.9, women 70.9 (World Bank 2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life table for Tuvalu was readable: populationpyramid.net does not cover Tuvalu and the WHO GHO API returned errors; the statistics office publishes none."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.POP.DPND.OL",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=TV",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio of 11.74 (2025). No readable source gave UN WPP projections for 2040 or 2065."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Tuvalu National Provident Fund, Retirement Benefit",
+      "sourceUrl": "https://www.tnpf.tv/index.php/withdrawal-grounds/benefits/retirement-benefit",
+      "asOf": "2026-10-31",
+      "note": "Normal retirement age 55 for TNPF withdrawals; voluntary retirement from 50."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official page stating the public service retirement age was readable."
+    },
+    "retirement_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Base case at about 1%, the level of 1-year deposits in comparable AUD Pacific markets; no Tuvalu rate is published."
+    },
+    "retirement_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "High case if local deposit rates rise with Australian rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix mostly in local deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "Base case: half local deposits at about 1% and half global equity at 4.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars",
+      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "High case with a larger, well-performing global equity share."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The 2026-27 budget allocates AUD 2.4 million to the welfare scheme for the elderly and people with disabilities, but no official monthly amount per person was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility age for Tuvalu's elderly welfare scheme was not stated in the budget documents or other official pages we could read."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service payment for private employees was found; retirement savings run through TNPF."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Tuvalu National Provident Fund, Retirement Benefit",
+      "sourceUrl": "https://www.tnpf.tv/index.php/withdrawal-grounds/benefits/retirement-benefit",
+      "asOf": "2026-10-31",
+      "note": "Compulsory provident fund for all working employees; balance available at 55 (voluntary from 50), with a term annuity option. Contribution rates were not stated on the fund's pages."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Offered by the national bank; rates not published online."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "3-month term deposit",
+      "note": "Offered by the national bank; rates not published online."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "1-year term deposit",
+      "note": "Offered by the national bank; rates not published online."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring deposit product found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail bond found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic treasury bills found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic government bonds found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic government bonds found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No local stock exchange or locally offered mutual funds found."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "note": "No local gold bullion or coin dealer found."
+    }
+  },
+  "institutions": {
+    "centralBank": null,
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Tuvalu National Provident Fund (TNPF)",
+      "url": "https://www.tnpf.tv/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Tuvalu Central Statistics Division",
+      "url": "https://stats.gov.tv/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

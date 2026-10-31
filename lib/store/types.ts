@@ -53,6 +53,7 @@ export interface M2State {
   coverToAge?: number;
   incomeShare?: Rate;
   childrenCount?: number;
+  youngestChildAge?: number;
   parentsCount?: number;
   parentAge?: number;
   investments?: Money;

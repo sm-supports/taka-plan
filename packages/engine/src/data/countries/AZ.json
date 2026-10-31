@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "AZ",
+  "iso3": "AZE",
+  "nameEn": "Azerbaijan",
+  "nameNative": "Azərbaycan",
+  "region": "europe_central_asia",
+  "languages": [
+    "az",
+    "ru"
+  ],
+  "currency": {
+    "code": "AZN",
+    "symbol": "₼",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.7,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/AZN (central bank official rate)",
+      "sourceUrl": "https://tradingeconomics.com/azerbaijan/currency",
+      "asOf": "2026-10-30",
+      "note": "The manat has been held at 1.70 per US dollar since 2017; World Bank 2025 average 1.70."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "State Statistical Committee of Azerbaijan, Changes in consumer prices (September 2026)",
+      "sourceUrl": "https://www.stat.gov.az/news/index.php?lang=en&id=6974",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 5.5% on September 2025 (food 6.9%, non-food 3.6%, services 5.1%); January-September average 5.7%."
+    },
+    "inflation_projection": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "CBAR target 4% +/- 2 points; CPI 2021-2025: 6.7%, 13.9%, 8.8%, 2.2%, 5.6% (AzStat)",
+      "sourceUrl": "https://www.stat.gov.az/source/price_tarif/en/001_1en.xlsx",
+      "asOf": "2026-10-31",
+      "note": "The 5-year average is about 7.4% but inflation has been inside the central bank's 2-6% band since 2024, so 5.5% (upper half of the band) is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.065,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Central Bank of Azerbaijan discount rate decision)",
+      "sourceUrl": "https://tradingeconomics.com/azerbaijan/interest-rate",
+      "asOf": "2026-09-23",
+      "note": "Discount (refinancing) rate held at 6.5% on 23 September 2026; corridor 5-7.5%. Secondary source because cbar.az refused connections; IMF IFS also shows 6.5% for August 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "cbar.az (deposit rate statistics) refused connections and no bank-level demand deposit rate was found; IMF only publishes the overall average deposit rate."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month term deposit rate found: the central bank's statistical bulletin (cbar.az) was unreachable."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 1-year term deposit rate found: the central bank's statistical bulletin (cbar.az) was unreachable; the average rate on manat deposits was 8.58% in August 2026 (IMF IFS)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No data on monthly recurring deposit products found; cbar.az unreachable."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0858,
+      "status": "sourced",
+      "sourceName": "IMF International Financial Statistics (MFS_IR), Azerbaijan deposit rate, national currency",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-08-31",
+      "note": "Average rate on manat deposits, August 2026 (9.33% in January 2026); foreign-currency deposits 2.86%. World Bank 2025 annual value 9.36%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; Ministry of Finance bonds are sold through the Baku Stock Exchange mainly to institutions."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "IMF's treasury bill series for Azerbaijan ends in 2017 and the Baku Stock Exchange / central bank pages were not reachable."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield found; Trading Economics has no Azerbaijan bond yield and bfb.az/cbar.az were not reachable."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield found; Azerbaijan issues few long manat bonds and no market yield is published on the sources read."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Azerbaijan income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/azerbaijan/individual/income-determination",
+      "asOf": "2026-09-28",
+      "note": "10% final withholding tax on Azeri-source interest; PwC also notes a seven-year exemption for individuals' bank deposit interest from 1 February 2016, so check whether a current exemption applies to manat deposits."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; PwC does not describe the tax treatment of government bond interest."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Azerbaijan Deposit Insurance Fund (adif.az) and cbar.az refused connections and no other source read stated the current cover per depositor."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate found; the average lending rate in manats was 15.9% in August 2026 (IMF IFS)."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Global equity index in US dollar terms; manat pegged at 1.70 per USD",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Azerbaijan has no liquid local stock market, so equity is a global index fund in manat terms; low case is a weak decade for world shares."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return in USD; after-tax average manat deposit 8.58% x 0.9 = 7.7%",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "Base on a global index in manat terms (about 7% in dollars plus about 1% expected manat depreciation), kept close to the after-tax deposit rate because manat deposits already pay well."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return in USD plus manat depreciation risk",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "High case: strong world shares plus some manat weakening, as in 2015-2016."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high; manat pegged",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold flat in dollars after its 2025-26 spike with a stable manat."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); manat pegged at 1.70 since 2017",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, plus about 1% a year expected manat depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold's strong 2005-2025 trend continues or the manat is devalued again."
+    },
+    "fixed_income_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Average manat deposit rate 8.58% (Aug 2026), falling about 0.75 points in 2026",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates keep falling with the policy rate and 10% tax applies."
+    },
+    "fixed_income_return_base": {
+      "value": 0.077,
+      "status": "assumption",
+      "sourceName": "Average manat deposit rate 8.58% less 10% withholding = 7.7%",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "Base case: the after-tax average deposit rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Average manat deposit rate 8.58% (IMF IFS), tax-exempt case",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "High case: longer manat deposits at or above the average, with interest exempt from tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The central bank (insurance supervisor since 2020) site was unreachable; no industry life claim settlement ratio found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance is a small market in Azerbaijan; no published term-life premium quotes were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found; mandatory health insurance covers a basic package in public facilities."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table found."
+    },
+    "oop_health_share": {
+      "value": 0.6463,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AZ",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "AzStat price index of paid services: +6.5% in 2025, +8.2% in 2023",
+      "sourceUrl": "https://www.stat.gov.az/source/price_tarif/en/001_1en.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No separate medical CPI was found; paid services have risen faster than headline CPI, so 7% is used for health costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "AzStat price index of paid services: +6.5% in 2025; September 2026 release notes higher-education and course fee rises",
+      "sourceUrl": "https://www.stat.gov.az/news/index.php?lang=en&id=6974",
+      "asOf": "2026-10-31",
+      "note": "No separate education CPI was found; tuition fees rose again in September 2026, so 7% is used."
+    },
+    "life_expectancy": {
+      "value": 77.1,
+      "status": "sourced",
+      "sourceName": "State Statistical Committee of Azerbaijan, life expectancy at birth",
+      "sourceUrl": "https://www.stat.gov.az/source/demoqraphy/en/002_4en.xls",
+      "asOf": "2025-12-31",
+      "note": "Men 74.9, women 79.3 in 2025 (national figure); UN WPP estimates 74.9 for 2026 and the World Bank 74.6 for 2024."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.6,
+            "men": 17.8,
+            "women": 21.1
+          },
+          {
+            "age": 65,
+            "total": 15.8,
+            "men": 14.3,
+            "women": 17.0
+          },
+          {
+            "age": 70,
+            "total": 12.3,
+            "men": 11.1,
+            "women": 13.2
+          },
+          {
+            "age": 80,
+            "total": 6.8,
+            "men": 6.2,
+            "women": 7.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/azerbaijan",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate); national tables give longer lives."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 7.59
+          },
+          {
+            "year": 2040,
+            "value": 4.52
+          },
+          {
+            "year": 2065,
+            "value": 2.67
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/azerbaijan/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 13.2 (2025, World Bank), 22.1 (2040) and 37.5 (2065, populationpyramid.net/azerbaijan/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection of Population, Old-age Labor Pension",
+      "sourceUrl": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension",
+      "asOf": "2026-07-01",
+      "note": "Retirement age 65 for men (since July 2021) and for women from 1 July 2026; 25 insurance years needed unless pension capital covers the minimum pension."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No source read states a separate retirement or age limit for civil servants."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Average manat deposit rate 8.58% (IMF IFS), falling",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall further and 10% tax applies."
+    },
+    "retirement_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Average manat deposit rate 8.58% less 10% withholding = 7.7%",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just under the after-tax average deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Average manat deposit rate 8.58% (IMF IFS)",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "High case: longer manat deposits with interest exempt from tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "After-tax deposit 7.7%; global equity low case 5%",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of manat deposits and a global equity fund."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "After-tax deposit 7.7%; global equity base 8%",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half manat deposits and half global shares in manat terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "After-tax deposit 8.5%; global equity high 10%",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 220,
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection of Population, Old-age Labor Pension (social benefit for age)",
+      "sourceUrl": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension",
+      "asOf": "2023-01-01",
+      "note": "Social benefit for age 220 manats a month as of 1 January 2023 (the latest amount stated); minimum labour pension 320 manats since 1 February 2025."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection of Population, Old-age Labor Pension",
+      "sourceUrl": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension",
+      "asOf": "2026-07-01",
+      "note": "Paid to people at retirement age who have no right to a labour pension and are not working; not income-tested as such."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provides severance pay on dismissal by the employer but no statutory gratuity on retirement or resignation was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection of Population, Labour pensions",
+      "sourceUrl": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension",
+      "asOf": "2026-07-01",
+      "note": "Compulsory labour pension: pension = insurance capital / expected payment months, minimum 320 manats; pensions are indexed each year under the Law On Labour Pensions (average assigned pension up 10.5% to 594.4 manats by July 2026, AzStat). Tax treatment not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Tələbli əmanət",
+      "localNameEn": "Demand (savings) deposit"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Müddətli əmanət",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Müddətli əmanət",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://api.imf.org/external/sdmx/2.1/data/IMF.STA,MFS_IR/AZE..M"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit scheme was found; some term deposits allow top-ups."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Qısamüddətli dövlət istiqrazları",
+      "localNameEn": "Short-term government bonds (Ministry of Finance)",
+      "note": "Auctioned on the Baku Stock Exchange, mainly to banks."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Dövlət istiqrazları",
+      "localNameEn": "Government bonds (Ministry of Finance)",
+      "note": "Issued in manat and US dollars, mostly bought by institutions."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 10-year manat government bond found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Investment fund",
+      "note": "The local stock market is very small and no widely available diversified retail fund was found; residents can buy foreign index funds through brokers."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Qızıl külçə",
+      "localNameEn": "Gold bars",
+      "note": "Physical gold bars and coins can be bought legally."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Republic of Azerbaijan",
+      "url": "https://www.cbar.az/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of the Republic of Azerbaijan (insurance supervision)",
+      "url": "https://www.cbar.az/",
+      "note": "The central bank supervises insurers since 2020."
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of the Republic of Azerbaijan, consumer complaints",
+      "url": "https://www.cbar.az/"
+    },
+    "pensionScheme": {
+      "name": "State Social Protection Fund",
+      "url": "https://dsmf.gov.az/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social benefit for age (Ministry of Labour and Social Protection of Population)",
+      "url": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension"
+    },
+    "publicHealthCover": {
+      "name": "State Agency on Mandatory Health Insurance",
+      "url": "https://its.gov.az/"
+    },
+    "depositInsurance": {
+      "name": "Azerbaijan Deposit Insurance Fund",
+      "url": "https://adif.az/"
+    },
+    "statistics": {
+      "name": "State Statistical Committee of the Republic of Azerbaijan",
+      "url": "https://www.stat.gov.az/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

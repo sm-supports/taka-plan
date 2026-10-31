@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "code": "MH",
+  "iso3": "MHL",
+  "nameEn": "Marshall Islands",
+  "nameNative": "Aolepān Aorōkin M̧ajeļ",
+  "region": "east_asia_pacific",
+  "languages": [
+    "mh",
+    "en"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MH",
+      "asOf": "2025-12-31",
+      "note": "The US dollar is the official currency."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.057,
+      "status": "sourced",
+      "sourceName": "Asian Development Bank, Asian Development Outlook September 2026 (Marshall Islands economy page)",
+      "sourceUrl": "https://www.adb.org/where-we-work/marshall-islands/economy",
+      "asOf": "2026-09-30",
+      "note": "ADB forecast for 2026 (4.7% for 2027); the IMF projects 7.4% for 2026. The statistics office (EPPSO) has published no recent CPI report (last 2023 Q4), so a forecast is used."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ADB 2027 forecast 4.7%; US-dollar economy with US inflation near 2-3%",
+      "sourceUrl": "https://www.adb.org/where-we-work/marshall-islands/economy",
+      "asOf": "2026-10-31",
+      "note": "Prices follow US and import costs and the IMF expects inflation to stay above its historical average for a while, so we plan with 3%."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Marshall Islands has no central bank and uses the US dollar, so there is no national policy rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published savings account rates of banks in the Marshall Islands found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month time deposit rates found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year time deposit rates found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank FR.INR.DPST has no value for the Marshall Islands; no average deposit rate published."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The government issues no treasury bills."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The government issues no domestic bonds."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The government issues no domestic bonds."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not confirm how bank interest is taxed for residents (the income tax is mainly a wages and salary tax); no official tax page reached."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national deposit insurance scheme found; a US bank branch operating in the RMI may carry US FDIC cover, but we could not confirm it."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card rate cap or typical rate found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Global equity index in US dollars; US 3-month Treasury bill 4.09%",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "No local stock market; low case for a global index fund in dollars over a weak decade."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Global equity index in US dollars; US 3-month Treasury bill 4.09%",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "No local stock market, so the base is a global index in dollars at about 3 points over US bills, within the 4-point limit."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equity index in US dollars",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "High case with a full equity premium."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall for a decade; the US dollar is the local currency."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 5% with no currency effect."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Local bank deposits (no published rates); US Treasury bills",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Low case for local savings and time deposits. Safe USD rates: no published local deposit rates found; the RMI has no central bank or government securities and uses the US dollar; US 3-month Treasury bill 4.09% (30 Oct 2026), reachable only through foreign brokers."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Local bank deposits (no published rates); US Treasury bills",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case below the US bill rate because local deposits pay less and US bills need a foreign broker. Safe USD rates: no published local deposit rates found; the RMI has no central bank or government securities and uses the US dollar; US 3-month Treasury bill 4.09% (30 Oct 2026), reachable only through foreign brokers."
+    },
+    "fixed_income_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "US 3-month Treasury bill 4.09%",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "High case near US Treasury bill yields. Safe USD rates: no published local deposit rates found; the RMI has no central bank or government securities and uses the US dollar; US 3-month Treasury bill 4.09% (30 Oct 2026), reachable only through foreign brokers."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No insurance regulator statistics on life claim settlement found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No locally published term life premium rates found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical hospital stay cost found; most care is public and serious cases are referred abroad."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates found."
+    },
+    "oop_health_share": {
+      "value": 0.011,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MH",
+      "asOf": "2023-12-31",
+      "note": "About 1.1%: public and donor funding cover almost all health spending."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation projection; very low out-of-pocket share (World Bank)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MH",
+      "asOf": "2026-10-31",
+      "note": "Households pay little directly, so we plan 1 point above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation projection (ADB forecasts)",
+      "sourceUrl": "https://www.adb.org/where-we-work/marshall-islands/economy",
+      "asOf": "2026-10-31",
+      "note": "No education CPI published; we plan 1 point above general inflation for fees and study abroad."
+    },
+    "life_expectancy": {
+      "value": 67.1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MH",
+      "asOf": "2024-12-31",
+      "note": "Men 65.0, women 69.5 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.4,
+            "men": 15.0,
+            "women": 18.1
+          },
+          {
+            "age": 65,
+            "total": 13.2,
+            "men": 12.0,
+            "women": 14.5
+          },
+          {
+            "age": 70,
+            "total": 10.3,
+            "men": 9.4,
+            "women": 11.3
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.4,
+            "women": 6.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/marshall-islands",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age; secondary source for UN WPP."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 12.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank WDI, age dependency ratio, old (SP.POP.DPND.OL)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=MH",
+      "asOf": "2025-12-31",
+      "note": "100 / 7.96 (2025); no 2040 or 2065 projection could be read."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Marshall Islands Social Security Administration (MISSA) pays old-age pensions, but we could not read its rules or the Social Security Act to confirm the pension age."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not find the public service retirement age."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Local bank deposits (no published rates)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Low case for local deposits. Safe USD rates: no published local deposit rates found; the RMI has no central bank or government securities and uses the US dollar; US 3-month Treasury bill 4.09% (30 Oct 2026), reachable only through foreign brokers."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Local bank deposits; US 3-month Treasury bill 4.09%",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case below the US bill rate, the only verifiable safe dollar rate. Safe USD rates: no published local deposit rates found; the RMI has no central bank or government securities and uses the US dollar; US 3-month Treasury bill 4.09% (30 Oct 2026), reachable only through foreign brokers."
+    },
+    "retirement_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "US 3-month Treasury bill 4.09%",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "High case near US bill yields. Safe USD rates: no published local deposit rates found; the RMI has no central bank or government securities and uses the US dollar; US 3-month Treasury bill 4.09% (30 Oct 2026), reachable only through foreign brokers."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Mix of dollar deposits and a global equity index",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Mix of dollar deposits and a global equity index",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Half global equity at 7% and half safe assets near 3%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Mix of dollar deposits and a global equity index",
+      "sourceUrl": "https://tradingeconomics.com/united-states/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "High case with about 60% equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No old-age social pension amount found. Enra, a universal basic income run by MISSA, pays about $200 per citizen per quarter (May 2026), and a planned non-contributory stipend for retirement-age people without a pension had no confirmed amount."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A non-contributory stipend for retirement-age Marshallese who never contributed was announced in 2024, but its age rule and start could not be confirmed."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MISSA runs the contributory old-age pension, but we could not read its current pension age, contribution rates or indexation."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Offered by the banks operating in the RMI; rates not published."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit",
+      "note": "Rates not published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit",
+      "note": "Rates not published."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit product found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail bond."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The government issues no treasury bills."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The government issues no domestic bonds."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The government issues no domestic bonds."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Global index fund (US dollars)",
+      "note": "No local stock market or funds; residents can only invest in US-listed index funds through foreign brokers."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "No local gold dealers; gold must be bought from abroad."
+    }
+  },
+  "institutions": {
+    "centralBank": null,
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health and Human Services (MOHHS)",
+      "url": "https://www.rmihealth.org/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Economic Policy, Planning and Statistics Office (EPPSO)",
+      "url": "https://rmieppso.org/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

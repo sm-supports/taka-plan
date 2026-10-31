@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "AL",
+  "iso3": "ALB",
+  "nameEn": "Albania",
+  "nameNative": "Shqipëria",
+  "region": "europe_central_asia",
+  "languages": [
+    "sq",
+    "en",
+    "el"
+  ],
+  "currency": {
+    "code": "ALL",
+    "symbol": "L",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 81.16,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, official exchange rate",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Official_exchange_rate/",
+      "asOf": "2026-10-30",
+      "note": "ALL 81.16 per USD (ALL 90.90 per EUR); World Bank 2025 average 86.80. Prices are written with 'L' or 'Lekë'."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.029,
+      "status": "sourced",
+      "sourceName": "INSTAT, Consumer Price Index September 2026",
+      "sourceUrl": "https://www.instat.gov.al/media/cvkbetti/cpi_september_2026.pdf",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI 2.9% in September 2026 (2.4% a year earlier); published 8 October 2026."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Albania 3% inflation target; CPI 2.9% (Sep 2026), 2.1% (2025, World Bank)",
+      "sourceUrl": "https://www.instat.gov.al/media/cvkbetti/cpi_september_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Albania targets 3% CPI inflation and recent inflation has run close to it, so the target is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, interest rates (base rate, one-week repo)",
+      "sourceUrl": "https://www.bankofalbania.org/Statistics/Interest_rates/",
+      "asOf": "2026-10-07",
+      "note": "Base rate 2.50% since 9 July 2025, kept unchanged at the 7 October 2026 meeting (Trading Economics)."
+    },
+    "savings_account_rate": {
+      "value": 0.003,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, lek deposit rates offered by banks (comparison table)",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/",
+      "asOf": "2026-07-31",
+      "note": "Demand/savings deposits in lek pay typically 0.1-0.7% at banks (range 0.03-3%); the central bank average on household overnight lek deposits was only 0.05% in September 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.005,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, lek deposit rates offered by banks (comparison table)",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/",
+      "asOf": "2026-07-31",
+      "note": "3-month lek time deposits typically 0.3-0.7% for standard tiers; midpoint used."
+    },
+    "fdr_1y_rate": {
+      "value": 0.012,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, lek deposit rates offered by banks (comparison table)",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/",
+      "asOf": "2026-07-31",
+      "note": "12-month lek time deposits typically 1.0-1.4%; the central bank average on new household lek deposits up to 1 year was 1.40% in September 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published rate was found in the Bank of Albania deposit rate comparison."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0177,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, interest rate statistics (new lek time deposits of households)",
+      "sourceUrl": "https://www.bankofalbania.org/Statistikat/Statistikat_e_normave_te_interesit/Statistikat_e_normave_te_interesit_te_institucioneve_monetare_financiare_IMF/",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on new household lek time deposits, September 2026 (preliminary); outstanding household lek deposits incl. overnight averaged 1.19%. World Bank FR.INR.DPST 1.86% (2024)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.051,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, 5-year benchmark yield fixing and bond auction results",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/",
+      "asOf": "2026-10-30",
+      "note": "Individuals can buy government securities at Bank of Albania desks or licensed institutions; the 5-year fixed-coupon bond fixed at 5.10% on 30 Oct 2026 and the 20 Oct 2026 auction accepted 5.10-5.45%. There is no separate savings certificate."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0246,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, treasury bill auction results",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Treasury_bills/Results_of_auctions/",
+      "asOf": "2026-10-06",
+      "note": "Weighted average yield of the 3-month T-bill auction no. 2102 on 6 October 2026; the 12-month bill yielded 3.06% on 27 October 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.051,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, daily benchmark yield fixing (5Y)",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/",
+      "asOf": "2026-10-30",
+      "note": "5-year benchmark fixing 5.10%; 3-year 4.51%, 4-year 4.66% the same day."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank of Albania auction pages showed only the latest 3-, 5- and 7-year auctions (7-year 5.25% on 12 Oct 2026); no recent 10-year yield was found."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Albania, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/albania/individual/taxes-on-personal-income",
+      "asOf": "2026-07-22",
+      "note": "Investment income other than dividends (8%) is taxed at 15%, withheld at source."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Albania, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/albania/individual/taxes-on-personal-income",
+      "asOf": "2026-07-22",
+      "note": "Government securities interest falls under other investment income at 15%; no exemption is listed for it."
+    },
+    "deposit_insurance_limit": {
+      "value": 2500000,
+      "status": "sourced",
+      "sourceName": "Deposit Insurance Agency (ASD), compensation amount",
+      "sourceUrl": "https://asd.gov.al/faqja-kryesore/sigurimi-i-depozitave/sa/",
+      "asOf": "2026-10-31",
+      "note": "ALL 2,500,000 per depositor per bank, regardless of number of deposits or currency."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2791,
+      "status": "sourced",
+      "sourceName": "Bank of Albania, maximum APR for consumer credit",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/NEI_Maksimal_per_kredite_konsumatore/",
+      "asOf": "2026-07-17",
+      "note": "Legal maximum APR for lek credit cards (0-200,000 lek) from 17 July 2026; 24.46% for euro cards."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (ALL per USD 86.8 in 2025); Bank of Albania rate 81.16 on 30 Oct 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AL",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund in lek terms if world shares are weak and the lek keeps appreciating; there is no meaningful local stock market."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "12-month T-bill 3.06% less 15% tax = 2.6%; global equity in lek terms",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Treasury_bills/Results_of_auctions/",
+      "asOf": "2026-10-31",
+      "note": "Albania has no liquid local equity market, so the base case is a global index in lek terms, kept within 4 points of the 2.6% after-tax safe rate because the lek has appreciated."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Global equity long-run record; World Bank PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AL",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run global equity returns with a stable lek."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (ALL per USD 86.8 in 2025, 81.2 in Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AL",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a further stronger lek."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (ALL per USD 86.8 in 2025, 81.2 in Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AL",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% less a slight lek appreciation trend against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (ALL per USD 86.8 in 2025, 81.2 in Oct 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AL",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a stable or weaker lek."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Bank of Albania deposit rate table: 12-month lek deposits 1.0-1.4%, less 15% tax",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after 15% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "12-month T-bill 3.06% (27 Oct 2026) less 15% tax = 2.6%",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Treasury_bills/Results_of_auctions/",
+      "asOf": "2026-10-31",
+      "note": "Base case: rolling 12-month treasury bills bought by individuals, after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "5-year government bond 5.10% (30 Oct 2026) less 15% tax = 4.3%",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/",
+      "asOf": "2026-10-31",
+      "note": "High case: 5-year government bonds held to maturity after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Financial Supervisory Authority (AMF) site refused automated access and no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold mainly with bank loans; no published per-1,000 premium rates by age were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major private hospital stay in Albania was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age band were found."
+    },
+    "oop_health_share": {
+      "value": 0.4827,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AL",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "INSTAT CPI September 2026 (health group contributed +0.06 points); 3% target",
+      "sourceUrl": "https://www.instat.gov.al/media/cvkbetti/cpi_september_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "INSTAT does not publish the health group's annual rate in the release, so we plan with the 3% projection plus one point for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "INSTAT CPI September 2026 (education services +1.2% in the month); 3% target",
+      "sourceUrl": "https://www.instat.gov.al/media/cvkbetti/cpi_september_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education prices rise in steps each school year, so we plan with the 3% projection plus one point."
+    },
+    "life_expectancy": {
+      "value": 79.78,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AL",
+      "asOf": "2024-12-31",
+      "note": "Men 77.9, women 81.6."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 23.3,
+            "men": 22.2,
+            "women": 24.3
+          },
+          {
+            "age": 65,
+            "total": 19.1,
+            "men": 18.2,
+            "women": 19.9
+          },
+          {
+            "age": 70,
+            "total": 15.0,
+            "men": 14.4,
+            "women": 15.6
+          },
+          {
+            "age": 80,
+            "total": 8.5,
+            "men": 8.0,
+            "women": 8.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/albania/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.73
+          },
+          {
+            "year": 2040,
+            "value": 2.48
+          },
+          {
+            "year": 2065,
+            "value": 1.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/albania/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 26.8 (2025, World Bank), 40.4 (2040) and 77.2 (2065, populationpyramid.net/albania/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Law 7703 on Social Insurance (ISSH consolidated text 2023), Art. 92",
+      "sourceUrl": "https://www.issh.gov.al/wp-content/uploads/2023/09/LIGJ-Nr.-7703-date-11.05.1993_i-perditesuar_2023.pdf",
+      "asOf": "2026-01-01",
+      "note": "Men 65 in 2026, rising one month a year from 2033 to 67 in 2056; women 62 in 2026, reaching 63 in 2032 and 67 in 2056. 39 years of insurance for a full pension, 15 years minimum."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Law 7703 on Social Insurance (ISSH consolidated text 2023), Art. 92",
+      "sourceUrl": "https://www.issh.gov.al/wp-content/uploads/2023/09/LIGJ-Nr.-7703-date-11.05.1993_i-perditesuar_2023.pdf",
+      "asOf": "2026-01-01",
+      "note": "Civil servants retire under the same social insurance pension age (men 65, women 62 in 2026); no separate general retirement age for government employees was found."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "12-month lek deposits 1.0-1.4% less 15% tax",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "12-month T-bill 3.06% less 15% tax = 2.6%",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Treasury_bills/Results_of_auctions/",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 12-month treasury bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "3-5-year government bonds 4.5-5.1% less 15% tax",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of 3- to 5-year government bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "12-month T-bill after tax 2.6%; global equity in lek terms",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Treasury_bills/Results_of_auctions/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag and the lek keeps rising."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "12-month T-bill after tax 2.6%; 5-year bond 5.1%; global equity base 6%",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half global equity at 6% and half lek government bonds at about 3.5-4% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "5-year bond 5.1%; global equity high case 8.5%",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 10222,
+      "status": "sourced",
+      "sourceName": "Social Insurance Institute (ISSH), social pension",
+      "sourceUrl": "https://www.issh.gov.al/te-tjera/",
+      "asOf": "2026-07-01",
+      "note": "Social pension ALL 10,222 a month from 1 July 2026 (Council of Ministers Decision No. 497 of 26.06.2026); reduced by any other income."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 70,
+        "womenAge": 70,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Social Insurance Institute (ISSH), social pension",
+      "sourceUrl": "https://www.issh.gov.al/te-tjera/",
+      "asOf": "2026-07-01",
+      "note": "Age 70, resident in Albania for the last 5 years, not entitled to a contributory pension, and no income or income below the social pension."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Albanian Labour Code provides a seniority payment on dismissal, but its text could not be read (ILO NATLEX and EPLex refused automated access), so the days per year of service are not confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Law 7703 on Social Insurance (ISSH consolidated text 2023), Art. 31, 61, 92",
+      "sourceUrl": "https://www.issh.gov.al/wp-content/uploads/2023/09/LIGJ-Nr.-7703-date-11.05.1993_i-perditesuar_2023.pdf",
+      "asOf": "2026-01-01",
+      "note": "Compulsory pay-as-you-go social insurance pension (ISSH): age 65 for men and 62 for women in 2026, minimum 15 years of insurance; pensions are indexed yearly to prices (Art. 61); social insurance income is exempt from personal income tax (PwC)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Llogari kursimi",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depozitë me afat 3-mujore",
+      "localNameEn": "3-month time deposit",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depozitë me afat 12-mujore",
+      "localNameEn": "12-month time deposit",
+      "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Obligacione qeveritare 5-vjeçare",
+      "localNameEn": "5-year government bonds bought by individuals",
+      "note": "No separate savings certificate; individuals buy treasury bills and bonds at Bank of Albania desks or licensed institutions.",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Treasury_bills/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bono thesari 3-mujore",
+      "localNameEn": "3-month treasury bill",
+      "note": "Individuals may bid at the auctions.",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Treasury_bills/Results_of_auctions/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligacion 5-vjeçar",
+      "localNameEn": "5-year government bond",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligacion 10-vjeçar",
+      "localNameEn": "10-year government bond",
+      "note": "Issued occasionally; no recent auction found.",
+      "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Bonds/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fond investimi",
+      "localNameEn": "Investment fund",
+      "note": "Retail investment funds supervised by the Financial Supervisory Authority exist but mostly hold bonds; there is no liquid local stock market, so diversified equity exposure is mainly through foreign funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ar fizik",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Albania (Banka e Shqipërisë)",
+      "url": "https://www.bankofalbania.org/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Supervisory Authority (Autoriteti i Mbikëqyrjes Financiare)",
+      "url": "https://amf.gov.al/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Supervisory Authority (AMF) complaints",
+      "url": "https://amf.gov.al/",
+      "note": "Complaints about insurers go to the AMF; its site refused automated access, so the exact page was not checked."
+    },
+    "pensionScheme": {
+      "name": "Social Insurance Institute (Instituti i Sigurimeve Shoqërore) – old-age pension",
+      "url": "https://www.issh.gov.al/pensioni-i-pleqerise/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social pension (Pensioni social), ISSH",
+      "url": "https://www.issh.gov.al/te-tjera/"
+    },
+    "publicHealthCover": {
+      "name": "Compulsory Health Care Insurance Fund (FSDKSH)",
+      "url": "https://www.fsdksh.gov.al/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Agency (Agjencia e Sigurimit të Depozitave)",
+      "url": "https://www.asd.gov.al/"
+    },
+    "statistics": {
+      "name": "Institute of Statistics (INSTAT)",
+      "url": "https://www.instat.gov.al/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -117,6 +117,8 @@ export interface M7Verdict {
 export interface M7Withdrawal {
   firstYear: Money;
   monthly: Money;
+  /** Monthly withdrawal under the low / base / high return cases (never a single number in the UI). */
+  monthlyRange?: { low: Money; base: Money; high: Money };
   /** Safe pot = withdrawal_safe_pot_years × first-year withdrawal. */
   safePot: Money;
   /** Age the money runs out at the user's current spending; null when it lasts. */

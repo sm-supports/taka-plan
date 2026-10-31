@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "code": "SB",
+  "iso3": "SLB",
+  "nameEn": "Solomon Islands",
+  "nameNative": "Solomon Islands",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en"
+  ],
+  "currency": {
+    "code": "SBD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 8.06,
+      "status": "sourced",
+      "sourceName": "Central Bank of Solomon Islands, Today's exchange rates (indicative)",
+      "sourceUrl": "https://www.cbsi.com.sb/data-statistics/exchange-rates/todays-exchange-rates",
+      "asOf": "2026-10-30",
+      "note": "Published as USD 0.1240 per SBD 1 (about 8.06 SBD per USD); the September 2026 monthly average was 8.03 (CBSI Monthly Economic Bulletin)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.037,
+      "status": "sourced",
+      "sourceName": "Central Bank of Solomon Islands, Monthly Economic Bulletin September 2026",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Headline inflation (year on year, 3-month moving average) 3.7% in August 2026, from 4.3% in July; core 3.3%. Based on SINSO national CPI."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBSI monetary policy stance (August 2026): desired inflation range 2-5%; World Bank CPI 3.4% in 2025",
+      "sourceUrl": "https://www.cbsi.com.sb/monetary-policy/current-monetary-policy/monetary-policy-stance",
+      "asOf": "2026-10-31",
+      "note": "CBSI aims for inflation within 2-5% and expects about 4.4% in 2027, so we plan with 4%."
+    },
+    "policy_rate": {
+      "value": 0.015,
+      "status": "sourced",
+      "sourceName": "Central Bank of Solomon Islands, Monetary Policy Stance",
+      "sourceUrl": "https://www.cbsi.com.sb/monetary-policy/current-monetary-policy/monetary-policy-stance",
+      "asOf": "2026-08-28",
+      "note": "The Board kept the policy rate at 1.5% for the next six months at its 28 August 2026 meeting. The 28-day Bokolo Bill rate is 0.40%."
+    },
+    "savings_account_rate": {
+      "value": 0.0079,
+      "status": "sourced",
+      "sourceName": "CBSI Money and Banking Statistics, Table 1.7 Interest Rates (commercial banks)",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-03-31",
+      "note": "Savings deposits weighted average 0.79% (range 0.60-1.39%) in March 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.012,
+      "status": "sourced",
+      "sourceName": "CBSI Money and Banking Statistics, Table 1.7 Interest Rates (commercial banks)",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-03-31",
+      "note": "Time deposits 1-3 months weighted average 1.20% (3-6 months 1.05%) in March 2026."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0151,
+      "status": "sourced",
+      "sourceName": "CBSI Money and Banking Statistics, Table 1.7 Interest Rates (commercial banks)",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-03-31",
+      "note": "Time deposits 1-2 years weighted average 1.51% (6-12 months 1.53%) in March 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No bank recurring-deposit product or published rate was found; CBSI publishes only savings and time-deposit rates."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.005,
+      "status": "sourced",
+      "sourceName": "Central Bank of Solomon Islands, Key indicators: Interest rates (July 2026)",
+      "sourceUrl": "https://www.cbsi.com.sb/data-statistics/key-indicators/interest-rates",
+      "asOf": "2026-07-31",
+      "note": "Deposit rate 0.50% and lending rate 8.60%; the Money and Banking Statistics give an all-deposits weighted average of 0.47% for March 2026. World Bank FR.INR.DPST: 0.41% (2023)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings bond or certificate for individuals was found; government Development Bonds are sold by auction mainly to institutions."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0113,
+      "status": "sourced",
+      "sourceName": "Central Bank of Solomon Islands, Monthly Economic Bulletin September 2026",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
+      "asOf": "2026-09-30",
+      "note": "Weighted average yield on 91-day T-bills 1.13% (182-day 2.33%) in September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield is published; CBSI lists only 10- and 15-year Development Bonds."
+    },
+    "tbond_10y_rate": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "CBSI Money and Banking Statistics, Table 1.7 Interest Rates (Development Bonds 10 years)",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-03-31",
+      "note": "Outstanding 10-year Development Bond rates listed at 4.67% and 5.0% (March 2026); bonds are auctioned mainly to institutions, with no secondary market."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Inland Revenue Division, Withholding tax",
+      "sourceUrl": "https://www.ird.gov.sb/withholding-tax/",
+      "asOf": "2026-10-31",
+      "note": "Interest paid to residents is subject to 10% withholding tax (15% for non-residents)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme was found; CBSI's regulatory framework page describes depositor protection under the Financial Institutions Act but no insurance scheme."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card rate cap or published typical card rate was found; CBSI reports personal loans at 10.1% weighted average (March 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "CBSI: 1-2 year time deposits 1.51% and 182-day T-bill 2.33%, less 10% resident withholding tax on interest",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No local stock exchange; low case close to the after-tax deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBSI: 1-2 year time deposits 1.51% and 182-day T-bill 2.33%, less 10% resident withholding tax on interest",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No local stock market, so the base case is a global index in Solomon dollar terms, held to about 3.6 points over the after-tax safe rate of about 1.4%; exchange controls limit access."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "CBSI: 1-2 year time deposits 1.51% and 182-day T-bill 2.33%, less 10% resident withholding tax on interest",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case for global equities in Solomon dollar terms."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "CBSI: SBD 8.03 per USD (September 2026 average), 8.06 in March 2026",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable basket-managed currency."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "CBSI: SBD 8.03 per USD (September 2026 average), 8.06 in March 2026",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4% plus slight Solomon dollar depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "CBSI: SBD 8.03 per USD (September 2026 average), 8.06 in March 2026",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold."
+    },
+    "fixed_income_return_low": {
+      "value": 0.007,
+      "status": "assumption",
+      "sourceName": "CBSI savings deposits 0.79% less 10% withholding tax",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits only, after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0136,
+      "status": "assumption",
+      "sourceName": "CBSI: 1-2 year time deposits 1.51% and 182-day T-bill 2.33%, less 10% resident withholding tax on interest",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-2 year time deposits after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.021,
+      "status": "assumption",
+      "sourceName": "CBSI: 1-2 year time deposits 1.51% and 182-day T-bill 2.33%, less 10% resident withholding tax on interest",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 182-day T-bills after tax, where accessible."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published figure for the cost of a major hospital stay was found; public hospital care is largely government-funded."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates were found."
+    },
+    "oop_health_share": {
+      "value": 0.0316,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SB",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "CBSI desired inflation range 2-5%; no medical CPI published",
+      "sourceUrl": "https://www.cbsi.com.sb/monetary-policy/current-monetary-policy/monetary-policy-stance",
+      "asOf": "2026-10-31",
+      "note": "Public care is mostly free but imported medicines and overseas referrals track import prices, so we plan slightly above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "CBSI desired inflation range 2-5%; no education CPI published",
+      "sourceUrl": "https://www.cbsi.com.sb/monetary-policy/current-monetary-policy/monetary-policy-stance",
+      "asOf": "2026-10-31",
+      "note": "No education price series was found, so we plan slightly above general inflation."
+    },
+    "life_expectancy": {
+      "value": 70.69,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SB",
+      "asOf": "2024-12-31",
+      "note": "Men 69.4, women 72.2."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.4,
+            "men": 16.5,
+            "women": 18.3
+          },
+          {
+            "age": 65,
+            "total": 13.8,
+            "men": 13.1,
+            "women": 14.6
+          },
+          {
+            "age": 70,
+            "total": 10.7,
+            "men": 10.2,
+            "women": 11.2
+          },
+          {
+            "age": 80,
+            "total": 5.8,
+            "men": 5.5,
+            "women": 6.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/solomon-islands/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.29
+          },
+          {
+            "year": 2040,
+            "value": 11.76
+          },
+          {
+            "year": 2065,
+            "value": 6.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/solomon-islands/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.14 (2025, World Bank), 8.5 (2040) and 14.5 (2065, populationpyramid.net/solomon-islands/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 50,
+      "status": "sourced",
+      "sourceName": "Solomon Islands National Provident Fund, Benefits and withdrawals",
+      "sourceUrl": "https://www.sinpf.org.sb/members/benefits-and-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "Normal retirement withdrawal from age 50; members who keep working can delay withdrawal."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The public service retirement age could not be confirmed from an official page in this pass."
+    },
+    "retirement_return_low": {
+      "value": 0.007,
+      "status": "assumption",
+      "sourceName": "CBSI savings deposits 0.79% less 10% withholding tax",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits only, after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.013,
+      "status": "assumption",
+      "sourceName": "CBSI: 1-2 year time deposits 1.51% and 182-day T-bill 2.33%, less 10% resident withholding tax on interest",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case at the after-tax 1-2 year time deposit rate (1.51% less 10%)."
+    },
+    "retirement_return_high": {
+      "value": 0.021,
+      "status": "assumption",
+      "sourceName": "CBSI: 1-2 year time deposits 1.51% and 182-day T-bill 2.33%, less 10% resident withholding tax on interest",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 182-day T-bills after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "SINPF crediting rates 2017-2026: 2.65% to 8.5%, 10-year average 5.6%",
+      "sourceUrl": "https://www.sinpf.org.sb/investments/crediting-rate/",
+      "asOf": "2026-10-31",
+      "note": "Low case near the weaker SINPF crediting years."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "SINPF crediting rates 2017-2026: 2.65% to 8.5%, 10-year average 5.6%",
+      "sourceUrl": "https://www.sinpf.org.sb/investments/crediting-rate/",
+      "asOf": "2026-10-31",
+      "note": "Base case somewhat below the SINPF 10-year average, since few other long-term assets are available."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.056,
+      "status": "assumption",
+      "sourceName": "SINPF crediting rates 2017-2026: 2.65% to 8.5%, 10-year average 5.6%",
+      "sourceUrl": "https://www.sinpf.org.sb/investments/crediting-rate/",
+      "asOf": "2026-10-31",
+      "note": "High case at the SINPF 10-year average."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found for Solomon Islands."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found for Solomon Islands."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment/Labour Act text on end-of-service or long-service benefits could not be reached (PacLII returned an error), so the rule is not reported."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 50,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Solomon Islands National Provident Fund, Benefits and withdrawals and Contribution rates",
+      "sourceUrl": "https://www.sinpf.org.sb/members/benefits-and-withdrawals/",
+      "asOf": "2026-10-31",
+      "note": "SINPF is a mandatory provident fund (employee 5%, employer 7.5% of wages), credited 5.5% for 2026; it pays a lump sum, with withdrawal from age 50, not a lifetime pension. youSave is the voluntary scheme for informal workers."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Time deposit (1-3 months)",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Time deposit (1-2 years)",
+      "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No bank recurring-deposit product was identified. Informal workers can save monthly through the SINPF youSave scheme.",
+      "sourceUrl": "https://www.sinpf.org.sb/members/yousave/"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond",
+      "note": "No retail government savings bond exists."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bills",
+      "note": "Issued by tender through CBSI; mostly held by banks and institutions.",
+      "sourceUrl": "https://www.cbsi.com.sb/monetary-policy/market-operations/treasury-bills"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "5-year government bond",
+      "note": "No 5-year government bond is listed."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Development Bonds",
+      "note": "Government Development Bonds are auctioned through CBSI, mainly to institutions.",
+      "sourceUrl": "https://www.cbsi.com.sb/monetary-policy/market-operations/development-bonds"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Equity fund",
+      "note": "There is no local stock exchange or retail equity fund; foreign investment is subject to exchange control."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Gold bullion",
+      "note": "No retail gold bullion market was identified."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Solomon Islands",
+      "url": "https://www.cbsi.com.sb/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Solomon Islands",
+      "url": "https://www.cbsi.com.sb/financial-system",
+      "note": "CBSI is the financial-sector supervisor; its site does not describe insurance supervision in detail."
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of Solomon Islands (contact)",
+      "url": "https://www.cbsi.com.sb/about-us/contact-locations/contact-us",
+      "note": "No dedicated insurance ombudsman was found."
+    },
+    "pensionScheme": {
+      "name": "Solomon Islands National Provident Fund",
+      "url": "https://www.sinpf.org.sb/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Solomon Islands National Statistics Office",
+      "url": "https://statistics.gov.sb/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

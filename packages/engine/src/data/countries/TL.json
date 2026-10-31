@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "code": "TL",
+  "iso3": "TLS",
+  "nameEn": "Timor-Leste",
+  "nameNative": "Timór-Leste",
+  "region": "east_asia_pacific",
+  "languages": [
+    "pt",
+    "en"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF (Timor-Leste uses the US dollar)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TL",
+      "asOf": "2025-12-31",
+      "note": "The US dollar is legal tender; BCTL issues only centavo coins."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": -0.0008,
+      "status": "sourced",
+      "sourceName": "Banco Central de Timor-Leste inflation report (national CPI compiled by the statistics office)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/inflationdoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-08-31",
+      "note": "Timor-Leste CPI year-on-year -0.08% in August 2026 (index 125.5); 0.48% in July. Dili CPI was +0.41%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCTL CPI history: 5.3% (Dec 2021), 6.9% (2022), 8.7% (2023), -0.4% (2024), 1.0% (2025); US dollar is the legal currency",
+      "sourceUrl": "https://www.bancocentral.tl/stats/inflationdoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Timor-Leste uses the US dollar, so long-run inflation should track US inflation plus import costs; the 2021-2025 average (about 4%) is inflated by the 2022-23 shock, so we plan with 3%."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Timor-Leste uses the US dollar and BCTL sets no policy interest rate; searched BCTL statistics and mandate pages."
+    },
+    "savings_account_rate": {
+      "value": 0.0047,
+      "status": "sourced",
+      "sourceName": "Banco Central de Timor-Leste, Table 10 Commercial Bank Interest Rate (saving deposit)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-08-26",
+      "note": "Average commercial bank savings deposit rate 0.47% in August 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0042,
+      "status": "sourced",
+      "sourceName": "Banco Central de Timor-Leste, Table 10 Commercial Bank Interest Rate (3-month time deposit)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-08-26",
+      "note": "Average 3-month time deposit rate 0.42% in August 2026 (0.54% in June)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0046,
+      "status": "sourced",
+      "sourceName": "Banco Central de Timor-Leste, Table 10 Commercial Bank Interest Rate (12-month time deposit)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-08-26",
+      "note": "Average 12-month time deposit rate 0.46% in August 2026, down from 0.68% in June."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product rate appears in BCTL Table 10 or the BCTL interest-rates-by-bank publications."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0046,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=TL",
+      "asOf": "2025-12-31",
+      "note": "BCTL Table 10 has no single weighted average across all deposits; time deposit rates were 0.42-0.46% in August 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found in BCTL publications."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic treasury bill market was found in BCTL statistics; the state finances itself mainly from the Petroleum Fund."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bond market was found in BCTL statistics."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bond market was found in BCTL statistics."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax authority and Ministry of Finance tax pages could not be read (site unreachable or script-only); no withholding rate on bank interest was confirmed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, so no tax rule applies; searched BCTL and Ministry of Finance pages."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme was found in BCTL laws, statistics or consumer protection pages."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BCTL Table 10 reports only loan rates (7.5% average in August 2026); no credit card rate or legal cap was found."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in US dollars; BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund held in US dollars after weak decades for world shares."
+    },
+    "equity_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in US dollars; BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "There is no local stock market, so the base is a global index in US dollars, capped at the 0.46% safe deposit rate plus under 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in US dollars; BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "High case near the long-run nominal return of world equities in US dollars."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "US dollar is the legal currency (World Bank PA.NUS.FCRF = 1)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TL",
+      "asOf": "2026-10-31",
+      "note": "Low case for gold in US dollars, with no currency depreciation effect."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "US dollar is the legal currency (World Bank PA.NUS.FCRF = 1)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TL",
+      "asOf": "2026-10-31",
+      "note": "Base case equals the long-run US dollar gold trend of about 4%, since there is no local currency to depreciate."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "US dollar is the legal currency (World Bank PA.NUS.FCRF = 1)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TL",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices."
+    },
+    "fixed_income_return_low": {
+      "value": 0.002,
+      "status": "assumption",
+      "sourceName": "BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings or short deposits if rates keep falling (the 12-month rate fell from 0.68% to 0.46% in mid-2026)."
+    },
+    "fixed_income_return_base": {
+      "value": 0.004,
+      "status": "assumption",
+      "sourceName": "BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Base case: local term deposits around 0.4-0.5%; tax on interest not confirmed, so kept just below the gross rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.006,
+      "status": "assumption",
+      "sourceName": "BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "High case: 6-12 month deposits back at the 2024-25 level of about 0.6-0.7%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BCTL insurance statistics page carries no claim settlement ratio; none found elsewhere."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates for Timor-Leste were found; the insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical private hospital bill was found; public hospital care is largely free."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table for Timor-Leste was found."
+    },
+    "oop_health_share": {
+      "value": 0.0699,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TL",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCTL CPI series (no medical sub-index published in the BCTL report)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/inflationdoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI is published, so we plan with the 3% headline projection plus one point."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCTL CPI series (no education sub-index published in the BCTL report)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/inflationdoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "No education CPI is published, so we plan with the 3% headline projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 67.904,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TL",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 68.3 for 2026 (men 66.7, women 70.1)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.1,
+            "men": 16.2,
+            "women": 18.0
+          },
+          {
+            "age": 65,
+            "total": 13.6,
+            "men": 12.9,
+            "women": 14.4
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 10.0,
+            "women": 11.1
+          },
+          {
+            "age": 80,
+            "total": 5.8,
+            "men": 5.5,
+            "women": 6.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/timor-leste/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 11.8
+          },
+          {
+            "year": 2040,
+            "value": 11.4
+          },
+          {
+            "year": 2065,
+            "value": 5.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/timor-leste/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 8.48 (2025, World Bank), 8.8 (2040) and 17.4 (2065, populationpyramid.net/timor-leste/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Tatoli (national news agency): Civil Service Commission explains retirement rules",
+      "sourceUrl": "https://tatoli.tl/2026/07/20/kfp-esklarese-regra-no-prosedimentu-reforma-ba-funsionariu-publiku-iha-raeoa/",
+      "asOf": "2026-07-20",
+      "note": "The social security regime (Law 12/2016) gives old-age rights from age 60, the same for men and women."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Tatoli (national news agency): Civil Service Commission explains retirement rules",
+      "sourceUrl": "https://tatoli.tl/2026/07/20/kfp-esklarese-regra-no-prosedimentu-reforma-ba-funsionariu-publiku-iha-raeoa/",
+      "asOf": "2026-07-20",
+      "note": "Mandatory retirement for civil servants at 65; retirement on request possible from 60 to 64."
+    },
+    "retirement_return_low": {
+      "value": 0.002,
+      "status": "assumption",
+      "sourceName": "BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits if rates keep falling."
+    },
+    "retirement_return_base": {
+      "value": 0.004,
+      "status": "assumption",
+      "sourceName": "BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just below the 0.46% average 1-year deposit rate, the best safe rate available locally."
+    },
+    "retirement_return_high": {
+      "value": 0.006,
+      "status": "assumption",
+      "sourceName": "BCTL Table 10, commercial bank 12-month time deposit rate 0.46% (August 2026)",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "High case: 6-12 month deposits back at about 0.6%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits (0.46%) and global equity in US dollars",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix mostly in near-zero local deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits (0.46%) and global equity in US dollars",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "Base case: half local deposits at about 0.4% and half a global equity fund at 4%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Mix of local deposits (0.46%) and global equity in US dollars",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/",
+      "asOf": "2026-10-31",
+      "note": "High case with a larger, well-performing global equity share."
+    },
+    "old_age_allowance_monthly": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Tatoli (national news agency): INSS plans monthly payments for elderly and disabled",
+      "sourceUrl": "https://tatoli.tl/2024/02/22/inss-planeia-halo-pagamentu-ba-idozu-no-invalidez-kada-fulan/",
+      "asOf": "2024-02-22",
+      "note": "Social pension US$60 a month at 60-69, US$80 at 70-79 and US$100 at 80+ (Tatoli, 10 January 2024 and 22 February 2024)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Tatoli (national news agency): Government adjusts the social pension for the disabled and elderly",
+      "sourceUrl": "https://tatoli.tl/2024/01/10/governu-halo-ajustamentu-rejime-juridiku-pensaun-sosial-invalides-no-ferik-katuas/",
+      "asOf": "2024-01-10",
+      "note": "Social pension (replaced SAII) from 60 with higher rates at 70 and 80; it cannot be combined with income from work, per Tatoli 22 February 2024."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity for private employees was found; retirement income runs through INSS."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Tatoli (national news agency): INSS contributions and the social security regime",
+      "sourceUrl": "https://tatoli.tl/2026/05/14/bobo-apela-ba-traballador-hakat-ba-inss-atu-asesu-ba-remunerasaun/",
+      "asOf": "2026-05-14",
+      "note": "Contributory INSS scheme under Law 12/2016: 4% employee plus 6% employer; old-age pension from 60 (Tatoli 20 July 2026). No automatic indexation rule was confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conta poupança",
+      "localNameEn": "Savings account",
+      "note": "Portuguese name; Tetum: konta poupansa.",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a prazo",
+      "localNameEn": "3-month time deposit",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a prazo",
+      "localNameEn": "12-month time deposit",
+      "sourceUrl": "https://www.bancocentral.tl/stats/interestratedoc/download/c4ca4238a0b923820dcc509a6f75849b/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring deposit product found in BCTL publications."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail bond found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic treasury bills found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic government bonds found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic government bonds found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No local stock exchange or locally offered mutual funds found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ouro",
+      "localNameEn": "Gold",
+      "note": "No legal restriction on buying gold was found; mainly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Timor-Leste",
+      "url": "https://www.bancocentral.tl/"
+    },
+    "insuranceRegulator": {
+      "name": "Banco Central de Timor-Leste (licenses and supervises insurers)",
+      "url": "https://www.bancocentral.tl/stats/insurance/"
+    },
+    "insuranceComplaints": {
+      "name": "Banco Central de Timor-Leste consumer protection",
+      "url": "https://www.bancocentral.tl/stats/con_protect/"
+    },
+    "pensionScheme": {
+      "name": "Instituto Nacional de Segurança Social (INSS), under the Ministry of Social Solidarity and Inclusion",
+      "url": "https://mssi.gov.tl/",
+      "note": "The INSS website (segurancasocial.gov.tl) showed only a placeholder page in October 2026."
+    },
+    "oldAgeAllowance": {
+      "name": "Social pension for the elderly and disabled (paid by INSS)",
+      "url": "https://mssi.gov.tl/"
+    },
+    "publicHealthCover": {
+      "name": "Ministério da Saúde (public health services)",
+      "url": "https://ms.gov.tl/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Instituto Nacional de Estatística Timor-Leste (INETL)",
+      "url": "https://inetl-ip.gov.tl/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "BG",
+  "iso3": "BGR",
+  "nameEn": "Bulgaria",
+  "nameNative": "България",
+  "region": "europe_central_asia",
+  "languages": [
+    "bg",
+    "en",
+    "ru",
+    "tr"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank, euro reference exchange rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "Bulgaria replaced the lev (BGN) with the euro on 1 January 2026 at BGN 1.95583 per euro (CLDR still lists BGN). USD 1.1172 per EUR, so EUR 0.8951 per US dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.057,
+      "status": "sourced",
+      "sourceName": "Trading Economics (NSI national CPI, September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/bulgaria/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI 5.7% in September 2026 (5.1% in August); HICP 5.6% (Eurostat). Secondary source for the NSI release."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB 2% target (Bulgaria in the euro area since January 2026); HICP 5.6% (Sep 2026), 12-month average 4.2%",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "The ECB target anchors the long run, but price-level catch-up with richer euro members keeps Bulgarian inflation higher, so 3% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, deposit facility rate",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-29",
+      "note": "Bulgaria adopted the euro on 1 January 2026, so ECB rates apply: deposit facility 2.50%, main refinancing 2.65%, held on 29 October 2026 (read via the ECB data API)."
+    },
+    "savings_account_rate": {
+      "value": 0.0041,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Bulgarian bank rates on household deposits redeemable at notice up to 3 months (new business)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L23.D.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "0.41% in August 2026; overnight (current) deposits pay 0.01%. Read via the ECB data API."
+    },
+    "fdr_3m_rate": {
+      "value": 0.014,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Bulgarian bank rates on household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "No separate 3-month series is published; the up-to-1-year bucket (1.40% in August 2026, 1.56% in July) is used. Read via the ECB data API."
+    },
+    "fdr_1y_rate": {
+      "value": 0.014,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Bulgarian bank rates on household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "1.40% in August 2026; 1-2 years 1.71%, over 2 years 2.82%. Read via the ECB data API."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring deposit product at Bulgarian banks was found; the ECB MIR statistics do not separate such products."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0025,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BG",
+      "asOf": "2025-12-31",
+      "note": "0.25% in 2025, weighted towards current accounts; ECB MIR new-business term deposits up to 1 year paid 1.40% in August 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings bond for individuals with a current rate was found; the Ministry of Finance site refused automated access."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 3-month Bulgarian treasury bill yield was found; government securities auctions are mainly for bonds and the Ministry of Finance site refused automated access."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Bulgarian 5-year government bond yield was found on readable pages (Trading Economics shows only a stale 10-year quote)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0409,
+      "status": "sourced",
+      "sourceName": "ECB long-term interest rate for convergence purposes, Bulgaria (10-year government bond)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/IRS/IRS.M.BG.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-09-30",
+      "note": "Monthly average for September 2026, read via the ECB data API; Trading Economics' Bulgarian quote was stale (February 2025)."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Bulgaria income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/bulgaria/individual/income-determination",
+      "asOf": "2026-08-02",
+      "note": "Interest on bank accounts in the EU/EEA is tax-free since 1 April 2022; accounts outside the EU/EEA are taxed at 10%."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Bulgaria income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/bulgaria/individual/income-determination",
+      "asOf": "2026-08-02",
+      "note": "Interest and discounts on bonds are exempt income for individuals (subject to conditions in the law)."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Bulgarian Deposit Insurance Fund",
+      "sourceUrl": "https://www.dif.bg/en",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per bank; up to EUR 125,000 for three months for certain deposits (home sale proceeds, insurance pay-outs, life events)."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1349,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Bulgarian bank rates on revolving loans, overdrafts and credit card credit to households",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.A2Z.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "13.49% in August 2026, an average that includes overdrafts; no specific legal cap on card rates was found."
+    },
+    "equity_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "SOFIX 1,838 on 29 Oct 2026 (base 100 in 2000), still below its October 2007 high of 1,982",
+      "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a small, illiquid market whose index has made no gain since 2007 despite a 72% rise in the past year."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 1.40% (tax-free); SOFIX record since 2000",
+      "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
+      "asOf": "2026-10-31",
+      "note": "After-tax safe rate of 1.4% plus a 3.6-point premium, kept modest because SOFIX has a weak record since 2007; diversified euro-area funds give similar euro returns."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "SOFIX long-run record (100 in 2000 to 1,838 in Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run euro-area and global equity returns in euro terms."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECB reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger euro."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "ECB reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected trend in the euro against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "ECB reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker euro."
+    },
+    "fixed_income_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "ECB MIR: savings 0.41%, term deposits up to 1 year 1.40% (interest tax-free)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and short deposits."
+    },
+    "fixed_income_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "ECB MIR: term deposits up to 1 year 1.40%, 1-2 years 1.71%, over 2 years 2.82% (tax-free)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of 1-year and longer term deposits, with no tax on EU bank interest."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "10-year government bond 4.09% (tax-free)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/IRS/IRS.M.BG.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long government bonds, whose interest is tax-exempt."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Financial Supervision Commission publishes premiums and claims paid but no industry-wide life claim settlement ratio that we could find."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published per-1,000 premium table by age was found; insurers quote individually."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost for one major private hospital stay was found; the National Health Insurance Fund pays for covered treatment with patient co-payments and extra fees at private hospitals."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary health insurance in Bulgaria is sold as plan packages, and no age-banded premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.355,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BG",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat HICP health: 3.0% a year to Sep 2026",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Medical prices rose 3.0% in the year to September 2026; the 3% projection plus half a point is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Eurostat HICP education: 7.7% a year to Sep 2026, 12-month average 8.7%",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Education prices have risen far faster than headline inflation, so 5% is used, between the projection and recent rates."
+    },
+    "life_expectancy": {
+      "value": 75.76,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BG",
+      "asOf": "2024-12-31",
+      "note": "Men 72.2, women 79.5; UN WPP 2024 (via populationpyramid.net) gives 76.1 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.3,
+            "men": 18.0,
+            "women": 22.6
+          },
+          {
+            "age": 65,
+            "total": 16.8,
+            "men": 14.8,
+            "women": 18.5
+          },
+          {
+            "age": 70,
+            "total": 13.3,
+            "men": 11.9,
+            "women": 14.6
+          },
+          {
+            "age": 80,
+            "total": 7.3,
+            "men": 6.7,
+            "women": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/bulgaria/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.85
+          },
+          {
+            "year": 2040,
+            "value": 2.31
+          },
+          {
+            "year": 2065,
+            "value": 1.85
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/bulgaria/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 35.1 (2025, World Bank), 43.2 (2040) and 54.1 (2065, populationpyramid.net/bulgaria/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 64.75,
+      "status": "sourced",
+      "sourceName": "National Social Security Institute (NOI), pension for insurance length and age",
+      "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/trudova-deinost-pridobivane-pravo/pensii-za-osig-staj-v-namalen-razmer/",
+      "asOf": "2026-01-01",
+      "note": "Men 64 years 9 months with 39 years 10 months of insurance in 2026; women 62 years 6 months with 36 years 10 months. Men reach 65 in 2029, women in 2037."
+    },
+    "retirement_age_government": {
+      "value": 64.75,
+      "status": "sourced",
+      "sourceName": "National Social Security Institute (NOI), pension for insurance length and age",
+      "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/trudova-deinost-pridobivane-pravo/pensii-za-osig-staj-v-namalen-razmer/",
+      "asOf": "2026-01-01",
+      "note": "Civil servants retire under the same general pension age (men 64 y 9 m, women 62 y 6 m in 2026); military, police and some other groups have lower ages."
+    },
+    "retirement_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "ECB MIR: savings 0.41%, term deposits up to 1 year 1.40% (tax-free)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings accounts and short deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.014,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 1.40% (tax-free)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the 1-year term deposit rate, which is untaxed."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "10-year government bond 4.09%; deposits over 2 years 2.82% (tax-free)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/IRS/IRS.M.BG.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of government bonds and long deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 1.40%; SOFIX index",
+      "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 1.40%; equity base 5%; 10-year bond 4.09%",
+      "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5% and half fixed income at about 2%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "SOFIX record; 10-year government bond 4.09%",
+      "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 183.81,
+      "status": "sourced",
+      "sourceName": "National Social Security Institute (NOI), social old-age pension",
+      "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/nesvyrzani-s-trudovata-deinost/socialna-pensiya-za-starost/",
+      "asOf": "2026-07-01",
+      "note": "EUR 183.81 a month from 1 July 2026 (EUR 170.51 from 1 January 2026)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 70,
+        "womenAge": 70,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "National Social Security Institute (NOI), social old-age pension",
+      "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/nesvyrzani-s-trudovata-deinost/socialna-pensiya-za-starost/",
+      "asOf": "2026-07-01",
+      "note": "From age 70; yearly family income per member must be below 30% of the poverty line (EUR 390.63 a month in 2026), and the person may not receive any other pension."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service payment expressed in days of wages per year of service was found; we could not read the Labour Code retirement-payment rule from an official page."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 64.75,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "National Social Security Institute (NOI), pension conditions and calculation",
+      "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/trudova-deinost-pridobivane-pravo/razmer-na-pensiite/",
+      "asOf": "2026-07-01",
+      "note": "Pay-as-you-go state pension: average insured income x individual coefficient x years x 1.35% per year; pension age 64 y 9 m (men) and 62 y 6 m (women) in 2026. Pensions are raised every 1 July (minimum EUR 322.37 to 347.51 in 2026). Workers born after 1959 also pay into a universal pension fund (second pillar)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Спестовна сметка",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L23.D.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Срочен депозит",
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Срочен депозит",
+      "localNameEn": "1-year term deposit",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard fixed-rate monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond",
+      "note": "No government savings bond sold to individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Краткосрочни ДЦК",
+      "localNameEn": "Short-term government securities",
+      "note": "No regular 3-month treasury bill issuance was found."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Държавни ценни книжа (ДЦК)",
+      "localNameEn": "Government bond",
+      "note": "Sold at BNB auctions through primary dealers; individuals can buy through banks."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Държавни ценни книжа (ДЦК)",
+      "localNameEn": "Government bond",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/IRS/IRS.M.BG.L.L40.CI.0000.EUR.N.Z"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Договорен фонд",
+      "localNameEn": "Mutual fund / index fund (ETF)",
+      "note": "Local mutual funds and EU-listed index funds are available; capital gains on EU/EEA regulated markets are tax-exempt."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Инвестиционно злато",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "Investment gold is VAT-exempt and freely bought."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bulgarian National Bank",
+      "url": "https://www.bnb.bg/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Supervision Commission",
+      "url": "https://www.fsc.bg/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Supervision Commission (complaints against insurers)",
+      "url": "https://www.fsc.bg/en/"
+    },
+    "pensionScheme": {
+      "name": "National Social Security Institute (NOI)",
+      "url": "https://nssi.bg/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social old-age pension (NOI)",
+      "url": "https://nssi.bg/fizicheski-lica/pensii-bg/nesvyrzani-s-trudovata-deinost/socialna-pensiya-za-starost/"
+    },
+    "publicHealthCover": {
+      "name": "National Health Insurance Fund (NHIF)",
+      "url": "https://www.nhif.bg/"
+    },
+    "depositInsurance": {
+      "name": "Bulgarian Deposit Insurance Fund",
+      "url": "https://www.dif.bg/en"
+    },
+    "statistics": {
+      "name": "National Statistical Institute",
+      "url": "https://www.nsi.bg/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

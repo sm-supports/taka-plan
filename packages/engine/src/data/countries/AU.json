@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 1,
+  "code": "AU",
+  "iso3": "AUS",
+  "nameEn": "Australia",
+  "nameNative": "Australia",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en",
+    "zh",
+    "it"
+  ],
+  "currency": {
+    "code": "AUD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.4205,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia exchange rates (70.40 US cents per AUD)",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-30",
+      "note": "1 / 0.7040"
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.043,
+      "status": "sourced",
+      "sourceName": "Australian Bureau of Statistics, Consumer Price Index, Australia (September 2026)",
+      "sourceUrl": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
+      "asOf": "2026-09-30",
+      "note": "Monthly CPI, 12 months to September 2026 (4.0% in August)"
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Australia 2-3% inflation target; CPI 4.3% (Sep 2026)",
+      "sourceUrl": "https://www.rba.gov.au/inflation/",
+      "asOf": "2026-10-31",
+      "note": "We plan at the top of the 2-3% target because inflation has run above it in most recent years."
+    },
+    "policy_rate": {
+      "value": 0.046,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F1 (cash rate target)",
+      "sourceUrl": "https://www.rba.gov.au/statistics/cash-rate/",
+      "asOf": "2026-10-29",
+      "note": "Cash rate target 4.60%; last raised 0.25 points (effective 30 September 2026)"
+    },
+    "savings_account_rate": {
+      "value": 0.031,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F4 Retail Deposit and Investment Rates",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Online savings accounts ($10,000); bonus saver accounts 4.80% if conditions met; transaction accounts 0%"
+    },
+    "fdr_3m_rate": {
+      "value": 0.033,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F4 Retail Deposit and Investment Rates",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Banks' 3-month term deposits, $10,000"
+    },
+    "fdr_1y_rate": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F4 Retail Deposit and Investment Rates",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Banks' 1-year term deposits, $10,000; 3-year 4.20%"
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Australian banks do not offer monthly recurring deposit schemes; RBA Table F4 has no such series."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0355,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F4 Retail Deposit and Investment Rates",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Average of banks' advertised term deposit rates across all terms (not a balance-weighted average)"
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Australia has no government savings certificate for individuals; exchange-traded Treasury Bonds trade at market yields (see tbond rates)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0492,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F1 (3-month bank accepted bills/NCDs)",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f01d.xlsx",
+      "asOf": "2026-10-29",
+      "note": "3-month bank bill rate used as the bill benchmark; Treasury Notes are issued irregularly"
+    },
+    "tbond_5y_rate": {
+      "value": 0.0495,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F2 Capital Market Yields",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx",
+      "asOf": "2026-10-29",
+      "note": "Australian Government 5-year bond"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0521,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F2 Capital Market Yields",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx",
+      "asOf": "2026-10-29",
+      "note": "Australian Government 10-year bond"
+    },
+    "tax_bank_interest": {
+      "value": 0.32,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Australia, Taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/australia/individual/taxes-on-personal-income",
+      "asOf": "2026-10-12",
+      "note": "No final withholding for residents who quote a tax file number; interest is taxed at marginal rates. 30% band (A$45,001-135,000) plus 2% Medicare levy for a middle earner"
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; Treasury Bond interest is taxed at marginal rates like bank interest."
+    },
+    "deposit_insurance_limit": {
+      "value": 250000,
+      "status": "sourced",
+      "sourceName": "Australian Prudential Regulation Authority, Financial Claims Scheme",
+      "sourceUrl": "https://www.apra.gov.au/financial-claims-scheme-banks-building-societies-and-credit-unions",
+      "asOf": "2026-10-31",
+      "note": "A$250,000 per account holder per authorised deposit-taking institution"
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2124,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Australia, Statistical Table F5 Indicator Lending Rates",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f05hist.xlsx",
+      "asOf": "2026-09-30",
+      "note": "No legal cap; standard credit card rate 21.24%, low-rate cards 13.49%"
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "S&P/ASX 200 at 8,908 (30 Oct 2026) versus about 5,400 ten years earlier",
+      "sourceUrl": "https://tradingeconomics.com/australia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: price growth well below the 10-year trend with dividends only."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "ASX 200 10-year record (about 5% a year in price plus about 4% dividends); after-tax 1-year deposit 3.4%",
+      "sourceUrl": "https://tradingeconomics.com/australia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Capped near the after-tax safe rate plus 4 points, below the 10-year total return of about 9%."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "ASX 200 10-year total return with franking",
+      "sourceUrl": "https://tradingeconomics.com/australia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case close to the 10-year total return."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend and a stable Australian dollar",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold in dollar terms with no depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Dollar gold long-run trend plus mild Australian dollar depreciation",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-31",
+      "note": "About 4% dollar gold trend plus about 1% currency drift."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend with a weaker Australian dollar",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
+      "asOf": "2026-10-31",
+      "note": "High case for gold in Australian dollars."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Online savings 3.1% after 32% tax",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: at-call savings after a middle earner's tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 5.0% and 5-year bond 4.95% after 32% tax",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits and government bonds after a middle earner's tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bonus saver and term deposits about 5% to 6% after tax, or lower personal tax",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case with bonus rates or a lower tax bracket."
+    },
+    "life_claim_settlement_rate": {
+      "value": 0.97,
+      "status": "sourced",
+      "sourceName": "Australian Prudential Regulation Authority, Life insurance claims and disputes statistics (June 2026)",
+      "sourceUrl": "https://www.apra.gov.au/life-insurance-claims-and-disputes-statistics",
+      "asOf": "2026-06-30",
+      "note": "Death cover admittance rate, individual advised, year to June 2026; non-advised 90.9%, group super 98.5%; TPD 71% to 91%"
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is widely sold, but no regulator or credible public premium table by age per A$1,000 of cover was reachable."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public hospital care is free under Medicare; no credible published typical out-of-pocket cost for a private stay found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance in Australia is community rated (premiums do not vary by age except Lifetime Health Cover loading) and is not priced per amount of cover."
+    },
+    "oop_health_share": {
+      "value": 0.158,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AU",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ABS health CPI +3.7% in the year to September 2026; private health premiums rise faster than CPI",
+      "sourceUrl": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
+      "asOf": "2026-10-31",
+      "note": "Medical costs have tracked a little above headline inflation, so we plan 1.5 points above the 3% assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "ABS education CPI +4.7% in the year to September 2026",
+      "sourceUrl": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
+      "asOf": "2026-10-31",
+      "note": "School and university fees have risen faster than headline CPI, so we plan at about the current education CPI."
+    },
+    "life_expectancy": {
+      "value": 83.1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AU",
+      "asOf": "2024-12-31",
+      "note": "Men 81.1, women 85.1"
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 65,
+            "total": 22.2,
+            "men": 21.0,
+            "women": 23.3,
+            "projected": 24.3
+          },
+          {
+            "age": 80,
+            "total": 10.3,
+            "men": 9.6,
+            "women": 10.9,
+            "projected": 11.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 (via Our World in Data)",
+      "sourceUrl": "https://ourworldindata.org/grapher/remaining-life-expectancy-at-different-ages?country=~AUS",
+      "asOf": "2025-07-01",
+      "note": "2025 estimates; projected = 2050 medium variant; ages 60 and 70 not published in this series"
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.6
+          },
+          {
+            "year": 2040,
+            "value": 2.8
+          },
+          {
+            "year": 2065,
+            "value": 2.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 old-age dependency ratio (via Our World in Data)",
+      "sourceUrl": "https://ourworldindata.org/grapher/age-dependency-ratio-old?country=~AUS",
+      "asOf": "2025-07-01",
+      "note": "100 / old-age dependency ratio (28.1 in 2025, 36.0 in 2040, 44.0 in 2065, medium variant)"
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Age Pension (Australia) and Retirement age",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Age_Pension_(Australia)",
+      "asOf": "2023-07-01",
+      "note": "Age Pension age 67 from 1 July 2023 for men and women; super can be accessed from preservation age 60"
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Australian public servants have no compulsory retirement age; no single figure to report."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Online savings after tax",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: cash only."
+    },
+    "retirement_return_base": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 5.0% less 32% tax",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Kept at the after-tax 1-year term deposit rate; super in pension phase is tax-free, so many retirees may do better."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Term deposits and bonds held in a tax-free super pension account",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Superannuation_in_Australia",
+      "asOf": "2026-10-31",
+      "note": "High case for a retiree paying no tax on earnings."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Balanced super option: bonds about 5%, equity low case",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix after fund tax."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Balanced mix of bonds (about 5%) and equity (7%) before fees",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Average of base fixed income before tax and equity, less fund tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Balanced mix with high-case equity",
+      "sourceUrl": "https://tradingeconomics.com/australia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Age Pension maximum rate: Services Australia and DSS pages could not be reached; Wikipedia gives no current rate."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Wikipedia, Age Pension (Australia)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Age_Pension_(Australia)",
+      "asOf": "2023-07-01",
+      "note": "Income and assets tests; 10 years of residence required"
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity in Australia; the National Employment Standards give redundancy pay and long service leave instead."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Wikipedia, Superannuation in Australia",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Superannuation_in_Australia",
+      "asOf": "2025-07-01",
+      "note": "Compulsory employer Superannuation Guarantee of 12% of earnings from 1 July 2025, held in private funds; preservation age 60; withdrawals from taxed funds after 60 are tax-free. The means-tested Age Pension is the public pension"
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Online savings account",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Term deposit",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Term deposit",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f04hist.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "Recurring deposit schemes are not offered"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate; exchange-traded Treasury Bonds are bought on the ASX"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury Note",
+      "note": "Treasury Notes are sold to institutions only"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Exchange-traded Treasury Bond",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Exchange-traded Treasury Bond",
+      "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Index fund or ETF",
+      "note": "Also the default balanced option in superannuation funds"
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold bullion"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of Australia",
+      "url": "https://www.rba.gov.au/"
+    },
+    "insuranceRegulator": {
+      "name": "Australian Prudential Regulation Authority",
+      "url": "https://www.apra.gov.au/"
+    },
+    "insuranceComplaints": {
+      "name": "Australian Financial Complaints Authority",
+      "url": "https://www.afca.org.au/"
+    },
+    "pensionScheme": {
+      "name": "Superannuation (Australian Taxation Office)",
+      "url": "https://www.ato.gov.au/individuals-and-families/super-for-individuals-and-families"
+    },
+    "oldAgeAllowance": {
+      "name": "Age Pension (Services Australia)",
+      "url": "https://www.servicesaustralia.gov.au/age-pension"
+    },
+    "publicHealthCover": {
+      "name": "Medicare",
+      "url": "https://www.servicesaustralia.gov.au/medicare"
+    },
+    "depositInsurance": {
+      "name": "Financial Claims Scheme",
+      "url": "https://www.apra.gov.au/financial-claims-scheme"
+    },
+    "statistics": {
+      "name": "Australian Bureau of Statistics",
+      "url": "https://www.abs.gov.au/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

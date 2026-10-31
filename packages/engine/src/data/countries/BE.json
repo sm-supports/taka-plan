@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "BE",
+  "iso3": "BEL",
+  "nameEn": "Belgium",
+  "nameNative": "België",
+  "region": "europe_central_asia",
+  "languages": [
+    "nl",
+    "fr",
+    "en",
+    "de"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank, euro reference exchange rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "USD 1.1172 per EUR, so EUR 0.8951 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0526,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Statbel national CPI, October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/belgium/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Annual CPI 5.26% in October 2026 (4.69% in September); EU HICP 5.2%. Secondary source because statbel.fgov.be served a bot check. Eurostat HICP for September 2026 was 4.5%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% target; Belgian CPI 5.26% (Oct 2026); HICP 12-month average 3.0% (Sep 2026, Eurostat)",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Belgium shares the ECB's credible 2% target but automatic wage indexation keeps its inflation above the euro-area average, so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, deposit facility rate",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-29",
+      "note": "ECB held rates on 29 October 2026: deposit facility 2.50%, main refinancing 2.65% (read via the ECB data API, series FM.D.U2.EUR.4F.KR.DFR.LEV)."
+    },
+    "savings_account_rate": {
+      "value": 0.0072,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Belgian bank rates on household deposits redeemable at notice up to 3 months (new business)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L23.D.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Regulated savings accounts (base rate plus loyalty premium) are reported in this category; 0.72% in August 2026. Ordinary overnight (current) accounts pay 0.06%. Read via the ECB data API."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0214,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Belgian bank rates on household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "No separate 3-month series is published; the up-to-1-year bucket (2.14% in August 2026) is used. Read via the ECB data API."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0214,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Belgian bank rates on household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "2.14% in August 2026; 1-2 years 2.92%, over 2 years 2.97%. Read via the ECB data API."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Belgian banks do not offer a fixed-rate monthly recurring deposit (DPS-style) product; regular saving goes into regulated savings accounts or fund savings plans."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank FR.INR.DPST has no Belgian series and no all-deposit weighted average was found; the ECB MIR series give 0.06% (overnight), 0.72% (savings) and 2.14% (term up to 1 year) for August 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Belgian Debt Agency's products for individuals currently list only OLOs and Treasury Certificates; no State Note (Staatsbon) issue with a current rate was found."
+    },
+    "tbill_91d_rate": {
+      "value": 0.026,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Belgium 3-month treasury certificate yield",
+      "sourceUrl": "https://tradingeconomics.com/belgium/3-month-bill-yield",
+      "asOf": "2026-10-30",
+      "note": "About 2.60% (the page also shows 2.64%); secondary source because the Debt Agency's auction statistics were not readable."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Belgian 5-year OLO yield was found on readable pages (Trading Economics shows 2-year 3.31% and 10-year 4.38% on 30 October 2026; worldgovernmentbonds.com did not load data)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0438,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Belgium 10-year government bond (OLO) yield",
+      "sourceUrl": "https://tradingeconomics.com/belgium/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term convergence rate for Belgium was 4.12% in September 2026 (IRS.M.BE.L.L40.CI.0000.EUR.N.Z)."
+    },
+    "tax_bank_interest": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Belgium income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/belgium/individual/income-determination",
+      "asOf": "2026-09-10",
+      "note": "30% withholding tax on interest (term deposits, bonds). Regulated savings accounts: first EUR 1,050 a year per person exempt (income year 2025), then 15%."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Belgium income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/belgium/individual/income-determination",
+      "asOf": "2026-09-10",
+      "note": "Government bond and treasury certificate interest falls under the general 30% withholding tax on movable income (the September 2023 one-year State Note was a one-off at 15%)."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "European Commission, deposit guarantee schemes",
+      "sourceUrl": "https://finance.ec.europa.eu/banking/banking-regulation/deposit-guarantee-schemes_en",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per bank under the EU directive, paid by the Belgian Guarantee Fund for Financial Services."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "ECB MIR statistics: Belgian bank rates on revolving loans, overdrafts and credit card credit to households",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.A2Z.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "5.00% in August 2026, an average that includes overdrafts; Belgian law sets maximum annual rates for credit openings (FPS Economy), which could not be read (bot check). Card credit itself usually costs more."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEL 20 index 5,841 on 30 Oct 2026 (base 1,000 in 1991), up 19% in a year",
+      "sourceUrl": "https://tradingeconomics.com/belgium/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case near the after-tax 10-year OLO yield (about 3.1%), for a decade of weak European stock returns."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "3-month treasury certificate 2.6% less 30% tax = 1.8%; BEL 20 price index about 5% a year since 1991",
+      "sourceUrl": "https://tradingeconomics.com/belgium/stock-market",
+      "asOf": "2026-10-31",
+      "note": "After-tax safe rate of 1.8% plus a 3.7-point premium, kept under the 4-point limit; dividends (taxed at 30%) add to the BEL 20's roughly 5% a year price gain."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BEL 20 long-run record (1,000 in 1991 to 5,841 in Oct 2026) plus dividends",
+      "sourceUrl": "https://tradingeconomics.com/belgium/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case near the BEL 20's long-run total return of about 8% a year."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECB reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger euro."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "ECB reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected trend in the euro against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "ECB reference rate USD 1.1172 per EUR (30 Oct 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker euro."
+    },
+    "fixed_income_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "ECB MIR: savings 0.72% (tax-free to EUR 1,050), term deposits up to 1 year 2.14% less 30%",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix of regulated savings and short term deposits after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "3-month treasury certificate 2.6% and 1-year term deposit 2.14%, less 30% withholding",
+      "sourceUrl": "https://tradingeconomics.com/belgium/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case: short treasury certificates and term deposits after 30% withholding tax (about 1.5-1.8%), with some longer deposits."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "10-year OLO 4.38% less 30% withholding = 3.1%",
+      "sourceUrl": "https://tradingeconomics.com/belgium/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in long OLOs after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Neither the FSMA, the NBB nor Assuralia publishes an industry-wide life claim settlement ratio that we could find."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (temporary death cover, 'schuldsaldoverzekering' and 'tijdelijke overlijdensverzekering') is widely sold, but no published per-1,000 premium table by age was found; insurers quote individually."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost for one major private hospital stay was found; the patient's share depends on room type and supplements, and statutory health insurance pays most of the bill."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Belgian hospitalisation insurance is priced per plan (room type, age) rather than per sum insured, and no age-banded premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.2151,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BE",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat HICP health: 3.6% a year to Sep 2026, 12-month average 3.1%",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Medical prices have run about a point above headline inflation, so 3.5% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat HICP education: 2.2% a year to Sep 2026",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Education is mostly publicly funded and its prices track headline inflation, so the 2.5% projection plus half a point for private fees is used."
+    },
+    "life_expectancy": {
+      "value": 82.3,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BE",
+      "asOf": "2024-12-31",
+      "note": "Men 80.3, women 84.4; UN WPP 2024 (via populationpyramid.net) gives 82.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.0,
+            "men": 23.3,
+            "women": 26.6
+          },
+          {
+            "age": 65,
+            "total": 20.9,
+            "men": 19.3,
+            "women": 22.3
+          },
+          {
+            "age": 70,
+            "total": 16.9,
+            "men": 15.6,
+            "women": 18.1
+          },
+          {
+            "age": 80,
+            "total": 9.6,
+            "men": 8.8,
+            "women": 10.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/belgium/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.02
+          },
+          {
+            "year": 2040,
+            "value": 2.3
+          },
+          {
+            "year": 2065,
+            "value": 1.98
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/belgium/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 33.1 (2025, World Bank), 43.4 (2040) and 50.4 (2065, populationpyramid.net/belgium/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 66,
+      "status": "sourced",
+      "sourceName": "Federal Pension Service, How is the retirement date calculated?",
+      "sourceUrl": "https://www.sfpd.fgov.be/en/retirement-age/when",
+      "asOf": "2026-10-31",
+      "note": "Statutory age is 66 for people born 1960-1963 (reached in 2026) and 67 for those born from 1964; same for men and women."
+    },
+    "retirement_age_government": {
+      "value": 66,
+      "status": "sourced",
+      "sourceName": "Federal Pension Service, How is the retirement date calculated?",
+      "sourceUrl": "https://www.sfpd.fgov.be/en/retirement-age/when",
+      "asOf": "2026-10-31",
+      "note": "Civil servants' service ends automatically at the same statutory age (66 now, 67 for those born from 1964); magistrates and soldiers have their own limits."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB MIR: regulated savings 0.72%, term deposits up to 1 year 2.14% less 30%",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings accounts and short deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 2.14% less 30% withholding = 1.5%",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "10-year OLO 4.38% less 30% withholding = 3.1%",
+      "sourceUrl": "https://tradingeconomics.com/belgium/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of OLOs and longer deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 1.8%; BEL 20 index",
+      "sourceUrl": "https://tradingeconomics.com/belgium/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 1.8%; equity base 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/belgium/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half fixed income at about 2.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "BEL 20 long-run record; 10-year OLO 4.38%",
+      "sourceUrl": "https://tradingeconomics.com/belgium/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1644.28,
+      "status": "sourced",
+      "sourceName": "Federal Pension Service, Guaranteed Income for Elderly Persons (GIEP/IGO/GRAPA)",
+      "sourceUrl": "https://www.sfpd.fgov.be/en/entitlement-to-a-pension/giep",
+      "asOf": "2026-09-01",
+      "note": "Gross EUR 1,644.28 a month for a single person (increased basic amount) and EUR 1,096.18 for a cohabitant, at index 186.83 from 1 September 2026; means-tested top-up."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 66,
+        "womenAge": 66,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Federal Pension Service, Guaranteed Income for Elderly Persons",
+      "sourceUrl": "https://www.sfpd.fgov.be/en/entitlement-to-a-pension/giep",
+      "asOf": "2026-09-01",
+      "note": "From the statutory retirement age (66 in 2026, rising to 67), subject to a means test covering the household's income and assets."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Belgian law has no statutory gratuity or end-of-service payment for private employees; departing employees get notice or pay in lieu of notice."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 66,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Federal Pension Service, How is the retirement date calculated?",
+      "sourceUrl": "https://www.sfpd.fgov.be/en/retirement-age/when",
+      "asOf": "2026-10-31",
+      "note": "Earnings-related statutory pension from social security contributions, payable from 66 (67 for those born from 1964); pensions follow the health index and are taxable. A pension reform agreed by the government is still being legislated."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Gereglementeerde spaarrekening",
+      "localNameEn": "Regulated savings account",
+      "note": "Base rate plus loyalty premium; interest tax-free up to EUR 1,050 a year per person.",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L23.D.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Termijnrekening",
+      "localNameEn": "3-month term deposit",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Termijnrekening",
+      "localNameEn": "1-year term deposit",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring deposit product; regular saving goes into savings accounts or fund savings plans."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": "Staatsbon",
+      "localNameEn": "State Note",
+      "note": "State Notes were sold to individuals from time to time (2023-2025), but none is listed among the Debt Agency's current products for individuals.",
+      "sourceUrl": "https://www.debtagency.be/en"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Schatkistcertificaat",
+      "localNameEn": "Treasury Certificate",
+      "note": "3, 6 and 12 months; individuals buy them on the secondary market through a bank.",
+      "sourceUrl": "https://www.debtagency.be/en/productctinfo"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Lineaire obligatie (OLO)",
+      "localNameEn": "Linear bond (OLO)",
+      "sourceUrl": "https://www.debtagency.be/en/productoloinfo"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Lineaire obligatie (OLO)",
+      "localNameEn": "Linear bond (OLO)",
+      "sourceUrl": "https://www.debtagency.be/en/productoloinfo"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Beleggingsfonds",
+      "localNameEn": "Investment fund / index fund (ETF)",
+      "note": "Retail index funds and ETFs are widely available; stock-exchange tax applies to trades."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Beleggingsgoud",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "Investment gold is VAT-exempt and freely bought."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Belgium",
+      "url": "https://www.nbb.be/en"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services and Markets Authority (FSMA); National Bank of Belgium (prudential)",
+      "url": "https://www.fsma.be/en"
+    },
+    "insuranceComplaints": {
+      "name": "Ombudsman des Assurances / Ombudsman van de Verzekeringen",
+      "url": "https://ombudsman-insurance.be/introduire-une-plainte"
+    },
+    "pensionScheme": {
+      "name": "Federal Pension Service",
+      "url": "https://www.sfpd.fgov.be/en/"
+    },
+    "oldAgeAllowance": {
+      "name": "Guaranteed Income for Elderly Persons (GIEP / IGO / GRAPA)",
+      "url": "https://www.sfpd.fgov.be/en/entitlement-to-a-pension/giep"
+    },
+    "publicHealthCover": {
+      "name": "INAMI / RIZIV (compulsory health insurance)",
+      "url": "https://www.inami.fgov.be/fr"
+    },
+    "depositInsurance": {
+      "name": "Guarantee Fund for Financial Services",
+      "url": "https://fondsdegarantie.belgium.be/fr"
+    },
+    "statistics": {
+      "name": "Statbel",
+      "url": "https://statbel.fgov.be/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

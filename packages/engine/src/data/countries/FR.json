@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 1,
+  "code": "FR",
+  "iso3": "FRA",
+  "nameEn": "France",
+  "nameNative": "France",
+  "region": "europe_central_asia",
+  "languages": [
+    "fr",
+    "en",
+    "es",
+    "de",
+    "oc"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.034,
+      "status": "sourced",
+      "sourceName": "Trading Economics (INSEE CPI, October 2026 provisional estimate)",
+      "sourceUrl": "https://tradingeconomics.com/france/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "INSEE flash estimate published 30 October 2026: CPI up 3.4% year on year (3.1% in September); secondary source because insee.fr series pages returned no data. World Bank 2025 average 0.9%."
+    },
+    "inflation_projection": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; French CPI 3.4% (Oct 2026) after 0.9% in 2025 (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/france/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The ECB 2% target is credible over the long run and French inflation averaged close to it over five years, but the 2026 rebound argues for a small margin, so 2.2% is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "France uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.017,
+      "status": "sourced",
+      "sourceName": "Service-Public.fr, Livret A",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
+      "asOf": "2026-08-01",
+      "note": "Livret A (state-regulated passbook offered by every bank, ceiling EUR 22,950) pays 1.7% tax-free from 1 August 2026 to 31 January 2027; ordinary overnight household deposits averaged 0.05% and notice deposits 1.55% in August 2026 (ECB MFI statistics)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/Banque de France MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.36% in August 2026); no 3-month term deposit (compte à terme) rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0236,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: French banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.82% and over 2 years 2.73% in August 2026."
+    },
+    "dps_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Service-Public.fr, Plan d'épargne logement (PEL)",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16140",
+      "asOf": "2026-01-01",
+      "note": "PEL opened in 2026: fixed 2.00% gross for the life of the plan, minimum EUR 540 a year in periodic deposits (e.g. EUR 45 a month), at least 4 years, up to 10; interest taxed under the flat tax."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0252,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: French banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST for France stops in 2017 (0.79%)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "France sells no government savings certificate or retail savings bond to individuals; state-regulated passbooks (Livret A, LDDS, LEP) fill that role."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0279,
+      "status": "sourced",
+      "sourceName": "Trading Economics, France 3-month BTF yield",
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Market yield on 3-month BTF (Bons du Trésor à taux fixe); 6-month 3.14%, 52-week 3.13%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0434,
+      "status": "sourced",
+      "sourceName": "Trading Economics, France 5-year OAT yield",
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield",
+      "asOf": "2026-10-30"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0497,
+      "status": "sourced",
+      "sourceName": "Trading Economics, France 10-year OAT yield",
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term (10-year) convergence yield for France was 4.44% in September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.314,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, France income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/france/individual/income-determination",
+      "asOf": "2026-01-01",
+      "note": "Flat tax (PFU) of 31.4% on interest earned from 2026: 12.8% income tax plus 18.6% social charges (17.2% before 2026); progressive income tax can be elected instead. Livret A, LDDS and LEP interest is tax-free."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals in France, so no specific tax rate applies."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Fonds de Garantie des Dépôts et de Résolution (FGDR)",
+      "sourceUrl": "https://www.garantiedesdepots.fr/fr",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per client per bank; state-guaranteed regulated passbooks (Livret A, LDDS, LEP) carry a separate EUR 100,000 guarantee."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.071,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: French banks, revolving loans, overdrafts and credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.A2Z.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on revolving loans, overdrafts and extended credit card credit combined (no card-only series); French law also caps consumer credit at the quarterly usury rate (taux d'usure) set by the Banque de France, which could not be read."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CAC 40 7,969 on 30 Oct 2026, down 1.9% in a year (Trading Economics); after-tax safe rate about 1.7%",
+      "sourceUrl": "https://tradingeconomics.com/france/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: French shares earn little more than safe savings over a long period, as in 2000-2015."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "CAC 40 price index (Trading Economics); Livret A 1.7% tax-free; 3-month BTF 2.79% less 31.4% flat tax = 1.9%",
+      "sourceUrl": "https://tradingeconomics.com/france/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The CAC 40 has a solid 10-year record (about 4,500 in late 2016 to 7,969), but the base is held to the after-tax safe rate plus about 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "CAC 40 price index (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/france/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified euro equity fund held in a PEA matching long-run global equity returns of about 7-8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.014,
+      "status": "assumption",
+      "sourceName": "Livret A 1.7% tax-free (Service-Public.fr); rate set by formula from inflation and short-term rates",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
+      "asOf": "2026-10-31",
+      "note": "Low case: regulated passbook rates drift lower as inflation eases."
+    },
+    "fixed_income_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Livret A 1.7% tax-free; 1-year deposits 2.36% less 31.4% flat tax = 1.6%",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
+      "asOf": "2026-10-31",
+      "note": "Base case: the tax-free Livret A rate, close to the after-tax 1-year term deposit."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "France 10-year OAT 4.97% less 31.4% flat tax = 3.4% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long government bonds after tax, slightly below today's unusually high 10-year yield."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The ACPR and France Assureurs do not publish an industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (assurance temporaire décès) is widely sold, but no published premium table per EUR 1,000 of cover by age was found; comparison sites were not read."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is largely covered by Assurance Maladie plus a complementary mutuelle; the patient pays a daily hospital charge (forfait journalier) and private-clinic extra fees, but no official figure for a typical out-of-pocket cost of a major stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Complementary health cover (mutuelle) is priced per person by age and benefit level, not per sum insured, and no published premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.0923,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=FR",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP France, health: 0.0% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.FR.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Regulated health prices in France have risen slower than headline inflation, but private fees and mutuelle premiums rise faster, so 3% is used for planning."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP France, education: 3.0% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.FR.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is free; private schooling and higher-education fees have risen faster than headline inflation, so 3.5% is used."
+    },
+    "life_expectancy": {
+      "value": 83.7,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/france",
+      "asOf": "2026-12-31",
+      "note": "Men 80.9, women 86.4 (UN WPP estimate for 2026); World Bank 2024 figure 83.0."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 26.4,
+            "men": 24.2,
+            "women": 28.4
+          },
+          {
+            "age": 65,
+            "total": 22.3,
+            "men": 20.4,
+            "women": 24.0
+          },
+          {
+            "age": 70,
+            "total": 18.3,
+            "men": 16.6,
+            "women": 19.7
+          },
+          {
+            "age": 80,
+            "total": 10.7,
+            "men": 9.5,
+            "women": 11.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/france",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.72
+          },
+          {
+            "year": 2040,
+            "value": 2.15
+          },
+          {
+            "year": 2065,
+            "value": 2.15
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/france/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 36.8 (2025, World Bank), 46.5 (2040) and 46.6 (2065, populationpyramid.net/france/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 64,
+      "status": "sourced",
+      "sourceName": "Service-Public.fr, âge minimum de départ à la retraite",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14043",
+      "asOf": "2026-08-14",
+      "note": "Minimum pension age 64 for people born from 1969; 62 years 9 months for those born January 1963 to March 1965 (age frozen while the 2023 reform is suspended), 63 to 63 years 9 months for 1965-1968. Full rate is automatic at 67."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Sedentary civil servants follow the same minimum pension age as private workers, but no official page stating the civil-service ages (including the age limit) could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.014,
+      "status": "assumption",
+      "sourceName": "Livret A 1.7% tax-free (Service-Public.fr)",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
+      "asOf": "2026-10-31",
+      "note": "Low case: regulated passbooks and short deposits after a fall in rates."
+    },
+    "retirement_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Livret A 1.7% tax-free; 1-year deposits 2.36% less 31.4% flat tax = 1.6%",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the tax-free Livret A rate, about the after-tax 1-year deposit."
+    },
+    "retirement_return_high": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "France 10-year OAT 4.97% less 31.4% flat tax = 3.4% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer government bonds or euro-fund life insurance after tax, below the current 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Livret A 1.7%; CAC 40 record (Trading Economics)",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Livret A 1.7%; equity base 5.5%",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.7-3% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax 10-year OAT 3.4%; equity high 7.5%",
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1043.59,
+      "status": "sourced",
+      "sourceName": "Service-Public.fr, Allocation de solidarité aux personnes âgées (ASPA)",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16871",
+      "asOf": "2026-01-01",
+      "note": "Means-tested minimum old-age income: tops total resources up to EUR 1,043.59 gross a month for a single person (EUR 1,620.18 for a couple both receiving it); may be recovered from estates above a threshold."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Service-Public.fr, ASPA",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16871",
+      "asOf": "2026-01-01",
+      "note": "From 65 (62 for long-career or disability early retirees); requires stable residence in France and, for most foreign nationals, 10 years of residence permits allowing work."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 7.5,
+        "daysPerYearAfter": 10,
+        "afterYears": 10,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Service-Public.fr, indemnité légale de licenciement",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F987",
+      "asOf": "2026-10-31",
+      "note": "Statutory severance on dismissal after 8 months' service: 1/4 of a month's pay per year for the first 10 years and 1/3 of a month per year beyond; not paid on resignation (a smaller retirement indemnity applies on voluntary retirement). Collective agreements may pay more."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 64,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Service-Public.fr, calcul de la retraite de base (Assurance retraite)",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F21552",
+      "asOf": "2026-10-31",
+      "note": "Compulsory basic pension: 50% of the average of the best 25 years' pay (capped; EUR 2,002.50 a month maximum in 2026) at full rate, plus the compulsory Agirc-Arrco points scheme; pensions are revalued each 1 January by average CPI excluding tobacco and are taxed as income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Livret A",
+      "localNameEn": "Regulated tax-free savings passbook",
+      "note": "Also LDDS and, for low incomes, LEP; ordinary bank savings accounts (livrets bancaires) exist too.",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Compte à terme",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Compte à terme",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Plan d'épargne logement (PEL)",
+      "localNameEn": "Home savings plan",
+      "note": "Regular deposits of at least EUR 540 a year for 4-10 years at a rate fixed when opened.",
+      "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16140"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bons du Trésor à taux fixe (BTF)",
+      "localNameEn": "French Treasury bills",
+      "note": "Auctioned by Agence France Trésor mainly to institutions.",
+      "sourceUrl": "https://www.aft.gouv.fr/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligation assimilable du Trésor (OAT)",
+      "localNameEn": "French government bond"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligation assimilable du Trésor (OAT)",
+      "localNameEn": "French government bond",
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "OPCVM et fonds indiciels (ETF)",
+      "localNameEn": "Mutual funds and index funds (ETF)",
+      "note": "Can be held in a tax-advantaged PEA (plan d'épargne en actions) or in assurance-vie unit-linked contracts."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Lingots et pièces d'or",
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy; sales are taxed under a flat tax on precious metals or as a capital gain."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque de France",
+      "url": "https://www.banque-france.fr/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Autorité de contrôle prudentiel et de résolution (ACPR)",
+      "url": "https://acpr.banque-france.fr/"
+    },
+    "insuranceComplaints": {
+      "name": "La Médiation de l'Assurance",
+      "url": "https://www.mediation-assurance.org/",
+      "note": "Free insurance ombudsman once the insurer's own complaints service has answered."
+    },
+    "pensionScheme": {
+      "name": "L'Assurance retraite (CNAV, basic pension)",
+      "url": "https://www.lassuranceretraite.fr/"
+    },
+    "oldAgeAllowance": {
+      "name": "Allocation de solidarité aux personnes âgées (ASPA)",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16871"
+    },
+    "publicHealthCover": {
+      "name": "Assurance Maladie",
+      "url": "https://www.ameli.fr/"
+    },
+    "depositInsurance": {
+      "name": "Fonds de Garantie des Dépôts et de Résolution (FGDR)",
+      "url": "https://www.garantiedesdepots.fr/"
+    },
+    "statistics": {
+      "name": "Institut national de la statistique et des études économiques (INSEE)",
+      "url": "https://www.insee.fr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

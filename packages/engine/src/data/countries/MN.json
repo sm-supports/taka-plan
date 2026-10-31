@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "code": "MN",
+  "iso3": "MNG",
+  "nameEn": "Mongolia",
+  "nameNative": "Монгол Улс",
+  "region": "east_asia_pacific",
+  "languages": [
+    "mn",
+    "kk",
+    "zh",
+    "ru",
+    "en"
+  ],
+  "currency": {
+    "code": "MNT",
+    "symbol": "₮",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3602,
+      "status": "sourced",
+      "sourceName": "Bank of Mongolia rate (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/currency",
+      "asOf": "2026-10-30",
+      "note": "Secondary source because the Bank of Mongolia rate page renders by script; World Bank average for 2025 was 3,545."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.129,
+      "status": "sourced",
+      "sourceName": "National Statistics Office of Mongolia CPI (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "12.9% year on year in September 2026 (12.5% in August, 13.0% in July); secondary source because the NSO site renders by script."
+    },
+    "inflation_projection": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of Mongolia 6% (+/-2) target; IMF WEO projections (6.6-8.2% for 2028-2031)",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MNG",
+      "asOf": "2026-10-31",
+      "note": "CPI averaged about 9.5% over 2021-2025 and the 6% target is rarely met, so we plan with 7%, in line with IMF medium-term projections."
+    },
+    "policy_rate": {
+      "value": 0.125,
+      "status": "sourced",
+      "sourceName": "Bank of Mongolia policy rate (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/interest-rate",
+      "asOf": "2026-09-17",
+      "note": "Raised from 12% to 12.5% in August 2026 and held on 17 September 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank deposit rate pages (rendered by script) could not be read; no published typical savings-account rate found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank term deposit rate pages could not be read; see bank_deposit_avg_rate."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank term deposit rate pages could not be read; see bank_deposit_avg_rate."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for monthly recurring deposits found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.1204,
+      "status": "sourced",
+      "sourceName": "Bank of Mongolia average deposit interest rate (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-09-30",
+      "note": "12.04% in September 2026 (12.02% in August); World Bank FR.INR.DPST shows 6.6% for 2021."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current domestic treasury bill yield found; Trading Economics has no Mongolian government bond yield series."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current domestic 5-year government bond yield found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current domestic 10-year government bond yield found."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Mongolia, taxes on personal income (reviewed 8 June 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/mongolia/individual/taxes-on-personal-income",
+      "asOf": "2026-06-08",
+      "note": "Interest is property income taxed at 10% for residents (withheld at source); 20% for non-residents; a special 5% rate applies to interest on purchased debt instruments."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; interest on purchased debt instruments is taxed at a special 5% rate (PwC)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A mandatory deposit insurance scheme exists (Law on Insurance of Bank Deposits, 2013; Deposit Insurance Corporation of Mongolia), but its website renders by script and we could not read the current limit."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate found."
+    },
+    "equity_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "MSE TOP-20 index record (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The index rose from a 10,486 low to about 66,800 (Oct 2026) but is volatile and concentrated, so the low case is below the deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "After-tax average deposit rate 10.8% plus a modest premium; MSE TOP-20 record",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base set about 2 points above the after-tax deposit rate, under the 4-point limit, because the market is small and concentrated despite a strong 10-year run."
+    },
+    "equity_return_high": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "MSE TOP-20 index record (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case closer to the index's strong record of the past decade (+34% in the year to October 2026)."
+    },
+    "gold_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; tugrik depreciation (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MN",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall for years; low case assumes little tugrik depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend plus expected tugrik depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MN",
+      "asOf": "2026-10-31",
+      "note": "About 4% dollar gold trend plus about 5% a year tugrik depreciation from the inflation gap with the US."
+    },
+    "gold_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend plus expected tugrik depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MN",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle with faster depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Mongolia average deposit rate after 10% tax",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case if rates fall back as inflation eases. Safe MNT rates: average bank deposit rate 12.04% (Sep 2026, Bank of Mongolia), 10% tax on interest, policy rate 12.5%; no retail treasury bills or savings bonds found."
+    },
+    "fixed_income_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Bank of Mongolia average deposit rate after 10% tax",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case just under the after-tax average deposit rate (12.04% x 0.9 = 10.8%). Safe MNT rates: average bank deposit rate 12.04% (Sep 2026, Bank of Mongolia), 10% tax on interest, policy rate 12.5%; no retail treasury bills or savings bonds found."
+    },
+    "fixed_income_return_high": {
+      "value": 0.115,
+      "status": "assumption",
+      "sourceName": "Bank of Mongolia average deposit rate and policy rate",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case for longer term deposits above the average rate. Safe MNT rates: average bank deposit rate 12.04% (Sep 2026, Bank of Mongolia), 10% tax on interest, policy rate 12.5%; no retail treasury bills or savings bonds found."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Financial Regulatory Commission site renders by script; no claim settlement ratio found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates or premium guides in tugrik found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age found."
+    },
+    "oop_health_share": {
+      "value": 0.488,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MN",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "NSO CPI (via Trading Economics); no medical CPI read",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "With about half of health spending out of pocket, we plan 2 points above long-run inflation for medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NSO CPI (via Trading Economics); no education CPI read",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "We plan 1 point above long-run inflation for school and university fees."
+    },
+    "life_expectancy": {
+      "value": 72.4,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MN",
+      "asOf": "2024-12-31",
+      "note": "Men 67.9, women 77.1 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.9,
+            "men": 16.2,
+            "women": 21.1
+          },
+          {
+            "age": 65,
+            "total": 15.4,
+            "men": 13.2,
+            "women": 17.2
+          },
+          {
+            "age": 70,
+            "total": 12.3,
+            "men": 10.5,
+            "women": 13.6
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 6.1,
+            "women": 7.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/mongolia",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age; secondary source because the WHO GHO API was unavailable."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 11.6
+          },
+          {
+            "year": 2040,
+            "value": 6.8
+          },
+          {
+            "year": 2065,
+            "value": 4.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
+      "sourceUrl": "https://www.populationpyramid.net/mongolia/2040/",
+      "asOf": "2024-07-31",
+      "note": "100 / old-age dependency ratio: 8.6 in 2025 (World Bank), 14.8 in 2040 and 22.8 in 2065 (UN WPP 2024)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "General Office of Social Insurance, old-age pension insurance",
+      "sourceUrl": "https://www.ndaatgal.mn/daatgal/%d1%82%d1%8d%d1%82%d0%b3%d1%8d%d0%b2%d1%80%d0%b8%d0%b9%d0%bd-%d0%b4%d0%b0%d0%b0%d1%82%d0%b3%d0%b0%d0%bb/",
+      "asOf": "2026-10-31",
+      "note": "Pension age rises 3 months per birth year: men from 60 (born 1957) to 65 (born 1977 or later); women from 55 (born 1962) to 65 (born 2002 or later), e.g. 60 for women born 1982. 65 is the age for today's younger workers."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official page with the current civil-service retirement age was readable; civil servants draw the same social insurance pension."
+    },
+    "retirement_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Mongolia average deposit rate after 10% tax",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case if deposit rates fall as inflation eases. Safe MNT rates: average bank deposit rate 12.04% (Sep 2026, Bank of Mongolia), 10% tax on interest, policy rate 12.5%; no retail treasury bills or savings bonds found."
+    },
+    "retirement_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Mongolia average deposit rate after 10% tax",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case below the after-tax average deposit rate (10.8%). Safe MNT rates: average bank deposit rate 12.04% (Sep 2026, Bank of Mongolia), 10% tax on interest, policy rate 12.5%; no retail treasury bills or savings bonds found."
+    },
+    "retirement_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Mongolia average deposit rate after 10% tax",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case near the after-tax deposit rate on longer terms. Safe MNT rates: average bank deposit rate 12.04% (Sep 2026, Bank of Mongolia), 10% tax on interest, policy rate 12.5%; no retail treasury bills or savings bonds found."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Mix of tugrik deposits and local equity",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "About 40% equity at the low case, 60% deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.115,
+      "status": "assumption",
+      "sourceName": "Mix of tugrik deposits and local equity",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "About half equity at 13% and half deposits near 10.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Mix of tugrik deposits and local equity",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "About 60% equity at the high case and 40% deposits."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The social welfare agency site was not reachable, so the amount of any non-contributory pension for elderly people without a social insurance pension could not be confirmed. Minimum contributory old-age pension is MNT 769,000 a month (Social Insurance General Office)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility ages for the social welfare pension could not be confirmed from an official page."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity per year of service found; the Labour Law provides severance on dismissal, but we could not read its current terms."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "General Office of Social Insurance, old-age pension insurance",
+      "sourceUrl": "https://www.ndaatgal.mn/daatgal/%d1%82%d1%8d%d1%82%d0%b3%d1%8d%d0%b2%d1%80%d0%b8%d0%b9%d0%bd-%d0%b4%d0%b0%d0%b0%d1%82%d0%b3%d0%b0%d0%bb/",
+      "asOf": "2026-10-31",
+      "note": "Social insurance pension: 8.5% employee + 8.5% employer (11.5% for voluntary contributors); pension age rising to 65 for both sexes; full pension needs 22 years 3 months of contributions in 2026, rising to 25 years by 2037 (10-19 years gives a reduced pension); 45% of the best 60 months' average wage in the last 20 years plus 0.125% a month beyond 20 years; minimum full pension MNT 769,000 a month. The page describes no automatic inflation indexation."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Хугацаагүй хадгаламж",
+      "localNameEn": "Demand savings deposit"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Хугацаатай хадгаламж",
+      "localNameEn": "Term deposit",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Хугацаатай хадгаламж",
+      "localNameEn": "Term deposit",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/deposit-interest-rate"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Хуримтлалын хадгаламж",
+      "localNameEn": "Accumulating savings deposit",
+      "note": "Banks offer savings plans with regular top-ups; no published average rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No current retail treasury bill found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "Засгийн газрын бонд",
+      "localNameEn": "Government bond",
+      "note": "No current domestic issue found for individuals."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": "Засгийн газрын бонд",
+      "localNameEn": "Government bond",
+      "note": "No current domestic issue found for individuals."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Хөрөнгө оруулалтын сан",
+      "localNameEn": "Investment fund",
+      "note": "A few licensed funds and shares trade on the Mongolian Stock Exchange.",
+      "sourceUrl": "https://tradingeconomics.com/mongolia/stock-market"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Алт",
+      "localNameEn": "Gold",
+      "note": "Gold bars are sold by banks and dealers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Mongolia (Mongolbank)",
+      "url": "https://www.mongolbank.mn/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Regulatory Commission (FRC)",
+      "url": "https://www.frc.mn/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Regulatory Commission (FRC)",
+      "url": "https://www.frc.mn/",
+      "note": "Complaints about insurers go to the regulator."
+    },
+    "pensionScheme": {
+      "name": "General Office of Social Insurance",
+      "url": "https://www.ndaatgal.mn/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Health Insurance General Authority",
+      "url": "https://emd.gov.mn/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Corporation of Mongolia",
+      "url": "https://www.dicom.mn/"
+    },
+    "statistics": {
+      "name": "National Statistics Office of Mongolia",
+      "url": "https://www.1212.mn/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

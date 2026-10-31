@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "code": "SG",
+  "iso3": "SGP",
+  "nameEn": "Singapore",
+  "nameNative": "Singapore",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en",
+    "zh",
+    "ms",
+    "ta"
+  ],
+  "currency": {
+    "code": "SGD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.278,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/SGD (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/singapore/currency",
+      "asOf": "2026-10-30",
+      "note": "1.27808 SGD per USD; the MAS exchange-rate page links only to an interactive tool. World Bank PA.NUS.FCRF gives 1.307 for 2025."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.022,
+      "status": "sourced",
+      "sourceName": "MAS, Consumer Price Developments in September 2026",
+      "sourceUrl": "https://www.mas.gov.sg/news/consumer-price-developments/2026/consumer-price-developments-in-september-2026",
+      "asOf": "2026-09-30",
+      "note": "CPI-All Items 2.2% y-o-y in September 2026 (2.3% in August); MAS Core 2.0%. SingStat table M213781 shows the same."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "MAS inflation forecasts (CPI-All Items about 2.0% in 2026, 1.5-2.5% in 2027); SingStat CPI 2016-2025 average 1.7%",
+      "sourceUrl": "https://www.mas.gov.sg/news/consumer-price-developments/2026/consumer-price-developments-in-september-2026",
+      "asOf": "2026-10-31",
+      "note": "MAS has no numeric target but treats core inflation just under 2% as consistent with price stability, and forecasts about 2%, so we plan with 2%."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MAS runs monetary policy through the exchange rate (S$NEER policy band), not a policy interest rate. The market benchmark SORA averaged 1.40% at end-September 2026 (SingStat M700071)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MAS stopped publishing average bank savings deposit rates after June 2021 (0.07% then, MAS Interest Rates of Banks and Finance Companies); no official current average was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MAS's average 3-month bank fixed deposit series ends in June 2021 (0.12%); no current official average was found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MAS's average 12-month bank fixed deposit series ends in June 2021 (0.24%); no current official average was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard bank recurring-deposit product or published rate was found for Singapore."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank FR.INR.DPST stops in 2021 (0.12%), when the MAS bank rate series ended; that figure is far below current rates, so it is not used."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "MAS Singapore Savings Bonds, November 2026 issue (GX26110X)",
+      "sourceUrl": "https://eservices.mas.gov.sg/ssb/public/api/v1/bonds/GX26110X",
+      "asOf": "2026-11-02",
+      "note": "Average return 2.45% a year if held 10 years (1.67% in year 1, stepping up); the 5-year average is not published by this endpoint. Redeemable any month without penalty; tax-exempt."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0187,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Singapore 3-month yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/singapore/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "3-month SGS/MAS bill yield 1.87%. Individuals can buy 6-month (1.90%) and 1-year T-bills; SingStat shows the 1-year T-bill at 1.73% at end-September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0224,
+      "status": "sourced",
+      "sourceName": "SingStat Table M700071, Government Securities 5-Year Bond Yield (MAS data)",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-09-30",
+      "note": "End-September 2026; Trading Economics shows 2.03% on 30 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0247,
+      "status": "sourced",
+      "sourceName": "SingStat Table M700071, Government Securities 10-Year Bond Yield (MAS data)",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-09-30",
+      "note": "End-September 2026; Trading Economics shows 2.24% on 30 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Singapore individual income determination (secondary source)",
+      "sourceUrl": "https://taxsummaries.pwc.com/singapore/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Interest from Singapore-approved banks and licensed finance companies is generally not taxable for individuals; no withholding."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "MAS, Singapore Government T-bills: information for individuals",
+      "sourceUrl": "https://www.mas.gov.sg/bonds-and-bills/singapore-government-t-bills-information-for-individuals",
+      "asOf": "2026-10-31",
+      "note": "For individuals, interest income earned on SGS (including Savings Bonds) is tax exempt."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Singapore Deposit Insurance Corporation",
+      "sourceUrl": "https://www.sdic.org.sg/",
+      "asOf": "2026-10-31",
+      "note": "Insured deposits with each scheme member are aggregated and covered up to S$100,000 per depositor."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap; the typical effective rate on card balances could not be confirmed from an official page in this pass."
+    },
+    "equity_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "Low case close to the tax-free safe rate."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "Tax-free safe rate of about 1.7-1.9% plus a 3.6-point premium; the local index has a modest long-run record, so the premium is kept below 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "High case for a diversified Singapore and global equity mix."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Trading Economics USD/SGD 1.278 (30 Oct 2026), down 1.8% on the year",
+      "sourceUrl": "https://tradingeconomics.com/singapore/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a firming Singapore dollar."
+    },
+    "gold_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Trading Economics USD/SGD 1.278 (30 Oct 2026), down 1.8% on the year",
+      "sourceUrl": "https://tradingeconomics.com/singapore/currency",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4% less slow Singapore dollar appreciation under the MAS exchange-rate policy."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Trading Economics USD/SGD 1.278 (30 Oct 2026), down 1.8% on the year",
+      "sourceUrl": "https://tradingeconomics.com/singapore/currency",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank fixed deposits and T-bills if short rates fall, tax-free."
+    },
+    "fixed_income_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "1-year T-bill 1.73%, 5-year SGS 2.24%, Savings Bond 10-year average 2.45%, all tax-exempt",
+      "sourceUrl": "https://eservices.mas.gov.sg/ssb/public/api/v1/bonds/GX26110X",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of T-bills and Savings Bonds, tax-free."
+    },
+    "fixed_income_return_high": {
+      "value": 0.0245,
+      "status": "assumption",
+      "sourceName": "MAS Singapore Savings Bonds November 2026: 2.45% average over 10 years, tax-exempt",
+      "sourceUrl": "https://eservices.mas.gov.sg/ssb/public/api/v1/bonds/GX26110X",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in Savings Bonds or 10-year SGS."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found from MAS or the life insurance association."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is widely sold, but no published per-S$1,000 premium rates by age were retrieved in this pass."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MOH publishes bill amounts by procedure through a search tool and fee benchmarks for private single rooms, but no single typical out-of-pocket figure for a major stay was retrieved."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MediShield Life premiums are set per person by age, not per S$100,000 of cover, and Integrated Shield Plan premiums by cover were not retrieved."
+    },
+    "oop_health_share": {
+      "value": 0.2542,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SG",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "SingStat CPI Health: 2.7% (2025), 3.9% (2024), 4.5% (2023); 10-year average about 2%",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M213811",
+      "asOf": "2026-10-31",
+      "note": "Health CPI ran near 3-4% in recent years with health insurance premiums rising faster, so we plan with 3%."
+    },
+    "goal_inflation_education": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "SingStat CPI Education: 0.7% (2025), 3.2% (2024), 2.7% (2023); private tuition 5-6% in 2023-24",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M213811",
+      "asOf": "2026-10-31",
+      "note": "Education CPI averaged about 2% over ten years with private tuition rising faster, so we plan with 2.5%."
+    },
+    "life_expectancy": {
+      "value": 83.9,
+      "status": "sourced",
+      "sourceName": "SingStat Table M810501, Life Expectancy at Birth (Residents), preliminary",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M810501",
+      "asOf": "2025-12-31",
+      "note": "Residents: men 81.8, women 86.0. World Bank SP.DYN.LE00.IN gives 83.3 for 2024 (total population)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 26.0,
+            "men": 24.0,
+            "women": 28.0
+          },
+          {
+            "age": 65,
+            "total": 21.7,
+            "men": 19.8,
+            "women": 23.5
+          },
+          {
+            "age": 70,
+            "total": 17.6,
+            "men": 15.9,
+            "women": 19.2
+          },
+          {
+            "age": 80,
+            "total": 10.4,
+            "men": 9.3,
+            "women": 11.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/singapore/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women. SingStat gives 21.6 years at 65 for residents in 2025 (men 19.9, women 23.1)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.21
+          },
+          {
+            "year": 2040,
+            "value": 3.13
+          },
+          {
+            "year": 2065,
+            "value": 1.28
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/singapore/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 19.18 (2025, World Bank), 32.0 (2040) and 78.4 (2065, populationpyramid.net/singapore/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "CPF Board, CPF LIFE (payouts from age 65)",
+      "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/monthly-payouts/cpf-life",
+      "asOf": "2026-10-31",
+      "note": "CPF LIFE payouts start from 65 (deferrable to 70). The statutory minimum retirement age is 64 from 1 July 2026 under the Retirement and Re-employment Act (MOM), with re-employment offered beyond it."
+    },
+    "retirement_age_government": {
+      "value": 64,
+      "status": "sourced",
+      "sourceName": "Ministry of Manpower, Retirement (statutory minimum retirement age 64 from 1 July 2026)",
+      "sourceUrl": "https://www.mom.gov.sg/employment-practices/retirement",
+      "asOf": "2026-07-01",
+      "note": "The Retirement and Re-employment Act minimum retirement age; public officers are treated as the same statutory minimum here (no separate civil-service age was confirmed)."
+    },
+    "retirement_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "Low case if short-term rates fall back, tax-free."
+    },
+    "retirement_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "Base case at the tax-free 1-year T-bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.0245,
+      "status": "assumption",
+      "sourceName": "MAS Singapore Savings Bonds November 2026: 2.45% average over 10 years, tax-exempt",
+      "sourceUrl": "https://eservices.mas.gov.sg/ssb/public/api/v1/bonds/GX26110X",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered Savings Bonds and SGS."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if equities only match bonds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Equity base 5.5% and SGS/Savings Bonds about 2-2.5%; CPF LIFE savings earn at least 4%",
+      "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/monthly-payouts/cpf-life",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half equity and half safe bonds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "1-year SGS T-bill 1.73% (end-Sep 2026), tax-exempt for individuals",
+      "sourceUrl": "https://tablebuilder.singstat.gov.sg/table/TS/M700071",
+      "asOf": "2026-10-31",
+      "note": "High case with the equity high case."
+    },
+    "old_age_allowance_monthly": {
+      "value": 360,
+      "status": "sourced",
+      "sourceName": "CPF Board, Silver Support Scheme",
+      "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/government-support/silver-support-scheme",
+      "asOf": "2026-10-31",
+      "note": "Means-tested quarterly payouts: S$1,080 a quarter (S$360 a month) for 1- and 2-room flat dwellers with per capita household income up to S$1,500, down to S$215 a quarter for 5-room flats with higher income."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "CPF Board, Silver Support Scheme",
+      "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/government-support/silver-support-scheme",
+      "asOf": "2026-10-31",
+      "note": "Singapore Citizens 65 and above; lifetime CPF contributions by 55 up to S$140,000, 1- to 5-room HDB flat, per capita household income up to S$2,300 a month. No application needed."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Singapore has no statutory gratuity or end-of-service benefit for private employees; retrenchment benefits depend on contract or collective agreement."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "CPF Board, CPF LIFE",
+      "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/monthly-payouts/cpf-life",
+      "asOf": "2026-10-31",
+      "note": "CPF is a mandatory contributory scheme for citizen and PR employees; CPF LIFE pays a monthly annuity for life from 65 (Standard plan fixed; Escalating plan rises 2% a year; neither is indexed to inflation). PwC notes CPF benefits are excluded from taxable retirement benefits. Official payout examples were not retrieved."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "Bank savings deposits; MAS stopped publishing average rates in 2021."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit (12 months)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard bank recurring-deposit product was identified; monthly savings plans are usually investment plans."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Singapore Savings Bonds",
+      "note": "10-year government bond for individuals with step-up interest; buy from S$500 monthly, redeem any month without penalty; tax-exempt.",
+      "sourceUrl": "https://www.mas.gov.sg/bonds-and-bills/singapore-savings-bonds"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Singapore Government T-bills",
+      "note": "Individuals can buy 6-month and 1-year T-bills at auction from S$1,000; 3-month bills are not offered to individuals.",
+      "sourceUrl": "https://www.mas.gov.sg/bonds-and-bills/singapore-government-t-bills-information-for-individuals"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Singapore Government Securities (5-year bond)",
+      "note": "Individuals can bid at SGS bond auctions.",
+      "sourceUrl": "https://www.mas.gov.sg/bonds-and-bills/investing-in-singapore-government-securities"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Singapore Government Securities (10-year bond)",
+      "sourceUrl": "https://www.mas.gov.sg/bonds-and-bills/investing-in-singapore-government-securities"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust or index ETF",
+      "note": "Diversified unit trusts and exchange-traded index funds are widely available to retail investors."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold bullion",
+      "note": "Gold bars and coins can be bought freely."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Monetary Authority of Singapore",
+      "url": "https://www.mas.gov.sg/"
+    },
+    "insuranceRegulator": {
+      "name": "Monetary Authority of Singapore",
+      "url": "https://www.mas.gov.sg/",
+      "note": "MAS is the integrated regulator for banks and insurers."
+    },
+    "insuranceComplaints": {
+      "name": "Financial Industry Disputes Resolution Centre (FIDReC)",
+      "url": "https://www.fidrec.com.sg/"
+    },
+    "pensionScheme": {
+      "name": "Central Provident Fund Board (CPF LIFE)",
+      "url": "https://www.cpf.gov.sg/"
+    },
+    "oldAgeAllowance": {
+      "name": "Silver Support Scheme",
+      "url": "https://www.cpf.gov.sg/member/retirement-income/government-support/silver-support-scheme"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (MediShield Life)",
+      "url": "https://www.moh.gov.sg/"
+    },
+    "depositInsurance": {
+      "name": "Singapore Deposit Insurance Corporation",
+      "url": "https://www.sdic.org.sg/"
+    },
+    "statistics": {
+      "name": "Singapore Department of Statistics",
+      "url": "https://www.singstat.gov.sg/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 1,
+  "code": "TW",
+  "iso3": "TWN",
+  "nameEn": "Taiwan",
+  "nameNative": "臺灣",
+  "region": "east_asia_pacific",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "currency": {
+    "code": "TWD",
+    "symbol": "NT$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 32.478,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of China (Taiwan), NT$/US$ interbank closing rate",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/lp-645-1.html",
+      "asOf": "2026-10-30",
+      "note": "Closing rate on 30 Oct 2026 (Taipei Foreign Exchange Brokerage)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0273,
+      "status": "sourced",
+      "sourceName": "DGBAS consumer price index, September 2026 (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "2.73% year on year in September 2026, up from 2.05% in August; secondary source."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central bank aim of CPI near 2%; recent CPI (DGBAS via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Taiwan CPI has stayed close to 2% over the past five years, so we plan with 2% despite the 2.7% reading in September 2026."
+    },
+    "policy_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of China (Taiwan) discount rate (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/interest-rate",
+      "asOf": "2026-09-17",
+      "note": "Discount rate held at 2% at the 17 Sep 2026 meeting; the CBC discount rate page did not render."
+    },
+    "savings_account_rate": {
+      "value": 0.0084,
+      "status": "sourced",
+      "sourceName": "Central Bank, five major banks' deposit rates, monthly history (demand savings deposit)",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-1166-1.html",
+      "asOf": "2026-09-30",
+      "note": "Floating rate on demand savings deposits 0.825-0.855% at the five largest banks, September 2026 (average 0.84%)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0129,
+      "status": "sourced",
+      "sourceName": "Central Bank, five major banks' average deposit rates (3-month fixed time deposit)",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-30",
+      "note": "Five-bank rates 1.285-1.29% on 30 Oct 2026."
+    },
+    "fdr_1y_rate": {
+      "value": 0.017,
+      "status": "sourced",
+      "sourceName": "Central Bank, five major banks' average deposit rates (1-year fixed time deposit)",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-30",
+      "note": "All five banks quote 1.70% on 30 Oct 2026; 2-year 1.70-1.73%, 3-year 1.705-1.745%."
+    },
+    "dps_rate": {
+      "value": 0.0176,
+      "status": "sourced",
+      "sourceName": "Central Bank, five major banks' deposit rates, monthly history (3-year time savings deposit, fixed)",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-1166-1.html",
+      "asOf": "2026-09-30",
+      "note": "Average 3-year fixed rate on time savings deposits (定期儲蓄存款), the account type used for monthly installment savings (零存整付); range 1.745-1.785%, September 2026."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBC weighted average deposit rate of domestic banks was not read; only five-bank posted rates were (see fdr rates)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Taiwan has no government savings certificate or retail savings bond for individuals."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bills are auctioned to financial institutions; no published 91-day yield found on readable pages."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable published 5-year government bond yield found."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0199,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Taiwan 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "1.99% on 30 Oct 2026, about 0.72 points higher than a year earlier; secondary source."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Taiwan individual deductions",
+      "sourceUrl": "https://taxsummaries.pwc.com/taiwan/individual/deductions",
+      "asOf": "2026-10-31",
+      "note": "No flat tax: bank deposit interest is part of consolidated income, but a special deduction of up to NT$270,000 per tax filing unit means most savers pay none; interest above that is taxed at the household's marginal rate."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists in Taiwan."
+    },
+    "deposit_insurance_limit": {
+      "value": 3000000,
+      "status": "sourced",
+      "sourceName": "Central Deposit Insurance Corporation (CDIC), Deposit Insurance System overview",
+      "sourceUrl": "https://www.cdic.gov.tw/main_en/List.aspx?uid=243&pid=83",
+      "asOf": "2011-01-01",
+      "note": "Maximum coverage NT$3 million per depositor per insured institution since 1 Jan 2011."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banking Act caps credit card revolving rates, but the law database (law.moj.gov.tw) was unreachable, so the cap is not confirmed."
+    },
+    "equity_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "TAIEX record (Trading Economics); five-bank 1-year deposit rate",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The TAIEX rose 60% in the year to 30 Oct 2026 and is concentrated in technology, so a flat decade from today's level is the low case."
+    },
+    "equity_return_base": {
+      "value": 0.057,
+      "status": "assumption",
+      "sourceName": "Five-bank 1-year deposit rate 1.70% plus 4 points",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "The 10-year index record is very strong, but the base is capped at the tax-free 1-year deposit rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "TAIEX long-run record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case if technology earnings keep growing near their long-run pace."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; CBC NT$/US$ closing rate",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/lp-645-1.html",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall for a decade, and the NT dollar can strengthen against the US dollar."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; CBC NT$/US$ closing rate",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/lp-645-1.html",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 5% with no expected NT dollar depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "US-dollar gold trend; CBC NT$/US$ closing rate",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/lp-645-1.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0129,
+      "status": "assumption",
+      "sourceName": "Central Bank, five major banks' average deposit rates",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "Low case at the 3-month time deposit rate. Safe TWD rates: five-bank average fixed time deposit 1.29% (3 months) and 1.70% (1 year) on 30 Oct 2026; 10-year government bond 1.99%; deposit interest up to NT$270,000 a year per household is deductible, so most savers pay no tax on it."
+    },
+    "fixed_income_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Central Bank, five major banks' average deposit rates",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "Base case at the 1-year time deposit rate. Safe TWD rates: five-bank average fixed time deposit 1.29% (3 months) and 1.70% (1 year) on 30 Oct 2026; 10-year government bond 1.99%; deposit interest up to NT$270,000 a year per household is deductible, so most savers pay no tax on it."
+    },
+    "fixed_income_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Trading Economics, Taiwan 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case near the 10-year government bond yield. Safe TWD rates: five-bank average fixed time deposit 1.29% (3 months) and 1.70% (1 year) on 30 Oct 2026; 10-year government bond 1.99%; deposit interest up to NT$270,000 a year per household is deductible, so most savers pay no tax on it."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life insurance claim settlement ratio found on readable regulator pages."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but we found no published premium rates or credible premium guide we could read."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay found; National Health Insurance covers most of the bill."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates found."
+    },
+    "oop_health_share": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Taiwan is not in World Bank or WHO health expenditure data; the Ministry of Health and Welfare national health expenditure tables were not read."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "DGBAS CPI healthcare sub-index (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Healthcare CPI rose 0.7% in the year to September 2026 because National Health Insurance fees are regulated; we plan 1 point above general inflation for private costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "DGBAS CPI education and entertainment sub-index (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education and entertainment CPI rose 3.15% in the year to September 2026, so we plan 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 81.1,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/taiwan",
+      "asOf": "2026-07-08",
+      "note": "Men 78.3, women 84.0 (2026 estimate); Taiwan is not in World Bank data; secondary source."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.5,
+            "men": 22.6,
+            "women": 26.3
+          },
+          {
+            "age": 65,
+            "total": 20.4,
+            "men": 18.7,
+            "women": 21.9
+          },
+          {
+            "age": 70,
+            "total": 16.4,
+            "men": 15.0,
+            "women": 17.8
+          },
+          {
+            "age": 80,
+            "total": 9.6,
+            "men": 8.5,
+            "women": 10.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/taiwan",
+      "asOf": "2026-07-08",
+      "note": "Remaining years derived from expected age at death by current age (2026); secondary source."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Taiwan is not in World Bank data; the National Development Council population projections site and UN WPP mirror pages for Taiwan were not reachable."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Bureau of Labor Insurance, Labor Insurance old-age benefits",
+      "sourceUrl": "https://www.bli.gov.tw/en/0007461.html",
+      "asOf": "2020-12-22",
+      "note": "Old-age pension age is 65 for people born in 1962 or later (60 for 1957 and before, rising a year per birth year); at least 15 insured years for the pension; claim up to 5 years early at -4% a year or defer at +4% a year."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil service retirement rules could not be read (Ministry of Civil Service and law database pages unreachable)."
+    },
+    "retirement_return_low": {
+      "value": 0.0129,
+      "status": "assumption",
+      "sourceName": "Central Bank, five major banks' average deposit rates",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "Low case at the 3-month time deposit rate. Safe TWD rates: five-bank average fixed time deposit 1.29% (3 months) and 1.70% (1 year) on 30 Oct 2026; 10-year government bond 1.99%; deposit interest up to NT$270,000 a year per household is deductible, so most savers pay no tax on it."
+    },
+    "retirement_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Central Bank, five major banks' average deposit rates",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "Base case at the 1-year time deposit rate (tax-free for most savers). Safe TWD rates: five-bank average fixed time deposit 1.29% (3 months) and 1.70% (1 year) on 30 Oct 2026; 10-year government bond 1.99%; deposit interest up to NT$270,000 a year per household is deductible, so most savers pay no tax on it."
+    },
+    "retirement_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Trading Economics, Taiwan 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case near the 10-year government bond yield. Safe TWD rates: five-bank average fixed time deposit 1.29% (3 months) and 1.70% (1 year) on 30 Oct 2026; 10-year government bond 1.99%; deposit interest up to NT$270,000 a year per household is deductible, so most savers pay no tax on it."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Mix of TWD deposits, bonds and equity funds",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "About 40% equity at the low case and 60% deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.037,
+      "status": "assumption",
+      "sourceName": "Mix of TWD deposits, bonds and equity funds",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "About half equity at 5.7% and half deposits near 1.7%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Mix of TWD deposits, bonds and equity funds",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html",
+      "asOf": "2026-10-31",
+      "note": "About 60% equity at the high case and 40% deposits and bonds."
+    },
+    "old_age_allowance_monthly": {
+      "value": 4049,
+      "status": "sourced",
+      "sourceName": "Bureau of Labor Insurance, National Pension Old-age Basic Guaranteed Pension",
+      "sourceUrl": "https://www.bli.gov.tw/en/0011315.html",
+      "asOf": "2024-01-01",
+      "note": "NT$4,049 a month from 1 Jan 2024; only for people already 65 when the National Pension Act took effect (1 Oct 2008), with income and property tests. Younger people get this amount as the fixed part of the contributory National Pension (Method A)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Bureau of Labor Insurance, National Pension Old-age Basic Guaranteed Pension",
+      "sourceUrl": "https://www.bli.gov.tw/en/0011315.html",
+      "asOf": "2024-01-01",
+      "note": "Age 65 or older on 1 Oct 2008; resident 183+ days a year for 3 years; income up to NT$500,000 a year and land and houses up to NT$5,000,000."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Taiwan has no gratuity in the Bangladesh sense: under the Labor Pension Act employers pay at least 6% of wages a month into the worker's individual pension account (not read), and the old Labor Standards Act retirement pay only covers service before July 2005."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Labor Insurance old-age pension from 65 (BLI) with at least 15 insured years and benefit of 1.55% of average insured salary per year; whether it is indexed to CPI and its tax treatment could not be confirmed from readable pages."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "活期儲蓄存款",
+      "localNameEn": "Demand savings deposit",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-1166-1.html"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "定期存款",
+      "localNameEn": "Time deposit",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "定期存款",
+      "localNameEn": "Time deposit",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-371-1.html"
+    },
+    "dps": {
+      "available": true,
+      "localName": "零存整付",
+      "localNameEn": "Installment time savings deposit",
+      "note": "Monthly installments into a time savings deposit (1-3 years).",
+      "sourceUrl": "https://www.cbc.gov.tw/tw/np-1166-1.html"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "國庫券",
+      "localNameEn": "Treasury bill",
+      "note": "Auctioned to financial institutions; not sold directly to individuals."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "中央政府公債",
+      "localNameEn": "Central government bond",
+      "note": "Mainly held by institutions; individuals can invest through bond funds or ETFs and the bond OTC market."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "中央政府公債",
+      "localNameEn": "Central government bond",
+      "note": "Mainly held by institutions; individuals can invest through bond funds or ETFs.",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "指數股票型基金",
+      "localNameEn": "Exchange-traded fund (ETF)",
+      "note": "Index ETFs on the TAIEX and other indices are widely held by retail investors.",
+      "sourceUrl": "https://tradingeconomics.com/taiwan/stock-market"
+    },
+    "gold": {
+      "available": true,
+      "localName": "黃金",
+      "localNameEn": "Gold",
+      "note": "Gold bars and coins are sold by banks and jewellers; banks also offer gold passbook accounts."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Republic of China (Taiwan)",
+      "url": "https://www.cbc.gov.tw/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Supervisory Commission, Insurance Bureau",
+      "url": "https://www.ib.gov.tw/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Ombudsman Institution",
+      "url": "https://www.foi.org.tw/"
+    },
+    "pensionScheme": {
+      "name": "Bureau of Labor Insurance (Labor Insurance and Labor Pension)",
+      "url": "https://www.bli.gov.tw/en/"
+    },
+    "oldAgeAllowance": {
+      "name": "Bureau of Labor Insurance, National Pension (Old-age Basic Guaranteed Pension)",
+      "url": "https://www.bli.gov.tw/en/0011315.html"
+    },
+    "publicHealthCover": {
+      "name": "National Health Insurance Administration",
+      "url": "https://www.nhi.gov.tw/en/"
+    },
+    "depositInsurance": {
+      "name": "Central Deposit Insurance Corporation (CDIC)",
+      "url": "https://www.cdic.gov.tw/main_en/"
+    },
+    "statistics": {
+      "name": "Directorate-General of Budget, Accounting and Statistics (DGBAS)",
+      "url": "https://eng.dgbas.gov.tw/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}
