@@ -124,16 +124,20 @@ describe("computeInsurance: vector 1 (age 30, partner + child, ৳50 000, nothin
     expect(r.life.status).toBe("red");
   });
 
-  it("youngest child's age: cover runs until that child is 22 when that comes first", () => {
+  it("youngest child's age: with only children depending on the income, cover runs until that child is 22", () => {
+    const kidsOnly = { ...v1, dependents: ["children"] as M2Input["dependents"] };
     // youngest 5 → 22 − 5 = 17 years < 30: 420 000 × annuity-due factor(ρ, 17) = 6 882 742.6 → ৳6 882 500 (11.5×, inside the band)
-    const kid = computeInsurance({ ...v1, youngestChildAge: 5 }, rates, today);
+    const kid = computeInsurance({ ...kidsOnly, youngestChildAge: 5 }, rates, today);
     expect(kid.life.yearsCovered).toBe(17);
     expect(kid.life.incomeNeed).toBe(6882500);
     expect(kid.life.incomeMultiple).toBe(11.5);
     expect(kid.notes).not.toContain("m2.note.multipleOutsideBand");
     expect(kid.explain.steps[0]).toMatchObject({ id: "m2.years", raw: 17, rounded: 17, inputs: { youngestChildAgeYears: 5, childIndependentAgeYears: 22 } });
     // A grown-up youngest child → no years of income to replace.
-    expect(computeInsurance({ ...v1, youngestChildAge: 25 }, rates, today).life.incomeNeed).toBe(0);
+    expect(computeInsurance({ ...kidsOnly, youngestChildAge: 25 }, rates, today).life.incomeNeed).toBe(0);
+    // A dependent partner (or parents) keeps needing the income after the children leave: cover runs to 60.
+    expect(computeInsurance({ ...v1, youngestChildAge: 5 }, rates, today).life.yearsCovered).toBe(30);
+    expect(computeInsurance({ ...v1, dependents: ["children", "parents"], youngestChildAge: 5 }, rates, today).life.yearsCovered).toBe(30);
     // Without children among the dependents the child's age is ignored.
     expect(computeInsurance({ ...v1, dependents: ["partner"], youngestChildAge: 5 }, rates, today).life.yearsCovered).toBe(30);
   });

@@ -245,10 +245,12 @@ export function computeInsurance(input: M2Input, rates: RatesSnapshot, today: IS
 
   // ── Life cover ───────────────────────────────────────────────────────────────
   const coverToAge = input.coverToAge ?? ex.use("insurance_cover_to_age");
-  // Children stop depending on the income around insurance_child_independent_age: with children among
-  // the dependents and the youngest child's age known, cover runs until then if that comes first.
+  // Children stop depending on the income around insurance_child_independent_age: when children are the
+  // only ones who depend on the income (no partner or parents) and the youngest child's age is known,
+  // cover runs until then if that comes first. A dependent partner or parents keep needing the income.
   const childIndependentAge = ex.use("insurance_child_independent_age");
-  const childYears = input.dependents.includes("children") && input.youngestChildAge !== undefined ? childIndependentAge - input.youngestChildAge : null;
+  const onlyChildren = input.dependents.includes("children") && !input.dependents.includes("partner") && !input.dependents.includes("parents");
+  const childYears = onlyChildren && input.youngestChildAge !== undefined ? childIndependentAge - input.youngestChildAge : null;
   const yearsRaw = childYears === null ? coverToAge - age : Math.min(coverToAge - age, childYears);
   const yearsCovered = step(
     "m2.years",
