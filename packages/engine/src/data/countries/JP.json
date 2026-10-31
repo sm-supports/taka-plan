@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "JP",
+  "iso3": "JPN",
+  "nameEn": "Japan",
+  "nameNative": "日本",
+  "region": "east_asia_pacific",
+  "languages": [
+    "ja"
+  ],
+  "currency": {
+    "code": "JPY",
+    "symbol": "¥",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 158.0,
+      "status": "sourced",
+      "sourceName": "Bank of Japan, USD/JPY spot rate at 9:00 JST, Tokyo market",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=FM08&code=FXERD01&startDate=202610",
+      "asOf": "2026-10-28"
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.021,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing Ministry of Internal Affairs and Communications CPI (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/japan/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Headline CPI 2.1% year on year in September 2026 (1.9% in August); core CPI excluding fresh food also 2.1%. The Statistics Bureau page links only to e-Stat tables."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank of Japan 2% price stability target",
+      "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+      "asOf": "2026-10-31",
+      "note": "The BOJ targets 2% and is raising rates to hold inflation there, so we plan with 2%."
+    },
+    "policy_rate": {
+      "value": 0.0125,
+      "status": "sourced",
+      "sourceName": "Bank of Japan, Statement on Monetary Policy, 30 October 2026",
+      "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+      "asOf": "2026-10-30",
+      "note": "Uncollateralized overnight call rate guided at around 1.25% (raised in June and September 2026)."
+    },
+    "savings_account_rate": {
+      "value": 0.00331,
+      "status": "sourced",
+      "sourceName": "Bank of Japan, average interest rates posted by type of deposit (ordinary deposits)",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606",
+      "asOf": "2026-10-31",
+      "note": "Average posted ordinary deposit rate 0.331% in October 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0044,
+      "status": "sourced",
+      "sourceName": "Bank of Japan, average posted time deposit rates (under 3 million yen, 3 months)",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606",
+      "asOf": "2026-10-31"
+    },
+    "fdr_1y_rate": {
+      "value": 0.00486,
+      "status": "sourced",
+      "sourceName": "Bank of Japan, average posted time deposit rates (under 3 million yen, 1 year)",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606",
+      "asOf": "2026-10-31"
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BOJ stopped publishing installment savings rates in 2022; banks offer installment time deposits but no average rate is published. The 5-year time deposit posted average is 0.748% (October 2026)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.00884,
+      "status": "sourced",
+      "sourceName": "Bank of Japan, average interest rates on new time deposits (total)",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR03&code=DLDRK_DLDR442DB&startDate=202604",
+      "asOf": "2026-08-31",
+      "note": "Average on all new time deposits; ordinary deposits average 0.33%. World Bank FR.INR.DPST stops in 2017."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.022,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, JGBs for individuals (fixed 5-year rate formula) and JGB yield curve",
+      "sourceUrl": "https://www.mof.go.jp/jgbs/individual/kojinmuke/",
+      "asOf": "2026-10-29",
+      "note": "Fixed 5-year retail JGB pays the 5-year base rate minus 0.05% (floor 0.05%); with the 5-year yield at 2.285% on 29 October 2026 that is about 2.2%. The current offering notice was not reachable."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0121,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Japan 3-month bill yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/japan/3-month-bill-yield",
+      "asOf": "2026-10-30"
+    },
+    "tbond_5y_rate": {
+      "value": 0.02285,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, JGB interest rates (yield curve)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-29"
+    },
+    "tbond_10y_rate": {
+      "value": 0.02876,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, JGB interest rates (yield curve)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-29"
+    },
+    "tax_bank_interest": {
+      "value": 0.20315,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, JGBs for individuals (tax on interest)",
+      "sourceUrl": "https://www.mof.go.jp/jgbs/individual/kojinmuke/",
+      "asOf": "2026-10-31",
+      "note": "Interest on deposits and bonds is taxed separately at 20.315% (15.315% national including reconstruction surtax plus 5% local), withheld at source."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.20315,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, JGBs for individuals (tax on interest)",
+      "sourceUrl": "https://www.mof.go.jp/jgbs/individual/kojinmuke/",
+      "asOf": "2026-10-31",
+      "note": "Retail JGB interest is taxed at 20.315%; some holders (for example people with disabilities) can claim exemption."
+    },
+    "deposit_insurance_limit": {
+      "value": 10000000,
+      "status": "sourced",
+      "sourceName": "Financial Services Agency, deposit insurance (payoff) page",
+      "sourceUrl": "https://www.fsa.go.jp/policy/payoff/index.html",
+      "asOf": "2026-10-31",
+      "note": "Principal up to 10 million yen per depositor per institution plus interest; settlement deposits fully protected."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.18,
+      "status": "sourced",
+      "sourceName": "Interest Rate Restriction Act (via Japanese Wikipedia)",
+      "sourceUrl": "https://ja.wikipedia.org/wiki/利息制限法",
+      "asOf": "2026-10-31",
+      "note": "Legal caps: 20% under 100,000 yen, 18% from 100,000 to under 1 million yen, 15% from 1 million yen; 18% used for typical card balances."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "Low case close to the after-tax safe rate."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "After-tax safe rate of about 1.8% plus a 3.7-point premium; TOPIX had a strong decade, but valuations are higher now."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "High case near TOPIX's 10-year total return."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Bank of Japan USD/JPY spot (158.00 on 28 Oct 2026); World Bank PA.NUS.FCRF",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=FM08&code=FXERD01&startDate=202610",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and some yen recovery from historically weak levels."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Japan USD/JPY spot (158.00 on 28 Oct 2026); World Bank PA.NUS.FCRF",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=FM08&code=FXERD01&startDate=202610",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4% with no further expected yen depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Japan USD/JPY spot (158.00 on 28 Oct 2026); World Bank PA.NUS.FCRF",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=FM08&code=FXERD01&startDate=202610",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and further yen weakness."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0039,
+      "status": "assumption",
+      "sourceName": "BOJ posted 1-year time deposit 0.486% less 20.315% tax",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank time deposits only, after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "Base case: mix of retail JGBs and deposits, about 1.5% after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.023,
+      "status": "assumption",
+      "sourceName": "10-year JGB 2.88% less 20.315% tax",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in 10-year JGB yields after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found from the FSA or the life insurance association within this pass."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is widely sold, but no published per-1,000-yen premium rates by age were retrieved in this pass."
+    },
+    "health_hospitalisation_cost": {
+      "value": 187000,
+      "status": "sourced",
+      "sourceName": "Japan Institute of Life Insurance, Survey on Life Security (FY2025)",
+      "sourceUrl": "https://www.jili.or.jp/lifeplan/lifesecurity/1210.html",
+      "asOf": "2025-12-31",
+      "note": "Average total out-of-pocket cost of a hospital stay 187,000 yen (24,300 yen a day), after the high-cost medical expense benefit; includes meals and private-room charges."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Japanese private medical insurance pays daily and surgery benefits rather than a cover limit, so premiums per 100,000 yen of cover are not published."
+    },
+    "oop_health_share": {
+      "value": 0.1224,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=JP",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank of Japan 2% target; national fee schedule for medical care",
+      "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+      "asOf": "2026-10-31",
+      "note": "Medical prices follow the regulated national fee schedule, so we plan with the 2% target."
+    },
+    "goal_inflation_education": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Bank of Japan 2% target; tuition support for high school",
+      "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+      "asOf": "2026-10-31",
+      "note": "Public tuition support has held education prices down, so we plan slightly below the target."
+    },
+    "life_expectancy": {
+      "value": 84.04,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=JP",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 85.1 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 27.1,
+            "men": 24.5,
+            "women": 29.7
+          },
+          {
+            "age": 65,
+            "total": 22.8,
+            "men": 20.4,
+            "women": 25.2
+          },
+          {
+            "age": 70,
+            "total": 18.6,
+            "men": 16.4,
+            "women": 20.7
+          },
+          {
+            "age": 80,
+            "total": 10.9,
+            "men": 9.4,
+            "women": 12.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/japan/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 1.96
+          },
+          {
+            "year": 2040,
+            "value": 1.53
+          },
+          {
+            "year": 2065,
+            "value": 1.41
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/japan/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 51.04 (2025, World Bank), 65.2 (2040) and 70.7 (2065, populationpyramid.net/japan/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Japan Pension Service, Old-age Basic Pension eligibility",
+      "sourceUrl": "https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/jukyu-yoken/20150401-01.html",
+      "asOf": "2026-10-31",
+      "note": "Basic pension from 65 (early from 60, deferred to 75) for men and women. Employers must set any mandatory retirement age at 60 or above and keep staff employed to 65 if they wish."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "National civil servants' retirement age is being raised in steps from 60 toward 65; the current step could not be confirmed from a reachable official page in this pass."
+    },
+    "retirement_return_low": {
+      "value": 0.004,
+      "status": "assumption",
+      "sourceName": "BOJ posted 1-year time deposit 0.486% less tax",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606",
+      "asOf": "2026-10-31",
+      "note": "Low case: time deposits only after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.009,
+      "status": "assumption",
+      "sourceName": "3-month bill 1.21% and 1-year JGB 1.68% less 20.315% tax",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "Base case at the after-tax government bill rate of about 1%."
+    },
+    "retirement_return_high": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "High case: laddered retail and 5-year JGBs after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if equities only match bonds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half equity at 5.5% and half bonds at 1.5-2.3%, held in tax-free NISA or iDeCo where possible."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "5-year JGB 2.29% and retail JGB about 2.2% before 20.315% tax (about 1.8% after tax)",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv",
+      "asOf": "2026-10-31",
+      "note": "High case with the equity high case."
+    },
+    "old_age_allowance_monthly": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Japan Pension Service, Old-age Basic Pension eligibility",
+      "sourceUrl": "https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/jukyu-yoken/20150401-01.html",
+      "asOf": "2026-10-31",
+      "note": "Japan has no non-contributory old-age pension: the basic pension needs at least 10 years of contributions or exemptions; people without income rely on means-tested public assistance."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension exists in Japan."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Japan has no statutory gratuity; retirement allowances are set by each employer's rules."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 20,
+        "entryAgeMax": 59,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false,
+        "projections": [
+          {
+            "monthlyContribution": 17920,
+            "years": 40,
+            "monthlyPension": 70608
+          },
+          {
+            "monthlyContribution": 17920,
+            "years": 10,
+            "monthlyPension": 17652
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Japan Pension Service, Old-age Basic Pension amount (FY2026) and National Pension premium",
+      "sourceUrl": "https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/jukyu-yoken/20150401-02.html",
+      "asOf": "2026-04-01",
+      "note": "National Pension: residents join from 20 to under 60; FY2026 premium 17,920 yen a month (nenkin.go.jp premium page); full pension 847,300 yen a year (70,608 a month) after 40 years, pro rata, with 10 years minimum. Amounts are revised each April by price and wage indexation (with macro-economic slide); pensions are taxable. Employees also get the earnings-related Employees' Pension."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "普通預金",
+      "localNameEn": "Ordinary deposit",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "定期預金",
+      "localNameEn": "Time deposit (3 months)",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "定期預金",
+      "localNameEn": "Time deposit (1 year)",
+      "sourceUrl": "https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=IR02&code=DLDR121N,DLDR43TL63MN,DLDR43TL61YN,DLDR43TL65YN&startDate=202606"
+    },
+    "dps": {
+      "available": true,
+      "localName": "積立定期預金",
+      "localNameEn": "Installment time deposit",
+      "note": "Fixed monthly transfers into a time deposit; offered by most banks."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "個人向け国債（固定5年）",
+      "localNameEn": "JGBs for individuals (fixed 5-year)",
+      "note": "Sold monthly from 10,000 yen; rate floor 0.05%; also fixed 3-year and floating 10-year types.",
+      "sourceUrl": "https://www.mof.go.jp/jgbs/individual/kojinmuke/"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "国庫短期証券",
+      "localNameEn": "Treasury discount bills",
+      "note": "Only corporations may hold Treasury discount bills; individuals cannot buy them.",
+      "sourceUrl": "https://tradingeconomics.com/japan/3-month-bill-yield"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "利付国債（5年）",
+      "localNameEn": "5-year JGB",
+      "note": "Individuals can buy newly issued JGBs at banks and brokers.",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "利付国債（10年）",
+      "localNameEn": "10-year JGB",
+      "sourceUrl": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "投資信託（インデックスファンド）",
+      "localNameEn": "Investment trust (index fund)",
+      "note": "Widely held through tax-free NISA accounts and iDeCo private pensions."
+    },
+    "gold": {
+      "available": true,
+      "localName": "金地金",
+      "localNameEn": "Gold bullion",
+      "note": "Gold bars and coins are freely bought; also gold accumulation plans."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Japan",
+      "url": "https://www.boj.or.jp/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Agency (FSA)",
+      "url": "https://www.fsa.go.jp/en/"
+    },
+    "insuranceComplaints": {
+      "name": "FSA Financial Services User Consultation Office",
+      "url": "https://www.fsa.go.jp/receipt/soudansitu/index.html",
+      "note": "Advice and referral; dispute resolution goes to the designated ADR body for life insurance."
+    },
+    "pensionScheme": {
+      "name": "Japan Pension Service (National Pension and Employees' Pension)",
+      "url": "https://www.nenkin.go.jp/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health, Labour and Welfare (public health insurance)",
+      "url": "https://www.mhlw.go.jp/english/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Corporation of Japan",
+      "url": "https://www.dic.go.jp/english/"
+    },
+    "statistics": {
+      "name": "Statistics Bureau of Japan",
+      "url": "https://www.stat.go.jp/english/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

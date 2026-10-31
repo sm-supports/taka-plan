@@ -83,7 +83,7 @@ describe("computePlan with the real engine and seed", () => {
     expect(plan.goals?.goals[0]?.instrument).toBe("dps");
   });
 
-  it("familyWithDebt: 24 000 a month → 19 200 to the fund, the 4 800 left to insurance (before the card), nothing for the goal or retirement", () => {
+  it("familyWithDebt: 24 000 a month → 19 200 to the fund, then 2 400 to insurance and 2 400 to the card, nothing for the goal or retirement", () => {
     const plan = computePlan(SAMPLE_PROFILES.familyWithDebt, rates, today);
     expect(plan.budget.savingsAmount).toBe(24000);
     expect(plan.emergency).toMatchObject({ months: 8, target: 600000, gap: 500000, monthlySaving: 41700, monthsCovered: 1.3, status: "amber" });
@@ -91,16 +91,19 @@ describe("computePlan with the real engine and seed", () => {
     // M2: 24 years of 120 000 × 12 × income share + debts + education − savings − 20 lakh group cover
     // leaves a 2.80 crore life gap and a 13.09 lakh family health gap → 16 700 a month of premiums.
     expect(plan.insurance).toMatchObject({ monthlyPremiumNeed: 16700, status: "red", life: { gap: 27953000, status: "red" }, health: { people: 5, gap: 1309000 } });
-    // Insurance comes before debt, so the card gets nothing this month (was 4 800 before M2 joined the plan).
+    // Insurance comes before debt but, with a 25% card open, may take only half of the 4 800 left
+    // (plan_insurance_max_share_with_debt 0.5): the card keeps shrinking at 2 400 a month (25 months).
     expect(plan.buckets.map((b) => [b.id, b.refId, b.amount, b.status, b.demotedFromRed])).toEqual([
       ["emergency", undefined, 19200, "amber", false],
-      ["insurance", undefined, 4800, "red", false],
+      ["insurance", undefined, 2400, "red", false],
+      ["debt", "c-1", 2400, "amber", true],
     ]);
-    expect(plan.buckets[1]).toMatchObject({ instrument: "term_insurance", reasonKey: "plan.reason.insurance", reasonParams: { amount: 4800 }, nextStepKey: "plan.next.insurance", module: "m2" });
+    expect(plan.buckets[1]).toMatchObject({ instrument: "term_insurance", reasonKey: "plan.reason.insurance", reasonParams: { amount: 2400 }, nextStepKey: "plan.next.insurance", module: "m2" });
+    expect(plan.buckets[2]?.reasonParams).toMatchObject({ amount: 2400, months: 25 });
     // M7 runs (nothing is left for its bucket): 1 39 500 a month to fund spending to 100; at today's
     // zero saving the money runs out at 63.
     expect(plan.retirement).toMatchObject({ monthlyNeed: 139500, planToAge: 100, verdict: { kind: "runsOut", age: 63, status: "red" } });
-    expect(plan.buckets.some((b) => b.id === "debt" || b.id === "goal" || b.id === "retirement" || b.id === "future")).toBe(false);
+    expect(plan.buckets.some((b) => b.id === "goal" || b.id === "retirement" || b.id === "future")).toBe(false);
     expect(plan.summary).toEqual({ emergencyShare: 0.8, monthsToEmergencyFull: 27, goalsShortfall: 18300 });
     expect(plan.explain.steps.find((s) => s.id === "plan.goalsShare")).toMatchObject({ inputs: { remaining: 0, goalsNeed: 18300 }, rounded: 0 });
     expect(plan.monthlyTotal).toBe(24000);

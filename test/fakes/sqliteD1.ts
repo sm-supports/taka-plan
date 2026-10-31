@@ -86,7 +86,7 @@ export class SqliteD1 implements D1Like {
 
 /** A fresh in-memory database with the schema, the seeded rates version 1 and the (empty) country tables. */
 export function seededSqliteD1(): SqliteD1 {
-  return new SqliteD1().migrate("0001_schema.sql", "0002_seed_rates.sql", "0003_rates_m2_m6_m7.sql", "0004_countries.sql");
+  return new SqliteD1().migrate("0001_schema.sql", "0002_seed_rates.sql", "0003_rates_m2_m6_m7.sql", "0004_countries.sql", "0005_rates_plan_v2.sql");
 }
 
 /** `seededSqliteD1()` plus the given country profiles inserted as published version 1. */

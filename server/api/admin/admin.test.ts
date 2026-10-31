@@ -237,11 +237,12 @@ describe("admin routes", () => {
       // Every module the sample profiles answer (M1–M7) is wired: a real summary, never an error marker.
       expect("error" in p.published ? p.published.error : typeof p.published.monthlyTotal).toBe("number");
     }
-    // familyWithDebt answered the insurance check: its premium takes what the fund leaves, before the card.
+    // familyWithDebt answered the insurance check: with a card open, insurance takes half of what the fund leaves and the card the rest.
     const family = noDraft.profiles.find((p) => p.id === "familyWithDebt")?.published;
     expect(family && !("error" in family) ? family.buckets.map((b) => [b.id, b.amount, b.instrument]) : family).toEqual([
       ["emergency", 19200, "fdr_3m"],
-      ["insurance", 4800, "term_insurance"],
+      ["insurance", 2400, "term_insurance"],
+      ["debt", 2400, "loan_prepayment"],
     ]);
 
     await putRates(put("rates", { key: "dps_rate", patch: { value: 0.1 } }, auth));

@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "code": "MV",
+  "iso3": "MDV",
+  "nameEn": "Maldives",
+  "nameNative": "ދިވެހިރާއްޖެ",
+  "region": "south_asia",
+  "languages": [
+    "dv",
+    "en"
+  ],
+  "currency": {
+    "code": "MVR",
+    "symbol": "MVR",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 15.42,
+      "status": "sourced",
+      "sourceName": "Maldives Monetary Authority, Table 1 Selected Economic Indicators: MVR per USD",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/1.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Managed peg at 15.42 per US dollar (2025 average 15.42)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0117,
+      "status": "sourced",
+      "sourceName": "Maldives Bureau of Statistics, CPI September 2026 (base Nov 2022), year-on-year",
+      "sourceUrl": "https://statisticsmaldives.gov.mv/cpi-september-2026/",
+      "asOf": "2026-09-30",
+      "note": "Food and beverages +8.59%, tobacco -29.11% year-on-year."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "MBS/MMA national inflation 2021-2025: 0.5%, 2.3%, 2.9%, 1.4%, 4.0% (average about 2.2%)",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/1.xlsx",
+      "asOf": "2026-10-31",
+      "note": "The rufiyaa is pegged to the US dollar and there is no inflation target, so we plan with a rounded 5-year average."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The MMA sets no single policy rate; its Standing Deposit Facility pays 0.25% and the Standing Lending Facility charges 7% (MMA Table 8, September 2026)."
+    },
+    "savings_account_rate": {
+      "value": 0.0136,
+      "status": "sourced",
+      "sourceName": "Maldives Monetary Authority, Table 8 Interest Rates: commercial bank saving deposits (MVR, weighted average)",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-09-30"
+    },
+    "fdr_3m_rate": {
+      "value": 0.0298,
+      "status": "sourced",
+      "sourceName": "Maldives Monetary Authority, Table 8 Interest Rates: time deposits up to 3 months (MVR, weighted average)",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-09-30",
+      "note": "3-6 months 3.12%."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MMA publishes time-deposit averages for up to 3 months (2.98%), 3-6 months (3.12%) and 2-3 years (5.44%), not 1 year. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring-deposit product or rate found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0355,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MV",
+      "asOf": "2025-12-31"
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0387,
+      "status": "sourced",
+      "sourceName": "Maldives Monetary Authority, Table 8 Interest Rates: 91-day Treasury bill",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Bills are sold on tap at fixed rates (unchanged since 2015): 28-day 3.5%, 182-day 4.23%, 364-day 4.6%."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 5-year government bond yield found on MMA tables. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 10-year government bond yield found on MMA tables. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Maldives Inland Revenue Authority site returned HTTP 403 and PwC Tax Summaries has no Maldives page; tax treatment of deposit interest not confirmed. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for this slot."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme found on MMA pages. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published cap or typical card rate found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "MMA Table 8: MASIX index; 364-day T-bill 4.6%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "The local stock exchange is tiny and illiquid, so the low case is below the safe rate."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "364-day T-bill 4.6%; global equity in US dollars (rufiyaa pegged to USD)",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Most equity exposure has to be global; with the peg we use a dollar equity return capped at the safe rate plus about 2.5 points."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "MASIX rose from about 197 (2020) to 490 (Sep 2026); global equity record",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "A strong decade for global and local shares."
+    },
+    "gold_return_low": {
+      "value": 0,
+      "status": "assumption",
+      "sourceName": "MVR per USD fixed at 15.42 (MMA)",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/1.xlsx",
+      "asOf": "2026-10-31",
+      "note": "With the peg, rufiyaa gold equals dollar gold, which can stall for a decade."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Long-run dollar gold trend; MVR pegged at 15.42 per USD",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/1.xlsx",
+      "asOf": "2026-10-31",
+      "note": "No expected currency depreciation while the peg holds, so gold earns roughly the dollar gold trend."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Dollar gold in strong decades",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/1.xlsx",
+      "asOf": "2026-10-31",
+      "note": "A strong gold decade or a devaluation of the rufiyaa."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "MMA: time deposits up to 3 months 2.98%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Short bank deposits."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "MMA: Treasury bills 3.87%-4.6%, 3-6 month deposits 3.12%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "A mix of deposits and bills; tax on interest assumed nil pending confirmation."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "MMA: 2-3 year time deposits 5.44%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Longer bank time deposits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry claim settlement ratio published by the MMA (insurance supervisor) found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium guide or regulator data found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private hospital stay cost found; most care is financed by the Aasandha scheme. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium guide found. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "oop_health_share": {
+      "value": 0.1805,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS (WHO GHED)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MV",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "MBS CPI September 2026: health +0.74% year-on-year",
+      "sourceUrl": "https://statisticsmaldives.gov.mv/cpi-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices barely move because Aasandha covers most care; we plan with general inflation plus 1.5 points for private and overseas treatment."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "MBS CPI September 2026: education services +0.27% year-on-year",
+      "sourceUrl": "https://statisticsmaldives.gov.mv/cpi-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is free; we plan with general inflation plus 1.5 points for private and overseas study."
+    },
+    "life_expectancy": {
+      "value": 81.285,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN (UN WPP)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MV",
+      "asOf": "2024-12-31",
+      "note": "Men 79.9, women 83.0."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "WHO GHO API was down (HTTP 500) and MBS publishes no life table on its site. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 15.3
+          },
+          {
+            "year": 2040,
+            "value": 6.5
+          },
+          {
+            "year": 2065,
+            "value": 1.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025: 6.5) and UN WPP 2024 medium variant via PopulationPyramid.net (2040: 15.4, 2065: 77.7)",
+      "sourceUrl": "https://www.populationpyramid.net/maldives/2065/",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio; UN projects very fast ageing after 2040."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Maldives Pension Administration Office: MRPS pension age",
+      "sourceUrl": "https://www.pension.gov.mv/maldives-pension-system",
+      "asOf": "2026-10-31",
+      "note": "Same for men and women; members meeting conditions can draw from 55."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official statement of the civil service retirement age read. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "MMA: short time deposits 2.98%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Short bank deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "MMA: 91-364 day Treasury bills 3.87%-4.6%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Below the 1-year bill rate of 4.6%."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "MMA: 364-day Treasury bill 4.6%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Equal to the 1-year bill rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Deposits and bills 3-4.6%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "A balanced mix that earns little more than deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Mix of equity base 7% and fixed income base 4%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Roughly half equity and half safe fixed income over a working life."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Equity high 10%, fixed income high 5%",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx",
+      "asOf": "2026-10-31",
+      "note": "A growth-tilted mix in a good decade."
+    },
+    "old_age_allowance_monthly": {
+      "value": 5000,
+      "status": "sourced",
+      "sourceName": "Maldives Pension Administration Office, Pension System leaflet: Old Age Basic Pension",
+      "sourceUrl": "https://storage.googleapis.com/staging.mpao-1327.appspot.com/strapi/Pension_System_5621c2df3d/Pension_System_5621c2df3d.pdf",
+      "asOf": "2019-03-01",
+      "note": "MVR 5,000 a month since March 2019 for citizens aged 65+; reduced for people who receive another state pension, so total pension income is at least MVR 5,000."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Maldives Pension Administration Office: Basic Pension",
+      "sourceUrl": "https://www.pension.gov.mv/basic-pension",
+      "asOf": "2026-10-31",
+      "note": "All Maldivian citizens aged 65+, under the Maldives Pension Act; not means-tested, but offset against other state pensions."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity rule found for private employees. Web search budget ran out during research; only official sites reachable by direct link were checked."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": 65,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Maldives Pension Administration Office: Maldives Retirement Pension Scheme (MRPS)",
+      "sourceUrl": "https://www.pension.gov.mv/mrps",
+      "asOf": "2026-10-31",
+      "note": "Defined-contribution scheme: employer and employee each pay 7% of basic salary (14% in all); employees aged 16-65 and the self-employed can join. Pension from 65 (55 under conditions), paid as the account balance spread over 168 months (14 years); the basic pension tops low payouts up to MVR 5,000."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit",
+      "note": "Banks offer terms up to 3 years.",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard recurring-deposit product found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bill",
+      "note": "Bills are sold on tap at fixed rates, mainly to banks; no retail channel confirmed.",
+      "sourceUrl": "https://database.mma.gov.mv/mosac/latest/8.xlsx"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bond",
+      "note": "No retail government bond found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bond",
+      "note": "No retail government bond found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Mutual fund",
+      "note": "No local retail mutual fund confirmed; a few shares trade on the Maldives Stock Exchange (regulator: CMDA).",
+      "sourceUrl": "https://www.cmda.gov.mv/"
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold (jewellery and coins)"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Maldives Monetary Authority",
+      "url": "https://www.mma.gov.mv/"
+    },
+    "insuranceRegulator": {
+      "name": "Maldives Monetary Authority (insurance supervision)",
+      "url": "https://www.mma.gov.mv/"
+    },
+    "insuranceComplaints": {
+      "name": "Maldives Monetary Authority",
+      "url": "https://www.mma.gov.mv/",
+      "note": "Complain to the insurer first, then to the MMA as supervisor."
+    },
+    "pensionScheme": {
+      "name": "Maldives Pension Administration Office (MRPS)",
+      "url": "https://www.pension.gov.mv/"
+    },
+    "oldAgeAllowance": {
+      "name": "Old Age Basic Pension (Maldives Pension Administration Office)",
+      "url": "https://www.pension.gov.mv/basic-pension"
+    },
+    "publicHealthCover": {
+      "name": "Aasandha universal health insurance (National Social Protection Agency)",
+      "url": "https://www.nspa.gov.mv/"
+    },
+    "statistics": {
+      "name": "Maldives Bureau of Statistics",
+      "url": "https://statisticsmaldives.gov.mv/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

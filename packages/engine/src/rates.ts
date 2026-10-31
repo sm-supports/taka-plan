@@ -77,6 +77,7 @@ export const RATE_KEYS = [
   "plan_emergency_min_share",
   "plan_emergency_max_share",
   "debt_payoff_target_months",
+  "plan_insurance_max_share_with_debt",
   "goal_inflation_education",
   "goal_inflation_health",
   // app policy and country data: M2 insurance and health

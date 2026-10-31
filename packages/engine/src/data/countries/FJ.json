@@ -36,8 +36,8 @@
     "inflation_projection": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "RBF inflation objective (around 3%); CPI average 2022-2026",
-      "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2019/05/Monetary-Policy-in-Fiji_Newspaper-Article.pdf",
+      "sourceName": "RBF inflation objective (around 3%); RBF Press Release 23/2026 on elevated supply-driven inflation; CPI average 2022-2026",
+      "sourceUrl": "https://www.rbf.gov.fj/?p=51781",
       "asOf": "2026-10-31",
       "note": "The RBF aims for inflation around 3% and the 2022-2026 average is roughly 3%, so we plan with 3.5% to allow for the import-price shocks seen in 2022 and 2026."
     },

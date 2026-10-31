@@ -48,10 +48,14 @@ export const M2_M6_M7_KEYS = [
   "pensioner_sanchayapatra_cap", "life_table_remaining", "support_ratio", "withdrawal_safe_pot_years",
 ];
 
+/** Plan policy keys added after the M2/M6/M7 batch (migration 0005). */
+export const PLAN_V2_KEYS = ["plan_insurance_max_share_with_debt"];
+
 /** Every batch of rows, in migration order. A new batch of keys means a new entry and a new file. */
 export const ROW_BATCHES = [
   { file: "0002_seed_rates.sql", keys: V1_KEYS, mode: "seed" },
   { file: "0003_rates_m2_m6_m7.sql", keys: M2_M6_M7_KEYS, mode: "add" },
+  { file: "0005_rates_plan_v2.sql", keys: PLAN_V2_KEYS, mode: "add" },
 ];
 
 const q = (v) => (v === null || v === undefined ? "NULL" : `'${String(v).replace(/'/g, "''")}'`);

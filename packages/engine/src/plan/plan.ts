@@ -323,7 +323,11 @@ export function computePlan(input: PlanInput, rates: RatesSnapshot, today: ISODa
   const premiumNeed = input.insurance?.monthlyPremiumNeed ?? insurance?.monthlyPremiumNeed;
   if (premiumNeed !== undefined) {
     const need = roundMoney(Math.max(0, premiumNeed), "monthly", R);
-    const amount = Math.min(remaining, need);
+    // While high-interest debt is open, insurance may take only part of what is left, so the debt
+    // still shrinks (plan_insurance_max_share_with_debt, our assumption).
+    const hasHighInterestDebt = (debt?.highInterestDebts.length ?? 0) > 0;
+    const cap = hasHighInterestDebt ? roundMoney(remaining * ex.use("plan_insurance_max_share_with_debt"), "monthly", R) : remaining;
+    const amount = Math.min(remaining, cap, need);
     drafts.push({
       id: "insurance",
       amount,

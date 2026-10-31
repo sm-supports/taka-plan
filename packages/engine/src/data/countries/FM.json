@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 1,
+  "code": "FM",
+  "iso3": "FSM",
+  "nameEn": "Micronesia",
+  "nameNative": "Federated States of Micronesia",
+  "region": "east_asia_pacific",
+  "languages": [
+    "en"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=FM",
+      "asOf": "2025-12-31",
+      "note": "The US dollar is the official currency of the FSM."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.028,
+      "status": "sourced",
+      "sourceName": "IMF World Economic Outlook (October 2026 database), CPI inflation, average",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/FSM",
+      "asOf": "2025-12-31",
+      "note": "2.8% for 2025 (5.4% in 2024); IMF forecasts 3.2% for 2026 and ADB 3.8% (ADO September 2026). The national statistics site was not reachable."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "US dollar economy (Federal Reserve 2% target); IMF WEO 5-year CPI average",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/FSM",
+      "asOf": "2026-10-31",
+      "note": "The FSM uses the US dollar; CPI averaged about 4.2% in 2021-2025 because of imported food and fuel, and the IMF expects 2-3% later, so we plan with 3%."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The FSM has no central bank or monetary policy of its own; it uses the US dollar."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank deposit rate pages for the FSM were not reachable; see bank_deposit_avg_rate for the average paid on deposits."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month time deposit rate found for banks in the FSM."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year time deposit rate found for banks in the FSM."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or rate found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0058,
+      "status": "sourced",
+      "sourceName": "FDIC call report data, interest on deposits / total deposits of the FSM-chartered commercial bank",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2025-12-31",
+      "note": "US$1.38 million of interest on about US$236 million of deposits in 2025 (about 0.58%); World Bank FR.INR.DPST shows 0.04% for 2021. Computed by us from the FDIC figures."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The FSM government sells no savings certificates or retail savings bonds."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The FSM government issues no treasury bills."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The FSM government issues no tradable bonds."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The FSM government issues no tradable bonds."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "FSM national taxes are on wages and business gross revenue; we could not read an official page confirming the treatment of individuals' interest income (the Department of Finance tax pages give no detail)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists."
+    },
+    "deposit_insurance_limit": {
+      "value": 250000,
+      "status": "sourced",
+      "sourceName": "FDIC standard deposit insurance amount; FDIC institution data lists the banks operating in the FSM as FDIC-insured",
+      "sourceUrl": "https://www.fdic.gov/resources/deposit-insurance",
+      "asOf": "2026-10-31",
+      "note": "Both commercial banks with branches in the FSM are FDIC-insured (FDIC BankFind data, state code FM), so deposits are covered up to US$250,000 per depositor per bank per ownership category."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate found."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No local stock market; global equity index in US dollars",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=FM",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund held in dollars over a weak decade."
+    },
+    "equity_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Average deposit rate (0.58%) plus a 4-point equity premium; global index in US dollars",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "There is no stock market in the FSM, so equity means a global index in US dollars, capped at the safe deposit rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Long-run global equity returns in US dollars",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "High case close to the long-run nominal return of global equities in dollars."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "US-dollar gold price trend; the FSM uses the US dollar",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=FM",
+      "asOf": "2026-10-31",
+      "note": "Gold can stall for a decade in dollar terms and there is no currency depreciation to add."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "US-dollar gold price trend; the FSM uses the US dollar",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=FM",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4% a year, with no exchange-rate effect because the US dollar is the local currency."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "US-dollar gold price trend; the FSM uses the US dollar",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=FM",
+      "asOf": "2026-10-31",
+      "note": "High case for a strong gold cycle."
+    },
+    "fixed_income_return_low": {
+      "value": 0.002,
+      "status": "assumption",
+      "sourceName": "Average interest paid on deposits (FDIC call reports)",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "Low case near savings-account rates. Safe USD rates in the FSM: no treasury bills or savings bonds are issued; interest paid on deposits at the FSM-chartered bank averaged about 0.58% in 2025 (FDIC call reports); no tax on interest found."
+    },
+    "fixed_income_return_base": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "Average interest paid on deposits (FDIC call reports)",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "Base case just under the 0.58% average paid on deposits. Safe USD rates in the FSM: no treasury bills or savings bonds are issued; interest paid on deposits at the FSM-chartered bank averaged about 0.58% in 2025 (FDIC call reports); no tax on interest found."
+    },
+    "fixed_income_return_high": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Average interest paid on deposits (FDIC call reports)",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "High case for longer time deposits on larger balances. Safe USD rates in the FSM: no treasury bills or savings bonds are issued; interest paid on deposits at the FSM-chartered bank averaged about 0.58% in 2025 (FDIC call reports); no tax on interest found."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No insurance regulator publication with a claim settlement ratio found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates or premium guides for the FSM found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major hospital stay found; serious cases are often referred off-island."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age found; the MiCare plan page was not reachable (expired certificate)."
+    },
+    "oop_health_share": {
+      "value": 0.0258,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=FM",
+      "asOf": "2023-12-31",
+      "note": "2.6% in 2023; public and donor-funded care covers most costs."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "IMF WEO CPI; no published medical CPI",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/FSM",
+      "asOf": "2026-10-31",
+      "note": "No health price index is published, so we plan one point above general inflation for medical costs, including off-island referrals."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "IMF WEO CPI; no published education CPI",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/FSM",
+      "asOf": "2026-10-31",
+      "note": "No education price index is published, so we plan one point above general inflation, as for US-priced tuition."
+    },
+    "life_expectancy": {
+      "value": 67.4,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=FM",
+      "asOf": "2024-12-31",
+      "note": "Men 63.6, women 71.3 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life table by age found for the FSM (georank.org has no FSM page; the WHO GHO API was unavailable)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 10.1
+          },
+          {
+            "year": 2040,
+            "value": 8.6
+          },
+          {
+            "year": 2065,
+            "value": 5.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
+      "sourceUrl": "https://www.populationpyramid.net/micronesia-fed-states-of/2040/",
+      "asOf": "2024-07-31",
+      "note": "100 / old-age dependency ratio: 9.9 in 2025 (World Bank), 11.6 in 2040 and 16.9 in 2065 (UN WPP 2024)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "FSM Social Security Administration, retirement benefits",
+      "sourceUrl": "https://www.fsmssa.fm/benefits",
+      "asOf": "2026-10-31",
+      "note": "Full old-age benefit at 65; a reduced benefit (50%) can be taken from 60. Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No mandatory retirement age for FSM national government employees found; public employees are covered by the same Social Security scheme."
+    },
+    "retirement_return_low": {
+      "value": 0.002,
+      "status": "assumption",
+      "sourceName": "Average interest paid on deposits (FDIC call reports)",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "Low case near savings-account rates. Safe USD rates in the FSM: no treasury bills or savings bonds are issued; interest paid on deposits at the FSM-chartered bank averaged about 0.58% in 2025 (FDIC call reports); no tax on interest found."
+    },
+    "retirement_return_base": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "Average interest paid on deposits (FDIC call reports)",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "Base case just under the 0.58% average paid on deposits, the only local safe rate. Safe USD rates in the FSM: no treasury bills or savings bonds are issued; interest paid on deposits at the FSM-chartered bank averaged about 0.58% in 2025 (FDIC call reports); no tax on interest found."
+    },
+    "retirement_return_high": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Average interest paid on deposits (FDIC call reports)",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "High case for longer time deposits on larger balances. Safe USD rates in the FSM: no treasury bills or savings bonds are issued; interest paid on deposits at the FSM-chartered bank averaged about 0.58% in 2025 (FDIC call reports); no tax on interest found."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Mix of US-dollar deposits and a global equity index",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "About 40% global equity at the low case, 60% deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Mix of US-dollar deposits and a global equity index",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "About half global equity at 4.5% and half deposits at 0.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Mix of US-dollar deposits and a global equity index",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
+      "asOf": "2026-10-31",
+      "note": "About 60% global equity at the high case and 40% deposits."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found; the Department of Health and Social Affairs lists elderly services but no cash allowance."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or severance law for private employees found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "FSM Social Security Administration, benefits and FAQ",
+      "sourceUrl": "https://www.fsmssa.fm/benefits",
+      "asOf": "2026-10-31",
+      "note": "Compulsory social security: 7.5% employee + 7.5% employer on wages up to US$7,000 a quarter; full benefit at 65 (50% from 60) after 50 quarters; annual benefit 16.5% of the first US$10,000 of cumulative covered earnings, 3% of the next US$30,000, 2% of the next US$262,500, 1% above; minimum US$100 a month. No automatic cost-of-living adjustment is described."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit",
+      "note": "Offered by banks in the FSM; no published rate found."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit",
+      "note": "Offered by banks in the FSM; no published rate found."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit scheme found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The FSM government issues no treasury bills."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The FSM government issues no bonds."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The FSM government issues no bonds."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No local stock exchange or locally offered retail funds; global funds are only reachable through overseas accounts."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "Legal to hold, but there is no local bullion market; gold is mostly bought abroad."
+    }
+  },
+  "institutions": {
+    "centralBank": null,
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "FSM Social Security Administration (FSMSSA)",
+      "url": "https://www.fsmssa.fm/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "FSM Department of Health and Social Affairs (public hospitals; MiCare plan for public employees)",
+      "url": "https://hsa.gov.fm/"
+    },
+    "depositInsurance": {
+      "name": "Federal Deposit Insurance Corporation (FDIC)",
+      "url": "https://www.fdic.gov/resources/deposit-insurance",
+      "note": "Banks operating in the FSM are FDIC-insured."
+    },
+    "statistics": {
+      "name": "FSM Statistics Office",
+      "url": "https://www.fsmstats.fm/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

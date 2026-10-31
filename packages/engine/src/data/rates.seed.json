@@ -1562,6 +1562,20 @@
       "reviewedBy": "sajat",
       "nextReview": "2027-06-30",
       "isAppAssumption": true
+    },
+    "plan_insurance_max_share_with_debt": {
+      "key": "plan_insurance_max_share_with_debt",
+      "unit": "ratio",
+      "value": 0.5,
+      "labelEn": "Most of the money left after the emergency fund that insurance may take while high-interest debt is open",
+      "labelBn": "বেশি সুদের ঋণ থাকা অবস্থায় জরুরি তহবিলের পরে বাকি টাকার যতটা বিমা নিতে পারে",
+      "sourceName": "Taka Plan (our assumption)",
+      "sourceUrl": "docs/PRD-insurance.md",
+      "asOf": "2026-10-30",
+      "reviewedBy": "sajat",
+      "nextReview": "2027-06-30",
+      "isAppAssumption": true,
+      "note": "So a 25% card balance still gets paid down while cover is being bought"
     }
   }
 }
