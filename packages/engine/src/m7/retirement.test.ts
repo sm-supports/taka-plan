@@ -9,6 +9,7 @@ import {
   annuityFv,
   computeRetirement,
   corpusFor,
+  countedServiceYears,
   firstYearWithdrawal,
   gratuityAmount,
   gratuityDays,
@@ -16,6 +17,7 @@ import {
   monthlyRateOf,
   projectedPension,
   providentFundAt,
+  publicPensionValueAtRetirement,
   retireeOptions,
   sinkingMonthly,
 } from "./retirement";
@@ -28,6 +30,10 @@ const CRORE = 10_000_000;
 
 function withValue(s: RatesSnapshot, key: RateKey, value: number): RatesSnapshot {
   return { ...s, rows: { ...s.rows, [key]: { ...s.rows[key], value } } };
+}
+
+function withJson(s: RatesSnapshot, key: RateKey, valueJson: unknown): RatesSnapshot {
+  return { ...s, rows: { ...s.rows, [key]: { ...s.rows[key], valueJson } } };
 }
 
 function within1pct(actual: number, expected: number): void {
@@ -82,15 +88,31 @@ describe("pure formulas", () => {
     expect(providentFundAt({ balance: 100, monthlyContribution: 10, rate: 0 }, 2)).toBe(340);
   });
 
-  it("gratuity: 30 days a year below 10 years, 45 days at 10 years, employer's rule if higher", () => {
+  it("gratuity: 30 days a year up to 10 years, 45 days once service exceeds 10, employer's rule if higher", () => {
     const rule = rates.rows.gratuity_rule.valueJson as { daysPerYear: number; daysPerYearAfter: number; afterYears: number; daysPerMonth: number };
     expect(gratuityDays({ yearsOfService: 9 }, rule)).toBe(30);
-    expect(gratuityDays({ yearsOfService: 10 }, rule)).toBe(45);
+    // Labour Act: 45 days only when service exceeds 10 years (was 45 at exactly 10).
+    expect(gratuityDays({ yearsOfService: 10 }, rule)).toBe(30);
+    expect(gratuityDays({ yearsOfService: 11 }, rule)).toBe(45);
     expect(gratuityAmount({ yearsOfService: 9, basicMonthly: 30_000 }, rule)).toBe(270_000);
-    expect(gratuityAmount({ yearsOfService: 10, basicMonthly: 30_000 }, rule)).toBe(450_000);
+    // 30 000 / 30 × 30 × 10 = 300 000 (was 450 000)
+    expect(gratuityAmount({ yearsOfService: 10, basicMonthly: 30_000 }, rule)).toBe(300_000);
+    // 30 000 / 30 × 45 × 11 = 495 000
+    expect(gratuityAmount({ yearsOfService: 11, basicMonthly: 30_000 }, rule)).toBe(495_000);
     expect(gratuityAmount({ yearsOfService: 9, basicMonthly: 30_000, employerDaysPerYear: 60 }, rule)).toBe(540_000);
     // The employer's lower rule never beats the law.
-    expect(gratuityAmount({ yearsOfService: 10, basicMonthly: 30_000, employerDaysPerYear: 20 }, rule)).toBe(450_000);
+    expect(gratuityAmount({ yearsOfService: 11, basicMonthly: 30_000, employerDaysPerYear: 20 }, rule)).toBe(495_000);
+  });
+
+  it("gratuity: a part year over six months counts as a year; no rule → the employer's days alone", () => {
+    const rule = rates.rows.gratuity_rule.valueJson as { daysPerYear: number; daysPerYearAfter: number; afterYears: number; daysPerMonth: number };
+    expect(countedServiceYears(9.5)).toBe(9);
+    expect(countedServiceYears(9.6)).toBe(10);
+    expect(countedServiceYears(10.7)).toBe(11);
+    // 10 years 7 months → 11 counted years, over 10 → 45 days: 1 000 × 45 × 11 = 495 000
+    expect(gratuityAmount({ yearsOfService: 10.6, basicMonthly: 30_000 }, rule)).toBe(495_000);
+    expect(gratuityDays({ yearsOfService: 12 }, null)).toBe(0);
+    expect(gratuityAmount({ yearsOfService: 12, basicMonthly: 30_000, employerDaysPerYear: 15 }, null)).toBe(180_000);
   });
 
   it("public pension projection passes through the official points and scales by contribution", () => {
@@ -142,9 +164,16 @@ describe("computeRetirement: working (F1, F2)", () => {
     expect(r.monthlySavingRange.high).toBeLessThan(r.monthlySavingRange.base);
   });
 
-  it("rounds monthly amounts to ৳100 (up) and lump sums to ৳500", () => {
-    for (const v of [r.targets.plan.monthlySaving, r.targets.contrast.monthlySaving, ...Object.values(r.monthlySavingRange)]) expect(v % 100).toBe(0);
-    for (const v of [r.targets.plan.corpus, r.targets.contrast.corpus, r.spendingAtRetirementYearly, ...r.simulation.map((p) => p.balance)]) expect(v % 500).toBe(0);
+  it("PRD rounding: monthly results up to ৳500, corpus to ৳1 lakh, other lump sums to ৳500", () => {
+    // 73 779.8 → 74 000 (was 73 800 with ৳100 steps); 43 5xx → 44 000 (was 43 600)
+    expect(r.targets.plan.monthlySaving).toBe(74_000);
+    expect(r.targets.contrast.monthlySaving).toBe(44_000);
+    // 12 55 81 537 → ৳12.56 crore; 7 41 84 745 → ৳7.42 crore
+    expect(r.targets.plan.corpus).toBe(125_600_000);
+    expect(r.targets.contrast.corpus).toBe(74_200_000);
+    for (const v of [r.targets.plan.monthlySaving, r.targets.contrast.monthlySaving, ...Object.values(r.monthlySavingRange)]) expect(v % 500).toBe(0);
+    for (const v of [r.targets.plan.corpus, r.targets.contrast.corpus, r.targets.plan.gap, r.targets.contrast.gap]) expect(v % LAKH).toBe(0);
+    for (const v of [r.spendingAtRetirementYearly, ...r.simulation.map((p) => p.balance)]) expect(v % 500).toBe(0);
     expect(r.targets.plan.monthlySaving).toBeGreaterThanOrEqual(stepRaw(r, "m7.monthly"));
   });
 
@@ -211,18 +240,63 @@ describe("computeRetirement: working (F1, F2)", () => {
     const p = computeRetirement({ ...working30, sources: { fixedPensionMonthly: 10_000 } }, rates, today);
     const value = levelAnnuityValue(120_000, 0.1, 40);
     expect(p.income.fixedPensionsValue).toBe(Math.round(value / 500) * 500);
-    within1pct(r.targets.plan.gap - p.targets.plan.gap, value);
+    // Compared unrounded: the shown gaps are rounded to ৳1 lakh.
+    within1pct(stepRaw(r, "m7.gap") - stepRaw(p, "m7.gap"), value);
     expect(p.notes).toContain("m7.note.pensionFixed");
     expect(r.notes).not.toContain("m7.note.pensionFixed");
   });
 
   it("PF and gratuity lower the gap by their value at retirement", () => {
-    const g = { yearsOfService: 10, basicMonthly: 30_000 };
+    const g = { yearsOfService: 11, basicMonthly: 30_000 };
     const pf = { balance: 200_000, monthlyContribution: 5_000, rate: 0.09 };
     const p = computeRetirement({ ...working30, sources: { gratuity: g, providentFund: pf } }, rates, today);
-    expect(p.income.gratuity).toBe(450_000);
+    expect(p.income.gratuity).toBe(495_000);
     expect(p.income.providentFundAtRetirement).toBe(Math.round(providentFundAt(pf, 30) / 500) * 500);
-    within1pct(r.targets.plan.gap - p.targets.plan.gap, 450_000 + providentFundAt(pf, 30));
+    within1pct(stepRaw(r, "m7.gap") - stepRaw(p, "m7.gap"), 495_000 + providentFundAt(pf, 30));
+  });
+
+  it("no gratuity rule for the country (null): the employer's days alone, with a note", () => {
+    const none = withJson(rates, "gratuity_rule", null);
+    const own = computeRetirement({ ...working30, sources: { gratuity: { yearsOfService: 10, basicMonthly: 30_000, employerDaysPerYear: 15 } } }, none, today);
+    // 30 000 / 30 × 15 × 10 = 150 000
+    expect(own.income.gratuity).toBe(150_000);
+    expect(own.notes).toContain("m7.note.noStatutoryGratuity");
+    expect(own.explain.assumptions.map((a) => a.key)).not.toContain("gratuity_rule");
+    const zero = computeRetirement({ ...working30, sources: { gratuity: { yearsOfService: 10, basicMonthly: 30_000 } } }, none, today);
+    expect(zero.income.gratuity).toBe(0);
+  });
+
+  it("unknown public pension scheme or allowance rows (null) never throw", () => {
+    const noScheme = withJson(rates, "public_pension_scheme", null);
+    const projected = computeRetirement({ ...working30, sources: { publicPension: { monthlyContribution: 1_000 } } }, noScheme, today);
+    expect(projected.income.publicPensionMonthly).toBe(0);
+    // A pension the user knows still counts (from the retirement age).
+    const known = computeRetirement({ ...working30, sources: { publicPension: { monthlyContribution: 1_000, expectedMonthly: 5_000 } } }, noScheme, today);
+    expect(known.income.publicPensionMonthly).toBe(5_000);
+    expect(known.income.fixedPensionsValue).toBe(Math.round(levelAnnuityValue(60_000, 0.1, 40) / 500) * 500);
+    const noAllowance = withJson(rates, "old_age_allowance_eligibility", null);
+    const a = computeRetirement({ ...working30, sex: "female", sources: { oldAgeAllowanceEligible: true } }, noAllowance, today);
+    expect(a.income.oldAgeAllowanceMonthly).toBe(0);
+    expect(a.notes).not.toContain("m7.note.allowanceNotCounted");
+  });
+
+  it("public pension is valued from the scheme's pension age, not the retirement age", () => {
+    const pp = { monthlyContribution: 1_000, expectedMonthly: 10_000 };
+    const yearly = 120_000;
+    // Retiring at 55, pension from 60: the 60..100 annuity discounted 5 years at 10%.
+    const early = computeRetirement({ ...working30, retirementAge: 55, sources: { publicPension: pp } }, rates, today);
+    expect(stepRaw(early, "m7.fixedPensions")).toBeCloseTo(levelAnnuityValue(yearly, 0.1, 40) / 1.1 ** 5, 4);
+    expect(publicPensionValueAtRetirement(yearly, 0.1, 0.09, 55, 60, 100)).toBeCloseTo(levelAnnuityValue(yearly, 0.1, 40) / 1.1 ** 5, 6);
+    // Retiring at 65, pension from 60: five years of pension saved at the accumulation return, then 65..100.
+    const late = computeRetirement({ ...working30, retirementAge: 65, sources: { publicPension: pp } }, rates, today);
+    expect(stepRaw(late, "m7.fixedPensions")).toBeCloseTo(levelAnnuityValue(yearly, 0.1, 35) + (yearly * (1.09 ** 5 - 1)) / 0.09, 4);
+    expect(late.explain.steps.find((s) => s.id === "m7.fixedPensions")?.inputs.pensionFromAgeYears).toBe(60);
+    // Fully funded with the pension starting before retirement, the chart still ends at ≈ 0.
+    const funded = computeRetirement({ ...working30, retirementAge: 65, sources: { publicPension: pp }, monthlySaving: stepRaw(late, "m7.monthly") }, rates, today);
+    expect(Math.abs(funded.simulation.at(-1)!.balance)).toBeLessThanOrEqual(500);
+    expect(funded.verdict.kind).toBe("onTrack");
+    const fundedEarly = computeRetirement({ ...working30, retirementAge: 55, sources: { publicPension: pp }, monthlySaving: stepRaw(early, "m7.monthly") }, rates, today);
+    expect(Math.abs(fundedEarly.simulation.at(-1)!.balance)).toBeLessThanOrEqual(500);
   });
 
   it("Universal Pension: projected from the scheme; entry age above 50 → 0 with a note", () => {
@@ -288,7 +362,10 @@ describe("computeRetirement: retired (F4)", () => {
     const r = computeRetirement(base, rates, today);
     within1pct(r.withdrawal!.firstYear, 3.85 * LAKH);
     within1pct(r.withdrawal!.monthly, 32_000);
-    expect(r.withdrawal!.monthly % 100).toBe(0);
+    expect(r.withdrawal!.monthly % 500).toBe(0);
+    // Low / base / high returns (8% = inflation, 10%, 11%): 1 crore × 1.08 / 40 / 12 = 22 500; 32 000; 37 500.
+    expect(r.withdrawal!.monthlyRange).toEqual({ low: 22_500, base: 32_000, high: 37_500 });
+    expect(r.notes).toContain("m7.note.lowCaseInflation");
     expect(r.withdrawal!.monthly).toBeLessThanOrEqual(stepRaw(r, "m7.withdrawal") / 12);
     expect(r.withdrawal!.safePot).toBe(Math.round((3 * stepRaw(r, "m7.withdrawal")) / 500) * 500);
     expect(r.monthlyNeed).toBe(0);
@@ -309,11 +386,24 @@ describe("computeRetirement: retired (F4)", () => {
 
   it("spending exactly the safe amount lasts to the plan-to age and reaches ≈ 0", () => {
     const w1 = firstYearWithdrawal(CRORE, 0.1, 0.08, 40);
-    const r = computeRetirement({ ...base, monthlySpending: w1 / 12 + 15_000, otherMonthlyIncome: 15_000 }, rates, today);
+    const r = computeRetirement({ ...base, monthlySpending: w1 / 12 }, rates, today);
     expect(r.withdrawal!.runsOutAt).toBeNull();
     expect(r.verdict).toEqual({ kind: "onTrack", age: 100, status: "green" });
     expect(Math.abs(r.simulation.at(-1)!.balance)).toBeLessThanOrEqual(500);
     expect(r.simulation[0]).toEqual({ age: 60, balance: CRORE });
+  });
+
+  it("other monthly income is a fixed amount: it does not rise with prices", () => {
+    const w1 = firstYearWithdrawal(CRORE, 0.1, 0.08, 40);
+    // Spending the safe amount plus 15 000 covered by a fixed 15 000: the fixed part loses buying
+    // power, so the money runs out before 100 (it lasted when other income was treated as rising).
+    const r = computeRetirement({ ...base, monthlySpending: w1 / 12 + 15_000, otherMonthlyIncome: 15_000 }, rates, today);
+    expect(r.withdrawal!.runsOutAt).not.toBeNull();
+    expect(r.income.fixedPensionsValue).toBe(Math.round(levelAnnuityValue(180_000, 0.1, 40) / 500) * 500);
+    expect(r.notes).toContain("m7.note.pensionFixed");
+    // Gap = corpus for the full spending − value of the fixed income − savings.
+    const corpus = corpusFor(12 * (w1 / 12 + 15_000), 0.1, 0.08, 40);
+    expect(stepRaw(r, "m7.gap")).toBeCloseTo(Math.max(0, corpus - levelAnnuityValue(180_000, 0.1, 40) - CRORE), 2);
   });
 
   it("r = i withdrawal through the calculator", () => {
@@ -360,10 +450,18 @@ describe("explain, notes and validation", () => {
   const working = computeRetirement(working30, rates, today);
   const retired = computeRetirement({ mode: "retired", age: 62, monthlySpending: 30_000, savings: 5_000_000, monthlySaving: 0 }, rates, today);
 
-  it("step ids: working uses every step but withdrawal and safePot; retired uses withdrawal and safePot", () => {
+  it("step ids: working uses every step but withdrawal and safePot (source steps only for added sources); retired uses withdrawal and safePot", () => {
     const ids = (r: M7Result) => r.explain.steps.map((s) => s.id);
-    expect(new Set(ids(working))).toEqual(new Set(M7_STEP_IDS.filter((s) => s !== "m7.withdrawal" && s !== "m7.safePot")));
-    expect(ids(working)).toHaveLength(9);
+    const SOURCE_STEPS = ["m7.providentFund", "m7.gratuity", "m7.fixedPensions"];
+    expect(new Set(ids(working))).toEqual(new Set(M7_STEP_IDS.filter((s) => s !== "m7.withdrawal" && s !== "m7.safePot" && !SOURCE_STEPS.includes(s))));
+    expect(ids(working)).toHaveLength(6);
+    const all = computeRetirement(
+      { ...working30, sources: { providentFund: { balance: 1, monthlyContribution: 1, rate: 0.05 }, gratuity: { yearsOfService: 5, basicMonthly: 20_000 }, fixedPensionMonthly: 1_000 } },
+      rates,
+      today,
+    );
+    expect(ids(all)).toHaveLength(9);
+    expect(ids(computeRetirement({ ...working30, sources: { rentMonthly: 5_000 } }, rates, today))).not.toContain("m7.fixedPensions");
     expect(ids(retired)).toEqual(expect.arrayContaining(["m7.withdrawal", "m7.safePot"]));
     for (const id of [...ids(working), ...ids(retired)]) expect(M7_STEP_IDS).toContain(id);
     expect(ids(retired)).not.toContain("m7.monthly");

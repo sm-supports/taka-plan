@@ -60,7 +60,7 @@ export function createFormatters(locale: Locale, currency: MoneyCurrency = BDT_C
     currency,
     taka: (n, o) => formatTaka(n, { digits, compact: o?.compact, sign: o?.sign }),
     money: (n, o) => formatMoney(n, { currency, locale: tag, digits, compact: o?.compact, sign: o?.sign }),
-    parseMoney: (s) => parseMoneyInput(s, { symbol: currency.symbol, locale: tag, digits }),
+    parseMoney: (s) => parseMoneyInput(s, { symbol: currency.symbol, code: currency.code, locale: tag, digits }),
     percent: (r, decimals) => formatPercent(r, { digits, decimals }),
     number: (n, decimals) => formatNumber(n, { digits, decimals }),
     months: (m) => formatMonths(m, locale),

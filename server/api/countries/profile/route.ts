@@ -1,4 +1,5 @@
-// GET /api/countries/:code: one country's published profile from D1 with ETag/304.
+// GET /api/countries/:code: one country's published profile from D1 with ETag/304, as
+// `{ version, status: "published", profile }` (StoredCountry).
 // 404 when the country has no published version (the client then uses its static file),
 // 503 (never cached) when D1 fails. Cost: one indexed SELECT for a 304, two for a fresh 200
 // (three when an If-None-Match did not match).
@@ -44,7 +45,8 @@ export async function GET(req: Request, rawCode: string): Promise<Response> {
     const stored = await repo.getPublished(code);
     if (!stored) return notFound(code);
     const profile = assertCountryProfile(stored.profile, countryUnits());
-    const body: PublicCountryResponse = { ...profile, version: stored.version };
+    // Wrapped like StoredCountry: lib/country/loader.ts parseCountryBody reads the version only from `{ version, profile }`.
+    const body: PublicCountryResponse = { version: stored.version, status: "published", profile };
     return json(body, { status: 200, headers: { ETag: countryEtag(code, stored.version), "Cache-Control": CACHE_PUBLIC, "X-Country-Source": "d1" } });
   } catch {
     return unavailable();

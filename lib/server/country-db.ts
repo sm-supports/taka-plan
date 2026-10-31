@@ -20,6 +20,9 @@ import {
 } from "@taka/engine";
 import type { ChangeLogEntry, D1Like, D1ResultLike } from "./db";
 import type { CountryMetaPatch, CountryRepo, CountrySummary, StoredCountry } from "./country-repo";
+import { META_PATCH_KEYS, assertFieldLimits, pickJsonShape, todayUtc } from "./country-clean";
+
+export { META_PATCH_KEYS };
 
 /** Thrown when a country has neither a published version nor (where relevant) a draft. */
 export class CountryNotFoundError extends Error {
@@ -41,9 +44,6 @@ const CC = /^[A-Z]{2}$/;
 const FIELD_KEY_SET: ReadonlySet<string> = new Set(COUNTRY_FIELD_KEYS);
 const MAX_LOG_PAGE = 500;
 
-/** The CountryProfile keys an admin may patch (identity code, iso3, region and schemaVersion are fixed). */
-export const META_PATCH_KEYS = ["nameEn", "nameNative", "languages", "currency", "instruments", "institutions", "researchedAt", "reviewedBy"] as const satisfies readonly (keyof CountryMetaPatch)[];
-
 let units: Record<RateKey, RateUnit> | null = null;
 /** Unit of every rate key, from the bundled seed (computed once per isolate). */
 export function countryUnits(): Record<RateKey, RateUnit> {
@@ -62,11 +62,14 @@ export function isCountryFieldKey(key: unknown): key is RateKey {
 /**
  * Validates one figure for `code`/`key` and returns a clean copy holding only CountryField properties
  * (`valueJson` and `note` only when set), so stray properties never reach the database or the log.
+ * On top of the engine validator: source and note length caps, a real `asOf` at most a year ahead
+ * (country-clean.ts), and JSON values reduced to the keys their shape knows.
  */
-export function cleanCountryField(code: CountryCode, key: RateKey, raw: unknown): CountryField {
+export function cleanCountryField(code: CountryCode, key: RateKey, raw: unknown, today: string = todayUtc()): CountryField {
   if (!isCountryFieldKey(key)) throw new Error(`"${String(key)}" is not a country field key`);
   const unit = countryUnits()[key];
   const f = assertCountryField(code, key, unit, raw);
+  assertFieldLimits(`fields.${key}`, f, today);
   const live = f.status !== "missing";
   const out: CountryField = {
     value: live && unit !== "json" && typeof f.value === "number" ? f.value : null,
@@ -75,8 +78,9 @@ export function cleanCountryField(code: CountryCode, key: RateKey, raw: unknown)
     sourceUrl: f.sourceUrl,
     asOf: f.asOf,
   };
-  if (live && unit === "json" && f.valueJson !== undefined && f.valueJson !== null) out.valueJson = f.valueJson;
+  if (live && unit === "json" && f.valueJson !== undefined && f.valueJson !== null) out.valueJson = pickJsonShape(key, f.valueJson);
   if (typeof f.note === "string" && f.note.length > 0) out.note = f.note;
+  if (f.status === "missing" && f.absent === true) out.absent = true;
   return out;
 }
 
@@ -131,6 +135,7 @@ export interface FieldDbRow {
   source_url: string;
   as_of: string;
   note: string | null;
+  absent?: number | null;
 }
 
 interface LogDbRow {
@@ -155,7 +160,7 @@ interface SummaryDbRow {
 }
 
 const VERSION_COLUMNS = "country, version, status, created_at, published_at, published_by, note, meta";
-export const FIELD_COLUMNS = "country, version, field, value, value_json, status, source_name, source_url, as_of, note";
+export const FIELD_COLUMNS = "country, version, field, value, value_json, status, source_name, source_url, as_of, note, absent";
 const LOG_COLUMNS = "id, at, actor, action, version, key, old_value, new_value, note";
 const LOG_INSERT_COLUMNS = "at, actor, action, version, key, old_value, new_value, note, country";
 
@@ -174,7 +179,7 @@ const SQL = {
     WHERE p.country = ? AND p.status = 'published'
       AND NOT EXISTS (SELECT 1 FROM country_versions WHERE country = ? AND status = 'draft')`,
   copyPublishedFieldsToDraft: `INSERT INTO country_fields (${FIELD_COLUMNS})
-    SELECT f.country, d.version, f.field, f.value, f.value_json, f.status, f.source_name, f.source_url, f.as_of, f.note
+    SELECT f.country, d.version, f.field, f.value, f.value_json, f.status, f.source_name, f.source_url, f.as_of, f.note, f.absent
     FROM country_fields f, country_versions p, country_versions d
     WHERE p.country = ? AND p.status = 'published'
       AND d.country = p.country AND d.status = 'draft'
@@ -187,11 +192,12 @@ const SQL = {
       AND NOT EXISTS (SELECT 1 FROM change_log l WHERE l.country = d.country AND l.action = 'create_draft' AND l.version = d.version)`,
   // updateField: insert-or-replace one field row, only while the version is still this country's draft.
   upsertDraftField: `INSERT INTO country_fields (${FIELD_COLUMNS})
-    SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+    SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
     WHERE EXISTS (SELECT 1 FROM country_versions v WHERE v.country = ? AND v.version = ? AND v.status = 'draft')
     ON CONFLICT (country, version, field) DO UPDATE SET
       value = excluded.value, value_json = excluded.value_json, status = excluded.status,
-      source_name = excluded.source_name, source_url = excluded.source_url, as_of = excluded.as_of, note = excluded.note`,
+      source_name = excluded.source_name, source_url = excluded.source_url, as_of = excluded.as_of, note = excluded.note,
+      absent = excluded.absent`,
   updateDraftMeta: "UPDATE country_versions SET meta = ? WHERE country = ? AND version = ? AND status = 'draft'",
   logIfDraft: `INSERT INTO change_log (${LOG_INSERT_COLUMNS})
     SELECT ?, 'admin', 'edit', ?, ?, ?, ?, ?, ?
@@ -243,6 +249,7 @@ export function fieldFromDb(r: FieldDbRow): CountryField {
   };
   if (r.value_json !== null && r.value_json !== undefined) f.valueJson = JSON.parse(r.value_json) as unknown;
   if (r.note !== null && r.note !== undefined) f.note = r.note;
+  if (Number(r.absent) === 1) f.absent = true;
   return f;
 }
 
@@ -259,6 +266,7 @@ export function fieldToBind(code: CountryCode, version: number, key: RateKey, f:
     f.sourceUrl,
     f.asOf,
     f.note ?? null,
+    f.status === "missing" && f.absent === true ? 1 : 0,
   ];
 }
 
@@ -449,7 +457,7 @@ export async function insertPublishedCountries(db: D1Like, profiles: readonly Co
     const stmts = [
       db.prepare(`INSERT INTO country_versions (${VERSION_COLUMNS}) VALUES (?, ?, 'published', ?, ?, 'seed', NULL, ?)`).bind(p.code, version, now, now, JSON.stringify(metaOf(p))),
       ...(Object.entries(p.fields) as [RateKey, CountryField][]).map(([k, f]) =>
-        db.prepare(`INSERT INTO country_fields (${FIELD_COLUMNS}) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`).bind(...fieldToBind(p.code, version, k, cleanCountryField(p.code, k, f))),
+        db.prepare(`INSERT INTO country_fields (${FIELD_COLUMNS}) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`).bind(...fieldToBind(p.code, version, k, cleanCountryField(p.code, k, f))),
       ),
     ];
     await db.batch(stmts);

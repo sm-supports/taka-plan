@@ -18,7 +18,7 @@ import type { M7Input, M7Result } from "../m7/types";
 import { assertSnapshot } from "../rates";
 import { EngineError, type Profile } from "../types";
 import { computePlan, hasOverrideAnswers, nextStepForInstrument, profileToPlanInput } from "./plan";
-import { PLAN_NEXT_KEYS, PLAN_REASON_KEYS, PLAN_STEP_IDS, type Bucket, type PlanInput } from "./types";
+import { PLAN_NEXT_KEYS, PLAN_NOTE_KEYS, PLAN_REASON_KEYS, PLAN_STEP_IDS, type Bucket, type PlanInput } from "./types";
 
 // Sibling slices implement these at the same time; here they are replaced by hand-built results.
 vi.mock("../m1/emergency-fund", () => ({ computeEmergencyFund: vi.fn(), suggestMonths: vi.fn() }));
@@ -26,7 +26,7 @@ vi.mock("../m3/debt-health", () => ({ computeDebtHealth: vi.fn() }));
 vi.mock("../m4/save-first", () => ({ computeSaveFirst: vi.fn() }));
 vi.mock("../m5/goal-planner", async (importOriginal) => ({ ...(await importOriginal<typeof import("../m5/goal-planner")>()), computeGoals: vi.fn() }));
 vi.mock("../m2/insurance", () => ({ computeInsurance: vi.fn() }));
-vi.mock("../m6/allocation", () => ({ computeAllocation: vi.fn() }));
+vi.mock("../m6/allocation", async (importOriginal) => ({ ...(await importOriginal<typeof import("../m6/allocation")>()), computeAllocation: vi.fn() }));
 vi.mock("../m7/retirement", () => ({ computeRetirement: vi.fn() }));
 
 const rates = assertSnapshot(seed);
@@ -365,7 +365,8 @@ describe("computePlan", () => {
     expect(plan.buckets.every((b) => b.amount > 0)).toBe(true);
     expect(plan.summary.goalsShortfall).toBe(1500);
     expect(plan.monthlyTotal).toBe(10000);
-    expect(plan.buckets[1]?.reasonParams.months).toBe(30); // 60 000 / 2 000
+    // 60 000 at 25% a year, the 3 000 minimum plus 2 000 extra: cleared in 14 months with interest (was 30 = 60 000 / 2 000).
+    expect(plan.buckets[1]?.reasonParams.months).toBe(14);
   });
 
   it("a goal that fits leaves the surplus in a future bucket so the whole amount is placed", () => {
@@ -394,8 +395,8 @@ describe("computePlan", () => {
     ]);
     const d = plan.buckets[1];
     expect(d).toMatchObject({ instrument: "loan_prepayment", status: "amber", module: "m3", refId: "c-1", nextStepKey: "plan.next.prepayDebt", reasonKey: "plan.reason.debt" });
-    // months = ceil(60 000 / 4 000): what the allocated amount actually achieves, not the 12-month target.
-    expect(d?.reasonParams).toEqual({ amount: 4000, rate: 0.25, count: 1, months: 15 });
+    // Months with interest at the 3 000 minimum plus 4 000 extra: 10 (was ceil(60 000 / 4 000) = 15, which ignored both).
+    expect(d?.reasonParams).toEqual({ amount: 4000, rate: 0.25, count: 1, months: 10 });
     expect(plan.debt).toBeDefined();
     const debtStep = plan.explain.steps.find((s) => s.id === "plan.debtShare");
     expect(debtStep?.inputs).toEqual({ remaining: 4000, headroom: 5000 });
@@ -415,7 +416,17 @@ describe("computePlan", () => {
       ["future", 5000],
     ]);
     expect(plan.buckets[0]?.nextStepKey).toBe("plan.next.keepFull");
-    expect(plan.buckets[1]?.reasonParams.months).toBe(12); // 60 000 / 5 000
+    expect(plan.buckets[1]?.reasonParams.months).toBe(9); // minimum 3 000 + 5 000, with interest (was 12 = 60 000 / 5 000)
+  });
+
+  it("a debt that does not clear at this pace says so instead of a month count", () => {
+    mockedM1.mockReturnValue(m1Result(240000));
+    // 1 000 000 at 30% with a 10 000 minimum: interest alone is 25 000 a month, more than 10 000 + 10 000 extra.
+    const big: DebtSummary = { id: "c-big", kind: "card", balance: 1000000, annualRate: 0.3, minPayment: 10000 };
+    mockedM3.mockImplementation(() => m3Result([big]));
+    const plan = computePlan(baseInput({ profile: { ...PROFILE, hasDebt: true }, m3: { takeHome: 50000, essentials: 30000, savingsTarget: 0, loans: [], cards: [] } }), rates, TODAY);
+    const d = plan.buckets.find((b) => b.id === "debt");
+    expect(d?.reasonParams).toEqual({ amount: 10000, rate: 0.3, count: 1, neverAtPace: 1 });
   });
 
   it("one-red rule: emergency red and debt red → debt demoted to amber", () => {
@@ -435,7 +446,7 @@ describe("computePlan", () => {
     mockedM4.mockReturnValue(m4Result({ savingsAmount: 20000 }));
     mockedM3.mockImplementation(() => m3Result([CARD_60K], { status: "red" }));
     const goal: Goal = { id: "g", name: "Flat", cost: 3000000, years: 7, type: "home" };
-    mockedM5.mockImplementation(() => m5Result([goalResult(goal, 30000, { status: "red" })]));
+    mockedM5.mockImplementation(() => m5Result([goalResult(goal, 30000, { status: "red", belowInflation: true })]));
     const plan = computePlan(
       baseInput({ profile: { ...PROFILE, hasDebt: true }, m3: { takeHome: 50000, essentials: 30000, savingsTarget: 0, loans: [], cards: [] }, m5: { goals: [goal], age: 28 } }),
       rates,
@@ -483,14 +494,16 @@ describe("computePlan", () => {
   it("insurance and retirement hooks reserve their need in priority order", () => {
     mockedM1.mockReturnValue(m1Result(240000));
     const plan = computePlan(baseInput({ insurance: { monthlyPremiumNeed: 2000 }, retirement: { monthlyNeed: 3000 } }), rates, TODAY);
+    // Retirement money is long-horizon: the growth slot (equity fund), not a DPS, even without an asset mix.
     expect(plan.buckets.map((b) => [b.id, b.module, b.amount, b.instrument, b.status, b.nextStepKey])).toEqual([
       ["emergency", "m1", 0, "fdr_3m", "green", "plan.next.keepFull"],
       ["insurance", "m2", 2000, "term_insurance", "green", "plan.next.insurance"],
-      ["retirement", "m7", 3000, "dps", "green", "plan.next.retirement"],
+      ["retirement", "m7", 3000, "equity_fund", "green", "plan.next.retirement"],
       ["future", "m5", 5000, "dps", "green", "plan.next.addGoal"],
     ]);
-    // Without an M7 result the plan-to age is the rates row.
-    expect(plan.buckets[2]?.reasonParams).toEqual({ amount: 3000, planTo: 100 });
+    // Without an M7 result the plan-to age is the rates row; fully funded, the money lasts to it.
+    expect(plan.buckets[2]?.reasonParams).toEqual({ amount: 3000, need: 3000, planTo: 100, lastsTo: 100 });
+    expect(plan.summary.retirementShortfall).toBe(0);
     expect(plan.buckets[1]?.reasonParams).toEqual({ amount: 2000 });
     expect(mockedM2).not.toHaveBeenCalled();
     expect(mockedM6).not.toHaveBeenCalled();
@@ -516,11 +529,15 @@ describe("computePlan", () => {
       rates,
       TODAY,
     );
-    expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([
-      ["emergency", 6000],
-      ["insurance", 1000],
-      ["debt", 3000],
+    // The unfunded retirement need stays on the plan as a red zero bucket (the goal's zero is dropped).
+    expect(plan.buckets.map((b) => [b.id, b.amount, b.status])).toEqual([
+      ["emergency", 6000, "amber"],
+      ["insurance", 1000, "green"],
+      ["debt", 3000, "amber"],
+      ["retirement", 0, "red"],
     ]);
+    expect(plan.summary.retirementShortfall).toBe(900);
+    expect(plan.buckets[3]?.reasonParams).toEqual({ amount: 0, need: 900, planTo: 100 });
     mockedM1.mockReturnValue(m1Result(0));
     const short = computePlan(baseInput({ insurance: { monthlyPremiumNeed: 3000 } }), rates, TODAY);
     // B 10 000 → emergency 8 000 (cap) → insurance gets the 2 000 left of 3 000: amber.
@@ -577,7 +594,7 @@ describe("computePlan", () => {
       ["debt", 2000],
     ]);
     expect(plan.explain.steps.find((s) => s.id === "plan.debtShare")?.inputs).toEqual({ remaining: 2000, headroom: 2500 });
-    expect(plan.buckets[1]?.reasonParams.months).toBe(30); // 60 000 / 2 000, not the 24-month target
+    expect(plan.buckets[1]?.reasonParams.months).toBe(14); // minimum + 2 000 with interest, not the 24-month target
     expect(plan.explain.steps.find((s) => s.id === "plan.emergencyShare")?.inputs).toMatchObject({ minShare: 0.8, maxShare: 0.9 });
   });
 
@@ -660,7 +677,7 @@ describe("computePlan with M2, M6 and M7", () => {
       ["retirement", 1500, "equity_fund", "green", "m7", "plan.next.retirement"],
       ["future", 1500, "equity_fund", "green", "m6", "plan.next.allocation"],
     ]);
-    expect(plan.buckets[2]?.reasonParams).toEqual({ amount: 1500, planTo: 95 });
+    expect(plan.buckets[2]?.reasonParams).toEqual({ amount: 1500, need: 1500, planTo: 95, lastsTo: 95 });
     expect(plan.buckets[3]?.reasonParams).toEqual({ amount: 1500, instrument: "equity_fund" });
     expect(plan.retirement?.monthlyNeed).toBe(1500);
     assertKeys(plan.buckets);
@@ -688,11 +705,77 @@ describe("computePlan with M2, M6 and M7", () => {
     const plan = computePlan(baseInput({ m7: M7_IN, retirement: { monthlyNeed: 2500 } }), rates, TODAY);
     expect(mockedM7).toHaveBeenCalledWith(M7_IN, rates, TODAY);
     expect(mockedM7.mock.calls[0]?.[0]).not.toHaveProperty("allocation");
+    // The hook's 2 500 is fully funded → green (status follows the money the plan puts aside, not M7's verdict at today's saving).
     expect(plan.buckets.map((b) => [b.id, b.amount, b.instrument, b.status])).toEqual([
       ["emergency", 0, "fdr_3m", "green"],
-      ["retirement", 2500, "dps", "red"],
+      ["retirement", 2500, "equity_fund", "green"],
       ["future", 7500, "dps", "green"],
     ]);
+  });
+
+  it("retirement status follows the money: funded green, partly amber, nothing red; lastsTo from M7 at that amount", () => {
+    mockedM1.mockReturnValue(m1Result(240000));
+    // M7 needs 12 000; the plan has 10 000: amber, short by 2 000; M7 is rerun at 10 000 a month.
+    mockedM7.mockImplementation((inp: M7Input) => (inp.monthlySaving === 10000 ? m7Result(12000, "amber", 100) : m7Result(12000, "red", 100)));
+    const plan = computePlan(baseInput({ m7: M7_IN }), rates, TODAY);
+    expect(plan.buckets.map((b) => [b.id, b.amount, b.status])).toEqual([
+      ["emergency", 0, "green"],
+      ["retirement", 10000, "amber"],
+    ]);
+    expect(mockedM7.mock.calls[1]?.[0].monthlySaving).toBe(10000);
+    expect(plan.buckets[1]?.reasonParams).toEqual({ amount: 10000, need: 12000, planTo: 100, lastsTo: 90 });
+    expect(plan.summary.retirementShortfall).toBe(2000);
+  });
+
+  it("goals and retirement share what is left in proportion to their needs", () => {
+    mockedM1.mockReturnValue(m1Result(240000));
+    const goal: Goal = { id: "g", name: "Flat", cost: 3000000, years: 10, type: "home" };
+    mockedM5.mockImplementation(() => m5Result([goalResult(goal, 6000, { status: "green" })]));
+    mockedM7.mockImplementation(() => m7Result(9000));
+    // 10 000 left; needs 6 000 + 9 000 = 15 000 → goal 10 000 × 6/15 = 4 000, retirement 6 000.
+    const plan = computePlan(baseInput({ m5: { goals: [goal], age: 28 }, m7: M7_IN }), rates, TODAY);
+    expect(plan.buckets.map((b) => [b.id, b.amount, b.status])).toEqual([
+      ["emergency", 0, "green"],
+      ["goal", 4000, "amber"],
+      ["retirement", 6000, "amber"],
+    ]);
+    expect(plan.summary).toMatchObject({ goalsShortfall: 2000, retirementShortfall: 3000 });
+    expect(plan.explain.steps.find((s) => s.id === "plan.goalsShare")).toMatchObject({ inputs: { remaining: 10000, goalsNeed: 6000, retirementNeed: 9000, goalsPool: 4000 }, rounded: 4000 });
+    expect(plan.monthlyTotal).toBe(10000);
+  });
+
+  it("a failing optional module drops its bucket with a note; the plan still adds up", () => {
+    mockedM1.mockReturnValue(m1Result(240000));
+    mockedM7.mockImplementation(() => {
+      throw new EngineError("INVALID_INPUT", "retirementAge must be earlier than the plan-to age");
+    });
+    mockedM2.mockImplementation(() => {
+      throw new Error("boom");
+    });
+    const plan = computePlan(baseInput({ m2: M2_IN, m7: M7_IN }), rates, TODAY);
+    expect(plan.retirement).toBeUndefined();
+    expect(plan.insurance).toBeUndefined();
+    expect(plan.buckets.map((b) => [b.id, b.amount])).toEqual([
+      ["emergency", 0],
+      ["future", 10000],
+    ]);
+    expect(plan.explain.notes).toEqual(expect.arrayContaining(["plan.note.insuranceSkipped", "plan.note.retirementSkipped"]));
+    for (const n of plan.explain.notes.filter((k) => k.startsWith("plan.note."))) expect(PLAN_NOTE_KEYS).toContain(n);
+  });
+
+  it("a stale M7 retirement age at or below today's age plans the user as retired", () => {
+    // Answered at 59 (retire at 60); the profile now says 61.
+    computePlan(baseInput({ profile: { ...PROFILE, age: 61 }, m7: { ...M7_IN, age: 61, retirementAge: 60 } }), rates, TODAY);
+    expect(mockedM7.mock.calls[0]?.[0].mode).toBe("retired");
+  });
+
+  it("M7's default savings count only above the emergency-fund target", () => {
+    mockedM1.mockReturnValue(m1Result(240000));
+    computePlan(baseInput({ m7: { ...M7_IN, savings: 300000 }, m7SavingsDefault: true }), rates, TODAY);
+    // 300 000 − 240 000 target = 60 000
+    expect(mockedM7.mock.calls[0]?.[0].savings).toBe(60000);
+    computePlan(baseInput({ m7: { ...M7_IN, savings: 300000 } }), rates, TODAY);
+    expect(mockedM7.mock.calls[1]?.[0].savings).toBe(300000);
   });
 
   it("M7: a working-mode user at or past the default retirement age (and no age of their own) is planned as retired", () => {
@@ -763,6 +846,10 @@ describe("profileToPlanInput with M2, M6 and M7 answers", () => {
     });
     const old = profileToPlanInput({ ...PROFILE, age: 55, incomeType: "business" }, { m6: { horizonYears: 3 } });
     expect(old.m6?.risk).toEqual({ ageBand: 0, incomeStability: 0, horizon: 0, reaction: 1 });
+    // Contradicting answers cannot happen: age band from the age, horizon from the years when given.
+    const fixed = profileToPlanInput(FAMILY, { m6: { horizonYears: 3, risk: { ageBand: 2, horizon: 2 } } });
+    expect(fixed.m6?.risk).toMatchObject({ ageBand: 1, horizon: 0 });
+    expect(profileToPlanInput(FAMILY, { m6: { risk: { horizon: 0 } } }).m6?.risk.horizon).toBe(0);
     const young = profileToPlanInput(PROFILE, { m6: { horizonYears: 25, monthly: 3000 } });
     expect(young.m6).toMatchObject({ monthly: 3000, risk: { ageBand: 2, incomeStability: 2, horizon: 2, reaction: 1 }, gate: { hasEmergencyFund: false, hasCardDebt: false } });
   });
@@ -777,6 +864,9 @@ describe("profileToPlanInput with M2, M6 and M7 answers", () => {
       planToAge: 95,
     });
     expect(profileToPlanInput(FAMILY, { m7: { monthlySpending: 90000, savings: 500000, monthlySaving: 5000 } }).m7).toMatchObject({ monthlySpending: 90000, savings: 500000, monthlySaving: 5000 });
+    // The savings default is flagged so computePlan can leave the emergency fund out of it.
+    expect(profileToPlanInput(FAMILY, { m7: { planToAge: 95 } }).m7SavingsDefault).toBe(true);
+    expect(profileToPlanInput(FAMILY, { m7: { savings: 500000 } }).m7SavingsDefault).toBeUndefined();
   });
 });
 

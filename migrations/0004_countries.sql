@@ -29,9 +29,13 @@ CREATE TABLE IF NOT EXISTS country_fields (
   source_url  TEXT    NOT NULL,
   as_of       TEXT    NOT NULL,
   note        TEXT,
+  -- 1 when research confirmed the thing does not exist (no term-life market, no gratuity law, ...);
+  -- only allowed with status 'missing'. 0 = unknown or not applicable.
+  absent      INTEGER NOT NULL DEFAULT 0 CHECK (absent IN (0, 1)),
   PRIMARY KEY (country, version, field),
   FOREIGN KEY (country, version) REFERENCES country_versions(country, version) ON DELETE CASCADE,
-  CHECK (status = 'missing' OR value IS NOT NULL OR value_json IS NOT NULL)
+  CHECK (status = 'missing' OR value IS NOT NULL OR value_json IS NOT NULL),
+  CHECK (absent = 0 OR status = 'missing')
 );
 
 -- Change log entries for country edits carry the country code (NULL for the Bangladesh rates table).

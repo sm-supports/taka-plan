@@ -60,34 +60,34 @@ describe("long goals priced at the M6 mix", () => {
   const MIX = { equity: 0.6, gold: 0.1, fixedIncome: 0.3 };
   const home = goal({ id: "home", name: "Home", cost: 2000000, years: 15, type: "home" });
 
-  it("blends the after-tax fixed income with untaxed equity and gold; low and high use the generic cases", () => {
+  it("prices the mix like M6: fixed_income_return_*, equity and gold for all three cases, effective monthly rate", () => {
     const g = computeGoal(home, snapshot, TODAY, undefined, MIX);
-    // base 0.3 × 10.647% + 0.6 × 9% + 0.1 × 8%; nominal uses Sanchayapatra's 11.83% before tax.
-    expect(g.afterTax).toBeCloseTo(0.3 * 0.10647 + 0.6 * 0.09 + 0.1 * 0.08, 10);
-    expect(g.nominal).toBeCloseTo(0.3 * 0.1183 + 0.6 * 0.09 + 0.1 * 0.08, 10);
+    // base 0.3 × 8.5% + 0.6 × 9% + 0.1 × 8% = 8.75% (was 9.394% with Sanchayapatra's 10.647% after tax).
+    expect(g.afterTax).toBeCloseTo(0.0875, 10);
+    expect(g.nominal).toBeCloseTo(0.0875, 10);
     expect(g).toMatchObject({ instrument: "equity_fund", candidates: ["sanchayapatra_5y", "equity_fund", "gold"], horizon: "long", status: "green" });
     const fvRaw = futureValue(2000000, 0.08, 15);
     const low = 0.3 * 0.065 + 0.6 * 0.02 + 0.1 * 0.02;
     const high = 0.3 * 0.105 + 0.6 * 0.14 + 0.1 * 0.12;
-    expect(g.monthly.base).toBe(roundMoney(sinkingFundMonthly(fvRaw, g.afterTax, 180), "monthly"));
-    expect(g.monthly.low).toBe(roundMoney(sinkingFundMonthly(fvRaw, low, 180), "monthly"));
-    expect(g.monthly.high).toBe(roundMoney(sinkingFundMonthly(fvRaw, high, 180), "monthly"));
-    expect(g.monthly).toEqual({ low: 27200, base: 16200, high: 11800 });
+    expect(g.monthly.base).toBe(roundMoney(sinkingFundMonthly(fvRaw, g.afterTax, 180, true), "monthly"));
+    expect(g.monthly.low).toBe(roundMoney(sinkingFundMonthly(fvRaw, low, 180, true), "monthly"));
+    expect(g.monthly.high).toBe(roundMoney(sinkingFundMonthly(fvRaw, high, 180, true), "monthly"));
+    // rm = (1 + r)^(1/12) − 1: 6 344 338 × rm / ((1 + rm)^180 − 1) (was 27 200 / 16 200 / 11 800 at r / 12 and the certificate rate)
+    expect(g.monthly).toEqual({ low: 27300, base: 17700, high: 12600 });
     expect(g.explain.notes).toEqual([]);
     const rate = g.explain.steps.find((s) => s.id === "m5.rate");
-    expect(rate?.inputs).toMatchObject({ instrument: "equity_fund", fixedIncomeShare: 0.3, equityShare: 0.6, goldShare: 0.1, equityRate: 0.09, goldRate: 0.08 });
-    // nominal × (1 − blended tax) = after tax, so the step's formula adds up.
-    expect((rate!.inputs.nominal as number) * (1 - (rate!.inputs.tax as number))).toBeCloseTo(g.afterTax, 10);
+    expect(rate?.inputs).toMatchObject({ instrument: "equity_fund", fixedIncomeShare: 0.3, equityShare: 0.6, goldShare: 0.1, fixedIncomeRate: 0.085, equityRate: 0.09, goldRate: 0.08, tax: 0 });
+    expect(g.explain.steps.find((s) => s.id === "m5.monthly")?.inputs.monthlyRate).toBeCloseTo(1.0875 ** (1 / 12) - 1, 12);
     const keys = g.explain.assumptions.map((a) => a.key);
-    expect(keys).toEqual(expect.arrayContaining(["sanchayapatra_5y_rate", "tax_sanchayapatra_profit", "equity_return_base", "gold_return_base", "fixed_income_return_low", "fixed_income_return_high", "equity_return_low", "equity_return_high", "gold_return_low", "gold_return_high"]));
+    expect(keys).toEqual(expect.arrayContaining(["fixed_income_return_base", "equity_return_base", "gold_return_base", "fixed_income_return_low", "fixed_income_return_high", "equity_return_low", "equity_return_high", "gold_return_low", "gold_return_high"]));
+    expect(keys).not.toContain("sanchayapatra_5y_rate");
     expect(keys).not.toContain("tax_bank_interest");
   });
 
-  it("keeps low ≤ base ≤ high even when today's fixed-income rate beats the generic high case", () => {
+  it("an all-fixed-income mix uses the generic fixed-income cases, not today's certificate rate", () => {
     const g = computeGoal(home, snapshot, TODAY, undefined, { equity: 0, gold: 0, fixedIncome: 1 });
-    // 10.647% after tax > fixed_income_return_high (10.5%): high falls back to the base.
-    expect(g.monthly.high).toBe(g.monthly.base);
-    expect(g.monthly.low).toBeGreaterThan(g.monthly.base);
+    // 6.5% / 8.5% / 10.5% at the effective monthly rate
+    expect(g.monthly).toEqual({ low: 21200, base: 18000, high: 15300 });
     expect(g.instrument).toBe("sanchayapatra_5y");
   });
 

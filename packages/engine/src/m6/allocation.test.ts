@@ -4,7 +4,7 @@ import { withCountry } from "../country/overlay";
 import { FIXTURE_US } from "../fixtures/countries";
 import { assertSnapshot, type RateKey, type RatesSnapshot } from "../rates";
 import { EngineError } from "../types";
-import { allocationWeights, computeAllocation, mixFutureValue, riskProfileFor } from "./allocation";
+import { allocationWeights, computeAllocation, mixFutureValue, riskProfileFor, waterFill } from "./allocation";
 import { M6_GATE_KEYS, M6_HOWTO_KEYS, M6_NOTE_KEYS, M6_STEP_IDS, type M6Input, type RiskProfile } from "./types";
 
 const rates = assertSnapshot(seed);
@@ -305,16 +305,23 @@ describe("computeAllocation: rebalancer (F4)", () => {
   });
 
   it("PRD: with 1.5 lakh new money, all of it goes to fixed income and nothing is sold", () => {
+    // Targets on 11.5 lakh: 517,500 / 115,000 / 517,500 → only fixed income is short (217,500): all 1.5 lakh goes there.
+    // That alone leaves fixed income 5.9 points under, but with ৳10,000 a month for 12 months
+    // (2.7 lakh in all, water-filled on 12.7 lakh) every bucket ends within 5 points, so nothing is sold.
     const r = run({ holdings, newMoney: 150_000 });
     const rb = r.rebalance!;
     expect(rb.total).toBe(1_150_000);
     expect(rb.trades).toEqual({ equity: 0, gold: 0, fixedIncome: 150_000 });
     expect(rb.newMoneyOnly).toBe(true);
     expect(r.notes).not.toContain("m6.note.exitCosts");
+    // Without a monthly amount the drift is still 5.9 points after the buy → full trades with sales.
+    const once = run({ holdings, newMoney: 150_000, monthly: 0 }).rebalance!;
+    expect(once.newMoneyOnly).toBe(false);
+    expect(once.trades).toEqual({ equity: -32_500, gold: -35_000, fixedIncome: 217_500 });
   });
 
-  it("too little new money to close the gaps → full target trades with sales", () => {
-    const r = run({ holdings, newMoney: 50_000 });
+  it("too little new money and no monthly amount → full target trades with sales", () => {
+    const r = run({ holdings, newMoney: 50_000, monthly: 0 });
     const rb = r.rebalance!;
     // Total 10.5 lakh: targets 472,500 / 105,000 / 472,500.
     expect(rb.trades).toEqual({ equity: -77_500, gold: -45_000, fixedIncome: 172_500 });
@@ -322,12 +329,33 @@ describe("computeAllocation: rebalancer (F4)", () => {
     expect(r.notes).toContain("m6.note.exitCosts");
   });
 
-  it("new money split across two under-weight buckets in proportion to their gaps", () => {
-    // Gaps on 10 lakh: gold 50,000, fixed income 100,000 → 1:2 of the new money.
+  it("the next 12 months of the monthly amount count before any sale", () => {
+    // 50,000 now + 12 × 10,000 = 1.7 lakh on 11.7 lakh: fixed income ends 4.8 points under → no sales;
+    // the 50,000 goes to fixed income now (was: sell 77,500 equity and 45,000 gold).
+    const r = run({ holdings, newMoney: 50_000 });
+    expect(r.rebalance).toMatchObject({ trades: { equity: 0, gold: 0, fixedIncome: 50_000 }, newMoneyOnly: true });
+    expect(r.notes).not.toContain("m6.note.exitCosts");
+  });
+
+  it("new money is water-filled across two under-weight buckets", () => {
+    // Targets on 13 lakh: 585,000 / 130,000 / 585,000; short: gold 80,000, fixed income 235,000.
+    // Level λ: (80,000 − λ) + (235,000 − λ) = 300,000 → λ = 7,500 → gold 72,500, fixed income 227,500
+    // (was 100,000 / 200,000 in proportion to the gaps on 10 lakh).
     const r = run({ holdings: { equity: 600_000, gold: 50_000, fixedIncome: 350_000 }, newMoney: 300_000 });
     const rb = r.rebalance!;
-    expect(rb.trades).toEqual({ equity: 0, gold: 100_000, fixedIncome: 200_000 });
+    expect(rb.trades).toEqual({ equity: 0, gold: 72_500, fixedIncome: 227_500 });
     expect(rb.newMoneyOnly).toBe(true);
+  });
+
+  it("waterFill closes the largest shortfall first and never exceeds the pool", () => {
+    const held = { equity: 0, gold: 0, fixedIncome: 0 };
+    // Only the largest shortfall until it is down to the next one: 30 all to equity.
+    expect(waterFill(held, { equity: 100, gold: 10, fixedIncome: 50 }, 30)).toEqual({ equity: 30, gold: 0, fixedIncome: 0 });
+    // (100 − λ) + (50 − λ) = 60 → λ = 45
+    expect(waterFill(held, { equity: 100, gold: 10, fixedIncome: 50 }, 60)).toEqual({ equity: 55, gold: 0, fixedIncome: 5 });
+    // (100 − λ) + (50 − λ) = 120 → λ = 15
+    expect(waterFill(held, { equity: 100, gold: 10, fixedIncome: 50 }, 120)).toEqual({ equity: 85, gold: 0, fixedIncome: 35 });
+    expect(waterFill(held, { equity: 100, gold: 10, fixedIncome: 50 }, 0)).toEqual({ equity: 0, gold: 0, fixedIncome: 0 });
   });
 
   it("on target: no trades, not triggered; with new money every bucket buys at its weight", () => {
@@ -339,10 +367,12 @@ describe("computeAllocation: rebalancer (F4)", () => {
     expect(add.trades).toEqual({ equity: 45_000, gold: 10_000, fixedIncome: 45_000 });
   });
 
-  it("drift exactly at the 5-point band does not trigger", () => {
+  it("drift exactly at the 5-point band does not trigger, and nothing is traded", () => {
     const rb = run({ holdings: { equity: 500_000, gold: 100_000, fixedIncome: 400_000 } }).rebalance!;
     expect(rb.drift.equity).toBe(0.05);
     expect(rb.triggered).toBe(false);
+    expect(rb.newMoneyOnly).toBe(true);
+    expect(rb.trades).toEqual({ equity: 0, gold: 0, fixedIncome: 0 });
   });
 
   it("empty holdings: drift 0, buy the target with new money", () => {

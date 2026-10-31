@@ -3,6 +3,7 @@
 // fields and meta keys that differ. Reads one country (+ the BD profile for its dollar rate).
 import { COUNTRY_FIELD_KEYS, SAMPLE_PROFILES, SAMPLE_PROFILE_IDS, withCountry, type CountryProfile, type PlanInput, type RatesSnapshot } from "@taka/engine";
 import { META_PATCH_KEYS } from "@/lib/server/country-db";
+import type { CountryRepo } from "@/lib/server/country-repo";
 import { getCountryRepo } from "@/lib/server/env";
 import { HttpError, json } from "@/lib/server/http";
 import type { CountryPreviewOutcome, CountryPreviewResponse } from "@/components/admin/countryTypes";
@@ -16,6 +17,13 @@ export const dynamic = "force-dynamic";
 
 /** Taka per US dollar when D1 holds no Bangladesh profile yet (matches FIXTURE_BD). */
 export const DEFAULT_BD_USD_RATE = 122;
+
+/** Taka per US dollar for overlaying `profile`: its own rate for BD, else the published BD profile's. */
+export async function bdUsdRateFor(repo: CountryRepo, profile: CountryProfile): Promise<number> {
+  const bd = profile.code === "BD" ? profile : (await repo.getPublished("BD").catch(() => null))?.profile;
+  const v = bd?.currency.usdRate.value;
+  return typeof v === "number" && v > 0 ? v : DEFAULT_BD_USD_RATE;
+}
 
 export function changedFields(a: CountryProfile, b: CountryProfile): CountryPreviewResponse["changedFields"] {
   return COUNTRY_FIELD_KEYS.filter((k) => stableJson(a.fields[k]) !== stableJson(b.fields[k]));
@@ -35,10 +43,9 @@ export async function GET(req: Request, rawCode: string): Promise<Response> {
     await requireAdmin(req);
     const code = parseCountryCode(rawCode);
     const repo = getCountryRepo();
-    const [published, draft, rates, bd] = await Promise.all([repo.getPublished(code), repo.getDraft(code), loadRates(), code === "BD" ? Promise.resolve(null) : repo.getPublished("BD").catch(() => null)]);
+    const [published, draft, rates] = await Promise.all([repo.getPublished(code), repo.getDraft(code), loadRates()]);
     if (!published) throw new HttpError(404, "NOT_FOUND", `No published data for country ${code}`);
-    const bdProfile = code === "BD" ? published.profile : bd?.profile;
-    const bdUsdRate = bdProfile?.currency.usdRate.value ?? DEFAULT_BD_USD_RATE;
+    const bdUsdRate = await bdUsdRateFor(repo, published.profile);
     const today = todayIso();
     const pubSnap = withCountry(rates.snapshot, published.profile, { bdUsdRate });
     const draftSnap = draft ? withCountry(rates.snapshot, draft.profile, { bdUsdRate }) : null;

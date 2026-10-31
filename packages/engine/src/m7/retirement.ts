@@ -12,11 +12,11 @@
  * Maths stays unrounded; every output is rounded once with the country's steps (roundingFor).
  */
 import { createExplain, type ExplainBuilder } from "../explain";
-import { clamp, roundMoney, roundMoneyUp, type RoundKind, type RoundSteps } from "../money";
+import { clamp, roundMoney, roundMoneyUp, roundTo, type RoundKind, type RoundSteps } from "../money";
 import type { RateKey, RatesSnapshot } from "../rates";
 import { jsonShapeOk, type GratuityRule, type OldAgeAllowanceEligibility, type PensionProjection, type PublicPensionScheme } from "../rates-json";
 import { roundingFor } from "../country/overlay";
-import { EngineError, assertInput, isFiniteNumber, type ISODate, type Instrument, type Money, type Rate } from "../types";
+import { assertInput, isFiniteNumber, type ISODate, type Instrument, type Money, type Rate } from "../types";
 import type { Allocation } from "../m5/types";
 import {
   M7_NOTE_KEYS,
@@ -97,20 +97,40 @@ export function providentFundAt(pf: ProvidentFund, years: number): number {
   return pf.balance * (1 + pf.rate) ** n + annuityFv(pf.monthlyContribution, monthlyRateOf(pf.rate), 12 * n);
 }
 
-/** Days of last basic pay per year of service: the law's rule, or the employer's if higher. */
-export function gratuityDays(g: Pick<Gratuity, "yearsOfService" | "employerDaysPerYear">, rule: GratuityRule): number {
-  const after = rule.daysPerYearAfter ?? null;
-  const afterYears = rule.afterYears ?? null;
-  const law = after !== null && afterYears !== null && g.yearsOfService >= afterYears ? after : rule.daysPerYear;
-  return Math.max(law, g.employerDaysPerYear ?? 0);
+/** Days in a month of pay when the country has no statutory gratuity rule (the employer's days still count). */
+export const GRATUITY_DAYS_PER_MONTH_DEFAULT = 30;
+
+/**
+ * Years of service that count: completed years, plus one when the part year is over six months
+ * (Labour Act practice).
+ */
+export function countedServiceYears(yearsOfService: number): number {
+  const whole = Math.floor(Math.max(0, yearsOfService));
+  return yearsOfService - whole > 0.5 ? whole + 1 : whole;
 }
 
-/** Gratuity lump sum: basic / daysPerMonth × days × years of service. */
-export function gratuityAmount(g: Gratuity, rule: GratuityRule): number {
-  return (g.basicMonthly / rule.daysPerMonth) * gratuityDays(g, rule) * g.yearsOfService;
+/**
+ * Days of last basic pay per year of service: the law's rule (the higher rate once service exceeds
+ * afterYears), or the employer's if higher. No rule (null: the country has none, or it is unknown) →
+ * the employer's days alone, 0 when absent.
+ */
+export function gratuityDays(g: Pick<Gratuity, "yearsOfService" | "employerDaysPerYear">, rule: GratuityRule | null): number {
+  const employer = g.employerDaysPerYear ?? 0;
+  if (rule === null) return employer;
+  const after = rule.daysPerYearAfter ?? null;
+  const afterYears = rule.afterYears ?? null;
+  const law = after !== null && afterYears !== null && countedServiceYears(g.yearsOfService) > afterYears ? after : rule.daysPerYear;
+  return Math.max(law, employer);
+}
+
+/** Gratuity lump sum: basic / daysPerMonth × days × counted years of service. */
+export function gratuityAmount(g: Gratuity, rule: GratuityRule | null): number {
+  const daysPerMonth = rule?.daysPerMonth ?? GRATUITY_DAYS_PER_MONTH_DEFAULT;
+  return (g.basicMonthly / daysPerMonth) * gratuityDays(g, rule) * countedServiceYears(g.yearsOfService);
 }
 
 function fvAnnualAnnuityFactor(g: number, n: number): number {
+  if (n <= 0) return 0;
   return Math.abs(g) < EQUAL_RATES_EPS ? n : ((1 + g) ** n - 1) / g;
 }
 
@@ -229,10 +249,20 @@ function validate(input: M7Input): void {
   }
 }
 
-function jsonRow<T>(ex: ExplainBuilder, key: RateKey): T {
-  const row = ex.useRow(key);
-  if (!jsonShapeOk(key, row.valueJson)) throw new EngineError("MISSING_RATE", `Rates row "${key}" has no usable JSON value`, { key });
-  return row.valueJson as T;
+/**
+ * A JSON row when it has its expected shape (then recorded as an assumption). Null when the country's
+ * figure is unknown or does not exist: the caller decides what that means, and nothing is shown.
+ */
+function jsonRow<T>(ex: ExplainBuilder, rates: RatesSnapshot, key: RateKey): T | null {
+  const raw = rates.rows[key];
+  if (raw === undefined || !jsonShapeOk(key, raw.valueJson)) return null;
+  return ex.useRow(key).valueJson as T;
+}
+
+/** True when the row holds a usable number (an overlaid country may leave it null). */
+function hasNumber(rates: RatesSnapshot, key: RateKey): boolean {
+  const v = rates.rows[key]?.value;
+  return typeof v === "number" && Number.isFinite(v);
 }
 
 interface ReturnSet {
@@ -262,6 +292,9 @@ function readReturns(ex: ExplainBuilder, level: "low" | "base" | "high", allocat
   return { r, ra };
 }
 
+/** The low case reads "if returns only match inflation" when its retirement return is within this of inflation (or below). */
+const LOW_CASE_INFLATION_MARGIN = 0.005;
+
 // ---------------------------------------------------------------------------------------------
 // Simulation.
 // ---------------------------------------------------------------------------------------------
@@ -277,10 +310,13 @@ interface SimulationSpec {
   i: Rate;
   /** Added to the pot on reaching the retirement age (PF + gratuity). */
   lumpAtRetirement: Money;
-  /** Net spending in the first retirement year (already net of inflation-linked income). */
+  /** Spending in the first retirement year (already net of inflation-linked income). */
   firstYearSpending: Money;
-  /** Level yearly pension income from the retirement age. */
+  /** Level yearly income from the retirement age (other fixed pensions, a retiree's other income). */
   fixedYearly: Money;
+  /** Level yearly public pension, paid at the end of every year from `pensionFromAge` (also while still working). */
+  publicPensionYearly: Money;
+  pensionFromAge: number;
 }
 
 interface SimulationRaw {
@@ -301,11 +337,12 @@ function simulate(s: SimulationSpec): SimulationRaw {
       balances.push({ age: a + 1, balance: 0 });
       continue;
     }
+    const pension = a >= s.pensionFromAge ? s.publicPensionYearly : 0;
     if (a < s.retirementAge) {
-      b = b * (1 + s.ra) + yearlySaving;
+      b = b * (1 + s.ra) + yearlySaving + pension;
       if (a + 1 === s.retirementAge) b += s.lumpAtRetirement;
     } else {
-      b = b * (1 + s.r) - s.firstYearSpending * (1 + s.i) ** (a - s.retirementAge) + s.fixedYearly;
+      b = b * (1 + s.r) - s.firstYearSpending * (1 + s.i) ** (a - s.retirementAge) + s.fixedYearly + pension;
     }
     if (b < -RUN_OUT_TOLERANCE) {
       runsOutAt = a + 1;
@@ -353,28 +390,56 @@ export function retireeOptions(type: "government" | "private", rates: Pick<Rates
 // Main.
 // ---------------------------------------------------------------------------------------------
 
-function floorTo(x: number, kind: RoundKind, steps: RoundSteps): Money {
+function floorTo(x: number, step: number): Money {
   if (!Number.isFinite(x)) return 0;
-  const step = steps[kind] > 0 ? steps[kind] : 1;
-  return Math.floor(x / step) * step;
+  const s = step > 0 ? step : 1;
+  return Math.floor(x / s) * s;
 }
 
-interface FixedIncomeAtR {
-  publicPensionMonthly: number;
-  fixedMonthly: number;
+/**
+ * PRD rounding for M7 results: monthly amounts to the currency's lump step (BDT 500) and corpus
+ * figures to 200 lump steps (BDT 1 lakh). Income values and the chart keep the usual steps.
+ */
+export function m7Rounding(steps: RoundSteps): { monthly: number; corpus: number } {
+  const lump = steps.lump > 0 ? steps.lump : 1;
+  return { monthly: lump, corpus: 200 * lump };
 }
 
-function publicPensionMonthly(pp: PublicPension | undefined, age: number, retirementAge: number, ex: ExplainBuilder): { monthly: number; entryClosed: boolean } {
-  if (!pp) return { monthly: 0, entryClosed: false };
-  if (pp.expectedMonthly !== undefined) return { monthly: pp.expectedMonthly, entryClosed: false };
-  if (pp.monthlyContribution <= 0) return { monthly: 0, entryClosed: false };
-  const scheme = jsonRow<PublicPensionScheme>(ex, "public_pension_scheme");
+interface PublicPensionValue {
+  monthly: number;
+  /** Age the scheme pays from (the retirement age when the scheme is unknown). */
+  fromAge: number;
+  entryClosed: boolean;
+}
+
+function publicPensionFor(pp: PublicPension | undefined, age: number, retirementAge: number, ex: ExplainBuilder, rates: RatesSnapshot): PublicPensionValue {
+  if (!pp) return { monthly: 0, fromAge: retirementAge, entryClosed: false };
+  const known = pp.expectedMonthly !== undefined;
+  if (!known && pp.monthlyContribution <= 0) return { monthly: 0, fromAge: retirementAge, entryClosed: false };
+  // Unknown scheme (null): no projection, but a pension the user knows still counts from retirement.
+  const scheme = jsonRow<PublicPensionScheme>(ex, rates, "public_pension_scheme");
+  const fromAge = scheme?.pensionFromAge ?? retirementAge;
+  if (pp.expectedMonthly !== undefined) return { monthly: pp.expectedMonthly, fromAge, entryClosed: false };
+  if (!scheme) return { monthly: 0, fromAge, entryClosed: false };
   const entryMax = scheme.entryAgeMax ?? null;
-  if (entryMax !== null && age > entryMax) return { monthly: 0, entryClosed: true };
+  if (entryMax !== null && age > entryMax) return { monthly: 0, fromAge, entryClosed: true };
   const start = Math.max(age, scheme.entryAgeMin ?? age);
   const end = Math.min(retirementAge, scheme.pensionFromAge);
   const years = Math.max(0, end - start);
-  return { monthly: projectedPension(pp.monthlyContribution, years, scheme.projections), entryClosed: false };
+  return { monthly: projectedPension(pp.monthlyContribution, years, scheme.projections), fromAge, entryClosed: false };
+}
+
+/**
+ * Value at the retirement age R of a level yearly public pension paid at the end of each year from
+ * age P until the end age: before R (P < R) the payments are saved at `ra`; from max(P, R) they are
+ * a level annuity at `r`, discounted back to R when P > R.
+ */
+export function publicPensionValueAtRetirement(yearly: Money, r: Rate, ra: Rate, retirementAge: number, pensionFromAge: number, endAge: number): number {
+  if (yearly <= 0) return 0;
+  const start = Math.max(pensionFromAge, retirementAge);
+  const later = levelAnnuityValue(yearly, r, endAge - start) / (1 + r) ** (start - retirementAge);
+  const before = yearly * fvAnnualAnnuityFactor(ra, retirementAge - pensionFromAge);
+  return later + before;
 }
 
 export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: ISODate): M7Result {
@@ -382,6 +447,9 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
   const ex = createExplain(rates, today);
   const steps = roundingFor(rates);
   const round = (x: number, kind: RoundKind) => roundMoney(x, kind, steps);
+  const m7Round = m7Rounding(steps);
+  const roundCorpus = (x: number) => roundTo(x, m7Round.corpus);
+  const roundMonthlyUp = (x: number) => roundMoneyUp(x, "lump", steps);
   const step = (id: M7StepId, inputs: Record<string, number | string>, raw: number, rounded: number) => ex.step({ id, inputs, raw, rounded, unit: "bdt" });
 
   const A = input.age;
@@ -410,14 +478,16 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
   const yearsContrast = Math.max(0, contrastAge - R);
   const yearsPlan = L - R;
 
-  // ---- Shown-only income: old-age allowance and family support. ----
+  // ---- Shown-only income: old-age allowance and family support (unknown rules → nothing shown). ----
   let allowanceMonthly = 0;
-  if (sources.oldAgeAllowanceEligible === true && input.retireeType !== "government") {
-    const elig = jsonRow<OldAgeAllowanceEligibility>(ex, "old_age_allowance_eligibility");
-    const monthly = ex.use("old_age_allowance_monthly");
-    // Eligible from menAge / womenAge (sex unknown → the later men's age); shown if the plan reaches it.
-    const fromAge = input.sex === "female" ? elig.womenAge : elig.menAge;
-    if (fromAge <= L) allowanceMonthly = A > 90 && elig.over90Monthly ? elig.over90Monthly : monthly;
+  if (sources.oldAgeAllowanceEligible === true && input.retireeType !== "government" && hasNumber(rates, "old_age_allowance_monthly")) {
+    const elig = jsonRow<OldAgeAllowanceEligibility>(ex, rates, "old_age_allowance_eligibility");
+    if (elig) {
+      const monthly = ex.use("old_age_allowance_monthly");
+      // Eligible from menAge / womenAge (sex unknown → the later men's age); shown if the plan reaches it.
+      const fromAge = input.sex === "female" ? elig.womenAge : elig.menAge;
+      if (fromAge <= L) allowanceMonthly = A > 90 && elig.over90Monthly ? elig.over90Monthly : monthly;
+    }
   }
   const familyMonthly = sources.familySupportMonthly ?? 0;
 
@@ -426,6 +496,7 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
   ex.useRow("support_ratio");
   if (input.sex !== "male") notes.add("m7.note.womenLiveLonger");
   if (allowanceMonthly > 0) notes.add("m7.note.allowanceNotCounted");
+  if (ex.use("retirement_return_low") <= i + LOW_CASE_INFLATION_MARGIN) notes.add("m7.note.lowCaseInflation");
 
   let result: Omit<M7Result, "notes" | "explain">;
 
@@ -444,68 +515,77 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
 
     const corpusC = corpusFor(eR, base.r, i, yearsContrast);
     const corpusP = corpusFor(eR, base.r, i, yearsPlan);
-    step("m7.corpusContrast", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsContrast }, corpusC, round(corpusC, "lump"));
-    step("m7.corpusPlan", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsPlan }, corpusP, round(corpusP, "lump"));
+    step("m7.corpusContrast", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsContrast }, corpusC, roundCorpus(corpusC));
+    step("m7.corpusPlan", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsPlan }, corpusP, roundCorpus(corpusP));
 
-    // ---- F2: income sources at retirement. ----
+    // ---- F2: income sources at retirement. Steps only for the sources the user added. ----
     const fvSavingsAt = (ra: Rate) => input.savings * (1 + ra) ** n;
     const fvSavings = fvSavingsAt(base.ra);
     step("m7.savingsFv", { savings: input.savings, accumulationRate: base.ra, retireInYears: n }, fvSavings, round(fvSavings, "lump"));
 
     const pf = sources.providentFund;
     const pfAtR = pf ? providentFundAt(pf, n) : 0;
-    step(
-      "m7.providentFund",
-      { balance: pf?.balance ?? 0, monthlyContribution: pf?.monthlyContribution ?? 0, fundRate: pf?.rate ?? 0, retireInYears: n },
-      pfAtR,
-      round(pfAtR, "lump"),
-    );
+    if (pf) step("m7.providentFund", { balance: pf.balance, monthlyContribution: pf.monthlyContribution, fundRate: pf.rate, retireInYears: n }, pfAtR, round(pfAtR, "lump"));
 
     const g = sources.gratuity;
     let gratuity = 0;
     if (g) {
-      const rule = jsonRow<GratuityRule>(ex, "gratuity_rule");
+      // Unknown or absent gratuity law (null): only the employer's own days count.
+      const rule = jsonRow<GratuityRule>(ex, rates, "gratuity_rule");
+      if (rule === null) notes.add("m7.note.noStatutoryGratuity");
       const days = gratuityDays(g, rule);
       gratuity = gratuityAmount(g, rule);
-      step("m7.gratuity", { basicMonthly: g.basicMonthly, daysPerMonthCount: rule.daysPerMonth, daysCount: days, serviceYears: g.yearsOfService }, gratuity, round(gratuity, "lump"));
-    } else {
-      step("m7.gratuity", { basicMonthly: 0, daysPerMonthCount: 0, daysCount: 0, serviceYears: 0 }, 0, 0);
+      step(
+        "m7.gratuity",
+        { basicMonthly: g.basicMonthly, daysPerMonthCount: rule?.daysPerMonth ?? GRATUITY_DAYS_PER_MONTH_DEFAULT, daysCount: days, serviceYears: countedServiceYears(g.yearsOfService) },
+        gratuity,
+        round(gratuity, "lump"),
+      );
     }
 
-    const pp = publicPensionMonthly(sources.publicPension, A, R, ex);
+    const pp = publicPensionFor(sources.publicPension, A, R, ex, rates);
     if (pp.entryClosed) notes.add("m7.note.pensionEntryClosed");
-    const fixed: FixedIncomeAtR = { publicPensionMonthly: pp.monthly, fixedMonthly: sources.fixedPensionMonthly ?? 0 };
-    const fixedYearly = 12 * (fixed.publicPensionMonthly + fixed.fixedMonthly);
-    if (fixedYearly > 0) notes.add("m7.note.pensionFixed");
-    const fixedValueAt = (r: Rate, years: number) => levelAnnuityValue(fixedYearly, r, years);
-    const fixedP = fixedValueAt(base.r, yearsPlan);
-    step(
-      "m7.fixedPensions",
-      { publicPensionMonthly: round(fixed.publicPensionMonthly, "monthly"), fixedPensionMonthly: fixed.fixedMonthly, returnRate: base.r, retiredForYears: yearsPlan },
-      fixedP,
-      round(fixedP, "lump"),
-    );
+    const otherFixedMonthly = sources.fixedPensionMonthly ?? 0;
+    const ppYearly = 12 * pp.monthly;
+    const otherYearly = 12 * otherFixedMonthly;
+    if (ppYearly + otherYearly > 0) notes.add("m7.note.pensionFixed");
+    // Other fixed pensions are paid from R; the public pension from the scheme's own pension age.
+    const fixedValueAt = (rs: ReturnSet, years: number) => levelAnnuityValue(otherYearly, rs.r, years) + publicPensionValueAtRetirement(ppYearly, rs.r, rs.ra, R, pp.fromAge, R + years);
+    const fixedP = fixedValueAt(base, yearsPlan);
+    if (sources.publicPension !== undefined || otherFixedMonthly > 0) {
+      step(
+        "m7.fixedPensions",
+        { publicPensionMonthly: round(pp.monthly, "monthly"), fixedPensionMonthly: otherFixedMonthly, returnRate: base.r, retiredForYears: yearsPlan, pensionFromAgeYears: pp.fromAge },
+        fixedP,
+        round(fixedP, "lump"),
+      );
+    }
 
     const months = 12 * n;
     const target = (years: number, rs: ReturnSet): { corpus: number; gap: number; monthly: number } => {
       const corpus = corpusFor(eR, rs.r, i, years);
       const fv = fvSavingsAt(rs.ra);
-      const fixedValue = fixedValueAt(rs.r, years);
+      const fixedValue = fixedValueAt(rs, years);
       const gap = Math.max(0, corpus - fv - pfAtR - gratuity - fixedValue);
       return { corpus, gap, monthly: sinkingMonthly(gap, monthlyRateOf(rs.ra), months) };
     };
     const tC = target(yearsContrast, base);
     const tP = target(yearsPlan, base);
 
-    step("m7.gap", { corpus: round(tP.corpus, "lump"), savingsFv: round(fvSavings, "lump"), providentFund: round(pfAtR, "lump"), gratuity: round(gratuity, "lump"), fixedPensions: round(fixedP, "lump") }, tP.gap, round(tP.gap, "lump"));
+    step(
+      "m7.gap",
+      { corpus: roundCorpus(tP.corpus), savingsFv: round(fvSavings, "lump"), providentFund: round(pfAtR, "lump"), gratuity: round(gratuity, "lump"), fixedPensions: round(fixedP, "lump") },
+      tP.gap,
+      roundCorpus(tP.gap),
+    );
     // Rounded UP so saving the shown amount fully funds the plan (same rule as M1's monthly saving).
-    const planMonthly = step("m7.monthly", { gap: round(tP.gap, "lump"), monthlyRate: monthlyRateOf(base.ra), savingMonths: months }, tP.monthly, roundMoneyUp(tP.monthly, "monthly", steps));
+    const planMonthly = step("m7.monthly", { gap: roundCorpus(tP.gap), monthlyRate: monthlyRateOf(base.ra), savingMonths: months }, tP.monthly, roundMonthlyUp(tP.monthly));
 
     const toTarget = (planTo: number, t: { corpus: number; gap: number; monthly: number }): M7Target => ({
       planTo,
-      corpus: round(t.corpus, "lump"),
-      gap: round(t.gap, "lump"),
-      monthlySaving: roundMoneyUp(t.monthly, "monthly", steps),
+      corpus: roundCorpus(t.corpus),
+      gap: roundCorpus(t.gap),
+      monthlySaving: roundMonthlyUp(t.monthly),
     });
     const contrast = toTarget(contrastAge, tC);
     const plan = { ...toTarget(L, tP), monthlySaving: planMonthly };
@@ -525,7 +605,9 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
       i,
       lumpAtRetirement: pfAtR + gratuity,
       firstYearSpending: eR,
-      fixedYearly,
+      fixedYearly: otherYearly,
+      publicPensionYearly: ppYearly,
+      pensionFromAge: pp.fromAge,
     });
     const verdict = verdictFor(sim.runsOutAt, L, contrastAge);
     notes.add("m7.note.startEarlier");
@@ -534,7 +616,7 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
       providentFundAtRetirement: round(pfAtR, "lump"),
       gratuity: round(gratuity, "lump"),
       fixedPensionsValue: round(fixedP, "lump"),
-      publicPensionMonthly: round(fixed.publicPensionMonthly, "monthly"),
+      publicPensionMonthly: round(pp.monthly, "monthly"),
       rentAtRetirementYearly: round(rentAtR, "lump"),
       oldAgeAllowanceMonthly: round(allowanceMonthly, "exact"),
       familySupportMonthly: round(familyMonthly, "exact"),
@@ -548,7 +630,7 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
       spendingAtRetirementYearly,
       targets: { contrast, plan },
       extraMonthlyForLongLife: Math.max(0, plan.monthlySaving - contrast.monthlySaving),
-      monthlySavingRange: { low: roundMoneyUp(low.monthly, "monthly", steps), base: plan.monthlySaving, high: roundMoneyUp(high.monthly, "monthly", steps) },
+      monthlySavingRange: { low: roundMonthlyUp(low.monthly), base: plan.monthlySaving, high: roundMonthlyUp(high.monthly) },
       income,
       simulation: sim.balances.map((p): SimulationPoint => ({ age: p.age, balance: round(p.balance, "lump") })),
       verdict,
@@ -558,35 +640,62 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
       status: verdict.status,
     };
   } else {
-    // ---- F4: already retired. Spending net of other monthly income, from today. ----
+    // ---- F4: already retired. Spending rises with prices from today; other income is a fixed amount. ----
     const other = input.otherMonthlyIncome ?? 0;
-    const e = Math.max(0, 12 * (input.monthlySpending - other));
-    const spendingAtRetirementYearly = step("m7.spendingAtRetirement", { monthlySpending: input.monthlySpending, otherMonthlyIncome: other, inflation: i, retireInYears: 0 }, e, round(e, "lump"));
+    const e = 12 * input.monthlySpending;
+    const otherYearly = 12 * other;
+    const spendingAtRetirementYearly = step("m7.spendingAtRetirement", { monthlySpending: input.monthlySpending, inflation: i, retireInYears: 0 }, e, round(e, "lump"));
     const yearsC = Math.max(0, contrastAge - A);
     const corpusC = corpusFor(e, base.r, i, yearsC);
     const corpusP = corpusFor(e, base.r, i, yearsPlan);
-    step("m7.corpusContrast", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsC }, corpusC, round(corpusC, "lump"));
-    step("m7.corpusPlan", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsPlan }, corpusP, round(corpusP, "lump"));
-    const gapC = Math.max(0, corpusC - input.savings);
-    const gapP = Math.max(0, corpusP - input.savings);
-    step("m7.gap", { corpus: round(corpusP, "lump"), savings: input.savings }, gapP, round(gapP, "lump"));
+    step("m7.corpusContrast", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsC }, corpusC, roundCorpus(corpusC));
+    step("m7.corpusPlan", { spendingAtRetirement: spendingAtRetirementYearly, returnRate: base.r, inflation: i, retiredForYears: yearsPlan }, corpusP, roundCorpus(corpusP));
+
+    // Other income (a pension, rent) is valued as a level annuity: its buying power shrinks with prices.
+    const otherC = levelAnnuityValue(otherYearly, base.r, yearsC);
+    const otherP = levelAnnuityValue(otherYearly, base.r, yearsPlan);
+    if (other > 0) {
+      notes.add("m7.note.pensionFixed");
+      step("m7.fixedPensions", { publicPensionMonthly: 0, fixedPensionMonthly: other, returnRate: base.r, retiredForYears: yearsPlan, pensionFromAgeYears: A }, otherP, round(otherP, "lump"));
+    }
+    const gapC = Math.max(0, corpusC - otherC - input.savings);
+    const gapP = Math.max(0, corpusP - otherP - input.savings);
+    step("m7.gap", { corpus: roundCorpus(corpusP), savings: input.savings, fixedPensions: round(otherP, "lump") }, gapP, roundCorpus(gapP));
 
     // Rounded down: never suggest withdrawing more than lasts.
-    const w1 = firstYearWithdrawal(input.savings, base.r, i, yearsPlan);
-    const firstYear = step("m7.withdrawal", { savings: input.savings, returnRate: base.r, inflation: i, retiredForYears: yearsPlan }, w1, floorTo(w1, "lump", steps));
+    const withdrawalAt = (r: Rate) => firstYearWithdrawal(input.savings, r, i, yearsPlan);
+    const w1 = withdrawalAt(base.r);
+    const firstYear = step("m7.withdrawal", { savings: input.savings, returnRate: base.r, inflation: i, retiredForYears: yearsPlan }, w1, floorTo(w1, steps.lump));
     const potYears = ex.use("withdrawal_safe_pot_years");
     const safePotRaw = potYears * w1;
     const safePot = step("m7.safePot", { firstYear, potYears }, safePotRaw, round(safePotRaw, "lump"));
+    const monthlyOf = (w: number) => floorTo(w / 12, m7Round.monthly);
+    const monthly = monthlyOf(w1);
+    const monthlyRange = { low: monthlyOf(withdrawalAt(ex.use("retirement_return_low"))), base: monthly, high: monthlyOf(withdrawalAt(ex.use("retirement_return_high"))) };
 
-    const sim = simulate({ age: A, retirementAge: A, planToAge: L, savings: input.savings, monthlySaving: 0, ra: 0, r: base.r, i, lumpAtRetirement: 0, firstYearSpending: e, fixedYearly: 0 });
+    const sim = simulate({
+      age: A,
+      retirementAge: A,
+      planToAge: L,
+      savings: input.savings,
+      monthlySaving: 0,
+      ra: 0,
+      r: base.r,
+      i,
+      lumpAtRetirement: 0,
+      firstYearSpending: e,
+      fixedYearly: otherYearly,
+      publicPensionYearly: 0,
+      pensionFromAge: A,
+    });
     const verdict = verdictFor(sim.runsOutAt, L, contrastAge);
 
     const type = input.retireeType ?? "private";
     const options = retireeOptions(type, rates);
     if (options.includes("m7.option.pensionerCertificate")) ex.use("pensioner_sanchayapatra_cap");
 
-    const withdrawal: M7Withdrawal = { firstYear, monthly: floorTo(w1 / 12, "monthly", steps), safePot, runsOutAt: sim.runsOutAt, options };
-    const zeroTarget = (planTo: number, corpus: number, gap: number): M7Target => ({ planTo, corpus: round(corpus, "lump"), gap: round(gap, "lump"), monthlySaving: 0 });
+    const withdrawal: M7Withdrawal = { firstYear, monthly, monthlyRange, safePot, runsOutAt: sim.runsOutAt, options };
+    const zeroTarget = (planTo: number, corpus: number, gap: number): M7Target => ({ planTo, corpus: roundCorpus(corpus), gap: roundCorpus(gap), monthlySaving: 0 });
 
     result = {
       mode: "retired",
@@ -600,7 +709,7 @@ export function computeRetirement(input: M7Input, rates: RatesSnapshot, today: I
       income: {
         providentFundAtRetirement: 0,
         gratuity: 0,
-        fixedPensionsValue: 0,
+        fixedPensionsValue: round(otherP, "lump"),
         publicPensionMonthly: 0,
         rentAtRetirementYearly: 0,
         oldAgeAllowanceMonthly: round(allowanceMonthly, "exact"),

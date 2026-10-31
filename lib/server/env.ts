@@ -6,6 +6,8 @@ import { D1RatesRepo, type D1Like, type RatesRepo } from "./db";
 export interface TakaEnv {
   DB?: D1Like;
   ADMIN_PASSWORD?: string;
+  /** Optional HMAC key for admin session cookies (at least 32 characters); without it the key is derived from ADMIN_PASSWORD. */
+  SESSION_SECRET?: string;
 }
 
 let current: TakaEnv = {};
@@ -35,4 +37,9 @@ export function getCountryRepo(): CountryRepo {
 export function getAdminPassword(): string | undefined {
   const p = getEnv().ADMIN_PASSWORD;
   return p && p.length > 0 ? p : undefined;
+}
+
+export function getSessionSecret(): string | undefined {
+  const s = getEnv().SESSION_SECRET;
+  return s && s.length > 0 ? s : undefined;
 }

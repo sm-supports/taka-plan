@@ -4,22 +4,12 @@ import type { CountryMetaPatch, CountrySummary, StoredCountry } from "@/lib/serv
 import type { ChangeLogEntry } from "@/lib/server/db";
 import type { PreviewError } from "./types";
 
-/** GET /api/countries/:code (200): the published profile plus its version. */
-export type PublicCountryResponse = CountryProfile & { version: number };
-
-/** One row of GET /api/countries (published countries only; no draft state). */
-export interface PublicCountrySummary {
-  code: CountryCode;
-  version: number;
-  sourced: number;
-  assumption: number;
-  missing: number;
-}
-
-/** GET /api/countries */
-export interface PublicCountryList {
-  countries: PublicCountrySummary[];
-}
+/**
+ * GET /api/countries/:code (200): the published profile wrapped with its version, the same shape as
+ * StoredCountry, which lib/country/loader.ts parseCountryBody reads. (There is no public list route:
+ * the client never needed one, and the admin list is GET /api/admin/countries.)
+ */
+export type PublicCountryResponse = StoredCountry & { status: "published"; profile: CountryProfile };
 
 /** GET /api/admin/countries */
 export interface AdminCountryList {

@@ -1,15 +1,16 @@
 # Security headers for static responses (Pages Functions set their own in lib/server/http.ts#json)
+# Pages merges every matching rule, joining a repeated header with a comma, so the frame-ancestors
+# policy lives only in /* (it covers /admin too) and the admin rules add just noindex.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: frame-ancestors 'none'
 
 /admin
-  Content-Security-Policy: frame-ancestors 'none'
   X-Robots-Tag: noindex
 
 /admin/*
-  Content-Security-Policy: frame-ancestors 'none'
   X-Robots-Tag: noindex
 
 /_next/static/*

@@ -3,7 +3,7 @@ import type { Dictionary } from "../../types";
 export const explainM7: Dictionary["explain"]["m7"] = {
   spendingAtRetirement: {
     title: "অবসরের প্রথম বছরের খরচ",
-    body: "আজকের মাসিক খরচ {monthlySpending}, ১২ দিয়ে গুণ করে, কাজ ছাড়া পর্যন্ত {retireInYears} বছর ধরে বছরে {inflation} মূল্যস্ফীতিতে বাড়ানো: ১২ × {monthlySpending} × (১ + {inflation})^{retireInYears}। যে ভাড়া পান, বা অবসরে অন্য আয়, আগে বাদ যায়, কারণ সেটাও দামের সঙ্গে বাড়ে। ফল: বছরে {result}।",
+    body: "আজকের মাসিক খরচ {monthlySpending}, ১২ দিয়ে গুণ করে, কাজ ছাড়া পর্যন্ত {retireInYears} বছর ধরে বছরে {inflation} মূল্যস্ফীতিতে বাড়ানো: ১২ × {monthlySpending} × (১ + {inflation})^{retireInYears}। যে ভাড়া পান, তা আগে বাদ যায়, কারণ সেটাও দামের সঙ্গে বাড়ে। ফল: বছরে {result}।",
   },
   corpusContrast: {
     title: "তুলনার বয়স পর্যন্ত লক্ষ্য",
@@ -27,7 +27,7 @@ export const explainM7: Dictionary["explain"]["m7"] = {
   },
   fixedPensions: {
     title: "নির্দিষ্ট পেনশনের মূল্য, কাজ ছাড়ার সময়",
-    body: "মাসে {publicPensionMonthly} সরকারি পেনশন আর {fixedPensionMonthly} অন্য নির্দিষ্ট পেনশন, দাম বাড়লেও না বেড়ে {retiredForYears} বছর ধরে পেলে, {returnRate} হারে এর মূল্য: {result}। তাই দীর্ঘ অবসরে এর কেনার ক্ষমতা কমে যায়।",
+    body: "{pensionFromAgeYears} বছর বয়স থেকে মাসে {publicPensionMonthly} সরকারি পেনশন আর মাসে {fixedPensionMonthly} অন্য নির্দিষ্ট আয়, দাম বাড়লেও না বেড়ে আপনার বেছে নেওয়া বয়স পর্যন্ত ({retiredForYears} বছরের অবসর) পেলে, কাজ ছাড়ার সময় {returnRate} হারে এর মূল্য: {result}। তাই দীর্ঘ অবসরে এর কেনার ক্ষমতা কমে যায়।",
   },
   gap: {
     title: "এখনো যা গড়তে হবে",

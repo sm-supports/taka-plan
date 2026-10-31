@@ -29,7 +29,7 @@ function get(path: string, headers: Record<string, string> = {}): Request {
 }
 
 async function signIn(): Promise<Record<string, string>> {
-  const res = await login(post("login", { password: "test-pass" }));
+  const res = await login(post("login", { password: "test-pass-123456" }));
   expect(res.status).toBe(204);
   const setCookie = res.headers.get("set-cookie");
   expect(setCookie).toMatch(new RegExp(`^${ADMIN_COOKIE}=\\d+\\.[0-9a-f]{64}; `));
@@ -39,7 +39,7 @@ async function signIn(): Promise<Record<string, string>> {
 
 describe("admin-auth", () => {
   it("verifyPassword accepts the stub password only", async () => {
-    expect(await verifyPassword("test-pass")).toBe(true);
+    expect(await verifyPassword("test-pass-123456")).toBe(true);
     expect(await verifyPassword("test-pas")).toBe(false);
     expect(await verifyPassword("")).toBe(false);
   });
@@ -97,7 +97,7 @@ describe("admin routes", () => {
     expect(Date.now() - started).toBeGreaterThanOrEqual(450);
     expect(bad.headers.get("set-cookie")).toBeNull();
 
-    const res = await login(post("login", { password: "test-pass" }));
+    const res = await login(post("login", { password: "test-pass-123456" }));
     expect(res.status).toBe(204);
     const cookie = res.headers.get("set-cookie")!;
     expect(cookie).toContain("HttpOnly");
@@ -105,7 +105,7 @@ describe("admin routes", () => {
     expect(cookie).toContain("Path=/");
     expect(cookie).not.toContain("Secure");
 
-    const https = await login(new Request("https://example.com/api/admin/login", { method: "POST", headers: CSRF, body: JSON.stringify({ password: "test-pass" }) }));
+    const https = await login(new Request("https://example.com/api/admin/login", { method: "POST", headers: CSRF, body: JSON.stringify({ password: "test-pass-123456" }) }));
     expect(https.headers.get("set-cookie")).toContain("; Secure");
   });
 
@@ -119,7 +119,7 @@ describe("admin routes", () => {
   });
 
   it("login without the CSRF header is 403", async () => {
-    const res = await login(post("login", { password: "test-pass" }, { "x-requested-with": "" }));
+    const res = await login(post("login", { password: "test-pass-123456" }, { "x-requested-with": "" }));
     expect(res.status).toBe(403);
   });
 
@@ -243,6 +243,7 @@ describe("admin routes", () => {
       ["emergency", 19200, "fdr_3m"],
       ["insurance", 2400, "term_insurance"],
       ["debt", 2400, "loan_prepayment"],
+      ["retirement", 0, "equity_fund"],
     ]);
 
     await putRates(put("rates", { key: "dps_rate", patch: { value: 0.1 } }, auth));

@@ -28,9 +28,3 @@ export function countryErrorResponse(e: unknown): Response {
   if (isEngineError(e) && e.code === "INVALID_INPUT") return httpError(400, "INVALID_INPUT", e.message);
   return toResponse(e);
 }
-
-/** Note text from a JSON body: trimmed, null when absent or blank. */
-export function noteOf(body: unknown): string | null {
-  const n = (body as { note?: unknown } | null)?.note;
-  return typeof n === "string" && n.trim().length > 0 ? n.trim() : null;
-}

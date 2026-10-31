@@ -4,7 +4,7 @@ import { withCountry } from "../country/overlay";
 import { FIXTURE_US } from "../fixtures/countries";
 import { EngineError } from "../types";
 import { assertSnapshot, type RateKey, type RatesSnapshot } from "../rates";
-import { annuityDueFV, bandFor, computeInsurance, growingAnnuityPV, policyIrr } from "./insurance";
+import { annuityDueFV, annuityDuePV, bandFor, computeInsurance, growingAnnuityPV, policyIrr } from "./insurance";
 import { M2_CHECK_KEYS, M2_NOTE_KEYS, M2_STEP_IDS, type M2Input } from "./types";
 
 const rates = assertSnapshot(seed);
@@ -12,8 +12,10 @@ const today = "2026-10-30";
 
 /*
  * Seed values used below (rates.seed.json):
- *   insurance_income_share 0.7, insurance_cover_to_age 60, inflation_projection 0.08,
- *   fdr_1y_rate 0.075, tax_bank_interest 0.10 → after-tax discount 0.075 × 0.9 = 0.0675,
+ *   insurance_income_share 0.7, insurance_cover_to_age 60, insurance_child_independent_age 22,
+ *   inflation_projection 0.08, fixed_income_return_base 0.085 (after tax) → real safe return
+ *   ρ = 1.085 / 1.08 − 1 = 0.0046296; annuity-due factor for 30 years = (1 − 1.0046296^−30) / ρ × 1.0046296 = 28.0790,
+ *   fdr_1y_rate 0.075, tax_bank_interest 0.10 → policy-check rate 0.075 × 0.9 = 0.0675,
  *   health_hospitalisation_cost 300 000, oop_health_share 0.793, health_public_cover_floor 0.3,
  *   health_cover_weights { self 1, partner 1, child 0.5, parent 1.5 },
  *   term table per 1 000: ≤30 2–4, ≤40 3–6, ≤50 6–12, ≤65 12–25, smoker × 1.6,
@@ -67,6 +69,12 @@ describe("helpers", () => {
     expect(growingAnnuityPV(1000, 0.1, 0, 3)).toBeCloseTo(2486.85, 2);
   });
 
+  it("annuityDuePV: 100 now and 100 in a year at 10% → 100 + 90.91 = 190.91; r = 0 → payment × years", () => {
+    expect(annuityDuePV(100, 0.1, 2)).toBeCloseTo(190.909, 3);
+    expect(annuityDuePV(100, 0, 5)).toBe(500);
+    expect(annuityDuePV(100, 0.1, 0)).toBe(0);
+  });
+
   it("annuityDueFV: 100 a year for 2 years at 10% → 100 × 1.1 + 100 × 1.21 = 231", () => {
     expect(annuityDueFV(100, 0.1, 2)).toBeCloseTo(231, 9);
     expect(annuityDueFV(100, 0, 5)).toBe(500);
@@ -77,9 +85,13 @@ describe("helpers", () => {
     expect(policyIrr(10000, 10, 120000)).toBeCloseTo(0.032894, 5);
     // Getting back exactly what was paid in → 0%.
     expect(policyIrr(10000, 10, 100000)).toBeCloseTo(0, 9);
-    // No root in −50%…100% (nothing back) → 0; no premium → 0.
-    expect(policyIrr(10000, 10, 0)).toBe(0);
+    // Nothing back → −100%; nothing paid → 0.
+    expect(policyIrr(10000, 10, 0)).toBe(-1);
     expect(policyIrr(0, 10, 0)).toBe(0);
+    // Marginal IRR: giving up a surrender value of 30 000 now plus 10 000 a year for 6 years against
+    // 120 000: 6.70%; without the surrender value the same stream looks like 20.2%.
+    expect(policyIrr(10000, 6, 120000, 30000)).toBeCloseTo(0.06696, 4);
+    expect(policyIrr(10000, 6, 120000)).toBeCloseTo(0.2021, 4);
   });
 
   it("bandFor picks the first band with maxAge ≥ age, else the last", () => {
@@ -97,19 +109,37 @@ describe("computeInsurance: vector 1 (age 30, partner + child, ৳50 000, nothin
   const r = computeInsurance(v1, rates, today);
 
   it("life cover", () => {
-    // years = 60 − 30 = 30
+    // years = 60 − 30 = 30 (the youngest child's age is not given, so cover runs to 60)
     // yearly need = 50 000 × 12 × 0.7 = 420 000
-    // PV = 420 000 / (0.0675 − 0.08) × (1 − (1.08 / 1.0675)^30) = −33 600 000 × (1 − 1.4180) = 14 044 791.5 → ৳14 045 000
+    // PV = 420 000 × 28.0790 = 11 793 176.9 → ৳11 793 000  (was 14 045 000 with the growing annuity at the FDR rate)
     expect(r.life.needed).toBe(true);
     expect(r.life.yearsCovered).toBe(30);
-    expect(r.life.incomeNeed).toBe(14045000);
-    expect(r.life.cover).toBe(14045000);
-    expect(r.life.gap).toBe(14045000);
-    // 14 045 000 / 600 000 = 23.4
-    expect(r.life.incomeMultiple).toBe(23.4);
-    // 14 045 000 / 1 000 × 2 = 28 090 → 28 100; × 4 = 56 180 → 56 200
-    expect(r.life.premiumYearly).toEqual({ low: 28100, high: 56200 });
+    expect(r.life.incomeNeed).toBe(11793000);
+    expect(r.life.cover).toBe(11793000);
+    expect(r.life.gap).toBe(11793000);
+    // 11 793 000 / 600 000 = 19.7 (outside 10–15 → note)
+    expect(r.life.incomeMultiple).toBe(19.7);
+    // 11 793 000 / 1 000 × 2 = 23 586 → 23 600; × 4 = 47 172 → 47 200
+    expect(r.life.premiumYearly).toEqual({ low: 23600, high: 47200 });
     expect(r.life.status).toBe("red");
+  });
+
+  it("youngest child's age: with only children depending on the income, cover runs until that child is 22", () => {
+    const kidsOnly = { ...v1, dependents: ["children"] as M2Input["dependents"] };
+    // youngest 5 → 22 − 5 = 17 years < 30: 420 000 × annuity-due factor(ρ, 17) = 6 882 742.6 → ৳6 882 500 (11.5×, inside the band)
+    const kid = computeInsurance({ ...kidsOnly, youngestChildAge: 5 }, rates, today);
+    expect(kid.life.yearsCovered).toBe(17);
+    expect(kid.life.incomeNeed).toBe(6882500);
+    expect(kid.life.incomeMultiple).toBe(11.5);
+    expect(kid.notes).not.toContain("m2.note.multipleOutsideBand");
+    expect(kid.explain.steps[0]).toMatchObject({ id: "m2.years", raw: 17, rounded: 17, inputs: { youngestChildAgeYears: 5, childIndependentAgeYears: 22 } });
+    // A grown-up youngest child → no years of income to replace.
+    expect(computeInsurance({ ...kidsOnly, youngestChildAge: 25 }, rates, today).life.incomeNeed).toBe(0);
+    // A dependent partner (or parents) keeps needing the income after the children leave: cover runs to 60.
+    expect(computeInsurance({ ...v1, youngestChildAge: 5 }, rates, today).life.yearsCovered).toBe(30);
+    expect(computeInsurance({ ...v1, dependents: ["children", "parents"], youngestChildAge: 5 }, rates, today).life.yearsCovered).toBe(30);
+    // Without children among the dependents the child's age is ignored.
+    expect(computeInsurance({ ...v1, dependents: ["partner"], youngestChildAge: 5 }, rates, today).life.yearsCovered).toBe(30);
   });
 
   it("health cover", () => {
@@ -124,22 +154,22 @@ describe("computeInsurance: vector 1 (age 30, partner + child, ৳50 000, nothin
   });
 
   it("monthly premium need and overall", () => {
-    // life mid = 14 045 × 3 = 42 135; health mid = (8 925 + 17 850) / 2 = 13 387.5
-    // (42 135 + 13 387.5) / 12 = 4 626.9 → ৳4 600
-    expect(r.monthlyPremiumNeed).toBe(4600);
+    // life mid = 11 793 × 3 = 35 379; health mid = (8 925 + 17 850) / 2 = 13 387.5
+    // (35 379 + 13 387.5) / 12 = 4 063.9 → ৳4 100
+    expect(r.monthlyPremiumNeed).toBe(4100);
     expect(r.hasHealthCover).toBe(false);
     expect(r.status).toBe("red");
     expect(r.policyCheck).toBeUndefined();
-    expect(r.notes).toEqual(["m2.note.premiumIndicative"]);
+    expect(r.notes).toEqual(["m2.note.multipleOutsideBand", "m2.note.premiumIndicative"]);
   });
 
   it("explain: one step per id in order, no policy steps", () => {
     expect(r.explain.steps.map((s) => s.id)).toEqual(BASE_STEPS);
     const incomeNeed = r.explain.steps.find((s) => s.id === "m2.incomeNeed");
-    expect(incomeNeed?.raw).toBeCloseTo(14044791.54, 1);
-    expect(incomeNeed?.rounded).toBe(14045000);
-    expect(incomeNeed?.inputs).toMatchObject({ takeHome: 50000, incomeShare: 0.7, yearlyNeed: 420000, inflation: 0.08, nominal: 0.075, tax: 0.1, coveredYears: 30 });
-    expect(incomeNeed?.inputs.afterTax).toBeCloseTo(0.0675, 12);
+    expect(incomeNeed?.raw).toBeCloseTo(11793176.86, 1);
+    expect(incomeNeed?.rounded).toBe(11793000);
+    expect(incomeNeed?.inputs).toMatchObject({ takeHome: 50000, incomeShare: 0.7, yearlyNeed: 420000, inflation: 0.08, afterTax: 0.085, coveredYears: 30 });
+    expect(incomeNeed?.inputs.realRate).toBeCloseTo(0.0046296, 6);
     for (const s of r.explain.steps) {
       for (const v of Object.values(s.inputs)) if (typeof v === "number") expect(Number.isFinite(v)).toBe(true);
     }
@@ -149,10 +179,10 @@ describe("computeInsurance: vector 1 (age 30, partner + child, ৳50 000, nothin
     expect(r.explain.assumptions.map((a) => a.key).sort()).toEqual(
       [
         "insurance_cover_to_age",
+        "insurance_child_independent_age",
         "insurance_income_share",
         "inflation_projection",
-        "fdr_1y_rate",
-        "tax_bank_interest",
+        "fixed_income_return_base",
         "health_hospitalisation_cost",
         "oop_health_share",
         "health_public_cover_floor",
@@ -169,7 +199,7 @@ describe("computeInsurance: vector 1 (age 30, partner + child, ৳50 000, nothin
     const keys = own.explain.assumptions.map((a) => a.key);
     expect(keys).not.toContain("insurance_cover_to_age");
     expect(keys).not.toContain("insurance_income_share");
-    expect(own.life.incomeNeed).toBe(14045000);
+    expect(own.life.incomeNeed).toBe(11793000);
   });
 
   it("checklist covers every check key with the claim settlement rate and regulator link", () => {
@@ -185,10 +215,10 @@ describe("computeInsurance: vector 1 (age 30, partner + child, ৳50 000, nothin
 describe("computeInsurance: other vectors", () => {
   it("smoker: life premiums × 1.6", () => {
     const r = computeInsurance({ ...v1, smoker: true }, rates, today);
-    // 14 045 × 2 × 1.6 = 44 944 → 44 900; 14 045 × 4 × 1.6 = 89 888 → 89 900
-    expect(r.life.premiumYearly).toEqual({ low: 44900, high: 89900 });
-    // (42 135 × 1.6 + 13 387.5) / 12 = (67 416 + 13 387.5) / 12 = 6 733.6 → ৳6 700
-    expect(r.monthlyPremiumNeed).toBe(6700);
+    // 11 793 × 2 × 1.6 = 37 737.6 → 37 700; 11 793 × 4 × 1.6 = 75 475.2 → 75 500
+    expect(r.life.premiumYearly).toEqual({ low: 37700, high: 75500 });
+    // (35 379 × 1.6 + 13 387.5) / 12 = (56 606.4 + 13 387.5) / 12 = 5 832.8 → ৳5 800
+    expect(r.monthlyPremiumNeed).toBe(5800);
     expect(r.explain.steps.find((s) => s.id === "m2.lifePremium")?.inputs.smokerMultipleCount).toBe(1.6);
   });
 
@@ -238,12 +268,12 @@ describe("computeInsurance: other vectors", () => {
   });
 
   it("savings and goals feed the cover; status amber and green by gap", () => {
-    // cover = 14 045 000 + 200 000 debts + 1 000 000 education − 500 000 saved − 245 000 invested = 14 500 000
+    // cover = 11 793 000 + 200 000 debts + 1 000 000 education − 500 000 saved − 245 000 invested = 12 248 000
     const base = { ...v1, debts: 200000, educationGoals: 1000000, liquidSavings: 500000, investments: 245000 };
     const r = computeInsurance(base, rates, today);
-    expect(r.life.cover).toBe(14500000);
-    // 10 000 000 held → gap 4 500 000 ≤ 7 250 000 → amber
-    expect(computeInsurance({ ...base, existingLifeCover: 10000000 }, rates, today).life).toMatchObject({ gap: 4500000, status: "amber" });
+    expect(r.life.cover).toBe(12248000);
+    // 10 000 000 held → gap 2 248 000 ≤ 6 124 000 → amber
+    expect(computeInsurance({ ...base, existingLifeCover: 10000000 }, rates, today).life).toMatchObject({ gap: 2248000, status: "amber" });
     // more held than needed → gap 0, green; health fully held → green overall
     const covered = computeInsurance({ ...base, existingLifeCover: 20000000, existingHealthCover: 600000 }, rates, today);
     expect(covered.life).toMatchObject({ gap: 0, status: "green", premiumYearly: { low: 0, high: 0 } });
@@ -294,11 +324,21 @@ describe("computeInsurance: other vectors", () => {
 
   it("no usable term table → life premiums 0 and the noTermSold note", () => {
     const r = computeInsurance(v1, withJson(rates, "insurance_term_premium_table", null), today);
-    expect(r.life.gap).toBe(14045000);
+    expect(r.life.gap).toBe(11793000);
     expect(r.life.premiumYearly).toEqual({ low: 0, high: 0 });
     // health only: 13 387.5 / 12 = 1 115.6 → ৳1 100
     expect(r.monthlyPremiumNeed).toBe(1100);
     expect(r.notes).toContain("m2.note.noTermSold");
+  });
+
+  it("no usable health price table or cover weights → health premiums 0 with a note, equal weights", () => {
+    const noTable = computeInsurance(v1, withJson(rates, "health_premium_table", null), today);
+    expect(noTable.health.premiumYearly).toEqual({ low: 0, high: 0 });
+    expect(noTable.notes).toContain("m2.note.noHealthPriceTable");
+    expect(noTable.explain.assumptions.map((a) => a.key)).not.toContain("health_premium_table");
+    // Weights unusable: self, partner and child count one stay each → 238 000 × 3 = 714 000.
+    const noWeights = computeInsurance(v1, withJson(rates, "health_cover_weights", null), today);
+    expect(noWeights.health.target).toBe(714000);
   });
 
   it("out-of-pocket share below the floor → publicCoverBroad, floor applies", () => {
@@ -323,11 +363,14 @@ describe("computeInsurance: policy check", () => {
       remainingYears: 10,
       termPremiumYearly: 600,
       investDifferenceFV: 137000,
+      surrenderValueFV: 0,
+      lowerBound: false,
       policyMaturity: 120000,
       difference: 17000,
       policyIrr: 0.0329,
       verdict: "termPlusInvestAhead",
     });
+    expect(r.notes).not.toContain("m2.note.policyNoSurrender");
     expect(r.explain.steps.map((s) => s.id)).toEqual([...M2_STEP_IDS]);
     expect(r.notes).toContain("m2.note.policyNotAdvice");
     expect(r.notes).toContain("m2.note.separateInvesting");
@@ -336,10 +379,30 @@ describe("computeInsurance: policy check", () => {
     expect(irrStep?.raw).toBeCloseTo(0.032894, 5);
   });
 
-  it("years already paid shorten the investing run; IRR stays on the full stream", () => {
+  it("years already paid, surrender value unknown: a lower bound, marginal IRR on the premiums left", () => {
     const r = computeInsurance({ ...v1, policy: { ...policy, yearsPaid: 4 } }, rates, today);
     // 9 400 × (1.0675^6 − 1) / 0.0675 × 1.0675 = 71 328.9 → ৳71 500; 71 500 − 120 000 = −48 500
-    expect(r.policyCheck).toMatchObject({ remainingYears: 6, investDifferenceFV: 71500, difference: -48500, policyIrr: 0.0329, verdict: "policyAhead" });
+    // IRR of 10 000 a year for the 6 years left against 120 000: 20.21% (was 3.29% on the full 10-year stream)
+    expect(r.policyCheck).toMatchObject({ remainingYears: 6, investDifferenceFV: 71500, surrenderValueFV: 0, lowerBound: true, difference: -48500, policyIrr: 0.2021, verdict: "policyAhead" });
+    expect(r.notes).toContain("m2.note.policyNoSurrender");
+  });
+
+  it("with the surrender value: it grows at the safe rate on the stop-paying side and enters the IRR", () => {
+    const r = computeInsurance({ ...v1, policy: { ...policy, yearsPaid: 4, surrenderValue: 30000 } }, rates, today);
+    // 30 000 × 1.0675^6 = 44 394.4 → 44 500 shown; 44 394.4 + 71 328.9 = 115 723.3 → ৳115 500
+    // 115 500 − 120 000 = −4 500, within 6 000 → similar; marginal IRR 6.70%
+    expect(r.policyCheck).toMatchObject({ remainingYears: 6, surrenderValueFV: 44500, investDifferenceFV: 115500, lowerBound: false, difference: -4500, policyIrr: 0.067, verdict: "similar" });
+    expect(r.notes).not.toContain("m2.note.policyNoSurrender");
+    expect(r.explain.steps.find((s) => s.id === "m2.policyIrr")?.inputs).toMatchObject({ surrenderValue: 30000, remainingYears: 6 });
+  });
+
+  it("no premiums left: no comparison, a note instead; maturity 0 gives −100%", () => {
+    const done = computeInsurance({ ...v1, policy: { ...policy, yearsPaid: 10 } }, rates, today);
+    expect(done.policyCheck).toBeUndefined();
+    expect(done.notes).toContain("m2.note.policyMatured");
+    expect(done.explain.steps.map((s) => s.id)).toEqual(BASE_STEPS);
+    const nothing = computeInsurance({ ...v1, policy: { ...policy, expectedMaturity: 0 } }, rates, today);
+    expect(nothing.policyCheck?.policyIrr).toBe(-1);
   });
 
   it("within 5% of maturity → similar", () => {
@@ -359,26 +422,28 @@ describe("computeInsurance: other currency (US fixture)", () => {
   const us = withCountry(rates, FIXTURE_US, { bdUsdRate: 122 });
 
   it("rounds with dollar steps (lump $5, monthly $1)", () => {
+    // Safe fixed income set to 3.5% after tax here so the vector does not depend on the overlay's fallback.
+    const usSafe: RatesSnapshot = { ...us, rows: { ...us.rows, fixed_income_return_base: { ...us.rows.fixed_income_return_base, value: 0.035 } } };
     const r = computeInsurance(
       { ...v1, age: 35, dependents: ["partner"], takeHome: 4000 },
-      us,
+      usSafe,
       today,
     );
-    // US: inflation 0.025, 1-year deposit 0.04, tax 0.22 → discount 0.04 × 0.78 = 0.0312
+    // US: inflation 0.025, safe 0.035 → ρ = 1.035 / 1.025 − 1 = 0.0097561
     // years 25; yearly need 4 000 × 12 × 0.7 = 33 600
-    // PV = 33 600 / (0.0312 − 0.025) × (1 − (1.025 / 1.0312)^25) = 5 419 354.8 × (1 − 0.86005) = 758 435.2 → $758 435
-    // (taka steps would have given 758 500)
-    expect(r.life.incomeNeed).toBe(758435);
-    expect(r.life.gap).toBe(758435);
-    // age 35 → band ≤40: 758.435 × 3 = 2 275.3 → 2 275; × 6 = 4 550.6 → 4 551
-    expect(r.life.premiumYearly).toEqual({ low: 2275, high: 4551 });
+    // PV = 33 600 × (1 − 1.0097561^−25) / 0.0097561 × 1.0097561 = 33 600 × 22.30520 = 749 454.6 → $749 455
+    // (taka steps would have given 749 500)
+    expect(r.life.incomeNeed).toBe(749455);
+    expect(r.life.gap).toBe(749455);
+    // age 35 → band ≤40: 749.455 × 3 = 2 248.4 → 2 248; × 6 = 4 496.7 → 4 497
+    expect(r.life.premiumYearly).toEqual({ low: 2248, high: 4497 });
     // oop 0.11 < floor 0.3 → perStay = 15 000 × 0.3 = 4 500; self + partner Σ 2 → 9 000
     expect(r.health.perStay).toBe(4500);
     expect(r.health.target).toBe(9000);
     // 0.09 × 1 500 = 135; 0.09 × 3 000 = 270
     expect(r.health.premiumYearly).toEqual({ low: 135, high: 270 });
-    // (3 412.96 + 202.5) / 12 = 301.29 → $301
-    expect(r.monthlyPremiumNeed).toBe(301);
+    // (3 372.55 + 202.5) / 12 = 297.92 → $298
+    expect(r.monthlyPremiumNeed).toBe(298);
     expect(r.notes).toContain("m2.note.publicCoverBroad");
     expect(r.checklist[0]?.params.regulatorUrl).toBe("https://content.naic.org/");
   });
@@ -404,6 +469,8 @@ describe("computeInsurance: input validation", () => {
     { name: "policy term 0", input: { ...v1, policy: { annualPremium: 1, sumAssured: 1, termYears: 0, yearsPaid: 0, expectedMaturity: 1 } } },
     { name: "policy years paid past term", input: { ...v1, policy: { annualPremium: 1, sumAssured: 1, termYears: 5, yearsPaid: 6, expectedMaturity: 1 } } },
     { name: "policy negative premium", input: { ...v1, policy: { annualPremium: -1, sumAssured: 1, termYears: 5, yearsPaid: 0, expectedMaturity: 1 } } },
+    { name: "policy negative surrender value", input: { ...v1, policy: { annualPremium: 1, sumAssured: 1, termYears: 5, yearsPaid: 1, expectedMaturity: 1, surrenderValue: -1 } } },
+    { name: "youngest child age negative", input: { ...v1, youngestChildAge: -1 } },
   ])("$name → INVALID_INPUT", ({ input }) => {
     expectInvalid(() => computeInsurance(input, rates, today));
   });
