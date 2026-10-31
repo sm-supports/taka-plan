@@ -181,3 +181,94 @@ describe("parseMoneyInput", () => {
     expect(parseMoneyInput("5 apples")).toBeNull();
   });
 });
+
+const SAR: MoneyCurrency = { code: "SAR", symbol: "﷼", decimals: 2, compact: "intl" };
+const KWD: MoneyCurrency = { code: "KWD", symbol: "د.ك", decimals: 3, compact: "intl" };
+const PKR: MoneyCurrency = { code: "PKR", symbol: "Rs", decimals: 2, compact: "lakh_crore" };
+const LOCALE_TAGS = ["en", "bn-BD", "ar", "hi-IN", "fr"] as const;
+
+describe("formatMoney ↔ parseMoneyInput round trips", () => {
+  const amounts = [0, 7, 999, 1000, 1250, 45000, 899000, 1250000, 12000000, 987654321, -1500, -1250000];
+  for (const currency of [INR, USD, JPY, EUR, SAR, KWD, BDT_CURRENCY, PKR]) {
+    for (const locale of LOCALE_TAGS) {
+      it(`${currency.code} in ${locale}`, () => {
+        const digits = locale.startsWith("bn") ? "bn" : "latn";
+        for (const n of amounts) {
+          const shown = formatMoney(n, { currency, locale, digits });
+          expect(parseMoneyInput(shown, { symbol: currency.symbol, code: currency.code, locale }), shown).toBe(n);
+          // Without the code (useFormat passes only the symbol) the usual currency forms still go.
+          expect(parseMoneyInput(shown, { symbol: currency.symbol, locale }), `${shown} (no code)`).toBe(n);
+        }
+      });
+    }
+  }
+
+  it("compact figures read back close to the amount", () => {
+    for (const currency of [INR, USD, EUR, SAR]) {
+      for (const locale of LOCALE_TAGS) {
+        const digits = locale.startsWith("bn") ? "bn" : "latn";
+        const shown = formatMoney(1250000, { currency, locale, digits, compact: true });
+        const back = parseMoneyInput(shown, { symbol: currency.symbol, code: currency.code, locale });
+        expect(back, shown).not.toBeNull();
+        expect(Math.abs((back ?? 0) - 1250000) / 1250000, shown).toBeLessThan(0.05);
+      }
+    }
+  });
+});
+
+describe("formatMoney details", () => {
+  it("Bangla puts the symbol before the number for Intl currencies", () => {
+    expect(formatMoney(1250000, { currency: USD, locale: "bn-BD", digits: "bn" })).toBe("$১২,৫০,০০০");
+    expect(formatMoney(-1500, { currency: EUR, locale: "bn-BD", digits: "bn" })).toBe("−€১,৫০০");
+    expect(spaces(formatMoney(1250, { currency: SAR, locale: "bn-BD", digits: "bn" }))).toBe("SAR ১,২৫০");
+  });
+  it("puts a space after a letter symbol in lakh/crore style", () => {
+    expect(spaces(formatMoney(1250000, { currency: PKR, locale: "en", digits: "latn" }))).toBe("Rs 12,50,000");
+    expect(spaces(formatMoney(-1500, { currency: { ...PKR, code: "NPR" }, locale: "en", digits: "latn" }))).toBe("−Rs 1,500");
+    expect(formatMoney(1500, { currency: INR, locale: "en", digits: "latn" })).toBe("₹1,500");
+  });
+  it("rounds negatives like positives", () => {
+    expect(formatMoney(-2.5, { currency: USD, locale: "en", digits: "latn" })).toBe("−$3");
+    expect(formatMoney(2.5, { currency: USD, locale: "en", digits: "latn" })).toBe("$3");
+    expect(formatMoney(-2.5, { currency: INR, locale: "en", digits: "latn" })).toBe("−₹3");
+    expect(formatMoney(-0.4, { currency: INR, locale: "en", digits: "latn" })).toBe("₹0");
+    expect(groupIndian(-2.5)).toBe("-3");
+    expect(formatPercent(-0.125, { digits: "latn", decimals: 0 })).toBe("−13%");
+    expect(formatPercent(0.125, { digits: "latn", decimals: 0 })).toBe("13%");
+    expect(parseMoneyInput("-12.5")).toBe(-13);
+    expect(parseMoneyInput("12.5")).toBe(13);
+  });
+});
+
+describe("parseMoneyInput currency tokens", () => {
+  it("strips the symbol only as a whole token at the start or end", () => {
+    // "R" (rand) must not eat the r of crore.
+    expect(parseMoneyInput("2 crore", { symbol: "R" })).toBe(20000000);
+    expect(parseMoneyInput("R 5 000", { symbol: "R" })).toBe(5000);
+    expect(parseMoneyInput("5R000", { symbol: "R" })).toBeNull();
+    expect(parseMoneyInput("5.000 kr.", { symbol: "kr.", code: "DKK" })).toBe(5000);
+  });
+  it("ignores bidi marks, ISO codes and Intl's own symbols", () => {
+    expect(parseMoneyInput("‏‎-1,250,000 ر.س.‏", { code: "SAR", locale: "ar" })).toBe(-1250000);
+    expect(parseMoneyInput("SAR 1,250")).toBe(1250);
+    expect(parseMoneyInput("1 250 KWD")).toBe(1250);
+    expect(parseMoneyInput("US$ 500", { symbol: "$", code: "USD" })).toBe(500);
+    expect(parseMoneyInput("؜500")).toBe(500);
+    expect(parseMoneyInput("$-500")).toBe(-500);
+    expect(parseMoneyInput("--500")).toBeNull();
+  });
+  it("reads East Asian, Russian and Arabic multipliers", () => {
+    expect(parseMoneyInput("5万")).toBe(50000);
+    expect(parseMoneyInput("5万円")).toBe(50000);
+    expect(parseMoneyInput("3億")).toBe(300000000);
+    expect(parseMoneyInput("2亿")).toBe(200000000);
+    expect(parseMoneyInput("5만")).toBe(50000);
+    expect(parseMoneyInput("1억")).toBe(100000000);
+    expect(parseMoneyInput("5000円")).toBe(5000);
+    expect(parseMoneyInput("5 тыс")).toBe(5000);
+    expect(parseMoneyInput("5 тыс.")).toBe(5000);
+    expect(parseMoneyInput("1,5 млн")).toBe(1500000);
+    expect(parseMoneyInput("٥ ألف")).toBe(5000);
+    expect(parseMoneyInput("2 مليون")).toBe(2000000);
+  });
+});

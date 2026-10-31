@@ -1,37 +1,19 @@
 /**
- * /{locale}/about — server component. The full disclaimer, how the plan is built
- * (seven steps, protect → save → grow, returns after tax and after inflation), and a
- * "Sources and assumptions" list with EVERY row of the bundled rates seed, formatted by
- * unit with the locale's digits. No "use client": nothing here is interactive.
+ * /{locale}/about — server component. The full disclaimer, how the plan is built (seven steps,
+ * protect → save → grow, returns after tax and after inflation) and a "Sources and assumptions"
+ * list. The figures follow the selected country, so the example table and the sources list are
+ * client components (AboutRates.tsx) reading the overlaid snapshot; the static export renders
+ * them with the Bangladesh defaults until the country loads.
  */
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  RATES_SEED,
-  RATE_KEYS,
-  assertSnapshot,
-  formatAsOf,
-  formatNumber,
-  formatPercent,
-  formatTaka,
-  getTaxSlabs,
-  instrumentAfterTax,
-  instrumentNominal,
-  instrumentReal,
-  isStale,
-  type Digits,
-  type Instrument,
-  type RateKey,
-  type RateRow,
-  type RatesSnapshot,
-} from "@taka/engine";
+import { RATES_SEED, assertSnapshot, formatNumber, formatPercent, type Digits } from "@taka/engine";
 import { Card } from "@/components/ui/Card";
 import { isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/server";
 import { interpolate, translate } from "@/lib/i18n/translate";
-import type { Dictionary } from "@/lib/i18n/types";
-import { RATE_GROUPS, type RateGroupId } from "./copy";
+import { ReturnsExample, SourcesList } from "./AboutRates";
 
 type Params = { params: Promise<{ locale: string }> };
 
@@ -46,59 +28,9 @@ const STEPS: ReadonlyArray<{ module: "m1" | "m2" | "m3" | "m4" | "m5" | "m6" | "
   { module: "m7", phase: "grow" },
 ];
 
-/** Two instruments whose real return makes the "after tax, after inflation" point (PRD: +2.1% vs −1.5%). */
-const EXAMPLE_INSTRUMENTS: readonly Instrument[] = ["sanchayapatra_5y", "fdr_1y"];
-
 /** Bangla digits in bn; Latin digits everywhere else. */
 function digitsFor(locale: Locale): Digits {
   return locale === "bn" ? "bn" : "latn";
-}
-
-/** Bangla rate labels in bn (English when a row has none); English labels in every other locale until rows carry their own. */
-function labelFor(row: RateRow, locale: Locale): string {
-  return locale === "bn" ? (row.labelBn ?? row.labelEn) : row.labelEn;
-}
-
-function todayIso(): string {
-  return new Date().toISOString().slice(0, 10);
-}
-
-/** Percent with 1 dp, or 2 dp when the source value needs it (11.83% must not read as 11.8% in a sources table). */
-function sourcePercent(value: number, digits: Digits): string {
-  const hundredths = Math.round(value * 10000);
-  const decimals = hundredths % 10 === 0 ? 1 : 2;
-  return formatPercent(value, { digits, decimals });
-}
-
-function formatValue(row: RateRow, snapshot: RatesSnapshot, locale: Locale, dict: Dictionary): string[] {
-  const digits = digitsFor(locale);
-  const copy = dict.about;
-  switch (row.unit) {
-    case "json": {
-      if (row.key !== "tax_slabs") return [JSON.stringify(row.valueJson)];
-      return getTaxSlabs(snapshot).map((slab) =>
-        slab.width === null
-          ? interpolate(copy.sources.slabRest, { rate: sourcePercent(slab.rate, digits) })
-          : interpolate(copy.sources.slabNext, { rate: sourcePercent(slab.rate, digits), width: formatTaka(slab.width, { digits }) }),
-      );
-    }
-    case "rate":
-    case "ratio":
-      return [sourcePercent(row.value ?? 0, digits)];
-    case "bdt":
-      return [formatTaka(row.value ?? 0, { digits })];
-    case "years":
-      return [`${formatNumber(row.value ?? 0, { digits, decimals: Number.isInteger(row.value) ? 0 : 1 })} ${translate(dict, "common.unit.years")}`];
-    case "months":
-      return [`${formatNumber(row.value ?? 0, { digits })} ${translate(dict, "common.unit.months")}`];
-    default:
-      return [String(row.value ?? "")];
-  }
-}
-
-function groupOf(key: RateKey): RateGroupId {
-  for (const g of RATE_GROUPS) if ((g.keys as readonly string[]).includes(key)) return g.id;
-  return "other";
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
@@ -115,28 +47,8 @@ export default async function AboutPage({ params }: Params) {
   const t = (key: string, p?: Record<string, string | number>) => translate(dict, key, p);
   const copy = dict.about;
   const digits = digitsFor(locale);
-  const snapshot = assertSnapshot(RATES_SEED);
-  const today = todayIso();
-
-  // Rows that only apply to Bangladesh (tax slabs, Sanchayapatra tiers, ...) are hidden once a country is overlaid.
-  const notApplicable = new Set<RateKey>(snapshot.country?.notApplicable ?? []);
-  const grouped = new Map<RateGroupId, RateRow[]>();
-  for (const key of RATE_KEYS) {
-    if (notApplicable.has(key)) continue;
-    const row = snapshot.rows[key];
-    const id = groupOf(key);
-    const list = grouped.get(id) ?? [];
-    list.push(row);
-    grouped.set(id, list);
-  }
-  const groupOrder: RateGroupId[] = [...RATE_GROUPS.map((g) => g.id), "other"];
-
-  const example = EXAMPLE_INSTRUMENTS.map((instrument) => ({
-    instrument,
-    headline: instrumentNominal(snapshot, instrument).rate,
-    afterTax: instrumentAfterTax(snapshot, instrument),
-    real: instrumentReal(snapshot, instrument),
-  }));
+  // App policy (the same in every country): the emergency fund's minimum share of the monthly amount.
+  const minShare = assertSnapshot(RATES_SEED).rows.plan_emergency_min_share.value ?? 0;
 
   return (
     <article className="flex flex-col gap-6">
@@ -176,131 +88,24 @@ export default async function AboutPage({ params }: Params) {
             ))}
           </ol>
         </Card>
-        <p className="leading-relaxed text-text">{interpolate(copy.method.order, { share: formatPercent(snapshot.rows.plan_emergency_min_share.value ?? 0, { digits, decimals: 0 }) })}</p>
+        <p className="leading-relaxed text-text">{interpolate(copy.method.order, { share: formatPercent(minShare, { digits, decimals: 0 }) })}</p>
 
         <h3 className="mt-2 text-base font-semibold text-text">{copy.method.returnsHeading}</h3>
         <p className="leading-relaxed text-text">{copy.method.returns}</p>
         <Card>
           <p className="text-sm text-text-muted">{copy.method.exampleCaption}</p>
-          <table className="mt-2 w-full text-sm">
-            <thead>
-              <tr className="text-start text-xs text-text-muted">
-                <th scope="col" className="py-1 pe-2 font-medium" />
-                <th scope="col" className="py-1 pe-2 text-end font-medium">
-                  {t("common.headline")}
-                </th>
-                <th scope="col" className="py-1 pe-2 text-end font-medium">
-                  {t("common.afterTax")}
-                </th>
-                <th scope="col" className="py-1 text-end font-medium">
-                  {t("common.afterInflation")}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {example.map((row) => (
-                <tr key={row.instrument} className="border-t border-line">
-                  <th scope="row" className="py-2 pe-2 text-start font-medium text-text">
-                    {t(`common.instrument.${row.instrument}`)}
-                  </th>
-                  <td className="py-2 pe-2 text-end tabular-nums">{sourcePercent(row.headline, digits)}</td>
-                  <td className="py-2 pe-2 text-end tabular-nums">{formatPercent(row.afterTax, { digits })}</td>
-                  <td className={`py-2 text-end font-semibold tabular-nums ${row.real < 0 ? "text-status-red" : "text-status-green"}`}>{formatPercent(row.real, { digits })}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <ReturnsExample />
         </Card>
         <p className="leading-relaxed text-text">{copy.method.rounding}</p>
         <p className="leading-relaxed text-text">{copy.method.onDevice}</p>
       </section>
 
-      {/* 3. Sources and assumptions: every seed row */}
+      {/* 3. Sources and assumptions: every row the selected country's calculators read */}
       <section aria-labelledby="about-sources" className="flex flex-col gap-3">
         <h2 id="about-sources" className="text-lg font-semibold text-text">
           {copy.sources.heading}
         </h2>
-        <p className="leading-relaxed text-text">{interpolate(copy.sources.intro, { version: formatNumber(snapshot.version, { digits }), date: formatAsOf(snapshot.publishedAt, locale) })}</p>
-
-        {groupOrder.map((groupId) => {
-          const rows = grouped.get(groupId);
-          if (!rows || rows.length === 0) return null;
-          return (
-            <div key={groupId}>
-              <h3 className="mb-2 mt-2 text-base font-semibold text-text">{copy.sources.group[groupId]}</h3>
-              <ul className="flex flex-col gap-2">
-                {rows.map((row) => {
-                  const stale = isStale(row, today);
-                  const label = labelFor(row, locale);
-                  const values = formatValue(row, snapshot, locale, dict);
-                  const isHttp = /^https?:\/\//.test(row.sourceUrl);
-                  return (
-                    <li key={row.key}>
-                      <Card className="p-3">
-                        <div className="flex items-start justify-between gap-3">
-                          <p className="font-medium text-text">{label}</p>
-                          <div className="flex shrink-0 flex-wrap justify-end gap-1">
-                            {row.isAppAssumption && <span className="rounded-md bg-surface-muted px-1.5 py-0.5 text-xs text-text-muted">{t("common.ourAssumption")}</span>}
-                            {stale && <span className="rounded-md bg-surface-muted px-1.5 py-0.5 text-xs text-text-muted">{t("common.mayBeOutdated")}</span>}
-                          </div>
-                        </div>
-                        <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
-                          <dt className="text-text-muted">{copy.sources.value}</dt>
-                          <dd className="min-w-0 font-semibold text-text tabular-nums [overflow-wrap:anywhere]">
-                            {values.length === 1 ? (
-                              values[0]
-                            ) : (
-                              <ul className="flex flex-col">
-                                {values.map((v) => (
-                                  <li key={v}>{v}</li>
-                                ))}
-                              </ul>
-                            )}
-                            {row.rangeLow != null && row.rangeHigh != null && (
-                              <span className="block font-normal text-text-muted">
-                                {t("common.range", { low: sourcePercent(row.rangeLow, digits), high: sourcePercent(row.rangeHigh, digits) })}
-                              </span>
-                            )}
-                          </dd>
-                          <dt className="sr-only">{copy.sources.dates}</dt>
-                          <dd className="col-span-2 text-text-muted tabular-nums">
-                            {t("common.asOf", { date: formatAsOf(row.asOf, locale) })} · {copy.sources.nextReview}: {formatAsOf(row.nextReview, locale)}
-                          </dd>
-                          <dt className="text-text-muted">{t("common.source")}</dt>
-                          <dd className="min-w-0 break-words text-text">
-                            {isHttp ? (
-                              <a href={row.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-block py-1 font-medium text-brand-700 underline decoration-dotted underline-offset-4">
-                                {row.sourceName}
-                              </a>
-                            ) : (
-                              <span>{row.sourceName}</span>
-                            )}
-                          </dd>
-                          {row.note && (
-                            <>
-                              <dt className="text-text-muted">{copy.sources.note}</dt>
-                              <dd className="text-text-muted" lang="en">
-                                {row.note}
-                              </dd>
-                            </>
-                          )}
-                        </dl>
-                      </Card>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          );
-        })}
-
-        <h3 className="mt-2 text-base font-semibold text-text">{copy.sources.unverifiedHeading}</h3>
-        <p className="leading-relaxed text-text">{copy.sources.unverifiedIntro}</p>
-        <ul className="list-disc space-y-1 ps-5 text-text">
-          {copy.sources.unverified.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <SourcesList />
       </section>
 
       {/* One primary action */}
