@@ -7,6 +7,7 @@
  */
 import { useMemo } from "react";
 import { computeEmergencyFund, getRate, suggestMonths, type Dependent, type IncomeType, type M1Input, type M1Result, type RatesSnapshot } from "@taka/engine";
+import { StartOverButton } from "@/components/drafts/StartOverButton";
 import { BigNumber } from "@/components/ui/BigNumber";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -261,6 +262,8 @@ export function EmergencyFundCalculator() {
                 ))}
               </ul>
             </Card>
+
+            {!demo && <StartOverButton />}
           </>
         )}
       </Section>

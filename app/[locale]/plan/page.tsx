@@ -9,11 +9,16 @@
  *                     fixed profile with the current rates) instead of the user's plan, so the screen
  *                     can be checked and screenshotted with known numbers. Harmless in production:
  *                     it never touches the store.
+ *
+ * Under a rendered plan: "Start from the beginning" and the collapsible "Your drafts (n)" list
+ * (components/drafts); both are hidden on the sample plan.
  */
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
 import type { EngineError, Plan } from "@taka/engine";
+import { DraftsList } from "@/components/drafts/DraftsList";
+import { StartOverButton } from "@/components/drafts/StartOverButton";
 import { BucketList } from "@/components/plan/BucketList";
 import { PlanHeadline } from "@/components/plan/PlanHeadline";
 import { PlanSummary } from "@/components/plan/PlanSummary";
@@ -129,10 +134,14 @@ function PlanBody({ plan, error, demo }: PlanBodyProps) {
           <PlanHeadline plan={plan} whyOpen={why === HEADLINE_WHY} onWhyOpenChange={(open) => onWhyChange(open ? HEADLINE_WHY : null)} />
           <BucketList plan={plan} why={why} onWhyChange={onWhyChange} />
           <PlanSummary plan={plan} />
+          {/* Start from the beginning: only under a plan that rendered, never on the sample plan. */}
+          {!demo && <StartOverButton />}
         </>
       ) : (
         <Skeleton page />
       )}
+
+      {!demo && (plan || error) && <DraftsList variant="section" />}
 
       {isTermKey(termParam) && <TermSheet k={termParam} open onClose={closeTerm} />}
     </div>

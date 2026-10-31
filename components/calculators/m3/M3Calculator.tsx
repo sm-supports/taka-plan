@@ -6,6 +6,7 @@
  */
 import { useMemo, useState } from "react";
 import { computeDebtHealth, getRate, type Card as CardT, type Loan, type M3Input, type M3Result } from "@taka/engine";
+import { StartOverButton } from "@/components/drafts/StartOverButton";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { ErrorCard } from "@/components/ui/ErrorCard";
@@ -187,6 +188,7 @@ export function M3Calculator({ demo = false }: M3CalculatorProps) {
       </Card>
 
       {computed.result ? <M3Results input={input} result={computed.result} snapshot={snapshot} /> : <ErrorCard title={t("m3.title")} message={t(computed.errorKey ?? "errors.generic")} />}
+      {computed.result && !demo && <StartOverButton />}
     </div>
   );
 }
