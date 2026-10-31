@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "CZ",
+  "iso3": "CZE",
+  "nameEn": "Czechia",
+  "nameNative": "Česko",
+  "region": "europe_central_asia",
+  "languages": [
+    "cs",
+    "en",
+    "sk",
+    "de"
+  ],
+  "currency": {
+    "code": "CZK",
+    "symbol": "Kč",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 21.814,
+      "status": "sourced",
+      "sourceName": "Czech National Bank exchange rate fixing (daily)",
+      "sourceUrl": "https://www.cnb.cz/en/financial-markets/foreign-exchange-market/central-bank-exchange-rate-fixing/central-bank-exchange-rate-fixing/daily.txt",
+      "asOf": "2026-10-30",
+      "note": "CZK 21.814 per US dollar and CZK 24.360 per euro on 30 October 2026; World Bank 2025 average 21.88."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Czech Statistical Office CPI, September 2026 final)",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI 2.5% year on year in September 2026 (1.9% in August), final figure released 13 October 2026; secondary source because csu.gov.cz was not read directly. World Bank 2025 average 2.5%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Czech National Bank 2% CPI target with a ±1 point tolerance band; CPI 2.5% (Sep 2026)",
+      "sourceUrl": "https://www.cnb.cz/en/monetary-policy/inflation-target/",
+      "asOf": "2026-10-31",
+      "note": "The CNB target is credible, but Czech inflation has averaged above 2% in recent years, so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.0375,
+      "status": "sourced",
+      "sourceName": "Czech National Bank, two-week repo rate history",
+      "sourceUrl": "https://www.cnb.cz/en/faq/How-has-the-CNB-two-week-repo-rate-changed-over-time/",
+      "asOf": "2026-06-19",
+      "note": "2W repo rate raised from 3.50% to 3.75% with effect from 19 June 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0154,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Czech banks, household overnight deposits in CZK (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L21.A.R.A.2250.CZK.N",
+      "asOf": "2026-08-31",
+      "note": "Average 1.54% on household overnight deposits (current and most savings accounts) in August 2026; notice deposits up to 3 months paid 1.94%."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/CNB MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (3.38% in August 2026); no 3-month rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0338,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Czech banks, household deposits in CZK with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L22.F.R.A.2250.CZK.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 3.56% and over 2 years 3.51% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Czechia's regular-saving product is building savings (stavební spoření) with a state contribution; no current average rate was found from an official source."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.016,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CZ",
+      "asOf": "2025-12-31",
+      "note": "Average deposit rate 1.60% in 2025, pulled down by low-rate sight deposits."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0375,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Dluhopisy Republiky: interest rate of the Flexi bond issued 15 October 2026",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/urokove-sazby/urokove-sazby-emise-15-10-2026",
+      "asOf": "2026-10-15",
+      "note": "The retail savings bond now on sale is the Flexi bond, an exchangeable 3-month state treasury bill for individuals that renews automatically; 3.75% a year for 15 Oct 2026 to 15 Jan 2027. No 5-year retail bond is currently offered."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0375,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Dluhopisy Republiky: Flexi bond (exchangeable state treasury bill) issue of 15 October 2026",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/urokove-sazby/urokove-sazby-emise-15-10-2026",
+      "asOf": "2026-10-15",
+      "note": "Retail 3-month state treasury bill rate (15 Oct 2026 to 15 Jan 2027); yields on institutional treasury bill auctions were not found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Czech government bond yield found: Trading Economics showed only the 10-year yield and worldgovernmentbonds.com did not load data."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0536,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Czech Republic 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term (10-year) convergence yield for Czechia was 5.24% in September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Czech Republic income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/czech-republic/individual/income-determination",
+      "asOf": "2026-07-27",
+      "note": "15% final withholding tax on interest from deposit accounts for resident individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Dluhopisy Republiky: Flexi bond",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/flexi-bond-poukazka",
+      "asOf": "2026-10-31",
+      "note": "Yields on the retail Flexi bond are exempt from income tax, unlike term deposit interest."
+    },
+    "deposit_insurance_limit": {
+      "value": 2436000,
+      "status": "sourced",
+      "sourceName": "Garanční systém finančního trhu (Financial Market Guarantee System), deposit insurance",
+      "sourceUrl": "https://www.garancnisystem.cz/en/about-deposit-insurance",
+      "asOf": "2026-10-30",
+      "note": "Cover is the equivalent of EUR 100,000 per depositor per bank (up to EUR 100,000 more in special cases); converted at the CNB rate of CZK 24.360 per euro on 30 October 2026."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Czech law sets no specific cap on credit card rates and no typical card rate was found; the ECB/CNB series for card credit to households returned no data."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "PX index 2,648 on 29 Oct 2026, up 11.5% in a year, near its September 2026 all-time high",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Czech shares, a small bank- and utility-heavy market, earn only a little more than tax-free state bills."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "PX index (Trading Economics); Flexi bond 3.75% tax-free",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points over the tax-free state bill rate, kept within the 4-point limit despite the PX's strong recent run."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "PX index (Trading Economics); global equity long-run returns",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified equity fund matching long-run global equity returns plus Czech inflation above the euro area."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike while the koruna holds firm against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); CZK 21.8 per USD (CNB)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the koruna is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in koruna terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 3.38% less 15% tax = 2.9%, with rates drifting lower",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L22.F.R.A.2250.CZK.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after tax if CNB rates fall."
+    },
+    "fixed_income_return_base": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "Flexi bond 3.75% tax-free; 1-year deposit 2.9% after tax",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/urokove-sazby/urokove-sazby-emise-15-10-2026",
+      "asOf": "2026-10-31",
+      "note": "Base case: rolling tax-free retail state bills and term deposits, slightly below the current Flexi bond rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Czech 10-year government bond 5.36% less 15% withholding = 4.6%",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long Czech government bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CNB and the Czech Insurance Association publish premium and claims totals but no industry life claim settlement ratio could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (rizikové životní pojištění) is widely sold, but no published premium table or regulator data on term premiums per sum insured was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by compulsory public health insurance with no hospital fee for most patients; no official figure for a typical out-of-pocket private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is a small market of supplementary policies not priced per sum insured; no premium table per CZK 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1406,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CZ",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Czechia, health: 3.3% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.CZ.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices have run above headline inflation; 4.5% is used as a long-run planning figure."
+    },
+    "goal_inflation_education": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Czechia, education: 4.1% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.CZ.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Education prices (mainly private schools and courses; public education is free) rise faster than headline inflation; 4.5% is used for planning."
+    },
+    "life_expectancy": {
+      "value": 80.3,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/czech-republic",
+      "asOf": "2026-12-31",
+      "note": "Men 77.5, women 83.0 (UN WPP estimate for 2026); World Bank 2024 figure 80.0."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.9,
+            "men": 20.8,
+            "women": 24.8
+          },
+          {
+            "age": 65,
+            "total": 18.9,
+            "men": 17.0,
+            "women": 20.5
+          },
+          {
+            "age": 70,
+            "total": 15.1,
+            "men": 13.6,
+            "women": 16.3
+          },
+          {
+            "age": 80,
+            "total": 8.5,
+            "men": 7.7,
+            "women": 9.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/czech-republic",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.01
+          },
+          {
+            "year": 2040,
+            "value": 2.37
+          },
+          {
+            "year": 2065,
+            "value": 1.95
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/czech-republic/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 33.2 (2025, World Bank), 42.2 (2040) and 51.3 (2065, populationpyramid.net/czech-republic/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Czech Social Security Administration (ČSSZ), retirement age",
+      "sourceUrl": "https://www.cssz.gov.cz/web/lang/duchodovy-vek",
+      "asOf": "2026-04-16",
+      "note": "65 for men born 1965-1971; men born 1962 (retiring in 2026) retire at 64 years 6 months; women's age depends on children raised and is converging; rises gradually to 67 for people born after 1988. 35 insurance years required."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Government employees are in the general pension insurance scheme; no source read stated a separate mandatory retirement age for civil servants."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 3.38% less 15% tax = 2.9%, with rates drifting lower",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L22.F.R.A.2250.CZK.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after tax if CNB rates fall."
+    },
+    "retirement_return_base": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "Flexi bond 3.75% tax-free (Ministry of Finance)",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/urokove-sazby/urokove-sazby-emise-15-10-2026",
+      "asOf": "2026-10-31",
+      "note": "Base case capped below the tax-free retail state bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.042,
+      "status": "assumption",
+      "sourceName": "Czech 10-year government bond 5.36% less 15% withholding = 4.6%",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer government bonds after tax, below the current 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Flexi bond 3.75% tax-free; PX record",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/urokove-sazby/urokove-sazby-emise-15-10-2026",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Flexi bond 3.75% tax-free; equity base 7%",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/urokove-sazby/urokove-sazby-emise-15-10-2026",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 7% and half safe fixed income at about 3.3-4.5% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "10-year bond 4.6% after tax; equity high 9%",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in the Czech Republic (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/0b4342bd-0bd0-4b42-b09e-e43733ae8b8e_en",
+      "asOf": "2026-07-31",
+      "note": "Czechia has no non-contributory old-age pension; older people with low income can claim the means-tested state social assistance benefit (dávka státní sociální pomoci) introduced on 1 October 2025."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension exists in Czechia, so there are no eligibility ages; low-income older people rely on means-tested state social assistance."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code gives severance pay (odstupné) only on redundancy, as a flat 1-3 months' average earnings by length of service rather than days per year, and there is no statutory retirement gratuity; the Labour Code text was not read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Czech Social Security Administration (ČSSZ), retirement age",
+      "sourceUrl": "https://www.cssz.gov.cz/web/lang/duchodovy-vek",
+      "asOf": "2026-04-16",
+      "note": "Compulsory pay-as-you-go pension insurance (social security 7.1% employee and 24.8% employer in 2026, per PwC); pension age 65 rising to 67 for those born after 1988. Pensions are raised every January by law (price growth plus part of real wage growth); that rule was not confirmed on a page read."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Spořicí účet",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L21.A.R.A.2250.CZK.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Termínovaný vklad",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Termínovaný vklad",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L22.F.R.A.2250.CZK.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Stavební spoření",
+      "localNameEn": "Building savings",
+      "note": "Regular saving with building societies over at least 6 years, with a yearly state contribution."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Dluhopis Republiky (Flexi bond)",
+      "localNameEn": "Republic savings bond (Flexi bond)",
+      "note": "Sold by the Ministry of Finance directly to individuals with no fee via an online asset account; currently a 3-month bill that renews automatically, interest tax-free, early repayment without penalty.",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/flexi-bond-poukazka"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Státní pokladniční poukázky",
+      "localNameEn": "State treasury bills",
+      "note": "Retail investors buy them as the Flexi bond; institutional bills are auctioned by the CNB for the Ministry of Finance.",
+      "sourceUrl": "https://dluhopisy.gov.cz/cs/o-dluhopisech/urokove-sazby/urokove-sazby-emise-15-10-2026"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Státní dluhopisy",
+      "localNameEn": "Czech government bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Státní dluhopisy",
+      "localNameEn": "Czech government bonds",
+      "sourceUrl": "https://tradingeconomics.com/czech-republic/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Podílový fond",
+      "localNameEn": "Mutual fund / index fund (ETF)",
+      "note": "Gains on securities held over 3 years are tax-exempt."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Investiční zlato",
+      "localNameEn": "Investment gold bars and coins",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt in the EU."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Česká národní banka (Czech National Bank)",
+      "url": "https://www.cnb.cz/"
+    },
+    "insuranceRegulator": {
+      "name": "Česká národní banka (Czech National Bank), financial market supervision",
+      "url": "https://www.cnb.cz/",
+      "note": "The CNB supervises insurers as well as banks."
+    },
+    "insuranceComplaints": {
+      "name": "Finanční arbitr (Financial Arbiter)",
+      "url": "https://www.finarbitr.cz/",
+      "note": "Out-of-court disputes with financial institutions, including life insurance."
+    },
+    "pensionScheme": {
+      "name": "Česká správa sociálního zabezpečení (Czech Social Security Administration)",
+      "url": "https://www.cssz.gov.cz/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Všeobecná zdravotní pojišťovna (General Health Insurance Company, public health insurance)",
+      "url": "https://www.vzp.cz/",
+      "note": "Largest of the public health insurance funds under compulsory health insurance."
+    },
+    "depositInsurance": {
+      "name": "Garanční systém finančního trhu (Financial Market Guarantee System)",
+      "url": "https://www.garancnisystem.cz/"
+    },
+    "statistics": {
+      "name": "Český statistický úřad (Czech Statistical Office)",
+      "url": "https://csu.gov.cz/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

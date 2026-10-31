@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "UZ",
+  "iso3": "UZB",
+  "nameEn": "Uzbekistan",
+  "nameNative": "Oʻzbekiston",
+  "region": "europe_central_asia",
+  "languages": [
+    "uz",
+    "ru",
+    "kaa",
+    "tg"
+  ],
+  "currency": {
+    "code": "UZS",
+    "symbol": "soʻm",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 11995.5,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/UZS exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/currency",
+      "asOf": "2026-10-30",
+      "note": "Secondary source: the Central Bank of Uzbekistan site (cbu.uz) could not be reached. World Bank official rate 2025 average 12,579 som per dollar (PA.NUS.FCRF)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.064,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Uzbekistan inflation rate (Statistics Agency data)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: annual CPI inflation 6.4% in September 2026 (6.2% in August); the Statistics Agency (stat.uz) publishes the CPI only as downloadable tables. World Bank 2025 average 8.8%."
+    },
+    "inflation_projection": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Central Bank of Uzbekistan 5% target; CPI 6.4% (Sep 2026), 8.8% in 2025 (World Bank), 2006-2026 average about 9.8% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Inflation has fallen towards the central bank's 5% target but has not yet reached it and averaged near 10% for two decades, so 6.5% is used."
+    },
+    "policy_rate": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Uzbekistan interest rate (Central Bank of Uzbekistan policy rate)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/interest-rate",
+      "asOf": "2026-09-16",
+      "note": "Secondary source (cbu.uz unreachable): the central bank kept its key rate at 14% on 16 September 2026, as at the June and July meetings; next decision 2 November 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical rate for ordinary savings (demand) deposits was found; the Central Bank of Uzbekistan site (cbu.uz), which publishes deposit-rate statistics, could not be reached."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found; cbu.uz deposit-rate statistics could not be reached."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found; cbu.uz deposit-rate statistics could not be reached. The weighted average deposit rate was 13.9% in August 2026 (Trading Economics)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks offer som deposits that can be topped up, but no published rate for a monthly recurring deposit scheme was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.139,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Uzbekistan deposit interest rate (Central Bank of Uzbekistan data)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-08-31",
+      "note": "Secondary source: 13.9% in August 2026, down from 14.7% in July; World Bank FR.INR.DPST 18.1% for 2024."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold to individuals at a fixed rate was found; the Ministry of Economy and Finance sells government bonds through auctions on the Republican Currency Exchange."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Short-term government bond auction results are published by the Republican Currency Exchange as images or attachments that could not be read, and the Ministry of Economy and Finance site gave no yields."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield could be read; the latest auctions seen were additional placements of 1,074-day (about 3-year) bonds on 27 and 29 October 2026 whose yields were not shown in text."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year domestic government bond yield was found."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Tax Code of the Republic of Uzbekistan, Article 378 (income not subject to tax), item 13",
+      "sourceUrl": "https://lex.uz/docs/4674893",
+      "asOf": "2026-10-31",
+      "note": "Interest and winnings on bank deposits of individuals are exempt from personal income tax (Art. 378, item 13); other interest and dividends are taxed at 5% (Art. 381)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Tax Code of the Republic of Uzbekistan, Article 378, items 12 and 13",
+      "sourceUrl": "https://lex.uz/docs/4674893",
+      "asOf": "2026-10-31",
+      "note": "Interest on government securities of Uzbekistan and income on savings certificates are exempt from personal income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 200000000,
+      "status": "sourced",
+      "sourceName": "Law of the Republic of Uzbekistan No. ZRU-1031 of 18 February 2025 'On guarantees of protection of deposits in banks', Article 26",
+      "sourceUrl": "https://lex.uz/ru/docs/7389439",
+      "asOf": "2026-06-29",
+      "note": "Compensation per depositor per bank is the full balance up to 200 million som, all deposits and currencies combined; these provisions took effect on 29 June 2026, replacing the earlier unlimited state guarantee. Paid by the Deposit Guarantee Agency."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical annual rate on credit card balances was found; cbu.uz lending-rate statistics could not be reached."
+    },
+    "equity_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Global equities in som terms; Tashkent stock market is small and illiquid; deposits 13.9% tax-free (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a global equity index in dollars earns about 4% and the som weakens about 3% a year."
+    },
+    "equity_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Global equity returns plus expected som depreciation; average deposit rate 13.9% tax-free",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "The local stock market is too thin to have a usable 10-year record, so the base uses a global index in som terms (about 7% in dollars plus about 4-5% depreciation), below the tax-free deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Global equity returns plus faster som depreciation",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns and som depreciation similar to the 2017-2023 period."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics); som roughly stable in 2026",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: dollar gold stagnates after the 2025-26 spike and the som stays stable."
+    },
+    "gold_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); USD/UZS 11,996 (Oct 2026) vs 12,579 average in 2025 (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 3.5% a year and the som loses about 4% a year against the dollar over the long run, as inflation stays above US levels."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 dollar trend plus som depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 13.9% (Aug 2026), tax-free; policy rate 14% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall as the central bank cuts towards a 5% inflation target."
+    },
+    "fixed_income_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 13.9% (Aug 2026), tax-free (Tax Code Art. 378)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: tax-free som deposits a little below today's average rate, as policy is eased over time."
+    },
+    "fixed_income_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 14.7% in July 2026; policy rate 14% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in today's higher term-deposit rates for several years."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance regulator (National Agency for Prospective Projects) publishes market statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or government source with indicative term-life premiums by age was found; the life insurance market is small and quotes come only from insurers."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official or survey figure for the typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or government source with indicative private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.6406,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=UZ",
+      "asOf": "2023-12-31",
+      "note": "Latest year available is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Headline CPI 6.4% (Sep 2026, Trading Economics); out-of-pocket share 64% of health spending (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI was found; with most health spending paid privately and services prices rising faster than goods, 8% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Headline CPI 6.4% (Sep 2026, Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was found; private schooling and university contract fees have risen faster than headline inflation, so 8% is used."
+    },
+    "life_expectancy": {
+      "value": 72.8,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/uzbekistan",
+      "asOf": "2026-07-01",
+      "note": "Men 69.8, women 75.8 (UN WPP estimate for 2026); World Bank 2024 figure 72.5."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.7,
+            "men": 16.7,
+            "women": 20.6
+          },
+          {
+            "age": 65,
+            "total": 15.2,
+            "men": 13.4,
+            "women": 16.7
+          },
+          {
+            "age": 70,
+            "total": 12,
+            "men": 10.5,
+            "women": 13.1
+          },
+          {
+            "age": 80,
+            "total": 6.8,
+            "men": 6,
+            "women": 7.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/uzbekistan",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 10.32
+          },
+          {
+            "year": 2040,
+            "value": 7.25
+          },
+          {
+            "year": 2065,
+            "value": 4.78
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/uzbekistan/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 9.69 (2025, World Bank), 13.8 (2040) and 20.9 (2065, populationpyramid.net/uzbekistan/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Law 'On state pension provision of citizens' No. 938-XII, Article 7",
+      "sourceUrl": "https://lex.uz/ru/docs/112312",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension from 60 for men with at least 25 years of work and 55 for women with at least 20 years; with 7 or more years a proportional pension is paid (Article 8). No legislated increase was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No separate retirement age for government employees was found; civil servants receive the general state pension from 60 (men) or 55 (women) under the same law."
+    },
+    "retirement_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 13.9% (Aug 2026), tax-free (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall sharply as inflation reaches the 5% target."
+    },
+    "retirement_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 13.9% (Aug 2026), tax-free (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below today's tax-free average deposit rate, allowing for rate cuts over a long retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 13.9% (Aug 2026), tax-free (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree keeps most savings in multi-year term deposits near today's rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Fixed income low 9%; equity low 7%",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if deposit rates fall and global shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.115,
+      "status": "assumption",
+      "sourceName": "Fixed income base 12%; equity base 12%",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free som deposits and global equity, both near 12% in som terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Fixed income high 15%; equity high 16%",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 878000,
+      "status": "sourced",
+      "sourceName": "Presidential Decree No. UP-115 of 23 June 2026 'On increasing wages, pensions, stipends and allowances'",
+      "sourceUrl": "https://lex.uz/ru/docs/8283680",
+      "asOf": "2026-07-01",
+      "note": "Allowance for elderly citizens without the required work record: 878,000 som a month from 1 July 2026 (pensions and allowances raised 7%). The minimum old-age pension is 983,000 som."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The eligibility ages and conditions for the allowance to elderly citizens without the required work record were not found in the texts read (pension law, 2026 decree, pension regulation No. 592)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service payment for private employees on resignation or retirement was found; the Labour Code text was not checked in full."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Law 'On state pension provision of citizens' No. 938-XII (Articles 7, 8, 26 and tax exemption)",
+      "sourceUrl": "https://lex.uz/ru/docs/112312",
+      "asOf": "2026-10-31",
+      "note": "State old-age pension funded by social tax: from 60 for men (25 years' work) and 55 for women (20 years), 55% of average monthly earnings plus increments, not less than the minimum pension (983,000 som a month from 1 July 2026); pensions are exempt from tax. Pensions are raised by presidential decree (7% from 1 July 2026), not by an automatic index."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Jamgʻarma omonati",
+      "localNameEn": "Savings deposit",
+      "note": "Interest on bank deposits is exempt from personal income tax."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Muddatli omonat",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Muddatli omonat",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate"
+    },
+    "dps": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Top-up savings deposit",
+      "note": "Many som deposits allow regular top-ups; no standard monthly recurring scheme with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found; government bonds are sold at auctions."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Davlat qisqa muddatli obligatsiyalari",
+      "localNameEn": "Short-term government bonds",
+      "note": "Issued by the Ministry of Economy and Finance at auctions on the Republican Currency Exchange, mainly to banks; interest is tax-free for individuals."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Davlat oʻrta muddatli obligatsiyalari",
+      "localNameEn": "Medium-term government bonds",
+      "note": "Bonds of about 3 years (1,074 days) were placed in October 2026; no 5-year yield was found.",
+      "sourceUrl": "https://www.uzrvb.uz/rynki-i-torgi/rynok-gosudarstvennyh-tsennyh-bumag/"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year domestic government bond was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No widely available retail diversified mutual or index fund was found; the Tashkent stock exchange is small and illiquid."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oʻlchovli oltin quymalari",
+      "localNameEn": "Measured gold bars",
+      "note": "Gold bars refined in Uzbekistan are sold to the public through banks under Central Bank of Uzbekistan arrangements."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Republic of Uzbekistan",
+      "url": "https://cbu.uz/en/"
+    },
+    "insuranceRegulator": {
+      "name": "National Agency for Prospective Projects (NAPP)",
+      "url": "https://napp.uz/en",
+      "note": "Regulates and licenses insurance, the capital market and crypto-assets."
+    },
+    "insuranceComplaints": {
+      "name": "National Agency for Prospective Projects, appeals",
+      "url": "https://napp.uz/appeal"
+    },
+    "pensionScheme": {
+      "name": "Pension Fund under the Ministry of Economy and Finance",
+      "url": "https://gov.uz/uz/pj"
+    },
+    "oldAgeAllowance": {
+      "name": "Allowance for elderly citizens without the required work record (Presidential Decree UP-115, 2026)",
+      "url": "https://lex.uz/ru/docs/8283680"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health of the Republic of Uzbekistan",
+      "url": "https://gov.uz/ssv",
+      "note": "Basic care in public facilities is state-funded; a State Health Insurance Fund is being rolled out region by region."
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Agency (Law ZRU-1031 'On guarantees of protection of deposits in banks')",
+      "url": "https://lex.uz/ru/docs/7389439",
+      "note": "Successor to the Fund for Guaranteeing Citizens' Deposits in Banks; its own site could not be reached."
+    },
+    "statistics": {
+      "name": "Statistics Agency under the President of the Republic of Uzbekistan",
+      "url": "https://stat.uz/en/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "code": "LT",
+  "iso3": "LTU",
+  "nameEn": "Lithuania",
+  "nameNative": "Lietuva",
+  "region": "europe_central_asia",
+  "languages": [
+    "lt",
+    "ru",
+    "en",
+    "pl"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026 (ECB EXR dataset), so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.067,
+      "status": "sourced",
+      "sourceName": "LRT, reporting the State Data Agency (Valstybės duomenų agentūra) September 2026 CPI release",
+      "sourceUrl": "https://www.lrt.lt/naujienos/verslas/4/3077070/rugseji-suderinta-6-1-proc-metine-ir-4-5-proc-vidutine-metine-infliacija",
+      "asOf": "2026-09-30",
+      "note": "National CPI up 6.7% year on year in September 2026 (HICP 6.1%; 12-month average CPI 4.9%). Secondary source: the official statistics portal could not be read; Trading Economics reports the same 6.7%. World Bank 2025 average 3.8%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Lithuanian CPI averaged about 7% a year in 2021-2025 (18.9% in 2022) and 6.7% in Sep 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=LT",
+      "asOf": "2026-10-31",
+      "note": "Lithuania shares the ECB 2% target but its prices and wages keep converging towards richer euro members and inflation is running well above target in 2026, so 3% is used for long-run planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Lithuania uses the euro; ECB deposit facility rate 2.50% since 16 September 2026 (2.25% from June 2026), confirmed in the ECB FM dataset on 31 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0025,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, overnight deposits from households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight deposits in Lithuania, August 2026 (0.25% in July, 0.22% in June)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/Bank of Lithuania MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.43% in August 2026); no separate 3-month term deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0243,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year (2.07% in July, 1.74% in June); 1-2 year deposits paid 3.31% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Lithuanian banks offer regular savings deposits (kaupiamasis indėlis), but no average or official rate for them was found in Bank of Lithuania or ECB statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.021,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits (2.06% in July); household overnight deposits paid 0.25%. World Bank FR.INR.DPST has no Lithuania figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.034,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Lithuania, defence bonds (Government savings notes) issue terms, 27 Oct - 9 Nov 2026",
+      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
+      "asOf": "2026-10-27",
+      "note": "Longest retail issue is 3 years (no 5-year note): 3-year 3.4%, 2-year 3.3%, 1-year 3.2% a year, 6-month 1.55% per half-year, sold to individuals from 27 Oct to 9 Nov 2026. The ministry site blocks automated reading, so the rates were taken from the page text shown in search results; rates are reset for each two-week issue."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month Lithuanian treasury bill yield was found; the Ministry of Finance's securities pages could not be read and the ECB publishes no Lithuanian money-market yield."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year government bond yield from an official or allowed secondary source was found; a 5-year Eurobond tranche was issued in January 2026 but the Ministry of Finance release with its yield could not be read."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0443,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Lithuania 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/lithuania/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary source. The ECB long-term convergence rate for Lithuania shows 2.88% for July-September 2026 but has been flat for months, so the market yield is used."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Lithuania significant developments and taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/lithuania/individual/significant-developments",
+      "asOf": "2026-10-01",
+      "note": "From 1 January 2026 almost all individual income is taxed at progressive 20%/25%/32% rates; the reduced 15% list (dividends, some pension and share income) does not include interest, so the 20% first band is used. The first EUR 500 of interest a year on deposits and securities is exempt (PwC income determination page). Some secondary sources still quote 15% for interest, so check before relying on it."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable official source on how interest on Government savings notes (defence bonds) is taxed was found; it is believed to follow the general interest rules (EUR 500 annual exemption), but the State Tax Inspectorate pages could not be read."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Indėlių ir investicijų draudimas (Deposit and Investment Insurance), deposit insurance",
+      "sourceUrl": "https://www.iidraudimas.lt/en/deposit-insurance/",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per credit institution, all eligible deposits at one bank added together."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.0991,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, revolving loans, overdrafts and credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.A2Z.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, August 2026."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "OMX Vilnius gross index 1,490 on 30 Oct 2026 (base 100 at end-1999), up 18.6% in a year",
+      "sourceUrl": "https://tradingeconomics.com/lithuania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: the small, concentrated Vilnius market returns only a little more than safe savings over a long period."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "OMX Vilnius (Trading Economics); 3-year savings note 3.4% and 1-year deposit 2.43% less 20% tax = about 2-2.7%",
+      "sourceUrl": "https://tradingeconomics.com/lithuania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "OMX Vilnius has compounded about 10% a year since 2000, but the market is small and illiquid, so the base is held near the after-tax safe rate plus about 3.5-4 points."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "OMX Vilnius long-run record; long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/lithuania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified euro equity fund matching long-run global equity returns of about 8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.013,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.43% (ECB MFI statistics), assuming rates fall, less 20% tax",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposit and savings-note rates drift down towards 1.6% before the 20% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.021,
+      "status": "assumption",
+      "sourceName": "1-year deposit 2.43% and 1-year savings note 3.2% less 20% tax = 1.9-2.6%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of 1-year term deposits and Government savings notes after the 20% tax (the EUR 500 interest exemption makes small balances effectively tax-free)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.027,
+      "status": "assumption",
+      "sourceName": "3-year Government savings note 3.4% less 20% tax = 2.7%",
+      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in 2-3 year savings notes or deposits (1-2 year deposits paid 3.31%) after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Lithuania (insurance supervisor) publishes market statistics but no industry-wide life claim settlement ratio could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (rizikos gyvybės draudimas) is sold, but no regulator or other non-company published premium table per EUR 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care for people covered by compulsory health insurance (PSD) is paid by the National Health Insurance Fund; no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is mostly employer-paid group cover; no published premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.3143,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LT",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Lithuania CPI, health: +5.7% year on year in September 2026 (Trading Economics, from State Data Agency); HICP health +3.8% in Dec 2025 (ECB)",
+      "sourceUrl": "https://tradingeconomics.com/lithuania/inflation-cpi/news/590410",
+      "asOf": "2026-10-31",
+      "note": "Health prices have been rising about as fast as or faster than headline prices, so 5% (two points above the 3% planning inflation) is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Lithuania CPI, education: +3.8% year on year in September 2026 (5.2% in August) (Trading Economics, from State Data Agency)",
+      "sourceUrl": "https://tradingeconomics.com/lithuania/inflation-cpi/news/590410",
+      "asOf": "2026-10-31",
+      "note": "Education costs are assumed to rise about 1.5 points above the 3% planning inflation, in line with recent education price growth."
+    },
+    "life_expectancy": {
+      "value": 77.5,
+      "status": "sourced",
+      "sourceName": "Eurostat demo_mlexpec, life expectancy at birth, Lithuania",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "2024 figure (latest published; older than 2025): men 73.0, women 81.6. World Bank 2024 figure 77.2."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.9,
+            "men": 18.6,
+            "women": 24.5
+          },
+          {
+            "age": 65,
+            "total": 18.3,
+            "men": 15.4,
+            "women": 20.3
+          },
+          {
+            "age": 70,
+            "total": 14.9,
+            "men": 12.5,
+            "women": 16.4
+          },
+          {
+            "age": 80,
+            "total": 8.8,
+            "men": 7.6,
+            "women": 9.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat demo_mlexpec, life expectancy by age and sex, Lithuania",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "2024 period life table (latest published; older than 2025)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 2.99
+          },
+          {
+            "year": 2040,
+            "value": 2.16
+          },
+          {
+            "year": 2065,
+            "value": 1.47
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat EUROPOP2023 population projections, proj_23ndbi old-age dependency ratio (65+ to 15-64), baseline",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/proj_23ndbi/default/table?lang=en",
+      "asOf": "2026-01-01",
+      "note": "100 divided by the projected old-age dependency ratio: 33.4 in 2026, 46.3 in 2040, 67.8 in 2065. World Bank 2025 ratio 32.0 gives 3.1."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "TV3, pension guide (Sodra rules), updated 17 September 2026",
+      "sourceUrl": "https://www.tv3.lt/pensija",
+      "asOf": "2026-09-17",
+      "note": "Secondary source (Sodra pages could not be read): from 2026 men and women both reach old-age pension age at 65, the end of the phased rise; no further rise is legislated, so 65 applies to people born after 1975. A 15-year minimum record is needed and the full required record is 34.5 years in 2026 (35 from 2027)."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servants draw the general Sodra pension; the Civil Service Law sets an upper age limit for career civil servants (about 65), but the current consolidated text could not be read on e-seimas.lrs.lt."
+    },
+    "retirement_return_low": {
+      "value": 0.013,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.43% (ECB MFI), assuming rates fall, less 20% tax",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposit and savings-note rates drift lower."
+    },
+    "retirement_return_base": {
+      "value": 0.019,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.43% less 20% tax = 1.94%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "Government savings notes 1-3 years 3.2-3.4% less 20% tax = 2.6-2.7%",
+      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of Government savings notes and longer deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.9%; equity low 3.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 2.1%; equity base 6%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6% and half safe fixed income at about 2.1% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "After-tax 3-year savings note 2.7%; equity high 8%",
+      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 261,
+      "status": "sourced",
+      "sourceName": "TV3, pension guide: šalpos senatvės pensija (social assistance old-age pension) 2026",
+      "sourceUrl": "https://www.tv3.lt/pensija",
+      "asOf": "2026-09-17",
+      "note": "Secondary source (Sodra and ministry pages could not be read): EUR 261 a month in 2026, paid from the state budget to people of pension age who lack the 15-year minimum record and get no equal or larger social insurance pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "TV3, pension guide (Sodra rules), updated 17 September 2026",
+      "sourceUrl": "https://www.tv3.lt/pensija",
+      "asOf": "2026-09-17",
+      "note": "Paid from the old-age pension age (65 for men and women in 2026) to people without the minimum 15-year insurance record; it is not income-tested, but it is only paid when no equal or larger state social insurance pension is due (Law on Social Assistance Pensions, art. 7)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No per-year gratuity: under the Labour Code an employer pays severance of about two months' average wage on dismissal without the employee's fault (one year of service or more), with extra long-service benefits from the Long-term Employment Benefit Fund, which does not fit a days-per-year rule; the Labour Code text could not be read on e-seimas.lrs.lt."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "TV3, pension guide (Sodra rules), updated 17 September 2026",
+      "sourceUrl": "https://www.tv3.lt/pensija",
+      "asOf": "2026-09-17",
+      "note": "Sodra state social insurance old-age pension (general part plus individual part from points), payable from 65 with a 15-year minimum record; early pension up to 5 years sooner, cut 0.32% a month. Pensions are indexed each year in line with the growth of the wage bill rather than CPI. Tax treatment could not be confirmed from a readable official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Taupomoji sąskaita",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Terminuotasis indėlis",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Terminuotasis indėlis",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Kaupiamasis indėlis",
+      "localNameEn": "Regular savings deposit",
+      "note": "Monthly top-up savings deposits are offered by banks; no average rate is published."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Vyriausybės taupymo lakštai (gynybos obligacijos)",
+      "localNameEn": "Government savings notes (defence bonds)",
+      "note": "Sold to individuals every two weeks with 6-month, 1-, 2- and 3-year terms; no 5-year term.",
+      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Vyriausybės iždo vekseliai",
+      "localNameEn": "Treasury bills",
+      "note": "No regular 3-month bill for retail investors was found."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Vyriausybės obligacijos",
+      "localNameEn": "Government bonds",
+      "note": "Domestic government bonds trade on the Vilnius exchange; no 5-year yield found."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Vyriausybės obligacijos",
+      "localNameEn": "Government bonds",
+      "sourceUrl": "https://tradingeconomics.com/lithuania/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Investiciniai fondai",
+      "localNameEn": "Investment funds / index funds (ETF)",
+      "note": "Retail funds widely available; an investment account (investicinė sąskaita) defers tax on gains."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Investicinis auksas",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt under EU rules."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Lietuvos bankas (Bank of Lithuania)",
+      "url": "https://www.lb.lt/en/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Lietuvos bankas (Bank of Lithuania), financial market supervision",
+      "url": "https://www.lb.lt/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Bank of Lithuania, disputes between consumers and financial market participants",
+      "url": "https://www.lb.lt/en/disputes-between-consumers-and-financial-market-participants"
+    },
+    "pensionScheme": {
+      "name": "Sodra (State Social Insurance Fund Board), old-age pension",
+      "url": "https://www.sodra.lt/en"
+    },
+    "oldAgeAllowance": {
+      "name": "Šalpos senatvės pensija (social assistance old-age pension), paid through Sodra",
+      "url": "https://www.sodra.lt/en"
+    },
+    "publicHealthCover": {
+      "name": "Valstybinė ligonių kasa (National Health Insurance Fund), compulsory health insurance",
+      "url": "https://ligoniukasa.lrv.lt/en/"
+    },
+    "depositInsurance": {
+      "name": "Indėlių ir investicijų draudimas (Deposit and Investment Insurance)",
+      "url": "https://www.iidraudimas.lt/en/deposit-insurance/"
+    },
+    "statistics": {
+      "name": "Valstybės duomenų agentūra (State Data Agency)",
+      "url": "https://osp.stat.gov.lt/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "code": "IT",
+  "iso3": "ITA",
+  "nameEn": "Italy",
+  "nameNative": "Italia",
+  "region": "europe_central_asia",
+  "languages": [
+    "it",
+    "en",
+    "fr",
+    "sc",
+    "de"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.054,
+      "status": "sourced",
+      "sourceName": "ISTAT, Consumer prices (provisional data), October 2026",
+      "sourceUrl": "https://www.istat.it/comunicato-stampa/prezzi-al-consumo-dati-provvisori-ottobre-2026/",
+      "asOf": "2026-10-31",
+      "note": "NIC index +5.4% year on year in October 2026 (HICP +5.6%), up from 4.2% in September, driven by energy; World Bank 2025 average 1.5%."
+    },
+    "inflation_projection": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; ISTAT NIC 5.4% (Oct 2026) after 1.5% in 2025 (World Bank)",
+      "sourceUrl": "https://www.istat.it/comunicato-stampa/prezzi-al-consumo-dati-provvisori-ottobre-2026/",
+      "asOf": "2026-10-31",
+      "note": "Italy uses the euro, so the ECB 2% target anchors long-run inflation; 2.2% allows for the current energy shock fading slowly."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Italy uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026, unchanged on 31 October 2026 (ECB data portal FM.D.U2.EUR.4F.KR.DFR.LEV)."
+    },
+    "savings_account_rate": {
+      "value": 0.002,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Italian banks, household overnight deposits (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight deposits at Italian banks, 0.20% in August 2026; online deposit accounts pay more. Interest taxed at 26%."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB and Banca d'Italia MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.46% in August 2026); no separate 3-month term deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0246,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Italian banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms (conti deposito vincolati) up to one year; interest taxed at 26%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Italian banks do not offer a standard monthly recurring deposit; regular saving is done through fund accumulation plans (PAC) or by buying postal savings bonds periodically. No published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0268,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Italian banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits; overnight deposits, which hold most savings, pay about 0.2%. World Bank FR.INR.DPST has no recent figure for Italy."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0413,
+      "status": "sourced",
+      "sourceName": "MEF Dipartimento del Tesoro, BTP Valore October 2026 final coupons",
+      "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
+      "asOf": "2026-10-27",
+      "note": "Retail-only 5-year BTP Valore (27 Oct 2026 to 27 Oct 2031): coupons 3.75% in years 1-2, 4.20% in years 3-4, 4.75% in year 5, about 4.13% a year on average; the BTP Valore Insieme twin pays a single 22.70% coupon at maturity. Issued periodically, not on continuous sale."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0265,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Italy 3-month bill yield",
+      "sourceUrl": "https://tradingeconomics.com/italy/3-month-bill-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary-market yield on 3-month Treasury bills (BOT); the Treasury mainly auctions 6- and 12-month BOT."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0394,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Italy 5-year BTP yield",
+      "sourceUrl": "https://tradingeconomics.com/italy/5-year-note-yield",
+      "asOf": "2026-10-30",
+      "note": null
+    },
+    "tbond_10y_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Italy 10-year BTP yield",
+      "sourceUrl": "https://tradingeconomics.com/italy/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term (10-year) convergence yield for Italy was 4.36% in September 2026 (ECB IRS.M.IT.L.L40.CI.0000.EUR.N.Z)."
+    },
+    "tax_bank_interest": {
+      "value": 0.26,
+      "status": "sourced",
+      "sourceName": "Agenzia delle Entrate, Circolare 19/E of 27 June 2014 (taxation of financial income)",
+      "sourceUrl": "https://www.agenziaentrate.gov.it/portale/documents/20143/298850/Circolare+n19E+del+27+giugno+2014_Cir19e+del+27+06+14.pdf/429c76f6-6236-4071-79ae-65af4aadd134",
+      "asOf": "2014-07-01",
+      "note": "26% withholding on bank and postal deposit interest since 1 July 2014, still in force in 2026 (PwC Tax Summaries also gives 26% for most financial income); source document is older than 2025."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.125,
+      "status": "sourced",
+      "sourceName": "Agenzia delle Entrate, Circolare 19/E of 27 June 2014 (taxation of financial income)",
+      "sourceUrl": "https://www.agenziaentrate.gov.it/portale/documents/20143/298850/Circolare+n19E+del+27+giugno+2014_Cir19e+del+27+06+14.pdf/429c76f6-6236-4071-79ae-65af4aadd134",
+      "asOf": "2014-07-01",
+      "note": "Interest on Italian government securities (BTP, BOT, BTP Valore) and postal savings bonds stays taxed at 12.5%; source document is older than 2025 but the rate is unchanged in 2026."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Fondo Interbancario di Tutela dei Depositi (FITD), Garanzia dei depositanti",
+      "sourceUrl": "https://www.fitd.it/Cosa_Facciamo/Garanzia_dei_depositanti",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per bank, repaid within 7 working days; EU-wide limit."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.191875,
+      "status": "sourced",
+      "sourceName": "Banca d'Italia, usury thresholds valid 1 October to 31 December 2026",
+      "sourceUrl": "https://www.bancaditalia.it/media/comunicati/documenti/2026-02/cs-rilevazione-trim-antiusura-30.09.2026.pdf",
+      "asOf": "2026-10-01",
+      "note": "Legal usury ceiling for credit card financing (average rate 12.15%); revolving credit ceiling 24.50% (average 16.50%). Ceilings are reset every quarter."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "FTSE MIB 49,474 on 30 Oct 2026 (Trading Economics); BTP 5-year 3.94% before 12.5% tax",
+      "sourceUrl": "https://tradingeconomics.com/italy/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Italian shares, a bank- and energy-heavy market, earn about the after-tax government bond rate, as in 2000-2016."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "FTSE MIB (Trading Economics); BTP 5-year 3.94% before 12.5% tax = 3.45% after tax",
+      "sourceUrl": "https://tradingeconomics.com/italy/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The FTSE MIB roughly tripled from about 17,000 in late 2016, but the base is held to the after-tax safe rate of about 3.5% plus 3 points, as a diversified fund would earn."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "FTSE MIB (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/italy/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified equity fund matching the strong last decade of Italian and global shares, about 8-9% a year in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, down 3% on a year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "1-year deposits 2.46% less 26% tax = 1.8% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings stay in term deposits taxed at 26%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "1-year deposits 1.8% after tax; BTP Valore about 4.13% less 12.5% tax = 3.6%",
+      "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits and retail government bonds, which are taxed at only 12.5%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.036,
+      "status": "assumption",
+      "sourceName": "BTP Valore October 2026 about 4.13% a year less 12.5% tax = 3.6%",
+      "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in 5-year retail government bonds at today's coupons."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "IVASS publishes complaint and market statistics but no industry-wide life claim settlement ratio could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (assicurazione temporanea caso morte, TCM) is widely sold, but no published premium table per EUR 1,000 of cover by age from IVASS or another public body was found; comparison sites were not used."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is free at the point of use in the Servizio Sanitario Nazionale; no official figure for the typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health policies are sold per plan (reimbursement ceilings, age), not per sum insured, and no age-banded premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.2231,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=IT",
+      "asOf": "2024-12-31",
+      "note": null
+    },
+    "goal_inflation_health": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ISTAT CPI September 2026: health (Sanità) +1.3% a year",
+      "sourceUrl": "https://www.istat.it/wp-content/uploads/2026/10/Prezzi-al-consumo-def-Set2026-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices rise below headline inflation, but private visits and diagnostics outside the public system tend to rise faster, so 2.5% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ISTAT CPI September 2026: education services +1.4% a year",
+      "sourceUrl": "https://www.istat.it/wp-content/uploads/2026/10/Prezzi-al-consumo-def-Set2026-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "Public schooling and university fees are low and regulated, so education costs are assumed to rise slightly above the 2% ECB target."
+    },
+    "life_expectancy": {
+      "value": 83.7,
+      "status": "sourced",
+      "sourceName": "ISTAT, Indicatori demografici, anno 2025",
+      "sourceUrl": "https://www.istat.it/wp-content/uploads/2026/03/Report_Indicatori-demografici_Anno-2025.pdf",
+      "asOf": "2025-12-31",
+      "note": "Men 81.7, women 85.7 in 2025 (ISTAT estimate); total 83.7 from ISTAT's 2026 health indicators. UN WPP gives 84.2 for 2026 and the World Bank 84.0 for 2024."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 26.0,
+            "men": 24.3,
+            "women": 27.6
+          },
+          {
+            "age": 65,
+            "total": 21.7,
+            "men": 20.1,
+            "women": 23.1
+          },
+          {
+            "age": 70,
+            "total": 17.5,
+            "men": 16.1,
+            "women": 18.7
+          },
+          {
+            "age": 80,
+            "total": 9.9,
+            "men": 9.0,
+            "women": 10.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/italy",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP mid-year estimate for 2026); ISTAT gives 19.7 (men) and 22.6 (women) at 65 for 2024."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.52
+          },
+          {
+            "year": 2040,
+            "value": 1.62
+          },
+          {
+            "year": 2065,
+            "value": 1.47
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/italy/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 39.7 (2025, World Bank), 61.8 (2040) and 68.0 (2065, populationpyramid.net/italy/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 67.25,
+      "status": "sourced",
+      "sourceName": "INPS, pension requirements updated for 2027 and 2028",
+      "sourceUrl": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.03.pensioni-requisiti-aggiornati-per-il-2027-e-il-2028.html",
+      "asOf": "2026-03-31",
+      "note": "Old-age pension (pensione di vecchiaia) age is 67 in 2026, 67 and 1 month in 2027 and 67 and 3 months from 2028, the same for men and women, with 20 years of contributions; it is linked to life expectancy, so people born after 1975 (who reach 67 after 2042) are likely to face a later age."
+    },
+    "retirement_age_government": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "INPS, pension requirements updated for 2027 and 2028 (public and private employees)",
+      "sourceUrl": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.03.pensioni-requisiti-aggiornati-per-il-2027-e-il-2028.html",
+      "asOf": "2026-03-31",
+      "note": "Public employees reach the old-age pension at the same age (67 in 2026, rising by 1 month in 2027 and 3 months in 2028); press reports (not read in full here) say the Budget Law 2025 moved the public-sector compulsory retirement limit from 65 to this age."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "1-year deposits 2.46% less 26% tax = 1.8% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall back if the ECB cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "3-month BOT 2.65% less 12.5% tax = 2.3% (Trading Economics); 1-year deposits 1.8% after tax",
+      "sourceUrl": "https://tradingeconomics.com/italy/3-month-bill-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax Treasury bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.032,
+      "status": "assumption",
+      "sourceName": "BTP Valore about 4.13% a year less 12.5% tax = 3.6% (MEF)",
+      "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree ladders retail government bonds at today's coupons."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BTP 5-year 3.94% before tax (Trading Economics); equity low case 3.5%",
+      "sourceUrl": "https://tradingeconomics.com/italy/5-year-note-yield",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Fixed income base 2.8% after tax; equity base 6.5%",
+      "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6.5% and half safe fixed income at about 2.8% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BTP Valore 3.6% after tax; equity high 8.5%",
+      "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 591.76,
+      "status": "sourced",
+      "sourceName": "INPS, Assegno sociale 2026",
+      "sourceUrl": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-sociale-50184.assegno-sociale.html",
+      "asOf": "2026-01-01",
+      "note": "EUR 546.24 a month paid 13 times a year in 2026 (EUR 7,101.12 a year, shown here as 546.24 x 13 / 12); means-tested and reduced by the claimant's own income; requires 10 years' continuous legal residence."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "INPS, Assegno sociale",
+      "sourceUrl": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-sociale-50184.assegno-sociale.html",
+      "asOf": "2026-01-01",
+      "note": "From 67 for men and women in 2026 (67 and 1 month in 2027); income below EUR 7,101.12 a year for a single person (EUR 14,202.24 for a couple); effective residence in Italy and 10 years' legal residence."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 28.9,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "INPS, TFR example (domestic workers); Civil Code art. 2120",
+      "sourceUrl": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.50215.dimissioni-licenziamento-e-tfr-dei-lavoratori-domestici.html",
+      "asOf": "2026-10-31",
+      "note": "Trattamento di fine rapporto (TFR): each year the employer sets aside annual pay / 13.5, paid on any termination (retirement, resignation or dismissal); with the usual 13 monthly salaries that is 13/13.5 of a month, about 28.9 days a year. Past accruals are revalued yearly by 1.5% plus 75% of inflation rather than recalculated on the last wage, and may be paid into a pension fund instead."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "INPS, pension requirements updated for 2027 and 2028",
+      "sourceUrl": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.03.pensioni-requisiti-aggiornati-per-il-2027-e-il-2028.html",
+      "asOf": "2026-03-31",
+      "note": "Compulsory earnings-related pension (Assicurazione generale obbligatoria) run by INPS: employees contribute 33% of pay (about 9.19% employee share); the old-age pension needs 20 years of contributions and is paid from 67 (67 and 3 months from 2028); pensions are indexed yearly to prices (perequazione) and are taxable income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conto deposito libero",
+      "localNameEn": "Instant-access deposit account",
+      "note": "Current accounts pay almost nothing; free deposit accounts and postal savings books pay more. Interest taxed at 26%; a stamp duty of 0.2% a year applies to deposit accounts.",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Conto deposito vincolato (3 mesi)",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Conto deposito vincolato (12 mesi)",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit; savers use fund accumulation plans (piani di accumulo, PAC) instead."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "BTP Valore",
+      "localNameEn": "Retail Italian government bond",
+      "note": "Retail-only government bond issued a few times a year by the Treasury, with step-up coupons and interest taxed at 12.5%; State-guaranteed postal savings bonds (buoni fruttiferi postali) are a continuously sold alternative.",
+      "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Buoni Ordinari del Tesoro (BOT)",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned mainly at 6 and 12 months; individuals can bid through their bank; interest taxed at 12.5%.",
+      "sourceUrl": "https://tradingeconomics.com/italy/3-month-bill-yield"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Buoni del Tesoro Poliennali (BTP)",
+      "localNameEn": "Treasury bonds",
+      "sourceUrl": "https://tradingeconomics.com/italy/5-year-note-yield"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Buoni del Tesoro Poliennali (BTP)",
+      "localNameEn": "Treasury bonds",
+      "sourceUrl": "https://tradingeconomics.com/italy/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondi comuni ed ETF",
+      "localNameEn": "Mutual funds and ETFs",
+      "note": "Gains taxed at 26%; long-term individual savings plans (PIR) can be tax-exempt after 5 years."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro da investimento",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "Legal to buy and exempt from VAT; gains taxed at 26%."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banca d'Italia",
+      "url": "https://www.bancaditalia.it/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "IVASS (Istituto per la Vigilanza sulle Assicurazioni)",
+      "url": "https://www.ivass.it/"
+    },
+    "insuranceComplaints": {
+      "name": "IVASS complaints; Arbitro Assicurativo",
+      "url": "https://www.ivass.it/consumatori/reclami/index.html",
+      "note": "Complain to the insurer first; after 45 days or an unsatisfactory reply, go to IVASS or the Arbitro Assicurativo (operating since 15 January 2026, www.arbitroassicurativo.org)."
+    },
+    "pensionScheme": {
+      "name": "INPS (Istituto Nazionale della Previdenza Sociale)",
+      "url": "https://www.inps.it/"
+    },
+    "oldAgeAllowance": {
+      "name": "Assegno sociale (INPS)",
+      "url": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-sociale-50184.assegno-sociale.html"
+    },
+    "publicHealthCover": {
+      "name": "Servizio Sanitario Nazionale (Ministero della Salute)",
+      "url": "https://www.salute.gov.it/",
+      "note": "Universal public health service; small co-payments (ticket) for some visits, tests and medicines."
+    },
+    "depositInsurance": {
+      "name": "Fondo Interbancario di Tutela dei Depositi (FITD)",
+      "url": "https://www.fitd.it/Cosa_Facciamo/Garanzia_dei_depositanti",
+      "note": "Cooperative banks are covered by the Fondo di Garanzia dei Depositanti del Credito Cooperativo, with the same EUR 100,000 limit."
+    },
+    "statistics": {
+      "name": "ISTAT (Istituto Nazionale di Statistica)",
+      "url": "https://www.istat.it/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

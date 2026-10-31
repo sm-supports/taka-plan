@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "SK",
+  "iso3": "SVK",
+  "nameEn": "Slovakia",
+  "nameNative": "Slovensko",
+  "region": "europe_central_asia",
+  "languages": [
+    "sk",
+    "cs",
+    "en",
+    "de",
+    "hu"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.031,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Statistical Office of the Slovak Republic CPI, September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/slovakia/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI 3.1% year on year in September 2026, unchanged from August (released 15 October 2026); secondary source because slovak.statistics.sk blocked automated reading. World Bank 2025 average 4.0%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Slovak HICP 2021-2025 average 6.6% (ECB ICP); CPI 3.1% in September 2026",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.SK.N.000000.4.AVR",
+      "asOf": "2026-10-31",
+      "note": "Slovakia shares the ECB's 2% target but its inflation has run well above the euro area (4.2% in 2025, 3.1% in September 2026), so 3% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Slovakia uses the euro; ECB deposit facility rate raised from 2.25% to 2.50% with effect from 16 September 2026 (main refinancing rate 2.65%)."
+    },
+    "savings_account_rate": {
+      "value": 0.0007,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovak banks, household overnight deposits (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 0.07% on household overnight deposits (current and most savings accounts) in August 2026."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/NBS MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.18% in August 2026); no separate 3-month rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0218,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovak banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.91% and over 2 years 2.87% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Slovakia's regular-saving product is building savings (stavebné sporenie) with a state premium; no official average rate for it was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0187,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovak banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits in August 2026; overnight deposits pay 0.07%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Debt and Liquidity Management Agency (ARDAL): issue summary of state bond 259 PATRIOT II (bonds for citizens)",
+      "sourceUrl": "https://dlhopisypreludi.ardal.sk/fileadmin/2026/SD_259_Prehlad.pdf",
+      "asOf": "2026-03-27",
+      "note": "Fixed 3.000% a year for 4 years (27 March 2026 to 27 March 2030), sold only to individuals 2-20 March 2026 in EUR 1,000 units; the 2-year INVESTOR II paid 2.70%. Issues are occasional and none is on sale now."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Slovakia issues state treasury bills (ŠPP) only occasionally and to primary dealers; no recent 3-month yield was found on ARDAL's pages."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0326,
+      "status": "sourced",
+      "sourceName": "ARDAL, auction results for state bond ŠD 251 H (maturing 6 November 2031)",
+      "sourceUrl": "https://www.ardal.sk/_img/Documents/Vysledky_aukcie/VA_SD_251_20260518.pdf",
+      "asOf": "2026-05-18",
+      "note": "Average accepted yield 3.2634% on 18 May 2026, the latest auction of a bond with about 5 years to run; it predates the ECB hikes of June and September 2026, and a 2029 bond yielded 3.59% on 19 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0436,
+      "status": "sourced",
+      "sourceName": "ARDAL, auction results for state bond ŠD 260 A (maturing 30 September 2036)",
+      "sourceUrl": "https://www.ardal.sk/_img/Documents/Vysledky_aukcie/VA_SD_260_20261019.pdf",
+      "asOf": "2026-10-19",
+      "note": "Average accepted yield 4.3603% on 19 October 2026; Trading Economics showed 4.33% on 30 October 2026 and the ECB convergence yield was 4.16% for September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.19,
+      "status": "sourced",
+      "sourceName": "ARDAL, Dlhopisy pre ľudí: yields and risks (model comparison of term deposit and state bond)",
+      "sourceUrl": "https://dlhopisypreludi.ardal.sk/vynosy-a-rizika",
+      "asOf": "2026-10-31",
+      "note": "The agency's model example taxes EUR 30 of deposit interest at EUR 5.70, i.e. the 19% withholding tax on bank interest for individuals; the page does not state the rate itself."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "ARDAL, Dlhopisy pre ľudí: yields and risks",
+      "sourceUrl": "https://dlhopisypreludi.ardal.sk/vynosy-a-rizika",
+      "asOf": "2026-10-31",
+      "note": "Interest on the state bonds for citizens is shown as exempt from tax (oslobodené od dane), against taxed interest on term deposits."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Fond ochrany vkladov (Deposit Protection Fund), frequently asked questions",
+      "sourceUrl": "https://fovsr.sk/caste-otazky/",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per bank; some deposits (inheritance, severance pay, sale of a home and similar) are protected in full for one year."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1895,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovak banks, extended credit card credit to households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.A2Z3.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 18.95% on extended credit card credit in August 2026; this is the typical rate, not a legal cap."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "SAX index 320 on 29 Oct 2026, still about 38% below its 2005 high of 513 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/slovakia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: shares barely beat tax-free state bonds, as the small Slovak market has done for twenty years."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "SAX index (Trading Economics); retail state bond 3.0% tax-free; 1-year deposit 2.18% less 19% tax",
+      "sourceUrl": "https://tradingeconomics.com/slovakia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The SAX has a weak long-run record and few listed firms, so the base case assumes a diversified global equity fund in euros earning about 3 points over the after-tax safe rate of roughly 2.5% (2-year state bond 3.34% less 19% tax)."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "SAX index (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/slovakia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a global equity fund repeating its long-run record in euro terms."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps its value after the 2025-26 spike while the euro holds steady against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises a little faster than world inflation and the euro is assumed stable against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.18% less 19% tax = 1.8% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after tax if ECB rates fall back."
+    },
+    "fixed_income_return_base": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "1-year deposits 1.8% after tax; retail state bonds 2.7-3.0% tax-free (ARDAL)",
+      "sourceUrl": "https://dlhopisypreludi.ardal.sk/fileadmin/2026/SD_259_Prehlad.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits and the occasional tax-free retail state bond."
+    },
+    "fixed_income_return_high": {
+      "value": 0.032,
+      "status": "assumption",
+      "sourceName": "10-year state bond 4.36% less 19% tax = 3.5% (ARDAL auction 19 Oct 2026)",
+      "sourceUrl": "https://www.ardal.sk/_img/Documents/Vysledky_aukcie/VA_SD_260_20261019.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: holding longer state bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NBS publishes insurance market totals but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (rizikové životné poistenie) is sold, but no regulator or official premium table per EUR 1,000 of cover was found; insurer quotes cannot be used."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by compulsory public health insurance; no official figure for a typical out-of-pocket private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is a small supplementary market not priced per sum insured; no premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.2015,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SK",
+      "asOf": "2023-12-31",
+      "note": "2023 is the latest year published (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Slovakia, health: 2.6% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.SK.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose a little below headline inflation in 2025; 3.5%, slightly above the planning inflation rate, is used for long-run medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Slovakia, education: 8.8% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.SK.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is free but paid education (private schools, courses) has risen fast; 4.5% is used for planning rather than the 2025 spike."
+    },
+    "life_expectancy": {
+      "value": 78.8,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/slovakia",
+      "asOf": "2026-07-01",
+      "note": "Men 75.6, women 82.0 (UN WPP estimate for 2026); World Bank 2024 figure 78.4."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.2,
+            "men": 19.9,
+            "women": 24.2
+          },
+          {
+            "age": 65,
+            "total": 18.4,
+            "men": 16.4,
+            "women": 20.0
+          },
+          {
+            "age": 70,
+            "total": 14.7,
+            "men": 13.1,
+            "women": 15.9
+          },
+          {
+            "age": 80,
+            "total": 8.4,
+            "men": 7.6,
+            "women": 8.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/slovakia",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.44
+          },
+          {
+            "year": 2040,
+            "value": 2.52
+          },
+          {
+            "year": 2065,
+            "value": 1.63
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/slovakia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 29.1 (2025, World Bank), 39.7 (2040) and 61.2 (2065, populationpyramid.net/slovakia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 64.17,
+      "status": "sourced",
+      "sourceName": "Sociálna poisťovňa (Social Insurance Agency), retirement age",
+      "sourceUrl": "https://www.socpoist.sk/socialne-poistenie/dochodkove-poistenie/vseobecne-informacie/dochodkovy-vek",
+      "asOf": "2026-07-01",
+      "note": "64 years 2 months for men and childless women born in 1968, the latest cohort set (women with children retire up to 18 months earlier). For people born after 1966 the age rises with life expectancy and is fixed six years ahead, so the age for those born after 1975 is not yet set and will be higher."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servants are in the general Social Insurance Agency pension scheme; no source read stated a separate mandatory retirement age for government employees."
+    },
+    "retirement_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.18% less 19% tax = 1.8% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposits after tax if ECB rates fall."
+    },
+    "retirement_return_base": {
+      "value": 0.017,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.18% less 19% tax = 1.8% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just below the after-tax 1-year deposit rate, since tax-free retail state bonds are sold only occasionally."
+    },
+    "retirement_return_high": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "Retail state bonds 2.7-3.0% tax-free (ARDAL); 10-year state bond 3.5% after tax",
+      "sourceUrl": "https://dlhopisypreludi.ardal.sk/fileadmin/2026/SD_259_Prehlad.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of retail and longer state bonds held to maturity."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "1-year deposit 1.8% after tax; SAX record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/slovakia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Fixed income base 2.2%; equity base 5.5%",
+      "sourceUrl": "https://dlhopisypreludi.ardal.sk/fileadmin/2026/SD_259_Prehlad.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 2.2% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "10-year state bond 3.5% after tax; equity high 8%",
+      "sourceUrl": "https://www.ardal.sk/_img/Documents/Vysledky_aukcie/VA_SD_260_20261019.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The European Commission guide Your social security rights in Slovakia (July 2026) lists only contributory old-age pensions (the minimum pension needs 30 insurance years); there is no non-contributory social pension, and low-income older people rely on means-tested assistance in material need.",
+      "absent": true
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension exists in Slovakia (European Commission guide, July 2026), so there are no eligibility ages.",
+      "absent": true
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provides a retirement allowance (odchodné) on first retirement and redundancy severance (odstupné), both set in months of average earnings rather than days per year of service; the Labour Code text itself was not read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 64,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Sociálna poisťovňa (Social Insurance Agency): retirement age; pension valorisation from 1 January 2027",
+      "sourceUrl": "https://www.socpoist.sk/socialne-poistenie/dochodkove-poistenie/vseobecne-informacie/dochodkovy-vek",
+      "asOf": "2026-10-28",
+      "note": "Compulsory pay-as-you-go pension insurance (1st pillar) plus the funded old-age saving pillar; 15 insurance years needed. Pension age about 64 and rising with life expectancy. Pensions rise every January by pensioner-household inflation (3.4% from 1 January 2027, per the agency's 28 October 2026 notice)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Sporiaci účet",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Termínovaný vklad",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Termínovaný vklad",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Stavebné sporenie",
+      "localNameEn": "Building savings",
+      "note": "Regular saving with building societies, with a yearly state premium; there is no generic monthly recurring deposit."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Dlhopisy pre ľudí (štátne dlhopisy pre občanov)",
+      "localNameEn": "State bonds for citizens",
+      "note": "Sold by the Debt and Liquidity Management Agency to individuals only, in occasional issues (March 2025, March 2026) of 2- and 4-year fixed-rate bonds; interest tax-free; can be sold early on the stock exchange.",
+      "sourceUrl": "https://dlhopisypreludi.ardal.sk/fileadmin/2026/SD_259_Prehlad.pdf"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Štátne pokladničné poukážky",
+      "localNameEn": "State treasury bills",
+      "note": "Issued only occasionally to primary dealers; not offered to individuals."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Štátne dlhopisy",
+      "localNameEn": "Slovak government bonds",
+      "sourceUrl": "https://www.ardal.sk/sk/statne-cenne-papiere/statne-dlhopisy/vysledky-aukcii-sd"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Štátne dlhopisy",
+      "localNameEn": "Slovak government bonds",
+      "sourceUrl": "https://www.ardal.sk/_img/Documents/Vysledky_aukcie/VA_SD_260_20261019.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Podielový fond",
+      "localNameEn": "Mutual fund / index fund (ETF)"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Investičné zlato",
+      "localNameEn": "Investment gold bars and coins",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt in the EU."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Národná banka Slovenska (National Bank of Slovakia)",
+      "url": "https://nbs.sk/en/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Národná banka Slovenska, financial market supervision",
+      "url": "https://nbs.sk/en/financial-market-supervision1/",
+      "note": "The NBS supervises insurers as well as banks."
+    },
+    "insuranceComplaints": {
+      "name": "Národná banka Slovenska, financial consumer protection",
+      "url": "https://nbs.sk/en/financial-market-supervision1/fcp/how-to-proceed-if-you-are-dissatisfied-with-the-conduct-of-a-financial-institution/",
+      "note": "Complain to the insurer first, then to the NBS."
+    },
+    "pensionScheme": {
+      "name": "Sociálna poisťovňa (Social Insurance Agency)",
+      "url": "https://www.socpoist.sk/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Úrad pre dohľad nad zdravotnou starostlivosťou (Health Care Surveillance Authority)",
+      "url": "https://www.udzs-sk.sk/",
+      "note": "Supervises the compulsory public health insurance that covers all residents."
+    },
+    "depositInsurance": {
+      "name": "Fond ochrany vkladov (Deposit Protection Fund)",
+      "url": "https://www.fovsr.sk/"
+    },
+    "statistics": {
+      "name": "Štatistický úrad Slovenskej republiky (Statistical Office of the Slovak Republic)",
+      "url": "https://slovak.statistics.sk/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

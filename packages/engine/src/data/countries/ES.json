@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 1,
+  "code": "ES",
+  "iso3": "ESP",
+  "nameEn": "Spain",
+  "nameNative": "España",
+  "region": "europe_central_asia",
+  "languages": [
+    "es",
+    "en",
+    "ca",
+    "gl",
+    "eu"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.049,
+      "status": "sourced",
+      "sourceName": "Instituto Nacional de Estadística (INE), Consumer Price Index September 2026",
+      "sourceUrl": "https://www.ine.es/dyngs/Prensa/es/IPC0926.htm",
+      "asOf": "2026-09-30",
+      "note": "CPI 4.9% year on year in September 2026 (HICP 5.0%), released 14 October 2026; INE's flash estimate for October 2026 is also 4.9% (Trading Economics). World Bank 2025 average 2.7%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Spanish HICP 2021-2025 average 4.1% (ECB ICP); CPI 4.9% in September 2026",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.ES.N.000000.4.AVR",
+      "asOf": "2026-10-31",
+      "note": "Spain shares the ECB's 2% target; with inflation now well above it and a 4.1% five-year average, 2.5% is used for long-run planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Spain uses the euro; ECB deposit facility rate raised from 2.25% to 2.50% with effect from 16 September 2026 (main refinancing rate 2.65%)."
+    },
+    "savings_account_rate": {
+      "value": 0.0016,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Spanish banks, household overnight deposits (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 0.16% on household overnight deposits (current and most savings accounts) in August 2026."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/Banco de España MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.01% in August 2026); no separate 3-month rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0201,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Spanish banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; deposits of 1-2 years paid 2.15% and over 2 years 1.67% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Spanish banks have no standard monthly recurring deposit; long-term savings accounts (CIALP) accept regular payments, but no official average rate for them was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0163,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Spanish banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits in August 2026; overnight deposits pay 0.16%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Spain has no savings bond reserved for individuals; individuals buy the ordinary Letras, Bonos and Obligaciones directly from the Treasury (Tesoro Público), recorded under the bill and bond rows."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0264,
+      "status": "sourced",
+      "sourceName": "Tesoro Público, latest auction results: Letras del Tesoro",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/letras-del-tesoro",
+      "asOf": "2026-10-13",
+      "note": "3-month Letras auctioned on 13 October 2026 at an average 2.635% (marginal 2.645%); 12-month Letras 2.999% on 6 October 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0348,
+      "status": "sourced",
+      "sourceName": "Tesoro Público, latest auction results: Bonos del Estado",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/bonos-del-estado",
+      "asOf": "2026-10-15",
+      "note": "5-year bond (coupon 2.60%, maturing 31 May 2031) auctioned on 15 October 2026 at an average 3.482%; Trading Economics showed 3.45% on 30 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0418,
+      "status": "sourced",
+      "sourceName": "Tesoro Público, latest auction results: Obligaciones del Estado",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/obligaciones-del-estado",
+      "asOf": "2026-10-01",
+      "note": "10-year bond (coupon 3.40%, maturing 31 October 2036) auctioned on 1 October 2026 at an average 4.176%; the market yield had eased to 3.95% by 30 October 2026 (Trading Economics)."
+    },
+    "tax_bank_interest": {
+      "value": 0.19,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Spain taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/spain/individual/taxes-on-personal-income",
+      "asOf": "2026-06-30",
+      "note": "Interest is savings income taxed at 19% on the first EUR 6,000, 21% to EUR 50,000, 23% to EUR 200,000, 27% to EUR 300,000 and 30% above; banks withhold 19% on deposit interest (withholding not stated on the page read)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail-only government savings bond exists; returns on Letras del Tesoro are savings income taxed at 19-28% with no withholding, per Tesoro Público (tesoro.es, Tributación de las Letras del Tesoro)."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Fondo de Garantía de Depósitos de Entidades de Crédito (FGD)",
+      "sourceUrl": "https://www.fgd.es/",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per institution; some deposits linked to property sales and life events are covered in full for a limited time."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1826,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Spanish banks, extended credit card credit to households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.A2Z3.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 18.26% on extended credit card credit in August 2026; Spain has no fixed legal cap (courts apply the usury law case by case)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "IBEX 35 18,653 on 30 Oct 2026, up 16% in a year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/spain/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Spanish shares only slightly beat after-tax Treasury bills over a long spell."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "IBEX 35 (Trading Economics); 12-month Letras 3.0% less 19% tax = 2.4%",
+      "sourceUrl": "https://tradingeconomics.com/spain/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5 points over the after-tax safe rate, within the 4-point limit, for a diversified equity fund in euros."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "IBEX 35 (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/spain/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified equity fund repeating long-run global equity returns in euro terms."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps its value after the 2025-26 spike while the euro holds steady against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises a little faster than world inflation and the euro is assumed stable against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.016,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.01% less 19% tax = 1.6% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank term deposits after tax if ECB rates fall."
+    },
+    "fixed_income_return_base": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "3-month Letras 2.635% and 12-month Letras 3.0% less 19% tax = 2.1-2.4% (Tesoro Público)",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/letras-del-tesoro",
+      "asOf": "2026-10-31",
+      "note": "Base case: rolling Treasury bills and term deposits after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "10-year Obligaciones 4.18% less 19% tax = 3.4% (Tesoro Público)",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/obligaciones-del-estado",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long government bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The DGSFP publishes insurance market statistics but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (seguro de vida riesgo) is widely sold, but no regulator or official premium table per EUR 1,000 of cover was found; insurer quotes cannot be used."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is free under the National Health System; no official figure for a typical out-of-pocket private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance in Spain is sold at flat premiums per person, not per sum insured; no premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.2086,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ES",
+      "asOf": "2023-12-31",
+      "note": "2023 is the latest year published (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Spain, health: 2.2% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.ES.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices have risen close to headline inflation; 3% (a little above the planning rate) is used for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Spain, education: 2.6% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.ES.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Public education is free; paid education rose 2.6% in 2025, so 3% is used for planning."
+    },
+    "life_expectancy": {
+      "value": 84.1,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/spain",
+      "asOf": "2026-07-01",
+      "note": "Men 81.4, women 86.7 (UN WPP estimate for 2026); World Bank 2024 figure 83.9."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 26.1,
+            "men": 23.9,
+            "women": 28.2
+          },
+          {
+            "age": 65,
+            "total": 21.9,
+            "men": 19.8,
+            "women": 23.7
+          },
+          {
+            "age": 70,
+            "total": 17.7,
+            "men": 16.0,
+            "women": 19.2
+          },
+          {
+            "age": 80,
+            "total": 10.2,
+            "men": 9.1,
+            "women": 11.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/spain",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.04
+          },
+          {
+            "year": 2040,
+            "value": 1.86
+          },
+          {
+            "year": 2065,
+            "value": 1.51
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/spain/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 32.9 (2025, World Bank), 53.9 (2040) and 66.4 (2065, populationpyramid.net/spain/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Seguridad Social, ordinary retirement age",
+      "sourceUrl": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+      "asOf": "2026-10-31",
+      "note": "From 2027 the ordinary age is 67, or 65 with at least 38 years 6 months of contributions (in 2026: 66 years 10 months, or 65 with 38 years 3 months). Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Estatuto Básico del Empleado Público, article 67 (BOE consolidated text)",
+      "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11719",
+      "asOf": "2026-10-03",
+      "note": "Civil servants are compulsorily retired at 65 and may ask to stay until 70; civil servants in the general Social Security scheme (most hired since 2011) retire at that scheme's ordinary age instead (art. 67.4)."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.01% less 19% tax = 1.6% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposits after tax if ECB rates fall."
+    },
+    "retirement_return_base": {
+      "value": 0.021,
+      "status": "assumption",
+      "sourceName": "3-month Letras 2.635% less 19% tax = 2.1% (Tesoro Público)",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/letras-del-tesoro",
+      "asOf": "2026-10-31",
+      "note": "Base case set at the after-tax 3-month Treasury bill rate, below the 12-month bill's 2.4% after tax."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "10-year Obligaciones 4.18% less 19% tax = 3.4% (Tesoro Público)",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/obligaciones-del-estado",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of government bonds held to maturity, below the current after-tax 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Letras 2.1-2.4% after tax; IBEX 35 record (Trading Economics)",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/letras-del-tesoro",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Fixed income base 2.2%; equity base 6%",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/letras-del-tesoro",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6% and half safe fixed income at about 2.2% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "10-year bond 3.4% after tax; equity high 8%",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/obligaciones-del-estado",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 733.6,
+      "status": "sourced",
+      "sourceName": "Seguridad Social, pension revaluation 2026 (non-contributory pensions)",
+      "sourceUrl": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30431",
+      "asOf": "2026-01-01",
+      "note": "Non-contributory retirement pension (PNC) of EUR 8,803.20 a year in 2026, paid as 14 payments of EUR 628.80 (European Commission guide, July 2026); the value shown is the yearly amount divided by 12. Means-tested."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Spain (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/c4767d73-7286-41ad-bc5a-557aedfff7e1_en",
+      "asOf": "2026-07-31",
+      "note": "Age 65 or over, living in Spain for 10 years after age 16 including the 2 years before applying, and yearly income below EUR 8,803.20 (household income counted when living with family). Managed by the Autonomous Communities."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 20,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Estatuto de los Trabajadores, article 53.1.b (BOE consolidated text)",
+      "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430",
+      "asOf": "2026-10-21",
+      "note": "Severance on dismissal for objective reasons: 20 days' salary per year of service, capped at 12 months' pay; unfair dismissal pays 33 days per year capped at 24 months (art. 56). There is no statutory payment on normal retirement."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Seguridad Social, ordinary retirement age; pension revaluation 2026",
+      "sourceUrl": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10963/28393/28396/28472",
+      "asOf": "2026-10-31",
+      "note": "Compulsory Social Security pension (Régimen General), minimum 15 years of contributions. Ordinary age 67 from 2027 (65 with 38 years 6 months of contributions). Contributory pensions were raised 2.7% for 2026 (Seguridad Social revaluation page)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Cuenta individual de ahorro a largo plazo (CIALP)",
+      "localNameEn": "Long-term savings account",
+      "note": "No standard monthly recurring deposit; long-term savings accounts accept regular contributions."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond for individuals",
+      "note": "No retail-only savings bond; individuals can buy ordinary Letras, Bonos and Obligaciones directly from the Treasury (Tesoro Público)."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letras del Tesoro",
+      "localNameEn": "Treasury bills",
+      "note": "Sold at regular auctions; individuals can bid directly through the Treasury or through a bank.",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/letras-del-tesoro"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos del Estado",
+      "localNameEn": "Government bonds (2-5 years)",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/bonos-del-estado"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligaciones del Estado",
+      "localNameEn": "Government bonds (over 5 years)",
+      "sourceUrl": "https://www.tesoro.es/deuda-publica/subastas/resultado-ultimas-subastas/obligaciones-del-estado"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondo de inversión",
+      "localNameEn": "Mutual fund / index fund (ETF)"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro de inversión",
+      "localNameEn": "Investment gold bars and coins",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt in the EU."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco de España",
+      "url": "https://www.bde.es/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Dirección General de Seguros y Fondos de Pensiones (DGSFP)",
+      "url": "https://dgsfp.mineco.gob.es/"
+    },
+    "insuranceComplaints": {
+      "name": "DGSFP, Servicio de Reclamaciones",
+      "url": "https://dgsfp.mineco.gob.es/es/Consumidor/Reclamaciones/Paginas/InformacionProcedimiento.aspx",
+      "note": "Complain to the insurer's customer service or ombudsman first, then to the DGSFP."
+    },
+    "pensionScheme": {
+      "name": "Seguridad Social (Instituto Nacional de la Seguridad Social)",
+      "url": "https://www.seg-social.es/"
+    },
+    "oldAgeAllowance": {
+      "name": "Pensión no contributiva de jubilación (Seguridad Social, revaluation 2026)",
+      "url": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/Revalorizacion/30431",
+      "note": "Managed and paid by the Autonomous Communities; means-tested."
+    },
+    "publicHealthCover": {
+      "name": "Sistema Nacional de Salud (Ministerio de Sanidad)",
+      "url": "https://www.sanidad.gob.es/",
+      "note": "Universal public health system run by the Autonomous Communities."
+    },
+    "depositInsurance": {
+      "name": "Fondo de Garantía de Depósitos de Entidades de Crédito (FGD)",
+      "url": "https://www.fgd.es/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística (INE)",
+      "url": "https://www.ine.es/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

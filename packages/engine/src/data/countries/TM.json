@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 1,
+  "code": "TM",
+  "iso3": "TKM",
+  "nameEn": "Turkmenistan",
+  "nameNative": "Türkmenistan",
+  "region": "europe_central_asia",
+  "languages": [
+    "tk",
+    "ru",
+    "uz"
+  ],
+  "currency": {
+    "code": "TMT",
+    "symbol": "TMT",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3.5,
+      "status": "sourced",
+      "sourceName": "Central Bank of Turkmenistan, official exchange rates",
+      "sourceUrl": "https://www.cbt.tm/kurs/kurs_today_en.html",
+      "asOf": "2026-10-31",
+      "note": "Official rate fixed at TMT 3.50 per US dollar (the list valid from 2 November 2026 is unchanged). Access to foreign currency at this rate is restricted and an unofficial market rate several times higher is widely reported, so dollar conversions are only indicative. The World Bank has no recent figure (its PA.NUS.FCRF series ends in 2001)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.027,
+      "status": "sourced",
+      "sourceName": "IMF World Economic Outlook, inflation (average consumer prices), Turkmenistan",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2025-12-31",
+      "note": "IMF estimate for 2025 (projection 5.6% for 2026); Turkmenistan does not publish a regular CPI. SESRIC, via Trading Economics, gives 8.0% for 2025, so the figure is uncertain. Latest year 2025."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "IMF WEO projections for Turkmenistan (4.1-4.6% in 2027-2030); 2021-2025 average about 7%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "There is no published inflation target; 5% sits between the IMF's medium-term projections and the higher 2021-2025 record, allowing for poor price data."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Turkmenistan website shows no current refinancing or policy rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official or industry-wide deposit rate statistics were found; the central bank only lists the banks that take deposits."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official term deposit rate statistics were found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official term deposit rate statistics were found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official information on recurring deposit products was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No weighted average deposit rate is published; the World Bank has no FR.INR.DPST figure for Turkmenistan."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regular treasury bill market or published yields were found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published government bond yields were found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published government bond yields were found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax treatment of individuals' deposit interest could not be confirmed (PwC Tax Summaries does not cover Turkmenistan and the Tax Code text was not read)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, so no tax rate applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or published cover limit was found; most deposit-taking banks are state-owned."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical rate for card credit was found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No functioning local stock market; global equities in manat (fixed at TMT 3.50 per USD, Central Bank of Turkmenistan)",
+      "sourceUrl": "https://www.cbt.tm/kurs/kurs_today_en.html",
+      "asOf": "2026-10-31",
+      "note": "Equity returns are based on a global index in manat terms because there is no liquid local market; low case is a weak decade for global shares at a fixed exchange rate."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Global equities about 6.5% a year in dollars; manat fixed to the dollar (Central Bank of Turkmenistan)",
+      "sourceUrl": "https://www.cbt.tm/kurs/kurs_today_en.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: a global index earning about 6.5% a year in dollars with the official peg held, about 1.5 points above the assumed safe rate; buying foreign funds is in practice very hard for residents."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Global equity record; risk of a manat devaluation from the fixed official rate",
+      "sourceUrl": "https://www.cbt.tm/kurs/kurs_today_en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global shares, or a devaluation that raises the manat value of foreign assets."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, down 3% on a year (Trading Economics); manat fixed to the dollar",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with the peg held."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); manat fixed at TMT 3.50 per USD",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4-5% a year, in line with its long-run trend, with no change in the official rate."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); devaluation risk of the fixed official rate",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold plus a devaluation of the official manat rate toward the unofficial market rate."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "IMF WEO inflation projections for Turkmenistan (4.1-4.6% in 2027-2030)",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits pay below inflation, as is common under administered interest rates."
+    },
+    "fixed_income_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "IMF WEO inflation projections for Turkmenistan; inflation projection 5%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "No deposit rate statistics are published, so the base case assumes manat deposits roughly keep pace with the 5% inflation assumption."
+    },
+    "fixed_income_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "IMF WEO inflation projections for Turkmenistan; inflation projection 5%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "High case: deposits earn about 2 points above inflation."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No insurance market statistics or claim settlement ratio were found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance market is small and dominated by the state; no term life premium information from a public source was found, and whether pure term cover is sold was not confirmed."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for the cost of a major hospital stay was found; out-of-pocket payments are about 77% of health spending (World Bank)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A voluntary state health insurance scheme exists, but no premium table by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.7739,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TM",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025); one of the highest out-of-pocket shares in the world."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "IMF WEO inflation projections; World Bank out-of-pocket share 77%",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TM",
+      "asOf": "2026-10-31",
+      "note": "No health price index is published; medical costs, largely paid out of pocket and often imported, are assumed to rise 1 point faster than the 5% general inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "IMF WEO inflation projections for Turkmenistan",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "No education price index is published; tuition and study costs (often abroad) are assumed to rise 1 point faster than general inflation."
+    },
+    "life_expectancy": {
+      "value": 70.2,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TM",
+      "asOf": "2024-12-31",
+      "note": "2024 (older than 2025): men 67.0, women 73.0. UN WPP gives 70.5 for 2026 (georank.org)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.7,
+            "men": 15.9,
+            "women": 19.0
+          },
+          {
+            "age": 65,
+            "total": 14.2,
+            "men": 12.6,
+            "women": 15.1
+          },
+          {
+            "age": 70,
+            "total": 11.0,
+            "men": 9.8,
+            "women": 11.6
+          },
+          {
+            "age": 80,
+            "total": 6.1,
+            "men": 5.5,
+            "women": 6.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/turkmenistan",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP estimate for 2026)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.31
+          },
+          {
+            "year": 2040,
+            "value": 7.58
+          },
+          {
+            "year": 2065,
+            "value": 4.12
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/turkmenistan/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 7.52 (2025, World Bank), 13.2 (2040) and 24.3 (2065, populationpyramid.net/turkmenistan/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection of Population of Turkmenistan, frequently asked questions",
+      "sourceUrl": "https://mlsp.gov.tm/faq",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension from 62 for men and 57 for women with at least 5 years of compulsory pension insurance; mothers of three or more children can retire earlier (56 with 20 years of insurance for three children). No scheduled increase was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The ministry FAQ gives only the general pension age (men 62, women 57); a separate retirement or service age limit for civil servants was not found."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "IMF WEO inflation projections for Turkmenistan",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "Low case: a retiree's manat deposits earn below inflation."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "IMF WEO inflation projections; fixed income base 5%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "Base case slightly below the assumed safe deposit return, since no deposit or bill rate is published to check against."
+    },
+    "retirement_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Fixed income high 7%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "High case: deposits keep earning a little above inflation."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Fixed income low 3%; equity low 3%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if both deposits and shares lag inflation."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Fixed income base 5%; equity base 6.5%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly manat deposits with some global shares, since local investment options are very limited."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Fixed income high 7%; equity high 10%",
+      "sourceUrl": "https://www.cbt.tm/kurs/kurs_today_en.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The state social allowance (döwlet durmuş kömek puly) for people of pension age without pension rights exists (Ministry of Labour FAQ), but its current monthly amount was not found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 62,
+        "womenAge": 57,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection of Population of Turkmenistan, frequently asked questions",
+      "sourceUrl": "https://mlsp.gov.tm/faq",
+      "asOf": "2026-10-31",
+      "note": "Men from 62 and women from 57 who have no pension right (less than 5 years of compulsory pension insurance or no work record) are entitled to the state social allowance. The FAQ sets no income test, only the lack of a pension right."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service benefit per year of service was found; the Labour Code text was not read, so absence is not confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 62,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection of Population of Turkmenistan, Pension Fund and FAQ",
+      "sourceUrl": "https://mlsp.gov.tm/faq",
+      "asOf": "2026-10-31",
+      "note": "Compulsory state pension insurance with individual (named) pension accounts run by the Pension Fund of Turkmenistan, plus voluntary insurance of at least 2% of pay; pension from 62 (men) and 57 (women) with 5+ years of insurance. No automatic price indexation was found in the sources read (pensions are raised by decree); tax treatment not checked."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Talap edilýänçä goýum",
+      "localNameEn": "Demand deposit",
+      "note": "Deposits are taken by the state and joint-stock banks listed by the central bank; rates are not published centrally.",
+      "sourceUrl": "https://www.cbt.tm/en/hyzmatlar.html"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Möhletleýin goýum (3 aý)",
+      "localNameEn": "Term deposit (3 months)",
+      "sourceUrl": "https://www.cbt.tm/en/hyzmatlar.html"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Möhletleýin goýum (1 ýyl)",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://www.cbt.tm/en/hyzmatlar.html"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring-deposit scheme was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No treasury bill market open to individuals was found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government bond market open to individuals was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government bond market open to individuals was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail mutual or index funds were found, and currency controls make foreign funds very hard to buy."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The central bank publishes a manat gold price, but retail sale of investment gold bars or coins was not confirmed; jewellery is the usual form of gold saving."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Turkmenistan",
+      "url": "https://www.cbt.tm/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Ministry of Finance and Economy of Turkmenistan",
+      "url": "https://fineconomic.gov.tm/",
+      "note": "Insurance supervision sits with the finance ministry (not re-checked in this research)."
+    },
+    "pensionScheme": {
+      "name": "Pension Fund of Turkmenistan (Ministry of Labour and Social Protection of Population)",
+      "url": "https://mlsp.gov.tm/pensia_gaznasy"
+    },
+    "oldAgeAllowance": {
+      "name": "State social allowance (döwlet durmuş kömek puly), Ministry of Labour and Social Protection of Population",
+      "url": "https://mlsp.gov.tm/faq"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health and Medical Industry of Turkmenistan",
+      "url": "https://saglykhm.gov.tm/",
+      "note": "Public clinics and hospitals with a voluntary state health insurance scheme; most costs are paid out of pocket."
+    },
+    "statistics": {
+      "name": "State Committee of Turkmenistan on Statistics",
+      "url": "https://www.stat.gov.tm/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

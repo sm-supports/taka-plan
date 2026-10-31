@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "code": "PL",
+  "iso3": "POL",
+  "nameEn": "Poland",
+  "nameNative": "Polska",
+  "region": "europe_central_asia",
+  "languages": [
+    "pl",
+    "en",
+    "uk",
+    "de",
+    "ru"
+  ],
+  "currency": {
+    "code": "PLN",
+    "symbol": "zł",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3.9251,
+      "status": "sourced",
+      "sourceName": "Narodowy Bank Polski, average exchange rate table A (USD)",
+      "sourceUrl": "https://api.nbp.pl/api/exchangerates/rates/a/usd/last/2/?format=json",
+      "asOf": "2026-10-30",
+      "note": "PLN 3.9251 per US dollar on 30 October 2026 (table 212/A/NBP/2026); World Bank 2025 average 3.76."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "Statistics Poland (GUS), flash estimate of the consumer price index in October 2026",
+      "sourceUrl": "https://stat.gov.pl/en/topics/prices-trade/price-indices/flash-estimate-of-the-consumer-price-index-in-october-2026,21,46.html",
+      "asOf": "2026-10-31",
+      "note": "Consumer prices were 3.5% higher than in October 2025 (flash estimate released 30 October 2026; -0.4% on the month). World Bank 2025 average 3.8%."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "NBP inflation target 2.5% +/- 1 point; Polish HICP 2021-2025 average 7.3% (ECB ICP)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.PL.N.000000.4.AVR",
+      "asOf": "2026-10-31",
+      "note": "The NBP targets 2.5% but inflation has run above the target for most of the last five years (13.2% in 2022) and is 3.5% now, so planning uses 3.5%, at the top of the tolerance band."
+    },
+    "policy_rate": {
+      "value": 0.0375,
+      "status": "sourced",
+      "sourceName": "Narodowy Bank Polski, NBP base rates (reference rate)",
+      "sourceUrl": "https://static.nbp.pl/dane/stopy/stopy_procentowe.xml",
+      "asOf": "2026-03-05",
+      "note": "Reference rate 3.75% in force since 5 March 2026 (lombard 4.25%, deposit 3.25%); the NBP rates feed still showed it unchanged at end-October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0048,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by NBP): Polish banks, overnight zloty deposits from households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L21.A.R.A.2250.PLN.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight (current and savings) zloty deposits was 0.48% in August 2026 (0.48% in July). Promotional savings accounts pay more for new money."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NBP and the ECB publish household term deposits up to 1 year as one bucket (2.94% in August 2026); no separate 3-month average was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0294,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by NBP): household zloty deposits with agreed maturity up to 1 year, new business",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year (3.00% in July 2026); 1-2 year deposits paid 1.96% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring-deposit product with a published average rate was found for Poland."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0294,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by NBP): household zloty deposits with agreed maturity up to 1 year, new business",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
+      "asOf": "2026-08-31",
+      "note": "No all-maturity average is published for Poland in the ECB dataset; deposits up to 1 year make up nearly all new household term deposits, so their weighted average (2.94%, August 2026) is used. The World Bank has no FR.INR.DPST figure for Poland."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0475,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Polish retail treasury savings bonds: 4-year indexed bonds COI1030",
+      "sourceUrl": "https://www.obligacjeskarbowe.pl/oferta-obligacji/obligacje-4-letnie-coi/",
+      "asOf": "2026-10-01",
+      "note": "4-year COI series sold 1-31 October 2026: 4.75% in year 1, then CPI + 1.50% (interest paid yearly). Same month: 6-year ROS 5.00% (family bond), 10-year EDO 5.35%, 3-year fixed TOS 4.40%, 1-year ROR 4.00%."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 3-month treasury bill yield was found; the Ministry of Finance funds itself mainly with bonds and treasury bills are not sold to individuals. The retail 3-month OTS savings bond paid a fixed 2.00% in October 2026 (obligacjeskarbowe.pl)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Polish government bond yield could be read from an official or reachable secondary page on 31 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0638,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Poland 10-year government bond yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/poland/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "10-year yield 6.38% on 30 October 2026; the ECB long-term convergence yield for Poland was 6.23% in September 2026 (ECB IRS dataset). Secondary source because the Ministry of Finance and NBP pages did not load."
+    },
+    "tax_bank_interest": {
+      "value": 0.19,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Poland income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/poland/individual/income-determination",
+      "asOf": "2026-08-11",
+      "note": "Flat 19% tax on interest from savings and deposits, withheld by the bank (page reviewed 11 August 2026). Interest inside IKE/IKZE retirement accounts can be tax-free."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.19,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Poland income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/poland/individual/income-determination",
+      "asOf": "2026-08-11",
+      "note": "Interest on retail treasury savings bonds is taxed at the same flat 19% as other interest, unless the bonds are held in an IKE or IKZE retirement account."
+    },
+    "deposit_insurance_limit": {
+      "value": 439550,
+      "status": "sourced",
+      "sourceName": "Bank Guarantee Fund (BFG), amount of the guarantee",
+      "sourceUrl": "https://bfg.pl/gwarantowanie-depozytow/zasady-gwarantowania-depozytow/wysokosc-gwarancji-bfg/",
+      "asOf": "2026-10-30",
+      "note": "Zloty equivalent of EUR 100,000 per depositor per bank, converted at the NBP mid rate EUR 1 = PLN 4.3955 (30 October 2026). Up to EUR 200,000 for some temporary high balances (home sale, inheritance, insurance payouts)."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1518,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by NBP): Polish banks, extended credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.A2Z3.A.R.A.2250.PLN.N",
+      "asOf": "2026-08-31",
+      "note": "Typical rate: average 15.18% in August 2026. The Civil Code caps contractual interest at twice the sum of the NBP reference rate and 3.5 points, which is 14.5% with the reference rate at 3.75%; the average may include older contracts."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "WIG index 157,676 on 30 Oct 2026, up 41% in a year (Trading Economics); after-tax 1-year deposit 2.4%",
+      "sourceUrl": "https://tradingeconomics.com/poland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Polish shares give back part of the 2025-26 rally and earn only a little more than after-tax savings bonds."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "WIG total-return index (Trading Economics); after-tax 1-year retail bond ROR 3.24%",
+      "sourceUrl": "https://tradingeconomics.com/poland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.75 points over the after-tax 1-year government savings bond, below the WIG's strong recent record because that run was driven by a few years of re-rating."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "WIG total-return index (Trading Economics), roughly 12% a year since 2016",
+      "sourceUrl": "https://tradingeconomics.com/poland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: Polish and diversified equity funds keep close to the WIG's record of the last decade."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); zloty per dollar 3.93 (NBP, 30 Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stalls after the 2025-26 spike and the zloty stays firm against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); NBP 2.5% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, and the zloty loses about 1% a year against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in zloty terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.024,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.94% less 19% tax = 2.4% (ECB MIR)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax bank term deposits only."
+    },
+    "fixed_income_return_base": {
+      "value": 0.032,
+      "status": "assumption",
+      "sourceName": "1-year retail bond ROR 4.00% and 4-year COI 4.75% less 19% tax (Ministry of Finance)",
+      "sourceUrl": "https://www.obligacjeskarbowe.pl/oferta-obligacji/obligacje-4-letnie-coi/",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly retail treasury savings bonds after the 19% tax, allowing for lower rates later."
+    },
+    "fixed_income_return_high": {
+      "value": 0.043,
+      "status": "assumption",
+      "sourceName": "10-year retail bond EDO 5.35% less 19% tax = 4.3% (Ministry of Finance)",
+      "sourceUrl": "https://www.obligacjeskarbowe.pl/oferta-obligacji/obligacje-4-letnie-coi/",
+      "asOf": "2026-10-31",
+      "note": "High case: long inflation-indexed retail treasury bonds at today's margins, or the same bonds held tax-free in an IKE account."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Polish Financial Supervision Authority (KNF) publishes insurance market statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Poland, but no regulator or official premium table per sum insured was found; only individual company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is free under the National Health Fund (NFZ); no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is sold in Poland, but no published premium table per PLN 100,000 of cover from a regulator or public source was found."
+    },
+    "oop_health_share": {
+      "value": 0.1621,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PL",
+      "asOf": "2024-12-31",
+      "note": "Out-of-pocket spending was 16.2% of current health expenditure in 2024 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Poland, health: 5.0% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.PL.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 5.0% in 2025, double general HICP inflation (2.5%), so planning uses 5%, 1.5 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Poland, education: 6.7% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.PL.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 6.7% in 2025, well above general inflation; planning uses 5.5%."
+    },
+    "life_expectancy": {
+      "value": 79.2,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/poland",
+      "asOf": "2026-07-01",
+      "note": "Men 75.5, women 82.7 (UN WPP estimate for 2026); World Bank 2024 figure 78.4."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/poland",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.8,
+            "men": 20.2,
+            "women": 25.0
+          },
+          {
+            "age": 65,
+            "total": 19.0,
+            "men": 16.8,
+            "women": 20.8
+          },
+          {
+            "age": 70,
+            "total": 15.5,
+            "men": 13.6,
+            "women": 16.8
+          },
+          {
+            "age": 80,
+            "total": 9.0,
+            "men": 8.1,
+            "women": 9.6
+          }
+        ]
+      },
+      "note": "Remaining years from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/poland/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.12
+          },
+          {
+            "year": 2040,
+            "value": 2.47
+          },
+          {
+            "year": 2065,
+            "value": 1.42
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 32.0 (2025, World Bank), 40.5 (2040) and 70.5 (2065, populationpyramid.net/poland/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Poland (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/281c2e4d-bbb3-4a73-93b6-ff3368cb15c6_en",
+      "asOf": "2026-07-31",
+      "note": "Statutory pension age is 65 for men and 60 for women, irrespective of date of birth, since 1 October 2017; the figure shown is the men's age."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Poland (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/281c2e4d-bbb3-4a73-93b6-ff3368cb15c6_en",
+      "asOf": "2026-07-31",
+      "note": "Civil servants are insured in the general ZUS scheme, so the same pension ages apply (65 men, 60 women); uniformed services and some other groups have separate rules."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 2.4% (ECB MIR)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax deposits with some further rate cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "1-year retail treasury bond ROR 4.00% less 19% tax = 3.24% (Ministry of Finance)",
+      "sourceUrl": "https://www.obligacjeskarbowe.pl/oferta-obligacji/obligacje-4-letnie-coi/",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the after-tax 1-year government savings bond rate."
+    },
+    "retirement_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "4-year COI 4.75% and 10-year EDO 5.35% less 19% tax (Ministry of Finance)",
+      "sourceUrl": "https://www.obligacjeskarbowe.pl/oferta-obligacji/obligacje-4-letnie-coi/",
+      "asOf": "2026-10-31",
+      "note": "High case: mostly inflation-indexed retail treasury bonds held to maturity."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax deposits 2.4%; WIG record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/poland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Fixed income base 3.2%; equity base 7%",
+      "sourceUrl": "https://tradingeconomics.com/poland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 7% and half safe fixed income at about 3.2%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Equity high 10%; after-tax indexed retail bonds 4.3%",
+      "sourceUrl": "https://tradingeconomics.com/poland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1229,
+      "status": "sourced",
+      "sourceName": "Ministry of Family, Labour and Social Policy, permanent allowance (zasiłek stały)",
+      "sourceUrl": "https://www.gov.pl/web/rodzina/zasilek-staly",
+      "asOf": "2025-01-01",
+      "note": "Maximum for a single person from 1 January 2025: 130% of the single-person income threshold minus own income, capped at PLN 1,229 a month (minimum PLN 100). Paid by the municipal social assistance centre to people unable to work because of age (pension age) or disability. Poland has no universal social pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Ministry of Family, Labour and Social Policy, permanent allowance (zasiłek stały); European Commission, Your social security rights in Poland (July 2026)",
+      "sourceUrl": "https://www.gov.pl/web/rodzina/zasilek-staly",
+      "asOf": "2026-07-31",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Adults unable to work because of age (pension age: 65 men, 60 women) whose income is below the social assistance threshold (PLN 1,010 a month for a single person, PLN 823 per person in a family)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code gives a one-off retirement severance (odprawa emerytalna) of one month's pay on retiring, and severance on collective dismissal of 1-3 months' pay by length of service; neither is a days-per-year gratuity, and no source stating it was read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Poland (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/281c2e4d-bbb3-4a73-93b6-ff3368cb15c6_en",
+      "asOf": "2026-07-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "note": "Compulsory notional-account pension run by ZUS: pension age 65 men and 60 women; the pension equals contributions plus initial capital divided by life expectancy, with a minimum pension of PLN 1,878.91 gross (from 1 March 2025). Pensions are adjusted each 1 March by CPI plus at least 20% of real wage growth, and are taxed as income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Konto oszczędnościowe",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L21.A.R.A.2250.PLN.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Lokata terminowa (3 miesiące)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Lokata terminowa (12 miesięcy)",
+      "localNameEn": "Term deposit (12 months)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring-deposit product; regular saving is usually done through savings accounts or retail treasury bonds."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Obligacje skarbowe oszczędnościowe (COI, 4-letnie)",
+      "localNameEn": "Retail treasury savings bonds (4-year indexed, COI)",
+      "note": "Sold monthly by the Ministry of Finance from PLN 100 per bond; year 1 fixed, later years CPI plus a margin. 1-, 2-, 3-, 6-, 10- and 12-year series also exist.",
+      "sourceUrl": "https://www.obligacjeskarbowe.pl/oferta-obligacji/obligacje-4-letnie-coi/"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bony skarbowe",
+      "localNameEn": "Treasury bills",
+      "note": "Treasury bills are sold only at wholesale auctions; individuals can buy the 3-month retail OTS savings bond instead.",
+      "sourceUrl": "https://www.obligacjeskarbowe.pl/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligacje skarbowe",
+      "localNameEn": "Treasury bonds",
+      "note": "Marketable treasury bonds trade on the exchange and through brokerage accounts."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligacje skarbowe",
+      "localNameEn": "Treasury bonds",
+      "sourceUrl": "https://tradingeconomics.com/poland/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fundusz inwestycyjny",
+      "localNameEn": "Investment funds and index funds (ETFs)",
+      "note": "Retail mutual funds and exchange-traded index funds are widely available; IKE and IKZE retirement accounts give tax relief."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Złoto inwestycyjne",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "Buying physical investment gold is legal and VAT-exempt under EU rules."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Narodowy Bank Polski (National Bank of Poland)",
+      "url": "https://nbp.pl/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Polish Financial Supervision Authority (KNF)",
+      "url": "https://www.knf.gov.pl/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Ombudsman (Rzecznik Finansowy)",
+      "url": "https://rf.gov.pl/en/",
+      "note": "Handles complaints and out-of-court disputes between customers and insurers or banks."
+    },
+    "pensionScheme": {
+      "name": "Social Insurance Institution (ZUS), old-age pensions",
+      "url": "https://www.zus.pl/en/"
+    },
+    "oldAgeAllowance": {
+      "name": "Permanent allowance (zasiłek stały), Ministry of Family, Labour and Social Policy",
+      "url": "https://www.gov.pl/web/rodzina/zasilek-staly",
+      "note": "Means-tested social assistance paid by the municipal social assistance centre (OPS)."
+    },
+    "publicHealthCover": {
+      "name": "National Health Fund (NFZ)",
+      "url": "https://www.nfz.gov.pl/"
+    },
+    "depositInsurance": {
+      "name": "Bank Guarantee Fund (BFG)",
+      "url": "https://bfg.pl/en/"
+    },
+    "statistics": {
+      "name": "Statistics Poland (GUS)",
+      "url": "https://stat.gov.pl/en/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

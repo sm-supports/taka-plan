@@ -1,0 +1,551 @@
+{
+  "schemaVersion": 1,
+  "code": "BA",
+  "iso3": "BIH",
+  "nameEn": "Bosnia and Herzegovina",
+  "nameNative": "Bosna i Hercegovina",
+  "region": "europe_central_asia",
+  "languages": [
+    "bs",
+    "hr",
+    "sr",
+    "en"
+  ],
+  "currency": {
+    "code": "BAM",
+    "symbol": "KM",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.750653,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bosnia and Herzegovina, exchange rate list no. 215",
+      "sourceUrl": "https://www.cbbh.ba/CurrencyExchange/?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Middle rate; the convertible mark is fixed at KM 1.95583 per euro under the currency board."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "Agency for Statistics of BiH (BHAS), CPI September 2026",
+      "sourceUrl": "https://bhas.gov.ba/?lang=en",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI 6.0% in September 2026 (4.9% in August), released 27 October 2026; index 138.75 vs 130.93 a year earlier in the BHAS CPI time series."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BHAS CPI time series (5-year average about 6.3% a year, Sep 2021-Sep 2026); convertible mark pegged to the euro (ECB 2% target)",
+      "sourceUrl": "https://www.bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
+      "asOf": "2026-10-31",
+      "note": "The euro peg anchors inflation near euro-area rates in the long run, but recent inflation has run well above them, so 3.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of BiH runs a currency board pegged to the euro and sets no policy interest rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CBBH interest-rate statistics are only in its login-only statistics portal and its bulletins could not be downloaded; no current savings account rate was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 3-month term deposit rate was found; CBBH interest-rate statistics are only in its login-only statistics portal."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 1-year term deposit rate was found; CBBH interest-rate statistics are only in its login-only statistics portal."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0189,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA",
+      "asOf": "2025-12-31",
+      "note": "1.89% in 2025 (1.61% in 2024), per World Bank via Trading Economics as well."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals exists at state or entity level that we could find."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Entity governments (FBiH, RS) issue treasury bills by stock-exchange auction, but no current 3-month yield was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year entity government bond yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield was found; there is no state-level bond market and entity bonds trade thinly."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PwC Tax Summaries (reviewed 23 Sep 2026) give flat income tax of 10% (FBiH) and 8% (RS) but do not say how bank interest is taxed, and no official page on it was readable."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the tax treatment of interest on entity government securities was not found."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Deposit Insurance Agency of BiH, Decision on the amount of insured deposit",
+      "sourceUrl": "https://aod.ba/odluka-o-visini-osiguranog-depozita/",
+      "asOf": "2026-10-31",
+      "note": "KM 100,000 per depositor per member bank, set by the decision published in Official Gazette of BiH no. 75/26; effective date not shown on the page."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap and no published average credit card rate were found; CBBH interest-rate statistics are only in its login-only portal."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "SASX-10 index 1,476 (29 Oct 2026), down from 9,854 in April 2007",
+      "sourceUrl": "https://tradingeconomics.com/bosnia-and-herzegovina/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for global equities in euro terms over a weak decade; the local market is too small and illiquid to plan with."
+    },
+    "equity_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89% (2025); SASX-10 index record",
+      "sourceUrl": "https://tradingeconomics.com/bosnia-and-herzegovina/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Based on a global index in euro terms (the mark is pegged to the euro), kept about 2.5 points above the deposit rate because the local SASX-10 has lost 85% since 2007."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "SASX-10 index record; global equity long-run returns in euro terms",
+      "sourceUrl": "https://tradingeconomics.com/bosnia-and-herzegovina/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run global equity returns in euro terms."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "CBBH exchange rate KM 1.750653 per US dollar (KM 1.95583 per euro), 31 Oct 2026",
+      "sourceUrl": "https://www.cbbh.ba/CurrencyExchange/?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger euro (and mark)."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBBH exchange rate KM 1.750653 per US dollar (KM 1.95583 per euro), 31 Oct 2026",
+      "sourceUrl": "https://www.cbbh.ba/CurrencyExchange/?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected trend in the euro-pegged mark against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "CBBH exchange rate KM 1.750653 per US dollar (KM 1.95583 per euro), 31 Oct 2026",
+      "sourceUrl": "https://www.cbbh.ba/CurrencyExchange/?lang=en",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker euro."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits paying well under the average deposit rate."
+    },
+    "fixed_income_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA",
+      "asOf": "2026-10-31",
+      "note": "Base case a little under the average deposit rate to allow for any tax on interest."
+    },
+    "fixed_income_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits paying above the average rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance agencies (BiH, FBiH, RS) publish premium and claims statistics but no life claim settlement ratio that we could find."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published per-1,000 term life premium table by age was found; life insurance in BiH is mostly savings-type policies quoted individually."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost for one major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No age-banded private health insurance premium table was found."
+    },
+    "oop_health_share": {
+      "value": 0.3096,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BA",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BHAS CPI time series: health division up 5.8% (Sep 2026 vs Sep 2025)",
+      "sourceUrl": "https://www.bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose faster than headline CPI in the past year, so the 3.5% projection plus one point is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BHAS CPI time series: education division up 2.3% (Sep 2026 vs Sep 2025)",
+      "sourceUrl": "https://www.bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose less than headline CPI, so the 3.5% projection is used."
+    },
+    "life_expectancy": {
+      "value": 78.04,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BA",
+      "asOf": "2024-12-31",
+      "note": "Men 74.6, women 81.1; UN WPP 2024 (via populationpyramid.net) gives 78.4 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.3,
+            "men": 18.8,
+            "women": 23.8
+          },
+          {
+            "age": 65,
+            "total": 17.8,
+            "men": 15.3,
+            "women": 19.6
+          },
+          {
+            "age": 70,
+            "total": 13.9,
+            "men": 11.9,
+            "women": 15.8
+          },
+          {
+            "age": 80,
+            "total": 8.0,
+            "men": 6.5,
+            "women": 9.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/bosnia-and-herzegovina/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.81
+          },
+          {
+            "year": 2040,
+            "value": 2.03
+          },
+          {
+            "year": 2065,
+            "value": 1.49
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/bosnia-and-herzegovina/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 35.6 (2025, World Bank), 49.2 (2040) and 67.1 (2065, populationpyramid.net/bosnia-and-herzegovina/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Federal Pension and Disability Insurance Institute (FZ MIO/PIO), pensioners",
+      "sourceUrl": "https://www.fzmiopio.ba/penzioneri/",
+      "asOf": "2026-10-31",
+      "note": "FBiH old-age pension at 65 with at least 15 years of insurance (or 20 years of pension service), or at any age after 40 years of insurance; same for men and women. Republika Srpska also uses 65 (Wikipedia, Retirement age)."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Federal Pension and Disability Insurance Institute (FZ MIO/PIO), pensioners",
+      "sourceUrl": "https://www.fzmiopio.ba/penzioneri/",
+      "asOf": "2026-10-31",
+      "note": "Civil servants are in the same entity pension systems and retire on the same age-65 rule; no separate public-service pension age was found."
+    },
+    "retirement_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly sight and savings deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the average deposit rate, the best available stand-in for the 1-year deposit rate, to allow for tax."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits and entity bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89%; SASX-10 index",
+      "sourceUrl": "https://tradingeconomics.com/bosnia-and-herzegovina/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.89%; equity base 4.5% (global index in euro terms)",
+      "sourceUrl": "https://tradingeconomics.com/bosnia-and-herzegovina/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global shares at 4.5% and half deposits at about 1.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Global equity in euro terms; SASX-10 index",
+      "sourceUrl": "https://tradingeconomics.com/bosnia-and-herzegovina/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory (social) old-age pension was found in either entity; older people without a pension rely on means-tested social assistance."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found, so there are no eligibility rules to report."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity in days of wages per year of service was found; severance in the entity labour laws applies to dismissal, and retirement payments are set by collective agreements."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Federal Pension and Disability Insurance Institute (FZ MIO/PIO), pensioners",
+      "sourceUrl": "https://www.fzmiopio.ba/penzioneri/",
+      "asOf": "2026-10-31",
+      "note": "Contributory pay-as-you-go pensions run by each entity (FZ MIO/PIO in FBiH, PIO Fund in RS). In FBiH, pensions are adjusted every 1 January and 1 July by a blend of consumer prices and gross wages (60/40 or 40/60), and are not cut when the blend is negative."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Štedni račun",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Oročeni depozit",
+      "localNameEn": "3-month term deposit"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Oročeni depozit",
+      "localNameEn": "1-year term deposit"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard fixed-rate monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail savings bond for individuals at state or entity level."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Trezorski zapisi",
+      "localNameEn": "Entity treasury bills (FBiH, RS)",
+      "note": "Sold by stock-exchange auction, mainly to banks."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obveznice",
+      "localNameEn": "Entity government bonds (FBiH, RS)",
+      "note": "Listed on the Sarajevo and Banja Luka stock exchanges; thinly traded."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "10-year government bond",
+      "note": "No regular 10-year issuance found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Otvoreni investicijski fond",
+      "localNameEn": "Open-ended investment fund",
+      "note": "A few local funds exist; the local stock market is small and illiquid."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Investicijsko zlato",
+      "localNameEn": "Gold bars and coins",
+      "note": "Physical gold can be bought legally."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Bosnia and Herzegovina",
+      "url": "https://www.cbbh.ba/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Supervision Agency of the Federation of BiH (Republika Srpska: Insurance Agency of RS)",
+      "url": "https://www.ano.ba/",
+      "note": "Republika Srpska: https://azors.rs.ba/sr/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Ombudsman (Insurance Supervision Agency of FBiH)",
+      "url": "https://www.ano.ba/ombudsmen-u-osiguranju/"
+    },
+    "pensionScheme": {
+      "name": "Federal Pension and Disability Insurance Institute (FZ MIO/PIO)",
+      "url": "https://www.fzmiopio.ba/",
+      "note": "Republika Srpska: PIO Fund, https://www.fondpiors.org/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Health Insurance and Reinsurance Institute of the Federation of BiH (ZZOR FBiH)",
+      "url": "https://zzofbih.ba/",
+      "note": "Republika Srpska: Health Insurance Fund of RS."
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Agency of Bosnia and Herzegovina",
+      "url": "https://aod.ba/"
+    },
+    "statistics": {
+      "name": "Agency for Statistics of Bosnia and Herzegovina (BHAS)",
+      "url": "https://bhas.gov.ba/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

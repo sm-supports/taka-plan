@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 1,
+  "code": "GB",
+  "iso3": "GBR",
+  "nameEn": "United Kingdom",
+  "nameNative": "United Kingdom",
+  "region": "europe_central_asia",
+  "languages": [
+    "en",
+    "cy",
+    "pl",
+    "pa",
+    "ur"
+  ],
+  "currency": {
+    "code": "GBP",
+    "symbol": "£",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.7477,
+      "status": "sourced",
+      "sourceName": "Bank of England, spot exchange rate US dollar into sterling (XUDLUSS)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=XUDLUSS&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-29",
+      "note": "USD 1.3375 per pound on 29 October 2026, so about GBP 0.748 per US dollar; World Bank 2025 average 0.759."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "Office for National Statistics (ONS), Consumer price inflation, UK: September 2026",
+      "sourceUrl": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026",
+      "asOf": "2026-09-30",
+      "note": "CPI rose 3.5% in the 12 months to September 2026 (3.1% in August); CPIH 3.6%. Released 21 October 2026. World Bank 2025 average 3.9%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Bank of England 2% CPI target; CPI 3.5% (Sep 2026, ONS), 3.9% in 2025 (World Bank)",
+      "sourceUrl": "https://www.bankofengland.co.uk/monetary-policy/inflation",
+      "asOf": "2026-10-31",
+      "note": "The Bank of England's 2% target is credible over the long run, but UK inflation has run above it in most years since 2021, so 2.5% is used."
+    },
+    "policy_rate": {
+      "value": 0.0375,
+      "status": "sourced",
+      "sourceName": "Bank of England, Bank Rate",
+      "sourceUrl": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
+      "asOf": "2026-09-17",
+      "note": "Bank Rate 3.75%, held at the 18 June, 30 July and 17 September 2026 decisions; next decision 5 November 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0206,
+      "status": "sourced",
+      "sourceName": "Bank of England quoted household interest rates: instant access deposits including bonuses (IUMB6VJ)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMB6VJ&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-09-30",
+      "note": "Representative quoted rate on easy-access savings accounts in September 2026 (1.90% excluding unconditional bonuses); interest is paid without tax deducted."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of England publishes new fixed-rate bonds with a term up to 1 year as one bucket (4.34% in September 2026, CFMZ6IP) and a quoted 1-year bond rate, but no 3-month fixed-term deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0435,
+      "status": "sourced",
+      "sourceName": "Bank of England quoted household interest rates: 1-year fixed-rate bond deposits including bonuses (IUMWTFA)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMWTFA&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-09-30",
+      "note": "Representative quoted rate on 1-year fixed-rate savings bonds, up from 4.08% in August 2026; new 1-year-or-less fixed bonds averaged 4.34% (CFMZ6IP)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks and building societies sell regular savings accounts (fixed monthly deposits, usually for 12 months), but neither the Bank of England nor the ONS publishes an average rate for them and no 5-year monthly scheme exists."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0344,
+      "status": "sourced",
+      "sourceName": "Bank of England effective interest rates: household time deposits, stock outstanding (CFMHSCW)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=CFMHSCW&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on all outstanding household time deposits in September 2026; interest-bearing sight deposits averaged 1.65% (CFMHSCV). World Bank FR.INR.DPST for the UK stops in 1998."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0517,
+      "status": "sourced",
+      "sourceName": "National Savings and Investments (NS&I, HM Treasury), Guaranteed Growth Bonds 5-year Issue 75",
+      "sourceUrl": "https://www.nsandi.com/products/guaranteed-growth-bonds",
+      "asOf": "2026-10-31",
+      "note": "Government-backed 5-year fixed-rate bond, 5.17% gross/AER; 1-year 4.99%, 2-year 5.07%, 3-year 5.10%. Interest is taxable and paid at maturity; NS&I can withdraw an issue without notice."
+    },
+    "tbill_91d_rate": {
+      "value": 0.042,
+      "status": "sourced",
+      "sourceName": "Trading Economics, United Kingdom 3-month bill yield",
+      "sourceUrl": "https://tradingeconomics.com/united-kingdom/3-month-bill-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary source; the Debt Management Office tender reports could not be read. SONIA was 3.73% on 28 October 2026 (Bank of England IUDSOIA)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0496,
+      "status": "sourced",
+      "sourceName": "Bank of England, 5-year nominal par yield on British government stock (IUDSNPY)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDSNPY&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-28",
+      "note": "Daily yield 4.96% on 28 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0531,
+      "status": "sourced",
+      "sourceName": "Bank of England, 10-year nominal par yield on British government stock (IUDMNPY)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDMNPY&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-28",
+      "note": "Daily yield 5.31% on 28 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, United Kingdom income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/united-kingdom/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "No withholding: banks pay interest gross and it is taxed at the saver's marginal savings rate, 20% for a basic-rate taxpayer (40% higher, 45% additional), after the 0% starting rate (up to GBP 5,000) and the personal savings allowance (GBP 1,000 basic rate, GBP 500 higher rate). Savings rates rise to 22%/42%/47% from April 2027. Cash ISA interest is tax-free."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "NS&I Guaranteed Growth Bonds, tax information",
+      "sourceUrl": "https://www.nsandi.com/products/guaranteed-growth-bonds",
+      "asOf": "2026-10-31",
+      "note": "NS&I fixed-term bond interest is paid without tax deducted but is taxable income in the year the bond matures, at the saver's marginal savings rate (20% basic rate, after the personal savings allowance). Premium Bond prizes are tax-free."
+    },
+    "deposit_insurance_limit": {
+      "value": 120000,
+      "status": "sourced",
+      "sourceName": "Financial Services Compensation Scheme (FSCS), banks and building societies",
+      "sourceUrl": "https://www.fscs.org.uk/what-we-cover/banks-building-societies/",
+      "asOf": "2025-12-01",
+      "note": "GBP 120,000 per eligible person per authorised bank, building society or credit union (banks sharing a licence count as one), from 1 December 2025; previously GBP 85,000."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2471,
+      "status": "sourced",
+      "sourceName": "Bank of England quoted household interest rates: representative credit card lending (IUMCCTL)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMCCTL&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-09-30",
+      "note": "The UK has no legal cap on credit card interest; 24.71% is the representative quoted rate in September 2026."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "FTSE 100 10,730 on 30 Oct 2026, +10.4% in a year (Trading Economics); 1-year fixed bonds 4.35% gross (Bank of England)",
+      "sourceUrl": "https://tradingeconomics.com/united-kingdom/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: UK shares, a value-heavy market, repeat their weak 2000-2020 record and earn little more than cash in an ISA."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "FTSE 100 near its July 2026 record (Trading Economics); after-tax safe rate about 3.5-4.4% (fixed bonds less 20% tax, cash ISAs)",
+      "sourceUrl": "https://tradingeconomics.com/united-kingdom/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2.5 points above the after-tax safe rate, in line with the UK market's long-run total return of roughly 6-7% a year with dividends."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "FTSE 100 (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/united-kingdom/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified global equity fund held in a Stocks and Shares ISA earns long-run equity returns of about 8-9% in pounds."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike and the pound holds its value against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); Bank of England 2% target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, with mild long-run weakness in the pound."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in pound terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "1-year fixed bonds 4.35% gross less 20% tax = 3.5% (Bank of England IUMWTFA)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMWTFA&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings rates fall back towards 3% as Bank Rate is cut, leaving about 2.5% after basic-rate tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "1-year fixed bonds 4.35% gross (Bank of England); 2-year fixed cash ISAs 4.53% tax-free (IUMZID2)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMWTFA&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of fixed-rate bonds after 20% tax (about 3.5%) and tax-free cash ISAs, assuming rates ease from today's level."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "NS&I 5-year Guaranteed Growth Bonds 5.17% gross; 5-year gilt 4.96% (Bank of England)",
+      "sourceUrl": "https://www.nsandi.com/products/guaranteed-growth-bonds",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in today's 5-year rates inside an ISA or within the personal savings allowance, so little tax is paid."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Association of British Insurers publishes yearly protection claims statistics, but its page returned 403 and the PRA/FCA publish no industry-wide life claim settlement ratio that could be read."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is widely sold in the UK, but no regulator or government source publishes indicative premiums per GBP 1,000 of cover by age; MoneyHelper gives no price table and insurer or broker quote tools were not used."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NHS hospital care is free at the point of use for UK residents, so the typical out-of-pocket cost of a major stay is nil; no official figure for the self-pay cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "UK private medical insurance is priced per plan (by age, postcode, excess and hospital list), not per sum insured, and no official premium table per GBP 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1456,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GB",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ONS CPI September 2026: Health division +3.5% a year",
+      "sourceUrl": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices rise with headline inflation, but private treatment, dental and prescription costs and care fees tend to rise faster, so 4% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "ONS CPI September 2026: Education division +5.0% a year",
+      "sourceUrl": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/september2026",
+      "asOf": "2026-10-31",
+      "note": "Education prices are rising faster than headline inflation, with university tuition fees now rising with inflation and private school fees subject to VAT since 2025, so 5% is used."
+    },
+    "life_expectancy": {
+      "value": 81.7,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/united-kingdom",
+      "asOf": "2026-07-01",
+      "note": "Men 79.9, women 83.6 (UN WPP estimate for 2026). ONS national life tables 2022-2024: men 79.1, women 83.0; World Bank 2024 figure 81.4."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.5,
+            "men": 23.2,
+            "women": 25.8
+          },
+          {
+            "age": 65,
+            "total": 20.3,
+            "men": 19.1,
+            "women": 21.5
+          },
+          {
+            "age": 70,
+            "total": 16.3,
+            "men": 15.2,
+            "women": 17.3
+          },
+          {
+            "age": 80,
+            "total": 9.3,
+            "men": 8.6,
+            "women": 9.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/united-kingdom",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate). ONS national life tables 2022-2024 give 18.7 (men) and 21.2 (women) at 65."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.21
+          },
+          {
+            "year": 2040,
+            "value": 2.64
+          },
+          {
+            "year": 2065,
+            "value": 2.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/united-kingdom/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 31.1 (2025, World Bank), 37.9 (2040) and 45.5 (2065, populationpyramid.net/united-kingdom/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 68,
+      "status": "sourced",
+      "sourceName": "GOV.UK, State Pension age timetable (Pensions Acts 2007 and 2014)",
+      "sourceUrl": "https://www.gov.uk/government/publications/state-pension-age-timetable/state-pension-age-timetable",
+      "asOf": "2026-10-31",
+      "note": "State Pension age is 68 for anyone born on or after 6 April 1978 (reached in stages for those born 6 April 1977 to 5 April 1978) and 67 for those born 6 April 1960 to 5 April 1977; it is 66 today and the same for men and women. A third State Pension age review is under way. There is no compulsory retirement age for private employees."
+    },
+    "retirement_age_government": {
+      "value": 68,
+      "status": "sourced",
+      "sourceName": "GOV.UK, State Pension age timetable; Civil Service alpha scheme normal pension age equals State Pension age",
+      "sourceUrl": "https://www.gov.uk/government/publications/state-pension-age-timetable/state-pension-age-timetable",
+      "asOf": "2026-10-31",
+      "note": "Civil servants in the alpha scheme (since 2015) have a normal pension age equal to their State Pension age (68 for those born from 6 April 1978); there is no compulsory retirement age. Uniformed services (police, firefighters, armed forces) have earlier ages."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "1-year fixed bonds 4.35% gross less 20% tax = 3.5% (Bank of England IUMWTFA)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMWTFA&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall back as Bank Rate is cut."
+    },
+    "retirement_return_base": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "1-year fixed bonds 4.35% gross less 20% basic-rate tax = 3.48% (Bank of England IUMWTFA)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMWTFA&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year fixed-rate bond rate for a basic-rate taxpayer."
+    },
+    "retirement_return_high": {
+      "value": 0.042,
+      "status": "assumption",
+      "sourceName": "NS&I Guaranteed Growth Bonds 4.99-5.17%; 5-year gilt 4.96% (Bank of England)",
+      "sourceUrl": "https://www.nsandi.com/products/guaranteed-growth-bonds",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree ladders gilts and fixed-rate bonds, partly inside ISAs, at about today's rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 3.5%; FTSE 100 record (Trading Economics)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMWTFA&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Fixed income base 3.5%; equity base 6.5%",
+      "sourceUrl": "https://tradingeconomics.com/united-kingdom/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6.5% and half safe fixed income at about 3.5% after tax, largely sheltered in ISAs and pensions."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Fixed income high 4.5%; equity high 8.5%",
+      "sourceUrl": "https://tradingeconomics.com/united-kingdom/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix held in tax-free wrappers."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1031,
+      "status": "sourced",
+      "sourceName": "GOV.UK, Pension Credit: what you'll get",
+      "sourceUrl": "https://www.gov.uk/pension-credit/what-youll-get",
+      "asOf": "2026-04-06",
+      "note": "Means-tested Guarantee Credit tops weekly income up to GBP 238 for a single person (GBP 363.25 for a couple) in 2026/27; GBP 238 x 52 / 12 = GBP 1,031 a month for someone with no other income. A person with a full new State Pension (GBP 241.30 a week) gets no Guarantee Credit."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 66,
+        "womenAge": 66,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "GOV.UK, Pension Credit eligibility",
+      "sourceUrl": "https://www.gov.uk/pension-credit/eligibility",
+      "asOf": "2026-10-31",
+      "note": "Claimable from State Pension age (66 today, rising to 67 and then 68 for younger people); means-tested on income and savings over GBP 10,000; must live in Great Britain. A non-contributory over-80 pension (GBP 110.75 a week in 2026/27) is also paid to people aged 80+ with little or no basic State Pension (gov.uk/over-80-pension)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "UK law has no statutory gratuity or end-of-service payment on resignation or retirement; the only statutory leaving payment is redundancy pay (half to one and a half weeks' pay per year of service up to 20 years, weekly pay capped at GBP 751, maximum GBP 22,530 from 6 April 2026), payable only on redundancy after 2 years' service (GOV.UK, Redundancy pay: https://www.gov.uk/redundant-your-rights/redundancy-pay).",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": null,
+        "pensionFromAge": 68,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "GOV.UK, The new State Pension",
+      "sourceUrl": "https://www.gov.uk/new-state-pension/what-youll-get",
+      "asOf": "2026-10-31",
+      "note": "National Insurance-based new State Pension: full rate GBP 241.30 a week (about GBP 1,046 a month) in 2026/27 with 35 qualifying years, minimum 10 years; paid from State Pension age (68 for those born from 6 April 1978). Uprated each April by the triple lock (the highest of earnings growth, CPI inflation or 2.5%). Taxable income, paid without tax deducted. Workplace pension auto-enrolment applies to employees aged 22 to State Pension age earning over GBP 10,000."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Easy-access savings account",
+      "localNameEn": null,
+      "note": "Interest is paid gross and taxed above the personal savings allowance; a cash ISA pays tax-free interest.",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMB6VJ&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed-rate bond",
+      "localNameEn": "Fixed-term savings bond (3 months)",
+      "note": "Short fixed-rate bonds and notice accounts are sold by banks and building societies; terms of 1 year or more are more common."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed-rate bond",
+      "localNameEn": "Fixed-term savings bond (1 year)",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUMWTFA&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Regular savings account",
+      "localNameEn": "Monthly regular saver",
+      "note": "Fixed monthly deposits, usually for 12 months, at a higher rate than easy-access accounts."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "NS&I Guaranteed Growth Bonds",
+      "localNameEn": "Government-backed fixed-rate savings bonds (1 to 5 years)",
+      "note": "Sold by National Savings and Investments, which is backed by HM Treasury, so savings are 100% protected; Premium Bonds (tax-free prizes) are the best-known NS&I product.",
+      "sourceUrl": "https://www.nsandi.com/products/guaranteed-growth-bonds"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bills",
+      "localNameEn": null,
+      "note": "Issued at weekly Debt Management Office tenders, mainly to banks and institutions; little retail access."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Gilts",
+      "localNameEn": "UK government bonds",
+      "note": "Retail investors can buy gilts through a broker or the DMO's purchase and sale service; gains on gilts are free of capital gains tax.",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDSNPY&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Gilts",
+      "localNameEn": "UK government bonds",
+      "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDMNPY&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Unit trusts, OEICs and index funds (ETFs)",
+      "note": "Usually held in a Stocks and Shares ISA or a pension, where gains and income are tax-free."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy; investment gold is VAT-exempt and UK legal-tender gold coins (such as sovereigns and Britannias) are free of capital gains tax."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of England",
+      "url": "https://www.bankofengland.co.uk/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Conduct Authority (FCA); Prudential Regulation Authority (PRA)",
+      "url": "https://www.fca.org.uk/",
+      "note": "The FCA regulates how insurers treat customers; the PRA (part of the Bank of England) supervises their finances."
+    },
+    "insuranceComplaints": {
+      "name": "Financial Ombudsman Service",
+      "url": "https://www.financial-ombudsman.org.uk/",
+      "note": "Free; complain to the insurer first and go to the ombudsman after 8 weeks or a final response."
+    },
+    "pensionScheme": {
+      "name": "The new State Pension (Department for Work and Pensions)",
+      "url": "https://www.gov.uk/new-state-pension"
+    },
+    "oldAgeAllowance": {
+      "name": "Pension Credit",
+      "url": "https://www.gov.uk/pension-credit",
+      "note": "Means-tested top-up for people over State Pension age on low incomes."
+    },
+    "publicHealthCover": {
+      "name": "National Health Service (NHS)",
+      "url": "https://www.nhs.uk/",
+      "note": "Free at the point of use for residents; prescription and dental charges apply in England."
+    },
+    "depositInsurance": {
+      "name": "Financial Services Compensation Scheme (FSCS)",
+      "url": "https://www.fscs.org.uk/"
+    },
+    "statistics": {
+      "name": "Office for National Statistics (ONS)",
+      "url": "https://www.ons.gov.uk/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

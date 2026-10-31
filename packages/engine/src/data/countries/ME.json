@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 1,
+  "code": "ME",
+  "iso3": "MNE",
+  "nameEn": "Montenegro",
+  "nameNative": "Crna Gora",
+  "region": "europe_central_asia",
+  "languages": [
+    "cnr",
+    "sr",
+    "bs",
+    "sq",
+    "en"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "Montenegro uses the euro; USD 1.1172 per euro on 30 October 2026, i.e. EUR 0.8951 per US dollar; World Bank 2025 average 0.887."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.052,
+      "status": "sourced",
+      "sourceName": "Statistical Office of Montenegro (Monstat), consumer price indices September 2026",
+      "sourceUrl": "https://monstat.org/uploads/files/cijene/CPI/2026/9/CPI_EN_Septembar_2026.pdf",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices 5.2% higher than in September 2025 (release of 13 October 2026); January-September average 3.7%; World Bank 2025 average 3.9%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Montenegro uses the euro (ECB 2% target); Monstat CPI 2025 4.0% (Dec), 5.2% (Sep 2026)",
+      "sourceUrl": "https://monstat.org/uploads/files/cijene/CPI/2026/9/CPI_EN_Septembar_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Montenegro uses the euro unilaterally, but its inflation has run above the euro area for years (about 13% in 2022, 4-5% in 2025-26), so 3% is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank key interest rates (deposit facility rate)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Montenegro uses the euro unilaterally and the Central Bank of Montenegro sets no policy rate; the ECB deposit facility rate has been 2.50% since 16 September 2026."
+    },
+    "savings_account_rate": {
+      "value": 5e-05,
+      "status": "sourced",
+      "sourceName": "Central Bank of Montenegro, bank interest rate statistics (table 2.1.10, households, sight deposits), September 2026",
+      "sourceUrl": "https://www.cbcg.me/slike_i_fajlovi/fajlovi/fajlovi_publikacije/statistika/statistika_kamatnih_stopa_banaka_sep_2026.zip",
+      "asOf": "2026-09-30",
+      "note": "Weighted average effective rate on households' sight deposits 0.005% (September 2026); listed on the CBCG interest-rate statistics page https://www.cbcg.me/en/statistics/statistical-data/interest-rates."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0106,
+      "status": "sourced",
+      "sourceName": "Central Bank of Montenegro, bank interest rate statistics (table 2.1.10, households, deposits up to 3 months), September 2026",
+      "sourceUrl": "https://www.cbcg.me/slike_i_fajlovi/fajlovi/fajlovi_publikacije/statistika/statistika_kamatnih_stopa_banaka_sep_2026.zip",
+      "asOf": "2026-09-30",
+      "note": "Weighted average effective rate on households' deposits with maturity up to 3 months 1.06%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.015,
+      "status": "sourced",
+      "sourceName": "Central Bank of Montenegro, bank interest rate statistics (table 2.1.10, households, deposits 3 months to 1 year), September 2026",
+      "sourceUrl": "https://www.cbcg.me/slike_i_fajlovi/fajlovi/fajlovi_publikacije/statistika/statistika_kamatnih_stopa_banaka_sep_2026.zip",
+      "asOf": "2026-09-30",
+      "note": "Weighted average effective rate on households' deposits of 3 months to 1 year 1.50%; 1-3 years 1.92%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recurring monthly savings deposit rate is published by the Central Bank of Montenegro; households' deposits of 3-5 years averaged 0.96% in September 2026."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0029,
+      "status": "sourced",
+      "sourceName": "Central Bank of Montenegro, bank interest rate statistics (table 2.1.10, total household deposits), September 2026",
+      "sourceUrl": "https://www.cbcg.me/slike_i_fajlovi/fajlovi/fajlovi_publikacije/statistika/statistika_kamatnih_stopa_banaka_sep_2026.zip",
+      "asOf": "2026-09-30",
+      "note": "Weighted average effective rate on all household deposits 0.293% (most deposits are sight deposits paying almost nothing); all deposits 0.276%; World Bank FR.INR.DPST 2025 average 0.27%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; the State borrows through Eurobonds and loans."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Montenegro's treasury bill statistics (updated 20 October 2026) show no T-bill auctions in 2024, 2025 or 2026, so there is no current yield."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Montenegro borrows mainly through Eurobonds; no official page with a current 5-year yield could be read."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official page with a current 10-year Montenegro government bond yield could be read."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Montenegro individual income determination (reviewed 7 August 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/montenegro/individual/income-determination",
+      "asOf": "2026-08-07",
+      "note": "Interest income is capital income taxed at a flat 15% personal income tax; the page does not list an exemption for bank deposit interest."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Montenegro individual income determination (reviewed 7 August 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/montenegro/individual/income-determination",
+      "asOf": "2026-08-07",
+      "note": "No government savings certificate exists; interest on debt securities issued by the State, the Central Bank or local governments is not treated as taxable capital income."
+    },
+    "deposit_insurance_limit": {
+      "value": 50000,
+      "status": "sourced",
+      "sourceName": "Deposit Protection Fund of Montenegro, information for depositors",
+      "sourceUrl": "https://fzdcg.org/informacija-za-deponente/",
+      "asOf": "2026-10-31",
+      "note": "Up to EUR 50,000 per depositor per credit institution (Law on Deposit Protection, Official Gazette 72/19, 70/26)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Montenegro publishes a maximum allowed effective rate for consumer loans, but no figure for credit cards could be read."
+    },
+    "equity_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Montenegro Stock Exchange is small and illiquid; global equities in EUR; 1-year deposits 1.5% less 15% tax",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares return little more than euro deposits over the long run."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return in EUR; after-tax 1-year household deposit rate 1.3% (CBCG); ECB deposit rate 2.5%",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates",
+      "asOf": "2026-10-31",
+      "note": "The local market is too small to rely on, so the base is a global index fund in euros, capped at about 4 points above the after-tax local deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Global equity long-run returns in EUR",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns over the long run."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold roughly flat after the 2025-26 spike, with a stable euro."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); euro-area inflation target 2%",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold rises about 4.5% a year in euros, a little above inflation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euros."
+    },
+    "fixed_income_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "CBCG household deposit rates: 3-12 months 1.50%, up to 3 months 1.06% (Sep 2026), less 15% tax",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case: local deposit rates stay near 1%, leaving under 1% after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.013,
+      "status": "assumption",
+      "sourceName": "CBCG: 1-year household deposits 1.50% less 15% tax = 1.3% (Sep 2026)",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates",
+      "asOf": "2026-10-31",
+      "note": "Base case: today's after-tax 1-year local deposit rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "CBCG: 1-3 year household deposits 1.92%; ECB deposit rate 2.5%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: savers use 1-3 year deposits or euro-area government bonds."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Supervision Agency publishes market reports, but no life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Montenegro, but no published premium table per EUR 1,000 of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Compulsory health insurance (FZO) covers public hospital care; no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary health insurance is sold as packages; no published premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.2633,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ME",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Monstat CPI September 2026: health division +4.4% year on year",
+      "sourceUrl": "https://monstat.org/uploads/files/cijene/CPI/2026/9/CPI_EN_Septembar_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices are rising at about the headline rate, above the 3% planning inflation, so 4.5% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Monstat CPI September 2026: education services +0.1% year on year",
+      "sourceUrl": "https://monstat.org/uploads/files/cijene/CPI/2026/9/CPI_EN_Septembar_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education prices have barely moved recently, so the planning inflation rate of 3% is used."
+    },
+    "life_expectancy": {
+      "value": 77.6,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/montenegro",
+      "asOf": "2026-12-31",
+      "note": "Men 74.3, women 80.7 (UN WPP estimate for 2026); World Bank 2024 figure 77.9."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.0,
+            "men": 18.4,
+            "women": 23.3
+          },
+          {
+            "age": 65,
+            "total": 17.2,
+            "men": 14.9,
+            "women": 19.1
+          },
+          {
+            "age": 70,
+            "total": 13.7,
+            "men": 11.6,
+            "women": 15.2
+          },
+          {
+            "age": 80,
+            "total": 7.9,
+            "men": 6.4,
+            "women": 8.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/montenegro",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.49
+          },
+          {
+            "year": 2040,
+            "value": 2.67
+          },
+          {
+            "year": 2065,
+            "value": 1.94
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/montenegro/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 28.7 (2025, World Bank), 37.5 (2040) and 51.5 (2065, populationpyramid.net/montenegro/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Pension and Disability Insurance Fund of Montenegro (Fond PIO), old-age pension",
+      "sourceUrl": "https://www.fondpio.me/starosna-penzija/",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension at 65 with at least 15 years of insurance (or at 61 with 40 years); women 63 years 3 months in 2026, rising to 64 years 9 months by 2032."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servants come under the same pension law (Fond PIO), but no official page stating a separate retirement age or age limit for public employees could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.006,
+      "status": "assumption",
+      "sourceName": "CBCG household deposit rates 1.06-1.50% (Sep 2026) less 15% tax",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case: short local deposits only, under 1% after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "CBCG: 1-year household deposits 1.50% less 15% tax = 1.3% (Sep 2026)",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just below the after-tax 1-year local deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "CBCG: 1-3 year deposits 1.92%; ECB deposit rate 2.5%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits or euro-area government bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "After-tax local deposits 1.3%; global equity low case 2.5%",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag and deposit rates stay low."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "After-tax local deposits 1.3%; global equity in EUR 5%",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half euro deposits and half global shares."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Euro bonds 2-2.5%; global equity high case 8%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No source stating a non-contributory old-age (social) pension amount for Montenegro could be read; means-tested social assistance exists, but its rules were not confirmed."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for a non-contributory old-age benefit in Montenegro could not be confirmed from an official page."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Montenegrin labour law provides a severance payment on retirement, but no official text giving it as days of wages per year of service could be read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Pension and Disability Insurance Fund of Montenegro (Fond PIO): old-age pension conditions; indexation decision of 2 October 2026",
+      "sourceUrl": "https://www.fondpio.me/2026/10/02/upravni-odbor-usvojio-odluke-o-uskladjivanju-penzija-4/",
+      "asOf": "2026-09-01",
+      "note": "Mandatory pay-as-you-go points-based pension (Fond PIO) from 65 with at least 15 years of insurance (women 63y3m in 2026, rising to 64y9m by 2032); pensions are indexed periodically (+2.48% from 1 September 2026; one personal point worth EUR 12.36)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Štedni račun / depozit po viđenju",
+      "localNameEn": "Savings (sight) deposit",
+      "note": "Sight deposits pay almost nothing (0.005% on average).",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Oročeni depozit",
+      "localNameEn": "Term deposit (up to 3 months)",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Oročeni depozit",
+      "localNameEn": "Term deposit (3 months to 1 year)",
+      "sourceUrl": "https://www.cbcg.me/en/statistics/statistical-data/interest-rates"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Namjenska štednja",
+      "localNameEn": "Savings plan with regular deposits",
+      "note": "Terms vary by bank; no published average rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Državni zapisi",
+      "localNameEn": "Treasury bills",
+      "note": "Treasury bills (28-273 days) exist in law, but no auctions were held in 2024-2026.",
+      "sourceUrl": "https://cbcg.me/en/statistics/statistical-data/tbills-statistics"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "Državne obveznice",
+      "localNameEn": "Government bonds",
+      "note": "The State borrows mainly through Eurobonds sold to institutional investors; no regular domestic retail bond issues were found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": "Državne obveznice",
+      "localNameEn": "Government bonds",
+      "note": "No regular domestic 10-year bond issues were found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Otvoreni investicioni fond",
+      "localNameEn": "Open-ended investment fund",
+      "note": "A few local funds exist; residents also reach euro and global funds through brokers."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Zlatne poluge i kovanice",
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy and hold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Montenegro",
+      "url": "https://www.cbcg.me/en"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Supervision Agency (ANO)",
+      "url": "https://ano.me/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Supervision Agency, complaints and consumer protection",
+      "url": "https://ano.me/prigovori-i-zastita-potrosaca/"
+    },
+    "pensionScheme": {
+      "name": "Pension and Disability Insurance Fund of Montenegro (Fond PIO)",
+      "url": "https://www.fondpio.me/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Health Insurance Fund of Montenegro (FZO), compulsory health insurance",
+      "url": "https://fzocg.me/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Protection Fund of Montenegro",
+      "url": "https://fzdcg.org/informacija-za-deponente/"
+    },
+    "statistics": {
+      "name": "Statistical Office of Montenegro (Monstat)",
+      "url": "https://www.monstat.org/eng/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

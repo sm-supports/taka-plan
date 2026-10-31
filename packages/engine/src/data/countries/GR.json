@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "code": "GR",
+  "iso3": "GRC",
+  "nameEn": "Greece",
+  "nameNative": "Ελλάδα",
+  "region": "europe_central_asia",
+  "languages": [
+    "el",
+    "en"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026 (ECB data portal EXR.D.USD.EUR.SP00.A), so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "Trading Economics (ELSTAT CPI, September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/greece/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI 5.0% year on year in September 2026 (3.8% in August), released 9 October 2026; secondary source because statistics.gr was not reachable. HICP averaged 2.9% in 2025 (ECB)."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Greek HICP 2021-2025 average 4.0% (ECB ICP); CPI 5.0% in September 2026",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.GR.N.000000.4.AVR",
+      "asOf": "2026-10-31",
+      "note": "The ECB 2% target anchors euro-area inflation over the long run, but Greek inflation has run above the euro average (5.0% in September 2026), so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Greece uses the euro; ECB deposit facility rate 2.50% since 16 September 2026, still 2.50% on 31 October 2026 (ECB data portal FM.D.U2.EUR.4F.KR.DFR.LEV)."
+    },
+    "savings_account_rate": {
+      "value": 0.0003,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Greek banks, overnight deposits from households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight deposits in Greece was 0.03% in June-August 2026."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/Bank of Greece MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.17% in August 2026); no separate 3-month rate found and bankofgreece.gr refused automated access."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0117,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Greek banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year (1.24% in July 2026); deposits of 1-2 years paid 1.43% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring-deposit product with a published average rate was found for Greece."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0119,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Greek banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits; overnight deposits paid 0.03%. World Bank FR.INR.DPST has no Greece figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Greece has no government savings certificate or retail savings bond for individuals; individuals buy ordinary Greek government bonds and treasury bills through banks."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0276,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Greece 3-month government bill yield",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary-market 3-month yield on the Greece bond page (1-month 2.68%, 6-month 2.82%); the Public Debt Management Agency auctions 13-week treasury bills."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Greek government bond yield found: Trading Economics shows no 5-year series for Greece, worldgovernmentbonds.com loads by script and bankofgreece.gr refused automated access."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0432,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Greece 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Page shows 4.32% (summary 4.35%); ECB long-term (10-year) convergence yield for Greece was 4.22% in September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Greece income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/greece/individual/income-determination",
+      "asOf": "2026-09-08",
+      "note": "Interest is subject to 15% withholding tax, which fully settles the tax for individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Greece income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/greece/individual/income-determination",
+      "asOf": "2026-09-08",
+      "note": "No savings certificate exists; interest on Greek State bonds and promissory notes (treasury bills) acquired by individuals is exempt from income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Hellenic Deposit and Investment Guarantee Fund (TEKE); European Commission, deposit guarantee schemes",
+      "sourceUrl": "https://finance.ec.europa.eu/banking/banking-regulation/deposit-guarantee-schemes_en",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per depositor per bank under the EU Deposit Guarantee Schemes Directive, paid by TEKE in Greece; teke.gr did not show the figure to automated access."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1687,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Greek banks, extended credit card credit to households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.A2Z3.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Typical rate, not a legal cap: average 16.87% on extended credit card debt in August 2026; revolving loans and overdrafts averaged 8.25%."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Athens General index 2,619 on 30 Oct 2026, up 31% in a year but still 60% below its 1999 high; after-tax 1-year deposit 1.0%",
+      "sourceUrl": "https://tradingeconomics.com/greece/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Greek shares repeat a long flat stretch like 2000-2020 and earn little more than safe instruments."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Athens General index (Trading Economics); tax-free 3-month treasury bill 2.76%",
+      "sourceUrl": "https://tradingeconomics.com/greece/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case capped near the tax-free bill rate plus about 3 points because the Greek index has a weak 25-year record despite its strong recovery since 2016."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Athens General index (Trading Economics); global equity long-run returns",
+      "sourceUrl": "https://tradingeconomics.com/greece/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified euro equity fund matching long-run global equity returns of about 7-8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.17% less 15% withholding = 1.0% (ECB MFI statistics)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax term deposits only."
+    },
+    "fixed_income_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.0%; tax-free 3-month treasury bill 2.76%",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of after-tax term deposits and tax-exempt Greek treasury bills, kept below the bill rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Greece 10-year government bond 4.32%, tax-exempt for individuals",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding Greek government bonds, whose interest is tax-free, with some price risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Neither the Bank of Greece insurance supervision department nor the Hellenic Association of Insurance Companies publishes an industry life claim settlement ratio that could be found; bankofgreece.gr refused automated access."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Greece, but no published premium table or regulator premium data per sum insured was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public hospital care is covered by EOPYY; no official figure for a typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is sold in Greece, but no published premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.343,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GR",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 34.3% of current health expenditure, among the highest in the EU."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Greece, health: 0.4% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.GR.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices have been held down by regulated prices, but private care costs tend to rise faster than general prices, so 3% is used for planning."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Greece, education: 2.8% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.GR.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Education prices (mainly private tutoring and schools; public education is free) rose 2.8% in 2025; 3% is used for planning."
+    },
+    "life_expectancy": {
+      "value": 82.4,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/greece",
+      "asOf": "2026-07-01",
+      "note": "Men 79.9, women 84.7 (UN WPP estimate for 2026); World Bank 2024 figure 81.8."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.6,
+            "men": 22.8,
+            "women": 26.2
+          },
+          {
+            "age": 65,
+            "total": 20.4,
+            "men": 18.8,
+            "women": 21.7
+          },
+          {
+            "age": 70,
+            "total": 16.4,
+            "men": 15.2,
+            "women": 17.5
+          },
+          {
+            "age": 80,
+            "total": 9.5,
+            "men": 8.6,
+            "women": 10.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/greece",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.57
+          },
+          {
+            "year": 2040,
+            "value": 1.87
+          },
+          {
+            "year": 2065,
+            "value": 1.67
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/greece/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 38.9 (2025, World Bank), 53.5 (2040) and 59.8 (2065, populationpyramid.net/greece/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Greece (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/f476ffdd-db90-48e3-8e1b-cd861a3f82e1_en",
+      "asOf": "2026-07-31",
+      "note": "General pension age 67 with at least 15 insurance years (4,500 days); a full pension is also payable from 62 with 40 insurance years."
+    },
+    "retirement_age_government": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Greece (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/f476ffdd-db90-48e3-8e1b-cd861a3f82e1_en",
+      "asOf": "2026-07-31",
+      "note": "Civil servants are insured with e-EFKA under the same unified rules since 2017, so the general age limit of 67 (62 with 40 years) applies."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 1.17% less 15% withholding = 1.0%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax term deposits only."
+    },
+    "retirement_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.0%; tax-free 3-month treasury bill 2.76%",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits and tax-exempt treasury bills, kept well below the bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Greece 10-year government bond 4.32%, tax-exempt for individuals",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of tax-exempt Greek government bonds, below the 10-year yield to allow for reinvestment risk."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.0%; Athens General record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/greece/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Fixed income base 1.5%; equity base 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/greece/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Tax-free 10-year bond 4.32%; equity high 7.5%",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 418.95,
+      "status": "sourced",
+      "sourceName": "OPEKA, social solidarity allowance for uninsured elderly (FAQ)",
+      "sourceUrl": "https://opeka.gov.gr/anasfalistoi-yperilikes/epidoma-koinonikis-allilengyis-anasfaliston-yperilikon/sychnes-erotiseis/",
+      "asOf": "2026-10-31",
+      "note": "EUR 418.95 a month (the eligibility section of the same page still shows the earlier EUR 409.13; the July 2026 EC guide gives EUR 399.54 and 418.95 in different places)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "OPEKA, social solidarity allowance for uninsured elderly",
+      "sourceUrl": "https://opeka.gov.gr/anasfalistoi-yperilikes/epidoma-koinonikis-allilengyis-anasfaliston-yperilikon/",
+      "asOf": "2026-10-31",
+      "note": "Age 67, 20 years of permanent legal residence in Greece, no pension from Greece or abroad, and annual taxable income up to EUR 4,320 (single) or EUR 8,640 (couple)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Greek law gives severance on dismissal (scaled by length of service) and a reduced retirement severance (40% of the dismissal amount) under Law 2112/1920 as amended, not a fixed days-per-year gratuity; no source stating the current scale was read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Greece (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/f476ffdd-db90-48e3-8e1b-cd861a3f82e1_en",
+      "asOf": "2026-07-31",
+      "note": "Compulsory e-EFKA pension: a tax-funded national pension (EUR 446.87 a month with 20 insurance years) plus a contributory part; pensions are taxed as income (only those of people with 80%+ disability are exempt). Yearly increases follow Law 4387/2016 (half GDP growth plus half CPI, at most CPI), which is not described in the guide."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Λογαριασμός ταμιευτηρίου",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Προθεσμιακή κατάθεση",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Προθεσμιακή κατάθεση",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring-deposit product was found; regular saving usually goes into savings accounts or monthly mutual fund plans."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "Greece has no retail savings certificate; individuals can buy Greek government bonds and treasury bills through banks, with interest exempt from income tax."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Έντοκα Γραμμάτια Ελληνικού Δημοσίου",
+      "localNameEn": "Greek Government Treasury Bills",
+      "note": "13-week bills auctioned by the Public Debt Management Agency; individuals buy through banks.",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Ομόλογα Ελληνικού Δημοσίου",
+      "localNameEn": "Greek Government Bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Ομόλογα Ελληνικού Δημοσίου",
+      "localNameEn": "Greek Government Bonds",
+      "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Αμοιβαία κεφάλαια",
+      "localNameEn": "Mutual funds and index funds (ETFs)",
+      "note": "Retail mutual funds and exchange-traded index funds are widely available."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Χρυσές λίρες και ράβδοι χρυσού",
+      "localNameEn": "Gold sovereigns and gold bars",
+      "note": "Buying physical gold is legal; gold sovereigns are a traditional savings form in Greece."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Greece",
+      "url": "https://www.bankofgreece.gr/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Bank of Greece, Department of Private Insurance Supervision",
+      "url": "https://www.bankofgreece.gr/"
+    },
+    "insuranceComplaints": {
+      "name": "Hellenic Consumer Ombudsman",
+      "url": "https://www.synigoroskatanaloti.gr/",
+      "note": "Independent authority for consumer disputes, including with insurers; complaints can also be sent to the Bank of Greece insurance supervision department."
+    },
+    "pensionScheme": {
+      "name": "e-EFKA (Unified Social Security Fund)",
+      "url": "https://www.efka.gov.gr/"
+    },
+    "oldAgeAllowance": {
+      "name": "OPEKA, social solidarity allowance for uninsured elderly",
+      "url": "https://opeka.gov.gr/anasfalistoi-yperilikes/epidoma-koinonikis-allilengyis-anasfaliston-yperilikon/"
+    },
+    "publicHealthCover": {
+      "name": "EOPYY (National Organisation for the Provision of Health Services)",
+      "url": "https://www.eopyy.gov.gr/"
+    },
+    "depositInsurance": {
+      "name": "Hellenic Deposit and Investment Guarantee Fund (TEKE)",
+      "url": "https://www.teke.gr/"
+    },
+    "statistics": {
+      "name": "Hellenic Statistical Authority (ELSTAT)",
+      "url": "https://www.statistics.gr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

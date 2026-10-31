@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "code": "RU",
+  "iso3": "RUS",
+  "nameEn": "Russia",
+  "nameNative": "Россия",
+  "region": "europe_central_asia",
+  "languages": [
+    "ru",
+    "tt",
+    "ba",
+    "cv",
+    "ce"
+  ],
+  "currency": {
+    "code": "RUB",
+    "symbol": "₽",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 80.5573,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, official exchange rates",
+      "sourceUrl": "https://www.cbr.ru/eng/currency_base/daily/",
+      "asOf": "2026-10-31",
+      "note": "Official rate set for 31 October 2026 (EUR 89.6603). World Bank 2025 average 83.65."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0635,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, key rate, inflation and inflation target table",
+      "sourceUrl": "https://www.cbr.ru/hd_base/infl/",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI 6.35% in September 2026 (6.33% in August, 5.98% in July). The Bank of Russia estimated about 6.8% in mid-October 2026. World Bank 2025 average 8.7%."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Russia 4% target; CPI 6.35% (Sep 2026); World Bank 2025 average 8.7%",
+      "sourceUrl": "https://www.cbr.ru/hd_base/infl/",
+      "asOf": "2026-10-31",
+      "note": "Inflation has run well above the 4% target for five years (roughly 7-12% a year since 2021), so we plan with 6%, between the target and the recent average."
+    },
+    "policy_rate": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, key rate",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/KeyRate/",
+      "asOf": "2026-10-30",
+      "note": "Held at 14% at the 23 October 2026 board meeting (14.25% in June 2026)."
+    },
+    "savings_account_rate": {
+      "value": 0.0547,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, weighted average interest rates on deposits of individuals in rubles (demand deposits)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-08-31",
+      "note": "Demand deposits of individuals, August 2026 (file deposits_e.xlsx). Includes current and savings (nakopitelny) accounts; savings accounts alone usually pay more, and banks can change their rate at any time."
+    },
+    "fdr_3m_rate": {
+      "value": 0.1244,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, weighted average interest rates on deposits of individuals in rubles (31 to 90 days)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-08-31",
+      "note": "Deposits of 31 to 90 days opened in August 2026 (file deposits_e.xlsx); 12.39% in July 2026."
+    },
+    "fdr_1y_rate": {
+      "value": 0.1327,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, weighted average interest rates on deposits of individuals in rubles (181 days to 1 year)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-08-31",
+      "note": "Deposits of 181 days to 1 year opened in August 2026 (file deposits_e.xlsx). The Bank of Russia's average maximum rate of the ten largest deposit-taking banks was 13.06% in mid-October 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard fixed-installment recurring deposit with a published market rate was found; banks offer term deposits that can be topped up, which the Bank of Russia does not report separately."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.1284,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, weighted average interest rates on deposits of individuals in rubles (up to 1 year, including demand deposits)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-08-31",
+      "note": "August 2026 (file deposits_e.xlsx); deposits over 1 year averaged 11.08%. World Bank FR.INR.DPST 2024: 14.6%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "absent": true,
+      "note": "The retail federal loan bonds for individuals (OFZ-n, 3-year) were suspended in March 2022; in December 2022 the Ministry of Finance announced it would stop issuing them and the last issue was redeemed on 12 February 2025 (ru.wikipedia.org/wiki/ОФЗ-н, citing the Ministry). Individuals now buy exchange-traded OFZ instead."
+    },
+    "tbill_91d_rate": {
+      "value": 0.1328,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, zero-coupon yield curve of federal loan bonds (0.25 years)",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/",
+      "asOf": "2026-10-30",
+      "note": "The government finances itself with OFZ bonds rather than treasury bills; this is the 3-month point of the OFZ zero-coupon curve (13.56% at 6 months, 14.06% at 1 year)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1605,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, zero-coupon yield curve of federal loan bonds (5 years)",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/",
+      "asOf": "2026-10-30",
+      "note": "Zero-coupon OFZ yield for 5 years on 30 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1656,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, zero-coupon yield curve of federal loan bonds (10 years)",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/",
+      "asOf": "2026-10-30",
+      "note": "Zero-coupon OFZ yield for 10 years on 30 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.13,
+      "status": "sourced",
+      "sourceName": "Bank of Russia financial literacy portal (fincult.info), taxes an investor pays",
+      "sourceUrl": "https://fincult.info/article/kakie-nalogi-platit-investor/",
+      "asOf": "2024-12-28",
+      "note": "Deposit interest up to 1 million rubles times the highest key rate of the year (on the 1st of any month) is tax-free; interest above that is taxed with investment income at 13% up to 2.4 million rubles a year and 15% above (from 2025). Page updated December 2024 (older than 2025)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.13,
+      "status": "sourced",
+      "sourceName": "Bank of Russia financial literacy portal (fincult.info), taxes an investor pays",
+      "sourceUrl": "https://fincult.info/article/kakie-nalogi-platit-investor/",
+      "asOf": "2024-12-28",
+      "note": "Bond coupon income is always subject to personal income tax: 13% on investment income up to 2.4 million rubles a year, 15% above (from 2025). Applies to OFZ, as the retail OFZ-n no longer exist. Page updated December 2024 (older than 2025)."
+    },
+    "deposit_insurance_limit": {
+      "value": 1400000,
+      "status": "sourced",
+      "sourceName": "Bank of Russia financial literacy portal (fincult.info), how to choose a deposit",
+      "sourceUrl": "https://fincult.info/article/kak-vybrat-vklad/",
+      "asOf": "2026-10-31",
+      "note": "Up to 1.4 million rubles per depositor per bank, all accounts and deposits at that bank combined, including accrued interest (page read October 2026; the Deposit Insurance Agency site asv.org.ru refused connections). Higher cover applies in special life situations."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.728,
+      "status": "sourced",
+      "sourceName": "Bank of Russia, average market and maximum values of the full cost of consumer credit (credit institutions, Q4 2026)",
+      "sourceUrl": "https://www.cbr.ru/statistics/bank_sector/psk/",
+      "asOf": "2026-08-14",
+      "note": "Legal maximum full cost of credit for loans via a payment card up to 100,000 rubles used cashless, for contracts signed in Q4 2026 (file 14082026_ko.xlsx); the market average was 54.6% (April-June 2026). Over 100,000 rubles: average 54.2%, cap 72.3%."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Russia key rate 14%; weak 5-year MOEX index record",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/KeyRate/",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local market is isolated from foreign investors since 2022 and its price index has gone sideways for years, so a long stretch of returns below inflation is plausible."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "1-year deposit 13.27% (Aug 2026), 6% long-run inflation assumption",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "Base case of about 4 points over planned inflation, kept below today's after-tax deposit rate plus 4 points because the Russian index has a weak 10-year record and high political risk."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "OFZ 10-year yield 16.56% (Bank of Russia zero-coupon curve)",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/",
+      "asOf": "2026-10-31",
+      "note": "High case: a re-rating of Russian shares with high dividends while rates fall."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Russia official exchange rate (80.56 rubles per USD)",
+      "sourceUrl": "https://www.cbr.ru/eng/currency_base/daily/",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold prices with a stable ruble."
+    },
+    "gold_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Bank of Russia official exchange rate; long-run dollar gold trend",
+      "sourceUrl": "https://www.cbr.ru/eng/currency_base/daily/",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus about 4% a year of ruble depreciation (6% planned inflation against about 2% in the US)."
+    },
+    "gold_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Bank of Russia official exchange rate",
+      "sourceUrl": "https://www.cbr.ru/eng/currency_base/daily/",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a sharp ruble devaluation, as in 2014-2015 and 2022-2023."
+    },
+    "fixed_income_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank of Russia 4% inflation target; demand deposits 5.47% (Aug 2026)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall towards a 4% inflation target plus a small real return."
+    },
+    "fixed_income_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "1-year deposit 13.27% and 3-month OFZ 13.28% today; 6% long-run inflation assumption",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "Base case over the long run: today's 13% deposit rates should fall as inflation comes down, so we use about 3 points over planned inflation; most savers stay inside the tax-free interest allowance."
+    },
+    "fixed_income_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "1-year deposit 13.27% (Aug 2026) less 13% tax above the allowance",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "High case: rates stay near today's level for many years."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Russia supervises insurers but no industry-wide life claim settlement ratio was found in its published statistics."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (risk) cover is sold, often with loans, but no regulator or official premium table per 1,000 rubles of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is free under compulsory medical insurance (OMS); no official figure for the typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary medical insurance (DMS) is mostly bought by employers; no published premium table per 100,000 rubles of cover by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2839,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=RU",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Services inflation 7.97% year on year in September 2026 (Trading Economics, Rosstat data)",
+      "sourceUrl": "https://tradingeconomics.com/russia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No separate medical CPI was read; services prices are rising faster than the overall CPI, so we plan health costs at 1.5 points over the 6% projection."
+    },
+    "goal_inflation_education": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Services inflation 7.97% year on year in September 2026 (Trading Economics, Rosstat data)",
+      "sourceUrl": "https://tradingeconomics.com/russia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No separate education CPI was read; paid education is a service, so we use the 6% projection plus 1.5 points."
+    },
+    "life_expectancy": {
+      "value": 73.44,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=RU",
+      "asOf": "2024-12-31",
+      "note": "Men 68.3, women 78.9 (2024, older than 2025)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.1,
+            "men": 17,
+            "women": 23.1
+          },
+          {
+            "age": 65,
+            "total": 17.1,
+            "men": 14.1,
+            "women": 19
+          },
+          {
+            "age": 70,
+            "total": 13.4,
+            "men": 11.5,
+            "women": 15.2
+          },
+          {
+            "age": 80,
+            "total": 7.9,
+            "men": 7.1,
+            "women": 8.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (mortality, 2026)",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/russian-federation/",
+      "asOf": "2026-01-01",
+      "note": "Secondary source of UN WPP 2024 for 2026, five-year age groups; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there), so they overstate slightly because women outnumber men at these ages."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 3.53
+          },
+          {
+            "year": 2040,
+            "value": 3.05
+          },
+          {
+            "year": 2065,
+            "value": 2.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (old-age dependency ratio)",
+      "sourceUrl": "https://www.populationpyramid.net/russian-federation/2040/",
+      "asOf": "2026-01-01",
+      "note": "100 / old-age dependency ratio: 28.3 (2026, /russian-federation/2026/), 32.8 (2040) and 40.0 (2065, /russian-federation/2065/). World Bank 2025: 27.3."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Social Fund of Russia, conditions for the old-age insurance pension (Federal Law 350-FZ)",
+      "sourceUrl": "https://sfr.gov.ru/grazhdanam/pensionnoe_obespechenie/strahovaya_pensiya_po_starosti/usloviya_naznacheniya/",
+      "asOf": "2026-10-31",
+      "note": "Men born in 1963 or later retire at 65 and women born in 1968 or later at 60 (from 2028); 2026 is a transition year (men 64, women 59). Requires 15 years of insurance record and 30 pension points."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Social Fund of Russia, conditions for the old-age insurance pension (state and municipal employees)",
+      "sourceUrl": "https://sfr.gov.ru/grazhdanam/pensionnoe_obespechenie/strahovaya_pensiya_po_starosti/usloviya_naznacheniya/",
+      "asOf": "2026-10-31",
+      "note": "Pension age for state civil and municipal servants rises on a separate schedule to 65 for men and 63 for women by 2034."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Russia 4% inflation target; demand deposits 5.47% (Aug 2026)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall close to target inflation."
+    },
+    "retirement_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "1-year deposit 13.27% (Aug 2026), mostly within the tax-free interest allowance",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "Base case well below today's after-tax 1-year deposit rate, since rates are expected to fall with inflation over a long retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "1-year deposit 13.27%; 5-year OFZ 16.05% (Bank of Russia)",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in today's high deposit and OFZ yields for longer."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Fixed-income low 6.5%; equity low 4%",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if both rates and shares disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Fixed-income base 9%; equity base 10%",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 10% and half deposits and OFZ at 9%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.125,
+      "status": "assumption",
+      "sourceName": "Fixed-income high 12%; equity high 14%",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 9424.12,
+      "status": "sourced",
+      "sourceName": "Social Fund of Russia, amount of the social pension",
+      "sourceUrl": "https://sfr.gov.ru/grazhdanam/pensionnoe_obespechenie/socialnaya_pensiya/razmer/",
+      "asOf": "2026-04-01",
+      "note": "Base social old-age pension from 1 April 2026, indexed every 1 April; higher with the northern district coefficient, and topped up to the regional pensioner subsistence minimum for non-working pensioners."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 70,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Social Fund of Russia, right to the social old-age pension",
+      "sourceUrl": "https://sfr.gov.ru/grazhdanam/pensionnoe_obespechenie/socialnaya_pensiya/pravo",
+      "asOf": "2026-10-31",
+      "note": "For residents without the right to an insurance pension (under 15 years of record or 30 points): 69 for men and 64 for women in 2026-2027, 70 and 65 from 2028; foreigners need 15 years of residence. No income test."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity per year of service was found; the Labour Code provides severance pay only on dismissal for redundancy or liquidation. Not confirmed from an official text, so not marked absent."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Social Fund of Russia, old-age insurance pension: conditions, amount and indexation",
+      "sourceUrl": "https://sfr.gov.ru/grazhdanam/pensionnoe_obespechenie/indeksacia_strahovth_pensij/",
+      "asOf": "2026-01-01",
+      "note": "Compulsory points-based insurance pension (Federal Law 400-FZ): pension = points x 156.76 rubles plus a fixed payment of 9,584.69 rubles (2026), from 65 for men and 60 for women. Indexed 7.6% in January 2026; from 2027 indexed twice a year, once to inflation and once for budget revenue growth."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Накопительный счёт",
+      "localNameEn": "Savings account",
+      "note": "The bank can change the rate at any time; interest is usually paid on the minimum monthly balance.",
+      "sourceUrl": "https://fincult.info/article/kak-vybrat-vklad/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Срочный вклад",
+      "localNameEn": "Term deposit (3 months)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Срочный вклад",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://www.cbr.ru/eng/statistics/bank_sector/int_rat/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard fixed-installment recurring deposit was found; term deposits that allow top-ups (popolnyaemy vklad) are the nearest product."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": "ОФЗ-н",
+      "localNameEn": "Federal loan bonds for individuals (OFZ-n)",
+      "note": "Discontinued: issuance stopped in 2022 and the last issue was redeemed in February 2025.",
+      "sourceUrl": "https://ru.wikipedia.org/wiki/ОФЗ-н"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "ОФЗ с коротким сроком до погашения",
+      "localNameEn": "Short-dated federal loan bonds (OFZ)",
+      "note": "No treasury bills are sold; the 3-month rate is the short end of the OFZ curve, bought through a brokerage account on the exchange.",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Облигации федерального займа (ОФЗ)",
+      "localNameEn": "Federal loan bonds (OFZ)",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Облигации федерального займа (ОФЗ)",
+      "localNameEn": "Federal loan bonds (OFZ)",
+      "sourceUrl": "https://www.cbr.ru/eng/hd_base/zcyc_params/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Паевой инвестиционный фонд (ПИФ) или биржевой фонд (БПИФ)",
+      "localNameEn": "Unit investment fund or exchange-traded fund",
+      "note": "Funds holding Russian shares are widely available; foreign index funds are largely inaccessible since 2022."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Золото в слитках и монетах",
+      "localNameEn": "Gold bars and coins",
+      "note": "Individuals can buy bars and investment coins from banks; VAT on gold bars for individuals was removed in 2022."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Russia",
+      "url": "https://www.cbr.ru/eng/"
+    },
+    "insuranceRegulator": {
+      "name": "Bank of Russia (insurance market supervision)",
+      "url": "https://www.cbr.ru/eng/insurance/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Ombudsman (Service of the Financial Consumer Ombudsman)",
+      "url": "https://finombudsman.ru/",
+      "note": "Statutory pre-court route for disputes with insurers; complaints can also be sent to the Bank of Russia's internet reception."
+    },
+    "pensionScheme": {
+      "name": "Social Fund of Russia, old-age insurance pension",
+      "url": "https://sfr.gov.ru/grazhdanam/pensionnoe_obespechenie/strahovaya_pensiya_po_starosti/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Fund of Russia, social old-age pension",
+      "url": "https://sfr.gov.ru/grazhdanam/pensionnoe_obespechenie/socialnaya_pensiya/"
+    },
+    "publicHealthCover": {
+      "name": "Federal Compulsory Medical Insurance Fund (OMS)",
+      "url": "https://www.ffoms.gov.ru/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Agency",
+      "url": "https://www.asv.org.ru/"
+    },
+    "statistics": {
+      "name": "Federal State Statistics Service (Rosstat)",
+      "url": "https://rosstat.gov.ru/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

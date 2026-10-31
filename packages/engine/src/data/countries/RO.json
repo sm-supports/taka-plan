@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "RO",
+  "iso3": "ROU",
+  "nameEn": "Romania",
+  "nameNative": "România",
+  "region": "europe_central_asia",
+  "languages": [
+    "ro",
+    "en",
+    "hu",
+    "fr"
+  ],
+  "currency": {
+    "code": "RON",
+    "symbol": "lei",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 4.7698,
+      "status": "sourced",
+      "sourceName": "National Bank of Romania reference exchange rate (USD)",
+      "sourceUrl": "https://curs.bnr.ro/nbrfxrates.xml",
+      "asOf": "2026-10-30",
+      "note": "RON 4.7698 per US dollar on 30 October 2026 (EUR 5.3426); World Bank 2025 average 4.47."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.066,
+      "status": "sourced",
+      "sourceName": "National Institute of Statistics (INS) consumer price index, September 2026, as reported by Trading Economics (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/romania/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI inflation 6.6% in September 2026 (6.2% in August; 10.85% peak in May 2026), released 13 October 2026. Secondary source because the INS site could not be reached. World Bank 2025 average 7.2%."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BNR inflation target 2.5% +/- 1 point; BNR projection 3.4% for end-2027; Romanian HICP 2021-2025 average 7.7% (ECB ICP)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.RO.N.000000.4.AVR",
+      "asOf": "2026-10-31",
+      "note": "The BNR targets 2.5% but inflation averaged 7.7% over 2021-2025 and is 6.6% now, so planning uses 4.5%, above the target band."
+    },
+    "policy_rate": {
+      "value": 0.065,
+      "status": "sourced",
+      "sourceName": "National Bank of Romania monetary policy rate, as reported by Trading Economics (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/romania/interest-rate",
+      "asOf": "2026-10-08",
+      "note": "Policy rate held at 6.50% at the 8 October 2026 board meeting, unchanged since August 2024; next decision 12 November 2026. Secondary source because the BNR pages load their figures by script."
+    },
+    "savings_account_rate": {
+      "value": 0.0051,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by the BNR): Romanian banks, overnight leu deposits from households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L21.A.R.A.2250.RON.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight (current and savings) leu deposits was 0.51% in August 2026 (0.51% in July)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BNR and ECB publish household term deposits up to 1 year as one bucket (5.04% in August 2026); no separate 3-month average was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0504,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by the BNR): household leu deposits with agreed maturity up to 1 year, new business",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year (5.04% in July 2026 too); 1-2 year deposits paid 5.83% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring-deposit product with a published average rate was found for Romania."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0504,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by the BNR): household leu deposits with agreed maturity up to 1 year, new business",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
+      "asOf": "2026-08-31",
+      "note": "No all-maturity average is published for Romania in the ECB dataset; deposits up to 1 year make up nearly all new household term deposits, so their weighted average (5.04%, August 2026) is used. World Bank FR.INR.DPST gives 5.23% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance sells retail government bonds (TEZAUR at the Treasury and post offices, FIDELIS on the stock exchange), but its pages could not be reached on 31 October 2026, so the current 5-year rate was not read."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 3-month treasury certificate yield could be read; the Ministry of Finance auction results pages could not be reached and no secondary source listed one."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Romanian government bond yield could be read from an official or reachable secondary page on 31 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.072,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Romania 10-year government bond yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/romania/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "10-year yield 7.20% on 30 October 2026; the ECB long-term convergence yield for Romania was 6.71% in September 2026 (ECB IRS dataset)."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Romania income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/romania/individual/income-determination",
+      "asOf": "2026-09-25",
+      "note": "Interest income is taxed at a flat 10%, withheld by the payer as a final tax (page reviewed 25 September 2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The PwC summary does not say whether interest on retail government bonds (TEZAUR, FIDELIS) is taxed, and the Ministry of Finance pages could not be reached to confirm their tax exemption."
+    },
+    "deposit_insurance_limit": {
+      "value": 534260,
+      "status": "sourced",
+      "sourceName": "European Commission, deposit guarantee schemes (EU rules); BNR reference rate EUR 1 = RON 5.3426 (30 October 2026)",
+      "sourceUrl": "https://finance.ec.europa.eu/banking/banking-regulation/deposit-guarantee-schemes_en",
+      "asOf": "2026-10-30",
+      "note": "EU rules guarantee deposits up to EUR 100,000 per depositor per bank, paid in lei by the Bank Deposit Guarantee Fund (FGDB, whose site could not be read); converted at the BNR rate of 30 October 2026."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2773,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by the BNR): Romanian banks, extended credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.A2Z3.A.R.A.2250.RON.N",
+      "asOf": "2026-08-31",
+      "note": "Typical rate, not a legal cap: average 27.73% in August 2026 (27.76% in July)."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BET index 34,822 on 29 Oct 2026, up about 55% in a year (Trading Economics); after-tax 1-year deposit 4.5%",
+      "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Romanian shares give back much of the 2025-26 rally and earn only a little more than after-tax deposits."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BET index (Trading Economics); after-tax 1-year deposit 5.04% x 0.9 = 4.5%",
+      "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5 points over the after-tax deposit rate, well below the BET's strong recent record because the index is concentrated in 10 stocks, mostly energy and banks."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "BET index (Trading Economics), roughly 17% a year in price terms since 2016",
+      "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: Romanian and diversified equity funds keep close to their strong leu returns of the last decade."
+    },
+    "gold_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); BNR gold price RON 609.57 per gram (30 Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stalls after the 2025-26 spike and the leu stays stable."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); BNR 2.5% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, and the leu loses about 2% a year against the dollar as inflation stays above the euro area's."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in leu terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 5.04% less 10% tax = 4.5% (ECB MIR)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax bank term deposits, with rates falling as inflation eases."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 4.5% (ECB MIR); 1-2 year deposits 5.83%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.G.R.A.2250.RON.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits and retail government bonds, allowing for policy-rate cuts."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "10-year government bond 7.20% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/romania/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in medium and long government bonds at today's yields."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Financial Supervisory Authority (ASF) publishes insurance market reports, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Romania, but no regulator or official premium table per sum insured was found; only individual company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by the National Health Insurance House (CNAS) for insured people; no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance and subscriptions are sold in Romania, but no published premium table per RON 100,000 of cover from a regulator or public source was found."
+    },
+    "oop_health_share": {
+      "value": 0.2296,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=RO",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 23.0% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Romania, health: 8.9% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.RO.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 8.9% in 2025, slightly above general HICP (8.6%); planning uses 6%, 1.5 points above general planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Romania, education: 8.5% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.RO.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 8.5% in 2025, in line with high general inflation; planning uses 6%."
+    },
+    "life_expectancy": {
+      "value": 76.4,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/romania",
+      "asOf": "2026-07-01",
+      "note": "Men 72.9, women 79.9 (UN WPP estimate for 2026); World Bank 2024 figure 76.5."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/romania",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.7,
+            "men": 18.4,
+            "women": 22.8
+          },
+          {
+            "age": 65,
+            "total": 17.1,
+            "men": 15.2,
+            "women": 18.6
+          },
+          {
+            "age": 70,
+            "total": 13.6,
+            "men": 12.2,
+            "women": 14.7
+          },
+          {
+            "age": 80,
+            "total": 7.5,
+            "men": 7.0,
+            "women": 7.8
+          }
+        ]
+      },
+      "note": "Remaining years from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/romania/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.19
+          },
+          {
+            "year": 2040,
+            "value": 2.44
+          },
+          {
+            "year": 2065,
+            "value": 1.98
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 31.3 (2025, World Bank), 40.9 (2040) and 50.4 (2065, populationpyramid.net/romania/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Romania (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/9b140205-9066-4a16-876f-eb7643365cc9_en",
+      "asOf": "2026-07-31",
+      "note": "Standard retirement age is 65 for men; for women it is 62 years 6 months in 2026 and rises to 65 by January 2035, so 65 applies to everyone born after 1975. Minimum contribution period 15 years."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Romania (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/9b140205-9066-4a16-876f-eb7643365cc9_en",
+      "asOf": "2026-07-31",
+      "note": "Civil servants are covered by the public pension system with the same standard ages (65 for men, rising to 65 for women by 2035); magistrates, military and police have special schemes."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 4.5% (ECB MIR)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax deposits after the policy rate is cut as inflation falls."
+    },
+    "retirement_return_base": {
+      "value": 0.0425,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 5.04% less 10% tax = 4.5% (ECB MIR)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the after-tax 1-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "1-2 year deposits 5.83% and 10-year government bond 7.20% (ECB MIR; Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/romania/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: medium-term deposits and government bonds bought at today's yields and held to maturity."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "After-tax deposits 4.5%; BET record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Fixed income base 4.5%; equity base 8%",
+      "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 8% and half safe fixed income at about 4.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Equity high 11%; government bonds 7.2%",
+      "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 533,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Romania (July 2026): minimum inclusion income",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/9b140205-9066-4a16-876f-eb7643365cc9_en",
+      "asOf": "2026-07-31",
+      "note": "Romania has no separate social pension; a single person aged over 65 with no income can get the inclusion aid (ajutor de incluziune) of up to RON 533 a month (threshold RON 533 minus equivalised income; RON 366 for younger people), since March 2025. Pensioners with low contributory pensions get the social indemnity top-up instead."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Romania (July 2026): minimum inclusion income",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/9b140205-9066-4a16-876f-eb7643365cc9_en",
+      "asOf": "2026-07-31",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Inclusion aid at the higher RON 533 threshold for single persons aged over 65; means-tested on household income and assets (no second home, car or large land holdings), legal residence in Romania."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory days-per-year end-of-service payment was found; severance on collective dismissal is set by collective agreements, and no official page stating the Labour Code rule could be read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Romania (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/9b140205-9066-4a16-876f-eb7643365cc9_en",
+      "asOf": "2026-07-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "note": "Compulsory points-based public pension (CNPP): standard age 65 for men and rising to 65 for women by 2035, at least 15 years of contributions; pension point value RON 81 from January 2026. By law the point is indexed yearly to inflation plus half of real wage growth, though it was frozen in 2025-2026. Pensions above RON 3,000 a month are taxed on the excess. Workers born after 1 July 1971 also pay into a mandatory private pension fund (Pillar II)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cont de economii",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L21.A.R.A.2250.RON.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depozit la termen (3 luni)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depozit la termen (12 luni)",
+      "localNameEn": "Term deposit (12 months)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring-deposit product; regular saving is usually done through savings accounts or retail government bonds."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Titluri de stat TEZAUR / FIDELIS",
+      "localNameEn": "Retail government bonds (TEZAUR, FIDELIS)",
+      "note": "Sold by the Ministry of Finance to individuals: TEZAUR through the State Treasury, post offices and online, FIDELIS through the Bucharest stock exchange; maturities of 1 to about 10 years."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Certificate de trezorerie",
+      "localNameEn": "Treasury certificates",
+      "note": "Discount treasury certificates are auctioned by the Ministry of Finance to primary dealers; individuals buy the retail TEZAUR or FIDELIS bonds instead."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligațiuni de stat",
+      "localNameEn": "Government bonds",
+      "note": "FIDELIS retail bonds and benchmark bonds can be bought through brokers."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligațiuni de stat",
+      "localNameEn": "Government bonds",
+      "sourceUrl": "https://tradingeconomics.com/romania/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fond de investiții",
+      "localNameEn": "Investment funds and index funds (ETFs)",
+      "note": "Retail mutual funds and exchange-traded index funds, including funds tracking the BET index, are available."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Aur de investiții",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "Buying physical investment gold is legal and VAT-exempt under EU rules; the BNR publishes a daily gold reference price."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banca Națională a României (National Bank of Romania)",
+      "url": "https://www.bnr.ro/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Supervisory Authority (ASF)",
+      "url": "https://asfromania.ro/en"
+    },
+    "insuranceComplaints": {
+      "name": "SAL-FIN (Alternative Dispute Resolution Entity in the Non-Banking Financial Area)",
+      "url": "https://www.salfin.ro/",
+      "note": "Out-of-court dispute body for consumers in disputes with insurers, set up by the ASF; complaints can also be filed with the ASF."
+    },
+    "pensionScheme": {
+      "name": "National Public Pension House (CNPP)",
+      "url": "https://www.cnpp.ro/"
+    },
+    "oldAgeAllowance": {
+      "name": "Minimum inclusion income (venitul minim de incluziune), National Agency for Payments and Social Inspection (ANPIS)",
+      "url": "https://www.mmanpis.ro/",
+      "note": "Means-tested aid with a higher threshold for single people over 65; claimed at the town hall's social assistance service."
+    },
+    "publicHealthCover": {
+      "name": "National Health Insurance House (CNAS)",
+      "url": "https://cnas.ro/"
+    },
+    "depositInsurance": {
+      "name": "Bank Deposit Guarantee Fund (FGDB)",
+      "url": "https://www.fgdb.ro/"
+    },
+    "statistics": {
+      "name": "National Institute of Statistics (INS)",
+      "url": "https://insse.ro/cms/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

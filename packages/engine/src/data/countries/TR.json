@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "code": "TR",
+  "iso3": "TUR",
+  "nameEn": "Turkey",
+  "nameNative": "Türkiye",
+  "region": "europe_central_asia",
+  "languages": [
+    "tr",
+    "en",
+    "ku"
+  ],
+  "currency": {
+    "code": "TRY",
+    "symbol": "₺",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 49.82,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of Türkiye (CBRT), indicative exchange rates of 30 October 2026",
+      "sourceUrl": "https://www.tcmb.gov.tr/kurlar/202610/30102026.xml",
+      "asOf": "2026-10-30",
+      "note": "Mid of the CBRT forex buying (49.7747) and selling (49.8644) rates for the US dollar announced on 30 October 2026; the lira lost about 19% against the dollar over the past year (Trading Economics). World Bank 2025 average 39.45."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.2973,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Turkish Statistical Institute (TurkStat), CPI September 2026",
+      "sourceUrl": "https://tradingeconomics.com/turkey/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 29.73% year on year in September 2026 (31.51% in August), released 5 October 2026; secondary source because the TurkStat bulletin could not be opened. October figure due 3 November 2026. World Bank 2025 average 34.9%."
+    },
+    "inflation_projection": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "IMF World Economic Outlook inflation path for Türkiye (31.2% 2026, 15.0% 2030); CBRT 5% medium-term target; 2021-2025 average about 48%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "The IMF expects disinflation to about 15% by 2030 but Türkiye has missed its 5% target for many years and inflation averaged about 48% in 2021-2025, so 18% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.36,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of Türkiye, one-week repo rate history",
+      "sourceUrl": "https://www.tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Core+Functions/Monetary+Policy/Central+Bank+Interest+Rates/1+Week+Repo",
+      "asOf": "2026-10-23",
+      "note": "One-week repo rate cut from 37% to 36% at the 22 October 2026 decision, effective 23 October; overnight lending 39% and borrowing 34.5% (Trading Economics)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for ordinary (demand) savings account interest was found; the CBRT weekly deposit rate statistics load only in its EVDS data system, which could not be read."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBRT publishes weekly weighted average TL deposit rates by maturity (Mevduat Faiz Oranları, Haftalık Akım), but the figures are served only through EVDS charts that could not be read in this research."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Same as the 3-month rate: CBRT weekly deposit rates by maturity could not be read from EVDS."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Some banks sell accumulating (birikimli) deposit accounts, but no official or industry-wide rate for a monthly recurring deposit was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.576,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=TR",
+      "asOf": "2025-12-31",
+      "note": "2025 annual average, when the policy rate was 38-46%; with the policy rate now 36%, current deposit rates are lower. A fresher CBRT figure could not be read."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found; individuals can buy Treasury bonds and lease certificates through banks."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 3-month Treasury bill yield was found; the Treasury issues few bills that short. The 2-year benchmark yield was 39.77% on 30 October 2026 (Trading Economics)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year benchmark yield could be read (the bond yield pages tried showed only 2- and 10-year yields)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.3587,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Turkey 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/turkey/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Market yield on 30 October 2026 (up about 2.8 points that session); secondary source."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Türkiye, Individual, Income determination (last reviewed 9 September 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/turkey/individual/income-determination",
+      "asOf": "2026-09-09",
+      "note": "Final withholding on TL deposit interest: 10% for call accounts and deposits up to 6 months, 7.5% up to 1 year, 5% over 1 year (Decree 2012/4116 as cited by PwC). The government has changed these rates by decree several times, so check the current decree."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists. PwC lists 10% withholding on local government bonds issued after 2006; the rate for Treasury bonds held by individuals was not stated."
+    },
+    "deposit_insurance_limit": {
+      "value": 1200000,
+      "status": "sourced",
+      "sourceName": "Savings Deposit Insurance Fund (TMSF), deposit insurance FAQ",
+      "sourceUrl": "https://www.tmsf.org.tr/tr/Tmsf/Finansman/mevduat.sss.guncel",
+      "asOf": "2026-01-01",
+      "note": "TRY 1,200,000 per person per credit institution in 2026 (950,000 in 2025), covering TL, foreign-currency and precious-metal deposits and participation funds; raised each year by the revaluation rate."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.45,
+      "status": "sourced",
+      "sourceName": "CBRT, maximum interest rates for credit card transactions",
+      "sourceUrl": "https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Istatistikler/Bankacilik+Verileri/Kredi_Karti_Islemlerinde_Uygulanacak_Azami_Faiz_Oranlari",
+      "asOf": "2026-10-01",
+      "note": "Legal maximum monthly contractual rate on TL card balances of TRY 30,000-180,000 is 3.75% (45% a year, simple); 3.25% below TRY 30,000 and 4.25% above TRY 180,000 or for cash advances; unchanged since January 2026 and announced for November 2026."
+    },
+    "equity_return_low": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BIST 100 at 10,760 on 30 Oct 2026, down 1.9% on a year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/turkey/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Turkish shares lag the 18% inflation assumption, as in the past year when the BIST 100 fell while prices rose about 30%."
+    },
+    "equity_return_base": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "BIST 100 record (Trading Economics); inflation projection 18%; 10-year bond yield 35.9%",
+      "sourceUrl": "https://tradingeconomics.com/turkey/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: a small real return above the 18% inflation assumption, since the BIST 100 has been volatile and weak in dollar terms; far below today's after-tax safe rates of over 30%."
+    },
+    "equity_return_high": {
+      "value": 0.28,
+      "status": "assumption",
+      "sourceName": "BIST 100 record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/turkey/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong nominal run like 2020-2024, when lira share prices rose much faster than inflation."
+    },
+    "gold_return_low": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, down 3% on a year (Trading Economics); CBRT USD rate 49.82",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with the lira losing about 12% a year, below the inflation gap."
+    },
+    "gold_return_base": {
+      "value": 0.19,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); inflation gap between Türkiye (18% assumed) and the US (about 2-3%)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4% a year and the lira loses about 15% a year against the dollar, in line with the inflation gap."
+    },
+    "gold_return_high": {
+      "value": 0.28,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); lira depreciation of 2018-2023",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold plus faster lira depreciation, as in past currency crises."
+    },
+    "fixed_income_return_low": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Inflation projection 18%; IMF path to 15% inflation by 2030",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "Low case: after the 10% withholding, deposits and bonds earn slightly less than inflation, as often happened in 2021-2023."
+    },
+    "fixed_income_return_base": {
+      "value": 0.19,
+      "status": "assumption",
+      "sourceName": "CBRT policy rate 36%; 10-year bond 35.9%; inflation projection 18%",
+      "sourceUrl": "https://www.tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Core+Functions/Monetary+Policy/Central+Bank+Interest+Rates/1+Week+Repo",
+      "asOf": "2026-10-31",
+      "note": "Base case: after-tax safe rates settle about 1 point above the 18% long-run inflation assumption, far below today's 30%+ as disinflation continues."
+    },
+    "fixed_income_return_high": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "CBRT policy rate 36%; 10-year bond 35.9%",
+      "sourceUrl": "https://tradingeconomics.com/turkey/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: tight monetary policy keeps real after-tax deposit and bond returns high for longer."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio from the insurance regulator (SEDDK) or the insurers' association was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, often tied to loans, but no published premium table per TRY 1,000 of cover by age from a regulator or other public source was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "General Health Insurance (GSS) covers care in public hospitals; no official figure for the typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private and complementary (tamamlayıcı) health insurance is sold, but no age-banded premium table per TRY 100,000 of cover from a public source was found."
+    },
+    "oop_health_share": {
+      "value": 0.1905,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TR",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.19,
+      "status": "assumption",
+      "sourceName": "Inflation projection 18%; TurkStat headline CPI 29.7% (Sep 2026, via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/turkey/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No health CPI figure could be read; private medical costs are set slightly above the 18% general inflation assumption because they track imported equipment and the exchange rate."
+    },
+    "goal_inflation_education": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Inflation projection 18%; TurkStat headline CPI 29.7% (Sep 2026, via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/turkey/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI figure could be read; private school and university fees are assumed to rise about 2 points faster than general prices."
+    },
+    "life_expectancy": {
+      "value": 77.42,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TR",
+      "asOf": "2024-12-31",
+      "note": "2024 (older than 2025): men 74.6, women 80.3. UN WPP gives 78.4 for 2026 (georank.org)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.6,
+            "men": 19.3,
+            "women": 23.7
+          },
+          {
+            "age": 65,
+            "total": 17.6,
+            "men": 15.7,
+            "women": 19.4
+          },
+          {
+            "age": 70,
+            "total": 14.0,
+            "men": 12.3,
+            "women": 15.4
+          },
+          {
+            "age": 80,
+            "total": 7.7,
+            "men": 6.3,
+            "women": 8.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/turkey",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP estimate for 2026)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.47
+          },
+          {
+            "year": 2040,
+            "value": 4.03
+          },
+          {
+            "year": 2065,
+            "value": 1.95
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/turkey/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 15.45 (2025, World Bank), 24.8 (2040) and 51.2 (2065, populationpyramid.net/turkey/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Social Insurance and General Health Insurance Law No. 5510, Article 28",
+      "sourceUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5510.pdf",
+      "asOf": "2026-10-31",
+      "note": "For people first insured after the law (2008): women 58 and men 60 until 2035, then rising two years at a time to men 65 from 2044 and women 65 from 2048, using the age in force when the premium-day requirement (7,200 days for employees) is met; so 65 applies to most people born after 1975 who started work after 2008. Earlier entrants retire under transitional rules (in practice 58-62 today)."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Social Insurance and General Health Insurance Law No. 5510, Article 28",
+      "sourceUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5510.pdf",
+      "asOf": "2026-10-31",
+      "note": "Civil servants first covered after 2008 fall under the same Article 28 age schedule (rising to 65), with a 9,000 premium-day requirement instead of 7,200."
+    },
+    "retirement_return_low": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Inflation projection 18%; 10% withholding on deposit interest (PwC)",
+      "sourceUrl": "https://taxsummaries.pwc.com/turkey/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Low case: a retiree's deposits earn less than inflation after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "CBRT policy rate 36%; 10-year bond 35.9% (about 32% after 10% withholding); inflation projection 18%",
+      "sourceUrl": "https://www.tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Core+Functions/Monetary+Policy/Central+Bank+Interest+Rates/1+Week+Repo",
+      "asOf": "2026-10-31",
+      "note": "Base case: safe after-tax returns about equal to long-run inflation, well below today's after-tax deposit and bond rates as rates fall with inflation."
+    },
+    "retirement_return_high": {
+      "value": 0.23,
+      "status": "assumption",
+      "sourceName": "CBRT policy rate 36%; 10-year bond 35.9%",
+      "sourceUrl": "https://tradingeconomics.com/turkey/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: real rates stay high for longer."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Fixed income low 16%; equity low 12%",
+      "sourceUrl": "https://tradingeconomics.com/turkey/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if both shares and deposits lag inflation."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.195,
+      "status": "assumption",
+      "sourceName": "Fixed income base 19%; equity base 20%",
+      "sourceUrl": "https://tradingeconomics.com/turkey/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 20% and half deposits and bonds at 19%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.265,
+      "status": "assumption",
+      "sourceName": "Fixed income high 25%; equity high 28%",
+      "sourceUrl": "https://tradingeconomics.com/turkey/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The needs-based old-age pension (65 yaş aylığı, Law 2022) pays 4,387 times the civil-servant salary coefficient each month; the coefficient in force for July-December 2026 was not found, so the TRY amount is not given."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Law No. 2022 on monthly payments to needy, disabled and destitute citizens over 65, Article 1",
+      "sourceUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.2022.pdf",
+      "asOf": "2026-10-31",
+      "note": "Paid to Turkish citizens aged 65+ found needy by the social assistance foundations, with no other pension or income; not payable when household income per person exceeds one third of the net minimum wage."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Labour Law No. 1475, Article 14 (severance pay, kıdem tazminatı)",
+      "sourceUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.1475.pdf",
+      "asOf": "2026-10-31",
+      "note": "30 days' gross wage for each full year of service (pro rata for part years) after at least one year with the employer, paid on retirement, dismissal other than for misconduct, military service, a woman leaving within a year of marriage, or death; capped per year at the maximum civil-servant retirement bonus."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Law No. 5510, Articles 28 (pension age) and 55 (indexation)",
+      "sourceUrl": "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5510.pdf",
+      "asOf": "2026-10-31",
+      "note": "Compulsory pay-as-you-go old-age insurance run by SGK (employee 14% and employer about 20.75% of pay for all SGK branches, PwC 2026). Pensions rise every January and July by the previous six months' CPI change (Article 55). Pension age rises to 65 for those first insured after 2008; tax treatment of pensions was not checked."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Vadesiz mevduat hesabı",
+      "localNameEn": "Demand deposit account",
+      "note": "Demand accounts pay little or no interest; most savers use short term deposits."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Vadeli mevduat (3 ay)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "TL deposits are insured by TMSF up to TRY 1.2 million per person per bank in 2026."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Vadeli mevduat (1 yıl)",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Birikimli vadeli hesap",
+      "localNameEn": "Accumulating savings deposit",
+      "note": "Some banks offer accumulating deposit accounts with regular top-ups; there is no standard national scheme."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals; Treasury bonds and lease certificates can be bought through banks."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Hazine bonosu",
+      "localNameEn": "Treasury bill",
+      "note": "Treasury bills (up to 1 year) can be bought through banks, but 3-month bills are rarely issued."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Devlet tahvili",
+      "localNameEn": "Government bond"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Devlet tahvili (10 yıl)",
+      "localNameEn": "Government bond (10 years)",
+      "sourceUrl": "https://tradingeconomics.com/turkey/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Yatırım fonu / Borsa yatırım fonu",
+      "localNameEn": "Mutual fund / exchange-traded fund",
+      "note": "Equity and index funds are widely sold to retail investors."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gram altın / Cumhuriyet altını",
+      "localNameEn": "Gold bars and Republic gold coins",
+      "note": "Physical gold is legal and widely bought; banks also offer gold deposit accounts."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Republic of Türkiye (TCMB)",
+      "url": "https://www.tcmb.gov.tr/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance and Private Pension Regulation and Supervision Agency (SEDDK)",
+      "url": "https://www.seddk.gov.tr/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Arbitration Commission (Sigorta Tahkim Komisyonu)",
+      "url": "https://www.sigortatahkim.org.tr/"
+    },
+    "pensionScheme": {
+      "name": "Social Security Institution (SGK)",
+      "url": "https://www.sgk.gov.tr/"
+    },
+    "oldAgeAllowance": {
+      "name": "Ministry of Family and Social Services (needs-based old-age pension, 65 yaş aylığı)",
+      "url": "https://www.aile.gov.tr/"
+    },
+    "publicHealthCover": {
+      "name": "General Health Insurance (GSS), Social Security Institution",
+      "url": "https://www.sgk.gov.tr/"
+    },
+    "depositInsurance": {
+      "name": "Savings Deposit Insurance Fund (TMSF)",
+      "url": "https://www.tmsf.org.tr/tr/Tmsf/Finansman/mevduat.sss.guncel"
+    },
+    "statistics": {
+      "name": "Turkish Statistical Institute (TurkStat)",
+      "url": "https://www.tuik.gov.tr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

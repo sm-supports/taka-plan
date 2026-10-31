@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "NO",
+  "iso3": "NOR",
+  "nameEn": "Norway",
+  "nameNative": "Norge",
+  "region": "europe_central_asia",
+  "languages": [
+    "nb",
+    "nn",
+    "en",
+    "se"
+  ],
+  "currency": {
+    "code": "NOK",
+    "symbol": "kr",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 9.2302,
+      "status": "sourced",
+      "sourceName": "Norges Bank exchange rates (USD/NOK)",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "asOf": "2026-10-30",
+      "note": "NOK 9.2302 per US dollar on 30 October 2026 (read via the Norges Bank data API); World Bank 2025 average 10.40."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.034,
+      "status": "sourced",
+      "sourceName": "Statistics Norway (SSB), CPI table 14700, 12-month rate",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/14700",
+      "asOf": "2026-09-30",
+      "note": "CPI up 3.4% year on year in September 2026 (3.3% in August), published 9 October 2026. World Bank 2025 average 3.0%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Norges Bank 2% inflation target; SSB CPI 2021-2025 average 4.2%, 3.0% in 2025 (table 14701)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/14701",
+      "asOf": "2026-10-31",
+      "note": "Norges Bank targets 2%, but inflation has stayed at 3-3.4% since 2024, so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Norges Bank key policy rate (data.norges-bank.no, series IR B.KPRA.SD.R)",
+      "sourceUrl": "https://data.norges-bank.no/api/data/IR/B.KPRA.SD.R?lastNObservations=1&format=csv",
+      "asOf": "2026-10-29",
+      "note": "Policy rate 4.50% (read via the Norges Bank data API)."
+    },
+    "savings_account_rate": {
+      "value": 0.0288,
+      "status": "sourced",
+      "sourceName": "SSB table 11018: interest rates on household deposits on demand (sample of banks)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-09-30",
+      "note": "Average rate on households' demand deposits 2.88% in September 2026; all household deposits 3.16%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.046,
+      "status": "sourced",
+      "sourceName": "SSB table 11018: interest rates on household deposits with conditions (fixed-term and notice)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-09-30",
+      "note": "No breakdown by maturity is published; deposits with conditions (fixed-term and notice accounts) averaged 4.60% in September 2026. The 3-month treasury bill yielded 4.73%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.046,
+      "status": "sourced",
+      "sourceName": "SSB table 11018: interest rates on household deposits with conditions (fixed-term and notice)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-09-30",
+      "note": "4.60% in September 2026 for fixed-term and notice deposits (no maturity breakdown); the 12-month treasury bill yielded 4.81% on 29 October 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Norwegian banks do not offer a fixed-rate monthly recurring deposit product with a published rate; the closest scheme is BSU, a tax-favoured housing savings account for people under 34, not a general recurring deposit."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0316,
+      "status": "sourced",
+      "sourceName": "SSB table 11018: interest rates on total household deposits (sample of banks)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-09-30",
+      "note": "Average rate on all household deposits 3.16% in September 2026 (3.14% in August); World Bank FR.INR.DPST 2025: 3.21%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Norway has no government savings certificate or retail savings bond sold to individuals; government bonds and bills trade through banks and brokers."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0473,
+      "status": "sourced",
+      "sourceName": "Norges Bank, generic government interest rates (3-month treasury bill)",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
+      "asOf": "2026-10-29",
+      "note": "4.73% on 29 October 2026 (6-month 4.73%, 12-month 4.81%); read via the Norges Bank data API."
+    },
+    "tbond_5y_rate": {
+      "value": 0.04603,
+      "status": "sourced",
+      "sourceName": "Norges Bank, generic government interest rates (5-year government bond)",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
+      "asOf": "2026-10-29",
+      "note": "4.603% on 29 October 2026; read via the Norges Bank data API."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0444,
+      "status": "sourced",
+      "sourceName": "Norges Bank, generic government interest rates (10-year government bond)",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
+      "asOf": "2026-10-29",
+      "note": "4.444% on 29 October 2026; read via the Norges Bank data API."
+    },
+    "tax_bank_interest": {
+      "value": 0.22,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Norway income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/norway/individual/income-determination",
+      "asOf": "2026-09-03",
+      "note": "No withholding: interest is net capital income, taxed at 22% in the annual assessment; net wealth tax may also apply to large deposits."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; interest on government bonds is ordinary capital income taxed at 22%."
+    },
+    "deposit_insurance_limit": {
+      "value": 2000000,
+      "status": "sourced",
+      "sourceName": "Financial Institutions Act (finansforetaksloven) section 19-4, Lovdata",
+      "sourceUrl": "https://lovdata.no/dokument/NL/lov/2015-04-10-17/KAPITTEL_19",
+      "asOf": "2026-10-31",
+      "note": "Guaranteed deposits up to NOK 2 million per depositor per member bank (Bankenes sikringsfond); some deposits (e.g. from a home sale) are fully covered for a limited period."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.227,
+      "status": "sourced",
+      "sourceName": "SSB table 12844: credit card interest rates, households (interest-bearing balances)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/12844",
+      "asOf": "2026-09-30",
+      "note": "No legal rate cap was found; the average rate on interest-bearing credit card balances was 22.7% in Q3 2026 (10.9% across all balances, including interest-free ones)."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Oslo Bors All-Share (OSEAX) 2,575 on 30 Oct 2026 (Trading Economics); 1-year deposits 4.6% less 22% tax = 3.6%",
+      "sourceUrl": "https://tradingeconomics.com/norway/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: share returns barely above safe after-tax deposits, as oil-heavy Oslo shares follow a weak energy cycle."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "OSEAX total-return index (Trading Economics); after-tax 1-year deposit about 3.6%",
+      "sourceUrl": "https://tradingeconomics.com/norway/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The Oslo index has a strong 10-year record (about 14% a year), but the base case is kept at the after-tax safe rate plus about 3.5 points, before the 37.84% tax on realised gains and dividends (deferred inside an equity savings account)."
+    },
+    "equity_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "OSEAX 10-year record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/norway/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case near the Oslo market's long-run total return of about 9-10% a year."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Norges Bank USD/NOK exchange rate",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger krone."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Norges Bank USD/NOK exchange rate; long-run dollar gold trend",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected trend in the krone against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Norges Bank USD/NOK exchange rate",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker krone, as in 2013-2023."
+    },
+    "fixed_income_return_low": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "SSB: household demand deposits 2.88% less 22% tax",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "SSB: household fixed-term/notice deposits 4.60% less 22% tax = 3.6%",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-10-31",
+      "note": "Base case: fixed-term deposits after the 22% tax on capital income."
+    },
+    "fixed_income_return_high": {
+      "value": 0.0375,
+      "status": "assumption",
+      "sourceName": "Norges Bank: 12-month treasury bill 4.81% less 22% tax = 3.75%",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "High case: short government paper and the best deposit rates after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Finanstilsynet and Finans Norge do not publish an industry-wide life insurance claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (livsforsikring/dødsfallsforsikring) is widely sold, but no regulator or official premium table per NOK 1,000 of cover by age was found; only company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Inpatient treatment in public hospitals is covered by the national insurance scheme, with yearly caps on patient charges for outpatient care, but helsenorge.no pages could not be read to confirm the figures; no official cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance (behandlingsforsikring) is mostly an employer benefit priced per plan, not per NOK 100,000 of cover; no published age-banded premium table was found."
+    },
+    "oop_health_share": {
+      "value": 0.1369,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NO",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "SSB CPI health (COICOP 06): +4.9% year on year in September 2026, +4.0% in 2025, +4.6% in 2024",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/14700",
+      "asOf": "2026-10-31",
+      "note": "Health prices have risen about 4-5% a year since 2024, so 4% is used, above the 2.5% general projection."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "SSB CPI education services (COICOP 10): +4.3% year on year in September 2026, +4.2% in 2025, +5.4% in 2024",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/14700",
+      "asOf": "2026-10-31",
+      "note": "Public education is free; fees that families do pay (private schools, courses) have risen 4-5% a year, so 4% is used."
+    },
+    "life_expectancy": {
+      "value": 83.23,
+      "status": "sourced",
+      "sourceName": "SSB table 07902, life tables 2025",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/07902",
+      "asOf": "2025-12-31",
+      "note": "Men 81.61, women 84.85 in 2025; World Bank 2024 value 83.16."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.22,
+            "men": 24.02,
+            "women": 26.37
+          },
+          {
+            "age": 65,
+            "total": 20.85,
+            "men": 19.73,
+            "women": 21.91
+          },
+          {
+            "age": 70,
+            "total": 16.72,
+            "men": 15.7,
+            "women": 17.65
+          },
+          {
+            "age": 80,
+            "total": 9.48,
+            "men": 8.75,
+            "women": 10.08
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "SSB table 07902, life tables 2025",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/07902",
+      "asOf": "2025-12-31",
+      "note": "Official period life table for 2025, both sexes and by sex (read via the SSB API)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 3.37
+          },
+          {
+            "year": 2040,
+            "value": 2.59
+          },
+          {
+            "year": 2065,
+            "value": 2.01
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "SSB table 14740, population projections 2026, main alternative (MMM)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/14740",
+      "asOf": "2026-01-01",
+      "note": "People aged 15-64 divided by people 65+ in the official 2026 projection: 3.37 (2026), 2.59 (2040), 2.01 (2065); old-age dependency 29.7, 38.6 and 49.7."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "NAV, alderspensjon (old-age pension)",
+      "sourceUrl": "https://www.nav.no/alderspensjon",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension can be drawn flexibly from 62 (with enough accrual) to 75; the usual age is 67 and the guarantee pension starts at 67. Parliament has agreed to replace it with a 'normert pensjonsalder' that rises with life expectancy (each cohort working 1-2 months longer), so people born after 1975 should expect a higher age, but timing is not yet decided."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "State employees draw the same national old-age pension (from 62-75, usually 67) plus a public-service pension; the upper age limit for remaining in state service could not be confirmed from a readable official source."
+    },
+    "retirement_return_low": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "SSB: household demand deposits 2.88% less 22% tax",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly easy-access savings after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "SSB: household fixed-term/notice deposits 4.60% less 22% tax = 3.6%",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.0375,
+      "status": "assumption",
+      "sourceName": "Norges Bank: 12-month treasury bill 4.81% less 22% tax",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "High case: short government paper and best deposit rates after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax term deposits about 3.6%; OSEAX record",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax term deposits about 3.6%; equity base 7%",
+      "sourceUrl": "https://tradingeconomics.com/norway/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 7% and half safe fixed income at about 3.5% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Equity high 9.5%; after-tax 12-month bill 3.75%",
+      "sourceUrl": "https://tradingeconomics.com/norway/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 21149,
+      "status": "sourced",
+      "sourceName": "NAV, alderspensjon: garantipensjon rates from 1 May 2026",
+      "sourceUrl": "https://www.nav.no/alderspensjon",
+      "asOf": "2026-05-01",
+      "note": "Guarantee pension (garantipensjon) at the high rate for a single person, NOK 253,787 a year (about NOK 21,149 a month); NOK 234,765 a year at the ordinary rate for people living with a pensioner or a partner earning over 2G. Full rate needs 40 years of residence (trygdetid) from 16 to 66, at least 5 years; it is reduced by 80% of any earnings-related pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "NAV, alderspensjon (garantipensjon)",
+      "sourceUrl": "https://www.nav.no/alderspensjon",
+      "asOf": "2026-10-31",
+      "note": "Residence-based minimum pension from 67 for people born 1963 or later; no means test on assets or other income, but it is reduced by 80% of the person's own earnings-related pension."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Norwegian employment law gives notice periods on dismissal; no statutory gratuity or end-of-service payment per year of service was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "NAV, alderspensjon (folketrygden)",
+      "sourceUrl": "https://www.nav.no/alderspensjon",
+      "asOf": "2026-10-31",
+      "note": "National insurance old-age pension: 18.1% of pensionable income up to 7.1G (G = NOK 136,549 from May 2026) is added to a pension account each year; it can be drawn from 62 to 75 (usually 67), is adjusted each year by the average of price and wage growth, and is taxed as income. Most employees also have a mandatory occupational pension."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Sparekonto",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fastrenteinnskudd",
+      "localNameEn": "Fixed-rate term deposit (3 months)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fastrenteinnskudd",
+      "localNameEn": "Fixed-rate term deposit (1 year)",
+      "sourceUrl": "https://www.ssb.no/en/statbank/table/11018"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No fixed-rate recurring deposit product; BSU is a tax-favoured housing savings account for people under 34."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate or savings bond."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Statskasseveksler",
+      "localNameEn": "Treasury bills",
+      "note": "Issued by Norges Bank for the state, mainly to institutions.",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Statsobligasjoner",
+      "localNameEn": "Norwegian government bonds",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Statsobligasjoner",
+      "localNameEn": "Norwegian government bonds",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Aksjefond / indeksfond",
+      "localNameEn": "Equity fund / index fund",
+      "note": "Widely available; an equity savings account (aksjesparekonto) defers tax on gains until withdrawal."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gullbarrer og gullmynter",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Norges Bank",
+      "url": "https://www.norges-bank.no/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Finanstilsynet (Financial Supervisory Authority of Norway)",
+      "url": "https://www.finanstilsynet.no/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Finansklagenemnda (Norwegian Financial Services Complaints Board)",
+      "url": "https://www.finkn.no/"
+    },
+    "pensionScheme": {
+      "name": "Folketrygden old-age pension (NAV)",
+      "url": "https://www.nav.no/alderspensjon"
+    },
+    "oldAgeAllowance": {
+      "name": "Garantipensjon / minimum pension (NAV)",
+      "url": "https://www.nav.no/alderspensjon#minstepensjon"
+    },
+    "publicHealthCover": {
+      "name": "National Insurance Scheme health services (helsenorge.no)",
+      "url": "https://www.helsenorge.no/"
+    },
+    "depositInsurance": {
+      "name": "Bankenes sikringsfond (Norwegian Banks' Guarantee Fund)",
+      "url": "https://www.bankenessikringsfond.no/"
+    },
+    "statistics": {
+      "name": "Statistics Norway (SSB)",
+      "url": "https://www.ssb.no/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "SI",
+  "iso3": "SVN",
+  "nameEn": "Slovenia",
+  "nameNative": "Slovenija",
+  "region": "europe_central_asia",
+  "languages": [
+    "sl",
+    "hr",
+    "en",
+    "de",
+    "it"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.033,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Statistical Office of the Republic of Slovenia CPI, October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "CPI 3.3% year on year in October 2026, unchanged from September (released 30 October 2026); secondary source because stat.si was not read directly. World Bank 2025 average 2.4%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Slovenian HICP 2021-2025 average 4.6% (ECB ICP); CPI 3.3% in October 2026",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.SI.N.000000.4.AVR",
+      "asOf": "2026-10-31",
+      "note": "Slovenia shares the ECB's 2% target; inflation has run a little above it (2.5% in 2025, 3.3% in October 2026), so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Slovenia uses the euro; ECB deposit facility rate raised from 2.25% to 2.50% with effect from 16 September 2026 (main refinancing rate 2.65%)."
+    },
+    "savings_account_rate": {
+      "value": 0.001,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovenian banks, household overnight deposits (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 0.10% on household overnight deposits (current and most savings accounts) in August 2026."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/Banka Slovenije MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (0.75% in August 2026); no separate 3-month rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0075,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovenian banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; deposits of 1-2 years paid 1.82% and over 2 years 1.69% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks offer instalment savings (obročno varčevanje), but no official average rate for them was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0147,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovenian banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits in August 2026; overnight deposits pay 0.10%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail savings bond for individuals was found on the Ministry of Finance Treasury Directorate pages, which list only market bond issues in 2026."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance auctions treasury bills (zakladne menice), but no recent 3-month auction yield could be found on gov.si."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Slovenian government bond yield was found; Trading Economics shows only the 10-year yield."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0392,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Slovenia 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "3.92% on 30 October 2026; the ECB long-term convergence yield for Slovenia was 3.86% for September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.25,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Slovenia income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/slovenia/individual/income-determination",
+      "asOf": "2026-07-15",
+      "note": "Interest is taxed at a flat 25%, but interest on bank deposits in Slovenia or elsewhere in the EU is not taxed up to EUR 1,000, so most savers pay nothing."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Slovenia has no retail government savings bond, so no specific tax rule applies; interest on other bonds falls under the general 25% rate on interest (PwC)."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Banka Slovenije, deposit guarantee scheme",
+      "sourceUrl": "https://www.bsi.si/en/financial-stability/deposit-guarantee-scheme",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per eligible depositor per bank."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1048,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Slovenian banks, extended credit card credit to households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.A2Z3.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average 10.48% on extended credit card credit in August 2026; this is the typical rate, not a legal cap."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "SBITOP 2,987 on 30 Oct 2026, up 21% in a year, near its August 2026 high of 3,274 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: after a strong run the small Ljubljana market only matches safe bonds for a long spell."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "SBITOP (Trading Economics); 1-2 year deposits 1.82%; 10-year bond 3.92% less 25% tax = 2.9%",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.7 points over the 1-2 year deposit rate, within the 4-point limit, for a diversified equity fund in euros."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "SBITOP (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified equity fund repeating long-run global equity returns in euro terms."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps its value after the 2025-26 spike while the euro holds steady against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises a little faster than world inflation and the euro is assumed stable against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.007,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 0.75% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: short bank deposits, which pay very little in Slovenia."
+    },
+    "fixed_income_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Household deposits of 1-2 years 1.82% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.G.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: rolling 1-2 year term deposits, slightly below their current rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.029,
+      "status": "assumption",
+      "sourceName": "Slovenia 10-year bond 3.92% less 25% tax = 2.9% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long government bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Supervision Agency (AZN) publishes market statistics but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (riziko življenjsko zavarovanje) is sold, but no regulator or official premium table per EUR 1,000 of cover was found; insurer quotes cannot be used."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by compulsory health insurance (ZZZS) with complementary insurance for co-payments; no official figure for a typical out-of-pocket private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance in Slovenia is mainly complementary or supplementary cover at flat premiums, not priced per sum insured; no premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1174,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SI",
+      "asOf": "2024-12-31",
+      "note": "2024 is the latest year published (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Slovenia, health: 5.8% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.SI.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices have run well above headline inflation; 4% is used as a long-run planning figure rather than the 2025 spike."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Slovenia, education: 4.0% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.SI.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Public education is largely free; paid education rose about 4% in 2025, so 3.5% is used for planning."
+    },
+    "life_expectancy": {
+      "value": 82.1,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/slovenia",
+      "asOf": "2026-07-01",
+      "note": "Men 79.5, women 84.7 (UN WPP estimate for 2026); World Bank 2024 figure 82.3."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.2,
+            "men": 22.2,
+            "women": 26.2
+          },
+          {
+            "age": 65,
+            "total": 20.1,
+            "men": 18.3,
+            "women": 21.8
+          },
+          {
+            "age": 70,
+            "total": 16.2,
+            "men": 14.6,
+            "women": 17.5
+          },
+          {
+            "age": 80,
+            "total": 9.3,
+            "men": 8.3,
+            "women": 10.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/slovenia",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.85
+          },
+          {
+            "year": 2040,
+            "value": 2.08
+          },
+          {
+            "year": 2065,
+            "value": 1.79
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/slovenia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 35.1 (2025, World Bank), 48.1 (2040) and 56.0 (2065, populationpyramid.net/slovenia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Government of Slovenia, pension system reform",
+      "sourceUrl": "https://www.gov.si/zbirke/projekti-in-programi/reforma-pokojninskega-sistema/",
+      "asOf": "2026-10-31",
+      "note": "Under the 2025 reform the pension age with 15 years of insurance rises from 65 (until 2027) by 3 months a year from 2028 to 67 in 2035; with 40 years of service it rises from 60 to 62. Same for men and women; applies to anyone born after 1975."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public employees are in the same compulsory pension insurance (ZPIZ); no source read stated a separate mandatory retirement age for government employees."
+    },
+    "retirement_return_low": {
+      "value": 0.007,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 0.75% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits only."
+    },
+    "retirement_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Household deposits of 1-2 years 1.82% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.G.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the 1-2 year deposit rate because 1-year deposits pay only 0.75% and no retail state bill rate was found."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Slovenia 10-year bond 3.92% less 25% tax = 2.9% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of government bonds held to maturity, below the current after-tax 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "1-2 year deposits 1.82%; SBITOP record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Fixed income base 1.5%; equity base 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "10-year bond 2.9% after tax; equity high 8%",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 238.49,
+      "status": "sourced",
+      "sourceName": "Government of Slovenia, varstveni dodatek (supplementary allowance)",
+      "sourceUrl": "https://www.gov.si/teme/varstveni-dodatek/",
+      "asOf": "2026-06-04",
+      "note": "Maximum supplementary allowance for a single person living alone; it is means-tested (income threshold EUR 745.92 from 1 April 2026), tops up low pensions or no income, and is paid by the Centres for Social Work. Slovenia has no universal social pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 63,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Government of Slovenia, varstveni dodatek (supplementary allowance)",
+      "sourceUrl": "https://www.gov.si/teme/varstveni-dodatek/",
+      "asOf": "2026-06-04",
+      "note": "Unemployed or permanently unable-to-work women over 63 and men over 65 qualify; pensioners on low pensions qualify at any age. Means-tested on household income and savings; since 1 January 2026 adult children's duty of support is no longer checked."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Relationships Act (ZDR-1) provides severance pay on dismissal for business reasons and a retirement severance payment, but its text could not be read (pisrs.si needs JavaScript), so the rule is not recorded."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Government of Slovenia, pension system reform",
+      "sourceUrl": "https://www.gov.si/zbirke/projekti-in-programi/reforma-pokojninskega-sistema/",
+      "asOf": "2026-10-31",
+      "note": "Compulsory pension and disability insurance run by ZPIZ, at least 15 years of insurance. Pension age 65 now, 67 from 2035 (62 with 40 years of service). Pensions are indexed 50% to wages and 50% to prices in 2026-2034, moving to 20/80 by 2045; accrual for 40 years rises from 63.5% to 70% by 2035."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Varčevalni račun",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Vezana vloga",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Vezana vloga",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Obročno varčevanje",
+      "localNameEn": "Instalment savings",
+      "note": "Monthly instalment savings plans offered by banks."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond for individuals",
+      "note": "No retail-only government savings bond was found; individuals can buy ordinary government bonds through a bank or broker."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Zakladne menice",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned by the Ministry of Finance; individuals usually buy through a bank or broker."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Državne obveznice",
+      "localNameEn": "Slovenian government bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Državne obveznice",
+      "localNameEn": "Slovenian government bonds",
+      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Vzajemni sklad",
+      "localNameEn": "Mutual fund / index fund (ETF)"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Naložbeno zlato",
+      "localNameEn": "Investment gold bars and coins",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt in the EU."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banka Slovenije (Bank of Slovenia)",
+      "url": "https://www.bsi.si/en",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Agencija za zavarovalni nadzor (Insurance Supervision Agency)",
+      "url": "https://www.a-zn.si/"
+    },
+    "insuranceComplaints": {
+      "name": "Agencija za zavarovalni nadzor, complaints",
+      "url": "https://www.a-zn.si/potrosniki/pritozbe/",
+      "note": "Complain to the insurer first, then to the agency."
+    },
+    "pensionScheme": {
+      "name": "Zavod za pokojninsko in invalidsko zavarovanje Slovenije (ZPIZ, Pension and Disability Insurance Institute)",
+      "url": "https://www.zpiz.si/"
+    },
+    "oldAgeAllowance": {
+      "name": "Varstveni dodatek (supplementary allowance), Centres for Social Work",
+      "url": "https://www.gov.si/teme/varstveni-dodatek/",
+      "note": "Means-tested; not a universal social pension."
+    },
+    "publicHealthCover": {
+      "name": "Zavod za zdravstveno zavarovanje Slovenije (ZZZS, Health Insurance Institute)",
+      "url": "https://www.zzzs.si/"
+    },
+    "depositInsurance": {
+      "name": "Banka Slovenije, deposit guarantee scheme",
+      "url": "https://www.bsi.si/en/financial-stability/deposit-guarantee-scheme"
+    },
+    "statistics": {
+      "name": "Statistični urad Republike Slovenije (Statistical Office, SURS)",
+      "url": "https://www.stat.si/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

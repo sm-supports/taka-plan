@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "code": "LI",
+  "iso3": "LIE",
+  "nameEn": "Liechtenstein",
+  "nameNative": "Liechtenstein",
+  "region": "europe_central_asia",
+  "languages": [
+    "de",
+    "gsw",
+    "en"
+  ],
+  "currency": {
+    "code": "CHF",
+    "symbol": "CHF",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8193,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, monthly average foreign exchange rates (devkum), USD 1",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/devkum",
+      "asOf": "2026-09-30",
+      "note": "Liechtenstein uses the Swiss franc under its currency treaty with Switzerland. September 2026 average CHF 0.8193 per US dollar; the ECB cross rate on 30 October 2026 was about CHF 0.823; World Bank 2025 average 0.831."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "Swiss Federal Statistical Office, Swiss consumer price index (LIK) September 2026, adopted monthly by the Liechtenstein Office of Statistics",
+      "sourceUrl": "https://www.admin.ch/de/newnsb/wNfni1DvzKuQ",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI inflation +1.0% in September 2026 (0.8% in August). Liechtenstein has no CPI of its own: its Office of Statistics takes over the Swiss national consumer price index each month."
+    },
+    "inflation_projection": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "SNB price stability range 0-2% and conditional forecast 0.7% (2026), 0.8% (2027-2028); Swiss CPI averaged about 1.4% a year in 2021-2025",
+      "sourceUrl": "https://www.snb.ch/en/publications/communication/press-releases-restricted/pre_20260924",
+      "asOf": "2026-10-31",
+      "note": "The SNB has kept Swiss-franc inflation inside its 0-2% range almost every year, so 1% is used for long-run planning."
+    },
+    "policy_rate": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, monetary policy assessment of 24 September 2026",
+      "sourceUrl": "https://www.snb.ch/en/publications/communication/press-releases-restricted/pre_20260924",
+      "asOf": "2026-09-24",
+      "note": "Liechtenstein has no central bank; the Swiss National Bank sets the policy rate for the Swiss franc, unchanged at 0% in September 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0007,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): savings deposits of private clients, mean",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-08-31",
+      "note": "Mean savings deposit rate 0.069% in August 2026 at banks in Switzerland; no separate statistic exists for Liechtenstein banks, which work in the same Swiss-franc market."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0003,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 3 months, mean",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-08-31",
+      "note": "Mean 0.026% in August 2026 at banks in Switzerland (Swiss-franc market; no Liechtenstein-only statistic). Covers deposits from CHF 100,000."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0012,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 12 months, mean",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-08-31",
+      "note": "Mean 0.117% in August 2026 at banks in Switzerland (Swiss-franc market; no Liechtenstein-only statistic); 2-year term deposits averaged 0.377%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published or average rate was found for Liechtenstein; regular saving is done through ordinary savings accounts or fund savings plans."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No weighted average deposit rate for Liechtenstein banks is published (World Bank FR.INR.DPST has no Liechtenstein figure; FMA statistics give volumes, not rates)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond issued by the State of Liechtenstein was found; residents can buy Swiss Confederation bonds in Swiss francs."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The State of Liechtenstein issues no treasury bills. For reference, 3-month Swiss Confederation money-market debt register claims yielded -0.047% in September 2026 (SNB zimoma)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Liechtenstein government bonds were found; Swiss Confederation bonds are the Swiss-franc benchmark."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Liechtenstein government bonds were found. For reference, the 10-year Swiss Confederation bond yielded 0.47% on 30 October 2026 (Trading Economics)."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Liechtenstein Tax Act (Steuergesetz, SteG) Art. 15(1)(a) and Art. 56, consolidated version of 1 July 2026",
+      "sourceUrl": "https://gesetze.li/konso/pdf/2010340000?version=38",
+      "asOf": "2026-07-01",
+      "note": "Actual interest is not taxed as income: income from wealth that bears wealth tax is exempt from the income (Erwerb) tax. Instead 4% of net taxable wealth (the Sollertrag, a deemed return) is added to taxable income each year, so savers pay tax on wealth whatever the interest earned."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; any bond interest would be exempt from income tax under SteG Art. 15(1)(a), with the bond taxed through the 4% deemed return on wealth."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Einlagensicherungs- und Anlegerentschädigungsverordnung (EAV), LGBl. 2019 Nr. 144, depositor information sheet",
+      "sourceUrl": "https://www.gesetze.li/konso/pdf/2019144000",
+      "asOf": "2026-10-31",
+      "note": "CHF 100,000 per depositor per bank, paid by the EAS deposit guarantee foundation; consolidated text unchanged since 1 June 2019 (older than 2025 but still in force)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or official average credit card rate for Liechtenstein was found; the FMA publishes no lending-rate statistics and the SNB figures cover banks in Switzerland only."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Swiss Market Index (SMI) 14,811 on 30 Oct 2026, up 21% in a year; Swiss 10-year yield 0.47%",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Liechtenstein has no stock exchange, so returns are based on Swiss and global equity funds in francs; the low case allows for a long flat spell from today's record highs."
+    },
+    "equity_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "SMI (Trading Economics); 1-year franc deposit 0.12% (SNB), untaxed",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "No local market exists, so the base uses a diversified Swiss/global equity fund in francs, capped at the near-zero safe franc rate plus about 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "SMI long-run record: price index from 1,500 (1988) to 14,811 (2026), about 6% a year before dividends",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: Swiss equities repeat their long-run record of about 6% a year in francs."
+    },
+    "gold_return_low": {
+      "value": 0,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); Swiss franc tends to rise against the dollar",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stalls after the 2025-26 spike and a firmer franc erases its dollar gains."
+    },
+    "gold_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); SNB inflation forecast under 1%",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, partly offset by the franc's long-run tendency to appreciate."
+    },
+    "gold_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in franc terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0,
+      "status": "assumption",
+      "sourceName": "SNB: 3-month term deposits 0.03%, 3-month Confederation claims -0.05%",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Low case: franc deposit rates stay at about zero (interest is not income-taxed, but the 4% deemed-return wealth tax still applies)."
+    },
+    "fixed_income_return_base": {
+      "value": 0.002,
+      "status": "assumption",
+      "sourceName": "SNB: 1-year term deposits 0.12%, 2-year 0.38%; interest untaxed under SteG Art. 15",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of 1- and 2-year franc term deposits; actual interest is not taxed as income."
+    },
+    "fixed_income_return_high": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "Swiss 10-year Confederation bond 0.47% (Trading Economics); SNB 2-year term deposits 0.38%",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in longer franc deposits or Confederation bonds."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The FMA (insurance supervisor) publishes no industry-wide life claim settlement ratio that could be found; Liechtenstein insurers mainly sell cross-border unit-linked policies."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (Todesfallrisikoversicherung) is available, but no regulator or other non-company published premium table per CHF 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by the compulsory health insurance (OKP) with a CHF 500 deductible plus 20% co-payment up to an annual cap; the 2026 cap could not be confirmed because the Office of Public Health premium overview could not be read."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Compulsory health insurance premiums are flat per adult (not per amount of cover), and no premium table for private cover per CHF 100,000 was found."
+    },
+    "oop_health_share": {
+      "value": 0.1972,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LI",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Swiss CPI +1.0% (Sep 2026); compulsory health insurance premiums rising faster than prices",
+      "sourceUrl": "https://www.admin.ch/de/newnsb/wNfni1DvzKuQ",
+      "asOf": "2026-10-31",
+      "note": "Health costs and insurance premiums in Liechtenstein and Switzerland have risen well above general inflation for years, so 3% (two points above the planning inflation) is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Swiss CPI +1.0% (Sep 2026); Swiss CPI education +2.6% in July 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/inflation-cpi/news/588599",
+      "asOf": "2026-10-31",
+      "note": "Education costs are assumed to rise about a point above the 1% planning inflation, in line with recent education price growth."
+    },
+    "life_expectancy": {
+      "value": 84.2,
+      "status": "sourced",
+      "sourceName": "Eurostat demo_mlexpec, life expectancy at birth, Liechtenstein",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "2024 figure (latest published; older than 2025): men 82.2, women 86.3; same as World Bank 2024. Small population, so figures move a lot from year to year (83.8 in 2023)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.9,
+            "men": 24,
+            "women": 27.9
+          },
+          {
+            "age": 65,
+            "total": 21.5,
+            "men": 19.9,
+            "women": 23.1
+          },
+          {
+            "age": 70,
+            "total": 17.3,
+            "men": 16.1,
+            "women": 18.5
+          },
+          {
+            "age": 80,
+            "total": 10.4,
+            "men": 9.6,
+            "women": 11.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat demo_mlexpec, life expectancy by age and sex, Liechtenstein",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "2024 period life table (latest published; older than 2025); small population, so values swing by up to a year between years."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 2.95
+          },
+          {
+            "year": 2040,
+            "value": 1.99
+          },
+          {
+            "year": 2065,
+            "value": 1.93
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects (via GeoRank): population shares aged 15-64 and 65+",
+      "sourceUrl": "https://georank.org/demographics/liechtenstein/switzerland",
+      "asOf": "2026-07-01",
+      "note": "Share aged 15-64 divided by share aged 65+: 64.0/21.7 in 2026, 57.4/28.9 in 2040, 56.8/29.4 in 2065 (UN projections). World Bank 2025 old-age dependency 33.2 gives 3.0."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "AHV-IV-FAK Liechtenstein, Rentenalter (ordinary pension age)",
+      "sourceUrl": "https://www.ahv.li/leistungen/ahv/rentenalter",
+      "asOf": "2026-10-31",
+      "note": "Ordinary AHV pension age is 65 for women and men born in 1958 or later (64 for those born 1946-1957); flexible early or deferred pension is possible with reductions or supplements."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "State staff are insured with the Stiftung Personalvorsorge Liechtenstein under the State Personnel Act, but no readable official source giving their normal retirement age was found."
+    },
+    "retirement_return_low": {
+      "value": 0,
+      "status": "assumption",
+      "sourceName": "SNB: 3-month term deposits 0.03%",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Low case: franc deposit rates stay at zero."
+    },
+    "retirement_return_base": {
+      "value": 0.001,
+      "status": "assumption",
+      "sourceName": "SNB: 1-year term deposits 0.117%, untaxed under SteG Art. 15",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the 1-year franc term deposit rate, which is not income-taxed (the deemed-return wealth tax still applies)."
+    },
+    "retirement_return_high": {
+      "value": 0.004,
+      "status": "assumption",
+      "sourceName": "SNB: 2-year term deposits 0.377%",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of 2-year franc deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Franc deposits about 0.1%; equity low 2%",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Franc deposits about 0.2%; equity base 4%",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half equity funds at 4% and half franc deposits or bonds at about 0.2%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.032,
+      "status": "assumption",
+      "sourceName": "Swiss 10-year bond 0.47%; equity high 6%",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No flat non-contributory old-age pension was found: the AHV pension (minimum CHF 1,225, maximum CHF 2,450 a month from 2025) depends on contributions, and supplementary benefits (Ergänzungsleistungen, ahv.li) are means-tested top-ups to AHV/IV pensions rather than a fixed benefit."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found; Ergänzungsleistungen are means-tested (income and assets) supplements for AHV/IV pensioners."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory days-per-year gratuity was found in a readable official source; occupational pensions (compulsory second pillar, BPVG) provide the employer-funded retirement benefit."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "AHV-IV-FAK Liechtenstein, Teuerungsanpassung (pension adjustment) and Rentenalter",
+      "sourceUrl": "https://www.ahv.li/leistungen/ahv/teuerungsanpassung",
+      "asOf": "2025-01-01",
+      "note": "Compulsory state old-age insurance (AHV) for everyone working or living in Liechtenstein; pension from 65 (born 1958 or later). Pensions are adjusted to a mixed wage-price index: +2.9% from 1 January 2025 (minimum CHF 1,225, maximum CHF 2,450 a month). AHV pensions are taxable income (SteG Art. 14(2)(e))."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Sparkonto",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Festgeld",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Festgeld",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No fixed-rate monthly recurring deposit product found; regular saving goes into savings accounts or fund savings plans."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond",
+      "note": "The State of Liechtenstein sells no savings certificates or retail bonds."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "No Liechtenstein treasury bills; Swiss Confederation money-market claims are the franc benchmark."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds",
+      "note": "No Liechtenstein government bonds; residents can buy Swiss Confederation bonds in francs."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds",
+      "note": "No Liechtenstein government bonds; the 10-year Swiss Confederation bond yielded 0.47% on 30 Oct 2026.",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Anlagefonds",
+      "localNameEn": "Investment funds / index funds (ETF)",
+      "note": "No local stock exchange; Swiss and international funds are widely available."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold (Barren und Münzen)",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold; held gold counts towards taxable wealth."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Swiss National Bank (Schweizerische Nationalbank)",
+      "url": "https://www.snb.ch/en/",
+      "note": "Liechtenstein has no central bank of its own and uses the Swiss franc under the 1980 currency treaty with Switzerland."
+    },
+    "insuranceRegulator": {
+      "name": "Finanzmarktaufsicht Liechtenstein (FMA)",
+      "url": "https://www.fma-li.li/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Schlichtungsstelle im Finanzdienstleistungsbereich (out-of-court conciliation board, covers insurers since 2024)",
+      "url": "https://www.schlichtungsstelle.li/"
+    },
+    "pensionScheme": {
+      "name": "AHV-IV-FAK Liechtenstein (state old-age and survivors' insurance)",
+      "url": "https://www.ahv.li/leistungen/ahv/rentenalter"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Obligatorische Krankenpflegeversicherung (compulsory health insurance), Amt für Gesundheit",
+      "url": "https://www.llv.li/en/individuals/health-care-and-care/insurance/health-insurance/mandatory-health-insurance"
+    },
+    "depositInsurance": {
+      "name": "Einlagensicherungs- und Anlegerentschädigungs-Stiftung (EAS)",
+      "url": "https://www.eas-liechtenstein.li/"
+    },
+    "statistics": {
+      "name": "Amt für Statistik (Office of Statistics)",
+      "url": "https://www.statistikportal.li/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

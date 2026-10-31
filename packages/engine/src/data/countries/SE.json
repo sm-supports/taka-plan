@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "code": "SE",
+  "iso3": "SWE",
+  "nameEn": "Sweden",
+  "nameNative": "Sverige",
+  "region": "europe_central_asia",
+  "languages": [
+    "sv",
+    "en",
+    "fi"
+  ],
+  "currency": {
+    "code": "SEK",
+    "symbol": "kr",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 9.8264,
+      "status": "sourced",
+      "sourceName": "Sveriges Riksbank, SEK per USD (SWEA series SEKUSDPMI)",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEKUSDPMI",
+      "asOf": "2026-10-30",
+      "note": "World Bank 2025 average 9.82."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.011,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Sweden inflation rate (SCB CPI, secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/sweden/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI up 1.1% year on year in September 2026 (0.3% in August); CPIF, the Riksbank target measure, 1.5%. SCB's own site could not be reached. Eurostat HICP for Sweden: 1.0%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Riksbank inflation target (2% CPIF); CPI 1.1% in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/sweden/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The Riksbank targets 2% CPIF inflation and has kept inflation near target outside the 2022-23 spike, so 2% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.0175,
+      "status": "sourced",
+      "sourceName": "Sveriges Riksbank, policy rate (SWEA series SECBREPOEFF)",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SECBREPOEFF",
+      "asOf": "2026-10-30",
+      "note": "Policy rate 1.75% on 30 October 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical savings-account rate could be read. Statistics Sweden (SCB), which publishes bank interest rates on household deposits for the Riksbank, could not be reached (connection refused on scb.se and api.scb.se)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical 3-month fixed-term deposit (fasträntekonto) rate could be read. Statistics Sweden (SCB), which publishes bank interest rates on household deposits for the Riksbank, could not be reached (connection refused on scb.se and api.scb.se)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical 1-year fixed-term deposit (fasträntekonto) rate could be read. Statistics Sweden (SCB), which publishes bank interest rates on household deposits for the Riksbank, could not be reached (connection refused on scb.se and api.scb.se)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Swedish banks do not sell a standard monthly recurring deposit product with a published rate; regular saving goes into ordinary savings accounts or an investment savings account (ISK)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank FR.INR.DPST for Sweden stops in 2006. Statistics Sweden (SCB), which publishes bank interest rates on household deposits for the Riksbank, could not be reached (connection refused on scb.se and api.scb.se)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate or savings bond is sold to individuals in Sweden today; the Debt Office (Riksgälden) ended its retail savings products, and government securities are bought through banks on the market."
+    },
+    "tbill_91d_rate": {
+      "value": 0.021,
+      "status": "sourced",
+      "sourceName": "Sveriges Riksbank, Swedish Treasury bill 3 months (SWEA series SETB3MBENCH)",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SETB3MBENCH",
+      "asOf": "2026-10-30",
+      "note": "3-month Treasury bill (statsskuldväxel) yield 2.10%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0295,
+      "status": "sourced",
+      "sourceName": "Sveriges Riksbank, Swedish government bond 5 years (SWEA series SEGVB5YC)",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEGVB5YC",
+      "asOf": "2026-10-30",
+      "note": "5-year government bond yield 2.947%."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0314,
+      "status": "sourced",
+      "sourceName": "Sveriges Riksbank, Swedish government bond 10 years (SWEA series SEGVB10YC)",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEGVB10YC",
+      "asOf": "2026-10-30",
+      "note": "10-year government bond yield 3.142%."
+    },
+    "tax_bank_interest": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Sweden taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/sweden/individual/taxes-on-personal-income",
+      "asOf": "2026-08-11",
+      "note": "Capital income, including bank interest, is taxed at a flat 30%; banks report interest to the tax agency rather than withholding a final tax. Savings inside an investment savings account (ISK) are taxed instead by a yearly standard levy."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; interest on government securities is ordinary capital income taxed at 30%."
+    },
+    "deposit_insurance_limit": {
+      "value": 1150000,
+      "status": "sourced",
+      "sourceName": "Riksgälden (Swedish National Debt Office), how the deposit insurance works",
+      "sourceUrl": "https://riksgalden.se/en/our-operations/deposit-insurance/how-the-deposit-insurance-works/",
+      "asOf": "2026-10-06",
+      "note": "SEK 1,150,000 per person per institution (changed from SEK 1,050,000 in 2025); up to SEK 5 million extra for deposits from specified life events such as a home sale."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Sweden caps interest on high-cost credit (reference rate plus 40 percentage points) but no readable official page confirming a cap or typical rate for credit cards could be reached (Konsumentverket page moved)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "OMX Stockholm 30 at 3,271 on 30 Oct 2026, +18% over the year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/sweden/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: after the 2025-26 rally Swedish shares return only a little more than safe bills."
+    },
+    "equity_return_base": {
+      "value": 0.054,
+      "status": "assumption",
+      "sourceName": "OMX Stockholm 30 (Trading Economics); 3-month Treasury bill 2.10% less 30% tax = 1.47%",
+      "sourceUrl": "https://tradingeconomics.com/sweden/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base set at the after-tax bill rate plus about 4 points, the cap; the Stockholm index has a strong 10-year record, so the full premium is used."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "OMX Stockholm 30 long-run record; long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/sweden/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: diversified Swedish and global equity funds matching their long-run record of about 8% in kronor."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps pace after the 2025-26 spike, and a firmer krona trims returns."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); Riksbank 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, with the krona assumed stable against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in krona terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Riksbank policy rate 1.75% less 30% tax = 1.2%",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SECBREPOEFF",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after tax, below the policy rate."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0147,
+      "status": "assumption",
+      "sourceName": "3-month Treasury bill 2.10% less 30% capital income tax = 1.47% (Riksbank SETB3MBENCH)",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SETB3MBENCH",
+      "asOf": "2026-10-31",
+      "note": "Base case: the after-tax Treasury bill rate, a proxy for fixed-term deposits."
+    },
+    "fixed_income_return_high": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "10-year government bond 3.142% less 30% tax = 2.2% (Riksbank SEGVB10YC)",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEGVB10YC",
+      "asOf": "2026-10-31",
+      "note": "High case: holding longer government bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Finansinspektionen does not publish an industry-wide life insurance claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (livförsäkring/risklivförsäkring) is sold, often through employers and unions, but no regulator or official premium table per SEK 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is provided by the regions with a small daily inpatient fee and a yearly high-cost cap; the 1177 regional fee pages could not be read, and no figure for a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance (sjukvårdsförsäkring) is mostly an employer benefit priced per person, not per SEK 100,000 of cover; no published premium table was found."
+    },
+    "oop_health_share": {
+      "value": 0.1338,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SE",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat HICP Sweden, health (ECOICOP 2 CP06): -5.9% year on year in September 2026",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "The recent fall reflects policy changes to patient and medicine fees; over the long run health costs are planned at 3%, a point above the 2% target."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Eurostat HICP Sweden, education (CP10): -15.2% year on year in September 2026",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Schooling and university are free for residents and the measured index is volatile; the fees people do pay (courses, private pre-school, materials) are planned at 3%."
+    },
+    "life_expectancy": {
+      "value": 83.8,
+      "status": "sourced",
+      "sourceName": "Eurostat, life expectancy by age and sex (demo_mlexpec), Sweden",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "Men 82.3, women 85.3 in 2024; World Bank 2024 total 84.06."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.7,
+            "men": 24.5,
+            "women": 26.8
+          },
+          {
+            "age": 65,
+            "total": 21.3,
+            "men": 20.2,
+            "women": 22.4
+          },
+          {
+            "age": 70,
+            "total": 17.2,
+            "men": 16.1,
+            "women": 18.1
+          },
+          {
+            "age": 80,
+            "total": 9.9,
+            "men": 9.1,
+            "women": 10.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat, life expectancy by age and sex (demo_mlexpec), Sweden 2024",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "Latest year published is 2024 (older than 2025)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 3.01
+          },
+          {
+            "year": 2040,
+            "value": 2.71
+          },
+          {
+            "year": 2065,
+            "value": 2.23
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat EUROPOP2023 projections, old-age dependency ratio (proj_23ndbi, baseline)",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/proj_23ndbi/default/table?lang=en",
+      "asOf": "2026-01-01",
+      "note": "100 divided by the projected old-age dependency ratio (65+ per 100 aged 15-64): 33.2 in 2026, 36.9 in 2040, 44.8 in 2065. World Bank 2025: 33.5."
+    },
+    "retirement_age_default": {
+      "value": 68,
+      "status": "sourced",
+      "sourceName": "Pensionsmyndigheten, pensionsåldrar och riktålder",
+      "sourceUrl": "https://www.pensionsmyndigheten.se/ga-i-pension/planera-din-pension/pensionsaldrar-och-riktalder",
+      "asOf": "2026-10-31",
+      "note": "Riktålder (target pension age) is 67 for people born 1960-1966 and projected at 68 for those born 1970-1981, 69 for 1982-1997 and 70 for 1998-2014; earliest public pension withdrawal 64-65 for the 1970s cohorts. Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Swedish public employees follow the same public pension ages and employment-protection rules as private employees; no separate statutory retirement age for government service could be confirmed from a readable official source."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Policy rate 1.75% less 30% tax",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SECBREPOEFF",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.014,
+      "status": "assumption",
+      "sourceName": "3-month Treasury bill 2.10% less 30% tax = 1.47%",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SETB3MBENCH",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just under the after-tax Treasury bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "10-year government bond 3.142% less 30% tax = 2.2%",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEGVB10YC",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer government bonds after tax, a little under the 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "After-tax bill rate 1.47%; equity low 3%",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SETB3MBENCH",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax bill rate 1.47%; equity base 5.4%",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SETB3MBENCH",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.4% and half safe fixed income at about 1.5-2% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax 10-year bond 2.2%; equity high 8%",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEGVB10YC",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 11988,
+      "status": "sourced",
+      "sourceName": "Pensionsmyndigheten, garantipension",
+      "sourceUrl": "https://www.pensionsmyndigheten.se/forsta-din-pension/sa-fungerar-pensionen/garantipension",
+      "asOf": "2026-01-01",
+      "note": "Maximum guarantee pension SEK 11,988 a month before tax for a single person and SEK 10,853 for a married person in 2026, for 40 years' residence; it is reduced as income-based pension rises."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Pensionsmyndigheten, garantipension",
+      "sourceUrl": "https://www.pensionsmyndigheten.se/forsta-din-pension/sa-fungerar-pensionen/garantipension",
+      "asOf": "2026-10-31",
+      "note": "Paid from the riktålder (67 from 2026, rising with life expectancy for later cohorts); needs at least 3 years' residence, full amount after 40 years from age 16. Not means-tested on assets, but reduced against the person's own income-based pension."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Swedish law (LAS) sets notice periods but no statutory gratuity or severance per year of service could be confirmed from a readable official source; severance (avgångsvederlag) comes only from collective agreements."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": null,
+        "pensionFromAge": 68,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Pensionsmyndigheten, the Swedish pension system and riktålder",
+      "sourceUrl": "https://www.pensionsmyndigheten.se/other-languages/english-engelska/english-engelska/pension-system-in-sweden",
+      "asOf": "2026-10-31",
+      "note": "Allmän pension: 16% of pensionable income to the notional income pension and 2.5% to the funded premium pension (18.5% in all). Pension from the riktålder, projected at 68 for people born 1970-81 (earliest 65). Pensions in payment follow wage growth less 1.6% rather than prices; taxed as income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Sparkonto",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fasträntekonto",
+      "localNameEn": "Fixed-rate deposit account (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fasträntekonto",
+      "localNameEn": "Fixed-rate deposit account (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard recurring-deposit product; regular saving goes into savings accounts or an investment savings account (ISK)."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate or bond is sold directly to individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Statsskuldväxlar",
+      "localNameEn": "Treasury bills",
+      "note": "Traded in large lots, mainly by institutions; individuals reach them through funds.",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SETB3MBENCH"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Statsobligationer",
+      "localNameEn": "Government bonds",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEGVB5YC"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Statsobligationer",
+      "localNameEn": "Government bonds",
+      "sourceUrl": "https://api.riksbank.se/swea/v1/Observations/Latest/SEGVB10YC"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Aktiefonder och indexfonder",
+      "localNameEn": "Equity and index funds",
+      "note": "Widely available, often held in an investment savings account (ISK) taxed by a yearly standard levy; the state default premium-pension fund is a global equity fund."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Guldtackor och guldmynt",
+      "localNameEn": "Gold bars and coins",
+      "note": "Investment gold is exempt from VAT and freely bought."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Sveriges Riksbank",
+      "url": "https://www.riksbank.se/en-gb/"
+    },
+    "insuranceRegulator": {
+      "name": "Finansinspektionen (Swedish Financial Supervisory Authority)",
+      "url": "https://www.fi.se/en/"
+    },
+    "insuranceComplaints": {
+      "name": "Allmänna reklamationsnämnden (National Board for Consumer Disputes)",
+      "url": "https://www.arn.se/"
+    },
+    "pensionScheme": {
+      "name": "Allmän pension (national public pension), Pensionsmyndigheten",
+      "url": "https://www.pensionsmyndigheten.se/other-languages/english-engelska/english-engelska/pension-system-in-sweden"
+    },
+    "oldAgeAllowance": {
+      "name": "Garantipension (guarantee pension), Pensionsmyndigheten",
+      "url": "https://www.pensionsmyndigheten.se/other-languages/english-engelska/english-engelska/guaranteed-pension-for-those-with-low-income"
+    },
+    "publicHealthCover": {
+      "name": "Regional public health care (1177)",
+      "url": "https://www.1177.se/"
+    },
+    "depositInsurance": {
+      "name": "Insättningsgarantin, Riksgälden (Swedish National Debt Office)",
+      "url": "https://riksgalden.se/en/our-operations/deposit-insurance/how-the-deposit-insurance-works/"
+    },
+    "statistics": {
+      "name": "Statistiska centralbyrån (Statistics Sweden)",
+      "url": "https://www.scb.se/en/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

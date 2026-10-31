@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "MK",
+  "iso3": "MKD",
+  "nameEn": "North Macedonia",
+  "nameNative": "Северна Македонија",
+  "region": "europe_central_asia",
+  "languages": [
+    "mk",
+    "sq",
+    "tr",
+    "en"
+  ],
+  "currency": {
+    "code": "MKD",
+    "symbol": "ден.",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 55.215,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/MKD exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/macedonia/currency",
+      "asOf": "2026-10-30",
+      "note": "EUR/MKD 61.51 (the denar is pegged to the euro). Secondary source because nbrm.mk served a bot check; World Bank 2025 average 54.65."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.027,
+      "status": "sourced",
+      "sourceName": "Trading Economics, North Macedonia inflation (State Statistical Office data)",
+      "sourceUrl": "https://tradingeconomics.com/macedonia/inflation-cpi/news/590167",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI 2.7% in September 2026 (2.6% in August, 2.3% in July), published 7 October 2026. Secondary source: stat.gov.mk could not be reached. World Bank 2025 average 4.1%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Denar pegged to the euro (ECB 2% target); CPI 2.3-2.7% in mid-2026, 4.1% in 2025 (World Bank)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "The National Bank keeps the denar stable against the euro, so long-run inflation should be close to the euro area's plus a catch-up margin; 3% is used."
+    },
+    "policy_rate": {
+      "value": 0.0425,
+      "status": "sourced",
+      "sourceName": "Trading Economics, North Macedonia interest rate (National Bank CB bills rate)",
+      "sourceUrl": "https://tradingeconomics.com/macedonia/interest-rate",
+      "asOf": "2026-09-15",
+      "note": "Raised 25 bp to 4.25% in June 2026 and held in July and September 2026. Secondary source: nbrm.mk served a bot check."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current rate for ordinary denar savings or sight deposits could be read: the National Bank's interest-rate statistics (nbrm.mk) served a bot check."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month denar term deposit rate could be read: the National Bank's interest-rate statistics (nbrm.mk) served a bot check."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0262,
+      "status": "sourced",
+      "sourceName": "TheGlobalEconomy.com, North Macedonia deposit interest rate (National Bank data: average rate on 1-year household term deposits)",
+      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "asOf": "2026-06-30",
+      "note": "2.62% in June 2026 (2.72% in December 2025). Secondary source because nbrm.mk served a bot check."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published rate was found; the National Bank's statistics could not be read."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0272,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
+      "asOf": "2025-12-31",
+      "note": "Deposit interest rate 2.72% for 2025 (National Bank data via IMF)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "biznis.rs news report on the third citizen bond (gradjanska obveznica) issue of North Macedonia",
+      "sourceUrl": "https://biznis.rs/novac/severna-makedonija-izdaje-trecu-gradjansku-obveznicu-u-ukupnom-iznosu-od-100-miliona-denara/",
+      "asOf": "2025-12-12",
+      "note": "2-year denar citizen bond sold to individuals through banks (auction 12 Dec 2025, matures 19 Dec 2027), 4.5% annual coupon, minimum MKD 10,000; the second issue (Nov 2023) paid 5%. No 5-year retail bond exists."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 3-month treasury bill yield was found: recent Ministry of Finance auctions reported in the news are 1-year bills, and the National Bank's auction pages served a bot check."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year government bond yield could be read (National Bank auction pages blocked, no market quote on Trading Economics)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 10-year government bond yield could be read (National Bank auction pages blocked, no market quote on Trading Economics)."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, North Macedonia income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/north-macedonia/individual/income-determination",
+      "asOf": "2026-07-23",
+      "note": "Interest on time savings is in principle taxed at 10%, but taxation is postponed until EU accession; interest on call deposits is exempt."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, North Macedonia income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/north-macedonia/individual/income-determination",
+      "asOf": "2026-07-23",
+      "note": "Interest on bonds issued by the state and local government units and on public loans is exempt."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Deposit Insurance Fund's site (fod.gov.mk) and the National Bank's site could not be reached; older reports give EUR 30,000 per depositor per bank (2019), but the current limit could not be confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The consumer credit law caps the annual cost at five times the statutory penalty interest rate (2019 amendment, reported secondarily), but the current reference rate on nbrm.mk could not be read."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Denar pegged to the euro; World Bank exchange rate PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global index fund in denar terms if world shares are weak; the local exchange (MBI10) is small and illiquid."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "1-year household deposit 2.62% (tax-free) plus a 3.4-point equity premium",
+      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "asOf": "2026-10-31",
+      "note": "North Macedonia's stock market is thin, so the base is a diversified global or regional index in denar terms (pegged to the euro), kept within 4 points of the tax-free 1-year deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Long-run global equity returns; denar pegged to the euro",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run global equity returns with a stable denar-euro peg."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate (denar per USD)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger euro (and denar)."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate (denar per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5%, with the denar following the euro and no expected trend against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate (denar per USD)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker euro and denar."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 2.72% in 2025 (World Bank), falling in 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix of sight and short term deposits as rates drift lower."
+    },
+    "fixed_income_return_base": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "1-year household term deposit 2.62% (National Bank data), interest tax-free",
+      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "asOf": "2026-10-31",
+      "note": "Base case: rolling 1-year denar term deposits, untaxed while the 10% tax on savings interest is postponed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Citizen bond 4.5% coupon (Dec 2025), interest tax-exempt",
+      "sourceUrl": "https://biznis.rs/novac/severna-makedonija-izdaje-trecu-gradjansku-obveznicu-u-ukupnom-iznosu-od-100-miliona-denara/",
+      "asOf": "2026-10-31",
+      "note": "High case: buying government citizen bonds and longer deposits when offered."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Supervision Agency (ASO) publishes market reports, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, mostly with bank loans, but no regulator or official premium table per MKD 1,000 of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for the typical out-of-pocket cost of a major private hospital stay was found; public hospital care under the Health Insurance Fund carries co-payments."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary private health insurance is small and no published premium table per MKD 100,000 of cover by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.3957,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MK",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Health CPI +1.3% year on year in September 2026 (Trading Economics, State Statistical Office data)",
+      "sourceUrl": "https://tradingeconomics.com/macedonia/inflation-cpi/news/590167",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices are rising slowly, but with about 40% of health spending paid out of pocket we plan with the 3% projection plus one point."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Education CPI +5.4% year on year in September 2026 (Trading Economics, State Statistical Office data)",
+      "sourceUrl": "https://tradingeconomics.com/macedonia/inflation-cpi/news/590167",
+      "asOf": "2026-10-31",
+      "note": "Education prices are rising about 5% a year, which is used for planning."
+    },
+    "life_expectancy": {
+      "value": 76.62,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MK",
+      "asOf": "2024-12-31",
+      "note": "Men 74.5, women 78.9 (2024); UN WPP 2024 projects 77.8 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.7,
+            "men": 19.1,
+            "women": 22.3
+          },
+          {
+            "age": 65,
+            "total": 16.9,
+            "men": 15.4,
+            "women": 18.1
+          },
+          {
+            "age": 70,
+            "total": 13.1,
+            "men": 12.0,
+            "women": 14.2
+          },
+          {
+            "age": 80,
+            "total": 7.2,
+            "men": 6.4,
+            "women": 7.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (mortality, 2026)",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/tfyr-macedonia/",
+      "asOf": "2026-01-01",
+      "note": "Secondary source of UN WPP 2024 for 2026, five-year age groups; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 3.41
+          },
+          {
+            "year": 2040,
+            "value": 2.59
+          },
+          {
+            "year": 2065,
+            "value": 1.77
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (old-age dependency ratio)",
+      "sourceUrl": "https://www.populationpyramid.net/tfyr-macedonia/2040/",
+      "asOf": "2026-01-01",
+      "note": "100 / old-age dependency ratio: 29.3 (2026), 38.6 (2040) and 56.4 (2065, populationpyramid.net/tfyr-macedonia/2065/). World Bank 2025: 28.5."
+    },
+    "retirement_age_default": {
+      "value": 64,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Retirement age (country table, North Macedonia 2026)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Men 64, women 62, with at least 15 years of pension service; secondary source because the Pension and Disability Insurance Fund (piom.com.mk) site could not be reached. No legislated increase for later cohorts was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No separate retirement age for public employees could be confirmed from a readable official source; public servants are generally covered by the same pension insurance (men 64, women 62)."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 2.72% in 2025 (World Bank), falling in 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly sight and short deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "1-year household term deposit 2.62%, interest tax-free",
+      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the tax-free 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Citizen bond 4.5% coupon (Dec 2025), tax-exempt",
+      "sourceUrl": "https://biznis.rs/novac/severna-makedonija-izdaje-trecu-gradjansku-obveznicu-u-ukupnom-iznosu-od-100-miliona-denara/",
+      "asOf": "2026-10-31",
+      "note": "High case: a mix of citizen bonds and term deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "1-year deposit 2.62%; global equity in denar terms",
+      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "1-year deposit 2.62%; equity base 6%",
+      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global equity at 6% and half deposits and citizen bonds at about 3%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Citizen bond 4.5%; equity high 8.5%",
+      "sourceUrl": "https://biznis.rs/novac/severna-makedonija-izdaje-trecu-gradjansku-obveznicu-u-ukupnom-iznosu-od-100-miliona-denara/",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The social security benefit for the elderly (Law on Social Security for the Elderly, 2019) started at MKD 6,000 a month and is raised each January by the previous year's cost-of-living increase, but the 2026 amount could not be found on the Ministry's pages."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Law on Social Security for the Elderly (Official Gazette 104/2019), Ministry of Social Policy, Demography and Youth",
+      "sourceUrl": "https://portal.mdt.gov.mk/post-body-files/regulativa-od-oblasta-na-socijalnata-zastita-file-HrXI.pdf",
+      "asOf": "2025-09-17",
+      "note": "From age 65 for citizens resident for the last 15 years, with no pension, no income in the last 3 months and no property to live from (applies to the spouse too); only one member of a couple can claim. The September 2025 amendment (Gazette 192/2025) changed only procedural articles."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Relations Law provides a one-off payment on retirement rather than a days-per-year gratuity, but its current text could not be read from an official source, so no figure is given."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 64,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Assembly bill amending the Law on Pension and Disability Insurance (March 2026), citing Gazette 154/2025",
+      "sourceUrl": "https://www.mchamber.mk/Upload/Documents/Предлог на закон за изменување и дополнување на Законот за пензиското и инвалидското осигурување, по скратена постапка.pdf",
+      "asOf": "2026-03-31",
+      "note": "Compulsory pay-as-you-go pension (Pension and Disability Insurance Fund) from 64 for men and 62 for women with 15 years of service, plus a mandatory funded second pillar for younger workers. Pensions are adjusted twice a year by 50% of CPI growth and 50% of average wage growth."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Штедна сметка",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Орочен депозит",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Орочен депозит",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard fixed-rate recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Граѓанска обврзница",
+      "localNameEn": "Citizen bond (government bond for individuals)",
+      "note": "2-year denar bonds sold to individuals through banks in occasional issues (2023, 2025); interest tax-exempt.",
+      "sourceUrl": "https://biznis.rs/novac/severna-makedonija-izdaje-trecu-gradjansku-obveznicu-u-ukupnom-iznosu-od-100-miliona-denara/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Државни записи",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned by the Ministry of Finance through the National Bank; recent issues are mostly 1-year bills."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Државни обврзници",
+      "localNameEn": "Government bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Државни обврзници",
+      "localNameEn": "Government bonds"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Инвестициски фондови",
+      "localNameEn": "Investment funds",
+      "note": "Open-end investment funds are supervised by the Securities and Exchange Commission."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Злато (прачки и монети)",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of the Republic of North Macedonia",
+      "url": "https://www.nbrm.mk/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Supervision Agency (ASO)",
+      "url": "https://aso.mk/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Supervision Agency (ASO), consumer complaints",
+      "url": "https://aso.mk/",
+      "note": "The agency handles complaints against insurers."
+    },
+    "pensionScheme": {
+      "name": "Pension and Disability Insurance Fund of North Macedonia (FPIOM)",
+      "url": "https://www.piom.com.mk/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social security for the elderly (Ministry of Social Policy, Demography and Youth)",
+      "url": "https://portal.mdt.gov.mk/post-body-files/regulativa-od-oblasta-na-socijalnata-zastita-file-HrXI.pdf"
+    },
+    "publicHealthCover": {
+      "name": "Health Insurance Fund of North Macedonia (FZOM)",
+      "url": "https://fzo.org.mk/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Fund",
+      "url": "https://www.fod.gov.mk/"
+    },
+    "statistics": {
+      "name": "State Statistical Office",
+      "url": "https://www.stat.gov.mk/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "code": "LU",
+  "iso3": "LUX",
+  "nameEn": "Luxembourg",
+  "nameNative": "Lëtzebuerg",
+  "region": "europe_central_asia",
+  "languages": [
+    "lb",
+    "fr",
+    "de",
+    "en",
+    "pt"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172 on 30 October 2026 (ECB EXR dataset), so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.029,
+      "status": "sourced",
+      "sourceName": "Trading Economics, reporting the STATEC national consumer price index for September 2026",
+      "sourceUrl": "https://tradingeconomics.com/luxembourg/inflation-cpi/news/590178",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI inflation 2.9% in September 2026 (2.2% in August, highest since April). Secondary source: the STATEC release itself could not be found; World Bank 2025 average 2.3%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Luxembourg CPI averaged about 3.4% a year in 2021-2025 (6.3% in 2022); STATEC 2026 forecast 1.8-2.9%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=LU",
+      "asOf": "2026-10-31",
+      "note": "Luxembourg shares the ECB 2% target but has run slightly above it, so 2.5% is used for long-run planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Luxembourg uses the euro; ECB deposit facility rate 2.50% since 16 September 2026 (2.25% from June 2026), confirmed in the ECB FM dataset on 31 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.006,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, overnight deposits from households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight deposits in Luxembourg, August 2026 (0.59% in July)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/BCL MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.00% in August 2026); no separate 3-month term deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year (1.81% in July); 1-2 year deposits paid 2.55% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks sell monthly savings plans, but no average or official rate for them was found in BCL or ECB statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0194,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits (1.86% in July); household overnight deposits paid 0.60%. World Bank FR.INR.DPST has no Luxembourg figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate or savings bond for individuals was found; Luxembourg government bonds are syndicated to institutional investors and only traded on the secondary market."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month Luxembourg treasury bill yield was found; the state funds itself mainly with medium- and long-term bonds."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 5-year Luxembourg government bond yield was found from the BCL, ECB or an allowed secondary source."
+    },
+    "tbond_10y_rate": {
+      "value": 0.037,
+      "status": "sourced",
+      "sourceName": "ECB long-term interest rate for convergence purposes, Luxembourg",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.LU.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-09-30",
+      "note": "Monthly average 3.697% for September 2026 (3.40% in August, 3.30% in July); Luxembourg has few bonds outstanding, so the figure is indicative."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Luxembourg income determination (investment income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/luxembourg/individual/income-determination",
+      "asOf": "2026-08-03",
+      "note": "Savings interest paid to resident individuals bears a 20% withholding tax in full discharge of income tax (Relibi); interest not covered by it is taxed at progressive rates after a EUR 1,500 investment-income allowance."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; interest on government bonds is ordinary savings interest under the 20% final withholding."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Fonds de garantie des dépôts Luxembourg (FGDL), deposit guarantee",
+      "sourceUrl": "https://www.fgdl.lu/en/deposit-guarantee/",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per person per bank; certain temporary high balances (property sales, life events) are protected up to EUR 2,500,000."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1017,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, revolving loans, overdrafts and credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.A2Z.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, August 2026."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "1-year deposit 2.00% less 20% tax = 1.6% (ECB MFI); long-run euro-area equity returns",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: a diversified euro equity fund earns little more than safe savings over a long period."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "1-year deposit 2.00% less 20% tax = 1.6% (ECB MFI) plus an equity premium of about 4 points",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "The local LuxX index is tiny and concentrated, so the base uses a diversified euro/global equity fund in euros, capped at the after-tax safe rate plus about 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Long-run global equity returns in euros",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified equity fund matching long-run global equity returns of about 7-8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.00% (ECB MFI statistics), assuming rates fall, less 20% withholding",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposit rates drift down towards 1.25% before the 20% withholding."
+    },
+    "fixed_income_return_base": {
+      "value": 0.016,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.00% less 20% withholding = 1.6%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: after-tax 1-year term deposit rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Household deposits 1-2 years 2.55% less 20% withholding = 2.0%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.H.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in longer term deposits after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Commissariat aux Assurances publishes market statistics but no industry-wide life claim settlement ratio could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (assurance temporaire décès) is sold, but no regulator or other non-company published premium table per EUR 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care for people insured with the CNS is largely covered, with a small daily patient contribution; no official figure for the out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Complementary health cover is sold by mutual societies and insurers, but no published premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.085,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LU",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Luxembourg CPI, health: +1.7% year on year in September 2026 (Trading Economics, from STATEC); HICP health +2.5% in Dec 2025 (ECB)",
+      "sourceUrl": "https://tradingeconomics.com/luxembourg/inflation-cpi/news/590178",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices rise slowly because most care is CNS-reimbursed, but the cost of uncovered care is assumed to rise about a point above the 2.5% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Luxembourg CPI, education: +0.6% year on year in September 2026 (6.2% in August) (Trading Economics, from STATEC)",
+      "sourceUrl": "https://tradingeconomics.com/luxembourg/inflation-cpi/news/590178",
+      "asOf": "2026-10-31",
+      "note": "Education price growth swings with fee changes; over the long run it is assumed to run about a point above the 2.5% planning inflation, in line with wage indexation."
+    },
+    "life_expectancy": {
+      "value": 83.2,
+      "status": "sourced",
+      "sourceName": "Eurostat demo_mlexpec, life expectancy at birth, Luxembourg",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "2024 figure (latest published; older than 2025): men 81.0, women 85.5. World Bank 2024 figure 83.2."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.3,
+            "men": 23.7,
+            "women": 26.9
+          },
+          {
+            "age": 65,
+            "total": 21.1,
+            "men": 19.5,
+            "women": 22.5
+          },
+          {
+            "age": 70,
+            "total": 17,
+            "men": 15.6,
+            "women": 18.3
+          },
+          {
+            "age": 80,
+            "total": 9.8,
+            "men": 8.7,
+            "women": 10.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat demo_mlexpec, life expectancy by age and sex, Luxembourg",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "2024 period life table (latest published; older than 2025)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 4.42
+          },
+          {
+            "year": 2040,
+            "value": 3.27
+          },
+          {
+            "year": 2065,
+            "value": 2.09
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat EUROPOP2023 population projections, proj_23ndbi old-age dependency ratio (65+ to 15-64), baseline",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/proj_23ndbi/default/table?lang=en",
+      "asOf": "2026-01-01",
+      "note": "100 divided by the projected old-age dependency ratio: 22.6 in 2026, 30.6 in 2040, 47.9 in 2065. World Bank 2025 ratio 23.1 gives 4.3."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "CNAP (Caisse nationale d'assurance pension), information about the pension scheme changes in 2026",
+      "sourceUrl": "https://cnap.public.lu/en/actualites/2026/informationsreforme202601.html",
+      "asOf": "2026-02-25",
+      "note": "The 2026 reform keeps the legal pension age at 65 (10 years of insurance needed), same for men and women; early pension from 57 (40 years of compulsory insurance) or 60 (40 years incl. credited periods), with the required career for early pensions rising gradually from 1 July 2026."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "IGSS (Inspection générale de la sécurité sociale), Aperçu no. 16: long-term sustainability of public pension schemes",
+      "sourceUrl": "https://igss.gouvernement.lu/dam-assets/publications/aper%C3%A7us-et-cahiers/aper%C3%A7us/apercu-no16.pdf",
+      "asOf": "2022-03-31",
+      "note": "Older than 2025: civil servants are covered by the special schemes (régimes spéciaux), which follow the same age rules as the general scheme: old-age pension at 65, early pension from 57 or 60 after 40 years."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.00% (ECB MFI), assuming rates fall, less 20% withholding",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposit rates drift lower."
+    },
+    "retirement_return_base": {
+      "value": 0.016,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.00% less 20% withholding = 1.6%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Household deposits 1-2 years 2.55% less 20% withholding = 2.0%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.H.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer term deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.6%; equity low 3%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.6%; equity base 5.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.6-2% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.048,
+      "status": "assumption",
+      "sourceName": "After-tax 1-2 year deposit 2.0%; equity high 7.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.H.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No dedicated non-contributory old-age pension was found: the minimum pension needs 20 years of insurance (CNAP), and older people without enough record rely on the means-tested social inclusion income (REVIS, Fonds national de solidarité), which is a top-up to an income threshold rather than a fixed benefit."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No dedicated non-contributory old-age pension found; REVIS (means-tested minimum income) is open to residents of any age from 25, including pensioners."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No per-year gratuity: the Labour Code gives a severance allowance on dismissal by the employer in steps of 1 to 12 months' wages after 5 to 30 years of service, which does not fit a days-per-year rule; no readable official page with the table was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "CNAP, 2026 pension scheme changes; IGSS Aperçu no. 16 (indexation)",
+      "sourceUrl": "https://cnap.public.lu/en/actualites/2026/informationsreforme202601.html",
+      "asOf": "2026-02-25",
+      "note": "General pension insurance scheme run by the CNAP: pension from 65 after 10 years of insurance; minimum pension after 20 years. Pensions are indexed to the cost of living and adjusted to real wage growth (IGSS). Contribution rate rose from 24% to 25.5% in 2026, shared by employer, employee and state. Pensions are taxed as ordinary income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Plan d'épargne",
+      "localNameEn": "Monthly savings plan",
+      "note": "Banks offer regular monthly savings plans; no average rate is published."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond",
+      "note": "No retail government savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "No 3-month treasury bill for retail investors was found."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligations de l'État",
+      "localNameEn": "Government bonds",
+      "note": "Few lines outstanding, bought on the secondary market; no 5-year yield found."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligations de l'État",
+      "localNameEn": "Government bonds",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.LU.L.L40.CI.0000.EUR.N.Z"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fonds d'investissement",
+      "localNameEn": "Investment funds / index funds (ETF)",
+      "note": "Retail funds widely available; Luxembourg is Europe's largest fund domicile."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or d'investissement",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt under EU rules."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque centrale du Luxembourg (BCL)",
+      "url": "https://www.bcl.lu/en/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Commissariat aux Assurances (CAA)",
+      "url": "https://www.caa.lu/en"
+    },
+    "insuranceComplaints": {
+      "name": "Commissariat aux Assurances, out-of-court settlement of disputes",
+      "url": "https://www.caa.lu/en/consumers/out-of-court-settlement-of-disputes"
+    },
+    "pensionScheme": {
+      "name": "Caisse nationale d'assurance pension (CNAP)",
+      "url": "https://cnap.public.lu/en.html"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Caisse nationale de santé (CNS)",
+      "url": "https://cns.public.lu/en.html"
+    },
+    "depositInsurance": {
+      "name": "Fonds de garantie des dépôts Luxembourg (FGDL)",
+      "url": "https://www.fgdl.lu/en/deposit-guarantee/"
+    },
+    "statistics": {
+      "name": "STATEC (National Institute of Statistics and Economic Studies)",
+      "url": "https://statistiques.public.lu/en.html"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "code": "MD",
+  "iso3": "MDA",
+  "nameEn": "Moldova",
+  "nameNative": "Republica Moldova",
+  "region": "europe_central_asia",
+  "languages": [
+    "ro",
+    "ru",
+    "uk",
+    "bg",
+    "gag"
+  ],
+  "currency": {
+    "code": "MDL",
+    "symbol": "L",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 18.0365,
+      "status": "sourced",
+      "sourceName": "National Bank of Moldova official exchange rate",
+      "sourceUrl": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=31.10.2026",
+      "asOf": "2026-10-31",
+      "note": "MDL 18.0365 per US dollar on 31 October 2026 (EUR 20.0954); World Bank 2025 average 17.38."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.086,
+      "status": "sourced",
+      "sourceName": "National Bureau of Statistics of Moldova, consumer price indices September 2026",
+      "sourceUrl": "https://statistica.gov.md/en/consumer-price-indices-in-the-republic-of-moldova-in-september-9485_62673.html",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices 8.6% higher than in September 2025 (index 108.60); World Bank 2025 average 7.8%."
+    },
+    "inflation_projection": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "National Bank of Moldova inflation target 5% +/-1.5 points; CPI 8.6% (Sep 2026)",
+      "sourceUrl": "https://www.bnm.md/en/content/monetary-policy-decision-17092026",
+      "asOf": "2026-10-31",
+      "note": "The target is 5%, but inflation has run above it in most recent years (very high in 2022 and 8.6% now), so 5.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.09,
+      "status": "sourced",
+      "sourceName": "National Bank of Moldova, monetary policy decision of 17 September 2026",
+      "sourceUrl": "https://www.bnm.md/en/content/monetary-policy-decision-17092026",
+      "asOf": "2026-09-17",
+      "note": "Base rate raised from 7.5% to 9.00%; overnight deposit 7%, overnight loan 11%; next decision 5 November 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.009,
+      "status": "sourced",
+      "sourceName": "National Bank of Moldova, bank deposit market in September 2026 (new interest-bearing demand deposits of individuals, MDL)",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "asOf": "2026-09-30",
+      "note": "Average nominal rate on new interest-bearing demand (sight) deposits of individuals in lei 0.90%; foreign currency 0.83%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0544,
+      "status": "sourced",
+      "sourceName": "National Bank of Moldova, bank deposit market in September 2026 (new term deposits of individuals in MDL, up to 6 months)",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "asOf": "2026-09-30",
+      "note": "BNM publishes rates by maturity band; 5.44% is the average for new lei term deposits of individuals with maturity up to 6 months (no separate 3-month figure)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0593,
+      "status": "sourced",
+      "sourceName": "National Bank of Moldova, bank deposit market in September 2026 (new term deposits of individuals in MDL, 6-12 months)",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "asOf": "2026-09-30",
+      "note": "Average for new lei term deposits of individuals with maturity of 6 to 12 months; 1-2 years 6.50%; foreign-currency 6-12 months 1.24%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks offer term deposits that accept regular top-ups, but BNM does not publish a rate for monthly recurring deposits and no official figure was found; lei term deposits of 2-5 years averaged 6.26% in September 2026 (BNM)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0611,
+      "status": "sourced",
+      "sourceName": "National Bank of Moldova, bank deposit market in September 2026 (average rate on new term deposits of individuals, MDL)",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "asOf": "2026-09-30",
+      "note": "Weighted average on all new lei term deposits of individuals; World Bank FR.INR.DPST 2025 average 4.76%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0805,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Moldova, placement of government securities by subscription to individuals (eVMS), 19 Oct - 2 Nov 2026",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-19",
+      "note": "Longest retail bond offered is 4 years at a fixed 8.05% (1 year 7.65%, 2 years 7.75%, 3 years 7.85%), interest paid every six months; no 5-year retail bond is offered."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0307,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Moldova, results of the government securities auction of 13 October 2026",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Rezultatele%20licitatie%2013-10-2026%20-%20rom.pdf",
+      "asOf": "2026-10-13",
+      "note": "Weighted average 3.07% on a small 91-day issue (MDL 31 million), far below the 182-day (11.07%) and 364-day (11.70%) bills sold the same day, so it is not representative of short-term yields."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0795,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Moldova, results of the government securities auction of 12 August 2026",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Rezultatele%20licitatie%2012-08-2026%20-%20rom.pdf",
+      "asOf": "2026-08-12",
+      "note": "Fixed-rate 5-year bond maturing 14 August 2031 placed at 7.95%."
+    },
+    "tbond_10y_rate": {
+      "value": 0.08,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Moldova, results of the government securities auction of 10 June 2026",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Rezultatele%20licitatie%2010-06-2026%20-%20rom.pdf",
+      "asOf": "2026-06-10",
+      "note": "Reopening of a 10-year bond (8.5 years left, maturing 13 December 2034) at 8.00%; no newer long-bond auction found."
+    },
+    "tax_bank_interest": {
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Moldova withholding taxes (reviewed 24 June 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/moldova/corporate/withholding-taxes",
+      "asOf": "2026-06-24",
+      "note": "6% final withholding on interest paid to resident individuals by banks; a draft 2027 tax package proposes raising it to 7%."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Moldova income determination (reviewed 24 June 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/moldova/individual/income-determination",
+      "asOf": "2026-06-24",
+      "note": "Interest on state securities and local government bonds earned by resident individuals is tax-exempt."
+    },
+    "deposit_insurance_limit": {
+      "value": 200000,
+      "status": "sourced",
+      "sourceName": "Deposit Guarantee Fund in the Banking System (FGDSB), information for depositors",
+      "sourceUrl": "https://fgdsb.md/pentru-deponenti/",
+      "asOf": "2026-10-31",
+      "note": "MDL 200,000 per depositor per bank since 1 January 2025 (Law 160/2023), regardless of currency."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Reports describe a draft law capping consumer-credit interest at 50% a year in lei, but it could not be confirmed as in force and no typical credit card rate was found."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "No usable local stock index (Moldova Stock Exchange is tiny and illiquid); global equities in MDL",
+      "sourceUrl": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=31.10.2026",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares earn about 4% in dollars and the leu stays stable against the dollar."
+    },
+    "equity_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return about 7% in USD; MDL 18.04 per USD (BNM); inflation target 5% vs 2% in the US",
+      "sourceUrl": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=31.10.2026",
+      "asOf": "2026-10-31",
+      "note": "No local market to invest in, so the base is a global index fund in lei: about 7% in dollars plus about 1.5% a year of expected leu depreciation, within 4 points of the tax-free 1-year retail bond (7.65%)."
+    },
+    "equity_return_high": {
+      "value": 0.115,
+      "status": "assumption",
+      "sourceName": "Global equity long-run returns; leu depreciation of 2005-2025",
+      "sourceUrl": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=31.10.2026",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns plus faster leu depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike and the leu stays stable."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); BNM 5% target vs 2% US inflation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4% a year and the leu loses about 1.5% a year against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend plus faster leu depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Lei deposits 5.4-5.9% less 6% tax (BNM, Sep 2026); BNM base rate 9%",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "asOf": "2026-10-31",
+      "note": "Low case: rates fall as inflation returns to the 5% target, leaving about 4.5% after tax on deposits."
+    },
+    "fixed_income_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Tax-free retail government bonds 7.65-8.05% (eVMS, Oct 2026); 1-year lei deposits 5.93% less 6% tax = 5.6%",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free retail government bonds and deposits, allowing for some easing of rates."
+    },
+    "fixed_income_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Tax-free retail government bonds 7.65-8.05% (eVMS, Oct 2026)",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: today's tax-free retail bond rates hold."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Bank of Moldova (insurance supervisor since July 2023) publishes insurance market statistics, but no life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance is a small market in Moldova (mostly credit-linked cover); no published premium table per MDL 1,000 of term cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Mandatory health insurance (CNAM) covers hospital care for the insured; no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary health insurance is sold as fixed packages; no published premium table per MDL 100,000 of cover by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2747,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MD",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "BNS CPI September 2026: health division +3.2%, medicines +4.1%, medical services +2.0% year on year",
+      "sourceUrl": "https://statistica.gov.md/en/consumer-price-indices-in-the-republic-of-moldova-in-september-9485_62673.html",
+      "asOf": "2026-10-31",
+      "note": "Health prices have recently risen slower than headline inflation, so the planning inflation rate of 5.5% is used rather than a premium."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BNS CPI September 2026: education division +8.4% year on year",
+      "sourceUrl": "https://statistica.gov.md/en/consumer-price-indices-in-the-republic-of-moldova-in-september-9485_62673.html",
+      "asOf": "2026-10-31",
+      "note": "Education prices are rising faster than headline inflation, so 7% is used."
+    },
+    "life_expectancy": {
+      "value": 71.6,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/moldova",
+      "asOf": "2026-12-31",
+      "note": "Men 67.0, women 75.9 (UN WPP estimate for 2026); World Bank 2024 figure 71.3."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.1,
+            "men": 15.2,
+            "women": 20.2
+          },
+          {
+            "age": 65,
+            "total": 14.8,
+            "men": 12.4,
+            "women": 16.4
+          },
+          {
+            "age": 70,
+            "total": 11.7,
+            "men": 9.7,
+            "women": 12.9
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 5.4,
+            "women": 7.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/moldova",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.77
+          },
+          {
+            "year": 2040,
+            "value": 3.33
+          },
+          {
+            "year": 2065,
+            "value": 2.59
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/republic-of-moldova/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 26.5 (2025, World Bank), 30.0 (2040) and 38.6 (2065, populationpyramid.net/republic-of-moldova/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Logos Press report on the 1 July 2026 retirement age step (Law 156/1998 on state social insurance pensions)",
+      "sourceUrl": "https://logos-pres.md/noutati/o-noua-majorare-a-varstei-de-pensionare-pentru-femei/",
+      "asOf": "2026-07-01",
+      "note": "Men 63; women 62 from 1 July 2026, rising to 62.5 in July 2027 and 63 from 1 July 2028, so 63 applies to everyone born after 1975."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Law 158/2008 on public office ends service on reaching the pension age, but court rulings and local decisions also cite ages 63 and 65 for continued service; no single official figure could be confirmed."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Lei deposits 5.4-5.9% less 6% tax (BNM, Sep 2026)",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit and bond rates fall as inflation settles at the 5% target."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "1-year lei deposits 5.93% less 6% tax = 5.6%; tax-free 1-year retail government bond 7.65% (eVMS)",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the tax-free 1-year retail government bond rate, assuming a mix with deposits."
+    },
+    "retirement_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Tax-free retail government bonds 7.65-8.05% (eVMS, Oct 2026)",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: today's tax-free retail bond rates hold for the long run."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax lei fixed income 4.5-6.5%; global equity low case 4%",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global shares lag and rates fall."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Tax-free retail government bonds about 7.7%; global equity in MDL 8.5%",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half lei government bonds and deposits and half global shares in lei terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Retail government bonds 8%; global equity high case 11.5%",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1527.83,
+      "status": "sourced",
+      "sourceName": "National Social Insurance House (CNAS), beneficiaries of pensions and state social allowances at 1 January 2026",
+      "sourceUrl": "https://cnas.gov.md/sites/default/files/2026-01/Informatie%20privind%20benef%20de%20pensii%2C%20aloca%C5%A3ii%20sociale%20de%20stat%20%C5%9Fi%20%C3%AEndemn.%20adr%20familiilor%20cu%20copii%20la%20sit%2001.01.2026.pdf",
+      "asOf": "2026-01-01",
+      "note": "State social allowance for elderly people who do not qualify for a contributory pension (25,205 recipients, same amount for men and women); pensions and social benefits were indexed by 6.84% from 1 April 2026, which would make it about MDL 1,632, but no post-indexation figure was published."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 63,
+        "womenAge": 62,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "CNAS beneficiaries report (1 Jan 2026); retirement ages per Logos Press (1 July 2026)",
+      "sourceUrl": "https://logos-pres.md/noutati/o-noua-majorare-a-varstei-de-pensionare-pentru-femei/",
+      "asOf": "2026-07-01",
+      "note": "Paid from the standard retirement age to people who do not meet the conditions for a contributory pension (e.g. too few contribution years); not income-tested. Women's age rises to 63 by July 2028."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity per year of service was found; the Labour Code provides severance pay only on dismissal for liquidation or redundancy, and the consolidated text could not be read to confirm other rules."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Moldpres: pensions and social benefits indexed by 6.84% from 1 April 2026; CNAS",
+      "sourceUrl": "https://moldpres.md/eng/official/pensiile-si-prestatiile-sociale-vor-fi-indexate-cu-684-de-la-1-aprilie-2026-eng",
+      "asOf": "2026-04-01",
+      "note": "Mandatory pay-as-you-go state social insurance pension (CNAS) from age 63 (women 62, rising to 63 by 2028), indexed every 1 April (6.84% in 2026); minimum old-age pension MDL 3,264.66 with a full 34-year record (3,525.72 with 40 years)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Depozit la vedere / cont de economii",
+      "localNameEn": "Demand (savings) deposit",
+      "note": "Interest-bearing demand deposits pay under 1%.",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depozit la termen",
+      "localNameEn": "Term deposit (up to 6 months)",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depozit la termen",
+      "localNameEn": "Term deposit (6-12 months)",
+      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Depozit cu posibilitate de completare",
+      "localNameEn": "Term deposit with regular top-ups",
+      "note": "Terms vary by bank; no published average rate."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Obligațiuni de stat pentru persoane fizice (eVMS)",
+      "localNameEn": "Government bonds for individuals (eVMS platform)",
+      "note": "Fixed-rate bonds of 1-4 years sold directly to individuals by the Ministry of Finance every two weeks through the eVMS platform; interest is tax-exempt.",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Comunicat%20spre%20plasare%20a%20VMS%20prin%20subscriere%2019.10.2026-02.11.2026.pdf"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bonuri de trezorerie",
+      "localNameEn": "Treasury bills",
+      "note": "91-, 182- and 364-day bills auctioned by the Ministry of Finance through the National Bank.",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Rezultatele%20licitatie%2013-10-2026%20-%20rom.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligațiuni de stat",
+      "localNameEn": "Government bonds (5 years)",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Rezultatele%20licitatie%2012-08-2026%20-%20rom.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligațiuni de stat",
+      "localNameEn": "Government bonds (10 years)",
+      "note": "Issued rarely; reopened in June 2026.",
+      "sourceUrl": "https://mf.gov.md/sites/default/files/Rezultatele%20licitatie%2010-06-2026%20-%20rom.pdf"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic diversified retail mutual or index funds were found; the local stock exchange is very small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Lingouri și monede din aur",
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy and hold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Moldova",
+      "url": "https://www.bnm.md/en"
+    },
+    "insuranceRegulator": {
+      "name": "National Bank of Moldova (insurance supervision since 1 July 2023)",
+      "url": "https://www.bnm.md/en/content/international-association-insurance-supervisors-iais"
+    },
+    "insuranceComplaints": {
+      "name": "National Bank of Moldova: where to turn when your rights as a consumer of financial services are breached",
+      "url": "https://www.bnm.md/ro/content/unde-te-adresezi-cand-ti-se-incalca-dreptul-de-consumator-al-serviciilor-financiare",
+      "note": "Consumer-protection complaints about insurers go to the National Commission for Financial Markets (CNPF)."
+    },
+    "pensionScheme": {
+      "name": "National Social Insurance House (CNAS)",
+      "url": "https://cnas.gov.md/"
+    },
+    "oldAgeAllowance": {
+      "name": "National Social Insurance House (CNAS), state social allowances",
+      "url": "https://cnas.gov.md/"
+    },
+    "publicHealthCover": {
+      "name": "National Health Insurance Company (CNAM), mandatory health insurance",
+      "url": "https://cnam.md/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund in the Banking System (FGDSB)",
+      "url": "https://fgdsb.md/pentru-deponenti/"
+    },
+    "statistics": {
+      "name": "National Bureau of Statistics of the Republic of Moldova",
+      "url": "https://statistica.gov.md/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

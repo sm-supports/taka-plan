@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "NL",
+  "iso3": "NLD",
+  "nameEn": "Netherlands",
+  "nameNative": "Nederland",
+  "region": "europe_central_asia",
+  "languages": [
+    "nl",
+    "en",
+    "de",
+    "fy"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/EXR/EXR.D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "USD 1.1172 per euro on 30 October 2026, i.e. EUR 0.8951 per USD; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.034,
+      "status": "sourced",
+      "sourceName": "CBS (Statistics Netherlands), CPI September 2026",
+      "sourceUrl": "https://www.cbs.nl/en-gb/news/2026/42/inflation-increases-to-3-4-percent-in-september",
+      "asOf": "2026-09-30",
+      "note": "CPI up 3.4% year on year in September 2026 (3.3% in August), published 13 October 2026; HICP 3.0%. World Bank 2025 average 3.2%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB 2% inflation target; CBS CPI 2021-2025 average 4.6%, 3.2% in 2025 (StatLine 86141NED)",
+      "sourceUrl": "https://opendata.cbs.nl/statline/#/CBS/nl/dataset/86141NED/table",
+      "asOf": "2026-10-31",
+      "note": "The ECB target anchors euro prices, but Dutch inflation has run above the euro-area average for years (3.2-3.4% in 2025-26), so 2.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank deposit facility rate (series FM.D.U2.EUR.4F.KR.DFR.LEV)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/FM/FM.D.U2.EUR.4F.KR.DFR.LEV",
+      "asOf": "2026-10-30",
+      "note": "The Netherlands uses the euro; ECB deposit facility rate 2.50% (read via the ECB data API)."
+    },
+    "savings_account_rate": {
+      "value": 0.0126,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Netherlands, household deposits redeemable at notice up to 3 months",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L23.D.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Dutch savings accounts (spaarrekeningen) are reported as notice deposits; 1.26% in August 2026. Overnight (current-account) deposits paid 0.14%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0254,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Netherlands, new household deposits with agreed maturity up to 1 year",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "No separate 3-month series is published; the up-to-1-year bucket (2.54% in August 2026) is used."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0254,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Netherlands, new household deposits with agreed maturity up to 1 year",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "2.54% in August 2026; 1-2 years 2.41%, over 2 years 2.82% (new business). Read via the ECB data API."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Dutch banks do not offer a fixed-rate monthly recurring deposit product with a published rate; regular saving goes into ordinary savings accounts."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No weighted average across all household deposits was found (World Bank FR.INR.DPST stops in 2013). ECB MIR series for August 2026: overnight 0.14%, notice (savings) 1.26%, outstanding fixed-term household deposits 2.45%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Dutch State Treasury Agency (DSTA) sells no retail savings certificate or savings bond to individuals; Dutch State Loans are bought through banks or brokers on the market."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0253,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Netherlands 3-month bill yield (bond table)",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary source: Dutch Treasury Certificates (DTC) are auctioned by the DSTA; 6-month 2.66% the same day."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year Dutch State Loan yield was found on readable pages: Trading Economics lists 3-month, 6-month, 2-year and 10-year yields only, and worldgovernmentbonds.com loads data by script."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0342,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Netherlands 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term convergence yield for the Netherlands was 3.56% in September 2026 (IRS.M.NL.L.L40.CI.0000.EUR.N.Z); 2-year 3.08%."
+    },
+    "tax_bank_interest": {
+      "value": 0.36,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Netherlands income determination (Box 3)",
+      "sourceUrl": "https://taxsummaries.pwc.com/netherlands/individual/income-determination",
+      "asOf": "2026-05-29",
+      "note": "No withholding tax on interest: savings are taxed in Box 3 at 36% on a deemed return (provisional 1.28% for bank balances in 2026) on assets above EUR 59,357 per person; taxpayers may instead declare their actual return if it is lower. Effective tax on actual interest is therefore usually well under 36%."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; Dutch State Loans held by individuals fall in Box 3 (36% on a deemed return of 6% for other assets in 2026)."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "De Nederlandsche Bank, Dutch deposit guarantee scheme",
+      "sourceUrl": "https://www.dnb.nl/en/reliable-financial-sector/dutch-deposit-guarantee/up-to-what-amount-is-my-money-protected/",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per person per bank; a joint account is covered up to EUR 200,000."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "Rijksoverheid, maximale kredietvergoeding",
+      "sourceUrl": "https://www.rijksoverheid.nl/vraag-en-antwoord/bescherming-van-consumenten/wat-is-kredietvergoeding-en-wat-is-het-maximale-kredietvergoedingspercentage",
+      "asOf": "2026-01-01",
+      "note": "Legal maximum annual rate on consumer credit is the statutory interest rate (4%) plus 8 points = 12% from 1 January 2026 (14% before). ECB MIR: revolving loans and card credit to households averaged 4.38% in August 2026."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "AEX index 1,134 on 30 Oct 2026 (Trading Economics); 1-year deposit 2.54%",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: a decade of weak European share returns, a little above safe deposits."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "AEX index (Trading Economics); 1-year deposit 2.54% less Box 3 tax of about 0.46% = 2.1% after tax",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The AEX has risen from about 450 in 2016 to 1,134 (a strong record), but the base case is kept at the after-tax safe rate plus about 4 points, before the yearly Box 3 tax on investments."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "AEX index 10-year record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case near the AEX's long-run total return of roughly 8-9% a year including dividends."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECB euro reference rate against the US dollar",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/EXR/EXR.D.USD.EUR.SP00.A",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger euro."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "ECB euro reference rate against the US dollar; long-run dollar gold trend",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/EXR/EXR.D.USD.EUR.SP00.A",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected trend in the euro against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "ECB euro reference rate against the US dollar",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/EXR/EXR.D.USD.EUR.SP00.A",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and a weaker euro."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB MIR: Dutch household savings (notice) deposits 1.26%, less Box 3 tax",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L23.D.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings after the Box 3 tax on the deemed savings return."
+    },
+    "fixed_income_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECB MIR: Dutch household deposits up to 1 year 2.54%, less Box 3 tax of about 0.46%",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: rolling 1-year term deposits after the Box 3 charge (36% of the 1.28% deemed return)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Netherlands 10-year government bond 3.42% (Trading Economics), less Box 3 tax",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in long Dutch State Loans after the Box 3 charge."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Neither DNB, the AFM nor Kifid publishes an industry-wide life insurance claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (overlijdensrisicoverzekering) is widely sold, but no regulator or official premium table per EUR 1,000 of cover by age was found; only company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": 385,
+      "status": "sourced",
+      "sourceName": "Rijksoverheid, eigen risico zorgverzekering",
+      "sourceUrl": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/zorgverzekering/eigen-risico-zorgverzekering",
+      "asOf": "2026-01-01",
+      "note": "Everyone must hold basic health insurance, which covers hospital stays and operations; the patient pays at most the compulsory yearly deductible of EUR 385 (2026 and 2027), or up to EUR 885 with the highest voluntary deductible."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Dutch basic health insurance is community-rated (one premium per policy regardless of age, about EUR 150-170 a month) and supplementary cover is priced per package, so no premium per EUR 100,000 of cover by age exists."
+    },
+    "oop_health_share": {
+      "value": 0.1179,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NL",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "CBS CPI health (COICOP 06): +3.7% in 2025, +6.1% in 2024, +1.3% year on year in September 2026 (StatLine 86141NED)",
+      "sourceUrl": "https://opendata.cbs.nl/statline/#/CBS/nl/dataset/86141NED/table",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 4-6% a year in 2023-2025 and health insurance premiums keep rising, so 3.5% (a point above the 2.5% projection) is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "CBS CPI education (COICOP 10): +3.4% year on year in September 2026, +8.8% in 2025 (StatLine 86141NED)",
+      "sourceUrl": "https://opendata.cbs.nl/statline/#/CBS/nl/dataset/86141NED/table",
+      "asOf": "2026-10-31",
+      "note": "Education prices swing with tuition-fee policy (cut in 2023, then raised), so 3.5% is used as a smoothed planning rate."
+    },
+    "life_expectancy": {
+      "value": 82.08,
+      "status": "sourced",
+      "sourceName": "CBS StatLine 37360ned, life table 2025 (levensverwachting at birth)",
+      "sourceUrl": "https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37360ned/table",
+      "asOf": "2025-12-31",
+      "note": "Men 80.67, women 83.46 in 2025; World Bank 2024 value 81.97."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.78,
+            "men": 23.69,
+            "women": 25.8
+          },
+          {
+            "age": 65,
+            "total": 20.47,
+            "men": 19.46,
+            "women": 21.42
+          },
+          {
+            "age": 70,
+            "total": 16.42,
+            "men": 15.49,
+            "women": 17.26
+          },
+          {
+            "age": 80,
+            "total": 9.29,
+            "men": 8.64,
+            "women": 9.81
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "CBS StatLine 37360ned, life table 2025",
+      "sourceUrl": "https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37360ned/table",
+      "asOf": "2025-12-31",
+      "note": "Official period life table for 2025, both sexes and by sex (read via the CBS OData API)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 3.0
+          },
+          {
+            "year": 2040,
+            "value": 2.31
+          },
+          {
+            "year": 2065,
+            "value": 1.99
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (old-age dependency ratio)",
+      "sourceUrl": "https://www.populationpyramid.net/netherlands/2040/",
+      "asOf": "2026-01-01",
+      "note": "100 / old-age dependency ratio: 33.3 (2026), 43.2 (2040) and 50.3 (2065, populationpyramid.net/netherlands/2065/). World Bank 2025: 32.5."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Rijksoverheid, AOW-leeftijd 2025-2031",
+      "sourceUrl": "https://www.rijksoverheid.nl/onderwerpen/algemene-ouderdomswet-aow/aow-leeftijd",
+      "asOf": "2026-10-31",
+      "note": "AOW age is 67 in 2026-2027 and 67 years 3 months in 2028-2031; it is then set each year, 5 years ahead, from CBS life expectancy (two-thirds of gains), so people born after 1975 (AOW from 2043 or later) should expect at least 67 years 3 months and probably more. Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "P-Direkt (central government HR service), end of employment at AOW age",
+      "sourceUrl": "https://www.p-direkt.nl/informatie-rijkspersoneel-2020/mijn-werk/einde-dienstverband/einde-dienstverband-bij-aow-leeftijd",
+      "asOf": "2026-10-31",
+      "note": "Central government employment ends automatically at the AOW age (67 in 2026, rising with life expectancy); the page is from the 2020 information set, so older than 2025."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB MIR: Dutch household savings deposits 1.26%, less Box 3 tax",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L23.D.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly easy-access savings after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECB MIR: Dutch household deposits up to 1 year 2.54%, less Box 3 tax of about 0.46%",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate (about 2.1%)."
+    },
+    "retirement_return_high": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "Netherlands 10-year government bond 3.42% (Trading Economics), less Box 3 tax",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer Dutch State Loans and deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "AEX index record; after-tax 1-year deposit about 2.1%",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "AEX index record; after-tax 1-year deposit about 2.1%",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6% and half fixed income at about 2-2.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "AEX index record; 10-year government bond 3.42%",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1662.16,
+      "status": "sourced",
+      "sourceName": "Sociale Verzekeringsbank (SVB), AOW amounts from 1 July 2026",
+      "sourceUrl": "https://www.svb.nl/nl/aow/bedragen-aow/aow-bedragen",
+      "asOf": "2026-07-01",
+      "note": "Full AOW for a person living alone, EUR 1,662.16 gross a month (EUR 1,139.39 each for a couple), plus EUR 104.78 holiday pay a month paid in May. AOW is residence-based: 2% of the full amount accrues for each year lived in the Netherlands from age 17 (rising with the AOW age); a means-tested AIO supplement tops up an incomplete AOW."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Rijksoverheid, AOW-leeftijd; SVB AOW amounts",
+      "sourceUrl": "https://www.rijksoverheid.nl/onderwerpen/algemene-ouderdomswet-aow/aow-leeftijd",
+      "asOf": "2026-10-31",
+      "note": "Paid from the AOW age (67 in 2026, 67 years 3 months from 2028) to residents and former residents, with no means test; only the AIO top-up for incomplete AOW is means-tested."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No gratuity is paid on retirement: the statutory transition payment (transitievergoeding, one-third of a month's pay per year of service, Civil Code art. 7:673) applies only when the employer ends or does not renew the contract, and not when employment ends at AOW age (rijksoverheid.nl, ontslag)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 17,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Rijksoverheid, AOW-leeftijd; SVB AOW amounts",
+      "sourceUrl": "https://www.rijksoverheid.nl/onderwerpen/algemene-ouderdomswet-aow/aow-leeftijd",
+      "asOf": "2026-10-31",
+      "note": "The AOW state pension is financed by payroll premiums but accrues by residence (2% a year over the 50 years before AOW age, starting at about 17); paid from 67 (67y3m from 2028), indexed twice a year with the net minimum wage, and taxed as income. Most employees also build an occupational pension in a sector or company fund."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Spaarrekening",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L23.D.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Deposito",
+      "localNameEn": "Term deposit (3 months)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Deposito",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No fixed-rate recurring deposit product; regular saving goes into savings accounts."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "The State does not sell savings certificates or retail savings bonds to individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Dutch Treasury Certificate (DTC)",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned by the Dutch State Treasury Agency, mainly to institutions."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Staatsobligaties (DSL)",
+      "localNameEn": "Dutch State Loans"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Staatsobligaties (DSL)",
+      "localNameEn": "Dutch State Loans",
+      "sourceUrl": "https://tradingeconomics.com/netherlands/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Beleggingsfonds / indexfonds",
+      "localNameEn": "Investment fund / index fund (ETF)",
+      "note": "Widely available; holdings are taxed in Box 3 on a deemed return of 6% (2026)."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Goudbaren en gouden munten",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold; investment gold is VAT-exempt."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "De Nederlandsche Bank (DNB)",
+      "url": "https://www.dnb.nl/en/"
+    },
+    "insuranceRegulator": {
+      "name": "De Nederlandsche Bank (prudential) and Autoriteit Financiële Markten (conduct)",
+      "url": "https://www.afm.nl/en"
+    },
+    "insuranceComplaints": {
+      "name": "Kifid (Financial Services Complaints Tribunal)",
+      "url": "https://www.kifid.nl/"
+    },
+    "pensionScheme": {
+      "name": "AOW state pension (Sociale Verzekeringsbank)",
+      "url": "https://www.svb.nl/nl/aow"
+    },
+    "oldAgeAllowance": {
+      "name": "AOW and AIO supplement (Sociale Verzekeringsbank)",
+      "url": "https://www.svb.nl/nl/aow/bedragen-aow/aow-bedragen"
+    },
+    "publicHealthCover": {
+      "name": "Zorgverzekeringswet (compulsory basic health insurance)",
+      "url": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering"
+    },
+    "depositInsurance": {
+      "name": "Dutch deposit guarantee scheme (DNB)",
+      "url": "https://www.dnb.nl/en/reliable-financial-sector/dutch-deposit-guarantee/"
+    },
+    "statistics": {
+      "name": "CBS (Statistics Netherlands)",
+      "url": "https://www.cbs.nl/en-gb"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

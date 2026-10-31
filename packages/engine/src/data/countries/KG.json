@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "KG",
+  "iso3": "KGZ",
+  "nameEn": "Kyrgyzstan",
+  "nameNative": "Кыргызстан",
+  "region": "europe_central_asia",
+  "languages": [
+    "ky",
+    "ru",
+    "uz"
+  ],
+  "currency": {
+    "code": "KGS",
+    "symbol": "⃀",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 87.4487,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, official exchange rates",
+      "sourceUrl": "https://www.nbkr.kg/index1.jsp?item=1562&lang=ENG",
+      "asOf": "2026-10-31",
+      "note": "Official rate of 87.4487 som per US dollar set for 31 October 2026; World Bank 2025 average 87.36."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.122,
+      "status": "sourced",
+      "sourceName": "Trading Economics (National Statistical Committee CPI, September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/kyrgyzstan/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "12.2% year on year in September 2026, highest since March 2023 (12.0% in August); the National Bank also shows 12.2% for September 2026. Secondary source because stat.gov.kg release pages could not be read."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NBKR medium-term inflation target 5-7%; CPI 12.2% (Sep 2026), 8.2% in 2025 (World Bank)",
+      "sourceUrl": "https://www.nbkr.kg/index1.jsp?item=2546&lang=ENG",
+      "asOf": "2026-10-31",
+      "note": "Inflation has run well above the 5-7% target in most recent years (about 10% on average over five years), so 8% is used for planning rather than the target."
+    },
+    "policy_rate": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, policy rate",
+      "sourceUrl": "https://www.nbkr.kg/index1.jsp?item=123&lang=ENG",
+      "asOf": "2026-10-27",
+      "note": "Held at 12.00% on 27 October 2026 (raised from 11% in February 2026); next decision 30 November 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0306,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, newly accepted deposits by commercial banks (Table 7, individuals, national currency)",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-07-31",
+      "note": "Weighted average rate on new som demand deposits of individuals in July 2026 (preliminary); demand deposits include ordinary savings and card accounts."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0778,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, newly accepted deposits by commercial banks (Table 7, individuals, national currency)",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-07-31",
+      "note": "New som time deposits of individuals with 1-3 month maturity, July 2026 (preliminary)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.1198,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, newly accepted deposits by commercial banks (Table 7, individuals, national currency)",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-07-31",
+      "note": "New som time deposits of individuals with 6-12 month maturity, July 2026 (preliminary); 1-3 years: 12.85%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average rate for monthly recurring (top-up) deposits; the National Bank reports deposits only by maturity."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0923,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, newly accepted deposits (Table 6, all depositors, national currency, time deposits)",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-07-31",
+      "note": "Weighted average rate on all new som time deposits in July 2026 (preliminary); including demand deposits, which dominate new inflows, the overall average is 2.86% (World Bank FR.INR.DPST 2024: 1.67%, on the same all-inclusive basis)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.17,
+      "status": "sourced",
+      "sourceName": "24.kg (news), government bonds for the population pilot issue",
+      "sourceUrl": "https://24.kg/ekonomika/379655_gosudarstvennyie_obligatsii_kak_kyirgyzstantsyi_mogut_zarabotat_bez_lishnego_riska/",
+      "asOf": "2026-06-26",
+      "note": "Pilot retail issue of 2-year som treasury bonds (GKO) for individuals ordered in June 2026: 100-som face value, from 1,000 som, fixed 17% coupon paid quarterly, traded on the Kyrgyz Stock Exchange; secondary source, term is 2 years not 5."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance has not auctioned 3-month treasury bills since January 2020 (NBKR auction file); only occasional 12-month bills are issued (10.5% in March 2026 per news reports)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1532,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, auctions of State Treasury Bonds (5-year)",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gko_auction_ats_eng.xls",
+      "asOf": "2026-10-16",
+      "note": "Weighted average yield at the 16 October 2026 auction of 5-year bonds (6% coupon); 15.34-15.38% at the other October auctions."
+    },
+    "tbond_10y_rate": {
+      "value": 0.16,
+      "status": "sourced",
+      "sourceName": "National Bank of the Kyrgyz Republic, auctions of State Treasury Bonds (10-year)",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gko_auction_ats_eng.xls",
+      "asOf": "2026-10-23",
+      "note": "Yield at the 23 October 2026 auction of 10-year bonds (8% coupon); unchanged at 16% through September-October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Tax Code of the Kyrgyz Republic, Article 191(7)(1) (text as of 06.08.2026, via prg.kz)",
+      "sourceUrl": "https://prg.kz/m/amp/document/31756556/14/1980000",
+      "asOf": "2026-08-06",
+      "note": "Interest on deposits and on balances of current, card and other bank accounts is exempt from personal income tax; secondary copy of the code because the official legal database (cbd.minjust.gov.kg) is script-only."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Article 191(7)(2) of the Tax Code exempts interest on securities listed in the top categories of the Kyrgyz Stock Exchange, but whether the retail treasury bonds qualify could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": 1000000,
+      "status": "sourced",
+      "sourceName": "Deposit Protection Agency of the Kyrgyz Republic, FAQ",
+      "sourceUrl": "https://deposit.kg/en/frequently-asked-questions-faq/",
+      "asOf": "2026-10-31",
+      "note": "Up to 1,000,000 som per depositor including accrued interest, per participating bank or microfinance company."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card rates was found and the National Bank does not publish a separate credit card rate."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "No developed local stock market; global equity index (S&P 500 +10.8% in a year to Oct 2026) in som terms; som about 87.4 per US dollar",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares bought from Kyrgyzstan return about 3% in dollars plus about 3% a year of som depreciation."
+    },
+    "equity_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Global equity index in som terms; NBKR 6-12 month deposit rate 11.98% (tax-free)",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-10-31",
+      "note": "The Kyrgyz Stock Exchange is too small and illiquid to base a forecast on, so the base case is a global index fund at about 7% in dollars plus about 4% a year of som depreciation, kept below the tax-free 1-year deposit rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Global equity long-run returns in som terms",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: global shares match their long-run dollar record of about 8-9% with faster som depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with only modest som depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); som per US dollar (NBKR 87.45, World Bank 2025 average 87.36)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4% a year and the som loses about 4% a year against the dollar, in line with inflation above US levels."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend plus faster som depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NBKR new som deposit rates July 2026 (1-3 months 7.78%), interest tax-exempt",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits around 8% and rates drifting down as inflation moves toward the 5-7% target."
+    },
+    "fixed_income_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "NBKR 6-12 month som deposit rate 11.98% (July 2026), tax-exempt; policy rate 12%",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year deposits and bonds pay about 12% today but are assumed to average about 10% as the policy rate eases over a long horizon."
+    },
+    "fixed_income_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "NBKR 1-3 year som deposit rate 12.85% (July 2026); 5-year treasury bond yield 15.32%",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gko_auction_ats_eng.xls",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits and government bonds keep paying about current rates."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance regulator (Finnadzor) publishes no industry life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium quotes or regulator premium data were found; life insurance is a very small market in Kyrgyzstan."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published figure for the typical cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published voluntary health insurance premium table was found."
+    },
+    "oop_health_share": {
+      "value": 0.4226,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS (WHO GHED)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KG",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 42.3% of current health expenditure in 2023 (older than 2025; latest available)."
+    },
+    "goal_inflation_health": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Kyrgyz CPI health component +15.3% year on year in August 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/kyrgyzstan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health prices are rising faster than headline CPI; 10% is used for the long run, two points above the 8% general inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Kyrgyz CPI education component +22.4% year on year in August 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/kyrgyzstan/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education fees have jumped recently; 10% is used for the long run, two points above the 8% general inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 72.4,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KG",
+      "asOf": "2024-12-31",
+      "note": "Men 68.4, women 76.6 (2024); UN WPP 2026 estimate 72.1."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.9,
+            "men": 15.9,
+            "women": 19.7
+          },
+          {
+            "age": 65,
+            "total": 14.4,
+            "men": 12.7,
+            "women": 15.8
+          },
+          {
+            "age": 70,
+            "total": 11.2,
+            "men": 9.9,
+            "women": 12.1
+          },
+          {
+            "age": 80,
+            "total": 6.1,
+            "men": 5.5,
+            "women": 6.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2026 life tables, via GeoRank",
+      "sourceUrl": "https://georank.org/life-expectancy/kyrgyzstan",
+      "asOf": "2026-07-01",
+      "note": "Remaining years = GeoRank's total life expectancy at each age minus the age (rounded to 0.1 year), from the UN WPP life tables for 2026."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 10.41
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.POP.DPND.OL",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=KG",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio of 9.60 (2025). UN WPP projects the 65+ share rising from 6.0% to 8.7% in 2040 and 13.3% in 2065 (GeoRank), but no projected 15-64 share was found to compute future ratios."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Economist.kg (news), citing the Social Fund",
+      "sourceUrl": "https://economist.kg/society/2026/01/28/minimalnyi-trudovoi-stazh-dlia-piensii-v-kr-vyros-do-6-liet/",
+      "asOf": "2026-01-28",
+      "note": "General pension age is 63 for men and 58 for women; minimum insured service 6 years from 2026, rising to 20 by 2045; early retirement abolished from July 2024. Secondary source because socfond.kg did not respond."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Kaktus.media (news), citing Article 37(2) of the Law on State Civil Service and Municipal Service",
+      "sourceUrl": "https://kaktus.media/doc/486913_mer_bishkeka_dostig_predelnogo_vozrasta_gosslyjashego._bydet_li_prezident_ego_meniat.html",
+      "asOf": "2023-09-13",
+      "note": "65 is the upper age limit for staying in the civil or municipal service; civil servants draw the state pension from 63 (men) or 58 (women) like other workers. Source is from 2023 (older than 2025)."
+    },
+    "retirement_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NBKR new som deposit rates July 2026, interest tax-exempt",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after rates fall toward the inflation target."
+    },
+    "retirement_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "NBKR 6-12 month som deposit rate 11.98% (July 2026), tax-exempt",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case kept well below today's tax-free 1-year deposit rate of about 12%, since rates are expected to ease over a retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "NBKR 1-3 year som deposit rate 12.85%; 5-year treasury bond yield 15.32%",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gko_auction_ats_eng.xls",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer deposits and government bonds near current rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Equity low 6%; fixed income low 8%",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of global shares and som deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Equity base 11%; fixed income base 10%",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global shares and half som deposits and bonds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Equity high 14%; fixed income high 12%",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gko_auction_ats_eng.xls",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 2000,
+      "status": "sourced",
+      "sourceName": "Economist.kg (news), Ministry of Labour draft on social benefits from 2027",
+      "sourceUrl": "https://economist.kg/society/2026/10/23/posobiya-kompensatsii-2027/",
+      "asOf": "2026-10-23",
+      "note": "Monthly social benefit for elderly people without a right to a pension is 2,000 som; a draft decree would raise it to 3,000 som from 1 January 2027. Secondary source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Economist.kg (news), who is entitled to social benefits in Kyrgyzstan",
+      "sourceUrl": "https://economist.kg/society/2025/02/28/komu-polozhieny-sotsialnyie-posobiia-v-kyrghyzstanie-i-kak-ikh-oformit/",
+      "asOf": "2025-02-28",
+      "note": "Elderly citizens (men from 65, women from 60) who have no right to a contributory pension; no income test is mentioned, but it is paid only to those without a pension."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees was found in the sources reviewed (web search budget ran out before the Labour Code could be checked), so it is not marked absent."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "24.kg (news), citing the Social Fund on the autumn 2026 pension increase",
+      "sourceUrl": "https://24.kg/obschestvo/374575_povyishenie_pensii_jdet_kyirgyizstantsev_osenyu_2026_goda/",
+      "asOf": "2026-05-20",
+      "note": "State pension social insurance run by the Social Fund (contributory, with a small funded part): pension at 63 for men and 58 for women after at least 6 years of service; pensions are indexed every year taking into account inflation and average wage growth; the minimum pension is 8,800 som from 1 October 2026 (7,100 before), the average about 11,300 som."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Талап боюнча депозит",
+      "localNameEn": "Demand (savings) deposit",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Мөөнөттүү депозит",
+      "localNameEn": "Term deposit (3 months)",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Мөөнөттүү депозит",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit scheme",
+      "note": "Some term deposits accept top-ups, but no standard monthly recurring deposit product with a published rate was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Калк үчүн мамлекеттик казыналык облигациялар",
+      "localNameEn": "Government treasury bonds for the population (pilot)",
+      "note": "2-year som bonds sold to individuals from 1,000 som on the Kyrgyz Stock Exchange from mid-2026 (pilot issue of 500 million som).",
+      "sourceUrl": "https://24.kg/ekonomika/379655_gosudarstvennyie_obligatsii_kak_kyirgyzstantsyi_mogut_zarabotat_bez_lishnego_riska/"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Мамлекеттик казыналык векселдер (МКВ)",
+      "localNameEn": "State treasury bills",
+      "note": "No 3-month bills have been auctioned since January 2020; only occasional 12-month bills.",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gkv_auction_ats_eng.xls"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Мамлекеттик казыналык облигациялар (МКО)",
+      "localNameEn": "State treasury bonds",
+      "note": "Auctioned regularly by the Ministry of Finance through the National Bank, mainly to banks and institutions.",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gko_auction_ats_eng.xls"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Мамлекеттик казыналык облигациялар (МКО)",
+      "localNameEn": "State treasury bonds",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/gko_auction_ats_eng.xls"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Equity or index fund",
+      "note": "The Kyrgyz Stock Exchange is small and no diversified retail equity or index funds sold locally were confirmed."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Алтын куймалар",
+      "localNameEn": "Gold bars",
+      "note": "The National Bank sells and buys back measured gold bars (1 g to 100 g) to the public.",
+      "sourceUrl": "https://www.nbkr.kg/index1.jsp?item=2747&lang=ENG"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Кыргыз Республикасынын Улуттук банкы (National Bank of the Kyrgyz Republic)",
+      "url": "https://www.nbkr.kg/"
+    },
+    "insuranceRegulator": {
+      "name": "Финансы рыногун жөнгө салуу жана көзөмөлдөө кызматы (Finnadzor, Service for Financial Market Regulation and Supervision)",
+      "url": "https://fsa.gov.kg/",
+      "note": "Supervises insurers, securities and non-state pension funds."
+    },
+    "insuranceComplaints": {
+      "name": "Finnadzor (Service for Financial Market Regulation and Supervision)",
+      "url": "https://fsa.gov.kg/"
+    },
+    "pensionScheme": {
+      "name": "Кыргыз Республикасынын Социалдык фонду (Social Fund of the Kyrgyz Republic)",
+      "url": "https://socfond.kg/"
+    },
+    "oldAgeAllowance": {
+      "name": "Ministry of Labour, Social Security and Migration (monthly social benefit)",
+      "url": "https://mlsp.gov.kg/",
+      "note": "Monthly social benefit of 2,000 som for elderly people without a pension (men 65+, women 60+)."
+    },
+    "publicHealthCover": {
+      "name": "Милдеттүү медициналык камсыздандыруу фонду (Mandatory Health Insurance Fund)",
+      "url": "https://foms.kg/"
+    },
+    "depositInsurance": {
+      "name": "Депозиттерди коргоо агенттиги (Deposit Protection Agency)",
+      "url": "https://deposit.kg/en/home/"
+    },
+    "statistics": {
+      "name": "Улуттук статистика комитети (National Statistical Committee)",
+      "url": "https://www.stat.gov.kg/en/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

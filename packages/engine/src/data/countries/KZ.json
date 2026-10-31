@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "code": "KZ",
+  "iso3": "KAZ",
+  "nameEn": "Kazakhstan",
+  "nameNative": "Қазақстан",
+  "region": "europe_central_asia",
+  "languages": [
+    "kk",
+    "ru",
+    "en",
+    "de"
+  ],
+  "currency": {
+    "code": "KZT",
+    "symbol": "₸",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 453.87,
+      "status": "sourced",
+      "sourceName": "National Bank of Kazakhstan, official exchange rates",
+      "sourceUrl": "https://nationalbank.kz/rss/get_rates.cfm?fdate=31.10.2026",
+      "asOf": "2026-10-31",
+      "note": "Official rate KZT 453.87 per US dollar on 31 October 2026; the tenge gained about 14% against the dollar over the past year. World Bank 2025 average 521.0."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.093,
+      "status": "sourced",
+      "sourceName": "Bureau of National Statistics (ASPR), Inflation in September 2026",
+      "sourceUrl": "https://stat.gov.kz/en/industries/economy/prices/publications/517844/",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 9.3% year on year in September 2026 (9.8% in August); food 8.5%, non-food 11%, paid services 8.9%. October figure due 2 November 2026. World Bank 2025 average 11.4%."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "National Bank of Kazakhstan 5% target (to be reached in 2028); CPI 9.3% (Sep 2026), 2021-2025 average about 12.7% (World Bank, BNS)",
+      "sourceUrl": "https://stat.gov.kz/en/industries/economy/prices/publications/517844/",
+      "asOf": "2026-10-31",
+      "note": "The 5% target has not been met in recent years and inflation averaged about 12-13% in 2021-2025, so a long-run 8% is used, between the target and the record."
+    },
+    "policy_rate": {
+      "value": 0.1575,
+      "status": "sourced",
+      "sourceName": "National Bank of Kazakhstan, base rate decisions schedule",
+      "sourceUrl": "https://nationalbank.kz/en/news/grafik-prinyatiya-resheniy-po-bazovoy-stavke/rubrics/2365",
+      "asOf": "2026-10-23",
+      "note": "Base rate cut to 15.75% (corridor 14.75-16.75%) at the October 2026 decision (23 October per NBK statements and Trading Economics; the schedule page lists 27.10.2026); next decision 4 December 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.1508,
+      "status": "sourced",
+      "sourceName": "Kazakhstan Deposit Insurance Fund (KDIF), market rates on new tenge deposits of individuals, September 2026",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-09-30",
+      "note": "Weighted average effective rate on new non-term (demand) tenge deposits; current accounts and cards pay far less."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "KDIF publishes market rates for 1-, 6-, 12- and 24-month tenge term deposits (16.22% for 1 month and 17.95% for 6 months without top-up, September 2026), but no 3-month rate."
+    },
+    "fdr_1y_rate": {
+      "value": 0.1526,
+      "status": "sourced",
+      "sourceName": "Kazakhstan Deposit Insurance Fund (KDIF), market rates on new tenge deposits of individuals, September 2026",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-09-30",
+      "note": "Weighted average effective rate on new 12-month tenge term and savings deposits without top-up (15.13% with top-up). Interest on deposits is not taxed."
+    },
+    "dps_rate": {
+      "value": 0.1266,
+      "status": "sourced",
+      "sourceName": "Kazakhstan Deposit Insurance Fund (KDIF), market rates on new tenge deposits of individuals, September 2026",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-09-30",
+      "note": "Rate on replenishable term and savings deposits over 24 months, the closest match to a monthly recurring deposit; banks do not sell a standard recurring-deposit scheme."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.147,
+      "status": "sourced",
+      "sourceName": "Trend News Agency, citing the Agency for Regulation and Development of the Financial Market (ARDFM)",
+      "sourceUrl": "https://www.trend.az/casia/kazakhstan/4221527.html",
+      "asOf": "2026-07-31",
+      "note": "Weighted average rate on individuals' tenge term deposits in July 2026, unchanged from June; secondary source (news) relaying official statistics."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Kazakhstan has no government savings certificate or retail savings bond sold to individuals; people can buy Ministry of Finance bonds (MEUKAM) on the exchange through a broker (5-year yield 14.10% in October 2026)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.1616,
+      "status": "sourced",
+      "sourceName": "National Bank of Kazakhstan, auctions of short-term notes (91-day)",
+      "sourceUrl": "https://www.nationalbank.kz/en/auction/aukcion-nbk-po-razmeshcheniyu-kratkosrochnyh-not",
+      "asOf": "2026-10-19",
+      "note": "Weighted average yield of 91-day NBK notes at the 19 October 2026 auction (16.25% on 14 September). The Ministry of Finance issues few 3-month bills."
+    },
+    "tbond_5y_rate": {
+      "value": 0.141,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance MEUKAM placement results published by KASE (MUM072_0016, 5.3 years to maturity)",
+      "sourceUrl": "https://kase.kz/ru/information/news/show/1577327",
+      "asOf": "2026-10-06",
+      "note": "Yield to maturity at the 6 October 2026 placement."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1389,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance MEUKAM placement results published by KASE (MUM156_0008, 11.6 years to maturity)",
+      "sourceUrl": "https://kase.kz/ru/information/news/show/1577329",
+      "asOf": "2026-10-06",
+      "note": "Yield to maturity at the 6 October 2026 placement of a bond with 11.6 years left; no exact 10-year benchmark is published."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Digital Business: deposit interest of individuals is not taxed (Article 430 of the Tax Code; Ministry of National Economy)",
+      "sourceUrl": "https://digitalbusiness.kz/2026-08-27/kazahstantsev-napugali-nalogom-na-depoziti-otkuda-vzyalsya-etot-sluh/",
+      "asOf": "2026-08-27",
+      "note": "Interest on individuals' deposits in Kazakh banks is excluded from personal income tax under Article 430 of the 2026 Tax Code; the ministry denied plans for a 5% tax in August 2026. Secondary source (news)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists. Interest on government securities is reported to be excluded from personal income tax under Article 430 of the 2026 Tax Code, but the official text could not be read (adilet.zan.kz needs JavaScript)."
+    },
+    "deposit_insurance_limit": {
+      "value": 20000000,
+      "status": "sourced",
+      "sourceName": "Kazakhstan Deposit Insurance Fund (KDIF), What we guarantee",
+      "sourceUrl": "https://kdif.kz/ru/what-we-guarantee",
+      "asOf": "2026-10-31",
+      "note": "Up to KZT 20 million for tenge savings deposits, KZT 10 million for other tenge deposits and KZT 5 million for foreign-currency deposits, with a combined maximum of KZT 20 million per depositor per bank."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.46,
+      "status": "sourced",
+      "sourceName": "National Bank of Kazakhstan, information message on maximum annual effective rates",
+      "sourceUrl": "https://nationalbank.kz/ru/news/informacionnye-soobshcheniya/19332",
+      "asOf": "2026-05-16",
+      "note": "Legal maximum annual effective rate (GESV) of 46% on unsecured bank loans (35% secured), set jointly by ARDFM and the NBK from 16 May 2026; card credit is unsecured lending, though the message does not name cards."
+    },
+    "equity_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "KASE index 7,916 on 30 Oct 2026, up 11% in a year (Trading Economics); inflation projection 8%",
+      "sourceUrl": "https://tradingeconomics.com/kazakhstan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Kazakh shares, a small market dominated by a few large issuers, only keep pace with inflation."
+    },
+    "equity_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "KASE index (Trading Economics); 1-year deposits 15.26% tax-free (KDIF); MEUKAM 5-year 14.10%",
+      "sourceUrl": "https://tradingeconomics.com/kazakhstan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "The KASE index rose strongly over the past decade, but the base is set near the long-run safe rate expected once inflation falls (about 10-11%) plus 2-3 points, well below today's deposit rate plus 4."
+    },
+    "equity_return_high": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "KASE index 10-year record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/kazakhstan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of the KASE index's strong 2016-2026 run in tenge."
+    },
+    "gold_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, down 3% on a year (Trading Economics); tenge 453.87 per USD (NBK)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable tenge, as in the past year when the tenge gained 14% against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); inflation gap between Kazakhstan (8% assumed) and the US (about 2-3%)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4% a year and the tenge loses about 5% a year against the dollar, in line with the inflation gap."
+    },
+    "gold_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); tenge devaluations of 2014-2015 and 2022",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold plus a faster tenge depreciation, as in past devaluation periods."
+    },
+    "fixed_income_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Inflation projection 8%; NBK 5% target",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall towards inflation as the NBK keeps cutting."
+    },
+    "fixed_income_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "1-year deposits 15.26% tax-free (KDIF, Sep 2026); base rate 15.75% falling",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-10-31",
+      "note": "Base case: tax-free deposit rates settle about 3 points above the 8% long-run inflation assumption, below today's 15%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.145,
+      "status": "assumption",
+      "sourceName": "1-year deposits 15.26% and MEUKAM 14.1% (Sep-Oct 2026)",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-10-31",
+      "note": "High case: today's high tax-free deposit and bond rates persist."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ARDFM publishes monthly insurance sector statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold by life insurers, but no published premium table per KZT 1,000 of cover by age from ARDFM or another public body was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by the state guaranteed package and compulsory social health insurance (OSMS); no official figure for the typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary health insurance is mostly bought by employers; no age-banded premium table per KZT 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.2764,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KZ",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BNS: paid services +8.9% year on year (Sep 2026); inflation projection 8%",
+      "sourceUrl": "https://stat.gov.kz/en/industries/economy/prices/publications/517844/",
+      "asOf": "2026-10-31",
+      "note": "Medical services are paid services, which rose 8.9% in the year to September 2026; 9% assumes they stay slightly above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BNS: paid services +8.9% year on year (Sep 2026); inflation projection 8%",
+      "sourceUrl": "https://stat.gov.kz/en/industries/economy/prices/publications/517844/",
+      "asOf": "2026-10-31",
+      "note": "Private school and university fees have tended to rise faster than general prices, so 10% is used."
+    },
+    "life_expectancy": {
+      "value": 75.97,
+      "status": "sourced",
+      "sourceName": "Bureau of National Statistics, demographic statistics (life expectancy 2025, released 27 March 2026)",
+      "sourceUrl": "https://stat.gov.kz/en/industries/socialtatistics/demography/publications/479793/",
+      "asOf": "2025-12-31",
+      "note": "Men 72.19, women 79.80 in 2025 (75.44 in 2024). UN WPP gives 74.8 for 2026 and the World Bank 74.5 for 2024."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.4,
+            "men": 17.7,
+            "women": 22.4
+          },
+          {
+            "age": 65,
+            "total": 16.7,
+            "men": 14.4,
+            "women": 18.3
+          },
+          {
+            "age": 70,
+            "total": 13.3,
+            "men": 11.4,
+            "women": 14.5
+          },
+          {
+            "age": 80,
+            "total": 7.6,
+            "men": 6.6,
+            "women": 8.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/kazakhstan",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP mid-year estimate for 2026); UN WPP life expectancy is lower than the national 2025 figure."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.87
+          },
+          {
+            "year": 2040,
+            "value": 5.13
+          },
+          {
+            "year": 2065,
+            "value": 4.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/kazakhstan/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 14.6 (2025, World Bank), 19.5 (2040) and 24.4 (2065, populationpyramid.net/kazakhstan/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "eGov (gov.kz), Pension age",
+      "sourceUrl": "https://www.gov.kz/situations/5/25?lang=ru",
+      "asOf": "2026-10-31",
+      "note": "Pension age is 63 for men; for women 61 until 2027, rising by half a year each January from 2028 to reach 63 in 2031, so 63 applies to everyone born after 1975. Mothers of 5 or more children can retire at 53."
+    },
+    "retirement_age_government": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "eGov (gov.kz), Pension age",
+      "sourceUrl": "https://www.gov.kz/situations/5/25?lang=ru",
+      "asOf": "2026-10-31",
+      "note": "The eGov page gives one general pension age (63; women 61 rising to 63 by 2031) with no separate age for civil servants; some uniformed services have their own service pensions."
+    },
+    "retirement_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Inflation projection 8%; deposit rates (KDIF)",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case: tax-free deposits earn only about inflation as rates fall."
+    },
+    "retirement_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "1-year deposits 15.26% tax-free (KDIF, Sep 2026); NBK 91-day notes 16.16%",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-10-31",
+      "note": "Base case below today's tax-free 1-year deposit rate, allowing for rates falling as inflation comes down."
+    },
+    "retirement_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "1-year deposits 15.26% and MEUKAM 14.1% (Sep-Oct 2026)",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree keeps earning rates close to today's."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Fixed income low 8%; equity low 8%",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if both shares and deposits only match inflation."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Fixed income base 11%; equity base 13%",
+      "sourceUrl": "https://tradingeconomics.com/kazakhstan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 13% and half deposits and bonds at about 11%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.155,
+      "status": "assumption",
+      "sourceName": "Fixed income high 14.5%; equity high 17%",
+      "sourceUrl": "https://tradingeconomics.com/kazakhstan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 35596,
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Protection, pension and benefit amounts for 2026",
+      "sourceUrl": "https://www.gov.kz/memleket/entities/social-musrepov/press/news/details/1124606?lang=ru",
+      "asOf": "2026-01-01",
+      "note": "Minimum state basic pension payment in 2026: 70% of the KZT 50,851 subsistence minimum, paid from pension age to people with 10 years or less (or no) pension-system service; it rises 2% of the subsistence minimum per extra year of service, up to KZT 60,005. Budget-funded, not means-tested."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 63,
+        "womenAge": 61,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "eGov (gov.kz), Pension age; Ministry of Labour 2026 amounts",
+      "sourceUrl": "https://www.gov.kz/situations/5/25?lang=ru",
+      "asOf": "2026-10-31",
+      "note": "Basic pension payment from pension age: men 63, women 61 (rising to 63 by 2031); not means-tested; the amount depends on years of pension-system service."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Kazakhstan has no statutory gratuity paid on retirement or resignation; the Labour Code only gives severance (about one month's average pay) when employment ends for reasons such as liquidation or staff reduction. No days-per-year rule exists to report; the severance rule was not read from the Labour Code text in this research."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "eGov (gov.kz), Pension age; ENPF and news reports on 2026 contribution rates",
+      "sourceUrl": "https://www.gov.kz/situations/5/25?lang=ru",
+      "asOf": "2026-10-31",
+      "note": "Funded defined-contribution system: employees pay 10% of pay (OPV) and employers 3.5% in 2026 (OPVR, rising to 5% by 2028) into individual ENPF accounts, paid out from pension age (63; women 61 rising to 63 by 2031) on top of the budget-funded basic pension. Accumulation payments are not indexed to inflation (basic and solidarity pensions are indexed yearly); pension payments are exempt from personal income tax from 2026."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Жинақ салымы",
+      "localNameEn": "Savings / demand deposit",
+      "note": "Demand and savings deposits pay high rates; interest is not taxed.",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Мерзімді салым (3 ай)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Мерзімді салым (12 ай)",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Толықтырылатын мерзімді салым",
+      "localNameEn": "Replenishable term deposit",
+      "note": "No standard monthly recurring-deposit product; replenishable term or savings deposits are used for regular saving.",
+      "sourceUrl": "https://kdif.kz/ru/reward-rates"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals; Ministry of Finance bonds (MEUKAM) can be bought on the exchange through a broker."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Ұлттық Банктің қысқа мерзімді ноталары",
+      "localNameEn": "National Bank short-term notes (91-day)",
+      "note": "Sold at NBK auctions to banks and professional investors; individuals buy through a broker.",
+      "sourceUrl": "https://www.nationalbank.kz/en/auction/aukcion-nbk-po-razmeshcheniyu-kratkosrochnyh-not"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "МЕУКАМ",
+      "localNameEn": "Ministry of Finance medium-term bonds (MEUKAM)",
+      "sourceUrl": "https://kase.kz/ru/information/news/show/1577327"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "МЕУКАМ",
+      "localNameEn": "Ministry of Finance long-term bonds (MEUKAM)",
+      "sourceUrl": "https://kase.kz/ru/information/news/show/1577329"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Инвестициялық пай қорлары",
+      "localNameEn": "Unit investment funds and ETFs",
+      "note": "Retail funds and exchange-traded funds are available through brokers; the local market is small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Аффинирленген алтын құймалары",
+      "localNameEn": "Refined gold bars",
+      "note": "Legal to buy and hold; refined gold bars produced for the National Bank have been sold to the public through banks (not re-checked in this research)."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Kazakhstan",
+      "url": "https://nationalbank.kz/"
+    },
+    "insuranceRegulator": {
+      "name": "Agency for Regulation and Development of the Financial Market (ARDFM)",
+      "url": "https://www.gov.kz/memleket/entities/ardfm"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Ombudsman",
+      "url": "https://www.omb.kz/",
+      "note": "Mandatory first step before going to court in insurance disputes since 1 January 2024 (ARDFM)."
+    },
+    "pensionScheme": {
+      "name": "Unified Accumulative Pension Fund (ENPF)",
+      "url": "https://www.enpf.kz/"
+    },
+    "oldAgeAllowance": {
+      "name": "Basic pension payment (Ministry of Labour and Social Protection)",
+      "url": "https://www.gov.kz/memleket/entities/social-musrepov/press/news/details/1124606?lang=ru"
+    },
+    "publicHealthCover": {
+      "name": "Social Health Insurance Fund (compulsory social health insurance, OSMS)",
+      "url": "https://fms.kz/",
+      "note": "Guaranteed free medical care for all citizens plus OSMS cover for insured people."
+    },
+    "depositInsurance": {
+      "name": "Kazakhstan Deposit Insurance Fund (KDIF)",
+      "url": "https://kdif.kz/ru/what-we-guarantee"
+    },
+    "statistics": {
+      "name": "Bureau of National Statistics (ASPR)",
+      "url": "https://stat.gov.kz/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "code": "GE",
+  "iso3": "GEO",
+  "nameEn": "Georgia",
+  "nameNative": "საქართველო",
+  "region": "europe_central_asia",
+  "languages": [
+    "ka",
+    "ru",
+    "en",
+    "hy"
+  ],
+  "currency": {
+    "code": "GEL",
+    "symbol": "₾",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.5992,
+      "status": "sourced",
+      "sourceName": "National Bank of Georgia official exchange rate (USD)",
+      "sourceUrl": "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD",
+      "asOf": "2026-10-31",
+      "note": "GEL 2.5992 per US dollar, set on 30 October 2026 and valid from 31 October 2026; World Bank 2025 average 2.743."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.056,
+      "status": "sourced",
+      "sourceName": "National Statistics Office of Georgia (Geostat), consumer price index",
+      "sourceUrl": "https://www.geostat.ge/en",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI inflation 5.6% in September 2026, same as August (Geostat headline; confirmed by Trading Economics); October figure not yet published. World Bank 2025 average 3.9%."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "National Bank of Georgia 3% inflation target; CPI 5.6% (Sep 2026), 3.9% in 2025 (World Bank)",
+      "sourceUrl": "https://www.geostat.ge/en",
+      "asOf": "2026-10-31",
+      "note": "Inflation has averaged well above the 3% target over the last five years (including 10-12% in 2021-22), so 4.5% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.0825,
+      "status": "sourced",
+      "sourceName": "Trading Economics (National Bank of Georgia refinancing rate)",
+      "sourceUrl": "https://tradingeconomics.com/georgia/interest-rate",
+      "asOf": "2026-10-21",
+      "note": "Monetary policy rate held at 8.25% on 21 October 2026; next decision 16 December 2026. Secondary source because nbg.gov.ge loads its rate by script."
+    },
+    "savings_account_rate": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "National Bank of Georgia, effective interest rates on deposits (bank comparison table)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Median effective rate on GEL demand deposits (daily balance) among banks that list one, about 5%; the two largest banks' demand entries are not usable, and USD demand deposits pay about 0.5-1%. Table date not shown; read 31 October 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.086,
+      "status": "sourced",
+      "sourceName": "National Bank of Georgia, effective interest rates on deposits (bank comparison table)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Average effective rate on 3-month GEL term deposits at the two largest banks (8.40% and 8.83%); other banks 6.1-9.7%; USD 3-month deposits pay 1-2.6%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0905,
+      "status": "sourced",
+      "sourceName": "National Bank of Georgia, effective interest rates on deposits (bank comparison table)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Average effective rate on 12-month GEL term deposits at the two largest banks (8.85% and 9.25%); other banks 8-10.2%; USD 12-month deposits pay 1.4-4%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks offer accumulative savings deposits with regular top-ups, but the NBG comparison table does not list them and no published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.093,
+      "status": "sourced",
+      "sourceName": "Trading Economics (IMF), Georgia deposit interest rate",
+      "sourceUrl": "https://tradingeconomics.com/georgia/deposit-interest-rate",
+      "asOf": "2026-07-31",
+      "note": "Average rate paid by commercial banks on deposits, July 2026 (9.36% in June); World Bank FR.INR.DPST 2025 average 10.6%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or dedicated retail savings bond for individuals was found; treasury notes and bonds are auctioned by the Ministry of Finance mainly to banks."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ministry of Finance treasury bill auctions (maturities up to one year) are published on mof.ge and nbg.gov.ge, but the result pages load by script and no yield could be read; a 91-day bill may not be issued."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "5-year treasury note yields appear in Ministry of Finance auction results and the NBG GEL yield curve, but both pages load by script and no figure could be read; Trading Economics shows no Georgia bond yield."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "10-year treasury bond yields appear in Ministry of Finance auction results, but the pages load by script and no figure could be read."
+    },
+    "tax_bank_interest": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "Tax Code of Georgia, Article 131 (matsne.gov.ge)",
+      "sourceUrl": "https://matsne.gov.ge/en/document/view/1043717",
+      "asOf": "2026-10-31",
+      "note": "Interest paid to an individual is taxed at source at 5% and is then final: it is not included in gross income or taxed further (Article 131(1) and (3))."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Tax Code of Georgia, Article 82(1)(s) (matsne.gov.ge)",
+      "sourceUrl": "https://matsne.gov.ge/en/document/view/1043717",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; interest on government debt securities and NBG securities held by individuals is exempt from income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Georgia has a deposit insurance scheme (Deposit Insurance Agency), but dia.ge refused the connection and no other official page stating the current limit per depositor could be read."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No page stating a legal interest-rate cap or a typical credit card rate could be read; NBG loan-rate statistics load by script."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "No meaningful local stock market (Trading Economics tracks no Georgian index); global equities in GEL; after-tax 1-year GEL deposit 9.05% less 5% = 8.6%",
+      "sourceUrl": "https://tradingeconomics.com/georgia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares earn about 4% in dollars and the lari stays stable, well below safe lari deposits."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return about 7% in USD; GEL per USD 2.60 (NBG); inflation gap with the US about 2 points",
+      "sourceUrl": "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD",
+      "asOf": "2026-10-31",
+      "note": "The Georgian Stock Exchange is tiny and illiquid, so the base is a global index fund in lari: about 7% in dollars plus about 2% a year of expected lari depreciation, within 4 points of the after-tax deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Global equity long-run returns; lari depreciation of 2005-2025",
+      "sourceUrl": "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns plus faster lari depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike and the lari stays stable."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); NBG 3% target vs 2% US inflation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4% a year and the lari loses about 2% a year against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend plus lari depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "NBG policy rate 8.25%; GEL deposit rates (NBG comparison table)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall as inflation returns to the 3% target, giving about 6.5% after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "12-month GEL deposits 9.05% less 5% tax = 8.6% (NBG comparison table)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Base case: a little below today's after-tax 1-year lari deposit rate, allowing for some easing."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Highest 12-month GEL deposit rates 9.6-10.2% (NBG comparison table) less 5% tax",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "High case: rates stay high and savers use the better-paying banks or tax-free treasury securities."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance State Supervision Service publishes market statistics but no life claim settlement ratio could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold mainly as credit-linked or group cover; no published premium table per GEL 1,000 of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Universal Healthcare Programme pays part of hospital costs with patient co-payments; no official figure for a typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is sold as fixed packages, not per sum insured, and no published premium table per GEL 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.5876,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GE",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Geostat CPI 5.6% (Sep 2026); out-of-pocket share of health spending 59% (World Bank)",
+      "sourceUrl": "https://www.geostat.ge/en",
+      "asOf": "2026-10-31",
+      "note": "Medicine and private care prices are mostly paid out of pocket and have risen faster than headline inflation, so 6% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Geostat CPI 5.6% (Sep 2026); planning inflation 4.5%",
+      "sourceUrl": "https://www.geostat.ge/en",
+      "asOf": "2026-10-31",
+      "note": "Private school and university fees tend to rise faster than headline inflation, so 6% is used."
+    },
+    "life_expectancy": {
+      "value": 75.0,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/georgia",
+      "asOf": "2026-12-31",
+      "note": "Men 70.1, women 79.5 (UN WPP estimate for 2026); World Bank 2024 figure 74.7."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.0,
+            "men": 16.8,
+            "women": 22.4
+          },
+          {
+            "age": 65,
+            "total": 16.3,
+            "men": 13.6,
+            "women": 18.3
+          },
+          {
+            "age": 70,
+            "total": 13.0,
+            "men": 10.6,
+            "women": 14.5
+          },
+          {
+            "age": 80,
+            "total": 7.5,
+            "men": 5.6,
+            "women": 8.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/georgia",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.97
+          },
+          {
+            "year": 2040,
+            "value": 3.42
+          },
+          {
+            "year": 2065,
+            "value": 2.53
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/georgia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 25.2 (2025, World Bank), 29.2 (2040) and 39.5 (2065, populationpyramid.net/georgia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Social Service Agency of Georgia), retirement age men and women",
+      "sourceUrl": "https://tradingeconomics.com/georgia/retirement-age-men",
+      "asOf": "2026-12-31",
+      "note": "State pension age 65 for men and 60 for women, unchanged since 2011."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official page stating the retirement or age limit for public servants could be read; the state pension age (65 men, 60 women) applies to all."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NBG policy rate 8.25%; GEL deposit rates (NBG comparison table)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Low case: lari deposit rates fall toward 6-7% as inflation settles."
+    },
+    "retirement_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "12-month GEL deposits 9.05% less 5% tax = 8.6% (NBG comparison table)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Base case capped below the after-tax 1-year lari deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.086,
+      "status": "assumption",
+      "sourceName": "12-month GEL deposits 9.05% less 5% tax = 8.6%",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "High case: today's after-tax 1-year deposit rate holds for the long run."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "After-tax GEL deposits 8.6%; global equity low case 5%",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global shares lag and deposit rates fall."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "After-tax GEL deposits 8.6%; global equity in GEL 9%",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half lari deposits and half global shares in lari terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "After-tax GEL deposits 8.6%; global equity high case 12%",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Georgia pays a flat non-contributory state pension, but the Social Service Agency, Ministry of Health and Ministry of Finance pages refused automated access and no source stating the 2026 amount could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Trading Economics (Social Service Agency of Georgia), retirement age men and women",
+      "sourceUrl": "https://tradingeconomics.com/georgia/retirement-age-women",
+      "asOf": "2026-12-31",
+      "note": "The state pension is a flat, non-contributory pension paid from the state pension age (65 men, 60 women), not means-tested; residence and other conditions could not be confirmed because the Social Service Agency site refused automated access."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service payment per year of service was found; the Labour Code text could not be read to confirm severance rules on dismissal."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Law of Georgia on Funded Pension (matsne.gov.ge); retirement ages via Trading Economics",
+      "sourceUrl": "https://matsne.gov.ge/en/document/view/4280127",
+      "asOf": "2026-10-31",
+      "note": "Mandatory funded pension (Pension Agency) since 2019: 2% of salary from the employee, 2% from the employer and 2% from the state (1% for income GEL 24,000-60,000); savings can be drawn at the state pension age (65 men, 60 women); returns depend on the fund, so payouts are not inflation-linked. Employees aged 40+ at launch could opt out."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "შემნახველი ანგარიში",
+      "localNameEn": "Savings (demand deposit) account",
+      "note": "Offered in lari and in US dollars or euros; foreign-currency deposits pay much less.",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "ვადიანი ანაბარი",
+      "localNameEn": "Term deposit (3 months)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "ვადიანი ანაბარი",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://nbg.gov.ge/en/effective-interest-rates-for-deposits"
+    },
+    "dps": {
+      "available": true,
+      "localName": "დაგროვებითი ანაბარი",
+      "localNameEn": "Accumulative savings deposit",
+      "note": "Deposit with regular top-ups; terms vary by bank."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals; interest on government securities is tax-exempt for individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "სახაზინო ვალდებულება",
+      "localNameEn": "Treasury bill",
+      "note": "Discount bills with maturities up to one year, auctioned by the Ministry of Finance through the NBG mainly to banks.",
+      "sourceUrl": "https://nbg.gov.ge/en/page/government-securities"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "სახაზინო ობლიგაცია",
+      "localNameEn": "Treasury note",
+      "sourceUrl": "https://nbg.gov.ge/en/page/government-securities"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "სახაზინო ობლიგაცია",
+      "localNameEn": "Treasury bond",
+      "sourceUrl": "https://nbg.gov.ge/en/page/government-securities"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "საინვესტიციო ფონდი",
+      "localNameEn": "Investment fund",
+      "note": "Few domestic funds; residents mainly reach diversified index funds abroad through brokerage accounts."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ოქროს ზოდები და მონეტები",
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy and hold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Georgia",
+      "url": "https://nbg.gov.ge/en"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance State Supervision Service of Georgia",
+      "url": "https://insurance.gov.ge/en"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance State Supervision Service of Georgia, consumer page",
+      "url": "https://insurance.gov.ge/en",
+      "note": "The regulator handles consumer questions about insurers; disputes go to the courts."
+    },
+    "pensionScheme": {
+      "name": "Pension Agency of Georgia (funded pension)",
+      "url": "https://www.pensions.ge/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Service Agency (state pension)",
+      "url": "https://ssa.moh.gov.ge/"
+    },
+    "publicHealthCover": {
+      "name": "Universal Healthcare Programme (Social Service Agency)",
+      "url": "https://ssa.moh.gov.ge/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Agency",
+      "url": "https://www.dia.ge/"
+    },
+    "statistics": {
+      "name": "National Statistics Office of Georgia (Geostat)",
+      "url": "https://www.geostat.ge/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 1,
+  "code": "TJ",
+  "iso3": "TJK",
+  "nameEn": "Tajikistan",
+  "nameNative": "Тоҷикистон",
+  "region": "europe_central_asia",
+  "languages": [
+    "tg",
+    "ru",
+    "uz"
+  ],
+  "currency": {
+    "code": "TJS",
+    "symbol": "TJS",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 9.2057,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/TJS (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/currency",
+      "asOf": "2026-10-30",
+      "note": "The NBT official-rate page was unreachable; World Bank 2025 average 10.02."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.041,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Tajikistan inflation rate (National Bank of Tajikistan data, secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI up 4.1% year on year in September 2026 (unchanged from August). The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections; the Statistics Agency gives 3.5% for 2025 and the World Bank 3.4%."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "National Bank of Tajikistan inflation target 5% ± 2 points since 2025 (IMF 2025 Article IV)",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2025/07/08/republic-of-tajikistan-2025-article-iv-consultation-and-second-review-under-the-policy-568379",
+      "asOf": "2026-10-31",
+      "note": "The NBT lowered its medium-term target from 6% to 5% ± 2 in 2025 and inflation has stayed inside the band, so the 5% centre is used."
+    },
+    "policy_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Trading Economics, National Bank of Tajikistan refinancing rate (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections; IMF 2025 Article IV gave 9% at end-2024/early 2025."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical savings-account rate could be read. The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical 3-month term deposit rate could be read. The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical 1-year term deposit rate could be read. The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for monthly recurring deposits could be found. The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections; World Bank FR.INR.DPST stops in 2019 (5.2%), too old to use."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate or savings bond for individuals could be found; the Ministry of Finance started market auctions of government securities in 2024, bought by banks and the Deposit Insurance Fund (IMF 2025 Article IV)."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance has auctioned government securities since 2024 (IMF 2025 Article IV), but no current 91-day yield could be read; the Ministry of Finance and NBT sites were unreachable."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield is published in a readable source; the domestic debt market is at an early stage (IMF 2025 Article IV)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield exists in a readable source; domestic public debt is mainly legacy bonds held by the NBT (IMF 2025 Article IV)."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax treatment of individuals' bank interest under the 2021 Tax Code could not be confirmed: the Tax Committee site (andoz.tj) failed its certificate check and PwC Tax Summaries does not cover Tajikistan."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists for which a tax rate could be found."
+    },
+    "deposit_insurance_limit": {
+      "value": 35000,
+      "status": "sourced",
+      "sourceName": "Deposit Insurance Fund of Tajikistan (Хазинаи суғуртаи амонату пасандозҳо), compensation amount",
+      "sourceUrl": "https://dif.tj/andozai-ubronpulii-su-urta/",
+      "asOf": "2026-10-31",
+      "note": "Up to 35,000 somoni per depositor per institution; foreign-currency deposits are compensated in somoni at the NBT rate; interest is not compensated."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical rate for credit-card balances could be found; card credit is little used."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "No functioning local stock market; global equities in somoni terms. NBT refinancing rate 7%",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a global equity fund returning about 5% in somoni if the somoni stays firm against the dollar."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equity index in somoni terms (no liquid local market); NBT refinancing rate 7% as safe-rate proxy",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case uses global equities (about 7% in dollars) plus about 2% a year somoni depreciation, kept within 4 points of the refinancing-rate proxy for the safe rate; the local exchange has almost no trading."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Global equity index in somoni terms",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global markets and faster somoni depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); somoni at 9.21 per dollar, firmer than the 2025 average of 10.02",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: dollar gold flat after the 2025-26 spike while the somoni holds its value."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); NBT 5% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, and the somoni loses about 2% a year against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's 2005-2025 trend plus faster somoni depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "NBT refinancing rate 7% (Trading Economics); deposit rates unpublished in reachable sources",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access somoni savings well below the policy rate."
+    },
+    "fixed_income_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NBT refinancing rate 7% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: somoni term deposits assumed a little below the policy rate after any tax; no published deposit rate could be read."
+    },
+    "fixed_income_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NBT refinancing rate 7% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: longer somoni term deposits, which usually pay above the policy rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life insurance claim settlement ratio is published by the insurance supervisor that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium rates could be found; the life insurance market is very small. Not confirmed absent."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay could be found; the Ministry of Health site has no such figure."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table could be found; voluntary health insurance is rare."
+    },
+    "oop_health_share": {
+      "value": 0.6236,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TJ",
+      "asOf": "2023-12-31",
+      "note": "Latest year 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NBT inflation target 5% ± 2; out-of-pocket share of health spending 62% (World Bank)",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2025/07/08/republic-of-tajikistan-2025-article-iv-consultation-and-second-review-under-the-policy-568379",
+      "asOf": "2026-10-31",
+      "note": "Most health spending is paid out of pocket for medicines and informal fees, which tend to rise faster than the CPI, so 2 points above the inflation target is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NBT inflation target 5% ± 2",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2025/07/08/republic-of-tajikistan-2025-article-iv-consultation-and-second-review-under-the-policy-568379",
+      "asOf": "2026-10-31",
+      "note": "Private tuition and university contract fees are planned at a point above the inflation target."
+    },
+    "life_expectancy": {
+      "value": 72.2,
+      "status": "sourced",
+      "sourceName": "GeoRank, Tajikistan life expectancy (UN World Population Prospects, 2026 estimate)",
+      "sourceUrl": "https://georank.org/life-expectancy/tajikistan",
+      "asOf": "2026-07-01",
+      "note": "Men 69.9, women 74.5; World Bank 2024: 71.9."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.0,
+            "men": 16.6,
+            "women": 19.3
+          },
+          {
+            "age": 65,
+            "total": 14.4,
+            "men": 13.2,
+            "women": 15.5
+          },
+          {
+            "age": 70,
+            "total": 11.2,
+            "men": 10.2,
+            "women": 12.0
+          },
+          {
+            "age": 80,
+            "total": 6.2,
+            "men": 5.7,
+            "women": 6.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "GeoRank, Tajikistan life expectancy by age (UN World Population Prospects, 2026)",
+      "sourceUrl": "https://georank.org/life-expectancy/tajikistan",
+      "asOf": "2026-07-01",
+      "note": "Remaining years = expected age at death at each age minus the age."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 14.08
+          },
+          {
+            "year": 2040,
+            "value": 10.0
+          },
+          {
+            "year": 2065,
+            "value": 5.62
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "PopulationPyramid.net, Tajikistan (UN World Population Prospects)",
+      "sourceUrl": "https://www.populationpyramid.net/tajikistan/2040/",
+      "asOf": "2026-07-01",
+      "note": "100 divided by the old-age dependency ratio: 7.1 in 2026, 10.0 in 2040 and 17.8 in 2065 (pages /tajikistan/2026/ and /tajikistan/2065/). World Bank 2025: 6.8."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Wikipedia, retirement age by country (secondary source)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension age 63 for men and 58 for women; secondary source because the pension agency and legal-database sites could not be reached. No change for later cohorts was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No separate retirement age for government employees could be confirmed from a reachable source; civil servants are believed to follow the general pension ages."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "NBT refinancing rate 7%",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access somoni savings."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NBT refinancing rate 7% as a proxy for the 1-year somoni deposit rate",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the policy rate because no after-tax 1-year deposit or bill rate could be read."
+    },
+    "retirement_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "NBT refinancing rate 7%",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: longer somoni term deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Fixed income low 4%; equity low 5%",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Fixed income base 6%; equity base 9%",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: half somoni deposits, half global equity in somoni terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Fixed income high 8%; equity high 12%",
+      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A social pension for elderly people without an insurance record is believed to exist, but its current amount could not be found: the pension agency site was unreachable and the Ministry of Health and Social Protection pages had no figure."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility ages for the social pension could not be confirmed from a reachable official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory days-per-year gratuity for private employees was found; the Labour Code's severance on dismissal (redundancy, liquidation) is a lump sum of average monthly pay, not a gratuity. The legal database could not be reached to confirm, so not marked absent."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A state insurance pension exists (Law on Insurance and State Pensions), paid from 63 for men and 58 for women, but its entry ages, indexation and tax treatment could not be confirmed: the Agency for Social Insurance and Pensions site was unreachable."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Амонати ба талаб",
+      "localNameEn": "Demand / savings deposit"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Амонати мӯҳлатнок",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Амонати мӯҳлатнок",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard recurring-deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate or bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "Government securities are auctioned to banks and institutions since 2024; not offered to individuals.",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2025/07/08/republic-of-tajikistan-2025-article-iv-consultation-and-second-review-under-the-policy-568379"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds",
+      "note": "No retail access or secondary market yet (IMF 2025 Article IV).",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2025/07/08/republic-of-tajikistan-2025-article-iv-consultation-and-second-review-under-the-policy-568379"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds",
+      "note": "No 10-year bonds are issued to the market.",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2025/07/08/republic-of-tajikistan-2025-article-iv-consultation-and-second-review-under-the-policy-568379"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Equity fund",
+      "note": "No retail mutual or index funds were found; the local stock exchange has very little trading."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Тилло",
+      "localNameEn": "Gold",
+      "note": "Gold jewellery and bars can be bought legally; availability of standard investment bars was not confirmed."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Tajikistan (Бонки миллии Тоҷикистон)",
+      "url": "https://nbt.tj/en/"
+    },
+    "insuranceRegulator": {
+      "name": "National Bank of Tajikistan (insurance supervision)",
+      "url": "https://nbt.tj/en/",
+      "note": "Insurance supervision was not confirmed from a reachable page."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health and Social Protection of the Population (state-guaranteed basic health services)",
+      "url": "https://moh.tj/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Fund of Tajikistan (Хазинаи суғуртаи амонату пасандозҳо)",
+      "url": "https://dif.tj/andozai-ubronpulii-su-urta/"
+    },
+    "statistics": {
+      "name": "Agency on Statistics under the President of the Republic of Tajikistan",
+      "url": "https://www.stat.tj/en/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

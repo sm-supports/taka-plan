@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 1,
+  "code": "UA",
+  "iso3": "UKR",
+  "nameEn": "Ukraine",
+  "nameNative": "Україна",
+  "region": "europe_central_asia",
+  "languages": [
+    "uk",
+    "ru",
+    "en"
+  ],
+  "currency": {
+    "code": "UAH",
+    "symbol": "₴",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 45.5293,
+      "status": "sourced",
+      "sourceName": "National Bank of Ukraine (NBU), official hryvnia exchange rate (open data API)",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=20261030&json",
+      "asOf": "2026-10-30",
+      "note": "Official rate UAH 45.5293 per US dollar for 30 October 2026 (45.3526 set for 2 November). World Bank 2025 average 41.69."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "National Bank of Ukraine open data, consumer price indices (State Statistics Service data)",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/inflation?period=m&date=202610&json",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 10.0% year on year in September 2026 (8.1% in August), released 9 October 2026; October figure due 10 November. World Bank 2025 average 12.7%."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NBU 5% inflation target; IMF WEO path for Ukraine (8.9% 2026, 5.0% 2030); 2021-2025 average about 12%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "asOf": "2026-10-31",
+      "note": "The NBU targets 5% and the IMF projects a return to 5% by 2030, but wartime inflation averaged about 12% in 2021-2025 and is 10% now, so 8% is used between the target and the record."
+    },
+    "policy_rate": {
+      "value": 0.165,
+      "status": "sourced",
+      "sourceName": "National Bank of Ukraine open data, NBU key policy rate",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/key?date=20261030&json",
+      "asOf": "2026-10-30",
+      "note": "Key policy rate raised from 16% to 16.5% at the 29 October 2026 decision (Trading Economics); overnight loans 20.5%, overnight certificates of deposit 16.5%."
+    },
+    "savings_account_rate": {
+      "value": 0.0277,
+      "status": "sourced",
+      "sourceName": "National Bank of Ukraine open data, interest rates on new deposits of households (hryvnia, demand)",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/mir?date=20261001&json",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on new hryvnia demand deposits of households in September 2026 (reporting date 1 October)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NBU statistics group new household term deposits only as up to 1 year, 1-2 years and over 2 years; no separate 3-month rate is published (up to 1 year: 11.83% in September 2026)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.1183,
+      "status": "sourced",
+      "sourceName": "National Bank of Ukraine open data, interest rates on new deposits of households (hryvnia, up to 1 year)",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/mir?date=20261001&json",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on new hryvnia household deposits with original maturity up to 1 year in September 2026; 1-2 years 13.38%, over 2 years 14.86%. Interest is taxed at 23% (see tax_bank_interest)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks offer term deposits that accept top-ups, but no official rate for a monthly recurring deposit was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.1031,
+      "status": "sourced",
+      "sourceName": "National Bank of Ukraine open data, interest rates on new deposits of households (hryvnia, all maturities)",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/mir?date=20261001&json",
+      "asOf": "2026-09-30",
+      "note": "Weighted average on all new hryvnia household deposits including demand deposits, September 2026. The IMF-based series on Trading Economics gives 10.32% for July 2026; World Bank 2025 average 9.95%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ukraine has no separate government savings certificate; individuals buy ordinary domestic government bonds (OVDP) through banks, brokers or the Diia app (1-year OVDP 14.95% at the 27 October 2026 auction)."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month OVDP was placed at the September-October 2026 auctions (NBU auction results); the shortest regular paper was about 11 months at 14.95-15.18%."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year OVDP was placed recently; the longest hryvnia bonds at the October 2026 auctions matured in 2029-2030 (about 3.3 years) at 16.4-16.5% (NBU auction results, bank.gov.ua/NBU_ovdp)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year hryvnia government bond is issued or quoted."
+    },
+    "tax_bank_interest": {
+      "value": 0.23,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Ukraine, Individual, Income determination (last reviewed 30 June 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/ukraine/individual/income-determination",
+      "asOf": "2026-06-30",
+      "note": "Bank interest is subject to 18% personal income tax plus the 5% military tax, withheld by the bank."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists. PwC lists an exemption for interest from securities issued by certain state bodies, which is understood to cover OVDP, but the exact Tax Code provision was not read."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Deposit Guarantee Fund (fg.gov.ua) and the law on the deposit guarantee system (zakon.rada.gov.ua) could not be opened, so the current cover per depositor (and any full cover during martial law) was not confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest was found; NBU statistics report rates on new consumer loans to households but not a separate card rate."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "No liquid local stock market; global equities in hryvnia terms (NBU USD rate 45.53)",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=20261030&json",
+      "asOf": "2026-10-31",
+      "note": "The local exchange is tiny and illiquid, so equity returns are based on a global index in hryvnia; low case is weak global shares and a stable hryvnia."
+    },
+    "equity_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Global equities about 7% a year in dollars plus expected hryvnia depreciation; 1-year OVDP 14.95% (NBU auction results)",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "Base case: a global index earning about 7% in dollars plus about 4% a year of hryvnia depreciation (inflation gap), below the tax-exempt 1-year OVDP yield plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Global equity record plus hryvnia depreciation",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=20261030&json",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global shares and a faster hryvnia depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, down 3% on a year (Trading Economics); NBU USD rate 45.53",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and only slight hryvnia depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); inflation gap between Ukraine (8% assumed) and the US (about 2-3%)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 4% a year and the hryvnia loses about 4% a year against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); hryvnia devaluations of 2014-2015 and 2022",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold plus a sharp hryvnia devaluation, as in 2014-2015 and 2022."
+    },
+    "fixed_income_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "1-year deposits 11.83% (9.1% after 23% tax, NBU, Sep 2026); inflation projection 8%",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/mir?date=20261001&json",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax deposit returns fall slightly below inflation as rates come down."
+    },
+    "fixed_income_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "1-year OVDP 14.95% (NBU auction 27 Oct 2026); 1-year deposits 9.1% after tax (NBU)",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of taxed deposits and tax-exempt OVDP earning about 2 points above the 8% inflation assumption."
+    },
+    "fixed_income_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "1-year OVDP 14.95% and 3-year OVDP 16.5% (NBU auction results, Oct 2026)",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "High case: today's high government bond yields persist."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The NBU (insurance supervisor since 2020) publishes insurance market statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium table per UAH 1,000 of cover by age from the NBU or another public source was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Programme of Medical Guarantees (NHSU) pays for listed hospital care; no official figure for the typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary health insurance is mostly bought by employers; no age-banded premium table per UAH 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.4529,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=UA",
+      "asOf": "2021-12-31",
+      "note": "Latest available year is 2021, before the full-scale invasion (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NBU/State Statistics Service CPI: health +3.3% year on year (Sep 2026); inflation projection 8%",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/inflation?period=m&date=202610&json",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose only 3.3% in the year to September 2026, below headline inflation, so medical costs are planned at the 8% general inflation assumption rather than above it."
+    },
+    "goal_inflation_education": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "NBU/State Statistics Service CPI: education +19.6% year on year (Sep 2026); inflation projection 8%",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/inflation?period=m&date=202610&json",
+      "asOf": "2026-10-31",
+      "note": "Education prices jumped 19.6% in the year to September 2026 (14.5% average over the year), so 12% is used, well above general inflation but below the latest spike."
+    },
+    "life_expectancy": {
+      "value": 74.69,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=UA",
+      "asOf": "2024-12-31",
+      "note": "2024 (older than 2025): men 69.8, women 79.4. UN WPP gives 75.0 for 2026 (georank.org); wartime deaths make all figures uncertain."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.7,
+            "men": 17.6,
+            "women": 23.0
+          },
+          {
+            "age": 65,
+            "total": 17.2,
+            "men": 14.6,
+            "women": 18.9
+          },
+          {
+            "age": 70,
+            "total": 14.0,
+            "men": 12.0,
+            "women": 15.2
+          },
+          {
+            "age": 80,
+            "total": 8.8,
+            "men": 7.6,
+            "women": 9.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/ukraine",
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP estimate for 2026)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.55
+          },
+          {
+            "year": 2040,
+            "value": 2.73
+          },
+          {
+            "year": 2065,
+            "value": 1.52
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/ukraine/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 28.18 (2025, World Bank), 36.6 (2040) and 65.9 (2065, populationpyramid.net/ukraine/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Pension Fund of Ukraine, conditions for an old-age pension",
+      "sourceUrl": "https://www.pfu.gov.ua/33642-umovy-pryznachennya/",
+      "asOf": "2026-01-01",
+      "note": "Pension at 60 with at least 33 years of insurance record in 2026, rising one year each year to 35 years from 2028; otherwise at 63 with a shorter record (25 years for those turning 60 in 2026) or at 65 with at least 15 years. Same ages for men and women."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servants now receive the general insurance pension (age 60 with the required record), but the age limit for staying in civil service was not confirmed from the Law on Civil Service."
+    },
+    "retirement_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "1-year deposits 9.1% after tax (NBU, Sep 2026); inflation projection 8%",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/mir?date=20261001&json",
+      "asOf": "2026-10-31",
+      "note": "Low case: a retiree's deposits earn slightly less than inflation after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "1-year deposits 11.83% (9.1% after 23% tax, NBU); 1-year OVDP 14.95% tax-exempt (NBU auction, 27 Oct 2026)",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "Base case below the tax-exempt 1-year OVDP yield and close to today's after-tax deposit rate, allowing for rates falling as inflation comes down."
+    },
+    "retirement_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "OVDP 14.95-16.5% (NBU auction results, Oct 2026)",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree keeps earning rates close to today's government bond yields."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Fixed income low 7%; equity low 5%",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if both shares and deposits lag inflation."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Fixed income base 10%; equity base 11%",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global shares at 11% and half deposits and OVDP at 10%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Fixed income high 14%; equity high 16%",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ukraine pays state social assistance to people without a right to a pension, but the 2026 amount (linked to the subsistence minimum for people unable to work) could not be confirmed from an official page."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility age and means test of the state social assistance for people without pension rights were not confirmed from an official page (the Pension Fund pages read do not cover it)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity per year of service is known; the Labour Code provides severance pay (at least one month's average wage) on certain dismissals. The Labour Code text could not be opened (zakon.rada.gov.ua refused the connection), so absence was not confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Pension Fund of Ukraine, conditions for an old-age pension and pension indexation",
+      "sourceUrl": "https://www.pfu.gov.ua/33642-umovy-pryznachennya/",
+      "asOf": "2026-01-01",
+      "note": "Compulsory pay-as-you-go solidarity pension funded by the unified social contribution. Pension from 60 with 33 years of record in 2026 (35 from 2028), 63 or 65 with less. Pensions are indexed each year by a coefficient of half the previous year's CPI growth plus half the 3-year wage growth (pfu.gov.ua/34730-indeksatsiya-pensij-3/). Tax treatment not checked."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Вклад на вимогу",
+      "localNameEn": "Demand deposit",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/mir?date=20261001&json"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Строковий депозит (3 місяці)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Строковий депозит (12 місяців)",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://bank.gov.ua/NBUStatService/v1/statdirectory/mir?date=20261001&json"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Депозит з поповненням",
+      "localNameEn": "Term deposit with top-ups",
+      "note": "No standard monthly recurring-deposit scheme; term deposits that accept top-ups are used for regular saving."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate; individuals buy ordinary government bonds (OVDP) through banks, brokers or the Diia app."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Короткострокові ОВДП",
+      "localNameEn": "Short-term domestic government bonds (OVDP)",
+      "note": "Recent auctions offered bills of about 11 months rather than 3 months.",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "ОВДП",
+      "localNameEn": "Domestic government bonds (OVDP)",
+      "note": "The longest hryvnia bonds placed in October 2026 had about 3.3 years to maturity.",
+      "sourceUrl": "https://bank.gov.ua/NBU_ovdp?json"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year hryvnia government bond is currently issued."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Інститути спільного інвестування",
+      "localNameEn": "Collective investment funds",
+      "note": "Local funds exist but the domestic stock market is very small; diversified global funds are hard to reach under wartime currency controls."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Банківські метали (золоті злитки)",
+      "localNameEn": "Bank gold bars",
+      "note": "Legal to buy; banks sell gold bars (not re-checked in this research)."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Ukraine (NBU)",
+      "url": "https://bank.gov.ua/en/"
+    },
+    "insuranceRegulator": {
+      "name": "National Bank of Ukraine (insurance supervision since 2020)",
+      "url": "https://bank.gov.ua/en/"
+    },
+    "insuranceComplaints": {
+      "name": "National Bank of Ukraine, financial consumer protection",
+      "url": "https://bank.gov.ua/en/consumer-protection"
+    },
+    "pensionScheme": {
+      "name": "Pension Fund of Ukraine",
+      "url": "https://www.pfu.gov.ua/"
+    },
+    "oldAgeAllowance": {
+      "name": "Ministry of Social Policy (state social assistance for people without pension rights)",
+      "url": "https://www.msp.gov.ua/"
+    },
+    "publicHealthCover": {
+      "name": "National Health Service of Ukraine (Programme of Medical Guarantees)",
+      "url": "https://nhsu.gov.ua/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund",
+      "url": "https://www.fg.gov.ua/"
+    },
+    "statistics": {
+      "name": "State Statistics Service of Ukraine",
+      "url": "https://www.ukrstat.gov.ua/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

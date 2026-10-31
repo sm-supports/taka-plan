@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "code": "VA",
+  "iso3": "VAT",
+  "nameEn": "Holy See",
+  "nameNative": "Santa Sede",
+  "region": "europe_central_asia",
+  "languages": [
+    "it",
+    "la"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "Vatican City uses the euro under its monetary convention with the EU; EUR 1 = USD 1.1172 on 30 October 2026, so about EUR 0.895 per US dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vatican City has no national statistics office, banking-statistics series or securities market of its own; no consumer price index for Vatican City was found. Prices follow the euro area and Rome (Italian ISTAT CPI)."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "European Central Bank 2% inflation target (Vatican City uses the euro)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Vatican City uses the euro under a monetary convention with the EU, so the ECB's credible 2% medium-term target is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank key interest rates (deposit facility rate)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Vatican City uses the euro and has no central bank of its own (Governorate, Monete e francobolli); the ECB deposit facility rate has been 2.50% since 16 September 2026 (main refinancing 2.65%)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vatican City has no national statistics office, banking-statistics series or securities market of its own; a single Vatican financial institution serves clergy, employees and Church bodies and publishes no account rates."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vatican City has no national statistics office, banking-statistics series or securities market of its own; no 3-month term deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vatican City has no national statistics office, banking-statistics series or securities market of its own; no 1-year term deposit rate was found. Euro-area banks paid households 2.13% on deposits fixed up to 1 year in August 2026 (ECB)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit scheme was found in Vatican City."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vatican City has no national statistics office, banking-statistics series or securities market of its own; World Bank FR.INR.DPST has no figure for the Holy See."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail bond issued by the Holy See or Vatican City State was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No treasury bills issued by the Holy See or Vatican City State were found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government bonds issued by the Holy See or Vatican City State were found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government bonds issued by the Holy See or Vatican City State were found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rule on the taxation of bank interest for Vatican residents was found; PwC Tax Summaries does not cover the Holy See."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists to tax, and no tax rule was found."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit guarantee scheme for Vatican City was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate for Vatican City was found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB, Aug 2026); global equity in euros",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "With no local stock market, the low case assumes a global equity fund in euros earns only about 1 point more than euro deposits."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB, Aug 2026); global equity in euros",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Vatican City has no stock market, so the base uses a diversified global equity index in euro terms, held to the euro safe rate plus about 3.5 points."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Long-run global equity returns in euros",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified global equity fund matches long-run equity returns of about 7-8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: euro deposit rates drift lower if the ECB cuts again."
+    },
+    "fixed_income_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026); ECB deposit rate 2.50%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: euro term deposits a little below today's rate, as no local safe instrument or tax rule was found."
+    },
+    "fixed_income_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.50% (Sep 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: euro safe assets keep paying about today's ECB deposit rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Vatican City has no domestic life insurance market or published claim statistics."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No term life insurance market in Vatican City and no published premiums were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No figure for hospital costs in Vatican City was found; the Holy See runs a health assistance fund (FAS) for its staff."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No private health insurance premiums for Vatican City were found."
+    },
+    "oop_health_share": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank and WHO health expenditure data do not cover the Holy See."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB 2% inflation target; health services costs rise faster than average",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "No medical price index exists for Vatican City; euro-area health costs tend to rise about 1 point faster than the 2% target."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB 2% inflation target; education services costs rise faster than average",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "No education price index exists for Vatican City; euro-area school and university fees tend to rise about 1 point faster than the 2% target."
+    },
+    "life_expectancy": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The UN World Population Prospects, World Bank and WHO do not publish life expectancy for the Holy See, whose few hundred residents are mostly adult clergy, Swiss Guards and staff."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life table for the Holy See is published by the UN, WHO or World Bank."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The UN World Population Prospects do not publish population projections or dependency ratios for the Holy See; World Bank SP.POP.DPND.OL has no figure."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Retirement of Holy See staff is set by the Regulation of the Vatican Pension Fund (Regolamento del Personale della Curia Romana 2026, Art. 73), which could not be read; there is no private-sector labour market."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Lay heads, secretaries and directors of Curia bodies leave service at 70 (Regolamento del Personale della Curia Romana, in force 1 January 2026, Art. 71 §2); the age for other staff is set by the Vatican Pension Fund regulation, which could not be read."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: euro deposit rates fall back after ECB cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the euro-area 1-year deposit rate, as no local safe instrument exists."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.50% (Sep 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree holds euro safe assets paying about today's ECB deposit rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Euro deposits about 2%; global equity low 3%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Euro fixed income base 1.8%; global equity base 5.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global shares and half euro safe assets."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Euro fixed income high 2.5%; global equity high 7.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension for Vatican City was found; pensions are paid to former staff by the Vatican Pension Fund."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension for Vatican City was found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Holy See staff receive an end-of-service payment (trattamento di fine rapporto) under separate 'Norme per la liquidazione' (Regolamento del Personale della Curia Romana 2026, Art. 88), but the formula could not be read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Staff of the Holy See and Vatican City State are covered by the Vatican Pension Fund (Fondo Pensioni), but its regulation with pension ages and benefit rules could not be read."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conto corrente",
+      "localNameEn": "Bank account",
+      "note": "A single Vatican financial institution, supervised by the Supervisory and Financial Information Authority (ASIF), holds accounts for eligible clergy, employees and Church bodies."
+    },
+    "fdr_3m": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic term deposit market with published terms was found."
+    },
+    "fdr_1y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic term deposit market with published terms was found."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No savings certificates issued by the Holy See were found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No treasury bills issued by the Holy See were found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government bonds issued by the Holy See were found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic investment fund market was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Monete d'oro",
+      "localNameEn": "Gold coins",
+      "note": "Vatican City State issues one gold coin a year (collector coins, not legal tender); gold bars and coins can also be bought in Italy.",
+      "sourceUrl": "https://www.vaticanstate.va/it/stato-e-governo/note-generali/monete-e-francobolli.html"
+    }
+  },
+  "institutions": {
+    "centralBank": null,
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Fondo Assistenza Sanitaria (FAS), Holy See health assistance fund",
+      "url": "https://www.vatican.va/content/romancuria/it/fas/fondo-assistenza-sanitaria.index.html",
+      "note": "Health assistance fund of the Holy See (listed among bodies linked to the Roman Curia); details are at fas.va."
+    },
+    "depositInsurance": null,
+    "statistics": null
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

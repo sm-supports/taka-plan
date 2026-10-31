@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "code": "CH",
+  "iso3": "CHE",
+  "nameEn": "Switzerland",
+  "nameNative": "Schweiz",
+  "region": "europe_central_asia",
+  "languages": [
+    "de",
+    "fr",
+    "it",
+    "en",
+    "rm"
+  ],
+  "currency": {
+    "code": "CHF",
+    "symbol": "CHF",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8193,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, foreign exchange rates, monthly average (cube devkum)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/devkum",
+      "asOf": "2026-09-30",
+      "note": "CHF 0.81926 per USD, September 2026 average; World Bank 2025 average 0.83."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Switzerland inflation rate (FSO CPI, secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI up 1.0% year on year in September 2026 (0.8% in August); the Federal Statistical Office pages were being moved and could not be read. Eurostat HICP for Switzerland: 1.2%."
+    },
+    "inflation_projection": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "SNB price stability defined as CPI inflation of 0-2%; CPI 1.0% in September 2026, World Bank 2025 average 0.15%",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Swiss inflation has averaged about 1% over the past five years including the 2022 spike, the middle of the SNB's 0-2% range, so 1% is used."
+    },
+    "policy_rate": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, official interest rates (data portal cube snboffzisa)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/snboffzisa",
+      "asOf": "2026-09-30",
+      "note": "SNB policy rate 0% (unchanged since June 2025); Trading Economics also shows 0% at end-October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0007,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, interest rates on new business by product (cube zikrepro): private clients' savings deposits, mean",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-08-31",
+      "note": "Average 0.07% in August 2026; payment accounts without withdrawal restrictions pay about 0%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0003,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 3 months, mean",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-08-31",
+      "note": "Average 0.03% in August 2026; 1-month term deposits averaged -0.03%. Series covers deposits of at least CHF 100,000."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0012,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 12 months, mean",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-08-31",
+      "note": "Average 0.12% in August 2026; bank cash bonds (Kassenobligationen) paid 0.41% for 2 years and 0.61% for 5 years."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Swiss banks do not sell a standard monthly recurring deposit product with a published rate; regular saving goes into savings accounts or tax-favoured tied pension (pillar 3a) accounts."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0008,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CH",
+      "asOf": "2025-12-31",
+      "note": "0.083% average for 2025; SNB new-business savings deposits averaged 0.07% in August 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Confederation does not sell a retail savings certificate or savings bond to individuals; Confederation bonds and money-market debt register claims are auctioned to market participants. Bank cash bonds (Kassenobligationen) are bank products."
+    },
+    "tbill_91d_rate": {
+      "value": -0.0005,
+      "status": "sourced",
+      "sourceName": "Swiss National Bank, money market rates (cube zimoma): 3-month Confederation money-market debt register claims",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zimoma",
+      "asOf": "2026-09-30",
+      "note": "Yield -0.047% in September 2026 (monthly average); SARON was -0.07%."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The SNB stopped publishing Confederation bond yields by maturity on its data portal after July 2025, and Trading Economics shows only the 2-year (0.18%) and 10-year yields; no current 5-year yield could be read."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0047,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Switzerland 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary source; the SNB's own yield series ended in July 2025. 2-year yield 0.18%."
+    },
+    "tax_bank_interest": {
+      "value": 0.35,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Switzerland income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/switzerland/individual/income-determination",
+      "asOf": "2026-07-01",
+      "note": "Interest on Swiss bank accounts bears 35% withholding tax, credited or refunded when the interest is declared; it is then taxed with other income at ordinary federal, cantonal and communal rates."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; interest on Confederation bonds bears the same 35% withholding tax and ordinary income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "esisuisse (Swiss deposit protection scheme), the Swiss system",
+      "sourceUrl": "https://www.esisuisse.ch/en/protection-of-deposits/the-swiss-system",
+      "asOf": "2026-10-31",
+      "note": "CHF 100,000 per client per bank; tied pension (pillar 3a) and vested-benefits deposits get a separate CHF 100,000."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Consumer Credit Ordinance sets maximum interest rates for consumer credit, overdrafts and credit cards, but the Fedlex text could not be read (script-only page), so the current cap is not confirmed."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "SMI 14,811 on 30 Oct 2026, +21% over the year and at an all-time high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: from record highs, Swiss shares return only about 2% a year."
+    },
+    "equity_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "SMI (Trading Economics); 1-year term deposit 0.12% after tax about 0.1% (SNB zikrepro)",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base capped at the after-tax safe rate plus 4 points; with near-zero Swiss interest rates and a moderate decade for the SMI, 4% in francs is used."
+    },
+    "equity_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "SMI long-run record; long-run global equity returns in francs",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: diversified Swiss and global equity funds matching their long-run record in francs, held back by the strong franc."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); franc appreciation against the dollar",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold flat in francs as the franc keeps rising against the dollar after the 2025-26 spike."
+    },
+    "gold_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); SNB 0-2% price stability",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation, partly offset by a slowly appreciating franc."
+    },
+    "gold_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in franc terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Savings deposits 0.07% (SNB zikrepro) less income tax",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings pay essentially nothing after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.001,
+      "status": "assumption",
+      "sourceName": "12-month term deposits 0.12% less income tax (SNB zikrepro)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Base case: the after-tax 1-year deposit rate, about 0.1%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.004,
+      "status": "assumption",
+      "sourceName": "10-year Confederation bond 0.47% and 5-year cash bonds 0.61%, less income tax",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in longer Confederation bonds or bank cash bonds, after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "FINMA does not publish an industry-wide life insurance claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (Todesfallrisikoversicherung) is sold, but no regulator or official premium table per CHF 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": 1075,
+      "status": "sourced",
+      "sourceName": "Federal Office of Public Health, premiums and costs FAQ (cost sharing in compulsory health insurance)",
+      "sourceUrl": "https://www.bag.admin.ch/en/premiums-and-costs-answers-to-frequently-asked-questions",
+      "asOf": "2026-10-31",
+      "note": "Computed for an adult with the standard deductible: CHF 300 deductible plus the 10% co-payment cap of CHF 700 plus CHF 15 a day hospital contribution for 5 nights; with the highest deductible (CHF 2,500) it would be CHF 3,275."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Compulsory basic health insurance premiums are flat per person by canton, age group and deductible (average CHF 412 a month in 2027, FOPH), not priced per CHF 100,000 of cover; no such premium table exists."
+    },
+    "oop_health_share": {
+      "value": 0.2203,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CH",
+      "asOf": "2023-12-31",
+      "note": "Latest year 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "FOPH: basic health insurance premiums up 5.0% on average for 2027; Eurostat HICP health +0.2% in September 2026",
+      "sourceUrl": "https://www.bag.admin.ch/en/premiums-and-costs-answers-to-frequently-asked-questions",
+      "asOf": "2026-10-31",
+      "note": "Health prices in the CPI barely move, but premiums and cost sharing, which households actually pay, have risen 4-6% a year, so 4% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Eurostat HICP Switzerland, education (CP10): -0.1% year on year in September 2026",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table?lang=en",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is free and university fees are low; private school and course fees are planned at about 1.5%, slightly above general inflation."
+    },
+    "life_expectancy": {
+      "value": 84.2,
+      "status": "sourced",
+      "sourceName": "Eurostat, life expectancy by age and sex (demo_mlexpec), Switzerland",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "Men 82.4, women 85.9 in 2024; World Bank 2024 total 84.41."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 26.2,
+            "men": 24.7,
+            "women": 27.5
+          },
+          {
+            "age": 65,
+            "total": 21.8,
+            "men": 20.4,
+            "women": 23.0
+          },
+          {
+            "age": 70,
+            "total": 17.6,
+            "men": 16.4,
+            "women": 18.7
+          },
+          {
+            "age": 80,
+            "total": 10.2,
+            "men": 9.3,
+            "women": 10.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat, life expectancy by age and sex (demo_mlexpec), Switzerland 2024",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/demo_mlexpec/default/table?lang=en",
+      "asOf": "2024-12-31",
+      "note": "Latest year published is 2024 (older than 2025)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 3.21
+          },
+          {
+            "year": 2040,
+            "value": 2.43
+          },
+          {
+            "year": 2065,
+            "value": 1.92
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Eurostat EUROPOP2023 projections, old-age dependency ratio (proj_23ndbi, baseline), Switzerland",
+      "sourceUrl": "https://ec.europa.eu/eurostat/databrowser/view/proj_23ndbi/default/table?lang=en",
+      "asOf": "2026-01-01",
+      "note": "100 divided by the projected old-age dependency ratio (65+ per 100 aged 15-64): 31.2 in 2026, 41.1 in 2040, 52.0 in 2065. World Bank 2025: 31.6."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Information Centre OASI/DI, leaflet 3.01 Old-age pensions (2026)",
+      "sourceUrl": "https://www.ahv-iv.ch/p/3.01.e",
+      "asOf": "2026-10-31",
+      "note": "Reference age 65 for men; for women it rises from 64 to 65 between 2025 and 2028 (born 1964 or later: 65), so 65 for anyone born after 1975. Pension can be drawn from 63 or deferred up to 5 years."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Federal and cantonal staff generally retire at the OASI reference age under their own personnel and pension-fund rules; no single official retirement age for government service could be confirmed from a readable source."
+    },
+    "retirement_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Savings deposits 0.07% less tax (SNB zikrepro)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Low case: easy-access savings pay nothing after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.001,
+      "status": "assumption",
+      "sourceName": "12-month term deposits 0.12% less tax (SNB zikrepro)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.004,
+      "status": "assumption",
+      "sourceName": "10-year Confederation bond 0.47% less tax (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer Confederation bonds and cash bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "After-tax deposit rate about 0.1%; equity low 2%",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "After-tax deposit rate about 0.1%; equity base 4%",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 4% and half safe fixed income near zero after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "10-year bond 0.47%; equity high 6%",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no flat non-contributory old-age pension: every resident contributes to OASI (AHV), whose full pension is CHF 1,260-2,520 a month in 2026. Low-income pensioners can claim means-tested supplementary benefits (Ergänzungsleistungen), which top income up to a needs level and have no fixed monthly amount."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Supplementary benefits (Ergänzungsleistungen) are paid to OASI pensioners whose income does not cover basic needs (means-tested, with residence conditions for foreign nationals), but the ahv-iv.ch page and leaflet with the rules could not be read."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No days-per-year gratuity: the Code of Obligations (art. 339b) gives a one-off severance only to employees aged 50+ with 20+ years' service, largely replaced by occupational pension (BVG) savings, which does not fit a days-per-year rule."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 20,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Information Centre OASI/DI, leaflet 3.01 Old-age pensions (2026)",
+      "sourceUrl": "https://www.ahv-iv.ch/p/3.01.e",
+      "asOf": "2026-10-31",
+      "note": "OASI (AHV/AVS), compulsory for all residents: a full pension needs contributions every year from age 20 to the reference age (scale 44). Full pension CHF 1,260-2,520 a month in 2026 plus a 13th monthly payment from December 2026. Adjusted every two years by the mixed index of wages and prices; taxed as income. Occupational pension (BVG) is the compulsory second pillar."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Sparkonto",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Festgeld",
+      "localNameEn": "Fixed-term deposit (3 months)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Festgeld",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard recurring-deposit product; regular saving goes into savings or tied pillar 3a accounts."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate; bank cash bonds (Kassenobligationen) are bank products."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Geldmarktbuchforderungen der Eidgenossenschaft",
+      "localNameEn": "Confederation money-market debt register claims",
+      "note": "Auctioned in large lots, mainly to institutions.",
+      "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zimoma"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Eidgenössische Anleihen",
+      "localNameEn": "Confederation bonds",
+      "note": "Listed on the Swiss exchange and buyable through a bank."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Eidgenössische Anleihen",
+      "localNameEn": "Confederation bonds",
+      "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Anlagefonds / Indexfonds",
+      "localNameEn": "Investment funds and index funds (ETF)",
+      "note": "Widely available; capital gains for private investors are generally tax-free, dividends taxed as income."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Goldbarren und Goldmünzen",
+      "localNameEn": "Gold bars and coins",
+      "note": "Freely bought; investment gold is exempt from VAT."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Swiss National Bank (SNB)",
+      "url": "https://www.snb.ch/en/"
+    },
+    "insuranceRegulator": {
+      "name": "FINMA (Swiss Financial Market Supervisory Authority)",
+      "url": "https://www.finma.ch/en/supervision/insurers/"
+    },
+    "insuranceComplaints": {
+      "name": "Ombudsman of Private Insurance (Swiss insurance ombudsman foundation)",
+      "url": "https://ombudsman-assurance.ch/",
+      "note": "Health-insurance complaints go to the separate ombudsman for social health insurance."
+    },
+    "pensionScheme": {
+      "name": "Old-age and survivors' insurance (OASI / AHV / AVS)",
+      "url": "https://www.ahv-iv.ch/en/Social-insurances/Old-age-and-survivors-insurance-OASI"
+    },
+    "oldAgeAllowance": {
+      "name": "Supplementary benefits to OASI (Ergänzungsleistungen / prestations complémentaires)",
+      "url": "https://www.ahv-iv.ch/en/Social-insurances/Supplementary-benefits-EL",
+      "note": "Means-tested top-up, not a flat social pension."
+    },
+    "publicHealthCover": {
+      "name": "Compulsory health insurance (KVG/LAMal), Federal Office of Public Health",
+      "url": "https://www.bag.admin.ch/en/premiums-and-costs-answers-to-frequently-asked-questions",
+      "note": "Basic insurance is compulsory for all residents and bought from approved insurers; premium subsidies for low incomes."
+    },
+    "depositInsurance": {
+      "name": "esisuisse (Swiss deposit protection)",
+      "url": "https://www.esisuisse.ch/en/protection-of-deposits/the-swiss-system"
+    },
+    "statistics": {
+      "name": "Federal Statistical Office (FSO / BFS)",
+      "url": "https://www.bfs.admin.ch/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "code": "MC",
+  "iso3": "MCO",
+  "nameEn": "Monaco",
+  "nameNative": "Monaco",
+  "region": "europe_central_asia",
+  "languages": [
+    "fr",
+    "it",
+    "en"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "USD 1.1172 per euro on 30 October 2026, i.e. EUR 0.8951 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.031,
+      "status": "sourced",
+      "sourceName": "INSEE consumer price index for France, September 2026 (French indices are the ones used in Monaco, per IMSEE)",
+      "sourceUrl": "https://www.insee.fr/fr/statistiques/9080209",
+      "asOf": "2026-09-30",
+      "note": "Monaco publishes no consumer price index of its own; IMSEE's 'Monaco en Chiffres' lists the INSEE French CPI among the main French indices used in the Principality. French CPI +3.1% year on year (final, published 15 October 2026)."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "European Central Bank 2% inflation target (Monaco uses the euro)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Monaco uses the euro under an agreement with the EU, so the ECB's credible 2% medium-term target is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank key interest rates (deposit facility rate)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Monaco uses the euro; the ECB deposit facility rate has been 2.50% since 16 September 2026 (main refinancing 2.65%)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Monaco has no national statistics on bank deposit rates and banks there are mostly private banks; no official average savings rate for Monaco was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official statistics on 3-month term deposit rates in Monaco were found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official statistics on 1-year term deposit rates in Monaco were found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recurring-deposit product or published rate was found for Monaco."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Monaco has no central bank or deposit-rate statistics of its own; banks follow French banking law but no published average rate for Monaco-based banks was found."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Monaco has no public debt, so the State sells no savings certificates or retail bonds (Government of Monaco, national budget strategy page: https://www.gouv.mc/en/policy-practice/ensuring-economic-policy-is-fit-for-the-challenges-ahead/defining-and-managing-the-national-budget-strategy).",
+      "absent": true
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Monaco has no public debt and issues no treasury bills (Government of Monaco, national budget strategy page).",
+      "absent": true
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Monaco has no public debt and issues no government bonds (Government of Monaco, national budget strategy page).",
+      "absent": true
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Monaco has no public debt and issues no government bonds (Government of Monaco, national budget strategy page).",
+      "absent": true
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Monaco public service portal: tax in Monaco",
+      "sourceUrl": "https://monservicepublic.gouv.mc/en/themes/tax/information/general-information/tax-in-monaco",
+      "asOf": "2026-10-31",
+      "note": "Residents genuinely established in Monaco pay no personal income tax, so bank interest is untaxed; French nationals resident in Monaco remain taxable in France under the 1963 convention."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Not applicable: Monaco issues no government savings certificates (no public debt)."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "French Deposit Guarantee and Resolution Fund (FGDR), which covers banks headquartered in Monaco",
+      "sourceUrl": "https://www.garantiedesdepots.fr/en/check-if-my-bank-protected",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per customer per bank; the FGDR covers banks whose head office is in the Principality of Monaco."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No source stating a legal cap or typical credit card rate for Monaco was found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local stock market; global equities in EUR; ECB deposit rate 2.5%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares return only a little above euro deposits over the long run."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return about 6-7% in EUR; ECB deposit rate 2.5% (no tax on interest for residents)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Monaco has no stock exchange, so the base is a global index fund in euros, kept within about 3.5 points of the 2.5% euro safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Global equity long-run returns in EUR",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns over the long run."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold roughly flat after the 2025-26 spike, with a stable euro."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold rises about 4.5% a year in euros, a little above inflation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euros."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.5% (Sep 2026); no tax on interest for non-French residents",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: euro rates fall back toward 1.5%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.5% (Sep 2026); no tax on interest",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: euro deposits and money funds earn about the ECB deposit rate, untaxed in Monaco."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.5%; euro-area bond yields",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: euro rates stay higher and savers lock in longer euro-area government bonds."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Insurers in Monaco are mostly French insurers approved by the Monaco government; no Monaco life claim settlement ratio is published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Monaco (mainly by insurers approved under French rules), but no published premium table per EUR 1,000 of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Employees are covered by the CCSS health insurance fund; no official figure for the out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published table of private (top-up) health insurance premiums per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.0845,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MC",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "INSEE CPI Sep 2026: health services +0.8%, health products -2.3% year on year; ECB 2% target",
+      "sourceUrl": "https://www.insee.fr/fr/statistiques/9080209",
+      "asOf": "2026-10-31",
+      "note": "Private medical costs in Monaco tend to rise faster than the 2% target, so 3% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "ECB 2% target; private and international school fees",
+      "sourceUrl": "https://www.insee.fr/fr/statistiques/9080209",
+      "asOf": "2026-10-31",
+      "note": "No education price index exists for Monaco; private and international school fees usually rise faster than general prices, so 3.5% is used."
+    },
+    "life_expectancy": {
+      "value": 86.7,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/monaco",
+      "asOf": "2026-12-31",
+      "note": "Men 84.8, women 88.8 (UN WPP estimate for 2026); World Bank 2024 figure 86.5."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 28.1,
+            "men": 26.3,
+            "women": 30.0
+          },
+          {
+            "age": 65,
+            "total": 23.5,
+            "men": 21.8,
+            "women": 25.3
+          },
+          {
+            "age": 70,
+            "total": 19.1,
+            "men": 17.6,
+            "women": 20.8
+          },
+          {
+            "age": 80,
+            "total": 11.5,
+            "men": 10.3,
+            "women": 12.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/monaco",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 1.39
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=MC",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio 71.7 (2025); no UN WPP projection for 2040 or 2065 could be read (populationpyramid.net has no Monaco page)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Caisses Sociales de Monaco, CAR direct pension",
+      "sourceUrl": "https://www.caisses-sociales.mc/accueil/retraite-car/retraite-car/pension-car/pension-directe",
+      "asOf": "2026-10-31",
+      "note": "Legal retirement age 65; a CAR pension can be taken from 60 without reduction once all work has stopped, and from 55 for mothers who raised three children; at least 10 years of activity are required."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil service pensions are governed by Law 1.049 of 1982 and Law 975 of 1975, but no current text stating the retirement age limit for State employees could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.5% (Sep 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: euro deposit rates fall back toward 1%."
+    },
+    "retirement_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.5% (Sep 2026); no tax on interest for residents",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the 2.5% euro safe rate, since Monaco has no government bills and banks pay less than the ECB rate on many deposits."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.5%; euro-area bond yields",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: savers hold longer euro-area government bonds at about 3%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Euro safe rate 2.5%; global equity low case 3%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares and rates both disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Euro safe rate 2.5%; global equity in EUR 6%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half euro fixed income and half global shares."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Euro bonds 3.5%; global equity high case 8.5%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Monaco pays a means-tested monthly retirement allowance (AMR) to non-Monegasque residents aged 65+ and a national old-age allowance to low-income Monegasques aged 60+, but the 2026 amounts (set by ministerial decree) could not be found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Monaco public service portal: how to apply for a monthly retirement allowance (updated 11 November 2025)",
+      "sourceUrl": "https://monservicepublic.gouv.mc/en/themes/social-health-and-families/aid/retired-and-elderly-people/how-to-apply-for-a-monthly-retirement-allowance",
+      "asOf": "2025-11-11",
+      "note": "Monthly retirement allowance (AMR) for non-Monegasques aged over 65 (60 if unfit for work) with at least 5 years' continuous residence and household income below a yearly threshold; Monegasque nationals over 60 on a low income get the national old-age allowance from the Town Hall social services."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity per year of service was found; Monaco labour law provides dismissal indemnities, but the text could not be read to confirm other rules."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Caisses Sociales de Monaco, CAR direct pension; Monaco public service portal (tax)",
+      "sourceUrl": "https://www.caisses-sociales.mc/accueil/retraite-car/retraite-car/pension-car/pension-directe",
+      "asOf": "2026-10-01",
+      "note": "Mandatory points-based basic pension (CAR) for private-sector employees plus the supplementary CMRC scheme; monthly pension = points x annual point value (EUR 22.27 from 1 October 2026) / 12, revalued by ministerial order rather than automatic indexation; +1.5% per quarter deferred after 65 (max 30%). Residents other than French nationals pay no income tax on it."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte sur livret",
+      "localNameEn": "Savings account",
+      "note": "Rates are set by each bank; no published average for Monaco."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Compte à terme",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Compte à terme",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard recurring-deposit product was identified."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Monaco has no public debt and sells no savings certificates.",
+      "sourceUrl": "https://www.gouv.mc/en/policy-practice/ensuring-economic-policy-is-fit-for-the-challenges-ahead/defining-and-managing-the-national-budget-strategy"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Monaco issues no treasury bills (no public debt).",
+      "sourceUrl": "https://www.gouv.mc/en/policy-practice/ensuring-economic-policy-is-fit-for-the-challenges-ahead/defining-and-managing-the-national-budget-strategy"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Monaco issues no government bonds (no public debt); residents can buy euro-area government bonds.",
+      "sourceUrl": "https://www.gouv.mc/en/policy-practice/ensuring-economic-policy-is-fit-for-the-challenges-ahead/defining-and-managing-the-national-budget-strategy"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Monaco issues no government bonds (no public debt).",
+      "sourceUrl": "https://www.gouv.mc/en/policy-practice/ensuring-economic-policy-is-fit-for-the-challenges-ahead/defining-and-managing-the-national-budget-strategy"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "OPCVM / fonds d'investissement",
+      "localNameEn": "Investment funds (UCITS)",
+      "note": "No local stock exchange; diversified euro and global funds are available through banks."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Lingots et pièces d'or",
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy and hold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "European Central Bank (Monaco uses the euro)",
+      "url": "https://www.ecb.europa.eu/"
+    },
+    "insuranceRegulator": {
+      "name": "Government of Monaco, insurance approvals (Business Development Agency)",
+      "url": "https://monentreprise.gouv.mc/en/themes/sector-specific-or-regulated-activities/regulations-approvals-and-declarations/approvals/how-to-obtain-approval-for-an-insurance-business",
+      "note": "Insurers need Monaco government approval to extend their French (ACPR) licence to the Principality."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Caisses Sociales de Monaco, Caisse Autonome des Retraites (CAR)",
+      "url": "https://www.caisses-sociales.mc/accueil/retraite-car"
+    },
+    "oldAgeAllowance": {
+      "name": "Department of Social Welfare (DASO), monthly retirement allowance",
+      "url": "https://monservicepublic.gouv.mc/en/themes/social-health-and-families/aid/retired-and-elderly-people/how-to-apply-for-a-monthly-retirement-allowance"
+    },
+    "publicHealthCover": {
+      "name": "Caisses Sociales de Monaco, Caisse de Compensation des Services Sociaux (CCSS)",
+      "url": "https://www.caisses-sociales.mc/"
+    },
+    "depositInsurance": {
+      "name": "Fonds de Garantie des Dépôts et de Résolution (FGDR), covering banks headquartered in Monaco",
+      "url": "https://www.garantiedesdepots.fr/en/check-if-my-bank-protected"
+    },
+    "statistics": {
+      "name": "Monaco Statistics (IMSEE)",
+      "url": "https://imsee.mc/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

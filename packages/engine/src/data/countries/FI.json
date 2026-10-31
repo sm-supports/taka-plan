@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "FI",
+  "iso3": "FIN",
+  "nameEn": "Finland",
+  "nameNative": "Suomi",
+  "region": "europe_central_asia",
+  "languages": [
+    "fi",
+    "en",
+    "sv",
+    "de"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172, so about EUR 0.895 per US dollar; World Bank 2025 average 0.885."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Statistics Finland, 122p annual change of the Consumer Price Index",
+      "sourceUrl": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__khi/statfin_khi_pxt_122p.px/",
+      "asOf": "2026-09-30",
+      "note": "CPI up 2.5% year on year in September 2026 (2.2% in August); World Bank 2025 average 0.3%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECB 2% medium-term target; Finnish CPI about 3.4% a year Sep 2021-Sep 2026, 0.3% in 2025, 2.5% in Sep 2026",
+      "sourceUrl": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__khi/statfin_khi_pxt_122p.px/",
+      "asOf": "2026-10-31",
+      "note": "Finnish inflation has swung around the ECB 2% target (high in 2022-23, very low in 2025), so the target itself is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "Finland uses the euro; ECB deposit facility rate 2.50% since 16 September 2026 (2.25% from June 2026), confirmed in the ECB FM dataset on 31 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0038,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Finnish banks, overnight deposits from households (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L21.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight deposits in Finland, August 2026; deposits redeemable at notice up to 3 months paid 0.36%."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECB/Bank of Finland MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.53% in August 2026); no separate 3-month term deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0253,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Finnish banks, household deposits with agreed maturity up to 1 year (new business)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.74% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The regular-saving deposit product in Finland is the home-savings (ASP) account, whose interest is set by each bank; no average or official rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0216,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Finnish banks, household deposits with agreed maturity (outstanding amounts)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.A.R.A.2250.EUR.O",
+      "asOf": "2026-08-31",
+      "note": "Average rate on all outstanding household term deposits; household overnight deposits paid 0.38%. World Bank FR.INR.DPST has no Finland figure."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings bond sold to individuals was found; Finnish government bonds and bills are sold through primary dealers to institutions."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The State Treasury issues Treasury bills (RFTB), but its website was down when read (treasuryfinland.fi showed a disruption notice) and no 3-month yield was found elsewhere."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Finnish government bond yield was found: Trading Economics shows only 2- and 10-year yields and the State Treasury site was down."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0374,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Finland 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/finland/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "ECB long-term convergence yield for Finland was 3.80% in September 2026; the 2-year yield was 3.13%."
+    },
+    "tax_bank_interest": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Finland income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/finland/individual/income-determination",
+      "asOf": "2026-06-24",
+      "note": "Interest on deposits in Finnish banks is subject to a final 30% tax withheld at source; other capital income is taxed at 30% up to EUR 30,000 and 34% above."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists; interest on government bonds is capital income taxed at 30% (34% above EUR 30,000)."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Finanssivalvonta (FIN-FSA), security of deposits and investments",
+      "sourceUrl": "https://www.finanssivalvonta.fi/en/consumers/security-of-deposits-and-investments/",
+      "asOf": "2026-10-31",
+      "note": "EUR 100,000 per customer per bank; the deposit guarantee is run by the Financial Stability Authority (rvv.fi, which refused automated access)."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.0917,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics: Finnish banks, revolving loans, overdrafts and credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.A2Z.A.R.A.2250.EUR.N",
+      "asOf": "2026-08-31",
+      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit in August 2026; the statutory consumer-credit interest ceiling was not verified from a source."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "OMX Helsinki 25 at 6,191 on 30 Oct 2026, up 13% in a year, near the September 2026 high of 6,663",
+      "sourceUrl": "https://tradingeconomics.com/finland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Finnish shares, heavy in industrials, forestry and banks, return little more than safe deposits over a long period."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "OMX Helsinki 25 (Trading Economics); 1-year deposit 2.53% less 30% tax = 1.8%",
+      "sourceUrl": "https://tradingeconomics.com/finland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base capped near the after-tax safe rate plus about 4 points because the Helsinki market is small and cyclical."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "OMX Helsinki 25; long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/finland/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified euro equity fund matching long-run global equity returns of about 7-8% in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.53% (ECB MFI), assuming rates fall, less 30% tax",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposit rates drift down towards 1.7% before the 30% withholding."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0175,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.53% less 30% tax = 1.77%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: after-tax 1-year term deposit rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "Finland 10-year government bond 3.74% less 30% tax = 2.6%",
+      "sourceUrl": "https://tradingeconomics.com/finland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: holding long government bonds after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Finanssivalvonta and Finance Finland do not publish an industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover (henkivakuutus / kuolemanvaraturva) is sold, but no published premium table per EUR 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public hospital care is provided by the wellbeing services counties for capped client fees; no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is sold, but premiums are not quoted per EUR 100,000 of cover and no published premium table was found."
+    },
+    "oop_health_share": {
+      "value": 0.1409,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=FI",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Statistics Finland CPI 15b5, health (COICOP 06): +2.5% in the year to Sep 2026, about 1.7% a year since Sep 2021",
+      "sourceUrl": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__khi/statfin_khi_pxt_15b5.px/",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices have risen slowly, but client fees and private care costs are planned at 3%, a point above the inflation target."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Statistics Finland CPI 15b5, education services (COICOP 10): +4.2% in the year to Sep 2026, about 4.0% a year since Sep 2021",
+      "sourceUrl": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__khi/statfin_khi_pxt_15b5.px/",
+      "asOf": "2026-10-31",
+      "note": "Education fees have risen about 4% a year over five years, which is used for planning (public schooling and university are free for residents)."
+    },
+    "life_expectancy": {
+      "value": 82.27,
+      "status": "sourced",
+      "sourceName": "Statistics Finland, 12ap life table by age and sex",
+      "sourceUrl": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__kuol/statfin_kuol_pxt_12ap.px/",
+      "asOf": "2025-12-31",
+      "note": "Men 79.81, women 84.73 in 2025; World Bank 2024 figure 82.3."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.87,
+            "men": 22.99,
+            "women": 26.62
+          },
+          {
+            "age": 65,
+            "total": 20.65,
+            "men": 18.94,
+            "women": 22.19
+          },
+          {
+            "age": 70,
+            "total": 16.67,
+            "men": 15.21,
+            "women": 17.92
+          },
+          {
+            "age": 80,
+            "total": 9.6,
+            "men": 8.65,
+            "women": 10.28
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Statistics Finland, 12ap life table by age and sex",
+      "sourceUrl": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__kuol/statfin_kuol_pxt_12ap.px/",
+      "asOf": "2025-12-31"
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 2.59
+          },
+          {
+            "year": 2040,
+            "value": 2.52
+          },
+          {
+            "year": 2065,
+            "value": 2.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "Statistics Finland, population projection 2024 (128t)",
+      "sourceUrl": "https://pxdata.stat.fi/PxWeb/pxweb/en/StatFin/StatFin__vaenn/statfin_vaenn_pxt_128t.px/",
+      "asOf": "2026-12-31",
+      "note": "People aged 15-64 divided by people 65+ in the official 2024 projection (31 December of each year); the projection assumes high net immigration. World Bank 2025 old-age dependency 39.4 gives 2.54."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Työeläke.fi (Finnish Centre for Pensions), retirement age by year of birth",
+      "sourceUrl": "https://www.tyoelake.fi/en/different-pensions/old-age-pension-your-retirement-age-is-based-on-your-year-of-birth/",
+      "asOf": "2026-10-31",
+      "note": "Lowest earnings-related retirement age is 65 for people born 1962-64 (64 years 9 months for 1961, the cohort retiring in 2026); from the 1965 cohort it follows life expectancy. Kela national pension from 65. Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public-sector employees follow the general retirement ages, but some have lower occupational retirement ages (raised by 2 years by 2025) set by Keva; no single figure was found."
+    },
+    "retirement_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.53% (ECB MFI), assuming rates fall, less 30% tax",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposit rates drift lower."
+    },
+    "retirement_return_base": {
+      "value": 0.0175,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 2.53% less 30% tax = 1.77%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year term deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.024,
+      "status": "assumption",
+      "sourceName": "Finland 10-year government bond 3.74% less 30% tax = 2.6%",
+      "sourceUrl": "https://tradingeconomics.com/finland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of longer government bonds after tax, slightly below the 10-year yield."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.8%; OMX Helsinki 25 record",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 1.8%; equity base 5.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.8-2.6% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax 10-year bond 2.6%; equity high 7.5%",
+      "sourceUrl": "https://tradingeconomics.com/finland/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 787.07,
+      "status": "sourced",
+      "sourceName": "Kela, old-age pension (national pension, kansaneläke)",
+      "sourceUrl": "https://www.kela.fi/old-age-pension",
+      "asOf": "2026-10-31",
+      "note": "Full national pension for a person living alone, EUR 787.07 a month (EUR 702.69 in a couple), as listed on kela.fi; reduced by half of other pensions above EUR 66.54 a month. A guarantee pension tops total pensions up to EUR 990.90 a month."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Kela, old-age pension and guarantee pension",
+      "sourceUrl": "https://www.kela.fi/old-age-pension",
+      "asOf": "2026-10-31",
+      "note": "Payable from 65 to residents who have lived in Finland at least 3 years after age 16; tested against other pension income only (not earnings, capital or assets). Taxable."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Finnish employment law has no statutory severance or end-of-service gratuity for private employees; none found in the sources read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Työeläke.fi (retirement ages; pension indexes) and Kela",
+      "sourceUrl": "https://www.tyoelake.fi/en/how-much-pension/indexes-protect-the-pension-amount/",
+      "asOf": "2026-10-31",
+      "note": "Compulsory earnings-related pension (työeläke) plus the residence-based Kela national pension; pensions in payment are adjusted every January by the earnings-related pension index (80% prices, 20% wages). Pensions are taxed as earned income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Säästötili",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L21.A.R.A.2250.EUR.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Määräaikaistalletus",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Määräaikaistalletus",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FI.B.L22.F.R.A.2250.EUR.N"
+    },
+    "dps": {
+      "available": true,
+      "localName": "ASP-tili",
+      "localNameEn": "Home-savings (ASP) account",
+      "note": "Regular saving towards a first home with state-backed loan benefits; interest set by each bank."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond",
+      "note": "No retail government savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Valtion velkasitoumukset",
+      "localNameEn": "Treasury bills (RFTB)",
+      "note": "Issued by the State Treasury, mainly to institutions.",
+      "sourceUrl": "https://www.treasuryfinland.fi/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Valtion obligaatiot",
+      "localNameEn": "Finnish government bonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Valtion obligaatiot",
+      "localNameEn": "Finnish government bonds",
+      "sourceUrl": "https://tradingeconomics.com/finland/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Sijoitusrahastot",
+      "localNameEn": "Mutual funds / index funds (ETF)",
+      "note": "Retail funds widely available; an equity savings account (osakesäästötili) defers tax on gains."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Kultaharkot ja kultakolikot",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Suomen Pankki (Bank of Finland)",
+      "url": "https://www.suomenpankki.fi/en/",
+      "note": "Part of the Eurosystem; monetary policy set by the European Central Bank."
+    },
+    "insuranceRegulator": {
+      "name": "Finanssivalvonta (Financial Supervisory Authority, FIN-FSA)",
+      "url": "https://www.finanssivalvonta.fi/en/"
+    },
+    "insuranceComplaints": {
+      "name": "FINE Finnish Financial Ombudsman Bureau (Insurance Complaints Board)",
+      "url": "https://www.fine.fi/en/"
+    },
+    "pensionScheme": {
+      "name": "Earnings-related pension (työeläke), Finnish Centre for Pensions",
+      "url": "https://www.tyoelake.fi/en/"
+    },
+    "oldAgeAllowance": {
+      "name": "Kela national pension and guarantee pension",
+      "url": "https://www.kela.fi/old-age-pension"
+    },
+    "publicHealthCover": {
+      "name": "Kela health insurance and public health services of the wellbeing services counties",
+      "url": "https://www.kela.fi/main-page"
+    },
+    "depositInsurance": {
+      "name": "Rahoitusvakausvirasto (Financial Stability Authority), deposit guarantee",
+      "url": "https://rvv.fi/en/deposit-guarantee/"
+    },
+    "statistics": {
+      "name": "Tilastokeskus (Statistics Finland)",
+      "url": "https://stat.fi/en"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

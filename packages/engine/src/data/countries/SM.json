@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "code": "SM",
+  "iso3": "SMR",
+  "nameEn": "San Marino",
+  "nameNative": "San Marino",
+  "region": "europe_central_asia",
+  "languages": [
+    "it"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank, euro reference exchange rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-30",
+      "note": "1 euro = 1.1172 US dollars on 30 October 2026, so 0.8951 euro per dollar. San Marino uses the euro under a monetary agreement with the EU. World Bank 2025 average 0.887."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0202,
+      "status": "sourced",
+      "sourceName": "Ufficio Nazionale di Statistica, consumer price index (FOI), year-on-year change",
+      "sourceUrl": "https://www.statistica.sm/pub1/StatisticaSM/Dati-statistici/Prezzi-e-retribuzioni/Prezzi.html",
+      "asOf": "2026-07-31",
+      "note": "2.02% in July 2026 (1.11% in June, 1.73% in May), from the file 'Variazione Tendenziale dal 2026 Ecoicop2'. World Bank 2025 average 2.3%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECB 2% inflation target; San Marino CPI 0.8-2.3% in 2026, 2.3% in 2025 (World Bank)",
+      "sourceUrl": "https://www.statistica.sm/pub1/StatisticaSM/Dati-statistici/Prezzi-e-retribuzioni/Prezzi.html",
+      "asOf": "2026-10-31",
+      "note": "San Marino uses the euro and its inflation tracks the euro area (and Italy), so the ECB's 2% target is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-09-16",
+      "note": "San Marino has no monetary policy of its own; it uses the euro, so the ECB deposit facility rate (2.50% from 16 September 2026; main refinancing rate 2.65%) applies."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank (BCSM) publishes deposit volumes in its quarterly bulletin but no average rate on savings accounts was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average rate for 3-month certificates of deposit or term deposits was found in the Central Bank's statistics."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average rate for 1-year certificates of deposit was found in the Central Bank's statistics; the World Bank all-deposit average for 2025 is 1.55%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0155,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2025-12-31",
+      "note": "Deposit interest rate 1.55% for 2025 (IMF International Financial Statistics, Central Bank data)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; San Marino borrows through occasional public debt issues rather than a standing retail programme."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regular treasury bill issuance or published 3-month yield for San Marino was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "San Marino has no regular benchmark bond programme; no published 5-year government yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "San Marino has no regular benchmark bond programme; no published 10-year government yield was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The withholding rate on bank interest under the general income tax (IGR) law could not be read from an official source; PwC Tax Summaries does not cover San Marino."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings product was found, and the tax treatment of government bond interest could not be read from an official source."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Depositor Guarantee Fund (Fondo di Garanzia dei Depositanti, managed at the Central Bank) guarantees depositors of banks in compulsory liquidation 'within the limits of its assets'; the Central Bank's page gives no per-depositor amount."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2191,
+      "status": "sourced",
+      "sourceName": "Central Bank of San Marino, anti-usury threshold rates, Circular 2026-TS4 (revolving credit and credit cards)",
+      "sourceUrl": "https://www.bcsm.sm/hubfs/Tassi%20Soglia%20TS/260929_Circolare_2026-TS4_con%20dicitura%20FIRMATO.pdf",
+      "asOf": "2026-10-01",
+      "note": "Usury ceiling for revolving credit and credit-card credit, 1 October to 31 December 2026, for all amounts; the average effective rate is 14.33% (taken from the Italian system because San Marino has too few reports)."
+    },
+    "equity_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity in euro terms; ECB euro reference rate",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "San Marino has no stock market, so returns are for a global index fund in euro terms; low case for a weak decade or a strong euro."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 1.55% (World Bank 2025) and ECB deposit rate 2.5%, plus an equity premium",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2026-10-31",
+      "note": "Base case for a diversified global index fund in euros, kept within 4 points of the safe euro rate (about 1.5-2.5%)."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Long-run global equity returns in euro terms",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case near the long-run return of world shares with a stable or weaker euro."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECB euro reference exchange rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stronger euro."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ECB euro reference exchange rate; long-run dollar gold trend",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected trend in the euro against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "ECB euro reference exchange rate (USD)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a weaker euro."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 1.55% (World Bank 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly sight deposits after tax if euro rates fall again."
+    },
+    "fixed_income_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 1.55% (World Bank 2025); ECB deposit rate 2.5% (Sep 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2026-10-31",
+      "note": "Base case: certificates of deposit and euro short-term bonds after tax, a little above the 2025 average deposit rate now that ECB rates have risen to 2.5%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB key rates (deposit facility 2.5%, Sep 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: longer certificates of deposit and euro government bonds if rates keep rising."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank supervises insurers but publishes no industry-wide life claim settlement ratio."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official term-life premium table per 1,000 euro of cover was found for San Marino."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care for residents is provided by the Social Security Institute (ISS) State Hospital; no figure for the out-of-pocket cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table per 100,000 euro of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1309,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SM",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Ufficio Nazionale di Statistica, CPI by group: health +1.31% year on year (July 2026)",
+      "sourceUrl": "https://www.statistica.sm/pub1/StatisticaSM/Dati-statistici/Prezzi-e-retribuzioni/Prezzi.html",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices rise slowly because the ISS covers most care, but private medical costs usually outpace the 2% projection, so one point is added."
+    },
+    "goal_inflation_education": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Ufficio Nazionale di Statistica, CPI by group: education services 0% year on year (2026)",
+      "sourceUrl": "https://www.statistica.sm/pub1/StatisticaSM/Dati-statistici/Prezzi-e-retribuzioni/Prezzi.html",
+      "asOf": "2026-10-31",
+      "note": "Local education prices were flat in 2026, but university study is mostly abroad (Italy), so we plan with the 2% projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 85.82,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SM",
+      "asOf": "2024-12-31",
+      "note": "Men 84.3, women 87.2 (2024, older than 2025); UN WPP via georank.org gives 86.0 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 27.4,
+            "men": 26,
+            "women": 28.7
+          },
+          {
+            "age": 65,
+            "total": 22.9,
+            "men": 21.5,
+            "women": 24.2
+          },
+          {
+            "age": 70,
+            "total": 18.5,
+            "men": 17.2,
+            "women": 19.7
+          },
+          {
+            "age": 80,
+            "total": 10.7,
+            "men": 9.7,
+            "women": 11.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org (life expectancy by current age, 2026)",
+      "sourceUrl": "https://georank.org/life-expectancy/san-marino",
+      "asOf": "2026-01-01",
+      "note": "Secondary source of UN WPP figures for 2026; remaining years are the published expected age at death minus current age. The UN estimates for a population of about 34,000 are modelled and uncertain. Data retrieved by georank.org on 8 July 2026."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 2.81
+          },
+          {
+            "year": 2040,
+            "value": 1.59
+          },
+          {
+            "year": 2065,
+            "value": 1.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org (demographics: old-age dependency and age-group forecasts)",
+      "sourceUrl": "https://georank.org/demographics/san-marino",
+      "asOf": "2025-12-31",
+      "note": "2025: 100 / old-age dependency ratio 35.6 (also World Bank 2025). 2040 and 2065 are computed from the page's UN forecast shares of 15-64 and 65+ (55.0% / 34.7% and 55.8% / 32.9%)."
+    },
+    "retirement_age_default": {
+      "value": 66,
+      "status": "sourced",
+      "sourceName": "Social Security Institute (ISS), how to apply for the old-age and seniority pension",
+      "sourceUrl": "https://www.iss.sm/on-line/home/menudestra/come-fare-per.html",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension from 66 (since 1 January 2021) with at least 20 years of contributions, same for men and women; seniority pension from 60 with 40 years. Page read October 2026; no later reform was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No separate retirement age for public employees was found; they appear to be covered by the same ISS pension rules (old-age pension at 66)."
+    },
+    "retirement_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 1.55% (World Bank 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly sight deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 1.55% (World Bank 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2026-10-31",
+      "note": "Base case at the average deposit rate, since no published 1-year deposit or bill rate could be found to set a higher cap."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECB deposit facility rate 2.5% (Sep 2026)",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case: longer certificates of deposit and euro bonds near the ECB rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Fixed income low 1%; global equity low 2.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if world shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.037,
+      "status": "assumption",
+      "sourceName": "Fixed income base 1.8%; global equity base 5.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SM",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global equity in euros and half deposits and certificates of deposit."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Fixed income high 3%; global equity high 8%",
+      "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current amount of a non-contributory old-age (social) pension could be read; the ISS pages found describe only social invalidity pensions and contributory pensions."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No eligibility rules for a non-contributory old-age pension could be confirmed from ISS or government pages."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service payment rule for private employees could be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The compulsory ISS pension pays an old-age pension from 66 with 20 years of contributions (iss.sm, 'come fare per'), plus the FondISS supplementary pension fund since 2011, but its indexation and tax treatment could not be confirmed, so the scheme is not filled in."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Deposito a risparmio",
+      "localNameEn": "Savings deposit",
+      "note": "No published average rate was found."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Certificato di deposito",
+      "localNameEn": "Certificate of deposit (3 months)",
+      "note": "Certificates of deposit hold about a third of bank customer funding (Central Bank bulletin, June 2026).",
+      "sourceUrl": "https://www.bcsm.sm/pubblicazioni-e-statistiche/sistema-finanziario-e-dati-statistici"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Certificato di deposito",
+      "localNameEn": "Certificate of deposit (1 year)",
+      "sourceUrl": "https://www.bcsm.sm/pubblicazioni-e-statistiche/sistema-finanziario-e-dati-statistici"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond for individuals",
+      "note": "No standing retail government savings product was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bill",
+      "note": "No regular San Marino treasury bill issuance was found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bond (5 years)",
+      "note": "No regular San Marino benchmark bond programme was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bond (10 years)",
+      "note": "No regular San Marino benchmark bond programme was found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondi comuni di investimento",
+      "localNameEn": "Investment funds",
+      "note": "No local stock exchange; residents invest in euro-denominated funds through authorised banks and investment firms supervised by the Central Bank."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro fisico (lingotti e monete)",
+      "localNameEn": "Gold bars and coins",
+      "note": "San Marino also mints its own gold coins; no restriction on buying physical gold was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Republic of San Marino (BCSM)",
+      "url": "https://www.bcsm.sm/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of the Republic of San Marino (supervision of insurers)",
+      "url": "https://www.bcsm.sm/"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of the Republic of San Marino (supervisory authority)",
+      "url": "https://www.bcsm.sm/",
+      "note": "No separate insurance ombudsman was found; complaints go first to the insurer, then to the supervisor."
+    },
+    "pensionScheme": {
+      "name": "Social Security Institute (ISS), Pensions Office",
+      "url": "https://www.iss.sm/on-line/home/menudestra/come-fare-per.html"
+    },
+    "publicHealthCover": {
+      "name": "Social Security Institute (ISS), national health service",
+      "url": "https://www.iss.sm/"
+    },
+    "depositInsurance": {
+      "name": "Depositor Guarantee Fund (Fondo di Garanzia dei Depositanti)",
+      "url": "https://www.bcsm.sm/funzioni/altre-funzioni/fondo-di-garanzia-dei-depositanti"
+    },
+    "statistics": {
+      "name": "National Statistics Office (Ufficio Nazionale di Statistica)",
+      "url": "https://www.statistica.sm/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "code": "HU",
+  "iso3": "HUN",
+  "nameEn": "Hungary",
+  "nameNative": "Magyarország",
+  "region": "europe_central_asia",
+  "languages": [
+    "hu",
+    "en",
+    "de"
+  ],
+  "currency": {
+    "code": "HUF",
+    "symbol": "Ft",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 326.64,
+      "status": "sourced",
+      "sourceName": "Magyar Nemzeti Bank official exchange rate (USD)",
+      "sourceUrl": "https://www.mnb.hu/arfolyamok",
+      "asOf": "2026-10-30",
+      "note": "HUF 326.64 per US dollar on 30 October 2026 (EUR 365.80); World Bank 2025 average 353.14."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.016,
+      "status": "sourced",
+      "sourceName": "Hungarian Central Statistical Office (KSH), consumer price index flash release, September 2026",
+      "sourceUrl": "https://www.ksh.hu/gyorstajekoztatok/far/far2609.html",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices were 1.6% higher than a year earlier in September 2026 (1.3% in August), released 7 October 2026. HICP averaged 4.4% in 2025."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "MNB 3% inflation target (tolerance band 2-4%); Hungarian HICP 2021-2025 average 9.1% (ECB ICP)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.HU.N.000000.4.AVR",
+      "asOf": "2026-10-31",
+      "note": "The MNB targets 3% but Hungary has repeatedly overshot it (15-17% in 2022-23), so planning uses 3.5%, slightly above the target even though CPI is 1.6% now."
+    },
+    "policy_rate": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "Magyar Nemzeti Bank, MNB Decree of 25 August 2026 on the central bank base rate",
+      "sourceUrl": "https://www.mnb.hu/letoltes/mnb-rendelet-20260825-en.pdf",
+      "asOf": "2026-08-26",
+      "note": "Base rate cut to 5.50% in August 2026 and held at the 22 September and 20 October 2026 Monetary Council meetings (corridor 4.50-6.50%)."
+    },
+    "savings_account_rate": {
+      "value": 0.0017,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by the MNB): Hungarian banks, overnight forint deposits from households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L21.A.R.A.2250.HUF.N",
+      "asOf": "2026-08-31",
+      "note": "Average rate on household overnight (sight and savings) forint deposits was 0.17% in August 2026 (0.21% in July)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The MNB and ECB publish household term deposits up to 1 year as one bucket (4.05% in August 2026); no separate 3-month average was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0405,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by the MNB): household forint deposits with agreed maturity up to 1 year, new business",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L22.F.R.A.2250.HUF.N",
+      "asOf": "2026-08-31",
+      "note": "Bucket covers all fixed terms up to one year (4.24% in July 2026); 1-2 year deposits paid 3.40% in August 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring-deposit product with a published average rate was found for Hungary; the state-subsidised home savings scheme closed to new contracts in 2018."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0395,
+      "status": "sourced",
+      "sourceName": "Magyar Nemzeti Bank, interest rate statistics release, August 2026 (household forint term deposits, new contracts)",
+      "sourceUrl": "https://statisztika.mnb.hu/sw/static/file/Kamat_HU_202608.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average rate on new household forint term deposits of all maturities was 3.95% in August 2026, down 0.18 points from July (4.81% a year earlier); World Bank FR.INR.DPST gives 5.71% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0548,
+      "status": "sourced",
+      "sourceName": "Government Debt Management Agency (ÁKK) retail bond MÁP Plusz series from 17 July 2026, as reported by economx.hu",
+      "sourceUrl": "https://www.economx.hu/befektetes/2026/07/14/allampapir-akk-kamatcsokkentes-befektetes/",
+      "asOf": "2026-07-17",
+      "note": "New 5-year Hungarian Government Security Plus series pays a stepped rate rising from 5.00% to 6.00% (5.00, 5.25, 5.50, 5.75, 6.00%), 5.48% a year on average; secondary source because the ÁKK offering page loads by script. Third cut in 2026."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0514,
+      "status": "sourced",
+      "sourceName": "Government Debt Management Agency (ÁKK), benchmark yields, 3-month",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok",
+      "asOf": "2026-10-30",
+      "note": "3-month benchmark yield 5.14% on 30 October 2026 (6-month 5.12%, 12-month 5.05%)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0546,
+      "status": "sourced",
+      "sourceName": "Government Debt Management Agency (ÁKK), benchmark yields, 5-year",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok",
+      "asOf": "2026-10-30",
+      "note": "5-year benchmark yield (2033/C bond) 5.46% on 30 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0545,
+      "status": "sourced",
+      "sourceName": "Government Debt Management Agency (ÁKK), benchmark yields, 10-year",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok",
+      "asOf": "2026-10-30",
+      "note": "10-year benchmark yield (2037/A bond) 5.45% on 30 October 2026; ECB long-term convergence yield for Hungary 5.69% in September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.28,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Hungary income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/hungary/individual/income-determination",
+      "asOf": "2026-07-01",
+      "note": "15% personal income tax plus 13% social contribution tax on interest from instruments bought after 1 July 2023 (bank deposits, treasury bills, funds); 0% or 10% inside a long-term investment account held 5 or 3 years."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Government Debt Management Agency (ÁKK), Hungarian Government Security Plus (MÁP Plusz)",
+      "sourceUrl": "https://akk.hu/en/securities-issuance-and-trading/types-government-securities/hg-security-plus-map-plusz",
+      "asOf": "2024-10-01",
+      "note": "No interest tax is charged on MÁP Plusz, and series issued after 1 June 2019 are exempt from the social contribution tax; product rules page dated October 2024, still in force."
+    },
+    "deposit_insurance_limit": {
+      "value": 36580000,
+      "status": "sourced",
+      "sourceName": "National Deposit Insurance Fund of Hungary (OBA), amount of compensation",
+      "sourceUrl": "https://www.oba.hu/en/deposit-insurance/ammount-of-compensation/",
+      "asOf": "2026-10-30",
+      "note": "EUR 100,000 per depositor per bank, paid in forints at the MNB rate of the day before payout; converted at EUR 1 = HUF 365.80 (MNB, 30 October 2026). An extra EUR 50,000 covers certain temporary high balances."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2412,
+      "status": "sourced",
+      "sourceName": "ECB MFI interest rate statistics (reported by the MNB): Hungarian banks, extended credit card credit to households",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.A2Z3.A.R.A.2250.HUF.N",
+      "asOf": "2026-08-31",
+      "note": "Typical rate, not the legal cap: average 24.12% in August 2026. By law the APR (THM) on credit cards may not exceed the MNB base rate plus 39 percentage points."
+    },
+    "equity_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BUX index 145,257 on 30 Oct 2026, up 35% in a year (Trading Economics); after-tax 1-year deposit about 2.9%",
+      "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Hungarian shares give back recent gains and earn only a little more than tax-free government securities."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BUX index (Trading Economics); tax-free MÁP Plusz 5.48%",
+      "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2.5 points over the tax-free retail government bond rate, below the strong 10-year BUX record because the index is concentrated in a few large companies."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "BUX index (Trading Economics), roughly 15% a year over 2016-2026",
+      "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: Hungarian and diversified equity funds keep close to their strong forint returns of the last decade."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); forint per dollar 326.64 (MNB, 30 Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stalls after the 2025-26 spike and the forint stays stable against the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); MNB 3% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, and the forint loses about 1.5% a year against the dollar as it has over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in forint terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.029,
+      "status": "assumption",
+      "sourceName": "Household deposits up to 1 year 4.05% less 28% tax = 2.9% (ECB MIR)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L22.F.R.A.2250.HUF.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax bank term deposits only."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 2.9%; tax-free MÁP Plusz 5.48% average",
+      "sourceUrl": "https://www.economx.hu/befektetes/2026/07/14/allampapir-akk-kamatcsokkentes-befektetes/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free retail government securities and after-tax deposits, allowing for further rate cuts."
+    },
+    "fixed_income_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Tax-free MÁP Plusz 5.48%; 5-year benchmark yield 5.46% (ÁKK)",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok",
+      "asOf": "2026-10-31",
+      "note": "High case: mostly tax-free retail government securities at today's rates."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The MNB (insurance supervisor) publishes insurance market statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Hungary, but no regulator or official premium table per sum insured was found; only individual company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is free under NEAK public health insurance; no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance is sold in Hungary, but no published premium table per HUF 100,000 of cover from a regulator or public source was found."
+    },
+    "oop_health_share": {
+      "value": 0.2306,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=HU",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 23.1% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Hungary, health: 7.0% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.HU.N.060000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Health prices have risen faster than general prices (7.0% vs 3.3% in December 2025), so planning uses 5.5%, two points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Eurostat/ECB HICP Hungary, education: 6.6% year on year in December 2025",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/M.HU.N.100000.4.ANR",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 6.6% in 2025, well above general inflation; planning uses 5%."
+    },
+    "life_expectancy": {
+      "value": 77.5,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/hungary",
+      "asOf": "2026-07-01",
+      "note": "Men 74.3, women 80.6 (UN WPP estimate for 2026); World Bank 2024 figure 76.7."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/hungary",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.2,
+            "men": 18.7,
+            "women": 23.2
+          },
+          {
+            "age": 65,
+            "total": 17.6,
+            "men": 15.5,
+            "women": 19.2
+          },
+          {
+            "age": 70,
+            "total": 14.2,
+            "men": 12.6,
+            "women": 15.4
+          },
+          {
+            "age": 80,
+            "total": 8.1,
+            "men": 7.4,
+            "women": 8.5
+          }
+        ]
+      },
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/hungary/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.05
+          },
+          {
+            "year": 2040,
+            "value": 2.53
+          },
+          {
+            "year": 2065,
+            "value": 2.1
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 32.8 (2025, World Bank), 39.5 (2040) and 47.7 (2065, populationpyramid.net/hungary/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Hungary (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/cda27b4f-ad1c-419d-b4c4-28222a5d2c34_en",
+      "asOf": "2026-07-31",
+      "note": "Old-age pension age is 65 for everyone born in 1957 or later, men and women; women with 40 years of eligibility can retire earlier at any age."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Hungary (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/cda27b4f-ad1c-419d-b4c4-28222a5d2c34_en",
+      "asOf": "2026-07-31",
+      "note": "Civil servants are covered by the same statutory pension insurance, so the general pension age of 65 applies."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year deposit 2.9% (ECB MIR)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L22.F.R.A.2250.HUF.N",
+      "asOf": "2026-10-31",
+      "note": "Low case: after-tax deposits with some further rate cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "3-month treasury bill 5.14% less 28% tax = 3.7% (ÁKK); after-tax 1-year deposit 2.9%",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the after-tax treasury bill rate, with some tax-free retail government securities in the mix."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Tax-free MÁP Plusz 5.48% average",
+      "sourceUrl": "https://www.economx.hu/befektetes/2026/07/14/allampapir-akk-kamatcsokkentes-befektetes/",
+      "asOf": "2026-10-31",
+      "note": "High case: mostly tax-free retail government securities, held to maturity."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax deposits 2.9%; BUX record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Fixed income base 4%; equity base 8%",
+      "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 8% and half safe fixed income at about 4%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Equity high 11%; tax-free government securities 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 43700,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Hungary (July 2026): old-age allowance (időskorúak járadéka)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/cda27b4f-ad1c-419d-b4c4-28222a5d2c34_en",
+      "asOf": "2026-07-31",
+      "note": "HUF 43,700 a month for a single person from pension age to 74 with no income (HUF 37,165 per person in a couple, HUF 58,990 alone at 75+); income is deducted. The government plans to roughly double these amounts from January 2027."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Act III of 1993 on social administration, sections 32/B-32/C (National Legislation Database)",
+      "sourceUrl": "https://njt.jog.gov.hu/jogszabaly/1993-3-00-00",
+      "asOf": "2026-10-01",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Pension age (65), income below the allowance amount (100% of the minimum pension base for singles under 75, 85% per person for couples, 135% for singles 75+), legal residence in Hungary."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code gives severance pay (végkielégítés) only on dismissal, scaled in months of pay by length of service (1 month after 3 years up to 6 months after 25), not a days-per-year retirement gratuity; no source stating the current scale was read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "European Commission, Your social security rights in Hungary (July 2026)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/cda27b4f-ad1c-419d-b4c4-28222a5d2c34_en",
+      "asOf": "2026-07-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": true
+      },
+      "note": "Compulsory earnings-related state pension: pension age 65 with at least 20 years of service (minimum pension HUF 28,500, to rise to HUF 120,000 from January 2027); raised each January by forecast CPI with later correction. Pensions are tax-exempt income under the Personal Income Tax Act."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Megtakarítási számla",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L21.A.R.A.2250.HUF.N"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Lekötött betét (3 hónap)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Lekötött betét (1 év)",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L22.F.R.A.2250.HUF.N"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring-deposit product; the subsidised home savings scheme (lakás-takarékpénztár) closed to new contracts in 2018."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Magyar Állampapír Plusz (MÁP Plusz)",
+      "localNameEn": "Hungarian Government Security Plus",
+      "note": "5-year retail government security with a stepped fixed rate, free of interest tax; sold by the State Treasury, post offices and banks.",
+      "sourceUrl": "https://akk.hu/en/securities-issuance-and-trading/types-government-securities/hg-security-plus-map-plusz"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Diszkont Kincstárjegy (DKJ)",
+      "localNameEn": "Discount Treasury Bill",
+      "note": "3-, 6- and 12-month bills auctioned by ÁKK; interest taxed at 28%.",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Magyar Államkötvény",
+      "localNameEn": "Hungarian Government Bond",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Magyar Államkötvény",
+      "localNameEn": "Hungarian Government Bond",
+      "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Befektetési alap",
+      "localNameEn": "Investment funds and index funds (ETFs)",
+      "note": "Retail mutual funds and exchange-traded index funds are widely available; a long-term investment account (TBSZ) lowers the tax after 3-5 years."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Befektetési arany",
+      "localNameEn": "Investment gold (bars and coins)",
+      "note": "Buying physical gold bars and coins is legal and VAT-exempt."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Magyar Nemzeti Bank (Central Bank of Hungary)",
+      "url": "https://www.mnb.hu/en"
+    },
+    "insuranceRegulator": {
+      "name": "Magyar Nemzeti Bank (financial supervisor for insurers)",
+      "url": "https://www.mnb.hu/en/supervision"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Arbitration Board (Pénzügyi Békéltető Testület)",
+      "url": "https://www.mnb.hu/bekeltetes",
+      "note": "Out-of-court dispute body for consumers in disputes with insurers and banks, operated by the MNB."
+    },
+    "pensionScheme": {
+      "name": "Hungarian State Treasury, pension insurance (Nyugdíjbiztosítás)",
+      "url": "https://www.allamkincstar.gov.hu/"
+    },
+    "oldAgeAllowance": {
+      "name": "Old-age allowance (időskorúak járadéka), Act III of 1993 sections 32/B-32/C",
+      "url": "https://njt.jog.gov.hu/jogszabaly/1993-3-00-00",
+      "note": "Claimed at the district government office (járási hivatal)."
+    },
+    "publicHealthCover": {
+      "name": "NEAK (National Health Insurance Fund of Hungary)",
+      "url": "https://www.neak.gov.hu/"
+    },
+    "depositInsurance": {
+      "name": "National Deposit Insurance Fund of Hungary (OBA)",
+      "url": "https://www.oba.hu/en"
+    },
+    "statistics": {
+      "name": "Hungarian Central Statistical Office (KSH)",
+      "url": "https://www.ksh.hu/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

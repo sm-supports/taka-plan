@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "code": "XK",
+  "iso3": "XKX",
+  "nameEn": "Kosovo",
+  "nameNative": "Kosova",
+  "region": "europe_central_asia",
+  "languages": [
+    "sq",
+    "sr",
+    "en"
+  ],
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.8951,
+      "status": "sourced",
+      "sourceName": "European Central Bank euro reference rate (USD)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A",
+      "asOf": "2026-10-30",
+      "note": "EUR 1 = USD 1.1172, so about EUR 0.895 per US dollar; Kosovo uses the euro unilaterally. World Bank 2025 average 0.887."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.078,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Kosovo Agency of Statistics CPI, September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/kosovo/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI 7.8% year on year in September 2026 (7.3% in August), highest since February 2023, driven by transport prices (+23.9%); secondary source because ask.rks-gov.net release pages did not render. World Bank 2025 average 3.9%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECB 2% target (Kosovo uses the euro); Kosovo CPI 7.8% (Sep 2026), 3.9% in 2025 (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/kosovo/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Kosovo uses the euro unilaterally, so long-run inflation should drift toward euro-area levels, but it has run above the ECB's 2% target, so 3% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "European Central Bank, deposit facility rate",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV",
+      "asOf": "2026-09-16",
+      "note": "Kosovo has no monetary policy of its own: it uses the euro unilaterally, so the ECB deposit facility rate (2.50% from 16 September 2026) is the reference rate for the currency."
+    },
+    "savings_account_rate": {
+      "value": 0.0028,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of Kosovo, Monthly Statistics Bulletin May 2026 (Table 15.1.2, household new deposits)",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-05-31",
+      "note": "Weighted average rate on new household savings deposits, May 2026 (0.30-0.32% earlier in 2026); transferable deposits pay about 0%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0271,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of Kosovo, Monthly Statistics Bulletin May 2026 (Table 15.1.2, household new deposits)",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-05-31",
+      "note": "Household new time deposits over 3 and up to 6 months, May 2026; the 1-3 month bucket is suppressed for confidentiality in 2026 (up to 1 month: 2.14%)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0302,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of Kosovo, Monthly Statistics Bulletin May 2026 (Table 15.1.2, household new deposits)",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-05-31",
+      "note": "Household new time deposits over 6 months and up to 1 year, May 2026 (over 1 up to 2 years: 3.21%)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recurring-deposit product rate found from an official source."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0326,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of Kosovo, Monthly Statistics Bulletin May 2026 (Table 15.1, new deposits of households and nonfinancial corporations)",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-05-31",
+      "note": "Weighted average rate on all new deposits in May 2026; households alone 3.00%. The CBK Monthly Report of Financial System for May 2026 rounds it to 3.3%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Kosovo has no retail government savings certificate or savings bond for individuals that could be found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance auctions government securities through the CBK, but no 2026 bill auction yield could be read (auction results pages and the Ministry of Finance site did not render; news reports found were from 2024)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 2026 5-year government bond auction yield could be read (auction results not found; news reports found were from 2024)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Kosovo rarely issues 10-year paper and no recent auction yield could be found."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Kosovo withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/kosovo/corporate/withholding-taxes",
+      "asOf": "2026-08-07",
+      "note": "10% withholding on interest; PwC's individual section says tax on savings-account interest is usually withheld by banks."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Kosovo income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/kosovo/individual/income-determination",
+      "asOf": "2026-08-07",
+      "note": "Interest on financial instruments issued or guaranteed by a Kosovo public authority is exempt from personal income tax; Kosovo has no retail savings certificate, so this applies to treasury bills and bonds."
+    },
+    "deposit_insurance_limit": {
+      "value": 5000,
+      "status": "sourced",
+      "sourceName": "Deposit Insurance Fund of Kosovo (FSDK), what is insured",
+      "sourceUrl": "https://fsdk.org/en/deposit-insurance/whats-covered/",
+      "asOf": "2026-10-31",
+      "note": "EUR 5,000 per depositor per member bank."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1231,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Republic of Kosovo, Monthly Statistics Bulletin May 2026 (Table 15.2.2, household overdrafts)",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-05-31",
+      "note": "No legal cap found; the CBK publishes no separate credit card rate, so this is the average rate on household overdrafts (outstanding), the closest revolving-credit series."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No Kosovo stock exchange; global equity index (US500 7,580 on 30 Oct 2026, +10.8% in a year) in euro terms",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: a global index fund bought in euros delivers little more than euro-area safe rates over a long stretch, as after 2000 and 2008."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "No Kosovo stock exchange; global equity index in euro terms; ECB deposit rate 2.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV",
+      "asOf": "2026-10-31",
+      "note": "Kosovo has no stock market, so the base case is a global index fund in euros at about 3 points over the euro safe rate, kept within 4 points of the after-tax safe return."
+    },
+    "equity_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Global equity long-run returns in euro terms",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities match their long-run record of about 7-8% a year in euros."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high of USD 5,608",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely keeps up after the 2025-26 spike, with no help from the euro."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); ECB 2% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, and the euro is assumed stable against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in euro terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "CBK household 3-6 month deposit rate 2.71% (May 2026) less 10% withholding",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: short term deposits at about 2.7% minus the 10% interest tax, with some time in near-zero savings accounts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBK household 6-12 month deposit rate 3.02% (May 2026) less 10% withholding; ECB deposit rate 2.5%",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year deposits after the 10% tax (about 2.7%), rounded down because euro rates may drift lower over a long horizon."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBK household 1-2 year deposit rate 3.21% (May 2026); Kosovo government securities tax-exempt (PwC)",
+      "sourceUrl": "https://taxsummaries.pwc.com/kosovo/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits or tax-exempt Kosovo government bonds, which pay a premium over euro-area rates."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBK supervises insurers but publishes no life claim settlement ratio; life insurance is tiny (EUR 4.1 million of written premiums by May 2026 per the CBK Monthly Report of Financial System)."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance in Kosovo is a very small market and no published term premium quotes or regulator premium data could be found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published figure for a typical private hospital stay cost in Kosovo was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary private health insurance is sold but no premium table per EUR 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank SH.XPD.OOPC.CH.ZS and WHO GHED do not report Kosovo separately; no other figure found."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Kosovo CPI (Trading Economics); headline 7.8% Sep 2026, 3.9% in 2025",
+      "sourceUrl": "https://tradingeconomics.com/kosovo/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health costs are assumed to rise about one point faster than the 3% long-run headline assumption, as private clinics and imported medicines track euro-area medical inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Kosovo CPI education index ~100 points in Sep 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/kosovo/indicators",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is largely free and the education CPI has barely moved, so private education costs are assumed to rise a little above general inflation at 3.5%."
+    },
+    "life_expectancy": {
+      "value": 78.2,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=XK",
+      "asOf": "2024-12-31",
+      "note": "Men 76.0, women 80.3 (World Bank 2024); UN WPP includes Kosovo within Serbia, so no UN estimate is available separately."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "UN WPP does not publish Kosovo separately (georank.org has no Kosovo page) and no Kosovo Agency of Statistics life table could be read."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.61
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.POP.DPND.OL",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=XK",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio of 15.1 (2025). No UN projections for Kosovo alone were found for 2040 or 2065."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Kosovo Pension Savings Trust (KPST), FAQ",
+      "sourceUrl": "https://trusti.org/en/contributors/faq/",
+      "asOf": "2026-10-31",
+      "note": "Retirement age 'currently set at 65' for withdrawing pension savings; the same age applies to the state basic pension."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Kosovo Pension Savings Trust (KPST), FAQ",
+      "sourceUrl": "https://trusti.org/en/contributors/faq/",
+      "asOf": "2026-10-31",
+      "note": "Civil servants are in the same KPST and state pension system with retirement at 65; no separate civil service retirement age was found."
+    },
+    "retirement_return_low": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "CBK household deposit rates May 2026 less 10% withholding",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a retiree keeps much of the money in short deposits and savings accounts, after the 10% interest tax."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBK household 6-12 month deposit rate 3.02% (May 2026), 2.72% after 10% withholding",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax 1-year deposit rate of about 2.7%."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Kosovo government securities, interest tax-exempt (PwC); CBK 1-2 year deposit rate 3.21%",
+      "sourceUrl": "https://taxsummaries.pwc.com/kosovo/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of tax-exempt Kosovo government bonds and longer deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Global equity low case 3%; Kosovo fixed income low case 2%",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Global equity base 5.5%; Kosovo fixed income base 2.5%",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global shares at 5.5% and half deposits and government paper at about 2.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Global equity high 7.5%; fixed income high 3%",
+      "sourceUrl": "https://taxsummaries.pwc.com/kosovo/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 150,
+      "status": "sourced",
+      "sourceName": "Telegrafi (news), basic pension paid with the 30-euro increase, 14 November 2025",
+      "sourceUrl": "https://telegrafi.com/cmimet-e-larta-na-detyrojne-te-punojme-edhe-ne-pleqeri-pensionistet-te-pakenaqur-me-rritjen-prej-30-eurosh/",
+      "asOf": "2025-11-14",
+      "note": "Secondary source (the Government and Ministry of Finance, Labour and Transfers sites did not resolve): the state-funded basic age pension rose from EUR 120 to EUR 150 a month from the November 2025 payment; no further 2026 change was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Kosovo 2.0 (news magazine), \"Invisible in old age\"",
+      "sourceUrl": "https://archive.kosovotwopointzero.com/en/?p=95845",
+      "asOf": "2023-12-05",
+      "note": "Secondary source from 2023 (older than 2025): the basic pension is a universal, budget-funded benefit for Kosovo citizens aged 65 and over, paid regardless of work history and not means-tested."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees in Kosovo could be confirmed from the Labour Law text."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Kosovo Pension Savings Trust (KPST), withdrawal of savings",
+      "sourceUrl": "https://trusti.org/en/contributors/withdrawal-of-savings/",
+      "asOf": "2026-10-31",
+      "note": "Mandatory funded individual accounts: 5% employee plus 5% employer contributions (PwC), voluntary up to 15% each; from 65 balances of EUR 3,000+ are paid as phased withdrawals of at least EUR 200 or 1% of the balance a month, not indexed, and withdrawals are subject to personal income tax. A separate state basic pension is paid from the budget."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Llogari kursimi",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depozitë me afat",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depozitë me afat",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit scheme",
+      "note": "No standard monthly recurring deposit product was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings bond for individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letra me vlerë të Qeverisë",
+      "localNameEn": "Government treasury bills",
+      "note": "Auctioned by the Ministry of Finance through the Central Bank; interest exempt from personal income tax.",
+      "sourceUrl": "https://taxsummaries.pwc.com/kosovo/individual/income-determination"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligacione të Qeverisë",
+      "localNameEn": "Government bonds",
+      "note": "Auctioned by the Ministry of Finance through the Central Bank, mainly to banks and the pension fund."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligacione të Qeverisë",
+      "localNameEn": "Government bonds",
+      "note": "Long maturities are issued occasionally; mainly institutional buyers."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Equity or index fund",
+      "note": "Kosovo has no stock exchange and no locally sold retail equity funds were confirmed; residents would need a foreign platform."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ar investues",
+      "localNameEn": "Investment gold bars and coins",
+      "note": "No restriction on buying physical gold; Kosovo uses the euro."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banka Qendrore e Republikës së Kosovës (Central Bank of the Republic of Kosovo)",
+      "url": "https://bqk-kos.org/",
+      "note": "Kosovo uses the euro; the CBK supervises banks, insurers and pension funds but sets no interest rate."
+    },
+    "insuranceRegulator": {
+      "name": "Banka Qendrore e Republikës së Kosovës (insurance supervision)",
+      "url": "https://bqk-kos.org/"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of the Republic of Kosovo, consumer complaints",
+      "url": "https://bqk-kos.org/"
+    },
+    "pensionScheme": {
+      "name": "Trusti i Kursimeve Pensionale të Kosovës (Kosovo Pension Savings Trust)",
+      "url": "https://trusti.org/en/"
+    },
+    "oldAgeAllowance": {
+      "name": "Ministria e Financave, Punës dhe Transfereve (basic age pension)",
+      "url": "https://mf.rks-gov.net/",
+      "note": "The basic age pension (EUR 150 a month since November 2025) is paid by the Pension Administration of Kosovo within this ministry."
+    },
+    "publicHealthCover": {
+      "name": "Ministria e Shëndetësisë (Ministry of Health)",
+      "url": "https://msh.rks-gov.net/",
+      "note": "Public health care is budget-funded with co-payments; the Health Insurance Fund set up by law is not yet fully operational."
+    },
+    "depositInsurance": {
+      "name": "Fondi për Sigurimin e Depozitave të Kosovës (FSDK)",
+      "url": "https://fsdk.org/en/"
+    },
+    "statistics": {
+      "name": "Agjencia e Statistikave të Kosovës (Kosovo Agency of Statistics)",
+      "url": "https://ask.rks-gov.net/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

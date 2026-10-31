@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "code": "RS",
+  "iso3": "SRB",
+  "nameEn": "Serbia",
+  "nameNative": "Србија",
+  "region": "europe_central_asia",
+  "languages": [
+    "sr",
+    "hu",
+    "sq",
+    "ro",
+    "en"
+  ],
+  "currency": {
+    "code": "RSD",
+    "symbol": "дин.",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 105.056,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia, official middle exchange rate (list no. 208)",
+      "sourceUrl": "https://webappcenter.nbs.rs/ExchangeRateWebApp/ExchangeRate/CurrentMiddleRate?",
+      "asOf": "2026-10-30",
+      "note": "105.0560 dinars per US dollar and 117.5367 per euro on 30 October 2026. World Bank 2025 average 103.98."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.041,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia (home page, inflation release of 12 October 2026); Statistical Office data",
+      "sourceUrl": "https://www.nbs.rs/en/indeks/",
+      "asOf": "2026-09-30",
+      "note": "Annual CPI 4.1% in September 2026, up from 2.2% in August (Trading Economics confirms). Target 3% +/-1.5 points. World Bank 2025 average 3.9%."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "NBS inflation target 3% +/-1.5 points (2026-2028); CPI 4.1% (Sep 2026)",
+      "sourceUrl": "https://www.nbs.rs/en/ciljevi-i-funkcije/monetarna-politika/inflacija/",
+      "asOf": "2026-10-31",
+      "note": "Inflation has been inside the target band since 2025 but spiked above 12% in 2022-2023, so we plan with 3.5%, a little above the 3% target."
+    },
+    "policy_rate": {
+      "value": 0.0575,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia, key policy rate",
+      "sourceUrl": "https://www.nbs.rs/en/indeks/",
+      "asOf": "2026-10-08",
+      "note": "Kept at 5.75% on 8 October 2026; unchanged since September 2024."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Bank publishes household term deposit rates by maturity but no average rate on sight or savings accounts was found in its tables."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Bank reports term deposits only as 'up to 1 year' (5.09% for household dinar deposits, September 2026), with no 3-month split."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0509,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia, Table 1.3.5 interest rates on household deposits by maturity, new business (dinar, up to 1 year)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-09-30",
+      "note": "Household dinar term deposits up to 1 year, September 2026 (updated 28 October 2026); over 1 to 2 years 4.99%. Euro deposits up to 1 year pay 3.42%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published market rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0388,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia, Table 1.3.5 interest rates on household deposits by maturity, new business (total term, all currencies)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-09-30",
+      "note": "All new household term deposits, September 2026: dinar 5.07%, euro and other foreign currency 3.41% (most household savings are in euros)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standing government savings certificate or retail bond programme for individuals was found; dinar government bonds are sold at Ministry of Finance auctions."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month dinar treasury bill auction is recorded in the National Bank's table of government securities rates (SBMS19) for 2024-2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia, Table 1.3.12 interest rates on securities (dinar government securities, 5 years)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS19.xls",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate at the June 2026 auction of 5-year dinar bonds (4.59% in May 2026)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0507,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia, Table 1.3.12 interest rates on securities (dinar government securities, 10.5 years)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS19.xls",
+      "asOf": "2026-01-31",
+      "note": "Weighted average rate at the January 2026 auction of 10.5-year dinar bonds; no exact 10-year auction was held in 2025-2026."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Serbia income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/serbia/individual/income-determination",
+      "asOf": "2026-08-07",
+      "note": "Interest on dinar savings is tax-free; interest on foreign-currency savings counts as investment income, taxed at 15% of the gross amount."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Serbia income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/serbia/individual/income-determination",
+      "asOf": "2026-08-07",
+      "note": "Interest on government bonds is exempt from tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 5876835,
+      "status": "sourced",
+      "sourceName": "Deposit Insurance Agency of Serbia, depositors",
+      "sourceUrl": "https://www.aod.rs/clan/osigdepoz/deponenti",
+      "asOf": "2026-10-30",
+      "note": "Up to EUR 50,000 per depositor per bank, dinar and foreign-currency deposits combined; converted at the NBS middle rate of 117.5367 dinars per euro (30 October 2026)."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1775,
+      "status": "sourced",
+      "sourceName": "National Bank of Serbia, maximum effective interest rates under the consumer protection law (credit card debt, dinars)",
+      "sourceUrl": "https://webappcenter.nbs.rs/webapp/CultureInfo/OpenPage?culture=en-Us&&pageUrl=/WebApp/FinInstBank/EffectiveInterestRateLimit/Index?",
+      "asOf": "2026-09-15",
+      "note": "Legal maximum effective rate on dinar credit card debt (key rate 5.75% plus 12 points); 14.65% for euro, 19.75% on dinar current-account overdrafts."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Small, illiquid Belgrade Stock Exchange; global equity in dinar terms; NBS middle exchange rate",
+      "sourceUrl": "https://webappcenter.nbs.rs/ExchangeRateWebApp/ExchangeRate/CurrentMiddleRate?",
+      "asOf": "2026-10-31",
+      "note": "Low case for a global or regional index fund in dinar terms in a weak decade for shares."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Household dinar 1-year deposit 5.09% (tax-free, NBS) plus an equity premium",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-10-31",
+      "note": "The local exchange (BELEX) is small and illiquid, so the base is a diversified index fund in dinar terms, about 2 points over the tax-free dinar deposit rate and within the 4-point limit."
+    },
+    "equity_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Long-run global equity returns; dinar managed against the euro",
+      "sourceUrl": "https://webappcenter.nbs.rs/ExchangeRateWebApp/ExchangeRate/CurrentMiddleRate?",
+      "asOf": "2026-10-31",
+      "note": "High case near long-run world equity returns plus slow dinar depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "NBS official middle exchange rate (dinars per USD)",
+      "sourceUrl": "https://webappcenter.nbs.rs/ExchangeRateWebApp/ExchangeRate/CurrentMiddleRate?",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable dinar."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "NBS official middle exchange rate; long-run dollar gold trend",
+      "sourceUrl": "https://webappcenter.nbs.rs/ExchangeRateWebApp/ExchangeRate/CurrentMiddleRate?",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% plus about 1% a year of dinar depreciation (3.5% planned inflation against about 2% abroad)."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "NBS official middle exchange rate (dinars per USD)",
+      "sourceUrl": "https://webappcenter.nbs.rs/ExchangeRateWebApp/ExchangeRate/CurrentMiddleRate?",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a weaker euro and dinar."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Household euro term deposits 3.41% and dinar 5.07% (NBS, Sep 2026)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case: rates fall as the key rate is cut, or savings are kept in sight accounts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Household dinar term deposit up to 1 year 5.09% (tax-free); 5-year dinar bond 5.00% (tax-free)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case: tax-free dinar term deposits and bonds at about 5% today, trimmed for lower rates over the long run."
+    },
+    "fixed_income_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Dinar government bonds 5.00-5.07% and 1-year dinar deposits 5.09% (NBS)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS19.xls",
+      "asOf": "2026-10-31",
+      "note": "High case: rates stay at or above today's level."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Bank supervises insurers and publishes sector reports, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Risk life cover is sold (often with loans), but no regulator or official premium table per 1,000 dinars of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by the Republic Health Insurance Fund (RFZO) with co-payments; no official figure for the cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary health insurance exists but no published premium table per 100,000 dinars of cover by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.3214,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=RS",
+      "asOf": "2023-12-31",
+      "note": "Latest available year is 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Health CPI +7.7% year on year in September 2026 (Trading Economics, Statistical Office data)",
+      "sourceUrl": "https://tradingeconomics.com/serbia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health prices are rising about twice as fast as the overall CPI, so we plan with 2 points over the 3.5% projection."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Education CPI +1.2% year on year in September 2026 (Trading Economics, Statistical Office data)",
+      "sourceUrl": "https://tradingeconomics.com/serbia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education prices are rising slowly, so we plan with the general 3.5% projection."
+    },
+    "life_expectancy": {
+      "value": 75.97,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=RS",
+      "asOf": "2024-12-31",
+      "note": "Men 73.7, women 78.4 (2024, older than 2025)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.7,
+            "men": 18.3,
+            "women": 23.1
+          },
+          {
+            "age": 65,
+            "total": 17,
+            "men": 14.8,
+            "women": 19
+          },
+          {
+            "age": 70,
+            "total": 13.4,
+            "men": 11.6,
+            "women": 15.1
+          },
+          {
+            "age": 80,
+            "total": 7.8,
+            "men": 6.6,
+            "women": 9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (mortality, 2026)",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/serbia/",
+      "asOf": "2026-01-01",
+      "note": "Secondary source of UN WPP 2024 for 2026, five-year age groups; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2026,
+            "value": 2.67
+          },
+          {
+            "year": 2040,
+            "value": 2.31
+          },
+          {
+            "year": 2065,
+            "value": 1.77
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (old-age dependency ratio)",
+      "sourceUrl": "https://www.populationpyramid.net/serbia/2040/",
+      "asOf": "2026-01-01",
+      "note": "100 / old-age dependency ratio: 37.5 (2026, /serbia/2026/), 43.2 (2040) and 56.6 (2065, /serbia/2065/). World Bank 2025: 36.8."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Law on Pension and Disability Insurance, Articles 19 and 19a (consolidated text, Pension and Disability Insurance Fund)",
+      "sourceUrl": "https://www.pio.rs/sites/default/files/Zakoni/Zakon_o_PIO-2024.pdf",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension at 65 with at least 15 years of insurance (or 45 years at any age). Women: 64 in 2026, rising by 2 months a year to 65 from 2032. Early pension from 60 with 40 years, reduced 0.34% per month."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Law on Pension and Disability Insurance, Article 19 (consolidated text, Pension and Disability Insurance Fund)",
+      "sourceUrl": "https://www.pio.rs/sites/default/files/Zakoni/Zakon_o_PIO-2024.pdf",
+      "asOf": "2026-10-31",
+      "note": "Public employees are insured in the same compulsory scheme as private employees; same pension ages (women 64 in 2026, 65 from 2032)."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Household euro term deposits 3.41% (NBS, Sep 2026)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case: lower deposit rates and some savings in sight accounts."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Household dinar term deposit up to 1 year 5.09%, interest tax-free (NBS, PwC)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case below today's tax-free 1-year dinar deposit rate, allowing for rate cuts over a long retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Dinar government bonds 5.00-5.07%, tax-free (NBS)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS19.xls",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in dinar bond and deposit rates near 5%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Fixed income low 3%; equity low 3.5%",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Fixed income base 4.5%; equity base 7%",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half equity funds at 7% and half dinar deposits and bonds at 4.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Fixed income high 5.5%; equity high 9.5%",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS19.xls",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension was found in the pension law or on the Pension Fund's site; older people without a pension can apply for means-tested financial social assistance, which is not an old-age benefit. Not confirmed as absent from an official statement."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension scheme with age-based eligibility was found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Law (Art. 119) requires a retirement severance of at least two average salaries, a flat amount rather than days per year of service; Art. 158 gives at least one third of monthly salary per year of service only on redundancy. Neither fits a days-per-year gratuity rule."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Law on Pension and Disability Insurance, Articles 19, 19a and 80 (Pension and Disability Insurance Fund); PwC Tax Summaries (pensions exempt)",
+      "sourceUrl": "https://www.pio.rs/sites/default/files/Zakoni/Zakon_o_PIO-2024.pdf",
+      "asOf": "2026-10-31",
+      "note": "Compulsory pay-as-you-go pension (PIO Fund) from 65 with 15 years of insurance (women 64 in 2026). From each December pensions are adjusted by wage growth, CPI, or half of each, depending on pension spending as a share of GDP (Art. 80). Pensions are exempt from income tax (PwC)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Штедни рачун",
+      "localNameEn": "Savings account",
+      "note": "Interest on dinar savings is tax-free; interest on foreign-currency savings is taxed at 15%."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Орочена штедња",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Орочена штедња",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS23.xls"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard fixed-installment recurring deposit with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings bond for individuals",
+      "note": "No standing retail government savings programme was found; individuals can hold dinar government bonds, whose interest is tax-free."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Државни записи",
+      "localNameEn": "Treasury bills",
+      "note": "No 3-month treasury bill auctions were recorded in 2024-2026."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Државне обвезнице",
+      "localNameEn": "Government bonds (dinar)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS19.xls"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Државне обвезнице",
+      "localNameEn": "Government bonds (dinar, about 10 years)",
+      "sourceUrl": "https://www.nbs.rs/export/sites/NBS_site/documents/statistika/monetarni_sektor/SBMS19.xls"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Инвестициони фондови",
+      "localNameEn": "Investment funds",
+      "note": "Open-end investment funds are supervised by the Securities Commission; the local stock market is small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Злато (полуге и дукати)",
+      "localNameEn": "Gold bars and coins",
+      "note": "No restriction on buying physical gold was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Serbia",
+      "url": "https://www.nbs.rs/en/"
+    },
+    "insuranceRegulator": {
+      "name": "National Bank of Serbia, insurance supervision",
+      "url": "https://www.nbs.rs/en/"
+    },
+    "insuranceComplaints": {
+      "name": "National Bank of Serbia, Financial Consumer Protection",
+      "url": "https://www.nbs.rs/en/",
+      "note": "The National Bank handles complaints and out-of-court mediation with banks and insurers."
+    },
+    "pensionScheme": {
+      "name": "Republic Pension and Disability Insurance Fund (PIO Fund)",
+      "url": "https://www.pio.rs/en/old-age-pension"
+    },
+    "publicHealthCover": {
+      "name": "Republic Health Insurance Fund (RFZO)",
+      "url": "https://www.rfzo.rs/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Agency",
+      "url": "https://www.aod.rs/clan/osigdepoz/deponenti"
+    },
+    "statistics": {
+      "name": "Statistical Office of the Republic of Serbia",
+      "url": "https://www.stat.gov.rs/en-us/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}
