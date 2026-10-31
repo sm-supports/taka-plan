@@ -38,7 +38,8 @@
     "db:migrate:remote": "wrangler d1 migrations apply taka-plan --remote -c config/wrangler.remote.toml",
     "db:reset:local": "rm -rf .wrangler/state",
     "rates:gen-seed": "node scripts/gen-seed-migration.mjs",
-    "smoke": "sh scripts/smoke.sh"
+    "smoke": "sh scripts/smoke.sh",
+    "countries:gen-seed": "node scripts/gen-country-seed.mjs"
   },
   "description": "Taka Plan: a free Bangla/English personal-finance planner for Bangladesh",
   "engines": {
