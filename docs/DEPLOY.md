@@ -1,6 +1,6 @@
 # Deploying Taka Plan (Cloudflare Pages + GitHub)
 
-Taka Plan is hosted on **Cloudflare Pages**, connected to the public GitHub repository `realsajat/taka-plan`. Pages builds every push itself: `main` goes to production, any other branch to a preview URL. There is no Cloudflare Worker, and GitHub Actions only runs checks (TOOLING.md), so GitHub stores no Cloudflare credentials.
+Taka Plan is hosted on **Cloudflare Pages**, connected to the public GitHub repository `sm-supports/taka-plan` (moved from `realsajat/taka-plan` on 31 Oct 2026; the old address redirects). Pages builds every push itself: `main` goes to production, any other branch to a preview URL. There is no Cloudflare Worker, and GitHub Actions only runs checks (TOOLING.md), so GitHub stores no Cloudflare credentials.
 
 ## What runs where
 
@@ -18,7 +18,7 @@ Why static export plus Functions rather than the whole vinext server on Pages: t
 | Setting | Value |
 | --- | --- |
 | Project name | `taka-plan` (site at `https://taka-plan.pages.dev`) |
-| Source | GitHub `realsajat/taka-plan`, production branch `main` |
+| Source | GitHub `sm-supports/taka-plan`, production branch `main` |
 | Build command | `npm run build` |
 | Build output directory | `dist/client` |
 | Root directory | (repository root) |
@@ -32,8 +32,8 @@ Pages installs dependencies with `npm ci` before the build command. Functions in
 
 ## One-time setup
 
-1. **GitHub access for Cloudflare.** Install the Cloudflare Pages GitHub app on the `realsajat` account with access to `taka-plan` (dashboard: Workers & Pages → Create → Pages → Connect to Git). A project connected to Git cannot later be switched to Direct Upload, or back.
-2. **Create the project** with the settings above, from the dashboard or with the cf CLI (`npx cf@1.0.0-beta.26 pages create …`; cf can create and edit Pages projects but refuses to deploy them).
+1. **GitHub access for Cloudflare.** The Cloudflare Pages GitHub app is installed on the `sm-supports` organisation, which is why the repository lives there (an attempt to create the project for `realsajat/taka-plan` failed with Cloudflare error 8000011). Connect from the dashboard: Workers & Pages → Create → Pages → Connect to Git. A project connected to Git cannot later be switched to Direct Upload, or back.
+2. **Create the project** with the settings above, from the dashboard or with the cf CLI (`npx cf@1.0.0-beta.26 pages create --body …`; cf can create and edit Pages projects but refuses to deploy them). A project made in the dashboard starts with an empty output directory, no D1 binding and no `NODE_VERSION`; fix them afterwards with `npx cf@1.0.0-beta.26 pages edit taka-plan --body '{"build_config":…,"deployment_configs":…}'` or in Settings, then trigger a new build.
 3. **Database.** The remote D1 already holds the schema and the published v1 rates (65 rows). For a new database: `npx wrangler d1 create taka-plan`, put its id in `config/wrangler.remote.toml` and in the project's D1 binding, then `npm run db:migrate:remote` (needs `npx wrangler login`).
 4. **Admin password.** Dashboard → Workers & Pages → `taka-plan` → Settings → Variables and Secrets → Production → Add → type **Secret**, name `ADMIN_PASSWORD`. Then **retry the latest production deployment** (Deployments → … → Retry), because a Pages deployment only sees variables that existed when it was built. Until then every admin sign-in is refused, by design.
 
