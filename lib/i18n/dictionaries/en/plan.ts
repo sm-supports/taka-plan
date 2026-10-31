@@ -47,6 +47,16 @@ export const plan = {
     },
   },
 
+  more: {
+    title: "Complete your plan",
+    start: "Start",
+    edit: "Edit",
+    reserved: "The plan sets aside {amount} a month for this.",
+    m2: { title: "Insurance & health", body: "How much life and health cover your family needs, and what it should roughly cost." },
+    m6: { title: "Asset mix", body: "How to split long-term money across fixed income, shares and gold for your age." },
+    m7: { title: "Retirement & family", body: "What you need to live on your own money to 100, and which income sources lower it." },
+  },
+
   summary: {
     title: "Summary",
     emergencyShare: "{share} of your monthly amount goes to the emergency fund until it is full.",

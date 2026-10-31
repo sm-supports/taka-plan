@@ -20,6 +20,7 @@ import type { EngineError, Plan } from "@taka/engine";
 import { DraftsList } from "@/components/drafts/DraftsList";
 import { StartOverButton } from "@/components/drafts/StartOverButton";
 import { BucketList } from "@/components/plan/BucketList";
+import { MoreSections } from "@/components/plan/MoreSections";
 import { PlanHeadline } from "@/components/plan/PlanHeadline";
 import { PlanSummary } from "@/components/plan/PlanSummary";
 import { calcErrorKey } from "@/components/calculators/shared/engineError";
@@ -134,6 +135,7 @@ function PlanBody({ plan, error, demo }: PlanBodyProps) {
           <PlanHeadline plan={plan} whyOpen={why === HEADLINE_WHY} onWhyOpenChange={(open) => onWhyChange(open ? HEADLINE_WHY : null)} />
           <BucketList plan={plan} why={why} onWhyChange={onWhyChange} />
           <PlanSummary plan={plan} />
+          {!demo && <MoreSections plan={plan} />}
           {/* Start from the beginning: only under a plan that rendered, never on the sample plan. */}
           {!demo && <StartOverButton />}
         </>
