@@ -6,6 +6,7 @@
  */
 import { useMemo, useState } from "react";
 import { computeGoals, type Goal, type M5Input, type M5Result } from "@taka/engine";
+import { StartOverButton } from "@/components/drafts/StartOverButton";
 import { Button } from "@/components/ui/Button";
 import { BigNumber } from "@/components/ui/BigNumber";
 import { Card } from "@/components/ui/Card";
@@ -138,6 +139,9 @@ export function M5Calculator({ demo = false }: M5CalculatorProps) {
         </Button>
         {!draftValid && !draftTouched && <p className="mt-2 text-center text-sm text-text-muted">{t("m5.input.incomplete")}</p>}
       </Card>
+
+      {/* Start from the beginning: only once the goals give a result. */}
+      {!demo && computed.result && computed.result.goals.some((g) => g.valid) && <StartOverButton />}
     </div>
   );
 }

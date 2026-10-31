@@ -8,6 +8,7 @@
  */
 import { useMemo, useState } from "react";
 import { computeSaveFirst, type IncomeType, type M4Input, type M4Result, type Money } from "@taka/engine";
+import { StartOverButton } from "@/components/drafts/StartOverButton";
 import { BigNumber } from "@/components/ui/BigNumber";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -236,6 +237,8 @@ export function SaveFirstCalculator() {
                     : t("m4.next.dps", { day: f.number(result.transferDay) })}
               </p>
             </Card>
+
+            {!demo && <StartOverButton />}
           </>
         )}
       </Section>
