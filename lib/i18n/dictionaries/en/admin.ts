@@ -179,6 +179,7 @@ export const admin = {
     counts: "{sourced} sourced · {assumption} assumption · {missing} missing",
     back: "All countries",
     notSet: "Not set: the app uses the regional or Bangladesh fallback.",
+    baseFieldsReadOnly: "Bangladesh's figures come from the rates table: edit them under Rates. Here you can change only its exchange rate and product names.",
     fieldCount: "{count} fields",
     recentChanges: "Recent changes to {code}",
     group: {

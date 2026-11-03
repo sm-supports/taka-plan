@@ -973,7 +973,7 @@
       "status": "assumption",
       "sourceName": "Taka Plan (our assumption)",
       "sourceUrl": "docs/CONTRACTS-V2.md",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Table from Poland, the median of 51 sourced countries in Europe and Central Asia."
     },
     "support_ratio": {
@@ -1323,7 +1323,7 @@
       "status": "assumption",
       "sourceName": "Taka Plan (our assumption)",
       "sourceUrl": "docs/CONTRACTS-V2.md",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Table from Nicaragua, the median of 33 sourced countries in Latin America and the Caribbean."
     },
     "support_ratio": {
@@ -2485,7 +2485,7 @@
       "status": "assumption",
       "sourceName": "Taka Plan (our assumption)",
       "sourceUrl": "docs/CONTRACTS-V2.md",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-08",
       "note": "Table from Brunei, the median of 187 sourced countries worldwide."
     },
     "support_ratio": {

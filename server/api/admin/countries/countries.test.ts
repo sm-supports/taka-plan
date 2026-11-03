@@ -116,6 +116,14 @@ describe("admin country routes", () => {
     expect(all.changeLog[0]).toMatchObject({ key: "fdr_1y_rate", version: 2, note: "survey" });
   });
 
+  it("PUT a Bangladesh field is refused (409 BASE_COUNTRY_FIELDS): its figures come from the rates table", async () => {
+    const auth = await signIn();
+    const res = await putCountry(put("countries/BD", { field: "fdr_1y_rate", value: FDR }, auth), "BD");
+    expect(res.status).toBe(409);
+    expect(((await res.json()) as { error: { code: string } }).error.code).toBe("BASE_COUNTRY_FIELDS");
+    expect(await repo.getDraft("BD")).toBeNull();
+  });
+
   it("PUT validation: 400 for bad bodies, non-country keys and invalid figures; nothing reaches the store", async () => {
     const auth = await signIn();
     const cases: [unknown, string][] = [

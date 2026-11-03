@@ -292,7 +292,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org (life expectancy by current age, 2026)",
       "sourceUrl": "https://georank.org/life-expectancy/saint-kitts-and-nevis",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {

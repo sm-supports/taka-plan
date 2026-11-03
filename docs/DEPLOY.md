@@ -58,23 +58,26 @@ Every handler reads one country at most (Free plan: 10 ms CPU per Functions requ
 | `GET /api/countries/:code` | `{ version, status: "published", profile: CountryProfile }` (the `StoredCountry` shape that `lib/country/loader.ts` `parseCountryBody` reads); ETag `"<CODE>-v<n>"`, `public, max-age=300, stale-while-revalidate=86400`, `X-Country-Source: d1`. 304 on a matching `If-None-Match` (version lookup only), 404 JSON when the country has no published version (the client uses its static file), 400 for a bad code, 503 `no-store` when D1 fails | 1 for a 304, 2 for a 200 |
 | `GET /api/admin/countries` | `{ countries: CountrySummary[] }` (with `hasDraft`) | 1 |
 | `GET /api/admin/countries/:code` | `{ code, published, draft, changeLog }`; `?before=<id>` pages the log | 5 |
-| `PUT /api/admin/countries/:code` | body `{ field, value: CountryField, note? }` or `{ meta: CountryMetaPatch, note? }`; creates the draft when absent and returns it (`StoredCountry`). Cleaned before anything is written (`lib/server/country-clean.ts`): meta keys, instrument slots, institution keys and their properties must be known and typed; names ≤ 100 characters, sources and URLs ≤ 300, notes ≤ 1,000; `researchedAt` no later than tomorrow, `asOf` no later than a year ahead, both real dates; JSON figures keep only the keys of their shape. 400 `BAD_PATCH` / `INVALID_META` / `INVALID_FIELD` / `INVALID_DATE` / `BAD_NOTE`, 413 `PROFILE_TOO_LARGE` when the profile would pass 48 KB | about 8 |
+| `PUT /api/admin/countries/:code` | body `{ field, value: CountryField, note? }` or `{ meta: CountryMetaPatch, note? }`; creates the draft when absent and returns it (`StoredCountry`). Cleaned before anything is written (`lib/server/country-clean.ts`): meta keys, instrument slots, institution keys and their properties must be known and typed; names ≤ 100 characters, sources and URLs ≤ 300, notes ≤ 1,000; `researchedAt` no later than tomorrow, `asOf` no later than a year ahead, both real dates; JSON figures keep only the keys of their shape. 400 `BAD_PATCH` / `INVALID_META` / `INVALID_FIELD` / `INVALID_DATE` / `BAD_NOTE`, 413 `PROFILE_TOO_LARGE` when the profile would pass 48 KB; 409 `BASE_COUNTRY_FIELDS` for a field edit on Bangladesh (its figures are the rates table) | about 8 |
 | `POST /api/admin/countries/:code/publish` | body `{ note? }` → `{ version }`; 409 without a draft; 400 `INVALID_DRAFT` (nothing published) when the draft fails validation, the limits above, or any of the three sample plans throws under `withCountry` + `computePlan` | 6 |
 | `POST /api/admin/countries/:code/discard` | 204 | 2 |
 | `GET /api/admin/countries/:code/preview` | three sample plans, published vs draft (`withCountry` over the published rates), with `changedFields` and `changedMeta` | about 8 |
 
 There is no public `GET /api/countries` list (the client never used one); the list is admin-only at `GET /api/admin/countries`.
 
-### Remote migrations before deploying v2
+### Remote migrations
 
-Production D1 has applied only `0001_schema.sql` and `0002_seed_rates.sql`. **Apply these in this order before pushing the v2 code to `main`**, with `npm run db:migrate:remote` (wrangler applies pending files in file-name order and records each in `d1_migrations`):
+Production D1 has applied `0001` to `0006` (v2 went live on 3 Nov 2026). `npm run db:migrate:remote` applies whatever is pending, in file-name order, and records each file in `d1_migrations`; **apply new migrations before pushing code that needs them**. Check with `npx wrangler d1 migrations list taka-plan --remote -c config/wrangler.remote.toml` (nothing pending) and `/api/health` (`"db":"ok"`, `"ratesSource":"d1"`).
 
-1. `0003_rates_m2_m6_m7.sql`: M2/M6/M7 rate rows for the published and draft versions.
-2. `0004_countries.sql`: `country_versions`, `country_fields`, `change_log.country`. The rates repository filters `change_log` on `country IS NULL`, so the admin rates log fails without it.
-3. `0005_rates_plan_v2.sql`: plan v2 rate rows.
-4. `0006_seed_countries.sql`: the country seed (published v1 per country), once it is in the repository; until then the country editor lists nothing and clients use the static country files.
+| File | What it holds |
+| --- | --- |
+| `0001_schema.sql`, `0002_seed_rates.sql` | rates schema and the published v1 rates |
+| `0003_rates_m2_m6_m7.sql`, `0005_rates_plan_v2.sql` | M2/M6/M7 and plan v2 rate rows |
+| `0004_countries.sql` | `country_versions`, `country_fields`, `change_log.country` |
+| `0006_seed_countries.sql` | the country seed: published v1 for all 197 countries |
+| `0007_country_seed_fixes.sql` | corrections to that seed (dates) |
 
-0003 and 0005 are not applied yet, so they may still be regenerated (`npm run rates:gen-seed`) until the moment they run; after that they are frozen like 0002. Without 0003 and 0005 the published rates miss rows, `/api/rates` serves the bundled seed and `/api/health` says `"db":"invalid-snapshot"` with `"reason":"rates table missing rows: …"`. Check afterwards with `npx wrangler d1 migrations list taka-plan --remote -c config/wrangler.remote.toml` (nothing pending) and `/api/health` (`"db":"ok"`, `"ratesSource":"d1"`).
+**Applied migrations are frozen**: wrangler never re-runs a file it has recorded, so editing one changes local and CI databases but not production. The generators enforce this for the country seed (`npm run countries:gen-seed` refuses to overwrite `0006`; `--force` is only for a database that has not applied it). To change a country's figures, publish a new version from `/admin/countries`; Bangladesh's figures are the rates table, edited under Rates, and its country page only takes the exchange rate and product names. To correct the v1 seed itself, edit `packages/engine/src/data/countries/<CC>.json` and add a numbered migration making the same change in D1; `test/country-seed.test.ts` fails until the JSON and all migrations agree.
 
 ## Rolling back
 

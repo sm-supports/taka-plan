@@ -5,6 +5,7 @@
  * preview (playwright.config.ts); the offline tests need its service worker.
  */
 import { expect, test, type BrowserContext, type Page } from "@playwright/test";
+import { offeredLocales } from "./country-data";
 
 const KEY = "taka-plan.v1";
 const PROFILE = { age: 28, incomeType: "salaried", takeHome: 50000, essentials: 30000, dependents: [], hasDebt: false };
@@ -110,13 +111,17 @@ test.describe("switching country mid-plan", () => {
     await page.locator('button[data-country="US"]').first().click();
     await expect(page.getByTestId("switch-country")).toHaveCount(0);
     // English is the United States' main language: it comes first.
-    await expect(page.locator("button[data-locale]")).toHaveText(["English", "Español", "简体中文", "Français"]);
+    const offered = await offeredLocales(page.request, "US");
+    // The picker starts from the bundled index and switches to /data/countries/index.json when it loads.
+    await expect(page.locator("button[data-locale]")).toHaveCount(offered.length, { timeout: 15_000 });
+    expect(offered[0]).toBe("en");
+    await expect(page.locator("button[data-locale]").first()).toHaveText("English");
   });
 });
 
 test("a country without researched data says so under the header; Bangladesh does not", async ({ page }) => {
-  const missing = await page.request.get("/data/countries/BO.json");
-  test.skip(missing.ok(), "Bolivia has a data file now; pick another country without one");
+  // Every country has a data file now: make Bolivia's unreachable to exercise the fallback.
+  await page.route(/\/(data\/countries\/BO\.json|api\/countries\/BO)(\?.*)?$/, (route) => route.fulfill({ status: 404, body: "" }));
   await seed(page, v2({ country: "BO" }), { tp_locale: "en", tp_country: "BO" });
   await page.goto("/en/plan");
   const notice = page.getByTestId("country-notice");

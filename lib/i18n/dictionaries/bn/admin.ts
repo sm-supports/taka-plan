@@ -181,6 +181,7 @@ export const admin: Dictionary["admin"] = {
     counts: "সূত্রসহ {sourced} · অনুমান {assumption} · পাওয়া যায়নি {missing}",
     back: "সব দেশ",
     notSet: "দেওয়া নেই: অ্যাপ আঞ্চলিক বা বাংলাদেশের বিকল্প মান ব্যবহার করে।",
+    baseFieldsReadOnly: "বাংলাদেশের হিসাবগুলো রেট টেবিল থেকে আসে: সেগুলো রেট অংশে বদলান। এখানে শুধু বিনিময় হার আর পণ্যের নাম বদলানো যায়।",
     fieldCount: "{count}টি ঘর",
     recentChanges: "{code}-এর সাম্প্রতিক পরিবর্তন",
     group: {

@@ -5,6 +5,7 @@
  * country is the United States.
  */
 import { expect, test, type BrowserContext, type Page } from "@playwright/test";
+import { offeredLocales } from "./country-data";
 
 async function openPicker(page: Page, path = "/"): Promise<void> {
   await page.goto(path);
@@ -54,7 +55,12 @@ test("United States is suggested and offers English (its main language) first, t
   await openPicker(page);
   await expect(page.getByRole("region", { name: "Suggested" }).locator('button[data-country="US"]')).toBeVisible();
   await pickCountry(page, "US");
-  await expect(languageButtons(page)).toHaveText(["English", "Español", "简体中文", "Français"]);
+  const offered = await offeredLocales(page.request, "US");
+  // The picker starts from the bundled index and switches to /data/countries/index.json when it loads.
+  expect(offered.slice(0, 2)).toEqual(["en", "es"]);
+  await expect(languageButtons(page)).toHaveCount(offered.length, { timeout: 15_000 });
+  expect(await languageButtons(page).evaluateAll((els) => els.map((e) => e.getAttribute("data-locale")))).toEqual(offered);
+  await expect(languageButtons(page).first()).toHaveText("English");
   await page.getByRole("button", { name: "English", exact: true }).click();
   await expect(page).toHaveURL(/\/en\/start\/1$/);
 });

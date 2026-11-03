@@ -6,6 +6,7 @@
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
+  BASE_COUNTRY,
   COUNTRY_FIELDS,
   RATES_SEED,
   unitsFrom,
@@ -239,6 +240,12 @@ function CountryDetail({ code, onBack }: { code: CountryCode; onBack: () => void
 
       <MetaCard profile={profile} published={published} isDraft={data.draft !== null} onEdit={() => setEditingMeta(true)} />
 
+      {code === BASE_COUNTRY && (
+        <p role="note" className="rounded-xl bg-status-amber-soft px-4 py-3 text-sm">
+          {t("admin.countries.baseFieldsReadOnly")}
+        </p>
+      )}
+
       {GROUPS.map((g) => (
         <section key={g.id} className="flex flex-col gap-2" aria-labelledby={`group-${g.id}`}>
           <h2 id={`group-${g.id}`} className="text-lg font-bold">
@@ -251,7 +258,7 @@ function CountryDetail({ code, onBack }: { code: CountryCode; onBack: () => void
               const edited = data.draft !== null && stableJson(field ?? null) !== stableJson(before ?? null);
               return (
                 <li key={key}>
-                  <FieldCard fieldKey={key} field={field} before={edited ? (before ?? null) : undefined} currency={profile.currency.code} onEdit={() => setEditing(key)} />
+                  <FieldCard fieldKey={key} field={field} before={edited ? (before ?? null) : undefined} currency={profile.currency.code} onEdit={code === BASE_COUNTRY ? undefined : () => setEditing(key)} />
                 </li>
               );
             })}
@@ -492,7 +499,8 @@ function MetaCard({ profile, published, isDraft, onEdit }: { profile: CountryPro
   );
 }
 
-function FieldCard({ fieldKey, field, before, currency, onEdit }: { fieldKey: RateKey; field: CountryField | undefined; before: CountryField | null | undefined; currency: string; onEdit: () => void }) {
+/** Without `onEdit` the card is read-only (Bangladesh: its figures live in the rates admin). */
+function FieldCard({ fieldKey, field, before, currency, onEdit }: { fieldKey: RateKey; field: CountryField | undefined; before: CountryField | null | undefined; currency: string; onEdit?: () => void }) {
   const { t } = useT();
   const unit = UNITS[fieldKey];
   const edited = before !== undefined;
@@ -507,9 +515,11 @@ function FieldCard({ fieldKey, field, before, currency, onEdit }: { fieldKey: Ra
             {field ? fieldValue(field, unit, currency) : t("admin.countries.notSet")}
           </p>
         </div>
-        <Button variant="secondary" onClick={onEdit} aria-label={`${t("admin.action.edit")} ${fieldKey}`} className="shrink-0">
-          {t("admin.action.edit")}
-        </Button>
+        {onEdit && (
+          <Button variant="secondary" onClick={onEdit} aria-label={`${t("admin.action.edit")} ${fieldKey}`} className="shrink-0">
+            {t("admin.action.edit")}
+          </Button>
+        )}
       </div>
       {edited && <p className="text-sm text-status-amber">{t("admin.table.publishedWas", { value: before ? fieldValue(before, unit, currency) : "—" })}</p>}
       <div className="flex flex-wrap items-center gap-1.5">

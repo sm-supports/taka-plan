@@ -1,5 +1,5 @@
 // GET/PUT /api/admin/countries/:code: one country's published + draft profile, and draft edits.
-import { assertCountryProfile, isEngineError, type CountryField, type CountryProfile } from "@taka/engine";
+import { BASE_COUNTRY, assertCountryProfile, isEngineError, type CountryField, type CountryProfile } from "@taka/engine";
 import { assertProfileSize, cleanMetaPatch, cleanNote } from "@/lib/server/country-clean";
 import { CountryNotFoundError, applyMetaPatch, cleanCountryField, countryUnits, isCountryFieldKey, metaOf } from "@/lib/server/country-db";
 import { getCountryRepo } from "@/lib/server/env";
@@ -36,7 +36,8 @@ function invalid(code: string, e: unknown): HttpError {
 
 /**
  * PUT { field, value: CountryField, note } or { meta: CountryMetaPatch, note } → edits the draft
- * (creating it from the published version when absent) and returns that country's draft.
+ * (creating it from the published version when absent) and returns that country's draft. Field
+ * edits for Bangladesh are refused (409 BASE_COUNTRY_FIELDS): its figures come from the rates table.
  * The edit is cleaned (lib/server/country-clean.ts) and the profile it would produce is validated
  * and size-capped (48 KB, 413 PROFILE_TOO_LARGE) before anything is written, so a rejected edit
  * never creates a draft.
@@ -58,6 +59,9 @@ export async function PUT(req: Request, rawCode: string): Promise<Response> {
     let candidate: (base: CountryProfile) => CountryProfile;
     let apply: (version: number) => Promise<unknown>;
     if (hasField) {
+      // withCountry never reads Bangladesh's fields (its figures are the rates table), so an edit here
+      // would publish and change nothing. Its meta (exchange rate, product names) does apply.
+      if (code === BASE_COUNTRY) throw new HttpError(409, "BASE_COUNTRY_FIELDS", "Bangladesh's figures are edited in the rates admin, not here");
       if (!isCountryFieldKey(body.field)) throw new HttpError(400, "BAD_FIELD", `"${String(body.field)}" is not a country field`);
       const field = body.field;
       let value: CountryField;
