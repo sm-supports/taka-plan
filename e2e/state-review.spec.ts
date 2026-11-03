@@ -110,7 +110,7 @@ test.describe("switching country mid-plan", () => {
     await page.locator('button[data-country="US"]').first().click();
     await expect(page.getByTestId("switch-country")).toHaveCount(0);
     // English is the United States' main language: it comes first.
-    await expect(page.locator("button[data-locale]")).toHaveText(["English", "Español"]);
+    await expect(page.locator("button[data-locale]")).toHaveText(["English", "Español", "简体中文", "Français"]);
   });
 });
 

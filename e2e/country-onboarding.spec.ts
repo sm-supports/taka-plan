@@ -50,11 +50,11 @@ test("India offers Hindi (and Bangla, Urdu) plus English", async ({ page }) => {
   await expect(page.locator("html")).toHaveAttribute("lang", "hi-IN");
 });
 
-test("United States is suggested and offers English (its main language) first, then Spanish", async ({ page }) => {
+test("United States is suggested and offers English (its main language) first, then its other supported languages", async ({ page }) => {
   await openPicker(page);
   await expect(page.getByRole("region", { name: "Suggested" }).locator('button[data-country="US"]')).toBeVisible();
   await pickCountry(page, "US");
-  await expect(languageButtons(page)).toHaveText(["English", "Español"]);
+  await expect(languageButtons(page)).toHaveText(["English", "Español", "简体中文", "Français"]);
   await page.getByRole("button", { name: "English", exact: true }).click();
   await expect(page).toHaveURL(/\/en\/start\/1$/);
 });
