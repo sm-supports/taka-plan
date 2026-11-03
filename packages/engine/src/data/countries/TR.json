@@ -58,12 +58,12 @@
       "note": "No official figure for ordinary (demand) savings account interest was found; the CBRT weekly deposit rate statistics load only in its EVDS data system, which could not be read."
     },
     "fdr_3m_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The CBRT publishes weekly weighted average TL deposit rates by maturity (Mevduat Faiz Oranları, Haftalık Akım), but the figures are served only through EVDS charts that could not be read in this research."
+      "value": 0.4322,
+      "status": "sourced",
+      "sourceName": "Endeks24, citing CBRT weekly deposit rate statistics (TL deposits up to 3 months, week of 16 October 2026)",
+      "sourceUrl": "https://www.endeks24.com/tl-mevduat-faizi-yuzde-4288e-indi-dusus-12-haftaya-uzandi",
+      "asOf": "2026-10-16",
+      "note": "Weighted average rate on new TL deposits with maturity up to 3 months, 43.22% in the week of 16 October 2026 (43.20% a week earlier); secondary source (news report of 22 October 2026) because the CBRT EVDS tables could not be read. The 22 October policy cut to 36% is not yet reflected."
     },
     "fdr_1y_rate": {
       "value": null,
@@ -82,12 +82,12 @@
       "note": "Some banks sell accumulating (birikimli) deposit accounts, but no official or industry-wide rate for a monthly recurring deposit was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.576,
+      "value": 0.4288,
       "status": "sourced",
-      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
-      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=TR",
-      "asOf": "2025-12-31",
-      "note": "2025 annual average, when the policy rate was 38-46%; with the policy rate now 36%, current deposit rates are lower. A fresher CBRT figure could not be read."
+      "sourceName": "Endeks24, citing CBRT weekly weighted average TL deposit rate (week of 16 October 2026)",
+      "sourceUrl": "https://www.endeks24.com/tl-mevduat-faizi-yuzde-4288e-indi-dusus-12-haftaya-uzandi",
+      "asOf": "2026-10-16",
+      "note": "Weighted average rate on all new TL deposits, 42.88% in the week of 16 October 2026, down 0.06 points on the week and falling for 12 weeks; secondary source because CBRT EVDS could not be read. World Bank 2025 annual average (FR.INR.DPST) 57.6%."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -122,12 +122,12 @@
       "note": "Market yield on 30 October 2026 (up about 2.8 points that session); secondary source."
     },
     "tax_bank_interest": {
-      "value": 0.1,
+      "value": 0.175,
       "status": "sourced",
-      "sourceName": "PwC Worldwide Tax Summaries, Türkiye, Individual, Income determination (last reviewed 9 September 2026)",
-      "sourceUrl": "https://taxsummaries.pwc.com/turkey/individual/income-determination",
-      "asOf": "2026-09-09",
-      "note": "Final withholding on TL deposit interest: 10% for call accounts and deposits up to 6 months, 7.5% up to 1 year, 5% over 1 year (Decree 2012/4116 as cited by PwC). The government has changed these rates by decree several times, so check the current decree."
+      "sourceName": "Official Gazette (Resmî Gazete) No. 33286, Presidential Decision 11444 extending the TL deposit withholding rates of Decision 10041 to 31 December 2026",
+      "sourceUrl": "https://www.resmigazete.gov.tr/eskiler/2026/06/20260620-4.pdf",
+      "asOf": "2026-06-20",
+      "note": "Final withholding on TL deposit interest: 17.5% for demand deposits and terms up to 6 months, 15% up to 1 year, 10% over 1 year (set by Decision 10041 of 9 July 2025 and extended to 31 December 2026 by Decision 11444). The gazette PDF is not machine-readable, so the rates were read from published summaries of the decision; PwC Tax Summaries still shows the older 10%/7.5%/5% rates."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -207,7 +207,7 @@
       "sourceName": "Inflation projection 18%; IMF path to 15% inflation by 2030",
       "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
       "asOf": "2026-10-31",
-      "note": "Low case: after the 10% withholding, deposits and bonds earn slightly less than inflation, as often happened in 2021-2023."
+      "note": "Low case: after the 15-17.5% withholding, deposits and bonds earn slightly less than inflation, as often happened in 2021-2023."
     },
     "fixed_income_return_base": {
       "value": 0.19,
@@ -215,7 +215,7 @@
       "sourceName": "CBRT policy rate 36%; 10-year bond 35.9%; inflation projection 18%",
       "sourceUrl": "https://www.tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Core+Functions/Monetary+Policy/Central+Bank+Interest+Rates/1+Week+Repo",
       "asOf": "2026-10-31",
-      "note": "Base case: after-tax safe rates settle about 1 point above the 18% long-run inflation assumption, far below today's 30%+ as disinflation continues."
+      "note": "Base case: after-tax safe rates settle about 1 point above the 18% long-run inflation assumption, far below today's after-tax 3-month deposit rate of about 35.7% (43.2% less 17.5% withholding) as disinflation continues."
     },
     "fixed_income_return_high": {
       "value": 0.25,
@@ -274,12 +274,12 @@
       "note": "No health CPI figure could be read; private medical costs are set slightly above the 18% general inflation assumption because they track imported equipment and the exchange rate."
     },
     "goal_inflation_education": {
-      "value": 0.2,
+      "value": 0.23,
       "status": "assumption",
-      "sourceName": "Inflation projection 18%; TurkStat headline CPI 29.7% (Sep 2026, via Trading Economics)",
-      "sourceUrl": "https://tradingeconomics.com/turkey/inflation-cpi",
+      "sourceName": "TurkStat education CPI +48.6% year on year in September 2026 (Finance Minister statement via Forbes Türkiye); inflation projection 18%",
+      "sourceUrl": "https://www.forbes.com.tr/ekonomi/tuik-eylul-enflasyonunu-acikladi-eylul-2026-tuketici-fiyat-endeksi-tuik",
       "asOf": "2026-10-31",
-      "note": "No education CPI figure could be read; private school and university fees are assumed to rise about 2 points faster than general prices."
+      "note": "Education prices rose 48.6% in the year to September 2026, far above headline CPI of 29.7%, so education costs are planned 5 points above the 18% general inflation assumption."
     },
     "life_expectancy": {
       "value": 77.42,
@@ -368,16 +368,16 @@
     "retirement_return_low": {
       "value": 0.15,
       "status": "assumption",
-      "sourceName": "Inflation projection 18%; 10% withholding on deposit interest (PwC)",
-      "sourceUrl": "https://taxsummaries.pwc.com/turkey/individual/income-determination",
+      "sourceName": "Inflation projection 18%; 17.5% withholding on short TL deposit interest (Official Gazette Decision 11444)",
+      "sourceUrl": "https://www.resmigazete.gov.tr/eskiler/2026/06/20260620-4.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: a retiree's deposits earn less than inflation after tax."
     },
     "retirement_return_base": {
       "value": 0.18,
       "status": "assumption",
-      "sourceName": "CBRT policy rate 36%; 10-year bond 35.9% (about 32% after 10% withholding); inflation projection 18%",
-      "sourceUrl": "https://www.tcmb.gov.tr/wps/wcm/connect/EN/TCMB+EN/Main+Menu/Core+Functions/Monetary+Policy/Central+Bank+Interest+Rates/1+Week+Repo",
+      "sourceName": "CBRT weekly 3-month TL deposit rate 43.2% (about 35.7% after 17.5% withholding); 10-year bond 35.9%; inflation projection 18%",
+      "sourceUrl": "https://www.endeks24.com/tl-mevduat-faizi-yuzde-4288e-indi-dusus-12-haftaya-uzandi",
       "asOf": "2026-10-31",
       "note": "Base case: safe after-tax returns about equal to long-run inflation, well below today's after-tax deposit and bond rates as rates fall with inflation."
     },
@@ -414,12 +414,12 @@
       "note": "High case for a growth-leaning balanced mix."
     },
     "old_age_allowance_monthly": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The needs-based old-age pension (65 yaş aylığı, Law 2022) pays 4,387 times the civil-servant salary coefficient each month; the coefficient in force for July-December 2026 was not found, so the TRY amount is not given."
+      "value": 7257,
+      "status": "sourced",
+      "sourceName": "Habertürk, 65 yaş aylığı (needs-based old-age pension) from July 2026",
+      "sourceUrl": "https://www.haberturk.com/65-yas-ayligi-2026-temmuz-zammi-yaslilik-maasi-ne-kadar-kac-tl-oldu-3895827",
+      "asOf": "2026-07-01",
+      "note": "About TRY 7,257 a month for July-December 2026 (6,393 in January-June), raised 13.52% with the civil-servant salary coefficient under Law No. 2022; means-tested, paid by the Ministry of Family and Social Services. Secondary source (news report of 4 July 2026); other reports give 7,256.71."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -471,7 +471,7 @@
       "available": true,
       "localName": "Vadesiz mevduat hesabı",
       "localNameEn": "Demand deposit account",
-      "note": "Demand accounts pay little or no interest; most savers use short term deposits."
+      "note": "Demand accounts pay little or no interest and their interest is taxed at 17.5%; most savers use short term deposits."
     },
     "fdr_3m": {
       "available": true,

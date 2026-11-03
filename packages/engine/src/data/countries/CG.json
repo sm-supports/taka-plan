@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "code": "CG",
+  "iso3": "COG",
+  "nameEn": "Congo",
+  "nameNative": "République du Congo",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "fr",
+    "ln",
+    "ktu"
+  ],
+  "currency": {
+    "code": "XAF",
+    "symbol": "FCFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 587.14,
+      "status": "sourced",
+      "sourceName": "BCEAO reference rate of the US dollar against the CFA franc, 30 October 2026",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-30",
+      "note": "The central African franc (XAF) and west African franc (XOF) share the same fixed parity of 655.957 per euro, so the dollar rate is identical; the BEAC site showed buy 585.95 and sell 590.99 for the same date. World Bank 2025 average 581.9."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.049,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the national statistics office of the Republic of Congo, CPI September 2026",
+      "sourceUrl": "https://tradingeconomics.com/republic-of-the-congo/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 4.9% year on year in September 2026 (4.4% in August); secondary source because the INS Congo site loads its indicators by script. World Bank 2025 average 2.4%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CEMAC convergence norm of 3% inflation; BEAC projects 2.4% average CEMAC inflation for 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/communiqué-de-presse-CPM-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "The franc is pegged to the euro and BEAC targets the 3% CEMAC ceiling; Congo's recent average is close to it, so 3% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Bank of Central African States (BEAC), Monetary Policy Committee, 29 June 2026: tender rate (TIAO)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/communiqué-de-presse-CPM-1.pdf",
+      "asOf": "2026-06-29",
+      "note": "TIAO cut from 4.75% to 4.50% on 29 June 2026; marginal lending facility 5.75%; deposit facility 0%. No later decision was listed on the BEAC site by October 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current published savings-account rate was found for Congo; BEAC's bank-conditions statistics on its site stop in 2017-2020."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found for Congo."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found for Congo."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Republic of Congo",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CG",
+      "asOf": "2016-12-31",
+      "note": "2.45% in 2016, the latest year in the World Bank series; far older than 2025 and probably the CEMAC regulated minimum savings rate of that time, so treat with care."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current government savings certificate or retail savings bond for individuals was confirmed."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0642,
+      "status": "sourced",
+      "sourceName": "BEAC, yield curve of Congolese government securities, July 2026 (3 months)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf",
+      "asOf": "2026-07-31",
+      "note": "BEAC estimated yield curve: 3 months 6.42%, 6 months 7.73%, 1 year 9.59%; bills (BTA) are auctioned through primary-dealer banks on the CEMAC market."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1304,
+      "status": "sourced",
+      "sourceName": "BEAC, yield curve of Congolese government securities, July 2026 (5 years)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf",
+      "asOf": "2026-07-31",
+      "note": "Estimated 5-year yield 13.04% on the BEAC curve for Congo, reflecting high sovereign risk."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1343,
+      "status": "sourced",
+      "sourceName": "BEAC, yield curve of Congolese government securities, July 2026 (10 years)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf",
+      "asOf": "2026-07-31",
+      "note": "Estimated 10-year yield 13.43% on the BEAC curve for Congo; few long bonds are actually issued."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Republic of Congo, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/republic-of-congo/individual/income-determination",
+      "asOf": "2026-08-07",
+      "note": "Interest from most sources is taxable; a Congolese resident payer withholds 20% at payment. The page does not say whether this is final or whether bank deposit interest has a different rate."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was confirmed, so no tax rule for it was found."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CEMAC has a regional deposit guarantee fund (FOGADAC), but its cover limit per depositor could not be read from an official source."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate for Congo was found."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No active local equity market (no Congolese listing found on the regional CEMAC exchange); franc fixed to the euro",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Equity means a global index fund in euro terms (equal to franc terms under the peg); low case is a weak decade."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Global equities in euro terms; assumed after-tax safe rate 3.5%",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Base case for a global index fund in euro terms, kept within 3 points of the assumed safe rate because there is no local index."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equities in euro terms",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities match their long-run record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 655.957 per euro",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold prices in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Long-run gold trend in euro terms; franc fixed to the euro",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run gold trend of about 4% a year, with no currency gain under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold in euro terms",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 2.45% (2016); 20% tax on interest (PwC)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CG",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits at about the regulated minimum less tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BEAC yield curve for Congo (3 months 6.42%) and bank deposit rates; 20% tax on interest",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits after the 20% tax; government bills pay more but carry sovereign risk and are reached only through banks."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BEAC yield curve for Congo, 1 year 9.59%, less 20% tax",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: short government bills held through a bank, after tax and allowing for default risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim settlement ratio for Congo was found from the regional supervisor (CIMA) or the national insurance directorate."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published individual term-life premium rates per XAF 1,000 of cover were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.2797,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Republic of Congo",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CG",
+      "asOf": "2023-12-31",
+      "note": "28.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 3%; World Bank CPI",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=CG",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI was found; medical costs are planned 2 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 3%; World Bank CPI",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=CG",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was found; school costs are planned 1.5 points above general inflation."
+    },
+    "life_expectancy": {
+      "value": 66.001,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Republic of Congo",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CG",
+      "asOf": "2024-12-31",
+      "note": "66.0 years in 2024 (men 64.3, women 67.7); UN WPP 2024 gives 66.4 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.6,
+            "men": 15.7,
+            "women": 17.4
+          },
+          {
+            "age": 65,
+            "total": 13.3,
+            "men": 12.5,
+            "women": 14.0
+          },
+          {
+            "age": 70,
+            "total": 10.3,
+            "men": 9.8,
+            "women": 10.8
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.7,
+            "women": 6.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/congo/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the both-sexes figure at 65 is published, the others are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 18.6
+          },
+          {
+            "year": 2040,
+            "value": 13.3
+          },
+          {
+            "year": 2065,
+            "value": 10.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/congo/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 5.37 (2025, World Bank), 7.5 (2040) and 9.9 (2065, populationpyramid.net/congo/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age of the Caisse Nationale de Sécurité Sociale (CNSS) could not be read: its pensions page loads by script and no other official text was reached."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil-service retirement age could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Deposit rates and 20% tax on interest (PwC)",
+      "sourceUrl": "https://taxsummaries.pwc.com/republic-of-congo/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank deposit rates and BEAC yield curve for Congo, less 20% tax",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case kept at or below the after-tax term-deposit rate, well below after-tax bill yields that carry sovereign risk."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BEAC yield curve for Congo (6 months 7.73%) less 20% tax",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: short government bills through a bank, after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Safe rate assumption; global equity low 2%",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits with weak equity and gold years."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Safe rate 3.5%, global equity base 6%, gold base 4%",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, gold and global equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Global equity high 9%; gold high 8%",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on retirement or end-of-service indemnity could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A contributory pension is run by the Caisse Nationale de Sécurité Sociale (CNSS; employee share 4% of gross salary, PwC Tax Summaries 2026), but its pension age and indexation rules could not be read (pensions page loads by script)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No current government savings certificate or retail savings bond for individuals was confirmed."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bon du Trésor assimilable (BTA, 13 semaines)",
+      "localNameEn": "Treasury bill (13 weeks)",
+      "note": "Auctioned on the regional CEMAC market through primary-dealer banks; individuals can only buy through a bank.",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligation du Trésor assimilable (OTA, 5 ans)",
+      "localNameEn": "Treasury bond (5 years)",
+      "note": "Auctioned on the regional CEMAC market through primary-dealer banks.",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Courbe-des-taux-de-rendement-des-titres-publics-Congolais-juillet-26.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The 10-year point is an estimate on the BEAC yield curve; regular 10-year issues were not found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No Congolese company is actively traded on the regional exchange and no locally sold equity fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mostly as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Central African States (Banque des États de l'Afrique Centrale, BEAC)",
+      "url": "https://www.beac.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Inter-African Conference on Insurance Markets (CIMA), regional insurance supervisor",
+      "url": "https://cima-afrique.org/"
+    },
+    "insuranceComplaints": {
+      "name": "CIMA, policyholder requests and complaints",
+      "url": "https://cima-afrique.org/faites-votre-requetes-ici-2/"
+    },
+    "pensionScheme": {
+      "name": "National Social Security Fund (Caisse Nationale de Sécurité Sociale, CNSS)",
+      "url": "https://www.cnss.cg/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Institute of Statistics (Institut National de la Statistique, INS Congo)",
+      "url": "https://ins-congo.cg/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

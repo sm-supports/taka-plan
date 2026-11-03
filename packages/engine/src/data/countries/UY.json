@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "UY",
+  "iso3": "URY",
+  "nameEn": "Uruguay",
+  "nameNative": "Uruguay",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es"
+  ],
+  "currency": {
+    "code": "UYU",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 40.2083,
+      "status": "sourced",
+      "sourceName": "USD/UYU exchange rate (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/currency",
+      "asOf": "2026-10-30",
+      "note": "UYU 40.21 per US dollar on 30 October 2026, +0.9% in a year; World Bank 2025 average 41.19. The Banco Central del Uruguay website could not be reached (certificate error and refused connection), so a secondary source is used."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0468,
+      "status": "sourced",
+      "sourceName": "Instituto Nacional de Estadística (INE), Índice de Precios del Consumo, variación 12 meses, September 2026",
+      "sourceUrl": "https://www5.ine.gub.uy/documents/Estad%C3%ADsticasecon%C3%B3micas/SERIES%20Y%20OTROS/IPC/Base%20Octubre%202022=100/IPC%20gral%20y%20variaciones_base%202022.xlsx",
+      "asOf": "2026-09-30",
+      "note": "CPI rose 4.68% in the 12 months to September 2026 (4.55% in August), shown on the INE home page with this data file; October CPI is due on 5 November 2026. World Bank 2025 average 4.65%."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Banco Central del Uruguay inflation target 4.5% over the policy horizon (as reported by Trading Economics); CPI 4.68% in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "The BCU targets 4.5% and inflation has been close to it since 2024, so planning uses the target."
+    },
+    "policy_rate": {
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "Banco Central del Uruguay, Tasa de Política Monetaria, decision of 8 October 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/interest-rate",
+      "asOf": "2026-10-08",
+      "note": "Raised 25 basis points to 6.00% on 8 October 2026 from 5.75%. The Banco Central del Uruguay website could not be reached (certificate error and refused connection), so a secondary source is used."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical savings-account rate was found; The Banco Central del Uruguay website could not be reached (certificate error and refused connection), where deposit rates by type are published."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average 3-month term deposit rate could be read; The Banco Central del Uruguay website could not be reached (certificate error and refused connection)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average 1-year term deposit rate could be read; The Banco Central del Uruguay website could not be reached (certificate error and refused connection)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.073,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=UY",
+      "asOf": "2025-12-31",
+      "note": "Average deposit rate 7.30% in 2025, when the policy rate was higher (about 9%); current rates are likely lower after cuts to 5.75-6.00% in 2026. The Banco Central del Uruguay website could not be reached (certificate error and refused connection)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Uruguay has no separate government savings certificate for individuals; government peso notes (Notas del Tesoro) are sold at auction to institutions and reach individuals through banks and brokers."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Short-term peso bills are Banco Central del Uruguay monetary regulation bills (Letras de Regulación Monetaria); their yields could not be read because the Banco Central del Uruguay website could not be reached (certificate error and refused connection)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0718,
+      "status": "sourced",
+      "sourceName": "Ministerio de Economía y Finanzas, Unidad de Gestión de Deuda, monthly report of domestic Treasury note issues, September 2026: Serie 13 nominal peso note maturing 2030",
+      "sourceUrl": "https://deuda.mef.gub.uy/innovaportal/file/32414/1/reporte-mensual-de-emisiones-de-notas-de-tesoreria-domesticas---setiembre-2026.pdf",
+      "asOf": "2026-09-30",
+      "note": "Cut-off yield 7.18% (coupon 8.125%) at the September 2026 auction of the nominal peso note due 2030, about 4 years; the 2029 peso note was sold at 6.84% on 27 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year nominal peso government yield was found; recent domestic auctions in nominal pesos were for notes due 2029-2030, and longer issues are in indexed units (UI, UP)."
+    },
+    "tax_bank_interest": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Uruguay, Individual, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/uruguay/individual/taxes-on-personal-income",
+      "asOf": "2026-09-02",
+      "note": "Capital investment income, including interest, is taxed at a flat 12% (IRPF) with some exceptions not detailed on the page (page reviewed 2 September 2026); lower rates are understood to apply to some longer-term peso deposits."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; the tax treatment of interest on public debt held by individuals could not be confirmed from PwC Tax Summaries."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Uruguay has a deposit guarantee run by the Corporación de Protección del Ahorro Bancario (COPAB), but its website could not be reached (certificate error), so the cover limit could not be confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Uruguay sets usury ceilings from Banco Central del Uruguay average rates, but the Banco Central del Uruguay website could not be reached (certificate error and refused connection), so the current ceiling could not be read."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No meaningful local stock market; global equities in peso terms; peso about 40.2 per US dollar, little changed in a year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global shares and a stable or stronger peso leave equities below peso fixed income."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Global equity index in peso terms; government peso notes 6.84-7.18% (MEF auctions), 12% tax on interest",
+      "sourceUrl": "https://deuda.mef.gub.uy/32411/14/areas/resultado-de-la-licitacion-de-la-serie-14-en-pesos-nominales-uyu.html",
+      "asOf": "2026-10-31",
+      "note": "Uruguay's exchange lists very few shares, so equity is a global index fund in pesos: about 2 points over the after-tax peso note yield, within safe rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Global equity long-run record plus modest peso depreciation",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: global shares repeat their long-run record and the peso weakens gradually."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 October 2026, down 3% in a year and below its January 2026 peak (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stays flat in dollars and the peso holds steady."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Gold USD price trend (Trading Economics); BCU 4.5% inflation target implies slow peso depreciation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold tracks long-run dollar inflation plus a little, and the peso loses about 1.5-2% a year against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold resumes its 2020s uptrend and the peso weakens."
+    },
+    "fixed_income_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Policy rate 6.00% (Trading Economics); 12% tax on interest (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: short peso deposits or bills near the policy rate, after 12% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Government peso note due 2029 at 6.84% (MEF auction 27 October 2026), 12% tax",
+      "sourceUrl": "https://deuda.mef.gub.uy/32411/14/areas/resultado-de-la-licitacion-de-la-serie-14-en-pesos-nominales-uyu.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: 6.84% less 12% tax is about 6.0%; planning uses 5.5% as typical deposits pay a little less than government notes."
+    },
+    "fixed_income_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Government peso note due 2030 at 7.18% (MEF auction September 2026)",
+      "sourceUrl": "https://deuda.mef.gub.uy/innovaportal/file/32414/1/reporte-mensual-de-emisiones-de-notas-de-tesoreria-domesticas---setiembre-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in four-year government peso notes at today's yield."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found; the insurance supervisor's (Banco Central del Uruguay) website could not be reached."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Uruguay, but no regulator or other non-company source with indicative premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a hospital stay was found; most people are covered through FONASA in the National Integrated Health System, with copayments set by each provider."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.171,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=UY",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 17.1% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "INE CPI September 2026: health division +6.72% year on year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health prices are rising about 2 points faster than the 4.68% CPI, so planning uses 6%."
+    },
+    "goal_inflation_education": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "INE CPI September 2026: education division +7.29% year on year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education was the fastest-rising CPI division in the year to September 2026 (7.3%), so planning uses 6.5%."
+    },
+    "life_expectancy": {
+      "value": 78.287,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=UY",
+      "asOf": "2024-12-31",
+      "note": "Men 74.4, women 82.0 (2024). UN WPP gives 78.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.9,
+            "men": 19.9,
+            "women": 25.6
+          },
+          {
+            "age": 65,
+            "total": 19.2,
+            "men": 16.3,
+            "women": 21.5
+          },
+          {
+            "age": 70,
+            "total": 15.7,
+            "men": 13.1,
+            "women": 17.6
+          },
+          {
+            "age": 80,
+            "total": 9.7,
+            "men": 7.7,
+            "women": 10.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/uruguay",
+      "asOf": "2026-07-01",
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP): total age reached minus current age."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 4.04
+          },
+          {
+            "year": 2040,
+            "value": 3.18
+          },
+          {
+            "year": 2065,
+            "value": 1.94
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/uruguay/2065/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 24.7 in 2025 (World Bank), 31.4 in 2040 and 51.6 in 2065 (UN WPP medium variant)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Banco de Previsión Social (BPS), Jubilación normal por el Nuevo Sistema Previsional Común (Ley 20.130)",
+      "sourceUrl": "https://www.bps.gub.uy/20533/jubilacion-normal-por-el-nuevo-sistema-previsional-comun.html",
+      "asOf": "2026-10-31",
+      "note": "Under the 2023 reform the minimum age with 30 years of work rises from 61 (born 1973) to 64 (born 1976) and 65 for people born in 1977 or later; with fewer years, retirement is possible from 65 with 25 years up to 70 with 15 years. The old regime allowed 60."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Banco de Previsión Social (BPS), Jubilación normal por el Nuevo Sistema Previsional Común (Ley 20.130)",
+      "sourceUrl": "https://www.bps.gub.uy/20533/jubilacion-normal-por-el-nuevo-sistema-previsional-comun.html",
+      "asOf": "2026-10-31",
+      "note": "Public employees in the civil affiliation are in the same common system, so the same 65 applies to those born in 1977 or later; military, police, bank and professional schemes have their own funds."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Policy rate 6.00%; 12% tax on interest",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: short peso deposits after tax, below the policy rate."
+    },
+    "retirement_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Government peso note due 2029 at 6.84% less 12% tax = 6.0% (MEF auction 27 October 2026)",
+      "sourceUrl": "https://deuda.mef.gub.uy/32411/14/areas/resultado-de-la-licitacion-de-la-serie-14-en-pesos-nominales-uyu.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly peso deposits and short government notes, kept well below the 6.0% after-tax note yield."
+    },
+    "retirement_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Government peso note due 2030 at 7.18% (MEF auction September 2026)",
+      "sourceUrl": "https://deuda.mef.gub.uy/innovaportal/file/32414/1/reporte-mensual-de-emisiones-de-notas-de-tesoreria-domesticas---setiembre-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of medium-term government peso notes."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Fixed income low 4.5%; equity low 3%",
+      "sourceUrl": "https://tradingeconomics.com/uruguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of peso fixed income and global equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Fixed income base 5.5%; equity base 8%",
+      "sourceUrl": "https://deuda.mef.gub.uy/32411/14/areas/resultado-de-la-licitacion-de-la-serie-14-en-pesos-nominales-uyu.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half safe peso fixed income and half global equity."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Equity high 11%; peso notes 7.2%",
+      "sourceUrl": "https://deuda.mef.gub.uy/innovaportal/file/32414/1/reporte-mensual-de-emisiones-de-notas-de-tesoreria-domesticas---setiembre-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: equities do well and peso yields stay near 7%."
+    },
+    "old_age_allowance_monthly": {
+      "value": 18575,
+      "status": "sourced",
+      "sourceName": "Banco de Previsión Social (BPS), montos y aumentos de pasividades: Pensión por vejez e invalidez",
+      "sourceUrl": "https://www.bps.gub.uy/6182/montos-y-aumentos-de-pasividades.html",
+      "asOf": "2026-01-01",
+      "note": "UYU 18,575 a month in 2026 (pensions rose 5.97% in the 2026 general increase); reduced by half of the person's own income and by part of relatives' income above set limits."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 70,
+        "womenAge": 70,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Banco de Previsión Social (BPS), Pensión por vejez",
+      "sourceUrl": "https://www.bps.gub.uy/20540/pension-por-vejez.html",
+      "asOf": "2025-12-03",
+      "note": "Age 70 or over (65 with at least 7 years of unpaid family care), 10 years' residence in the last 20, no other retirement pension, and lacking resources: own income and that of legally obligated relatives is tested. People aged 65-69 in extreme poverty may get Asistencia a la Vejez first."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Dismissal severance (indemnización por despido) exists for private employees, but the current legal text could not be confirmed (IMPO shows the 1944 Ley 10.489 rule of one month's pay per year, up to six, as amended later); no gratuity on retirement was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Banco de Previsión Social (BPS), Jubilación normal por el Nuevo Sistema Previsional Común (Ley 20.130)",
+      "sourceUrl": "https://www.bps.gub.uy/20533/jubilacion-normal-por-el-nuevo-sistema-previsional-comun.html",
+      "asOf": "2026-10-31",
+      "note": "Compulsory for private and public employees; pension from 65 (born 1977 or later) with 30 years, based on the best 20 years' wages; pay-as-you-go BPS pension plus a mandatory individual account (AFAP). Pensions in payment get a general increase each year (5.97% in 2026, BPS). Normal pensions under the new system start in 2033."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Caja de ahorro",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo (3 meses)",
+      "localNameEn": "Fixed-term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo (1 año)",
+      "localNameEn": "Fixed-term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail savings certificate; individuals buy government notes through banks and brokers."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letras de Regulación Monetaria",
+      "localNameEn": "Central bank monetary regulation bills",
+      "note": "Short-term peso bills are issued by the Banco Central del Uruguay; the Treasury itself issues notes of two years and longer."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Notas del Tesoro en pesos",
+      "localNameEn": "Treasury notes in pesos",
+      "note": "Auctioned by the Ministry of Economy and Finance in nominal pesos, UI and UP.",
+      "sourceUrl": "https://deuda.mef.gub.uy/29186/14/areas/notas-del-tesoro.html"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Notas del Tesoro y Bonos Globales",
+      "localNameEn": "Treasury notes and global bonds",
+      "note": "Long maturities are issued mainly in inflation-indexed units (UI) and wage-indexed units (UP).",
+      "sourceUrl": "https://deuda.mef.gub.uy/29186/14/areas/notas-del-tesoro.html"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondos de inversión",
+      "localNameEn": "Investment funds",
+      "note": "The local stock market is very small; equity exposure is mostly through foreign funds bought via securities brokers."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro (lingotes y monedas)",
+      "localNameEn": "Gold (bars and coins)",
+      "note": "No legal restriction on owning gold was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central del Uruguay (BCU)",
+      "url": "https://www.bcu.gub.uy/"
+    },
+    "insuranceRegulator": {
+      "name": "Banco Central del Uruguay, Superintendencia de Servicios Financieros",
+      "url": "https://www.bcu.gub.uy/",
+      "note": "The BCU's Financial Services Superintendency supervises insurers; the site could not be reached during research."
+    },
+    "insuranceComplaints": {
+      "name": "Banco Central del Uruguay, Superintendencia de Servicios Financieros (consumer complaints)",
+      "url": "https://www.bcu.gub.uy/",
+      "note": "Complaints about insurers go first to the insurer and then to the BCU's Financial Services Superintendency."
+    },
+    "pensionScheme": {
+      "name": "Banco de Previsión Social (BPS), jubilación",
+      "url": "https://www.bps.gub.uy/3498/jubilaciones.html"
+    },
+    "oldAgeAllowance": {
+      "name": "Banco de Previsión Social (BPS), Pensión por vejez",
+      "url": "https://www.bps.gub.uy/20540/pension-por-vejez.html"
+    },
+    "publicHealthCover": {
+      "name": "Ministerio de Salud Pública, Sistema Nacional Integrado de Salud (FONASA)",
+      "url": "https://www.gub.uy/ministerio-salud-publica/"
+    },
+    "depositInsurance": {
+      "name": "Corporación de Protección del Ahorro Bancario (COPAB)",
+      "url": "https://www.copab.org.uy/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística (INE)",
+      "url": "https://www.gub.uy/instituto-nacional-estadistica/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

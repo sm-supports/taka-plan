@@ -138,12 +138,12 @@
       "note": "No government savings certificate exists. PwC lists an exemption for interest from securities issued by certain state bodies, which is understood to cover OVDP, but the exact Tax Code provision was not read."
     },
     "deposit_insurance_limit": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The Deposit Guarantee Fund (fg.gov.ua) and the law on the deposit guarantee system (zakon.rada.gov.ua) could not be opened, so the current cover per depositor (and any full cover during martial law) was not confirmed."
+      "value": 600000,
+      "status": "sourced",
+      "sourceName": "Minfin.com.ua news on the Deposit Guarantee Fund guarantee (deposit data at 1 April 2026)",
+      "sourceUrl": "https://minfin.com.ua/ua/2026/04/23/172505366/",
+      "asOf": "2026-04-01",
+      "note": "Individuals' deposits (including sole proprietors) are guaranteed in full while martial law lasts (extended again from 31 October 2026) and for three months after it ends; after that the cover per depositor per bank is UAH 600,000. Secondary source because fg.gov.ua refused the connection."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -358,12 +358,12 @@
       "note": "Pension at 60 with at least 33 years of insurance record in 2026, rising one year each year to 35 years from 2028; otherwise at 63 with a shorter record (25 years for those turning 60 in 2026) or at 65 with at least 15 years. Same ages for men and women."
     },
     "retirement_age_government": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Law of Ukraine No. 889-VIII on Civil Service, Article 83(1)(7)",
+      "sourceUrl": "https://protocol.ua/ua/pro_dergavnu_slugbu_vid_10_12_2015_889_viii_stattya_83/",
       "asOf": "2026-10-31",
-      "note": "Civil servants now receive the general insurance pension (age 60 with the required record), but the age limit for staying in civil service was not confirmed from the Law on Civil Service."
+      "note": "Civil service ends on retirement or on reaching 65 unless a law provides otherwise; service may be extended yearly with consent up to 70. The pension itself follows the general rules (from 60 with the required insurance record). Read from a legal database copy because zakon.rada.gov.ua refused the connection."
     },
     "retirement_return_low": {
       "value": 0.07,
@@ -414,20 +414,26 @@
       "note": "High case for a growth-leaning balanced mix."
     },
     "old_age_allowance_monthly": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Ukraine pays state social assistance to people without a right to a pension, but the 2026 amount (linked to the subsistence minimum for people unable to work) could not be confirmed from an official page."
+      "value": 778.5,
+      "status": "sourced",
+      "sourceName": "Law of Ukraine No. 1727-IV on state social assistance to persons without pension rights, Article 6 (30% of the subsistence minimum for persons unable to work, UAH 2,595 in 2026)",
+      "sourceUrl": "https://protocol.ua/ua/pro_dergavnu_sotsialnu_dopomogu_osobam_yaki_ne_mayut_prava_na_pensiyu_ta_osobam_z_invalidnistyu_stattya_6/",
+      "asOf": "2026-01-01",
+      "note": "For people who reached 65 without a pension right (and without disability) the assistance is 30% of the subsistence minimum for persons unable to work, which is UAH 2,595 in 2026, so UAH 778.50 a month; news reports (Novyny.LIVE, citing the Pension Fund) give the same 778.50. Some reports describe a top-up to the subsistence minimum for families with very low income, which was not confirmed."
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Eligibility age and means test of the state social assistance for people without pension rights were not confirmed from an official page (the Pension Fund pages read do not cover it)."
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Social Policy, standard information card for the state social assistance to persons without pension rights (Order No. 413-N of 30 October 2023)",
+      "sourceUrl": "https://center.diia.gov.ua/uploads/0/1777-priznacennna_derzavnoi_social_noi_dopomogi_osobam_aki_ne_maut_prava_na_pensiyu_ta_osobam_z_invalidnistu_docx.pdf",
+      "asOf": "2023-10-30",
+      "note": "Paid to people who reached 65 (women born 1960 and earlier from a lower transitional age) who have no right to a pension, receive no pension, and are low-income (malozabezpecheni); the rule card is from 2023 (older than 2025) but the law is unchanged."
     },
     "gratuity_rule": {
       "value": null,
@@ -435,7 +441,8 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No statutory gratuity per year of service is known; the Labour Code provides severance pay (at least one month's average wage) on certain dismissals. The Labour Code text could not be opened (zakon.rada.gov.ua refused the connection), so absence was not confirmed."
+      "absent": true,
+      "note": "Labour Code of Ukraine, Article 44: severance pay (at least one month's average earnings, more on some grounds) is due only on specific dismissal grounds, is not tied to years of service and is not paid on retirement; no statutory gratuity for private employees exists (protocol.ua/ua/kodeks_zakoniv_pro_pratsyu_ukraini_stattya_44/)."
     },
     "public_pension_scheme": {
       "value": null,
@@ -535,8 +542,8 @@
       "url": "https://www.pfu.gov.ua/"
     },
     "oldAgeAllowance": {
-      "name": "Ministry of Social Policy (state social assistance for people without pension rights)",
-      "url": "https://www.msp.gov.ua/"
+      "name": "Pension Fund of Ukraine (state social assistance to persons without pension rights, Law No. 1727-IV)",
+      "url": "https://www.pfu.gov.ua/"
     },
     "publicHealthCover": {
       "name": "National Health Service of Ukraine (Programme of Medical Guarantees)",
@@ -544,7 +551,8 @@
     },
     "depositInsurance": {
       "name": "Deposit Guarantee Fund",
-      "url": "https://www.fg.gov.ua/"
+      "url": "https://www.fg.gov.ua/",
+      "note": "Full cover during martial law and three months after; UAH 600,000 per depositor per bank afterwards."
     },
     "statistics": {
       "name": "State Statistics Service of Ukraine",

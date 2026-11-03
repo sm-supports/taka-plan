@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "LC",
+  "iso3": "LCA",
+  "nameEn": "Saint Lucia",
+  "nameNative": "Saint Lucia",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "acf"
+  ],
+  "currency": {
+    "code": "XCD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.7,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LC",
+      "asOf": "2025-12-31",
+      "note": "The EC dollar has been fixed at 2.70 per US dollar by the Eastern Caribbean Central Bank since 1976."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0536,
+      "status": "sourced",
+      "sourceName": "ECCB, Consumer Price Index Saint Lucia (Central Statistical Office data)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-lucia/m?start_date=31/05/2025&end_date=30/09/2026",
+      "asOf": "2026-06-30",
+      "note": "All-items index 125.25 in June 2026 against 118.88 in June 2025 (computed year on year; the table's monthly 'inflation rate' column is month on month). The jump is driven by housing and utilities; December-to-December inflation was 0.33% in 2025 and the 2025 average 2.03%. June 2026 is the latest month published."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB CPI Saint Lucia: period-average inflation 2021-2025 of 2.4%, 9.7%, 3.8%, -0.7% and 2.0%; EC dollar pegged at 2.70 per US dollar",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-lucia/a",
+      "asOf": "2026-10-31",
+      "note": "The ECCB has no inflation target (the EC dollar is pegged to the US dollar), so we plan with 2.5%: close to US-dollar inflation, nudged up for the volatile, import-driven Saint Lucia CPI (5-year average about 3.4% including the 2022 shock)."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates on Deposits and Loans: Saint Lucia (discount rate)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=7",
+      "asOf": "2026-08-31",
+      "note": "ECCB discount rate 3.00% (May-August 2026), the same for all ECCU members; with the peg it is a backstop rate rather than an active policy tool."
+    },
+    "savings_account_rate": {
+      "value": 0.0207,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates and Weighted Average Rates on Deposits and Loans: Saint Lucia",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=7",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate on EC-dollar savings deposits 2.07% in June 2026; posted savings rates 2.00-3.00%, with the ECCB 2% minimum savings rate as the floor."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The ECCB interest rate table for Saint Lucia shows no 3-month time-deposit rate ('---' through August 2026); 6-month deposits were quoted at 1.30-2.50%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0164,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates and Weighted Average Rates on Deposits and Loans: Saint Lucia",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=7",
+      "asOf": "2026-06-30",
+      "note": "Posted 12-month EC-dollar time-deposit rates ranged 0.10-2.50% (May-August 2026); the weighted average on all EC-dollar time deposits was 1.64% in June 2026, used here as the typical rate."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the ECCB interest rate tables for Saint Lucia: no monthly recurring deposit product rate is published."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0119,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates and Weighted Average Rates on Deposits and Loans: Saint Lucia",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=7",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate on all EC-dollar deposits 1.19% in June 2026 (1.08% including foreign-currency deposits); World Bank deposit rate 1.18% (2025)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; the Government of Saint Lucia borrows through Treasury bills and bonds auctioned on the Regional Government Securities Market."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0295,
+      "status": "sourced",
+      "sourceName": "ECCB, Weighted Average Interest Rates on the RGSM: Saint Lucia",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-09-30",
+      "note": "91-day Treasury bill weighted average 2.95% at the September 2026 auction (3.00% in June 2026; 2.71% average in 2025)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0567,
+      "status": "sourced",
+      "sourceName": "ECCB, Weighted Average Interest Rates on the RGSM: Saint Lucia (annual)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/a?country_code[]=7",
+      "asOf": "2025-12-31",
+      "note": "Weighted average yield on 5-year Government of Saint Lucia bonds issued in 2025 was 5.67% (5.75% in 2024); no 5-year bond was auctioned in May-September 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0715,
+      "status": "sourced",
+      "sourceName": "ECCB, Weighted Average Interest Rates on the RGSM: Saint Lucia (annual)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/a?country_code[]=7",
+      "asOf": "2024-12-31",
+      "note": "Weighted average yield on 10-year Government of Saint Lucia bonds issued in 2024 was 7.15% (6.99% in 2023); none was issued in 2025 or May-September 2026, so the figure is older than 2025."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Saint Lucia: Individual - Income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/saint-lucia/individual/income-determination",
+      "asOf": "2026-10-12",
+      "note": "Interest from banks in Saint Lucia is exempt from income tax (page last reviewed 12 October 2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists in Saint Lucia (see sanchayapatra_5y_rate), so no tax rate applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched ECCB sources: the regional Eastern Caribbean deposit insurance arrangement is not shown as operating, and no deposit insurance cover limit for Saint Lucia was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest was found; the ECCB publishes only an 'other lending rates' range of 3.50-25.00% for Saint Lucia (August 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Lucia 91-day Treasury bill 2.95% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Low case: the regional share market is very small, so savers rely mostly on global equity funds in pegged US-dollar terms, and a weak decade is possible."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Lucia 91-day Treasury bill 2.95% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Base case uses a global equity index in EC-dollar terms (pegged to the US dollar): about the 3% tax-free safe rate plus a 3.5-point premium, as the local market is too thin to have a usable 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Lucia 91-day Treasury bill 2.95% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat their strong long-run US-dollar returns."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECCB: EC dollar fixed at 2.70 per US dollar; World Bank PA.NUS.FCRF 2.70 (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LC",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price, and the long-standing peg gives no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ECCB: EC dollar fixed at 2.70 per US dollar; World Bank PA.NUS.FCRF 2.70 (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LC",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% a year, with no expected depreciation of the pegged EC dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "ECCB: EC dollar fixed at 2.70 per US dollar; World Bank PA.NUS.FCRF 2.70 (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LC",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECCB Saint Lucia: weighted average time-deposit rate 1.64% and savings rate 2.07% (June 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and time deposits at about 1.5-2%, tax-free for residents."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB Saint Lucia: savings rate 2.07% (June 2026); 91-day Treasury bill 2.95% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free savings deposits around 2% and Treasury bills near 3%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM Saint Lucia: 91-day bill 2.95%, 180-day bill 3.00-4.00% (2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling 91- and 180-day Treasury bills at 3-4%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Financial Services Regulatory Authority statistics: it publishes long-term insurance income and expense statements (2011-2022) but no claim settlement ratio."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Saint Lucia by regional insurers, but no regulator or other non-company source publishes premium rates by age."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Ministry of Health and statistics sources: no published typical cost of a major private hospital stay in Saint Lucia was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source publishing private health insurance premiums by age was found for Saint Lucia."
+    },
+    "oop_health_share": {
+      "value": 0.3714,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LC",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 37.1% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ECCB CPI Saint Lucia: health index 110.25 (2021) to 127.26 (2025), about 3.7% a year",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-lucia/a",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose about 3.7% a year in 2021-2025, above headline; we plan with 4% to allow for private and overseas treatment costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECCB CPI Saint Lucia: education index 98.30 (2021) to 88.80 (2025)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-lucia/a",
+      "asOf": "2026-10-31",
+      "note": "The CPI education index fell in 2021-2025 (public schooling is largely free), but private and overseas tertiary costs rise faster, so we plan with planning inflation plus half a point."
+    },
+    "life_expectancy": {
+      "value": 72.846,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LC",
+      "asOf": "2024-12-31",
+      "note": "Men 69.5, women 76.5 (2024). UN WPP 2024 via populationpyramid.net gives 73.2 for 2026 (men 69.7, women 76.7)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/saint-lucia/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.8,
+            "men": 16.7,
+            "women": 20.8
+          },
+          {
+            "age": 65,
+            "total": 15.2,
+            "men": 13.4,
+            "women": 16.8
+          },
+          {
+            "age": 70,
+            "total": 11.8,
+            "men": 10.5,
+            "women": 13.1
+          },
+          {
+            "age": 80,
+            "total": 6.6,
+            "men": 5.9,
+            "women": 7.2
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/saint-lucia/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 7.3
+          },
+          {
+            "year": 2040,
+            "value": 4.2
+          },
+          {
+            "year": 2065,
+            "value": 2.0
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 13.7 (2025, World Bank), 23.8 (2040) and 48.8 (2065, populationpyramid.net/saint-lucia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "National Insurance Corporation Saint Lucia, Retirement Benefit",
+      "sourceUrl": "https://www.stlucianic.org/retirement-benefit",
+      "asOf": "2026-10-31",
+      "note": "Age pension from 65 with at least 180 months of contributions; the Labour Code 2006 s.159 sets the retirement age of all employees at the NIC pensionable age. Same for men and women. The page carries no date (read October 2026)."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Government of Saint Lucia sources: the statutory retirement age for public officers under the Pensions Act could not be confirmed from a readable official page."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECCB Saint Lucia: weighted average time-deposit rate 1.64% (June 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly tax-free savings and time deposits at about 1.5-2%."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB Saint Lucia: savings rate 2.07% (June 2026); 91-day Treasury bill 2.95% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 2.95% tax-free Treasury bill rate: a mix of savings deposits and bills, kept liquid in retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Lucia 91-day Treasury bill 2.95% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling Treasury bills at about the latest auction rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 2.95%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global equities disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 2.95%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global equities at 6.5% and half deposits and bills around 2.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 2.95%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "HelpAge Pension Watch (https://www.helpage.org/country_profile/saint-lucia/) states that Saint Lucia does not currently have a social pension (0% of people 60+ receive one); poor older people can only apply for means-tested public assistance.",
+      "absent": true
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension exists in Saint Lucia (HelpAge Pension Watch, https://www.helpage.org/country_profile/saint-lucia/).",
+      "absent": true
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity: the Labour Code 2006 (https://www.govt.lc/media.govt.lc/www/resources/legislation/SaintLuciaLabourCode2006.pdf) gives redundancy pay only on redundancy (s.160) and not to an employee who chooses to retire (s.162(1)(g)); severance is left to collective agreements until regulations are made (s.161).",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "National Insurance Corporation Saint Lucia, Retirement Benefit and FAQ",
+      "sourceUrl": "https://www.stlucianic.org/retirement-benefit",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": 65,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory NIC for employed and self-employed people aged 16 to 65 (10% of insurable earnings up to EC$5,000 a month, split equally). Age pension from 65 with 180 months of contributions: 40% of average pensionable earnings in the best 5 years plus 0.1% per month beyond 180; minimum EC$500 a month; fewer contributions give a lump-sum grant. No automatic indexation is stated; tax treatment not confirmed. Pages carry no date."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "ECCB minimum savings rate 2%; weighted average 2.07% (June 2026).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=7"
+    },
+    "fdr_3m": {
+      "available": false,
+      "localName": null,
+      "note": "Banks in Saint Lucia report no 3-month time-deposit rate to the ECCB; the shortest quoted term is 6 months (1.30-2.50%).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=7"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "12-month fixed (time) deposit",
+      "note": "Posted 12-month rates 0.10-2.50% (2026).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=7"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of Saint Lucia 91-day Treasury bill",
+      "note": "Auctioned on the Regional Government Securities Market through licensed intermediaries; mostly bought by institutions.",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=7"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Government bond",
+      "localNameEn": "Government of Saint Lucia 5-year bond",
+      "note": "Issued occasionally on the Regional Government Securities Market (2024 and 2025).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/a?country_code[]=7"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Government bond",
+      "localNameEn": "Government of Saint Lucia 10-year bond",
+      "note": "Issued occasionally on the Regional Government Securities Market (2022-2024; none since).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/a?country_code[]=7"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No locally registered retail equity or index fund was identified; the regional share market is very small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": "Gold jewellery and coins",
+      "note": "No legal restriction on buying gold; mostly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Eastern Caribbean Central Bank (ECCB)",
+      "url": "https://www.eccb-centralbank.org/",
+      "note": "Shared central bank of the Eastern Caribbean Currency Union."
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Regulatory Authority (FSRA)",
+      "url": "https://www.fsrastlucia.org/index.php/insurance-pensions/insurance-companies/overview"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Regulatory Authority (FSRA), complaints",
+      "url": "https://www.fsrastlucia.org/index.php/complaints",
+      "note": "No separate insurance ombudsman; complaints about regulated insurers go to the FSRA."
+    },
+    "pensionScheme": {
+      "name": "National Insurance Corporation (NIC), retirement benefit",
+      "url": "https://www.stlucianic.org/retirement-benefit"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health, Wellness and Nutrition (public hospitals and wellness centres)",
+      "url": "https://health.govt.lc/",
+      "note": "No national health insurance yet; a draft Universal Health Coverage Bill was published for consultation in October 2026."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Central Statistical Office of Saint Lucia",
+      "url": "https://www.stats.gov.lc/subjects/economy/prices-and-price-indices/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

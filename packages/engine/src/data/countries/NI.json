@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "code": "NI",
+  "iso3": "NIC",
+  "nameEn": "Nicaragua",
+  "nameNative": "Nicaragua",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "miq",
+    "en"
+  ],
+  "currency": {
+    "code": "NIO",
+    "symbol": "C$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 36.6243,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NI",
+      "asOf": "2025-12-31",
+      "note": "Official rate 36.6243 córdobas per US dollar (2025 average). Trading Economics quoted 36.80 on 30 October 2026; the BCN site refused access, so its daily official rate could not be read."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.04,
+      "status": "sourced",
+      "sourceName": "INIDE, Nota de prensa: Índice de Precios al Consumidor, julio 2026",
+      "sourceUrl": "https://www.inide.gob.ni/docs/ipc/ipc_2026/ipc_jul26/Nota_de_Prensa_de_Inflaci%c3%b3n_julio_2026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Year-on-year CPI inflation 4.0% in July 2026 (0.64% a year earlier); core 2.84% (published 13 August 2026). Later monthly notes could not be reached; World Bank 2025 average 2.08%."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "INIDE CPI July 2026 4.0%; World Bank 2025 average 2.1% and higher rates in 2022-2023",
+      "sourceUrl": "https://www.inide.gob.ni/docs/ipc/ipc_2026/ipc_jul26/Nota_de_Prensa_de_Inflaci%c3%b3n_julio_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The córdoba moves little against the dollar and recent inflation has ranged from 2% to 4%, so planning uses 4%, close to the current rate."
+    },
+    "policy_rate": {
+      "value": 0.0575,
+      "status": "sourced",
+      "sourceName": "Banco Central de Nicaragua, Tasa de Referencia Monetaria, as reported by Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/nicaragua/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "Monetary reference rate (TRM) 5.75% in September 2026, unchanged from the previous reading; secondary source because the BCN site refused access."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Banco Central de Nicaragua and SIBOIF sites could not be reached, and no other source for ordinary savings account rates was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BCN deposit-rate statistics by term could not be reached (the site refused access)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BCN deposit-rate statistics by term could not be reached (the site refused access)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0227,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2025-12-31",
+      "note": "Average rate paid by commercial banks on deposits, 2.27% in 2025 (2.25% in 2024); BCN's own weighted rates could not be reached. Most deposits in Nicaragua are in US dollars."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold to individuals was found; government and central bank securities are sold through the stock exchange."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Yields on short-term central bank bills (Letras del BCN) could not be found because the BCN site refused access."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 5-year government bond yield was found; BCN and Ministry of Finance sites could not be reached."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 10-year government bond yield was found."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Nicaragua, corporate withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/nicaragua/corporate/withholding-taxes",
+      "asOf": "2026-08-04",
+      "note": "Interest paid to resident individuals or legal entities is subject to 15% withholding (page reviewed 4 August 2026); exemptions for small deposits, if any, were not confirmed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Nicaragua, corporate withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/nicaragua/corporate/withholding-taxes",
+      "asOf": "2026-08-04",
+      "note": "No separate savings certificate exists; interest is generally subject to 15% withholding. Any exemption for government securities was not confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": 439492,
+      "status": "sourced",
+      "sourceName": "FOGADE, preguntas frecuentes (US$12,000 per depositor)",
+      "sourceUrl": "https://fogade.gob.ni/preguntas-frecuentes/",
+      "asOf": "2026-10-31",
+      "note": "FOGADE covers up to US$12,000 per depositor per member institution, principal plus interest, in córdobas or foreign currency; converted at 36.6243 córdobas per dollar (World Bank 2025)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; the SIBOIF and BCN sites could not be reached."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No active local stock market; global equities in córdoba terms (córdoba closely tied to the US dollar: 36.62 in 2025, 36.80 in October 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares disappoint, leaving equities near after-tax deposit rates."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Global equity index in dollar terms; after-tax average deposit 2.27% x 0.85 = 1.9% (World Bank FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Nicaragua's exchange trades mainly bonds, so equity is a global index fund in dollar terms; kept within 4 points of the after-tax safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equity long-run record in US dollars",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "High case: global shares repeat their long-run record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 3% lower in a year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stays flat in dollars and the córdoba holds its value."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Gold USD price trend (Trading Economics); córdoba closely tied to the dollar",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold tracks long-run dollar inflation plus a little."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold resumes its 2020s uptrend."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 2.27% less 15% tax (World Bank FR.INR.DPST; PwC)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 2.27% (World Bank); term deposits pay more than the all-deposit average",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Base case: one-year term deposits after 15% tax, a little above the after-tax average of all deposits."
+    },
+    "fixed_income_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 2.27% (World Bank); longer deposits and government bonds",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits or government bonds bought through the stock exchange."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found; the SIBOIF site could not be reached."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source with indicative term life premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.3763,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NI",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 37.6% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "INIDE CPI July 2026 (headline 4.0%)",
+      "sourceUrl": "https://www.inide.gob.ni/docs/ipc/ipc_2026/ipc_jul26/Nota_de_Prensa_de_Inflaci%c3%b3n_julio_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Medical costs usually rise faster than general prices; planning uses 5%, 1 point above projected inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "INIDE CPI July 2026: education division unchanged in the month, headline 4.0% year on year",
+      "sourceUrl": "https://www.inide.gob.ni/docs/ipc/ipc_2026/ipc_jul26/Nota_de_Prensa_de_Inflaci%c3%b3n_julio_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "School fees step up once a year, usually faster than general prices; planning uses 5%."
+    },
+    "life_expectancy": {
+      "value": 75.1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NI",
+      "asOf": "2024-12-31",
+      "note": "Men 72.5, women 77.6 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/nicaragua",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.9,
+            "men": 19.5,
+            "women": 22.0
+          },
+          {
+            "age": 65,
+            "total": 17.1,
+            "men": 15.9,
+            "women": 18.1
+          },
+          {
+            "age": 70,
+            "total": 13.5,
+            "men": 12.5,
+            "women": 14.3
+          },
+          {
+            "age": 80,
+            "total": 7.3,
+            "men": 6.6,
+            "women": 7.7
+          }
+        ]
+      },
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/nicaragua/2065/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 11.58
+          },
+          {
+            "year": 2040,
+            "value": 7.3
+          },
+          {
+            "year": 2065,
+            "value": 3.33
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 8.6 in 2025 (World Bank), 13.7 in 2040 and 30.0 in 2065 (UN WPP medium variant)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The INSS old-age pension age (commonly 60) could not be confirmed: the INSS site refused access and the National Assembly legislation site could not be reached."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public employees are covered by the INSS; the retirement age could not be confirmed from an official source that could be reached."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 2.27% less 15% tax (World Bank FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.019,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 2.27% less 15% tax = 1.9% (World Bank FR.INR.DPST; PwC)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept at the after-tax average deposit rate, the only safe rate that could be sourced."
+    },
+    "retirement_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Longer term deposits and government bonds (World Bank FR.INR.DPST as floor)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits or government bonds at higher yields."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "After-tax deposits about 1.5-2.5%; equity low case 2%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Low case for a mix of deposits and global equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Fixed income base 2.5%; equity base 5.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half safe deposits and half global equity in dollar terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Equity high 9%; fixed income high 4%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NI",
+      "asOf": "2026-10-31",
+      "note": "High case: equities do well and longer deposits pay more."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension amount was found; the INSS and government social programme sites could not be reached to confirm whether one exists."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found from a reachable official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code (Ley 185) provides a seniority indemnity on termination, but the National Assembly and Ministry of Labour sites could not be reached to confirm the days-per-year rule."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The INSS contributory pension (Invalidez, Vejez y Muerte) rules could not be documented from an official source that could be reached."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo a 3 meses",
+      "localNameEn": "3-month fixed-term deposit"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo a 1 año",
+      "localNameEn": "1-year fixed-term deposit"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letras del Banco Central de Nicaragua",
+      "localNameEn": "Central Bank of Nicaragua bills",
+      "note": "Short-term bills are issued by the central bank and traded through the stock exchange; yields could not be sourced."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos de la República de Nicaragua",
+      "localNameEn": "Republic of Nicaragua bonds",
+      "note": "Ministry of Finance bonds are traded through the stock exchange; yields could not be sourced."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "10-year government bond",
+      "note": "A regular 10-year domestic government bond could not be confirmed."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Equity investment fund",
+      "note": "No diversified equity fund sold to retail savers in Nicaragua was confirmed; the local exchange trades mainly fixed income."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro (lingotes y monedas)",
+      "localNameEn": "Gold bars and coins"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Nicaragua (BCN)",
+      "url": "https://www.bcn.gob.ni/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de Bancos y de Otras Instituciones Financieras (SIBOIF)",
+      "url": "https://www.siboif.gob.ni/"
+    },
+    "insuranceComplaints": {
+      "name": "SIBOIF, attention to financial users",
+      "url": "https://www.siboif.gob.ni/",
+      "note": "Complaints about insurers go first to the insurer and then to SIBOIF; a dedicated complaints page could not be reached."
+    },
+    "pensionScheme": {
+      "name": "Instituto Nicaragüense de Seguridad Social (INSS)",
+      "url": "https://www.inss.gob.ni/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministerio de Salud (MINSA), free public health care",
+      "url": "https://www.minsa.gob.ni/"
+    },
+    "depositInsurance": {
+      "name": "Fondo de Garantía de Depósitos (FOGADE)",
+      "url": "https://fogade.gob.ni/preguntas-frecuentes/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Información de Desarrollo (INIDE)",
+      "url": "https://www.inide.gob.ni/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

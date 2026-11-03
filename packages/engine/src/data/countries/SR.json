@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 1,
+  "code": "SR",
+  "iso3": "SUR",
+  "nameEn": "Suriname",
+  "nameNative": "Suriname",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "nl",
+    "srn",
+    "hns",
+    "jv",
+    "en"
+  ],
+  "currency": {
+    "code": "SRD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 37.444,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/SRD exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/suriname/currency",
+      "asOf": "2026-10-29",
+      "note": "Secondary source because the Central Bank of Suriname website blocks automated reading behind a verification page; the World Bank official rate PA.NUS.FCRF averaged 37.26 in 2025. The Suriname dollar floats."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.073,
+      "status": "sourced",
+      "sourceName": "Algemeen Bureau voor de Statistiek (ABS), CPI Suriname September 2026",
+      "sourceUrl": "https://statistics-suriname.org/infographic-consumentenprijsindex-en-inflatiecijfers-september-2026/",
+      "asOf": "2026-09-30",
+      "note": "Prices in September 2026 were 7.3% higher than in September 2025 (index 979.7, April-June 2016 = 100; monthly change 0.1%); provisional figure."
+    },
+    "inflation_projection": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "IMF 2025 Article IV (February 2026): CPI end-2026 9.7%, 2027 6.1%, 5.0% from 2028; ABS CPI 7.3% (September 2026)",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2026/02/11/suriname-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-573924",
+      "asOf": "2026-10-31",
+      "note": "Suriname has no inflation target and a history of very high inflation (over 50% in 2023), so we plan with 7%, above the IMF's 5% medium-term projection."
+    },
+    "policy_rate": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Suriname interest rate (Central Bank of Suriname discount rate)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Secondary source because the Central Bank of Suriname website blocks automated reading behind a verification page: the discount rate at which the central bank lends to banks is 10% (October 2026). The central bank steers reserve money through open market operations rather than a point policy rate (IMF 2025 Article IV)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for bank savings rates: the Central Bank of Suriname website blocks automated reading behind a verification page, and no other public source of savings account rates was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for 3-month term deposit rates: the Central Bank of Suriname website blocks automated reading behind a verification page, and no other public source was found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for 1-year term deposit rates: the Central Bank of Suriname website blocks automated reading behind a verification page, and no other public source was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Suriname deposit interest rate (Central Bank of Suriname data)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-08-31",
+      "note": "Secondary source because the Central Bank of Suriname website blocks automated reading behind a verification page: average deposit rate 7% in August 2026, unchanged from July; World Bank FR.INR.DPST gives 6.69% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond was found. The central bank has sold its own certificates to retail investors at times in 2023-2025, which the IMF (2025 Article IV) recommends stopping; their rates could not be read."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current Treasury bill yield is published: the IMF 2025 Article IV (February 2026) reports that the operationalisation of Treasury bill auctions is still pending."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 5-year domestic government bond yield was found; domestic debt markets are undeveloped (IMF 2025 Article IV)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 10-year domestic government bond yield was found; domestic debt markets are undeveloped (IMF 2025 Article IV)."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Belastingdienst Suriname site (income tax pages and laws list) and PwC Tax Summaries (no Suriname page): no readable statement of how interest on bank deposits is taxed for residents was found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals in Suriname (see sanchayapatra_5y_rate), so no tax rate applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Government of Suriname and IMF sources: no operating deposit insurance scheme or cover limit was found (the Central Bank of Suriname website blocks automated reading behind a verification page)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest and no official typical rate were found; the average bank lending rate was 13.7% in August 2026 (Trading Economics, central bank data)."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local stock market is tiny and illiquid, so we use a global equity index in Suriname-dollar terms, with a weak global decade and a stable currency."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: global equities (about 6.5% in US dollars) plus some expected depreciation of the Suriname dollar, capped at the 7% deposit rate plus 3 points because there is no usable local index record."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities and faster depreciation of the Suriname dollar, which has lost most of its value since 2020."
+    },
+    "gold_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF: SRD 37.26 per US dollar (2025 average); SRD 37.44 (October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price and a stable Suriname dollar."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF: SRD 37.26 per US dollar (2025 average); IMF medium-term inflation 5%",
+      "sourceUrl": "https://tradingeconomics.com/suriname/currency",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4.5% a year plus about 4.5% a year of expected Suriname-dollar depreciation (inflation gap with the US)."
+    },
+    "gold_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF: SRD 37.26 per US dollar (2025 average)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold prices and renewed currency depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and short deposits pay well below the 7% average deposit rate."
+    },
+    "fixed_income_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits around the 7% average deposit rate, less possible tax on interest (not confirmed)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits slightly above the average deposit rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio is published; insurance supervision rules are still being developed (the Insurance Act was submitted to Parliament in June 2024, IMF 2025 Article IV)."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Suriname, but no regulator or other non-company source publishes premium rates by age."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found for Suriname."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Health cover is mainly the compulsory national basic health insurance, priced as a flat monthly premium by age (SRD 55-240 a month on the government page https://gov.sr/thema/basiszorgverzekering/, older than 2025), not per 100,000 of cover; no source of private top-up premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.1972,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SR",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 19.7% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "ABS CPI 7.3% (September 2026); planning inflation 7%",
+      "sourceUrl": "https://statistics-suriname.org/infographic-consumentenprijsindex-en-inflatiecijfers-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "No long-run medical CPI series was found; we plan with headline planning inflation plus 2 points for private and imported medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "ABS CPI 7.3% (September 2026); planning inflation 7%",
+      "sourceUrl": "https://statistics-suriname.org/infographic-consumentenprijsindex-en-inflatiecijfers-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "No long-run education CPI series was found; we plan with headline planning inflation plus 1 point."
+    },
+    "life_expectancy": {
+      "value": 73.757,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SR",
+      "asOf": "2024-12-31",
+      "note": "Men 70.6, women 77.0 (2024). UN WPP 2024 via populationpyramid.net gives 74.0 for 2026 (men 70.9, women 77.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/suriname/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.3,
+            "men": 18.0,
+            "women": 22.5
+          },
+          {
+            "age": 65,
+            "total": 16.8,
+            "men": 14.6,
+            "women": 18.5
+          },
+          {
+            "age": 70,
+            "total": 13.3,
+            "men": 11.6,
+            "women": 15.0
+          },
+          {
+            "age": 80,
+            "total": 7.7,
+            "men": 6.5,
+            "women": 8.9
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/suriname/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.1
+          },
+          {
+            "year": 2040,
+            "value": 5.1
+          },
+          {
+            "year": 2065,
+            "value": 3.4
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 12.3 (2025, World Bank), 19.7 (2040) and 29.3 (2065, populationpyramid.net/suriname/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Government of Suriname, 'Pensioen' (Wet Algemeen Pensioen 2014)",
+      "sourceUrl": "https://gov.sr/thema/pensioen/",
+      "asOf": "2022-04-01",
+      "note": "The pension age in Suriname is 60 under the Wet Algemeen Pensioen 2014, the same for men and women; the AOV also starts at 60. Page dated April 2022 (older than 2025); no change found since."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Ministry of Home Affairs (Binnenlandse Zaken), Government of Suriname",
+      "sourceUrl": "https://gov.sr/minister-marinus-bee-ontvangt-religieuze-organisaties/",
+      "asOf": "2025-12-11",
+      "note": "The statutory pension age for civil servants is 60, with extension by employment contract for up to five years."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings and short deposits paying well below the average deposit rate."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 7% average deposit rate, allowing for lower rates on liquid deposits and possible tax on interest."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: term deposits at about the average deposit rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026); global equity assumptions in SRD",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits and global equities."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026); global equity assumptions in SRD",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global equities at 10% and half deposits around 6% in Suriname-dollar terms."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Average bank deposit rate 7.0% (August 2026, Central Bank of Suriname via Trading Economics); inflation 7.3% (September 2026); global equity assumptions in SRD",
+      "sourceUrl": "https://tradingeconomics.com/suriname/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns and currency depreciation."
+    },
+    "old_age_allowance_monthly": {
+      "value": 2250,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance and Planning, Government of Suriname: 'Ministerie verduidelijkt uitbetaling sociale uitkeringen'",
+      "sourceUrl": "https://gov.sr/ministerie-verduidelijkt-uitbetaling-sociale-uitkeringen/",
+      "asOf": "2026-05-31",
+      "note": "The universal AOV (Algemene Oudedagsvoorziening) is SRD 2,250 a month (raised from SRD 1,750 in March 2025) and was not increased in 2026; a separate temporary supplement of SRD 1,000 was paid in some months of 2026."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN ECLAC non-contributory pensions database: Universal Old Age Pension (AOV), Suriname",
+      "sourceUrl": "https://dds.cepal.org/bpsnc/programme?id=270",
+      "asOf": "2025-03-31",
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "note": "AOV from age 60 for Surinamese citizens and for foreign nationals resident in Suriname for at least 10 years; universal, not means-tested; financed from general revenue and a 4% levy on the taxable income of residents under 60."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Government of Suriname sources: whether labour law provides any statutory payment on retirement could not be confirmed (no readable text of the labour laws was found)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Government of Suriname, 'Pensioen' (Wet Algemeen Pensioen 2014)",
+      "sourceUrl": "https://gov.sr/thema/pensioen/",
+      "asOf": "2022-04-01",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory general pension for all working residents (in force 8 December 2014), run by the Algemeen Pensioenfonds: premium example 3% of wages, at least half paid by the employer; pension from 60 after at least 5 years of premiums, separate from the AOV. No indexation is stated; tax treatment not confirmed. Page dated April 2022 (older than 2025)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Spaarrekening",
+      "localNameEn": "Savings account",
+      "note": "Offered by commercial banks; rates could not be read from central bank statistics."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Termijndeposito",
+      "localNameEn": "3-month term deposit",
+      "note": "Offered by commercial banks; no public rate table was readable."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Termijndeposito",
+      "localNameEn": "1-year term deposit",
+      "note": "Offered by commercial banks; no public rate table was readable."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond; central bank certificates have occasionally been sold to retail investors, which the IMF recommends stopping.",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2026/02/11/suriname-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-573924"
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "Treasury bill auctions are not yet operational (IMF 2025 Article IV, February 2026).",
+      "sourceUrl": "https://www.imf.org/en/publications/cr/issues/2026/02/11/suriname-2025-article-iv-consultation-press-release-staff-report-and-statement-by-the-573924"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic government bond market open to individuals was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No domestic government bond market open to individuals was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No locally registered retail equity or index fund was identified; the local stock market is very small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Goud",
+      "localNameEn": "Gold",
+      "note": "Suriname is a gold producer and buying gold is legal; mostly sold as jewellery and small bars."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Centrale Bank van Suriname (CBvS)",
+      "url": "https://www.cbvs.sr/"
+    },
+    "insuranceRegulator": {
+      "name": "Centrale Bank van Suriname (CBvS), supervision of insurers and pension funds",
+      "url": "https://www.cbvs.sr/",
+      "note": "A new Insurance Act was submitted to Parliament in June 2024 (IMF 2025 Article IV)."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Algemeen Pensioenfonds (APF), Wet Algemeen Pensioen 2014",
+      "url": "https://gov.sr/thema/pensioen/"
+    },
+    "oldAgeAllowance": {
+      "name": "Algemene Oudedagsvoorziening (AOV), Ministry of Social Affairs and Housing",
+      "url": "https://gov.sr/aov/",
+      "note": "Universal pension from age 60, paid by the AOV Fund."
+    },
+    "publicHealthCover": {
+      "name": "Staatsziekenfonds (SZF) and the national basic health insurance (Basiszorgverzekering)",
+      "url": "https://www.szf.sr/",
+      "note": "Basic health insurance is compulsory; the government pays the premium for Surinamese children up to 16 and people 60 and older (https://gov.sr/thema/basiszorgverzekering/)."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Algemeen Bureau voor de Statistiek (ABS)",
+      "url": "https://statistics-suriname.org/consumenten-prijs-index-cpi/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "ET",
+  "iso3": "ETH",
+  "nameEn": "Ethiopia",
+  "nameNative": "ኢትዮጵያ",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "am",
+    "om",
+    "ti",
+    "so",
+    "en"
+  ],
+  "currency": {
+    "code": "ETB",
+    "symbol": "Br",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 153.2503,
+      "status": "sourced",
+      "sourceName": "National Bank of Ethiopia, FX sale auction results (Auction No. 19)",
+      "sourceUrl": "https://nbe.gov.et/fx-sale-auction/",
+      "asOf": "2026-02-21",
+      "note": "Auction rate of Birr 153.25 per US dollar on 21 February 2026, the latest published rate (the daily indicative rate page loads no figures as text); the birr floats since July 2024 and averaged 132.76 in April-June 2025 (NBE Annual Report 2024/25)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.149,
+      "status": "sourced",
+      "sourceName": "Ethiopian Statistical Service, Consumer Price Index monthly news release, September 2026 (Meskerem EFY2019)",
+      "sourceUrl": "https://ess.gov.et/download/consumer-price-index-septmber-2026/",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year general inflation 14.9% (food 14.8%, non-food 15.1%), up from a low of 9.4% in March 2026; the Ethiopian month runs 11 September to 10 October 2026."
+    },
+    "inflation_projection": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "NBE Monetary Policy Committee aim of single-digit inflation in the medium term; ESS CPI 9.4-15.3% in 2025/26",
+      "sourceUrl": "https://nbe.gov.et/mpc7/",
+      "asOf": "2026-10-31",
+      "note": "The NBE aims for single-digit inflation but inflation was 9.4-15.3% over the last year and above 20% in 2021-2023, so a rounded 10% is used for long-run planning."
+    },
+    "policy_rate": {
+      "value": 0.16,
+      "status": "sourced",
+      "sourceName": "National Bank of Ethiopia, MPC meeting No. 7 press release (13 July 2026) and NBE homepage rate panel (NBR 16%)",
+      "sourceUrl": "https://nbe.gov.et/mpc7/",
+      "asOf": "2026-07-13",
+      "note": "The MPC raised the National Bank Rate by 1 percentage point from 15% to 16% (corridor of plus or minus 3 points); the NBE site shows NBR 16% on 31 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.08,
+      "status": "sourced",
+      "sourceName": "National Bank of Ethiopia, Annual Report 2024/25, Table 4.4 Interest Rates (savings deposit, simple average)",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2025-06-30",
+      "note": "Average savings deposit rate 8.0% (minimum 7%, maximum 9%) at end June 2025. Deposit rates have been set freely by each bank since 9 January 2026 (NBE Directive NBE/INT/13/2026, which repealed the 7% minimum), so later rates may differ."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found; the NBE reports only a weighted average for time deposits up to 1 year (7.7% in 2024/25)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.077,
+      "status": "sourced",
+      "sourceName": "National Bank of Ethiopia, Annual Report 2024/25, Table 4.4 Interest Rates (time deposit up to 1 year, weighted average)",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2025-06-30",
+      "note": "Weighted average rate on time deposits of up to 1 year, 7.7% in 2024/25. Deposit rates have been set freely by each bank since 9 January 2026 (NBE Directive NBE/INT/13/2026, which repealed the 7% minimum), so later rates may differ."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit rate is published by the NBE; banks set their own rates."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.077,
+      "status": "sourced",
+      "sourceName": "National Bank of Ethiopia, Annual Report 2024/25, Table 4.4 Interest Rates (time deposits, weighted average)",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2025-06-30",
+      "note": "Weighted average time deposit rate 7.7% in 2024/25 (savings deposits 8.0% simple average; demand deposits 0.1%). The World Bank series (FR.INR.DPST) stops in 2008. Deposit rates have been set freely by each bank since 9 January 2026 (NBE Directive NBE/INT/13/2026, which repealed the 7% minimum), so later rates may differ."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found on the NBE or Ministry of Finance sites; Treasury bills are auctioned by the NBE."
+    },
+    "tbill_91d_rate": {
+      "value": 0.03235,
+      "status": "sourced",
+      "sourceName": "National Bank of Ethiopia, Treasury bill auction results, Tender No. 1012th/2026 (16 September 2026)",
+      "sourceUrl": "https://nbe.gov.et/treasury-bills/",
+      "asOf": "2026-09-16",
+      "note": "91-day weighted average yield 3.235% (28-day 1.958%, 182-day 4.932%, 364-day 7.597%); yields fell sharply through 2026 (91-day 5.53% on 5 August 2026, 11.0% in May 2026 per the MPC)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No marketable 5-year government bond yield was found; the NBE treasury auction page lists only bills of 28 to 364 days."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No marketable 10-year government bond yield was found; the NBE treasury auction page lists only bills of 28 to 364 days."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Ethiopia, Individual - Income determination (last reviewed 15 July 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/ethiopia/individual/income-determination",
+      "asOf": "2026-07-15",
+      "note": "Interest income is subject to a 10% withholding tax, which is the final tax (secondary source; the income tax proclamation itself was not read)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals and the tax treatment of Treasury bill income for individuals was not confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Ethiopian Deposit Insurance Fund (EDIF), Insurance coverage limit",
+      "sourceUrl": "https://edif.gov.et/insurance-coverage-limit/",
+      "asOf": "2026-10-31",
+      "note": "Up to Birr 100,000 per depositor per member financial institution (banks and microfinance institutions); the fund began operating in April 2023."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on card rates exists since lending rates are set freely by each bank (NBE Directive NBE/INT/13/2026); no typical credit card rate is published. The NBE reports an average lending rate of 15.8% in 2024/25."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Ethiopian Securities Exchange opened in January 2025 with very few listings; birr depreciation (NBE)",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for equities with little currency gain, well below inflation."
+    },
+    "equity_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 7% (NBE Annual Report 2024/25; PwC 10% interest tax); no 10-year local index record",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "There is no local index history (the exchange opened in 2025), so equity means a global index in birr terms, capped at about 3.5 points above the after-tax safe rate of about 7% even though birr depreciation could add more."
+    },
+    "equity_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Global equity in birr terms; birr fell from 56 to 119 per dollar on average between 2023/24 and 2024/25 (NBE)",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: global equity returns plus continued birr depreciation of several points a year."
+    },
+    "gold_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend; NBE exchange rate history (Birr 55.96 in 2023/24, 119.31 in 2024/25, 153.25 at the February 2026 auction)",
+      "sourceUrl": "https://nbe.gov.et/fx-sale-auction/",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slow birr depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend; NBE exchange rate history (Birr 55.96 in 2023/24, 119.31 in 2024/25, 153.25 at the February 2026 auction)",
+      "sourceUrl": "https://nbe.gov.et/fx-sale-auction/",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend of about 4% a year plus birr depreciation of about 8% a year, in line with the gap between Ethiopian and US inflation."
+    },
+    "gold_return_high": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Dollar gold trend; NBE exchange rate history (Birr 55.96 in 2023/24, 119.31 in 2024/25, 153.25 at the February 2026 auction)",
+      "sourceUrl": "https://nbe.gov.et/fx-sale-auction/",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years with faster birr depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "NBE Annual Report 2024/25 (savings 8.0%, time deposits 7.7%); 10% final withholding tax on interest (PwC); NBE T-bill auctions 2026",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and time deposits after deposit rates were freed in 2026 drift down, less 10% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NBE Annual Report 2024/25 (savings 8.0%, time deposits 7.7%); 10% final withholding tax on interest (PwC); NBE T-bill auctions 2026",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year time deposits at about 7.7% less the 10% final withholding tax, about 6.9-7%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "NBE Annual Report 2024/25 (savings 8.0%, time deposits 7.7%); 10% final withholding tax on interest (PwC); NBE T-bill auctions 2026",
+      "sourceUrl": "https://nbe.gov.et/treasury-bills/",
+      "asOf": "2026-10-31",
+      "note": "High case: better-paying time deposits or 364-day Treasury bills (7.6-10% in August-September 2026) where accessible."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life insurance claim settlement ratio was found from the NBE, which supervises insurers."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per Birr 1,000 of cover were found from the regulator or a credible guide."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.4627,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Ethiopia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ET",
+      "asOf": "2023-12-31",
+      "note": "46.3% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Ethiopian Statistical Service CPI September 2026: health prices +10.9% year on year",
+      "sourceUrl": "https://ess.gov.et/download/consumer-price-index-septmber-2026/",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 10.9% in the year to September 2026; private and imported care costs run faster, so health goals use 2 points above the 10% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Ethiopian Statistical Service CPI September 2026: education prices +17.8% year on year",
+      "sourceUrl": "https://ess.gov.et/download/consumer-price-index-septmber-2026/",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 17.8% in the year to September 2026, so education goals use 3 points above the 10% planning inflation."
+    },
+    "life_expectancy": {
+      "value": 67.603,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Ethiopia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ET",
+      "asOf": "2024-12-31",
+      "note": "67.6 years in 2024 (men 64.4, women 71.0)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/ethiopia/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.3,
+            "men": 17.1,
+            "women": 19.5
+          },
+          {
+            "age": 65,
+            "total": 14.8,
+            "men": 13.7,
+            "women": 15.7
+          },
+          {
+            "age": 70,
+            "total": 11.5,
+            "men": 10.7,
+            "women": 12.2
+          },
+          {
+            "age": 80,
+            "total": 6.4,
+            "men": 5.9,
+            "women": 6.8
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women except at 65, where the page gives 14.8 for both sexes."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=ET",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 17.6
+          },
+          {
+            "year": 2040,
+            "value": 13.9
+          },
+          {
+            "year": 2065,
+            "value": 8.0
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 5.69 (2025, World Bank), 7.2 (2040, populationpyramid.net/ethiopia/2040/) and 12.5 (2065, populationpyramid.net/ethiopia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Private Organization Employees' Social Security Administration (POESSA), pension page",
+      "sourceUrl": "https://www.poessa.gov.et/?page_id=443",
+      "asOf": "2026-10-31",
+      "note": "Service pension at 60 with at least 10 years of service; voluntary early pension from 55 with 25 years. Same age for men and women (Private Organization Employees' Pension Proclamation No. 1268/2022)."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Public Servants' Social Security Administration, Implementation Directive No. 959/2023 of Proclamation No. 1267/2022",
+      "sourceUrl": "https://psssa.gov.et/sites/default/files/resource/959_Public_Servants%E2%80%99_Pension_Proclamation_No_12672022_Implementation.pdf",
+      "asOf": "2022-12-09",
+      "note": "The directive states the retirement age determined by law is 60 years; early pension from 55 with 25 years of service. The directive dates from 2022 (older than 2025)."
+    },
+    "retirement_return_low": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "NBE Annual Report 2024/25 (savings 8.0%, time deposits 7.7%); 10% final withholding tax on interest (PwC); NBE T-bill auctions 2026",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings accounts after deposit rates fall, less 10% tax."
+    },
+    "retirement_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "NBE Annual Report 2024/25 (savings 8.0%, time deposits 7.7%); 10% final withholding tax on interest (PwC); NBE T-bill auctions 2026",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year time deposits at about 7.7% less 10% tax (about 6.9%), kept a little below that after-tax rate."
+    },
+    "retirement_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NBE Annual Report 2024/25 (savings 8.0%, time deposits 7.7%); 10% final withholding tax on interest (PwC); NBE T-bill auctions 2026",
+      "sourceUrl": "https://nbe.gov.et/treasury-bills/",
+      "asOf": "2026-10-31",
+      "note": "High case: better time deposit offers or 364-day Treasury bills where accessible."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 7%; global equity base 10.5% and gold base 12% in birr terms",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bank deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 7%; global equity base 10.5% and gold base 12% in birr terms",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of time deposits, gold and some equity."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 7%; global equity base 10.5% and gold base 12% in birr terms",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more equity and gold."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age pension was found; the POESSA and public servants' schemes are contributory, and safety-net transfers are not old-age pensions."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age pension was found; the POESSA and public servants' schemes are contributory."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Proclamation No. 1156/2019 provides severance pay on some terminations, but its official text could not be read (ILO NATLEX and the labour ministry site were not reachable), so the rule is not recorded."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Private Organization Employees' Social Security Administration (POESSA), pension page",
+      "sourceUrl": "https://www.poessa.gov.et/?page_id=443",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory scheme for private-sector employees (Proclamation No. 1268/2022): contributions 7% employee and 11% employer; pension at 60 after 10 years, 30% of the average salary of the last 36 months plus 1.25% for each year beyond 10; under 10 years a lump-sum grant. The page states no automatic indexation; tax treatment was not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "የቁጠባ ሂሳብ",
+      "localNameEn": "Savings account",
+      "note": "Rates set freely by each bank since January 2026; averaged 8.0% in 2024/25 (NBE).",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "የጊዜ ገደብ ተቀማጭ (3 ወር)",
+      "localNameEn": "Time deposit (3 months)",
+      "note": "Banks take time deposits; only an up-to-1-year average (7.7%) is published.",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "የጊዜ ገደብ ተቀማጭ (1 ዓመት)",
+      "localNameEn": "Time deposit (1 year)",
+      "note": "Weighted average for time deposits up to 1 year was 7.7% in 2024/25 (NBE).",
+      "sourceUrl": "https://nbe.gov.et/wp-content/uploads/2026/07/Annual-Report-2024-2025.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "የግምጃ ቤት ሰነድ",
+      "localNameEn": "Treasury bills",
+      "note": "Treasury bills of 28-364 days are auctioned by the NBE every two weeks; direct access for individuals was not confirmed.",
+      "sourceUrl": "https://nbe.gov.et/treasury-bills/"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No marketable 5-year government bond was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No marketable 10-year government bond was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The Ethiopian Securities Exchange opened in January 2025; no diversified retail equity fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ወርቅ",
+      "localNameEn": "Gold",
+      "note": "Gold is bought mainly as jewellery; the NBE publishes a gold purchasing rate for gold sold to it.",
+      "sourceUrl": "https://nbe.gov.et/exchange/gold-purchasing-rate/"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Ethiopia (NBE)",
+      "url": "https://nbe.gov.et/"
+    },
+    "insuranceRegulator": {
+      "name": "National Bank of Ethiopia, insurance supervision",
+      "url": "https://nbe.gov.et/financial-institutions/insurers/"
+    },
+    "insuranceComplaints": {
+      "name": "National Bank of Ethiopia, Financial Consumer Protection Directive No. FCP/01/2020 (complaint handling by financial institutions)",
+      "url": "https://nbe.gov.et/files/financial-consumer-protection-directive-no-fcp-01-2020/"
+    },
+    "pensionScheme": {
+      "name": "Private Organization Employees' Social Security Administration (POESSA)",
+      "url": "https://www.poessa.gov.et/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ethiopian Health Insurance Service (community-based and social health insurance)",
+      "url": "https://ehis.gov.et/en"
+    },
+    "depositInsurance": {
+      "name": "Ethiopian Deposit Insurance Fund (EDIF)",
+      "url": "https://edif.gov.et/"
+    },
+    "statistics": {
+      "name": "Ethiopian Statistical Service (ESS)",
+      "url": "https://ess.gov.et/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

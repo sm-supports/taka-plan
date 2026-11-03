@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "code": "MA",
+  "iso3": "MAR",
+  "nameEn": "Morocco",
+  "nameNative": "المغرب",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "ary",
+    "zgh",
+    "fr",
+    "en"
+  ],
+  "currency": {
+    "code": "MAD",
+    "symbol": "DH",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 9.8138,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, reference exchange rates, US dollar, 30 October 2026",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-des-changes/Cours-de-change/Cours-de-reference",
+      "asOf": "2026-10-30",
+      "note": "9.8138 dirhams per US dollar (9.8393 the day before); World Bank 2025 average 9.35. CLDR gives no narrow symbol; 'DH' is the usual local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.005,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, inflation and core inflation (HCP consumer price index), September 2026",
+      "sourceUrl": "https://www.bkam.ma/Statistiques/Prix/Inflation-et-inflation-sous-jacente",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 0.5% year on year in September 2026 (-0.3% in August); average 0.3% over the first nine months of 2026."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib inflation data; World Bank CPI inflation 2021-2025",
+      "sourceUrl": "https://www.bkam.ma/Statistiques/Prix/Inflation-et-inflation-sous-jacente",
+      "asOf": "2026-10-31",
+      "note": "Inflation averaged about 3% over 2021-2025 (two high years in 2022-2023, below 1% in 2024-2026) and the central bank steers toward about 2%, so 2% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.0225,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing Bank Al-Maghrib monetary policy decision of 22 September 2026",
+      "sourceUrl": "https://tradingeconomics.com/morocco/interest-rate",
+      "asOf": "2026-09-22",
+      "note": "Key rate held at 2.25% for the sixth meeting in a row; Bank Al-Maghrib's decision history (bkam.ma) shows 2.25% since March 2025."
+    },
+    "savings_account_rate": {
+      "value": 0.0182,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, rate on savings passbook accounts (comptes sur carnet), 1 July-31 December 2026",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-comptes-sur-carnet",
+      "asOf": "2026-07-01",
+      "note": "Regulated rate for passbook savings accounts for the second half of 2026 (1.61% in the first half); set every six months by Bank Al-Maghrib."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank Al-Maghrib publishes average term-deposit rates only for 6 and 12 months (6-month: 2.21% in September 2026); no 3-month figure was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0256,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, weighted average rates on term deposits, 12 months, September 2026",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on 12-month term deposits and certificates of deposit, 2.56% in September 2026 (2.65% in August); 6-month 2.21%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found in Bank Al-Maghrib statistics; banks offer housing and education savings plans instead."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0268,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Morocco",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MA",
+      "asOf": "2025-12-31",
+      "note": "2.68% average for 2025; Bank Al-Maghrib's 12-month term-deposit average was 2.56% in September 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; Treasury bonds are auctioned by the Treasury through Bank Al-Maghrib to banks and institutions."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0217,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, reference rates of Treasury bonds (secondary market), 30 October 2026",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-30",
+      "note": "Weighted average rate of the Treasury line maturing 18 January 2027 (about 11 weeks to run), the shortest line in the reference curve."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0309,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, reference rates of Treasury bonds (secondary market), 30 October 2026",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-30",
+      "note": "Interpolated between the lines maturing April 2030 (2.88%) and April 2032 (3.15%); the curve is published by maturity date, not by tenor."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0368,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, reference rates of Treasury bonds (secondary market), 30 October 2026",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-30",
+      "note": "Interpolated between the lines maturing June 2035 (3.52%) and July 2039 (4.01%); the curve is published by maturity date, not by tenor."
+    },
+    "tax_bank_interest": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Morocco, individual income determination (investment income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/morocco/individual/income-determination",
+      "asOf": "2025-12-31",
+      "note": "Interest earned by individuals (other than those taxed under the real or simplified business regime) is taxed at 30%; PwC shows the 2025 rate, no 2026 change was found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.3,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Morocco, individual income determination (investment income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/morocco/individual/income-determination",
+      "asOf": "2025-12-31",
+      "note": "No savings certificate exists; interest on fixed-income instruments such as Treasury bonds is taxed at 30% for individuals (2025 rate)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank Al-Maghrib's customer-protection page confirms a collective deposit guarantee fund (managed by SGFG) with a maximum per depositor, but gives no amount, and the SGFG site refused access."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1321,
+      "status": "sourced",
+      "sourceName": "Bank Al-Maghrib, maximum conventional interest rate (TMIC), 1 April 2026-31 March 2027",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-maximum-des-interets-conventionnels",
+      "asOf": "2026-04-01",
+      "note": "Legal ceiling on conventional lending rates, including credit cards, for April 2026 to March 2027 (13.36% the year before)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib Treasury reference curve (10-year about 3.7%)",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-31",
+      "note": "Low case: equities return about the Treasury bond yield, as in the weak MASI years of 2018-2022."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib Treasury reference curve (10-year 3.68%, about 2.6% after the 30% tax)",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4 points above the after-tax 10-year Treasury yield, the cap for this premium; the MASI has a moderate 10-year record with strong gains only since 2024."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib Treasury reference curve",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: the MASI repeats a strong decade similar to 2024-2026."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib reference exchange rate (9.81 MAD per USD)",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-des-changes/Cours-de-change/Cours-de-reference",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable dirham."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib reference exchange rate; World Bank official exchange rate history",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus a little dirham weakness, since the dirham is managed against a euro-dollar basket within a narrow band."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib reference exchange rate; World Bank official exchange rate history",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MA",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib, passbook savings rate 1.82% (H2 2026), taxed at 30%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-comptes-sur-carnet",
+      "asOf": "2026-10-31",
+      "note": "Low case: the passbook savings rate after the 30% tax on interest (1.82% x 0.7 = 1.3%), rounded down."
+    },
+    "fixed_income_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib, 12-month term deposits 2.56% (September 2026), taxed at 30%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme",
+      "asOf": "2026-10-31",
+      "note": "Base case: the 12-month deposit rate after the 30% tax on interest (2.56% x 0.7 = 1.8%)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib Treasury reference curve (10-year 3.68%), taxed at 30%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: longer Treasury bonds or bond funds after the 30% tax (3.68% x 0.7 = 2.6%)."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ACAPS (the insurance regulator) publishes sector statistics (first half 2026) but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Temporary death cover (assurance temporaire décès) is sold, but no published premium rates per 1,000 MAD of cover by age were found from ACAPS or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found; AMO reimburses 70-90% of the national reference tariff (CLEISS 2024)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.3725,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Morocco",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MA",
+      "asOf": "2023-12-31",
+      "note": "37.3% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available, and before compulsory health insurance (AMO) was fully generalised."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib inflation data (0.5% September 2026); inflation assumption 2%",
+      "sourceUrl": "https://www.bkam.ma/Statistiques/Prix/Inflation-et-inflation-sous-jacente",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI was read; private medical costs usually rise faster than general prices, so 1.5 points above the 2% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib inflation data (0.5% September 2026); inflation assumption 2%",
+      "sourceUrl": "https://www.bkam.ma/Statistiques/Prix/Inflation-et-inflation-sous-jacente",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was read; private school fees usually rise faster than general prices, so 2 points above the 2% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 75.493,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Morocco",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MA",
+      "asOf": "2024-12-31",
+      "note": "75.5 years in 2024 (men 73.3, women 77.8)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.2,
+            "men": 18.5,
+            "women": 21.9
+          },
+          {
+            "age": 65,
+            "total": 16.2,
+            "men": 14.8,
+            "women": 17.7
+          },
+          {
+            "age": 70,
+            "total": 12.7,
+            "men": 11.4,
+            "women": 13.9
+          },
+          {
+            "age": 80,
+            "total": 6.9,
+            "men": 6.2,
+            "women": 7.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/morocco/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 7.85
+          },
+          {
+            "year": 2040,
+            "value": 5.18
+          },
+          {
+            "year": 2065,
+            "value": 2.92
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/morocco/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 12.74 (2025, World Bank), 19.3 (2040) and 34.3 (2065, populationpyramid.net/morocco/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "CLEISS (French social security liaison body), the Moroccan social security system: CNSS old-age pension",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_maroc.html",
+      "asOf": "2024-09-09",
+      "note": "CNSS old-age pension at 60 with at least 3,240 insured days (55 for miners); a 2026 reform that might raise ages is stalled. Source is 2024 (older than 2025); the CNSS site could not be reached."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil-service pension fund (CMR) and Finance Ministry pages could not be reached, so the current age limit for civil servants could not be confirmed; an April 2026 press review (le360.ma) says raising it to 65 is one option of a stalled reform."
+    },
+    "retirement_return_low": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib, passbook savings rate 1.82%, taxed at 30%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-comptes-sur-carnet",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.018,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib, 12-month term deposits 2.56% (September 2026), taxed at 30%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme",
+      "asOf": "2026-10-31",
+      "note": "Base case: the after-tax 12-month deposit rate (1.8%); not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib Treasury reference curve, taxed at 30%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in longer Treasury bonds or bond funds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib deposit and Treasury rates",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning a little above after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib Treasury reference curve; equity base 6.5%; gold base 4.5%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or bond funds, equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank Al-Maghrib Treasury reference curve; equity high 10%",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The direct social aid programme (ASD, since December 2023) supports poor households including older members, but its site could not be reached and no official current amount for an older person could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules of the direct social aid programme for older people could not be read from an official source (asd.ma not reachable)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provides a severance indemnity on dismissal, but no official text giving an end-of-service benefit on retirement or resignation could be read; the Labour Ministry and CNSS sites could not be reached."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "pensionFromAge": 60,
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "CLEISS (French social security liaison body), the Moroccan social security system: CNSS old-age pension",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_maroc.html",
+      "asOf": "2024-09-09",
+      "note": "Compulsory CNSS pension for private employees: 50% of the average capped wage of the last 96 months after 3,240 insured days, plus 1% per extra 216 days up to 70%; wage ceiling 6,000 MAD a month (maximum pension 4,200), minimum pension 1,000 MAD. No automatic indexation is described. Source is 2024 (older than 2025)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب على دفتر",
+      "localNameEn": "Passbook savings account (compte sur carnet)",
+      "note": "Rate regulated by Bank Al-Maghrib every six months (1.82% for H2 2026).",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-comptes-sur-carnet"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل",
+      "localNameEn": "Term deposit (dépôt à terme)",
+      "note": "Bank Al-Maghrib publishes average rates only for 6 and 12 months.",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Term deposit, 12 months (dépôt à terme)",
+      "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found; banks offer housing and education savings plans."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bills (bons du Trésor)",
+      "note": "Auctioned by the Treasury to banks and institutions; individuals reach them mainly through banks or money-market funds.",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bonds (bons du Trésor)",
+      "note": "Mostly held by banks, insurers and funds.",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bonds (bons du Trésor)",
+      "note": "Mostly held by banks, insurers and funds.",
+      "sourceUrl": "https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-obligataire/Marche-des-bons-de-tresor/Marche-secondaire/Taux-de-reference-des-bons-du-tresor"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "هيئات التوظيف الجماعي للقيم المنقولة",
+      "localNameEn": "Collective investment funds (OPCVM)",
+      "note": "Supervised by the capital-market authority (AMMC); equity funds track or invest in the Casablanca market (MASI)."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold is mainly bought as jewellery; bars and coins are less common."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank Al-Maghrib",
+      "url": "https://www.bkam.ma/"
+    },
+    "insuranceRegulator": {
+      "name": "Autorité de Contrôle des Assurances et de la Prévoyance Sociale (ACAPS)",
+      "url": "https://www.acaps.ma/"
+    },
+    "insuranceComplaints": {
+      "name": "ACAPS online insurance complaints",
+      "url": "https://www.acaps.ma/fr/e-services"
+    },
+    "pensionScheme": {
+      "name": "Caisse Nationale de Sécurité Sociale (CNSS), old-age pension",
+      "url": "https://www.cnss.ma/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Compulsory health insurance (AMO), regulated by the Agence Nationale de l'Assurance Maladie (ANAM)",
+      "url": "https://www.anam.ma/"
+    },
+    "depositInsurance": {
+      "name": "Fonds collectif de garantie des dépôts, managed by SGFG",
+      "url": "https://www.sgfg.ma/"
+    },
+    "statistics": {
+      "name": "Haut-Commissariat au Plan (HCP)",
+      "url": "https://www.hcp.ma/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

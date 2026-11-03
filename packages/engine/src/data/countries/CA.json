@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "code": "CA",
+  "iso3": "CAN",
+  "nameEn": "Canada",
+  "nameNative": "Canada",
+  "region": "north_america",
+  "languages": [
+    "en",
+    "fr",
+    "zh",
+    "pa",
+    "es"
+  ],
+  "currency": {
+    "code": "CAD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1.396,
+      "status": "sourced",
+      "sourceName": "Bank of Canada, daily average exchange rate USD/CAD (FXUSDCAD)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?recent=5",
+      "asOf": "2026-10-30",
+      "note": "CAD 1.3960 per US dollar on 30 October 2026; World Bank 2025 average 1.398."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.031,
+      "status": "sourced",
+      "sourceName": "Statistics Canada, The Daily: Consumer Price Index, September 2026",
+      "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.htm",
+      "asOf": "2026-09-30",
+      "note": "CPI rose 3.1% year on year in September 2026 (3.0% in August), driven by gasoline (+27.8%); CPI excluding gasoline 2.2%. World Bank 2025 average 2.1%."
+    },
+    "inflation_projection": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "Bank of Canada 2% inflation target (1-3% band); CPI 3.1% (Sep 2026), 2.1% in 2025 (World Bank)",
+      "sourceUrl": "https://www.bankofcanada.ca/core-functions/monetary-policy/inflation/",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Canada's 2% target has been credible over decades and inflation excluding energy is near it, so a small margin above target, 2.2%, is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Bank of Canada, policy interest rate (target for the overnight rate)",
+      "sourceUrl": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
+      "asOf": "2026-10-29",
+      "note": "Raised 25 basis points to 2.50% on 28 October 2026 (effective 29 October), after holding at 2.25% since October 2025; next decision 9 December 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0001,
+      "status": "sourced",
+      "sourceName": "Bank of Canada, chartered bank posted rates: non-chequable savings deposits (V80691338)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691338/json?recent=5",
+      "asOf": "2026-10-28",
+      "note": "Posted rate 0.01% at chartered banks (also 0.01% on daily-interest savings balances over CAD 100,000, V80691337). High-interest savings accounts and promotional rates pay more; interest inside a TFSA is tax-free."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Canada publishes posted chartered-bank rates only for 1-, 3- and 5-year GICs and 5-year personal term deposits; no 3-month term deposit rate was found from the Bank of Canada or Statistics Canada."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "Bank of Canada, chartered bank posted rates: guaranteed investment certificates, 1-year (V80691339)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691339/json?recent=5",
+      "asOf": "2026-10-28",
+      "note": "Weekly posted rate 2.45%; 3-year GIC 3.20% (V80691340), 5-year GIC 2.75% (V80691341), 5-year personal fixed-term deposit 2.65% (V80691336)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Canadian banks do not sell a standard monthly recurring-deposit product with its own rate; savers use pre-authorised transfers into savings accounts or GICs, and the Bank of Canada publishes no such rate."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current weighted average deposit rate was found from the Bank of Canada or Statistics Canada; World Bank FR.INR.DPST for Canada stops in 2017 (0.1%, a posted savings rate)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Government of Canada discontinued sales of new Canada Savings Bonds in 2017 (Budget 2017, chapter 4: https://www.budget.canada.ca/2017/docs/plan/chap-04-en.html); there is no federal retail savings bond today.",
+      "absent": true
+    },
+    "tbill_91d_rate": {
+      "value": 0.0253,
+      "status": "sourced",
+      "sourceName": "Bank of Canada, Treasury bill auction average yield, 3-month (V80691303)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691303/json?recent=5",
+      "asOf": "2026-10-20",
+      "note": "Average yield at the 20 October 2026 auction, before the 28 October policy rate rise; 2.41% on 6 October."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0358,
+      "status": "sourced",
+      "sourceName": "Bank of Canada, Government of Canada 5-year benchmark bond yield (BD.CDN.5YR.DQ.YLD)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.5YR.DQ.YLD/json?recent=5",
+      "asOf": "2026-10-29"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0384,
+      "status": "sourced",
+      "sourceName": "Bank of Canada, Government of Canada 10-year benchmark bond yield (BD.CDN.10YR.DQ.YLD)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.10YR.DQ.YLD/json?recent=5",
+      "asOf": "2026-10-29"
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Canada: taxes on personal income (2026 federal brackets)",
+      "sourceUrl": "https://taxsummaries.pwc.com/canada/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "No withholding on interest paid to residents; interest is fully taxed at the saver's marginal rate. The lowest 2026 federal rate is 14% (to CAD 58,523) plus a provincial rate (about 5-10% in the lowest bracket), so about 20% for a modest earner; combined top rates 44.5-54.8%. Interest inside a TFSA is tax-free, and inside an RRSP tax is deferred."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No federal retail savings bond is sold (Canada Savings Bonds ended in 2017); government bond interest is taxed like bank interest at the marginal rate (PwC Tax Summaries).",
+      "absent": true
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Canada Deposit Insurance Corporation (CDIC), what's covered",
+      "sourceUrl": "https://www.cdic.ca/depositors/whats-covered/",
+      "asOf": "2026-10-31",
+      "note": "CAD 100,000 (principal and interest) per depositor per member institution in each of nine categories (single name, joint, RRSP, RRIF, TFSA, RDSP, RESP, FHSA, trust). GICs and term deposits are covered."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.19,
+      "status": "sourced",
+      "sourceName": "Financial Consumer Agency of Canada, How credit cards work",
+      "sourceUrl": "https://www.canada.ca/en/financial-consumer-agency/services/credit-cards/credit-card-work.html",
+      "asOf": "2026-10-31",
+      "note": "FCAC's example rate for regular purchases is 19% (22% for cash advances); specialised and retail cards may charge more. The legal ceiling is the criminal rate of 35% APR (Criminal Code s.347, https://laws-lois.justice.gc.ca/eng/acts/C-46/section-347.html), which does not bind standard cards."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "S&P/TSX Composite 35,620 on 30 Oct 2026, +17.7% in a year, record 37,069 in Aug 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/canada/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: after a strong run from a record high, Canadian shares earn little more than safe GICs for a long stretch."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "S&P/TSX Composite (Trading Economics); after-tax safe rate about 2-2.5% (1-year GIC 2.45%, 3-month bill 2.53%, Bank of Canada)",
+      "sourceUrl": "https://tradingeconomics.com/canada/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5-4 points above the after-tax safe rate, in line with the TSX's long-run total return with dividends, and within the 4-point cap."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "S&P/TSX Composite (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/canada/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified Canadian and global equity index fund held in a TFSA or RRSP earns long-run equity returns of about 8% in Canadian dollars."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics); USD/CAD 1.396 (Bank of Canada)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold drifts after the 2025-26 spike and the Canadian dollar holds against the US dollar."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); Bank of Canada 2% target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, with no long-run trend in the Canadian dollar."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in Canadian-dollar terms."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "1-year GIC 2.45% less about 20% tax = 1.96% (Bank of Canada V80691339)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691339/json?recent=5",
+      "asOf": "2026-10-31",
+      "note": "Low case: GIC and bill rates fall back towards 2% and are taxed at about 20-30%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.022,
+      "status": "assumption",
+      "sourceName": "1-year GIC 2.45%, 3-year GIC 3.20% posted (Bank of Canada); 3-month bill 2.53%",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691339/json?recent=5",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of GICs and bills taxed at about 20%, partly held tax-free in a TFSA."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "5-year Government of Canada bond 3.58%; 3-year GIC 3.20% (Bank of Canada)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.5YR.DQ.YLD/json?recent=5",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in 3-5 year government bonds or GICs inside a TFSA, so little tax is paid."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Neither OSFI, the provincial insurance regulators (CCIR) nor the OmbudService for Life and Health Insurance publishes an industry-wide life insurance claim settlement ratio for Canada."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life insurance is widely sold in Canada, but no regulator or government body publishes indicative premiums per CAD 1,000 of cover by age; insurer and broker quote tools were not used."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Medically necessary hospital stays are covered without charge for residents under provincial health insurance plans (Canada Health Act), so the typical out-of-pocket cost is nil; no official figure for a private self-pay stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance in Canada only supplements provincial plans (drugs, dental, vision, private room) and is priced per plan, not per sum insured; no official premium table per CAD 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1528,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CA",
+      "asOf": "2024-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Statistics Canada CPI September 2026 (all items 3.1%)",
+      "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.htm",
+      "asOf": "2026-10-31",
+      "note": "Hospital and doctor care is publicly funded, but prescription drugs, dental care and long-term care costs rise faster than CPI, so 3.5% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Statistics Canada: tuition fees rose 2.4% in 2026 (1.7% in 2025)",
+      "sourceUrl": "https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.htm",
+      "asOf": "2026-10-31",
+      "note": "Tuition rises are capped or frozen in several provinces but living and residence costs rise faster, so 3.5% is used for education goals."
+    },
+    "life_expectancy": {
+      "value": 83.1,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/canada",
+      "asOf": "2026-07-01",
+      "note": "Men 80.9, women 85.2 (UN WPP estimate for 2026). World Bank 2024: 82.1 (men 80.0, women 84.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.8,
+            "men": 24.2,
+            "women": 27.3
+          },
+          {
+            "age": 65,
+            "total": 21.6,
+            "men": 20.1,
+            "women": 22.9
+          },
+          {
+            "age": 70,
+            "total": 17.6,
+            "men": 16.3,
+            "women": 18.7
+          },
+          {
+            "age": 80,
+            "total": 10.4,
+            "men": 9.4,
+            "women": 11.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/canada",
+      "asOf": "2026-07-01",
+      "note": "Remaining years from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.2
+          },
+          {
+            "year": 2040,
+            "value": 2.54
+          },
+          {
+            "year": 2065,
+            "value": 2.07
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/canada/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 31.3 (2025, World Bank), 39.4 (2040) and 48.4 (2065, populationpyramid.net/canada/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Government of Canada, CPP retirement pension: when to start",
+      "sourceUrl": "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-benefit/when-start.html",
+      "asOf": "2026-10-31",
+      "note": "The standard CPP age is 65 for men and women; it can start from 60 (0.6% less per month early, up to 36%) to 70 (0.7% more per month, up to 42%). OAS also starts at 65. There is no mandatory retirement age for private employees."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Public Service Superannuation Act, section 12.1 (Group 2 contributors)",
+      "sourceUrl": "https://laws-lois.justice.gc.ca/eng/acts/P-36/section-12.1.html",
+      "asOf": "2026-10-31",
+      "note": "Federal public servants who joined from 2013 (Group 2) get an immediate unreduced pension at 65 (s.12.1); those who joined earlier (Group 1) at 60, or 55 with 30 years of service (s.13). There is no compulsory retirement age."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "1-year GIC 2.45% less about 20% tax (Bank of Canada V80691339)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691339/json?recent=5",
+      "asOf": "2026-10-31",
+      "note": "Low case: GIC and bill rates fall back after the current rise."
+    },
+    "retirement_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "1-year GIC 2.45% and 3-month bill 2.53% less about 20% tax = 1.96-2.02% (Bank of Canada)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691339/json?recent=5",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 1-year GIC and 3-month bill rate for a modest-income retiree."
+    },
+    "retirement_return_high": {
+      "value": 0.028,
+      "status": "assumption",
+      "sourceName": "3-year GIC 3.20% and 5-year Government of Canada bond 3.58% (Bank of Canada)",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.5YR.DQ.YLD/json?recent=5",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree ladders GICs and government bonds, partly inside a TFSA, at about today's rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 2%; TSX record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/canada/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag, mostly sheltered in an RRSP or TFSA."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Fixed income base 2.2% (taxed) to 3% (sheltered); equity base 6%",
+      "sourceUrl": "https://tradingeconomics.com/canada/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 6% and half GICs and bonds at about 3%, held in RRSPs and TFSAs."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Fixed income high 3%; equity high 8%",
+      "sourceUrl": "https://tradingeconomics.com/canada/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix in tax-sheltered accounts."
+    },
+    "old_age_allowance_monthly": {
+      "value": 762.5,
+      "status": "sourced",
+      "sourceName": "Government of Canada, Old Age Security payment amounts (October-December 2026)",
+      "sourceUrl": "https://www.canada.ca/en/services/benefits/publicpensions/old-age-security/payments.html",
+      "asOf": "2026-10-01",
+      "note": "Maximum OAS pension CAD 762.50 a month at 65-74 and CAD 838.75 at 75+, for October-December 2026, with 40 years of residence after 18 (partial from 10 years). Adjusted quarterly for CPI; taxable. Low-income pensioners also get the Guaranteed Income Supplement (up to CAD 1,138.90 a month for a single person)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Government of Canada, Old Age Security eligibility",
+      "sourceUrl": "https://www.canada.ca/en/services/benefits/publicpensions/old-age-security/eligibility.html",
+      "asOf": "2026-10-31",
+      "note": "Age 65+, 10 years' residence in Canada after 18 (20 years if living abroad); not based on work history. It is not means-tested, but it is clawed back from high incomes (recovery tax above CAD 93,454 net income in 2025, fully gone above about CAD 152,062 at 65-74). The over-75 amount is 10% higher."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Canadian employment law has no gratuity or end-of-service payment on resignation or retirement. Only employer terminations trigger statutory pay, e.g. federal severance of 2 days' wages per year of service (minimum 5 days) after 12 months (Canada Labour Code s.235: https://laws-lois.justice.gc.ca/eng/acts/L-2/section-235.html); provinces have similar notice or severance rules.",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 70,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Government of Canada, CPP retirement pension: how much you could receive",
+      "sourceUrl": "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-benefit/amount.html",
+      "asOf": "2026-10-31",
+      "note": "Canada Pension Plan (Quebec has the QPP): contributory, earnings-related; contribution rates of 9.9% (base) and 11.9% (with the enhancement) of pensionable earnings, shared equally by employee and employer. Maximum at 65 CAD 1,507.65 a month (January 2026), average CAD 858.34 (July 2026). Start from 60 to 70; benefits are indexed to CPI each January; taxable income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "Posted rates at large banks are near zero; high-interest savings accounts pay more. A Tax-Free Savings Account (TFSA) shelters interest from tax.",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691338/json?recent=5"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Short-term GIC",
+      "localNameEn": "Guaranteed investment certificate / term deposit (3 months)",
+      "note": "Short-term GICs and term deposits (30 days to 1 year) are sold by banks and credit unions; no official average rate is published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "GIC",
+      "localNameEn": "Guaranteed investment certificate (1 year)",
+      "note": "Covered by CDIC up to CAD 100,000 per category when held at a member institution.",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691339/json?recent=5"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product; savers set up automatic transfers into savings accounts, GICs or funds."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Canada Savings Bonds (discontinued)",
+      "note": "Sales of new Canada Savings Bonds ended in 2017; a few provinces have issued their own savings bonds in some years.",
+      "sourceUrl": "https://www.budget.canada.ca/2017/docs/plan/chap-04-en.html"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bills",
+      "localNameEn": "Government of Canada treasury bills",
+      "note": "Sold at Bank of Canada auctions to dealers; individuals buy them through a broker or via money-market funds.",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/V80691303/json?recent=5"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Government of Canada bonds",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.5YR.DQ.YLD/json?recent=5"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Government of Canada bonds",
+      "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.10YR.DQ.YLD/json?recent=5"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Mutual funds and index ETFs",
+      "note": "Usually held in a TFSA (tax-free) or RRSP (tax-deferred)."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy; investment-grade gold bars and coins of 99.5% purity or more are exempt from GST/HST."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Canada",
+      "url": "https://www.bankofcanada.ca/"
+    },
+    "insuranceRegulator": {
+      "name": "Office of the Superintendent of Financial Institutions (OSFI); provincial insurance regulators (Canadian Council of Insurance Regulators)",
+      "url": "https://www.osfi-bsif.gc.ca/en",
+      "note": "OSFI supervises federally regulated insurers' finances; provincial regulators (coordinated through CCIR, https://www.ccir-ccrra.org/) license insurers and oversee market conduct."
+    },
+    "insuranceComplaints": {
+      "name": "OmbudService for Life and Health Insurance (OLHI)",
+      "url": "https://www.olhi.ca/",
+      "note": "Free, independent ombudsman for life and health insurance complaints after the insurer's own process."
+    },
+    "pensionScheme": {
+      "name": "Canada Pension Plan (CPP)",
+      "url": "https://www.canada.ca/en/services/benefits/publicpensions/cpp.html",
+      "note": "Quebec workers are covered by the Quebec Pension Plan (QPP) instead."
+    },
+    "oldAgeAllowance": {
+      "name": "Old Age Security (OAS) pension and Guaranteed Income Supplement",
+      "url": "https://www.canada.ca/en/services/benefits/publicpensions/old-age-security.html"
+    },
+    "publicHealthCover": {
+      "name": "Canada's health care system (provincial and territorial health insurance plans)",
+      "url": "https://www.canada.ca/en/health-canada/services/canada-health-care-system.html",
+      "note": "Medically necessary hospital and physician services are free for insured residents under the Canada Health Act."
+    },
+    "depositInsurance": {
+      "name": "Canada Deposit Insurance Corporation (CDIC)",
+      "url": "https://www.cdic.ca/"
+    },
+    "statistics": {
+      "name": "Statistics Canada",
+      "url": "https://www.statcan.gc.ca/en/start"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

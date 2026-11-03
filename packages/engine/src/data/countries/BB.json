@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "BB",
+  "iso3": "BRB",
+  "nameEn": "Barbados",
+  "nameNative": "Barbados",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "bjs"
+  ],
+  "currency": {
+    "code": "BBD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.0,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados: The What, Why and How of Maintaining Barbados' Exchange Rate",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/the-what-why-and-how-of-maintaining-barbados-exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "Fixed peg of BBD 2.00 per US dollar since 1975; the World Bank PA.NUS.FCRF gives 2.0 for 2025."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.015,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados, Review of the Economy January-September 2026 (Barbados Statistical Service CPI)",
+      "sourceUrl": "https://www.centralbank.org.bb/news/economic-reviews/economic-review-january-september-2026",
+      "asOf": "2026-07-31",
+      "note": "12-month moving-average inflation 1.5% in July 2026 (latest CPI month); point-to-point 1.5% in July, after 2.0% in May."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBB review Jan-Sep 2026: inflation 2021-2025 of 1.5, 4.3, 3.2, 1.5, 0.9%; projection 1.5-2% for end-2026",
+      "sourceUrl": "https://www.centralbank.org.bb/news/economic-reviews/economic-review-january-september-2026",
+      "asOf": "2026-10-31",
+      "note": "Barbados has no inflation target (the dollar is pegged to the US dollar); the 2021-2025 average is about 2.3%, rounded up to 2.5% to allow for imported energy and freight shocks."
+    },
+    "policy_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados Table E2 (Bank Rate), April 2026 release",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx",
+      "asOf": "2026-05-31",
+      "note": "The Bank Rate (discount rate on overnight lending to licensees) has been 2% since April 2020; under the peg it is not actively moved."
+    },
+    "savings_account_rate": {
+      "value": 0.0017,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados Table E1 (commercial banks' selected interest rates), April 2026 release",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx",
+      "asOf": "2026-04-30",
+      "note": "No single savings rate is published: posted savings rates range from 0% to 2%, and the weighted average rate on all deposits is 0.17%, used here as the typical rate. The CBB stopped setting a minimum savings rate in 2015."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados Table E1 (commercial banks' selected interest rates), April 2026 release",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx",
+      "asOf": "2026-04-30",
+      "note": "Posted 3-month time deposit rates are 0% at both the minimum and the maximum of the range reported by banks."
+    },
+    "fdr_1y_rate": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados Table E1 (commercial banks' selected interest rates), April 2026 release",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx",
+      "asOf": "2026-04-30",
+      "note": "Posted 12-month time deposit rates range from 0% to 2%; midpoint used. The weighted average on all deposits is only 0.17%, so most balances earn far less."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched CBB interest-rate tables and regulator material: no monthly recurring deposit product rate is published for Barbados banks."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0017,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados Table E1 (weighted average deposit rate), April 2026 release",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx",
+      "asOf": "2026-04-30",
+      "note": "Weighted average deposit rate 0.17% (rounded to 0.1% in the CBB review for September 2026)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados, 4.50% Barbados Optional Savings Bonds Plus (BOSS+) 2030",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1",
+      "asOf": "2026-01-01",
+      "note": "BOSS+ is a 5-year government savings bond sold at par through the CBB: fixed 4.50% paid twice a year, minimum BBD 500, redeemable at par after 24 months. Latest series issued 1 January 2026."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0067,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados, Treasury Bills Issue 1042 notice",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/treasury-bills-issue-1042",
+      "asOf": "2026-09-09",
+      "note": "Last-issue 91-day rate 0.67% (average tender price 99.83) shown in the 9 September 2026 notice; the CBB review gives a 0.7% Treasury bill rate for September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched CBB government securities pages: no market yield for 5-year government paper is published; the retail 5-year BOSS+ bond pays a fixed 4.50% (see sanchayapatra_5y_rate)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched CBB government securities pages: no 10-year benchmark yield is published. The latest long issue is the 7.75% Barbados Government Debenture 2045 (issued 1 January 2026, amortising 2036-2045)."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Barbados: Individual - Income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/barbados/individual/income-determination",
+      "asOf": "2026-07-01",
+      "note": "15% final withholding tax on local interest over BBD 100 paid to residents; no tax is withheld from interest paid to pensioners aged 60 and over."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Central Bank of Barbados, Government Securities: What You Need to Know About BOSS+ Bonds",
+      "sourceUrl": "https://centralbank.org.bb/news/moneysmart-investing/government-securities-what-you-need-to-know-about-boss-bonds",
+      "asOf": "2024-10-27",
+      "note": "BOSS+ interest is not subject to withholding tax, unlike the 15% on bank interest (CBB guide from October 2024, still current for the 2026 series)."
+    },
+    "deposit_insurance_limit": {
+      "value": 25000,
+      "status": "sourced",
+      "sourceName": "Barbados Deposit Insurance Corporation, deposit insurance calculator",
+      "sourceUrl": "https://bdic.org.bb/site/index.php/en/resources-docs/deposit-insurance-calculator",
+      "asOf": "2026-10-31",
+      "note": "BBD 25,000 per depositor per bank; joint and trust accounts are separate categories. Parliament passed a Protection of Depositors bill in June 2026 extending cover to credit unions at the same limit (not yet verified as in force)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched CBB, FSC and government sources: no legal cap on credit card interest exists and no official typical rate is published (only company rate sheets and older news citing rates above 20%)."
+    },
+    "equity_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "CBB Treasury bill 0.67% (Sep 2026); BOSS+ 4.50% tax-free",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/treasury-bills-issue-1042",
+      "asOf": "2026-10-31",
+      "note": "Low case of zero: the small, illiquid Barbados Stock Exchange has had a weak 10-year price record."
+    },
+    "equity_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBB Treasury bill 0.67% (Sep 2026); BOSS+ 4.50% tax-free",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/treasury-bills-issue-1042",
+      "asOf": "2026-10-31",
+      "note": "Safe after-tax rate of 0.67% plus a premium kept below 4 points because the local index record is weak; dividends make up most of the return."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "CBB Treasury bill 0.67% (Sep 2026); BOSS+ 4.50% tax-free",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/treasury-bills-issue-1042",
+      "asOf": "2026-10-31",
+      "note": "High case if local listed companies keep paying solid dividends and prices recover, or if savers hold global funds in US-dollar-pegged terms."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Barbados dollar fixed at BBD 2 = USD 1 (Central Bank of Barbados)",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/the-what-why-and-how-of-maintaining-barbados-exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price; the peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Barbados dollar fixed at BBD 2 = USD 1 (Central Bank of Barbados)",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/the-what-why-and-how-of-maintaining-barbados-exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% a year, with no expected depreciation under the fixed peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Barbados dollar fixed at BBD 2 = USD 1 (Central Bank of Barbados)",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/the-what-why-and-how-of-maintaining-barbados-exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold, or a peg under stress."
+    },
+    "fixed_income_return_low": {
+      "value": 0.002,
+      "status": "assumption",
+      "sourceName": "CBB Table E1 weighted average deposit rate 0.17%",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary deposits at about 0.2% after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "BOSS+ 4.50% tax-free; Treasury bill 0.67%; deposits 0-2%",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free BOSS+ bonds and short-term deposits or bills."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BOSS+ 4.50% tax-free",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1",
+      "asOf": "2026-10-31",
+      "note": "High case: all in tax-free 5-year BOSS+ bonds."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Financial Services Commission annual and insurance reports: no industry-wide life claim settlement ratio is published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in Barbados, but no regulator or public source publishes premium rates by age; only individual insurer quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Ministry of Health and Wellness and other public sources: care at the Queen Elizabeth Hospital is free for residents, and no official typical private hospital bill is published (only insurer and travel-guide estimates)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched FSC and public sources: no published private health insurance premiums by age (group plans dominate; individual quotes only)."
+    },
+    "oop_health_share": {
+      "value": 0.4949,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BB",
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBB review Jan-Sep 2026: health among the CPI groups pushing inflation up",
+      "sourceUrl": "https://www.centralbank.org.bb/news/economic-reviews/economic-review-january-september-2026",
+      "asOf": "2026-10-31",
+      "note": "No separate long-run medical CPI series found; we plan with headline projection plus 1.5 points for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "CBB review Jan-Sep 2026: education among the CPI groups pushing inflation up",
+      "sourceUrl": "https://www.centralbank.org.bb/news/economic-reviews/economic-review-january-september-2026",
+      "asOf": "2026-10-31",
+      "note": "No long-run education CPI series found; headline projection plus one point."
+    },
+    "life_expectancy": {
+      "value": 76.332,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BB",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 76.6 for 2026 (men 74.1, women 79.0)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/barbados/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.3,
+            "men": 19.7,
+            "women": 22.9
+          },
+          {
+            "age": 65,
+            "total": 17.4,
+            "men": 15.9,
+            "women": 18.6
+          },
+          {
+            "age": 70,
+            "total": 13.5,
+            "men": 12.4,
+            "women": 14.6
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 6.4,
+            "women": 7.6
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/barbados/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.9
+          },
+          {
+            "year": 2040,
+            "value": 2.7
+          },
+          {
+            "year": 2065,
+            "value": 2.2
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 25.9 (2025, World Bank), 37.0 (2040) and 46.0 (2065, populationpyramid.net/barbados/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 68,
+      "status": "sourced",
+      "sourceName": "National Insurance and Social Security (Amendment) Act 2023 (Parliament of Barbados); NIS reform summary",
+      "sourceUrl": "https://www.barbadosparliament.com/bills/details/722",
+      "asOf": "2023-08-09",
+      "note": "NIS pensionable age is 67 now, rises to 67.5 in 2028 and 68 in 2034, so 68 applies to anyone born after 1975 (reduced early pension from 61, rising to 63 by 2031). There is no statutory private-sector retirement age."
+    },
+    "retirement_age_government": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Ministry of the Public Service, Compulsory Age of Retirement",
+      "sourceUrl": "https://mps.gov.bb/People_Resourcing/age",
+      "asOf": "2018-01-01",
+      "note": "Compulsory retirement age for public officers is 67 from 1 January 2018 (Pensions Act, Cap. 25); voluntary retirement from 60. Figure dates from 2018 but is still in force."
+    },
+    "retirement_return_low": {
+      "value": 0.0015,
+      "status": "assumption",
+      "sourceName": "CBB Table E1 weighted average deposit rate 0.17%",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits after the 15% withholding tax (exempt from 60, but rates are near zero)."
+    },
+    "retirement_return_base": {
+      "value": 0.0067,
+      "status": "assumption",
+      "sourceName": "CBB Treasury Bills Issue 1042 (91-day 0.67%)",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/treasury-bills-issue-1042",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the Treasury bill rate, the best safe short rate; pensioners 60+ pay no withholding tax on interest."
+    },
+    "retirement_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BOSS+ 4.50% tax-free",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of tax-free BOSS+ bonds with some cash, below the full 4.5% coupon for liquidity."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BOSS+ 4.50%; Treasury bill 0.67%; weak local equity record",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if local shares stagnate and bonds are held to maturity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BOSS+ 4.50%; Treasury bill 0.67%; weak local equity record",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1",
+      "asOf": "2026-10-31",
+      "note": "Base case: half equities at 4% and half government savings bonds and deposits around 3%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "BOSS+ 4.50%; Treasury bill 0.67%; weak local equity record",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns, including global funds held in pegged dollars."
+    },
+    "old_age_allowance_monthly": {
+      "value": 997,
+      "status": "sourced",
+      "sourceName": "National Insurance and Social Security Service, Non-Contributory Old Age Pension",
+      "sourceUrl": "https://www.nis.gov.bb/non-contributory-old-age-pension",
+      "asOf": "2025-12-15",
+      "note": "BBD 230 a week (same for all), converted as 230 x 52 / 12. A temporary BBD 100 a month cost-of-living credit applies for one year from 1 April 2026 (2026 budget); the page has no date for the rate, so it may be older."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "National Insurance and Social Security Service, Non-Contributory Old Age Pension",
+      "sourceUrl": "https://www.nis.gov.bb/non-contributory-old-age-pension",
+      "asOf": "2025-12-15",
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "note": "Payable from 67 (the pensionable age) to citizens with 12 years' residence after 40 or 20 years after 18 (15/20 for permanent residents). Not income-tested, but excluded if receiving a public service pension or an NIS pension above this rate."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Barbados has no statutory gratuity on retirement or resignation; the Severance Payments Act pays 2.5 to 3.5 weeks' wages per year of service only on redundancy after 104 weeks of service (Severance Payments Act, Cap. 355A, as cited by the Barbados courts: https://www.barbadoslawcourts.gov.bb/assets/content/pdfs/2014/09/No.-665-of-1992-Hoyte-Ivor-Winston-v.-The-Transport-Board.pdf). Retirement income runs through the NIS.",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "NIS reform summary (National Insurance and Social Security (Amendment) Act 2023)",
+      "sourceUrl": "https://www.nis.gov.bb/wp-content/uploads/2023/07/NIS2-PDF.pdf",
+      "asOf": "2023-07-28",
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": null,
+        "pensionFromAge": 68,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory contributory NIS old-age pension for employed and self-employed people from 16: 750 weeks of contributions needed; pension age 67 now, 67.5 from 2028 and 68 from 2034; pensions get up to 1.5% a year cost-of-living increases (not full indexation); best 10 years of earnings. Reform document from 2023."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "3-month fixed (time) deposit",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "12-month fixed (time) deposit",
+      "sourceUrl": "https://cdn.centralbank.org.bb/documents/2026-07-09-14-37-44-E1E2InterestRatesApril2026.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "BOSS+",
+      "localNameEn": "Barbados Optional Savings Bonds Plus (5-year government savings bond)",
+      "note": "Sold by the Central Bank for the Government at par; 4.50% fixed, interest not subject to withholding tax; minimum BBD 500.",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/4-50-barbados-optional-savings-bonds-plus-2030-1"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of Barbados Treasury bill (91 and 182 days)",
+      "note": "Issued by tender through the CBB; mostly bought by banks and institutions.",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/treasury-bills-issue-1042"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Treasury note",
+      "localNameEn": "Government of Barbados Treasury note",
+      "note": "Issued occasionally through the CBB; no market yield published.",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release-treasury"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Debenture",
+      "localNameEn": "Barbados Government Debenture",
+      "note": "Long-dated debentures (latest 7.75% 2045) issued through the CBB; interest subject to 15% withholding tax except for pensioners 60+.",
+      "sourceUrl": "https://www.centralbank.org.bb/news/general-press-release/7-75-barbados-government-debenture-2045"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Mutual fund",
+      "localNameEn": "Mutual fund (regulated by the Financial Services Commission)",
+      "note": "Locally sponsored mutual funds invest in local and regional shares and bonds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": "Gold jewellery, coins and bars",
+      "note": "No legal restriction on buying gold; mostly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Barbados",
+      "url": "https://www.centralbank.org.bb/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Commission (insurance division)",
+      "url": "https://www.fsc.gov.bb/regulatory-divisions/insurance"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Commission: tips, complaints and referrals",
+      "url": "https://www.fsc.gov.bb/tips-complaints-referrals"
+    },
+    "pensionScheme": {
+      "name": "National Insurance and Social Security Service (NIS)",
+      "url": "https://www.nis.gov.bb/"
+    },
+    "oldAgeAllowance": {
+      "name": "Non-Contributory Old Age Pension (NIS)",
+      "url": "https://www.nis.gov.bb/non-contributory-old-age-pension"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health and Wellness (free care at public hospitals and polyclinics)",
+      "url": "https://www.health.gov.bb/"
+    },
+    "depositInsurance": {
+      "name": "Barbados Deposit Insurance Corporation",
+      "url": "https://bdic.org.bb/"
+    },
+    "statistics": {
+      "name": "Barbados Statistical Service",
+      "url": "https://stats.gov.bb/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

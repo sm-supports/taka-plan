@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "MX",
+  "iso3": "MEX",
+  "nameEn": "Mexico",
+  "nameNative": "México",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "en",
+    "nhe",
+    "yua"
+  ],
+  "currency": {
+    "code": "MXN",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 18.7962,
+      "status": "sourced",
+      "sourceName": "Banco de México (SIE) CF102, tipo de cambio FIX",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=6&accion=consultarCuadro&idCuadro=CF102&locale=es",
+      "asOf": "2026-10-30",
+      "note": "FIX rate MXN 18.7962 per US dollar on 30 October 2026; World Bank 2025 average 19.24."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0345,
+      "status": "sourced",
+      "sourceName": "Banco de México (SIE), Inflación, cuadro CP151 (INPC, INEGI)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=8&accion=consultarCuadro&idCuadro=CP151&locale=es",
+      "asOf": "2026-09-30",
+      "note": "Headline CPI (INPC) rose 3.45% in the 12 months to September 2026; core 3.75%. World Bank 2025 average 3.81%."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banxico inflation target 3% ±1 point; 5-year CPI average about 5% (2021-2025, World Bank)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=8&accion=consultarCuadro&idCuadro=CP151&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Inflation has been back near 3.5% in 2026 but averaged well above the 3% target over five years, so planning uses 4%, the top of Banxico's tolerance range."
+    },
+    "policy_rate": {
+      "value": 0.065,
+      "status": "sourced",
+      "sourceName": "Banco de México, tasa objetivo (anuncios de política monetaria 2026)",
+      "sourceUrl": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/anuncios-politica-monetaria-t.html",
+      "asOf": "2026-09-24",
+      "note": "Target overnight interbank rate 6.50%, cut 25 bp on 26 March and 7 May 2026 and held on 25 June, 6 August and 24 September 2026 (still 6.50% on 1 November, SIE CF101)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banxico's weighted gross rate on savings deposits (CF117) was 9.53% in September 2026, but it is pulled up by high-yield digital accounts and is not typical of ordinary accounts at large banks; no typical large-bank savings rate was found."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0567,
+      "status": "sourced",
+      "sourceName": "Banco de México (SIE) CF117, ventanilla rate at opening, depósitos a plazo fijo 3 meses, gross",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=18&accion=consultarCuadro&idCuadro=CF117&locale=es",
+      "asOf": "2026-09-30",
+      "note": "Average counter (posted) gross rate on 3-month fixed deposits, September 2026 (4.31% net); the weighted gross rate actually paid on 90-day deposits was 6.34%."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banxico's CF117 table publishes counter and weighted rates for terms up to 6 months (6-month fixed deposits 4.57% gross, September 2026) but no 1-year deposit rate was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published average rate was found in Banxico's deposit-rate tables."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0522,
+      "status": "sourced",
+      "sourceName": "Banco de México (SIE) CF112, Costo porcentual promedio de captación (CPP)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=18&accion=consultarCuadro&idCuadro=CF112&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Average cost of peso deposits (CPP) 5.22% in October 2026; the cost of term deposits at commercial banks (CCP) was 6.10%. World Bank deposit rate 2.55% (2025)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Mexico has no separate government savings certificate; individuals buy ordinary federal government securities (CETES, Bonos, Udibonos) directly through the government's Cetesdirecto programme (see the bill and bond slots)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0669,
+      "status": "sourced",
+      "sourceName": "Banco de México (SIE) CF107, Valores gubernamentales, CETES 91 días, primary auction yield",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-29",
+      "note": "91-day CETES 6.69% at the auction of 29 October 2026 (6.75% on 22 October); 28-day 6.22%, 364-day 7.12%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0878,
+      "status": "sourced",
+      "sourceName": "Banco de México (SIE) CF107, Bonos de desarrollo a tasa fija 5 años, primary auction yield",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-29",
+      "note": "5-year fixed-rate government bond (Bono M) 8.78% at the auction of 29 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0925,
+      "status": "sourced",
+      "sourceName": "Banco de México (SIE) CF107, Bonos de desarrollo a tasa fija 10 años, primary auction yield",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-22",
+      "note": "10-year fixed-rate government bond 9.25% at the auction of 22 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.145,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Mexico, withholding taxes (0.90% of invested capital)",
+      "sourceUrl": "https://taxsummaries.pwc.com/mexico/corporate/withholding-taxes",
+      "asOf": "2026-08-06",
+      "note": "Banks withhold income tax at 0.90% a year of the capital invested, not of the interest; at a 6.2% deposit rate that is about 14.5% of the interest. The final tax is on real (inflation-adjusted) interest at the saver's marginal rate in the annual return. Page reviewed 6 August 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.145,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Mexico, withholding taxes (0.90% of invested capital)",
+      "sourceUrl": "https://taxsummaries.pwc.com/mexico/corporate/withholding-taxes",
+      "asOf": "2026-08-06",
+      "note": "No separate savings certificate; interest on government securities bought by individuals is subject to the same 0.90%-of-capital withholding (about 14.5% of a 6.2% yield), with final tax on real interest in the annual return."
+    },
+    "deposit_insurance_limit": {
+      "value": 3555000,
+      "status": "sourced",
+      "sourceName": "IPAB, ¿Qué hacemos? (400,000 UDIs); UDI value from Banco de México SIE CP150",
+      "sourceUrl": "https://www.gob.mx/ipab/que-hacemos",
+      "asOf": "2026-10-31",
+      "note": "IPAB covers bank deposits up to 400,000 UDIs per person per bank; with the UDI at about 8.89 pesos (Banxico CP150, early November 2026) that is about MXN 3.55 million."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest was confirmed and Banxico's household credit table (CF303) shows no recent credit card figure (N/E for July-September 2026); Banxico's credit card indicators report could not be reached."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Mexican stock index (S&P/BMV IPC) weak 10-year record; CETES 364-day 7.12% gross (Banxico CF107)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local index repeats its weak decade, leaving equities below after-tax government bills."
+    },
+    "equity_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "After-tax 1-year CETES 7.12% less 0.90% withholding = 6.2% (Banxico CF107); Banxico 3% inflation target",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2.3 points over the after-tax safe rate, kept modest because the Mexican index has lagged over the past ten years."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Long-run emerging-market equity returns in local currency; Banxico CF107 yields",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "High case: Mexican and global shares recover their long-run record in peso terms."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 3% lower in a year and far below the January 2026 peak (Trading Economics); FIX MXN 18.80 per dollar",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold flat in dollars and the peso stable."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Gold USD price trend (Trading Economics); expected peso depreciation of about 1-2 points a year (inflation gap with the US)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold tracks long-run dollar inflation plus a little, with the peso weakening slowly in line with the inflation gap."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold resumes its 2020s uptrend and the peso weakens."
+    },
+    "fixed_income_return_low": {
+      "value": 0.048,
+      "status": "assumption",
+      "sourceName": "3-month fixed deposit 5.67% gross (Banxico CF117) less 0.90% withholding",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=18&accion=consultarCuadro&idCuadro=CF117&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short bank deposits after the withholding tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.062,
+      "status": "assumption",
+      "sourceName": "CETES 364 days 7.12% (Banxico CF107) less 0.90% withholding",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Base case: one-year government bills (CETES) after withholding."
+    },
+    "fixed_income_return_high": {
+      "value": 0.078,
+      "status": "assumption",
+      "sourceName": "Bono M 5 years 8.78% (Banxico CF107) less 0.90% withholding",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in five-year fixed-rate government bonds at today's yield."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CNSF publishes insurance market statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Mexico, but no regulator or other non-company source with indicative premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or statistics-office figure for the typical cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.4124,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MX",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 41.2% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Banxico CPI tables (INPC, INEGI); headline 3.45%, core 3.75% (September 2026)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=8&accion=consultarCuadro&idCuadro=CP151&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Medical prices in Mexico usually rise faster than general prices; planning uses 5%, about 1 point above projected inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Banxico SIE CP154: education (colegiaturas) index 149.1 in September 2026 vs 145.5 for headline CPI (base 2Q July 2018 = 100)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=8&accion=consultarCuadro&idCuadro=CP154&locale=es",
+      "asOf": "2026-10-31",
+      "note": "School fees have risen faster than general prices since 2018 and step up each school year; planning uses 5.5%."
+    },
+    "life_expectancy": {
+      "value": 75.264,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MX",
+      "asOf": "2024-12-31",
+      "note": "Men 72.4, women 78.0 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/mexico",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.7,
+            "men": 20.7,
+            "women": 22.5
+          },
+          {
+            "age": 65,
+            "total": 17.9,
+            "men": 17.2,
+            "women": 18.5
+          },
+          {
+            "age": 70,
+            "total": 14.4,
+            "men": 13.9,
+            "women": 14.8
+          },
+          {
+            "age": 80,
+            "total": 8.3,
+            "men": 8.4,
+            "women": 8.3
+          }
+        ]
+      },
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/mexico/2065/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 7.91
+          },
+          {
+            "year": 2040,
+            "value": 4.95
+          },
+          {
+            "year": 2065,
+            "value": 2.72
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 12.6 in 2025 (World Bank), 20.2 in 2040 and 36.7 in 2065 (UN WPP medium variant)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The IMSS pension age under the 1997 Social Security Law (old-age pension at 65, reduced 'cesantía' pension from 60) could not be confirmed: the IMSS site refused access and the Chamber of Deputies law library (Ley del Seguro Social) could not be reached."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The ISSSTE retirement age for federal employees under the 2007 ISSSTE Law could not be confirmed from an official source that could be reached."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "3-month fixed deposit 5.67% gross (Banxico CF117) less 0.90% withholding",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=18&accion=consultarCuadro&idCuadro=CF117&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short deposits after withholding, allowing for lower rates as Banxico eases."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "CETES 364 days 7.12% less 0.90% withholding = 6.2% (Banxico CF107)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly CETES and short government bonds, kept below the 6.2% after-tax one-year bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bono M 5 years 8.78% less 0.90% withholding (Banxico CF107)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of medium-term fixed-rate government bonds at today's yields."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax bills and deposits 4.8-6.2%; equity low case 4% (Banxico CF107, CF117)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of government securities and equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.072,
+      "status": "assumption",
+      "sourceName": "Fixed income base 6.2%; equity base 8.5%",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half peso government securities and half equity."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Equity high 11%; Bono M 5 years 8.8% (Banxico CF107)",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
+      "asOf": "2026-10-31",
+      "note": "High case: equities do well and bond yields stay high."
+    },
+    "old_age_allowance_monthly": {
+      "value": 3200,
+      "status": "sourced",
+      "sourceName": "Programas para el Bienestar, Pensión para el Bienestar de las Personas Adultas Mayores",
+      "sourceUrl": "https://www.programasparaelbienestar.gob.mx/programas/adultos-mayores/pension-para-personas-adultas-mayores/",
+      "asOf": "2026-10-31",
+      "note": "MXN 6,400 paid every two months (MXN 3,200 a month) to everyone 65 or over; the page does not state the year, and 6,400 is the 2026 amount (6,200 in 2025). Women aged 60-64 can receive a separate Pensión Mujeres Bienestar."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Programas para el Bienestar, Pensión para el Bienestar de las Personas Adultas Mayores",
+      "sourceUrl": "https://www.programasparaelbienestar.gob.mx/programas/adultos-mayores/pension-para-personas-adultas-mayores/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "note": "Universal: Mexican by birth or naturalisation, living in Mexico, aged 65 or over, regardless of income; registration at a Bienestar module during open registration periods."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Ley Federal del Trabajo, articles 162 and 486 (Chamber of Deputies text, last reform 12 June 2015, hosted on gob.mx)",
+      "sourceUrl": "https://www.gob.mx/cms/uploads/attachment/file/156203/1044_Ley_Federal_del_Trabajo.pdf",
+      "asOf": "2015-06-12",
+      "valueJson": {
+        "daysPerYear": 12,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "note": "Prima de antigüedad: 12 days' wages per year of service for permanent workers, paid on dismissal (justified or not), on justified separation, and on voluntary resignation after at least 15 years; the daily wage counted is capped at twice the minimum wage. The text read is the 2015 consolidated version (older than 2025); article 162 has not changed since. Separate severance (3 months plus 20 days per year) applies to unjustified dismissal."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The IMSS contributory pension (individual AFORE accounts under the 1997 law, with a guaranteed minimum pension) could not be documented from an official source that could be reached (IMSS refused access; the Chamber of Deputies law library was down)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=18&accion=consultarCuadro&idCuadro=CF117&locale=es"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo a 3 meses",
+      "localNameEn": "3-month fixed-term deposit",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=18&accion=consultarCuadro&idCuadro=CF117&locale=es"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo a 1 año",
+      "localNameEn": "1-year fixed-term deposit",
+      "note": "Banks offer 1-year term deposits and pagarés, but Banxico publishes average rates only up to 6 months."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard recurring-deposit product with a published rate; regular savers use savings accounts or scheduled purchases of CETES through Cetesdirecto."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No separate retail savings certificate; individuals buy ordinary federal government securities through the government's Cetesdirecto programme."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "CETES (Certificados de la Tesorería de la Federación)",
+      "localNameEn": "Federal Treasury Certificates",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos de Desarrollo a tasa fija (Bonos M)",
+      "localNameEn": "Fixed-rate federal government bonds",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bonos de Desarrollo a tasa fija (Bonos M)",
+      "localNameEn": "Fixed-rate federal government bonds",
+      "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondos de inversión de renta variable",
+      "localNameEn": "Equity investment funds",
+      "note": "Equity funds and index-tracking exchange-traded funds are sold to retail investors through regulated intermediaries."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Monedas de oro (Centenario, Libertad)",
+      "localNameEn": "Gold coins (Centenario, Libertad)",
+      "note": "Banco de México's gold bullion coins are legal tender and can be bought and sold by individuals."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco de México (Banxico)",
+      "url": "https://www.banxico.org.mx/"
+    },
+    "insuranceRegulator": {
+      "name": "Comisión Nacional de Seguros y Fianzas (CNSF)",
+      "url": "https://www.gob.mx/cnsf"
+    },
+    "insuranceComplaints": {
+      "name": "Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF)",
+      "url": "https://www.condusef.gob.mx/"
+    },
+    "pensionScheme": {
+      "name": "Instituto Mexicano del Seguro Social (IMSS) pensions, with individual accounts supervised by CONSAR",
+      "url": "https://www.gob.mx/consar"
+    },
+    "oldAgeAllowance": {
+      "name": "Pensión para el Bienestar de las Personas Adultas Mayores",
+      "url": "https://www.programasparaelbienestar.gob.mx/programas/adultos-mayores/pension-para-personas-adultas-mayores/"
+    },
+    "publicHealthCover": {
+      "name": "IMSS-Bienestar (free public health care for people without social security)",
+      "url": "https://www.gob.mx/imssbienestar"
+    },
+    "depositInsurance": {
+      "name": "Instituto para la Protección al Ahorro Bancario (IPAB)",
+      "url": "https://www.gob.mx/ipab/que-hacemos"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística y Geografía (INEGI)",
+      "url": "https://www.inegi.org.mx/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

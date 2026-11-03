@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "code": "CI",
+  "iso3": "CIV",
+  "nameEn": "Côte d'Ivoire",
+  "nameNative": "Côte d'Ivoire",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "fr",
+    "dyu",
+    "bci"
+  ],
+  "currency": {
+    "code": "XOF",
+    "symbol": "F CFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 587.14,
+      "status": "sourced",
+      "sourceName": "BCEAO reference rate of the US dollar against the CFA franc",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-30",
+      "note": "587.14 francs per dollar on 30 October 2026; the franc is fixed at 655.957 per euro. World Bank 2025 average 581.9."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.016,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Institut National de la Statistique (INS) of Côte d'Ivoire, CPI September 2026",
+      "sourceUrl": "https://tradingeconomics.com/ivory-coast/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 1.6% year on year in September 2026 (1.2% in August, which the BCEAO's September 2026 economic note confirms); secondary source because the INS site could not be reached."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BCEAO inflation target range of 1-3% (centre 2%); UEMOA inflation 3.5% in 2024, 0.0% in 2025, 1.0% expected for 2026",
+      "sourceUrl": "https://www.bceao.int/fr/communique-presse/communique-de-presse-de-la-reunion-ordinaire-du-comite-de-politique-monetaire-19",
+      "asOf": "2026-10-31",
+      "note": "The franc is pegged to the euro and the BCEAO aims at 2% within a 1-3% band, which matches the recent average, so 2% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "BCEAO Monetary Policy Committee, 9 September 2026: main policy rate (minimum bid rate on liquidity tenders)",
+      "sourceUrl": "https://www.bceao.int/fr/communique-presse/communique-de-presse-de-la-reunion-ordinaire-du-comite-de-politique-monetaire-19",
+      "asOf": "2026-09-09",
+      "note": "Held at 3.00% (in force since 16 March 2026); marginal lending facility 5.00%."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current savings-account rate for Côte d'Ivoire was found; the BCEAO publishes only an average deposit rate for the Union."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate for Côte d'Ivoire was found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate for Côte d'Ivoire was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCEAO's September 2026 economic note gives only the Union-wide average deposit rate (5.15% in July 2026) and says Côte d'Ivoire's fell 16 basis points; the country figure itself was not found."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Treasury sells bonds to the public by public offering (appel public à l'épargne), but the rate of a current issue could not be confirmed from an official page."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recent 91-day bill auction for Côte d'Ivoire was found; the latest 12-month bill (20 October 2026) yielded 3.89% on average (UMOA-Titres)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0704,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres (UEMOA public securities agency), Côte d'Ivoire Treasury bond auction of 27 October 2026, 5-year bond",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-27",
+      "note": "Weighted average yield 7.04% on the 60-month bond (coupon 5.45%); 7.03% at the 20 October auction."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year bond auction for Côte d'Ivoire was found in October 2026; the longest recent auction was 7 years at 7.11-7.18% (UMOA-Titres)."
+    },
+    "tax_bank_interest": {
+      "value": 0.135,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Côte d'Ivoire, withholding taxes (tax on income from debt claims, IRC)",
+      "sourceUrl": "https://taxsummaries.pwc.com/ivory-coast/corporate/withholding-taxes",
+      "asOf": "2026-09-09",
+      "note": "The general rate on interest is 18%, reduced to 13.5% for individuals on bank deposit interest; 25% on cash certificates."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Côte d'Ivoire, withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/ivory-coast/corporate/withholding-taxes",
+      "asOf": "2026-09-09",
+      "note": "Income realised by individuals on Treasury bonds is exempt from tax."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The UEMOA deposit guarantee and resolution fund (FGDR-UMOA) covers bank deposits, but its cover limit could not be read from an official source (its site could not be reached)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current usury cap or typical credit card rate for Côte d'Ivoire was found; the Union-wide average lending rate was 6.70% in July 2026 (BCEAO)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO: UEMOA government bond yields about 7%; regional stock exchange in Abidjan with a volatile 10-year record",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Low case: a decade like 2016-2020, when the regional index fell sharply."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Assumed after-tax safe rate 4.5% (deposits) and tax-free government bonds about 7% (UMOA-Titres, October 2026)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Base case for regional equities including dividends, held about 3.5 points above the after-tax deposit rate because the index's 10-year record is uneven."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Regional stock exchange dividend yields and recent recovery",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: high dividend yields plus moderate price growth."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 655.957 per euro (BCEAO reference rates)",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold prices in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Long-run gold trend in euro terms; franc fixed to the euro",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run gold trend of about 4% a year, with no currency gain under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold in euro terms",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "UEMOA average deposit rate 5.15% (July 2026); 13.5% tax on deposit interest",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings at lower rates after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "UEMOA average deposit rate 5.15% (July 2026) less 13.5% tax",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits at the Union average rate after tax (about 4.45%)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Tax-free Treasury bonds for individuals, about 6-7% (UMOA-Titres, October 2026)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: government bonds bought by individuals, whose income is tax-exempt, allowing for lower retail coupons."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim settlement ratio for Côte d'Ivoire was found from the regional supervisor (CIMA) or the national insurance directorate."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per XOF 1,000 of cover were found from the regulator or an official source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.3199,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Côte d'Ivoire",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CI",
+      "asOf": "2023-12-31",
+      "note": "32.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; BCEAO",
+      "sourceUrl": "https://www.bceao.int/fr/content/principaux-indicateurs-et-taux-directeurs",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series was confirmed; medical costs are planned 2 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; BCEAO",
+      "sourceUrl": "https://www.bceao.int/fr/content/principaux-indicateurs-et-taux-directeurs",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series was confirmed; school costs are planned 1.5 points above general inflation."
+    },
+    "life_expectancy": {
+      "value": 62.11,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Côte d'Ivoire",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CI",
+      "asOf": "2024-12-31",
+      "note": "62.1 years in 2024 (men 60.2, women 64.3); UN WPP 2024 gives 62.4 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.3,
+            "men": 15.2,
+            "women": 17.3
+          },
+          {
+            "age": 65,
+            "total": 13.2,
+            "men": 12.4,
+            "women": 14.2
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 9.8,
+            "women": 11.4
+          },
+          {
+            "age": 80,
+            "total": 6.3,
+            "men": 5.8,
+            "women": 6.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/c%C3%B4te-divoire/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the both-sexes figure at 65 is published, the others are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 21.4
+          },
+          {
+            "year": 2040,
+            "value": 16.9
+          },
+          {
+            "year": 2065,
+            "value": 11.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/c%C3%B4te-divoire/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.66 (2025, World Bank), 5.9 (2040) and 8.4 (2065, populationpyramid.net)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Prévoyance Sociale (CNPS), old-age insurance factsheet",
+      "sourceUrl": "https://www.cnps.ci/wp-content/uploads/2022/11/ASSURANCE-VIEILLESSE-V2.pdf",
+      "asOf": "2026-10-31",
+      "note": "Pension from 60 with at least 15 years of insured salaried work; early pension from 55 reduced 5% per year of anticipation."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil-service retirement age could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "UEMOA average deposit rate 5.15% less 13.5% tax",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "UEMOA average deposit rate 5.15% (July 2026) less 13.5% tax = about 4.45%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Tax-free Treasury bonds for individuals, about 6-7% (UMOA-Titres)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: government bonds held to maturity, tax-exempt for individuals."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Safe rate 4.5%; equity low 3%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits with weak equity and gold years."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Safe rate 4.5%, government bonds about 7%, equity base 8%, gold base 4%",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, government bonds, regional equity funds and gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Equity high 11%; bonds about 7%",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension was found; the CNPS pays contributory pensions only."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on retirement indemnity could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Prévoyance Sociale (CNPS), old-age insurance factsheet",
+      "sourceUrl": "https://www.cnps.ci/wp-content/uploads/2022/11/ASSURANCE-VIEILLESSE-V2.pdf",
+      "asOf": "2026-10-31",
+      "note": "Compulsory for private-sector employees (6.3% employee and 7.7% employer, PwC Tax Summaries 2026); pension from 60 after 15 years, equal to the average of the best 15 years' salary times 1.33% or 1.70% per year of career, plus 10% per dependent child (up to 3); the factsheet states no automatic indexation, so inflationLinked is false."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Emprunt obligataire de l'État par appel public à l'épargne",
+      "localNameEn": "Government bond sold to the public",
+      "note": "Treasury bonds sold to individuals through licensed brokers; income is tax-exempt for individuals. The current issue's rate could not be confirmed."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bon assimilable du Trésor (BAT)",
+      "localNameEn": "Treasury bill",
+      "note": "Bills are auctioned to banks on the regional market, and recent Ivorian auctions were 12-month bills only.",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-20-10-2026/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligation assimilable du Trésor (OAT, 5 ans)",
+      "localNameEn": "Treasury bond (5 years)",
+      "note": "Auctioned on the regional market; individuals buy through banks or licensed brokers.",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-de-la-cote-divoire-du-27-10-2026/"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No recent 10-year auction was found; the longest recent maturity was 7 years."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "OPCVM (FCP ou SICAV)",
+      "localNameEn": "Mutual fund",
+      "note": "Funds regulated by the regional financial markets authority invest in shares listed on the regional exchange in Abidjan."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mostly as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of West African States (Banque Centrale des États de l'Afrique de l'Ouest, BCEAO)",
+      "url": "https://www.bceao.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Inter-African Conference on Insurance Markets (CIMA), regional insurance supervisor",
+      "url": "https://cima-afrique.org/"
+    },
+    "insuranceComplaints": {
+      "name": "CIMA, policyholder requests and complaints",
+      "url": "https://cima-afrique.org/faites-votre-requetes-ici-2/"
+    },
+    "pensionScheme": {
+      "name": "National Social Insurance Fund (Caisse Nationale de Prévoyance Sociale, CNPS)",
+      "url": "https://www.cnps.ci/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Institute of Statistics (Institut National de la Statistique, INS)",
+      "url": "https://www.ins.ci/",
+      "note": "The site's security certificate was misconfigured when checked."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "code": "GD",
+  "iso3": "GRD",
+  "nameEn": "Grenada",
+  "nameNative": "Grenada",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "gcl"
+  ],
+  "currency": {
+    "code": "XCD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.7,
+      "status": "sourced",
+      "sourceName": "ECCB Monetary Council, communique of the 113th meeting (10 July 2026), reported by Discover MNI",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-07-10",
+      "note": "Fixed exchange rate of EC$2.70 per US dollar, in place for 50 years; World Bank PA.NUS.FCRF also gives 2.7 for 2025."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0203,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Grenada inflation rate (Central Statistical Office CPI)",
+      "sourceUrl": "https://tradingeconomics.com/grenada/inflation-cpi",
+      "asOf": "2026-06-30",
+      "note": "Secondary source: annual CPI inflation 2.03% in June 2026 (2.06% in May); the CSO and ECCB CPI pages could not be read (CSO site lists releases only to 2024, ECCB site blocked)."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "IMF WEO (2026 forecast 1.3%, medium term about 2%); World Bank CPI 0.6% for 2025; EC dollar pegged at 2.70 per US dollar",
+      "sourceUrl": "https://tradingeconomics.com/grenada/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The ECCB has no inflation target (the EC dollar is pegged to the US dollar), so we plan with about 2%, in line with US-dollar inflation and recent Grenada readings of 0.6-2%."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "ECCB Monetary Council, communique of the 113th meeting (10 July 2026), reported by Discover MNI",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-07-10",
+      "note": "ECCB discount rate 3.0% for short-term credit (4.5% long-term), unchanged; applies to all ECCU members including Grenada. Secondary copy of the communique (the ECCB site blocks automated reading)."
+    },
+    "savings_account_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "ECCB Monetary Council, communique of the 113th meeting (10 July 2026): Minimum Savings Rate",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-07-10",
+      "note": "The ECCB Minimum Savings Rate of 2.0% is the floor banks must pay on savings deposits; banks' posted savings rates are generally at or near this floor."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched ECCB statistics and Grenada sources: the ECCB interest-rate tables by country could not be read (site blocks automated access) and no other public source gives a 3-month time deposit rate for Grenada."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched ECCB statistics and Grenada sources: no readable public figure for a 12-month time deposit rate in Grenada; the World Bank average deposit rate (all deposits) was 0.95% in 2025."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched ECCB and Grenada sources: no monthly recurring deposit product rate is published."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0095,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GD",
+      "asOf": "2025-12-31",
+      "note": "Average rate paid by commercial banks on deposits, 2025 (ECCB data via IMF IFS)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Government of Grenada and ECCB/RGSM sources: no government savings certificate or retail savings bond for individuals was found; government borrowing is through Treasury bills on the Regional Government Securities Market."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0347,
+      "status": "sourced",
+      "sourceName": "Regional Government Securities Market news release: Government of Grenada 91-day Treasury bill (8 June 2026)",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-06-08",
+      "note": "Uniform-price auction discount rate 3.46972%, EC$30 million raised; earlier 2026 issues were in March. A September 2026 rollover result was not found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched RGSM and ECCB debt pages: no current 5-year Government of Grenada bond yield is published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched RGSM and ECCB debt pages: no current 10-year Government of Grenada bond yield is published."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Income Tax Act Cap. 149 (Grenada), s.25(1)(aa)",
+      "sourceUrl": "https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap149-INCOME-TAX-ACT.pdf",
+      "asOf": "2021-08-01",
+      "note": "Interest accruing from deposits to individuals resident in Grenada is exempt from income tax (since 31 March 1995); s.53 sets 0% withholding on deposit interest to non-residents. Consolidated text dated 2021 (older than 2025)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals in Grenada (see sanchayapatra_5y_rate), so no tax rate applies; the Income Tax Act exempts only interest on government loans declared exempt by the Minister (s.25(1)(f))."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Grenada passed the Eastern Caribbean Deposit Insurance Corporation Agreement Bill 2025 (https://grenadaparliament.gd/wp-content/uploads/2025/05/Eastern-Caribbean-Deposit-Insurance-Corporation-Agreement-Bill-2025.pdf), but no evidence was found that the regional corporation is operating or that a coverage limit has been set."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched ECCB and GARFIN sources: no legal cap on credit card interest and no official typical rate published for Grenada."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026); EC dollar pegged to the US dollar",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: very small local share market on the regional exchange, so savers mostly rely on global equity funds in pegged US-dollar terms, with a weak decade possible."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026); EC dollar pegged to the US dollar",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case uses a global equity index in EC-dollar terms (pegged to USD): the 3.5% safe rate plus a 3-point premium, as the local market is too thin to have a usable 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026); EC dollar pegged to the US dollar",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat their strong long-run US-dollar returns."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate (113th Monetary Council communique)",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price; the 50-year peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate (113th Monetary Council communique)",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% a year, with no expected depreciation of the pegged EC dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate (113th Monetary Council communique)",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 0.95% (2025); ECCB minimum savings rate 2%",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits at 1-2%, tax-free for residents."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB minimum savings rate 2%; 91-day Treasury bill 3.47% (June 2026)",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free savings deposits at 2% and Treasury bills near 3.5%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026)",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling Treasury bills at about 3.5%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched GARFIN Supervisor of Insurance reports and news: only claim totals are published (latest found for 2018), no industry-wide life claim settlement ratio."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in Grenada by regional insurers, but no regulator or public source publishes premium rates by age; only individual insurer quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Ministry of Health and news sources: public General Hospital fees are low and not published as a typical bill; no official figure for a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched GARFIN and public sources: no published individual health insurance premiums by age."
+    },
+    "oop_health_share": {
+      "value": 0.4848,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GD",
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Grenada CPI inflation 2.03% (June 2026); planning inflation 2%",
+      "sourceUrl": "https://tradingeconomics.com/grenada/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No long-run medical CPI series found; headline planning inflation plus 2 points for private and overseas medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Grenada CPI inflation 2.03% (June 2026); planning inflation 2%",
+      "sourceUrl": "https://tradingeconomics.com/grenada/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No long-run education CPI series found; headline planning inflation plus 1.5 points."
+    },
+    "life_expectancy": {
+      "value": 75.367,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GD",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 75.7 for 2026 (men 72.8, women 78.8)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/grenada/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.4,
+            "men": 19.0,
+            "women": 23.8
+          },
+          {
+            "age": 65,
+            "total": 17.8,
+            "men": 15.7,
+            "women": 19.9
+          },
+          {
+            "age": 70,
+            "total": 14.5,
+            "men": 12.5,
+            "women": 16.5
+          },
+          {
+            "age": 80,
+            "total": 8.8,
+            "men": 7.6,
+            "women": 9.9
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/grenada/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.4
+          },
+          {
+            "year": 2040,
+            "value": 4.1
+          },
+          {
+            "year": 2065,
+            "value": 2.0
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 18.5 (2025, World Bank), 24.2 (2040) and 50.7 (2065, populationpyramid.net/grenada/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "National Insurance (Amendment) (No. 2) Bill 2023, Third Schedule (Parliament of Grenada)",
+      "sourceUrl": "https://grenadaparliament.gd/wp-content/uploads/2023/06/National-Insurance_Amendment-No.-2-Bill-2023.docx",
+      "asOf": "2024-01-01",
+      "note": "NIS pensionable age rises one year a year from 60 (2023) to 61 (2024), 62 (2025), 63 (2026), 64 (2027) and 65 from 1 January 2028, so 65 applies to anyone born after 1975. In force 1 January 2024 (passed mid-2023; older than 2025)."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Jamaica Observer, 'Grenada says new pension scheme favourable to civil servants' (31 December 2024)",
+      "sourceUrl": "https://jamaicaobserver.com/2024/12/31/grenada-says-new-pension-scheme-favourable-civil-servants",
+      "asOf": "2024-12-31",
+      "note": "Attorney General quoted: public officers work until 60 or 26 2/3 years of service; early retirement at 50 with 20 years. A new Public Sector Employees (Pension Fund) scheme was proposed in 2024. News source from 2024 (older than 2025)."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 0.95% (2025); ECCB minimum savings rate 2%",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly tax-free savings deposits at about 1.5-2%."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB minimum savings rate 2%; 91-day Treasury bill 3.47% (June 2026)",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 3.47% Treasury bill rate: a mix of savings deposits and bills, kept liquid in retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026)",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling Treasury bills at about the latest auction rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.47%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global equities disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.47%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global equities at 6.5% and half deposits and bills around 2.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.47%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "HelpAge Pension Watch (https://www.helpage.org/country_profile/grenada/) states that Grenada does not currently have a social pension (0% of people 60+ receive one); poor elderly people can only apply for means-tested Public Assistance.",
+      "absent": true
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension exists in Grenada (HelpAge Pension Watch, https://www.helpage.org/country_profile/grenada/).",
+      "absent": true
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity: the Employment Act Cap. 89 s.84 (https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap89-EMPLOYMENT-ACT.pdf) pays a termination allowance of one week's wages per year only on dismissal by the employer, and expressly not to an employee over 60 or at retirement age.",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "National Insurance (Amendment) (No. 2) Bill 2023 (Parliament of Grenada), amending the National Insurance Act Cap. 205",
+      "sourceUrl": "https://grenadaparliament.gd/wp-content/uploads/2023/06/National-Insurance_Amendment-No.-2-Bill-2023.docx",
+      "asOf": "2024-01-01",
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory contributory NIS age pension for employed persons from 16 to the pensionable age (rising to 65 by 2028); traditionally 500 weeks of contributions needed (150 paid), else a lump-sum age grant. No automatic indexation was found in the Act; increases are ad hoc. Tax treatment not confirmed. Law dates from 2023 (older than 2025)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "ECCB minimum savings rate 2%.",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "3-month fixed (time) deposit",
+      "note": "Offered by commercial banks and credit unions; no public rate table found."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "12-month fixed (time) deposit",
+      "note": "Offered by commercial banks and credit unions; no public rate table found."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of Grenada 91-day Treasury bill",
+      "note": "Auctioned on the Regional Government Securities Market through licensed intermediaries; mostly bought by institutions.",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 5-year government bond issue for retail found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 10-year government bond issue for retail found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No locally registered retail equity or index fund was identified; the regional share market is very small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": "Gold jewellery and coins",
+      "note": "No legal restriction on buying gold; mostly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Eastern Caribbean Central Bank (ECCB)",
+      "url": "https://www.eccb-centralbank.org/",
+      "note": "Shared central bank of the Eastern Caribbean Currency Union."
+    },
+    "insuranceRegulator": {
+      "name": "Grenada Authority for the Regulation of Financial Institutions (GARFIN)",
+      "url": "https://www.garfin.org/"
+    },
+    "insuranceComplaints": {
+      "name": "Grenada Authority for the Regulation of Financial Institutions (GARFIN)",
+      "url": "https://www.garfin.org/",
+      "note": "No separate insurance ombudsman; complaints go to GARFIN."
+    },
+    "pensionScheme": {
+      "name": "National Insurance Scheme (NIS) Grenada",
+      "url": "https://nisgrenada.org/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (public hospitals and free district health centres)",
+      "url": "https://www.gov.gd/health"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Central Statistical Office, Ministry of Finance",
+      "url": "https://stats.gov.gd/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

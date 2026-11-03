@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "code": "KN",
+  "iso3": "KNA",
+  "nameEn": "Saint Kitts and Nevis",
+  "nameNative": "Saint Kitts and Nevis",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en"
+  ],
+  "currency": {
+    "code": "XCD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.7,
+      "status": "sourced",
+      "sourceName": "ECCB Monetary Council, communique of the 113th meeting (10 July 2026), reported by Discover MNI",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-07-10",
+      "note": "Fixed exchange rate of EC$2.70 per US dollar, in place for 50 years; the 114th communique (30 October 2026) says the EC dollar remains strong and stable; World Bank PA.NUS.FCRF gives 2.7 for 2025."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.046,
+      "status": "sourced",
+      "sourceName": "Trading Economics, St Kitts and Nevis inflation rate (ECCB / Statistics Department CPI)",
+      "sourceUrl": "https://tradingeconomics.com/st-kitts-and-nevis/inflation-cpi",
+      "asOf": "2026-06-30",
+      "note": "Secondary source: year-on-year CPI inflation 4.6% in June 2026 (5.1% in May); the Statistics Department site publishes CPI tables only up to 2024."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Government of St Kitts and Nevis, Household Savings Bond prospectus (2026): inflation forecast 2.5% for 2026, just below 2% in 2027; EC dollar pegged at 2.70",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "The EC dollar is pegged to the US dollar and the ECCB has no inflation target; the Ministry of Finance forecasts 2.5% for 2026 easing below 2%, so we plan with 2.5% given the recent 4-5% readings."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "ECCB Monetary Council, communique of the 114th meeting (30 October 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/news/communique-114th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank",
+      "asOf": "2026-10-30",
+      "note": "ECCB discount rate kept at 3.0% for short-term credit (4.5% long-term); applies to all ECCU members including St Kitts and Nevis."
+    },
+    "savings_account_rate": {
+      "value": 0.0215,
+      "status": "sourced",
+      "sourceName": "ECCB statistics: interest rates and weighted average rates on deposits, St Kitts and Nevis",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate on local-currency savings deposits, June 2026 (posted range 2.00-2.75%; ECCB minimum savings rate 2%)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "ECCB statistics: interest rates on deposits and loans, St Kitts and Nevis (monthly)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code%5B%5D=6",
+      "asOf": "2026-08-31",
+      "note": "3-month time deposits in local currency: minimum and maximum posted rates both 2.00% (May-August 2026)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0348,
+      "status": "sourced",
+      "sourceName": "ECCB statistics: weighted average rate on time deposits, St Kitts and Nevis",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate on all local-currency time deposits (3.48%, June 2026), used as the 1-year figure; posted 12-month rates range from 0.10% to 4.25% (August 2026)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published rate was found in the ECCB statistics or St Kitts and Nevis sources."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.021,
+      "status": "sourced",
+      "sourceName": "ECCB statistics: weighted average rate on total deposits, St Kitts and Nevis",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate on total local-currency deposits, June 2026 (1.74% including foreign-currency deposits); World Bank FR.INR.DPST gives 2.15% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Government of St Kitts and Nevis Household Savings Bond (ECCU Retail Bond Programme), prospectus",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-23",
+      "note": "Retail bond for individuals and NGOs only: 2-year term, fixed 4.50% a year paid half-yearly, EC$500 to EC$125,000 per investor, issued 23 October 2026 (shorter than 5 years); the inaugural issue raised EC$10 million (ECCB communique, 30 October 2026)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0375,
+      "status": "sourced",
+      "sourceName": "Household Savings Bond prospectus, Appendix III: outstanding Government securities (91-day T-bill)",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2025-10-28",
+      "note": "Government of St Kitts and Nevis 91-day over-the-counter Treasury bill at 3.75% (issued 28 October 2025); 182-day bills 3.85% and 365-day bills 4.00%. Bills are rolled over at set rates; no later 91-day rate was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year Government of St Kitts and Nevis bond was found; outstanding listed bonds are long private placements (2032 and 2057) per the 2026 prospectus."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 10-year Government of St Kitts and Nevis bond yield is published; the prospectus lists only a 20-year US-dollar bond (2032) and a 45-year bond (2057) from 2012."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "St Kitts and Nevis collects withholding taxes and corporate income tax, but no readable official source on how bank interest received by resident individuals is taxed was found (Inland Revenue site unreachable; PwC has no St Kitts and Nevis summary)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Household Savings Bond prospectus (2026)",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-23",
+      "note": "Income from the retail bond and all other instruments issued on the Regional Government Securities Market is not subject to any tax, duty or levy by ECCU governments."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ECCU members are setting up the Eastern Caribbean Deposit Insurance Corporation, but the 113th and 114th ECCB Monetary Council communiques (2026) do not mention it operating and no coverage limit for St Kitts and Nevis was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest was found; ECCB statistics show other lending rates up to 25% but no credit card series."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "St Kitts and Nevis 91-day Treasury bill 3.75%; EC dollar pegged to the US dollar",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: the regional share market is very small, so savers rely on global equity funds in pegged US-dollar terms, and a weak decade is possible."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "St Kitts and Nevis 91-day Treasury bill 3.75%; EC dollar pegged to the US dollar",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "No usable local index record, so the base uses a global equity index in EC-dollar terms: the tax-free 3.75% bill rate plus about 2.75 points."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "St Kitts and Nevis 91-day Treasury bill 3.75%; EC dollar pegged to the US dollar",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat their strong long-run US-dollar returns."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price; the 50-year peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% a year, with no expected depreciation of the pegged EC dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECCB statistics: savings deposits 2.15%, 3-month deposits 2.00% (2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits at about 2%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECCB statistics: time deposits 3.48% (June 2026); 91-day T-bill 3.75%; retail bond 4.5% (tax-free)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of savings and time deposits with some Treasury bills and the tax-free retail bond."
+    },
+    "fixed_income_return_high": {
+      "value": 0.0425,
+      "status": "assumption",
+      "sourceName": "Household Savings Bond 4.50% (2-year, tax-free); 365-day T-bill 4.00%",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: retail bonds and 1-year bills at about 4-4.5%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Financial Services Regulatory Commission site: no industry-wide life claim settlement ratio is published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold by regional insurers, but no regulator or public source publishes premium rates by age for St Kitts and Nevis."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for a typical major hospital stay at a private or mid-range hospital in St Kitts and Nevis was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or public source publishes individual health insurance premiums by age for St Kitts and Nevis."
+    },
+    "oop_health_share": {
+      "value": 0.418,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KN",
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "St Kitts and Nevis CPI 4.6% (June 2026); planning inflation 2.5%",
+      "sourceUrl": "https://tradingeconomics.com/st-kitts-and-nevis/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series found; planning inflation plus 2 points for private and overseas medical care."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "St Kitts and Nevis CPI 4.6% (June 2026); planning inflation 2.5%",
+      "sourceUrl": "https://tradingeconomics.com/st-kitts-and-nevis/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series found; planning inflation plus 1.5 points."
+    },
+    "life_expectancy": {
+      "value": 72.281,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KN",
+      "asOf": "2024-12-31",
+      "note": "UN WPP (via georank.org) gives 72.6 for 2026 (men 69.0, women 76.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org (life expectancy by current age, 2026)",
+      "sourceUrl": "https://georank.org/life-expectancy/saint-kitts-and-nevis",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.6,
+            "men": 16.4,
+            "women": 20.8
+          },
+          {
+            "age": 65,
+            "total": 15.1,
+            "men": 13.2,
+            "women": 16.9
+          },
+          {
+            "age": 70,
+            "total": 11.8,
+            "men": 10.4,
+            "women": 13.2
+          },
+          {
+            "age": 80,
+            "total": 6.7,
+            "men": 6,
+            "women": 7.3
+          }
+        ]
+      },
+      "note": "Remaining years derived from the total expected age at death by current age for 2026 (e.g. 78.6 at age 60 means 18.6 years left)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.POP.DPND.OL",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=KN",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio of 16.76 in 2025. No UN WPP projection for 2040 or 2065 could be read for St Kitts and Nevis."
+    },
+    "retirement_age_default": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "St Christopher and Nevis Social Security Board: Age Benefit",
+      "sourceUrl": "https://socialsecurity.kn/age-benefit/",
+      "asOf": "2026-10-31",
+      "note": "Age pension from 62 with at least 500 contributions (150 paid). A May 2026 actuarial reform proposal published by the Board would raise it to 65 by 2032, but it had not been enacted as of October 2026, so 62 applies today."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for public officers under the Pensions Act could not be confirmed (revised laws listing did not show the Act); government workers also draw the social security age pension at 62."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECCB statistics: savings deposits 2.15% (June 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings deposits at about 2%."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.75%; time deposits 3.48% (June 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 3.48-3.75% deposit and bill rates (no tax on RGSM income): a liquid mix in retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.0375,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.75%; Household Savings Bond 4.5%",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling Treasury bills and retail bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.75%; global equity in pegged EC dollars",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global equities disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.0475,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.75%; global equity in pegged EC dollars",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global equities at 6.5% and half deposits and bills around 3%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.75%; global equity in pegged EC dollars",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns."
+    },
+    "old_age_allowance_monthly": {
+      "value": 350,
+      "status": "sourced",
+      "sourceName": "St Christopher and Nevis Social Security Board: increases to minimum age pension and assistance pension (press release, 29 December 2023)",
+      "sourceUrl": "https://socialsecurity.kn/press/press-releases-2023/increases-to-minimum-age-pension-assistance-pension-and-funeral-grant/",
+      "asOf": "2024-01-01",
+      "note": "Assistance (non-contributory) Pension raised from EC$255 to EC$350 a month from 1 January 2024 (HelpAge Pension Watch also gives EC$350); the Board's benefit page still shows the old EC$255. No later change found; source older than 2025."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "St Christopher and Nevis Social Security Board: Non-Contributory Pensions",
+      "sourceUrl": "https://socialsecurity.kn/non-contributory-pensions/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "menAge": 62,
+        "womenAge": 62,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Assistance Pension for people over 62 who do not qualify for the contributory age pension and are in need, with no secure income or other means of support."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Protection of Employment Act 1986 pays severance from a government fund (1% employer levy) to workers made redundant (Social Security Board, https://socialsecurity.kn/protection-act/); no statutory gratuity at retirement was confirmed, but the Act text could not be read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "St Christopher and Nevis Social Security Board: Age Benefit",
+      "sourceUrl": "https://socialsecurity.kn/age-benefit/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 62,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory social security age pension: from 62 with 500 contributions (150 paid), 16-60% of the average of the best three years' insurable earnings, paid for life; otherwise a lump-sum age grant. Minimum age pension EC$500 a month from 2024. Increases are ad hoc (no automatic indexation found); tax treatment not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "Weighted average 2.15% (June 2026); ECCB minimum savings rate 2%.",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "3-month fixed (time) deposit",
+      "note": "Posted rate 2.00% (2026).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code%5B%5D=6"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "12-month fixed (time) deposit",
+      "note": "Posted 12-month rates 0.10-4.25% (2026).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code%5B%5D=6"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Household Savings Bond",
+      "localNameEn": "Government of St Kitts and Nevis Retail Bond (2 years)",
+      "note": "ECCU Retail Bond Programme: individuals and NGOs only, EC$500 minimum, 4.5% fixed, tax-free; first issued September-October 2026.",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of St Kitts and Nevis 91-day Treasury bill",
+      "note": "Sold over the counter at set rates (3.75% for 91 days); mostly held by institutions.",
+      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 5-year government bond issue for retail found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 10-year government bond issue for retail found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No locally registered retail equity or index fund was identified; the regional share market is very small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": "Gold jewellery and coins",
+      "note": "No legal restriction on buying gold; mostly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Eastern Caribbean Central Bank (ECCB)",
+      "url": "https://www.eccb-centralbank.org/",
+      "note": "Shared central bank of the Eastern Caribbean Currency Union, headquartered in Basseterre."
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Regulatory Commission (FSRC), St Kitts and Nevis",
+      "url": "https://www.fsrc.kn/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Regulatory Commission (FSRC), St Kitts and Nevis",
+      "url": "https://www.fsrc.kn/",
+      "note": "No separate insurance ombudsman; complaints go to the FSRC."
+    },
+    "pensionScheme": {
+      "name": "St Christopher and Nevis Social Security Board",
+      "url": "https://socialsecurity.kn/age-benefit/"
+    },
+    "oldAgeAllowance": {
+      "name": "Assistance Pension, Social Security Board",
+      "url": "https://socialsecurity.kn/non-contributory-pensions/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (public hospitals and community health services)",
+      "url": "https://www.gov.kn/prime-ministers-office-ministry-of-finance-national-security-citizenship-and-immigration-health-and-social-security/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Department of Statistics, Ministry of Sustainable Development",
+      "url": "https://www.stats.gov.kn/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

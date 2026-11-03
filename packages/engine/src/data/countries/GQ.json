@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "code": "GQ",
+  "iso3": "GNQ",
+  "nameEn": "Equatorial Guinea",
+  "nameNative": "Guinea Ecuatorial",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "es",
+    "fan",
+    "fr"
+  ],
+  "currency": {
+    "code": "XAF",
+    "symbol": "FCFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 581.928,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Equatorial Guinea",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GQ",
+      "asOf": "2025-12-31",
+      "note": "2025 average. The franc CFA is fixed at 655.957 per euro, so the dollar rate moves with the euro."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.032,
+      "status": "sourced",
+      "sourceName": "Bank of Central African States (BEAC), note on CEMAC inflation, Q2 2026 (national CPI, Equatorial Guinea)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-06-30",
+      "note": "Consumer prices up 3.2% year on year in June 2026 in Equatorial Guinea (BEAC table of national CPIs); the annual average was 2.3%. The national statistics office (INEGE) site was not reachable."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC: CEMAC inflation convergence norm of 3%; franc CFA fixed to the euro",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The franc CFA is fixed to the euro and the BEAC holds CEMAC inflation under a 3% norm; Equatorial Guinea's annual average inflation was 3.4% in 2024 and 2.3% in 2025 (BEAC), so the 3% norm is used."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "BEAC Monetary Policy Committee, press release of 28 September 2026 (Taux d'intérêt des appels d'offres)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
+      "asOf": "2026-09-28",
+      "note": "BEAC tender rate (TIAO) held at 4.50% on 28 September 2026 (marginal lending facility 5.75%, deposit facility 0%); the rate is common to all six CEMAC countries."
+    },
+    "savings_account_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "BEAC Monetary Policy Report, September 2026, Annex 1 (Taux Créditeur Minimum)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-09-30",
+      "note": "Minimum rate banks must pay on savings accounts of individuals (Taux Créditeur Minimum), 2.45% unchanged since 8 July 2014; banks usually pay this floor."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found; the BEAC publishes lending rates (TEG) by country but no deposit rates beyond the 2.45% savings floor."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found; the BEAC publishes lending rates (TEG) by country but no term deposit rates."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Equatorial Guinea",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GQ",
+      "asOf": "2017-12-31",
+      "note": "2.45% in 2017, the latest World Bank value (older than 2025); it equals the BEAC minimum savings rate (Taux Créditeur Minimum), still 2.45% in the BEAC September 2026 report."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; the Treasury borrows through BEAC-run auctions of bills and bonds."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0818,
+      "status": "sourced",
+      "sourceName": "BEAC, Statistiques mensuelles du marché des valeurs du Trésor de la CEMAC, January 2026 (coût des ressources, BTA, Guinée Equatoriale)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-01-31",
+      "note": "Weighted average cost of Treasury bills (BTA, 13 to 52 weeks) issued by Equatorial Guinea in January 2026; no separate 13-week yield is published."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1012,
+      "status": "sourced",
+      "sourceName": "BEAC, Statistiques mensuelles du marché des valeurs du Trésor de la CEMAC, January 2026 (coût des ressources, OTA, Guinée Equatoriale)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2025-12-31",
+      "note": "Weighted average cost of Treasury bonds (OTA, 2 years and more) issued by Equatorial Guinea in December 2025 (10.39% in January 2025); no OTA was issued in January 2026 and no yield for an exact 5-year maturity is published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Treasury bond yield for Equatorial Guinea was found; the BEAC yield curve chart in its January 2026 statistics covers only Cameroon, Congo and Gabon."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax on bank interest received by resident individuals could not be confirmed; PwC Worldwide Tax Summaries (reviewed 21 November 2025) gives 15% withholding on interest paid to non-residents only."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists, and the tax treatment of Treasury security income for individuals could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": 8000000,
+      "status": "sourced",
+      "sourceName": "Deposit Guarantee Fund of Central Africa (FOGADAC), FAQ",
+      "sourceUrl": "https://www.fogadac.com/faq",
+      "asOf": "2026-10-31",
+      "note": "FOGADAC covers deposits up to XAF 8 million per individual depositor (read 31 October 2026); covers banks in all CEMAC countries, including Equatorial Guinea."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; the BEAC reports an average effective lending rate (TEG) of 13.82% in Equatorial Guinea in Q2 2026, but not for cards."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC: franc CFA fixed to the euro; no Equatorial Guinea companies of note on the regional exchange (BVMAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global equities held in euro (franc CFA) terms; there is no usable local stock index."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BEAC: franc CFA fixed to the euro; no Equatorial Guinea companies of note on the regional exchange (BVMAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No local stock index record, so equity means a global index in euro terms, held about 4 points above an after-tax safe saving rate of about 2.5-3%."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BEAC: franc CFA fixed to the euro; no Equatorial Guinea companies of note on the regional exchange (BVMAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities repeat their long-run euro-terms record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GQ",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold prices with no currency loss under the euro peg."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GQ",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run gold trend of about 4-5% a year in euro terms, which the franc CFA follows."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GQ",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury market statistics January 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings accounts at the 2.45% minimum rate, less any tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury market statistics January 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: savings and term deposits a little above the 2.45% floor; Treasury yields are higher but mostly bought by banks and institutions."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury market statistics January 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of savings in government securities, whose issue cost was 8-10% in 2025-2026, after default and liquidity risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim settlement ratio was found from CIMA (the regional insurance regulator) or the national insurance directorate."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per XAF 1,000 of cover were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.6598,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Equatorial Guinea",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GQ",
+      "asOf": "2023-12-31",
+      "note": "66.0% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BEAC note on CEMAC inflation Q2 2026: health prices +1.5% year on year in June 2026 (CEMAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-10-31",
+      "note": "CEMAC health prices rose 1.5% in June 2026, but private and imported care costs run faster, so health goals use 1.5 points above the 3% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BEAC note on CEMAC inflation Q2 2026: education prices +0.8% year on year in June 2026 (CEMAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-10-31",
+      "note": "CEMAC education prices rose 0.8% in June 2026, but private school fees rise faster, so education goals use 1 point above the 3% planning inflation."
+    },
+    "life_expectancy": {
+      "value": 63.906,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Equatorial Guinea",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GQ",
+      "asOf": "2024-12-31",
+      "note": "63.9 years in 2024 (men 62.2, women 65.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.6,
+            "men": 15.9,
+            "women": 17.3
+          },
+          {
+            "age": 65,
+            "total": 13.3,
+            "men": 12.7,
+            "women": 13.8
+          },
+          {
+            "age": 70,
+            "total": 10.3,
+            "men": 9.9,
+            "women": 10.7
+          },
+          {
+            "age": 80,
+            "total": 5.8,
+            "men": 5.6,
+            "women": 6.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/equatorial-guinea/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (the page gives a both-sexes figure only at 65)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 15.7
+          },
+          {
+            "year": 2040,
+            "value": 12.2
+          },
+          {
+            "year": 2065,
+            "value": 9.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=GQ",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.36 (2025, World Bank), 8.2 (2040, populationpyramid.net/equatorial-guinea/2040/) and 10.9 (2065, populationpyramid.net/equatorial-guinea/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The old-age pension age could not be confirmed: the INSESO old-age pension page (inseso.org/prestacion/pension-por-vejez) lists only documents required, and the ISSA and US SSA country profiles were not reachable."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age of civil servants could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury bill issue cost 8.18% (January 2026)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts at the 2.45% minimum rate, less any tax."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury bill issue cost 8.18% (January 2026)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: bank deposits close to the 2.45% floor; kept well below the Treasury bill rate, since term deposit rates are not published and individuals rarely hold Treasury securities."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury bill issue cost 8.18% (January 2026)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a larger share in government securities."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bank savings."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, government securities, gold and foreign equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found; the INSESO social benefits page lists only contributory pensions (old age, invalidity, survivors)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found; the INSESO social benefits page lists only contributory pensions (old age, invalidity, survivors)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The end-of-service or dismissal indemnity provisions of the General Labour Law could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "INSESO runs the compulsory contributory old-age pension (contributions 21.5% employer and 4.5% employee per PwC Worldwide Tax Summaries, reviewed 21 November 2025), but the pension age, qualifying period and indexation could not be confirmed from a readable source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account",
+      "note": "Banks must pay at least the BEAC minimum savings rate (2.45%).",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo (3 meses)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Banks take term deposits (the BEAC sets reserve requirements on them), but rates are not published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo (1 año)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Banks take term deposits, but rates are not published."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bonos del Tesoro asimilables (BTA)",
+      "localNameEn": "Treasury bills",
+      "note": "Treasury bills are auctioned through the BEAC to banks and primary dealers (SVT); individuals cannot bid directly.",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "Obligaciones del Tesoro asimilables (OTA)",
+      "localNameEn": "Treasury bonds",
+      "note": "Treasury bonds are auctioned through the BEAC to primary dealers; Equatorial Guinea issued none in January 2026.",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year Treasury bond yield or issue was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No locally sold diversified equity fund was found; the regional exchange (BVMAC) lists very few companies."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Central African States (Banco de los Estados de África Central, BEAC)",
+      "url": "https://www.beac.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Inter-African Conference on Insurance Markets (CIMA), regional insurance regulator, with the national insurance directorate",
+      "url": "https://cima-afrique.org/"
+    },
+    "insuranceComplaints": {
+      "name": "CIMA policyholder requests and complaints form",
+      "url": "https://cima-afrique.org/faites-votre-requetes-ici-2/"
+    },
+    "pensionScheme": {
+      "name": "National Social Security Institute (Instituto Nacional de Seguridad Social, INSESO)",
+      "url": "https://www.inseso.org/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund of Central Africa (FOGADAC)",
+      "url": "https://www.fogadac.com/"
+    },
+    "statistics": {
+      "name": "National Institute of Statistics of Equatorial Guinea (INEGE)",
+      "url": "https://www.inege.org/",
+      "note": "Site blocks automated access; not read during research."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

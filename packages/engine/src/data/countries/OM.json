@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "OM",
+  "iso3": "OMN",
+  "nameEn": "Oman",
+  "nameNative": "عُمان",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en",
+    "bal",
+    "fa"
+  ],
+  "currency": {
+    "code": "OMR",
+    "symbol": "RO",
+    "decimals": 3,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.3845,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Oman",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=OM",
+      "asOf": "2025-12-31",
+      "note": "The rial is pegged at 0.3845 per US dollar. CLDR gives no narrow symbol; 'RO' (rial Omani) is the usual local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.032,
+      "status": "sourced",
+      "sourceName": "National Centre for Statistics and Information (NCSI), Consumer Price Inflation, September 2026",
+      "sourceUrl": "https://api.ncsi.gov.om/uploads/pdfs/consumer_price_inflation__september_2026_1791889556.pdf",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 3.2% year on year in September 2026 (base 2018); food 8.4%, average 3.0% over January-September 2026."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "NCSI CPI (3.2% September 2026); World Bank CPI inflation 2021-2025 (about 1.4% average); dollar peg",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "With the rial pegged to the dollar, inflation averaged about 1.4% over 2021-2025 and is 3.2% now, so 2% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Central Bank of Oman repo rate decision of 16 September 2026",
+      "sourceUrl": "https://tradingeconomics.com/oman/interest-rate",
+      "asOf": "2026-09-16",
+      "note": "Repo rate raised by 25 basis points to 4.50%; secondary source. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current industry-wide savings account rate could be read. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current industry-wide 3-month term deposit rate could be read. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current industry-wide 1-year term deposit rate could be read. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0415,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Oman",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=OM",
+      "asOf": "2021-12-31",
+      "note": "4.15% for 2021, the latest year in the World Bank series (IMF data); older than 2025 and likely different now. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; government development bonds and sukuk are issued through the Central Bank of Oman and listed on the stock exchange."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recent 91-day Treasury bill auction result could be read. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government development bond yield could be read. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield could be read. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Oman, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/oman/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "There is no personal income tax in 2026; a 5% tax on income above OMR 42,000 a year (which will include interest) starts on 1 January 2028."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Oman, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/oman/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "No personal income tax until 2028, so returns on government securities are untaxed for individuals (no retail savings certificate exists)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Oman has a bank deposit insurance scheme run by the Central Bank of Oman, but its cover per depositor could not be read. The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or average credit card rate could be read; the NCSI bulletin shows only the average rate on all bank credit (5.32% in August 2026). The Central Bank of Oman website rejected automated access, so its statistical bulletin could not be read."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "NCSI Monthly Statistical Bulletin, October 2026 (MSX 30 index 7,566.8, end of September 2026)",
+      "sourceUrl": "https://api.ncsi.gov.om/uploads/pdfs/monthly_statistical_bulletin__october_2026_1792489912.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local market repeats its weak 2015-2023 decade and returns less than deposits."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "NCSI Monthly Statistical Bulletin, October 2026 (MSX 30 up 46% in a year); World Bank deposit rate 4.15%",
+      "sourceUrl": "https://api.ncsi.gov.om/uploads/pdfs/monthly_statistical_bulletin__october_2026_1792489912.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points above the untaxed deposit rate, within the 4-point cap, because the MSX 30 had a weak 10-year record before its 2025-2026 rally."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "NCSI Monthly Statistical Bulletin, October 2026 (MSX 30 index)",
+      "sourceUrl": "https://api.ncsi.gov.om/uploads/pdfs/monthly_statistical_bulletin__october_2026_1792489912.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a stronger equity premium similar to other Gulf markets."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Dollar peg (0.3845 OMR per USD); World Bank exchange rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; the peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dollar peg (0.3845 OMR per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year, with no depreciation gain under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Dollar peg (0.3845 OMR per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate (4.15%, 2021); repo rate 4.50% (September 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with lower dollar rates; untaxed."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate (4.15%, 2021); repo rate 4.50% (September 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Base case: a little below the last published average deposit rate, untaxed, because current term-deposit rates could not be read."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Repo rate 4.50% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/oman/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: savers who reach Treasury bill, development bond or sukuk returns near the policy rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Financial Services Authority (insurance regulator) publishes market reviews and customer-protection statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per OMR 1,000 of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found; Omani citizens are treated free in Ministry of Health facilities."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.0631,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Oman",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=OM",
+      "asOf": "2023-12-31",
+      "note": "6.3% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "NCSI CPI September 2026: health group 1.7% year on year",
+      "sourceUrl": "https://api.ncsi.gov.om/uploads/pdfs/consumer_price_inflation__september_2026_1791889556.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health CPI is 1.7% now, but private medical costs usually rise faster than general prices over time, so 1.5 points above the 2% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "NCSI CPI September 2026: education group 2.2% year on year",
+      "sourceUrl": "https://api.ncsi.gov.om/uploads/pdfs/consumer_price_inflation__september_2026_1791889556.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education CPI is 2.2% now; private school fees usually rise faster than general prices, so 1.5 points above the 2% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 80.246,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Oman",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=OM",
+      "asOf": "2024-12-31",
+      "note": "80.2 years in 2024 (men 78.7, women 82.0); the population includes many younger migrant workers."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 23.6,
+            "men": 22.4,
+            "women": 24.8
+          },
+          {
+            "age": 65,
+            "total": 19.3,
+            "men": 18.2,
+            "women": 20.5
+          },
+          {
+            "age": 70,
+            "total": 15.3,
+            "men": 14.3,
+            "women": 16.3
+          },
+          {
+            "age": 80,
+            "total": 8.7,
+            "men": 8.1,
+            "women": 9.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/oman/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 27.2
+          },
+          {
+            "year": 2040,
+            "value": 19.2
+          },
+          {
+            "year": 2065,
+            "value": 7.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/oman/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 3.68 (2025, World Bank), 5.2 (2040) and 14.0 (2065, populationpyramid.net/oman/2065/); the large migrant workforce keeps the ratio high."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Gov.om (official government portal), Get old-age pension, Social Protection Fund service, updated 21 September 2026",
+      "sourceUrl": "https://gov.om/w/-get-old-age-pension",
+      "asOf": "2026-09-21",
+      "note": "The Social Protection Fund pays the old-age pension from age 60 to insured Omanis with a period of service; the page does not give a different age for women. Expatriates are not covered."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Gov.om (official government portal), Get old-age pension, Social Protection Fund service, updated 21 September 2026",
+      "sourceUrl": "https://gov.om/w/-get-old-age-pension",
+      "asOf": "2026-09-21",
+      "note": "Since the 2023 Social Protection Law the Social Protection Fund runs one old-age pension for civil and private-sector Omanis, paid from 60; the page gives no separate civil-service age."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate (4.15%, 2021); repo rate 4.50%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with lower dollar rates; untaxed."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate (4.15%, 2021); repo rate 4.50%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the last published untaxed average deposit rate, because current 1-year deposit rates could not be read."
+    },
+    "retirement_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Repo rate 4.50% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/oman/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money earns Treasury bill, development bond or sukuk returns."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate (4.15%, 2021)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate; equity base 6.5%; gold base 4%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=OM",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or sukuk, equities and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NCSI bulletin (MSX 30); equity high 10%",
+      "sourceUrl": "https://api.ncsi.gov.om/uploads/pdfs/monthly_statistical_bulletin__october_2026_1792489912.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Protection Fund's elderly benefit (منفعة كبار السن) is confirmed on gov.om for Omanis aged 60+, but the page gives no monthly amount and the Fund's site could not be reached."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Gov.om (official government portal), Register for the elderly benefit, Social Protection Fund service",
+      "sourceUrl": "https://gov.om/w/get-old-age-benefit",
+      "asOf": "2026-10-31",
+      "note": "Monthly support for people who have reached 60; the only conditions listed are Omani nationality and residence in Oman, so it is treated as not means-tested."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Law (Royal Decree 53/2023) gives non-Omani employees an end-of-service gratuity (Omanis are covered by the Social Protection Fund), but the law text on the Ministry of Labour site refused access, so the days per year could not be confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "pensionFromAge": 60,
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Gov.om (official government portal), Get old-age pension, Social Protection Fund service, updated 21 September 2026",
+      "sourceUrl": "https://gov.om/w/-get-old-age-pension",
+      "asOf": "2026-09-21",
+      "note": "Compulsory Social Protection Fund pension for Omani employees (PwC: contributions 14.5% employer and 8% employee), paid from 60 with a period of service. No indexation rule could be read, so it is treated as not inflation-linked; pensions will count as income under the personal income tax from 2028."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب التوفير",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "أذون الخزانة",
+      "localNameEn": "Treasury bills",
+      "note": "Issued by the Central Bank of Oman for the government, mainly to banks."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات التنمية الحكومية",
+      "localNameEn": "Government development bonds",
+      "note": "Issued through the Central Bank of Oman and listed on the stock exchange; government sukuk are also issued."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات التنمية الحكومية",
+      "localNameEn": "Government development bonds",
+      "note": "Long maturities are issued less often; mainly held by institutions."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار",
+      "localNameEn": "Investment funds",
+      "note": "Supervised by the Financial Services Authority.",
+      "sourceUrl": "https://fsa.gov.om/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are freely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Oman (CBO)",
+      "url": "https://cbo.gov.om/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Authority (FSA), insurance sector",
+      "url": "https://fsa.gov.om/Sector/Index/2"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Authority, insurance complaint form",
+      "url": "https://e.fsa.gov.om/ServiceInsuranceComplaint?lang=en"
+    },
+    "pensionScheme": {
+      "name": "Social Protection Fund, old-age pension",
+      "url": "https://gov.om/w/-get-old-age-pension"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Protection Fund, elderly benefit (منفعة كبار السن)",
+      "url": "https://gov.om/w/get-old-age-benefit"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (public health care for citizens)",
+      "url": "https://www.moh.gov.om/"
+    },
+    "depositInsurance": {
+      "name": "Bank Deposit Insurance Scheme, Central Bank of Oman",
+      "url": "https://cbo.gov.om/"
+    },
+    "statistics": {
+      "name": "National Centre for Statistics and Information (NCSI)",
+      "url": "https://www.ncsi.gov.om/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

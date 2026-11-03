@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "GA",
+  "iso3": "GAB",
+  "nameEn": "Gabon",
+  "nameNative": "Gabon",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "fr",
+    "fan",
+    "puu"
+  ],
+  "currency": {
+    "code": "XAF",
+    "symbol": "FCFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 581.928,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Gabon",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GA",
+      "asOf": "2025-12-31",
+      "note": "2025 average. The franc CFA is fixed at 655.957 per euro, so the dollar rate moves with the euro."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.013,
+      "status": "sourced",
+      "sourceName": "Bank of Central African States (BEAC), note on CEMAC inflation to June 2026 with prospects, annex table of national CPIs (Gabon)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices in Gabon up 1.3% year on year in September 2026 (annual average 1.1%), per the BEAC annex table of national CPIs; the national statistics office bulletin was not read."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "BEAC: CEMAC inflation norm of 3%; franc CFA fixed to the euro; Gabon CPI 0.2-2.3% year on year in 2025-2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-10-31",
+      "note": "Gabon's inflation has stayed between about 0% and 2.5% since 2024 under the euro peg and the BEAC 3% norm, so 2.5% is used for long-run planning."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "BEAC Monetary Policy Committee, press release of 28 September 2026 (Taux d'intérêt des appels d'offres)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
+      "asOf": "2026-09-28",
+      "note": "BEAC tender rate held at 4.50% on 28 September 2026 (marginal lending facility 5.75%, deposit facility 0%); common to all six CEMAC countries."
+    },
+    "savings_account_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "BEAC Monetary Policy Report, September 2026, Annex 1 (Taux Créditeur Minimum)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-09-30",
+      "note": "Minimum rate banks must pay on savings accounts of individuals in CEMAC (Taux Créditeur Minimum), 2.45%, unchanged since July 2014."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate for Gabon was found; the BEAC publishes lending rates by country but no term deposit rates."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate for Gabon was found; the BEAC publishes lending rates by country but no term deposit rates."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Gabon",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GA",
+      "asOf": "2017-12-31",
+      "note": "2.45% in 2017, the latest World Bank value (older than 2025); it equals the BEAC minimum savings rate, still 2.45% in the BEAC September 2026 report."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found; the Treasury borrows through BEAC-run auctions and public bond offers (appels publics à l'épargne)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0663,
+      "status": "sourced",
+      "sourceName": "BEAC, Statistiques mensuelles du marché des valeurs du Trésor de la CEMAC, January 2026 (coût des ressources, BTA, Gabon)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-01-31",
+      "note": "Weighted average cost of Treasury bills (BTA, 13 to 52 weeks) issued by Gabon in January 2026 (6.80% in December 2025); no separate 13-week yield is published."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0725,
+      "status": "sourced",
+      "sourceName": "BEAC, Statistiques mensuelles du marché des valeurs du Trésor de la CEMAC, January 2026 (coût des ressources, OTA, Gabon)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-01-31",
+      "note": "Weighted average cost of Treasury bonds (OTA, 2 years and more) issued by Gabon in January 2026 (8.06% in December 2025); no yield for an exact 5-year maturity is published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year yield for Gabon is published in the BEAC Treasury market statistics, which give only an average cost for all bonds (OTA)."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax on bank interest for individuals (IRCM) could not be confirmed: PwC Worldwide Tax Summaries (reviewed 6 August 2026) gives the 20% IRCM only for payments to legal entities."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals and the tax on Treasury security income for individuals was not confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": 8000000,
+      "status": "sourced",
+      "sourceName": "Deposit Guarantee Fund of Central Africa (FOGADAC), FAQ",
+      "sourceUrl": "https://www.fogadac.com/faq",
+      "asOf": "2026-10-31",
+      "note": "FOGADAC covers deposits of individuals up to XAF 8 million (legal persons XAF 15 million), read 31 October 2026; covers banks in all CEMAC countries including Gabon."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate for Gabon was found."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed to the euro; regional exchange (BVMAC) with very small capitalisation (BEAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global equities in euro (franc CFA) terms; the regional exchange is too small to serve as a guide."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed to the euro; regional exchange (BVMAC) with very small capitalisation (BEAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No usable local index record, so equity means a global index in euro terms, held about 3.5-4 points above an after-tax safe saving rate of about 2.5-3%."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed to the euro; regional exchange (BVMAC) with very small capitalisation (BEAC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities repeat their long-run euro-terms record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GA",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold prices with no currency loss under the euro peg."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run gold trend of about 4-5% a year in euro terms, which the franc CFA follows."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GA",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury statistics January 2026 (Gabon bills 6.63%, bonds 7.25%)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings accounts at the 2.45% minimum rate, less any tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury statistics January 2026 (Gabon bills 6.63%, bonds 7.25%)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: savings and term deposits a little above the 2.45% floor; Treasury yields are higher but mostly held by banks."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury statistics January 2026 (Gabon bills 6.63%, bonds 7.25%)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of savings in Gabonese Treasury bonds offered to the public (issue cost 7.25% in January 2026), after liquidity risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim settlement ratio for Gabon was found from CIMA or the national insurance directorate."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per XAF 1,000 of cover were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.1727,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Gabon",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GA",
+      "asOf": "2023-12-31",
+      "note": "17.3% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BEAC note on CEMAC inflation: CEMAC health prices +1.5% year on year in September 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-10-31",
+      "note": "CEMAC health prices rose 1.5% in the year to September 2026, but private and imported care costs rise faster, so health goals use 1.5 points above the 2.5% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BEAC note on CEMAC inflation: CEMAC education prices +0.4% year on year in September 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-10-31",
+      "note": "CEMAC education prices rose only 0.4% in the year to September 2026, but private school fees rise faster, so education goals use 1 point above the 2.5% planning inflation."
+    },
+    "life_expectancy": {
+      "value": 68.511,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Gabon",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GA",
+      "asOf": "2024-12-31",
+      "note": "68.5 years in 2024 (men 66.1, women 71.2)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/gabon/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.0,
+            "men": 16.8,
+            "women": 19.1
+          },
+          {
+            "age": 65,
+            "total": 14.6,
+            "men": 13.7,
+            "women": 15.5
+          },
+          {
+            "age": 70,
+            "total": 11.6,
+            "men": 10.9,
+            "women": 12.2
+          },
+          {
+            "age": 80,
+            "total": 6.7,
+            "men": 6.4,
+            "women": 7.0
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women except at 65, where the page gives 14.6 for both sexes."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=GA",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 14.4
+          },
+          {
+            "year": 2040,
+            "value": 11.4
+          },
+          {
+            "year": 2065,
+            "value": 7.5
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 6.93 (2025, World Bank), 8.8 (2040, populationpyramid.net/gabon/2040/) and 13.3 (2065, populationpyramid.net/gabon/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Social Security Fund of Gabon (CNSS), forms for insured persons (early pension request)",
+      "sourceUrl": "https://cnss.ga/assures-et-allocataires/",
+      "asOf": "2026-10-31",
+      "note": "The CNSS offers an early pension (pension anticipée) to insured persons aged 55 to 59, so the normal old-age pension age for private-sector workers is 60; the Social Security Code itself was not read."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "Caisse des Pensions et des Prestations Familiales des agents de l'État (CPPF), retirement guide",
+      "sourceUrl": "https://cppf.ga/je-demande-ma-retraite-2/",
+      "asOf": "2026-10-31",
+      "note": "Since the pension reform in force in 2024 the legal retirement age for civil servants is 62, extendable for some corps up to 65; defence and security forces retire earlier by grade."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury statistics January 2026 (Gabon bills 6.63%, bonds 7.25%)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts at the 2.45% minimum rate, less any tax."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury statistics January 2026 (Gabon bills 6.63%, bonds 7.25%)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: deposits and some public bond offers, kept close to the deposit floor and well below the 6.63% Treasury bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury statistics January 2026 (Gabon bills 6.63%, bonds 7.25%)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a larger share in Gabonese Treasury bonds offered to the public."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bank savings."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, public bond offers, gold and foreign equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension amount was found; the CNSS old-age allowance (allocation de vieillesse) is a contributory benefit, and CNAMGS covers health care for the economically weak rather than paying a pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found; the CNSS old-age pension and allowance are contributory."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on dismissal or retirement indemnity could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "National Social Security Fund of Gabon (CNSS), forms for insured persons",
+      "sourceUrl": "https://cnss.ga/assures-et-allocataires/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory scheme for salaried private-sector workers run by the CNSS: old-age pension or allowance (allocation de vieillesse, for short careers) from 60, early pension from 55 to 59. The benefit formula, revaluation rule and tax treatment were not found on the CNSS site, so no automatic indexation is assumed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account",
+      "note": "Banks must pay at least the BEAC minimum savings rate (2.45%).",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Banks take term deposits (the BEAC sets reserve requirements on them), but rates are not published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Banks take term deposits, but rates are not published."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bons du Trésor assimilables (BTA)",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned through the BEAC mainly to banks; individuals held about XAF 16 billion of Gabonese bills in January 2026 (BEAC).",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligations du Trésor assimilables (OTA)",
+      "localNameEn": "Treasury bonds",
+      "note": "Auctioned or offered to the public; individuals held about XAF 56 billion of Gabonese Treasury bonds in January 2026 (BEAC).",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year Gabonese Treasury bond yield is published; bond maturities on the regional market are mostly up to about 7 years."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No locally sold diversified equity fund was found; the regional exchange (BVMAC) lists very few companies."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Central African States (Banque des États de l'Afrique Centrale, BEAC)",
+      "url": "https://www.beac.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Inter-African Conference on Insurance Markets (CIMA), regional insurance regulator, with the national insurance directorate",
+      "url": "https://cima-afrique.org/"
+    },
+    "insuranceComplaints": {
+      "name": "CIMA policyholder requests and complaints form",
+      "url": "https://cima-afrique.org/faites-votre-requetes-ici-2/"
+    },
+    "pensionScheme": {
+      "name": "National Social Security Fund (Caisse Nationale de Sécurité Sociale, CNSS)",
+      "url": "https://cnss.ga/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Health Insurance and Social Guarantee Fund (Caisse Nationale d'Assurance Maladie et de Garantie Sociale, CNAMGS)",
+      "url": "https://cnamgs.ga/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund of Central Africa (Fonds de Garantie des Dépôts en Afrique Centrale, FOGADAC)",
+      "url": "https://www.fogadac.com/"
+    },
+    "statistics": {
+      "name": "Direction Générale des Statistiques du Gabon",
+      "url": "https://www.stat-gabon.org/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "code": "CD",
+  "iso3": "COD",
+  "nameEn": "DR Congo",
+  "nameNative": "République démocratique du Congo",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "sw",
+    "lua",
+    "fr",
+    "ln",
+    "kg"
+  ],
+  "currency": {
+    "code": "CDF",
+    "symbol": "FC",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2270.47,
+      "status": "sourced",
+      "sourceName": "Banque Centrale du Congo, indicative exchange rate USD/CDF (weekly statistical bulletin no. 39-2026)",
+      "sourceUrl": "https://resources.bcc.cd/publications/condense-informations-statistiques/condense_hebdomadaire_d_informations_statistiques_ndeg_39-2026_4eme_semaine_septembre.pdf",
+      "asOf": "2026-09-25",
+      "note": "2,270.47 francs per dollar on 25 September 2026; the BCC site shows 2,265.16 at the start of November 2026. World Bank 2025 average 2,693 (the franc appreciated in 2025-2026). CLDR gives no narrow symbol; 'FC' is the local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0887,
+      "status": "sourced",
+      "sourceName": "Banque Centrale du Congo, national consumer price inflation (INS data), year on year",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-reel/inflation",
+      "asOf": "2026-10-24",
+      "note": "National CPI up 8.87% year on year in the 4th week of October 2026 (7.20% a week earlier); the jump reflects falling prices in late 2025 when the franc appreciated. Cumulative since January 7.87%."
+    },
+    "inflation_projection": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BCC condensé statistique: INS end-of-period inflation 2021-2025 (5.3%, 13.1%, 23.8%, 11.7%, 2.3%); latest 8.9%",
+      "sourceUrl": "https://resources.bcc.cd/publications/condense-informations-statistiques/condense_hebdomadaire_d_informations_statistiques_ndeg_39-2026_4eme_semaine_septembre.pdf",
+      "asOf": "2026-10-31",
+      "note": "The 5-year average is about 11% but has been falling since 2023 and the latest reading is 8.9%, so 9% is a rounded long-run planning rate; no published numeric target was confirmed."
+    },
+    "policy_rate": {
+      "value": 0.125,
+      "status": "sourced",
+      "sourceName": "Banque Centrale du Congo, taux directeur",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-09-30",
+      "note": "Policy rate 12.5% since July 2026 (25% in December 2024, 17.5% by December 2025, then 15%, 13.5% and 12.5% in 2026); marginal lending facility 16.5%."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCC publishes only an average deposit rate across banks, not a savings-account rate; the economy is largely dollarised (average dollar deposit rate about 4%)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate by maturity; the BCC publishes only an average deposit rate in francs (8.24% in September 2026)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate by maturity; the BCC publishes only an average deposit rate in francs (8.24% in September 2026)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0824,
+      "status": "sourced",
+      "sourceName": "Banque Centrale du Congo, average deposit rate of banks in national currency (créditeur dépôts MN)",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate paid on franc deposits, September 2026 (8.59% in August). Dollar deposits average about 4% (BCC weekly bulletin, September 2026)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; government securities are auctioned to banks."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Treasury auctions 3- and 6-month bills (Bons du Trésor) only occasionally and to banks; the BCC weekly bulletin of September 2026 shows no recent 3-month auction rate. The BCC's own 84-day bills yielded 12.5% in September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield was found; the domestic bond market is very thin."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield was found; the domestic bond market is very thin."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax on interest (impôt mobilier) for resident individuals could not be confirmed from a current source; PwC Tax Summaries (reviewed April 2026) says income other than salaries is not subject in practice to personal income tax but does not state the rate on interest."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals, and no tax rule for one was found."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A deposit guarantee fund (FOGADEC) was created by law, but its cover limit per depositor could not be read from an official source; its site could not be reached."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; the BCC reports an average franc lending rate of 23.3% (September 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "No stock exchange in DR Congo; global equities in franc terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=CD",
+      "asOf": "2026-10-31",
+      "note": "No local stock market exists, so equity means a global index fund in franc terms; low case is a weak decade for world shares with little currency gain."
+    },
+    "equity_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Global equity in US dollars (about 6%) plus assumed franc depreciation; BCC average deposit rate 8.24%",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "Base case is a global index fund in franc terms, kept within about 3 points of the assumed after-tax safe rate of 6.5% because there is no local index and access is through foreign funds."
+    },
+    "equity_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Global equity in US dollars plus franc depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=CD",
+      "asOf": "2026-10-31",
+      "note": "High case: strong world equity returns plus faster franc depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Franc per dollar: BCC indicative rate 2,270 (September 2026) vs about 2,850 in late 2024",
+      "sourceUrl": "https://resources.bcc.cd/publications/condense-informations-statistiques/condense_hebdomadaire_d_informations_statistiques_ndeg_39-2026_4eme_semaine_septembre.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable or appreciating franc, as in 2025-2026."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Long-run dollar gold trend about 4% plus assumed franc depreciation of about 4%",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=CD",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend plus a franc that loses value against the dollar over time at roughly the inflation gap."
+    },
+    "gold_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Dollar gold plus franc depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=CD",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years and a weaker franc."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCC average deposit rate in francs 8.24% (September 2026); dollar deposits about 4%",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings or dollar deposits paying about 4%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BCC average deposit rate in francs 8.24% (September 2026)",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "Base case: franc term deposits at the published average rate less an allowance for a possible 20% tax on interest, which could not be confirmed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "BCC average deposit rate in francs and BCC bill yields (12.5% at 84 days)",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "High case: longer franc deposits near the policy rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The regulator's 2024 market report (ARCA, État du marché 2024) gives premiums and claims by branch but no industry claim settlement ratio for life insurance."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Death-cover contracts exist (ARCA 2024 market report), mostly as group and loan cover, but no published individual term-life premium rates per CDF 1,000 were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found; health cover is sold mostly to employers."
+    },
+    "oop_health_share": {
+      "value": 0.38,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), DR Congo",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CD",
+      "asOf": "2023-12-31",
+      "note": "38.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 9%; BCC/INS national CPI",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-reel/inflation",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series was confirmed; medical costs are planned 2 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 9%; BCC/INS national CPI",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-reel/inflation",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series was confirmed; school costs are planned 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 62.074,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), DR Congo",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CD",
+      "asOf": "2024-12-31",
+      "note": "62.1 years in 2024 (men 60.0, women 64.2); UN WPP 2024 gives 62.4 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.1,
+            "men": 16.3,
+            "women": 17.8
+          },
+          {
+            "age": 65,
+            "total": 13.6,
+            "men": 13.0,
+            "women": 14.2
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 10.1,
+            "women": 11.0
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.6,
+            "women": 6.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/democratic-republic-of-the-congo/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the both-sexes figure at 65 is published, the others are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.5
+          },
+          {
+            "year": 2040,
+            "value": 16.9
+          },
+          {
+            "year": 2065,
+            "value": 13.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/democratic-republic-of-the-congo/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.05 (2025, World Bank), 5.9 (2040) and 7.6 (2065, populationpyramid.net/democratic-republic-of-the-congo/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), pension branch",
+      "sourceUrl": "https://cnss.cd/?page_id=1421",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension from 60 for men and women with at least 180 months of insurance; early pension from 55 reduced 5% per year; 65 is the mandatory retirement limit."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil-service retirement age (statute of public servants) could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCC average deposit rates: francs 8.24%, dollars about 4% (2026)",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly dollar or savings deposits after any tax."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BCC average deposit rate in francs 8.24% (September 2026)",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax franc deposit rate (8.24% less a possible 20% tax on interest is about 6.6%)."
+    },
+    "retirement_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "BCC average deposit rate in francs and BCC bill yields",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "High case: longer franc deposits at better rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Safe rate assumption 6.5%; global equity low 4%",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits with weak equity and gold years."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Safe rate 6.5%, global equity base 9.5%, gold base 8% (franc terms)",
+      "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of franc deposits, gold and global equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Global equity high 13%; gold high 13%",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=CD",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix in a weaker-franc decade."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension was found; the CNSS pays only contributory pensions."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on end-of-service or retirement indemnity could not be read from an official source; any end-of-career payment is set by collective agreements."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), pension branch",
+      "sourceUrl": "https://cnss.cd/?page_id=1421",
+      "asOf": "2026-10-31",
+      "note": "Compulsory for salaried workers (5% employee and 5% employer contribution, PwC Tax Summaries 2026); pension from 60 with 180 months of insurance, else a single lump sum; the CNSS page states no automatic indexation, so inflationLinked is false."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Offered in francs and US dollars; no published rate by maturity."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Offered in francs and US dollars; no published rate by maturity."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bon du Trésor (3 mois)",
+      "localNameEn": "Treasury bill (3 months)",
+      "note": "Treasury bills are auctioned to banks only, and 3-month issues have been rare since 2024.",
+      "sourceUrl": "https://resources.bcc.cd/publications/condense-informations-statistiques/condense_hebdomadaire_d_informations_statistiques_ndeg_39-2026_4eme_semaine_septembre.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 5-year government bond for retail investors was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year government bond for retail investors was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "DR Congo has no stock exchange and no locally sold equity fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mostly as jewellery; artisanal gold trading is regulated."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Congo (Banque Centrale du Congo, BCC)",
+      "url": "https://www.bcc.cd/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Regulatory and Control Authority (Autorité de Régulation et de Contrôle des Assurances, ARCA)",
+      "url": "https://arca.cd/"
+    },
+    "insuranceComplaints": {
+      "name": "ARCA contact page (insurance supervisor)",
+      "url": "https://arca.cd/nous-contacter/",
+      "note": "No dedicated complaints desk or ombudsman was found; contact the regulator."
+    },
+    "pensionScheme": {
+      "name": "National Social Security Fund (Caisse Nationale de Sécurité Sociale, CNSS), pension branch",
+      "url": "https://cnss.cd/?page_id=1421"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Central Bank of the Congo, inflation statistics (INS data)",
+      "url": "https://www.bcc.cd/statistiques/secteur-reel/inflation",
+      "note": "The National Institute of Statistics (INS) site could not be reached; the BCC republishes its price data."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "BS",
+  "iso3": "BHS",
+  "nameEn": "Bahamas",
+  "nameNative": "The Bahamas",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "ht"
+  ],
+  "currency": {
+    "code": "BSD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas: daily spot foreign exchange rates",
+      "sourceUrl": "https://www.centralbankbahamas.com/exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "The Bahamian dollar is pegged at par: the Central Bank buys and sells US dollars at 1.0000."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.031,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas Quarterly Statistical Digest (August 2026), table 8.2: Retail Price Index (Bahamas National Statistical Institute)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-03-31",
+      "note": "All-Bahamas retail price index 126.04 at end-March 2026 against 122.23 at end-March 2025 (November 2014 = 100), up 3.1%; the index was 126.76 in April 2026. December-to-December inflation was 2.3% in 2025."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 8.2: retail price index 2016-2025 average about 2.2% a year; Bahamian dollar fixed at par with the US dollar",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "The one-to-one US-dollar peg anchors prices and inflation averaged about 2.2% over 2016-2025 (2.8% since 2020), so we plan with 2.5%."
+    },
+    "policy_rate": {
+      "value": 0.04,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas Quarterly Statistical Digest (August 2026), table 4.1: Selected Interest Rates",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-06-30",
+      "note": "Bank Rate (the rate at which banks borrow from the Central Bank) 4.00%, unchanged since 2016."
+    },
+    "savings_account_rate": {
+      "value": 0.0025,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas Quarterly Statistical Digest (August 2026), table 4.3: Deposit Rates of the Banking System",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-06-30",
+      "note": "Average rate on savings deposits 0.25% in June 2026 (0.25-0.28% through 2026)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.004,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas Quarterly Statistical Digest (August 2026), table 4.3: Deposit Rates of the Banking System",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-06-30",
+      "note": "Fixed deposits up to 3 months averaged 0.40% in June 2026 (0.25-0.34% earlier in 2026)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0036,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas Quarterly Statistical Digest (August 2026), table 4.3: Deposit Rates of the Banking System",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-06-30",
+      "note": "Fixed deposits of 6-12 months averaged 0.36% in June 2026; deposits over 12 months 1.33%. The highest rate offered in September 2026 was 2.25%, on fixed balances over 12 months (CBOB monthly report)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product rate is published in the Central Bank of The Bahamas deposit rate tables."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0062,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas: Monthly Economic and Financial Developments, September 2026",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Monthly-Economic-and-Financial-Developments-September-2026-1793300706-BqgnOF.pdf",
+      "asOf": "2026-09-30",
+      "note": "Banks' weighted average deposit rate narrowed by 10 basis points to 0.62% in September 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0343,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas: Bahamas Savings Bond prospectus, November 2024",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/2024-11-15-02-05-14-BSB-November-2024-Prospectus-5MFinal-1778056381-Wchkr5.pdf",
+      "asOf": "2024-11-25",
+      "note": "Bahamas Savings Bond 4-year tenor fixed coupon 3.43% (6-year 3.99%, 2-year 3.01%, 1-year 2.81%), paid semi-annually, units of B$100, sold through the Central Bank. Latest prospectus found is from November 2024 (older than 2025)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0344,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas: Treasury bill tender results, 13 and 14 October 2026",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Treasury-Bill-Tender-Results---13-and-14-October-2026-1792073773-TI2L99.pdf",
+      "asOf": "2026-10-13",
+      "note": "91-day bills average yield 3.44% (discount rate 3.41%); 182-day 3.66%; 364-day 3.85% (3.87% at the 28-29 October tender)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0475,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas (registrar): Bahamas Registered Stock reopening results, 14 and 15 October 2026",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Bahamas-Registered-Stock-Reopening-Results---14-and-15-October-2026-1792095495-Wc7wEt.pdf",
+      "asOf": "2026-10-14",
+      "note": "5-year Bahamas Registered Stock due 15 October 2031: average competitive yield 4.75% (3-year 4.25%, 7-year 5.51%)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.052,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Bahamas (registrar): Bahamas Registered Stock reopening results, 14 and 15 October 2026",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Bahamas-Registered-Stock-Reopening-Results---14-and-15-October-2026-1792095495-Wc7wEt.pdf",
+      "asOf": "2026-10-14",
+      "note": "Closest tenor to 10 years: 11-year Bahamas Registered Stock due 14 July 2037, average competitive yield 5.20%."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: The Bahamas, individual taxes on personal income (last reviewed 21 July 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/the-bahamas/individual/taxes-on-personal-income",
+      "asOf": "2026-07-21",
+      "note": "There is no personal income tax in The Bahamas, so bank interest is untaxed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: The Bahamas, individual taxes on personal income (last reviewed 21 July 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/the-bahamas/individual/taxes-on-personal-income",
+      "asOf": "2026-07-21",
+      "note": "No personal income tax, so Bahamas Savings Bond coupons are untaxed."
+    },
+    "deposit_insurance_limit": {
+      "value": 50000,
+      "status": "sourced",
+      "sourceName": "Deposit Insurance Corporation of The Bahamas: FAQs",
+      "sourceUrl": "https://www.dic.bs/faq.php",
+      "asOf": "2026-10-31",
+      "note": "Each eligible deposit at a member bank or credit union is insured up to B$50,000 per depositor, principal and interest included."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published average credit card rate found; the CBOB loan rate table gives consumer loans at 12.0% and overdrafts at 11.1% (June 2026) but no card rate."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 3.6: BISX All Share index 1,938 (end-2016) to 3,110 (end-2025)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case near the 3.4-3.9% Treasury bill yields, for a weak decade in a small, illiquid market."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 3.6: BISX index up about 5.4% a year 2016-2025 before dividends; 364-day T-bill 3.87%",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: index price gains of about 5% plus dividends, capped near 3 points above the untaxed 1-year bill rate."
+    },
+    "equity_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 3.7: BISX and US equity annual returns",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case if local or US-dollar global equities repeat their long-run record of about 9-10%."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bahamian dollar fixed at par with the US dollar (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BS",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold prices with no currency depreciation under the peg."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bahamian dollar fixed at par with the US dollar (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BS",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected depreciation under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bahamian dollar fixed at par with the US dollar (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BS",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 4.3: bank deposits 0.25-1.33%",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: money left in bank deposits, which pay well under 1.5%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBOB: 91-day T-bill 3.44%; Bahamas Savings Bond 2.81-3.99%",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Treasury-Bill-Tender-Results---13-and-14-October-2026-1792073773-TI2L99.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: savings bonds and Treasury bills, untaxed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "CBOB: 5-year Bahamas Registered Stock 4.75% (October 2026)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Bahamas-Registered-Stock-Reopening-Results---14-and-15-October-2026-1792095495-Wc7wEt.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: holding 5-year registered stock."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Insurance Commission of The Bahamas material: no industry-wide life claim settlement ratio published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in The Bahamas, but no regulator or other non-company source publishing premium rates by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found for The Bahamas."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source publishing private health insurance premiums by age found."
+    },
+    "oop_health_share": {
+      "value": 0.2748,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BS",
+      "asOf": "2023-12-31",
+      "note": "Latest year available (2023), older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 8.2: health sub-index 119.0 (2016) to 168.3 (2025)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "The health price index rose about 3.9% a year over 2016-2025, so we plan with 4%."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 8.2: education sub-index 109.5 (2016) to 107.2 (2025)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "The education index was flat over 2016-2025, but school fees tend to track wages, so we plan with the 2.5% headline projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 74.71,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BS",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 75.0 for 2026 (men 71.4, women 78.6)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.9,
+            "men": 19.7,
+            "women": 24.0
+          },
+          {
+            "age": 65,
+            "total": 18.2,
+            "men": 16.0,
+            "women": 20.0
+          },
+          {
+            "age": 70,
+            "total": 14.9,
+            "men": 13.1,
+            "women": 16.6
+          },
+          {
+            "age": 80,
+            "total": 9.2,
+            "men": 7.9,
+            "women": 10.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/bahamas/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.8
+          },
+          {
+            "year": 2040,
+            "value": 3.6
+          },
+          {
+            "year": 2065,
+            "value": 2.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/bahamas/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 17.2 (2025, World Bank), 27.9 (2040) and 42.0 (2065, populationpyramid.net/bahamas/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "National Insurance Board of The Bahamas: long-term benefits (Retirement Benefit)",
+      "sourceUrl": "https://www.nib-bahamas.com/benefits/long-term",
+      "asOf": "2026-10-31",
+      "note": "Full NIB retirement benefit from 65 with at least 500 weekly contributions; it can be taken from 60 at a reduced rate. No separate statutory private-sector retirement age found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for the public service retirement age under The Bahamas Pensions Act: no reachable official source found."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "CBOB QSD table 4.3: bank deposits 0.25-1.33%",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings left in bank deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBOB: 364-day T-bill 3.87% (October 2026); Bahamas Savings Bond 2.81-3.99%",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Treasury-Bill-Tender-Results---28-and-29-October-2026-1793309070-PypEql.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case below the untaxed 1-year Treasury bill yield, using savings bonds and bills."
+    },
+    "retirement_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBOB: 5-year Bahamas Registered Stock 4.75%; 6-year savings bond 3.99%",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Bahamas-Registered-Stock-Reopening-Results---14-and-15-October-2026-1792095495-Wc7wEt.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of savings bonds and registered stock."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Mix of bills/bonds (3.4-4.75%) and local equities",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Bahamas-Registered-Stock-Reopening-Results---14-and-15-October-2026-1792095495-Wc7wEt.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix in a weak decade."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Mix of bills/bonds (3.4-4.75%) and equities (7% base)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Bahamas-Registered-Stock-Reopening-Results---14-and-15-October-2026-1792095495-Wc7wEt.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case for a roughly half-and-half mix of government securities and equities."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Mix of registered stock (up to 5.5%) and equities (9.5% high case)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Bahamas-Registered-Stock-Reopening-Results---14-and-15-October-2026-1792095495-Wc7wEt.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with a strong equity decade."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NIB pays a means-tested Old Age Non-Contributory Pension from 65, but its current monthly amount is not stated on the NIB assistance payments page."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "National Insurance Board of The Bahamas: assistance payments (Old Age Non-Contributory Pension)",
+      "sourceUrl": "https://www.nib-bahamas.com/benefits/assistance-payments",
+      "asOf": "2026-10-31",
+      "note": "Monthly pension for needy Bahamian residents aged 65 or older who do not meet the contribution conditions for the NIB Retirement Benefit and pass a test of resources; eligibility is verified twice a year."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity found; the Employment Act provides severance pay on redundancy or dismissal, but its official text could not be read to confirm the scale."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "National Insurance Board of The Bahamas: long-term benefits (Retirement Benefit)",
+      "sourceUrl": "https://www.nib-bahamas.com/benefits/long-term",
+      "asOf": "2026-10-31",
+      "note": "Compulsory National Insurance: monthly Retirement Benefit from 65 (reduced from 60) of 30-60% of average insurable wage with at least 500 contributions; a one-off Retirement Grant with 150-499 contributions. Insurable wage ceiling B$810 a week (July 2024). No automatic indexation found; untaxed as there is no income tax."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "Fixed deposit up to 3 months",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "Fixed deposit of 6-12 months",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product rate published."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Bahamas Savings Bond",
+      "localNameEn": "Bahamas Savings Bond (1, 2, 4 and 6 years)",
+      "note": "Fixed-coupon government savings bond for individuals, sold in B$100 units through the Central Bank.",
+      "sourceUrl": "https://www.centralbankbahamas.com/bahamas-savings-bond"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of The Bahamas Treasury bill (91, 182 or 364 days)",
+      "note": "Sold at Central Bank tenders; non-competitive bids are accepted.",
+      "sourceUrl": "https://www.centralbankbahamas.com/news/t-bill-auction-results"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bahamas Registered Stock",
+      "localNameEn": "Bahamas Government Registered Stock, 5 years",
+      "sourceUrl": "https://www.centralbankbahamas.com/bahamas-registered-stock"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bahamas Registered Stock",
+      "localNameEn": "Bahamas Government Registered Stock, 10-11 years",
+      "sourceUrl": "https://www.centralbankbahamas.com/bahamas-registered-stock"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Mutual fund",
+      "localNameEn": "Investment fund",
+      "note": "Investment funds are regulated by the Securities Commission of The Bahamas.",
+      "sourceUrl": "https://scb.gov.bs/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "note": "No legal restriction on buying gold; mainly sold as jewellery and coins."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of The Bahamas",
+      "url": "https://www.centralbankbahamas.com/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Commission of The Bahamas",
+      "url": "https://www.icb.gov.bs/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Commission of The Bahamas: complaints",
+      "url": "https://www.icb.gov.bs/consumer-awareness/complaints/"
+    },
+    "pensionScheme": {
+      "name": "National Insurance Board (Retirement Benefit)",
+      "url": "https://www.nib-bahamas.com/benefits/long-term"
+    },
+    "oldAgeAllowance": {
+      "name": "National Insurance Board: Old Age Non-Contributory Pension",
+      "url": "https://www.nib-bahamas.com/benefits/assistance-payments"
+    },
+    "publicHealthCover": {
+      "name": "National Health Insurance Bahamas (NHI)",
+      "url": "https://www.nhibahamas.gov.bs/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Corporation",
+      "url": "https://www.dic.bs/"
+    },
+    "statistics": {
+      "name": "Bahamas National Statistical Institute",
+      "url": "https://stats.gov.bs/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

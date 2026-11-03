@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "code": "AR",
+  "iso3": "ARG",
+  "nameEn": "Argentina",
+  "nameNative": "Argentina",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "en"
+  ],
+  "currency": {
+    "code": "ARS",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1537.3487,
+      "status": "sourced",
+      "sourceName": "BCRA wholesale reference exchange rate (Communication A 3500), series 5",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/5",
+      "asOf": "2026-10-30",
+      "note": "Pesos per US dollar, official wholesale reference rate; World Bank PA.NUS.FCRF gives a 2025 average of 1,240.85."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.334,
+      "status": "sourced",
+      "sourceName": "INDEC consumer price index (national), as published in BCRA statistics series 28",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/28",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year CPI inflation 33.4% in September 2026 (1.9% in the month); 31.5% in December 2025 and 117.8% in December 2024."
+    },
+    "inflation_projection": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "BCRA market expectations survey (REM): median expected inflation for the next 12 months 21.1% (September 2026)",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/29",
+      "asOf": "2026-10-31",
+      "note": "The central bank has no inflation target and the 5-year average is far above 50%, so we plan with 20%, near the market's 12-month expectation, which assumes disinflation continues; review yearly."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCRA stopped setting a monetary policy rate in July 2025 (last value 29% nominal on 10 July 2025, BCRA series 160) and now targets monetary aggregates; the overnight repo rate between third parties was 20.7% on 29 October 2026 (series 150)."
+    },
+    "savings_account_rate": {
+      "value": 0.034,
+      "status": "sourced",
+      "sourceName": "BCRA daily series of deposit interest rates (table IX-2-1-2-4-1, individuals' peso savings accounts)",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-29",
+      "note": "Individuals' ordinary peso savings accounts paid 3.4-3.6% nominal a year for balances up to ARS 500,000 (3.1% for ARS 500,000-999,999); the all-depositor average was 4.6%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.21,
+      "status": "sourced",
+      "sourceName": "BCRA daily series of deposit interest rates (table IX-2-1-2-4-1, individuals' peso time deposits of 60 days and more)",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-29",
+      "note": "Individuals' peso time deposits of 60 days or more paid 20.9-21.5% nominal a year (balances up to ARS 1 million); 30-day deposits system-wide 22.39% (BCRA series 12). No separate 90-day series is published."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCRA publishes deposit rates only up to the bucket '60 days and more' (about 21-23% nominal for individuals in October 2026); no 1-year time deposit average found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product found in the BCRA deposit rate series for Argentina."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.2313,
+      "status": "sourced",
+      "sourceName": "BCRA daily series of deposit interest rates (table IX-2-1-1, peso time deposits, all terms)",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-29",
+      "note": "Weighted average rate on new peso time deposits of all terms 23.13% nominal a year; peso savings accounts averaged 4.55%. World Bank FR.INR.DPST gives 34.9% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold directly to individuals found; Treasury securities are sold by auction and traded through brokers."
+    },
+    "tbill_91d_rate": {
+      "value": 0.2832,
+      "status": "sourced",
+      "sourceName": "Ministry of Economy, Secretariat of Finance: Treasury auction results of 28 October 2026",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-16",
+      "asOf": "2026-10-28",
+      "note": "New fixed-rate capitalising Treasury letter (LECAP) maturing 26 February 2027 (about 4 months) cut at 2.10% a month effective, 28.32% effective annual yield (about 25.2% nominal). No 91-day letter was offered."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year fixed-rate peso bond yield found in official auction results; recent long peso issues are CER-linked (real yields about 6%) or TAMAR-linked."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year peso government bond is issued; recent official auctions go out to 2028."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: Argentina, individual income determination (last reviewed 16 June 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/argentina/individual/income-determination",
+      "asOf": "2026-06-16",
+      "note": "Interest on savings accounts in Argentine banks is exempt from personal income tax; PwC states other interest income is taxable at the progressive 5-35% rates."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists; PwC notes capital gains on Argentine government bonds are exempt from income tax."
+    },
+    "deposit_insurance_limit": {
+      "value": 50000000,
+      "status": "sourced",
+      "sourceName": "SEDESA (statutory deposit guarantee fund administrator): Deposit Guarantee System",
+      "sourceUrl": "https://www.sedesa.com.ar/en/deposit-guarantee-system/",
+      "asOf": "2026-10-31",
+      "note": "The deposit guarantee covers up to ARS 50,000,000 per person across accounts and deposits at a participating institution; joint accounts share one limit."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.7914,
+      "status": "sourced",
+      "sourceName": "BCRA monthly series of lending rates to individuals (credit card system, total)",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/preser_tas.xls",
+      "asOf": "2026-09-30",
+      "note": "Typical (weighted average) annual nominal rate on peso credit card balances of individuals 79.1% in September 2026; personal loans averaged 60.6% (October 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "BCRA: peso deposits 21-23%, LECAP 28% effective; peso depreciation about 58% a year 2016-2026 (BCRA series 5)",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/5",
+      "asOf": "2026-10-31",
+      "note": "Low case below deposit rates, reflecting the main index's very volatile record and periods of large losses in dollar terms."
+    },
+    "equity_return_base": {
+      "value": 0.23,
+      "status": "assumption",
+      "sourceName": "BCRA: peso time deposits 21-23% (October 2026); LECAP 28.3% effective",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-16",
+      "asOf": "2026-10-31",
+      "note": "Base case only about 1-2 points above untaxed peso deposits, because the local index's 10-year record in dollar terms is weak and erratic; within 4 points of the safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.32,
+      "status": "assumption",
+      "sourceName": "BCRA wholesale exchange rate series 5; inflation expectation 21% (REM)",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/5",
+      "asOf": "2026-10-31",
+      "note": "High case: 20% inflation plus a strong real equity return of about 10%."
+    },
+    "gold_return_low": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BCRA wholesale exchange rate (ARS 15.85 per USD end-2016, 1,537 on 30 October 2026)",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/5",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold and slower peso depreciation than inflation."
+    },
+    "gold_return_base": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "BCRA wholesale exchange rate series 5; REM inflation expectation 21%",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/5",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4% plus peso depreciation of about 15% a year, close to the expected inflation gap with the US."
+    },
+    "gold_return_high": {
+      "value": 0.3,
+      "status": "assumption",
+      "sourceName": "BCRA wholesale exchange rate series 5",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/5",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a faster peso slide."
+    },
+    "fixed_income_return_low": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "BCRA: individuals' 30-day peso time deposits about 19.7% nominal",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short peso deposits if rates keep falling with inflation."
+    },
+    "fixed_income_return_base": {
+      "value": 0.21,
+      "status": "assumption",
+      "sourceName": "BCRA: individuals' peso time deposits of 60 days and more about 21%; interest on peso deposits largely untaxed",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case at current 60-day-plus deposit rates."
+    },
+    "fixed_income_return_high": {
+      "value": 0.26,
+      "status": "assumption",
+      "sourceName": "Treasury auction 28 October 2026: LECAP 28.3% effective annual",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-16",
+      "asOf": "2026-10-31",
+      "note": "High case mixing short Treasury letters and deposits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Superintendencia de Seguros de la Nación material: no industry-wide life claim settlement ratio published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Argentina, but no regulator or other non-company source publishing premium rates by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found for Argentina; public hospitals are free at the point of use."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private prepaid health plan prices are set by each company; no regulator table of premiums by age per 100,000 of cover found."
+    },
+    "oop_health_share": {
+      "value": 0.2447,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AR",
+      "asOf": "2023-12-31",
+      "note": "Latest year available (2023), older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "INDEC CPI via BCRA series 28; REM 12-month expectation 21.1%",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/29",
+      "asOf": "2026-10-31",
+      "note": "No long health CPI series was read, so we plan with the 20% projection plus two points, as private health plan fees have tended to rise faster than prices."
+    },
+    "goal_inflation_education": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "INDEC CPI via BCRA series 28 (education among the September 2026 leaders)",
+      "sourceUrl": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/28",
+      "asOf": "2026-10-31",
+      "note": "Education led price rises in September 2026, so we plan with the 20% projection plus two points."
+    },
+    "life_expectancy": {
+      "value": 77.543,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AR",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 77.8 for 2026 (men 75.3, women 80.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.2,
+            "men": 20.3,
+            "women": 24.0
+          },
+          {
+            "age": 65,
+            "total": 18.4,
+            "men": 16.6,
+            "women": 20.0
+          },
+          {
+            "age": 70,
+            "total": 14.7,
+            "men": 13.3,
+            "women": 16.1
+          },
+          {
+            "age": 80,
+            "total": 8.6,
+            "men": 7.8,
+            "women": 9.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/argentina/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.3
+          },
+          {
+            "year": 2040,
+            "value": 4.2
+          },
+          {
+            "year": 2065,
+            "value": 2.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/argentina/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 19.0 (2025, World Bank), 23.7 (2040) and 43.3 (2065, populationpyramid.net/argentina/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Law 24.241 (Integrated Pension System), article 19, consolidated text on InfoLEG",
+      "sourceUrl": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/639/texact.htm",
+      "asOf": "2026-10-31",
+      "note": "Men qualify for the basic universal pension at 65 and women at 60 (women may keep working to 65), with 30 years of contributions."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Law 24.241 (Integrated Pension System), article 19, consolidated text on InfoLEG",
+      "sourceUrl": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/639/texact.htm",
+      "asOf": "2026-10-31",
+      "note": "National public employees are covered by the same SIPA rules (men 65, women 60); provinces and some professions run their own schemes with different ages."
+    },
+    "retirement_return_low": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "BCRA: individuals' 30-day peso deposits about 19.7% nominal",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case if peso deposit rates keep falling."
+    },
+    "retirement_return_base": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "BCRA: individuals' peso time deposits of 60 days and more about 21%",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case just below the current 60-day-plus deposit rate, untaxed for savings interest."
+    },
+    "retirement_return_high": {
+      "value": 0.24,
+      "status": "assumption",
+      "sourceName": "Treasury auction 28 October 2026: LECAP 28.3% effective annual",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-16",
+      "asOf": "2026-10-31",
+      "note": "High case mixing Treasury letters and deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Mix of peso deposits (about 21%) and local equities",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced peso mix in a bad decade."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "Mix of peso deposits (about 21%) and equities (23% base)",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case for a roughly half-and-half mix, about 2 points above expected inflation."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.28,
+      "status": "assumption",
+      "sourceName": "Mix of Treasury letters (28% effective) and equities (32% high case)",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-16",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equities and high peso yields."
+    },
+    "old_age_allowance_monthly": {
+      "value": 348599,
+      "status": "sourced",
+      "sourceName": "Universal Old-Age Pension (PUAM, Law 27.260): 80% of the minimum pension; minimum pension per news report (October 2026)",
+      "sourceUrl": "https://www.rankia.com.ar/noticias/subsidios/7491336-jubilacion-minima-octubre-bono-70-000-cobras-505-748-51-8",
+      "asOf": "2026-10-01",
+      "note": "PUAM pays 80% of the minimum retirement pension (argentina.gob.ar Ley Simple). A news headline gives ARS 505,748.51 for October 2026 including the ARS 70,000 bonus, so the minimum is ARS 435,748.51 and PUAM about ARS 348,599 before any bonus; ANSES pages could not be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Justice, Derecho Fácil: Pensión universal para el adulto mayor (Law 27.260)",
+      "sourceUrl": "https://www.argentina.gob.ar/justicia/derechofacil/leysimple/pension-universal-para-el-adulto-mayor",
+      "asOf": "2026-10-31",
+      "note": "Non-contributory pension from 65 for citizens (naturalised after 10 years' residence, foreigners after 20); ANSES runs a socio-economic and asset assessment, and claimants must not receive or be entitled to any other pension. It rises with the minimum pension and includes PAMI health cover."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Argentina has no statutory gratuity on retirement or resignation: Labour Contract Law art. 252 ends the contract at retirement without any seniority indemnity; the only statutory payment is the art. 245 dismissal indemnity of one month's best pay per year of service when the employer dismisses without just cause.",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Law 24.241 (Integrated Pension System), articles 19 and 32, consolidated text on InfoLEG",
+      "sourceUrl": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/639/texact.htm",
+      "asOf": "2026-10-31",
+      "note": "Compulsory pay-as-you-go SIPA run by ANSES: pension at 65 for men and 60 for women with 30 years of contributions; benefits are adjusted every month by the INDEC CPI since July 2024 (art. 32 as replaced by Decree 274/2024)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Caja de ahorro",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Plazo fijo",
+      "localNameEn": "Fixed-term deposit (60 days or more)",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Plazo fijo a 365 días",
+      "localNameEn": "1-year fixed-term deposit",
+      "note": "Offered by banks, but the BCRA publishes no separate 1-year rate.",
+      "sourceUrl": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/diar_pas.xls"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond sold directly to individuals found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letra del Tesoro Nacional Capitalizable en pesos (LECAP)",
+      "localNameEn": "Fixed-rate capitalising Treasury letter",
+      "note": "Short fixed-rate Treasury letters sold at fortnightly auctions and traded on the market; recent new issues run about 4 months.",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-16"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bono del Tesoro Nacional en pesos",
+      "localNameEn": "Peso Treasury bond (fixed-rate, CER-linked or TAMAR-linked)",
+      "note": "Peso bonds trade on the local market; no official 5-year fixed-rate yield found.",
+      "sourceUrl": "https://www.argentina.gob.ar/noticias/resultado-de-la-licitacion-por-efectivo-de-instrumentos-del-tesoro-nacional-denominados-16"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No 10-year peso government bond is issued."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondo común de inversión de renta variable",
+      "localNameEn": "Equity mutual fund",
+      "note": "Mutual funds are regulated by the Comisión Nacional de Valores.",
+      "sourceUrl": "https://www.argentina.gob.ar/cnv"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold bars and coins",
+      "note": "Physical gold can be bought legally."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de la República Argentina (BCRA)",
+      "url": "https://www.bcra.gob.ar/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de Seguros de la Nación (SSN)",
+      "url": "https://www.argentina.gob.ar/superintendencia-de-seguros"
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia de Seguros de la Nación: consultas y denuncias",
+      "url": "https://www.argentina.gob.ar/servicio/realizar-una-consulta-o-denuncia-ante-la-superintendencia-de-seguros-de-la-nacion"
+    },
+    "pensionScheme": {
+      "name": "ANSES: Sistema Integrado Previsional Argentino (SIPA)",
+      "url": "https://www.argentina.gob.ar/anses"
+    },
+    "oldAgeAllowance": {
+      "name": "Pensión Universal para el Adulto Mayor (PUAM), paid by ANSES",
+      "url": "https://www.argentina.gob.ar/justicia/derechofacil/leysimple/pension-universal-para-el-adulto-mayor"
+    },
+    "publicHealthCover": {
+      "name": "Ministerio de Salud (free public hospitals; PAMI for retirees)",
+      "url": "https://www.argentina.gob.ar/salud"
+    },
+    "depositInsurance": {
+      "name": "Sistema de Seguro de Garantía de los Depósitos (administered by SEDESA)",
+      "url": "https://www.sedesa.com.ar/en/deposit-guarantee-system/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística y Censos (INDEC)",
+      "url": "https://www.indec.gob.ar/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

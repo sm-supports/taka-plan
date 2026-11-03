@@ -122,12 +122,12 @@
       "note": "No published government bond yields were found."
     },
     "tax_bank_interest": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The tax treatment of individuals' deposit interest could not be confirmed (PwC Tax Summaries does not cover Turkmenistan and the Tax Code text was not read)."
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Tax Code of Turkmenistan, Article 187(1)(t) (income not included in the tax base), as amended to 12 April 2025",
+      "sourceUrl": "https://prg.kz/m/amp/document/30415652/11/1870000",
+      "asOf": "2025-04-12",
+      "note": "Interest on bank deposits and deposit certificates of individuals is excluded from personal income tax. Read from a legal database copy of the Tax Code (amendments to April 2025)."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -441,7 +441,8 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No statutory gratuity or end-of-service benefit per year of service was found; the Labour Code text was not read, so absence is not confirmed."
+      "absent": true,
+      "note": "Labour Code of Turkmenistan (No. 30-IV, as amended to 22 November 2025), Article 54: severance is two weeks' or one month's average pay on specific dismissal grounds (liquidation, staff cuts, call-up, refused transfer), not tied to years of service and not paid on retirement; no statutory gratuity exists (prg.kz/m/amp/document/31348675/4/540000)."
     },
     "public_pension_scheme": {
       "value": null,

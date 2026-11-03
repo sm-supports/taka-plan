@@ -1,0 +1,544 @@
+{
+  "schemaVersion": 1,
+  "code": "VC",
+  "iso3": "VCT",
+  "nameEn": "Saint Vincent and the Grenadines",
+  "nameNative": "Saint Vincent and the Grenadines",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "svc"
+  ],
+  "currency": {
+    "code": "XCD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.7,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VC",
+      "asOf": "2025-12-31",
+      "note": "The EC dollar has been fixed at 2.70 per US dollar by the Eastern Caribbean Central Bank since 1976."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "ECCB, Consumer Price Index Saint Vincent and the Grenadines (Statistical Office data)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-vincent-and-the-grenadines/m?start_date=31/05/2025&end_date=30/09/2026",
+      "asOf": "2026-06-30",
+      "note": "All-items index 132.6 in June 2026 against 130.0 in June 2025, a 2.0% year-on-year rise (computed; the table's monthly 'inflation rate' column is month on month). 2025 average inflation was 0.91%. June 2026 is the latest month published."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB CPI Saint Vincent and the Grenadines: period-average inflation 2021-2025 of 1.6%, 5.7%, 4.6%, 3.6% and 0.9%; EC dollar pegged at 2.70 per US dollar",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-vincent-and-the-grenadines/a",
+      "asOf": "2026-10-31",
+      "note": "The ECCB has no inflation target (the EC dollar is pegged to the US dollar), so we plan with 2.5%: close to US-dollar inflation, a little below the 3.3% 5-year average that includes the 2022-2023 import-price shock."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates on Deposits and Loans: Saint Vincent and the Grenadines (discount rate)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=8",
+      "asOf": "2026-08-31",
+      "note": "ECCB discount rate 3.00% (May-August 2026), the same for all ECCU members; with the peg it is a backstop rate rather than an active policy tool."
+    },
+    "savings_account_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates on Deposits and Loans: Saint Vincent and the Grenadines",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=8",
+      "asOf": "2026-08-31",
+      "note": "Posted EC-dollar savings rates were 2.00% (minimum and maximum) in May-August 2026, the ECCB 2% minimum savings rate; the weighted average on savings deposits was 1.89% in June 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.015,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates on Deposits and Loans: Saint Vincent and the Grenadines",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=8",
+      "asOf": "2026-08-31",
+      "note": "Posted 3-month EC-dollar time-deposit rates ranged 0.10-1.50% (May-August 2026); the top of the range is used as the rate a saver can get."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0187,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates and Weighted Average Rates on Deposits and Loans: Saint Vincent and the Grenadines",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=8",
+      "asOf": "2026-06-30",
+      "note": "Posted 12-month EC-dollar time-deposit rates ranged 0.10-4.00% (May-August 2026); the weighted average on all EC-dollar time deposits was 1.87% in June 2026, used here as the typical rate."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the ECCB interest rate tables for Saint Vincent and the Grenadines: no monthly recurring deposit product rate is published."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0123,
+      "status": "sourced",
+      "sourceName": "ECCB, Interest Rates and Weighted Average Rates on Deposits and Loans: Saint Vincent and the Grenadines",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=8",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate on all EC-dollar deposits 1.23% in June 2026 (1.17% including foreign-currency deposits); World Bank deposit rate 1.24% (2025)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; the government borrows on the Regional Government Securities Market, where it issued only 91-day Treasury bills in 2021-2026."
+    },
+    "tbill_91d_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "ECCB, Weighted Average Interest Rates on the RGSM: Saint Vincent and the Grenadines",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-09-30",
+      "note": "91-day Treasury bill weighted average 3.50% at the July, August and September 2026 auctions (2.86% average in 2025)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Government of Saint Vincent and the Grenadines auctioned no bonds of any tenor on the Regional Government Securities Market in 2021-2025 or May-September 2026 (ECCB RGSM annual and monthly tables); no other published 5-year yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond was auctioned on the Regional Government Securities Market in 2021-2026 (ECCB RGSM tables); no other published 10-year yield was found."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Income Tax Act Cap. 435 (Saint Vincent and the Grenadines), s.25(1)(g)",
+      "sourceUrl": "https://ird.gov.vc/images/pdf/Cap435.pdf",
+      "asOf": "2009-12-31",
+      "note": "Income accruing to any individual by way of interest on a deposit in any bank or building society in Saint Vincent and the Grenadines is exempt from income tax. Consolidated text amended to 2009 (older than 2025), published by the Inland Revenue Department; no later repeal found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists (see sanchayapatra_5y_rate), so no tax rate applies; the Income Tax Act s.25(1)(f) exempts only interest on government loans the Minister declares exempt."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched ECCB sources: the regional Eastern Caribbean deposit insurance arrangement is not shown as operating, and no deposit insurance cover limit for Saint Vincent and the Grenadines was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest was found; the ECCB publishes only an 'other lending rates' range of 3.50-22.00% for Saint Vincent and the Grenadines (August 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Vincent and the Grenadines 91-day Treasury bill 3.50% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Low case: the regional share market is very small, so savers rely mostly on global equity funds in pegged US-dollar terms, and a weak decade is possible."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Vincent and the Grenadines 91-day Treasury bill 3.50% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Base case uses a global equity index in EC-dollar terms (pegged to the US dollar): the 3.5% tax-free safe rate plus a 3-point premium, as the local market is too thin to have a usable 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Vincent and the Grenadines 91-day Treasury bill 3.50% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat their strong long-run US-dollar returns."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "ECCB: EC dollar fixed at 2.70 per US dollar; World Bank PA.NUS.FCRF 2.70 (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VC",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price, and the long-standing peg gives no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ECCB: EC dollar fixed at 2.70 per US dollar; World Bank PA.NUS.FCRF 2.70 (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VC",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% a year, with no expected depreciation of the pegged EC dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "ECCB: EC dollar fixed at 2.70 per US dollar; World Bank PA.NUS.FCRF 2.70 (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=VC",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECCB Saint Vincent and the Grenadines: posted 3-month deposits up to 1.50%, weighted time-deposit rate 1.87% (2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits at about 1.5-2%, tax-free for residents."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB: savings rate 2.00% (2026); 91-day Treasury bill 3.50% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-free savings deposits at 2% and Treasury bills near 3.5%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Vincent and the Grenadines 91-day Treasury bill 3.50% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling 91-day Treasury bills at about 3.5%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Financial Services Authority site (statistics page): no industry-wide life claim settlement ratio is published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Saint Vincent and the Grenadines by regional insurers, but no regulator or other non-company source publishes premium rates by age."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found; the Ministry of Health website was unavailable during this research."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source publishing private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2657,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=VC",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 26.6% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ECCB CPI Saint Vincent and the Grenadines: health index 115.8 (2021) to 128.8 (2025), about 2.7% a year",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-vincent-and-the-grenadines/a",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose about 2.7% a year in 2021-2025; we plan with 4% to allow for private and overseas treatment costs, which the CPI barely covers."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "ECCB CPI Saint Vincent and the Grenadines: education index 109.1 (2021) to 120.4 (2025), about 2.5% a year",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-saint-vincent-and-the-grenadines/a",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose about 2.5% a year in 2021-2025; we plan with 3.5% to allow for overseas tertiary study, which most students need."
+    },
+    "life_expectancy": {
+      "value": 71.382,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=VC",
+      "asOf": "2024-12-31",
+      "note": "Men 68.8, women 74.5 (2024). UN WPP 2024 via populationpyramid.net gives 71.7 for 2026 (men 69.0, women 74.8)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/saint-vincent-and-the-grenadines/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.5,
+            "men": 16.6,
+            "women": 20.3
+          },
+          {
+            "age": 65,
+            "total": 14.9,
+            "men": 13.4,
+            "women": 16.5
+          },
+          {
+            "age": 70,
+            "total": 11.8,
+            "men": 10.6,
+            "women": 12.9
+          },
+          {
+            "age": 80,
+            "total": 6.6,
+            "men": 6.0,
+            "women": 7.1
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/saint-vincent-and-the-grenadines/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.5
+          },
+          {
+            "year": 2040,
+            "value": 3.8
+          },
+          {
+            "year": 2065,
+            "value": 2.9
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 18.3 (2025, World Bank), 26.0 (2040) and 34.3 (2065, populationpyramid.net/saint-vincent-and-the-grenadines/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not confirm the current National Insurance Services pensionable age or any scheduled increase: the National Insurance Services website (nissvg.org) blocked automated reading during this research, and no other official or secondary source could be read."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not confirm the statutory retirement age for public officers from a readable official source (government ministry sites were down during this research)."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "ECCB Saint Vincent and the Grenadines: posted 3-month deposits up to 1.50% (2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly tax-free savings and short deposits at about 1.5-2%."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB: savings rate 2.00% (2026); 91-day Treasury bill 3.50% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 3.5% tax-free Treasury bill rate: a mix of savings deposits and bills, kept liquid in retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: Saint Vincent and the Grenadines 91-day Treasury bill 3.50% (September 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling Treasury bills at about the latest auction rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.50%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global equities disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.50%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global equities at 6.5% and half deposits and bills around 2.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 3.50%; global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The only non-contributory old-age pension, the Non-contributory Assistance Age Pension (EC$75 every two weeks), is limited to people who were over 57 (elderly support component: over 47) on 5 January 1987, so no one planning today can receive it (UN ECLAC non-contributory pensions database, https://dds.cepal.org/bpsnc/programa?id=150).",
+      "absent": true
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension open to new claimants: eligibility is tied to age on 5 January 1987 (UN ECLAC non-contributory pensions database, https://dds.cepal.org/bpsnc/programa?id=150); poor older people rely on public assistance.",
+      "absent": true
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not confirm whether the Protection of Employment Act provides any payment on retirement (the Act text could not be read); severance is known to apply on redundancy and dismissal."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A compulsory contributory National Insurance Services age pension exists (NIS benefits are tax-exempt under Income Tax Act s.25(1)(w)), but its pensionable age and indexation rules could not be confirmed: the National Insurance Services website (nissvg.org) blocked automated reading during this research."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "ECCB minimum savings rate 2%.",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=8"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "3-month fixed (time) deposit",
+      "note": "Posted rates 0.10-1.50% (2026).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=8"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "12-month fixed (time) deposit",
+      "note": "Posted rates 0.10-4.00% (2026).",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m?country_code[]=8"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of Saint Vincent and the Grenadines 91-day Treasury bill",
+      "note": "Auctioned on the Regional Government Securities Market through licensed intermediaries; mostly bought by institutions.",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m?country_code[]=8"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government bonds were auctioned on the regional market in 2021-2026.",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/a?country_code[]=8"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No government bonds were auctioned on the regional market in 2021-2026.",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/a?country_code[]=8"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No locally registered retail equity or index fund was identified; the regional share market is very small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": "Gold jewellery and coins",
+      "note": "No legal restriction on buying gold; mostly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Eastern Caribbean Central Bank (ECCB)",
+      "url": "https://www.eccb-centralbank.org/",
+      "note": "Shared central bank of the Eastern Caribbean Currency Union."
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Authority (FSA) Saint Vincent and the Grenadines",
+      "url": "https://fsasvg.com/licensed-insurance-and-pension-plans-2/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Authority (FSA), file a complaint",
+      "url": "https://fsasvg.com/file-complaint/",
+      "note": "No separate insurance ombudsman; complaints about regulated insurers go to the FSA."
+    },
+    "pensionScheme": {
+      "name": "National Insurance Services (NIS)",
+      "url": "https://www.nissvg.org/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health, Wellness and the Environment (public hospitals and district clinics)",
+      "url": "https://health.gov.vc/health/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Statistical Office, Saint Vincent and the Grenadines",
+      "url": "https://stats.gov.vc/subjects/prices-and-price-indices/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

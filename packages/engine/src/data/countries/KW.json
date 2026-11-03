@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "code": "KW",
+  "iso3": "KWT",
+  "nameEn": "Kuwait",
+  "nameNative": "الكويت",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "currency": {
+    "code": "KWD",
+    "symbol": "KD",
+    "decimals": 3,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.3082,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Main Indicators: USD/KWD exchange rate",
+      "sourceUrl": "https://www.cbk.gov.kw/en/monetary-policy/market-operations/main-indicators",
+      "asOf": "2026-10-29",
+      "note": "0.30820/0.30830 dinar per US dollar (bid/ask) on 29 October 2026; the dinar is pegged to an undisclosed basket. World Bank 2025 average 0.3065. CLDR gives no narrow symbol; 'KD' is the usual local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0219,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Central Statistical Bureau, CPI July 2026",
+      "sourceUrl": "https://tradingeconomics.com/kuwait/inflation-cpi",
+      "asOf": "2026-07-31",
+      "note": "Consumer prices up 2.19% year on year in July 2026 (2.19% in June); secondary source because the CSB release was not read. World Bank 2025 average 2.36%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2021-2025 (about 3% average, 2.4% in 2025); latest 2.19% (July 2026); dinar pegged to a currency basket",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=KW",
+      "asOf": "2026-10-31",
+      "note": "Inflation has eased from 4% in 2022 to about 2.2-2.4%, with the dinar pegged to an undisclosed basket, so 2.5% a year is used."
+    },
+    "policy_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Main Indicators: discount rate",
+      "sourceUrl": "https://www.cbk.gov.kw/en/monetary-policy/market-operations/main-indicators",
+      "asOf": "2026-10-29",
+      "note": "Discount rate 3.50% (last changed 11 December 2025); overnight repo 3.125%, 1-week 3.375%, 1-month 3.625%."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBK publishes counter rates on time deposits only; no average rate for savings accounts was found."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0329,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 20 (average counter interest rates on customer KD time deposits, 3 months)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-09-30",
+      "note": "3.294% on 3-month KD time deposits in September 2026; simple average of daily counter rates for KD 25,000-50,000 deposits at conventional banks (Islamic banks excluded)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.036,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 20 (average counter interest rates on customer KD time deposits, 12 months)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-09-30",
+      "note": "3.602% on 12-month KD time deposits in September 2026; KD 25,000-50,000 deposits at conventional banks."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found in the CBK statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0257,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 16 (private-sector KD deposits by interest rate, weighted interest rate)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-09-30",
+      "note": "Weighted interest rate on all private-sector KD deposits at local banks, 2.57% in September 2026, including the 24% that pay no interest."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; treasury bonds and CBK bonds are sold to banks."
+    },
+    "tbill_91d_rate": {
+      "value": 0.03625,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 8-1 (CBK bonds and related tawarruq, 3-month rate)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-09-30",
+      "note": "Rate on 3-month CBK bonds (a monetary instrument sold to banks) 3.625% since December 2025; no 3-month treasury bills are issued and no 3-month CBK bonds were outstanding in September 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.03375,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 8 (public debt instruments, interest rate on new issues, 5 years)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-08-31",
+      "note": "5-year treasury bonds issued in August 2026 at 3.375% (3.25% in June and July 2026); public debt issuance resumed in 2025."
+    },
+    "tbond_10y_rate": {
+      "value": 0.05125,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 8 (public debt instruments, interest rate on new issues, 10 years)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2025-10-31",
+      "note": "Latest 10-year issue was in October 2025 at 5.125%, before rates fell; a 7-year bond was issued at 3.625% in September 2026, so the current 10-year yield is likely lower."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Kuwait, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/kuwait/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "There is no personal income tax in Kuwait, so bank interest is untaxed for individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Kuwait, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/kuwait/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "No personal income tax, so returns on government securities are untaxed for individuals (no retail savings certificate exists)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Deposits at local banks are guaranteed by the state under Law No. 30 of 2008, but no current CBK page stating the guarantee or a limit was read, so it is not recorded."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBK caps consumer lending rates relative to the discount rate, but no current official page with the credit card rate or cap was read."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Boursa Kuwait All Share index via Trading Economics (down 6.4% in the year to October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/kuwait/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: below the deposit rate, as in weak years for the oil-linked market."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBK 3-month deposit rate 3.29% (untaxed); Boursa Kuwait record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/kuwait/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points above the untaxed deposit rate, within the 4-point cap, because the market has had a moderate, dividend-driven record."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Boursa Kuwait All Share index via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/kuwait/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a fuller equity premium, as in strong oil-price years."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, USD/KWD 0.3082 (29 October 2026); dinar pegged to a basket",
+      "sourceUrl": "https://www.cbk.gov.kw/en/monetary-policy/market-operations/main-indicators",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable dinar."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait exchange rate; long-run dollar gold trend",
+      "sourceUrl": "https://www.cbk.gov.kw/en/monetary-policy/market-operations/main-indicators",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year; the basket peg keeps the dinar close to the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait exchange rate; long-run dollar gold trend",
+      "sourceUrl": "https://www.cbk.gov.kw/en/monetary-policy/market-operations/main-indicators",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026 (deposit rates)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall further if the discount rate is cut, untaxed."
+    },
+    "fixed_income_return_base": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 20 (3-month KD deposit 3.29%)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "Base case: the untaxed 3-month KD deposit rate; government bonds are sold to banks, not to individuals."
+    },
+    "fixed_income_return_high": {
+      "value": 0.039,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026 (12-month deposit 3.60%; CBK 12-month bonds 3.875%)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits or funds holding government bonds."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Regulatory Unit publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no regulator or other public table of premiums per KD 1,000 of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public table of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Kuwait",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KW",
+      "asOf": "2023-12-31",
+      "note": "10.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Trading Economics, Kuwait CPI health index 127.5 in July 2026 (2013=100), about 1.8% a year since 2013",
+      "sourceUrl": "https://tradingeconomics.com/kuwait/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health prices have risen about 1.8% a year since 2013, a little below general inflation, but private care usually costs more over time, so 0.5 points above the 2.5% assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Trading Economics, Kuwait CPI education index 128.9 in July 2026 (2013=100), about 1.9% a year since 2013",
+      "sourceUrl": "https://tradingeconomics.com/kuwait/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education prices have risen about 1.9% a year since 2013; private school fees rise faster, so 0.5 points above the 2.5% assumption."
+    },
+    "life_expectancy": {
+      "value": 81.0,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net, life expectancy at birth, Kuwait, 2026",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/kuwait/",
+      "asOf": "2026-07-01",
+      "note": "81.0 years (men 79.8, women 82.3), UN WPP 2024 medium variant; secondary source. The World Bank (SP.DYN.LE00.IN) gives 84.6 for 2024."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 23.2,
+            "men": 22.5,
+            "women": 23.9
+          },
+          {
+            "age": 65,
+            "total": 18.7,
+            "men": 18.0,
+            "women": 19.4
+          },
+          {
+            "age": 70,
+            "total": 14.5,
+            "men": 13.7,
+            "women": 15.2
+          },
+          {
+            "age": 80,
+            "total": 7.8,
+            "men": 7.2,
+            "women": 8.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/kuwait/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 24.84
+          },
+          {
+            "year": 2040,
+            "value": 15.15
+          },
+          {
+            "year": 2065,
+            "value": 10.87
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/kuwait/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.03 (2025, World Bank), 6.6 (2040) and 9.2 (2065, populationpyramid.net/kuwait/2065/); the large young migrant workforce keeps the ratio very high."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Public Institution for Social Security (PIFSS), Insurance guide (دليل التأمينات), edition 10",
+      "sourceUrl": "http://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
+      "asOf": "2023-01-03",
+      "note": "Legal retirement age 55 for civilian men and 50 for civilian women (Kuwaiti nationals), with full pension after 30 years of service and a 15-year minimum; the guide dates from January 2023 (older than 2025) and later amendments could not be checked."
+    },
+    "retirement_age_government": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "Public Institution for Social Security (PIFSS), Insurance guide (دليل التأمينات), edition 10",
+      "sourceUrl": "http://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
+      "asOf": "2023-01-03",
+      "note": "Kuwaiti civil servants are insured with PIFSS under the same civilian rules: 55 for men, 50 for women (military 45); the guide dates from January 2023."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026 (deposit rates)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "Low case: lower deposit rates after future rate cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.033,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 20 (3-month KD deposit 3.29%; 12-month 3.60%)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "Base case: the untaxed 3-month deposit rate, below the 1-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.038,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026 (12-month deposit 3.60%)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits and bond funds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026 (deposits and government bonds)",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about the deposit rate."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.048,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026; equity base 6.5%; gold base 4%",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, Gulf equities and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026; equity high 9%",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Older Kuwaitis on low incomes can get means-tested social assistance from the Ministry of Social Affairs, but no current amount for an older person could be read from an official source; non-Kuwaitis are not covered."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for social assistance to older people could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 15,
+        "daysPerYearAfter": 20,
+        "afterYears": 3,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Kuwait, individual other taxes (terminal indemnity under the Kuwait Labour Law)",
+      "sourceUrl": "https://taxsummaries.pwc.com/kuwait/individual/other-taxes",
+      "asOf": "2026-07-22",
+      "note": "Per PwC: workers who complete three years with an employer get 15 days' pay per year for the first three years and two-thirds of a month's pay (20 of 30 days) per year after that. Mainly relevant to expatriates, who are outside social security; the Labour Law text itself was not read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 65,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Public Institution for Social Security (PIFSS), Insurance guide (دليل التأمينات), edition 10; PwC Kuwait (no personal income tax)",
+      "sourceUrl": "http://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
+      "asOf": "2023-01-03",
+      "note": "Compulsory social insurance for Kuwaiti nationals in government and private jobs (employee 10.5%, employer 11.5% per PwC); pension from 55 for men and 50 for women with 15+ years (best rate at 30 years); increases come from a separate pension-increase fund, not CPI indexation. Guide dated January 2023; non-Kuwaitis are not covered."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account",
+      "note": "Savings accounts pay little; many offer prize draws instead of interest."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)",
+      "note": "Average counter rate 3.29% for KD deposits in September 2026.",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)",
+      "note": "Average counter rate 3.60% for KD deposits in September 2026.",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No treasury bills are issued; the CBK's own 3-month bonds and tawarruq are sold only to banks.",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزانة",
+      "localNameEn": "Treasury bonds",
+      "note": "Issued through the CBK since 2025 and bought by local banks.",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات الخزانة",
+      "localNameEn": "Treasury bonds",
+      "note": "Issued through the CBK and bought by local banks.",
+      "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار",
+      "localNameEn": "Investment funds",
+      "note": "Local equity funds investing on Boursa Kuwait are available."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are freely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Kuwait (CBK)",
+      "url": "https://www.cbk.gov.kw/en"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Regulatory Unit (IRU)",
+      "url": "https://www.iru.gov.kw/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Regulatory Unit (IRU), complaints",
+      "url": "https://www.iru.gov.kw/"
+    },
+    "pensionScheme": {
+      "name": "Public Institution for Social Security (PIFSS)",
+      "url": "https://www.pifss.gov.kw/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (public health care for citizens)",
+      "url": "https://www.moh.gov.kw/"
+    },
+    "statistics": {
+      "name": "Central Statistical Bureau (CSB)",
+      "url": "https://www.csb.gov.kw/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

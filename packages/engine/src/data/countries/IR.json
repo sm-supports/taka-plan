@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "code": "IR",
+  "iso3": "IRN",
+  "nameEn": "Iran",
+  "nameNative": "ایران",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "fa",
+    "az",
+    "mzn",
+    "ckb",
+    "ar"
+  ],
+  "currency": {
+    "code": "IRR",
+    "symbol": "IRR",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1871664,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Islamic Republic of Iran, exchange rates on the homepage (9 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "1,871,664 rials per US dollar dated 9 Aban 1405 (31 October 2026); Trading Economics shows 1,868,414 on 29 October. Prices are often quoted in tomans (10 rials). The World Bank's 42,000 (2023) was the former preferential rate."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.879,
+      "status": "sourced",
+      "sourceName": "Statistical Centre of Iran annual inflation, July 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/iran/inflation-cpi",
+      "asOf": "2026-07-31",
+      "note": "87.9% in July 2026 (88.6% in June); food inflation 130.5% in June 2026. Secondary source; the Statistical Centre of Iran site was not read. World Bank 2025 average 42.2%."
+    },
+    "inflation_projection": {
+      "value": 0.4,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2025 (42.2%); Statistical Centre of Iran 87.9% in July 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=IR",
+      "asOf": "2026-10-31",
+      "note": "The central bank has no credible inflation target and inflation has run around 40% for years before the 2026 spike, so 40% is used for long-run planning."
+    },
+    "policy_rate": {
+      "value": 0.23,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Islamic Republic of Iran, minimum repurchase agreement rate (7 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-29",
+      "note": "The central bank's homepage shows the minimum repo (open-market) rate at 23%, the interbank market rate at 24%, the regulated borrowing rate at 24% and the regulated deposit (standing facility) rate at 17%, dated 7 Aban 1405 (29 October 2026). Iran has no single policy rate; the repo rate is the closest equivalent."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for ordinary savings accounts was found; qard al-hasan savings accounts are interest-free under Islamic banking rules, but this could not be confirmed from an official page."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published current rate for short-term investment deposits was found; the central bank sets ceilings on bank deposit profit rates but the current ceiling could not be read."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published current ceiling or typical rate for 1-year investment deposits could be read from the central bank."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recent weighted average deposit rate was found; the World Bank series (FR.INR.DPST) stops at 12.8% in 2016, too old to use."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No continuously sold government savings certificate for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Iran does not issue 3-month treasury bills; its Islamic treasury bills (asnad-e khazaneh) are zero-coupon papers of about 1 to 3 years, and no current yield could be read."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current yield on government sukuk or Islamic treasury bills of about 5 years could be read."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government security exists or was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Profit on bank deposits is reported to be exempt from income tax under the Direct Taxation Act, but no official or PwC page could be read to confirm it."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found, and the tax treatment of government securities could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A deposit guarantee fund is reported to exist, but its cover per depositor could not be read from an official source."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Credit cards in the international sense are not issued; no cap or typical rate for domestic credit-card loans was found. The central bank's regulated borrowing rate is 24% for reference."
+    },
+    "equity_return_low": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "TEDPIX index (Trading Economics): +33% over the 12 months to February 2026 against inflation of about 40% to 88%",
+      "sourceUrl": "https://tradingeconomics.com/iran/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: equities fall well behind inflation, as in the recent record."
+    },
+    "equity_return_base": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "Central bank interbank rate 24%; repo rate 23%; TEDPIX record",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Base case: about the safe rate, below its 4-point cap, because the Tehran index has trailed inflation and trading was disrupted in 2026."
+    },
+    "equity_return_high": {
+      "value": 0.4,
+      "status": "assumption",
+      "sourceName": "TEDPIX record; inflation assumption 40%",
+      "sourceUrl": "https://tradingeconomics.com/iran/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: equities keep pace with inflation and rial depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Central bank official rate 1,871,664 rials per US dollar (9 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slower rial depreciation than inflation implies."
+    },
+    "gold_return_base": {
+      "value": 0.4,
+      "status": "assumption",
+      "sourceName": "Central bank exchange rate; inflation assumption 40%; long-run dollar gold trend about 4%",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4% dollar gold trend plus rial depreciation of about 35% a year, the gap between the 40% inflation assumption and US inflation."
+    },
+    "gold_return_high": {
+      "value": 0.6,
+      "status": "assumption",
+      "sourceName": "Central bank exchange rate; Trading Economics USD/IRR history",
+      "sourceUrl": "https://tradingeconomics.com/iran/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: a renewed currency collapse like that of 2025-2026."
+    },
+    "fixed_income_return_low": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Central bank regulated deposit rate 17% and interbank rate 24% (7 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary deposits earning well below the interbank rate."
+    },
+    "fixed_income_return_base": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Central bank repo rate 23% and interbank rate 24% (7 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Base case: bank investment deposits a few points below the interbank rate; deposit profit is assumed untaxed (not confirmed)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.24,
+      "status": "assumption",
+      "sourceName": "Central bank interbank rate 24%",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "High case: government Islamic securities near the interbank rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio could be read from the Central Insurance of Iran."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per 1,000 rials of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published supplementary health insurance premiums by age were found from the regulator or another public source."
+    },
+    "oop_health_share": {
+      "value": 0.431,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Iran",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=IR",
+      "asOf": "2023-12-31",
+      "note": "43.1% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.45,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 40%; Statistical Centre of Iran inflation 87.9% (July 2026)",
+      "sourceUrl": "https://tradingeconomics.com/iran/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Medicines and equipment are imported and priced off the dollar, so health goals are planned 5 points above the general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.4,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 40%",
+      "sourceUrl": "https://tradingeconomics.com/iran/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was read, so education goals use the general inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 77.854,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Iran",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IR",
+      "asOf": "2024-12-31",
+      "note": "77.9 years in 2024 (men 76.0, women 79.8); UN WPP 2024 gives 78.2 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.2,
+            "men": 21.2,
+            "women": 23.1
+          },
+          {
+            "age": 65,
+            "total": 17.9,
+            "men": 17.1,
+            "women": 18.8
+          },
+          {
+            "age": 70,
+            "total": 13.9,
+            "men": 13.1,
+            "women": 14.6
+          },
+          {
+            "age": 80,
+            "total": 7.3,
+            "men": 6.7,
+            "women": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/iran-islamic-republic-of/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.1
+          },
+          {
+            "year": 2040,
+            "value": 4.6
+          },
+          {
+            "year": 2065,
+            "value": 1.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/iran-islamic-republic-of/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 12.37 (2025, World Bank), 21.6 (2040) and 53.0 (2065, populationpyramid.net/iran-islamic-republic-of/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Security Organization pension age (traditionally 60 for men and 55 for women) is being raised gradually under the Seventh Development Plan, but the age that applies to people born after 1975 could not be read from an official source."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age and service conditions for civil servants under the Civil Servants Pension Fund could not be read from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Central bank regulated deposit rate 17% (7 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall below today's regulated deposit rate."
+    },
+    "retirement_return_base": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "Central bank repo rate 23%; regulated deposit rate 17%",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the rates banks can pay on long deposits, so not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "Central bank interbank rate 24%",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "High case: long deposits and government securities near the interbank rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Fixed income low 15%; equity low 10%",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Low case: a balanced mix earning about deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Fixed income base 20%; equity base 22%; gold base 40%",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix with gold, which has carried most of the protection against rial depreciation."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.38,
+      "status": "assumption",
+      "sourceName": "Equity high 40%; gold high 60%",
+      "sourceUrl": "https://www.cbi.ir/",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth and gold heavy mix during fast depreciation."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Poor older people can receive means-tested support from public relief bodies, but no current monthly amount for a universal or social old-age pension could be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for non-contributory support to older people could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code is reported to give an end-of-service payment (haq-e sanavat) of one month's last wage per year of service, but the official text could not be read (the ILO NATLEX copy could not be reached)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Security Organization runs the main contributory pension for private-sector workers, but its current pension age schedule and indexation rule could not be read from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب پس‌انداز قرض‌الحسنه",
+      "localNameEn": "Qard al-hasan savings account",
+      "note": "Interest-free savings accounts under Islamic banking; banks may offer prize draws instead of profit."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "سپرده سرمایه‌گذاری کوتاه‌مدت",
+      "localNameEn": "Short-term investment deposit",
+      "note": "Profit rates are capped by the central bank."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "سپرده سرمایه‌گذاری بلندمدت یک‌ساله",
+      "localNameEn": "1-year investment deposit",
+      "note": "Profit rates are capped by the central bank."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No continuously sold government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 3-month treasury bill; Islamic treasury bills run about 1 to 3 years."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "اسناد خزانه اسلامی",
+      "localNameEn": "Islamic treasury bills and government sukuk",
+      "note": "Government Islamic securities of up to about 5 years traded on the securities exchanges; availability to individuals not confirmed from an official page."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year government security was found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صندوق سرمایه‌گذاری",
+      "localNameEn": "Investment funds (mutual funds and ETFs)",
+      "note": "Equity and fixed-income funds are supervised by the Securities and Exchange Organization."
+    },
+    "gold": {
+      "available": true,
+      "localName": "سکه طلا",
+      "localNameEn": "Gold coins",
+      "note": "Gold coins minted by the central bank, gold bars and gold funds are widely bought."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Islamic Republic of Iran",
+      "url": "https://www.cbi.ir/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Insurance of Iran (Bimeh Markazi)",
+      "url": "https://www.centinsur.ir/"
+    },
+    "insuranceComplaints": {
+      "name": "Central Insurance of Iran",
+      "url": "https://www.centinsur.ir/"
+    },
+    "pensionScheme": {
+      "name": "Social Security Organization (Tamin Ejtemaei)",
+      "url": "https://www.tamin.ir/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Iran Health Insurance Organization",
+      "url": "https://ihio.gov.ir/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Statistical Centre of Iran",
+      "url": "https://www.amar.org.ir/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

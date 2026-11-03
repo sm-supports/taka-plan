@@ -1,0 +1,551 @@
+{
+  "schemaVersion": 1,
+  "code": "DZ",
+  "iso3": "DZA",
+  "nameEn": "Algeria",
+  "nameNative": "الجزائر",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "arq",
+    "fr",
+    "kab",
+    "en"
+  ],
+  "currency": {
+    "code": "DZD",
+    "symbol": "DA",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 135.5079,
+      "status": "sourced",
+      "sourceName": "Bank of Algeria, daily exchange rate quotation of 30 October 2026",
+      "sourceUrl": "https://www.bank-of-algeria.dz/taux-de-change-journalier/",
+      "asOf": "2026-10-30",
+      "note": "Bank of Algeria quotation of the dinar against the US dollar for 30 October 2026 (135.2075 on 29 October); World Bank 2025 average 131.61. CLDR gives no narrow symbol; 'DA' is how prices are written locally."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.083,
+      "status": "sourced",
+      "sourceName": "Office National des Statistiques (ONS), consumer price index of Algiers, August 2026",
+      "sourceUrl": "https://www.ons.dz/IMG/pdf/IPC_Aout2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Consumer prices in Algiers up 8.3% on August 2025 (food +9.4%, manufactured goods +9.5%, services +1.5%); the 12-month average rate was 3.9%. World Bank 2025 average 1.4%."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2021-2025 (about 6% average); ONS 12-month average 3.9% to August 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Algeria publishes no numeric inflation target, so a rounded 5% sits between the 2021-2025 average of about 6% and the recent 12-month average of 3.9%."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Bank of Algeria benchmark (discount) rate",
+      "sourceUrl": "https://tradingeconomics.com/algeria/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "2.50%, at a record low since January 2026 and unchanged at the latest reading (reference September 2026); secondary source because the Bank of Algeria site loads its rate tables by script."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official or industry-wide rate for ordinary savings books (livret d'épargne) was found; web search was unavailable for part of this research."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for 3-month term deposits was found; the Bank of Algeria statistics pages could not be read."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for 1-year term deposits was found; the Bank of Algeria statistics pages could not be read."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit scheme or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0175,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Algeria",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2025-12-31",
+      "note": "1.75% for 2025 (IMF IFS series via the World Bank); no fresher Bank of Algeria figure could be read."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current government savings certificate or retail savings bond for individuals was found; the Treasury has run one-off national bond issues in the past."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bill (BTC) auction results are published by the Ministry of Finance, whose site could not be reached."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Treasury bond (OAT) yield could be read; the Ministry of Finance site could not be reached."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Treasury bond yield could be read; the Ministry of Finance site could not be reached."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The withholding rate on bank and savings interest in the Code des impôts directs could not be read from an official or PwC page (PwC Worldwide Tax Summaries has no Algeria page)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found, and the tax rate on Treasury securities income could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A deposit guarantee fund exists (Société de Garantie des Dépôts Bancaires), but the current cover per depositor could not be read from the Bank of Algeria regulations."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical rate for credit card balances was found; card payments are mostly debit (CIB/Edahabia)."
+    },
+    "equity_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Bank of Algeria / World Bank deposit rate 1.75%; very small Algiers Stock Exchange",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "The Algiers Stock Exchange lists only a handful of companies with little trading, so the low case is close to zero in local currency."
+    },
+    "equity_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75% (2025); inflation assumption 5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "Kept within 4 points of the after-tax safe rate (about 1.5%) and below that cap, because the local market is tiny and has no long, liquid index record."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75%; inflation assumption 5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "High case: equities beat inflation by about 3 points a year."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank of Algeria exchange rate (about 4.5% dinar fall against the dollar over the past year)",
+      "sourceUrl": "https://www.bank-of-algeria.dz/taux-de-change-journalier/",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slow dinar depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Algeria exchange rate; long-run dollar gold trend of about 4% a year",
+      "sourceUrl": "https://www.bank-of-algeria.dz/taux-de-change-journalier/",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend of about 4% plus about 2% a year of dinar depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Algeria exchange rate; long-run dollar gold trend",
+      "sourceUrl": "https://www.bank-of-algeria.dz/taux-de-change-journalier/",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and faster dinar depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings rates below the average deposit rate, after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "Base case: the average deposit rate less roughly 10% withholding tax (rate not confirmed), so about 1.5%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75%; policy rate 2.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits and Treasury paper at around the policy rate or a little above."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found from the insurance supervisor (Commission de Supervision des Assurances)."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Death-cover (temporaire décès) insurance is sold, mostly with loans, but no published premium rates per DZD 1,000 of cover by age were found from a public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.45,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Algeria",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DZ",
+      "asOf": "2023-12-31",
+      "note": "45.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "ONS CPI August 2026: health and personal care +1.6% on a year earlier; inflation assumption 5%",
+      "sourceUrl": "https://www.ons.dz/IMG/pdf/IPC_Aout2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices in the CPI rose slowly recently, but private care costs usually outpace general prices, so 1 point above the 5% inflation assumption is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "ONS CPI August 2026: education, culture and leisure -3.0% on a year earlier; inflation assumption 5%",
+      "sourceUrl": "https://www.ons.dz/IMG/pdf/IPC_Aout2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Public education is free and the CPI group fell recently, so education costs are planned at the general 5% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 76.475,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Algeria",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DZ",
+      "asOf": "2024-12-31",
+      "note": "76.5 years in 2024 (men 75.1, women 77.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.1,
+            "men": 20.1,
+            "women": 22.1
+          },
+          {
+            "age": 65,
+            "total": 17.0,
+            "men": 16.1,
+            "women": 17.9
+          },
+          {
+            "age": 70,
+            "total": 13.3,
+            "men": 12.5,
+            "women": 14.0
+          },
+          {
+            "age": 80,
+            "total": 7.4,
+            "men": 6.9,
+            "women": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/algeria/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.3
+          },
+          {
+            "year": 2040,
+            "value": 5.7
+          },
+          {
+            "year": 2065,
+            "value": 3.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/algeria/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 10.76 (2025, World Bank), 17.5 (2040) and 31.3 (2065, populationpyramid.net/algeria/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Law No. 16-15 of 31 December 2016 amending Law No. 83-12 on retirement (Journal officiel No. 78, 2016)",
+      "sourceUrl": "https://www.joradp.dz/FTP/jo-francais/2016/F2016078.pdf",
+      "asOf": "2017-01-01",
+      "note": "Pension at 60 with at least 15 years of work (7.5 years of contributions minimum); women may retire from 55 on request. Early retirement without age condition was abolished; the law is older than 2025 but still in force."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Law No. 16-15 amending Law No. 83-12 on retirement (Journal officiel No. 78, 2016)",
+      "sourceUrl": "https://www.joradp.dz/FTP/jo-francais/2016/F2016078.pdf",
+      "asOf": "2017-01-01",
+      "note": "Law No. 83-12 covers all salaried workers including public employees, so civil servants also retire at 60 (women from 55 on request); older than 2025 but still in force."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings-book rates after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "Base case: the average deposit rate after roughly 10% withholding tax; not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75%; policy rate 2.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "High case: term deposits and Treasury paper near the policy rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75%; tiny local equity market",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about the after-tax deposit rate."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75%; equity base 4%; gold base 6%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, gold and some equity, below inflation-plus because local markets are shallow."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.75%; equity high 8%; gold high 10%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=DZ",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with gold."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A means-tested flat solidarity allowance (Allocation forfaitaire de solidarité) for older people without income exists, but its current amount could not be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules of the solidarity allowance (Allocation forfaitaire de solidarité) could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service or retirement gratuity for private employees was confirmed; Law No. 90-11 on labour relations and collective agreements could not be checked."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Law No. 16-15 of 31 December 2016 amending Law No. 83-12 on retirement",
+      "sourceUrl": "https://www.joradp.dz/FTP/jo-francais/2016/F2016078.pdf",
+      "asOf": "2017-01-01",
+      "note": "Compulsory pay-as-you-go pension for salaried workers run by the Caisse Nationale des Retraites (CNR): pension at 60 (women from 55) after 15 years' work. The law sets no automatic price indexation (revaluations are decided yearly); tax treatment not checked."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "دفتر التوفير",
+      "localNameEn": "Savings book (livret d'épargne)",
+      "note": "Savings books are offered by banks and the postal network; rates are low."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Term deposit (dépôt à terme, 3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Term deposit (dépôt à terme, 1 year)",
+      "note": "Banks also sell short-term bank bonds (bons de caisse)."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No continuously sold government savings certificate; the Treasury has issued occasional national bonds to the public."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "سندات الخزينة قصيرة الأجل",
+      "localNameEn": "Treasury bills (BTC)",
+      "note": "Sold at auction mainly to banks and other institutions; access for individuals is limited."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزينة المماثلة",
+      "localNameEn": "Treasury bonds (OAT)",
+      "note": "Issued at auction, mainly held by banks and insurers."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات الخزينة المماثلة (10 سنوات)",
+      "localNameEn": "Treasury bonds (OAT, 10 years)",
+      "note": "Issued at auction, mainly held by banks and insurers."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No diversified equity or index fund sold to retail investors was found; the Algiers Stock Exchange (supervised by COSOB) lists only a few companies.",
+      "sourceUrl": "https://www.cosob.org/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold is bought mostly as jewellery; availability of investment bars and coins was not confirmed."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Algeria (Banque d'Algérie)",
+      "url": "https://www.bank-of-algeria.dz/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Supervision Commission (Commission de Supervision des Assurances), Ministry of Finance",
+      "url": "https://www.mf.gov.dz/"
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "National Pension Fund (Caisse Nationale des Retraites, CNR)",
+      "url": "https://www.cnr.dz/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Social Insurance Fund for Salaried Workers (CNAS); public hospitals give free care",
+      "url": "https://www.cnas.dz/"
+    },
+    "depositInsurance": {
+      "name": "Bank Deposit Guarantee Company (Société de Garantie des Dépôts Bancaires), under the Bank of Algeria",
+      "url": "https://www.bank-of-algeria.dz/cadre-reglementaire-2/"
+    },
+    "statistics": {
+      "name": "National Statistics Office (Office National des Statistiques, ONS)",
+      "url": "https://www.ons.dz/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

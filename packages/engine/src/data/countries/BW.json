@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 1,
+  "code": "BW",
+  "iso3": "BWA",
+  "nameEn": "Botswana",
+  "nameNative": "Botswana",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "tn",
+    "en"
+  ],
+  "currency": {
+    "code": "BWP",
+    "symbol": "P",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 13.46,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, exchange rates (foreign currency per pula), 30 October 2026",
+      "sourceUrl": "https://www.bankofbotswana.bw/content/exchange-rates",
+      "asOf": "2026-10-30",
+      "note": "USD 0.0743 per pula, i.e. about 13.46 pula per US dollar (1/0.0743); World Bank 2025 average 13.50."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0777,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 2.3 annual inflation (Statistics Botswana CPI)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Headline CPI up 7.8% year on year in September 2026 after 9.3% in August; above the Bank of Botswana's 3-6% objective range since early 2026."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana 3-6% inflation objective; CPI averaged about 5.9% a year over 2021-2025 (BEFS table 2.3)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Inflation has run near the top of the 3-6% objective range over five years (12.2% in 2022, 2.7-2.8% in 2024-2025, 7.8% in September 2026), so 5% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Monetary Policy Rate (interest rates page)",
+      "sourceUrl": "https://www.bankofbotswana.bw/content/interest-rates",
+      "asOf": "2026-10-30",
+      "note": "MoPR 5.50% on 30 October 2026; raised from 3.50% in April 2026 (BEFS table 4.1)."
+    },
+    "savings_account_rate": {
+      "value": 0.021,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1 interest rates (commercial bank savings accounts)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-08-31",
+      "note": "Simple average savings-account rate of commercial and merchant banks, 2.10% in August 2026 (2.09% in July)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0421,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1 interest rates (fixed deposits up to 12 months)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-08-31",
+      "note": "Average rate on pula fixed deposits up to 12 months, 4.21% in August 2026; the Bank of Botswana does not publish a separate 3-month figure (notice deposits 3.79%)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0421,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1 interest rates (fixed deposits up to 12 months)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-08-31",
+      "note": "Average rate on pula fixed deposits up to 12 months, 4.21% in August 2026 (4.28% in July); fixed deposits over 12 months averaged 3.65%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or rate was found in Bank of Botswana statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0235,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Botswana",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BW",
+      "asOf": "2024-12-31",
+      "note": "2.35% average for 2024 (older than 2025); the Bank of Botswana publishes only simple averages by deposit type (fixed up to 12 months 4.21% in August 2026)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; government bonds and treasury bills are auctioned by the Bank of Botswana."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0566,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Government bond and treasury bill auction results, 30 October 2026 (3-month bill BOTSTB0227)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf",
+      "asOf": "2026-10-30",
+      "note": "Weighted average yield of winning bids 5.655% on the 3-month bill maturing 3 February 2027 (stop-out effective yield 5.878%); 5.881% at the 24 September auction."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0722,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Government bond and treasury bill auction results, 30 October 2026 (bond BOTSGB0931, maturing September 2031)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf",
+      "asOf": "2026-10-30",
+      "note": "Weighted average yield 7.22% on the 7.75% bond maturing 10 September 2031 (about 4.9 years)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0902,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Government bond and treasury bill auction results, 30 October 2026 (bond BOTSGB0635, maturing June 2035)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf",
+      "asOf": "2026-10-30",
+      "note": "Weighted average yield 9.02% on the 8.60% bond maturing 6 June 2035 (about 8.6 years), the closest line to 10 years; the 2040 bond yielded 10.88%."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Botswana, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/botswana/individual/income-determination",
+      "asOf": "2026-01-09",
+      "note": "Interest paid to residents is subject to 10% withholding tax, which is final; interest from a Botswana bank or building society is exempt up to BWP 7,800 a year."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the tax treatment of government bond interest for individuals is not stated by PwC or another source read."
+    },
+    "deposit_insurance_limit": {
+      "value": 250000,
+      "status": "sourced",
+      "sourceName": "Bank of Botswana, Deposit Insurance Scheme of Botswana: establishment",
+      "sourceUrl": "https://www.bankofbotswana.bw/content/establishment",
+      "asOf": "2023-07-21",
+      "note": "The scheme guarantees up to P250,000 per depositor per member institution; established under the Bank of Botswana (Amendment) Act 2022, regulations in force since 21 July 2023 (date of the rule, still current)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; the Bank of Botswana publishes the prime lending rate (7.19%) and average return on advances (16.2% in August 2026) only."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.5 Botswana Stock Exchange",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: the domestic company index barely rose over ten years, so equities may return little more than their dividends."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.5 Botswana Stock Exchange; treasury bill and deposit rates",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: the domestic company index rose only about 1.8% a year from December 2016 (9,401) to September 2026 (11,250) plus dividends of about 5-8%, so equities are put about 2 points above the after-tax 1-year bill yield (about 5.8%), below the 4-point cap."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.5 Botswana Stock Exchange",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade for local shares or a global index fund in pula terms."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana exchange rates (pula per US dollar)",
+      "sourceUrl": "https://www.bankofbotswana.bw/content/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a small pula depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana exchange rates; World Bank official exchange rate history",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BW",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 1.5% a year of pula depreciation under the crawling basket peg."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana exchange rates",
+      "sourceUrl": "https://www.bankofbotswana.bw/content/exchange-rates",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a weaker pula."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1 (notice deposits 3.79%, savings 2.10%)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: notice and savings deposits, with the first P7,800 of interest tax free and 10% withholding above it."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1 (fixed deposits up to 12 months 4.21%)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: 12-month fixed deposits at 4.21%, mostly untaxed for a small saver (P7,800 exemption, 10% above)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Government bond and treasury bill auction results, 30 October 2026",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 12-month treasury bills (6.46%) or 5-year bonds (7.22%) less 10% withholding tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NBFIRA (the insurance regulator) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per 1,000 pula of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Botswana was found; public hospital care is heavily subsidised."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private medical aid contributions by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.0426,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Botswana",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BW",
+      "asOf": "2023-12-31",
+      "note": "4.3% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 2.4 cost of living index by group (health)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "The health price index rose only about 2.2% a year from December 2016 to September 2026 because public care is subsidised, but private medical costs rise faster, so 0.5 points above the 5% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 2.4 cost of living index by group (education)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "The education price index rose about 3.4% a year from December 2016 to September 2026, below general inflation (4.9%); private school fees are assumed to rise with the 5% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 69.293,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Botswana",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BW",
+      "asOf": "2024-12-31",
+      "note": "69.3 years in 2024 (men 66.8, women 71.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.3,
+            "men": 16.8,
+            "women": 19.8
+          },
+          {
+            "age": 65,
+            "total": 14.9,
+            "men": 13.6,
+            "women": 16.2
+          },
+          {
+            "age": 70,
+            "total": 11.8,
+            "men": 10.7,
+            "women": 12.9
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 6.1,
+            "women": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/botswana/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 15.67
+          },
+          {
+            "year": 2040,
+            "value": 11.49
+          },
+          {
+            "year": 2065,
+            "value": 4.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/botswana/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.38 (2025, World Bank), 8.7 (2040) and 20.4 (2065, populationpyramid.net/botswana/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Botswana has no public contributory pension and no statutory pension age for private employees was found; retirement ages are set by employers' pension fund rules."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Botswana Public Officers Pension Fund, member information",
+      "sourceUrl": "https://www.bpopf.co.bw/MemberInformation.aspx",
+      "asOf": "2026-10-31",
+      "note": "Normal and compulsory retirement age for public officers is 60; early retirement from 45. Up to half of the benefit can be taken as a tax-free lump sum, the rest buys an annuity."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1 (notice and savings deposits)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: notice and savings deposits after the 10% withholding tax."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1 (fixed deposits up to 12 months 4.21%)",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: 12-month fixed deposits (4.21%), little taxed for a small saver; below the after-tax 1-year treasury bill yield (about 5.8%)."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Government bond and treasury bill auction results, 30 October 2026",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in treasury bills or short government bonds after 10% tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Botswana Economic and Financial Statistics, September 2026, table 4.1",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Government bond and treasury bill auction results, 30 October 2026; equity base 8%; gold base 5.5%",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of government bonds, equity (local and global) funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Bank of Botswana, Government bond and treasury bill auction results, 30 October 2026; equity high 11%",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A universal non-contributory Old Age Pension Scheme exists (named in the 2026/27 Budget Speech), but no official current monthly amount could be read; the government social protection page could not be loaded (expired certificate)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Old Age Pension Scheme exists (2026/27 Budget Speech), but its eligibility age and rules could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Act provides a severance benefit, but its text could not be read from an official source, so the days per year of service are not given."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Botswana has no public contributory pension: 'There are no social security taxes or contributions in Botswana' (PwC Tax Summaries, reviewed 9 January 2026). Old age is covered by the universal non-contributory Old Age Pension and employer pension funds; public officers belong to a defined-contribution fund (BPOPF).",
+      "absent": true
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "Fixed deposit",
+      "note": "Banks offer fixed deposits of 3 to 12 months; the central bank publishes one average for terms up to 12 months.",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "Fixed deposit, 12 months",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/publications/Botswana%20Economic%20and%20Financial%20Statistics%20-%20September%202026%20%20.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Treasury bill",
+      "note": "3, 6 and 12-month bills auctioned monthly by the Bank of Botswana for the government.",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Government bond",
+      "localNameEn": "Government bond",
+      "note": "Auctioned monthly by the Bank of Botswana and listed on the Botswana Stock Exchange.",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Government bond",
+      "localNameEn": "Government bond",
+      "note": "Lines maturing 2035, 2040, 2043 and 2050 are on issue.",
+      "sourceUrl": "https://www.bankofbotswana.bw/sites/default/files/auction-pdf-files/Government%20Bond%20Auction%20%2030%20October%202026.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trusts (collective investment undertakings)",
+      "note": "Supervised by NBFIRA; local funds invest on the Botswana Stock Exchange and abroad."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "No local bullion product is sold; gold is bought as jewellery or imported coins."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Botswana",
+      "url": "https://www.bankofbotswana.bw/"
+    },
+    "insuranceRegulator": {
+      "name": "Non-Bank Financial Institutions Regulatory Authority (NBFIRA)",
+      "url": "https://www.nbfira.org.bw/"
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (public health facilities)",
+      "url": "https://www.moh.gov.bw/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Scheme of Botswana",
+      "url": "https://www.bankofbotswana.bw/content/establishment"
+    },
+    "statistics": {
+      "name": "Statistics Botswana",
+      "url": "https://www.statsbots.org.bw/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

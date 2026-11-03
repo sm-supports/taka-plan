@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "code": "AG",
+  "iso3": "ATG",
+  "nameEn": "Antigua and Barbuda",
+  "nameNative": "Antigua and Barbuda",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "aig"
+  ],
+  "currency": {
+    "code": "XCD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.7,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AG",
+      "asOf": "2025-12-31",
+      "note": "The Eastern Caribbean dollar has been fixed at EC$2.70 per US dollar by the ECCB since 1976."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0366,
+      "status": "sourced",
+      "sourceName": "Eastern Caribbean Central Bank, Consumer Price Index - Antigua and Barbuda (Statistics Division data)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-antigua-and-barbuda/m",
+      "asOf": "2026-06-30",
+      "note": "All-items index 129.81 in June 2026 against 125.23 in June 2025 (2019 = 100), so 3.7% year on year; June 2026 is the latest month published. December-to-December inflation was 3.1% in 2025."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECCB CPI table: 2018-2025 average about 3.6% a year; EC dollar pegged to the US dollar at 2.70",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-antigua-and-barbuda/m",
+      "asOf": "2026-10-31",
+      "note": "The ECCB has no inflation target but the fixed US-dollar peg anchors prices, and the 2018-2025 average (3.6%) includes the 2022 import-price spike, so we plan with 3%."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Eastern Caribbean Central Bank, interest rates on deposits and loans (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m",
+      "asOf": "2026-08-31",
+      "note": "ECCB discount rate for short-term credit 3.0% (4.5% for long-term credit), unchanged since November 2023; confirmed at the 112th Monetary Council meeting in February 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0205,
+      "status": "sourced",
+      "sourceName": "Eastern Caribbean Central Bank, interest rates and weighted average rates on deposits and loans (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q",
+      "asOf": "2026-06-30",
+      "note": "Weighted average EC-dollar savings deposit rate 2.05%; quoted savings rates range 2.00-2.25%, and the ECCB minimum savings rate is 2%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Eastern Caribbean Central Bank, interest rates on deposits and loans (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m",
+      "asOf": "2026-08-31",
+      "note": "3-month EC-dollar time deposits quoted at 2.00% (minimum and maximum)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Eastern Caribbean Central Bank, interest rates on deposits and loans (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m",
+      "asOf": "2026-08-31",
+      "note": "12-month EC-dollar time deposits quoted from 0.10% to 2.50%; the weighted average on all EC-dollar time deposits is 1.87% (June 2026), so 2.0% is used as typical."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched ECCB interest rate tables: no monthly recurring deposit product rate is published for Antigua and Barbuda."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0132,
+      "status": "sourced",
+      "sourceName": "Eastern Caribbean Central Bank, interest rates and weighted average rates on deposits and loans (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q",
+      "asOf": "2026-06-30",
+      "note": "Weighted average rate on all EC-dollar deposits 1.32% in June 2026 (1.17% including foreign-currency deposits)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals found for Antigua and Barbuda; government securities are sold by auction on the Regional Government Securities Market."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Government of Antigua and Barbuda issued no 91-day bills in 2025-2026; its latest bills were 180-day at 3.00% (July 2026) and 365-day at 4.50% (September 2026), per the ECCB RGSM weighted average rates table."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Antigua and Barbuda bond auctioned on the RGSM in 2025-2026; the ECCB RGSM table shows only a 2-year bond at 4.00% (May 2026) and a 3-year bond at 5.80% (September 2025)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Antigua and Barbuda bond auctioned on the RGSM in 2025-2026 per the ECCB RGSM weighted average rates table."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Caribbean Journal (news): Antigua and Barbuda abolishes personal income tax",
+      "sourceUrl": "https://www.caribjournal.com/2016/01/21/antigua-and-barbuda-is-abolishing-its-personal-income-tax/",
+      "asOf": "2016-04-01",
+      "note": "Personal income tax was abolished from April 2016, so resident individuals pay no tax on bank interest (a withholding tax applies only to non-residents). Secondary source from 2016; no later reintroduction found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists to tax; resident individuals pay no income tax on investment income since 2016."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Eastern Caribbean Deposit Insurance Corporation Agreement (signed 2025) is being enacted by ECCU members, but no operating scheme or coverage limit for Antigua and Barbuda could be confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate found; ECCB tables give only 'other lending rates' of 4-24% for Antigua and Barbuda."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No liquid local equity index; global equities in EC-dollar (US-dollar-pegged) terms",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "Low case close to the 3-4.5% government bill yields, for a weak decade in global markets."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "No liquid local equity index; global equities in EC-dollar terms; 365-day T-bill 4.50% (Sep 2026)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "The regional exchange lists only a handful of thinly traded shares, so equity is a global index fund in EC-dollar terms at about 6.5%, within 4 points of the roughly 3% untaxed safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equities in EC-dollar (US-dollar-pegged) terms",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat their long-run record of about 9% a year in US dollars."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "EC dollar fixed at 2.70 per US dollar (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AG",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold prices with no currency depreciation under the peg."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "EC dollar fixed at 2.70 per US dollar (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AG",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% with no expected EC-dollar depreciation under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "EC dollar fixed at 2.70 per US dollar (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AG",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECCB: savings and 3-month deposits about 2.0% (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits at the 2% minimum savings rate; no tax on resident interest."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECCB: 12-month deposits up to 2.5%; 180-day T-bills 3.00% and 365-day 4.50% (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "Base case mixing 1-year deposits and government bills, untaxed for residents."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: 365-day T-bill 4.50% (Sep 2026); 2-year bond 4.00%",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "High case: holding 1-year government bills and short bonds at about 4-4.5%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched the Financial Services Regulatory Commission's material: no industry-wide life claim settlement ratio published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Antigua and Barbuda, but no regulator or other non-company source publishes premium rates by age."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay found for Antigua and Barbuda."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source publishing private health insurance premiums by age found."
+    },
+    "oop_health_share": {
+      "value": 0.2081,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AG",
+      "asOf": "2023-12-31",
+      "note": "Latest year available (2023), older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ECCB CPI table, Antigua and Barbuda health sub-index (2018 100.1, 2025 114.3)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-antigua-and-barbuda/m",
+      "asOf": "2026-10-31",
+      "note": "The health index rose about 2% a year over 2018-2025 but swings widely, so we plan with the 3% headline projection plus one point for imported medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "ECCB CPI table, Antigua and Barbuda education sub-index (2018 100.0, 2025 114.9)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-antigua-and-barbuda/m",
+      "asOf": "2026-10-31",
+      "note": "The education index averaged about 2% a year over 2018-2025 but jumped 13% in 2025, so we plan with the headline projection plus half a point."
+    },
+    "life_expectancy": {
+      "value": 77.766,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AG",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 78.1 for 2026 (men 75.1, women 80.7)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.3,
+            "men": 19.9,
+            "women": 24.6
+          },
+          {
+            "age": 65,
+            "total": 18.6,
+            "men": 16.3,
+            "women": 20.4
+          },
+          {
+            "age": 70,
+            "total": 14.7,
+            "men": 12.9,
+            "women": 16.4
+          },
+          {
+            "age": 80,
+            "total": 8.4,
+            "men": 7.0,
+            "women": 9.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/antigua-and-barbuda/",
+      "asOf": "2026-12-31",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.7
+          },
+          {
+            "year": 2040,
+            "value": 3.1
+          },
+          {
+            "year": 2065,
+            "value": 1.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/antigua-and-barbuda/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 17.6 (2025, World Bank), 32.4 (2040) and 53.5 (2065, populationpyramid.net/antigua-and-barbuda/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Antigua and Barbuda Social Security Board: media release on pension and contribution rate adjustments",
+      "sourceUrl": "https://socialsecurity.gov.ag/media-release-pension-contribution-rate-adjustments/",
+      "asOf": "2025-01-01",
+      "note": "Social security pensionable age moved to 65 on 1 January 2025 (Statutory Instrument 2016 No. 61), the end of the phased rise from 60; there is no separate statutory private-sector retirement age."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public officers historically retired at 60; a 2019-2020 bill to raise the public service retirement age to 65 was reported, but its enactment could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "ECCB: savings and 3-month deposits about 2.0% (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits, untaxed for residents."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "ECCB: 12-month deposits up to 2.5%; 365-day T-bill 4.50% (ECCB table, country Antigua and Barbuda)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 4.5% 1-year government bill rate, mixing deposits and bills."
+    },
+    "retirement_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ECCB RGSM: 365-day T-bill 4.50%; 2-year bond 4.00%",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "High case: mostly 1-year government bills and short bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Mix of EC-dollar deposits/bills (2-4.5%) and global equities",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix in a weak decade."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Mix of EC-dollar deposits/bills (2-4.5%) and global equities (6.5% base)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "Base case for a roughly half-and-half mix of safe EC-dollar assets and global equities."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Mix of EC-dollar bills and global equities (9% high case)",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
+      "asOf": "2026-10-31",
+      "note": "High case with a strong equity decade."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The only non-contributory old-age pension, the Old-age Assistance Programme (EC$255 a month), is limited to people who were 65 or older in 1993 (or blind or disabled), so no one planning today can receive it (UN ECLAC non-contributory programmes database, https://dds.cepal.org/bpsnc/programme?id=145).",
+      "absent": true
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No old-age assistance open to new claimants: the Old-age Assistance Programme covers only people who were 65 or older in 1993 (UN ECLAC non-contributory programmes database, https://dds.cepal.org/bpsnc/programme?id=145).",
+      "absent": true
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity found; the Labour Code's severance pay applies only on redundancy or dismissal after a year of service, and the official text of the Code could not be read to confirm the scale."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Antigua and Barbuda Social Security Board: Age Benefit",
+      "sourceUrl": "https://socialsecurity.gov.ag/age-benefits/",
+      "asOf": "2026-10-31",
+      "note": "Compulsory social security for employees and the self-employed: age pension from 65 of 25% of average insurable earnings (best 5 of the last 10 years) for the minimum contributions plus 1% per 50 further weekly contributions, up to 50%; minimum EC$350 a month; a lump-sum age grant if fewer contributions; early claims cut 0.5% a month. No automatic indexation found; pensions are untaxed since personal income tax was abolished."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "3-month fixed (time) deposit",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "12-month fixed (time) deposit",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product rate published for Antigua and Barbuda."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of Antigua and Barbuda Treasury bill (180 or 365 days)",
+      "note": "Sold by auction on the Regional Government Securities Market through licensed intermediaries; recent issues are 180-day and 365-day bills, not 91-day.",
+      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No 5-year government bond auctioned on the RGSM in 2025-2026; only 2- and 3-year bonds."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No 10-year government bond auctioned on the RGSM in 2025-2026."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No locally registered retail mutual or index fund market found; the regional securities exchange lists only a few thinly traded shares."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "note": "No legal restriction on buying gold; mainly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Eastern Caribbean Central Bank (ECCB)",
+      "url": "https://www.eccb-centralbank.org/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Regulatory Commission (FSRC)",
+      "url": "https://www.fsrc.gov.ag/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Regulatory Commission (FSRC)",
+      "url": "https://www.fsrc.gov.ag/",
+      "note": "No separate insurance ombudsman found; complaints go to the insurer, then the FSRC."
+    },
+    "pensionScheme": {
+      "name": "Antigua and Barbuda Social Security Board (age benefit)",
+      "url": "https://socialsecurity.gov.ag/age-benefits/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Medical Benefits Scheme",
+      "url": "https://www.mbs.gov.ag/v2/",
+      "note": "Payroll-funded scheme covering treatment for listed conditions; public hospital care is subsidised."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Statistics Division, Ministry of Finance",
+      "url": "https://statistics.gov.ag/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

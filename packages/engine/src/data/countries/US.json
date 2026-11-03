@@ -1,0 +1,569 @@
+{
+  "schemaVersion": 1,
+  "code": "US",
+  "iso3": "USA",
+  "nameEn": "United States",
+  "nameNative": "United States",
+  "region": "north_america",
+  "languages": [
+    "en",
+    "es",
+    "zh",
+    "fr",
+    "vi"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=US",
+      "asOf": "2025-12-31",
+      "note": "The US dollar is the reference currency: 1 by definition."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.037,
+      "status": "sourced",
+      "sourceName": "U.S. Bureau of Labor Statistics, Consumer Price Index news release, September 2026",
+      "sourceUrl": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "asOf": "2026-09-30",
+      "note": "CPI-U rose 3.7% in the 12 months to September 2026 (not seasonally adjusted); released 14 October 2026. World Bank 2024 average 2.9%."
+    },
+    "inflation_projection": {
+      "value": 0.027,
+      "status": "assumption",
+      "sourceName": "Federal Reserve 2% longer-run goal for PCE inflation; CPI-U 3.7% (Sep 2026, BLS)",
+      "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "asOf": "2026-10-31",
+      "note": "The Fed's 2% goal is for PCE prices, which run a few tenths below CPI, and inflation has stayed above goal since 2021, so 2.7% CPI inflation is used."
+    },
+    "policy_rate": {
+      "value": 0.04,
+      "status": "sourced",
+      "sourceName": "Board of Governors of the Federal Reserve System, open market operations: federal funds target range",
+      "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "asOf": "2026-09-17",
+      "note": "Target range 3.75-4.00% (upper bound shown) after a 25 basis point rise on 17 September 2026; the range was unchanged through 31 October 2026 (FRED DFEDTARU)."
+    },
+    "savings_account_rate": {
+      "value": 0.0038,
+      "status": "sourced",
+      "sourceName": "FDIC, National Rates and Rate Caps, October 2026: savings",
+      "sourceUrl": "https://www.fdic.gov/national-rates-and-rate-caps",
+      "asOf": "2026-10-19",
+      "note": "National average savings rate 0.38% (money market 0.63%, interest checking 0.07%); online high-yield savings accounts pay much more. Interest is taxable."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0114,
+      "status": "sourced",
+      "sourceName": "FDIC, National Rates and Rate Caps, October 2026: 3-month CD",
+      "sourceUrl": "https://www.fdic.gov/national-rates-and-rate-caps",
+      "asOf": "2026-10-19",
+      "note": "National average 3-month certificate of deposit rate 1.14% (6-month 1.39%)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0176,
+      "status": "sourced",
+      "sourceName": "FDIC, National Rates and Rate Caps, October 2026: 12-month CD",
+      "sourceUrl": "https://www.fdic.gov/national-rates-and-rate-caps",
+      "asOf": "2026-10-19",
+      "note": "National average 12-month CD rate 1.76% (24-month 1.55%, 60-month 1.41%). Many banks pay far more than the deposit-weighted average; 1-year Treasury yield was 4.36% on 30 Oct 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "US banks do not commonly sell monthly recurring-deposit products and the FDIC national rates cover only savings, checking, money market and CDs; no published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No weighted average deposit rate across banks is published by the Federal Reserve or FDIC in this form; World Bank FR.INR.DPST has no US series. FDIC national averages (October 2026): savings 0.38%, 12-month CD 1.76%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.0426,
+      "status": "sourced",
+      "sourceName": "U.S. Treasury (TreasuryDirect), Series I savings bonds: interest rates",
+      "sourceUrl": "https://www.treasurydirect.gov/savings-bonds/i-bonds/i-bonds-interest-rates/",
+      "asOf": "2026-05-01",
+      "note": "Composite rate 4.26% for I bonds issued May-October 2026 (fixed 0.90% plus inflation 1.67% a half-year); bonds issued November 2026-April 2027 earn 5.51% (fixed 1.40%). Rate resets every 6 months with CPI; cashing in before 5 years forfeits the last 3 months' interest; USD 10,000 a year limit per person electronically."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0416,
+      "status": "sourced",
+      "sourceName": "U.S. Department of the Treasury, daily Treasury par yield curve rates: 3-month",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-30",
+      "note": "3-month bill 4.16% on 30 October 2026 (1-year 4.36%)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0471,
+      "status": "sourced",
+      "sourceName": "U.S. Department of the Treasury, daily Treasury par yield curve rates: 5-year",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-30"
+    },
+    "tbond_10y_rate": {
+      "value": 0.0494,
+      "status": "sourced",
+      "sourceName": "U.S. Department of the Treasury, daily Treasury par yield curve rates: 10-year",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-30"
+    },
+    "tax_bank_interest": {
+      "value": 0.22,
+      "status": "sourced",
+      "sourceName": "Internal Revenue Service, tax inflation adjustments for tax year 2026",
+      "sourceUrl": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+      "asOf": "2026-01-01",
+      "note": "No withholding on interest for residents; interest is ordinary income. 22% is the federal marginal rate for a single filer with taxable income USD 50,401-105,700 in 2026 (12% below that); most states add their own income tax (eight have none). Interest in IRAs and 401(k)s is tax-deferred or tax-free (Roth)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.22,
+      "status": "sourced",
+      "sourceName": "TreasuryDirect, I bonds; IRS 2026 federal brackets",
+      "sourceUrl": "https://www.treasurydirect.gov/savings-bonds/i-bonds/i-bonds-interest-rates/",
+      "asOf": "2026-10-31",
+      "note": "I bond interest is subject to federal income tax at the marginal rate (22% for a middle earner) but exempt from state and local tax; tax can be deferred until the bond is cashed and may be excluded if used for qualified higher education. Treasury bill and bond interest is also state-tax-free."
+    },
+    "deposit_insurance_limit": {
+      "value": 250000,
+      "status": "sourced",
+      "sourceName": "Federal Deposit Insurance Corporation (FDIC), deposit insurance",
+      "sourceUrl": "https://www.fdic.gov/resources/deposit-insurance",
+      "asOf": "2026-10-31",
+      "note": "At least USD 250,000 per depositor, per FDIC-insured bank, per ownership category. Credit unions are insured to the same limit by the NCUA."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2119,
+      "status": "sourced",
+      "sourceName": "Federal Reserve G.19 Consumer Credit: commercial bank interest rate on credit card plans, all accounts",
+      "sourceUrl": "https://www.federalreserve.gov/releases/g19/current/default.htm",
+      "asOf": "2026-08-31",
+      "note": "21.19% APR on all accounts in August 2026 (22.36% on accounts assessed interest), released 7 October 2026. There is no general federal cap on credit card interest."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "S&P 500 7,580 on 30 Oct 2026, +10.8% in a year, near its October 2026 record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: from high valuations US shares deliver well below their 10-year record, only a little above Treasuries."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "S&P 500 (Trading Economics); after-tax safe rate about 3.2% (3-month bill 4.16% less 22% federal tax, US Treasury)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5-4 points above the after-tax Treasury bill rate, below the S&P 500's strong 10-year record because valuations are high."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "S&P 500 long-run total return (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: US shares continue close to their long-run total return of about 9-10% a year with dividends."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 31% below the January 2026 high (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold drifts after the 2025-26 spike and lags inflation."
+    },
+    "gold_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); Fed 2% goal",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises roughly with inflation plus a little over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of part of gold's strong 2005-2025 trend in dollars."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "3-month Treasury bill 4.16%, 12-month CD 1.76% national average (US Treasury; FDIC)",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-31",
+      "note": "Low case: short rates fall back towards 3% and are taxed at about 22%, or savings sit in low-rate bank accounts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "3-month bill 4.16% and 1-year Treasury 4.36% less 22% federal tax = 3.2-3.4% (US Treasury)",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-31",
+      "note": "Base case: Treasury bills, notes and competitive CDs after 22% federal tax, assuming rates ease a little."
+    },
+    "fixed_income_return_high": {
+      "value": 0.038,
+      "status": "assumption",
+      "sourceName": "5-year Treasury 4.71% (US Treasury); I bonds 5.51% from November 2026 (TreasuryDirect)",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in today's 5-year Treasury or I bond rates, partly inside tax-advantaged accounts."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Neither the NAIC nor state insurance departments publish an industry-wide life insurance claim settlement ratio; no official figure was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life insurance is widely sold in the US, but no regulator or government body publishes indicative premiums per USD 1,000 of cover by age; insurer and broker quote tools were not used."
+    },
+    "health_hospitalisation_cost": {
+      "value": 10600,
+      "status": "sourced",
+      "sourceName": "HealthCare.gov, out-of-pocket maximum/limit (2026)",
+      "sourceUrl": "https://www.healthcare.gov/glossary/out-of-pocket-maximum-limit/",
+      "asOf": "2026-01-01",
+      "note": "Indicative only: USD 10,600 is the 2026 legal maximum an individual on a Marketplace (ACA-compliant) plan pays out of pocket in a year for in-network care (USD 21,200 for a family); one major hospital stay with surgery often reaches the plan's deductible or this limit. Uninsured patients face the full bill."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "US health insurance is priced per plan (by age, location, metal tier and tobacco use), not per sum insured; no official premium table per USD 100,000 of cover exists."
+    },
+    "oop_health_share": {
+      "value": 0.1093,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=US",
+      "asOf": "2023-12-31",
+      "note": "2023 figure (older than 2025; latest available)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BLS CPI September 2026: medical care +1.5%, medical care services +2.5% over 12 months",
+      "sourceUrl": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "asOf": "2026-10-31",
+      "note": "Measured medical CPI is low this year, but US health costs and premiums have long risen faster than general prices, so 4% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BLS CPI September 2026: education index +3.8% over 12 months",
+      "sourceUrl": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "asOf": "2026-10-31",
+      "note": "Education prices are rising faster than general inflation, and college costs have a long record of doing so, so 4% is used."
+    },
+    "life_expectancy": {
+      "value": 79.8,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/united-states",
+      "asOf": "2026-07-01",
+      "note": "Men 77.4, women 82.2 (UN WPP estimate for 2026). World Bank 2024: 78.9 (men 76.5, women 81.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.1,
+            "men": 22.6,
+            "women": 25.5
+          },
+          {
+            "age": 65,
+            "total": 20.2,
+            "men": 18.9,
+            "women": 21.4
+          },
+          {
+            "age": 70,
+            "total": 16.4,
+            "men": 15.3,
+            "women": 17.4
+          },
+          {
+            "age": 80,
+            "total": 9.7,
+            "men": 8.9,
+            "women": 10.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/united-states",
+      "asOf": "2026-07-01",
+      "note": "Remaining years from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.51
+          },
+          {
+            "year": 2040,
+            "value": 2.82
+          },
+          {
+            "year": 2065,
+            "value": 2.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/united-states-of-america/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 28.5 (2025, World Bank), 35.5 (2040) and 41.6 (2065, populationpyramid.net/united-states-of-america/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Social Security Act section 216(l), 42 U.S.C. 416(l) (Cornell LII)",
+      "sourceUrl": "https://www.law.cornell.edu/uscode/text/42/416",
+      "asOf": "2026-10-31",
+      "note": "Full retirement age is 67 for anyone reaching 62 after 2021 (born 1960 or later), men and women alike; reduced benefits from 62, delayed credits to 70. There is no mandatory retirement age for most private employees."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "U.S. Office of Personnel Management, FERS retirement eligibility",
+      "sourceUrl": "https://www.opm.gov/retirement-center/fers-information/eligibility/",
+      "asOf": "2026-10-31",
+      "note": "Federal employees under FERS can retire on an immediate unreduced annuity at 62 with 5 years' service, 60 with 20 years, or the minimum retirement age (57 for those born 1970 or later) with 30 years; there is no mandatory retirement age for most federal jobs."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "3-month Treasury bill 4.16% (US Treasury); FDIC national CD averages",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-31",
+      "note": "Low case: short rates fall back and savings earn less after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "3-month bill 4.16% less 22% federal tax = 3.24% (US Treasury)",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the after-tax 3-month Treasury bill rate for a middle-income retiree."
+    },
+    "retirement_return_high": {
+      "value": 0.037,
+      "status": "assumption",
+      "sourceName": "5-year Treasury 4.71%; I bonds 5.51% from November 2026 (TreasuryDirect)",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree ladders Treasuries, I bonds and competitive CDs at about today's rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 3.2%; S&P 500 valuations (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag, held mostly in 401(k)s and IRAs."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Fixed income base 3%; equity base 7%",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 7% and half bonds and bills at about 3%, in tax-advantaged accounts."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Fixed income high 3.8%; equity high 9%",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix in tax-advantaged accounts."
+    },
+    "old_age_allowance_monthly": {
+      "value": 994,
+      "status": "sourced",
+      "sourceName": "Social Security Administration, Cost-of-Living Increase and Other Determinations for 2026 (Federal Register)",
+      "sourceUrl": "https://www.federalregister.gov/documents/2025/11/03/2025-19763/cost-of-living-increase-and-other-determinations-for-2026",
+      "asOf": "2026-01-01",
+      "note": "Supplemental Security Income (SSI) federal payment standard USD 994 a month for an individual (USD 1,491 for a couple) in 2026; many states add a supplement. Paid to people 65+ (or disabled) with very low income and resources."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "42 U.S.C. 1382c(a)(1)(A), definition of aged individual for SSI (Cornell LII)",
+      "sourceUrl": "https://www.law.cornell.edu/uscode/text/42/1382c",
+      "asOf": "2026-10-31",
+      "note": "SSI is paid from 65 regardless of work history, but is means-tested on income and resources (countable resources up to USD 2,000 for an individual, USD 3,000 for a couple) and requires US citizenship or qualifying immigration status."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "US federal law (Fair Labor Standards Act) requires no severance or end-of-service payment; any severance or retirement payment is at the employer's discretion or set by contract (U.S. Department of Labor, severance pay: https://www.dol.gov/general/topic/wages/severancepay).",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "status": "sourced",
+      "sourceName": "Social Security Administration, Cost-of-Living Increase and Other Determinations for 2026 (Federal Register); 42 U.S.C. 416(l)",
+      "sourceUrl": "https://www.federalregister.gov/documents/2025/11/03/2025-19763/cost-of-living-increase-and-other-determinations-for-2026",
+      "asOf": "2026-01-01",
+      "note": "Social Security (Old-Age, Survivors and Disability Insurance): earnings-related, funded by payroll tax (6.2% employee plus 6.2% employer) on earnings up to USD 184,500 in 2026; 40 quarters of coverage (about 10 years) needed. Full benefit at 67 for those born 1960 or later, reduced from 62, larger to 70. Benefits rose 2.8% in January 2026 under the automatic CPI-W cost-of-living adjustment; up to 85% of benefits can be federally taxable."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "National average rates are low; online high-yield savings and money market accounts pay close to Treasury bill rates. FDIC-insured to USD 250,000.",
+      "sourceUrl": "https://www.fdic.gov/national-rates-and-rate-caps"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Certificate of deposit (CD)",
+      "localNameEn": "Certificate of deposit (3 months)",
+      "sourceUrl": "https://www.fdic.gov/national-rates-and-rate-caps"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Certificate of deposit (CD)",
+      "localNameEn": "Certificate of deposit (12 months)",
+      "sourceUrl": "https://www.fdic.gov/national-rates-and-rate-caps"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product; savers use automatic transfers into savings accounts or brokerage and retirement accounts."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Series I savings bonds",
+      "localNameEn": "Inflation-protected U.S. savings bonds (I bonds)",
+      "note": "Bought from the Treasury at TreasuryDirect, up to USD 10,000 a year per person; Series EE bonds are also sold (doubling guaranteed in 20 years).",
+      "sourceUrl": "https://www.treasurydirect.gov/savings-bonds/i-bonds/i-bonds-interest-rates/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bills",
+      "localNameEn": "U.S. Treasury bills",
+      "note": "Individuals can buy at auction through TreasuryDirect or a broker; interest is exempt from state and local tax.",
+      "sourceUrl": "https://www.treasurydirect.gov/marketable-securities/treasury-bills/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Treasury notes",
+      "localNameEn": "U.S. Treasury notes (2 to 10 years)",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Treasury notes",
+      "localNameEn": "U.S. Treasury notes (10 years)",
+      "sourceUrl": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Mutual funds and index ETFs",
+      "note": "Usually held in a 401(k), IRA or Roth IRA for tax advantages."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold bars and coins",
+      "note": "Legal to buy; the U.S. Mint issues gold bullion coins. Gains on physical gold are taxed as collectibles (up to 28% federal)."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Board of Governors of the Federal Reserve System",
+      "url": "https://www.federalreserve.gov/"
+    },
+    "insuranceRegulator": {
+      "name": "State insurance departments (coordinated through the National Association of Insurance Commissioners, NAIC)",
+      "url": "https://content.naic.org/state-insurance-departments",
+      "note": "Insurance is regulated by each state; the NAIC is the states' standard-setting body."
+    },
+    "insuranceComplaints": {
+      "name": "Your state insurance department (NAIC directory)",
+      "url": "https://content.naic.org/state-insurance-departments",
+      "note": "Find your state insurance department and file a complaint there."
+    },
+    "pensionScheme": {
+      "name": "Social Security (Social Security Administration)",
+      "url": "https://www.ssa.gov/benefits/retirement/"
+    },
+    "oldAgeAllowance": {
+      "name": "Supplemental Security Income (SSI)",
+      "url": "https://www.ssa.gov/ssi/",
+      "note": "Means-tested monthly payment for people 65+ or disabled with little income and resources."
+    },
+    "publicHealthCover": {
+      "name": "Medicare (65+), Medicaid and the Health Insurance Marketplace",
+      "url": "https://www.medicare.gov/",
+      "note": "Medicare covers people 65+; Medicaid covers low-income people; others buy cover through employers or HealthCare.gov (https://www.healthcare.gov/)."
+    },
+    "depositInsurance": {
+      "name": "Federal Deposit Insurance Corporation (FDIC)",
+      "url": "https://www.fdic.gov/resources/deposit-insurance",
+      "note": "Credit union deposits are insured by the NCUA."
+    },
+    "statistics": {
+      "name": "U.S. Census Bureau",
+      "url": "https://www.census.gov/",
+      "note": "Consumer prices are published by the Bureau of Labor Statistics (https://www.bls.gov/cpi/)."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

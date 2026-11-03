@@ -1,0 +1,524 @@
+{
+  "schemaVersion": 1,
+  "code": "YE",
+  "iso3": "YEM",
+  "nameEn": "Yemen",
+  "nameNative": "اليمن",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "currency": {
+    "code": "YER",
+    "symbol": "ر.ي",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1562.49,
+      "status": "sourced",
+      "sourceName": "Central Bank of Yemen (Aden), Monetary and financial developments, May 2026",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-05-31",
+      "note": "Average market rate of 1,562.49 rials per US dollar in May 2026 (1,562.93 in April). Figures are for the central bank in Aden; areas run by the Sanaa authorities use older banknotes at a different exchange rate and restrict interest. Trading Economics still shows an outdated official rate of about 236."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No year-on-year inflation rate could be read: the Central Bank of Yemen's May 2026 report gives only the monthly CPI change (index 98.19 to 100.05, +1.89% in May 2026, from the Central Statistical Organization), the statistics office site refused requests, and the World Bank's latest figure is from 2014."
+    },
+    "inflation_projection": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Central Bank of Yemen (Aden): monthly CPI +1.89% in May 2026; rial 1,562 per dollar after a 2025 peak near 2,900",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Inflation in government areas ran at 20 to 30% a year during the currency collapse before the 2025-2026 stabilisation, so a planning rate of 15% allows for renewed depreciation."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Yemen (Aden) sets a minimum rate on rial savings deposits (18%) and a 20% coupon on one-year treasury bills, but publishes no single policy rate; Trading Economics' 27% is from 2022. Figures are for the central bank in Aden; areas run by the Sanaa authorities use older banknotes at a different exchange rate and restrict interest."
+    },
+    "savings_account_rate": {
+      "value": 0.18,
+      "status": "sourced",
+      "sourceName": "Central Bank of Yemen (Aden), Monetary and financial developments, May 2026",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-05-31",
+      "note": "The central bank set the interest rate on new rial savings deposits at commercial banks at 18% a year and leaves term deposit rates to banks. Figures are for the central bank in Aden; areas run by the Sanaa authorities use older banknotes at a different exchange rate and restrict interest."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks set term deposit rates freely (Central Bank of Yemen, May 2026) and no industry-wide 3-month rate is published."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks set term deposit rates freely (Central Bank of Yemen, May 2026) and no industry-wide 1-year rate is published."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current weighted average deposit rate was found; the World Bank's latest value is 15.25% for 2013, too old to use."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold to individuals was confirmed."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Yemen (Aden) currently auctions one-year treasury bills at a 20% coupon (auction of 4 November 2026, minimum bid 50 million rials) to banks; no 3-month yield is published."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield is published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield is published."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax treatment of bank interest for individuals could not be confirmed; PwC Worldwide Tax Summaries does not cover Yemen and the Tax Authority site could not be found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no government savings certificate for individuals, and the tax on government security interest could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover amount was found for Yemeni banks."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; lending rates are set freely by banks (Central Bank of Yemen, May 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Yemen; global equities in rial terms; rial 1,562 per dollar (May 2026)",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: global equities earn little in dollars while the rial holds steady."
+    },
+    "equity_return_base": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Yemen; global equity index about 7% a year in dollars; rial depreciation assumed about 8% a year",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Yemen has no stock market, so the base case is a global index in rial terms (about 7% in dollars plus about 8% a year of depreciation), below the 18% savings rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.24,
+      "status": "assumption",
+      "sourceName": "Global equity index in rial terms; rial history (about 250 per dollar in 2014 to 1,562 in May 2026)",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global markets and a renewed sharp rial depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Rial 1,562 per dollar (May 2026), stable since August 2025",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable rial."
+    },
+    "gold_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Rial 1,562 per dollar (May 2026); inflation assumption 15%; long-run dollar gold trend about 4%",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4% dollar gold trend plus about 9% a year of rial depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Rial history: 1,756 per dollar in May 2024, 2,534 in May 2025, 1,562 in May 2026 (Central Bank of Yemen)",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a renewed collapse of the rial like 2021-2025."
+    },
+    "fixed_income_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Central Bank of Yemen: 18% on new rial savings deposits (May 2026)",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall as the rial stabilises, and liquidity limits at banks reduce what savers actually earn."
+    },
+    "fixed_income_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Central Bank of Yemen: 18% on new rial savings deposits (May 2026); one-year treasury bills at 20%",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: well below the posted 18% savings rate because tax treatment is unconfirmed and bank liquidity and cash-withdrawal limits make the posted rate hard to earn in full."
+    },
+    "fixed_income_return_high": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "Central Bank of Yemen: 18% on new rial savings deposits; one-year treasury bills at 20% (November 2026 auction)",
+      "sourceUrl": "https://www.cby-ye.com/news/981",
+      "asOf": "2026-10-31",
+      "note": "High case: the full posted savings rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per YER 1,000 by age were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.691,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Yemen",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=YE",
+      "asOf": "2023-12-31",
+      "note": "69.1% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 15%; imported medicines priced in dollars",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Medicines and private care are largely imported and priced off the dollar, so health goals are planned 2 points above the general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 15%",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education price index could be read, so education goals use the general assumption."
+    },
+    "life_expectancy": {
+      "value": 69.439,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Yemen",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=YE",
+      "asOf": "2024-12-31",
+      "note": "69.4 years in 2024 (men 67.4, women 71.5)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.6,
+            "men": 16.5,
+            "women": 18.6
+          },
+          {
+            "age": 65,
+            "total": 14,
+            "men": 13.1,
+            "women": 14.8
+          },
+          {
+            "age": 70,
+            "total": 10.8,
+            "men": 10.1,
+            "women": 11.4
+          },
+          {
+            "age": 80,
+            "total": 5.8,
+            "men": 5.5,
+            "women": 6.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/yemen/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the 65 total is published there, the other totals are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 22.2
+          },
+          {
+            "year": 2040,
+            "value": 16.9
+          },
+          {
+            "year": 2065,
+            "value": 8.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/yemen/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.51 (2025, World Bank), 5.9 (2040) and 12.2 (2065, populationpyramid.net/yemen/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age under the Social Insurance Law for private-sector workers could not be read from an official source; the social security corporation's site could not be found and the US SSA country pages refused requests."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for civil servants could not be read from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Central Bank of Yemen: 18% on new rial savings deposits (May 2026)",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall and access to deposits stays limited."
+    },
+    "retirement_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Central Bank of Yemen: 18% on new rial savings deposits (May 2026)",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the posted savings rate, allowing for unconfirmed tax and bank liquidity limits, so not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Central Bank of Yemen: 18% on new rial savings deposits; one-year treasury bills at 20%",
+      "sourceUrl": "https://www.cby-ye.com/news/981",
+      "asOf": "2026-10-31",
+      "note": "High case: near the posted savings rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Fixed income low 8%; equity low 6%; gold low 4%",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix of rial deposits, gold and foreign assets earning little."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Fixed income base 12%; global equity base 15%; gold base 13%",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of rial deposits, gold and global equities."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Equity high 24%; gold high 25%",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with rial depreciation boosting foreign assets."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Welfare Fund pays means-tested cash transfers to poor households, including elderly people, but its current amount and whether payments are regular could not be confirmed."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Social Welfare Fund cash transfers target poor households rather than an age group; no age-based eligibility rule was found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code (Law No. 5 of 1995) is reported to provide an end-of-service award for workers not covered by social insurance, but its terms could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public-sector employees are insured by the General Authority for Social Insurance and Pensions and private-sector employees by the General Corporation for Social Security, but pension ages and indexation could not be read from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account",
+      "note": "The central bank sets 18% a year on new rial savings deposits (May 2026).",
+      "sourceUrl": "https://www.cby-ye.com/files/6a5a2d18db074.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Rates are set by banks."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Rates are set by banks."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was confirmed."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "أذون الخزانة",
+      "localNameEn": "Treasury bills",
+      "note": "The central bank auctions one-year bills to banks with a 50 million rial minimum bid; no 3-month bills for individuals.",
+      "sourceUrl": "https://www.cby-ye.com/news/981"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail government bonds were found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail government bonds were found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Yemen has no stock exchange or regulated retail mutual funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold jewellery and coins are widely bought as savings."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Yemen (head office, Aden)",
+      "url": "https://www.cby-ye.com/"
+    },
+    "statistics": {
+      "name": "Central Statistical Organization",
+      "url": "https://www.cso-yemen.com/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

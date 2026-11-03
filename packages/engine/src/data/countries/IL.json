@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "code": "IL",
+  "iso3": "ISR",
+  "nameEn": "Israel",
+  "nameNative": "ישראל",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "he",
+    "ar",
+    "en",
+    "ru"
+  ],
+  "currency": {
+    "code": "ILS",
+    "symbol": "₪",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3.118,
+      "status": "sourced",
+      "sourceName": "Bank of Israel statistics API, representative exchange rate USD/ILS (series RER_USD_ILS)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNObservations=1&format=csv",
+      "asOf": "2026-10-30",
+      "note": "Representative rate of 3.118 shekels per US dollar on 30 October 2026; the World Bank 2025 average was 3.45."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0164,
+      "status": "sourced",
+      "sourceName": "Bank of Israel statistics API, CPI general index, change over 12 months (Central Bureau of Statistics data)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/PRI/1.0/CP_PCHYTY?lastNObservations=1&format=csv",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices rose 1.64% in the year to September 2026 (1.5% in August); CBS data served by the Bank of Israel series database. Trading Economics also reports 1.6%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank of Israel inflation target 1-3% (midpoint 2%); market 5-10 year forward inflation expectation 1.93% (September 2026)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/EXP_EXB_FRW_ZD_05Y_10Y_MA?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Inflation is inside the Bank of Israel's 1-3% target band and bond markets expect about 1.9% a year for years 5-10, so the 2% midpoint is used."
+    },
+    "policy_rate": {
+      "value": 0.0325,
+      "status": "sourced",
+      "sourceName": "Bank of Israel statistics API, Bank of Israel interest rate (series MNT_RIB_BOI_D)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/BR/1.0/MNT_RIB_BOI_D?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Israel kept its rate at 3.25% at the 21 October 2026 decision (Trading Economics also reports this)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Israeli current accounts pay essentially no interest and money is saved in short deposits; no published average rate for a savings account was found. The Bank of Israel website (deposit rate tables) refused access and its open data API has no deposit-rate series that could be located."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Israel publishes deposit interest rates on its website, which refused access (bot check); no deposit-rate series could be located in its open data API."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Israel publishes deposit interest rates on its website, which refused access (bot check); no deposit-rate series could be located in its open data API."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks offer monthly-deposit savings plans, but no industry-wide rate was found; Bank of Israel deposit tables could not be read."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "World Bank FR.INR.DPST stops in 2022 (0.44%, before the 2022-2023 rate rises), so it is not used; the current Bank of Israel average deposit rate could not be read."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Israel has no government savings certificate or retail savings bond for individuals; savers buy tradable government bonds and Makam bills on the Tel Aviv Stock Exchange."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0304,
+      "status": "sourced",
+      "sourceName": "Bank of Israel statistics API, yield to maturity of Makam (short-term Bank of Israel bills) with 3 months to maturity (series DWH_SRC_0342)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
+      "asOf": "2026-10-30",
+      "note": "Makam with three months to maturity yielded 3.04% on 30 October 2026; Israel's 3-month bills are Makam issued by the Bank of Israel."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0372,
+      "status": "sourced",
+      "sourceName": "Bank of Israel statistics API, nominal (unlinked) government zero-coupon yield, 5 years, monthly average (series ZC_TSB_ZND_05Y_MA)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_05Y_MA?lastNObservations=1&format=csv",
+      "asOf": "2026-09-30",
+      "note": "Average nominal 5-year zero-coupon government yield in September 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0406,
+      "status": "sourced",
+      "sourceName": "Bank of Israel statistics API, nominal (unlinked) government zero-coupon yield, 10 years, monthly average (series ZC_TSB_ZND_10Y_MA)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_10Y_MA?lastNObservations=1&format=csv",
+      "asOf": "2026-09-30",
+      "note": "Average nominal 10-year zero-coupon yield in September 2026; Trading Economics shows the 10-year benchmark at 4.16% on 30 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Israel, income determination (interest income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "15% on interest that is not linked to the CPI (ordinary shekel deposits); CPI-linked interest is taxed at 25%; a 2% surtax applies to capital income above ILS 721,560 a year (2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Israel, income determination (interest income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/israel/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "No retail savings certificate exists; interest on unlinked government bonds and Makam is taxed at 15% (CPI-linked bonds 25%)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme for Israeli banks was found; an official source confirming its absence could not be read (Bank of Israel site refused access), so it is not marked absent."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Fair Credit Law caps the cost of credit, but its current level could not be read from an official page (gov.il refused access)."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Bank of Israel Makam 3-month yield 3.04%; 10-year nominal government yield 4.06% (September 2026)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: equities return no more than a long government bond after tax, after a strong run (TA-125 up 17% in the year to October 2026)."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank of Israel Makam yield 3.04% (2.58% after 15% tax); TA-125 index record via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/israel/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4 points above the after-tax Makam yield, in line with the cap; the Tel Aviv market has had a strong 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "TA-125 index record (Trading Economics); 10-year government yield 4.06%",
+      "sourceUrl": "https://tradingeconomics.com/israel/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a fuller equity premium over the 4% long bond yield, as the TA-125 has delivered over the past decade."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Bank of Israel exchange rate 3.118 ILS per USD (30 October 2026)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable or stronger shekel."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Israel exchange rate 3.118 ILS per USD; inflation close to US inflation",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year with no expected shekel depreciation, since Israeli inflation is close to US inflation."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Israel exchange rate 3.118 ILS per USD",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/EXR/1.0/RER_USD_ILS?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years or a weaker shekel."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Bank of Israel Makam yield 3.04%; 15% tax on unlinked interest (PwC)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: short rates fall toward 2% as inflation stays low, giving about 1.5% after the 15% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "Bank of Israel Makam 3-month yield 3.04% (30 October 2026), less 15% tax",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Base case: the 3-month Makam yield after the 15% tax on unlinked interest."
+    },
+    "fixed_income_return_high": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "Bank of Israel 10-year nominal government yield 4.06% (September 2026), less 15% tax",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_10Y_MA?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in long government bond yields, about 3.4% after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Capital Market, Insurance and Savings Authority publishes service indices for insurers, but its site (gov.il) refused access, so no industry-wide life claim settlement ratio could be read."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (risk) insurance is widely sold, but no regulator or other public table of premiums per ILS 1,000 of cover by age could be read; gov.il refused access."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by National Health Insurance through the health funds; no published typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Supplementary and private health insurance is sold, but no public table of premiums by age per ILS 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.2049,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Israel",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=IL",
+      "asOf": "2023-12-31",
+      "note": "20.5% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Israel statistics API, CPI health component up 1.25% and medical services up 2.48% in the year to September 2026",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/PRI/1.0/CP070000_PCHYTY?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Health prices are rising about as fast as the CPI and medical services a little faster, so 1 point above the 2% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Israel statistics API, CPI education component up 0.95% and education services up 2.4% in the year to September 2026",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/PRI/1.0/CP060000_PCHYTY?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Education services prices rise a little faster than the CPI, so 1 point above the 2% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 83.2,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Israel",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IL",
+      "asOf": "2024-12-31",
+      "note": "83.2 years in 2024 (men 81.1, women 85.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.1,
+            "men": 23.6,
+            "women": 26.6
+          },
+          {
+            "age": 65,
+            "total": 20.9,
+            "men": 19.6,
+            "women": 22.2
+          },
+          {
+            "age": 70,
+            "total": 16.8,
+            "men": 15.7,
+            "women": 17.9
+          },
+          {
+            "age": 80,
+            "total": 9.8,
+            "men": 9.2,
+            "women": 10.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/israel/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 4.74
+          },
+          {
+            "year": 2040,
+            "value": 4.26
+          },
+          {
+            "year": 2065,
+            "value": 3.68
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/israel/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 21.1 (2025, World Bank), 23.5 (2040) and 27.2 (2065, populationpyramid.net/israel/2065/); high fertility keeps Israel younger than other high-income countries."
+    },
+    "retirement_age_default": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Retirement Age Law 2004 (חוק גיל פרישה), sections 3 and 6 (text on Hebrew Wikisource)",
+      "sourceUrl": "https://he.wikisource.org/wiki/חוק_גיל_פרישה",
+      "asOf": "2026-10-31",
+      "note": "Retirement age is 67 for men; for women born in 1970 or later it is 65 (the transition schedule for women ends with those born in December 1969 at 64 years 9 months). Early retirement age for occupational pensions is 60."
+    },
+    "retirement_age_government": {
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Retirement Age Law 2004 (חוק גיל פרישה), section 4: mandatory retirement age (text on Hebrew Wikisource)",
+      "sourceUrl": "https://he.wikisource.org/wiki/חוק_גיל_פרישה",
+      "asOf": "2026-10-31",
+      "note": "The law sets 67 as the age at which any employee, men and women, may be required to retire; it applies to civil servants as well."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Bank of Israel Makam yield 3.04%; 15% tax on unlinked interest (PwC)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: short rates fall toward 2%, about 1.5% after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Bank of Israel Makam 3-month yield 3.04% (2.58% after 15% tax)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Base case: just below the after-tax 3-month Makam yield, so it does not exceed the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.034,
+      "status": "assumption",
+      "sourceName": "Bank of Israel 10-year nominal government yield 4.06%, less 15% tax",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_10Y_MA?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money locked into long government bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Israel Makam and government bond yields (October 2026)",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: a balanced mix earning little more than government bonds after tax."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Israel government yields; equity base 6.5%; gold base 4%",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_10Y_MA?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of bonds, Israeli and global equities and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of Israel government yields; equity high 9%",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_10Y_MA?lastNObservations=1&format=csv",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1838,
+      "status": "sourced",
+      "sourceName": "National Insurance Law (חוק הביטוח הלאומי), section 244 (pension 17.7% of the basic amount) and section 1 (basic amount ILS 10,382 in 2026), text on Hebrew Wikisource",
+      "sourceUrl": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "asOf": "2026-01-01",
+      "note": "17.7% of the 2026 basic amount of ILS 10,382 = about ILS 1,838 a month for a single person, before the 2% a year seniority increment (up to 50%) and dependant supplements; it rises to 18.7% from age 80. Every resident aged 18+ is insured by the National Insurance Institute (a qualifying period of contributions or residence applies), so this is the basic flat pension, not a means-tested allowance."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "National Insurance Law, section 245 (entitlement), and Retirement Age Law 2004 (text on Hebrew Wikisource)",
+      "sourceUrl": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "asOf": "2026-10-31",
+      "note": "Paid from the retirement age (67 for men, 65 for women born from 1970) subject to an earnings test until 70 for men (women until their entitlement age): work income above the threshold reduces the pension by 60% of the excess. There is no means test from 70."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Severance Pay Law 1963 (חוק פיצויי פיטורים), section 12 (text on Hebrew Wikisource)",
+      "sourceUrl": "https://he.wikisource.org/wiki/חוק_פיצויי_פיטורים",
+      "asOf": "2026-10-31",
+      "note": "One month's salary for each year of work for monthly-paid employees (two weeks' wages for wage earners), paid on dismissal; in practice employers deposit 8.33% (or 6%) of pay into the employee's pension fund for severance."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": null,
+        "pensionFromAge": 67,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "National Insurance Law (חוק הביטוח הלאומי), sections 1, 240, 244-246 (text on Hebrew Wikisource)",
+      "sourceUrl": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
+      "asOf": "2026-10-31",
+      "note": "National Insurance old-age pension: residents aged 18+ are insured; paid from 67 for men (65 for women born from 1970) after a qualifying period (generally 60 months in the last 10 years or 144 months in all); the basic amount is updated each January by the CPI. The amount is in old_age_allowance_monthly. Employees also have a mandatory occupational pension (pension funds), not included here."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "פיקדון לזמן קצר",
+      "localNameEn": "Short-term deposit",
+      "note": "Current accounts usually pay no interest; savers use short or on-call deposits."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "פיקדון לזמן קצוב (3 חודשים)",
+      "localNameEn": "Fixed-term deposit (3 months)",
+      "note": "Shekel deposits can be unlinked or CPI-linked; interest on unlinked deposits is taxed at 15%."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "פיקדון לזמן קצוב (שנה)",
+      "localNameEn": "Fixed-term deposit (1 year)"
+    },
+    "dps": {
+      "available": true,
+      "localName": "תוכנית חיסכון",
+      "localNameEn": "Savings plan (monthly deposits)",
+      "note": "Banks offer savings plans with monthly deposits; no industry-wide rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals; retail savers buy tradable government bonds on the stock exchange."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "מק\"ם (מלווה קצר מועד)",
+      "localNameEn": "Makam (short-term Bank of Israel bills)",
+      "note": "Issued by the Bank of Israel and traded on the Tel Aviv Stock Exchange, open to retail investors.",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "אגרות חוב ממשלתיות (שחר / גליל)",
+      "localNameEn": "Government bonds (unlinked Shahar / CPI-linked Galil)",
+      "note": "Traded on the Tel Aviv Stock Exchange.",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_05Y_MA?lastNObservations=1&format=csv"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "אגרות חוב ממשלתיות (שחר / גליל)",
+      "localNameEn": "Government bonds (unlinked Shahar / CPI-linked Galil)",
+      "note": "Traded on the Tel Aviv Stock Exchange.",
+      "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_10Y_MA?lastNObservations=1&format=csv"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "קרנות נאמנות וקרנות סל",
+      "localNameEn": "Mutual funds and exchange-traded funds",
+      "note": "Index funds tracking the TA-35, TA-125 and global indices are widely available."
+    },
+    "gold": {
+      "available": true,
+      "localName": "זהב",
+      "localNameEn": "Gold",
+      "note": "Gold bars and coins can be bought freely."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Israel",
+      "url": "https://www.boi.org.il/en/"
+    },
+    "insuranceRegulator": {
+      "name": "Capital Market, Insurance and Savings Authority (Ministry of Finance)",
+      "url": "https://mof.gov.il/hon/"
+    },
+    "insuranceComplaints": {
+      "name": "Capital Market, Insurance and Savings Authority, public inquiries unit",
+      "url": "https://mof.gov.il/hon/"
+    },
+    "pensionScheme": {
+      "name": "National Insurance Institute (Bituach Leumi), old-age insurance",
+      "url": "https://www.btl.gov.il/English%20Homepage/Benefits/Old%20Age%20Insurance/Pages/default.aspx"
+    },
+    "oldAgeAllowance": {
+      "name": "National Insurance Institute (Bituach Leumi), old-age pension",
+      "url": "https://www.btl.gov.il/English%20Homepage/Benefits/Old%20Age%20Insurance/Pages/default.aspx"
+    },
+    "publicHealthCover": {
+      "name": "National Health Insurance (health funds), Ministry of Health",
+      "url": "https://www.health.gov.il/"
+    },
+    "statistics": {
+      "name": "Central Bureau of Statistics (CBS)",
+      "url": "https://www.cbs.gov.il/en/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "GT",
+  "iso3": "GTM",
+  "nameEn": "Guatemala",
+  "nameNative": "Guatemala",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "quc",
+    "mam",
+    "cak",
+    "kek"
+  ],
+  "currency": {
+    "code": "GTQ",
+    "symbol": "Q",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 7.6801,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GT",
+      "asOf": "2025-12-31",
+      "note": "Official rate, 2025 average. Trading Economics shows 7.645 quetzales per dollar on 30 October 2026; the Banco de Guatemala site was unreachable (HTTP 522) during research."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0469,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Guatemala inflation rate (INE consumer price index)",
+      "sourceUrl": "https://tradingeconomics.com/guatemala/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: year-on-year CPI inflation 4.69% in September 2026, up from 3.37% in August; the INE site blocks automated reading and the Banco de Guatemala site was unreachable (HTTP 522) during research."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banco de Guatemala inflation target of 4% +/- 1 point; Guatemala CPI 1.5% in 2025 (World Bank) and 4.7% in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/guatemala/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "We plan with the central bank's 4% target, which recent inflation (1.5-4.7%) has mostly stayed within."
+    },
+    "policy_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Guatemala interest rate (Banco de Guatemala tasa de interes lider)",
+      "sourceUrl": "https://tradingeconomics.com/guatemala/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Secondary source: the monetary-policy leading rate (tasa lider) is 3.50% for October 2026, unchanged from the previous decision; the Banco de Guatemala site was unreachable (HTTP 522) during research."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for Superintendencia de Bancos and Banco de Guatemala interest-rate statistics: both sites blocked or unreachable during research; no other public source for a typical savings account rate found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for Superintendencia de Bancos and Banco de Guatemala term-deposit rate tables: sites blocked or unreachable; no other public source found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for Superintendencia de Bancos and Banco de Guatemala term-deposit rate tables: sites blocked or unreachable; the World Bank average rate on all deposits was 5.11% in 2025."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring (programmed) savings deposit was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0511,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2025-12-31",
+      "note": "Average rate paid by commercial banks on deposits in 2025 (Banco de Guatemala data via IMF IFS), up from 4.93% in 2024."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for a government savings certificate or retail savings bond for individuals: none confirmed; the Ministry of Finance and central bank sites were blocked or unreachable."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Guatemala finances itself mainly with medium and long Bonos del Tesoro; no current 91-day government bill yield could be found (the Banco de Guatemala site was unreachable (HTTP 522) during research, Ministry of Finance site blocked)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable current 5-year Bonos del Tesoro yield: Ministry of Finance and central bank sites were blocked or unreachable."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable current 10-year Bonos del Tesoro yield: Ministry of Finance and central bank sites were blocked or unreachable."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Guatemala: Individual - Income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/guatemala/individual/income-determination",
+      "asOf": "2026-06-09",
+      "note": "Interest earned by domiciled individuals is subject to 10% income tax withholding (capital income); page last reviewed 9 June 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was confirmed, and the tax treatment of interest on government securities could not be verified (PwC summary does not mention an exemption)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Guatemala has a deposit protection fund (Fondo para la Proteccion del Ahorro, FOPA), but the Superintendencia de Bancos and Banco de Guatemala pages stating the cover limit were blocked or unreachable during research, so the limit is not confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched for an official cap or typical credit-card rate: Superintendencia de Bancos statistics were blocked; no figure confirmed."
+    },
+    "equity_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025), 10% tax on interest; Banco de Guatemala policy rate 3.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local stock exchange has almost no equity trading, so savers rely on global funds in quetzal terms, and a weak decade is possible."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025), 10% tax on interest; Banco de Guatemala policy rate 3.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Base case uses a global equity index in quetzal terms (the quetzal has been stable near 7.6-7.8 per dollar): the 4.6% after-tax deposit rate plus about 2.5 points."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025); quetzal near 7.6-7.8 per US dollar",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat strong long-run dollar returns and the quetzal weakens slightly."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF: 7.68 quetzales per US dollar (2025), little changed over a decade",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price with a stable quetzal."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF: 7.68 quetzales per US dollar (2025), little changed over a decade",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4.5% a year plus a little expected quetzal depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF: 7.68 quetzales per US dollar (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and some quetzal weakening."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025); PwC: 10% withholding on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings deposits at low rates after the 10% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025); PwC: 10% withholding on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits near the 5.1% average deposit rate, about 4.6% after tax, with some cash."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025); PwC: 10% withholding on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits or government bonds at 5.5-6% before tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Superintendencia de Bancos insurance statistics were blocked; no industry-wide life claim settlement ratio found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in Guatemala, but no regulator or public source publishing indicative premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official or public figure for a typical private hospital stay found (Ministry of Health site blocked)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or public source publishing private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.5718,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GT",
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Banco de Guatemala 4% inflation target; CPI 4.69% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/guatemala/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No long-run medical CPI series could be read; planning inflation plus 2 points for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Banco de Guatemala 4% inflation target; CPI 4.69% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/guatemala/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No long-run education CPI series could be read; planning inflation plus 1 point for private schooling."
+    },
+    "life_expectancy": {
+      "value": 72.746,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GT",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 73.0 for 2026 (men 70.7, women 75.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/guatemala/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.2,
+            "men": 19.5,
+            "women": 20.9
+          },
+          {
+            "age": 65,
+            "total": 16.5,
+            "men": 15.8,
+            "women": 17.1
+          },
+          {
+            "age": 70,
+            "total": 13.0,
+            "men": 12.4,
+            "women": 13.5
+          },
+          {
+            "age": 80,
+            "total": 6.8,
+            "men": 6.4,
+            "women": 7.2
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/guatemala/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 12.9
+          },
+          {
+            "year": 2040,
+            "value": 9.9
+          },
+          {
+            "year": 2065,
+            "value": 4.1
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 7.75 (2025, World Bank), 10.1 (2040) and 24.4 (2065, populationpyramid.net/guatemala/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Instituto Guatemalteco de Seguridad Social (IGSS), Pension por riesgo de Vejez (IVS)",
+      "sourceUrl": "https://www.igssgt.org/pension-por-riesgo-de-vejez/",
+      "asOf": "2026-10-31",
+      "note": "IGSS old-age pension requires age 60 and at least 240 months of contributions, the same for men and women; no scheduled increase found. The page carries no date."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not confirm a compulsory retirement age for civil servants under the Regimen de Clases Pasivas Civiles del Estado (ONSEC and Congress sites blocked)."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025); PwC: 10% withholding on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits and short term deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025); PwC: 10% withholding on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 4.6% after-tax average deposit rate, keeping part in liquid savings."
+    },
+    "retirement_return_high": {
+      "value": 0.046,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 5.11% (2025); PwC: 10% withholding on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "High case: all in term deposits at the average 5.11% less 10% tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 5.11% (2025); global equity assumptions in quetzal terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global equities disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 5.11% (2025); global equity assumptions in quetzal terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global equities at 7% and half term deposits at about 4%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 5.11% (2025); global equity assumptions in quetzal terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GT",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns."
+    },
+    "old_age_allowance_monthly": {
+      "value": 500,
+      "status": "sourced",
+      "sourceName": "Ministerio de Trabajo y Prevision Social, Condiciones de pobreza extrema en personas de 65 anos o mas (PAM 2026)",
+      "sourceUrl": "https://mintrabajo.gob.gt/wp-content/uploads/2026/06/Condiciones-de-Pobreza-Extrema-PAM-2026.pdf",
+      "asOf": "2026-06-30",
+      "note": "The Programa de Aporte Economico del Adulto Mayor (Decreto 85-2005, reformed by Decreto 4-2022) currently pays Q500 a month (Q6,000 a year) to each beneficiary."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Ministerio de Trabajo y Prevision Social, Programa de Aporte Economico del Adulto Mayor (PAM)",
+      "sourceUrl": "https://mintrabajo.gob.gt/programa-de-aporte-economico-del-adulto-mayor-pam/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Guatemalans aged 65 or more in extreme poverty or social vulnerability (shown by a socio-economic study), not receiving a pension and not employed."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code requires an indemnity of one month's wages per year of service on unjustified dismissal, but whether any statutory payment applies on retirement could not be confirmed (Congress and Ministry sites with the Code text were blocked)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Instituto Guatemalteco de Seguridad Social (IGSS), Pension por riesgo de Vejez (IVS)",
+      "sourceUrl": "https://www.igssgt.org/pension-por-riesgo-de-vejez/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory contributory IGSS Invalidez, Vejez y Sobrevivencia programme for formal employees: pension from 60 with at least 240 months of contributions. No automatic indexation rule was found; tax treatment not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "3-month fixed-term deposit"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "1-year fixed-term deposit"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals was confirmed."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 91-day government bill issue was confirmed; the government borrows mainly through Bonos del Tesoro."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos del Tesoro",
+      "localNameEn": "Government of Guatemala Treasury bonds (quetzales)",
+      "note": "Issued by the Ministry of Finance in several maturities; current yields could not be read."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bonos del Tesoro",
+      "localNameEn": "Government of Guatemala Treasury bonds (quetzales)",
+      "note": "Issued by the Ministry of Finance in long maturities; current yields could not be read."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No retail equity or index fund registered locally was identified; local share trading is minimal."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold jewellery and coins",
+      "note": "No legal restriction on buying gold; mostly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco de Guatemala",
+      "url": "https://www.banguat.gob.gt/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de Bancos (SIB)",
+      "url": "https://www.sib.gob.gt/",
+      "note": "Supervises banks and insurers."
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia de Bancos (SIB)",
+      "url": "https://www.sib.gob.gt/",
+      "note": "Complaints about insurers go to the SIB user service."
+    },
+    "pensionScheme": {
+      "name": "Instituto Guatemalteco de Seguridad Social (IGSS), programa IVS",
+      "url": "https://www.igssgt.org/programa-de-invalidez-vejez-y-sobrevivencia"
+    },
+    "oldAgeAllowance": {
+      "name": "Programa de Aporte Económico del Adulto Mayor (PAM), Ministerio de Trabajo",
+      "url": "https://mintrabajo.gob.gt/programa-de-aporte-economico-del-adulto-mayor-pam/"
+    },
+    "publicHealthCover": {
+      "name": "Ministerio de Salud Pública y Asistencia Social (free public hospitals and health centres)",
+      "url": "https://www.mspas.gob.gt/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Instituto Nacional de Estadística (INE)",
+      "url": "https://www.ine.gob.gt/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "code": "CV",
+  "iso3": "CPV",
+  "nameEn": "Cabo Verde",
+  "nameNative": "Kabu Verdi",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "kea",
+    "pt"
+  ],
+  "currency": {
+    "code": "CVE",
+    "symbol": "CVE",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 98.62,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/CVE market rate, 29 October 2026",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/currency",
+      "asOf": "2026-10-29",
+      "note": "Secondary source because the Banco de Cabo Verde site refused connections on 31 October 2026. The escudo is pegged to the euro at 110.265; World Bank 2025 average 97.86 per dollar. Locally amounts are written with the cifrão as decimal mark (1.000$00)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.027,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Instituto Nacional de Estatística (INE), consumer prices, September 2026",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: the INE site is a script-only app that could not be read. Annual inflation 2.7% in September 2026 (0.8% in August); World Bank 2025 average 2.3%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2021-2025 (FP.CPI.TOTL.ZG); escudo pegged to the euro",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "The escudo is pegged to the euro (110.265 per euro), and inflation outside the 2022 shock has run near 1-3%, so 2% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Banco de Cabo Verde reference rate (taxa de referência)",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "Secondary source because the Banco de Cabo Verde site refused connections on 31 October 2026; 2.50% reference rate as last recorded for September 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No typical savings-account rate could be read; the Banco de Cabo Verde site refused connections on 31 October 2026."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month term-deposit rate could be read; the Banco de Cabo Verde site refused connections on 31 October 2026."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 1-year term-deposit rate could be read; the Banco de Cabo Verde site refused connections on 31 October 2026. The World Bank average deposit rate was 1.53% in 2025."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0153,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Cabo Verde",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2025-12-31",
+      "note": "1.53% average for 2025 (1.67% in 2024); a fresher central bank figure could not be read because the Banco de Cabo Verde site refused connections on 31 October 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recent Treasury bill (Bilhetes do Tesouro) auction rate could be read; the Banco de Cabo Verde site refused connections on 31 October 2026."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Treasury bond yield could be read; the Banco de Cabo Verde site refused connections on 31 October 2026 and Trading Economics has no Cabo Verde bond yield."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Treasury bond yield could be read; the Banco de Cabo Verde site refused connections on 31 October 2026 and Trading Economics has no Cabo Verde bond yield."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Cabo Verde, individual income determination (Category D, investment income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/cabo-verde/individual/income-determination",
+      "asOf": "2026-05-29",
+      "note": "Investment income, including interest, is taxed at a flat 20% (page last reviewed 29 May 2026); interest on term deposits of Cabo Verdean emigrants is exempt."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Cabo Verde, individual income determination (Category D, investment income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/cabo-verde/individual/income-determination",
+      "asOf": "2026-05-29",
+      "note": "No savings certificate exists; interest on bonds, including Treasury bonds, is taxed at a flat 10% (page last reviewed 29 May 2026)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit-guarantee cover per depositor could be confirmed; the Banco de Cabo Verde site refused connections on 31 October 2026."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit-card rate was found; World Bank average lending rate was 7.75% in 2025."
+    },
+    "equity_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025), taxed at 20%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for world shares in euro-pegged escudo terms, about the deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025), about 1.2% after the 20% tax",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Base case: the local stock exchange is very small with few listings and no long index record, so this follows a global index in escudo (euro) terms, capped at 4 points over the after-tax deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Escudo-euro peg; World Bank deposit rate 1.53% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "High case: world shares near their long-run return in euro terms."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Escudo-euro peg at 110.265 per euro",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Escudo-euro peg at 110.265 per euro",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/currency",
+      "asOf": "2026-10-31",
+      "note": "Base case: long-run dollar gold trend of about 4-5% a year with a stable euro peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Escudo-euro peg at 110.265 per euro",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold prices as in 2019-2025."
+    },
+    "fixed_income_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025), PwC 20% tax on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates falling further, below 1% after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025), PwC 20% tax on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Base case: the average deposit rate after the 20% interest tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "PwC: Treasury bond interest taxed at 10%",
+      "sourceUrl": "https://taxsummaries.pwc.com/cabo-verde/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "High case: listed Treasury bonds, taxed at 10%, at a few points above deposits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found; the Banco de Cabo Verde site refused connections on 31 October 2026."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium rates per 1,000 CVE of cover were found from the supervisor or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums per 100,000 CVE of cover were found."
+    },
+    "oop_health_share": {
+      "value": 0.2574,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CV",
+      "asOf": "2023-12-31",
+      "note": "25.7% in 2023 (latest year; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2021-2025; Trading Economics CPI September 2026",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI could be read, so health costs are planned one point above the 2% general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2021-2025; Trading Economics CPI September 2026",
+      "sourceUrl": "https://tradingeconomics.com/cape-verde/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI could be read, so education costs are planned slightly above the 2% general assumption."
+    },
+    "life_expectancy": {
+      "value": 76.2,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CV",
+      "asOf": "2024-12-31",
+      "note": "76.2 years in 2024 (men 73.1, women 79.4); UN WPP 2024 gives 76.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.0,
+            "men": 19.3,
+            "women": 22.7
+          },
+          {
+            "age": 65,
+            "total": 17.0,
+            "men": 15.4,
+            "women": 18.3
+          },
+          {
+            "age": 70,
+            "total": 13.0,
+            "men": 11.8,
+            "women": 14.1
+          },
+          {
+            "age": 80,
+            "total": 7.1,
+            "men": 6.5,
+            "women": 7.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/cabo-verde/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total, 17.0, is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.53
+          },
+          {
+            "year": 2040,
+            "value": 6.06
+          },
+          {
+            "year": 2065,
+            "value": 2.34
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/cabo-verde/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 10.50 (2025, World Bank), 16.5 (2040) and 42.7 (2065, populationpyramid.net/cabo-verde/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "CLEISS (French social security liaison body), the Cabo Verde social security system: INPS old-age pension",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_capvert.html",
+      "asOf": "2024-06-28",
+      "note": "Men 65, women 60, after at least 15 years of contributions. Source describes the 2024 rules (older than 2025); no later change was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official text giving the retirement age of civil servants could be read; civil servants hired since 2006 are covered by the INPS scheme."
+    },
+    "retirement_return_low": {
+      "value": 0.008,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025), PwC 20% tax on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposits after tax if rates fall further."
+    },
+    "retirement_return_base": {
+      "value": 0.012,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025), PwC 20% tax on interest",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Base case: the average deposit rate after the 20% tax, so not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "PwC: Treasury bond interest taxed at 10%",
+      "sourceUrl": "https://taxsummaries.pwc.com/cabo-verde/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in listed Treasury bonds taxed at 10%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits, a little in shares."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 1.53% (2025); equity base 5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, Treasury bonds and global shares, between the safe and equity base cases."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Escudo-euro peg; equity high case 8%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CV",
+      "asOf": "2026-10-31",
+      "note": "High case: a larger share in global shares in a good decade."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The basic social pension (Pensão Social Básica) exists, but its current monthly amount was not given on the CNPS pages that could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Centro Nacional de Pensões Sociais (CNPS), Pensão Social Básica: conditions",
+      "sourceUrl": "https://www.cnps.cv/index.php/pt/programa-de-inclusao-social/pensao-social-basica",
+      "asOf": "2020-07-21",
+      "note": "Residents aged 60 or over whose household income is below the INE extreme-poverty line and who are not covered by any social security scheme; foreigners after 10 years of legal residence. Page last updated 2020 (older than 2025)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees could be confirmed from an official source; PwC and CLEISS describe none."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "CLEISS (French social security liaison body), the Cabo Verde social security system: INPS old-age pension",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_capvert.html",
+      "asOf": "2024-06-28",
+      "note": "Compulsory INPS pension for employees and the self-employed: 2% of the reference wage (best 10 of the last 15 years) per insured year, at most 80%, after 15 years of contributions; contributions 8.5% employee and 16% employer (PwC). No automatic indexation is described. Source is 2024 (older than 2025)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conta poupança",
+      "localNameEn": "Savings account",
+      "note": "Rates not published in a source that could be read."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a prazo (3 meses)",
+      "localNameEn": "Term deposit, 3 months",
+      "note": "Rates not published in a source that could be read."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a prazo (1 ano)",
+      "localNameEn": "Term deposit, 1 year",
+      "note": "Rates not published in a source that could be read."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bilhetes do Tesouro",
+      "localNameEn": "Treasury bills",
+      "note": "Issued by the Treasury and sold mainly to banks; no recent rate could be read."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obrigações do Tesouro",
+      "localNameEn": "Treasury bonds",
+      "note": "Listed on the Cabo Verde stock exchange; interest taxed at 10% for individuals.",
+      "sourceUrl": "https://taxsummaries.pwc.com/cabo-verde/individual/income-determination"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obrigações do Tesouro",
+      "localNameEn": "Treasury bonds",
+      "note": "Listed on the Cabo Verde stock exchange; no yield could be read."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No diversified retail investment fund was found; the local stock exchange has only a few listed shares."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail market for investment gold bars or coins was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco de Cabo Verde (BCV)",
+      "url": "https://www.bcv.cv/",
+      "note": "Also supervises banks and insurers; site refused connections when checked on 31 October 2026."
+    },
+    "insuranceRegulator": {
+      "name": "Banco de Cabo Verde, insurance supervision",
+      "url": "https://www.bcv.cv/"
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Instituto Nacional de Previdência Social (INPS)",
+      "url": "https://www.inps.cv/"
+    },
+    "oldAgeAllowance": {
+      "name": "Centro Nacional de Pensões Sociais (CNPS), Pensão Social Básica",
+      "url": "https://www.cnps.cv/index.php/pt/programa-de-inclusao-social/pensao-social-basica"
+    },
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Instituto Nacional de Estatística (INE)",
+      "url": "https://ine.cv/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

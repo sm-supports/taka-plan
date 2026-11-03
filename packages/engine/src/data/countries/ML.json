@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "ML",
+  "iso3": "MLI",
+  "nameEn": "Mali",
+  "nameNative": "Mali",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "bm",
+    "fr",
+    "ff",
+    "snk",
+    "ses"
+  ],
+  "currency": {
+    "code": "XOF",
+    "symbol": "F CFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 589.0,
+      "status": "sourced",
+      "sourceName": "BCEAO, rates of foreign currencies against the CFA franc for transfers, 30 October 2026",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-30",
+      "note": "Mid-point of the buying (585.50) and selling (592.50) rates for the US dollar; the CFA franc is pegged at 655.957 per euro. World Bank 2025 average 581.9."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.033,
+      "status": "sourced",
+      "sourceName": "BCEAO, monthly economic note for UMOA countries, September 2026 (harmonised consumer prices, August 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Consumer prices up 3.3% year on year in Mali in August 2026 after 2.8% in July (INSTAT data via BCEAO); 2025 average 3.3% (World Bank)."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "BCEAO inflation target (1-3% band, centre 2%); Mali CPI 3.3% in August 2026 and 3.3% in 2025",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The CFA franc is pegged to the euro and the BCEAO targets 1-3%, but Mali's inflation has run slightly above the centre (3.3% in 2025 and August 2026), so 2.5% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "BCEAO, monthly economic note for UMOA countries, September 2026 (Monetary Policy Committee of 9 September 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-09-09",
+      "note": "Main policy rate (refinancing rate) 3.00%, held on 9 September 2026; the marginal lending facility rate is 5.00%. Common to all eight UMOA countries."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average rate on ordinary savings accounts in Mali was found; the BCEAO bank-conditions survey (first half 2026) lists term-deposit and contractual-savings rates only."
+    },
+    "fdr_3m_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Mali)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median of the minimum term-deposit rates (taux DAT minimum) declared by Mali's 14 banks to the BCEAO, range 2.0-4.0%; the minimum usually applies to small, short deposits. Not a tenor-specific average."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCEAO bank-conditions survey gives only minimum (median 3.5%) and maximum (median 6.2%, range 5.65-7.0%) term-deposit rates per bank in Mali for the first half of 2026, not a 1-year rate."
+    },
+    "dps_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Mali)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median rate on contractual savings plans (épargne contractuelle) declared by Mali's banks in the first half of 2026; most declare 3.50% (range 3.25-4.0%)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0515,
+      "status": "sourced",
+      "sourceName": "BCEAO, monthly economic note for UMOA countries, September 2026 (bank deposit rates, July 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Average deposit rate across UMOA banks, 5.15% in July 2026; Mali's rate fell 0.19 points in the month, but the note does not give the country level (World Bank's last Mali figure is 6.9% for 2016)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold to individuals was found; the Treasury borrows through UMOA-Titres auctions of 1-year bills and 3-5 year bonds, which individuals can buy through banks and licensed brokers (SGI)."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Mali's Treasury issued 6-month and 12-month bills on the regional market in 2026 (last: 364-day bill at a 4.51% average yield on 28 October 2026); no 3-month bill rate exists."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0758,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres, Mali Treasury auction of 28 October 2026 (5-year bond)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/",
+      "asOf": "2026-10-28",
+      "note": "Weighted average yield 7.58% on the 6.20% bond maturing 29 October 2031; the 3-year bond in the same auction yielded 7.67%."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Mali auctioned no bond longer than 7 years in 2026 (longest line matures April 2033), so no 10-year yield exists."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax authority (DGI) lists deposit interest as taxable under the tax on securities income (IRVM) but its page gives no rate, the online tax code could not be read, and PwC Tax Summaries has no Mali page."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the auction notices for Mali Treasury securities state no tax regime for individuals."
+    },
+    "deposit_insurance_limit": {
+      "value": 1400000,
+      "status": "sourced",
+      "sourceName": "UMOA Council of Ministers, Decision of 30 June 2017 on FGD-UMOA contribution rates and compensation ceilings (Article 2)",
+      "sourceUrl": "https://www.fgd-umoa.org/wp-content/uploads/2024/10/Decision-du-CM-relative-aux-taux-de-contribution-et-aux-plafonds-d-indemnistation-2-1.pdf",
+      "asOf": "2017-06-30",
+      "note": "Deposits are guaranteed up to 1,400,000 FCFA per depositor per bank (300,000 FCFA at a microfinance institution) by the regional deposit guarantee fund; the decision dates from 2017 (older than 2025) and is still the one the fund publishes."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions débitrices of UMOA credit institutions, first half 2026 (Mali)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Maximum lending rate (taux débiteur maximum) declared by most Mali banks for the first half of 2026 (range 12-14% at banks); it applies to all bank credit, including cards. No card-specific rate is published."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (regional stock exchange BRVM, deposit rates)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: regional (BRVM) equities, where Mali investors buy shares, return about the bank deposit rate, as in their weak 2016-2020 years."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026; UMOA-Titres Mali auction of 28 October 2026",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points above 1-year Treasury bills (4.5%) and term deposits, within the 4-point cap; the BRVM composite rose 60.7% in the year to August 2026 but its 10-year record is uneven."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (BRVM indices)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: the BRVM repeats a strong decade like 2023-2026."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "BCEAO exchange rates (CFA franc pegged to the euro)",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO exchange rates (CFA franc pegged at 655.957 per euro)",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus a small allowance for the euro-pegged franc weakening against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCEAO exchange rates",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years such as 2024-2025."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Mali)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at the 3.5% floor rate, less a possible tax on interest."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO bank conditions, first half 2026 (Mali); UMOA-Titres Mali auction of 28 October 2026 (1-year bill 4.51%)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year Treasury bills (4.5%) or larger term deposits (median maximum 6.2%) through a bank, rounded down because the tax on interest is unconfirmed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres, Mali auction of 28 October 2026 (3-year 7.67%, 5-year 7.58%)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: 3-5 year Treasury bonds at about 7.6%, less a possible tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CIMA (the regional insurance regulator) and Mali's Treasury insurance division publish no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Temporary death cover is sold under the CIMA code, but no published premium rates per 1,000 FCFA of cover by age were found from a public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Mali was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.4723,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Mali",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ML",
+      "asOf": "2023-12-31",
+      "note": "47.2% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026; inflation assumption 2.5%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No national medical CPI series was read; private medical costs usually rise faster than general prices, so 1.5 points above the 2.5% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026; inflation assumption 2.5%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No national education CPI series was read; private school fees usually rise faster than general prices, so 2 points above the 2.5% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 60.675,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Mali",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ML",
+      "asOf": "2024-12-31",
+      "note": "60.7 years in 2024 (men 59.3, women 62.2); UN WPP 2024 gives 61.1 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.8,
+            "men": 15.2,
+            "women": 16.3
+          },
+          {
+            "age": 65,
+            "total": 12.4,
+            "men": 11.9,
+            "women": 12.8
+          },
+          {
+            "age": 70,
+            "total": 9.3,
+            "men": 9.0,
+            "women": 9.6
+          },
+          {
+            "age": 80,
+            "total": 4.8,
+            "men": 4.6,
+            "women": 4.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/mali/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 21.94
+          },
+          {
+            "year": 2040,
+            "value": 21.28
+          },
+          {
+            "year": 2065,
+            "value": 14.08
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/mali/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.56 (2025, World Bank), 4.7 (2040) and 7.1 (2065, populationpyramid.net/mali/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 58,
+      "status": "sourced",
+      "sourceName": "WageIndicator, Mali social security (Social Security Code 1999 art. 142-162; Labour Code art. 60; Law 2019-025)",
+      "sourceUrl": "https://wageindicator.org/fr-ml/travail-au-mali/droit-du-travail/securite-sociale/",
+      "asOf": "2026-03-30",
+      "note": "Secondary source (INPS site unreachable): old-age pension at 58 with at least 13 years of contributions, early from 53; a woman's age is reduced one year per child. Law 2019-025 lets category A staff work on to 62 and B-D to 60 by agreement. No newer rule for people born after 1975 was found."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "Caisse Malienne de Sécurité Sociale (CMSS), civil servants' pension",
+      "sourceUrl": "https://cmss.ml/fonctionnaire/",
+      "asOf": "2026-10-31",
+      "note": "Pension (liquidation) age by grade: 58 for category C, 61 for B1, 62 for B2 and 65 for A, after 15-40 years of contributions; 62 (B2, the middle grade) is used."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Mali)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at about 3.5%, less a possible tax on interest."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres, Mali auction of 28 October 2026 (364-day bill 4.51%)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the 1-year Treasury bill yield (4.51%) to allow for a possible tax; not above the safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres, Mali auction of 28 October 2026 (3-year bond 7.67%)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in larger term deposits or short Treasury bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Mali)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Mali auction results; equity base 7.5%; gold base 4.5%",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or Treasury bonds, regional equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Mali auction results; equity high 12%",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension for Mali was found; the INPS 'allocation de vieillesse' (52% of the minimum wage from 53 with at least 6 years of insurance) is contributory, not a social pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 6,
+        "daysPerYearAfter": 7.5,
+        "afterYears": 10,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "WageIndicator, Mali notice and severance (Labour Code 1992, Law 92-020, articles 53-55)",
+      "sourceUrl": "https://wageindicator.org/fr-ml/travail-au-mali/droit-du-travail/contrats-et-licenciements/preavis-et-indemnite-de-depart/",
+      "asOf": "2026-03-30",
+      "note": "Secondary source. On retirement the worker gets a retirement indemnity on the severance basis: average monthly pay of the last 12 months x 20% per year for years 1-5, 25% for years 6-10 and 30% beyond 10 (6, 7.5 and 9 days a year). Approximated as 6 days a year, 7.5 for all years once service exceeds 10, which is close to the law at 11-20 years."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "pensionFromAge": 58,
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "WageIndicator, Mali social security (Social Security Code 1999, articles 142-162)",
+      "sourceUrl": "https://wageindicator.org/fr-ml/travail-au-mali/droit-du-travail/securite-sociale/",
+      "asOf": "2026-03-30",
+      "note": "Compulsory INPS pension for private employees from 58 with at least 13 years of contributions: 26% of average pay over the last 8 years plus 2% per year beyond 10 years, up to 80%; paid quarterly. No automatic indexation rule was found, so inflationLinked is false. Secondary source; the INPS site was unreachable."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (DAT)",
+      "note": "Banks declare minimum and maximum term-deposit rates to the BCEAO twice a year.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (DAT), 1 year",
+      "note": "Banks declare minimum and maximum term-deposit rates to the BCEAO twice a year.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Épargne contractuelle",
+      "localNameEn": "Contractual savings plan",
+      "note": "Monthly savings plans (housing or project savings) offered by banks.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Mali's Treasury issued only 6-month and 12-month bills (bons assimilables du Trésor) on the regional market in 2026.",
+      "sourceUrl": "https://www.umoatitres.org/fr/pays/mali/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligations assimilables du Trésor",
+      "localNameEn": "Treasury bonds (OAT)",
+      "note": "Auctioned every two weeks by UMOA-Titres in 3 and 5-year lines; individuals buy through banks or licensed brokers (SGI).",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-mali-du-28-10-2026/"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No bond longer than 7 years was auctioned in 2026.",
+      "sourceUrl": "https://www.umoatitres.org/fr/pays/mali/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "OPCVM (FCP, SICAV)",
+      "localNameEn": "Collective investment funds",
+      "note": "Supervised by the regional financial market authority (AMF-UMOA); equity funds invest on the regional exchange (BRVM)."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Sanu",
+      "localNameEn": "Gold",
+      "note": "Mali is a major gold producer; gold is mainly bought as jewellery, bars and coins are uncommon for savers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque Centrale des États de l'Afrique de l'Ouest (BCEAO)",
+      "url": "https://www.bceao.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Commission Régionale de Contrôle des Assurances (CIMA)",
+      "url": "https://cima-afrique.org/",
+      "note": "Regional insurance regulator for the CIMA member states; national supervision sits with the Treasury in the Ministry of Economy and Finance."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Institut National de Prévoyance Sociale (INPS), old-age pension",
+      "url": "https://www.inps.ml/",
+      "note": "Private-sector pension fund; its site did not respond during research (31 October 2026). Civil servants are covered by the Caisse Malienne de Sécurité Sociale (https://cmss.ml/fonctionnaire/)."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Caisse Nationale d'Assurance Maladie (CANAM), compulsory health insurance (AMO)",
+      "url": "https://www.canam.ml/index.php/accueil/amo"
+    },
+    "depositInsurance": {
+      "name": "Fonds de Garantie des Dépôts et de Résolution dans l'UMOA (FGDR-UMOA)",
+      "url": "https://www.fgd-umoa.org/a-propos/missions/"
+    },
+    "statistics": {
+      "name": "Institut National de la Statistique (INSTAT)",
+      "url": "https://www.instat-mali.org/fr"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

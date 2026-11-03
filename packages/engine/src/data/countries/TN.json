@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 1,
+  "code": "TN",
+  "iso3": "TUN",
+  "nameEn": "Tunisia",
+  "nameNative": "تونس",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "aeb",
+    "fr"
+  ],
+  "currency": {
+    "code": "TND",
+    "symbol": "DT",
+    "decimals": 3,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2.9907,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/TND exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/currency",
+      "asOf": "2026-10-30",
+      "note": "2.99 dinars per US dollar on 30 October 2026; secondary source because the Banque Centrale de Tunisie site returned server errors. World Bank 2025 average 3.00."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.056,
+      "status": "sourced",
+      "sourceName": "Institut National de la Statistique, consumer price index press release, September 2026",
+      "sourceUrl": "https://www.ins.tn/statistiques/90",
+      "asOf": "2026-09-30",
+      "note": "5.6% year on year in September 2026 (INS release of 5 October 2026); health 3.3%, education 5.5%. World Bank 2025 average 5.2%."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "INS CPI 5.6% (September 2026); World Bank CPI inflation 5.2% (2025); about 7% average 2021 to 2025",
+      "sourceUrl": "https://www.ins.tn/statistiques/90",
+      "asOf": "2026-10-31",
+      "note": "The central bank has no numeric target and inflation averaged about 7% over five years before easing to 5 to 6%, so 6% is a rounded middle value."
+    },
+    "policy_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Banque Centrale de Tunisie key rate, board meeting of 29 July 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/interest-rate",
+      "asOf": "2026-07-29",
+      "note": "Held at 7.00% on 29 July 2026; secondary source because the Banque Centrale de Tunisie site returned server errors."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Savings accounts pay at least the central bank's savings remuneration rate (TRE), but its current level could not be read: the Banque Centrale de Tunisie site returned server errors and web search was unavailable."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published industry-wide 3-month term deposit rate could be read; the Banque Centrale de Tunisie statistics pages returned server errors."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published industry-wide 1-year term deposit rate could be read; the Banque Centrale de Tunisie statistics pages returned server errors."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or published rate was found; housing savings contracts are the closest product."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0863,
+      "status": "sourced",
+      "sourceName": "World Bank deposit interest rate, Tunisia, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/deposit-interest-rate",
+      "asOf": "2024-12-31",
+      "note": "8.63%, latest World Bank value shown (series to 2024); older than 2025 and above the 7% policy rate of 2026, so likely higher than today's average."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The state periodically issues national bond loans open to individuals, but the rate of a current issue could not be read from the Ministry of Finance or the central bank."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current short-term treasury bill (BTCT) auction yield could be read; the Banque Centrale de Tunisie site returned server errors and Trading Economics shows no figure."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year treasury bond (BTA) yield could be read from an official or secondary source."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 10-year treasury bond (BTA) yield could be read; Trading Economics shows no Tunisia bond yield."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Tunisia, withholding taxes (last reviewed 29 June 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/tunisia/corporate/withholding-taxes",
+      "asOf": "2026-06-29",
+      "note": "20% withholding on interest, except interest on deposits in foreign currency or convertible dinars (exempt). Part of savings-account interest may be deductible under domestic law; not confirmed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax on national bond loan interest for individuals could not be confirmed; ordinary interest bears 20% withholding (PwC Worldwide Tax Summaries)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Tunisia has a deposit guarantee fund (Fonds de Garantie des Dépôts Bancaires), but its cover per depositor could not be read: the fund's site did not resolve and web search was unavailable."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Lending rates are capped by the central bank's usury rate (taux effectif global maximum), but the current figure could not be read from the Banque Centrale de Tunisie."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "TUNINDEX 18,623 on 30 October 2026, 14% below its July 2026 peak (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: equities earn about the after-tax deposit rate after the 2025-2026 rally cools."
+    },
+    "equity_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "TUNINDEX 18,623 on 30 October 2026, up 48% in a year (Trading Economics); after-tax safe rate about 6%",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: 4 points over the roughly 5.5% after-tax deposit rate, the cap, as the index has a strong 10-year record but a small, illiquid market."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "TUNINDEX record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: close to the index's price growth since 2016 (about 5,500 to 18,600 points)."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "USD/TND 2.99 on 30 October 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a stable dinar."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "USD/TND 2.99 (October 2026); inflation assumption 6%; long-run dollar gold trend about 4%",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/currency",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4% dollar gold trend plus about 2% a year of dinar depreciation, a little below the 2016-2026 pace."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "USD/TND history (World Bank PA.NUS.FCRF); dollar gold trend",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and faster dinar depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Policy rate 7% (July 2026); 20% withholding on interest (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with further policy cuts and savings balances earn less than term deposits."
+    },
+    "fixed_income_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Policy rate 7% (July 2026); 20% withholding on interest (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits near the 7% policy rate, less 20% withholding, rounded down."
+    },
+    "fixed_income_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Policy rate 7%; 20% withholding on interest (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: longer treasury bonds or national bond loans at about 9% before tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found in the Comité Général des Assurances statistics or annual report summaries."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (assurance temporaire décès) is sold, often with loans, but no published premium rates per TND 1,000 by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from the regulator or another public source."
+    },
+    "oop_health_share": {
+      "value": 0.379,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Tunisia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TN",
+      "asOf": "2023-12-31",
+      "note": "37.9% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "INS health price index 3.3% year on year (September 2026); inflation assumption 6%",
+      "sourceUrl": "https://www.ins.tn/statistiques/90",
+      "asOf": "2026-10-31",
+      "note": "Regulated public prices keep measured health inflation low, but private clinic costs follow general prices, so health goals use the general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "INS education price index 5.5% year on year (September 2026)",
+      "sourceUrl": "https://www.ins.tn/statistiques/90",
+      "asOf": "2026-10-31",
+      "note": "Private school and university fees have tracked or exceeded general inflation, so education goals are planned half a point above it."
+    },
+    "life_expectancy": {
+      "value": 76.711,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Tunisia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TN",
+      "asOf": "2024-12-31",
+      "note": "76.7 years in 2024 (men 74.1, women 79.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.8,
+            "men": 19.1,
+            "women": 22.4
+          },
+          {
+            "age": 65,
+            "total": 16.7,
+            "men": 15.3,
+            "women": 18.1
+          },
+          {
+            "age": 70,
+            "total": 13,
+            "men": 11.9,
+            "women": 14.1
+          },
+          {
+            "age": 80,
+            "total": 7.2,
+            "men": 6.6,
+            "women": 7.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/tunisia/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.7
+          },
+          {
+            "year": 2040,
+            "value": 4.2
+          },
+          {
+            "year": 2065,
+            "value": 2.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/tunisia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 14.9 (2025, World Bank), 23.9 (2040) and 42.6 (2065, populationpyramid.net/tunisia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age for private-sector workers insured with the CNSS (60, with reforms raising ages since 2019) could not be confirmed from an official source; the CNSS site failed certificate checks and the US SSA country page refused requests."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Retirement age (table lists Tunisia 62–65 from 2019)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Secondary source; the range matches the 2019 public-sector reform (retirement at 62, with an option to work to 65). The CNRPS site refused connections."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Policy rate 7%; 20% withholding on interest (PwC)",
+      "sourceUrl": "https://taxsummaries.pwc.com/tunisia/corporate/withholding-taxes",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with further policy cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Policy rate 7%; 20% withholding on interest (PwC)",
+      "sourceUrl": "https://taxsummaries.pwc.com/tunisia/corporate/withholding-taxes",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits near 7% less 20% withholding, so not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Policy rate 7%; 20% withholding on interest (PwC)",
+      "sourceUrl": "https://taxsummaries.pwc.com/tunisia/corporate/withholding-taxes",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of treasury bonds and national bond loans at about 8 to 9% before tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Fixed income low 4.5%; equity low 6%",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: a balanced mix earning about the after-tax deposit rate."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Fixed income base 5.5%; equity base 9.5%; gold base 6%",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, Tunisian equities and gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Equity high 14%; gold high 12%",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No age-based social pension was confirmed; poor households, including elderly people, receive the means-tested family cash transfer of the Amen social programme, whose current amount could not be read (the Ministry of Social Affairs site failed certificate checks)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No age-based non-contributory pension was confirmed; the means-tested Amen social cash transfer targets poor households, not an age group."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees was confirmed; the Labour Code provides severance on dismissal, and retirement bonuses depend on sector collective agreements, which could not be checked."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CNSS (private sector) and CNRPS (public sector) run compulsory pensions (employee CNSS contribution 9.68% from 2025 per PwC), but the pension age schedule and indexation rule could not be read from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب ادخار",
+      "localNameEn": "Savings account (compte spécial d'épargne)",
+      "note": "Pays at least the central bank's savings remuneration rate (TRE)."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "إيداع لأجل (3 أشهر)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "إيداع لأجل (سنة)",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit was confirmed; housing savings contracts (épargne logement) with monthly payments are the closest product, and their interest is tax-exempt.",
+      "sourceUrl": "https://taxsummaries.pwc.com/tunisia/individual/deductions"
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "القرض الرقاعي الوطني",
+      "localNameEn": "National bond loan (emprunt obligataire national)",
+      "note": "The state has issued national bond loans open to individuals in several tranches, with 5 to 10 year categories; availability depends on a current issue."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "رقاع الخزينة قصيرة المدى",
+      "localNameEn": "Short-term treasury bills (BTCT)",
+      "note": "Sold at central bank auctions; individuals usually buy through banks or brokers."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "رقاع الخزينة القابلة للتنظير",
+      "localNameEn": "Treasury bonds (BTA)"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "رقاع الخزينة القابلة للتنظير (10 سنوات)",
+      "localNameEn": "Treasury bonds (BTA, 10 years)"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "مؤسسات التوظيف الجماعي في الأوراق المالية",
+      "localNameEn": "Collective investment funds (OPCVM: SICAV and FCP)",
+      "note": "Supervised by the Conseil du Marché Financier.",
+      "sourceUrl": "https://www.cmf.tn/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold is mostly bought as jewellery; the trade in precious metals is regulated."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque Centrale de Tunisie",
+      "url": "https://www.bct.gov.tn/"
+    },
+    "insuranceRegulator": {
+      "name": "Comité Général des Assurances (CGA)",
+      "url": "https://www.cga.gov.tn/"
+    },
+    "insuranceComplaints": {
+      "name": "Comité Général des Assurances, petitions and complaints",
+      "url": "https://www.cga.gov.tn/index.php?id=83&L=1"
+    },
+    "pensionScheme": {
+      "name": "Caisse Nationale de Sécurité Sociale (CNSS), private sector pensions",
+      "url": "https://www.cnss.tn/",
+      "note": "Public-sector employees are covered by the CNRPS (https://www.cnrps.nat.tn/)."
+    },
+    "oldAgeAllowance": {
+      "name": "Amen social programme (means-tested cash transfers), Ministry of Social Affairs",
+      "url": "https://www.social.gov.tn/",
+      "note": "Not an age-based pension; targets poor households."
+    },
+    "publicHealthCover": {
+      "name": "Caisse Nationale d'Assurance Maladie (CNAM)",
+      "url": "https://www.cnam.nat.tn/"
+    },
+    "depositInsurance": {
+      "name": "Fonds de Garantie des Dépôts Bancaires (FGDB), set up under the banking law of 2016",
+      "url": "https://www.bct.gov.tn/",
+      "note": "The fund's own site could not be reached; linked to the central bank."
+    },
+    "statistics": {
+      "name": "Institut National de la Statistique (INS)",
+      "url": "https://www.ins.tn/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

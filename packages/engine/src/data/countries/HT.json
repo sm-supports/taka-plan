@@ -1,0 +1,532 @@
+{
+  "schemaVersion": 1,
+  "code": "HT",
+  "iso3": "HTI",
+  "nameEn": "Haiti",
+  "nameNative": "Ayiti",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "ht",
+    "fr"
+  ],
+  "currency": {
+    "code": "HTG",
+    "symbol": "G",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 130.7348,
+      "status": "sourced",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux du jour (taux de référence)",
+      "sourceUrl": "https://www.brh.ht/taux-du-jour/",
+      "asOf": "2026-10-31",
+      "note": "Reference rate; bank buying 130.4580 and selling 131.6921 gourdes on the same day. The CLDR file lists USD for Haiti; the national currency is the gourde (HTG)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.164,
+      "status": "sourced",
+      "sourceName": "BRH: Évolution de l'indice des prix à la consommation (IHSI data)",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/ipc.pdf",
+      "asOf": "2026-09-30",
+      "note": "CPI (base 2017-2018=100) 647.6 in September 2026, up 16.4% year on year; inflation has fallen from 31.9% in September 2025."
+    },
+    "inflation_projection": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "BRH CPI series (IHSI): 16.4% in Sept 2026; Sept-on-Sept 38.7% (2022), 31.8% (2023), 27.9% (2024), 31.9% (2025)",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/ipc.pdf",
+      "asOf": "2026-10-31",
+      "note": "The BRH publishes no inflation target and the 5-year average is near 29%, but inflation has been falling steadily through 2026, so we plan with a rounded 15%."
+    },
+    "policy_rate": {
+      "value": 0.115,
+      "status": "sourced",
+      "sourceName": "Banque de la République d'Haïti (BRH): Bons BRH, nominal rates by auction",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tableaubons.pdf",
+      "asOf": "2026-10-07",
+      "note": "The BRH announces no single policy rate; its 91-day BRH bill (Bon BRH) rate, which BRH describes as the reference for banks' treasury operations, has stayed at 11.5% (7-day 6%, 28-day 8%) through the auction of 7 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0052,
+      "status": "sourced",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2025-09-28",
+      "note": "Average gourde savings deposit rate (min 0.03%, max 1.00%) for the week of 28 September 2025, the latest in the series read; older than 2025-10."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BRH gourde rate series gives one average for all term deposits (3.75%, range 1.5-6.0%, week of 28 September 2025) without a breakdown by maturity; no 3-month figure found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BRH gourde rate series gives one average for all term deposits (3.75%, range 1.5-6.0%, week of 28 September 2025) without a breakdown by maturity; no 1-year figure found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official series or public product rate for monthly recurring deposits was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0428,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HT",
+      "asOf": "2025-12-31",
+      "note": "Average deposit rate from IMF IFS via the World Bank."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold to individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No treasury bill yield for retail investors was found; the 91-day BRH bill (11.5%) is a central bank instrument sold to banks."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PwC Worldwide Tax Summaries does not cover Haiti and no official tax-authority source on the tax on bank interest could be reached."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found, so no tax rate applies to report."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or coverage amount was found; BRH pages read do not mention one."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; BRH notes interest rate ceilings were abolished in 1989."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local stock exchange; global equity index in gourde terms",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global equities and a stable gourde."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Global equity index in gourde terms; BRH average gourde term deposit rate 3.75% (Sept 2025)",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Haiti has no stock exchange, so we use a global equity index in gourde terms, capped at the average term-deposit rate (3.75%) plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Global equity index in gourde terms",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities plus some gourde depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price; BRH reference rate",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable gourde."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price; BRH reference rate",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4-5% a year plus 3-4% expected gourde depreciation, as the gourde has been stable near 131 per dollar since 2023 but fell sharply before."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price; BRH reference rate",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and renewed gourde depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case near the bottom of the term-deposit range (1.5%)."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case just below the 3.75% average gourde term-deposit rate, since the tax on interest is unknown."
+    },
+    "fixed_income_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case near the top of the term-deposit range (6%)."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio from an insurance supervisor was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium rates by age from a regulator or other permitted source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public premium table for private health insurance by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.524,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=HT",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "BRH CPI series (IHSI)",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/ipc.pdf",
+      "asOf": "2026-10-31",
+      "note": "No health price index was read; we plan with 1 point above the 15% headline assumption, as private care tends to rise faster."
+    },
+    "goal_inflation_education": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "BRH CPI series (IHSI)",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/ipc.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education price index was read; we plan with the 15% headline assumption."
+    },
+    "life_expectancy": {
+      "value": 65.119,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=HT",
+      "asOf": "2024-12-31",
+      "note": "Men 61.9, women 68.5 (2024). UN WPP 2024 via populationpyramid.net gives 65.5 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.5,
+            "men": 15.2,
+            "women": 17.7
+          },
+          {
+            "age": 65,
+            "total": 13.2,
+            "men": 12.1,
+            "women": 14.1
+          },
+          {
+            "age": 70,
+            "total": 10.1,
+            "men": 9.4,
+            "women": 10.8
+          },
+          {
+            "age": 80,
+            "total": 5.6,
+            "men": 5.2,
+            "women": 5.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/haiti/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium-variant projections for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.4
+          },
+          {
+            "year": 2040,
+            "value": 10.4
+          },
+          {
+            "year": 2065,
+            "value": 5.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/haiti/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 7.44 (2025, World Bank), 9.6 (2040) and 17.9 (2065, populationpyramid.net/haiti/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Office National d'Assurance-Vieillesse (ONA) runs the private-sector pension, but its site and the international social-security databases (SSA, ISSA, ILO) could not be read, so the pension age is not confirmed."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable official source on the civil-service retirement age was found."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits near the bottom of the range."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 3.75% average gourde term-deposit rate, as the tax on interest is unknown."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with better term-deposit rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BRH deposit rates; global equity index in gourde terms",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a mix of gourde deposits, gold and global equities."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "BRH deposit rates; global equity index in gourde terms",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half global equities at 7.5% and half deposits at 3.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BRH deposit rates; global equity index in gourde terms",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equities and gold."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official source on a non-contributory old-age pension, or its amount, could be found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official source on a non-contributory old-age pension could be found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable source on a statutory gratuity or end-of-service payment under the Haitian Labour Code was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "ONA (Office National d'Assurance-Vieillesse) runs the contributory pension for private-sector workers, but its rules could not be read from an official or permitted secondary source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Kont epay",
+      "localNameEn": "Savings account",
+      "note": "Gourde and US dollar savings accounts are offered; average gourde savings rate about 0.5%.",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depo a tèm",
+      "localNameEn": "Term deposit",
+      "note": "BRH publishes one average rate for all term deposits, not by maturity.",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depo a tèm",
+      "localNameEn": "Term deposit",
+      "note": "BRH publishes one average rate for all term deposits, not by maturity.",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond is sold to individuals."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "The 91-day BRH bill is a central bank instrument sold to banks; no retail treasury bill programme was found.",
+      "sourceUrl": "https://www.brh.ht/wp-content/uploads/tableaubons.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government bond for retail investors was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No government bond for retail investors was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "Haiti has no stock exchange and no retail equity fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Lò",
+      "localNameEn": "Gold",
+      "note": "Gold jewellery and coins can be bought from jewellers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque de la République d'Haïti (BRH)",
+      "url": "https://www.brh.ht/"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Office National d'Assurance-Vieillesse (ONA)",
+      "url": "https://ona.ht/",
+      "note": "Contributory old-age insurance for private-sector employees."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministère de la Santé Publique et de la Population (MSPP)",
+      "url": "https://www.mspp.gouv.ht/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Institut Haïtien de Statistique et d'Informatique (IHSI)",
+      "url": "https://www.ihsi.ht/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

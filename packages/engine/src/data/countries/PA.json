@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 1,
+  "code": "PA",
+  "iso3": "PAN",
+  "nameEn": "Panama",
+  "nameNative": "Panamá",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "en",
+    "gym"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=PA",
+      "asOf": "2025-12-31",
+      "note": "The US dollar circulates as legal tender; the balboa (PAB) is fixed at par and issued only as coins."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.028,
+      "status": "sourced",
+      "sourceName": "INEC Panamá, Índice de Precios al Consumidor, as reported by Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/panama/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year CPI inflation 2.8% in September 2026 (2.2% in August), published by INEC on 14 October 2026; the INEC site shows the same 2.8%. 2025 annual average -0.1%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "INEC CPI: -0.1% in 2025, 2.8% in September 2026; US dollar is the currency (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/panama/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Panama uses the US dollar and has no central bank, so its inflation tracks US inflation over time; planning uses 2%, close to the long-run average."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Panama has no central bank or monetary policy rate; the US dollar is legal tender. The Superintendencia de Bancos publishes interbank rates (3 months 3.83%, week of 17-23 October 2026) for information only."
+    },
+    "savings_account_rate": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "Superintendencia de Bancos de Panamá, Tarifario de tasas nominales, cuentas de ahorro básicas, septiembre 2026",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Median nominal rate on basic savings accounts across 29 banks in September 2026 (range 0.05%-2.5%); figures are informative and not binding on banks."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Superintendencia de Bancos tarifario reports term-deposit rates only as a single 'up to 1 year' figure per bank; no separate 3-month rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0375,
+      "status": "sourced",
+      "sourceName": "Superintendencia de Bancos de Panamá, Tarifario de tasas nominales, depósitos a plazo fijo con vencimiento hasta 1 año, septiembre 2026",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Median nominal rate on fixed-term deposits of up to 1 year across 29 banks in September 2026 (range 1.25%-5.25%, mean 3.66%)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published average rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No weighted average deposit rate for Panama was found; the World Bank's last FR.INR.DPST value is from 2006. Posted rates are in the Superintendencia de Bancos tarifario (see the savings and 1-year slots)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found; the Ministry of Economy and Finance issues Letras and Notas del Tesoro to the market."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bills (Letras del Tesoro) are generally 12-month instruments sold at periodic auctions (MEF, October 2026); no 3-month yield was found, and the MEF yield-curve page did not show figures."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The MEF public debt yield-curve page could not be read (figures load dynamically), and no other source for a 5-year yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No reachable source for the 10-year government bond yield was found; the MEF yield-curve page did not show figures."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Panama, corporate income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/panama/corporate/income-determination",
+      "asOf": "2026-08-04",
+      "note": "Interest on bank accounts in Panama and earnings on government securities are exempt income, as the page notes for the dividend rule (page reviewed 4 August 2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Panama, corporate income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/panama/corporate/income-determination",
+      "asOf": "2026-08-04",
+      "note": "No separate savings certificate exists; interest and earnings on securities issued by the government are exempt income."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme was found: the Superintendencia de Bancos consumer and FAQ pages do not mention deposit insurance or a guarantee, but no source confirming that none exists could be read."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1958,
+      "status": "sourced",
+      "sourceName": "Superintendencia de Bancos de Panamá, Tarifario de tasas nominales, tarjetas de crédito, septiembre 2026",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Median nominal annual credit card rate across 24 banks in September 2026 (range 9%-26.5%); a typical rate, not a legal cap."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Few shares trade locally; global equities in US dollars; 1-year deposit 3.75% tax-free (SBP tarifario)",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares disappoint and return less than tax-free deposits."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Global equity index in US dollars; tax-free 1-year deposit 3.75% (SBP tarifario)",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Panama's exchange lists few shares, so equity is a global index fund in US dollars (the local currency): about 3.25 points over tax-free one-year deposits."
+    },
+    "equity_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Global equity long-run record in US dollars",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: global shares repeat their long-run record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 3% lower in a year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stays flat in dollars."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Gold USD price trend (Trading Economics); US dollar is the currency",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold tracks long-run dollar inflation plus a little."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold resumes its 2020s uptrend."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Savings accounts 1%, 1-year deposits 3.75% (SBP tarifario), interest tax-exempt",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix of savings accounts and short deposits after rates fall."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0375,
+      "status": "assumption",
+      "sourceName": "1-year fixed deposit median 3.75%, tax-exempt (SBP tarifario; PwC)",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: one-year fixed deposits, with no tax on the interest."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Top 1-year deposit rates 5-5.25% (SBP tarifario); government notes",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: the better-paying deposits or medium-term government notes."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Superintendencia de Seguros y Reaseguros publishes market statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Panama, but no regulator or other non-company source with indicative premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.4046,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PA",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 40.5% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "INEC CPI (Trading Economics): 2.8% in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/panama/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Medical costs usually rise faster than general prices; planning uses 3.5%, 1.5 points above projected inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "INEC CPI (Trading Economics): 2.8% in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/panama/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "School fees usually rise a little faster than general prices; planning uses 3%."
+    },
+    "life_expectancy": {
+      "value": 79.775,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PA",
+      "asOf": "2024-12-31",
+      "note": "Men 76.9, women 82.7 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/panama",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.6,
+            "men": 22.6,
+            "women": 26.4
+          },
+          {
+            "age": 65,
+            "total": 20.4,
+            "men": 18.6,
+            "women": 22.1
+          },
+          {
+            "age": 70,
+            "total": 16.5,
+            "men": 14.9,
+            "women": 18.0
+          },
+          {
+            "age": 80,
+            "total": 9.7,
+            "men": 8.5,
+            "women": 10.6
+          }
+        ]
+      },
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/panama/2065/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.82
+          },
+          {
+            "year": 2040,
+            "value": 4.27
+          },
+          {
+            "year": 2065,
+            "value": 2.62
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 14.7 in 2025 (World Bank), 23.4 in 2040 and 38.2 in 2065 (UN WPP medium variant)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Caja de Seguro Social old-age pension ages (after the 2025 reform, Ley 462) could not be confirmed: the CSS site refused access and the law text could not be reached."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public employees are covered by the Caja de Seguro Social; the retirement age could not be confirmed from an official source that could be reached."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Savings 1%, 1-year deposits 3.75% (SBP tarifario), tax-exempt",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with US rates."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "1-year fixed deposit median 3.75%, tax-exempt (SBP tarifario)",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly one-year deposits, kept just below the tax-free one-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Top 1-year deposit rates 5-5.25% (SBP tarifario); government notes",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: better-paying deposits and medium-term government notes."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Deposits 2-3.75%; equity low case 2%",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case for a mix of deposits and global equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Fixed income base 3.75%; equity base 7%",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half deposits and half global equity in US dollars."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Equity high 9.5%; fixed income high 5%",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: equities do well and deposit rates stay high."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The non-contributory '120 a los 65' programme (Ministerio de Desarrollo Social) pays older people without a pension, but its page was behind a verification challenge and the current amount could not be confirmed."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The eligibility rules of the '120 a los 65' programme could not be read (MIDES page behind a verification challenge)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provides a seniority premium (prima de antigüedad) on the end of an indefinite contract, but the Ministry of Labour site refused access, so the days-per-year rule could not be confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Caja de Seguro Social pension rules after the 2025 reform could not be documented from an official source that could be reached."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo a 3 meses",
+      "localNameEn": "3-month fixed-term deposit",
+      "note": "Short fixed deposits are offered; the regulator's rate table groups all terms up to 1 year."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo a 1 año",
+      "localNameEn": "1-year fixed-term deposit",
+      "sourceUrl": "https://www.superbancos.gob.pa/documentos/financiera_y_estadistica/tarifario/2026/Septiembre.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Monthly recurring deposit",
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "3-month treasury bill",
+      "note": "Letras del Tesoro are generally 12-month bills sold at periodic auctions (MEF, October 2026); a regular 3-month bill was not found.",
+      "sourceUrl": "https://www.mef.gob.pa/2026/10/moodys-asigna-calificacion-de-riesgo-a-los-programas-de-letras-y-notas-del-tesoro-de-panama/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Notas del Tesoro",
+      "localNameEn": "Treasury notes (medium term)",
+      "note": "Medium-term notes are sold at auction with term and coupon set each time; yields could not be sourced.",
+      "sourceUrl": "https://www.mef.gob.pa/2026/10/moodys-asigna-calificacion-de-riesgo-a-los-programas-de-letras-y-notas-del-tesoro-de-panama/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bonos de la República de Panamá",
+      "localNameEn": "Republic of Panama bonds",
+      "note": "Long-term dollar bonds trade through securities brokers; yields could not be sourced."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondos de inversión",
+      "localNameEn": "Investment funds",
+      "note": "Funds are regulated by the Superintendencia del Mercado de Valores; global equity funds and ETFs are bought through securities brokers."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro (lingotes y monedas)",
+      "localNameEn": "Gold bars and coins"
+    }
+  },
+  "institutions": {
+    "centralBank": null,
+    "insuranceRegulator": {
+      "name": "Superintendencia de Seguros y Reaseguros de Panamá",
+      "url": "https://www.superseguros.gob.pa/"
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia de Seguros y Reaseguros de Panamá, consumer complaints",
+      "url": "https://www.superseguros.gob.pa/",
+      "note": "A dedicated complaints page could not be confirmed; complaints go to the Superintendencia."
+    },
+    "pensionScheme": {
+      "name": "Caja de Seguro Social (CSS), Invalidez, Vejez y Muerte",
+      "url": "https://www.css.gob.pa/"
+    },
+    "oldAgeAllowance": {
+      "name": "Programa Especial de Transferencia Económica a los Adultos Mayores (120 a los 65), MIDES",
+      "url": "https://www.mides.gob.pa/programas/120-a-los-65/"
+    },
+    "publicHealthCover": {
+      "name": "Ministerio de Salud (MINSA) and Caja de Seguro Social public health services",
+      "url": "https://www.minsa.gob.pa/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística y Censo (INEC), Contraloría General",
+      "url": "https://www.inec.gob.pa/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

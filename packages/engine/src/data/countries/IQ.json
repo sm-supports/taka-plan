@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 1,
+  "code": "IQ",
+  "iso3": "IRQ",
+  "nameEn": "Iraq",
+  "nameNative": "العراق",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "ckb",
+    "en",
+    "az"
+  ],
+  "currency": {
+    "code": "IQD",
+    "symbol": "IQD",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1510,
+      "status": "sourced",
+      "sourceName": "Central Bank of Iraq, currency converter on the homepage",
+      "sourceUrl": "https://cbi.iq/",
+      "asOf": "2026-10-31",
+      "note": "1,510 dinars per US dollar shown by the Central Bank of Iraq (read 31 October 2026, undated on the page); Trading Economics quotes 1,516 on 30 October 2026. The World Bank 2025 average was 1,300 before the dinar's 2026 move."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.038,
+      "status": "sourced",
+      "sourceName": "Central Statistical Organization Iraq, inflation September 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/iraq/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "3.8% in September 2026 (3.3% in August); core 3.9%. Secondary source; the statistics office site was not read. World Bank 2025 average 0.3%."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Central Statistical Organization inflation 3.8% (September 2026); World Bank 2025 0.3%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Iraq publishes no numeric target; inflation has mostly run between 0% and 5% recently, and the dinar's move from about 1,300 to 1,510 per dollar adds import-price pressure, so a rounded 3.5% is used."
+    },
+    "policy_rate": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "Central Bank of Iraq policy rate, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "5.50% at the October 2026 reading, unchanged from the previous one; secondary source because the central bank homepage shows no policy rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current industry-wide savings account rate could be read from the Central Bank of Iraq."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current industry-wide 3-month fixed deposit rate could be read from the Central Bank of Iraq."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current industry-wide 1-year fixed deposit rate could be read from the Central Bank of Iraq."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recent average deposit rate was found; the World Bank series (FR.INR.DPST) stops at 4.78% in 2016, too old to use."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No continuously sold government savings certificate for individuals was confirmed; the Ministry of Finance has sold occasional public bond issues."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bills are auctioned to banks; no current 91-day yield could be read from the Central Bank of Iraq."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year government bond yield could be read."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PwC Worldwide Tax Summaries (Iraq, last reviewed 24 June 2026) treats interest arising from deposits held in Iraq as taxable income but gives no specific rate or exemption for resident individuals' bank interest."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was confirmed, and the tax on government bond income could not be read."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A deposit insurance arrangement under the Central Bank of Iraq is reported, but its cover per depositor could not be read from an official source."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%; small, illiquid Iraq Stock Exchange",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: the thinly traded local market returns little in dinars."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%; assumed after-tax deposit rate about 4%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2 points over the after-tax safe rate, below the 4-point cap, because the Iraq Stock Exchange is small with no strong 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%; inflation assumption 3.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: equities beat inflation by about 6 points a year."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq rate 1,510 dinars per US dollar (October 2026) against 1,300 in 2025 (World Bank)",
+      "sourceUrl": "https://cbi.iq/",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a stable dinar."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq exchange rate; long-run dollar gold trend about 4%",
+      "sourceUrl": "https://cbi.iq/",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4% dollar gold trend plus about 2% a year of dinar depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq exchange rate history (1,300 to 1,510 per dollar)",
+      "sourceUrl": "https://cbi.iq/",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and further devaluations like the 2026 one."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings rates well below the policy rate."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits a little below the policy rate, after any tax; bank rates were not published."
+    },
+    "fixed_income_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits and government bonds at about the policy rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio could be read from the Insurance Diwan."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance penetration is very low and no published term-life premium rates per 1,000 dinars of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from the regulator or another public source."
+    },
+    "oop_health_share": {
+      "value": 0.54,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Iraq",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=IQ",
+      "asOf": "2023-12-31",
+      "note": "54.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 3.5%; out-of-pocket share 54% (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/iraq/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Private clinics and imported medicines drive health costs, so health goals are planned 2.5 points above the general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 3.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Public education is free but private school and university fees rise faster than general prices, so 1.5 points above the general assumption."
+    },
+    "life_expectancy": {
+      "value": 72.424,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Iraq",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IQ",
+      "asOf": "2024-12-31",
+      "note": "72.4 years in 2024 (men 70.5, women 74.2); UN WPP 2024 gives 72.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.3,
+            "men": 17.1,
+            "women": 19.5
+          },
+          {
+            "age": 65,
+            "total": 14.7,
+            "men": 13.6,
+            "women": 15.6
+          },
+          {
+            "age": 70,
+            "total": 11.3,
+            "men": 10.5,
+            "women": 12.0
+          },
+          {
+            "age": 80,
+            "total": 6.1,
+            "men": 5.7,
+            "women": 6.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/iraq/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 17.5
+          },
+          {
+            "year": 2040,
+            "value": 11.2
+          },
+          {
+            "year": 2065,
+            "value": 6.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/iraq/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 5.70 (2025, World Bank), 8.9 (2040) and 16.2 (2065, populationpyramid.net/iraq/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age for private-sector workers under the Social Security and Retirement Law for Workers (Law No. 18 of 2023) could not be read from an official source."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil-service retirement age under the Unified Retirement Law (No. 9 of 2014, as amended) is reported as 60 but could not be read from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings rates after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the assumed 4% after-tax term deposit rate, so not above the safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Iraq policy rate 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: long deposits and government bonds near the policy rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Fixed income low 2.5%; equity low 2%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Fixed income base 4%; equity base 6%; gold base 6%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, gold and some equity in a shallow market."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Equity high 10%; gold high 12%",
+      "sourceUrl": "https://tradingeconomics.com/iraq/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with gold."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Protection Network of the Ministry of Labour and Social Affairs pays means-tested cash support to poor households including older people, but the current monthly amount for an elderly person could not be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for social protection support to older people could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees could be confirmed from the Labour Law (No. 37 of 2015)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private-sector workers are covered by the social security fund under the Ministry of Labour and Social Affairs (employee 5%, employer 12% of pay per Trading Economics), but its pension age and indexation rules could not be read from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب التوفير",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة ثابتة (3 أشهر)",
+      "localNameEn": "Fixed deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة ثابتة (سنة)",
+      "localNameEn": "Fixed deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No continuously sold government savings certificate for individuals was confirmed."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "حوالات الخزينة",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned mainly to banks; access for individuals is limited."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bonds",
+      "note": "Mainly held by banks; occasional public issues have been sold to individuals."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year government bond was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No diversified equity or index fund sold to retail investors was found; the Iraq Stock Exchange is supervised by the Iraq Securities Commission."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold is bought mostly as jewellery; investment bars and coins are also sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Iraq",
+      "url": "https://cbi.iq/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Diwan (Insurance Regulatory Authority), Ministry of Finance",
+      "url": "https://mof.gov.iq/"
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Social security for workers, Ministry of Labour and Social Affairs",
+      "url": "https://molsa.gov.iq/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Protection Network, Ministry of Labour and Social Affairs",
+      "url": "https://molsa.gov.iq/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (public hospitals and clinics)",
+      "url": "https://moh.gov.iq/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Central Statistical Organization",
+      "url": "https://cosit.gov.iq/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

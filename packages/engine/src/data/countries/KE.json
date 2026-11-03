@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "code": "KE",
+  "iso3": "KEN",
+  "nameEn": "Kenya",
+  "nameNative": "Kenya",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "sw",
+    "en",
+    "ki"
+  ],
+  "currency": {
+    "code": "KES",
+    "symbol": "KSh",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 129.95,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kenya mean rate, 30 October 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/kenya/currency",
+      "asOf": "2026-10-30",
+      "note": "CBK posted a mean rate of 129.95 shillings per dollar on 30 October 2026 (shown on CBK pages); World Bank 2025 average 129.30. CLDR gives 'KES' as symbol; 'KSh' is the local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.073,
+      "status": "sourced",
+      "sourceName": "Kenya National Bureau of Statistics (KNBS) CPI, October 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/kenya/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Secondary source (the KNBS site failed a TLS check). Annual inflation 7.3% in October 2026, up from 6.8% in September (CBK also shows 6.8% for September); food inflation 10.2%."
+    },
+    "inflation_projection": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Central Bank of Kenya inflation target (5% +/- 2.5 points); World Bank CPI inflation 2021-2025",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=KE",
+      "asOf": "2026-10-31",
+      "note": "The CBK targets 5% within a 2.5-point band and inflation averaged about 6% over 2021-2025 (4.1% in 2025), so 5.5% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.0875,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kenya, MPC press release: CBR retained at 8.75%",
+      "sourceUrl": "https://www.centralbank.go.ke/2026/10/07/mpc-retains-the-cbr-at-8-75-percent-3/",
+      "asOf": "2026-10-07",
+      "note": "The Monetary Policy Committee kept the Central Bank Rate at 8.75% on 7 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0353,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kenya, commercial banks' weighted average interest rates, savings, September 2026",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv",
+      "asOf": "2026-09-30",
+      "note": "Weighted average savings rate across commercial banks, 3.53% in September 2026 (3.54% in August)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBK headline table gives one weighted average deposit rate (6.94%, September 2026), not a 3-month rate; no official 3-month term-deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0694,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kenya, commercial banks' weighted average interest rates, deposit rate, September 2026",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv",
+      "asOf": "2026-09-30",
+      "note": "Weighted average deposit rate across maturities (not 1 year only), 6.94% in September 2026; rates fell from 11.2% in September 2024 as the CBR was cut."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found in CBK statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0694,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kenya, commercial banks' weighted average interest rates, deposit rate, September 2026",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv",
+      "asOf": "2026-09-30",
+      "note": "Weighted by each bank's share of deposits; World Bank FR.INR.DPST gives 11.98% for 2024, before the 2025-2026 rate cuts."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate is on sale; no current issue of the M-Akiba mobile retail bond was found. Individuals buy ordinary Treasury bills and bonds through the CBK DhowCSD platform."
+    },
+    "tbill_91d_rate": {
+      "value": 0.087498,
+      "status": "sourced",
+      "sourceName": "Central Bank of Kenya, Treasury bill auction results, issue 2706/091 (auction of 29 October 2026, value date 2 November 2026)",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/91_day_historical_treasury_bill_results/872459219_RESULTS%202706-091%202680-182%202635-364%20DATED%2002-11-2026.pdf",
+      "asOf": "2026-10-29",
+      "note": "Weighted average rate of accepted bids 8.7498% on the 91-day bill (182 days 8.8508%, 364 days 9.0288%)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year primary auction was held in 2026 (CBK Treasury bond page) and no published 5-year secondary-market yield from an official source was found."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1253,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Kenya 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/kenya/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "Secondary source: 12.53% on 30 October 2026 (11.13% low in March 2026). The CBK last auctioned a 10-year bond (FXD1/2022/010) on 13 July 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Kenya, withholding taxes (other interest, resident)",
+      "sourceUrl": "https://taxsummaries.pwc.com/kenya/corporate/withholding-taxes",
+      "asOf": "2026-07-17",
+      "note": "15% withholding on interest paid to residents, final tax for individuals; page last reviewed 17 July 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists. For reference, PwC lists 15% withholding on government bonds of 2 years or more and 10% on bonds of 10 years or more (infrastructure bonds are exempt under the Income Tax Act)."
+    },
+    "deposit_insurance_limit": {
+      "value": 500000,
+      "status": "sourced",
+      "sourceName": "Kenya Deposit Insurance Corporation, deposit insurance cover",
+      "sourceUrl": "https://kdic.go.ke/deposit-insurance",
+      "asOf": "2026-10-31",
+      "note": "KES 500,000 per depositor per member institution; the page does not state when this limit took effect."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Kenya's interest rate cap was repealed in 2019; no official industry figure for credit card rates was found (CBK average lending rate 14.40%, September 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Trading Economics, Nairobi Securities Exchange NSE 20 index history",
+      "sourceUrl": "https://tradingeconomics.com/kenya/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: the NSE 20 index stood near 4,100 in October 2026, close to its level a decade earlier, so a repeat of a flat-price decade with dividends gives about 5%."
+    },
+    "equity_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "CBK 364-day Treasury bill 9.03% (29 October 2026), 7.7% after 15% withholding",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/91_day_historical_treasury_bill_results/872459219_RESULTS%202706-091%202680-182%202635-364%20DATED%2002-11-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: held below the after-tax bill rate plus 4 points (11.7%) because the local index has a weak 10-year price record despite a 33% rise in the last year."
+    },
+    "equity_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Trading Economics, NSE 20 index (+33% over the year to October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/kenya/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a sustained re-rating like 2025-2026 plus dividend yields of 5-7%."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Trading Economics, USD/KES 129.95 (30 October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/kenya/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a broadly stable shilling, as in 2024-2026."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Trading Economics, USD/KES history; CBK inflation target 5%",
+      "sourceUrl": "https://tradingeconomics.com/kenya/currency",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend of about 4-5% a year plus shilling depreciation of about 2-3% a year, in line with the inflation gap to the US."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Trading Economics, USD/KES history (peak 163 in January 2024)",
+      "sourceUrl": "https://tradingeconomics.com/kenya/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a renewed depreciation episode like 2022-2023."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBK weighted average savings rate 3.53% (September 2026)",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings account rate after 15% withholding, about 3%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBK deposit rate 6.94% (September 2026) and 364-day bill 9.03% (October 2026), after 15% withholding",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/91_day_historical_treasury_bill_results/872459219_RESULTS%202706-091%202680-182%202635-364%20DATED%2002-11-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: between term deposits (5.9% after tax) and one-year Treasury bills (7.7% after tax)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Trading Economics, 10-year government bond yield 12.53% (30 October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/kenya/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: long Treasury bonds at about 12.5% less 10-15% withholding, allowing for lower future yields."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Regulatory Authority site was behind a bot check and no industry-wide life claim settlement ratio could be read."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published indicative term-life premium rates per 1,000 KES of cover from the regulator or another public source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official typical cost of a major private hospital stay was found (SHA benefit tariffs cover reimbursement rates, not out-of-pocket totals)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums per 100,000 KES of cover from the regulator or another public source were found."
+    },
+    "oop_health_share": {
+      "value": 0.2425,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KE",
+      "asOf": "2023-12-31",
+      "note": "24.2% in 2023 (latest year; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBK inflation target 5% +/- 2.5; KNBS CPI (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/kenya/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No health CPI series could be read, so medical costs are planned at one point above the 5.5% general assumption, as private hospital and drug prices track imports and the exchange rate."
+    },
+    "goal_inflation_education": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBK inflation target 5% +/- 2.5; KNBS CPI (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/kenya/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series could be read, so school fees are planned at one point above the 5.5% general assumption, as fees are usually raised yearly."
+    },
+    "life_expectancy": {
+      "value": 63.8,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KE",
+      "asOf": "2024-12-31",
+      "note": "63.8 years in 2024 (men 61.6, women 66.1)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.0,
+            "men": 15.7,
+            "women": 18.2
+          },
+          {
+            "age": 65,
+            "total": 14.1,
+            "men": 13.0,
+            "women": 15.0
+          },
+          {
+            "age": 70,
+            "total": 11.5,
+            "men": 10.6,
+            "women": 12.2
+          },
+          {
+            "age": 80,
+            "total": 6.9,
+            "men": 6.3,
+            "women": 7.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/kenya/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 20.1
+          },
+          {
+            "year": 2040,
+            "value": 14.7
+          },
+          {
+            "year": 2065,
+            "value": 8.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/kenya/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.98 (2025, World Bank), 6.8 (2040) and 12.4 (2065, populationpyramid.net/kenya/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Social Security Fund Act (Cap. 258), section 2: pensionable age",
+      "sourceUrl": "https://www.nssf.or.ke/download/download-the-nssf-act?wpdmdl=3590",
+      "asOf": "2026-10-31",
+      "note": "Pensionable age is 60 for men and women; early retirement pension from 50 (section 36). The NSSF benefits page also mentions an age benefit at 55 under the old provident fund rules."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The mandatory retirement age for public servants (widely reported as 60, 65 for persons with disabilities) could not be read from an official source: the Public Service Superannuation Fund site did not resolve."
+    },
+    "retirement_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBK deposit rate 6.94% (September 2026), 5.9% after 15% withholding",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposits after tax, allowing for further rate cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBK 364-day Treasury bill 9.03% (29 October 2026), 7.7% after 15% withholding",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/91_day_historical_treasury_bill_results/872459219_RESULTS%202706-091%202680-182%202635-364%20DATED%2002-11-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits and Treasury bills, below the 7.7% after-tax one-year bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Trading Economics, 10-year government bond yield 12.53% (30 October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/kenya/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in long Treasury or tax-exempt infrastructure bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBK deposit rate 6.94% and 364-day bill 9.03%",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/91_day_historical_treasury_bill_results/872459219_RESULTS%202706-091%202680-182%202635-364%20DATED%2002-11-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills with a small, weak equity share."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "CBK Treasury auctions and Trading Economics NSE 20 index",
+      "sourceUrl": "https://tradingeconomics.com/kenya/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of Treasury bonds and local shares, between the safe and equity base cases."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.115,
+      "status": "assumption",
+      "sourceName": "Trading Economics, 10-year bond yield 12.53% and NSE 20 index",
+      "sourceUrl": "https://tradingeconomics.com/kenya/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: more long bonds and shares, with yields staying near current levels."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Kenya runs the Inua Jamii older persons cash transfer, but the State Department for Social Protection site refused connections and the current amount could not be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules of the Inua Jamii older persons cash transfer could not be read from an official source (site unreachable)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Act 2007 provides service pay on termination for employees who are not members of NSSF or a pension scheme (s.35(5)-(6)), but the official text could not be read (Kenya Law and ILO NATLEX did not serve the file)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "National Social Security Fund Act (Cap. 258), sections 19-20, 36 and Third Schedule",
+      "sourceUrl": "https://www.nssf.or.ke/download/download-the-nssf-act?wpdmdl=3590",
+      "asOf": "2026-10-31",
+      "note": "Compulsory for employees aged 18 to pensionable age (60); employer and employee each pay 6% of pensionable earnings up to the Upper Earnings Limit; defined contribution, the fund credit buys a life pension (10-year guarantee), early retirement from 50. Pensions are not indexed by law; tax treatment not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Akaunti ya akiba",
+      "localNameEn": "Savings account",
+      "note": "Weighted average 3.53% in September 2026 (CBK).",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Amana ya muda maalum",
+      "localNameEn": "Fixed deposit",
+      "note": "CBK publishes one weighted average deposit rate (6.94%, September 2026).",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Amana ya muda maalum (mwaka 1)",
+      "localNameEn": "Fixed deposit, 1 year",
+      "note": "CBK publishes one weighted average deposit rate (6.94%, September 2026).",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found in CBK statistics."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate on sale; no current M-Akiba retail bond issue was found. Individuals can buy Treasury bonds directly via DhowCSD."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "Weekly CBK auctions (91, 182, 364 days); individuals bid through DhowCSD, non-competitive minimum KES 50,000.",
+      "sourceUrl": "https://www.centralbank.go.ke/uploads/91_day_historical_treasury_bill_results/872459219_RESULTS%202706-091%202680-182%202635-364%20DATED%2002-11-2026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bonds",
+      "note": "Fixed-rate bonds of 2 to 30 years; no new 5-year issue in 2026, older 5-year bonds trade on the secondary market.",
+      "sourceUrl": "https://www.centralbank.go.ke/bills-bonds/treasury-bonds/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bonds",
+      "note": "10-year bonds are reopened at auction and in switch auctions.",
+      "sourceUrl": "https://www.centralbank.go.ke/bills-bonds/treasury-bonds/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Unit trust (collective investment scheme)",
+      "note": "Unit trusts, including money market and equity funds, are licensed by the Capital Markets Authority.",
+      "sourceUrl": "https://www.cma.or.ke/"
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail market for investment gold bars or coins was found; the CBK does not issue gold coins."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Kenya",
+      "url": "https://www.centralbank.go.ke/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Regulatory Authority (IRA)",
+      "url": "https://www.ira.go.ke/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Regulatory Authority, consumer protection and complaints",
+      "url": "https://www.ira.go.ke/",
+      "note": "The IRA handles complaints against insurers; the site was behind a bot check on 31 October 2026."
+    },
+    "pensionScheme": {
+      "name": "National Social Security Fund (NSSF)",
+      "url": "https://www.nssf.or.ke/",
+      "note": "Retirement Benefits Authority (https://www.rba.go.ke/) regulates occupational and individual pension schemes."
+    },
+    "oldAgeAllowance": {
+      "name": "Inua Jamii older persons cash transfer, State Department for Social Protection",
+      "url": "https://www.socialprotection.go.ke/",
+      "note": "Site unreachable when checked on 31 October 2026."
+    },
+    "publicHealthCover": {
+      "name": "Social Health Authority (SHA)",
+      "url": "https://www.sha.go.ke/",
+      "note": "Replaced NHIF from October 2024 under the Social Health Insurance Act 2023."
+    },
+    "depositInsurance": {
+      "name": "Kenya Deposit Insurance Corporation (KDIC)",
+      "url": "https://kdic.go.ke/deposit-insurance"
+    },
+    "statistics": {
+      "name": "Kenya National Bureau of Statistics (KNBS)",
+      "url": "https://www.knbs.or.ke/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

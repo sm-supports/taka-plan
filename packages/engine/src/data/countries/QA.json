@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 1,
+  "code": "QA",
+  "iso3": "QAT",
+  "nameEn": "Qatar",
+  "nameNative": "قطر",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en",
+    "fa",
+    "ml"
+  ],
+  "currency": {
+    "code": "QAR",
+    "symbol": "ر.ق",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3.64,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Qatar",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=QA",
+      "asOf": "2025-12-31",
+      "note": "The riyal is pegged at 3.64 per US dollar. CLDR gives no narrow symbol (only 'QAR'); the Arabic abbreviation ر.ق is used locally."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0398,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the National Planning Council (NPC), CPI July 2026",
+      "sourceUrl": "https://tradingeconomics.com/qatar/inflation-cpi",
+      "asOf": "2026-07-31",
+      "note": "Consumer prices up 3.98% year on year in July 2026 (2.21% in June), driven by food; secondary source because the NPC release could not be read. World Bank 2024 average 1.3%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Dollar peg; 2005-2026 average CPI inflation of about 2.1% (Trading Economics, citing NPC)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "With the riyal pegged to the dollar, inflation has averaged about 2% over two decades, so 2% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.041,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Qatar Central Bank decision of 16 September 2026",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-09-16",
+      "note": "The QCB raised its deposit rate (QCBDR) by 25 bps to 4.10%, with the lending rate at 4.60% and the repo rate at 4.35%; secondary source because the QCB site could not be read (certificate error). The deposit rate is used as the policy rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Average savings-account rates are published in QCB statistics, but the QCB site could not be read (certificate error) and no other official source was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Average 3-month time-deposit rates are in QCB statistics, which could not be read (certificate error)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Average 1-year time-deposit rates are in QCB statistics, which could not be read (certificate error)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0468,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Qatar",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=QA",
+      "asOf": "2025-12-31",
+      "note": "4.68% in 2025 (IMF International Financial Statistics via the World Bank); the fresher QCB statistics could not be read."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; QCB treasury bills and government bonds are auctioned to banks."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The QCB auctions 3-, 6- and 9-month treasury bills to banks each month, but the auction results on the QCB site could not be read (certificate error)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year government bond yield was found from an official or allowed secondary source."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The only 10-year yield found (Trading Economics) dates from February 2023, too old to use; the QCB site could not be read."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Qatar, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/qatar/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Bank interest and returns due to individuals not carrying on a taxable activity are not subject to income tax, and salaries are untaxed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Qatar, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/qatar/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Capital gains on securities are exempt for individuals and there is no tax on bank interest or returns; no retail savings certificate exists."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover limit could be confirmed; the QCB site could not be read (certificate error)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published average credit card rate could be read; the QCB site could not be read (certificate error)."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10% (September 2026); weak 10-year record of Qatar's main index",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local index, which ended the last decade close to where it started, returns less than deposits."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10%; World Bank deposit rate 4.68% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2.5 points above the safe deposit rate, below the 4-point cap, because the main Qatari index has had a weak, dividend-driven 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10%; Gulf equity premium",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a fuller equity premium if Gulf markets re-rate."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Dollar peg (3.64 QAR per USD); World Bank exchange rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=QA",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; the peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dollar peg (3.64 QAR per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=QA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year, with no depreciation gain under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Dollar peg (3.64 QAR per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=QA",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10% (September 2026); World Bank deposit rate 4.68% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with US rates, untaxed."
+    },
+    "fixed_income_return_base": {
+      "value": 0.0375,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10% (September 2026); World Bank deposit rate 4.68% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a little below today's untaxed deposit rates, allowing for rate cuts over a long plan."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 4.68% (2025); QCB lending rate 4.60%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=QA",
+      "asOf": "2026-10-31",
+      "note": "High case: deposit rates stay near their 2025 level."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The QCB (the insurance regulator) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per QAR 1,000 of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.0743,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Qatar",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=QA",
+      "asOf": "2023-12-31",
+      "note": "7.4% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; health CPI about 0% (May 2026, Trading Economics citing NPC)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Public care keeps the health CPI near zero, but private treatment costs usually rise faster than prices, so 1.5 points above the inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; education CPI 2.1% (January 2026, Trading Economics citing NPC)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose about 2% a year recently; private school fees tend to rise faster, so 1.5 points above the inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 82.522,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Qatar",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=QA",
+      "asOf": "2024-12-31",
+      "note": "82.5 years in 2024 (men 81.8, women 83.5); the population is mostly younger migrant workers."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.9,
+            "men": 24.3,
+            "women": 25.4
+          },
+          {
+            "age": 65,
+            "total": 20.4,
+            "men": 19.8,
+            "women": 21.1
+          },
+          {
+            "age": 70,
+            "total": 16.3,
+            "men": 15.6,
+            "women": 17.0
+          },
+          {
+            "age": 80,
+            "total": 9.3,
+            "men": 8.7,
+            "women": 9.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/qatar/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 49.0
+          },
+          {
+            "year": 2040,
+            "value": 41.7
+          },
+          {
+            "year": 2065,
+            "value": 22.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/qatar/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 2.04 (2025, World Bank), 2.4 (2040) and 4.5 (2065, populationpyramid.net/qatar/2065/); the very large migrant workforce keeps the ratio high."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Social Insurance Law No. 1 of 2022 (General Retirement and Social Insurance Authority) covers Qatari private-sector workers, but the pension age could not be read from the authority's pages (content not loaded) or the law text."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil retirement rules under Law No. 1 of 2022 could not be read from the General Retirement and Social Insurance Authority site."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with US rates, untaxed."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10%; World Bank deposit rate 4.68% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: below today's untaxed deposit rates (no 1-year rate could be read), so it does not exceed the safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank deposit rate 4.68% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=QA",
+      "asOf": "2026-10-31",
+      "note": "High case: deposit rates stay near their 2025 level."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10%; equity low case 3%",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "QCB deposit rate 4.10%; equity base 6.5%; gold base 4%",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or sukuk, equities and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Equity high case 9%; deposit rate 4.68% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/qatar/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Social security assistance for older Qatari nationals exists through the Ministry of Social Development and Family, but no current monthly amount could be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for social security assistance to older people could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Law (No. 14 of 2004) provides an end-of-service gratuity for workers, but the article giving the weeks of wages per year could not be opened on the Al Meezan legal portal or ILO NATLEX (access refused)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The General Retirement and Social Insurance Authority says Social Insurance Law No. 1 of 2022 (issued 19 April 2022) covers Qatari government and private-sector employees and self-employed Qataris, but the pension age and indexation rules could not be read; expatriates are not covered."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "أذونات الخزينة",
+      "localNameEn": "Treasury bills",
+      "note": "Issued monthly by the QCB for 3, 6 and 9 months and bought by banks; individuals reach them only through banks or funds."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات حكومية",
+      "localNameEn": "Government bonds",
+      "note": "Government bonds and sukuk are auctioned to banks."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات حكومية",
+      "localNameEn": "Government bonds",
+      "note": "Government bonds and sukuk are auctioned to banks."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار",
+      "localNameEn": "Investment funds",
+      "note": "Funds investing in Qatari and Gulf shares are offered to retail investors."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are freely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Qatar Central Bank (QCB)",
+      "url": "https://www.qcb.gov.qa/"
+    },
+    "insuranceRegulator": {
+      "name": "Qatar Central Bank, insurance supervision",
+      "url": "https://www.qcb.gov.qa/"
+    },
+    "insuranceComplaints": {
+      "name": "Qatar Central Bank, consumer protection",
+      "url": "https://www.qcb.gov.qa/",
+      "note": "Complaints about insurers go to the QCB consumer protection function."
+    },
+    "pensionScheme": {
+      "name": "General Retirement and Social Insurance Authority",
+      "url": "https://www.daman.gov.qa/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Public Health (public health care)",
+      "url": "https://www.moph.gov.qa/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Planning Council",
+      "url": "https://www.npc.qa/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

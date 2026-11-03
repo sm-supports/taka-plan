@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 1,
+  "code": "SA",
+  "iso3": "SAU",
+  "nameEn": "Saudi Arabia",
+  "nameNative": "المملكة العربية السعودية",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "currency": {
+    "code": "SAR",
+    "symbol": "ر.س",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3.75,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Saudi Arabia",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SA",
+      "asOf": "2025-12-31",
+      "note": "The riyal is pegged at 3.75 per US dollar. CLDR gives no narrow symbol (only 'SAR'); the Arabic abbreviation ر.س is used here because the new riyal sign is not yet supported by most fonts."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.019,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the General Authority for Statistics (GASTAT), CPI September 2026",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 1.9% year on year in September 2026 (1.8% in August); secondary source because the GASTAT release was not read. World Bank 2025 average 2.0%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Dollar peg; 2000-2026 average CPI inflation of 2.0% (Trading Economics, citing GASTAT)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "With the riyal pegged to the dollar, inflation has averaged about 2% since 2000 and is 1.9% now, so 2% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Saudi Central Bank (SAMA) decision of 16 September 2026",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/interest-rate",
+      "asOf": "2026-09-16",
+      "note": "SAMA raised its repo rate by 25 bps to 4.50% (reverse repo 4.00%); secondary source because the SAMA site could not be read (certificate error)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average savings-account rate was found; many accounts are Islamic current or savings accounts paying little or nothing, and SAMA statistics could not be read (certificate error)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average retail 3-month time-deposit rate was found; the 3-month interbank rate (SAIBOR, 5.01% in September 2026) is a wholesale rate, and SAMA statistics could not be read."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average retail 1-year time-deposit rate was found; SAMA's 1-year riyal deposit rate (5.19%) is a money-market rate, used for bank_deposit_avg_rate instead."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0519,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Saudi Central Bank: 1-year riyal deposit rate, September 2026",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-09-30",
+      "note": "SAMA's 1-year cash deposit rate rose to 5.19% in September 2026 (5.00% in August); it is a money-market rate, so retail time deposits usually pay less. Secondary source; World Bank FR.INR.DPST has no Saudi data."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance's Sah savings sukuk for individuals (1-year, fixed return, from SAR 1,000) sets its return each monthly issue; the portal does not show the current rate."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month treasury bill yield was found; the 3-month interbank rate (SAIBOR) was 5.01% in September 2026 (Trading Economics, citing SAMA)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Debt Management Center publishes amounts but not yields for its monthly riyal sukuk issues; no 5-year yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government yield could be read; the National Debt Management Center reports amounts only, and the secondary source did not show a Saudi yield."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Saudi Arabia, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/saudi-arabia/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "There is no individual income tax scheme in Saudi Arabia, so bank returns of individuals are untaxed (non-employment business income is taxed as an entity)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Saudi Arabia, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/saudi-arabia/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "No individual income tax, so returns on the Sah savings sukuk are untaxed for individuals."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A deposit protection fund run by SAMA exists, but its cover limit could not be read (SAMA site certificate error and connection refused)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published average credit card rate could be read; SAMA site unreachable."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: oil-driven swings leave the local index returning less than deposits."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%; repo rate 4.50%",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2.5 points above the safe deposit rate, under the 4-point cap, because the main Saudi index has had only a moderate 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%; Gulf equity premium",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a fuller equity premium with strong earnings growth."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Dollar peg (3.75 SAR per USD); World Bank exchange rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SA",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; the peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dollar peg (3.75 SAR per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year, with no depreciation gain under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Dollar peg (3.75 SAR per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SA",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%; repo rate 4.50% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: retail deposit and Sah returns fall with US rates, untaxed."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%; repo rate 4.50% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the money-market deposit rate because retail deposits pay less and rates may fall over a long plan."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: retail savers get close to money-market rates, for example through Sah savings sukuk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Authority publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life (protection) cover is sold, but no published premium rates per SAR 1,000 of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source; employer cover is compulsory for private-sector staff."
+    },
+    "oop_health_share": {
+      "value": 0.1412,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Saudi Arabia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SA",
+      "asOf": "2023-12-31",
+      "note": "14.1% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; health CPI 0.3% (July 2026, Trading Economics citing GASTAT)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The health CPI is nearly flat because public care is free, but private treatment costs rise faster, so 1.5 points above the inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; education CPI index 103.7 (September 2026, Trading Economics citing GASTAT)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education inflation rate was read; private school fees tend to rise faster than prices, so 1.5 points above the inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 78.982,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Saudi Arabia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SA",
+      "asOf": "2024-12-31",
+      "note": "79.0 years in 2024 (men 77.3, women 81.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.9,
+            "men": 21.7,
+            "women": 24.1
+          },
+          {
+            "age": 65,
+            "total": 18.6,
+            "men": 17.6,
+            "women": 19.9
+          },
+          {
+            "age": 70,
+            "total": 14.9,
+            "men": 13.9,
+            "women": 15.9
+          },
+          {
+            "age": 80,
+            "total": 8.6,
+            "men": 8.0,
+            "women": 9.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/saudi-arabia/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 24.0
+          },
+          {
+            "year": 2040,
+            "value": 13.7
+          },
+          {
+            "year": 2065,
+            "value": 6.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/saudi-arabia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.17 (2025, World Bank), 7.3 (2040) and 15.8 (2065, populationpyramid.net/saudi-arabia/2065/); a large migrant workforce keeps the ratio high today."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Trading Economics, retirement age for men, Saudi Arabia (citing the Ministry of Labour)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/retirement-age-men",
+      "asOf": "2026-10-31",
+      "note": "65 in 2026 under the Social Insurance Law in force since July 2024, which applies 65 to new entrants and raises the age gradually for existing contributors; same age for women. Secondary source because GOSI pages could not be read."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for civil servants under the unified social insurance law could not be confirmed from an official page (GOSI pages did not load)."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: retail deposit rates fall with US rates, untaxed."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%; repo rate 4.50%",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the untaxed 1-year deposit rate, allowing for lower retail rates and future cuts."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: money-market-like returns through Sah sukuk or term deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%; equity low case 3.5%",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "SAMA 1-year deposit rate 5.19%; equity base 7.5%; gold base 4%",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or sukuk, Saudi equities and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Equity high case 10%; SAMA 1-year deposit rate 5.19%",
+      "sourceUrl": "https://tradingeconomics.com/saudi-arabia/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Means-tested Developed Social Security support from the Ministry of Human Resources and Social Development covers some older people, but no old-age amount could be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules of the Developed Social Security programme for older people could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Law provides an end-of-service award for private-sector workers, but the law text could not be opened (the Bureau of Experts portal refused the connection and the ministry page was not found), so the days per year could not be confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Saudi nationals are covered by compulsory social insurance through GOSI (employee 9.75% and employer 11.75% of basic pay plus housing, capped at SAR 45,000, per PwC), but entry ages and indexation rules could not be read; GOSI pages did not load."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account",
+      "note": "Many accounts are Islamic and pay little or no return."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)",
+      "note": "Often offered as Islamic murabaha deposits."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)",
+      "note": "Often offered as Islamic murabaha deposits."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "صح",
+      "localNameEn": "Sah government savings sukuk",
+      "note": "A 1-year government savings sukuk for individuals with a fixed return set each monthly issue, from SAR 1,000, profit paid at maturity; shorter than 5 years.",
+      "sourceUrl": "https://sukuk.ndmc.gov.sa/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "أذونات الخزينة",
+      "localNameEn": "Treasury bills",
+      "note": "Issued for banks and primary dealers; individuals reach them through funds."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "صكوك حكومية بالريال",
+      "localNameEn": "Government riyal sukuk",
+      "note": "Monthly riyal sukuk issues with 5- to 13-year maturities, sold through primary dealers.",
+      "sourceUrl": "https://www.ndmc.gov.sa/en/e/news-details/30151/1048534"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "صكوك حكومية بالريال",
+      "localNameEn": "Government riyal sukuk",
+      "note": "Monthly riyal sukuk issues with 5- to 13-year maturities, sold through primary dealers.",
+      "sourceUrl": "https://www.ndmc.gov.sa/en/e/news-details/30151/1048534"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار",
+      "localNameEn": "Investment funds",
+      "note": "Funds investing in Saudi shares are offered to retail investors under Capital Market Authority rules."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are freely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Saudi Central Bank (SAMA)",
+      "url": "https://www.sama.gov.sa/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Authority",
+      "url": "https://www.ia.gov.sa/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Authority, complaints",
+      "url": "https://www.ia.gov.sa/",
+      "note": "Complaints about insurers go to the Insurance Authority."
+    },
+    "pensionScheme": {
+      "name": "General Organization for Social Insurance (GOSI)",
+      "url": "https://www.gosi.gov.sa/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (free public care for citizens)",
+      "url": "https://www.moh.gov.sa/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Protection Fund, Saudi Central Bank",
+      "url": "https://www.sama.gov.sa/"
+    },
+    "statistics": {
+      "name": "General Authority for Statistics (GASTAT)",
+      "url": "https://www.stats.gov.sa/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

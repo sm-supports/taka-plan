@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "code": "DO",
+  "iso3": "DOM",
+  "nameEn": "Dominican Republic",
+  "nameNative": "República Dominicana",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es"
+  ],
+  "currency": {
+    "code": "DOP",
+    "symbol": "RD$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 60.4156,
+      "status": "sourced",
+      "sourceName": "DGII table of BCRD reference exchange rates 2026 (US dollar)",
+      "sourceUrl": "https://www.dgii.gov.do/estadisticas/tasaCambio/1Dlar/Dolar2026.pdf",
+      "asOf": "2026-10-30",
+      "note": "BCRD reference rate, pesos per US dollar, on 30 October 2026 as published by the tax authority (October 2026 average 60.72)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0512,
+      "status": "sourced",
+      "sourceName": "elDinero, reporting the Banco Central de la República Dominicana CPI release",
+      "sourceUrl": "https://eldinero.com.do/384711/banco-central-informa-inflacion-interanual-a-septiembre-de-2026-es-de-5-12/",
+      "asOf": "2026-09-30",
+      "note": "Secondary source (BCRD press release reported by elDinero, 13 October 2026): CPI rose 5.12% year on year in September 2026 (core 4.61%), down from a 5.67% peak in June."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCRD inflation target 4% plus or minus 1 point; CPI 5.1-5.7% in mid-2026",
+      "sourceUrl": "https://eldinero.com.do/383116/banco-central-incrementa-su-tasa-de-politica-monetaria-en-25-puntos-basicos-de-5-25-a-5-50-anual/",
+      "asOf": "2026-10-31",
+      "note": "We plan with the central bank's 4% target, which inflation has mostly been near over the past decade, although 2026 readings run above it."
+    },
+    "policy_rate": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "elDinero, reporting the BCRD monetary policy decision of September 2026",
+      "sourceUrl": "https://eldinero.com.do/383116/banco-central-incrementa-su-tasa-de-politica-monetaria-en-25-puntos-basicos-de-5-25-a-5-50-anual/",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: the BCRD raised its policy rate (TPM) by 25 basis points to 5.50% at its September 2026 meeting (1-day repo facility 6.00%, overnight deposits 4.75%); the October 2026 decision could not be confirmed."
+    },
+    "savings_account_rate": {
+      "value": 0.0053,
+      "status": "sourced",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-29",
+      "note": "Weighted average rate on savings deposits at multiple banks, average of 1-29 October 2026 (preliminary)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0742,
+      "status": "sourced",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-29",
+      "note": "Certificates and time deposits of 61-90 days, weighted average at multiple banks, 1-29 October 2026 (preliminary); 0-30 days 7.68%, 91-180 days 7.22%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0652,
+      "status": "sourced",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-29",
+      "note": "Certificates and time deposits of 181-360 days, weighted average at multiple banks, 1-29 October 2026 (preliminary); 361 days-2 years 6.28%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCRD rate tables have no series for monthly recurring (programmed) savings; no official rate found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0702,
+      "status": "sourced",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-29",
+      "note": "Weighted average rate on financial certificates and time deposits in pesos at multiple banks, 1-29 October 2026 (preliminary); it fell from about 9.6% in mid-2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold directly to individuals was found; Ministry of Finance peso bonds reach individuals through the stock market after auction."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 91-day treasury bill yield found. The nearest short-term figure: BCRD Letras auction of 29 October 2026 awarded only the 161-day bill, at a weighted average yield of 8.32% (cdn.bancentral.gov.do Letras_bc_resultados.pdf)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ministry of Finance (Crédito Público) auction results could not be opened (HTTP 403); no 5-year peso bond yield found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ministry of Finance (Crédito Público) auction results could not be opened (HTTP 403); no 10-year peso bond yield found."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Dirección General de Impuestos Internos (DGII), technical consultation on interest withholding (Código Tributario art. 306 bis)",
+      "sourceUrl": "https://dgii.gov.do/legislacion/consultas/Consultas%20Tecnicas%202025/Enero/Consulta%2012-Retenci%C3%B3n%20de%20ISR%20pago%20de%20intereses.pdf",
+      "asOf": "2025-01-23",
+      "note": "Interest paid to resident individuals is subject to a 10% income-tax withholding, a final payment or an advance depending on the taxpayer's return. (PwC Tax Summaries describes such interest as exempt; we follow the tax authority.)"
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists to tax; interest on other instruments paid to individuals falls under the 10% withholding of art. 306 bis."
+    },
+    "deposit_insurance_limit": {
+      "value": 1860000,
+      "status": "sourced",
+      "sourceName": "elDinero: Fondo de Contingencia (Ley Monetaria y Financiera 183-02, art. 64)",
+      "sourceUrl": "https://eldinero.com.do/381606/fondo-de-contingencia-de-los-depositantes-llego-a-rd35824-millones-al-cierre-de-2025/",
+      "asOf": "2026-09-21",
+      "note": "Secondary source: the BCRD contingency fund guarantees each depositor up to RD$1,860,000 if a financial institution is liquidated."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap found (interest rates are freely set under Ley 183-02) and the BCRD lending-rate tables do not report a credit card rate."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar); BCRD deposit rates",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DO",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global equities in dollars plus little peso depreciation."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar); BCRD deposit rates (181-360 days 6.52%, 5.9% after 10% tax)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DO",
+      "asOf": "2026-10-31",
+      "note": "The local stock market trades almost no shares, so we use a global equity index of about 7% a year in dollars plus about 2% yearly peso depreciation, kept under the after-tax 1-year deposit rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DO",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities and faster peso depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DO",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slight peso depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar; about 46 in 2015 and 62 in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DO",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4.5% a year plus about 2% yearly peso depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DO",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and faster peso depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposits at about 5.5-6% less the 10% withholding, allowing for rates falling further."
+    },
+    "fixed_income_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year deposits at 6.5% (5.9% after tax) and BCRD bills at about 8% (7.5% after tax)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "BCRD Letras auction 29 October 2026: 161-day yield 8.32%",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/instrumentos-de-inversion/instrumentos-operaciones-de-mercado-abierto/documents/Letras_bc_resultados.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: central bank and government paper at about 8.3% less the 10% withholding."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio found from the Superintendencia de Seguros."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published per-1,000 premium rates by age from the regulator or another public source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public premium table for private health insurance by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2506,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DO",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "elDinero (BCRD CPI release, September 2026)",
+      "sourceUrl": "https://eldinero.com.do/384711/banco-central-informa-inflacion-interanual-a-septiembre-de-2026-es-de-5-12/",
+      "asOf": "2026-10-31",
+      "note": "Headline CPI runs at about 5%; private clinic and medicine costs usually rise faster, so we plan with 6%."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "elDinero (BCRD CPI release, September 2026): education prices up 1.85% in September alone on private-school fees",
+      "sourceUrl": "https://eldinero.com.do/384711/banco-central-informa-inflacion-interanual-a-septiembre-de-2026-es-de-5-12/",
+      "asOf": "2026-10-31",
+      "note": "Private school fees push education prices above headline, so we plan with 6%."
+    },
+    "life_expectancy": {
+      "value": 73.868,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DO",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 74.1 for 2026 (men 70.9, women 77.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.4,
+            "men": 19.5,
+            "women": 23.3
+          },
+          {
+            "age": 65,
+            "total": 17.7,
+            "men": 15.9,
+            "women": 19.4
+          },
+          {
+            "age": 70,
+            "total": 14.3,
+            "men": 12.7,
+            "women": 15.8
+          },
+          {
+            "age": 80,
+            "total": 8.7,
+            "men": 7.5,
+            "women": 9.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/dominican-republic/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium-variant projections for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.0
+          },
+          {
+            "year": 2040,
+            "value": 5.3
+          },
+          {
+            "year": 2065,
+            "value": 3.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/dominican-republic/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 12.48 (2025, World Bank), 18.7 (2040) and 31.1 (2065, populationpyramid.net/dominican-republic/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Superintendencia de Pensiones (SIPEN), Resolución 72-03 on contributory pension benefits (Ley 87-01)",
+      "sourceUrl": "https://sipen.gob.do/documentos/norm_resolucion_sipen_72_03.pdf",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension from age 60 with at least 360 monthly contributions; a pension from 55 is possible if the individual account can fund it. Same for men and women. The resolution dates from 2003 and is still the rule we found."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Superintendencia de Pensiones (SIPEN), Resolución 72-03 (Ley 87-01)",
+      "sourceUrl": "https://sipen.gob.do/documentos/norm_resolucion_sipen_72_03.pdf",
+      "asOf": "2026-10-31",
+      "note": "Public employees are covered by the same Ley 87-01 contributory system (60 with 360 contributions); members of the old civil-service scheme (Ley 379) aged up to 45 when the system began moved over with a recognition bond. Source dates from 2003."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after the 10% withholding, with rates easing."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case below the after-tax 1-year deposit rate of about 5.9% (6.52% less 10%)."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BCRD Letras auction 29 October 2026: 161-day yield 8.32%",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/instrumentos-de-inversion/instrumentos-operaciones-de-mercado-abierto/documents/Letras_bc_resultados.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of central bank and government paper at about 8% less tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits and global equities."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half global equities at 9% in pesos and half fixed income at 6%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equities and higher local rates."
+    },
+    "old_age_allowance_monthly": {
+      "value": 6000,
+      "status": "sourced",
+      "sourceName": "elDinero: solidarity pensions of the subsidised regime (Sistema Dominicano de Seguridad Social)",
+      "sourceUrl": "https://eldinero.com.do/?p=347908",
+      "asOf": "2025-09-30",
+      "note": "Secondary source: each solidarity pension pays RD$6,000 a month plus a Christmas payment; granted by decree in limited batches (57,242 beneficiaries by September 2025)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "elDinero: CNSS rules for solidarity pensions",
+      "sourceUrl": "https://eldinero.com.do/?p=347908",
+      "asOf": "2025-12-23",
+      "note": "People over 60 whose income is below half the national minimum wage, after a poverty assessment (SIUBEN); also people with disabilities and some single mothers."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 21,
+        "daysPerYearAfter": 23,
+        "afterYears": 5,
+        "daysPerMonth": 23.83
+      },
+      "status": "sourced",
+      "sourceName": "Revista Mercado: auxilio de cesantía under art. 80 of the Labour Code (Ley 16-92)",
+      "sourceUrl": "https://revistamercado.do/money-invest/republica-dominicana/cesantia-laboral-en-rd-cuanto-te-corresponde-segun-tu-salario-y-antiguedad/",
+      "asOf": "2026-02-10",
+      "note": "Secondary source: severance (cesantía) when the employer ends the contract without cause: 21 days' ordinary wage per year for 1-5 years of service and 23 days per year after more than 5 years (shorter scales under 1 year); daily wage = monthly wage / 23.83. Not paid on resignation."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Superintendencia de Pensiones (SIPEN), Resolución 72-03 (Ley 87-01)",
+      "sourceUrl": "https://sipen.gob.do/documentos/norm_resolucion_sipen_72_03.pdf",
+      "asOf": "2026-10-31",
+      "note": "Mandatory individual-account (AFP) system under Ley 87-01 for private and public employees: employee 2.87% plus employer 7.10% of salary (PwC Tax Summaries, 2026); old-age pension from 60 with 360 contributions, paid as programmed withdrawal or annuity; no automatic inflation indexing described in the sources read."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorros",
+      "localNameEn": "Savings account",
+      "note": "Peso savings accounts pay well under 1% a year on average.",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Certificado financiero",
+      "localNameEn": "Financial certificate (3-month term deposit)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Certificado financiero",
+      "localNameEn": "Financial certificate (1-year term deposit)",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate is sold directly to individuals; Ministry of Finance peso bonds can be bought on the stock market through brokers."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letras del Banco Central",
+      "localNameEn": "Central bank bills (terms under one year)",
+      "note": "Auctioned by the BCRD; terms vary (161-308 days in the October 2026 auction) rather than a fixed 91 days.",
+      "sourceUrl": "https://cdn.bancentral.gov.do/documents/instrumentos-de-inversion/instrumentos-operaciones-de-mercado-abierto/documents/Letras_bc_resultados.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos del Ministerio de Hacienda",
+      "localNameEn": "Ministry of Finance peso bonds",
+      "note": "Auctioned by the Dirección General de Crédito Público; individuals buy on the secondary market."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bonos del Ministerio de Hacienda",
+      "localNameEn": "Ministry of Finance peso bonds",
+      "note": "Auctioned by the Dirección General de Crédito Público; individuals buy on the secondary market."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "Local investment funds supervised by the Superintendencia del Mercado de Valores invest mainly in fixed income; no diversified local equity index fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold",
+      "note": "Gold can be bought legally from jewellers and dealers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de la República Dominicana",
+      "url": "https://www.bancentral.gov.do/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de Seguros",
+      "url": "https://superseguros.gob.do/"
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia de Seguros (policyholder complaints)",
+      "url": "https://superseguros.gob.do/",
+      "note": "No separate insurance ombudsman; the Superintendencia handles complaints."
+    },
+    "pensionScheme": {
+      "name": "Sistema Dominicano de Pensiones (Ley 87-01), supervised by the Superintendencia de Pensiones (SIPEN)",
+      "url": "https://www.sipen.gob.do/"
+    },
+    "oldAgeAllowance": {
+      "name": "Pensiones solidarias del Régimen Subsidiado, Consejo Nacional de Seguridad Social",
+      "url": "https://www.cnss.gob.do/"
+    },
+    "publicHealthCover": {
+      "name": "Seguro Nacional de Salud (SeNaSa)",
+      "url": "https://www.arssenasa.gob.do/"
+    },
+    "depositInsurance": {
+      "name": "Fondo de Contingencia, Banco Central de la República Dominicana",
+      "url": "https://www.bancentral.gov.do/",
+      "note": "Guarantee set by Ley Monetaria y Financiera 183-02, art. 64."
+    },
+    "statistics": {
+      "name": "Oficina Nacional de Estadística (ONE)",
+      "url": "https://www.one.gob.do/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

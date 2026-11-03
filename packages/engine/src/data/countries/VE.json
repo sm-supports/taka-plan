@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "code": "VE",
+  "iso3": "VEN",
+  "nameEn": "Venezuela",
+  "nameNative": "Venezuela",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es"
+  ],
+  "currency": {
+    "code": "VES",
+    "symbol": "Bs.",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 887.4798,
+      "status": "sourced",
+      "sourceName": "USD/VES exchange rate (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "asOf": "2026-10-30",
+      "note": "VES 887.48 per US dollar on 30 October 2026; the bolívar lost about three-quarters of its dollar value in a year. Secondary source because the Banco Central de Venezuela website could not be reached (certificate error); the World Bank series stops in 2017. Trading Economics does not state whether this is the BCV official rate."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 4.656,
+      "status": "sourced",
+      "sourceName": "Banco Central de Venezuela, Índice Nacional de Precios al Consumidor, September 2026 (as reported by Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices rose 465.6% in the 12 months to September 2026 (534.2% in August; 8.4% in the month). Secondary source because the Banco Central de Venezuela website could not be reached (certificate error); World Bank has no figure after 2016."
+    },
+    "inflation_projection": {
+      "value": 1.0,
+      "status": "assumption",
+      "sourceName": "BCV CPI 465.6% (September 2026); Trading Economics forecasts about 600% for 2027 and 180% for 2028",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Venezuela has had double- or triple-digit inflation almost every year for a decade and has no inflation target, so planning uses 100% a year, well below today's rate but far above any stable economy."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Venezuela has no conventional policy rate; the BCV manages money mainly through reserve requirements and exchange-market sales, and the Banco Central de Venezuela website could not be reached (certificate error)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical savings-account rate could be read; the Banco Central de Venezuela website could not be reached (certificate error)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No reliable published 3-month term deposit rate was found; Trading Economics shows a daily '90-day deposit rate' of 60% (October 2026) attributed to the BCV, but its definition and history are unclear, so it is not used."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found; the Banco Central de Venezuela website could not be reached (certificate error)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No reliable weighted average deposit rate was found; the World Bank series stops in 2017 (14.7%) and the Banco Central de Venezuela website could not be reached (certificate error)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published Treasury bill (Letras del Tesoro) yield was found; there is no active public market for them."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 5-year government bond yield was found; domestic bolívar bonds are not actively traded and the external dollar bonds have been in default since 2017."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 10-year government bond yield was found; domestic bolívar bonds are not actively traded and the external dollar bonds have been in default since 2017."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Venezuela, Individual, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/venezuela/individual/income-determination",
+      "asOf": "2026-09-30",
+      "note": "Interest from Venezuelan savings deposits or savings funds is tax-exempt, and so are interest on fixed deposits, mortgage certificates and savings certificates under the banking law (page reviewed 30 September 2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; PwC Tax Summaries does not address interest on government bonds held by individuals."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "FOGADE guarantees bank deposits, but no current cover limit per depositor was found on its website (home and legal-framework pages read)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCV sets maximum lending and credit card rates by resolution, but the Banco Central de Venezuela website could not be reached (certificate error), so the current cap could not be read."
+    },
+    "equity_return_low": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "No reliable safe bolívar rate; Trading Economics '90-day deposit rate' 60% (October 2026), inflation 465.6%",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: Caracas-listed shares lose heavily in real terms, as bolívar assets usually have."
+    },
+    "equity_return_base": {
+      "value": 0.5,
+      "status": "assumption",
+      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); planning safe rate 50%",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "The Caracas stock exchange is small and illiquid with no long reliable record, so the base case stays at the 50% planning safe rate, well below the 100% inflation assumption."
+    },
+    "equity_return_high": {
+      "value": 1.0,
+      "status": "assumption",
+      "sourceName": "Dollar-linked share prices rising with bolívar depreciation (Trading Economics USD/VES, bolívar down about 75% in a year)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: share prices keep pace with the dollar, so returns roughly match inflation."
+    },
+    "gold_return_low": {
+      "value": 0.6,
+      "status": "assumption",
+      "sourceName": "USD/VES 887.5 on 30 October 2026, bolívar down sharply in a year (Trading Economics); gold USD 3,876/oz",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold is flat in dollars and the bolívar loses about 40% of its value a year."
+    },
+    "gold_return_base": {
+      "value": 1.0,
+      "status": "assumption",
+      "sourceName": "Gold USD price trend plus bolívar depreciation in line with the 100% inflation assumption (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold holds its dollar value and gains about 4% a year, and the bolívar falls roughly in line with inflation, so gold about doubles in bolívares each year."
+    },
+    "gold_return_high": {
+      "value": 1.6,
+      "status": "assumption",
+      "sourceName": "Bolívar depreciation of about 75% in the year to October 2026 (Trading Economics USD/VES)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: the bolívar keeps falling at recent speed and gold rises in dollars."
+    },
+    "fixed_income_return_low": {
+      "value": 0.3,
+      "status": "assumption",
+      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); savings and fixed-deposit interest tax-exempt (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings accounts pay far less than term deposits and far less than inflation."
+    },
+    "fixed_income_return_base": {
+      "value": 0.5,
+      "status": "assumption",
+      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026), tax-exempt",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: bolívar deposits keep paying well below inflation, as under the BCV's controls for years; 50%, below the indicative 60%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.6,
+      "status": "assumption",
+      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: term deposits at the current indicative rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "SUDEASEG publishes a monthly statistical bulletin (Boletín en Cifras) but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source with indicative term-life premiums by age was found; life cover in Venezuela is mostly sold as group cover and in dollars."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a private hospital stay was found; private clinics price mostly in US dollars."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2969,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=VE",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 29.7% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 1.0,
+      "status": "assumption",
+      "sourceName": "BCV CPI 465.6% (September 2026, Trading Economics); health care weight 4.3% of the CPI basket",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No separate health price index was available, so health goals use the 100% general inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 1.0,
+      "status": "assumption",
+      "sourceName": "BCV CPI 465.6% (September 2026, Trading Economics); education weight 2.7% of the CPI basket",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No separate education price index was available, so education goals use the 100% general inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 72.673,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=VE",
+      "asOf": "2024-12-31",
+      "note": "Men 68.9, women 76.7 (2024). UN WPP gives 73.0 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.5,
+            "men": 18.7,
+            "women": 22.1
+          },
+          {
+            "age": 65,
+            "total": 16.7,
+            "men": 15.2,
+            "women": 18.1
+          },
+          {
+            "age": 70,
+            "total": 13.3,
+            "men": 12.0,
+            "women": 14.3
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 6.3,
+            "women": 7.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/venezuela",
+      "asOf": "2026-07-01",
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP): total age reached minus current age."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.49
+          },
+          {
+            "year": 2040,
+            "value": 4.5
+          },
+          {
+            "year": 2065,
+            "value": 3.66
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/venezuela-bolivarian-republic-of/2065/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 15.4 in 2025 (World Bank), 22.2 in 2040 and 27.3 in 2065 (UN WPP medium variant)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Retirement age (citing the Instituto Venezolano de los Seguros Sociales, Pensión por Vejez)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "IVSS old-age pension at 60 for men and 55 for women. Secondary source because the IVSS website could not be reached; the cited IVSS page is an archived 2018 copy, older than 2025."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for public employees (Ley del Estatuto sobre el Régimen de Jubilaciones y Pensiones) could not be confirmed from a source that could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.3,
+      "status": "assumption",
+      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); tax-exempt",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings accounts paying well below term deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.45,
+      "status": "assumption",
+      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); tax-exempt (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: bolívar term deposits, kept below the 50% planning safe rate and the indicative 60% deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.6,
+      "status": "assumption",
+      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: term deposits at the current indicative rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.3,
+      "status": "assumption",
+      "sourceName": "Fixed income low 30%; equity low 20%",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case for a mix of bolívar deposits and local shares."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.5,
+      "status": "assumption",
+      "sourceName": "Fixed income base 50%; equity base 50%",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of bolívar deposits and shares, well below the 100% inflation assumption (most Venezuelans save in dollars instead)."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.9,
+      "status": "assumption",
+      "sourceName": "Equity high 100%; gold base 100%",
+      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: dollar-linked assets such as shares and gold keep pace with bolívar depreciation."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A non-contributory old-age pension (Gran Misión en Amor Mayor) exists, but its current amount could not be confirmed from an official or secondary source that could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for the Gran Misión en Amor Mayor pension could not be confirmed from a source that could be read."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The labour law (LOTTT) provides end-of-service social benefits (prestaciones sociales) for private employees, but the legal text could not be read from an official source, so the rule is not recorded."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The IVSS old-age pension (from 60 for men, 55 for women) is the main public scheme, but its contribution rules, indexation and tax treatment could not be confirmed because the IVSS website could not be reached."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account",
+      "note": "Interest on savings deposits is tax-exempt (PwC)."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo (90 días)",
+      "localNameEn": "Fixed-term deposit (90 days)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo (1 año)",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "note": "Long bolívar term deposits are rare because of high inflation."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Letras del Tesoro",
+      "localNameEn": "Treasury bills",
+      "note": "No active public market or published yields were found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "Bonos de la Deuda Pública Nacional",
+      "localNameEn": "Government bonds",
+      "note": "Domestic bolívar bonds are not actively traded; external dollar bonds have been in default since 2017."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": "Bonos de la Deuda Pública Nacional",
+      "localNameEn": "Government bonds",
+      "note": "Domestic bolívar bonds are not actively traded; external dollar bonds have been in default since 2017."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": "Fondos mutuales",
+      "localNameEn": "Mutual funds",
+      "note": "Shares can be bought directly on the Caracas stock exchange, but no diversified retail index fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro (lingotes y monedas)",
+      "localNameEn": "Gold (bars and coins)",
+      "note": "No legal restriction on individuals owning gold was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Venezuela (BCV)",
+      "url": "https://www.bcv.org.ve/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de la Actividad Aseguradora (SUDEASEG)",
+      "url": "https://www.sudeaseg.gob.ve/"
+    },
+    "insuranceComplaints": {
+      "name": "SUDEASEG, Defensoría del Asegurado",
+      "url": "https://www.sudeaseg.gob.ve/defensor-del-asegurado",
+      "note": "Free line 0800 7832734."
+    },
+    "pensionScheme": {
+      "name": "Instituto Venezolano de los Seguros Sociales (IVSS)",
+      "url": "https://www.ivss.gob.ve/",
+      "note": "The site could not be reached during research."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministerio del Poder Popular para la Salud (MPPS), public health system",
+      "url": "https://mpps.gob.ve/"
+    },
+    "depositInsurance": {
+      "name": "Fondo de Protección Social de los Depósitos Bancarios (FOGADE)",
+      "url": "https://www.fogade.gob.ve/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística (INE)",
+      "url": "https://www.ine.gob.ve/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

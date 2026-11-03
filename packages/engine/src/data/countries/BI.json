@@ -1,0 +1,544 @@
+{
+  "schemaVersion": 1,
+  "code": "BI",
+  "iso3": "BDI",
+  "nameEn": "Burundi",
+  "nameNative": "Uburundi",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "rn",
+    "fr",
+    "sw",
+    "en"
+  ],
+  "currency": {
+    "code": "BIF",
+    "symbol": "FBu",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3013.13,
+      "status": "sourced",
+      "sourceName": "Banque de la République du Burundi, daily exchange rates, US dollar mid rate, 30 October 2026",
+      "sourceUrl": "https://www.brb.bi/Details%20Taux%20de%20Change",
+      "asOf": "2026-10-30",
+      "note": "Mid rate 3,013.13 francs per dollar (buying 2,989.03, selling 3,037.24); World Bank 2025 average 2,943. CLDR gives 'BIF' as symbol; 'FBu' is the local abbreviation used for the franc burundais."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.074,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the national statistics institute (ISTEEBU/INSBU), consumer prices, September 2026",
+      "sourceUrl": "https://tradingeconomics.com/burundi/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: the statistics office site could not be read. Annual inflation 7.4% in September 2026 (8.4% in August), the lowest since May 2021; food inflation 1.7%. The BRB's CPI table (INSBU data) confirms 8.4% for August 2026. Inflation averaged 34% in 2025 (World Bank) and peaked at 45.5% in April 2025."
+    },
+    "inflation_projection": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BRB monetary policy report Q4 2025 (inflation outlook); World Bank CPI inflation 2021-2025",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Inflation averaged about 22% a year over 2021-2025 and has only just fallen to 7.4%, with no formal target and a wide parallel-market exchange premium, so 12% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Banque de la République du Burundi (BRB), monetary policy report Q4 2025: policy rate cut from 12% to 10%",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-02-26",
+      "note": "Cut by 200 basis points at the 26 February 2026 monetary policy committee; the BRB website still showed 10% 'in effect since 26/02/2026' on 31 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0497,
+      "status": "sourced",
+      "sourceName": "BRB, monetary policy report Q4 2025, table 11: weighted average rate on passbook savings accounts (comptes sur livrets), end-December 2025",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2025-12-31",
+      "note": "Weighted average on outstanding passbook savings at banks, 4.97% at end-December 2025 (4.90% end-September). Latest published quarter found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BRB publishes one weighted average for all term deposits (7.44% at end-December 2025), not by maturity; no 3-month figure was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0744,
+      "status": "sourced",
+      "sourceName": "BRB, monetary policy report Q4 2025, table 11: weighted average rate on term deposits (dépôts à terme), end-December 2025",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2025-12-31",
+      "note": "Average over all term-deposit maturities (not 1 year only), 7.44% at end-December 2025, unchanged from September 2025."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found in BRB statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0715,
+      "status": "sourced",
+      "sourceName": "BRB, monetary policy report Q4 2025, table 11: overall weighted average deposit rate (taux moyen pondéré créditeur), end-December 2025",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2025-12-31",
+      "note": "Weighted average on outstanding deposits: 7.15% at end-December 2025 (demand 3.35%, passbook 4.97%, term 7.44%)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; Treasury bills and bonds are auctioned by the BRB."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0889,
+      "status": "sourced",
+      "sourceName": "BRB, Treasury bill auction results of 28-29 October 2026, 91 days",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20B.T%20du%2029%2010%202026.pdf",
+      "asOf": "2026-10-28",
+      "note": "Weighted average rate 8.89% on the 91-day bill (182 days 9.40%, 364 days 11.00%)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0967,
+      "status": "sourced",
+      "sourceName": "BRB, Treasury bond auction results of 29 June 2026, 5 years",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-06/R%C3%A9sultats%20d%27adjudication%20O.T%20du%2029%2006%202026.pdf",
+      "asOf": "2026-06-26",
+      "note": "Weighted average 9.67% at the last 5-year auction found (a single bid of 1 billion BIF); the 2-year bond is auctioned weekly at about 14.1%, so the curve is irregular."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1146,
+      "status": "sourced",
+      "sourceName": "BRB, Treasury bond auction results of 28-29 October 2026, 10 years",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20O.T%20du%2028%20%26%20du%2029%2010%202026.pdf",
+      "asOf": "2026-10-28",
+      "note": "Weighted average 11.46% at the 10-year auction of 28 October 2026 (10.97% on 20 October)."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The withholding tax on interest (impôt sur les revenus des capitaux mobiliers) could not be confirmed: the revenue authority (OBR) site returned an error and PwC Tax Summaries has no Burundi page."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No savings certificate exists and the tax on Treasury-security interest for individuals could not be confirmed from an official source."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published deposit-guarantee cover per depositor was found; the deposit guarantee fund's site could not be reached."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published card rate was found; the BRB reports average short-term lending rates of 15.75% (end-December 2025)."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BRB Treasury auctions (364-day bill 11.00%); no local stock exchange",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20B.T%20du%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: no local stock market, so a global index held in francs; a weak decade for world shares with a stable official rate gives about 4%."
+    },
+    "equity_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "BRB term-deposit average 7.44% (Q4 2025), about 6.5% after an assumed withholding tax",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: no local stock exchange operates, so this is a global equity index in Burundian-franc terms, held to 4 points above the after-tax deposit rate (6.5%)."
+    },
+    "equity_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "BRB official exchange rate history; World Bank PA.NUS.FCRF",
+      "sourceUrl": "https://www.brb.bi/Details%20Taux%20de%20Change",
+      "asOf": "2026-10-31",
+      "note": "High case: global shares near their long-run dollar return plus continued franc depreciation (the official rate moved from about 2,000 to 3,000 per dollar in 2021-2026)."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BRB official exchange rate, 3,013 BIF per dollar (30 October 2026)",
+      "sourceUrl": "https://www.brb.bi/Details%20Taux%20de%20Change",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with modest franc depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BRB official exchange rate history; World Bank PA.NUS.FCRF",
+      "sourceUrl": "https://www.brb.bi/Details%20Taux%20de%20Change",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend of about 4-5% a year plus expected franc depreciation of about 5% a year."
+    },
+    "gold_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "BRB official exchange rate history; World Bank PA.NUS.FCRF",
+      "sourceUrl": "https://www.brb.bi/Details%20Taux%20de%20Change",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a further devaluation such as the 2023 step from about 2,070 to 2,850 per dollar."
+    },
+    "fixed_income_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BRB passbook savings 4.97% (Q4 2025)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: passbook savings rate, about 5%, with tax uncertain."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BRB term deposits 7.44% (Q4 2025); 91-day bill 8.89% (October 2026)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: slightly below the term-deposit average to allow for withholding tax that could not be confirmed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BRB Treasury auctions, 364-day bill 11.00% (October 2026)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20B.T%20du%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: one-year Treasury bills at about 11% less some tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found; the insurance regulator (ARCA) site was unavailable."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium rates per 1,000 BIF of cover were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums per 100,000 BIF of cover were found."
+    },
+    "oop_health_share": {
+      "value": 0.2449,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BI",
+      "asOf": "2023-12-31",
+      "note": "24.5% in 2023 (latest year; older than 2025). External donors finance a large share of health spending."
+    },
+    "goal_inflation_health": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BRB statistics table V.7, consumer price index by function (INSBU data), health and general indices 2018-2026",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-09/V.7%20Indice%20des%20prix%20%C3%A0%20la%20consommation.xls",
+      "asOf": "2026-10-31",
+      "note": "The health index rose about 17% a year over 2020-2025 against 21% for all items (13% vs 17% over 2018-2025), so health costs are planned at about 80% of the 12% general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BRB statistics table V.7, consumer price index by function (INSBU data), education and general indices 2018-2026",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-09/V.7%20Indice%20des%20prix%20%C3%A0%20la%20consommation.xls",
+      "asOf": "2026-10-31",
+      "note": "The education index rose about 7% a year over 2020-2025 against 21% for all items (1.5% in the year to August 2026), so education costs are planned at half the 12% general assumption."
+    },
+    "life_expectancy": {
+      "value": 63.8,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BI",
+      "asOf": "2024-12-31",
+      "note": "63.8 years in 2024 (men 61.8, women 65.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.1,
+            "men": 16.3,
+            "women": 17.8
+          },
+          {
+            "age": 65,
+            "total": 13.7,
+            "men": 13.0,
+            "women": 14.3
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 10.1,
+            "women": 11.1
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.6,
+            "women": 6.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/burundi/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 21.0
+          },
+          {
+            "year": 2040,
+            "value": 19.6
+          },
+          {
+            "year": 2065,
+            "value": 11.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/burundi/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.77 (2025, World Bank), 5.1 (2040) and 9.0 (2065, populationpyramid.net/burundi/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age of the private-sector scheme (INSS) could not be read from an official source: the INSS site did not respond and ILO and SSA country pages refused access."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age of civil servants (ONPR scheme) could not be confirmed from an official text that could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BRB passbook savings 4.97% (Q4 2025)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: passbook savings rate in retirement."
+    },
+    "retirement_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BRB term deposits 7.44% (Q4 2025)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the term-deposit average to allow for withholding tax, so not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BRB Treasury auctions, 91-day bill 8.89% (October 2026)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20B.T%20du%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling short Treasury bills at about 9% less some tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BRB term deposits 7.44% (Q4 2025)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits with a small share of global shares."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BRB Treasury auctions (364-day bill 11.00%) and term deposits 7.44%",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20B.T%20du%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, Treasury bills and global shares, between the safe and equity base cases."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BRB Treasury auctions, 364-day bill 11.00% (October 2026)",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20B.T%20du%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: higher share in Treasury bills and global shares with continued franc depreciation."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension amount was found; no official source on such a scheme could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No eligibility rules for a non-contributory old-age pension were found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code text on end-of-service or severance benefits could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Rules of the INSS contributory pension (private employees) could not be read: the INSS site did not respond and ILO/SSA country profiles refused access."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte sur livret",
+      "localNameEn": "Passbook savings account",
+      "note": "Average 4.97% at end-December 2025 (BRB).",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit",
+      "note": "The BRB publishes one average for all term deposits (7.44%, end-December 2025).",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit, 1 year",
+      "note": "The BRB publishes one average for all term deposits (7.44%, end-December 2025).",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-03/Rapport%20de%20Politique%20Mon%C3%A9taire%20du%20quatri%C3%A8me%20trimestre%202025.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found in BRB statistics."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bons du Trésor",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned weekly by the BRB for the Treasury (13, 26 and 52 weeks); mostly bought by banks.",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20B.T%20du%2029%2010%202026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligations du Trésor",
+      "localNameEn": "Treasury bonds",
+      "note": "2 to 10-year bonds are auctioned by the BRB; 5-year issues are occasional.",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-06/R%C3%A9sultats%20d%27adjudication%20O.T%20du%2029%2006%202026.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligations du Trésor",
+      "localNameEn": "Treasury bonds",
+      "note": "10-year bonds are auctioned most weeks by the BRB.",
+      "sourceUrl": "https://www.brb.bi/sites/default/files/2026-10/R%C3%A9sultats%20d%27adjudication%20O.T%20du%2028%20%26%20du%2029%2010%202026.pdf"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No stock exchange or retail investment funds operating in Burundi were found."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail market for investment gold bars or coins was found; gold trading and export are regulated by the BRB."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque de la République du Burundi (BRB)",
+      "url": "https://www.brb.bi/"
+    },
+    "insuranceRegulator": {
+      "name": "Agence de Régulation et de Contrôle des Assurances (ARCA)",
+      "url": "https://www.arca.bi/",
+      "note": "Site unavailable when checked on 31 October 2026."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Institut National de Sécurité Sociale (INSS), pensions for private-sector employees",
+      "url": "https://www.inss.bi/",
+      "note": "Site did not respond when checked on 31 October 2026; civil servants are covered by the Office National des Pensions et Risques Professionnels (ONPR, https://www.onpr.bi/)."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Institut National de la Statistique du Burundi (INSBU, formerly ISTEEBU)",
+      "url": "https://www.insbu.bi/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

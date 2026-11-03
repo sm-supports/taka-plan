@@ -1,0 +1,544 @@
+{
+  "schemaVersion": 1,
+  "code": "BO",
+  "iso3": "BOL",
+  "nameEn": "Bolivia",
+  "nameNative": "Bolivia",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "qu",
+    "ay",
+    "gn"
+  ],
+  "currency": {
+    "code": "BOB",
+    "symbol": "Bs",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 12.09,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, official exchange rate (tipo de cambio oficial)",
+      "sourceUrl": "https://www.bcb.gob.bo/?q=content/tipo-de-cambio-oficial-del-d%C3%B3lar-estadounidense",
+      "asOf": "2026-10-31",
+      "note": "Official rate Bs 12.09 per US dollar for 31 October to 3 November 2026, now set daily as the weighted average of banks' dollar purchases under the flexible regime adopted in June 2026 (BCB financial stability report, July 2026); it was fixed at 6.96 until 2025."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.057,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, indicadores de inflación (INE CPI, base 2016)",
+      "sourceUrl": "https://www.bcb.gob.bo/?q=indicadores_inflacion",
+      "asOf": "2026-09-30",
+      "note": "12-month CPI inflation 5.70% in September 2026 (monthly 0.85%, year to date 3.88%), down from 19.5% for 2025 (World Bank)."
+    },
+    "inflation_projection": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BCB CPI Sept 2026 (5.7%); World Bank CPI 2021-2025: 0.7, 1.7, 2.6, 5.1, 19.5%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=BO",
+      "asOf": "2026-10-31",
+      "note": "The 2021-2025 average is 5.9% and the boliviano has just moved to a flexible rate, so we plan with 7%, above the current 5.7% to allow for further pass-through."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCB has no single policy rate; it steers through open market operations (91-day BCB letters 9.20%, 273-day 10.41% on 28 October 2026) and a 7-day repo base premium of 13.5% (BCB auction results)."
+    },
+    "savings_account_rate": {
+      "value": 0.0101,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, tasas de interés pasivas del sistema financiero (cajas de ahorro), 2026",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/28%20AH%20M%202026_0.pdf",
+      "asOf": "2026-09-30",
+      "note": "Nominal savings rate in bolivianos at multiple (commercial) banks 1.01% in September 2026 (system 1.70%; cooperatives 2.25%). Savings in US dollars pay about 0.01%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0668,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, weekly deposit rates (semana 19-25 octubre 2026), DPF 90 days in bolivianos",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-25",
+      "note": "Median of the 90-day term deposit rates reported that week by banks taking such deposits (5 banks, range 1.2-8.3%). Effective rates, weighted by amount."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0774,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, weekly deposit rates (semana 19-25 octubre 2026), DPF 360 days in bolivianos",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-25",
+      "note": "Median 360-day term deposit rate across 11 banks (range 4.6-9.6%); 720-day deposits pay about 9.2%. The BCB financial stability report gives an average effective DPF rate of 6.77% for the first half of 2026."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched BCB rate tables: no monthly recurring deposit product rate is published for Bolivia."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.037,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, Tasa de Referencia (TRe) 2026",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/otras_tasas/NUEVA%20TRE%20GESTION-2026_0.pdf",
+      "asOf": "2026-08-31",
+      "note": "Reference rate TRe in bolivianos 3.70% (calculated on August 2026 deposits, in force October 2026); US-dollar TRe 0.34%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCB ended its retail direct-sale securities for individuals on 31 December 2025 to concentrate operations in open market auctions (BCB home page notice, https://www.bcb.gob.bo/); no other government savings certificate for individuals exists.",
+      "absent": true
+    },
+    "tbill_91d_rate": {
+      "value": 0.092,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, results of the securities auction of 28 October 2026",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/002_omas/subasta_28.10.26%20web.pdf",
+      "asOf": "2026-10-28",
+      "note": "91-day BCB letter (LB-MN) awarded at 9.20%; the Treasury did not offer bills under one year that week (its shortest bond, 364 days, paid 10.45%)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1094,
+      "status": "sourced",
+      "sourceName": "Banco Central de Bolivia, results of the securities auction of 28 October 2026 (Treasury bonds)",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/002_omas/subasta_28.10.26%20web.pdf",
+      "asOf": "2026-10-28",
+      "note": "Treasury bond BT-MN 1,820 days (5 years) awarded at 10.94%."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BCB auctions of 28 October 2026 offered Treasury bonds only up to 1,820 days (5 years); no 10-year government yield is published."
+    },
+    "tax_bank_interest": {
+      "value": 0.13,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Bolivia: Individual - Income determination and Taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/bolivia/individual/income-determination",
+      "asOf": "2026-07-01",
+      "note": "Bolivian-source investment income is taxed as ordinary income under RC-IVA at 13%. Specific exemptions for some long-term deposits in bolivianos may apply but were not verified."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists since BCB direct sales ended on 31 December 2025."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched BCB and ASFI material: no per-depositor deposit insurance limit for Bolivia was found (a depositor protection fund exists for bank resolution, but no cover amount was confirmed)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched BCB rate tables: consumer loan rates average about 18.5% (September 2026), but no credit card rate or legal cap is published."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No functioning local stock market; global equity index in boliviano terms",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/politicasbcb/IEF%20jul26%20VF.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares weak in dollars while the boliviano holds steady under the new flexible regime."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BCB weekly DPF 360-day median 7.74% (13% RC-IVA); Treasury 5-year 10.94%",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Bolivia's stock market is negligible, so the base case is a global index (about 7% in dollars) plus some boliviano depreciation, capped within 4 points of the 6.7% after-tax 1-year deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Global equity index in boliviano terms after the 2026 move to a flexible exchange rate",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/politicasbcb/IEF%20jul26%20VF.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with strong global shares and further depreciation of the boliviano."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BCB official exchange rate Bs 12.09 per USD (flexible since June 2026)",
+      "sourceUrl": "https://www.bcb.gob.bo/?q=content/tipo-de-cambio-oficial-del-d%C3%B3lar-estadounidense",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold and a stable boliviano."
+    },
+    "gold_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "BCB official exchange rate Bs 12.09 per USD (flexible since June 2026)",
+      "sourceUrl": "https://www.bcb.gob.bo/?q=content/tipo-de-cambio-oficial-del-d%C3%B3lar-estadounidense",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4.5% plus about 4% a year of expected boliviano depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "BCB official exchange rate Bs 12.09 per USD (flexible since June 2026)",
+      "sourceUrl": "https://www.bcb.gob.bo/?q=content/tipo-de-cambio-oficial-del-d%C3%B3lar-estadounidense",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold and faster depreciation, as in 2025-2026."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCB savings rate 1.01%; DPF rates 6.7-7.7%",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix of savings accounts and shorter term deposits after 13% RC-IVA."
+    },
+    "fixed_income_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BCB weekly DPF 360-day median 7.74% (13% RC-IVA); Treasury 5-year 10.94%",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year term deposits at about 7.7% less 13% RC-IVA, about 6.7%."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BCB auction 28 Oct 2026: Treasury bonds 10.45-10.94%; 720-day DPF about 9.2%",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/002_omas/subasta_28.10.26%20web.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits or Treasury bonds held to maturity after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched APS insurance statistics and the BCB financial stability report: no industry-wide life claim settlement ratio is published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance is sold in Bolivia, but no regulator or public source publishes term premium rates by age."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Ministry of Health and public sources: no official typical private hospital bill is published."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched APS and public sources: no published private health insurance premiums by age."
+    },
+    "oop_health_share": {
+      "value": 0.2732,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BO",
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "BCB CPI September 2026 (5.7%); planning inflation 7%",
+      "sourceUrl": "https://www.bcb.gob.bo/?q=indicadores_inflacion",
+      "asOf": "2026-10-31",
+      "note": "No separate medical CPI series was read; we plan with the 7% projection plus 1.5 points for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCB CPI September 2026 (5.7%); planning inflation 7%",
+      "sourceUrl": "https://www.bcb.gob.bo/?q=indicadores_inflacion",
+      "asOf": "2026-10-31",
+      "note": "No separate education CPI series was read; headline projection plus one point."
+    },
+    "life_expectancy": {
+      "value": 68.739,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BO",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 69.1 for 2026 (men 66.6, women 71.7)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/bolivia-plurinational-state-of/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.45,
+            "men": 17.3,
+            "women": 19.6
+          },
+          {
+            "age": 65,
+            "total": 15.0,
+            "men": 14.1,
+            "women": 15.9
+          },
+          {
+            "age": 70,
+            "total": 11.9,
+            "men": 11.2,
+            "women": 12.6
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 6.6,
+            "women": 7.4
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/bolivia-plurinational-state-of/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 11.3
+          },
+          {
+            "year": 2040,
+            "value": 8.5
+          },
+          {
+            "year": 2065,
+            "value": 4.7
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 8.86 (2025, World Bank), 11.7 (2040) and 21.1 (2065, populationpyramid.net/bolivia-plurinational-state-of/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Sistema Integral de Pensiones (Ley 065 of 2010) sets the old-age pension age, but the law text on the APS site and the Gestora site could not be opened, so the age was not confirmed from a source."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No source read on a compulsory retirement age for Bolivian public servants; public employees are covered by the same Sistema Integral de Pensiones."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCB savings rate 1.01%; DPF rates 6.7-7.7%",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings and short deposits after 13% RC-IVA."
+    },
+    "retirement_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BCB weekly DPF 360-day median 7.74% (13% RC-IVA); Treasury 5-year 10.94%",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case capped at the 1-year term deposit rate after 13% RC-IVA (7.74% x 0.87 = 6.7%)."
+    },
+    "retirement_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "BCB auction 28 Oct 2026: Treasury bonds 10.45-10.94%",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/002_omas/subasta_28.10.26%20web.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of Treasury bonds and 2-year deposits after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCB DPF rates; global equity in boliviano terms",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if real deposit rates stay near zero."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCB DPF rates; global equity in boliviano terms",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: half term deposits or bonds at 7-10% and half global equity, about one point above planned inflation."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "BCB DPF rates; global equity in boliviano terms",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equity returns and long bonds."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bolivia pays the universal non-contributory Renta Dignidad (the APS publishes its statistics at https://www.aps.gob.bo/estadisticas/estadisticas-de-renta-dignidad/), but the current monthly amount could not be read from an official page."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Renta Dignidad exists (APS statistics page), but its eligibility rules could not be read from an official page (decree DS 29400 on the APS site did not open)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bolivian labour law provides a length-of-service indemnity (Ley General del Trabajo art. 13), but the legal text and its current rules could not be opened from an official source, so the rule was not recorded."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The contributory Sistema Integral de Pensiones (Ley 065, run by the public Gestora) exists, but its rules could not be read from an official page (APS law PDFs and the Gestora site did not open)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Caja de ahorro",
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/28%20AH%20M%202026_0.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo (DPF) a 90 días",
+      "localNameEn": "3-month fixed-term deposit",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo (DPF) a 360 días",
+      "localNameEn": "1-year fixed-term deposit",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/tasas_interes/PUBLICACION%202026%2010%2019%20TASAS%20ACT%20Y%20PAS.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "BCB direct sales of securities to individuals ended on 31 December 2025."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letras del BCB",
+      "localNameEn": "Central Bank of Bolivia letters (91 days)",
+      "note": "Auctioned weekly by the BCB; individuals buy through a stockbroker on the exchange.",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/002_omas/subasta_28.10.26%20web.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos del Tesoro",
+      "localNameEn": "Treasury bonds (up to 1,820 days)",
+      "note": "Auctioned weekly by the BCB for the Treasury.",
+      "sourceUrl": "https://www.bcb.gob.bo/webdocs/002_omas/subasta_28.10.26%20web.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No Treasury bonds longer than 5 years were offered in 2026 auctions."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondo de inversión abierto",
+      "localNameEn": "Open-ended investment fund",
+      "note": "Funds supervised by ASFI invest mostly in term deposits and bonds; the local share market is very small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold jewellery and bars",
+      "note": "No legal restriction on buying gold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Bolivia",
+      "url": "https://www.bcb.gob.bo/"
+    },
+    "insuranceRegulator": {
+      "name": "Autoridad de Fiscalización y Control de Pensiones y Seguros (APS)",
+      "url": "https://www.aps.gob.bo/"
+    },
+    "insuranceComplaints": {
+      "name": "APS: consultas y reclamos",
+      "url": "https://www.aps.gob.bo/consultas-y-reclamos/"
+    },
+    "pensionScheme": {
+      "name": "Gestora Pública de la Seguridad Social de Largo Plazo (Sistema Integral de Pensiones)",
+      "url": "https://www.gestora.bo/"
+    },
+    "oldAgeAllowance": {
+      "name": "Renta Dignidad (APS statistics)",
+      "url": "https://www.aps.gob.bo/estadisticas/estadisticas-de-renta-dignidad/"
+    },
+    "publicHealthCover": {
+      "name": "Sistema Único de Salud (SUS), Ministerio de Salud y Deportes",
+      "url": "https://www.minsalud.gob.bo/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística (INE)",
+      "url": "https://www.ine.gob.bo/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

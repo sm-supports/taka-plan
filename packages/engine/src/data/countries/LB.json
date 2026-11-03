@@ -1,0 +1,544 @@
+{
+  "schemaVersion": 1,
+  "code": "LB",
+  "iso3": "LBN",
+  "nameEn": "Lebanon",
+  "nameNative": "لبنان",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "apc",
+    "fr",
+    "en",
+    "hy"
+  ],
+  "currency": {
+    "code": "LBP",
+    "symbol": "L£",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 89500,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF (official exchange rate, 2025 average)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LB",
+      "asOf": "2025-12-31",
+      "note": "Banque du Liban has held the rate at about LBP 89,500 per dollar since 2024; Trading Economics shows 89,560 on 30 October 2026. bdl.gov.lb refused automated access."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.1753,
+      "status": "sourced",
+      "sourceName": "Central Administration of Statistics, Consumer Prices - September 2026",
+      "sourceUrl": "https://www.cas.gov.lb/new/consumer-prices-september-2026/",
+      "asOf": "2026-09-30",
+      "note": "CPI up 17.53% on September 2025 (released 21 October 2026); 16.7% in August per Trading Economics. World Bank 2025 average 14.6%."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "CAS CPI 17.5% (Sep 2026); World Bank 2025 average 14.6%; exchange rate held near LBP 89,500 per dollar since 2023",
+      "sourceUrl": "https://www.cas.gov.lb/new/consumer-prices-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "With the pound held stable against the dollar since 2023, prices should drift toward dollar inflation over time, but double-digit inflation persists, so 8% (well below the current rate, well above dollar inflation) is used; the 5-year average (hyperinflation of 2021-2023) is not a usable guide."
+    },
+    "policy_rate": {
+      "value": 0.25,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Lebanon interest rate (Banque du Liban data)",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/interest-rate",
+      "asOf": "2026-07-31",
+      "note": "Benchmark rate 25% in July 2026, unchanged; secondary source because bdl.gov.lb refused automated access. Banque du Liban manages the currency mainly through its exchange-rate policy, so this rate has little effect on deposit rates."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical savings account rate was found; Banque du Liban pages refused automated access. Since the 2019 crisis, old deposits are largely frozen and new ('fresh') deposits earn little."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found; Banque du Liban statistics pages refused automated access."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found; Banque du Liban statistics pages refused automated access."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0455,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Lebanon deposit interest rate (Banque du Liban data)",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-07-31",
+      "note": "Average rate paid by commercial banks on deposits, 4.55% in July 2026 (5.19% in June); secondary source because bdl.gov.lb refused access. The page does not say whether it covers pound or dollar deposits."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold to individuals was found in Lebanon; government debt is sold as treasury bills and bonds through Banque du Liban auctions, mainly to banks."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Lebanese pound treasury bills are auctioned by Banque du Liban for the Ministry of Finance, but bdl.gov.lb and finance.gov.lb refused automated access and no recent 3-month yield was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year Lebanese pound bond yield was found; Banque du Liban pages refused automated access."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year yield was found; Lebanon's dollar Eurobonds have been in default since March 2020 and Trading Economics shows no Lebanon bond yield."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Lebanon: income determination (reviewed 1 July 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/lebanon/individual/income-determination",
+      "asOf": "2026-07-01",
+      "note": "10% withholding tax on income from movable capital, which includes interest; PwC's personal income page says Law 144 (2019 budget) raised the interest tax from 7%."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Lebanon has no retail government savings certificate; PwC lists treasury bill and bond interest under movable capital income taxed at 10%, but no savings-certificate tax applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Institute for the Guarantee of Deposits covers bank deposits, but its website did not resolve and no official page with the current limit in pounds could be read."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; Banque du Liban circulars could not be read (access refused)."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BLOM Stock Index 1,640 on 29 Oct 2026, down 18.7% in a year and about 40% below its January 2025 high",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: the small Beirut market (a handful of bank and property shares) keeps its weak record and earns about half the deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BLOM Stock Index (Trading Economics); average deposit rate 4.55% less 10% tax = 4.1%",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case kept within 2 points of the after-tax deposit rate because the local index is tiny, illiquid and has a weak record; shares there are priced in dollars."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BLOM Stock Index (Trading Economics); long-run global equity returns",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified (largely foreign) equity holding earning global equity returns of about 8-9% with a stable pound."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); pound held near 89,500 per dollar",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely gains after the 2025-26 spike and the pound stays fixed."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); pound stable since 2023",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, with some allowance for renewed pound weakness."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); history of pound devaluation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold plus renewed pound depreciation; gold has protected Lebanese savers through past currency collapses."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 4.55% (Jul 2026) less 10% tax, falling from 5.19% in June",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates keep falling as they did in mid-2026."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 4.55% less 10% tax = 4.1%",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case slightly below the current after-tax average deposit rate, which is trending down."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 5.19% (Jun 2026) less 10% tax = 4.7%",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: deposit rates return to their June 2026 level."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry life claim settlement ratio from the Insurance Control Commission was found; its website could not be reached."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per LBP 1,000 of cover by age were found from the regulator or another public source; most cover is priced in US dollars."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for the typical out-of-pocket cost of a major private hospital stay was found; the Ministry of Public Health publishes hospital tariffs for the cases it covers, but no typical patient cost."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table per LBP 100,000 of cover was found; private health plans are sold in US dollars."
+    },
+    "oop_health_share": {
+      "value": 0.297,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LB",
+      "asOf": "2023-12-31",
+      "note": "Older than 2025; latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "CAS CPI 17.5% (Sep 2026); health prices repriced in dollars after the crisis",
+      "sourceUrl": "https://www.cas.gov.lb/new/consumer-prices-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "Health costs (hospitals and medicines largely priced in dollars) are assumed to rise faster than the 8% headline planning rate; CAS did not publish a health sub-index in its September release."
+    },
+    "goal_inflation_education": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "CAS CPI 17.5% (Sep 2026); private school and university fees largely in dollars",
+      "sourceUrl": "https://www.cas.gov.lb/new/consumer-prices-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "Education (mostly private schools and universities charging partly in dollars) is assumed to rise a little faster than the 8% headline planning rate."
+    },
+    "life_expectancy": {
+      "value": 78.2,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/lebanon",
+      "asOf": "2026-12-31",
+      "note": "Men 76.2, women 80.1 (UN WPP estimate for 2026); World Bank 2024 figure 77.9."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.0,
+            "men": 20.3,
+            "women": 23.5
+          },
+          {
+            "age": 65,
+            "total": 17.8,
+            "men": 16.3,
+            "women": 19.2
+          },
+          {
+            "age": 70,
+            "total": 14.1,
+            "men": 12.7,
+            "women": 15.2
+          },
+          {
+            "age": 80,
+            "total": 7.9,
+            "men": 7.0,
+            "women": 8.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/lebanon",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.13
+          },
+          {
+            "year": 2040,
+            "value": 4.37
+          },
+          {
+            "year": 2065,
+            "value": 3.38
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/lebanon/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 16.3 (2025, World Bank), 22.9 (2040) and 29.6 (2065, populationpyramid.net/lebanon/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private employees receive a lump-sum end-of-service indemnity from the National Social Security Fund rather than a pension; Law 319 of 2023 creates a pension system, but no official page giving the pension age could be read (cnss.gov.lb did not show it)."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official page stating the current retirement age for civil servants could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 4.55% (Jul 2026) less 10% tax, falling",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates keep falling."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 4.55% less 10% tax = 4.1%",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax average deposit rate, as no treasury bill yield was found."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 5.19% (Jun 2026) less 10% tax = 4.7%",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: deposit rates recover to their June 2026 level."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "After-tax deposits about 4.1%; BLOM index weak record",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares and deposit rates both disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "After-tax deposits 3.5% base; equity base 6%; gold base 5%",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of deposits, gold and shares at about 5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Equity high 9%; gold high 10%; deposits 4.5%",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix with foreign shares and gold."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension that a person can claim today was confirmed; means-tested cash assistance from the Ministry of Social Affairs exists, but no old-age amount could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension with published eligibility ages was confirmed."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private employees covered by the National Social Security Fund receive an end-of-service indemnity based on last wage and years of service (employer contribution 5% of earnings per PwC), but the formula could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Law 319 of 2023 replaces the NSSF end-of-service indemnity with a pension system for private employees, but its pension age, indexation and start date could not be read from an official source; cnss.gov.lb did not show them."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account",
+      "note": "Most new savings are held in 'fresh' US dollars; old pre-2019 deposits remain largely frozen."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل",
+      "localNameEn": "Term deposit (1 year)",
+      "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring deposit scheme with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "سندات الخزينة بالليرة اللبنانية",
+      "localNameEn": "Lebanese pound treasury bills",
+      "note": "Auctioned by Banque du Liban, mainly to banks."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزينة بالليرة اللبنانية",
+      "localNameEn": "Lebanese pound treasury bonds",
+      "note": "Mainly held by banks; no current yield found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": "سندات اليوروبوندز",
+      "localNameEn": "Eurobonds",
+      "note": "Lebanon's dollar Eurobonds have been in default since March 2020; no 10-year bond is being issued."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Mutual fund",
+      "note": "No diversified local retail mutual or index fund was confirmed; the Beirut Stock Exchange lists only a few shares."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ذهب (سبائك وليرات)",
+      "localNameEn": "Gold bars and coins",
+      "note": "Physical gold is freely bought and sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "مصرف لبنان (Banque du Liban)",
+      "url": "https://www.bdl.gov.lb/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Control Commission (Ministry of Economy and Trade)",
+      "url": "https://www.economy.gov.lb/",
+      "note": "The commission's own website could not be reached during research."
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Control Commission (Ministry of Economy and Trade)",
+      "url": "https://www.economy.gov.lb/"
+    },
+    "pensionScheme": {
+      "name": "الصندوق الوطني للضمان الاجتماعي (National Social Security Fund)",
+      "url": "https://www.cnss.gov.lb/",
+      "note": "Pays the end-of-service indemnity; Law 319 of 2023 introduces a pension system."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Public Health (hospital care for the uninsured)",
+      "url": "https://www.moph.gov.lb/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "إدارة الإحصاء المركزي (Central Administration of Statistics)",
+      "url": "https://www.cas.gov.lb/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

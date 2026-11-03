@@ -1,0 +1,544 @@
+{
+  "schemaVersion": 1,
+  "code": "LY",
+  "iso3": "LBY",
+  "nameEn": "Libya",
+  "nameNative": "ليبيا",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "ayl",
+    "en"
+  ],
+  "currency": {
+    "code": "LYD",
+    "symbol": "LD",
+    "decimals": 3,
+    "compact": "intl",
+    "usdRate": {
+      "value": 6.4304,
+      "status": "sourced",
+      "sourceName": "Central Bank of Libya, currency exchange rates (US dollar average)",
+      "sourceUrl": "https://cbl.gov.ly/en/currency-exchange-rates/",
+      "asOf": "2026-10-29",
+      "note": "Buy 6.4143, sell 6.4465 dinars per dollar on 29 October 2026; World Bank 2025 average 5.30, so the dinar has been devalued again since."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.166,
+      "status": "sourced",
+      "sourceName": "Trading Economics (Bureau of Statistics and Census Libya CPI, September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/libya/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "CPI up 16.6% year on year in September 2026 (14.3% in August), the highest since March 2023, after the dinar's devaluation; secondary source because the bureau's site (bsc.ly) shows only 2023 data. World Bank 2025 average 1.8%."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "World Bank CPI 2021-2025 (about 2-5% a year); Trading Economics CPI 16.6% (Sep 2026) and its 7% forecast for 2028",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=LY",
+      "asOf": "2026-10-31",
+      "note": "Inflation was low for years under subsidised prices but jumped after the 2025-26 devaluations, so 6% (between the pre-devaluation average and the current rate) is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Libya interest rate (Central Bank of Libya rediscount rate)",
+      "sourceUrl": "https://tradingeconomics.com/libya/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "Rediscount rate 3%, unchanged since 2009; it has little practical effect because commercial banks do not pay or charge interest."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Libyan banks operate under Law No. 1 of 2013, which prohibits interest-based (riba) transactions, so no interest rates are published; savings accounts earn no interest."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Libyan banks operate under Law No. 1 of 2013, which prohibits interest-based (riba) transactions, so no interest rates are published; no term deposit rates were found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Libyan banks operate under Law No. 1 of 2013, which prohibits interest-based (riba) transactions, so no interest rates are published; no term deposit rates were found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The latest World Bank deposit rate (FR.INR.DPST) for Libya is 2.5% for 2014, before interest was banned in banking; the Central Bank of Libya's monetary statistics publish no deposit rate."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found in Libya."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Libyan treasury bill market was found; the Central Bank of Libya's monetary and banking statistics list no bill yields."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Libyan government bond market was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Libyan government bond market was found."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Libya: taxes on personal income (reviewed 31 May 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/libya/individual/taxes-on-personal-income",
+      "asOf": "2026-05-31",
+      "note": "PwC says individuals are only taxed on employment income earned in Libya; in practice banks pay no interest."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Libya has no government savings certificate, so no tax rate applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or coverage limit was found on the Central Bank of Libya's website."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; interest-based lending is prohibited under Law No. 1 of 2013."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No active local stock market; global equities in dinar terms; LYD per USD 6.43 (Oct 2026)",
+      "sourceUrl": "https://cbl.gov.ly/en/currency-exchange-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: global equities disappoint and the dinar stays stable from here."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return; dinar fell about 18% against the dollar in the year to Oct 2026",
+      "sourceUrl": "https://tradingeconomics.com/libya/currency",
+      "asOf": "2026-10-31",
+      "note": "No working local stock market, so the base is a global index in dinar terms, capped at the safe rate (about 1%) plus 4 points; access to foreign funds is also restricted."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Global equity long-run return plus dinar depreciation (Trading Economics USD/LYD)",
+      "sourceUrl": "https://tradingeconomics.com/libya/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities earn about 7% in dollars and the dinar keeps losing about 3% a year."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); dinar stable after the 2026 devaluation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold barely gains after the 2025-26 spike and the dinar holds its new rate."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); dinar devalued in 2025 and 2026",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises with world inflation plus a little, and the dinar loses about 3% a year."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); USD/LYD up about 18% in the year to Oct 2026",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold plus further devaluations like 2025-26."
+    },
+    "fixed_income_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Banks pay no interest under Law No. 1 of 2013; Central Bank rediscount rate 3%",
+      "sourceUrl": "https://tradingeconomics.com/libya/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: cash and current deposits earn nothing."
+    },
+    "fixed_income_return_base": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "No interest-bearing deposits or treasury bills available to individuals",
+      "sourceUrl": "https://tradingeconomics.com/libya/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a small profit share on Islamic investment deposits at most; no published rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of Libya rediscount rate 3%",
+      "sourceUrl": "https://tradingeconomics.com/libya/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: profit-sharing deposits paying around the central bank's 3% rediscount rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry life claim settlement ratio was found; the Insurance Supervisory Authority's website refused automated access."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium rates per LYD 1,000 of cover by age were found; life insurance is a very small market in Libya."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public hospital care is free, but no figure for the typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium table per LYD 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1918,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LY",
+      "asOf": "2023-12-31",
+      "note": "Older than 2025; latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Trading Economics CPI 16.6% (Sep 2026); medicines and private care largely imported",
+      "sourceUrl": "https://tradingeconomics.com/libya/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health costs depend on imported medicines and private clinics priced off the dollar, so they are assumed to rise faster than the 6% headline planning rate."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Trading Economics CPI 16.6% (Sep 2026)",
+      "sourceUrl": "https://tradingeconomics.com/libya/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Public education is free, but private school fees are assumed to rise a little faster than the 6% headline planning rate."
+    },
+    "life_expectancy": {
+      "value": 75.2,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/libya",
+      "asOf": "2026-12-31",
+      "note": "Men 72.7, women 77.8 (UN WPP estimate for 2026); World Bank 2024 figure 71.1."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.2,
+            "men": 18.6,
+            "women": 21.9
+          },
+          {
+            "age": 65,
+            "total": 16.4,
+            "men": 15.0,
+            "women": 17.8
+          },
+          {
+            "age": 70,
+            "total": 13.0,
+            "men": 11.8,
+            "women": 14.1
+          },
+          {
+            "age": 80,
+            "total": 7.3,
+            "men": 6.7,
+            "women": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/libya",
+      "asOf": "2026-12-31",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.09
+          },
+          {
+            "year": 2040,
+            "value": 6.02
+          },
+          {
+            "year": 2065,
+            "value": 3.39
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/libya/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 7.6 (2025, World Bank), 16.6 (2040) and 29.5 (2065, populationpyramid.net/libya/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Security Fund's pensions page says the old-age pension age depends on the labour law, type of work and sex, without giving figures (it mentions early retirement for men at 60); no official statutory pension age could be read."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official page stating the retirement age for civil servants could be read; the Social Security Fund page mentions early retirement after 20 years of service under Law No. 8 of 1985 but no normal age."
+    },
+    "retirement_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Banks pay no interest under Law No. 1 of 2013",
+      "sourceUrl": "https://tradingeconomics.com/libya/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings held as cash or current deposits earn nothing."
+    },
+    "retirement_return_base": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "No interest-bearing deposit or treasury bill available to individuals",
+      "sourceUrl": "https://tradingeconomics.com/libya/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case kept near zero because there is no after-tax deposit or bill rate to rely on."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of Libya rediscount rate 3%",
+      "sourceUrl": "https://tradingeconomics.com/libya/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: Islamic profit-sharing deposits paying around 3%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Cash earns nothing; gold and global equity low cases 2%",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case for a mix of cash, gold and foreign shares."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold base 7%, global equity base 5%, cash 1%",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of cash, gold and (where accessible) global shares."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold high 12%, global equity high 10%",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case for a gold- and equity-heavy mix with further dinar depreciation."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Libya has a basic pension (al-ma'ash al-asasi) for people without other income, mentioned on the Social Security Fund's pensions page, but its current monthly amount could not be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility ages and means test for the basic pension could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees could be confirmed; the Labour Relations Law (No. 12 of 2010) could not be checked."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Security Fund runs the compulsory pension; its pensions page says the pension is based on years of service and the average of the last 36 months' pay, with a minimum of 80% of the national minimum wage, but gives no pension age or indexation rule."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account",
+      "note": "Pays no interest; banks follow Law No. 1 of 2013 banning interest."
+    },
+    "fdr_3m": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Term deposit (3 months)",
+      "note": "No interest-bearing term deposits; any investment deposits work on Islamic profit-sharing without a published rate."
+    },
+    "fdr_1y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Term deposit (1 year)",
+      "note": "No interest-bearing term deposits; any investment deposits work on Islamic profit-sharing without a published rate."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No monthly recurring deposit scheme with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "No treasury bill market was found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds",
+      "note": "No government bond market was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds",
+      "note": "No government bond market was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Mutual fund",
+      "note": "No active local stock market or retail index fund was found; buying foreign funds is restricted by currency controls."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ذهب (سبائك وجنيهات)",
+      "localNameEn": "Gold bars and coins",
+      "note": "Physical gold is widely bought as a store of value."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "مصرف ليبيا المركزي (Central Bank of Libya)",
+      "url": "https://cbl.gov.ly/en/"
+    },
+    "insuranceRegulator": {
+      "name": "هيئة الإشراف على التأمين (Insurance Supervisory Authority)",
+      "url": "https://isa.gov.ly/",
+      "note": "Website refused automated access during research."
+    },
+    "insuranceComplaints": {
+      "name": "هيئة الإشراف على التأمين (Insurance Supervisory Authority)",
+      "url": "https://isa.gov.ly/"
+    },
+    "pensionScheme": {
+      "name": "صندوق الضمان الاجتماعي (Social Security Fund)",
+      "url": "https://ssf.gov.ly/?page_id=20544"
+    },
+    "oldAgeAllowance": {
+      "name": "المعاش الأساسي (Basic pension), Social Security Fund",
+      "url": "https://ssf.gov.ly/?page_id=20544",
+      "note": "Amount and eligibility not found."
+    },
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "مصلحة الإحصاء والتعداد (Bureau of Statistics and Census)",
+      "url": "https://bsc.ly/",
+      "note": "The site showed only 2023 CPI data and some injected third-party content during research."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -228,12 +228,12 @@
       "note": "High case: locking in today's 5-year rates inside an ISA or within the personal savings allowance, so little tax is paid."
     },
     "life_claim_settlement_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The Association of British Insurers publishes yearly protection claims statistics, but its page returned 403 and the PRA/FCA publish no industry-wide life claim settlement ratio that could be read."
+      "value": 0.967,
+      "status": "sourced",
+      "sourceName": "Insurance Business UK (news), reporting Association of British Insurers and GRiD protection claims data for 2025",
+      "sourceUrl": "https://www.insurancebusinessmag.com/uk/news/life-insurance/uk-protection-payouts-reach-7-84bn-as-musculoskeletal-claims-lead-income-protection-580599.aspx",
+      "asOf": "2025-12-31",
+      "note": "Secondary source (the industry association's own release returned 403): 96.7% of 48,055 new individual life insurance claims were paid in 2025; 97.9% of all individual protection claims were paid. Published 29 June 2026."
     },
     "insurance_term_premium_table": {
       "value": null,

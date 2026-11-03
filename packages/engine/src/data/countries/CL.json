@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "code": "CL",
+  "iso3": "CHL",
+  "nameEn": "Chile",
+  "nameNative": "Chile",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "en",
+    "arn"
+  ],
+  "currency": {
+    "code": "CLP",
+    "symbol": "$",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 994.29,
+      "status": "sourced",
+      "sourceName": "Servicio de Impuestos Internos, dólar observado (published by the Banco Central de Chile), 27 October 2026",
+      "sourceUrl": "https://www.sii.cl/valores_y_fechas/dolar/dolar2026.htm",
+      "asOf": "2026-10-27",
+      "note": "CLP 994.29 per US dollar on 27 October 2026 (October average to date 981.58); World Bank 2025 average 951.3."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.041,
+      "status": "sourced",
+      "sourceName": "Instituto Nacional de Estadísticas (INE), IPC September 2026",
+      "sourceUrl": "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/10/08/%C3%ADndice-de-precios-al-consumidor-%28ipc%29-de-septiembre-present%C3%B3-una-variaci%C3%B3n-mensual-de-0-4",
+      "asOf": "2026-09-30",
+      "note": "CPI rose 0.4% in September 2026, 4.0% so far in 2026 and 4.1% over 12 months (released 8 October 2026). World Bank 2025 average 4.2%."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Banco Central de Chile 3% inflation target over a two-year horizon (reported by Rankia, Oct 2026); CPI 4.1% in September 2026",
+      "sourceUrl": "https://www.rankia.cl/noticias/bolsa/7528705-tpm-octubre-2026-banco-central-chile-mantiene-tasa-4-5",
+      "asOf": "2026-10-31",
+      "note": "The central bank's 3% target has a long record of credibility and inflation expectations two years ahead stay near it, so planning uses the target despite the current 4.1% rate."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Banco Central de Chile, Informativo diario de operaciones financieras, 30 October 2026 (TPM)",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf",
+      "asOf": "2026-10-27",
+      "note": "Monetary policy rate (TPM) 4.50%, held unanimously at the 27 October 2026 meeting and unchanged since December 2025; next meeting 15 December 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bank savings accounts (cuentas de ahorro) in Chile are mostly UF-indexed with a small real rate; no published average rate was found in central bank or CMF statistics that could be read."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0412,
+      "status": "sourced",
+      "sourceName": "Banco Central de Chile, average deposit rates of the financial system, peso operations, 30 to 89 days (Base de Datos Estadísticos)",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531",
+      "asOf": "2026-09-30",
+      "note": "Average rate on new non-indexed peso term deposits of 30-89 days was 4.12% a year in September 2026 (4.14% in August); deposits of 90 days to 1 year paid 4.53%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0453,
+      "status": "sourced",
+      "sourceName": "Banco Central de Chile, average deposit rates of the financial system, peso operations, 90 days to 1 year (Base de Datos Estadísticos)",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531",
+      "asOf": "2026-09-30",
+      "note": "Average rate on new peso term deposits of 90 days to 1 year was 4.53% in September 2026; 1-3 year deposits paid 5.26%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring-deposit product with a published rate exists in Chile; regular saving is done through savings accounts, term deposits, mutual funds or voluntary pension savings (APV)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0427,
+      "status": "sourced",
+      "sourceName": "Banco Central de Chile, average deposit rates and flows of the financial system, peso operations (weighted by September 2026 flows)",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531",
+      "asOf": "2026-09-30",
+      "note": "Weighting the four term buckets by their September 2026 flows (CLP 18.3 trillion at 4.12%, 4.3 trillion at 4.53%, 1.5 trillion at 5.26%, 0.02 trillion at 5.95%) gives about 4.27% a year. World Bank FR.INR.DPST 2024: 6.07%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Chile has no government savings certificate or retail savings bond sold directly to individuals; Treasury bonds (BTP/BTU) are auctioned to institutions and bought by individuals only through brokers."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Treasury issues no bills; the central bank's 30-360 day discount notes (PDBC) are auctioned to banks and institutional investors, and no PDBC 90-day auction was held in late October 2026 (Banco Central de Chile daily bulletin). The 180-day average interbank swap rate was 4.66%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0581,
+      "status": "sourced",
+      "sourceName": "Banco Central de Chile, Informativo diario de operaciones financieras, 30 October 2026: peso bond rates, 5 years",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf",
+      "asOf": "2026-10-28",
+      "note": "Secondary-market yield on 5-year peso government bonds (BTP/BCP) was 5.81% on 28 October 2026; 5-year UF-indexed bonds yielded 2.27% real."
+    },
+    "tbond_10y_rate": {
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "Banco Central de Chile, Informativo diario de operaciones financieras, 30 October 2026: peso bond rates, 10 years",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf",
+      "asOf": "2026-10-28",
+      "note": "Secondary-market yield on 10-year peso government bonds was 6.00% on 28 October 2026 (Trading Economics: 5.98% on 30 October); 10-year UF bonds yielded 2.62% real."
+    },
+    "tax_bank_interest": {
+      "value": 0.04,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Chile income determination and taxes on personal income (reviewed 30 Oct 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/chile/individual/income-determination",
+      "asOf": "2026-10-30",
+      "note": "No withholding: only real interest (interest less the rise in the cost of living) is added to income and taxed at the progressive Global Complementary Tax rates (0% to 40%); 4% is the bracket rate for a middle earner (taxable income about 13.5-30 UTA a year). Many small savers pay nothing."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no government savings certificate in Chile; government bond interest is taxed like other interest (real interest at progressive rates)."
+    },
+    "deposit_insurance_limit": {
+      "value": 8249526,
+      "status": "sourced",
+      "sourceName": "Dirección de Presupuestos (Ministry of Finance), Informe de Pasivos Contingentes 2025: state guarantee on deposits (Ley 21.130); UF value from the SII",
+      "sourceUrl": "https://www.dipres.gob.cl/598/articles-400549_doc_pdf.pdf",
+      "asOf": "2026-10-31",
+      "note": "The state guarantees 100% of term deposits of individuals up to 200 UF per bank per calendar year (400 UF across the system), set by Ley 21.130 of 2019; 200 UF = CLP 8,249,526 at the UF of 41,247.63 on 31 October 2026 (sii.cl)."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.4102,
+      "status": "sourced",
+      "sourceName": "Comisión para el Mercado Financiero, Certificado 10/2026 (Diario Oficial 15 Oct 2026): maximum conventional interest rate",
+      "sourceUrl": "https://www.diariooficial.interior.gob.cl/publicaciones/2026/10/15/44574/01/2885690.pdf",
+      "asOf": "2026-10-15",
+      "note": "Legal cap (tasa máxima convencional) for non-indexed peso credit of 90 days or more up to 50 UF, the bracket covering most card balances: 41.02% a year (simple annual rate) from 15 October 2026; 47.73% for under 90 days."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Santiago Stock Exchange IGPA index 51,947 on 30 Oct 2026, up about 9% in a year (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/chile/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Chilean shares repeat their flat 2016-2023 decade and earn little more than deposits."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "IGPA index history (Trading Economics); after-tax 1-year deposit about 4.3%",
+      "sourceUrl": "https://tradingeconomics.com/chile/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case about 3 points over the after-tax safe rate, kept modest because the local index's 10-year record is mixed; diversified global funds are also widely held."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "IGPA record high 58,749 in January 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/chile/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: Chilean and global shares keep close to their strong 2023-2026 gains."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); CLP 994 per USD (SII, 27 Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stalls after the 2025-26 rally and the peso firms with copper prices."
+    },
+    "gold_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); Chile 3% vs US 2% inflation targets",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold rises roughly with world inflation plus a little in dollars, and the peso loses about 1% a year against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in pesos."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "30-89 day deposits 4.12% (Banco Central de Chile) less a little tax",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits only, with further rate cuts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.043,
+      "status": "assumption",
+      "sourceName": "90-day to 1-year deposits 4.53% (Banco Central de Chile) less tax on the real part",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits after tax; tax applies only to real interest, so the after-tax rate stays close to the nominal one for most savers."
+    },
+    "fixed_income_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "10-year peso government bond 6.00% (Banco Central de Chile daily bulletin)",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in medium and long government bonds (through funds or brokers) at today's yields."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CMF publishes insurance market statistics, but no industry-wide life claim settlement ratio was found (the CMF site could not be reached)."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life insurance is sold in Chile, but no regulator or other public table of premiums per CLP 1,000 of cover by age was found; only company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for the typical out-of-pocket cost of a major private hospital stay was found; costs depend on FONASA or ISAPRE coverage."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health insurance (ISAPRE plans and complementary policies) is priced per person in UF a month, not per sum insured; no public premium table per CLP 100,000 of cover exists."
+    },
+    "oop_health_share": {
+      "value": 0.3915,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CL",
+      "asOf": "2024-12-31",
+      "note": "Out-of-pocket spending was 39.1% of current health expenditure in 2024 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "INE, IPC September 2026 bulletin: Salud division up 5.1% over 12 months",
+      "sourceUrl": "https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/boletines/espa%C3%B1ol/2026/boletin-%C3%ADndice-de-precios-al-consumidor-septiembre-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 5.1% against 4.1% for all items; planning uses 5%, about 2 points above the 3% target, since medical costs rise faster over long periods."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "INE, IPC September 2026 bulletin: Educación division up 5.8% over 12 months",
+      "sourceUrl": "https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/boletines/espa%C3%B1ol/2026/boletin-%C3%ADndice-de-precios-al-consumidor-septiembre-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 5.8% in the year to September 2026; planning uses 5%, about 2 points above general inflation."
+    },
+    "life_expectancy": {
+      "value": 81.7,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/chile",
+      "asOf": "2026-07-01",
+      "note": "Life expectancy at birth 81.7 years in 2026 (men 79.9, women 83.5), UN WPP estimate. World Bank 2024: 81.4."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/chile",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.0,
+            "men": 23.8,
+            "women": 26.1
+          },
+          {
+            "age": 65,
+            "total": 20.9,
+            "men": 19.7,
+            "women": 21.9
+          },
+          {
+            "age": 70,
+            "total": 17.0,
+            "men": 16.0,
+            "women": 17.8
+          },
+          {
+            "age": 80,
+            "total": 10.4,
+            "men": 9.8,
+            "women": 10.9
+          }
+        ]
+      },
+      "note": "Remaining years from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/chile/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 4.72
+          },
+          {
+            "year": 2040,
+            "value": 3.02
+          },
+          {
+            "year": 2065,
+            "value": 1.49
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 21.2 (2025, World Bank), 33.1 (2040) and 66.9 (2065, populationpyramid.net/chile/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "ChileAtiende, Pensión de vejez del sistema de pensiones (AFP)",
+      "sourceUrl": "https://www.chileatiende.gob.cl/fichas/5256-pension-de-vejez-del-sistema-de-pensiones-afp",
+      "asOf": "2026-03-17",
+      "note": "Legal pension age 65 for men and 60 for women in the individual-account system (DL 3.500); retiring is optional at that age and early retirement needs a pension of at least 12 UF."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "ChileAtiende, Pensión de vejez del sistema de pensiones (AFP)",
+      "sourceUrl": "https://www.chileatiende.gob.cl/fichas/5256-pension-de-vejez-del-sistema-de-pensiones-afp",
+      "asOf": "2026-03-17",
+      "note": "Civil servants hired since 1981 contribute to the same AFP system, so the same pension ages of 65 (men) and 60 (women) apply; no separate civil-service pension age was found."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "30-89 day deposits 4.12% (Banco Central de Chile)",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after small taxes, with rate cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.042,
+      "status": "assumption",
+      "sourceName": "90-day to 1-year deposits 4.53% less tax on real interest (Banco Central de Chile; PwC)",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just below the after-tax 1-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.052,
+      "status": "assumption",
+      "sourceName": "5-10 year peso government bonds 5.81-6.00% (Banco Central de Chile daily bulletin)",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of medium government bonds or UF-indexed annuities bought at today's yields."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "After-tax deposits 3.5-4.3%; IGPA record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/chile/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.058,
+      "status": "assumption",
+      "sourceName": "Fixed income base 4.3%; equity base 7.5%",
+      "sourceUrl": "https://tradingeconomics.com/chile/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 7.5% and half safe fixed income at about 4.3% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Equity high 10%; 10-year peso bond 6.0%",
+      "sourceUrl": "https://tradingeconomics.com/chile/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 231732,
+      "status": "sourced",
+      "sourceName": "ChileAtiende (Instituto de Previsión Social), Pensión Garantizada Universal (PGU)",
+      "sourceUrl": "https://www.chileatiende.gob.cl/fichas/102077-pension-garantizada-universal-pgu",
+      "asOf": "2026-09-24",
+      "note": "PGU pays CLP 231,732 a month at 65-74 to people with a base pension up to CLP 789,139 (a smaller amount up to CLP 1,252,602); from 75 the maximum is CLP 250,275 under the 2025 pension reform. It is paid on top of other pensions and while still working."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "ChileAtiende (Instituto de Previsión Social), Pensión Garantizada Universal (PGU)",
+      "sourceUrl": "https://www.chileatiende.gob.cl/fichas/102077-pension-garantizada-universal-pgu",
+      "asOf": "2026-09-24",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Age 65 for men and women; not in the richest 10% of the population (pension targeting score), at least 20 years' residence since age 20 and 4 of the last 5 years, and a base pension of at most CLP 1,252,602."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Chile's Labour Code gives severance of 30 days' pay per year of service (capped at 11 years and 90 UF a month) only when the employer dismisses for business needs, not on retirement or resignation, so there is no retirement gratuity; the Labour Directorate page stating the scale could not be read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "ChileAtiende, Pensión de vejez del sistema de pensiones (AFP)",
+      "sourceUrl": "https://www.chileatiende.gob.cl/fichas/5256-pension-de-vejez-del-sistema-de-pensiones-afp",
+      "asOf": "2026-03-17",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "note": "Compulsory individual-account system (AFP) for employees, with a new employer-funded social insurance component from the 2025 reform: pension age 65 (men) or 60 (women); the pension depends on the account balance, age and life expectancy, annuities are paid in inflation-indexed UF, and pensions are taxed as income."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account",
+      "note": "Mostly UF-indexed accounts with a small real rate; no published average rate."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo",
+      "localNameEn": "Term deposit (30-89 days)",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo",
+      "localNameEn": "Term deposit (90 days to 1 year)",
+      "note": "Also sold in UF (inflation-indexed) for terms of 90 days or more.",
+      "sourceUrl": "https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_TASA_INTERES/MN_TASA_INTERES_09/TSF_34/T531"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring-deposit product."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate or savings bond."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bill",
+      "note": "No Treasury bills; central bank discount notes (PDBC) are sold to institutions only.",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bono de la Tesorería en pesos (BTP)",
+      "localNameEn": "Treasury peso bond, 5 years",
+      "note": "Bought by individuals through brokers or bond funds.",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bono de la Tesorería en pesos (BTP)",
+      "localNameEn": "Treasury peso bond, 10 years",
+      "sourceUrl": "https://si3.bcentral.cl/estadisticas/Diario1/aplicaciones/Informativo/inf20261030.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondo mutuo accionario",
+      "localNameEn": "Equity mutual fund or index fund (ETF)",
+      "note": "Equity mutual funds and ETFs are widely sold to retail investors; voluntary pension savings (APV) carry tax relief."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro físico (lingotes y monedas)",
+      "localNameEn": "Physical gold bars and coins",
+      "note": "Buying physical gold is legal; there is no specific retail gold scheme."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Chile",
+      "url": "https://www.bcentral.cl/"
+    },
+    "insuranceRegulator": {
+      "name": "Comisión para el Mercado Financiero (CMF)",
+      "url": "https://www.cmfchile.cl/"
+    },
+    "insuranceComplaints": {
+      "name": "CMF, consultas y reclamos (Presentaciones CMF)",
+      "url": "https://www.cmfchile.cl/",
+      "note": "Complain to the insurer first; then to the CMF. Health insurers (ISAPRE) are handled by the Superintendencia de Salud."
+    },
+    "pensionScheme": {
+      "name": "Superintendencia de Pensiones (AFP system)",
+      "url": "https://www.spensiones.cl/"
+    },
+    "oldAgeAllowance": {
+      "name": "Pensión Garantizada Universal (PGU), Instituto de Previsión Social",
+      "url": "https://www.chileatiende.gob.cl/fichas/102077-pension-garantizada-universal-pgu"
+    },
+    "publicHealthCover": {
+      "name": "Fondo Nacional de Salud (FONASA)",
+      "url": "https://www.fonasa.cl/"
+    },
+    "depositInsurance": {
+      "name": "State deposit guarantee (Garantía estatal a los depósitos), explained by the CMF",
+      "url": "https://www.cmfchile.cl/educa/621/w3-article-27460.html",
+      "note": "No separate insurer: the state guarantees term deposits of individuals up to 200 UF per bank per year."
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadísticas (INE)",
+      "url": "https://www.ine.gob.cl/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

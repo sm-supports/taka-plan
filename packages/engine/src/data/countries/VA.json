@@ -305,20 +305,20 @@
       "note": "The UN World Population Prospects do not publish population projections or dependency ratios for the Holy See; World Bank SP.POP.DPND.OL has no figure."
     },
     "retirement_age_default": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Retirement of Holy See staff is set by the Regulation of the Vatican Pension Fund (Regolamento del Personale della Curia Romana 2026, Art. 73), which could not be read; there is no private-sector labour market."
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Avvenire (news), 'Il Vaticano alza l'età e i contributi' (Vatican Pension Fund reform in force 1 January 2010)",
+      "sourceUrl": "https://www.avvenire.it/rubriche/pensioni-e-previdenza/il-vaticano-alza-leta-e-i-contributi_5232",
+      "asOf": "2010-01-01",
+      "note": "Secondary source, older than 2025: since 2010 lay staff of the Holy See and Vatican City State retire at 67 (clergy and religious not before 72); there is no private-sector labour market, the Holy See and the State being the employers. No later change to the general age was found."
     },
     "retirement_age_government": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Lay heads, secretaries and directors of Curia bodies leave service at 70 (Regolamento del Personale della Curia Romana, in force 1 January 2026, Art. 71 §2); the age for other staff is set by the Vatican Pension Fund regulation, which could not be read."
+      "value": 67,
+      "status": "sourced",
+      "sourceName": "Avvenire (news), 'Il Vaticano alza l'età e i contributi' (Vatican Pension Fund reform in force 1 January 2010)",
+      "sourceUrl": "https://www.avvenire.it/rubriche/pensioni-e-previdenza/il-vaticano-alza-leta-e-i-contributi_5232",
+      "asOf": "2010-01-01",
+      "note": "Secondary source, older than 2025: lay employees retire at 67 and clergy and religious at 72; lay heads, secretaries and directors of Curia bodies leave at 70 (Regolamento del Personale della Curia Romana, in force 1 January 2026, Art. 71 §2); cardinals heading dicasteries at 75."
     },
     "retirement_return_low": {
       "value": 0.01,
@@ -398,7 +398,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Staff of the Holy See and Vatican City State are covered by the Vatican Pension Fund (Fondo Pensioni), but its regulation with pension ages and benefit rules could not be read."
+      "note": "Staff of the Holy See and Vatican City State are covered by the Vatican Pension Fund (Fondo Pensioni): lay staff retire at 67 (Avvenire, 2009), a pension needs at least 20 years' service (Secretariat of State rescript of 16 January 2010, https://www.vatican.va/roman_curia/labour_office/docs/documents/ulsa_b17_2_it.html) and contributions are 26% of pay; the benefit formula and whether pensions are indexed to prices were not found, so the scheme is not filled in."
     }
   },
   "instruments": {
@@ -466,7 +466,11 @@
     "centralBank": null,
     "insuranceRegulator": null,
     "insuranceComplaints": null,
-    "pensionScheme": null,
+    "pensionScheme": {
+      "name": "Fondo Pensioni (Vatican Pension Fund)",
+      "url": "https://www.vatican.va/roman_curia/labour_office/docs/documents/ulsa_b17_2_it.html",
+      "note": "Pension fund for employees of the Holy See and Vatican City State; the link is the Labour Office of the Apostolic See bulletin on voluntary contributions to the fund."
+    },
     "oldAgeAllowance": null,
     "publicHealthCover": {
       "name": "Fondo Assistenza Sanitaria (FAS), Holy See health assistance fund",

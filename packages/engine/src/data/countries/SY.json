@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "code": "SY",
+  "iso3": "SYR",
+  "nameEn": "Syria",
+  "nameNative": "سوريا",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "ku",
+    "en",
+    "fr",
+    "hy"
+  ],
+  "currency": {
+    "code": "SYP",
+    "symbol": "ل.س",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 122.0,
+      "status": "sourced",
+      "sourceName": "Central Bank of Syria, official exchange-rate bulletin (new pound)",
+      "sourceUrl": "https://cb.gov.sy/fx",
+      "asOf": "2026-10-29",
+      "note": "122.00 new Syrian pounds per US dollar in the official bulletin of 29 October 2026 (Trading Economics shows 122.02 on 30 October); rates are quoted in the new pound, so all money figures here are in new pounds. The bank's site carries a demo-version banner. CLDR's '£' is replaced by the local abbreviation ل.س."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.248,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Syrian Center for Policy Research, CPI July 2026",
+      "sourceUrl": "https://tradingeconomics.com/syria/inflation-cpi",
+      "asOf": "2026-07-31",
+      "note": "Consumer prices up 24.8% year on year in July 2026 (40.5% in June); secondary source because no official 2026 CPI was found (the Central Bank of Syria price-index series stops in 2020). World Bank data stops in 2019."
+    },
+    "inflation_projection": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Latest CPI 24.8% (July 2026) after 40.5% in June; exchange rate stable near 122 new pounds per dollar",
+      "sourceUrl": "https://tradingeconomics.com/syria/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "There is no credible inflation target and inflation is falling fast from very high levels with a steadier pound, so a rounded 15% a year is used, well below today's rate but far above stable economies."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Syria site shows no policy rate; only the weighted average market lending rate (16.23% in June 2026) is published."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No savings-account rate is published; the Central Bank of Syria deposit-rate series covers only 1-year deposits and stops in March 2022."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month deposit rate is published by the Central Bank of Syria."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0807,
+      "status": "sourced",
+      "sourceName": "Central Bank of Syria, weighted average market interest rate on 1-year customer deposits in Syrian pounds",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2022-03-31",
+      "note": "8.07% in March 2022, the latest value published; older than 2025 and far below current inflation, so treat it as indicative only."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0807,
+      "status": "sourced",
+      "sourceName": "Central Bank of Syria, weighted average market interest rates on customer deposits in Syrian pounds",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2022-03-31",
+      "note": "8.07% in March 2022 (1-year deposits), the latest value published; older than 2025. World Bank FR.INR.DPST has no recent Syrian data."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Investment certificates (شهادات الاستثمار) were sold to the public (Central Bank of Syria series of amounts outstanding, to June 2022), but no current rate or terms were found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Syria lists treasury bill and bond auction results up to issue 6 of 2024 only as PDF titles; no yield could be read."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bonds of 1 to 30 years are auctioned (latest listed issue 6 of 2024), but no yield could be read."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bonds of 1 to 30 years are auctioned (latest listed issue 6 of 2024), but no 10-year yield could be read."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax rate on bank interest for individuals could not be confirmed from an official source; no PwC Tax Summary covers Syria."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax treatment of investment-certificate returns could not be confirmed from an official source."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover limit could be confirmed from the Central Bank of Syria site."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published credit card rate was found; the market lending rate averaged 16.23% in June 2026 (Central Bank of Syria)."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022); inflation 24.8% (July 2026)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Low case: the small local market, recovering from war and sanctions, returns less than deposits in pounds."
+    },
+    "equity_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022); market lending rate 16.23% (June 2026)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points above the deposit rate, within the 4-point cap, because the local index has a weak, war-distorted 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "Inflation 24.8% (July 2026); market lending rate 16.23% (June 2026)",
+      "sourceUrl": "https://tradingeconomics.com/syria/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "High case: share prices keep pace with high inflation as the economy recovers."
+    },
+    "gold_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Official rate 122 new pounds per USD (October 2026); inflation assumption 15%",
+      "sourceUrl": "https://cb.gov.sy/fx",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with modest pound depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Official rate 122 new pounds per USD (October 2026); inflation assumption 15%; long-run dollar gold trend",
+      "sourceUrl": "https://cb.gov.sy/fx",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold up about 4% a year plus about 10% a year of pound depreciation, in line with the inflation gap to the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Official rate 122 new pounds per USD (October 2026); latest inflation 24.8%",
+      "sourceUrl": "https://cb.gov.sy/fx",
+      "asOf": "2026-10-31",
+      "note": "High case: renewed pound weakness at today's inflation rate."
+    },
+    "fixed_income_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates below the last published level, before any tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Base case: a little below the last published 1-year deposit rate to allow for tax on interest, which could not be confirmed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022); market lending rate 16.23% (June 2026)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "High case: deposit rates rise toward inflation as monetary policy normalises."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found from the insurance supervisor."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium rates per 1,000 pounds of cover were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.724,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Syria",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SY",
+      "asOf": "2023-12-31",
+      "note": "72.4% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 15%; latest CPI 24.8% (July 2026)",
+      "sourceUrl": "https://tradingeconomics.com/syria/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI was found; with most health spending paid out of pocket and many imported medicines, 2 points above the inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 15%; latest CPI 24.8% (July 2026)",
+      "sourceUrl": "https://tradingeconomics.com/syria/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was found; private schooling costs tend to rise faster than prices, so 2 points above the inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 72.56,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Syria",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SY",
+      "asOf": "2024-12-31",
+      "note": "72.6 years in 2024 (men 70.2, women 74.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.2,
+            "men": 17.7,
+            "women": 20.7
+          },
+          {
+            "age": 65,
+            "total": 15.4,
+            "men": 14.1,
+            "women": 16.6
+          },
+          {
+            "age": 70,
+            "total": 11.9,
+            "men": 10.9,
+            "women": 12.9
+          },
+          {
+            "age": 80,
+            "total": 6.5,
+            "men": 5.9,
+            "women": 7.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/syrian-arab-republic/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.8
+          },
+          {
+            "year": 2040,
+            "value": 9.1
+          },
+          {
+            "year": 2065,
+            "value": 4.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/syrian-arab-republic/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 7.25 (2025, World Bank), 11.0 (2040) and 22.0 (2065, populationpyramid.net/syrian-arab-republic/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The private-sector pension age under the social insurance law could not be confirmed from an official or allowed secondary source."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for government employees could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates below the last published level."
+    },
+    "retirement_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Base case: below the last published 1-year deposit rate, allowing for tax on interest that could not be confirmed."
+    },
+    "retirement_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022); market lending rate 16.23% (June 2026)",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "High case: deposit rates rise somewhat as policy normalises."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Syria 1-year deposit rate 8.07% (2022); equity low case 5%; gold low case 6%",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Deposit rate 8.07% (2022); equity base 11%; gold base 14%",
+      "sourceUrl": "https://cb.gov.sy/statistics/4",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of deposits, some local shares and a larger gold share, as is common where the currency is weak."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Equity high 18%; gold high 25%; inflation 24.8% (July 2026)",
+      "sourceUrl": "https://tradingeconomics.com/syria/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth and gold-leaning mix that keeps pace with high inflation."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension and amount could be confirmed from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension eligibility rules could be confirmed from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity rule for private employees could be confirmed; the labour law text could not be read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A contributory social insurance scheme covers public and private employees, but its pension age, indexation and tax rules could not be read from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)",
+      "note": "The latest published average rate on 1-year pound deposits is 8.07% (March 2022).",
+      "sourceUrl": "https://cb.gov.sy/statistics/4"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "شهادات الاستثمار",
+      "localNameEn": "Investment certificates",
+      "note": "Government-backed investment certificates were sold to the public; the Central Bank of Syria series of amounts outstanding ends in June 2022 and current terms were not found.",
+      "sourceUrl": "https://cb.gov.sy/statistics/26"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "أذون الخزينة",
+      "localNameEn": "Treasury bills",
+      "note": "Bills under one year are auctioned to banks; the latest listed issue is from 2024.",
+      "sourceUrl": "https://cb.gov.sy/pages/587"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bonds",
+      "note": "Bonds of 1 to 30 years are auctioned to banks; the latest listed issue is from 2024.",
+      "sourceUrl": "https://cb.gov.sy/pages/587"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bonds",
+      "note": "Bonds of 1 to 30 years are auctioned to banks; the latest listed issue is from 2024.",
+      "sourceUrl": "https://cb.gov.sy/pages/587"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No diversified mutual or index fund for retail investors was found; only individual shares trade on the local exchange."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold coins, small bars and jewellery are widely bought as savings."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Syria",
+      "url": "https://cb.gov.sy/"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": null
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

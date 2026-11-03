@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "PY",
+  "iso3": "PRY",
+  "nameEn": "Paraguay",
+  "nameNative": "Paraguay",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "gn"
+  ],
+  "currency": {
+    "code": "PYG",
+    "symbol": "₲",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 5919.69,
+      "status": "sourced",
+      "sourceName": "Banco Central del Paraguay, reference exchange rate (non-financial clients market), close 30 October 2026",
+      "sourceUrl": "https://www.bcp.gov.py/webapps/web/cotizacion/referencial-fluctuante",
+      "asOf": "2026-10-30",
+      "note": "Mid of the closing buy 5,910.01 and sell 5,929.37 guaranies per dollar; the guarani appreciated sharply in 2026 (World Bank average 7,545 for 2025)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.017,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Paraguay inflation rate (Banco Central del Paraguay CPI)",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: year-on-year CPI inflation 1.7% in September 2026 (1.5% in August); the BCP site blocks automated reading. World Bank gives 4.0% for 2025."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Banco Central del Paraguay inflation target 3.5% (reported by Trading Economics, October 2026 decision)",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "The BCP targets 3.5% and expectations are anchored there, so we plan with the target although current inflation (1.7%) is lower."
+    },
+    "policy_rate": {
+      "value": 0.055,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Paraguay interest rate (BCP monetary policy committee, 23 October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/interest-rate",
+      "asOf": "2026-10-23",
+      "note": "Secondary source: BCP policy rate (TPM) held at 5.50% at the October 2026 meeting; the BCP site blocks automated reading."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCP publishes average deposit rates by type, but its pages block automated reading (Cloudflare challenge) and no other public source with a 2026 savings account rate was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BCP average rates for short fixed-term deposits could not be read (site blocks automated access); no other public 2026 figure found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "BCP average rates for 1-year savings certificates (CDA) could not be read (site blocks automated access); no other public 2026 figure found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published rate was found in Paraguay."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0342,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=PY",
+      "asOf": "2021-12-31",
+      "note": "Average rate paid by banks on deposits, 2021 (older than 2025; the series has no later value and the BCP rate tables could not be read)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; the Ministry of Economy and Finance sells Treasury bonds through the stock exchange (see tbond rows)."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regular 91-day Treasury bill auction by the Ministry of Economy and Finance was found in its 2026 news; short-term central bank paper (IRM) is sold to banks, not individuals."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0826,
+      "status": "sourced",
+      "sourceName": "Ministerio de Economia y Finanzas: Treasury bond auction, bond maturing 2030",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-09-23",
+      "note": "MEF auction of 23 September 2026 (reopening, via the Asuncion stock exchange): allotment yield 8.26% on the bond maturing in 2030 (about 4 years remaining), 24 basis points below July."
+    },
+    "tbond_10y_rate": {
+      "value": 0.087,
+      "status": "sourced",
+      "sourceName": "Ministerio de Economia y Finanzas: Treasury bond auction, bond maturing 2035",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-09-23",
+      "note": "MEF auction of 23 September 2026 (reopening, via the Asuncion stock exchange): allotment yield 8.70% on the bond maturing in 2035 (about 9 years remaining), 30 basis points below July."
+    },
+    "tax_bank_interest": {
+      "value": 0.08,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Paraguay individual taxes on personal income (reviewed 19 October 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/paraguay/individual/taxes-on-personal-income",
+      "asOf": "2026-10-19",
+      "note": "Personal income tax (IRP) on capital income is 8%, and PwC lists interest on deposits among capital income; PwC lists no exemption for deposit interest, but special exemptions in Law 6380/2019 could not be checked (tax authority site unreachable)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists in Paraguay (see sanchayapatra_5y_rate), so no tax rate applies."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Paraguay has a Deposit Guarantee Fund (Fondo de Garantia de Depositos) run by the BCP, but its page and the law text could not be read (sites block automated access or were unreachable), so the coverage amount was not confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCP publishes maximum credit card rates, but its pages block automated reading; no other public 2026 figure found."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Paraguay Treasury bond yields 8.26-8.70% (MEF, September 2026); no usable local equity index",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "Low case: the Asuncion stock exchange trades few shares, so savers rely on global equity in guarani terms, and a weak decade is possible."
+    },
+    "equity_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Paraguay Treasury bond yields 8.26-8.70% (MEF, September 2026); global equity in guarani terms",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "No local equity index with a 10-year record exists, so the base uses global equities in guarani terms (about 7% in dollars plus slight guarani depreciation), below the 7.6% after-tax bond yield plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Paraguay Treasury bond yields 8.26-8.70% (MEF, September 2026); global equity in guarani terms",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat strong dollar returns and the guarani weakens."
+    },
+    "gold_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "BCP reference exchange rate (about 5,920 guaranies per dollar, October 2026, after strong appreciation from 7,545 in 2025)",
+      "sourceUrl": "https://www.bcp.gov.py/webapps/web/cotizacion/referencial-fluctuante",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price while the guarani stays strong."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "BCP reference exchange rate (about 5,920 guaranies per dollar, October 2026); World Bank average 7,545 for 2025",
+      "sourceUrl": "https://www.bcp.gov.py/webapps/web/cotizacion/referencial-fluctuante",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4.5% plus about 1 point of guarani depreciation a year over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BCP reference exchange rate (about 5,920 guaranies per dollar, October 2026)",
+      "sourceUrl": "https://www.bcp.gov.py/webapps/web/cotizacion/referencial-fluctuante",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold prices and a weaker guarani."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCP policy rate 5.50% (October 2026); 8% personal income tax on interest",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits below the policy rate, after 8% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCP policy rate 5.50%; Treasury bond yields 8.26-8.70% (September 2026); 8% tax on interest",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits near the policy rate and Treasury bonds, after 8% personal income tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Treasury bond yields 8.26-8.70% (MEF, September 2026); 8% tax on interest",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "High case: holding Treasury bonds at about 7.6-8% after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Superintendencia de Seguros (BCP) publishes insurer statistics, but its pages block automated reading; no industry-wide life claim settlement ratio found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Paraguay, but no regulator or public source publishing premium rates by age was found; only individual insurer quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official or public figure for a typical major private hospital stay in Paraguay was found (Ministry of Health and IPS sites unreachable)."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health plan (medicina prepaga) premiums by age from a regulator or public source were found."
+    },
+    "oop_health_share": {
+      "value": 0.3632,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PY",
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCP inflation target 3.5%; CPI inflation 1.7% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No long-run medical CPI series could be read; planning inflation plus 1.5 points for private medical costs."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCP inflation target 3.5%; CPI inflation 1.7% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No long-run education CPI series could be read; planning inflation plus 1.5 points for private school and university fees."
+    },
+    "life_expectancy": {
+      "value": 73.982,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PY",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 74.2 for 2026 (men 71.3, women 77.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/paraguay/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.2,
+            "men": 18.5,
+            "women": 21.9
+          },
+          {
+            "age": 65,
+            "total": 16.6,
+            "men": 15.1,
+            "women": 18
+          },
+          {
+            "age": 70,
+            "total": 13.2,
+            "men": 11.9,
+            "women": 14.4
+          },
+          {
+            "age": 80,
+            "total": 7.5,
+            "men": 6.7,
+            "women": 8.2
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/paraguay/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.7
+          },
+          {
+            "year": 2040,
+            "value": 6.8
+          },
+          {
+            "year": 2065,
+            "value": 3.5
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 10.35 (2025, World Bank), 14.7 (2040) and 28.2 (2065, https://www.populationpyramid.net/paraguay/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Ministerio de Economia y Finanzas, presentation on the Caja Fiscal reform (14 January 2026): comparison with IPS parameters",
+      "sourceUrl": "https://www.mef.gov.py/sites/default/files/2026-01/14-01-2026%20-%20Pres%20Reforma%20Caja%20Fiscal.pdf",
+      "asOf": "2026-01-14",
+      "note": "IPS (Instituto de Prevision Social) ordinary retirement: minimum age 60 with 25 years of contributions, 100% replacement rate; early (extraordinary) retirement from 55 with 30 years."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "Ministerio de Economia y Finanzas, Caja Fiscal presentation (January 2026): ordinary retirement parameters by sector",
+      "sourceUrl": "https://www.mef.gov.py/sites/default/files/2026-01/PresCajaFiscal.pdf",
+      "asOf": "2026-01-01",
+      "note": "General public administration (Caja Fiscal): minimum age 62 with 20-40 years of contributions (47-100% replacement); the 2026 reform (Law 7633/2026) kept these parameters and set 57 for teachers, police and military."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCP policy rate 5.50% (October 2026); 8% tax on interest",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings and short deposits after 8% tax."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCP policy rate 5.50% (October 2026); 8% tax on interest",
+      "sourceUrl": "https://tradingeconomics.com/paraguay/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the policy rate after tax (about 5.1%), as 1-year deposit rates could not be read; liquid deposits in retirement."
+    },
+    "retirement_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Treasury bond yields 8.26-8.70% (MEF, September 2026); 8% tax",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "High case: part of savings in Treasury bonds at about 7.6% after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Treasury bond yields 8.26-8.70%; global equity in guarani terms",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if equities disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Treasury bond yields 8.26-8.70%; global equity in guarani terms",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "Base case: half equities at 8.5% and half deposits and bonds around 5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Treasury bond yields 8.26-8.70%; global equity in guarani terms",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns and bonds held to maturity."
+    },
+    "old_age_allowance_monthly": {
+      "value": 724762,
+      "status": "sourced",
+      "sourceName": "HelpAge International, Pension Watch: Paraguay (Pension Alimentaria para Adultos Mayores)",
+      "sourceUrl": "https://www.helpage.org/country_profile/paraguay/",
+      "asOf": "2025-07-01",
+      "note": "Poverty-targeted social pension from age 65 paid to over 375,000 people (MEF, August 2026); 724,762 guaranies is 25% of the 2025 minimum wage (2,899,048), so it likely rose in July 2026 with the new minimum wage (about 3,044,000); paid by the Ministry of Social Development."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "HelpAge International, Pension Watch: Paraguay",
+      "sourceUrl": "https://www.helpage.org/country_profile/paraguay/",
+      "asOf": "2025-07-01",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Pension Alimentaria para Adultos Mayores: age 65 for men and women, targeted at people in poverty; covers about 61% of people 60+."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provides an indemnity on unjustified dismissal, but its text and the Labour Ministry site were unreachable, so whether any statutory payment applies at retirement could not be confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Ministerio de Economia y Finanzas, Caja Fiscal reform presentation (14 January 2026): IPS parameters",
+      "sourceUrl": "https://www.mef.gov.py/sites/default/files/2026-01/14-01-2026%20-%20Pres%20Reforma%20Caja%20Fiscal.pdf",
+      "asOf": "2026-01-14",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "IPS compulsory contributory scheme for private employees: ordinary pension at 60 with 25 years of contributions (100% of the reference wage). Automatic indexation and tax treatment could not be confirmed (IPS site unreachable), so inflationLinked is set false."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Caja de ahorro",
+      "localNameEn": "Savings account",
+      "note": "Offered by banks and finance companies; no public 2026 rate could be read."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "Fixed-term deposit",
+      "note": "Short fixed-term deposits are offered by banks; no public 2026 rate could be read."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Certificado de Depósito de Ahorro (CDA)",
+      "localNameEn": "Savings deposit certificate",
+      "note": "The usual term deposit product for 1 year or more; no public 2026 rate could be read."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 91-day Treasury bill auction was found; the BCP's short-term monetary regulation instruments are for banks."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos del Tesoro Público",
+      "localNameEn": "Treasury bonds (maturing 2030)",
+      "note": "Auctioned by the Ministry of Economy and Finance through the Asuncion stock exchange; individuals buy through licensed brokers.",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bonos del Tesoro Público",
+      "localNameEn": "Treasury bonds (maturing 2035)",
+      "note": "Auctioned by the Ministry of Economy and Finance through the Asuncion stock exchange.",
+      "sourceUrl": "https://www.mef.gov.py/es/institucional/sala-de-prensa/noticias/mef-adjudico-230527-millones-bonos-del-tesoro-tasas"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "Local investment funds are mostly money-market and fixed-income; no diversified local equity or index fund for retail was confirmed."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold jewellery and coins",
+      "note": "No legal restriction on buying gold; mostly sold as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central del Paraguay (BCP)",
+      "url": "https://www.bcp.gov.py/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de Seguros, Banco Central del Paraguay",
+      "url": "https://www.bcp.gov.py/superintendencia-de-seguros-i9"
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia de Seguros, Banco Central del Paraguay",
+      "url": "https://www.bcp.gov.py/superintendencia-de-seguros-i9",
+      "note": "No separate insurance ombudsman; complaints go to the Superintendencia de Seguros."
+    },
+    "pensionScheme": {
+      "name": "Instituto de Previsión Social (IPS)",
+      "url": "https://portal.ips.gov.py/"
+    },
+    "oldAgeAllowance": {
+      "name": "Pensión Alimentaria para Adultos Mayores, Ministerio de Desarrollo Social",
+      "url": "https://www.mds.gov.py/"
+    },
+    "publicHealthCover": {
+      "name": "Ministerio de Salud Pública y Bienestar Social (free public health services)",
+      "url": "https://www.mspbs.gov.py/"
+    },
+    "depositInsurance": {
+      "name": "Fondo de Garantía de Depósitos (Banco Central del Paraguay)",
+      "url": "https://www.bcp.gov.py/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística (INE)",
+      "url": "https://www.ine.gov.py/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

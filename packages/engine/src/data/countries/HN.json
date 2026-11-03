@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 1,
+  "code": "HN",
+  "iso3": "HND",
+  "nameEn": "Honduras",
+  "nameNative": "Honduras",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es"
+  ],
+  "currency": {
+    "code": "HNL",
+    "symbol": "L",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 26.8784,
+      "status": "sourced",
+      "sourceName": "Trading Economics: USD/HNL exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/honduras/currency",
+      "asOf": "2026-10-30",
+      "note": "Secondary source (BCH site could not be read); World Bank PA.NUS.FCRF gives 25.95 for 2025."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0628,
+      "status": "sourced",
+      "sourceName": "Trading Economics: Honduras inflation rate (BCH/INE data)",
+      "sourceUrl": "https://tradingeconomics.com/honduras/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: the Banco Central de Honduras site could not be read by machine. 6.20% in August 2026."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Trading Economics indicators: inflation expectations 4.95% (Aug 2026); World Bank FP.CPI.TOTL.ZG 4.6% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/honduras/indicators",
+      "asOf": "2026-10-31",
+      "note": "Expected inflation near 5% and a recent average of about 5-6% (higher in 2022), so we plan with a rounded 5%."
+    },
+    "policy_rate": {
+      "value": 0.0575,
+      "status": "sourced",
+      "sourceName": "Trading Economics: Honduras interest rate (BCH tasa de política monetaria)",
+      "sourceUrl": "https://tradingeconomics.com/honduras/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "Secondary source; unchanged from the previous reading."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCH interest rate statistics pages are rendered by script and could not be read; no savings rate found from a permitted source."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 3-month term deposit rate found; the BCH statistics pages could not be read."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 1-year term deposit rate found; the BCH statistics pages could not be read."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official series for monthly recurring deposits was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.1244,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2025-12-31",
+      "note": "IMF IFS deposit rate via the World Bank; up from 8.91% in 2024, reflecting tight bank liquidity in 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold directly to individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 91-day bill yield found from an official or permitted source."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield found from an official or permitted source."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield found from an official or permitted source."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PwC Worldwide Tax Summaries (reviewed 10 August 2026) does not state the tax on deposit interest for resident individuals; no official SAR source could be read."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found, so no tax rate applies to report."
+    },
+    "deposit_insurance_limit": {
+      "value": 245715,
+      "status": "sourced",
+      "sourceName": "FOSEDE: Resolución No. 341/18-02-2025, suma máxima asegurada para el año 2025",
+      "sourceUrl": "https://fosede.hn/wp-content/uploads/2025/06/Resolucion-Suma-Maxima-Asugurada-para-el-ano-2025.pdf",
+      "asOf": "2025-01-01",
+      "note": "L245,715 per depositor per institution for 2025 (the legal USD 9,632.92 base at the BCH selling rate of L25.5069); the amount is reset each January and no 2026 resolution was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or official average credit card rate was found."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Global equity index in lempira terms",
+      "sourceUrl": "https://tradingeconomics.com/honduras/indicators",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global equities and a stable lempira."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equity index in lempira terms; lempira 26.88 per dollar (Oct 2026) vs about 24.6 in 2023",
+      "sourceUrl": "https://tradingeconomics.com/honduras/indicators",
+      "asOf": "2026-10-31",
+      "note": "The local exchange lists few shares, so we use a global equity index (about 7% in dollars) plus about 2% a year of lempira depreciation."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Global equity index in lempira terms",
+      "sourceUrl": "https://tradingeconomics.com/honduras/indicators",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities and faster depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with mild lempira depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price; lempira exchange rate trend",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4.5% a year plus about 2.5% lempira depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold."
+    },
+    "fixed_income_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank FR.INR.DPST (12.44% in 2025, 8.91% in 2024)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "Low case if deposit rates fall back with the 5.75% policy rate."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank FR.INR.DPST (12.44% in 2025, 8.91% in 2024)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "Base case well below the 2025 peak average deposit rate, allowing for tax and normalising liquidity."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "World Bank FR.INR.DPST (12.44% in 2025, 8.91% in 2024)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "High case if term deposit rates stay near 2024-2025 levels."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio from the CNBS was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published per-1,000 premium rates by age from the regulator or another permitted source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public premium table for private health insurance by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.5306,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=HN",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Trading Economics: Honduras inflation rate (6.28%, Sept 2026)",
+      "sourceUrl": "https://tradingeconomics.com/honduras/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No health price index rate was read; private care tends to outpace headline, so we plan with 1.5 points above the 5% assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Trading Economics indicators: CPI education index",
+      "sourceUrl": "https://tradingeconomics.com/honduras/indicators",
+      "asOf": "2026-10-31",
+      "note": "No education inflation rate was read; tuition usually rises faster than headline, so we plan with 6%."
+    },
+    "life_expectancy": {
+      "value": 73.044,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=HN",
+      "asOf": "2024-12-31",
+      "note": "Men 70.5, women 75.7 (2024). UN WPP 2024 via populationpyramid.net gives 73.4 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.0,
+            "men": 17.2,
+            "women": 20.7
+          },
+          {
+            "age": 65,
+            "total": 15.3,
+            "men": 13.8,
+            "women": 16.8
+          },
+          {
+            "age": 70,
+            "total": 12.0,
+            "men": 10.8,
+            "women": 13.2
+          },
+          {
+            "age": 80,
+            "total": 6.7,
+            "men": 6.1,
+            "women": 7.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/honduras/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium-variant projections for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 14.4
+          },
+          {
+            "year": 2040,
+            "value": 9.6
+          },
+          {
+            "year": 2065,
+            "value": 4.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/honduras/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.97 (2025, World Bank), 10.4 (2040) and 24.2 (2065, populationpyramid.net/honduras/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The IHSS old-age pension (régimen IVM) page shows its rules only as images, and PwC and the international databases could not be read, so the pension age is not confirmed."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "INJUPEMP: preguntas frecuentes (requisitos de jubilación voluntaria)",
+      "sourceUrl": "https://www.injupemp.gob.hn/preguntas-frecuentes-2/",
+      "asOf": "2026-10-31",
+      "note": "Public employees' fund: retirement at 62 with 15 years of service for those retiring from 2032 or aged 43 or less in 2013 (anyone born after 1975); 60 with 13 years for 2024-2027 and 61 with 14 years for 2028-2031."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank FR.INR.DPST (12.44% in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "Low case if deposit rates fall back with the policy rate."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "World Bank FR.INR.DPST (12.44% in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "Base case well below the average deposit rate, allowing for tax and normalising rates."
+    },
+    "retirement_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "World Bank FR.INR.DPST (12.44% in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "High case if deposit rates stay high."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Deposit rates; global equity index in lempira terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits and global equities."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Deposit rates; global equity index in lempira terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half global equities at 9% and half deposits at 7%, rounded down."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Deposit rates; global equity index in lempira terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=HN",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equities."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official source on a non-contributory old-age pension for Honduras, or its amount, could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official source on a non-contributory old-age pension for Honduras could be read."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Severance (auxilio de cesantía) exists under the Labour Code, but no readable official or permitted source confirming the days-per-year rules was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The IHSS runs the contributory invalidity, old-age and death pension (employees pay 1% of insurable pay up to L11,903.13, per PwC), but its age and benefit rules could not be read from a permitted source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond is sold directly to individuals."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "note": "No retail treasury bill programme was found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No retail channel for 5-year government bonds was confirmed."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No retail channel for 10-year government bonds was confirmed."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No diversified equity index fund for retail investors was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold",
+      "note": "Gold can be bought legally from jewellers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Honduras (BCH)",
+      "url": "https://www.bch.hn/"
+    },
+    "insuranceRegulator": {
+      "name": "Comisión Nacional de Bancos y Seguros (CNBS)",
+      "url": "https://www.cnbs.gob.hn/"
+    },
+    "insuranceComplaints": {
+      "name": "CNBS: reclamos de usuarios financieros",
+      "url": "https://www.cnbs.gob.hn/reclamos"
+    },
+    "pensionScheme": {
+      "name": "Instituto Hondureño de Seguridad Social (IHSS), régimen de invalidez, vejez y muerte",
+      "url": "https://www.ihss.hn/pension-por-vejez-2/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Secretaría de Salud (public health services)",
+      "url": "https://www.salud.gob.hn/",
+      "note": "Formal-sector workers are covered by the IHSS sickness and maternity scheme."
+    },
+    "depositInsurance": {
+      "name": "Fondo de Seguro de Depósitos (FOSEDE)",
+      "url": "https://fosede.hn/cobertura-del-seguro/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística (INE)",
+      "url": "https://www.ine.gob.hn/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

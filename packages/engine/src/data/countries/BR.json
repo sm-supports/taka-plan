@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 1,
+  "code": "BR",
+  "iso3": "BRA",
+  "nameEn": "Brazil",
+  "nameNative": "Brasil",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "pt",
+    "en"
+  ],
+  "currency": {
+    "code": "BRL",
+    "symbol": "R$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 5.4212,
+      "status": "sourced",
+      "sourceName": "Banco Central do Brasil, PTAX US dollar selling rate (SGS series 1)",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/12?formato=json",
+      "asOf": "2026-10-30",
+      "note": "R$5.4212 per US dollar on 30 October 2026; World Bank 2025 average 5.59."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0458,
+      "status": "sourced",
+      "sourceName": "IBGE, IPCA (SIDRA table 7060), 12-month change to September 2026",
+      "sourceUrl": "https://apisidra.ibge.gov.br/values/t/7060/n1/all/v/2265/p/last%201/c315/7169,7660,7766",
+      "asOf": "2026-09-30",
+      "note": "IPCA rose 0.82% in September 2026 and 4.58% over 12 months (4.22% in August), above the 4.5% upper tolerance limit; also BCB SGS series 13522. World Bank 2025 average 5.0%."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCB/CMN continuous inflation target 3% (tolerance +/-1.5 pts); IPCA 2021-2025 averaged about 6%",
+      "sourceUrl": "https://www.bcb.gov.br/controleinflacao/metainflacao",
+      "asOf": "2026-10-31",
+      "note": "The 3% target has been missed upward in most recent years (IPCA 4.58% in September 2026), so planning uses 4%, between the target and the 5-year average."
+    },
+    "policy_rate": {
+      "value": 0.1375,
+      "status": "sourced",
+      "sourceName": "Banco Central do Brasil, Selic target (SGS series 432)",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/12?formato=json",
+      "asOf": "2026-09-17",
+      "note": "Copom cut the Selic target by 0.25 pt to 13.75% at its 15-16 September 2026 meeting (in force from 17 September); there was no October meeting. Cuts in 2026 from 15.00% in March, April, June, August and September."
+    },
+    "savings_account_rate": {
+      "value": 0.0835,
+      "status": "sourced",
+      "sourceName": "Banco Central do Brasil, savings account (poupança) monthly yield, SGS series 195",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.195/dados/ultimos/12?formato=json",
+      "asOf": "2026-10-28",
+      "note": "Poupança paid 0.67% a month for deposits made on 28 October 2026 (0.5% a month plus the TR, because the Selic is above 8.5%), about 8.35% a year, exempt from income tax for individuals."
+    },
+    "fdr_3m_rate": {
+      "value": 0.134,
+      "status": "sourced",
+      "sourceName": "InvestNews survey of new CDB issues (large banks 98.3% of CDI, 3-12 months, March 2026) applied to the CDI of 13.65% (BCB SGS 4389, 30 Oct 2026)",
+      "sourceUrl": "https://investnews.com.br/investimentos/cdbs-marco-pagam-mais-guerra/",
+      "asOf": "2026-10-30",
+      "note": "Brazilian term deposits (CDB) are mostly priced as a percentage of the CDI overnight rate; large banks paid on average 98.3% of the CDI on 3-12 month issues in March 2026 (secondary source; no central bank series of CDB rates is published), which at today's CDI gives about 13.4% a year before tax."
+    },
+    "fdr_1y_rate": {
+      "value": 0.134,
+      "status": "sourced",
+      "sourceName": "InvestNews survey of new CDB issues (large banks 98.3% of CDI, 3-12 months, March 2026) applied to the CDI of 13.65% (BCB SGS 4389, 30 Oct 2026)",
+      "sourceUrl": "https://investnews.com.br/investimentos/cdbs-marco-pagam-mais-guerra/",
+      "asOf": "2026-10-30",
+      "note": "Same survey bucket as the 3-month rate (3-12 month CDBs at large banks, 98.3% of CDI); smaller banks paid about 102% of the CDI. Interest is taxed at source on a sliding scale, 17.5% for a 1-year CDB."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring-deposit product with a published rate exists in Brazil; regular saving goes into poupança, CDBs or Tesouro Direto."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.077,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BR",
+      "asOf": "2024-12-31",
+      "note": "7.70% for 2024 (latest available; older than 2025 and well below today's CDI of 13.65%); the central bank does not publish a weighted average deposit rate series we could read."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.153,
+      "status": "sourced",
+      "sourceName": "Tesouro Nacional, Tesouro Direto rates (Tesouro Transparente dataset), Tesouro Prefixado 01/01/2031, purchase rate",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-30",
+      "note": "Tesouro Direto is the government's retail bond programme for individuals (minimum about 1% of a bond). The fixed-rate Tesouro Prefixado 2031 (about 4 years) was offered at 15.30% a year on 30 October 2026; inflation-linked Tesouro IPCA+ 2032 paid IPCA + 7.89%."
+    },
+    "tbill_91d_rate": {
+      "value": 0.1348,
+      "status": "sourced",
+      "sourceName": "Tesouro Nacional, Tesouro Direto rates (Tesouro Transparente dataset), Tesouro Prefixado 01/01/2027 (LTN), purchase rate",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-30",
+      "note": "Brazil has no 91-day bill; the shortest zero-coupon Treasury bill (LTN) maturing 1 January 2027 (about 2 months) was offered at 13.48% a year on 30 October 2026. The CDI overnight rate was 13.65% (BCB SGS 4389)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.153,
+      "status": "sourced",
+      "sourceName": "Tesouro Nacional, Tesouro Direto rates (Tesouro Transparente dataset), Tesouro Prefixado 01/01/2031 and Prefixado com Juros Semestrais 2031",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-30",
+      "note": "About 4.2-year fixed-rate Treasury bonds offered at 15.29-15.30% a year on 30 October 2026 (Tesouro Direto purchase rates, which track the secondary market)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1523,
+      "status": "sourced",
+      "sourceName": "Tesouro Nacional, Tesouro Direto rates (Tesouro Transparente dataset), Tesouro Prefixado com Juros Semestrais 01/01/2037 (NTN-F)",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-30",
+      "note": "The 2037 fixed-rate bond with semi-annual coupons (about 10 years) was offered at 15.23% a year on 30 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.175,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Brazil income determination (reviewed 23 Sep 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/brazil/individual/income-determination",
+      "asOf": "2026-09-23",
+      "note": "Interest on Brazilian investments is taxed at source at 22.5% down to 15% depending on the term (22.5% up to 180 days, 20% to 360, 17.5% to 720, 15% beyond); 17.5% applies to a typical 1-year CDB. Poupança interest is exempt for individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Brazil income determination (reviewed 23 Sep 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/brazil/individual/income-determination",
+      "asOf": "2026-09-23",
+      "note": "Tesouro Direto returns follow the same withholding scale (22.5% to 15% by holding period); a bond held more than 2 years, such as a 5-year Tesouro Prefixado, pays 15%."
+    },
+    "deposit_insurance_limit": {
+      "value": 250000,
+      "status": "sourced",
+      "sourceName": "FGC (Fundo Garantidor de Créditos) regulation, approved by the National Monetary Council, ordinary guarantee",
+      "sourceUrl": "https://fgc.org.br/documents/d/asset-library-52554/regulamento-fgc",
+      "asOf": "2026-01-31",
+      "note": "Deposits, CDBs, poupança and similar instruments are guaranteed up to R$250,000 per person per institution or financial conglomerate, with a R$1 million overall cap per person in each 4-year period."
+    },
+    "credit_card_rate_cap": {
+      "value": 1.0028,
+      "status": "sourced",
+      "sourceName": "Banco Central do Brasil, average interest rate, individuals, credit card total (SGS series 22024)",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.22024/dados/ultimos/12?formato=json",
+      "asOf": "2026-09-30",
+      "note": "Typical rate, all credit card credit: 100.28% a year in September 2026. Revolving card credit averaged 451.71% a year (SGS 22022) and instalment card credit 193.02% (SGS 22023). Since January 2024 the law caps total interest and charges on revolving and instalment card debt at 100% of the original debt."
+    },
+    "equity_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Ibovespa 167,922 on 30 Oct 2026 (Trading Economics), roughly 10% a year in total-return terms over 10 years, below the CDI over most of that period",
+      "sourceUrl": "https://tradingeconomics.com/brazil/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Brazilian shares again fail to beat after-tax government bonds."
+    },
+    "equity_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Ibovespa 10-year record (Trading Economics); Tesouro Selic after 15% tax about 11.6%",
+      "sourceUrl": "https://tradingeconomics.com/brazil/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case kept at about the after-tax safe rate because the Ibovespa, a total-return index, has not clearly beaten the CDI over 10 years; well under the safe rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Ibovespa record high 209,713 in October 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/brazil/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: Brazilian shares earn a real equity premium as interest rates fall from today's high levels."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); BRL 5.42 per USD (BCB PTAX, 30 Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stalls after the 2025-26 rally and the real holds its value."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); inflation target 3% in Brazil vs about 2% in the US",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold rises roughly with world inflation plus a little in dollars, and the real loses about 2-3% a year against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in reais."
+    },
+    "fixed_income_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Poupança about 8.35% a year, tax-free (BCB SGS 195)",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.195/dados/ultimos/12?formato=json",
+      "asOf": "2026-10-31",
+      "note": "Low case: poupança and short CDBs after tax as the Selic is cut; poupança falls to 70% of the Selic once the Selic is 8.5% or less."
+    },
+    "fixed_income_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Tesouro Selic and CDBs at about the CDI of 13.65% less 15-17.5% tax (BCB SGS 4389; PwC)",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.4389/dados/ultimos/12?formato=json",
+      "asOf": "2026-10-31",
+      "note": "Base case: floating-rate government bonds and CDBs after tax, allowing for the Selic to keep falling from 13.75% over the coming years."
+    },
+    "fixed_income_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Tesouro Prefixado 2031 at 15.30% less 15% tax = 13.0% (Tesouro Direto)",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in today's high fixed rates on 4-10 year government bonds and holding to maturity."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "SUSEP publishes market statistics on premiums and claims paid, but no industry-wide share of life claims paid versus claims made was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life insurance (seguro de vida) is widely sold in Brazil, but no regulator or other public table of premiums per R$1,000 of cover by age was found; only company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is free in the public SUS; no official figure for the out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health plans are priced per person and age band (regulated by ANS), not per sum insured; no public premium table per R$100,000 of cover exists."
+    },
+    "oop_health_share": {
+      "value": 0.2623,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BR",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 26.2% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "IBGE IPCA group 'Saúde e cuidados pessoais': 5.75% over 12 months to September 2026 (SIDRA 7060)",
+      "sourceUrl": "https://apisidra.ibge.gov.br/values/t/7060/n1/all/v/2265/p/last%201/c315/7169,7660,7766",
+      "asOf": "2026-10-31",
+      "note": "Health and personal care prices rose 5.75% against 4.58% for all items; planning uses 6%, about 2 points above general inflation, since health plan prices tend to rise faster."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "IBGE IPCA group 'Educação': 5.95% over 12 months to September 2026 (SIDRA 7060)",
+      "sourceUrl": "https://apisidra.ibge.gov.br/values/t/7060/n1/all/v/2265/p/last%201/c315/7169,7660,7766",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 5.95% against 4.58% for all items; planning uses 6%."
+    },
+    "life_expectancy": {
+      "value": 76.6,
+      "status": "sourced",
+      "sourceName": "IBGE, Tábua completa de mortalidade para o Brasil 2024",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/periodicos/3097/tcmb_2024.pdf",
+      "asOf": "2024-12-31",
+      "note": "Life expectancy at birth 76.6 years in 2024 (men 73.3, women 79.9), published November 2025 (latest; older than 2025). UN WPP via georank gives 76.4 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "IBGE, Tábua completa de mortalidade para o Brasil 2024",
+      "sourceUrl": "https://biblioteca.ibge.gov.br/visualizacao/periodicos/3097/tcmb_2024.pdf",
+      "asOf": "2024-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.6,
+            "men": 20.8,
+            "women": 24.2
+          },
+          {
+            "age": 65,
+            "total": 18.8,
+            "men": 17.2,
+            "women": 20.1
+          },
+          {
+            "age": 70,
+            "total": 15.2,
+            "men": 14.0,
+            "women": 16.3
+          },
+          {
+            "age": 80,
+            "total": 9.0,
+            "men": 8.3,
+            "women": 9.5
+          }
+        ]
+      },
+      "note": "Expectation of remaining life at exact ages from the 2024 IBGE life tables for both sexes, men and women (latest; older than 2025). UN WPP 2026 via georank gives 18.2 years at 65."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/brazil/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.02
+          },
+          {
+            "year": 2040,
+            "value": 3.76
+          },
+          {
+            "year": 2065,
+            "value": 2.07
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 16.6 (2025, World Bank), 26.6 (2040) and 48.3 (2065, populationpyramid.net/brazil/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "INSS, Aposentadoria por idade urbana",
+      "sourceUrl": "https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias/aposentadoria-por-idade-urbana",
+      "asOf": "2026-10-31",
+      "note": "Urban old-age pension at 65 for men and 62 for women (women's age reached 62 in 2023), with at least 15 years of contributions (20 years for men who joined after 13 November 2019), under Constitutional Amendment 103/2019."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "UFRB (federal university) staff guide 'Aposentadoria Ativa 2026', rules of Constitutional Amendment 103/2019",
+      "sourceUrl": "https://ufrb.edu.br/progep/images/Cartilha%20Aposentadoria%20Ativa%20-%202026.pdf",
+      "asOf": "2026-01-31",
+      "note": "Federal civil servants retire voluntarily at 65 (men) or 62 (women) with 25 years of contributions, 10 in public service; retirement is compulsory at 75. State and municipal schemes may differ."
+    },
+    "retirement_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Poupança about 8.35% tax-free (BCB SGS 195)",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.195/dados/ultimos/12?formato=json",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and short deposits as interest rates fall."
+    },
+    "retirement_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "1-year CDB 13.4% less 17.5% tax = 11.1%; 2-month LTN 13.48% less 22.5% tax = 10.4% (Tesouro Direto)",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax 1-year deposit and short bill rates, allowing for the Selic to keep falling."
+    },
+    "retirement_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Tesouro IPCA+ and Prefixado bonds at 15.2-15.3% (or IPCA + 7.3-7.9%) less 15% tax (Tesouro Direto)",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of medium and long government bonds bought at today's high yields."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "After-tax poupança and CDBs; Ibovespa 10-year record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/brazil/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag and rates fall."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Fixed income base 10.5%; equity base 11%",
+      "sourceUrl": "https://tradingeconomics.com/brazil/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 11% and half safe fixed income at about 10.5% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.135,
+      "status": "assumption",
+      "sourceName": "Equity high 15%; after-tax long government bonds 13%",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1621,
+      "status": "sourced",
+      "sourceName": "INSS, Benefício assistencial à pessoa idosa (BPC-Loas); Decree 12.797/2025 setting the 2026 minimum wage at R$1,621",
+      "sourceUrl": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-idosa-bpc-loas",
+      "asOf": "2026-01-01",
+      "note": "BPC pays one minimum wage a month (R$1,621 from 1 January 2026, Decree 12.797 of 23 December 2025) to people aged 65+ whose family income is at most a quarter of the minimum wage per person; no contributions needed, no 13th payment."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "INSS, Benefício assistencial à pessoa idosa (BPC-Loas)",
+      "sourceUrl": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-idosa-bpc-loas",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Brazilian (or Portuguese) nationals aged 65 or over, men and women, with family income per person of at most 1/4 of the minimum wage (about R$405 in 2026), registered in the CadÚnico."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Ministério do Trabalho e Emprego, FGTS (employer deposits 8% of pay into the worker's FGTS account)",
+      "sourceUrl": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/fgts",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "daysPerYear": 31,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "note": "No days-per-year gratuity, but every employer must deposit 8% of monthly pay (also on the 13th salary) into the worker's FGTS account, about 31 days of wages a year, which can be drawn on retirement or dismissal without cause (plus a 40% employer fine on dismissal). The fund earns TR + 3% a year, so actual balances depend on pay history."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "INSS, Aposentadoria por idade urbana (General Social Security Regime, RGPS)",
+      "sourceUrl": "https://www.gov.br/inss/pt-br/direitos-e-deveres/aposentadorias/aposentadoria-por-idade-urbana",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": false
+      },
+      "note": "Compulsory contributory RGPS pension run by the INSS: 65 for men and 62 for women, minimum 15 years of contributions (20 for men joining after November 2019); the benefit starts at 60% of average earnings plus 2% per extra year, is never below the minimum wage, is adjusted yearly for inflation (INPC) and is taxed as income above the exemption limit."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Caderneta de poupança",
+      "localNameEn": "Savings account (poupança)",
+      "note": "Rate set by law (0.5% a month plus TR while the Selic is above 8.5%); tax-free for individuals and covered by the FGC.",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.195/dados/ultimos/12?formato=json"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "CDB (Certificado de Depósito Bancário)",
+      "localNameEn": "Bank certificate of deposit (CDB), 3 months",
+      "note": "Usually priced as a percentage of the CDI; covered by the FGC up to R$250,000.",
+      "sourceUrl": "https://investnews.com.br/investimentos/cdbs-marco-pagam-mais-guerra/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "CDB (Certificado de Depósito Bancário)",
+      "localNameEn": "Bank certificate of deposit (CDB), 1 year",
+      "sourceUrl": "https://investnews.com.br/investimentos/cdbs-marco-pagam-mais-guerra/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring-deposit product; regular saving is done through poupança, CDBs or Tesouro Direto."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Tesouro Direto (Tesouro Prefixado, Tesouro IPCA+)",
+      "localNameEn": "Tesouro Direto retail government bonds",
+      "note": "The National Treasury's programme selling government bonds to individuals online from about R$30; includes Tesouro Renda+ for retirement income and Tesouro Educa+ for education.",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Tesouro Prefixado (LTN)",
+      "localNameEn": "Fixed-rate Treasury bill (LTN)",
+      "note": "No 91-day bill is issued; the shortest LTN line is used, and Tesouro Selic (LFT) is the floating-rate alternative.",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Tesouro Prefixado / Tesouro IPCA+",
+      "localNameEn": "Fixed-rate or inflation-linked Treasury bond",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Tesouro Prefixado com Juros Semestrais (NTN-F)",
+      "localNameEn": "Fixed-rate Treasury bond with semi-annual coupons",
+      "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fundo de índice (ETF) / fundo de ações",
+      "localNameEn": "Index fund (ETF) or equity mutual fund",
+      "note": "Ibovespa index funds and equity funds are widely available to retail investors; regulated by the CVM."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ouro ativo financeiro",
+      "localNameEn": "Investment gold (bars)",
+      "note": "Gold as a financial asset can be bought legally in bars through authorised dealers; gold is also traded on the stock exchange."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central do Brasil",
+      "url": "https://www.bcb.gov.br/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendência de Seguros Privados (SUSEP)",
+      "url": "https://www.gov.br/susep/pt-br",
+      "note": "Health plans are regulated separately by the ANS."
+    },
+    "insuranceComplaints": {
+      "name": "Consumidor.gov.br (federal consumer complaints platform, used for insurers supervised by SUSEP)",
+      "url": "https://www.consumidor.gov.br/",
+      "note": "Complain to the insurer and its ombudsman first."
+    },
+    "pensionScheme": {
+      "name": "Instituto Nacional do Seguro Social (INSS), General Social Security Regime",
+      "url": "https://www.gov.br/inss/pt-br"
+    },
+    "oldAgeAllowance": {
+      "name": "Benefício de Prestação Continuada (BPC) for older people, INSS",
+      "url": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-idosa-bpc-loas"
+    },
+    "publicHealthCover": {
+      "name": "Sistema Único de Saúde (SUS), Ministry of Health",
+      "url": "https://www.gov.br/saude/pt-br"
+    },
+    "depositInsurance": {
+      "name": "Fundo Garantidor de Créditos (FGC)",
+      "url": "https://www.fgc.org.br/"
+    },
+    "statistics": {
+      "name": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+      "url": "https://www.ibge.gov.br/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

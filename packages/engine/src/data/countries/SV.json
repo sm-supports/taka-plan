@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "code": "SV",
+  "iso3": "SLV",
+  "nameEn": "El Salvador",
+  "nameNative": "El Salvador",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SV",
+      "asOf": "2025-12-31",
+      "note": "El Salvador has used the US dollar as its currency since 2001."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.036,
+      "status": "sourced",
+      "sourceName": "Banco Central de Reserva de El Salvador: índice de precios al consumidor",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/indice-de-precios-al-consumidor-ipc",
+      "asOf": "2026-09-30",
+      "note": "CPI 135.60 in September 2026 vs 130.89 a year earlier: 3.6% year on year, the highest since mid-2023 (3.19% in August)."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank FP.CPI.TOTL.ZG (0.3% in 2025); BCR CPI 3.6% in September 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=SV",
+      "asOf": "2026-10-31",
+      "note": "El Salvador uses the US dollar and has no inflation target; inflation ranged from 0.3% (2025) to 7% (2022) in recent years, so we plan with a rounded 2.5%."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "El Salvador is dollarised and the Banco Central de Reserva sets no monetary policy rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCR weighted-average rate series read lists term deposits only; no current savings-account rate found."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0381,
+      "status": "sourced",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on 90-day deposits, September 2026 (preliminary); 30 days 3.38%, 180 days 4.67%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0506,
+      "status": "sourced",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on 360-day deposits, September 2026 (preliminary)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official series for monthly recurring deposits was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCR series read gives rates by term only (180-day reference 4.67% in September 2026), not an average across all deposits; the World Bank series for El Salvador ended in 2000."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold directly to individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bills (LETES) are auctioned by the Ministry of Finance, but no current yield could be reached from an official source."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield found from an official or other permitted source."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond yield found from an official or other permitted source."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: El Salvador, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/el-salvador/individual/income-determination",
+      "asOf": "2026-09-27",
+      "note": "Interest, prizes and other benefits earned directly on deposits with banks and financial associations are non-taxable income for individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found, so no tax rate applies to report."
+    },
+    "deposit_insurance_limit": {
+      "value": 12054,
+      "status": "sourced",
+      "sourceName": "Instituto de Garantía de Depósitos (IGD): new deposit guarantee amount",
+      "sourceUrl": "https://igd.gob.sv/nuevo-monto-de-la-garantia-de-depositos-en-el-salvador/",
+      "asOf": "2026-01-01",
+      "note": "USD 12,054 per person per member institution, valid 1 January 2026 to 31 December 2027."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.5608,
+      "status": "sourced",
+      "sourceName": "Banco Central de Reserva: maximum legal interest rates, July-December 2026 (Ley contra la Usura)",
+      "sourceUrl": "https://www.bcr.gob.sv/2026/06/12/tasas-de-interes-maximas-semestre-i-2026-vigentes-de-julio-a-diciembre-de-2026/",
+      "asOf": "2026-07-01",
+      "note": "Maximum effective annual rate on credit cards for credit lines above 5 minimum wages (USD 2,044); 64.43% for lines of 3-5 minimum wages and 71.73% up to 3 (USD 1,226)."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global equities in dollars."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual; 360-day deposits 5.06%, tax-free",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "The local stock market trades few shares, so we use a global equity index of about 7-8% a year in US dollars (El Salvador's currency), within the tax-free 1-year deposit rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities in dollars."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; no currency effect since El Salvador uses the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% a year; no currency effect in a dollarised economy."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "Low case: 30-90 day deposits at about 3.4-3.8%, tax-free."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "Base case: 180-360 day deposits at 4.7-5.1%, tax-free."
+    },
+    "fixed_income_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "High case: 1-year deposits if rates rise with 2026 inflation."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio found from the Superintendencia del Sistema Financiero."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published per-1,000 premium rates by age from the regulator or another public source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public premium table for private health insurance by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.3249,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SV",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: índice de precios al consumidor: health index up about 2.9% in the year to September 2026",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/indice-de-precios-al-consumidor-ipc",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose about 2.9% in the past year; private care tends to outpace headline, so we plan with 4%."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: índice de precios al consumidor: education index up about 0.8% in the year to September 2026",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/indice-de-precios-al-consumidor-ipc",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose little in the past year, but private tuition usually rises faster than a 2.5% headline, so we plan with 3.5%."
+    },
+    "life_expectancy": {
+      "value": 72.302,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SV",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 72.7 for 2026 (men 68.2, women 76.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.2,
+            "men": 18.7,
+            "women": 21.6
+          },
+          {
+            "age": 65,
+            "total": 16.7,
+            "men": 15.3,
+            "women": 17.7
+          },
+          {
+            "age": 70,
+            "total": 13.0,
+            "men": 12.0,
+            "women": 14.0
+          },
+          {
+            "age": 80,
+            "total": 7.1,
+            "men": 6.5,
+            "women": 7.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/el-salvador/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium-variant projections for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.1
+          },
+          {
+            "year": 2040,
+            "value": 5.8
+          },
+          {
+            "year": 2065,
+            "value": 2.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/el-salvador/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 12.35 (2025, World Bank), 17.2 (2040) and 37.6 (2065, populationpyramid.net/el-salvador/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: El Salvador, other taxes (pension system)",
+      "sourceUrl": "https://taxsummaries.pwc.com/el-salvador/individual/other-taxes",
+      "asOf": "2026-09-27",
+      "note": "Pension age 60 for men and 55 for women, or after 30 years of service regardless of age."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No source read states the retirement age for public employees separately; they are understood to contribute to the same pension system but this was not confirmed."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits at about 3.4%, tax-free."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "Base case below the tax-free 1-year deposit rate of 5.06%, allowing for rates easing."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "High case: 1-year deposits at about 5%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits and global equities."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half global equities at 7.5% and half deposits at 4.5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Banco Central de Reserva de El Salvador: tasas de interés, promedio ponderado mensual",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equities."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A non-contributory basic pension for poor older people has existed, but no official source on its current amount or availability could be reached."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official source on the current eligibility rules of a non-contributory old-age pension could be reached."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A statutory payment on voluntary resignation (Ley Reguladora de la Prestación Económica por Renuncia Voluntaria) and severance on unjustified dismissal exist, but no official text could be reached to confirm the days-per-year rules."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: El Salvador, other taxes (pension system)",
+      "sourceUrl": "https://taxsummaries.pwc.com/el-salvador/individual/other-taxes",
+      "asOf": "2026-09-27",
+      "note": "Mandatory pension savings in individual accounts at private pension fund administrators (AFPs): employee 7.25% plus employer 8.75% of salary; pension from 60 (men) or 55 (women), or after 30 years of service; the source read does not describe inflation indexing."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account",
+      "note": "Deposit interest is not taxed for individuals."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo",
+      "localNameEn": "Term deposit (90 days)",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo",
+      "localNameEn": "Term deposit (360 days)",
+      "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/5-1-1-2-mensual-promedio-ponderado-metodologia-2022"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond is sold directly to individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Letras del Tesoro (LETES)",
+      "localNameEn": "Treasury bills",
+      "note": "Short-term Treasury bills auctioned by the Ministry of Finance."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No local-currency 5-year government bond for retail investors was found; long government debt is mainly international dollar bonds."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No retail 10-year government bond was found; long government debt is mainly international dollar bonds."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No diversified local equity index fund for retail investors was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold",
+      "note": "Gold can be bought legally from jewellers and dealers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Reserva de El Salvador",
+      "url": "https://www.bcr.gob.sv/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia del Sistema Financiero (SSF)",
+      "url": "https://ssf.gob.sv/"
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia del Sistema Financiero (user complaints)",
+      "url": "https://ssf.gob.sv/",
+      "note": "No separate insurance ombudsman; the SSF handles complaints about supervised insurers."
+    },
+    "pensionScheme": {
+      "name": "Sistema de Ahorro para Pensiones, supervised by the Superintendencia del Sistema Financiero",
+      "url": "https://ssf.gob.sv/"
+    },
+    "publicHealthCover": {
+      "name": "Ministerio de Salud (public health services)",
+      "url": "https://www.salud.gob.sv/",
+      "note": "Formal-sector workers are covered by the Instituto Salvadoreño del Seguro Social (https://www.isss.gob.sv/)."
+    },
+    "depositInsurance": {
+      "name": "Instituto de Garantía de Depósitos (IGD)",
+      "url": "https://www.igd.gob.sv/"
+    },
+    "statistics": {
+      "name": "Banco Central de Reserva: statistics portal",
+      "url": "https://estadisticas.bcr.gob.sv/",
+      "note": "The BCR publishes the official CPI and economic statistics."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

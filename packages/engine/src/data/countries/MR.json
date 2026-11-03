@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 1,
+  "code": "MR",
+  "iso3": "MRT",
+  "nameEn": "Mauritania",
+  "nameNative": "موريتانيا",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "ar",
+    "mey",
+    "fr",
+    "ff",
+    "wo"
+  ],
+  "currency": {
+    "code": "MRU",
+    "symbol": "UM",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 39.64,
+      "status": "sourced",
+      "sourceName": "Banque Centrale de Mauritanie, daily reference exchange rates 2008-2025 (USD)",
+      "sourceUrl": "https://bo.bcm.mr/sites/default/files/2026-02/Taux%20de%20change%20journalier%202008%20au%202025%20.xlsx",
+      "asOf": "2025-12-19",
+      "note": "Reference rate of 39.64 ouguiya per dollar on 19 December 2025, the last 2025 value in the BCM file; the 2025 average was 39.75. No 2026 file was reachable."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.093,
+      "status": "sourced",
+      "sourceName": "Banque Centrale de Mauritanie (BCM), daily key rates feed (taux d'inflation)",
+      "sourceUrl": "https://bo.bcm.mr/api/taux_journalier",
+      "asOf": "2026-10-29",
+      "note": "9.3% as displayed by the BCM on 29 October 2026 (latest month not stated); consistent with the IMF WEO projection of 8.0% average and 9.0% end-2026 inflation, after 1.6% in 2025."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "IMF WEO: 4.0% inflation by 2030; 2021-2025 average 4.4%",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MRT",
+      "asOf": "2026-10-31",
+      "note": "No published inflation target; the 2021-2025 average (4.4%) and the IMF medium-term 4% are rounded to 4.5% given the 2026 spike."
+    },
+    "policy_rate": {
+      "value": 0.0675,
+      "status": "sourced",
+      "sourceName": "BCM daily key rates feed (taux directeur)",
+      "sourceUrl": "https://bo.bcm.mr/api/taux_journalier",
+      "asOf": "2026-10-29",
+      "note": "Policy rate 6.75%; overnight deposit facility 2%, repo (lending facility) 7%."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical savings account rate was found; the BCM site is a JavaScript app with no rates table reachable, and web search was unavailable during this run."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found on the BCM site."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found on the BCM site."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0567,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Mauritania",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MR",
+      "asOf": "2017-12-31",
+      "note": "5.67% in 2017, the latest World Bank value (much older than 2025); no fresher BCM average deposit rate was found."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0458,
+      "status": "sourced",
+      "sourceName": "BCM, Treasury securities auction rates (bons du Trésor 13 semaines)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-29",
+      "note": "13-week Treasury bill rate 4.58% at the auction of 29 October 2026 (26-week 4.09%, 52-week 4.26%)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0482,
+      "status": "sourced",
+      "sourceName": "BCM, Treasury securities auction rates (obligations du Trésor 5 ans)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-29",
+      "note": "5-year Treasury bond rate 4.82% as of 29 October 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.043,
+      "status": "sourced",
+      "sourceName": "BCM, Treasury securities auction rates (obligations du Trésor 10 ans)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-29",
+      "note": "10-year Treasury bond rate 4.30% as of 29 October 2026 (15-year 5.99%)."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Mauritania, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/mauritania/individual/income-determination",
+      "asOf": "2026-10-31",
+      "note": "Interest on deposits with a Mauritanian bank is taxed at 10%, withheld by the bank (secondary source)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals, so no tax rule for one was found; bond interest is taxed at 10% (PwC)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit guarantee cover limit per depositor was found from the BCM."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Mauritania; global equities in ouguiya terms",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MRT",
+      "asOf": "2026-10-31",
+      "note": "No local stock market exists, so equity means a global index in ouguiya terms; low case is a weak decade for global shares."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Mauritania; global equities in ouguiya terms",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "Global equities in ouguiya terms, held about 3.4 points above the 4.1% after-tax 13-week bill rate, since access is only through foreign funds."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Mauritania; global equities in ouguiya terms",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities repeat their long-run record plus mild ouguiya depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "BCM ouguiya/dollar reference rates 2025 (about 39.6-39.8 per dollar); gold trend in dollars",
+      "sourceUrl": "https://bo.bcm.mr/sites/default/files/2026-02/Taux%20de%20change%20journalier%202008%20au%202025%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold prices and a stable ouguiya."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BCM ouguiya/dollar reference rates 2025 (about 39.6-39.8 per dollar); gold trend in dollars",
+      "sourceUrl": "https://bo.bcm.mr/sites/default/files/2026-02/Taux%20de%20change%20journalier%202008%20au%202025%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 5% plus about 1% a year of ouguiya depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BCM ouguiya/dollar reference rates 2025 (about 39.6-39.8 per dollar); gold trend in dollars",
+      "sourceUrl": "https://bo.bcm.mr/sites/default/files/2026-02/Taux%20de%20change%20journalier%202008%20au%202025%20.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years with faster depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "Low case: shorter bills or deposits after the 10% interest tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "Base case: the 13-week bill rate of 4.58% less 10% tax (4.1%), rounded down."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: longer Treasury bonds (5-year 4.82%, 15-year 5.99%) after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life insurance claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per MRU 1,000 of cover were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.4377,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Mauritania",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MR",
+      "asOf": "2023-12-31",
+      "note": "43.8% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 4.5%; no medical CPI found",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MRT",
+      "asOf": "2026-10-31",
+      "note": "No medical price index was found; medical costs, many imported, are planned 1.5 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 4.5%; no education CPI found",
+      "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/MRT",
+      "asOf": "2026-10-31",
+      "note": "No education price index was found; private school costs are planned 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 68.713,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Mauritania",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MR",
+      "asOf": "2024-12-31",
+      "note": "68.7 years in 2024 (men 66.7, women 70.7)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/mauritania/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.2,
+            "men": 15.9,
+            "women": 18.4
+          },
+          {
+            "age": 65,
+            "total": 13.7,
+            "men": 12.6,
+            "women": 14.7
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 9.8,
+            "women": 11.3
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.5,
+            "women": 6.2
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women except at 65, where the page gives 13.7 for both sexes."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=MR",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.7
+          },
+          {
+            "year": 2040,
+            "value": 15.2
+          },
+          {
+            "year": 2065,
+            "value": 9.6
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 5.97 (2025, World Bank), 6.6 (2040, populationpyramid.net/mauritania/2040/) and 10.4 (2065, populationpyramid.net/mauritania/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), FAQ: conditions for an old-age pension",
+      "sourceUrl": "https://www.cnss.mr/fr/services",
+      "asOf": "2026-10-31",
+      "note": "Old-age pension at 63 with at least 20 years of CNSS registration, 60 months of insurance in the last 10 years and stopping salaried work (CNSS site FAQ); no separate age for women is given."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age of civil servants (Caisse des Retraites de l'Etat) could not be confirmed from an official source during this run."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposits and short bills after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the 4.1% after-tax 13-week bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of Treasury bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Safe rate 4.1% after tax; global equity base 7.5%; gold base 6%",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Safe rate 4.1% after tax; global equity base 7.5%; gold base 6%",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "Base case: bills and deposits with some gold and foreign equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Safe rate 4.1% after tax; global equity base 7.5%; gold base 6%",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with foreign equity funds."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found; the national cash transfer programme targets poor households, not older people as such."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on dismissal or end-of-service indemnity could not be read from an official source during this run."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CNSS pays old-age pensions from 63 (see retirement_age_default), but its indexation, entry rules and tax treatment could not be confirmed from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب ادخار",
+      "localNameEn": "Savings account",
+      "note": "Banks offer savings accounts; interest is taxed at 10%."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Banks take term deposits, but rates are not published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Banks take term deposits, but rates are not published."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "أذونات الخزينة",
+      "localNameEn": "Treasury bills (13 weeks)",
+      "note": "13-week bills are auctioned by the BCM; no retail subscription channel for individuals was found.",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "سندات الخزينة (5 سنوات)",
+      "localNameEn": "Treasury bonds (5 years)",
+      "note": "Bonds are auctioned by the BCM; no retail subscription channel for individuals was found.",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": "سندات الخزينة (10 سنوات)",
+      "localNameEn": "Treasury bonds (10 years)",
+      "note": "Bonds are auctioned by the BCM; no retail subscription channel for individuals was found.",
+      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "There is no stock exchange in Mauritania and no locally sold equity fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold is mined in Mauritania and sold mainly as jewellery; the BCM buys artisanal gold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque Centrale de Mauritanie (BCM)",
+      "url": "https://www.bcm.mr/"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Caisse Nationale de Sécurité Sociale (CNSS)",
+      "url": "https://www.cnss.mr/fr/services",
+      "note": "Old-age pensions for private-sector employees."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Caisse Nationale d'Assurance Maladie (CNAM)",
+      "url": "https://www.cnam.mr/fr/",
+      "note": "Health insurance for insured workers and their dependants."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Agence Nationale de la Statistique et de la Démographie (ANSADE)",
+      "url": "https://ansade.mr/fr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

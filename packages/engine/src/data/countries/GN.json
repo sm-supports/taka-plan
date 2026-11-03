@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "code": "GN",
+  "iso3": "GIN",
+  "nameEn": "Guinea",
+  "nameNative": "Guinée",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "fr",
+    "ff",
+    "emk",
+    "sus"
+  ],
+  "currency": {
+    "code": "GNF",
+    "symbol": "FG",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 8822.6644,
+      "status": "sourced",
+      "sourceName": "BCRG, reference rates of the main currencies against the GNF, 30 October 2026 (list 0206/2026)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/COURS-DE-REFERENCE-BCRG-DU-30-10-2026.pdf",
+      "asOf": "2026-10-30",
+      "note": "Official BCRG reference rate; the World Bank PA.NUS.FCRF series for Guinea stops in 2020."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.059,
+      "status": "sourced",
+      "sourceName": "Institut National de la Statistique (INS), Indice national harmonisé des prix à la consommation (INHPC), September 2026",
+      "sourceUrl": "https://www.stat-guinee.org/images/Documents/Publications/INS/infra_annuelles/IHPC/INHPC_2026/Note_INHPC_Sept_2026_Guinee_V1.pdf",
+      "asOf": "2026-09-30",
+      "note": "National consumer prices up 5.9% year on year in September 2026 (Conakry 6.3%); the 12-month average was 5.2%. Food prices rose 12.4% while health (-0.5%) and education (+0.5%) were almost flat."
+    },
+    "inflation_projection": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BCRG Monetary Policy Committee, 18 September 2026 (6.0% average inflation projected for 2026); INS INHPC (index 167.3 in September 2026, base 2019 = 100)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/09/22eme-Reunion-du-Comite-de-Politique-Monetaire-18-09-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The BCRG has no numerical target; it projects 6.0% average inflation for 2026, and the national index rose about 7.6% a year from 2019 to 2026, so a rounded 7% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.095,
+      "status": "sourced",
+      "sourceName": "BCRG, communiqué of the 22nd ordinary Monetary Policy Committee meeting, 18 September 2026",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/09/22eme-Reunion-du-Comite-de-Politique-Monetaire-18-09-2026.pdf",
+      "asOf": "2026-09-18",
+      "note": "Policy rate (taux directeur) held at 9.5% and reserve requirement at 11.5%; it was 9.75% at end-2025."
+    },
+    "savings_account_rate": {
+      "value": 0.029,
+      "status": "sourced",
+      "sourceName": "BCRG Annual Report 2025, table 24 (structure des taux d'intérêt, taux d'épargne)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2025-12-31",
+      "note": "Average rate on savings accounts 2.90% in 2025 (3.06% in 2024); bank deposit rates are free (not regulated)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCRG publishes only an average term-deposit rate (6.10% in 2025, Annual Report 2025), not a 3-month rate."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCRG publishes only an average term-deposit rate across maturities (6.10% in 2025, Annual Report 2025), not a 1-year rate."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.061,
+      "status": "sourced",
+      "sourceName": "BCRG Annual Report 2025, table 24 (structure des taux d'intérêt, taux DAT)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2025-12-31",
+      "note": "Average term-deposit (DAT) rate 6.10% in 2025 (5.69% in 2024); the average savings-account rate was 2.90%. No weighted average of all deposits is published."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standing government savings certificate for individuals was found; the Treasury made one public bond offer (appel public à l'épargne) of GNF 1,500 billion for 5 years at 11% in 2025 (BCRG Annual Report 2025), reported under the 5-year bond."
+    },
+    "tbill_91d_rate": {
+      "value": 0.041,
+      "status": "sourced",
+      "sourceName": "BCRG Annual Report 2025, table 24 and annex A8 (taux des bons du Trésor)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2025-12-31",
+      "note": "91-day Treasury bill rate 4.10% in December 2025, down from 14.35% in December 2024; 182-day 4.18%, 364-day 7.74%. Direct subscription is reserved to primary banks."
+    },
+    "tbond_5y_rate": {
+      "value": 0.11,
+      "status": "sourced",
+      "sourceName": "BCRG Annual Report 2025, Treasury bond market (obligations du Trésor)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2025-12-31",
+      "note": "Coupon of the 5-year Treasury bond offered to the public (appel public à l'épargne, GNF 1,500 billion) in 2025; no market yield for 5-year bonds is published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Treasury bond yield for Guinea was found in BCRG publications."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The withholding tax on interest for individuals could not be confirmed: PwC Worldwide Tax Summaries has no Guinea page and the tax authority's General Tax Code was not read."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the tax treatment of Treasury bond interest for individuals could not be confirmed from an official source."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit guarantee for commercial banks was found; the BCRG's deposit guarantee and resolution fund covers only inclusive financial institutions (microfinance), up to GNF 5 million per client per institution, indexed each year to inflation (BCRG instruction, 2019)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; the BCRG reports an average bank lending rate of 13.2% in Q2 2026 (MPC communiqué, 18 September 2026), not card-specific."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local stock exchange found for Guinea; global equity in GNF terms; BCRG Annual Report 2025 (deposit and bill rates)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global equities with a stable franc guinéen."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "No stock exchange operates in Guinea; global equity in GNF terms; BCRG term-deposit rate 6.10% (2025)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "There is no local stock market, so equity means a global index fund in franc guinéen terms (about 7% in dollars plus about 2% a year of currency depreciation), kept within 4 points of an after-tax safe rate of about 5.5%."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "No stock exchange operates in Guinea; global equity in GNF terms",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities repeat their strong long-run dollar record with faster franc depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "BCRG reference exchange rate (GNF 8,822.66 per dollar, 30 October 2026); dollar gold trend",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/COURS-DE-REFERENCE-BCRG-DU-30-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a stable franc guinéen."
+    },
+    "gold_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BCRG reference exchange rate (GNF 8,822.66 per dollar, 30 October 2026); dollar gold trend",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/COURS-DE-REFERENCE-BCRG-DU-30-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: long-run dollar gold trend of about 4% a year plus about 2.5% a year franc depreciation (the franc lost 0.9% to the dollar in the year to mid-2026, more in earlier years)."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BCRG reference exchange rate (GNF 8,822.66 per dollar, 30 October 2026); dollar gold trend",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/COURS-DE-REFERENCE-BCRG-DU-30-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years with faster franc depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCRG Annual Report 2025: savings rate 2.90%, term deposits 6.10%",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings accounts at about 3%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCRG Annual Report 2025: term deposits 6.10%; 364-day bill 7.74% (banks only)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits at about 6% less a possible tax on interest, which could not be confirmed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCRG Annual Report 2025: 5-year public bond offer at 11%",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of savings in Treasury bonds offered to the public (11% in 2025), after default and liquidity risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCRG (insurance supervisor) reports claims paid by life and non-life insurers in its annual report, but no life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance is sold by a few licensed insurers, but no published term life premium rates per GNF 1,000 of cover by age were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major private hospital stay in Guinea was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.5442,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Guinea",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GN",
+      "asOf": "2023-12-31",
+      "note": "54.4% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "INS INHPC September 2026: health prices -0.5% year on year; 7% planning inflation",
+      "sourceUrl": "https://www.stat-guinee.org/images/Documents/Publications/INS/infra_annuelles/IHPC/INHPC_2026/Note_INHPC_Sept_2026_Guinee_V1.pdf",
+      "asOf": "2026-10-31",
+      "note": "The health price index has been flat (-0.5% in the year to September 2026), but it tracks public prices; private and imported care cost more over time, so health goals use 1 point above the 7% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "INS INHPC September 2026: education prices +0.5% year on year; 7% planning inflation",
+      "sourceUrl": "https://www.stat-guinee.org/images/Documents/Publications/INS/infra_annuelles/IHPC/INHPC_2026/Note_INHPC_Sept_2026_Guinee_V1.pdf",
+      "asOf": "2026-10-31",
+      "note": "The education price index rose only 0.5% in the year to September 2026, but private school fees rise in steps, so education goals use 1 point above the 7% planning inflation."
+    },
+    "life_expectancy": {
+      "value": 60.904,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Guinea",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GN",
+      "asOf": "2024-12-31",
+      "note": "60.9 years in 2024 (men 59.7, women 62.1)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/guinea/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.1,
+            "men": 16.6,
+            "women": 17.5
+          },
+          {
+            "age": 65,
+            "total": 13.7,
+            "men": 13.3,
+            "women": 14.0
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 10.3,
+            "women": 10.9
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.7,
+            "women": 6.0
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=GN",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.12
+          },
+          {
+            "year": 2040,
+            "value": 15.63
+          },
+          {
+            "year": 2065,
+            "value": 8.93
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 6.20 (2025, World Bank), 6.4 (2040, populationpyramid.net/guinea/2040/) and 11.2 (2065, populationpyramid.net/guinea/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), assurance vieillesse",
+      "sourceUrl": "https://cnss.gov.gn/assurance-vieillesse/",
+      "asOf": "2026-10-31",
+      "note": "Pension age by job category under decree 2009/185 of 5 September 2009: 55 for manual and heavy work, 60 for workers, employees, supervisors and foremen, 65 for managers and engineers; at least 15 years (180 months) of contributions. 60 is used; same for men and women. The decree dates from 2009 (older than 2025)."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age of civil servants under the public service statute could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCRG Annual Report 2025: savings rate 2.90%, term deposits 6.10%",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts at about 3%."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCRG Annual Report 2025: term deposits 6.10%",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits at about 6% less a possible tax on interest; kept below the after-tax deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BCRG Annual Report 2025: term deposits 6.10%; 5-year public bond offer at 11%",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in Treasury bonds offered to the public."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Safe rate about 5%; global equity base 9%; gold base 6.5% (our assumptions above)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Safe rate about 5%; global equity base 9%; gold base 6.5% (our assumptions above)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of term deposits, public bond offers, gold and some foreign equity."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Safe rate about 5%; global equity base 9%; gold base 6.5% (our assumptions above)",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found; the CNSS 'allocation de vieillesse' is a contributory lump sum for insured workers with under 15 years of contributions, not a social pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on a retirement or end-of-service indemnity for private employees could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), assurance vieillesse",
+      "sourceUrl": "https://cnss.gov.gn/assurance-vieillesse/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory CNSS retirement pension for salaried workers after at least 180 months of contributions (careers counted up to 30 years), from 55, 60 or 65 by job category (60 used); with fewer than 15 years a lump-sum old-age allowance is paid. The page gives no benefit formula or indexation rule, so inflationLinked is set to false and tax treatment is unknown."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account",
+      "note": "Average rate 2.90% in 2025 (BCRG).",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Banks take term deposits at free rates; the average across maturities was 6.10% in 2025 (BCRG)."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Banks take term deposits at free rates; the average across maturities was 6.10% in 2025 (BCRG)."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standing government savings certificate; the Treasury occasionally offers bonds to the public (appel public à l'épargne)."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bons du Trésor à 91 jours",
+      "localNameEn": "91-day Treasury bills",
+      "note": "Direct subscription to Treasury bills is reserved to primary banks and holders of a BCRG account.",
+      "sourceUrl": "https://www.bcrg-guinee.org/marches/marche-obligtaire/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligations du Trésor (appel public à l'épargne)",
+      "localNameEn": "Treasury bonds offered to the public",
+      "note": "A 5-year bond at 11% was offered to the public in 2025 (BCRG Annual Report 2025); such offers are occasional.",
+      "sourceUrl": "https://www.bcrg-guinee.org/wp-content/uploads/2026/10/RAPPORT-ANNUEL-BCRG-2025-VF2_20102026.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year Treasury bond was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No stock exchange or locally sold diversified equity fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is mined artisanally and industrially and sold locally as bars and jewellery; no official coin or bullion scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque Centrale de la République de Guinée (BCRG)",
+      "url": "https://www.bcrg-guinee.org/"
+    },
+    "insuranceRegulator": {
+      "name": "BCRG, insurance supervision",
+      "url": "https://www.bcrg-guinee.org/missions/supervision/assurances/",
+      "note": "The central bank licenses and supervises insurers under the Insurance Code (Law L/2016/034)."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Caisse Nationale de Sécurité Sociale (CNSS), assurance vieillesse",
+      "url": "https://cnss.gov.gn/assurance-vieillesse/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": {
+      "name": "Fonds de garantie des dépôts et de résolution des IFI (BCRG)",
+      "url": "https://www.bcrg-guinee.org/missions/supervision/institutions-de-microfinances/reglementations-des-imf/fonds-de-garantie-des-depots-et-de-resolution-des-ifi/",
+      "note": "Covers microfinance (inclusive financial) institutions only, up to GNF 5 million per client per institution, indexed yearly to inflation."
+    },
+    "statistics": {
+      "name": "Institut National de la Statistique (INS)",
+      "url": "https://www.stat-guinee.org/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "code": "TT",
+  "iso3": "TTO",
+  "nameEn": "Trinidad and Tobago",
+  "nameNative": "Trinidad and Tobago",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "trf"
+  ],
+  "currency": {
+    "code": "TTD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 6.7593,
+      "status": "sourced",
+      "sourceName": "Central Bank of Trinidad and Tobago, exchange rates (US dollar selling rate)",
+      "sourceUrl": "https://www.central-bank.org.tt/",
+      "asOf": "2026-10-30",
+      "note": "TT$6.7593 per US dollar (selling; buying 6.6491) on 30 October 2026; August 2026 average 6.7701 (CBTT DataPack); World Bank 2025 average 6.75."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.006,
+      "status": "sourced",
+      "sourceName": "Central Bank of Trinidad and Tobago, Monetary Policy Announcement 30 September 2026 (CSO Consumer Price Index)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/09/monetary-policy-announcement-2026-09-30-september-2026-1.pdf",
+      "asOf": "2026-07-31",
+      "note": "Headline CPI inflation 0.6% year on year in July 2026 (food 1.7%, core 0.2%), the latest CSO figure cited by the Central Bank; the CSO page itself showed 0.3% for June 2026. World Bank 2025 average 1.0%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBTT Economic DataPack September 2026 (headline inflation 0.3-1.5% in 2024-2026); no formal inflation target",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank does not target inflation; recent inflation is about 1% but the five-year average (2021-2025, including the 2022-2023 food-price spike) is near 2.5-3%, so planning uses 2.5%."
+    },
+    "policy_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "Central Bank of Trinidad and Tobago, Monetary Policy Announcement: repo rate maintained at 3.50%",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/09/monetary-policy-announcement-2026-09-30-september-2026-1.pdf",
+      "asOf": "2026-09-30",
+      "note": "Repo rate held at 3.50% on 30 September 2026; it has been 3.50% since March 2020."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank publishes only the weighted average deposit rate (0.92% in June 2026) and a fee schedule for savings accounts; no published typical rate for ordinary savings accounts was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average rate for 3-month time deposits was found; the Central Bank's Economic DataPack gives only the overall weighted average deposit rate (0.92%, June 2026)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average rate for 1-year time deposits was found; the Central Bank's Economic DataPack gives only the overall weighted average deposit rate (0.92%, June 2026)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or published rate was found in Central Bank data."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0092,
+      "status": "sourced",
+      "sourceName": "Central Bank of Trinidad and Tobago, Economic DataPack September 2026, Selected Interest Rates: commercial banks' weighted average deposit rate",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-06-30",
+      "note": "0.92% in June 2026 (0.92% in March 2026, 0.80% in June 2025). World Bank deposit rate 1.5% (2025)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No separate government savings certificate or retail savings bond for individuals was found; the Central Bank says the public can buy ordinary government bonds at auction through Government Securities Intermediaries."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0301,
+      "status": "sourced",
+      "sourceName": "Central Bank of Trinidad and Tobago, Economic DataPack September 2026, Trinidad and Tobago Government Treasury Yield Curve, 0.25-year tenor",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "3.01% at end-August 2026 (2.77% in April 2026; 3-month OMO Treasury bill rate 3.01% in August 2026)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0548,
+      "status": "sourced",
+      "sourceName": "Central Bank of Trinidad and Tobago, Economic DataPack September 2026, Government Treasury Yield Curve, 5-year tenor",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "5.48% at end-August 2026 (5.20% in November 2025)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0632,
+      "status": "sourced",
+      "sourceName": "Central Bank of Trinidad and Tobago, Economic DataPack September 2026, Government Treasury Yield Curve, 10-year tenor",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "6.32% at end-August 2026 (5.88% in November 2025)."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Trinidad and Tobago, Individual, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/trinidad-and-tobago/individual/income-determination",
+      "asOf": "2026-06-02",
+      "note": "Interest received by a resident individual on savings or other accounts with banks and other deposit-taking institutions is exempt from tax (page reviewed 2 June 2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists to tax; the tax treatment of interest on ordinary government bonds held by individuals could not be confirmed (PwC Tax Summaries mentions only the bank-interest exemption)."
+    },
+    "deposit_insurance_limit": {
+      "value": 200000,
+      "status": "sourced",
+      "sourceName": "Deposit Insurance Corporation of Trinidad and Tobago, deposit insurance coverage",
+      "sourceUrl": "https://dictt.org/deposit-insurance/deposit-insurance-coverage/",
+      "asOf": "2026-10-31",
+      "note": "TT$200,000 per depositor per member institution in each right and capacity, Trinidad and Tobago dollar deposits only."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest was found; the Central Bank's October 2026 comparative schedule for credit cards lists fees only, not interest rates."
+    },
+    "equity_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "CBTT Economic DataPack: T&T Composite Index 1,016.7 in August 2026, up only 1.6% in a year",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local index keeps drifting as it has since its 2020 peak, leaving only dividends."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Weak local index record; 3-month Treasury 3.01% and 1-year Treasury 4.59% (CBTT DataPack); bank interest tax-free",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The T&T Composite Index is lower than five years ago, so the base case is only about 2.5 points over the 3% Treasury bill rate, below the safe rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Local dividend yields plus recovery, or global equities in TT dollar terms (TT dollar near 6.77 per US dollar since 2017)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: local shares recover or savers hold global equity funds, which in TT dollars track US dollar returns because the exchange rate is managed."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 October 2026, down 3% in a year and well below its January 2026 peak (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stays flat in dollars and the managed TT dollar does not weaken."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold USD price trend (Trading Economics); TT dollar managed near 6.77 per US dollar (CBTT DataPack)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold tracks long-run dollar inflation plus a little, with the TT dollar broadly stable against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold resumes its 2020s uptrend or the TT dollar is devalued."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Commercial banks' weighted average deposit rate 0.92%, tax-free (CBTT DataPack June 2026)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: money left in bank deposits, which pay under 1% but are tax-free."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "3-month Treasury 3.01%, 1-year 4.59% (CBTT yield curve August 2026)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of short government securities and higher-paying deposits; tax on government security interest for individuals is not confirmed, so the figure stays near the bill rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "5-year government bond 5.48% (CBTT yield curve August 2026)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in five-year government bonds bought at auction through a securities intermediary."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank supervises insurers under the Insurance Act 2018 but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Trinidad and Tobago, but no regulator or other non-company source with indicative premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a private hospital stay was found; public hospitals under the Regional Health Authorities provide care at little or no charge."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.4527,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TT",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 45.3% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBTT Economic DataPack September 2026: CPI health sub-index +0.9% year on year (July 2026)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices rose under 1% in the last year, but private medical costs and imported drugs tend to rise faster than the CPI, so planning uses 3%."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBTT Economic DataPack September 2026: CPI education sub-index unchanged at 102.5 (0.0% year on year)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The CPI education index has been flat (public education is largely free), but private school and tertiary fees rise over time, so planning uses 3%."
+    },
+    "life_expectancy": {
+      "value": 73.617,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TT",
+      "asOf": "2024-12-31",
+      "note": "Men 70.5, women 76.8 (2024). UN WPP gives 73.9 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 20.0,
+            "men": 18.1,
+            "women": 21.7
+          },
+          {
+            "age": 65,
+            "total": 16.2,
+            "men": 14.6,
+            "women": 17.6
+          },
+          {
+            "age": 70,
+            "total": 12.6,
+            "men": 11.3,
+            "women": 13.7
+          },
+          {
+            "age": 80,
+            "total": 6.9,
+            "men": 6.2,
+            "women": 7.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/trinidad-and-tobago",
+      "asOf": "2026-07-01",
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP): total age reached minus current age."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.38
+          },
+          {
+            "year": 2040,
+            "value": 3.61
+          },
+          {
+            "year": 2065,
+            "value": 2.02
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/trinidad-and-tobago/2065/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 18.6 in 2025 (World Bank), 27.7 in 2040 and 49.5 in 2065 (UN WPP medium variant)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Insurance Board of Trinidad and Tobago, Retirement (Grant/Pension)",
+      "sourceUrl": "https://www.nibtt.net/benefits_09/ben_retirement.html",
+      "asOf": "2026-10-31",
+      "note": "The NIS retirement pension can be claimed from 60 if retired from insurable employment, or at 65 whether retired or not, with at least 750 weekly contributions."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The compulsory retirement age for public servants could not be confirmed from an official page that could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Commercial banks' weighted average deposit rate 0.92%, tax-free; 3-month Treasury 3.01% (CBTT DataPack)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bank deposits with some Treasury bills."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "3-month Treasury 3.01% (CBTT yield curve August 2026)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: short government securities and term deposits, kept at the 3% Treasury bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "1-year Treasury 4.59%, 5-year 5.48% (CBTT yield curve August 2026)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of one- to five-year government bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Fixed income low 1%; equity low 1%; bonds 3-5%",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits, government bonds and equity funds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Fixed income base 3%; equity base 5.5%",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half safe TT dollar fixed income and half equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Equity high 9%; 5-year government bond 5.48%",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: equities do well and long bond yields stay near 5-6%."
+    },
+    "old_age_allowance_monthly": {
+      "value": 3500,
+      "status": "sourced",
+      "sourceName": "ttconnect (Government of Trinidad and Tobago), Senior Citizens' Pension",
+      "sourceUrl": "https://ttconnect.gov.tt/senior-citizens-pension",
+      "asOf": "2026-10-31",
+      "note": "Maximum TT$3,500 a month for people whose own monthly income is up to TT$2,500; it falls to TT$2,500, 1,500 and 500 for incomes up to TT$5,500, above which nothing is paid."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "ttconnect (Government of Trinidad and Tobago), Senior Citizens' Pension",
+      "sourceUrl": "https://ttconnect.gov.tt/senior-citizens-pension",
+      "asOf": "2026-10-31",
+      "note": "Age 65 or over, resident 20 consecutive years before applying (or 50 years in total), with monthly income not above TT$5,500."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Retrenchment and Severance Benefits Act provides severance on retrenchment (redundancy), but its text could not be read from an official source and no statutory gratuity on retirement was confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "National Insurance Board of Trinidad and Tobago, Retirement (Grant/Pension)",
+      "sourceUrl": "https://www.nibtt.net/benefits_09/ben_retirement.html",
+      "asOf": "2026-10-31",
+      "note": "National Insurance is compulsory for employees. Pension from 60 (if retired) or 65 with 750 weekly contributions; fewer contributions give a one-off retirement grant (minimum TT$3,000). The NIB says benefit levels have been raised from time to time, not indexed automatically; minimum pension TT$3,000 a month since 2013; tax treatment not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "Banks pay low rates; the weighted average deposit rate was 0.92% in June 2026. Interest is tax-free for residents."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit (3 months)",
+      "note": "Time deposits are offered by banks; no average rate by term is published.",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit (1 year)",
+      "note": "Time deposits are offered by banks; no average rate by term is published.",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring deposit product was found in Central Bank data."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No separate retail savings certificate; individuals can buy ordinary government bonds at auction.",
+      "sourceUrl": "https://www.central-bank.org.tt/core-functions/market-operations/bonds/"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Treasury bill",
+      "note": "Issued by the Central Bank for the government, mostly bought by institutions.",
+      "sourceUrl": "https://www.central-bank.org.tt/core-functions/market-operations/treasury-bills/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Government bond",
+      "localNameEn": "Government bond",
+      "note": "The public can buy at auction, competitively or non-competitively, through Government Securities Intermediaries.",
+      "sourceUrl": "https://www.central-bank.org.tt/core-functions/market-operations/bonds/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Government bond",
+      "localNameEn": "Government bond",
+      "note": "The public can buy at auction through Government Securities Intermediaries.",
+      "sourceUrl": "https://www.central-bank.org.tt/core-functions/market-operations/bonds/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Equity mutual fund (unit trust)",
+      "note": "Equity funds held TT$8.1 billion in June 2026 (CBTT DataPack).",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold bullion (bars and coins)",
+      "note": "No legal restriction on owning gold was found; there is no local exchange-traded gold market."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Trinidad and Tobago",
+      "url": "https://www.central-bank.org.tt/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Trinidad and Tobago, insurance sector supervision",
+      "url": "https://www.central-bank.org.tt/core-functions/financial-stability/insurance-sector/"
+    },
+    "insuranceComplaints": {
+      "name": "Office of the Financial Services Ombudsman (OFSO)",
+      "url": "https://www.ofso.org.tt/"
+    },
+    "pensionScheme": {
+      "name": "National Insurance Board of Trinidad and Tobago (NIBTT), retirement pension",
+      "url": "https://www.nibtt.net/benefits_09/ben_retirement.html"
+    },
+    "oldAgeAllowance": {
+      "name": "Senior Citizens' Pension (Ministry of Social Development and Family Services)",
+      "url": "https://ttconnect.gov.tt/senior-citizens-pension"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health, accessing public healthcare (Regional Health Authorities)",
+      "url": "https://health.gov.tt/accessing-public-healthcare"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Corporation of Trinidad and Tobago",
+      "url": "https://dictt.org/deposit-insurance/deposit-insurance-coverage/"
+    },
+    "statistics": {
+      "name": "Central Statistical Office (CSO)",
+      "url": "https://cso.gov.tt/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

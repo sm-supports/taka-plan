@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "JM",
+  "iso3": "JAM",
+  "nameEn": "Jamaica",
+  "nameNative": "Jamaica",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "jam"
+  ],
+  "currency": {
+    "code": "JMD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 159.096,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=JM",
+      "asOf": "2025-12-31",
+      "note": "2025 average; the Bank of Jamaica reported a weighted average selling rate of J$159.66 on 30 October 2026."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0859,
+      "status": "sourced",
+      "sourceName": "Bank of Jamaica: headline inflation (RS.INF.01, STATIN CPI)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/RS.INF.01.xls",
+      "asOf": "2026-09-30",
+      "note": "12-month point-to-point inflation 8.59% in September 2026, up from 7.86% in August; above the 4-6% target range."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica: inflation target and outturn (RS.INF.00), target 4-6%",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/RS.INF.00.xls",
+      "asOf": "2026-10-31",
+      "note": "The BOJ targets 4-6% and fiscal-year outturns were 4.3-6.2% in 2022/23-2025/26 apart from 2021/22, so we plan with the 5% mid-point despite the 2026 spike."
+    },
+    "policy_rate": {
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "Bank of Jamaica: Monetary Policy Press Release, September 2026",
+      "sourceUrl": "https://boj.org.jm/monetary-policy-press-release-september-2026/",
+      "asOf": "2026-09-29",
+      "note": "Raised by 50 basis points from 5.50% on 24-25 September 2026, effective 29 September 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0097,
+      "status": "sourced",
+      "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
+      "asOf": "2026-08-31",
+      "note": "Weighted average rate on savings deposits, August 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0491,
+      "status": "sourced",
+      "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
+      "asOf": "2026-08-31",
+      "note": "Weighted average rate on time deposits of 3 to less than 6 months, August 2026 (1-3 months: 4.38%)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0478,
+      "status": "sourced",
+      "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
+      "asOf": "2026-08-31",
+      "note": "Weighted average rate on time deposits of 12 months and over, August 2026 (6-12 months: 4.94%)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official series for monthly recurring deposits was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
+      "asOf": "2026-08-31",
+      "note": "Overall weighted average rate on all local-currency deposits (time 4.53%, savings 0.97%, demand 1.51%), August 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold directly to individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0546,
+      "status": "sourced",
+      "sourceName": "Bank of Jamaica: Government of Jamaica Treasury bill yields (IR.GOJ.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Average 3-month (88-93 day) Treasury bill tender yield, October 2026; 6-month 5.97%."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Government of Jamaica bond yield was found in the BOJ tables read."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Government of Jamaica bond yield was found in the BOJ tables read."
+    },
+    "tax_bank_interest": {
+      "value": 0.25,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries: Jamaica, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/jamaica/individual/income-determination",
+      "asOf": "2026-09-29",
+      "note": "25% withheld at source by banks and other prescribed financial institutions; the interest is then taxed at 25% or 30% with credit for the tax withheld."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found, so no tax rate applies to report."
+    },
+    "deposit_insurance_limit": {
+      "value": 1200000,
+      "status": "sourced",
+      "sourceName": "Jamaica Deposit Insurance Corporation (JDIC): coverage",
+      "sourceUrl": "https://www.jdic.org/coverage/",
+      "asOf": "2026-10-31",
+      "note": "J$1,200,000 per depositor per institution, principal and interest; the page gives no effective date."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or official average credit card rate was found; BOJ loan-rate tables give personal credit at 24.6% (August 2026) but not cards."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica Treasury bill yields (IR.GOJ.00); Jamaica Stock Exchange record",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for local shares, as after 2019."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica Treasury bill yields: 3-month 5.46%, about 4.1% after 25% tax",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case within the after-tax T-bill rate plus 4 points, as the local index has been flat to weak since its 2019 peak."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Jamaica Stock Exchange record; global equities in Jamaican dollar terms",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade like 2015-2019."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with mild depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price; JMD exchange rate trend",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4.5% a year plus about 2% Jamaican dollar depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case: 1-3 month deposits at about 4.4%, less 25% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica Treasury bill yields (IR.GOJ.00) and deposit rates",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: 3-month T-bills at 5.46% and 3-12 month deposits near 4.9%, less 25% withholding tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica Treasury bill yields (IR.GOJ.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case if yields rise after the September 2026 policy rate increase."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio from the Financial Services Commission was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published per-1,000 premium rates by age from the regulator or another permitted source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public premium table for private health insurance by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2025,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=JM",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica: headline inflation (RS.INF.01)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/RS.INF.01.xls",
+      "asOf": "2026-10-31",
+      "note": "No health price index rate was read; private care tends to outpace headline, so we plan with 1.5 points above the 5% target mid-point."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica: headline inflation (RS.INF.01)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/RS.INF.01.xls",
+      "asOf": "2026-10-31",
+      "note": "No education price index rate was read; tuition usually rises faster than headline, so we plan with 6%."
+    },
+    "life_expectancy": {
+      "value": 71.606,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=JM",
+      "asOf": "2024-12-31",
+      "note": "Men 69.1, women 74.1 (2024). UN WPP 2024 via populationpyramid.net gives 71.9 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.1,
+            "men": 16.7,
+            "women": 19.4
+          },
+          {
+            "age": 65,
+            "total": 14.6,
+            "men": 13.5,
+            "women": 15.6
+          },
+          {
+            "age": 70,
+            "total": 11.4,
+            "men": 10.5,
+            "women": 12.2
+          },
+          {
+            "age": 80,
+            "total": 6.4,
+            "men": 6.0,
+            "women": 6.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/jamaica/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium-variant projections for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.5
+          },
+          {
+            "year": 2040,
+            "value": 5.0
+          },
+          {
+            "year": 2065,
+            "value": 1.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/jamaica/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 11.73 (2025, World Bank), 20.2 (2040) and 52.1 (2065, populationpyramid.net/jamaica/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "National Insurance Act (with amendments to 2016), section 3(2): retirement age",
+      "sourceUrl": "https://www.mlss.gov.jm/wp-content/uploads/2018/02/The-National-Insurance-Act-with-Ammendments-to-2016-April-2018.pdf",
+      "asOf": "2018-04-01",
+      "note": "NIS retirement age 65 for men; for women it rose a year at a time from 60 (to March 2011) to 64 (April 2014 to March 2015) and then 65. Older than 2025: consolidated text of April 2018."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Jamaica Information Service: House approves pension reform for public officers (8 May 2025)",
+      "sourceUrl": "https://jis.gov.jm/house-approves-pension-reform-grants-early-retirement-with-full-benefits-for-public-officers/",
+      "asOf": "2025-05-08",
+      "note": "Under the Pensions (Public Service) Act the retirement age rose gradually from 60 to 65 between April 2018 and April 2023; public officers retire at 65 from April 2023."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits after 25% tax."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
+      "asOf": "2026-10-31",
+      "note": "Base case just below the after-tax 1-year deposit rate (4.78% less 25% = 3.6%)."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bank of Jamaica Treasury bill yields (IR.GOJ.00)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case with 6-month T-bills near 6% before tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BOJ deposit and T-bill rates; Jamaica Stock Exchange record",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of T-bills, deposits and shares."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BOJ deposit and T-bill rates; Jamaica Stock Exchange record",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half equities at 7.5% and half fixed income at 4%, rounded."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BOJ deposit and T-bill rates; Jamaica Stock Exchange record",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equities."
+    },
+    "old_age_allowance_monthly": {
+      "value": 6000,
+      "status": "sourced",
+      "sourceName": "Jamaica Information Service: Nearly 15,000 seniors registered on the Social Pension Programme (31 May 2024)",
+      "sourceUrl": "https://jis.gov.jm/nearly-15000-seniors-registered-on-the-social-pension-programme/",
+      "asOf": "2024-05-01",
+      "note": "Social Pension paid every two months: J$12,000 per payment from May 2024 (up from J$6,800), i.e. J$6,000 a month. Older than 2025; no later amount found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 75,
+        "womenAge": 75,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Jamaica Information Service: 16,000 Jamaicans now registered under Govt's Social Pension Programme (22 September 2025)",
+      "sourceUrl": "https://jis.gov.jm/16000-jamaicans-now-registered-under-govts-social-pension-programme/",
+      "asOf": "2025-09-22",
+      "note": "Citizens aged 75 and older who receive no pension (local or overseas), other retirement, disability or regular income support, are not on PATH and do not live in a government care facility."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Redundancy pay exists under the Employment (Termination and Redundancy Payments) Act, but no readable official source giving the weeks-per-year formula was found; there is no general statutory gratuity on retirement or resignation in the sources read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Labour and Social Security: National Insurance Scheme",
+      "sourceUrl": "https://www.mlss.gov.jm/departments/national-insurance-scheme/",
+      "asOf": "2023-04-01",
+      "note": "NIS: employee and employer each pay 3% of pay up to J$5 million a year (PwC, reviewed 29 Sept 2026); flat-rate old-age pension J$4,200 a week (full rate) from 1 April 2023, raised by periodic decisions rather than automatic indexation; a J$60,000 grant if contribution conditions are not met. Older than 2025."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "Average savings rate about 1%; interest taxed at 25% at source.",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "Time deposit (3 to 6 months)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "Time deposit (12 months and over)",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond is sold directly to individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of Jamaica Treasury bill",
+      "note": "Sold at Bank of Jamaica tenders.",
+      "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.GOJ.00.xlsx"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Benchmark investment note",
+      "localNameEn": "Government of Jamaica bond",
+      "note": "Government of Jamaica local-currency bonds are traded; no yield found."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Benchmark investment note",
+      "localNameEn": "Government of Jamaica bond",
+      "note": "Government of Jamaica local-currency bonds are traded; no yield found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trust or mutual fund",
+      "note": "Collective investment schemes are supervised by the Financial Services Commission.",
+      "sourceUrl": "https://www.fscjamaica.org/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "note": "Gold jewellery and coins can be bought from jewellers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Jamaica",
+      "url": "https://boj.org.jm/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Commission (FSC)",
+      "url": "https://www.fscjamaica.org/industry/insurance/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Commission: complaints",
+      "url": "https://www.fscjamaica.org/complaints/"
+    },
+    "pensionScheme": {
+      "name": "National Insurance Scheme (NIS), Ministry of Labour and Social Security",
+      "url": "https://www.mlss.gov.jm/departments/national-insurance-scheme/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Pension Programme, Ministry of Labour and Social Security",
+      "url": "https://mlss.gov.jm/community/social-pension-forms/",
+      "note": "For citizens 75 and older without a pension or other income support."
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health and Wellness (public health services)",
+      "url": "https://www.moh.gov.jm/"
+    },
+    "depositInsurance": {
+      "name": "Jamaica Deposit Insurance Corporation (JDIC)",
+      "url": "https://www.jdic.org/coverage/"
+    },
+    "statistics": {
+      "name": "Statistical Institute of Jamaica (STATIN)",
+      "url": "https://statinja.gov.jm/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

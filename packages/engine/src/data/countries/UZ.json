@@ -67,12 +67,12 @@
       "note": "No published 3-month term deposit rate was found; cbu.uz deposit-rate statistics could not be reached."
     },
     "fdr_1y_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "No published 1-year term deposit rate was found; cbu.uz deposit-rate statistics could not be reached. The weighted average deposit rate was 13.9% in August 2026 (Trading Economics)."
+      "value": 0.154,
+      "status": "sourced",
+      "sourceName": "Kursiv Uzbekistan (news), reporting Central Bank of Uzbekistan deposit statistics for June 2026",
+      "sourceUrl": "https://uz.kursiv.media/?p=2076055",
+      "asOf": "2026-06-30",
+      "note": "Secondary source (cbu.uz could not be reached): the average rate on som term deposits of up to one year was 15.4% in June 2026 (14.7% in May); deposits over one year paid 18.1%. The bucket covers all terms up to one year, for individuals and companies; bank interest is tax-free for individuals."
     },
     "dps_rate": {
       "value": null,
@@ -88,7 +88,7 @@
       "sourceName": "Trading Economics, Uzbekistan deposit interest rate (Central Bank of Uzbekistan data)",
       "sourceUrl": "https://tradingeconomics.com/uzbekistan/deposit-interest-rate",
       "asOf": "2026-08-31",
-      "note": "Secondary source: 13.9% in August 2026, down from 14.7% in July; World Bank FR.INR.DPST 18.1% for 2024."
+      "note": "Secondary source: 13.9% in August 2026, down from 14.7% in July; World Bank FR.INR.DPST 18.1% for 2024. The series is not described on the page and appears to blend all deposits; the Central Bank reported an average of 17.6% on som term deposits in June 2026 (Kursiv Uzbekistan, https://uz.kursiv.media/?p=2076055)."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -356,7 +356,7 @@
       "sourceName": "Law 'On state pension provision of citizens' No. 938-XII, Article 7",
       "sourceUrl": "https://lex.uz/ru/docs/112312",
       "asOf": "2026-10-31",
-      "note": "Old-age pension from 60 for men with at least 25 years of work and 55 for women with at least 20 years; with 7 or more years a proportional pension is paid (Article 8). No legislated increase was found."
+      "note": "Old-age pension from 60 for men with at least 25 years of work and 55 for women with at least 20 years; with 7 or more years a proportional pension is paid (Article 8). No legislated increase was found. A draft presidential decree put to public discussion in September 2026 would raise the age by 3 months a year from 1 January 2028 to 63 (men) and 58 (women) by 2039 and lift the minimum record from 7 to 15 years; it had not been adopted by 31 October 2026 (Spot, https://www.spot.uz/en/2026/09/15/pension-age/)."
     },
     "retirement_age_government": {
       "value": null,
@@ -420,15 +420,21 @@
       "sourceName": "Presidential Decree No. UP-115 of 23 June 2026 'On increasing wages, pensions, stipends and allowances'",
       "sourceUrl": "https://lex.uz/ru/docs/8283680",
       "asOf": "2026-07-01",
-      "note": "Allowance for elderly citizens without the required work record: 878,000 som a month from 1 July 2026 (pensions and allowances raised 7%). The minimum old-age pension is 983,000 som."
+      "note": "Allowance for elderly citizens without the required work record: 878,000 som a month from 1 July 2026 (pensions and allowances raised 7%). The minimum old-age pension is 983,000 som. Paid from 65 (men) or 60 (women) to people without the work record needed for a pension (gov.uz)."
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Unified portal of interactive public services (gov.uz), allowances to elderly and disabled citizens without work record",
+      "sourceUrl": "https://gov.uz/en/advice/64/document/1884",
       "asOf": "2026-10-31",
-      "note": "The eligibility ages and conditions for the allowance to elderly citizens without the required work record were not found in the texts read (pension law, 2026 decree, pension regulation No. 592)."
+      "note": "Paid to men from 65 and women from 60 who have no work record or too short a record for a pension (mothers of children disabled from childhood from 55); payment stops if the person has paid work or another income, so it is treated as income-tested. Rules from Presidential Decree UP-6241 (2021) and Cabinet Resolution No. 119 (2023), still in force."
     },
     "gratuity_rule": {
       "value": null,
@@ -452,7 +458,7 @@
       "sourceName": "Law 'On state pension provision of citizens' No. 938-XII (Articles 7, 8, 26 and tax exemption)",
       "sourceUrl": "https://lex.uz/ru/docs/112312",
       "asOf": "2026-10-31",
-      "note": "State old-age pension funded by social tax: from 60 for men (25 years' work) and 55 for women (20 years), 55% of average monthly earnings plus increments, not less than the minimum pension (983,000 som a month from 1 July 2026); pensions are exempt from tax. Pensions are raised by presidential decree (7% from 1 July 2026), not by an automatic index."
+      "note": "State old-age pension funded by social tax: from 60 for men (25 years' work) and 55 for women (20 years), 55% of average monthly earnings plus increments, not less than the minimum pension (983,000 som a month from 1 July 2026); pensions are exempt from tax. Pensions are raised by presidential decree (7% from 1 July 2026), not by an automatic index. A draft decree (September 2026, not yet adopted) would raise pension ages gradually from 2028 to 63 (men) and 58 (women)."
     }
   },
   "instruments": {

@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "code": "GW",
+  "iso3": "GNB",
+  "nameEn": "Guinea-Bissau",
+  "nameNative": "Guiné-Bissau",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "pov",
+    "pt",
+    "ff",
+    "bjt",
+    "mnk"
+  ],
+  "currency": {
+    "code": "XOF",
+    "symbol": "F CFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 589.0,
+      "status": "sourced",
+      "sourceName": "BCEAO, rates of foreign currencies against the CFA franc for transfers, 30 October 2026",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-30",
+      "note": "Mid-point of the buying (585.50) and selling (592.50) rates for the US dollar; the CFA franc is pegged at 655.957 per euro. World Bank 2025 average 581.9."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": -0.005,
+      "status": "sourced",
+      "sourceName": "BCEAO, Note de conjoncture économique des pays de l'UEMOA, September 2026 (national harmonised CPI, Guinea-Bissau)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Consumer prices fell 0.5% year on year in Guinea-Bissau in August 2026, after 0.0% in July (INE data via BCEAO); the 2025 average was +0.9% (World Bank)."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BCEAO inflation target band of 1-3%; CFA franc pegged to the euro",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Guinea-Bissau's inflation has stayed low under the euro peg, so the 2% centre of the BCEAO's 1-3% target band is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "BCEAO, Note de conjoncture économique des pays de l'UEMOA, September 2026 (Monetary Policy Committee of 9 September 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-09-09",
+      "note": "Main policy rate held at 3.00% (marginal lending facility 5.00%) by the Monetary Policy Committee on 9 September 2026; common to all eight UMOA countries."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average rate on ordinary savings accounts in Guinea-Bissau was found; the BCEAO bank-conditions survey (first half 2026) lists term-deposit and contractual-savings rates only."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0325,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Guinea-Bissau)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median of the minimum term-deposit rates (taux DAT minimum) declared to the BCEAO by Guinea-Bissau's 6 banks, range 2.25-3.50%; the minimum usually applies to small, short deposits. Not a tenor-specific average."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCEAO bank-conditions survey gives only minimum (median 3.25%) and maximum (median 6.4%, range 4.0-6.75%) term-deposit rates per bank in Guinea-Bissau for the first half of 2026, not a 1-year rate."
+    },
+    "dps_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Guinea-Bissau, épargne contractuelle)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median rate on contractual savings plans declared by Guinea-Bissau's banks in the first half of 2026; five of six declare 3.50% (range 3.50-3.75%)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0515,
+      "status": "sourced",
+      "sourceName": "BCEAO, Note de conjoncture économique des pays de l'UEMOA, September 2026 (bank deposit rates, July 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Average deposit rate across UMOA banks, 5.15% in July 2026; Guinea-Bissau's rate fell 1.46 points in the month, but the BCEAO does not publish the country level in this note. The World Bank series for Guinea-Bissau stops in 2016 (6.9%)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold to individuals was found; the Treasury borrows through UMOA-Titres auctions and regional public bond offers, open to individuals only through banks and brokers."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0533,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres, Guinea-Bissau yield curve (zero coupon) at 23 October 2026",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-23",
+      "note": "3-month zero-coupon rate 5.33% (5.41% after smoothing); 1-year 5.61%. No recent Guinea-Bissau 3-month auction result page could be read."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0851,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres, Guinea-Bissau yield curve (zero coupon) at 23 October 2026",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-23",
+      "note": "5-year zero-coupon rate 8.51% (8.10% after smoothing)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The UMOA-Titres Guinea-Bissau yield curve (23 October 2026) stops at 7 years (7.04%); no 10-year rate was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The withholding tax on bank interest for individuals in Guinea-Bissau could not be confirmed: PwC Worldwide Tax Summaries has no Guinea-Bissau page and the tax authority's texts were not reached."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the tax treatment of Treasury security interest for individuals could not be confirmed from an official source."
+    },
+    "deposit_insurance_limit": {
+      "value": 1400000,
+      "status": "sourced",
+      "sourceName": "UMOA Council of Ministers, Decision of 30 June 2017 on FGD-UMOA contribution rates and compensation ceilings",
+      "sourceUrl": "https://www.fgd-umoa.org/wp-content/uploads/2024/10/Decision-du-CM-relative-aux-taux-de-contribution-et-aux-plafonds-d-indemnistation-2-1.pdf",
+      "asOf": "2017-06-30",
+      "note": "Deposits are guaranteed up to 1,400,000 FCFA per depositor per bank (300,000 FCFA at a microfinance institution) by the regional deposit guarantee fund; the decision dates from 2017 (older than 2025), and no later change was found."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions débitrices of UMOA credit institutions, first half 2026 (Guinea-Bissau)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median maximum lending rate (taux débiteur maximum) declared by Guinea-Bissau's 6 banks for the first half of 2026 (range 12-15%); it applies to all bank credit, including cards. No card-specific rate is published."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (regional stock exchange BRVM); UMOA-Titres Guinea-Bissau yield curve",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: regional (BRVM) equities return about the bank deposit rate, as in their weak 2016-2020 years."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (regional stock exchange BRVM); UMOA-Titres Guinea-Bissau yield curve",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5 points above after-tax term deposits and 1-year bills (about 4.5%), within the 4-point cap; Guinea-Bissau has no exchange of its own, so equity means regional BRVM funds, whose 10-year record is mixed."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (regional stock exchange BRVM)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: the BRVM repeats a strong decade like 2023-2026."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "BCEAO transfer rates (CFA franc pegged at 655.957 per euro); dollar gold trend",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO transfer rates (CFA franc pegged at 655.957 per euro); dollar gold trend",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus a small allowance for the euro-pegged franc weakening against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCEAO transfer rates (CFA franc pegged at 655.957 per euro); dollar gold trend",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years such as 2024-2025."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO bank-conditions survey, first half 2026 (Guinea-Bissau)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at about 3.25-3.5%, less a possible tax on interest."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO bank-conditions survey, first half 2026; UMOA-Titres Guinea-Bissau curve (1-year 5.61%)",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: larger term deposits (median maximum 6.4%) or 1-year Treasury bills (5.6%) through a bank, less tax on interest, rounded down because the tax rate is unconfirmed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Guinea-Bissau yield curve (3-5 years 8.2-8.5%)",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: 3-5 year Treasury bonds at about 8%, less a possible tax and an allowance for Guinea-Bissau's higher credit risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CIMA (the regional insurance regulator) and Guinea-Bissau's insurance directorate publish no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per 1,000 FCFA of cover by age were found from a public source; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Guinea-Bissau was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.6156,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Guinea-Bissau",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GW",
+      "asOf": "2023-12-31",
+      "note": "61.6% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCEAO 1-3% inflation target band; 2% planning inflation",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No national medical CPI series was read; private and imported medical costs usually rise faster than general prices, so 1.5 points above the 2% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO 1-3% inflation target band; 2% planning inflation",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No national education CPI series was read; private school fees usually rise faster than general prices, so 2 points above the 2% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 64.254,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Guinea-Bissau",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GW",
+      "asOf": "2024-12-31",
+      "note": "64.3 years in 2024 (men 61.8, women 66.5)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/guinea-bissau/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.0,
+            "men": 15.9,
+            "women": 18.0
+          },
+          {
+            "age": 65,
+            "total": 13.7,
+            "men": 12.8,
+            "women": 14.4
+          },
+          {
+            "age": 70,
+            "total": 10.7,
+            "men": 10.0,
+            "women": 11.3
+          },
+          {
+            "age": 80,
+            "total": 6.1,
+            "men": 5.7,
+            "women": 6.4
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=GW",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 18.05
+          },
+          {
+            "year": 2040,
+            "value": 14.71
+          },
+          {
+            "year": 2065,
+            "value": 8.2
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 5.54 (2025, World Bank), 6.8 (2040, populationpyramid.net/guinea-bissau/2040/) and 12.2 (2065, populationpyramid.net/guinea-bissau/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age of the National Social Security Institute (INPS) could not be confirmed: its website was unreachable and the ISSA, ILO and US SSA country pages refused access."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age of civil servants could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO bank-conditions survey, first half 2026 (Guinea-Bissau)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at about 3.5%, less a possible tax on interest."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO bank-conditions survey, first half 2026; UMOA-Titres Guinea-Bissau curve (1-year 5.61%)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits at 3.25-6.4% less tax on interest; below the after-tax 1-year deposit and Treasury bill rates."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Guinea-Bissau yield curve",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in short Treasury bonds bought through a bank."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCEAO bank-conditions survey, first half 2026 (Guinea-Bissau)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Guinea-Bissau yield curve; regional equity and gold assumptions above",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or Treasury bonds, regional equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Guinea-Bissau yield curve; regional equity and gold assumptions above",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension for Guinea-Bissau was found; no source confirming that none exists could be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official text on a statutory end-of-service indemnity for private employees in Guinea-Bissau could be read (the Labour Law was not reached)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A contributory pension for private-sector employees is run by the National Social Security Institute (Instituto Nacional de Previdência Social, INPS), but its pension age, benefit formula and indexation could not be read from an official or international source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conta poupança",
+      "localNameEn": "Savings account",
+      "note": "Banks offer savings accounts; no average rate is published."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a prazo (3 meses)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Minimum term-deposit rates of 2.25-3.50% declared to the BCEAO (first half 2026).",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a prazo (1 ano)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Maximum term-deposit rates of 4.0-6.75% declared to the BCEAO (first half 2026); no 1-year average is published.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Poupança contratual",
+      "localNameEn": "Contractual savings plan",
+      "note": "Contractual savings at about 3.50% (BCEAO bank-conditions survey, first half 2026).",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bilhetes do Tesouro",
+      "localNameEn": "Treasury bills",
+      "note": "Auctioned through UMOA-Titres to banks and primary dealers; individuals buy through a bank or broker.",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obrigações do Tesouro",
+      "localNameEn": "Treasury bonds",
+      "note": "Auctioned through UMOA-Titres; individuals buy through a bank or broker.",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Guinea-Bissau's yield curve stops at 7 years; no 10-year bond was found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fundos comuns de investimento (BRVM)",
+      "localNameEn": "Regional mutual funds (BRVM)",
+      "note": "No local exchange; residents can buy regional mutual funds investing on the BRVM through approved intermediaries."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ouro",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque Centrale des États de l'Afrique de l'Ouest (BCEAO)",
+      "url": "https://www.bceao.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Commission Régionale de Contrôle des Assurances (CIMA)",
+      "url": "https://cima-afrique.org/",
+      "note": "Regional insurance regulator for the CIMA member states, Guinea-Bissau included."
+    },
+    "insuranceComplaints": {
+      "name": "CIMA policyholder requests and complaints form",
+      "url": "https://cima-afrique.org/faites-votre-requetes-ici-2/"
+    },
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": {
+      "name": "Fonds de Garantie des Dépôts et de Résolution dans l'UMOA (FGDR-UMOA)",
+      "url": "https://www.fgd-umoa.org/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estatística (INE)",
+      "url": "https://www.stat-guinebissau.com/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 1,
+  "code": "BH",
+  "iso3": "BHR",
+  "nameEn": "Bahrain",
+  "nameNative": "البحرين",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en",
+    "ml"
+  ],
+  "currency": {
+    "code": "BHD",
+    "symbol": "BD",
+    "decimals": 3,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.376,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Bahrain",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BH",
+      "asOf": "2025-12-31",
+      "note": "The dinar is pegged at 0.376 per US dollar; the Central Bank of Bahrain daily rate on 29 October 2026 was 0.376081. CLDR gives no narrow symbol; 'BD' is the usual local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.031,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Information & eGovernment Authority (iGA), CPI September 2026",
+      "sourceUrl": "https://tradingeconomics.com/bahrain/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 3.1% year on year in September 2026 (3.0% in August); secondary source because the iGA release could not be read. World Bank 2025 average -0.1%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2021-2025 (about 1% average); latest 3.1% (September 2026); dollar peg",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=BH",
+      "asOf": "2026-10-31",
+      "note": "With the dinar pegged to the dollar, inflation has averaged about 1% over 2021-2025 and is 3.1% now, so 2% a year is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain press release, 28 October 2026: overnight deposit rate unchanged",
+      "sourceUrl": "https://www.cbb.gov.bh/media-center/cbb-maintains-overnight-interest-rate-unchanged-at-4-50/",
+      "asOf": "2026-10-28",
+      "note": "The CBB kept its overnight deposit rate at 4.50%; its daily rates on 29 October 2026 show the one-week deposit rate at 4.75% and the overnight repo rate at 5.50%."
+    },
+    "savings_account_rate": {
+      "value": 0.0018,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, Table 7 (conventional retail banks, BD savings deposits)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average rate on BD savings deposits at conventional retail banks, 0.18% in August 2026."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0269,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, Table 7 (BD time deposits, 3-6 months)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average rate on BD time deposits of 3-6 months, 2.69% in August 2026 (less than 3 months: 2.67%); deposits in the BD 10,000-50,000 range."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0264,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, Table 7 (BD time deposits, 6-12 months)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average rate on BD time deposits of 6-12 months, 2.64% in August 2026; deposits in the BD 10,000-50,000 range."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found in the CBB statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0263,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, banking indicators (average interest rate on deposits, 6-12 months)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Quarterly average rate on 6-12 month deposits, 2.63% in Q2 2026 (2.00% in Q1); no weighted average over all deposits is published. World Bank FR.INR.DPST stops in 2015."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; government securities are auctioned to banks and institutions through the CBB."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0528,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, Table 11 (Government of Bahrain Treasury Bills)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-08-26",
+      "note": "Average rate on the weekly 91-day bills allotted on 26 August 2026 (BD 70 million at a price of 98.684); recent auctions ranged 5.28-5.48%."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield is published; the CBB bulletin gives only the average yield on long-term development bonds."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0669,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, banking indicators (average interest rate on local and international long-term government bonds)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Average yield on long-term government development bonds, 6.69% in Q2 2026 (5.96% in Q1); maturities are not split out, so this is used as the long bond yield."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Bahrain, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/bahrain/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "There is no personal income tax in Bahrain, so bank interest is untaxed for individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Bahrain, taxes on personal income",
+      "sourceUrl": "https://taxsummaries.pwc.com/bahrain/individual/taxes-on-personal-income",
+      "asOf": "2026-10-31",
+      "note": "No personal income tax, so returns on government securities are untaxed for individuals (no retail savings certificate exists)."
+    },
+    "deposit_insurance_limit": {
+      "value": 20000,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Consumer information: Deposit & URIA Protection Scheme",
+      "sourceUrl": "https://www.cbb.gov.bh/consumer-information/",
+      "asOf": "2026-10-31",
+      "note": "Eligible individual account holders are covered up to BD 20,000 of their total eligible accounts per bank (conventional deposits and Islamic unrestricted investment accounts), replacing the earlier lower of 75% or BD 15,000."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2077,
+      "status": "sourced",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, Table 7 (conventional retail banks, credit cards)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average interest rate on credit card balances at conventional retail banks, 20.77% in August 2026; no legal cap was found."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBB 91-day Treasury bill yield 5.28% (August 2026)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local market, dominated by a few banks, returns less than Treasury bills."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "CBB 91-day Treasury bill yield 5.28%; 1-year deposit 2.64%",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2 points above the Treasury bill yield, within the 4-point cap, because the Bahrain All Share index has had only a moderate, dividend-driven 10-year record."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "CBB 91-day Treasury bill yield 5.28%",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a stronger equity premium similar to other Gulf markets."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Dollar peg (0.376 BHD per USD); World Bank exchange rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BH",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; the peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dollar peg (0.376 BHD per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BH",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year, with no depreciation gain under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Dollar peg (0.376 BHD per USD); long-run dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BH",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026 (deposit rates)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall back toward the 2025 level of about 1.9%, untaxed."
+    },
+    "fixed_income_return_base": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026 (1-year deposit 2.64%)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: the 6-12 month deposit rate, untaxed; Treasury bills pay more but are bid for by banks and institutions."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026 (Treasury bills 5.28%, policy rate 4.5%)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: savers who reach Treasury bill or sukuk returns through banks or funds."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBB (the insurance regulator) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per BD 1,000 of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.2866,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Bahrain",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BH",
+      "asOf": "2023-12-31",
+      "note": "28.7% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; latest CPI 3.1%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=BH",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI was read; private medical costs usually rise about 2 points faster than general prices."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2%; latest CPI 3.1%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=BH",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was read; private school fees usually rise faster than general prices, so 2 points above the inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 81.423,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Bahrain",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BH",
+      "asOf": "2024-12-31",
+      "note": "81.4 years in 2024 (men 80.9, women 82.1); the population includes many younger migrant workers."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 24.3,
+            "men": 23.8,
+            "women": 24.7
+          },
+          {
+            "age": 65,
+            "total": 20.1,
+            "men": 19.6,
+            "women": 20.5
+          },
+          {
+            "age": 70,
+            "total": 16.3,
+            "men": 15.8,
+            "women": 16.7
+          },
+          {
+            "age": 80,
+            "total": 9.7,
+            "men": 9.3,
+            "women": 10.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/bahrain/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 19.3
+          },
+          {
+            "year": 2040,
+            "value": 11.5
+          },
+          {
+            "year": 2065,
+            "value": 6.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/bahrain/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 5.18 (2025, World Bank), 8.7 (2040) and 15.0 (2065, populationpyramid.net/bahrain/2065/); the large migrant workforce keeps the ratio high."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Insurance Organization site and the social insurance law could not be read (access refused), so the current private-sector pension age could not be confirmed."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil-service pension age could not be confirmed; the Social Insurance Organization site could not be read."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026 (deposit rates)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates near their 2025 level, untaxed."
+    },
+    "retirement_return_base": {
+      "value": 0.026,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026 (1-year deposit 2.64%)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: the untaxed 6-12 month deposit rate; not above the after-tax 1-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026 (Treasury bills 5.28%)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money earns Treasury bill or sukuk returns."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026 (deposits and Treasury bills)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning a little above deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026; equity base 7.5%; gold base 4%",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or sukuk, equities and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026; equity high 10%",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Means-tested social assistance from the Ministry of Social Development covers some older people, but no current amount of an old-age allowance could be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for social assistance to older people could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Portal says the Labour Law gives expatriate employees a statutory end-of-service indemnity (Bahraini nationals are covered by social insurance instead), but the Labour Law text giving the days per year could not be opened (access refused)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Compulsory social insurance through the Social Insurance Organization covers Bahraini public and private employees (the National Portal says a full pension needs 20 years of insured employment and is based on the last five years' average pay), but the pension age and indexation rules could not be read."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account",
+      "note": "Savings accounts pay very little (0.18% on average in August 2026).",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)",
+      "note": "Deposits are protected up to BD 20,000 per person per bank."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "أذونات الخزانة",
+      "localNameEn": "Treasury bills",
+      "note": "91-day bills are auctioned weekly by the CBB to banks, the Social Insurance Organisation and other institutions; Islamic Al-Salam sukuk are also issued monthly.",
+      "sourceUrl": "https://www.cbb.gov.bh/government-securities/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات التنمية الحكومية",
+      "localNameEn": "Government development bonds",
+      "note": "Issued in dinars and US dollars, mainly bought by institutions.",
+      "sourceUrl": "https://www.cbb.gov.bh/government-securities/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات التنمية الحكومية",
+      "localNameEn": "Government development bonds",
+      "note": "Issued in dinars and US dollars, mainly bought by institutions.",
+      "sourceUrl": "https://www.cbb.gov.bh/government-securities/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار",
+      "localNameEn": "Mutual funds",
+      "note": "About 1,750 collective investment undertakings are registered with the CBB.",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf"
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are freely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Bahrain (CBB)",
+      "url": "https://www.cbb.gov.bh/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Bahrain, insurance supervision",
+      "url": "https://www.cbb.gov.bh/insurance/"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of Bahrain, consumer complaints",
+      "url": "https://www.cbb.gov.bh/complaint-form/"
+    },
+    "pensionScheme": {
+      "name": "Social Insurance Organization (SIO)",
+      "url": "https://www.sio.gov.bh/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (public health care for citizens)",
+      "url": "https://www.moh.gov.bh/"
+    },
+    "depositInsurance": {
+      "name": "Deposit & Unrestricted Investment Accounts Protection Scheme, Central Bank of Bahrain",
+      "url": "https://www.cbb.gov.bh/consumer-information/"
+    },
+    "statistics": {
+      "name": "Information & eGovernment Authority (iGA)",
+      "url": "https://www.iga.gov.bh/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

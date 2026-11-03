@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "code": "GY",
+  "iso3": "GUY",
+  "nameEn": "Guyana",
+  "nameNative": "Guyana",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "en",
+    "gyn"
+  ],
+  "currency": {
+    "code": "GYD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 208.5,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GY",
+      "asOf": "2025-12-31",
+      "note": "Official rate, 2025; the Budget Speech 2026 also uses GYD 208.50 per US dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.034,
+      "status": "sourced",
+      "sourceName": "Bureau of Statistics Guyana, Consumer Price Index (Georgetown) September 2026",
+      "sourceUrl": "https://statisticsguyana.gov.gy/subjects/price-indices/consumer-price-index-georgetown-guyana-september-2026/",
+      "asOf": "2026-09-30",
+      "note": "12-month inflation 3.4% (September 2025 to September 2026); the index fell 0.1% in the month."
+    },
+    "inflation_projection": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: inflation target 2.5% for 2026; CPI 2021-2025 of 5.7, 7.2, 2.0, 2.9, 2.5%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The 2.5% figure is a one-year government target, not a central bank target; the 2021-2025 average is about 4%, so we plan with 3.5%."
+    },
+    "policy_rate": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Guyana interest rate (Bank of Guyana bank rate)",
+      "sourceUrl": "https://tradingeconomics.com/guyana/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: the Bank of Guyana bank rate is 5.00% (September 2026), unchanged since March 2013; the Bank of Guyana site blocks automated reading behind a verification page."
+    },
+    "savings_account_rate": {
+      "value": 0.0081,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Budget Speech 2026 (para 3.36)",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2025-12-31",
+      "note": "Commercial banks' small savings rate stayed at 0.81% through 2025 (Bank of Guyana data)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Bank of Guyana statistics: the Bank of Guyana site blocks automated reading behind a verification page; the Budget Speech 2026 gives only the small savings rate."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Searched Bank of Guyana statistics: the Bank of Guyana site blocks automated reading behind a verification page; no other public source for a 1-year time deposit rate found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.00775,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GY",
+      "asOf": "2025-12-31",
+      "note": "Average rate paid by commercial banks on deposits, 2025 (Bank of Guyana data via IMF IFS)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; domestic government borrowing is mainly through Treasury bills (the Bank of Guyana site blocks automated reading behind a verification page)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.011,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Budget Speech 2026 (para 3.36)",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2025-12-31",
+      "note": "The 91-day Treasury bill yield stayed at 1.10% in 2025 (364-day 1.09%, 182-day 0.99%); 2026 auction results could not be read (the Bank of Guyana site blocks automated reading behind a verification page)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year domestic government bond yield published; government domestic debt is mainly Treasury bills and debentures."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year domestic government bond yield published."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Guyana: Individual - Income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/guyana/individual/income-determination",
+      "asOf": "2026-06-02",
+      "note": "Interest on savings and other accounts with banks and financial institutions is subject to a 20% final withholding tax, refundable if total income is below GYD 780,000 a year; page last reviewed 2 June 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists (see sanchayapatra_5y_rate), and the PwC summary does not address tax on government securities."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Guyana has a Deposit Insurance Corporation (it appears in the Budget Speech 2026 debt tables), but no readable official page stating the cover per depositor was found (the Bank of Guyana site blocks automated reading behind a verification page)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card interest and no official typical rate found."
+    },
+    "equity_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%, small savings rate 0.81%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local stock exchange is small and thinly traded, so savers rely on global funds in Guyana dollars, and a weak decade is possible."
+    },
+    "equity_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%, small savings rate 0.81%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case uses a global equity index in Guyana-dollar terms (the rate has held near 208.5 per dollar), capped at the 1.1% safe rate plus 4 points because there is no usable local index record."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case if global equities repeat strong long-run dollar returns."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026 and World Bank: GYD 208.50 per US dollar, stable for years",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak dollar gold price with a stable Guyana dollar."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026 and World Bank: GYD 208.50 per US dollar, stable for years",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Dollar gold trend of about 4-5% a year with no expected depreciation of the managed Guyana dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026 and World Bank: GYD 208.50 per US dollar",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with strong dollar gold or a weaker Guyana dollar."
+    },
+    "fixed_income_return_low": {
+      "value": 0.006,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: small savings rate 0.81%; PwC: 20% withholding on bank interest",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits at 0.81% less 20% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.009,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%, small savings rate 0.81%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of savings deposits and Treasury bills, about 0.9% after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: Treasury bills or longer time deposits slightly above the bill rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio is published by the Bank of Guyana (insurance supervisor)."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold in Guyana, but no regulator or public source publishes indicative premiums by age."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for a typical private hospital stay found; public hospital care is free."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or public source publishing private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2633,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GY",
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bureau of Statistics Guyana CPI September 2026: medical care and health services +2.4% over 12 months",
+      "sourceUrl": "https://statisticsguyana.gov.gy/subjects/price-indices/consumer-price-index-georgetown-guyana-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "Medical CPI rose 2.4% in the latest year; we plan with headline planning inflation plus 1 point for private care."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bureau of Statistics Guyana CPI September 2026: education, recreation and cultural services +4.5% over 12 months",
+      "sourceUrl": "https://statisticsguyana.gov.gy/subjects/price-indices/consumer-price-index-georgetown-guyana-september-2026/",
+      "asOf": "2026-10-31",
+      "note": "The education group rose 4.5% in the latest year; we plan with 5% for private schooling costs."
+    },
+    "life_expectancy": {
+      "value": 70.319,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GY",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 70.6 for 2026 (men 66.8, women 74.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/guyana/",
+      "asOf": "2026-12-31",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.4,
+            "men": 16.3,
+            "women": 20.4
+          },
+          {
+            "age": 65,
+            "total": 15.3,
+            "men": 13.5,
+            "women": 16.9
+          },
+          {
+            "age": 70,
+            "total": 12.4,
+            "men": 11.0,
+            "women": 13.8
+          },
+          {
+            "age": 80,
+            "total": 7.6,
+            "men": 6.6,
+            "women": 8.5
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/guyana/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.2
+          },
+          {
+            "year": 2040,
+            "value": 6.5
+          },
+          {
+            "year": 2065,
+            "value": 4.2
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 10.9 (2025, World Bank), 15.4 (2040) and 23.6 (2065, populationpyramid.net/guyana/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Insurance Scheme Guyana, Old Age Benefit",
+      "sourceUrl": "https://www.nis.org.gy/oldage_benefit",
+      "asOf": "2026-10-31",
+      "note": "NIS old-age pension from age 60 with at least 750 contributions (150 paid); same for men and women, no scheduled increase found. The page carries no date."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not confirm the statutory retirement age for public servants (Public Service Ministry and Pensions Act texts not reachable without search)."
+    },
+    "retirement_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: small savings rate 0.81%; PwC: 20% withholding on bank interest",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits after the 20% tax."
+    },
+    "retirement_return_base": {
+      "value": 0.009,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case below the 1.10% Treasury bill rate, with part held in savings deposits."
+    },
+    "retirement_return_high": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: Treasury bills and longer time deposits a little above the bill rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 1.10%; global equity assumptions in Guyana dollars",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if global equities disappoint."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 1.10%; global equity assumptions in Guyana dollars",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: half global equities at 5% and half deposits and bills near 1%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "91-day Treasury bill 1.10%; global equity assumptions in Guyana dollars",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case with stronger equity returns."
+    },
+    "old_age_allowance_monthly": {
+      "value": 46000,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Budget Speech 2026 (para 6.28)",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
+      "asOf": "2026-01-01",
+      "note": "The universal Old Age Pension rose from G$41,000 to G$46,000 a month from 1 January 2026 (about 95,000 pensioners); HelpAge Pension Watch also lists G$46,000."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "HelpAge International, Pension Watch country profile: Guyana",
+      "sourceUrl": "https://www.helpage.org/country_profile/guyana/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "note": "Old Age Pension from 65 for men and women, universal (not means-tested)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Could not confirm whether the Termination of Employment and Severance Pay Act provides any payment on retirement (the Act text could not be read); severance is known to apply on redundancy."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "National Insurance Scheme Guyana, Old Age Benefit and Information on Contributions",
+      "sourceUrl": "https://www.nis.org.gy/oldage_benefit",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": 60,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory NIS for employees aged 16 to 60 (14% of wages: 5.6% employee, 8.4% employer; self-employed 12.5%). Pension from 60 with 750 contributions: 40% of average insurable earnings plus 1% per 50 contributions above 750, up to 60%; minimum G$43,075 a month from 1 January 2025. No automatic indexation stated; tax treatment not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "note": "Small savings rate 0.81% (2025).",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "3-month time deposit"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": "12-month time deposit"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring deposit product with a published rate."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Government of Guyana 91-day Treasury bill",
+      "note": "Auctioned by the Bank of Guyana (91, 182 and 364 days); mostly bought by banks.",
+      "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 5-year domestic government bond."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "note": "No regular 10-year domestic government bond."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No locally registered retail equity or index fund was identified; the local stock exchange is small."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": "Gold jewellery, bars and coins",
+      "note": "Guyana is a gold producer; buying gold is legal."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Guyana",
+      "url": "https://bankofguyana.org.gy/"
+    },
+    "insuranceRegulator": {
+      "name": "Bank of Guyana (insurance supervision)",
+      "url": "https://bankofguyana.org.gy/",
+      "note": "The Bank of Guyana supervises insurers under the Insurance Act 2016."
+    },
+    "insuranceComplaints": {
+      "name": "Bank of Guyana (insurance supervision)",
+      "url": "https://bankofguyana.org.gy/"
+    },
+    "pensionScheme": {
+      "name": "National Insurance Scheme (NIS)",
+      "url": "https://www.nis.org.gy/"
+    },
+    "oldAgeAllowance": {
+      "name": "Old Age Pension (Ministry of Human Services and Social Security)",
+      "url": "https://dpi.gov.gy/category/news-bulletin/government/ministry-of-human-services-and-social-security/",
+      "note": "Universal pension from 65; link is the government information agency page for the ministry."
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (free care at public hospitals and health centres)",
+      "url": "https://health.gov.gy/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Bureau of Statistics Guyana",
+      "url": "https://statisticsguyana.gov.gy/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

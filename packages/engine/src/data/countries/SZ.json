@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 1,
+  "code": "SZ",
+  "iso3": "SWZ",
+  "nameEn": "Eswatini",
+  "nameNative": "eSwatini",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "ss",
+    "en",
+    "zu",
+    "ts"
+  ],
+  "currency": {
+    "code": "SZL",
+    "symbol": "E",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 17.889,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Eswatini",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SZ",
+      "asOf": "2025-12-31",
+      "note": "2025 average. The lilangeni is pegged one to one to the South African rand, which also circulates as legal tender."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.028,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Monetary Policy Statement of 25 September 2026",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Monetary-Policy-Statement-Sept.pdf",
+      "asOf": "2026-08-31",
+      "note": "Headline consumer inflation 2.8% year on year in August 2026 (2.5% in July); Central Statistical Office data reported by the central bank, whose site showed 2.9% for September 2026."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini forecasts (3.86% for 2027, 3.45% for 2028); IMF WEO average 2021-2025 about 4.1%",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Monetary-Policy-Statement-Sept.pdf",
+      "asOf": "2026-10-31",
+      "note": "The lilangeni is pegged one to one to the South African rand, so inflation tracks South Africa's; the central bank's medium-term forecasts of 3.5-3.9% and the 5-year average of about 4.1% round to 4%."
+    },
+    "policy_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Monetary Policy Statement of 25 September 2026 (discount rate)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Monetary-Policy-Statement-Sept.pdf",
+      "asOf": "2026-09-26",
+      "note": "Discount rate raised by 25 basis points to 7.00% effective 26 September 2026; banks' prime lending rate moved to 10.50%."
+    },
+    "savings_account_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Quarterly Review June 2026, Table 3 (savings deposit rates for banks and building society)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/09/CBE-Quarterly-Review_June-2026-Online.pdf",
+      "asOf": "2026-06-30",
+      "note": "Ordinary savings balances earned about 2.2-4.0% at end June 2026 depending on the bank and balance (higher balances up to about 6%); 3% is the typical rate."
+    },
+    "fdr_3m_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Quarterly Review June 2026, Table 2 (comparative interest rates, 88-day deposits)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/09/CBE-Quarterly-Review_June-2026-Online.pdf",
+      "asOf": "2026-06-30",
+      "note": "88-day term deposit rates at end June 2026 ranged from about 1.1% to 3.35% across banks (6-month rates 3.2-6.45%); 3% is the typical rate."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0503,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Recent Economic Developments August/September 2026 (economic indicators: deposit rate 12 months)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average 12-month deposit rate 5.03% in August 2026, unchanged since February 2026; the 31-day rate averaged 2.31%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or published rate was found in the central bank's interest rate tables."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.039,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Eswatini",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SZ",
+      "asOf": "2024-12-31",
+      "note": "3.90% average for 2024 (older than 2025); the central bank's August 2026 averages were 2.31% for 31 days and 5.03% for 12 months."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals can buy ordinary government bonds through primary dealers (minimum E10,000)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0793,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Recent Economic Developments August/September 2026 (economic indicators: T. bill rate)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Treasury bill rate 7.93% in August 2026 (7.88-7.98% since February); the central bank does not split it by tenor in this table. The June 2026 Quarterly Review gives an average yield of 8.35%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1025,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Government Bonds advert October 2026 (SG145, maturing 31 March 2031)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/10/Bond-Advert-Oct-2026.pdf",
+      "asOf": "2026-10-28",
+      "note": "Fixed coupon of the 5-year benchmark bond SG145 reopened at the 28 October 2026 auction; this is the coupon, not the auction yield, and recent issues sold at a premium (yield below coupon)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.11,
+      "status": "sourced",
+      "sourceName": "Central Bank of Eswatini, Government Bonds advert October 2026 (SG147, maturing 31 March 2036)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/10/Bond-Advert-Oct-2026.pdf",
+      "asOf": "2026-10-28",
+      "note": "Fixed coupon of the 10-year benchmark bond SG147 reopened at the 28 October 2026 auction; this is the coupon, not the auction yield, and recent issues sold at a premium (yield below coupon)."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Eswatini Revenue Service, Rates and Thresholds (withholding tax on interest paid to residents)",
+      "sourceUrl": "https://www.ers.org.sz/IncomeTax/RatesandThres",
+      "asOf": "2026-10-31",
+      "note": "Withholding tax of 10% on interest paid to residents (page read 31 October 2026)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists; the tax treatment of government bond interest for individuals was not confirmed separately from the 10% withholding on interest."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The deposit insurance cover per depositor could not be confirmed; the deposit insurance fund's website was not reachable and the central bank reports read do not state it."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; banks' prime lending rate was 10.50% from September 2026 (Central Bank of Eswatini)."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini: very small local stock exchange; retail unit trusts invest mostly in South African and global markets; lilangeni pegged to the rand",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for South African and global equities in rand terms."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini: very small local stock exchange; retail unit trusts invest mostly in South African and global markets; lilangeni pegged to the rand",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "The local exchange is too small to guide, so equity means rand-based unit trusts tracking South African and global shares; held at about 4 points above the after-tax 1-year deposit rate (about 4.5%)."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini: very small local stock exchange; retail unit trusts invest mostly in South African and global markets; lilangeni pegged to the rand",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: South African and global equities repeat their long-run record in rand terms."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Lilangeni pegged to the South African rand; dollar gold trend plus long-run rand depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SZ",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a slightly firmer rand."
+    },
+    "gold_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Lilangeni pegged to the South African rand; dollar gold trend plus long-run rand depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SZ",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4% dollar gold trend plus 2-3% a year of rand depreciation against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Lilangeni pegged to the South African rand; dollar gold trend plus long-run rand depreciation",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SZ",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years with a weaker rand."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini deposit and treasury bill rates (August 2026); 10% withholding on interest (Eswatini Revenue Service)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and short deposits around 3%, less 10% withholding."
+    },
+    "fixed_income_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini deposit and treasury bill rates (August 2026); 10% withholding on interest (Eswatini Revenue Service)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of 12-month deposits (5.03%, 4.5% after tax) and treasury bills or bonds (7.9-10%), net of tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini deposit and treasury bill rates (August 2026); 10% withholding on interest (Eswatini Revenue Service)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/10/Bond-Advert-Oct-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: mostly government bonds bought through primary dealers (coupons 10-11%), net of tax and price risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio was found from the Financial Services Regulatory Authority."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published indicative term life premium rates per E1,000 of cover were found from the regulator or a public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private medical aid premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.1102,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Eswatini",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SZ",
+      "asOf": "2023-12-31",
+      "note": "11.0% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini Annual Economic Review 2025/26 (CPI by COICOP category); planning inflation 4%",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "No separate health price series was readable; private medical costs and medical aid contributions in the region rise about 2 points above headline inflation, so 6% is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini Annual Economic Review 2025/26 (CPI by COICOP category); planning inflation 4%",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "No separate education price series was readable; school and tertiary fees in the region rise about 2 points above headline inflation, so 6% is used."
+    },
+    "life_expectancy": {
+      "value": 64.264,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Eswatini",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SZ",
+      "asOf": "2024-12-31",
+      "note": "64.3 years in 2024 (men 61.3, women 67.1)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.1,
+            "men": 15.8,
+            "women": 18.3
+          },
+          {
+            "age": 65,
+            "total": 14.3,
+            "men": 13.1,
+            "women": 15.1
+          },
+          {
+            "age": 70,
+            "total": 11.5,
+            "men": 10.8,
+            "women": 12.2
+          },
+          {
+            "age": 80,
+            "total": 6.9,
+            "men": 6.6,
+            "women": 7.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/swaziland/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (the page gives a both-sexes figure only at 65)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 14.4
+          },
+          {
+            "year": 2040,
+            "value": 12.5
+          },
+          {
+            "year": 2065,
+            "value": 6.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=SZ",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.94 (2025, World Bank), 8.0 (2040, populationpyramid.net/swaziland/2040/) and 16.5 (2065, populationpyramid.net/swaziland/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 50,
+      "status": "sourced",
+      "sourceName": "Eswatini National Provident Fund (ENPF), age benefit",
+      "sourceUrl": "https://enpf.co.sz/age-benefits/",
+      "asOf": "2026-10-31",
+      "note": "Private-sector workers belong to the ENPF, a provident fund that pays a lump-sum age benefit from 50 (or from 45 on retirement from regular employment); there is no statutory lifetime pension age for the private sector. Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Public Service Pensions Fund (PSPF), retirement benefits",
+      "sourceUrl": "https://pspf.co.sz/retirement-benefits/",
+      "asOf": "2026-10-31",
+      "note": "Compulsory retirement at 60 for civil servants (judges at 75); early retirement from 45 with at least 10 years of service."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini: 12-month deposit rate 5.03% and treasury bill rate 7.93% (August 2026); 10% withholding on interest",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits after 10% withholding."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini: 12-month deposit rate 5.03% and treasury bill rate 7.93% (August 2026); 10% withholding on interest",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: equal to the 12-month deposit rate after 10% withholding (5.03% x 0.9), below the after-tax treasury bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Central Bank of Eswatini: 12-month deposit rate 5.03% and treasury bill rate 7.93% (August 2026); 10% withholding on interest",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/10/Bond-Advert-Oct-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: more in treasury bills and government bonds, after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Safe rate about 5%; rand-based equity base 9%; gold base 6.5%",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Safe rate about 5%; rand-based equity base 9%; gold base 6.5%",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of government bonds, deposits and rand-based equity unit trusts."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Safe rate about 5%; rand-based equity base 9%; gold base 6.5%",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The amount of the non-contributory Old Age Grant could not be confirmed from an official source; the government portal (gov.sz) was not reachable and the central bank reports read do not state it."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The eligibility rules of the non-contributory Old Age Grant could not be confirmed from an official source; the government portal (gov.sz) was not reachable."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Act provisions on severance or end-of-service pay could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public lifetime pension for private-sector workers was confirmed: the Eswatini National Provident Fund pays a lump-sum age benefit from 50 (enpf.co.sz/age-benefits/), and PwC Worldwide Tax Summaries (reviewed 30 March 2026) says there are no social security contributions. Civil servants have a defined-benefit pension (PSPF, 2% of final salary per year of service from 60)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Rates of about 2-4% on ordinary balances at end June 2026 (Central Bank of Eswatini).",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/09/CBE-Quarterly-Review_June-2026-Online.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit (88 days / 3 months)",
+      "note": "Short fixed deposits are offered; 88-day rates were about 1-3.35% at end June 2026.",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/09/CBE-Quarterly-Review_June-2026-Online.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit (12 months)",
+      "note": "Average 12-month deposit rate 5.03% in August 2026.",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found in the central bank's rate tables."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "Treasury bills are auctioned by the central bank; holders include individuals and other investors (Quarterly Review June 2026).",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/09/CBE-Quarterly-Review_June-2026-Online.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Government bonds",
+      "note": "Bond auctions are open to individuals through primary dealers, minimum E10,000 for non-competitive bids.",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/10/Bond-Advert-Oct-2026.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Government bonds (10 years)",
+      "note": "10-year benchmark bonds are reopened at regular auctions open to individuals.",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2026/10/Bond-Advert-Oct-2026.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Unit trusts (collective investment schemes)",
+      "note": "Collective investment schemes are licensed by the Financial Services Regulatory Authority; most invest in South African and global markets.",
+      "sourceUrl": "https://www.fsra.co.sz/capital-markets/"
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "Gold jewellery and coins can be bought; no official local bullion scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Eswatini",
+      "url": "https://www.centralbank.org.sz/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Regulatory Authority (FSRA)",
+      "url": "https://www.fsra.co.sz/"
+    },
+    "insuranceComplaints": {
+      "name": "FSRA complaints handling",
+      "url": "https://www.fsra.co.sz/complaints-handling/"
+    },
+    "pensionScheme": {
+      "name": "Eswatini National Provident Fund (ENPF)",
+      "url": "https://enpf.co.sz/",
+      "note": "A lump-sum provident fund for private-sector workers; civil servants belong to the Public Service Pensions Fund (pspf.co.sz)."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

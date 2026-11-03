@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "code": "EG",
+  "iso3": "EGY",
+  "nameEn": "Egypt",
+  "nameNative": "مصر",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "arz",
+    "en"
+  ],
+  "currency": {
+    "code": "EGP",
+    "symbol": "E£",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 56.0,
+      "status": "sourced",
+      "sourceName": "Trading Economics, USD/EGP exchange rate",
+      "sourceUrl": "https://tradingeconomics.com/egypt/currency",
+      "asOf": "2026-10-30",
+      "note": "56.00 Egyptian pounds per US dollar on 30 October 2026; secondary source because the Central Bank of Egypt exchange-rate page rejected requests. World Bank 2025 average 49.23."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.139,
+      "status": "sourced",
+      "sourceName": "CAPMAS annual urban headline inflation, September 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/egypt/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "13.9% in September 2026, down from 14.5% in August; core inflation 14.1%, food 7.2%. Secondary source because the CAPMAS and Central Bank of Egypt sites rejected requests. World Bank 2025 average 14.1%."
+    },
+    "inflation_projection": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Central Bank of Egypt inflation target (7% plus or minus 2 points for Q4 2026); urban inflation 13.9% in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/egypt/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Inflation has run well above the central bank's single-digit targets for years (World Bank 2025 average 14.1%), so a rounded 10% sits between the target and the recent record."
+    },
+    "policy_rate": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "Central Bank of Egypt overnight deposit rate, MPC meeting of 29 October 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/egypt/interest-rate",
+      "asOf": "2026-10-29",
+      "note": "The MPC raised the overnight deposit rate by 100 basis points to 20.00% (overnight lending rate 21.00%) on 29 October 2026. Secondary source because the Central Bank of Egypt site rejected requests."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide savings account rate could be read; the Central Bank of Egypt statistical bulletin site rejected requests and web search was unavailable for this research."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published industry-wide 3-month time deposit rate could be read; the Central Bank of Egypt site rejected requests."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published industry-wide 1-year time deposit or bank certificate rate could be read; the Central Bank of Egypt site rejected requests."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for monthly recurring savings plans was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.145,
+      "status": "sourced",
+      "sourceName": "IMF International Financial Statistics deposit rate, Egypt, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-08-31",
+      "note": "14.50% in August 2026 (14.60% in July). World Bank FR.INR.DPST gives 19.16% for 2024."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold to individuals was confirmed; the widely held savings certificates are issued by banks, not the government."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 91-day treasury bill auction yield could be read; the Ministry of Finance and Central Bank of Egypt auction pages rejected requests and Trading Economics did not show the figure."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year treasury bond yield could be read from an official or secondary source."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 10-year treasury bond yield could be read from an official or secondary source."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Egypt, individual income determination (last reviewed 17 August 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/egypt/individual/income-determination",
+      "asOf": "2026-08-17",
+      "note": "Interest income from local banks is not taxable for residents; interest on treasury bills and bonds bears 20% withholding tax."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no government savings certificate for individuals to tax; for reference, interest on treasury bills and bonds bears 20% withholding tax (PwC Worldwide Tax Summaries, Egypt)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No operating deposit insurance scheme or cover amount could be confirmed from the Central Bank of Egypt, whose site rejected requests."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; the lending rate was 21% (October 2026) for reference."
+    },
+    "equity_return_low": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "EGX30 index about 49,600 points in October 2026 (Trading Economics); after-tax deposit rate about 14.5%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: equities lag the after-tax deposit rate, as can happen when currency-driven rallies reverse."
+    },
+    "equity_return_base": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "After-tax average deposit rate 14.5% (bank interest untaxed); EGX30 long-run record",
+      "sourceUrl": "https://tradingeconomics.com/egypt/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2.5 points over the untaxed deposit rate, within the 4-point cap, since much of the EGX30's 10-year rise reflects pound devaluation rather than real growth."
+    },
+    "equity_return_high": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "EGX30 index record; deposit rate 14.5%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: equities beat deposits by about 7 points a year, as in periods of devaluation-driven nominal gains."
+    },
+    "gold_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "USD/EGP 56.00 (October 2026) against a 2025 average of 49.2 (World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/egypt/currency",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slow pound depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "USD/EGP 56.00 (October 2026); inflation assumption 10%; long-run dollar gold trend about 4%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/currency",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4% dollar gold trend plus about 7% a year of pound depreciation, the gap between the 10% inflation assumption and US inflation."
+    },
+    "gold_return_high": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "USD/EGP history (World Bank PA.NUS.FCRF); dollar gold trend",
+      "sourceUrl": "https://tradingeconomics.com/egypt/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a renewed sharp devaluation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "IMF deposit rate 14.5% (August 2026); policy rate 20%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: rates fall as inflation eases toward the central bank target, and savings balances earn less than the average."
+    },
+    "fixed_income_return_base": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "IMF deposit rate 14.5% (August 2026); bank interest untaxed (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: about the average deposit rate, which is tax-free for residents, rounded down."
+    },
+    "fixed_income_return_high": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Policy rate 20%; treasury bills taxed at 20% (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/egypt/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: longer bank certificates or treasury bills at around 21% before the 20% withholding tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio could be read from the Financial Regulatory Authority."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published premium rates per EGP 1,000 of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from the regulator or another public source."
+    },
+    "oop_health_share": {
+      "value": 0.572,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Egypt",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=EG",
+      "asOf": "2023-12-31",
+      "note": "57.2% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Urban core inflation 14.1% (September 2026); inflation assumption 10%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Private medical costs follow imported drugs and equipment priced in dollars, so health goals are planned 2 points above the general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Urban core inflation 14.1% (September 2026); inflation assumption 10%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Private school and university fees have risen faster than general prices, so education goals are planned 2 points above the general assumption."
+    },
+    "life_expectancy": {
+      "value": 71.806,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Egypt",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=EG",
+      "asOf": "2024-12-31",
+      "note": "71.8 years in 2024 (men 69.7, women 74.0); UN WPP 2024 gives 72.2 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.0,
+            "men": 15.6,
+            "women": 18.3
+          },
+          {
+            "age": 65,
+            "total": 13.5,
+            "men": 12.4,
+            "women": 14.5
+          },
+          {
+            "age": 70,
+            "total": 10.3,
+            "men": 9.5,
+            "women": 11.1
+          },
+          {
+            "age": 80,
+            "total": 5.5,
+            "men": 5.2,
+            "women": 5.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/egypt/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 12.0
+          },
+          {
+            "year": 2040,
+            "value": 8.7
+          },
+          {
+            "year": 2065,
+            "value": 5.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/egypt/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 8.34 (2025, World Bank), 11.5 (2040) and 19.9 (2065, populationpyramid.net/egypt/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Social Insurance and Pensions Law No. 148 of 2019 sets the pension age at 60 with a gradual increase toward 65, but the schedule that applies to people born after 1975 could not be read from an official source (the National Organization for Social Insurance and SSA pages refused requests)."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for civil servants (60 under current practice, covered by Law No. 148 of 2019 with its gradual increase) could not be read from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "IMF deposit rate 14.5% (August 2026)",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall as inflation eases."
+    },
+    "retirement_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "IMF deposit rate 14.5% (August 2026); bank interest untaxed (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a little below the untaxed average deposit rate, so not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Policy rate 20%; treasury bills taxed at 20% (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/egypt/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: long bank certificates and treasury bills near current high rates."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Deposit rate 14.5%; equity low 10%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a balanced mix earning below today's deposit rate."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Deposit rate 14.5%; equity base 17%; gold base 11%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, equities and gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Equity high 22%; gold high 18%",
+      "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix in a high-inflation, devaluing currency."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Karama, the means-tested cash transfer of the Takaful and Karama programme, covers poor people aged 65 and over, but its current monthly amount for an elderly person could not be read from the Ministry of Social Solidarity."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "Arabic Wikipedia, Takaful and Karama programme (citing the Ministry of Social Solidarity)",
+      "sourceUrl": "https://ar.wikipedia.org/wiki/تكافل_وكرامة",
+      "asOf": "2022-10-04",
+      "note": "Karama is for people aged 65 and over (also people with disabilities or chronic illness) without an insurance pension or a job insured above EGP 400; means-tested. Secondary source; the eligibility description is older than 2025."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service gratuity for private employees was confirmed; the Labour Law could not be checked."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Organization for Social Insurance runs the compulsory pension under Law No. 148 of 2019 (employee 11%, employer 18.75% of insured pay per PwC), but its pension age schedule and indexation rule could not be read from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)",
+      "note": "Banks also sell fixed-rate savings certificates (شهادات ادخار), usually for 1 to 3 years; bank interest is tax-free for residents."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was confirmed; savings certificates are bank products."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "أذون الخزانة",
+      "localNameEn": "Treasury bills",
+      "note": "Individuals can buy through banks; interest bears 20% withholding tax.",
+      "sourceUrl": "https://taxsummaries.pwc.com/egypt/individual/income-determination"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزانة",
+      "localNameEn": "Treasury bonds",
+      "note": "Interest bears 20% withholding tax.",
+      "sourceUrl": "https://taxsummaries.pwc.com/egypt/individual/income-determination"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات الخزانة (10 سنوات)",
+      "localNameEn": "Treasury bonds (10 years)",
+      "note": "Interest bears 20% withholding tax.",
+      "sourceUrl": "https://taxsummaries.pwc.com/egypt/individual/income-determination"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار",
+      "localNameEn": "Mutual funds",
+      "note": "Equity and index funds investing on the Egyptian Exchange are supervised by the Financial Regulatory Authority.",
+      "sourceUrl": "https://fra.gov.eg/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are widely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Egypt",
+      "url": "https://www.cbe.org.eg/en"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Regulatory Authority (FRA)",
+      "url": "https://fra.gov.eg/"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Regulatory Authority complaints",
+      "url": "https://fra.gov.eg/"
+    },
+    "pensionScheme": {
+      "name": "National Organization for Social Insurance (NOSI)",
+      "url": "https://www.nosi.gov.eg/"
+    },
+    "oldAgeAllowance": {
+      "name": "Takaful and Karama programme, Ministry of Social Solidarity",
+      "url": "https://www.moss.gov.eg/"
+    },
+    "publicHealthCover": {
+      "name": "Universal Health Insurance Authority (rolling out by governorate)",
+      "url": "https://uhia.gov.eg/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Central Agency for Public Mobilization and Statistics (CAPMAS)",
+      "url": "https://www.capmas.gov.eg/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

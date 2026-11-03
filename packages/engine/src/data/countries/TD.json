@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 1,
+  "code": "TD",
+  "iso3": "TCD",
+  "nameEn": "Chad",
+  "nameNative": "Tchad",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "fr",
+    "ar",
+    "shu"
+  ],
+  "currency": {
+    "code": "XAF",
+    "symbol": "FCFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 581.928,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Chad",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TD",
+      "asOf": "2025-12-31",
+      "note": "2025 average. The franc CFA is fixed at 655.957 per euro, so the dollar rate moves with the euro; the BEAC indicative rate on 30 October 2026 was about 586-591 per dollar (buy/sell)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": -0.02,
+      "status": "sourced",
+      "sourceName": "Bank of Central African States (BEAC), note on CEMAC inflation, Q2 2026 (national CPI, Chad)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-06-30",
+      "note": "Consumer prices fell 2.0% year on year in June 2026 in Chad (BEAC table of national CPIs), after falling since mid-2025 because of good harvests and cheaper imports from Libya; the annual average was -3.6% in June 2026."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC: CEMAC inflation convergence norm of 3%; franc CFA fixed to the euro",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The franc CFA is fixed to the euro and the BEAC holds CEMAC inflation under a 3% norm; Chad swung from 5.7% average inflation in 2024 to -2.6% in 2025 (BEAC), so the 3% norm is used rather than recent deflation."
+    },
+    "policy_rate": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "BEAC Monetary Policy Committee, press release of 28 September 2026 (Taux d'intérêt des appels d'offres)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
+      "asOf": "2026-09-28",
+      "note": "BEAC tender rate (TIAO) held at 4.50% on 28 September 2026 (marginal lending facility 5.75%, deposit facility 0%); the rate is common to all six CEMAC countries."
+    },
+    "savings_account_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "BEAC Monetary Policy Report, September 2026, Annex 1 (Taux Créditeur Minimum)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-09-30",
+      "note": "Minimum rate banks must pay on savings accounts of individuals (Taux Créditeur Minimum), 2.45% unchanged since 8 July 2014; banks usually pay this floor."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found; the BEAC publishes lending rates (TEG) by country but no deposit rates beyond the 2.45% savings floor."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found; the BEAC publishes lending rates (TEG) by country but no term deposit rates."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Chad",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=TD",
+      "asOf": "2016-12-31",
+      "note": "2.45% in 2016, the latest World Bank value (older than 2025); it equals the BEAC minimum savings rate (Taux Créditeur Minimum), which is unchanged at 2.45% in the BEAC September 2026 report."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found; Chad sells Treasury bonds through BEAC-run auctions and public bond offers, and the yield of the bonds bought by individuals is not published separately."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0696,
+      "status": "sourced",
+      "sourceName": "BEAC, Statistiques mensuelles du marché des valeurs du Trésor de la CEMAC, January 2026 (coût des ressources, BTA)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-01-31",
+      "note": "Weighted average cost of Treasury bills (BTA, 13 to 52 weeks) issued by Chad in January 2026; no separate 13-week yield is published."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1103,
+      "status": "sourced",
+      "sourceName": "BEAC, Statistiques mensuelles du marché des valeurs du Trésor de la CEMAC, January 2026 (coût des ressources, OTA)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-01-31",
+      "note": "Weighted average cost of Treasury bonds (OTA, 2 to 7 years) issued by Chad in January 2026; no yield for an exact 5-year maturity is published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Treasury bond yield for Chad is published in the BEAC Treasury market statistics (January 2026)."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PwC Worldwide Tax Summaries (last reviewed 12 August 2024) says interest income of individuals is added to other income and taxed at the progressive personal income tax rates, and that no withholding tax applies to interest paid to residents, so no single flat rate can be given."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals exists, and the tax treatment of Treasury security income for individuals could not be confirmed from an official source."
+    },
+    "deposit_insurance_limit": {
+      "value": 8000000,
+      "status": "sourced",
+      "sourceName": "Deposit Guarantee Fund of Central Africa (FOGADAC), FAQ",
+      "sourceUrl": "https://www.fogadac.com/faq",
+      "asOf": "2026-10-31",
+      "note": "FOGADAC covers deposits up to XAF 8 million for individuals (XAF 15 million for legal persons) per the FAQ read on 31 October 2026; older FOGADAC pages still show the earlier XAF 5 million per depositor per bank. Covers all CEMAC banks."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; the BEAC reports an average effective lending rate (TEG) of 8.47% in Chad in Q2 2026, but not for cards."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC: franc CFA fixed to the euro; CEMAC regional exchange (BVMAC) with very small market capitalisation",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global equities held in euro (franc CFA) terms; the regional exchange is too small and illiquid to serve as a guide."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BEAC: franc CFA fixed to the euro; CEMAC regional exchange (BVMAC) with very small market capitalisation",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No usable local index record (BVMAC equity capitalisation was only about XAF 295 billion in January 2026), so equity means a global index in euro terms, held about 4 points above an after-tax safe saving rate of about 2.5-3%."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "BEAC: franc CFA fixed to the euro; CEMAC regional exchange (BVMAC) with very small market capitalisation",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities repeat their long-run euro-terms record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TD",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold prices with no currency loss under the euro peg."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TD",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run gold trend of about 4-5% a year in euro terms, which the franc CFA follows."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Franc CFA fixed at 655.957 per euro (BEAC); dollar gold trend",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TD",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury market statistics (individuals hold Treasury bonds)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings accounts at the 2.45% minimum rate, less any tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury market statistics (individuals hold Treasury bonds)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: savings and term deposits a little above the 2.45% floor; government bond yields are much higher but mostly bought by banks and institutions."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury market statistics (individuals hold Treasury bonds)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of savings in government bonds offered to the public, whose issue cost averaged 11.03% in January 2026, after some default and liquidity risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim settlement ratio was found from CIMA (the regional insurance regulator) or the national insurance directorate."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per XAF 1,000 of cover were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.5168,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Chad",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TD",
+      "asOf": "2023-12-31",
+      "note": "51.7% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BEAC note on CEMAC inflation Q2 2026: health prices +1.5% year on year in June 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices in the CEMAC index rose 1.5% in June 2026, but private and imported care costs run faster, so health goals use 1.5 points above the 3% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BEAC note on CEMAC inflation Q2 2026: education prices +0.8% year on year in June 2026",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education prices in the CEMAC index rose 0.8% in June 2026, but private school fees rise faster, so education goals use 1 point above the 3% planning inflation."
+    },
+    "life_expectancy": {
+      "value": 55.238,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Chad",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TD",
+      "asOf": "2024-12-31",
+      "note": "55.2 years in 2024 (men 53.4, women 57.2)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.5,
+            "men": 14.8,
+            "women": 16.1
+          },
+          {
+            "age": 65,
+            "total": 12.3,
+            "men": 11.7,
+            "women": 12.8
+          },
+          {
+            "age": 70,
+            "total": 9.5,
+            "men": 9.1,
+            "women": 9.9
+          },
+          {
+            "age": 80,
+            "total": 5.3,
+            "men": 5.0,
+            "women": 5.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/chad/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women where the page gives no both-sexes figure (it gives 65 only)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 24.5
+          },
+          {
+            "year": 2040,
+            "value": 20.0
+          },
+          {
+            "year": 2065,
+            "value": 13.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=TD",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.08 (2025, World Bank), 5.0 (2040, populationpyramid.net/chad/2040/) and 7.4 (2065, populationpyramid.net/chad/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age of the National Social Welfare Fund (CNPS) could not be confirmed: its website has no pension rules and the ILO, ISSA and US SSA country pages were not reachable."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age of civil servants could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury bill issue cost 6.96% (January 2026)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts at the 2.45% minimum rate, less any tax."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury bill issue cost 6.96% (January 2026)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: deposits and some public bond offers; kept below the Treasury bill rate and close to the deposit floor, since term deposit rates are not published."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BEAC Taux Créditeur Minimum 2.45%; BEAC Treasury bill issue cost 6.96% (January 2026)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a larger share in government bonds offered to the public."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bank savings."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, public bond offers, gold and foreign equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension or official programme page for one was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension or official programme page for one was found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on dismissal or end-of-service indemnity could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A compulsory pension for salaried workers is run by the National Social Welfare Fund (CNPS), financed by 5% employer and 3.5% employee contributions (PwC, reviewed 2024), but its pension age and indexation rules could not be read from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account",
+      "note": "Banks must pay at least the BEAC minimum savings rate (2.45%).",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Banks take term deposits (the BEAC sets reserve requirements on them), but rates are not published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Banks take term deposits, but rates are not published."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found; individuals hold Chad Treasury bonds (see the 5-year slot) instead."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bons du Trésor assimilables (BTA)",
+      "localNameEn": "Treasury bills",
+      "note": "Treasury bills are auctioned to banks and primary dealers; individuals held almost none (XAF 0.01 billion) in January 2026 (BEAC).",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligations du Trésor assimilables (OTA)",
+      "localNameEn": "Treasury bonds",
+      "note": "Treasury bonds are auctioned or offered to the public; individuals held about XAF 108.6 billion of Chad bonds in January 2026 (BEAC).",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year Treasury bond for Chad was found in the BEAC statistics."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No locally sold diversified equity fund was found; the regional exchange (BVMAC) lists very few companies."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery and from artisanal mining; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Central African States (Banque des États de l'Afrique Centrale, BEAC)",
+      "url": "https://www.beac.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Inter-African Conference on Insurance Markets (CIMA), regional insurance regulator, with the national insurance directorate",
+      "url": "https://cima-afrique.org/"
+    },
+    "insuranceComplaints": {
+      "name": "CIMA policyholder requests and complaints form",
+      "url": "https://cima-afrique.org/faites-votre-requetes-ici-2/"
+    },
+    "pensionScheme": {
+      "name": "National Social Welfare Fund (Caisse Nationale de Prévoyance Sociale, CNPS)",
+      "url": "https://cnps-tchad.org/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Public Health (public health services)",
+      "url": "https://sante.gouv.td/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund of Central Africa (Fonds de Garantie des Dépôts en Afrique Centrale, FOGADAC)",
+      "url": "https://www.fogadac.com/"
+    },
+    "statistics": {
+      "name": "National Institute of Statistics, Economic and Demographic Studies (INSEED)",
+      "url": "https://inseed.td/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

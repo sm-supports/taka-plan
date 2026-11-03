@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 1,
+  "code": "JO",
+  "iso3": "JOR",
+  "nameEn": "Jordan",
+  "nameNative": "الأردن",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en"
+  ],
+  "currency": {
+    "code": "JOD",
+    "symbol": "JD",
+    "decimals": 3,
+    "compact": "intl",
+    "usdRate": {
+      "value": 0.71,
+      "status": "sourced",
+      "sourceName": "Central Bank of Jordan statistical database, US dollar selling rate, end of period",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-09-30",
+      "note": "710 fils per US dollar at the end of September 2026; the dinar is pegged at about 0.709 (World Bank 2025 average 0.71). CLDR gives no narrow symbol; 'JD' is the usual local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0273,
+      "status": "sourced",
+      "sourceName": "Central Bank of Jordan statistical database, consumer price index (2018=100), Department of Statistics data",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-09-30",
+      "note": "CPI 115.816 in September 2026 against 112.739 a year earlier, up 2.73% (Trading Economics also reports 2.73%, from 2.66% in August)."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, CPI: 2.4% a year on average September 2021 to September 2026; dinar pegged to the US dollar",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "The dinar is pegged to the dollar and CPI inflation averaged 2.4% a year over the last five years (2.7% now), so 2.5% is used; the central bank has no numeric target."
+    },
+    "policy_rate": {
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Central Bank of Jordan: main policy rate raised by 25 bps to 6% in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/jordan/interest-rate",
+      "asOf": "2026-09-30",
+      "note": "Secondary source; the CBJ website could not be reached. The CBJ statistical database shows the main rate at 5.75% through August 2026, with the overnight deposit window 0.25 points lower."
+    },
+    "savings_account_rate": {
+      "value": 0.0038,
+      "status": "sourced",
+      "sourceName": "Central Bank of Jordan statistical database, weighted average interest rate on savings deposits at licensed banks",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-08-31",
+      "note": "0.38% in August 2026 (demand deposits 0.75%)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBJ publishes only the weighted average rate on all time deposits (4.90% in August 2026), not a 3-month rate."
+    },
+    "fdr_1y_rate": {
+      "value": 0.049,
+      "status": "sourced",
+      "sourceName": "Central Bank of Jordan statistical database, weighted average interest rate on time deposits at licensed banks",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-08-31",
+      "note": "Weighted average over all time deposits, 4.90% in August 2026 (5.43% a year earlier); no split by term is published, so this is used for the 1-year deposit."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found in the CBJ statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.049,
+      "status": "sourced",
+      "sourceName": "Central Bank of Jordan statistical database, weighted average interest rate on time deposits at licensed banks",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-08-31",
+      "note": "4.90% in August 2026 (Trading Economics reports the same 4.90% as Jordan's deposit interest rate); the World Bank FR.INR.DPST 2025 average was 5.47%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; treasury bills and bonds are auctioned by the CBJ mainly to banks."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bill auction yields are published by the CBJ and Ministry of Finance, but neither site could be reached (connection refused) and the CBJ statistical database has no bill-yield series."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bond auction yields could not be read: the CBJ and Ministry of Finance sites refused connections."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Treasury bond auction yields could not be read: the CBJ and Ministry of Finance sites refused connections."
+    },
+    "tax_bank_interest": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Jordan, corporate withholding taxes (interest paid by banks)",
+      "sourceUrl": "https://taxsummaries.pwc.com/jordan/corporate/withholding-taxes",
+      "asOf": "2026-10-31",
+      "note": "Interest and deposit profits paid by banks are subject to 5% withholding for individuals (7% for companies); interest is also taxable income for residents under the progressive 5-30% scale, so the 5% is a minimum."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail savings certificate exists; the tax treatment of treasury bond interest for individuals was not confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Jordan Deposit Insurance Corporation insures bank deposits, but its site (dic.gov.jo) refused connections, so the current cover limit could not be confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published average credit card rate was found in the CBJ statistics (the overdraft average is published, card rates are not)."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Amman Stock Exchange general index via Trading Economics: still below its June 2008 peak",
+      "sourceUrl": "https://tradingeconomics.com/jordan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: below the after-tax deposit rate, as the Amman index has gained little over the long run."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CBJ time-deposit rate 4.90% (4.66% after 5% withholding); Amman index record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/jordan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2.3 points above the after-tax deposit rate, kept modest because the index is still below its 2008 high despite a 24% gain in the past year."
+    },
+    "equity_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Amman Stock Exchange general index via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/jordan/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a fuller equity premium if the recent recovery continues."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database: 0.710 JOD per USD (peg)",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; the peg means no currency boost."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dollar peg (0.709-0.710 JOD per USD); long-run dollar gold trend",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year, with no depreciation gain under the peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Dollar peg; long-run dollar gold trend",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, time-deposit rates",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall further, as they have since 2025, to about 3.5% after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.046,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, time-deposit rate 4.90% (August 2026), less 5% withholding",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Base case: the average time-deposit rate after the 5% withholding tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan policy rate 6% (Trading Economics); time-deposit rate 4.90%",
+      "sourceUrl": "https://tradingeconomics.com/jordan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: savers who reach rates closer to the 6% policy rate through larger or longer deposits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBJ (insurance supervisor since 2021) publishes no industry-wide life claim settlement ratio that could be found; its site could not be reached."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no regulator or other public table of premiums per JOD 1,000 of cover by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public table of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.3447,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Jordan",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=JO",
+      "asOf": "2023-12-31",
+      "note": "34.5% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, CPI health group: up 0.7% in the year to September 2026, 1.6% a year over five years",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Measured health prices have risen slower than the CPI, but private care costs usually rise faster, so 1 point above the 2.5% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, CPI education group: up 3.3% in the year to September 2026, 1.9% a year over five years",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Education prices are now rising faster than the CPI (3.3%), so 1 point above the 2.5% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 77.98,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Jordan",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=JO",
+      "asOf": "2024-12-31",
+      "note": "78.0 years in 2024 (men 75.9, women 80.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.8,
+            "men": 20.0,
+            "women": 23.6
+          },
+          {
+            "age": 65,
+            "total": 17.6,
+            "men": 16.0,
+            "women": 19.3
+          },
+          {
+            "age": 70,
+            "total": 13.9,
+            "men": 12.5,
+            "women": 15.2
+          },
+          {
+            "age": 80,
+            "total": 7.7,
+            "men": 6.8,
+            "women": 8.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/jordan/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.68
+          },
+          {
+            "year": 2040,
+            "value": 7.14
+          },
+          {
+            "year": 2065,
+            "value": 3.98
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/jordan/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 7.31 (2025, World Bank), 14.0 (2040) and 25.1 (2065, populationpyramid.net/jordan/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Security Corporation site (ssc.gov.jo) refused connections and no other official text of the Social Security Law could be read, so the old-age pension age could not be confirmed."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "New civil servants are covered by the Social Security Corporation; its pension age could not be confirmed because ssc.gov.jo refused connections."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, time-deposit rates",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates keep falling, to about 3.5% after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, time-deposit rate 4.90% (4.66% after 5% withholding)",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Base case: just below the after-tax time-deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.053,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan policy rate 6% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/jordan/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: larger or longer deposits near the policy rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Central Bank of Jordan statistical database, deposit rates",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning a little less than deposits after tax because equities lag."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "CBJ deposit rates; equity base 7%; gold base 4%",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, equities and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CBJ deposit rates; equity high 9.5%",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No dedicated non-contributory old-age pension was found; poor households, including older people, can get means-tested cash aid from the National Aid Fund, but its current amounts for an older person could not be read (site unreachable)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Eligibility rules for National Aid Fund support to older people could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Law provides end-of-service compensation for workers not covered by social security, but the law text and the Ministry of Labour site could not be read, so the days per year could not be confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Compulsory social security through the Social Security Corporation covers private and newer public employees (PwC: contributions 7.5% employee, 14.25% employer, https://taxsummaries.pwc.com/jordan/individual/other-taxes), but the pension age and indexation rules could not be read because ssc.gov.jo refused connections."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account",
+      "note": "Savings deposits pay very little (0.38% on average in August 2026).",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Time deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Time deposit (1 year)",
+      "note": "The average rate on time deposits was 4.90% in August 2026; 5% tax is withheld on interest.",
+      "sourceUrl": "https://statisticaldb.cbj.gov.jo/Browser/index"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "أذونات الخزينة",
+      "localNameEn": "Treasury bills",
+      "note": "Issued by the Ministry of Finance through CBJ auctions, mainly bought by banks."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bonds",
+      "note": "Issued through CBJ auctions, mainly bought by banks and institutions."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات الخزينة",
+      "localNameEn": "Treasury bonds",
+      "note": "Issued through CBJ auctions, mainly bought by banks and institutions."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار المشترك",
+      "localNameEn": "Mutual investment funds",
+      "note": "Few local funds exist; shares on the Amman Stock Exchange can also be bought directly."
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are freely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Jordan (CBJ)",
+      "url": "https://www.cbj.gov.jo/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Jordan, insurance supervision",
+      "url": "https://www.cbj.gov.jo/"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of Jordan, financial consumer protection",
+      "url": "https://www.cbj.gov.jo/"
+    },
+    "pensionScheme": {
+      "name": "Social Security Corporation (SSC)",
+      "url": "https://www.ssc.gov.jo/"
+    },
+    "oldAgeAllowance": {
+      "name": "National Aid Fund (means-tested cash assistance)",
+      "url": "https://naf.gov.jo/"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health, civil health insurance",
+      "url": "https://www.moh.gov.jo/"
+    },
+    "depositInsurance": {
+      "name": "Jordan Deposit Insurance Corporation",
+      "url": "https://www.dic.gov.jo/"
+    },
+    "statistics": {
+      "name": "Department of Statistics (DoS)",
+      "url": "https://dosweb.dos.gov.jo/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

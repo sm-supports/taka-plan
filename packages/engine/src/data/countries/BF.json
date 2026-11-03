@@ -1,0 +1,555 @@
+{
+  "schemaVersion": 1,
+  "code": "BF",
+  "iso3": "BFA",
+  "nameEn": "Burkina Faso",
+  "nameNative": "Burkina Faso",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "mos",
+    "dyu",
+    "fr",
+    "ff"
+  ],
+  "currency": {
+    "code": "XOF",
+    "symbol": "F CFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 589.0,
+      "status": "sourced",
+      "sourceName": "BCEAO, rates of foreign currencies against the CFA franc for transfers, 30 October 2026",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-30",
+      "note": "Mid-point of the buying (585.50) and selling (592.50) rates for the US dollar; the CFA franc is pegged at 655.957 per euro. World Bank 2025 average 581.9."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "BCEAO, monthly economic note for UMOA countries, September 2026 (harmonised consumer prices, August 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Consumer prices up 3.0% year on year in Burkina in August 2026 after 2.3% in July (INSD data via BCEAO); 2025 average -0.6% (World Bank)."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BCEAO inflation target (1-3% band, centre 2%); Burkina CPI 3.0% in August 2026",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Inflation swings with harvests but averages near the BCEAO band and the CFA franc is pegged to the euro, so the 2% centre of the 1-3% target band is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "BCEAO, key rates (minimum bid rate for refinancing tenders), effective 16 March 2026",
+      "sourceUrl": "https://www.bceao.int/fr/content/taux-directeurs",
+      "asOf": "2026-03-16",
+      "note": "Main policy rate 3.00%, held at the 9 September 2026 committee; the marginal lending facility rate is 5.00%. Common to all eight UMOA countries."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average rate on ordinary savings accounts in Burkina was found; the BCEAO bank-conditions survey (first half 2026) lists term-deposit and contractual-savings rates only."
+    },
+    "fdr_3m_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Burkina Faso)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median of the minimum term-deposit rates (taux DAT minimum) that Burkina's banks declare to the BCEAO, range 2.0-4.5%; the minimum usually applies to small, short deposits. Not a tenor-specific average."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCEAO bank-conditions survey gives only minimum (median 3.5%) and maximum (median 6.5%, range 5.0-7.5%) term-deposit rates per bank in Burkina for the first half of 2026, not a 1-year rate."
+    },
+    "dps_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Burkina Faso)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median rate on contractual savings plans (épargne contractuelle) declared by Burkina's banks in the first half of 2026; most declare 3.50% (range 3.5-5.0%)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0515,
+      "status": "sourced",
+      "sourceName": "BCEAO, monthly economic note for UMOA countries, September 2026 (bank deposit rates, July 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Average deposit rate across UMOA banks, 5.15% in July 2026 (5.12% in June); Burkina's rate fell 0.01 points in the month, but the BCEAO does not publish the country level in this note."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold to individuals was found; the Treasury borrows through UMOA-Titres auctions of 12-month bills and 3-7 year bonds, open to individuals through banks and brokers."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Burkina's Treasury issued only 12-month bills on the regional market in 2026 (last: 3.73% yield on 7 October 2026); no 3-month bill rate exists."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0744,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres, Burkina Treasury auction of 7 October 2026 (5-year bond)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-burkina-du-07-10-2026/",
+      "asOf": "2026-10-07",
+      "note": "Weighted average yield 7.44% on the 6.20% bond maturing 8 October 2031; the UMOA-Titres zero-coupon curve of 23 October 2026 gives 7.58% at 5 years."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Burkina has not auctioned bonds longer than 7 years since 2022 (7-year yield 7.39% on 7 October 2026); the UMOA-Titres curve's 10-year point (5.9% zero coupon) rests on few trades and is not used."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax authority site could not be reached and PwC Tax Summaries has no Burkina Faso page, so the withholding rate on bank interest could not be confirmed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the tax treatment of interest on Burkina Treasury securities for individuals could not be confirmed from an official source."
+    },
+    "deposit_insurance_limit": {
+      "value": 1400000,
+      "status": "sourced",
+      "sourceName": "UMOA Council of Ministers, Decision No. 009 of 30 June 2017 on FGDR-UMOA contribution rates and compensation ceilings",
+      "sourceUrl": "https://www.fgd-umoa.org/wp-content/uploads/2024/10/Decision-du-CM-relative-aux-taux-de-contribution-et-aux-plafonds-d-indemnistation-2-1.pdf",
+      "asOf": "2017-06-30",
+      "note": "Deposits are guaranteed up to 1,400,000 FCFA per depositor per bank (300,000 FCFA at a microfinance institution) by the regional deposit guarantee fund; the decision dates from 2017 (older than 2025) and is still the one the fund publishes."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions débitrices of UMOA credit institutions, first half 2026 (Burkina Faso)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Maximum lending rate (taux débiteur maximum) declared by most Burkina banks for the first half of 2026 (range 12-14% at banks); it applies to all bank credit, including cards. No card-specific rate is published."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (regional stock exchange BRVM, deposit rates)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: regional (BRVM) equities return about the bank deposit rate, as in their weak 2016-2020 years."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026; UMOA-Titres Burkina auction results",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5 points above after-tax term deposits and 1-year Treasury bills (about 4%), within the 4-point cap; the BRVM's equity capitalisation rose 65.7% in the year to August 2026 but its 10-year record is uneven."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (BRVM market capitalisation)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: the BRVM repeats a strong decade like 2023-2026."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "BCEAO exchange rates (CFA franc pegged to the euro)",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO exchange rates (CFA franc pegged at 655.957 per euro)",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus a small allowance for the euro-pegged franc weakening against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCEAO exchange rates",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years such as 2024-2025."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Burkina Faso)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at the 3.5% floor rate, less a possible tax on interest."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Burkina Faso)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: larger term deposits (median maximum 6.5%) or 1-year Treasury bills (3.7%) through a bank, less tax on interest, rounded down because the tax rate is unconfirmed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres, Burkina auction of 7 October 2026 (3-year 7.01%, 5-year 7.44%)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-burkina-du-07-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: 3-5 year Treasury bonds at about 7%, less a possible tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CIMA (the regional insurance regulator) and Burkina's insurance directorate publish no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Temporary death cover is sold under the CIMA code, but no published premium rates per 1,000 FCFA of cover by age were found from a public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Burkina Faso was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.4382,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Burkina Faso",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BF",
+      "asOf": "2023-12-31",
+      "note": "43.8% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026; inflation assumption 2%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No reliable national medical CPI series was read; private medical costs usually rise faster than general prices, so 1.5 points above the 2% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026; inflation assumption 2%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No reliable national education CPI series was read; private school fees usually rise faster than general prices, so 2 points above the 2% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 61.292,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Burkina Faso",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BF",
+      "asOf": "2024-12-31",
+      "note": "61.3 years in 2024 (men 59.1, women 63.4)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.7,
+            "men": 14.9,
+            "women": 16.5
+          },
+          {
+            "age": 65,
+            "total": 12.4,
+            "men": 11.7,
+            "women": 12.9
+          },
+          {
+            "age": 70,
+            "total": 9.3,
+            "men": 8.8,
+            "women": 9.7
+          },
+          {
+            "age": 80,
+            "total": 4.7,
+            "men": 4.5,
+            "women": 4.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/burkina-faso/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 20.92
+          },
+          {
+            "year": 2040,
+            "value": 17.86
+          },
+          {
+            "year": 2065,
+            "value": 9.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/burkina-faso/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.78 (2025, World Bank), 5.6 (2040) and 10.1 (2065, populationpyramid.net/burkina-faso/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 58,
+      "status": "sourced",
+      "sourceName": "CNSS Burkina Faso, old-age pension (pension de vieillesse)",
+      "sourceUrl": "https://cnssbf.org/la-pension-de-retraite-vieillesse/",
+      "asOf": "2026-10-31",
+      "note": "Pension age is set by decree by job category: 56 for manual workers, 58 for employees, 60 for supervisors and managers, 63 for doctors and university teachers; at least 15 years of contributions. 58 (employees) is used; no newer rule for people born after 1975 was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CARFO (the civil-service pension fund) describes the pension as due at the statutory age limit but does not state it, and the public service statute could not be read."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Burkina Faso)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at about 3.5%, less a possible tax on interest."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres, Burkina auction of 7 October 2026 (12-month bill 3.73%)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-burkina-du-07-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Base case: about the 1-year Treasury bill yield (3.73%) and small term-deposit rates; not above the safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres, Burkina auction of 7 October 2026 (3-year bond 7.01%)",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-burkina-du-07-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in larger term deposits or short Treasury bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Burkina Faso)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Burkina auction results; equity base 7.5%; gold base 4.5%",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-burkina-du-07-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or Treasury bonds, regional equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Burkina auction results; equity high 12%",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-burkina-du-07-10-2026/",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension for Burkina Faso was found; the CNSS and CARFO 'allocation de vieillesse' is a contributory lump sum for people with under 15 years of contributions, not a social pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official text on a statutory end-of-service or retirement indemnity for private employees in Burkina Faso could be read (the Labour Code was not reached)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "pensionFromAge": 58,
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "CNSS Burkina Faso, old-age pension (pension de vieillesse)",
+      "sourceUrl": "https://cnssbf.org/la-pension-de-retraite-vieillesse/",
+      "asOf": "2026-10-31",
+      "note": "Compulsory CNSS pension for private employees after at least 15 years of contributions, from 56, 58 or 60 depending on job category (58 used); voluntary insured persons from 56. The page gives no benefit formula or indexation rule, so inflationLinked is false (no automatic indexation found); a lump-sum allocation is paid to those with under 15 years."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (DAT)",
+      "note": "Banks declare minimum and maximum term-deposit rates to the BCEAO twice a year.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (DAT), 1 year",
+      "note": "Banks declare minimum and maximum term-deposit rates to the BCEAO twice a year.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Épargne contractuelle",
+      "localNameEn": "Contractual savings plan",
+      "note": "Monthly savings plans (housing or project savings) offered by banks.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Burkina's Treasury issued only 12-month bills (bons assimilables du Trésor) on the regional market in 2026.",
+      "sourceUrl": "https://www.umoatitres.org/fr/pays/burkina/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligations assimilables du Trésor",
+      "localNameEn": "Treasury bonds (OAT)",
+      "note": "Auctioned every two weeks by UMOA-Titres in 3, 5 and 7-year lines; individuals buy through banks or licensed brokers (SGI).",
+      "sourceUrl": "https://www.umoatitres.org/fr/emission/emission-simultanee-de-bons-et-dobligations-du-tresor-du-burkina-du-07-10-2026/"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No bond longer than 7 years has been auctioned since 2022.",
+      "sourceUrl": "https://www.umoatitres.org/fr/pays/burkina/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "OPCVM (FCP, SICAV)",
+      "localNameEn": "Collective investment funds",
+      "note": "Supervised by the regional financial market authority (AMF-UMOA); equity funds invest on the regional exchange (BRVM)."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Burkina is a gold producer; gold is mainly bought as jewellery, bars and coins are uncommon for savers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque Centrale des États de l'Afrique de l'Ouest (BCEAO)",
+      "url": "https://www.bceao.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Commission Régionale de Contrôle des Assurances (CIMA)",
+      "url": "https://cima-afrique.org/",
+      "note": "Regional insurance regulator for the CIMA member states; Burkina's insurance directorate is in the Ministry of Economy and Finance."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Caisse Nationale de Sécurité Sociale (CNSS), old-age pension",
+      "url": "https://cnssbf.org/la-pension-de-retraite-vieillesse/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Caisse Nationale d'Assurance Maladie Universelle (CNAMU)",
+      "url": "https://www.cnamu.bf/"
+    },
+    "depositInsurance": {
+      "name": "Fonds de Garantie des Dépôts et de Résolution dans l'UMOA (FGDR-UMOA)",
+      "url": "https://www.fgd-umoa.org/"
+    },
+    "statistics": {
+      "name": "Institut National de la Statistique et de la Démographie (INSD)",
+      "url": "https://www.insd.bf/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

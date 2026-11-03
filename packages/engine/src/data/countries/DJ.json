@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "code": "DJ",
+  "iso3": "DJI",
+  "nameEn": "Djibouti",
+  "nameNative": "Djibouti",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "aa",
+    "so",
+    "ar",
+    "fr"
+  ],
+  "currency": {
+    "code": "DJF",
+    "symbol": "Fdj",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 177.721,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Djibouti",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DJ",
+      "asOf": "2025-12-31",
+      "note": "The franc is fixed at 177.721 per US dollar under a currency board; the Banque Centrale de Djibouti site shows the same parity. CLDR gives no narrow symbol; 'Fdj' is the local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.019,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the National Institute of Statistics of Djibouti (INSTAD), CPI August 2026",
+      "sourceUrl": "https://tradingeconomics.com/djibouti/inflation-cpi",
+      "asOf": "2026-08-31",
+      "note": "Consumer prices up 1.9% year on year in August 2026 (3.8% in July); secondary source because the INSTAD site loads its data by script. World Bank 2025 average -0.3%."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation 2021-2025 (about 2% average); dollar peg under a currency board",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=DJ",
+      "asOf": "2026-10-31",
+      "note": "With the franc fixed to the dollar and no inflation target, a rounded 2.5% sits a little above the recent 5-year average to allow for imported food and fuel shocks."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Djibouti runs a currency board (franc fixed to the US dollar), and no central bank policy rate was found on the Banque Centrale de Djibouti site."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit rate is published by the Banque Centrale de Djibouti or in the World Bank data for savings accounts."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit rate is published by the Banque Centrale de Djibouti or in the World Bank data for 3-month term deposits."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit rate is published by the Banque Centrale de Djibouti or in the World Bank data for 1-year term deposits."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit scheme or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit rate is published by the Banque Centrale de Djibouti or in the World Bank data; the bank statistics pages of the central bank show no interest rates."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic Treasury bill market or yield was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bond market or yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bond market or yield was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax rate on bank interest in the Code Général des Impôts could not be confirmed from a current official source; PwC Worldwide Tax Summaries has no Djibouti page."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists to tax, and no current rule was found."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover limit was found on the Banque Centrale de Djibouti site."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Banque Centrale de Djibouti: franc fixed to the US dollar; no local stock exchange",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "No local stock market exists, so equity means a global index fund in dollar terms (equal to franc terms under the peg); low case is a weak decade."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Banque Centrale de Djibouti: franc fixed to the US dollar; no local stock exchange",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "Global equities in dollar terms, held to about 4 points above an assumed safe rate of about 1.5%, since no local index exists and access is through foreign funds."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Banque Centrale de Djibouti: franc fixed to the US dollar",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities match their long-run dollar record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 177.721 per US dollar (World Bank)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DJ",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold, no currency gain under the peg."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 177.721 per US dollar (World Bank)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DJ",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 177.721 per US dollar (World Bank)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DJ",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "No published deposit rates; franc fixed to the US dollar",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary savings accounts paying close to nothing."
+    },
+    "fixed_income_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "No published deposit rates; franc fixed to the US dollar",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits at a modest rate; no official deposit rate was found, so this is deliberately cautious."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No published deposit rates; franc fixed to the US dollar",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits nearer dollar money-market rates."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life claim settlement ratio was found from the insurance supervisor."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per DJF 1,000 of cover were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.2884,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Djibouti",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DJ",
+      "asOf": "2023-12-31",
+      "note": "28.8% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2.5%; World Bank CPI",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=DJ",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI was found; medical costs usually rise about 2 points faster than general prices."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2.5%; World Bank CPI",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=DJ",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was found; private school costs are planned 1.5 points above general inflation."
+    },
+    "life_expectancy": {
+      "value": 66.202,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Djibouti",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DJ",
+      "asOf": "2024-12-31",
+      "note": "66.2 years in 2024 (men 63.7, women 68.7)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.9,
+            "men": 17.0,
+            "women": 18.8
+          },
+          {
+            "age": 65,
+            "total": 14.4,
+            "men": 13.6,
+            "women": 15.1
+          },
+          {
+            "age": 70,
+            "total": 11.2,
+            "men": 10.6,
+            "women": 11.8
+          },
+          {
+            "age": 80,
+            "total": 6.2,
+            "men": 5.8,
+            "women": 6.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/djibouti/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women (the page gives no both-sexes figures)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.3
+          },
+          {
+            "year": 2040,
+            "value": 8.5
+          },
+          {
+            "year": 2065,
+            "value": 5.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/djibouti/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 7.51 (2025, World Bank), 11.8 (2040) and 18.6 (2065, populationpyramid.net/djibouti/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age of the Caisse Nationale de Sécurité Sociale (CNSS) could not be confirmed; its site could not be reached."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil-service retirement age could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "No published deposit rates; franc fixed to the US dollar",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts paying close to nothing."
+    },
+    "retirement_return_base": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "No published deposit rates; franc fixed to the US dollar",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "Base case: cautious term-deposit return, kept at the assumed safe rate since no official deposit rate exists."
+    },
+    "retirement_return_high": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "No published deposit rates; franc fixed to the US dollar",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "No published deposit rates; no local stock market",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bank deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Assumed safe rate 1.5%; global equity base 5.5%; gold base 4%",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "Base case: deposits with some gold and foreign equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Global equity high 9%; gold high 8%",
+      "sourceUrl": "https://banque-centrale.dj/le-currency-board/",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with foreign equity funds."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension amount was found; cash transfer programmes target poor households rather than older people."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on end-of-service or dismissal indemnity could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A contributory pension is run by the Caisse Nationale de Sécurité Sociale (CNSS), but its pension age and indexation rules could not be read (site unreachable)."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic Treasury bill market was found."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic government bond market was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic government bond market was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "There is no stock exchange in Djibouti and no locally sold equity fund was found; investors can only use foreign funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold freely, mostly as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Djibouti (Banque Centrale de Djibouti)",
+      "url": "https://banque-centrale.dj/"
+    },
+    "insuranceRegulator": {
+      "name": "Ministry of Economy and Finance (insurance supervision)",
+      "url": "https://www.ministere-finances.dj/"
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "National Social Security Fund (Caisse Nationale de Sécurité Sociale, CNSS)",
+      "url": "https://www.cnss.dj/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Universal Health Insurance (Assurance Maladie Universelle), run by the CNSS; public care through the Ministry of Health",
+      "url": "https://www.sante.gouv.dj/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Institute of Statistics of Djibouti (INSTAD)",
+      "url": "https://www.instad.dj/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

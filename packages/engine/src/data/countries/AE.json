@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "AE",
+  "iso3": "ARE",
+  "nameEn": "United Arab Emirates",
+  "nameNative": "الإمارات العربية المتحدة",
+  "region": "middle_east_north_africa",
+  "languages": [
+    "ar",
+    "en",
+    "ml",
+    "ps",
+    "fa"
+  ],
+  "currency": {
+    "code": "AED",
+    "symbol": "د.إ",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3.6725,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), United Arab Emirates",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AE",
+      "asOf": "2025-12-31",
+      "note": "The dirham is pegged at 3.6725 per US dollar."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0204,
+      "status": "sourced",
+      "sourceName": "Federal Competitiveness and Statistics Centre (FCSC) CPI, December 2025, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/inflation-cpi",
+      "asOf": "2025-12-31",
+      "note": "2.04% year on year in December 2025 (1.61% in November), the latest headline rate shown; secondary source because the FCSC site refused requests. World Bank 2025 average 1.25%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Dirham pegged to the US dollar; FCSC CPI 2.0% (December 2025); World Bank CPI 1.25% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "With the dirham pegged to the dollar, inflation tracks the US 2% target and averaged about 2% over 2021 to 2025, so 2% is used."
+    },
+    "policy_rate": {
+      "value": 0.039,
+      "status": "sourced",
+      "sourceName": "Central Bank of the UAE base rate (overnight deposit facility), decision of 28 October 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/interest-rate",
+      "asOf": "2026-10-28",
+      "note": "Held at 3.90% on 28 October 2026 after a 25 basis point rise in September 2026, following the US Federal Reserve. Secondary source because the central bank site refused requests."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide savings account rate could be read; the Central Bank of the UAE site refused requests and web search was unavailable."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published industry-wide 3-month fixed deposit rate could be read; for reference, 3-month EIBOR was 4.34% on 30 October 2026 (Trading Economics)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published industry-wide 1-year fixed deposit rate could be read from the Central Bank of the UAE."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for monthly recurring savings plans was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of the UAE publishes average deposit rates in its statistical bulletin, but its site refused requests; the World Bank has no recent deposit rate for the UAE."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate sold to individuals was confirmed."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of the UAE issues monetary bills to banks, but no current 3-month yield could be read; its site refused requests."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Ministry of Finance auctions dirham treasury bonds and sukuk through primary dealer banks, but no current 5-year yield could be read."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 10-year dirham government bond yield could be read from an official or secondary source."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, United Arab Emirates, taxes on personal income (last reviewed 9 September 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/united-arab-emirates/individual/taxes-on-personal-income",
+      "asOf": "2026-09-09",
+      "note": "There is no personal income tax in the UAE, so interest earned by individuals is untaxed."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, United Arab Emirates, taxes on personal income (last reviewed 9 September 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/united-arab-emirates/individual/taxes-on-personal-income",
+      "asOf": "2026-09-09",
+      "note": "No personal income tax, so returns on any government security held by an individual are untaxed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No explicit deposit insurance scheme or cover amount was confirmed for UAE banks; the Central Bank of the UAE site refused requests."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate could be read from the Central Bank of the UAE."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ADX General index 9,466 on 30 October 2026, down 6% in a year and 12% below its February 2026 peak (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: equities earn about the deposit rate, as in the past year's decline."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "ADX General index record (Trading Economics); EIBOR 4.34% and untaxed interest",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.5 points over the untaxed 3-month EIBOR of about 4.3%, within the 4-point cap; the ADX roughly doubled since 2016 with dividends of about 4%."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "ADX General index record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: price growth like 2016-2026 plus dividends."
+    },
+    "gold_return_low": {
+      "value": 0,
+      "status": "assumption",
+      "sourceName": "Dirham pegged at 3.6725 per US dollar",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AE",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; the peg adds no currency gain."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Dirham pegged at 3.6725 per US dollar; long-run dollar gold trend about 4%",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AE",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend, since the peg means no currency effect."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Dirham pegged at 3.6725 per US dollar; dollar gold history",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AE",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade for dollar gold."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Central Bank of the UAE base rate 3.9% (October 2026); no income tax (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: US and UAE rates fall back and savings balances earn less than fixed deposits."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Base rate 3.9%; 3-month EIBOR 4.34% (October 2026); no income tax (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/interbank-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: fixed deposits a little below interbank rates over a full rate cycle, untaxed."
+    },
+    "fixed_income_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "3-month EIBOR 4.34% (October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/interbank-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: rates stay near today's level and savers use longer fixed deposits or government sukuk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio could be read from the Central Bank of the UAE, the insurance supervisor."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published premium rates per AED 1,000 by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The federal basic health plan for private-sector and domestic workers costs AED 320 a year for ages 1 to 64 (u.ae, updated 8 September 2026), but its annual cover limit and premiums for wider plans by age were not published, so a per-AED-100,000 table could not be built."
+    },
+    "oop_health_share": {
+      "value": 0.0967,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), United Arab Emirates",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AE",
+      "asOf": "2023-12-31",
+      "note": "9.7% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "FCSC health CPI index 103.4 (June 2026, Trading Economics); inflation assumption 2%",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "The health CPI has risen slowly, but private medical costs and insurance premiums have grown faster than general prices, so health goals are planned 2 points above the general assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "FCSC education CPI index 104.5 (June 2026, Trading Economics); inflation assumption 2%",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Private school fees, regulated by emirate authorities, rise in yearly steps above general inflation, so education goals use 3.5%."
+    },
+    "life_expectancy": {
+      "value": 83.069,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), United Arab Emirates",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AE",
+      "asOf": "2024-12-31",
+      "note": "83.1 years in 2024 (men 82.2, women 84.3); the resident population is mostly working-age migrants."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.2,
+            "men": 24.5,
+            "women": 25.8
+          },
+          {
+            "age": 65,
+            "total": 20.5,
+            "men": 20,
+            "women": 21.1
+          },
+          {
+            "age": 70,
+            "total": 16.2,
+            "men": 15.6,
+            "women": 16.7
+          },
+          {
+            "age": 80,
+            "total": 8.5,
+            "men": 8,
+            "women": 9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/united-arab-emirates/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the 65 total is published there, the other totals are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 45.9
+          },
+          {
+            "year": 2040,
+            "value": 29.4
+          },
+          {
+            "year": 2065,
+            "value": 14.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/united-arab-emirates/2065/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 2.18 (2025, World Bank), about 3.4 (2040, from 2.7% aged 65+ and 17.9% under 15 on populationpyramid.net/united-arab-emirates/2040/) and 6.8 (2065). Migrant workers keep the ratio high."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "UAE Government portal, Pensions and social security for UAE citizens (updated 14 October 2026)",
+      "sourceUrl": "https://u.ae/en/information-and-services/jobs/Sector-of-employment/working-in-uae-government-sector/pensions-and-social-security-for-uae-citizens",
+      "asOf": "2026-10-14",
+      "note": "Applies to UAE and GCC nationals only: 60 with 15 years of insured service if registered before 31 October 2023; those joining since then may retire from 55 with at least 30 years. Expatriates have no public pension and receive an end-of-service gratuity instead."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The mandatory retirement age for federal government employees under the federal human resources law could not be read; the GPSSA pension rules above apply to nationals in both sectors."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Base rate 3.9% (October 2026); no income tax (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: rates fall back over retirement."
+    },
+    "retirement_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "3-month EIBOR 4.34%; no income tax (PwC)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/interbank-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: fixed deposits below today's interbank rate, untaxed, so not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "3-month EIBOR 4.34% (October 2026)",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/interbank-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: rates stay near today's level."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Fixed income low 2.5%; equity low 4%",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: a balanced mix earning about the deposit rate."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Fixed income base 3.5%; equity base 7.5%; gold base 4%",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, UAE or global equities and gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Equity high 11%; gold high 8%",
+      "sourceUrl": "https://tradingeconomics.com/united-arab-emirates/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Federal and emirate social welfare programmes give means-tested support to low-income UAE nationals (Ministry of Community Empowerment), but no age-based monthly amount for older people is published on the government portal (updated 8 July 2026)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Social welfare for nationals is means-tested by family situation and income; no separate age-based eligibility rule for older people was found on the government portal."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 21,
+        "daysPerYearAfter": 30,
+        "afterYears": 5,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "UAE Government portal, End of service benefits for workers in the private sector (updated 15 October 2026)",
+      "sourceUrl": "https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/end-of-service-benefits-for-employees-in-the-private-sector",
+      "asOf": "2026-10-15",
+      "note": "Expatriate private-sector workers with at least one year of service get 21 days of basic wage per year for the first 5 years and 30 days per year after, capped at 2 years' wage. The page does not give the daily-wage divisor; 30 days a month is assumed. Employers may opt into a savings scheme instead."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 60,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "UAE Government portal, Pensions and social security for UAE citizens (updated 14 October 2026)",
+      "sourceUrl": "https://u.ae/en/information-and-services/jobs/Sector-of-employment/working-in-uae-government-sector/pensions-and-social-security-for-uae-citizens",
+      "asOf": "2026-10-14",
+      "note": "GPSSA covers UAE and GCC nationals only (Abu Dhabi nationals: Abu Dhabi Pension Fund). Registration at 18 to 60; pension at 60 with 15 years if registered before 31 October 2023, or from 55 with 30 years for new members; contributions 26% (employee 11%, employer 15%). The page mentions no indexation; pensions are untaxed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب توفير",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة لأجل (3 أشهر)",
+      "localNameEn": "Fixed deposit (3 months)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة لأجل (سنة)",
+      "localNameEn": "Fixed deposit (1 year)"
+    },
+    "dps": {
+      "available": true,
+      "localName": "حساب ادخار شهري",
+      "localNameEn": "Monthly savings plan",
+      "note": "Some banks offer monthly instalment savings accounts; no standard product."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was confirmed."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "شهادات الإيداع النقدية",
+      "localNameEn": "Monetary bills (M-Bills)",
+      "note": "Issued by the Central Bank of the UAE to banks, not sold directly to individuals."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "سندات الخزينة الاتحادية",
+      "localNameEn": "Federal treasury bonds and sukuk (T-Bonds, T-Sukuk)",
+      "note": "Dirham bonds auctioned by the Ministry of Finance through primary dealer banks since 2022; retail access is through banks."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "سندات الخزينة الاتحادية (10 سنوات)",
+      "localNameEn": "Federal treasury bonds (10 years)",
+      "note": "Longer dirham maturities are auctioned in smaller amounts (availability not confirmed for every year); retail access is through banks."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "صناديق الاستثمار",
+      "localNameEn": "Investment funds",
+      "note": "Funds are regulated by the Securities and Commodities Authority.",
+      "sourceUrl": "https://www.sca.gov.ae/"
+    },
+    "gold": {
+      "available": true,
+      "localName": "الذهب",
+      "localNameEn": "Gold",
+      "note": "Gold bars, coins and jewellery are widely sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the UAE (CBUAE)",
+      "url": "https://www.centralbank.ae/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of the UAE, insurance supervision",
+      "url": "https://www.centralbank.ae/"
+    },
+    "insuranceComplaints": {
+      "name": "Sanadak, UAE financial ombudsman for banking and insurance",
+      "url": "https://www.sanadak.gov.ae/"
+    },
+    "pensionScheme": {
+      "name": "General Pension and Social Security Authority (GPSSA), for UAE and GCC nationals",
+      "url": "https://gpssa.gov.ae/",
+      "note": "Abu Dhabi nationals are covered by the Abu Dhabi Pension Fund; expatriates receive an end-of-service gratuity instead."
+    },
+    "oldAgeAllowance": {
+      "name": "Social welfare programmes, Ministry of Community Empowerment (means-tested, UAE nationals)",
+      "url": "https://u.ae/en/information-and-services/social-affairs/social-welfare/social-welfare-programmes"
+    },
+    "publicHealthCover": {
+      "name": "Mandatory health insurance by emirate; Thiqa and Enaya for nationals",
+      "url": "https://u.ae/en/information-and-services/health-and-fitness/Healthcare-access-and-insurance/getting-a-health-insurance"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Federal Competitiveness and Statistics Centre (FCSC)",
+      "url": "https://fcsc.gov.ae/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

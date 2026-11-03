@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "code": "CU",
+  "iso3": "CUB",
+  "nameEn": "Cuba",
+  "nameNative": "Cuba",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es"
+  ],
+  "currency": {
+    "code": "CUP",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 768.0,
+      "status": "sourced",
+      "sourceName": "Banco Central de Cuba, official exchange rate, Segment III (households and non-state businesses)",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "CUP 768.00 per US dollar for 31 October 2026 in Segment III, the rate used for household currency exchange; Segment I (state) is fixed at 24 and Segment II at 120. The Segment III rate was 411 in January 2026."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.2844,
+      "status": "sourced",
+      "sourceName": "ONEI (Oficina Nacional de Estadística e Información) CPI, September 2026, as reported by Directorio Cubano (secondary source)",
+      "sourceUrl": "https://www.directoriocubano.info/cuba/salario-medio-cuba-inflacion-septiembre-2026/",
+      "asOf": "2026-09-30",
+      "note": "Official year-on-year CPI inflation 28.44% in September 2026 (25.19% in August). ONEI's own site could not be reached (certificate error). Independent estimates put real inflation far higher."
+    },
+    "inflation_projection": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "ONEI CPI 28.4% in September 2026; official inflation about 25-40% a year since the 2021 currency reform; no inflation target",
+      "sourceUrl": "https://www.directoriocubano.info/cuba/salario-medio-cuba-inflacion-septiembre-2026/",
+      "asOf": "2026-10-31",
+      "note": "With no credible inflation target and official inflation above 25% for most years since 2021, planning uses 25% a year."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Banco Central de Cuba sets bank interest rates administratively and its monetary policy dashboard shows no published reference rate."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Deposit rates are set by the Banco Central de Cuba for state banks and are not published on its site; only bank pages show them."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Deposit rates are set by the Banco Central de Cuba for state banks and are not published on its site; only bank pages show them."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Deposit rates are set by the Banco Central de Cuba for state banks and are not published on its site; only bank pages show them."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average deposit rate; the World Bank has no deposit-rate series for Cuba."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail bond is sold to individuals; government bonds are placed with state banks."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No treasury bills are sold to the public and no yield is published."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Government bonds are placed with state banks only; no market yield is published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Government bonds are placed with state banks only; no market yield is published."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official or tax-guide source on taxation of personal bank interest under the Tax System Law (Ley 113) could be read."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or published cover limit was found; banks are state-owned."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published legal cap or typical rate for credit card balances was found."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Cuba; Segment III official rate rose from 411 to 768 pesos per US dollar in 2026 (BCC)",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "There is no local stock market and no legal way for most residents to buy a global index fund; low case kept just under the assumed safe rate."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "No local market; capped at the assumed safe rate (3%) plus 4 points",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "A global index in peso terms would track the peso's fall, but equity is not available to residents, so the base case is capped at 4 points over the assumed safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Global equity record; peso depreciation (BCC Segment III rate)",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "High case for a resident with access to foreign assets."
+    },
+    "gold_return_low": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026 (Trading Economics); peso depreciation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: dollar gold flat while the peso keeps losing value more slowly than in 2026."
+    },
+    "gold_return_base": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Gold USD trend plus peso depreciation: BCC Segment III rate 411 (Jan 2026) to 768 (Oct 2026) pesos per dollar",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold in pesos rises roughly with the peso's depreciation, assumed at about 20% a year."
+    },
+    "gold_return_high": {
+      "value": 0.35,
+      "status": "assumption",
+      "sourceName": "Peso lost almost half its official Segment III value in 2026 (BCC)",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "High case: the peso keeps falling as fast as in 2026."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "BCC sets deposit rates administratively; not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "Low case: an ordinary peso savings account, which pays very little."
+    },
+    "fixed_income_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCC sets deposit rates administratively; not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "Base case: fixed-term peso deposits at state banks, assumed to pay low single-digit rates far below inflation."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCC sets deposit rates administratively; not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "High case: the longest fixed-term peso deposits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance supervisor (Superintendencia de Seguros, Ministry of Finance and Prices) publishes no claim settlement statistics."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Life insurance is sold by state insurers, but no regulator or non-company source of term premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care for residents is free in the public national health system; there are no private hospitals for residents and no published cost."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No private health insurance market for residents was found."
+    },
+    "oop_health_share": {
+      "value": 0.1658,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CU",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 16.6% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "ONEI CPI 28.4% (September 2026); public care is free but medicines are scarce and bought informally",
+      "sourceUrl": "https://www.directoriocubano.info/cuba/salario-medio-cuba-inflacion-septiembre-2026/",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI was found; planning uses the general inflation assumption of 25%."
+    },
+    "goal_inflation_education": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "ONEI CPI 28.4% (September 2026); public education is free",
+      "sourceUrl": "https://www.directoriocubano.info/cuba/salario-medio-cuba-inflacion-septiembre-2026/",
+      "asOf": "2026-10-31",
+      "note": "No education CPI was found; planning uses the general inflation assumption of 25%."
+    },
+    "life_expectancy": {
+      "value": 78.264,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CU",
+      "asOf": "2024-12-31",
+      "note": "Men 75.9, women 80.7 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/cuba",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.3,
+            "men": 20.6,
+            "women": 23.8
+          },
+          {
+            "age": 65,
+            "total": 18.5,
+            "men": 17.0,
+            "women": 19.8
+          },
+          {
+            "age": 70,
+            "total": 15.0,
+            "men": 13.7,
+            "women": 16.1
+          },
+          {
+            "age": 80,
+            "total": 9.0,
+            "men": 8.3,
+            "women": 9.6
+          }
+        ]
+      },
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/cuba/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 3.99
+          },
+          {
+            "year": 2040,
+            "value": 2.07
+          },
+          {
+            "year": 2065,
+            "value": 1.61
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 25.1 in 2025 (World Bank), 48.3 in 2040 and 62.0 in 2065 (UN WPP)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "US SSA, Social Security Programs Throughout the World: The Americas, 2019, Cuba",
+      "sourceUrl": "https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/americas/cuba.html",
+      "asOf": "2019-12-31",
+      "note": "Social Security Law 105 of 2008: old-age pension at 65 for men and 60 for women with 30 years of work (partial pension with 20-29 years). Source is from 2019, older than 2025; no later change was found."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "US SSA, Social Security Programs Throughout the World: The Americas, 2019, Cuba",
+      "sourceUrl": "https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/americas/cuba.html",
+      "asOf": "2019-12-31",
+      "note": "The same social insurance rules cover public-sector employees: 65 for men, 60 for women. Source is from 2019, older than 2025."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "BCC sets deposit rates administratively; not published",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings account in pesos."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCC sets deposit rates administratively; not published",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "Base case: fixed-term peso deposits, assumed low single digits and no higher than the safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BCC sets deposit rates administratively; not published",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "High case: longest fixed-term peso deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Peso deposits only; no local stock or bond market for individuals",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "Low case: residents can mostly hold only peso deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Peso deposits; equity assumption capped at safe rate plus 4 points",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "Base case for a mix weighted to peso deposits."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Equity base 7%; peso deposits 5%",
+      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "asOf": "2026-10-31",
+      "note": "High case for someone with some access to real or foreign assets."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Means-tested social assistance pays older people who cannot work and have no family support, but the amount is set case by case and no current figure was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "US SSA, Social Security Programs Throughout the World: The Americas, 2019, Cuba",
+      "sourceUrl": "https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/americas/cuba.html",
+      "asOf": "2019-12-31",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Social assistance old-age benefit: men 65, women 60 with fewer than 20 years of work, unable to work and with no family members to support them. Source is from 2019, older than 2025."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service payment for employees was found in the sources read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "US SSA, Social Security Programs Throughout the World: The Americas, 2019, Cuba",
+      "sourceUrl": "https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/americas/cuba.html",
+      "asOf": "2019-12-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "State social insurance (Law 105 of 2008) covers employees: pension at 65 (men) or 60 (women) with 30 years of work, 60% of best 5 of the last 15 years' average earnings; benefits are adjusted by government decree, not automatically for inflation. Source is from 2019."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "Fixed-term deposit",
+      "note": "Offered by state savings banks; rates are not published by the central bank."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "Fixed-term deposit",
+      "note": "Offered by state savings banks; rates are not published by the central bank."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No monthly recurring deposit product was confirmed."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "Government bonds are placed with state banks, not sold to individuals."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bills"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government bonds"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Equity funds",
+      "note": "Cuba has no stock exchange and no retail investment funds."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Investment gold",
+      "note": "No legal retail market for investment gold bars or coins was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Cuba (BCC)",
+      "url": "https://www.bc.gob.cu/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de Seguros, Ministerio de Finanzas y Precios",
+      "url": "https://www.mfp.gob.cu/nosotros/seguros"
+    },
+    "insuranceComplaints": {
+      "name": "Ministerio de Finanzas y Precios, citizen complaints (Superintendencia de Seguros)",
+      "url": "https://www.mfp.gob.cu/nosotros/seguros"
+    },
+    "pensionScheme": {
+      "name": "Seguridad social (Ley 105), Ministerio de Trabajo y Seguridad Social",
+      "url": "https://www.mtss.gob.cu/"
+    },
+    "oldAgeAllowance": {
+      "name": "Asistencia social, Ministerio de Trabajo y Seguridad Social",
+      "url": "https://www.mtss.gob.cu/",
+      "note": "Means-tested social assistance, not a universal pension."
+    },
+    "publicHealthCover": {
+      "name": "Sistema Nacional de Salud, Ministerio de Salud Pública (MINSAP)",
+      "url": "https://salud.msp.gob.cu/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Oficina Nacional de Estadística e Información (ONEI)",
+      "url": "https://www.onei.gob.cu/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

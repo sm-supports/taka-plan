@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "GH",
+  "iso3": "GHA",
+  "nameEn": "Ghana",
+  "nameNative": "Ghana",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "ak",
+    "en",
+    "ee",
+    "gaa",
+    "ha"
+  ],
+  "currency": {
+    "code": "GHS",
+    "symbol": "GH₵",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 11.62,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, daily interbank FX rates, 30 October 2026 (USD/GHS mid rate)",
+      "sourceUrl": "https://www.bog.gov.gh/treasury-and-the-markets/daily-interbank-fx-rates/",
+      "asOf": "2026-10-30",
+      "note": "Mid rate 11.6200 (buying 11.6142, selling 11.6258); the World Bank 2025 average was 12.56."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, Summary of Economic and Financial Data, September 2026 (table 1, year-on-year inflation, Ghana Statistical Service CPI)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "5.0% year on year in August 2026 (4.6% in July, 5.4% in December 2025, 23.8% in December 2024). The Ghana Statistical Service home page shows 5.2% for September 2026, but no September release page could be read."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana medium-term inflation target of 8% ± 2% (MPC, September 2026)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/10/MPC-Decision-Statement-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Inflation has fallen from over 20% in 2024 to about 5% in 2026, below the band, but the 5-year average is far higher, so the centre of the Bank of Ghana's 8% ± 2% target is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, MPC decision statement, September 2026",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/10/MPC-Decision-Statement-September-2026.pdf",
+      "asOf": "2026-09-24",
+      "note": "Monetary Policy Rate held at 14.0% at the 132nd MPC meeting (23-24 September 2026); it was cut from 18% to 14% between December 2025 and March 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.041,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, Summary of Economic and Financial Data, September 2026 (table 3a, savings deposits)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average savings deposit rate 4.10% in August 2026 (5.00% for most of 2025-2026)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0868,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, Summary of Economic and Financial Data, September 2026 (table 3a, 3-month time deposits)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average 3-month time deposit rate 8.68% in August 2026, down from 10.50% through June 2026; the 6-month rate was 9.72%."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Ghana's Summary of Economic and Financial Data (September 2026) gives 3-month (8.68%) and 6-month (9.72%) time deposit rates only; no published 1-year average deposit rate was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring deposit product was found; the Bank of Ghana publishes demand, savings and 3- and 6-month time deposit rates only."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.105,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Ghana",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GH",
+      "asOf": "2025-12-31",
+      "note": "10.5% for 2025 (World Bank, from IMF data); it matches the Bank of Ghana 3-month time deposit rate through mid-2026, which has since fallen to 8.68% (August 2026)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals buy Treasury bills and Government of Ghana bonds through banks and licensed dealers."
+    },
+    "tbill_91d_rate": {
+      "value": 0.046135,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, Treasury bill rates, tender 2030 (issue 26 October 2026)",
+      "sourceUrl": "https://www.bog.gov.gh/treasury-and-the-markets/treasury-bill-rates/",
+      "asOf": "2026-10-26",
+      "note": "91-day bill interest-equivalent rate 4.6135% (discount rate 4.5609%); 182-day 6.29% and 364-day 9.67% at the same tender."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1273,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, Summary of Economic and Financial Data, September 2026 (table 3b, secondary market, post-DDEP 5-year bond)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Secondary market yield of the post-debt-exchange (DDEP) 5-year bond, 12.73% in August 2026 (Ghana Fixed Income Market)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.147,
+      "status": "sourced",
+      "sourceName": "Bank of Ghana, Summary of Economic and Financial Data, September 2026 (table 3b, secondary market, post-DDEP 10-year bond)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "Secondary market yield of the post-debt-exchange (DDEP) 10-year bond, 14.70% in August 2026 (Ghana Fixed Income Market)."
+    },
+    "tax_bank_interest": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Ghana, individual income determination (last reviewed 27 October 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/ghana/individual/income-determination",
+      "asOf": "2026-10-27",
+      "note": "Interest paid to individuals by a resident financial institution is exempt from income tax."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Ghana, individual income determination (last reviewed 27 October 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/ghana/individual/income-determination",
+      "asOf": "2026-10-27",
+      "note": "There is no savings certificate; interest paid to individuals on government bonds, including Treasury bills, is exempt from tax, so 0 is used for government securities."
+    },
+    "deposit_insurance_limit": {
+      "value": 6250,
+      "status": "sourced",
+      "sourceName": "Ghana Deposit Protection Corporation (GDPC), deposit coverage",
+      "sourceUrl": "https://gdpc.gov.gh/deposit-insurance/deposit-coverage",
+      "asOf": "2026-10-31",
+      "note": "Up to GHS 6,250 per depositor per bank (GHS 1,250 at a specialised deposit-taking institution); a 2026 GDPC directive says these limits stay in force while the board reviews them under the Ghana Deposit Protection (Amendment) Act passed in March 2026 (gdpc.gov.gh/media-news/details/321)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; the Bank of Ghana reports an average bank lending rate of 15.94% in August 2026 (Summary of Economic and Financial Data), which is not card-specific."
+    },
+    "equity_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana Summary of Economic and Financial Data, September 2026: GSE Composite Index and Treasury bill rates",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: Ghana Stock Exchange returns fall back to roughly the 91-day bill and savings rates for a long stretch, as in the weak 2017-2022 years."
+    },
+    "equity_return_base": {
+      "value": 0.125,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana Summary of Economic and Financial Data, September 2026: GSE Composite Index and Treasury bill rates",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points above the tax-free 364-day bill rate (9.67%), within the 4-point cap; the GSE Composite Index rose 79% in 2025 and another 72% to August 2026, but its decade before that was weak and the market is small."
+    },
+    "equity_return_high": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana Summary of Economic and Financial Data, September 2026: GSE Composite Index and Treasury bill rates",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: the Ghana Stock Exchange keeps part of the momentum of its 2025-2026 rally."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: international gold price (Summary of Economic and Financial Data) and USD/GHS interbank rate",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with modest cedi depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: international gold price (Summary of Economic and Financial Data) and USD/GHS interbank rate",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: long-run dollar gold trend of about 4% a year plus about 5% a year cedi depreciation (the gap between the 8% target and dollar inflation)."
+    },
+    "gold_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: international gold price (Summary of Economic and Financial Data) and USD/GHS interbank rate",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years combined with a cedi slide like 2022-2024."
+    },
+    "fixed_income_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: savings deposit rate 4.10%, 91-day bill 4.61%, 364-day bill 9.67%; interest tax-exempt for individuals (PwC)",
+      "sourceUrl": "https://www.bog.gov.gh/treasury-and-the-markets/treasury-bill-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and 91-day bills at about 4-5%, which are tax-exempt for individuals."
+    },
+    "fixed_income_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: 3-month deposit 8.68%, 364-day bill 9.67%; interest tax-exempt for individuals (PwC)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of 3- to 6-month time deposits (8.7-9.7%) and 182- to 364-day bills (6.3-9.7%), all tax-exempt for individuals."
+    },
+    "fixed_income_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: 364-day bill 9.67%; 5-year bond 12.73% (secondary market, August 2026)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in 364-day bills and Government of Ghana bonds, net of default and liquidity risk after the 2023 domestic debt exchange."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The National Insurance Commission reports that insurers paid GHS 3.6 billion in claims in 2024 (nic.gov.gh), but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold by licensed life insurers, but no published premium rates per GHS 1,000 of cover by age were found from the National Insurance Commission or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major private hospital stay in Ghana was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from the National Insurance Commission or the National Health Insurance Authority."
+    },
+    "oop_health_share": {
+      "value": 0.2668,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Ghana",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GH",
+      "asOf": "2023-12-31",
+      "note": "26.7% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana 8% ± 2% inflation target (MPC, September 2026)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/10/MPC-Decision-Statement-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No health CPI series was read; private and imported medical costs usually rise faster than general prices, so health goals use 2 points above the 8% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana 8% ± 2% inflation target (MPC, September 2026)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/10/MPC-Decision-Statement-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series was read; private school and university fees usually rise faster than general prices, so education goals use 2 points above the 8% planning inflation."
+    },
+    "life_expectancy": {
+      "value": 65.695,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Ghana",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GH",
+      "asOf": "2024-12-31",
+      "note": "65.7 years in 2024 (men 63.3, women 68.2)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/ghana/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.5,
+            "men": 16.6,
+            "women": 18.4
+          },
+          {
+            "age": 65,
+            "total": 14.1,
+            "men": 13.3,
+            "women": 14.7
+          },
+          {
+            "age": 70,
+            "total": 10.9,
+            "men": 10.3,
+            "women": 11.5
+          },
+          {
+            "age": 80,
+            "total": 6.1,
+            "men": 5.7,
+            "women": 6.4
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=GH",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.05
+          },
+          {
+            "year": 2040,
+            "value": 11.11
+          },
+          {
+            "year": 2065,
+            "value": 6.8
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 6.23 (2025, World Bank), 9.0 (2040, populationpyramid.net/ghana/2040/) and 14.7 (2065, populationpyramid.net/ghana/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "SSNIT, Superannuation (old age) pension",
+      "sourceUrl": "https://www.ssnit.org.gh/old-age-benefit/",
+      "asOf": "2026-10-31",
+      "note": "Full SSNIT pension at 60 with at least 180 months of contributions; reduced pension from 55. Same for men and women."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Constitution of Ghana, article 199 (Constitute Project text)",
+      "sourceUrl": "https://www.constituteproject.org/constitution/Ghana_1996?lang=en",
+      "asOf": "1996-12-31",
+      "note": "A public officer retires from the public service at 60 (voluntary retirement possible from 45); the constitutional rule dates from 1992, amended 1996."
+    },
+    "retirement_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: savings 4.10%, 91-day bill 4.61%, 364-day bill 9.67% (tax-exempt for individuals)",
+      "sourceUrl": "https://www.bog.gov.gh/treasury-and-the-markets/treasury-bill-rates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and short bills at about 4-5%."
+    },
+    "retirement_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: 3-month deposit 8.68%, 364-day bill 9.67% (tax-exempt for individuals)",
+      "sourceUrl": "https://www.bog.gov.gh/treasury-and-the-markets/treasury-bill-rates/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a ladder of time deposits and 182- to 364-day bills, below the tax-free 364-day bill rate of 9.67%."
+    },
+    "retirement_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Ghana: 364-day bill 9.67%; 5-year bond 12.73% (secondary market)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in Government of Ghana bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Safe rate about 8%; equity base 12.5%; gold base 9% (our assumptions above)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills with weak equity years."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Safe rate about 8%; equity base 12.5%; gold base 9% (our assumptions above)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of bills and bonds, equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Safe rate about 8%; equity base 12.5%; gold base 9% (our assumptions above)",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No universal non-contributory old-age pension was found; the LEAP cash transfer (Ministry of Gender, Children and Social Protection) reaches extremely poor households, including those with members aged 65+ without support, but it is a household benefit set by household size, not a per-person social pension."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official text on a statutory end-of-service gratuity for private employees under the Labour Act, 2003 (Act 651) could be read; redundancy pay is negotiated, and many collective agreements add end-of-service benefits."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "SSNIT, Superannuation (old age) pension; Constitution of Ghana article 199(4) (pensions exempt from tax)",
+      "sourceUrl": "https://www.ssnit.org.gh/old-age-benefit/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": 15,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "note": "Compulsory first-tier SSNIT pension under Act 766: 37.5% of the average of the best three years' salaries after 180 months of contributions, plus 1.125% per extra year, up to 60% after 420 months; full pension at 60, reduced from 55, paid until death. Pensions are reviewed yearly by the SSNIT board rather than linked to the CPI by law; the Constitution exempts pensions from tax."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "localNameEn": null,
+      "note": "Average savings deposit rate 4.10% in August 2026 (Bank of Ghana).",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit (3 months)",
+      "localNameEn": "Time deposit (3 months)",
+      "note": "Average 3-month time deposit rate 8.68% in August 2026 (Bank of Ghana).",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit (1 year)",
+      "localNameEn": "Time deposit (1 year)",
+      "note": "Banks take 1-year deposits, but the Bank of Ghana publishes only 3- and 6-month averages."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found; individuals buy Treasury bills and bonds instead."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "91-day Treasury bill",
+      "localNameEn": null,
+      "note": "Auctioned weekly by the Bank of Ghana; individuals buy through banks and licensed dealers, and the interest is tax-exempt.",
+      "sourceUrl": "https://www.bog.gov.gh/treasury-and-the-markets/treasury-bill-rates/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Government of Ghana 5-year bond",
+      "localNameEn": null,
+      "note": "Post-debt-exchange (DDEP) bonds trade on the Ghana Fixed Income Market.",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Government of Ghana 10-year bond",
+      "localNameEn": null,
+      "note": "Post-debt-exchange (DDEP) bonds trade on the Ghana Fixed Income Market.",
+      "sourceUrl": "https://www.bog.gov.gh/wp-content/uploads/2026/09/Summary-of-Economic-and-Financial-Data-September-2026.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Mutual fund / unit trust",
+      "localNameEn": null,
+      "note": "Collective investment schemes licensed by the Securities and Exchange Commission invest in Ghana Stock Exchange shares and fixed income."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Gold",
+      "localNameEn": null,
+      "note": "Gold bars and jewellery can be bought legally; Ghana is a major gold producer and the trade is regulated by the state."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Ghana",
+      "url": "https://www.bog.gov.gh/"
+    },
+    "insuranceRegulator": {
+      "name": "National Insurance Commission (NIC)",
+      "url": "https://nic.gov.gh/"
+    },
+    "insuranceComplaints": {
+      "name": "National Insurance Commission, file a complaint",
+      "url": "https://nic.gov.gh/consumers/complaints"
+    },
+    "pensionScheme": {
+      "name": "Social Security and National Insurance Trust (SSNIT), old-age pension",
+      "url": "https://www.ssnit.org.gh/old-age-benefit/",
+      "note": "First tier of the three-tier pension system; the National Pensions Regulatory Authority (npra.gov.gh) supervises the second and third tiers."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Health Insurance Scheme (NHIS)",
+      "url": "https://www.nhis.gov.gh/"
+    },
+    "depositInsurance": {
+      "name": "Ghana Deposit Protection Corporation (GDPC)",
+      "url": "https://gdpc.gov.gh/deposit-insurance/deposit-coverage"
+    },
+    "statistics": {
+      "name": "Ghana Statistical Service",
+      "url": "https://statsghana.gov.gh/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

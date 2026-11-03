@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 1,
+  "code": "AO",
+  "iso3": "AGO",
+  "nameEn": "Angola",
+  "nameNative": "Angola",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "pt",
+    "umb",
+    "kmb",
+    "kg"
+  ],
+  "currency": {
+    "code": "AOA",
+    "symbol": "Kz",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 911.99,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF (official exchange rate, period average)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AO",
+      "asOf": "2025-12-31",
+      "note": "2025 average AOA 912 per US dollar; Trading Economics shows AOA 919.70 on 30 October 2026 (https://tradingeconomics.com/angola/currency)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0843,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Angola inflation rate (from INE Angola, national CPI)",
+      "sourceUrl": "https://tradingeconomics.com/angola/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: 8.43% year on year in September 2026 (8.78% in August), the lowest since April 2015; the INE Angola home page indicator panel shows the same 8.43% but its release page could not be read. World Bank 2025 average 20.2%."
+    },
+    "inflation_projection": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "INE CPI 8.43% (Sep 2026, via Trading Economics); World Bank CPI 20.2% in 2025; BNA governor expects 8.6% at end-2026",
+      "sourceUrl": "https://tradingeconomics.com/angola/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Angola has no formal inflation target and averaged roughly 20% a year over 2021-2025, but inflation has fallen fast to about 8.5%, so 12% is used as a long-run planning rate between the two."
+    },
+    "policy_rate": {
+      "value": 0.1475,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Angola interest rate (Banco Nacional de Angola, Taxa BNA)",
+      "sourceUrl": "https://tradingeconomics.com/angola/interest-rate",
+      "asOf": "2026-09-15",
+      "note": "Secondary source; the BNA site could not be read. The BNA cut its policy rate by 100 basis points to 14.75% on 15 September 2026, its third straight cut; next meeting 17 November 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical savings account rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit (depósito a prazo) rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures. The World Bank average deposit rate was 7.98% in 2025."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring-deposit product or rate was found for Angola."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0798,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2025-12-31",
+      "note": "2025 average deposit rate 7.98% (7.40% in 2024), also shown by Trading Economics. The BNA policy rate has since been cut three times, to 14.75% in September 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals can buy Treasury bills and bonds through banks and BODIVA."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 91-day Treasury bill (Bilhetes do Tesouro) auction yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year Treasury bond (Obrigações do Tesouro) yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 10-year Treasury bond yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PwC Worldwide Tax Summaries states that Angola's Investment Income Tax (Imposto sobre a Aplicação de Capitais) is generally 15%, or 10% for listed income including bond interest, and exempts interest on government-approved savings products up to AOA 500,000; it does not state the rate on bank deposit interest, and the tax authority (AGT) site did not respond."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no government savings certificate for individuals; PwC Tax Summaries lists bond interest at the 10% Investment Income Tax rate (https://taxsummaries.pwc.com/angola/corporate/taxes-on-corporate-income), but no retail savings-certificate product exists to apply it to."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Angola has a deposit guarantee fund (Fundo de Garantia de Depósitos), but its site could not be read (certificate error) and no other official page with the per-depositor limit was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card interest rate was found; the World Bank lending rate was 19.4% in 2025 and Trading Economics shows 15.75% in September 2026."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "No local stock index (BODIVA lists only a few shares); S&P 500 as a global proxy (Trading Economics); World Bank deposit rate 7.98% (2025)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: global shares earn well below their record in dollars and the kwanza stays near AOA 920 per dollar, so returns trail deposits."
+    },
+    "equity_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Global equity index in kwanza terms (S&P 500 via Trading Economics); after-tax safe rate about 7% (deposit rate 7.98% less about 10% tax, World Bank)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: Angola has no diversified local equity index, so this is a global equity index in kwanza terms (about 7% in dollars plus 4-5% a year of expected kwanza depreciation), capped at 4 points over the after-tax deposit rate."
+    },
+    "equity_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Global equity index (Trading Economics); long-run kwanza depreciation against the dollar (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: global shares do well and the kwanza resumes faster depreciation, lifting returns in kwanza."
+    },
+    "gold_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026 (Trading Economics); kwanza stable at AOA 912-920 per dollar in 2025-26",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: dollar gold drifts after the 2025-26 spike and the kwanza holds its value."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); expected kwanza depreciation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold rises about 3.5% a year plus about 4-5% a year of kwanza depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Gold price history (Trading Economics); kwanza depreciation history (World Bank PA.NUS.FCRF)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and faster kwanza depreciation, as in past devaluation episodes."
+    },
+    "fixed_income_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 7.98% (2025); BNA policy rate 14.75% and falling",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall with the policy rate and Investment Income Tax of about 10-15% is withheld."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 7.98% (2025) less about 10% tax = 7.2%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits at about today's average rate after Investment Income Tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BNA policy rate 14.75% (Trading Economics); World Bank deposit rate 7.98%",
+      "sourceUrl": "https://tradingeconomics.com/angola/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: savers lock in longer term deposits or Treasury bonds, which pay well above the average deposit rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance regulator ARSEG publishes market statistics and complaint reports, but no industry-wide life insurance claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or government source with indicative term life premiums for Angola was found; ARSEG lists life insurance among voluntary insurance types but publishes no premium data."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for the out-of-pocket cost of a major private hospital stay in Angola was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official or regulator data on private health insurance premiums by age in Angola was found."
+    },
+    "oop_health_share": {
+      "value": 0.3255,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AO",
+      "asOf": "2023-12-31",
+      "note": "2023 figure (older than 2025; latest available)."
+    },
+    "goal_inflation_health": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "INE CPI 8.43% (Sep 2026, via Trading Economics); 5-year CPI average about 20%",
+      "sourceUrl": "https://tradingeconomics.com/angola/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No health CPI figure could be read, so health goals use the long-run planning inflation rate of 12%, since private care is priced partly in imported goods and dollars."
+    },
+    "goal_inflation_education": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "INE CPI September 2026: education +18.53% year on year (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/angola/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education prices are rising more than twice as fast as headline inflation, so 15% is used for education goals."
+    },
+    "life_expectancy": {
+      "value": 65.2,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/angola",
+      "asOf": "2026-07-01",
+      "note": "Men 62.6, women 67.7 (UN WPP estimate for 2026). World Bank 2024: 64.8 (men 62.3, women 67.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.8,
+            "men": 15.7,
+            "women": 17.9
+          },
+          {
+            "age": 65,
+            "total": 13.5,
+            "men": 12.5,
+            "women": 14.4
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 9.8,
+            "women": 11.2
+          },
+          {
+            "age": 80,
+            "total": 6.0,
+            "men": 5.6,
+            "women": 6.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/angola",
+      "asOf": "2026-07-01",
+      "note": "Remaining years from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 18.31
+          },
+          {
+            "year": 2040,
+            "value": 16.39
+          },
+          {
+            "year": 2065,
+            "value": 12.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/angola/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 5.46 (2025, World Bank), 6.1 (2040) and 8.0 (2065, populationpyramid.net/angola/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The social security institute (INSS) site could not be read (certificate error), and the ISSA and ILO country profiles returned 403; no readable official source for the old-age pension age was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable official source for the retirement age of civil servants was found (INSS and public administration pages could not be read)."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 7.98% (2025); BNA policy rate falling (Trading Economics)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2026-10-31",
+      "note": "Low case: deposit rates fall further as the BNA keeps cutting."
+    },
+    "retirement_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "World Bank average deposit rate 7.98% (2025) less about 10-15% Investment Income Tax = 6.8-7.2%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just below the after-tax average deposit rate, the only safe-rate figure that could be sourced."
+    },
+    "retirement_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BNA policy rate 14.75% (Trading Economics); World Bank deposit rate 7.98%",
+      "sourceUrl": "https://tradingeconomics.com/angola/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: a retiree holds longer term deposits or Treasury bonds at rates above the average deposit rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Fixed income low 5%; equity low 6%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits and foreign equity in kwanza terms."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Fixed income base 7%; equity base 11% (global index in kwanza)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly kwanza deposits and bonds with some global equity, given the very small local stock market."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Fixed income high 9%; equity high 15%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning mix if the kwanza depreciates faster."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension amount was found; the INSS and ministry pages could not be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension eligibility rules were found (INSS and ILO pages could not be read)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No readable source for an end-of-service payment on retirement or resignation under the General Labour Law (Lei Geral do Trabalho, Law 12/23) was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Angola has a contributory social security system run by INSS (PwC Tax Summaries: employees pay 3% and employers 8% of gross pay, https://taxsummaries.pwc.com/angola/individual/other-taxes), but no readable source for its pension age, qualifying period or indexation was found."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conta poupança",
+      "localNameEn": "Savings account",
+      "note": "Offered by banks; no published average rate was found."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a prazo",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "No published average rate was found."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a prazo",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "The World Bank average deposit rate was 7.98% in 2025.",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=AO"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No monthly recurring-deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bilhetes do Tesouro",
+      "localNameEn": "Treasury bills",
+      "note": "Issued by the Ministry of Finance; individuals buy them through banks or BODIVA members. No current yield could be read."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obrigações do Tesouro",
+      "localNameEn": "Treasury bonds",
+      "note": "Treasury bonds are traded on BODIVA, the Angolan securities exchange. No current yield could be read."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": "Obrigações do Tesouro",
+      "localNameEn": "Treasury bonds (10 years)",
+      "note": "A 10-year benchmark yield could not be confirmed."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "No diversified equity mutual or index fund for retail investors was found; BODIVA lists only a few shares."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "note": "No retail market for investment gold bars or coins was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Nacional de Angola (BNA)",
+      "url": "https://www.bna.ao/"
+    },
+    "insuranceRegulator": {
+      "name": "Agência Angolana de Regulação e Supervisão de Seguros (ARSEG)",
+      "url": "https://www.arseg.ao/"
+    },
+    "insuranceComplaints": {
+      "name": "ARSEG, apresentar reclamação",
+      "url": "https://www.arseg.ao/consumidor/gestao-de-reclamacoes/apresentar-reclamacao/",
+      "note": "Complain to the insurer (or its customer ombudsman) first; ARSEG also takes complaints by e-mail and phone."
+    },
+    "pensionScheme": {
+      "name": "Instituto Nacional de Segurança Social (INSS)",
+      "url": "https://www.inss.gov.ao/",
+      "note": "Contributory social security: employees pay 3% and employers 8% of gross pay."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministério da Saúde, Serviço Nacional de Saúde",
+      "url": "https://minsa.gov.ao/",
+      "note": "Runs the public National Health Service facilities."
+    },
+    "depositInsurance": {
+      "name": "Fundo de Garantia de Depósitos (FGD)",
+      "url": "https://www.fgd.ao/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estatística (INE)",
+      "url": "https://www.ine.gov.ao/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

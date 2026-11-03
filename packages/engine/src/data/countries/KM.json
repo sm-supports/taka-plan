@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "code": "KM",
+  "iso3": "COM",
+  "nameEn": "Comoros",
+  "nameNative": "Komori",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "zdj",
+    "wni",
+    "fr",
+    "ar"
+  ],
+  "currency": {
+    "code": "KMF",
+    "symbol": "CF",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 435.376,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Comoros",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KM",
+      "asOf": "2025-12-31",
+      "note": "2025 average. The Comorian franc is fixed at 491.96775 per euro (BCC), so the dollar rate moves with the euro."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.016,
+      "status": "sourced",
+      "sourceName": "Central Bank of the Comoros (BCC), Monetary Policy Committee communiqué of 8 October 2026",
+      "sourceUrl": "https://banque-comores.km/uploads/Communiqu-CPM-10.26.pdf",
+      "asOf": "2026-06-30",
+      "note": "Consumer prices up 1.6% year on year in the second quarter of 2026; the BCC expects 1.8% for 2026 after 3.3% in 2025."
+    },
+    "inflation_projection": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCC: 3.3% inflation in 2025, 1.8% expected for 2026; franc fixed to the euro",
+      "sourceUrl": "https://banque-comores.km/uploads/Communiqu-CPM-10.26.pdf",
+      "asOf": "2026-10-31",
+      "note": "The franc is fixed to the euro, which anchors inflation near euro-area levels, but food and fuel shocks pushed it far higher in 2022-2023, so a rounded 3% is used."
+    },
+    "policy_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "BCC Monetary Policy Committee communiqué of 8 October 2026 (TSAO)",
+      "sourceUrl": "https://banque-comores.km/uploads/Communiqu-CPM-10.26.pdf",
+      "asOf": "2026-10-08",
+      "note": "Maximum rate on the BCC liquidity tenders (TSAO) kept at 2.5% on 8 October 2026 (marginal lending facility 5.5%, reserve requirement 10%)."
+    },
+    "savings_account_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "BCC, Taux d'intérêt de la BCC (minimum rate on savings deposits)",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc",
+      "asOf": "2023-08-15",
+      "note": "Minimum rate banks must pay on savings deposits, 2.5% since 1 August 2022 (was 1.75%); the BCC page was last updated in August 2023 (older than 2025) and no later change was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found on the BCC site or in its quarterly bulletin."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate was found on the BCC site or in its quarterly bulletin."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0206,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Comoros",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=KM",
+      "asOf": "2022-12-31",
+      "note": "2.06% in 2022, the latest World Bank value (older than 2025); the BCC raised the minimum savings rate from 1.75% to 2.5% in August 2022."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Treasury issues only 28-day bills through BCC auctions (weighted average rate 4.73% on 31 August 2026); no 91-day bill or yield exists."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bond market or 5-year yield was found; the Treasury issues only short-term bills."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No domestic government bond market or 10-year yield was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax rate on bank interest for individuals could not be confirmed from an official source; PwC Worldwide Tax Summaries has no Comoros page."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and no rule on its taxation was found."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit guarantee scheme or cover limit was found on the BCC site or in its quarterly bulletin."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "BCC, Taux d'intérêt de la BCC (range of lending rates, interest and fees)",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc",
+      "asOf": "2023-08-15",
+      "note": "Bank lending rates, interest and fees included, must lie between 2.5% and 14% a year since 1 August 2022; the 14% ceiling applies to all bank credit, cards included. The page dates from August 2023 (older than 2025)."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No stock exchange in the Comoros; franc fixed to the euro (491.96775 per euro, BCC)",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "No local stock market exists, so equity means a global index in euro terms (equal to franc terms under the peg); low case is a weak decade."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "No stock exchange in the Comoros; franc fixed to the euro (491.96775 per euro, BCC)",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "Global equities in euro terms, held to about 3.5 points above the 2.5% minimum savings rate, since access is only through foreign funds."
+    },
+    "equity_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "No stock exchange in the Comoros; franc fixed to the euro (491.96775 per euro, BCC)",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities repeat their long-run euro-terms record."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 491.96775 per euro (BCC); gold trend in euro terms",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold prices with no currency loss under the euro peg."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 491.96775 per euro (BCC); gold trend in euro terms",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run gold trend of about 4-5% a year in euro terms, which the franc follows."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Franc fixed at 491.96775 per euro (BCC); gold trend in euro terms",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "BCC minimum savings rate 2.5%; 28-day Treasury bills at 4.73% (banks only)",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits at or below the 2.5% minimum after any tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "BCC minimum savings rate 2.5%; 28-day Treasury bills at 4.73% (banks only)",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc",
+      "asOf": "2026-10-31",
+      "note": "Base case: savings and term deposits at about the 2.5% minimum; Treasury bills are sold only to banks."
+    },
+    "fixed_income_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCC minimum savings rate 2.5%; 28-day Treasury bills at 4.73% (banks only)",
+      "sourceUrl": "https://banque-comores.km/article/show/annonce-du-resultat-global-de-ladjudication-de-lappel-doffres-demission-de-bons-du-tresor-n00042026-du-31-aout-2026",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits nearer the 4.73% Treasury bill rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No life insurance claim settlement ratio was found; the Comoros is not a CIMA member and no national insurance supervisor publication was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per KMF 1,000 of cover were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.5657,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Comoros",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KM",
+      "asOf": "2023-12-31",
+      "note": "56.6% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 3%; no medical CPI found",
+      "sourceUrl": "https://banque-comores.km/uploads/Communiqu-CPM-10.26.pdf",
+      "asOf": "2026-10-31",
+      "note": "No medical price index was found; medical costs, much of them imported or paid abroad, are planned 1.5 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 3%; no education CPI found",
+      "sourceUrl": "https://banque-comores.km/uploads/Communiqu-CPM-10.26.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education price index was found; private school costs are planned 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 67.023,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Comoros",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KM",
+      "asOf": "2024-12-31",
+      "note": "67.0 years in 2024 (men 65.0, women 69.2)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.7,
+            "men": 15.4,
+            "women": 17.9
+          },
+          {
+            "age": 65,
+            "total": 13.2,
+            "men": 12.2,
+            "women": 14.2
+          },
+          {
+            "age": 70,
+            "total": 10.2,
+            "men": 9.4,
+            "women": 10.9
+          },
+          {
+            "age": 80,
+            "total": 5.7,
+            "men": 5.3,
+            "women": 6.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/comoros/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women except at 65, where the page gives 13.2 for both sexes."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 13.2
+          },
+          {
+            "year": 2040,
+            "value": 12.0
+          },
+          {
+            "year": 2065,
+            "value": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=KM",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 7.59 (2025, World Bank), 8.3 (2040, populationpyramid.net/comoros/2040/) and 12.8 (2065, populationpyramid.net/comoros/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age for private-sector workers could not be confirmed from an official source; no official site of a Comorian social security or pension fund was reachable."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age of civil servants (pensions paid by the Caisse de Retraite des Comores) could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "BCC minimum savings rate 2.5%; 28-day Treasury bills at 4.73% (banks only)",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings deposits after any tax."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "BCC minimum savings rate 2.5%; 28-day Treasury bills at 4.73% (banks only)",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept at the 2.5% minimum savings rate, the only published deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCC minimum savings rate 2.5%; 28-day Treasury bills at 4.73% (banks only)",
+      "sourceUrl": "https://banque-comores.km/article/show/annonce-du-resultat-global-de-ladjudication-de-lappel-doffres-demission-de-bons-du-tresor-n00042026-du-31-aout-2026",
+      "asOf": "2026-10-31",
+      "note": "High case: longer term deposits."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Safe rate 2.5%; global equity base 6% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bank savings."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Safe rate 2.5%; global equity base 6% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "Base case: deposits with some gold and foreign equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Safe rate 2.5%; global equity base 6% in euro terms; gold base 4.5%",
+      "sourceUrl": "https://banque-comores.km/page/show/devises-taux-de-change-contre-franc",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with foreign equity funds."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provisions on dismissal or end-of-service indemnity could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servants are covered by the Caisse de Retraite des Comores, but no official source for the pension age, indexation or a scheme for private-sector workers was reachable."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account",
+      "note": "Banks must pay at least the BCC minimum rate of 2.5% on savings deposits.",
+      "sourceUrl": "https://banque-comores.km/page/show/taux-dinteret-de-la-bcc"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Banks take term deposits (the BCC counts term savings in money supply), but rates are not published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Banks take term deposits, but rates are not published."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bons du Trésor",
+      "localNameEn": "Treasury bills",
+      "note": "Only 28-day Treasury bills are issued, by BCC auction to banks.",
+      "sourceUrl": "https://banque-comores.km/article/show/annonce-du-resultat-global-de-ladjudication-de-lappel-doffres-demission-de-bons-du-tresor-n00042026-du-31-aout-2026"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic government bond market was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic government bond market was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "There is no stock exchange in the Comoros and no locally sold equity fund was found; investors can only use foreign funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; the BCC publishes gold prices.",
+      "sourceUrl": "https://banque-comores.km/page/show/cours-de-lor"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of the Comoros (Banque Centrale des Comores, BCC)",
+      "url": "https://banque-comores.km/"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Institute of Statistics and Economic and Demographic Studies (INSEED)",
+      "url": "https://www.inseed.km/",
+      "note": "Linked from the BCC site; the site did not respond on 31 October 2026."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

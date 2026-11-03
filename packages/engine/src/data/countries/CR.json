@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "code": "CR",
+  "iso3": "CRI",
+  "nameEn": "Costa Rica",
+  "nameNative": "Costa Rica",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "en"
+  ],
+  "currency": {
+    "code": "CRC",
+    "symbol": "₡",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 455.44,
+      "status": "sourced",
+      "sourceName": "Banco Central de Costa Rica, reference exchange rate (selling), US dollar",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/125?Cuadro=491",
+      "asOf": "2026-10-30",
+      "note": "CRC 455.44 per US dollar on 30 October 2026 (456.04 on 31 October); World Bank 2025 average 503.5, so the colón has strengthened about 9% in a year."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0034,
+      "status": "sourced",
+      "sourceName": "INEC Costa Rica, Índice de Precios al Consumidor, setiembre 2026",
+      "sourceUrl": "https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2026/10/coEconomIPC092026-01.pdf",
+      "asOf": "2026-09-30",
+      "note": "CPI rose 0.34% in the 12 months to September 2026 (published 7 October 2026), the first positive reading after 16 months of year-on-year deflation; World Bank 2025 average -0.07%. October CPI is due in early November."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "BCCR inflation target 3% ±1 point; CPI well below the target range for 41 straight months",
+      "sourceUrl": "https://www.bccr.fi.cr/cr/es/noticias/listado-de-noticias/2026/junta-directiva-del-bccr-acordo-mantener-la-tasa-de-politica-monetaria-en-3,00-por-ciento-anual-24-09-2026.html",
+      "asOf": "2026-10-31",
+      "note": "The BCCR targets 3%, but inflation has run below the 2-4% range since 2023 (about 0% in 2024-2026), so planning uses 2.5%, a little under the target."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Banco Central de Costa Rica (BCCR), Tasa de Política Monetaria, decision of 24 September 2026",
+      "sourceUrl": "https://www.bccr.fi.cr/cr/es/noticias/listado-de-noticias/2026/junta-directiva-del-bccr-acordo-mantener-la-tasa-de-politica-monetaria-en-3,00-por-ciento-anual-24-09-2026.html",
+      "asOf": "2026-09-24",
+      "note": "Held at 3.00% on 24 September 2026 after a 25-basis-point cut on 23 July 2026; next meeting 26 November 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published average rate for ordinary colón savings accounts was found; the BCCR publishes negotiated term-deposit rates only (deposits of 1 to 6 days paid 0.18% in October 2026)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0379,
+      "status": "sourced",
+      "sourceName": "BCCR, Tasa pasiva negociada (TPN) por plazo, all deposit-taking institutions, 90-119 days, colones",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-27",
+      "note": "Weighted average negotiated rate on new colón term deposits of 90-119 days, week of 21-27 October 2026 (3.60% the week before); public banks 3.82%. Gross of the 15% withholding tax."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0568,
+      "status": "sourced",
+      "sourceName": "BCCR, Tasa pasiva negociada (TPN) por plazo, all deposit-taking institutions, 360-539 days, colones",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-27",
+      "note": "Weighted average negotiated rate on new colón term deposits of 360-539 days, week of 21-27 October 2026 (public banks 5.31%, private banks 5.54%, cooperatives 6.08%). Gross of tax."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks and cooperatives offer programmed monthly savings plans (ahorro programado), but no published average rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0453,
+      "status": "sourced",
+      "sourceName": "BCCR, Tasa pasiva negociada (TPN), weighted average of all terms, all deposit-taking institutions, colones",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-27",
+      "note": "Weighted average of new colón term deposits of all terms, week of 21-27 October 2026. The BCCR's Tasa Básica Pasiva was 3.56% for early November 2026; World Bank deposit rate 3.44% (2025)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Costa Rica has no separate government savings certificate for individuals; individuals buy ordinary Ministry of Finance securities (see the bond slots)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0398,
+      "status": "sourced",
+      "sourceName": "BCCR, Curva de rendimiento soberana en colones, 3-month point (net yield)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369",
+      "asOf": "2026-10-28",
+      "note": "Sovereign colón curve for the week of 28 October-3 November 2026: 3 months 3.976% (4.041% the week before). The BCCR publishes the curve net of income tax (about 4.7% gross at the 15% rate)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0577,
+      "status": "sourced",
+      "sourceName": "BCCR, Curva de rendimiento soberana en colones, 5-year point (net yield)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369",
+      "asOf": "2026-10-28",
+      "note": "5-year net yield 5.770% for the week of 28 October-3 November 2026 (about 6.8% gross at 15% tax)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0622,
+      "status": "sourced",
+      "sourceName": "BCCR, Curva de rendimiento soberana en colones, 10-year point (net yield)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369",
+      "asOf": "2026-10-28",
+      "note": "10-year net yield 6.220% for the week of 28 October-3 November 2026 (about 7.3% gross at 15% tax)."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Costa Rica, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/costa-rica/individual/income-determination",
+      "asOf": "2026-06-30",
+      "note": "Interest is taxed as income from movable capital at 15%, withheld at source (page reviewed 30 June 2026). Savings at some public-law and cooperative entities are on a phase-in that reached 14% in July 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Costa Rica, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/costa-rica/individual/income-determination",
+      "asOf": "2026-06-30",
+      "note": "No separate savings certificate exists; interest on government securities is capital income taxed at 15% (older issues kept an 8% rate)."
+    },
+    "deposit_insurance_limit": {
+      "value": 6000000,
+      "status": "sourced",
+      "sourceName": "BCCR, Fondo de Garantía de Depósitos, productos garantizados",
+      "sourceUrl": "https://www.bccr.fi.cr/cr/es/fondo-garantia-depositos/productos-garantizados.html",
+      "asOf": "2026-10-31",
+      "note": "Up to CRC 6,000,000 per person per entity (Law 9816), principal only, any currency; the amount is to be adjusted for inflation by regulation. State-owned commercial banks also carry an unlimited state guarantee."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.3648,
+      "status": "sourced",
+      "sourceName": "BCCR maximum (usury) annual rate for colón credit, second half of 2026, as reported by Delfino.cr",
+      "sourceUrl": "https://www.delfino.cr/2026/07/topes-de-usura-tendran-ajustes-mixtos-para-el-segundo-semestre",
+      "asOf": "2026-07-01",
+      "note": "Legal cap under the usury law: 36.48% a year in colones (30.11% in dollars) for July-December 2026, applying to credit cards; secondary source reporting the BCCR's calculation."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No meaningful local stock market; global equities in colón terms. Colón rose about 9% against the dollar in the year to October 2026 (BCCR reference rate)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/125?Cuadro=491",
+      "asOf": "2026-10-31",
+      "note": "Low case: a strong colón and weak global shares leave equities only a little above after-tax deposits."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Global equity index in colón terms; after-tax 1-year deposit 5.68% x 0.85 = 4.8% (BCCR TPN)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-31",
+      "note": "Costa Rica's local exchange lists very few shares, so equity is a global index fund in colones: about 2.7 points over the after-tax safe rate, allowing for long-run colón strength."
+    },
+    "equity_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Global equity long-run record plus modest colón depreciation",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/125?Cuadro=491",
+      "asOf": "2026-10-31",
+      "note": "High case: global shares repeat their long-run record and the colón gives back part of its recent gains."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026, 3% lower in a year and well below its January 2026 peak (Trading Economics); colón appreciation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stays flat in dollars and the colón holds its strength."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Gold USD price trend (Trading Economics); BCCR 3% inflation target",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold tracks long-run dollar inflation plus a little, with the colón roughly stable to slightly weaker against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: gold resumes its 2020s uptrend and the colón weakens."
+    },
+    "fixed_income_return_low": {
+      "value": 0.032,
+      "status": "assumption",
+      "sourceName": "3-month term deposit 3.79% less 15% tax = 3.2% (BCCR TPN)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short deposits after tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.048,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 5.68% less 15% tax = 4.8% (BCCR TPN)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-31",
+      "note": "Base case: one-year colón term deposits after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.058,
+      "status": "assumption",
+      "sourceName": "5-year government bond 5.77% net of tax (BCCR sovereign curve)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in five-year government bonds at today's net yield."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "SUGESE publishes insurance market statistics but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Costa Rica, but no regulator or other non-company source with indicative premiums by age was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a private hospital stay was found; most care is provided free at the point of use by the CCSS."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or other non-company source of private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2413,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CR",
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket spending was 24.1% of current health expenditure in 2023 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "INEC CPI September 2026: health division weight 6.65%, +0.04% in the month",
+      "sourceUrl": "https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2026/10/coEconomIPC092026-01.pdf",
+      "asOf": "2026-10-31",
+      "note": "Medical prices in Costa Rica have risen faster than the near-zero overall CPI; planning uses 4%, about 1.5 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "INEC CPI September 2026: educational services weight 4.30%, -0.01% in the month",
+      "sourceUrl": "https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2026/10/coEconomIPC092026-01.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education fees usually rise once a year faster than general prices; planning uses 4%."
+    },
+    "life_expectancy": {
+      "value": 80.996,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CR",
+      "asOf": "2024-12-31",
+      "note": "Men 78.4, women 83.6 (2024)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/costa-rica",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 25.2,
+            "men": 23.5,
+            "women": 26.6
+          },
+          {
+            "age": 65,
+            "total": 21.0,
+            "men": 19.5,
+            "women": 22.3
+          },
+          {
+            "age": 70,
+            "total": 17.0,
+            "men": 15.6,
+            "women": 18.1
+          },
+          {
+            "age": 80,
+            "total": 9.9,
+            "men": 8.8,
+            "women": 10.7
+          }
+        ]
+      },
+      "note": "Remaining years derived from the 'life expectancy by current age' table for 2026 (UN WPP)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/costa-rica/2065/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.41
+          },
+          {
+            "year": 2040,
+            "value": 3.31
+          },
+          {
+            "year": 2065,
+            "value": 1.64
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 18.5 in 2025 (World Bank), 30.2 in 2040 and 61.1 in 2065 (UN WPP medium variant)."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "CCSS, Reglamento del Seguro de Invalidez, Vejez y Muerte, article 5 (SCIJ)",
+      "sourceUrl": "https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=26485&param2=148515&param3=1",
+      "asOf": "2026-10-31",
+      "note": "Ordinary old-age pension at 65 with 300 monthly contributions (proportional pension at 65 with 180-299). Women may retire early from 63 with 405 contributions; early retirement for men was abolished in the 2023 reform."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "CCSS, Reglamento del Seguro de Invalidez, Vejez y Muerte, article 5 (SCIJ)",
+      "sourceUrl": "https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=26485&param2=148515&param3=1",
+      "asOf": "2026-10-31",
+      "note": "Most central-government employees have been in the CCSS IVM scheme since the 1992 pension reform, so 65 applies; teachers and judicial staff have separate schemes with similar ages."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "3-month term deposit 3.79% less 15% tax (BCCR TPN)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-31",
+      "note": "Low case: rolling short deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "1-year term deposit 5.68% less 15% tax = 4.8% (BCCR TPN)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly one-year deposits and short government bonds, kept below the 4.8% after-tax one-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "5-year government bond 5.77% net (BCCR sovereign curve)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of medium-term government bonds at today's net yields."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "After-tax deposits 3.2-4.8%; equity low case 3%",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits, government bonds and global equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Fixed income base 4.8%; equity base 7.5%",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half safe colón fixed income and half global equity."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Equity high 11%; 5-year government bond 5.8% net",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369",
+      "asOf": "2026-10-31",
+      "note": "High case: equities do well and bond yields stay high."
+    },
+    "old_age_allowance_monthly": {
+      "value": 82000,
+      "status": "sourced",
+      "sourceName": "CRHoy.com report on the Régimen No Contributivo bill, 20 August 2026 (secondary source)",
+      "sourceUrl": "https://crhoy.com/nacionales/que-propone-el-proyecto-del-gobierno-sobre-las-pensiones-del-regimen-no-contributivo/",
+      "asOf": "2026-08-20",
+      "note": "The CCSS non-contributory pension pays about CRC 82,000 a month plus a 13th payment; the amount has not changed since 2019, and about 32,000 eligible people were on a waiting list in August 2026."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "SUPEN, how to get a pension without contributions (Régimen No Contributivo)",
+      "sourceUrl": "https://www.supen.fi.cr/como-obtener-una-pension-si-no-he-realizado-aportes-no-contributivo",
+      "asOf": "2026-10-29",
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "note": "Age 65 or over, Costa Rican, in poverty or extreme poverty (household income per person not above the pension amount), no other pension, no relatives able to help and no property other than a modest home."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Código de Trabajo, article 29 (auxilio de cesantía), text as reproduced by Diario Extra",
+      "sourceUrl": "https://www.diarioextra.com/noticia/texto-del-articulo-29-del-codigo-de-trabajo/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "daysPerYear": 19.5,
+        "daysPerYearAfter": 22,
+        "afterYears": 6,
+        "daysPerMonth": 30
+      },
+      "note": "Severance (cesantía) is due on dismissal without just cause and certain other terminations (bill 23.078 proposed excluding people who retire on a pension): 19.5 days' wages per year after 1 year, rising each year to 22 days in years 7-9 and easing to 20 days from year 13; capped at the last 8 years of service. Daily wage = average monthly wage / 30."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "CCSS, Reglamento del Seguro de Invalidez, Vejez y Muerte (SCIJ)",
+      "sourceUrl": "https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=26485&param2=148515&param3=1",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "note": "Mandatory for all employees and the self-employed. Pension at 65 with 300 contributions, based on the best 300 monthly wages updated by CPI; pensions in payment are revalued periodically by the CCSS board in line, as far as possible, with the cost of living. A mandatory individual account (ROP) adds to it."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorro",
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Certificado de depósito a plazo (CDP) a 3 meses",
+      "localNameEn": "Term deposit certificate (3 months)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Certificado de depósito a plazo (CDP) a 1 año",
+      "localNameEn": "Term deposit certificate (1 year)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/369?Cuadro=886"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Ahorro programado",
+      "localNameEn": "Programmed monthly savings plan",
+      "note": "Monthly savings plans are offered by banks and cooperatives; no average rate is published."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No separate retail savings certificate; individuals can buy ordinary Ministry of Finance securities."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Títulos cero cupón del Gobierno",
+      "localNameEn": "Government zero-coupon bills",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Títulos de propiedad del Gobierno",
+      "localNameEn": "Government bonds (títulos de propiedad)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Títulos de propiedad del Gobierno",
+      "localNameEn": "Government bonds (títulos de propiedad)",
+      "sourceUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/366?Cuadro=369"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondos de inversión",
+      "localNameEn": "Investment funds",
+      "note": "Local funds are mostly money-market, bond and real-estate funds; global equity funds and ETFs are bought through securities brokers."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro de inversión (lingotes y monedas)",
+      "localNameEn": "Investment gold (bars and coins)"
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de Costa Rica (BCCR)",
+      "url": "https://www.bccr.fi.cr/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia General de Seguros (SUGESE)",
+      "url": "https://www.sugese.fi.cr/"
+    },
+    "insuranceComplaints": {
+      "name": "SUGESE, consumer queries and complaints",
+      "url": "https://www.sugese.fi.cr/cr/es/sobre-sugese/tramites/gestiones-consumidor-financiero.html"
+    },
+    "pensionScheme": {
+      "name": "Caja Costarricense de Seguro Social (CCSS), Seguro de Invalidez, Vejez y Muerte (IVM)",
+      "url": "https://www.ccss.sa.cr/"
+    },
+    "oldAgeAllowance": {
+      "name": "CCSS Régimen No Contributivo de Pensiones",
+      "url": "https://www.supen.fi.cr/como-obtener-una-pension-si-no-he-realizado-aportes-no-contributivo"
+    },
+    "publicHealthCover": {
+      "name": "Caja Costarricense de Seguro Social (CCSS), Seguro de Salud",
+      "url": "https://www.ccss.sa.cr/"
+    },
+    "depositInsurance": {
+      "name": "Fondo de Garantía de Depósitos (administered by the BCCR)",
+      "url": "https://www.bccr.fi.cr/cr/es/fondo-garantia-depositos.html"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística y Censos (INEC)",
+      "url": "https://inec.cr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

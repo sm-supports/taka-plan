@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "CO",
+  "iso3": "COL",
+  "nameEn": "Colombia",
+  "nameNative": "Colombia",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "en"
+  ],
+  "currency": {
+    "code": "COP",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3182.99,
+      "status": "sourced",
+      "sourceName": "Superintendencia Financiera de Colombia, Tasa Representativa del Mercado (TRM), datos.gov.co dataset 32sa-8pi3",
+      "sourceUrl": "https://www.datos.gov.co/resource/32sa-8pi3.json",
+      "asOf": "2026-10-31",
+      "note": "Official TRM of COP 3,182.99 per US dollar valid from 31 October 2026 (3,166.91 on 30 October); World Bank 2025 average 4,053, so the peso has strengthened sharply in 2026."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0629,
+      "status": "sourced",
+      "sourceName": "DANE, Boletín técnico IPC septiembre 2026",
+      "sourceUrl": "https://www.dane.gov.co/files/operaciones/IPC/sep2026/bol-IPC-sep2026.pdf",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices rose 6.29% in the 12 months to September 2026 (released 7 October 2026); 6.24% in August. World Bank 2025 average 5.1%."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Banco de la República 3% target (+/-1 pt); CPI 6.29% in September 2026 (DANE); expectations for December 2026 at 6.9% (Trading Economics)",
+      "sourceUrl": "https://www.dane.gov.co/files/operaciones/IPC/sep2026/bol-IPC-sep2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Inflation has stayed well above the 3% target since 2021 (5-year average about 7-8%) and expectations are rising, so planning uses 5%, between the target and recent history."
+    },
+    "policy_rate": {
+      "value": 0.1225,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Colombia interest rate (Banco de la República board decision of 30 Oct 2026) (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/colombia/interest-rate",
+      "asOf": "2026-10-30",
+      "note": "The board kept the policy rate at 12.25% by majority on 30 October 2026 after a 25 bp rise at its previous meeting. Secondary source: the central bank's own site blocked automated access, though its home-page headline showed the same decision."
+    },
+    "savings_account_rate": {
+      "value": 0.0084,
+      "status": "sourced",
+      "sourceName": "Superintendencia Financiera de Colombia, daily deposit rates by entity (datos.gov.co dataset axk9-g2nh): banks, active savings deposits of individuals",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json",
+      "asOf": "2026-10-28",
+      "note": "Balance-weighted average rate on active savings accounts of individuals at banks was about 0.84% a year (effective annual) over 22-28 October 2026; computed by us across all reporting banks."
+    },
+    "fdr_3m_rate": {
+      "value": 0.1069,
+      "status": "sourced",
+      "sourceName": "Superintendencia Financiera de Colombia, daily deposit rates by entity (datos.gov.co dataset axk9-g2nh): banks, CDT issues at 90 days",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json",
+      "asOf": "2026-10-28",
+      "note": "Amount-weighted average rate on new 90-day CDTs at banks was 10.69% effective annual over 22-28 October 2026 (10.86% on 28 October); computed by us across all reporting banks."
+    },
+    "fdr_1y_rate": {
+      "value": 0.1265,
+      "status": "sourced",
+      "sourceName": "Superintendencia Financiera de Colombia, daily deposit rates by entity (datos.gov.co dataset axk9-g2nh): banks, CDT issues at 360 days",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json",
+      "asOf": "2026-10-28",
+      "note": "Amount-weighted average rate on new 360-day CDTs at banks was 12.65% effective annual over 22-28 October 2026 (180 days: 11.34%; over 360 days: 12.86%)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring-deposit product with a published average rate was found for Colombia; programmed-savings accounts exist but their rates are not reported separately to the Superintendencia Financiera."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0896,
+      "status": "sourced",
+      "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CO",
+      "asOf": "2025-12-31",
+      "note": "8.96% for 2025 (10.17% in 2024); today's CDT rates are higher (90-day 10.7%, 360-day 12.7%)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found in Colombia; government TES bonds are bought through brokers or funds."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Treasury issues short-term TES (TCO) of up to one year, but no current 3-month yield could be read (the central bank site blocked access)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current 5-year TES yield could be read: the central bank's yield-curve pages blocked automated access and Trading Economics shows only the 10-year yield."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1302,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Colombia 10-year government bond yield (secondary source)",
+      "sourceUrl": "https://tradingeconomics.com/colombia/government-bond-yield",
+      "asOf": "2026-10-30",
+      "note": "10-year peso TES yield 13.02% on 30 October 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.19,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Colombia taxes on personal income and income determination (reviewed 21 Jul 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/colombia/individual/taxes-on-personal-income",
+      "asOf": "2026-07-21",
+      "note": "Interest is capital income in the general basket, taxed at progressive rates (0% up to 1,090 UVT, then 19%, 28%, 33% and up to 39%); 19% is the first taxed bracket (UVT COP 52,347 in 2026). The inflationary component of financial yields is exempt for individuals, so the effective rate is lower; banks also withhold at source and charge the 0.4% financial transactions tax on withdrawals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no government savings certificate in Colombia; TES interest is taxed like other interest."
+    },
+    "deposit_insurance_limit": {
+      "value": 50000000,
+      "status": "sourced",
+      "sourceName": "Fogafín, ¿Qué es el Seguro de Depósitos?",
+      "sourceUrl": "https://www.fogafin.gov.co/que-es-el-seguro-de-depositos",
+      "asOf": "2026-10-31",
+      "note": "Fogafín's deposit insurance repays depositors up to COP 50 million per person per failed institution (banks, financial corporations, finance companies and electronic payment companies)."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2859,
+      "status": "sourced",
+      "sourceName": "Superintendencia Financiera de Colombia, certified bank current interest rate (TIBC) for consumer and ordinary credit, Resolution 1472 of 2026 (datos.gov.co pare-7x5i)",
+      "sourceUrl": "https://www.datos.gov.co/resource/pare-7x5i.json?modalidad=CONSUMO%20Y%20ORDINARIO",
+      "asOf": "2026-10-01",
+      "note": "The usury cap is 1.5 times the certified current rate: TIBC 19.06% for October 2026, so cards may charge at most about 28.59% effective annual (TIBC 18.89% certified for November 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "MSCI COLCAP 2,490.92 on 30 Oct 2026, up 25% in a year, record 2,627 in September 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/colombia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: Colombian shares fall back to their weak 2015-2023 record and earn less than CDTs."
+    },
+    "equity_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "COLCAP history (Trading Economics); 360-day CDT 12.65% less 19% tax = 10.2%",
+      "sourceUrl": "https://tradingeconomics.com/colombia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case kept close to the after-tax safe rate because the COLCAP's 10-year record is weak despite the 2025-26 rally; well under the safe rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "COLCAP record high in September 2026 (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/colombia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: Colombian and global shares earn a real equity premium as interest rates fall."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); COP 3,183 per USD (TRM 31 Oct 2026)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Low case: gold stalls after the 2025-26 rally and the peso keeps its 2026 strength."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics); Colombian inflation about 3 points above US inflation",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "Base case: gold rises roughly with world inflation plus a little in dollars, and the peso loses about 3% a year against the dollar over the long run."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Gold USD price history (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of gold's strong 2005-2025 trend in pesos."
+    },
+    "fixed_income_return_low": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "90-day CDT 10.69% (Superintendencia Financiera) less tax",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json",
+      "asOf": "2026-10-31",
+      "note": "Low case: short CDTs after tax, with the policy rate cut back towards neutral."
+    },
+    "fixed_income_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "360-day CDT 12.65% (Superintendencia Financiera) less tax, allowing for lower rates later",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year CDTs after tax, allowing for interest rates to fall as inflation returns towards target."
+    },
+    "fixed_income_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "10-year TES 13.02% less 19% tax = 10.5% (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/colombia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: locking in today's long TES yields and holding to maturity."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Superintendencia Financiera publishes insurance statistics, but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life insurance (seguro de vida) is sold in Colombia, but no regulator or other public table of premiums per COP 1,000 of cover by age was found; only company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Hospital care is covered by the mandatory health system (EPS); no official figure for the typical out-of-pocket cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Voluntary private health plans (medicina prepagada, complementary plans) are priced per person, not per sum insured; no public premium table per COP 100,000 of cover was found."
+    },
+    "oop_health_share": {
+      "value": 0.1474,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CO",
+      "asOf": "2024-12-31",
+      "note": "Out-of-pocket spending was 14.7% of current health expenditure in 2024 (latest available; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "DANE, IPC September 2026: Salud division up 7.79% over 12 months",
+      "sourceUrl": "https://www.dane.gov.co/files/operaciones/IPC/sep2026/bol-IPC-sep2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 7.79% against 6.29% for all items; planning uses 6.5%, about 1.5 points above general planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "DANE, IPC September 2026: Educación division up 7.49% over 12 months",
+      "sourceUrl": "https://www.dane.gov.co/files/operaciones/IPC/sep2026/bol-IPC-sep2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 7.49% against 6.29% for all items; planning uses 6.5%."
+    },
+    "life_expectancy": {
+      "value": 78.3,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/colombia",
+      "asOf": "2026-07-01",
+      "note": "Life expectancy at birth 78.3 years in 2026 (men 75.6, women 80.9), UN WPP estimate. World Bank 2024: 77.9."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/colombia",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.9,
+            "men": 21.2,
+            "women": 24.3
+          },
+          {
+            "age": 65,
+            "total": 18.7,
+            "men": 17.2,
+            "women": 20.0
+          },
+          {
+            "age": 70,
+            "total": 14.8,
+            "men": 13.4,
+            "women": 15.9
+          },
+          {
+            "age": 80,
+            "total": 8.1,
+            "men": 7.1,
+            "women": 8.8
+          }
+        ]
+      },
+      "note": "Remaining years from georank's expected age at death by current age (UN WPP 2026 estimate)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/colombia/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 6.84
+          },
+          {
+            "year": 2040,
+            "value": 4.08
+          },
+          {
+            "year": 2065,
+            "value": 2.02
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 14.6 (2025, World Bank), 24.5 (2040) and 49.5 (2065, populationpyramid.net/colombia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "Ley 100 de 1993, art. 33 as amended by Ley 797 de 2003 (Senate legal database)",
+      "sourceUrl": "https://www.secretariasenado.gov.co/senado/basedoc/ley_0100_1993.html",
+      "asOf": "2026-10-15",
+      "note": "Pension age 62 for men and 57 for women in the public pay-as-you-go scheme (Colpensiones), with at least 1,300 weeks of contributions (the Constitutional Court ordered fewer weeks for women). The 2024 pension reform (Ley 2381) keeps these ages, but its entry into force is still suspended (database updated 15 October 2026)."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "Ley 100 de 1993, art. 33; Ley 1821 de 2016 (Senate legal database)",
+      "sourceUrl": "https://www.secretariasenado.gov.co/senado/basedoc/ley_1821_2016.html",
+      "asOf": "2026-10-15",
+      "note": "Public servants draw a pension at the same 62 (men) / 57 (women) under the general system; Ley 1821 of 2016 sets 70 as the maximum age for holding public office."
+    },
+    "retirement_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "90-day CDT 10.69% less tax (Superintendencia Financiera)",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json",
+      "asOf": "2026-10-31",
+      "note": "Low case: short CDTs after tax as interest rates fall."
+    },
+    "retirement_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "360-day CDT 12.65% less 19% tax = 10.2% (Superintendencia Financiera; PwC)",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax 1-year CDT rate, allowing for the policy rate to fall from 12.25%."
+    },
+    "retirement_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "10-year TES 13.02% less tax (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/colombia/government-bond-yield",
+      "asOf": "2026-10-31",
+      "note": "High case: long TES or long CDTs bought at today's yields and held."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "After-tax CDTs; COLCAP record (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/colombia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix if shares lag and rates fall."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Fixed income base 9%; equity base 11%",
+      "sourceUrl": "https://tradingeconomics.com/colombia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Base case: roughly half shares at 11% and half safe fixed income at about 9% after tax."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.125,
+      "status": "assumption",
+      "sourceName": "Equity high 15%; after-tax 10-year TES 10.5%",
+      "sourceUrl": "https://tradingeconomics.com/colombia/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case for a growth-leaning balanced mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Colombia has a non-contributory old-age subsidy for poor older people (Colombia Mayor; the 2024 reform's Renta Básica Solidaria is not yet in force), but its current monthly amount could not be read: the administering agency's sites did not respond."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ley 100 art. 257 sets the original rule (65+, Colombian, 10 years' residence, lacking income), but the current Colombia Mayor age and targeting rules set by regulation could not be confirmed from an official page."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Código Sustantivo del Trabajo, art. 249 (auxilio de cesantía) (Senate legal database)",
+      "sourceUrl": "https://www.secretariasenado.gov.co/senado/basedoc/codigo_sustantivo_trabajo_pr008.html",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "note": "Employers must pay severance (cesantías) of one month's salary per year of service, pro rata, when the contract ends; it is deposited each year in a severance fund and earns 12% annual interest paid to the worker. It can also be drawn for housing or education."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "Ley 100 de 1993, arts. 14 and 33 (Senate legal database)",
+      "sourceUrl": "https://www.secretariasenado.gov.co/senado/basedoc/ley_0100_1993.html",
+      "asOf": "2026-10-15",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 62,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "note": "Compulsory General Pension System: the public defined-benefit scheme run by Colpensiones or private individual accounts. Pension at 62 (men) / 57 (women) with 1,300 weeks; pensions are raised every 1 January by the previous year's CPI (minimum-wage pensions by the minimum-wage rise). The 2024 reform (Ley 2381) remains suspended."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorros",
+      "localNameEn": "Savings account",
+      "note": "Pays very little interest; withdrawals above a monthly exempt amount pay the 0.4% financial transactions tax.",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "CDT (Certificado de Depósito a Término)",
+      "localNameEn": "Term deposit certificate (CDT), 90 days",
+      "note": "Covered by Fogafín up to COP 50 million.",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "CDT (Certificado de Depósito a Término)",
+      "localNameEn": "Term deposit certificate (CDT), 360 days",
+      "sourceUrl": "https://www.datos.gov.co/resource/axk9-g2nh.json"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Recurring deposit",
+      "note": "No standard monthly recurring-deposit product with published rates."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government savings certificate",
+      "note": "No retail government savings certificate; TES are bought through brokers or funds."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "TES de corto plazo (TCO)",
+      "localNameEn": "Short-term Treasury securities (TCO)",
+      "note": "Issued for terms up to one year; individuals buy them through brokers. No current yield could be read."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "TES (Títulos de Tesorería)",
+      "localNameEn": "Treasury bonds (TES), 5 years",
+      "note": "Peso fixed-rate and UVR-indexed TES; bought through brokers or bond funds."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "TES (Títulos de Tesorería)",
+      "localNameEn": "Treasury bonds (TES), 10 years",
+      "sourceUrl": "https://tradingeconomics.com/colombia/government-bond-yield"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Fondo de inversión colectiva / ETF",
+      "localNameEn": "Collective investment fund or index fund (ETF)",
+      "note": "Collective investment funds and ETFs on the Colombian and global markets are available to retail investors; voluntary pension funds carry tax relief."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro físico (lingotes y monedas)",
+      "localNameEn": "Physical gold bars and coins",
+      "note": "Buying physical gold is legal."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco de la República",
+      "url": "https://www.banrep.gov.co/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia Financiera de Colombia",
+      "url": "https://www.superfinanciera.gov.co/"
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia Financiera de Colombia (consumer complaints) and each insurer's Defensor del Consumidor Financiero",
+      "url": "https://www.superfinanciera.gov.co/",
+      "note": "Complain to the insurer or its financial consumer ombudsman first, then to the Superintendencia Financiera."
+    },
+    "pensionScheme": {
+      "name": "Colpensiones (public pension administrator)",
+      "url": "https://www.colpensiones.gov.co/"
+    },
+    "oldAgeAllowance": {
+      "name": "Colombia Mayor, Departamento Administrativo para la Prosperidad Social",
+      "url": "https://prosperidadsocial.gov.co/"
+    },
+    "publicHealthCover": {
+      "name": "Sistema General de Seguridad Social en Salud, Ministerio de Salud y Protección Social",
+      "url": "https://www.minsalud.gov.co/"
+    },
+    "depositInsurance": {
+      "name": "Fondo de Garantías de Instituciones Financieras (Fogafín)",
+      "url": "https://www.fogafin.gov.co/que-es-el-seguro-de-depositos"
+    },
+    "statistics": {
+      "name": "Departamento Administrativo Nacional de Estadística (DANE)",
+      "url": "https://www.dane.gov.co/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

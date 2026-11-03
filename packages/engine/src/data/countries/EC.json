@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 1,
+  "code": "EC",
+  "iso3": "ECU",
+  "nameEn": "Ecuador",
+  "nameNative": "Ecuador",
+  "region": "latin_america_caribbean",
+  "languages": [
+    "es",
+    "qu"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=EC",
+      "asOf": "2025-12-31",
+      "note": "Ecuador has used the US dollar as its official currency since 2000."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0134,
+      "status": "sourced",
+      "sourceName": "Trading Economics (INEC consumer price index)",
+      "sourceUrl": "https://tradingeconomics.com/ecuador/inflation-cpi",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: annual inflation 1.34% in September 2026 (1.12% in August); the INEC release for September could not be reached."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank FP.CPI.TOTL.ZG (0.7% in 2025); CPI 1.1-1.7% in 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=EC",
+      "asOf": "2026-10-31",
+      "note": "Ecuador uses the US dollar and has no inflation target; inflation averaged under 2% a year in 2021-2025 (peak 3.5% in 2022), so we plan with 2%."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Ecuador is officially dollarised and the Banco Central del Ecuador sets no monetary policy rate; it publishes reference and maximum lending rates instead."
+    },
+    "savings_account_rate": {
+      "value": 0.016,
+      "status": "sourced",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Reference rate on savings deposits. Published by the BCE as the reference rates for November 2026, computed from deposits taken in the preceding weeks."
+    },
+    "fdr_3m_rate": {
+      "value": 0.042,
+      "status": "sourced",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Effective reference rate for term deposits of 61-90 days (30-60 days 3.96%, 91-120 days 4.38%). Published by the BCE as the reference rates for November 2026, computed from deposits taken in the preceding weeks."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0619,
+      "status": "sourced",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Effective reference rate for term deposits of 361 days and more (181-360 days 4.83%). Published by the BCE as the reference rates for November 2026, computed from deposits taken in the preceding weeks."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCE rate tables have no series for monthly recurring deposits; no official rate found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0483,
+      "status": "sourced",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Tasa pasiva referencial, the BCE's weighted average deposit rate. Published by the BCE as the reference rates for November 2026, computed from deposits taken in the preceding weeks. World Bank FR.INR.DPST gives 5.3% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond sold directly to individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current yield for Treasury certificates (CETES) was found; Ministry of Finance auction results could not be located."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond yield was found; local-market Bonos del Estado are not quoted in a reachable public source."
+    },
+    "tbond_10y_rate": {
+      "value": 0.08975,
+      "status": "sourced",
+      "sourceName": "Ministerio de Economía y Finanzas, Bulletin 061 (eurobond issue)",
+      "sourceUrl": "https://ire.finanzas.gob.ec/content\\2026\\01\\2026.01.27_61.pdf",
+      "asOf": "2026-01-26",
+      "note": "US-dollar eurobonds maturing 2034 and 2039 issued in January 2026 at an average yield of 8.975%; used as the closest available figure to a 10-year government yield."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Primicias: SRI raises withholding on financial returns to 3% (March 2026)",
+      "sourceUrl": "https://www.primicias.ec/economia/sri-retencion-impuesto-renta-inversiones-polizas-bancos-cooperativas-117479/",
+      "asOf": "2026-03-01",
+      "note": "Secondary source: interest on term deposits of 180 days or more is exempt from income tax (Ley de Régimen Tributario Interno art. 9) and savings-account interest is exempt (PwC Tax Summaries, July 2026); shorter deposits have 3% withheld from 1 March 2026 as an advance on income tax."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found, so no tax rate applies to report."
+    },
+    "deposit_insurance_limit": {
+      "value": 32000,
+      "status": "sourced",
+      "sourceName": "Primicias: COSEDE deposit insurance coverage",
+      "sourceUrl": "https://www.primicias.ec/economia/que-seguro-cosede-bancos-cooperativas-liquidacion-quiebra-requisitos-121025/",
+      "asOf": "2026-04-22",
+      "note": "Secondary source (COSEDE site blocked): up to USD 32,000 per depositor in public and private banks and mutualistas; cooperatives USD 1,000-32,000 by segment."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1677,
+      "status": "sourced",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Maximum effective annual rate for the consumer credit segment, which applies to credit card balances. Published by the BCE as the reference rates for November 2026, computed from deposits taken in the preceding weeks."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global equities in dollars."
+    },
+    "equity_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026); 361-day deposits 6.19%, tax-exempt",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "The local stock market trades few shares, so we use a global equity index of about 7-8% a year in US dollars (Ecuador's currency), below the tax-free 1-year deposit rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities in dollars."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold; no currency effect since Ecuador uses the dollar."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "Long-run dollar gold trend of about 4-5% a year; no currency effect in a dollarised economy."
+    },
+    "gold_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank Commodity Markets (Pink Sheet) gold price",
+      "sourceUrl": "https://www.worldbank.org/en/research/commodity-markets",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Low case: 3-6 month deposits at about 4-4.4%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of 6-12 month deposits (4.8%) and 1-year-plus deposits (6.2%), tax-exempt at 180 days or more."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "High case: deposits of 361 days and more at about 6.2%."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio found from the Superintendencia de Compañías, Valores y Seguros."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life is sold, but no published per-1,000 premium rates by age from the regulator or another public source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public premium table for private health insurance by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.3089,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=EC",
+      "asOf": "2023-12-31"
+    },
+    "goal_inflation_health": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Trading Economics (INEC CPI): health index 100.55 in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/ecuador/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Health prices are rising slowly in 2026, but private medical costs tend to outpace a 2% headline, so we plan with 3%."
+    },
+    "goal_inflation_education": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Trading Economics (INEC CPI): education index 100.25 in September 2026",
+      "sourceUrl": "https://tradingeconomics.com/ecuador/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Education prices are near flat in 2026; private tuition usually rises somewhat faster than headline, so we plan with 3%."
+    },
+    "life_expectancy": {
+      "value": 77.579,
+      "status": "sourced",
+      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=EC",
+      "asOf": "2024-12-31",
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 77.9 for 2026 (men 75.3, women 80.6)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 22.8,
+            "men": 21.3,
+            "women": 24.3
+          },
+          {
+            "age": 65,
+            "total": 18.8,
+            "men": 17.4,
+            "women": 20.1
+          },
+          {
+            "age": 70,
+            "total": 14.9,
+            "men": 13.6,
+            "women": 16.1
+          },
+          {
+            "age": 80,
+            "total": 8.2,
+            "men": 7.3,
+            "women": 9.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/ecuador/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium-variant projections for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 7.9
+          },
+          {
+            "year": 2040,
+            "value": 5.2
+          },
+          {
+            "year": 2065,
+            "value": 2.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/ecuador/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 12.73 (2025, World Bank), 19.4 (2040) and 39.7 (2065, populationpyramid.net/ecuador/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Expreso: IESS old-age retirement rules 2026",
+      "sourceUrl": "https://www.expreso.ec/tramites-y-servicios/todo-lo-que-debes-saber-sobre-la-jubilacion-del-iess-en-ecuador-este-2026-282288.html",
+      "asOf": "2026-05-17",
+      "note": "Secondary source: IESS old-age pension at 60 with 360 monthly contributions, 65 with 180, 70 with 120, or any age with 480; same for men and women. Many retire at 65 with 15 years."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Expreso: IESS old-age retirement rules 2026",
+      "sourceUrl": "https://www.expreso.ec/tramites-y-servicios/todo-lo-que-debes-saber-sobre-la-jubilacion-del-iess-en-ecuador-este-2026-282288.html",
+      "asOf": "2026-05-17",
+      "note": "Public servants are IESS members and retire on the same age and contribution rules."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits at about 4% with some cash held at lower rates."
+    },
+    "retirement_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Base case below the tax-exempt 6-12 month deposit rate of 4.8%."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of 1-year-plus deposits at about 6%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Low case for a balanced mix of deposits and global equities."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "Base case: about half global equities at 7.5% and half deposits at 5%."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Banco Central del Ecuador: tasas de interés (vigentes noviembre 2026)",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm",
+      "asOf": "2026-10-31",
+      "note": "High case with strong equities."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A non-contributory pension for older people is paid by the Ministerio de Inclusión Económica y Social (MIES), but its site could not be reached and the 2026 amount could not be confirmed."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "MIES site unreachable; age and means-test rules for the non-contributory pension could not be confirmed."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code provides an end-of-contract bonus (bonificación por desahucio), but neither the Ministry of Labour site nor the Code text could be reached to confirm the days-per-year rule."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Expreso: IESS old-age retirement rules 2026",
+      "sourceUrl": "https://www.expreso.ec/tramites-y-servicios/todo-lo-que-debes-saber-sobre-la-jubilacion-del-iess-en-ecuador-este-2026-282288.html",
+      "asOf": "2026-05-17",
+      "note": "IESS defined-benefit pension: employee 9.45% plus employer 12.15% of pay (PwC Tax Summaries, July 2026); pension from 60 with 360 contributions (or 65/180, 70/120, any age/480); minimum 50% of the basic wage (USD 241 in 2026); the sources read do not describe how pensions in payment are adjusted."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Cuenta de ahorros",
+      "localNameEn": "Savings account",
+      "note": "Savings deposits pay about 1.6% (BCE reference rate); interest is tax-exempt.",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "Fixed-term deposit (3 months)",
+      "note": "Also called póliza de acumulación.",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a plazo fijo",
+      "localNameEn": "Fixed-term deposit (1 year)",
+      "note": "Interest on deposits of 180 days or more is exempt from income tax.",
+      "sourceUrl": "https://contenido.bce.fin.ec/documentos/Estadisticas/SectorMonFin/TasasInteres/Indice.htm"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "note": "No standard monthly recurring-deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "note": "No government savings certificate or retail savings bond is sold directly to individuals."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Certificados de Tesorería (CETES)",
+      "localNameEn": "Treasury certificates",
+      "note": "Short-term Treasury paper issued by the Ministry of Economy and Finance."
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Bonos del Estado",
+      "localNameEn": "Government bonds",
+      "note": "Government dollar bonds issued by the Ministry of Economy and Finance."
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Bonos del Estado",
+      "localNameEn": "Government bonds",
+      "note": "Long government bonds are mainly international dollar eurobonds.",
+      "sourceUrl": "https://ire.finanzas.gob.ec/content\\2026\\01\\2026.01.27_61.pdf"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "note": "Local investment funds invest mainly in fixed income; no diversified local equity index fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Oro",
+      "localNameEn": "Gold",
+      "note": "Gold can be bought legally from jewellers and dealers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central del Ecuador",
+      "url": "https://www.bce.fin.ec/"
+    },
+    "insuranceRegulator": {
+      "name": "Superintendencia de Compañías, Valores y Seguros",
+      "url": "https://www.supercias.gob.ec/"
+    },
+    "insuranceComplaints": {
+      "name": "Superintendencia de Compañías, Valores y Seguros (complaints)",
+      "url": "https://www.supercias.gob.ec/",
+      "note": "No separate insurance ombudsman; the Superintendencia handles policyholder complaints."
+    },
+    "pensionScheme": {
+      "name": "Instituto Ecuatoriano de Seguridad Social (IESS)",
+      "url": "https://www.iess.gob.ec/"
+    },
+    "oldAgeAllowance": {
+      "name": "Pensión para adultos mayores, Ministerio de Inclusión Económica y Social (MIES)",
+      "url": "https://www.inclusion.gob.ec/"
+    },
+    "publicHealthCover": {
+      "name": "Ministerio de Salud Pública (free public health care)",
+      "url": "https://www.salud.gob.ec/",
+      "note": "Formal-sector workers also have IESS health insurance."
+    },
+    "depositInsurance": {
+      "name": "Corporación del Seguro de Depósitos (COSEDE)",
+      "url": "https://www.cosede.gob.ec/"
+    },
+    "statistics": {
+      "name": "Instituto Nacional de Estadística y Censos (INEC)",
+      "url": "https://www.ecuadorencifras.gob.ec/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}
