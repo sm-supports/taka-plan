@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "code": "UG",
+  "iso3": "UGA",
+  "nameEn": "Uganda",
+  "nameNative": "Uganda",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "lg",
+    "en",
+    "sw",
+    "nyn"
+  ],
+  "currency": {
+    "code": "UGX",
+    "symbol": "USh",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 4259.05,
+      "status": "sourced",
+      "sourceName": "Bank of Uganda, opening indicative exchange rates (interbank middle rate, US dollar)",
+      "sourceUrl": "https://bou.or.ug/uploads/OPENING_RATES_13106e5bea.xlsx",
+      "asOf": "2026-10-30",
+      "note": "UGX 4,259.05 per dollar (interbank middle rate). The Bank of Uganda file is headed as the opening rates for Monday 2 November 2026, published after the last trading day of October (Friday 30 October), so asOf is 30 October; the file is overwritten daily. The shilling fell about 15% from the World Bank 2025 average of 3,603. CLDR gives 'UGX' as symbol; 'USh' is the local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.058,
+      "status": "sourced",
+      "sourceName": "Trading Economics, citing the Uganda Bureau of Statistics (UBOS) consumer price index, October 2026",
+      "sourceUrl": "https://tradingeconomics.com/uganda/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "Secondary source (the UBOS site failed a security certificate check): annual headline inflation 5.8% in October 2026, up from 4.6% in September (the Bank of Uganda MPS FAQ of October 2026 confirms 4.6% for September); core 4.4%, food 7.5%."
+    },
+    "inflation_projection": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda core inflation target 5%; Monetary Policy Statement October 2026 (headline projected at 7.0-7.5% over the next 12 months)",
+      "sourceUrl": "https://bou.or.ug/uploads/FA_Qs_October_2026_49a1f5323d.pdf",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Uganda targets 5% core inflation and inflation averaged about 4.3% in 2021-2025, but the 2026 shilling depreciation and fuel prices push the next year to 7%+, so 5.5% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "Bank of Uganda, Monetary Policy Statement FAQs October 2026; money market report of 29 October 2026 (CBR 12.00%, effective 14 October 2026)",
+      "sourceUrl": "https://bou.or.ug/uploads/MM_29_October_2026_f010b202a0.pdf",
+      "asOf": "2026-10-14",
+      "note": "A special MPC meeting raised the Central Bank Rate from 9.75% to 12.0% with effect from 14 October 2026; the cash reserve requirement rose from 11% to 13.5% on 24 September 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No dated official average savings-account rate was found; the Bank of Uganda website shows an undated 'domestic deposit rate' of 2.83% without saying which deposits it covers."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official average 3-month term deposit rate was found (the Bank of Uganda's interest rate statistics are published through an interactive portal that could not be read)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official average 1-year term deposit rate was found (the Bank of Uganda's interest rate statistics are published through an interactive portal that could not be read)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.1024,
+      "status": "sourced",
+      "sourceName": "Trading Economics, Uganda deposit interest rate, citing the Bank of Uganda, August 2026",
+      "sourceUrl": "https://tradingeconomics.com/uganda/deposit-interest-rate",
+      "asOf": "2026-08-31",
+      "note": "Secondary source: 10.24% in August 2026, down from 10.82% in July (before the October 2026 rate rise); World Bank FR.INR.DPST gives 9.38% for 2018."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals can bid non-competitively in the Bank of Uganda Treasury bill and bond auctions."
+    },
+    "tbill_91d_rate": {
+      "value": 0.11733,
+      "status": "sourced",
+      "sourceName": "Bank of Uganda, results of Treasury bills auction No. 1236, 21 October 2026",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_91_Days_182_Days_364_Days_T_Bills_Auction_21_OCT_2026_c8a80b0a6b.pdf",
+      "asOf": "2026-10-21",
+      "note": "Effective yield 11.733% on 91-day bills (money market yield 11.249%, discount rate 10.942%); 182 days 13.850%, 364 days 14.502%. Yields jumped after the October 2026 policy rate rise (91 days 10.06% on 14 October)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.168,
+      "status": "sourced",
+      "sourceName": "Bank of Uganda, results of Treasury bond auction of 28 October 2026 (5-year re-opening, 15.000% due 20 May 2032)",
+      "sourceUrl": "https://bou.or.ug/uploads/PRESS_RELEASE_RESULTS_OF_TREASURY_BOND_AUCTION_Wednesday_28_October_2026_5792fc8721.pdf",
+      "asOf": "2026-10-28",
+      "note": "Yield at cut-off price 16.800% for the 5-year benchmark; 2-year 16.000%, 15-year 17.925%, 25-year 18.475%."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1685,
+      "status": "sourced",
+      "sourceName": "Bank of Uganda, results of Treasury bond auction of 7 October 2026 (10-year re-opening, 16.000% due 14 May 2037)",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_3_YR_10_YR_20_YR_T_Bonds_07_OCT_2026_2456c7d1cb.pdf",
+      "asOf": "2026-10-07",
+      "note": "Yield at cut-off price 16.850%; secondary-market bid/ask for 10 years averaged 17.19/16.59% in the week to 21 October 2026 (Bank of Uganda financial news report)."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Uganda, withholding taxes (interest paid to residents)",
+      "sourceUrl": "https://taxsummaries.pwc.com/uganda/corporate/withholding-taxes",
+      "asOf": "2026-10-22",
+      "note": "15% withholding on interest paid to residents (bank interest is not among the exceptions); government securities carry 20% (under 10 years) or 10% (10 years or more). Page last reviewed 22 October 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; for reference, PwC lists 20% withholding on interest from government securities of under 10 years and 10% for 10 years or more."
+    },
+    "deposit_insurance_limit": {
+      "value": 10000000,
+      "status": "sourced",
+      "sourceName": "Deposit Protection Fund of Uganda, FAQs",
+      "sourceUrl": "https://dpf.or.ug/faqs/",
+      "asOf": "2026-10-31",
+      "note": "UGX 10 million per depositor per institution (per depositor, not per account); the limit was raised from UGX 3 million in 2019 and a review is targeted for 1 January 2027 (DPF news, 28 August 2026)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Uganda has no legal cap on bank lending rates and no official credit card rate was found; the Bank of Uganda website shows an undated average lending rate of 18.3%."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Trading Economics, Uganda Securities Exchange All Share Index (ALSI)",
+      "sourceUrl": "https://tradingeconomics.com/uganda/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local index was weak for most of the decade before 2025, so a flat-price decade plus dividends gives about 6%."
+    },
+    "equity_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda 364-day bill 14.50% (21 October 2026), about 11.6% after 20% withholding; ALSI history",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_91_Days_182_Days_364_Days_T_Bills_Auction_21_OCT_2026_c8a80b0a6b.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: held near the after-tax one-year bill rate rather than 4 points above it, because the local index has a weak 10-year record despite a 74.6% rise in the year to 29 October 2026."
+    },
+    "equity_return_high": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Trading Economics, ALSI 2,594.93 on 29 October 2026 (+74.6% over the year)",
+      "sourceUrl": "https://tradingeconomics.com/uganda/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: the 2025-2026 re-rating continues with dividend yields of several percent."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda opening exchange rates (UGX 4,259 per dollar, 30 October 2026 close); World Bank 2025 average 3,603",
+      "sourceUrl": "https://bou.or.ug/uploads/OPENING_RATES_13106e5bea.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with the shilling recovering part of its 2026 fall."
+    },
+    "gold_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda exchange rates; inflation target 5%",
+      "sourceUrl": "https://bou.or.ug/uploads/OPENING_RATES_13106e5bea.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: a dollar gold trend of about 4% a year plus shilling depreciation of about 3-4% a year, in line with the inflation gap to the US."
+    },
+    "gold_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Trading Economics, USD/UGX (shilling down 22.7% in the year to November 2026)",
+      "sourceUrl": "https://tradingeconomics.com/uganda/currency",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold together with further depreciation episodes like 2026."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda undated domestic deposit rate 2.83%; Trading Economics deposit rate 10.24% (August 2026)",
+      "sourceUrl": "https://tradingeconomics.com/uganda/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix of low-paying savings accounts and term deposits after 15% withholding."
+    },
+    "fixed_income_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Trading Economics deposit rate 10.24% (8.7% after tax); Bank of Uganda 364-day bill 14.50% (11.6% after 20% withholding)",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_91_Days_182_Days_364_Days_T_Bills_Auction_21_OCT_2026_c8a80b0a6b.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: between term deposits and one-year Treasury bills after tax, allowing for yields to fall back after the 2026 rate rise."
+    },
+    "fixed_income_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda bond auctions (10-year 16.85%, 15-25 years 17.9-18.5%; 10% withholding on 10+ year bonds)",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_3_YR_10_YR_20_YR_T_Bonds_07_OCT_2026_2456c7d1cb.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: long Treasury bonds held to maturity after 10% withholding, allowing for lower future yields."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance Regulatory Authority of Uganda market report could not be downloaded and no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published indicative term-life premium rates per 1,000 UGX of cover from the regulator or another public source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums per 100,000 UGX of cover by age were found from the regulator or another public source."
+    },
+    "oop_health_share": {
+      "value": 0.3217,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=UG",
+      "asOf": "2023-12-31",
+      "note": "32.2% in 2023, the latest year (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "UBOS CPI via Trading Economics (health CPI index 140.59 in October 2026); inflation assumption 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/uganda/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No current health inflation rate could be read, so medical costs are planned one point above the 5.5% inflation assumption, since private care and drug prices follow imports and the exchange rate."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "UBOS CPI via Trading Economics (education CPI index 161.58 in September to 164.32 in October 2026); inflation assumption 5.5%",
+      "sourceUrl": "https://tradingeconomics.com/uganda/inflation-cpi",
+      "asOf": "2026-10-31",
+      "note": "No current education inflation rate could be read, but the education price index rose about 1.7% in October 2026 alone and school fees are raised regularly, so 1.5 points above the 5.5% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 68.487,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=UG",
+      "asOf": "2024-12-31",
+      "note": "68.5 years in 2024 (men 65.5, women 71.4), the latest World Bank year (older than 2025); UN WPP 2024 gives 68.9 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/uganda/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.0,
+            "men": 17.2,
+            "women": 20.8
+          },
+          {
+            "age": 65,
+            "total": 16.1,
+            "men": 14.3,
+            "women": 17.6
+          },
+          {
+            "age": 70,
+            "total": 13.2,
+            "men": 11.7,
+            "women": 14.7
+          },
+          {
+            "age": 80,
+            "total": 8.3,
+            "men": 7.1,
+            "women": 9.4
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there); figures are for the 5-year bands starting at each age."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/uganda/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 24.53
+          },
+          {
+            "year": 2040,
+            "value": 18.87
+          },
+          {
+            "year": 2065,
+            "value": 8.13
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 4.08 (2025, World Bank), 5.3 (2040) and 12.3 (2065, populationpyramid.net/uganda/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 55,
+      "status": "sourced",
+      "sourceName": "National Social Security Fund (NSSF Uganda), age benefit",
+      "sourceUrl": "https://www.nssfug.org/benefits-products/benefits/benefits-age/",
+      "asOf": "2026-10-31",
+      "note": "The NSSF age benefit is paid to members who reach the retirement age of 55, whether or not still employed; a withdrawal benefit is available from 50 after a year out of work. NSSF is a provident fund, not an annuity."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The public service retirement age could not be confirmed from an official source (the Public Service Pensions Act and Standing Orders were not read)."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Trading Economics deposit rate 10.24% (August 2026), 8.7% after 15% withholding",
+      "sourceUrl": "https://tradingeconomics.com/uganda/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposits after tax with lower rates in future."
+    },
+    "retirement_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Trading Economics deposit rate 10.24% (August 2026), 8.7% after 15% withholding; 364-day bill 11.6% after tax",
+      "sourceUrl": "https://tradingeconomics.com/uganda/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the after-tax deposit rate (8.7%), the lower of the two safe one-year rates."
+    },
+    "retirement_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda 364-day bill 14.50% and 10-year bond 16.85% (October 2026)",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_91_Days_182_Days_364_Days_T_Bills_Auction_21_OCT_2026_c8a80b0a6b.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: Treasury bills and long bonds bought directly at auction, after withholding."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda bill and bond auctions (October 2026); NSSF interest 13.5% for FY 2024/25",
+      "sourceUrl": "https://www.nssfug.org/benefits-products/benefits/benefits-age/",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills with a small, weak equity share."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda bond auctions; NSSF declared 13.5% interest for FY 2024/25",
+      "sourceUrl": "https://www.nssfug.org/benefits-products/benefits/benefits-age/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of Treasury bonds, deposits and local shares, below NSSF's recent credited rates because yields and the shilling were unusually volatile in 2026."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Bank of Uganda 15-25 year bond auctions (17.9-18.5%, 28 October 2026)",
+      "sourceUrl": "https://bou.or.ug/uploads/PRESS_RELEASE_RESULTS_OF_TREASURY_BOND_AUCTION_Wednesday_28_October_2026_5792fc8721.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: more long bonds and shares with yields staying near current levels."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Uganda pays a Senior Citizens' Grant to older persons (starting at age 80, to be lowered towards 65, 60 in Karamoja, per the Expanded Social Protection programme), but its current monthly amount could not be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Expanded Social Protection programme site says the Senior Citizens' Grant starts with people aged 80 and above, but does not say whether it is means-tested or give current rules in full, so the eligibility row is left missing."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Act 2006 provides severance allowance on termination, but no official text with a fixed number of days per year of service was read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "National Social Security Fund (NSSF Uganda), age benefit; PwC Tax Summaries (contribution rates)",
+      "sourceUrl": "https://www.nssfug.org/benefits-products/benefits/benefits-age/",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 55,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory provident fund for private employees: 5% of gross pay from the employee and 10% from the employer (PwC, reviewed 22 October 2026). The age benefit is paid at 55 as savings plus credited interest (13.5% for FY 2024/25), not as an indexed pension; tax treatment not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "No dated official average rate was found."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit",
+      "note": "No official tenor-specific average rate was found."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit, 1 year",
+      "note": "No official tenor-specific average rate was found."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals; individuals can bid non-competitively for Treasury bills and bonds."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "Bank of Uganda auctions 91, 182 and 364-day bills about every two weeks; non-competitive bids from individuals are accepted.",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_91_Days_182_Days_364_Days_T_Bills_Auction_21_OCT_2026_c8a80b0a6b.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bonds",
+      "note": "2 to 25 year bonds re-opened at Bank of Uganda auctions.",
+      "sourceUrl": "https://bou.or.ug/uploads/PRESS_RELEASE_RESULTS_OF_TREASURY_BOND_AUCTION_Wednesday_28_October_2026_5792fc8721.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bonds",
+      "note": "The 10-year benchmark (due May 2037) was re-opened on 7 October 2026.",
+      "sourceUrl": "https://bou.or.ug/uploads/Press_Release_Report_for_the_3_YR_10_YR_20_YR_T_Bonds_07_OCT_2026_2456c7d1cb.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Collective investment schemes (unit trusts)",
+      "note": "Unit trusts are licensed by the Capital Markets Authority."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "Gold is mainly bought as jewellery; no official retail market for investment bars or coins was confirmed."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Uganda",
+      "url": "https://www.bou.or.ug/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance Regulatory Authority of Uganda (IRA)",
+      "url": "https://ira.go.ug/"
+    },
+    "insuranceComplaints": {
+      "name": "Insurance Regulatory Authority of Uganda, complaints portal",
+      "url": "https://iracomplaints.go.ug/"
+    },
+    "pensionScheme": {
+      "name": "National Social Security Fund (NSSF Uganda)",
+      "url": "https://www.nssfug.org/benefits-products/benefits/benefits-age/",
+      "note": "Retirement schemes are supervised by the Uganda Retirement Benefits Regulatory Authority; public servants have a separate government pension."
+    },
+    "oldAgeAllowance": {
+      "name": "Senior Citizens' Grant, Expanded Social Protection programme (Ministry of Gender, Labour and Social Development)",
+      "url": "https://socialprotection.go.ug/"
+    },
+    "publicHealthCover": null,
+    "depositInsurance": {
+      "name": "Deposit Protection Fund of Uganda (DPF)",
+      "url": "https://dpf.or.ug/faqs/"
+    },
+    "statistics": {
+      "name": "Uganda Bureau of Statistics (UBOS)",
+      "url": "https://www.ubos.org/",
+      "note": "The site failed a security certificate check on 3 November 2026."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

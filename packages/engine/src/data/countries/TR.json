@@ -26,18 +26,18 @@
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.2973,
+      "value": 0.2977,
       "status": "sourced",
-      "sourceName": "Trading Economics, citing the Turkish Statistical Institute (TurkStat), CPI September 2026",
+      "sourceName": "Trading Economics, citing the Turkish Statistical Institute (TurkStat), CPI October 2026",
       "sourceUrl": "https://tradingeconomics.com/turkey/inflation-cpi",
-      "asOf": "2026-09-30",
-      "note": "Consumer prices up 29.73% year on year in September 2026 (31.51% in August), released 5 October 2026; secondary source because the TurkStat bulletin could not be opened. October figure due 3 November 2026. World Bank 2025 average 34.9%."
+      "asOf": "2026-10-31",
+      "note": "Consumer prices up 29.77% year on year in October 2026 (29.73% in September), released 3 November 2026; secondary source because the TurkStat bulletin could not be opened. World Bank 2025 average 34.9%."
     },
     "inflation_projection": {
       "value": 0.18,
       "status": "assumption",
       "sourceName": "IMF World Economic Outlook inflation path for Türkiye (31.2% 2026, 15.0% 2030); CBRT 5% medium-term target; 2021-2025 average about 48%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TUR",
       "asOf": "2026-10-31",
       "note": "The IMF expects disinflation to about 15% by 2030 but Türkiye has missed its 5% target for many years and inflation averaged about 48% in 2021-2025, so 18% a year is used for long-range plans."
     },
@@ -124,10 +124,10 @@
     "tax_bank_interest": {
       "value": 0.175,
       "status": "sourced",
-      "sourceName": "Official Gazette (Resmî Gazete) No. 33286, Presidential Decision 11444 extending the TL deposit withholding rates of Decision 10041 to 31 December 2026",
-      "sourceUrl": "https://www.resmigazete.gov.tr/eskiler/2026/06/20260620-4.pdf",
-      "asOf": "2026-06-20",
-      "note": "Final withholding on TL deposit interest: 17.5% for demand deposits and terms up to 6 months, 15% up to 1 year, 10% over 1 year (set by Decision 10041 of 9 July 2025 and extended to 31 December 2026 by Decision 11444). The gazette PDF is not machine-readable, so the rates were read from published summaries of the decision; PwC Tax Summaries still shows the older 10%/7.5%/5% rates."
+      "sourceName": "Official Gazette (Resmî Gazete) No. 32951 of 9 July 2025, Presidential Decision 10041 amending Decision 2006/10731 (withholding under Income Tax Law provisional article 67)",
+      "sourceUrl": "https://www.resmigazete.gov.tr/eskiler/2025/07/20250709-6.pdf",
+      "asOf": "2025-07-09",
+      "note": "Decision 10041 raised the final withholding on TL demand deposits and deposits of up to 6 months from 15% to 17.5% and on deposits of up to 1 year from 12% to 15% (over 1 year stays 10%), for deposits opened or renewed from 9 July 2025; read from the gazette page image. No later change was found up to October 2026 (Decision 11444 of June 2026 only extends a temporary rate for government bonds and lease certificates). PwC Tax Summaries still shows the pre-2023 10%/7.5%/5% rates."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -205,7 +205,7 @@
       "value": 0.16,
       "status": "assumption",
       "sourceName": "Inflation projection 18%; IMF path to 15% inflation by 2030",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TUR",
       "asOf": "2026-10-31",
       "note": "Low case: after the 15-17.5% withholding, deposits and bonds earn slightly less than inflation, as often happened in 2021-2023."
     },
@@ -368,8 +368,8 @@
     "retirement_return_low": {
       "value": 0.15,
       "status": "assumption",
-      "sourceName": "Inflation projection 18%; 17.5% withholding on short TL deposit interest (Official Gazette Decision 11444)",
-      "sourceUrl": "https://www.resmigazete.gov.tr/eskiler/2026/06/20260620-4.pdf",
+      "sourceName": "Inflation projection 18%; 17.5% withholding on short TL deposit interest (Official Gazette, Decision 10041)",
+      "sourceUrl": "https://www.resmigazete.gov.tr/eskiler/2025/07/20250709-6.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: a retiree's deposits earn less than inflation after tax."
     },

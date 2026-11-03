@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Banque de France MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.36% in August 2026); no 3-month term deposit (compte à terme) rate was found."
+      "note": "ECB/Banque de France MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.54% in September 2026); no official 3-month term deposit (compte à terme) rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0236,
+      "value": 0.0254,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: French banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.82% and over 2 years 2.73% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (new business, September 2026; 2.36% in August)."
     },
     "dps_rate": {
       "value": 0.02,
@@ -81,15 +81,15 @@
       "sourceName": "Service-Public.fr, Plan d'épargne logement (PEL)",
       "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16140",
       "asOf": "2026-01-01",
-      "note": "PEL opened in 2026: fixed 2.00% gross for the life of the plan, minimum EUR 540 a year in periodic deposits (e.g. EUR 45 a month), at least 4 years, up to 10; interest taxed under the flat tax."
+      "note": "PEL opened in 2026: fixed 2.00% gross for the life of the plan, minimum EUR 540 a year in periodic deposits (e.g. EUR 45 a month), at least 4 years, up to 10; Service-Public states PEL interest bears the 30% flat tax (12.8% income tax plus 17.2% social charges)."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0252,
+      "value": 0.0255,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: French banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST for France stops in 2017 (0.79%)."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026 (2.52% in August); World Bank FR.INR.DPST for France stops in 2017 (0.79%)."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -128,7 +128,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, France income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/france/individual/income-determination",
       "asOf": "2026-01-01",
-      "note": "Flat tax (PFU) of 31.4% on interest earned from 2026: 12.8% income tax plus 18.6% social charges (17.2% before 2026); progressive income tax can be elected instead. Livret A, LDDS and LEP interest is tax-free."
+      "note": "Flat tax (PFU) of 31.4% on interest earned from 2026: 12.8% income tax plus 18.6% social charges (17.2% before 2026); progressive income tax can be elected instead. Livret A, LDDS and LEP interest is tax-free; Service-Public still shows 30% for PEL interest."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -142,17 +142,17 @@
       "value": 100000,
       "status": "sourced",
       "sourceName": "Fonds de Garantie des Dépôts et de Résolution (FGDR)",
-      "sourceUrl": "https://www.garantiedesdepots.fr/fr",
+      "sourceUrl": "https://www.garantiedesdepots.fr/fr/connaitre-mes-garanties/je-detiens-des-comptes-et-des-livrets-bancaires-quelles-sont-mes-garanties",
       "asOf": "2026-10-31",
-      "note": "EUR 100,000 per client per bank; state-guaranteed regulated passbooks (Livret A, LDDS, LEP) carry a separate EUR 100,000 guarantee."
+      "note": "EUR 100,000 per client per bank; state-guaranteed regulated passbooks (Livret A, LDDS, LEP) carry a separate EUR 100,000 guarantee; exceptional deposits (e.g. a home sale) raise the limit for three months."
     },
     "credit_card_rate_cap": {
-      "value": 0.071,
+      "value": 0.0729,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: French banks, revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on revolving loans, overdrafts and extended credit card credit combined (no card-only series); French law also caps consumer credit at the quarterly usury rate (taux d'usure) set by the Banque de France, which could not be read."
+      "asOf": "2026-09-30",
+      "note": "Average rate on revolving loans, overdrafts and extended credit card credit combined, September 2026 (no card-only series); French law also caps consumer credit at the quarterly usury rate (taux d'usure) set by the Banque de France, which could not be read."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -213,7 +213,7 @@
     "fixed_income_return_base": {
       "value": 0.017,
       "status": "assumption",
-      "sourceName": "Livret A 1.7% tax-free; 1-year deposits 2.36% less 31.4% flat tax = 1.6%",
+      "sourceName": "Livret A 1.7% tax-free; 1-year deposits 2.54% (Sep 2026) less 31.4% flat tax = 1.7%",
       "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
       "asOf": "2026-10-31",
       "note": "Base case: the tax-free Livret A rate, close to the after-tax 1-year term deposit."
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=FR",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "Latest World Bank figure is for 2024 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.03,
@@ -286,7 +287,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/france",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Men 80.9, women 86.4 (UN WPP estimate for 2026); World Bank 2024 figure 83.0."
     },
     "life_table_remaining": {
@@ -322,8 +323,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/france",
-      "asOf": "2026-12-31",
-      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate, mid-year)."
     },
     "support_ratio": {
       "value": null,
@@ -376,10 +377,10 @@
     "retirement_return_base": {
       "value": 0.017,
       "status": "assumption",
-      "sourceName": "Livret A 1.7% tax-free; 1-year deposits 2.36% less 31.4% flat tax = 1.6%",
+      "sourceName": "Livret A 1.7% tax-free; 1-year deposits 2.54% (Sep 2026) less 31.4% flat tax = 1.7%",
       "sourceUrl": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the tax-free Livret A rate, about the after-tax 1-year deposit."
+      "note": "Base case capped at the tax-free Livret A rate, equal to the after-tax 1-year deposit (1.74%)."
     },
     "retirement_return_high": {
       "value": 0.028,
@@ -503,7 +504,7 @@
       "localName": "Bons du Trésor à taux fixe (BTF)",
       "localNameEn": "French Treasury bills",
       "note": "Auctioned by Agence France Trésor mainly to institutions.",
-      "sourceUrl": "https://www.aft.gouv.fr/"
+      "sourceUrl": "https://tradingeconomics.com/france/government-bond-yield"
     },
     "tbond_5y": {
       "available": true,

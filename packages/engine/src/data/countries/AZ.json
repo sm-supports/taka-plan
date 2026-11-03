@@ -126,7 +126,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Azerbaijan income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/azerbaijan/individual/income-determination",
       "asOf": "2026-09-28",
-      "note": "10% final withholding tax on Azeri-source interest; PwC also notes a seven-year exemption for individuals' bank deposit interest from 1 February 2016, so check whether a current exemption applies to manat deposits."
+      "note": "10% final withholding tax on Azeri-source interest (PwC, last reviewed 28 Sep 2026). PwC also describes a seven-year exemption for individuals' bank deposit interest from 1 February 2016, which on its own terms ended in 2023; whether a later extension applies to manat deposits could not be confirmed from an official source."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -155,8 +155,8 @@
     "equity_return_low": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "Global equity index in US dollar terms; manat pegged at 1.70 per USD",
-      "sourceUrl": "https://tradingeconomics.com/commodity/gold",
+      "sourceName": "Global equity index in US dollar terms; manat pegged at 1.70 per USD (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/azerbaijan/currency",
       "asOf": "2026-10-31",
       "note": "Azerbaijan has no liquid local stock market, so equity is a global index fund in manat terms; low case is a weak decade for world shares."
     },
@@ -261,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AZ",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 is the latest year in the World Bank series (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.07,
@@ -320,8 +321,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/azerbaijan",
-      "asOf": "2026-12-31",
-      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate); national tables give longer lives."
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate, mid-year date used); national tables give longer lives."
     },
     "support_ratio": {
       "value": null,
@@ -417,7 +418,7 @@
       "sourceName": "Ministry of Labour and Social Protection of Population, Old-age Labor Pension (social benefit for age)",
       "sourceUrl": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension",
       "asOf": "2023-01-01",
-      "note": "Social benefit for age 220 manats a month as of 1 January 2023 (the latest amount stated); minimum labour pension 320 manats since 1 February 2025."
+      "note": "Social benefit for age (non-contributory, for people at retirement age with no labour pension who are not working): 220 manats a month as of 1 January 2023, the latest amount the ministry states. Flag: figure older than 2025 and may since have been raised. Minimum labour pension is 320 manats."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -431,7 +432,7 @@
       "sourceName": "Ministry of Labour and Social Protection of Population, Old-age Labor Pension",
       "sourceUrl": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension",
       "asOf": "2026-07-01",
-      "note": "Paid to people at retirement age who have no right to a labour pension and are not working; not income-tested as such."
+      "note": "Paid from the retirement age (65 for men and, from 1 July 2026, women) to people with no right to a labour pension who are not working and are incapable of working; not income-tested as such. Benefit amount last stated for 1 January 2023 (older than 2025)."
     },
     "gratuity_rule": {
       "value": null,
@@ -455,7 +456,7 @@
       "sourceName": "Ministry of Labour and Social Protection of Population, Labour pensions",
       "sourceUrl": "https://sosial.gov.az/en/services/key-activities/pensions-and-social-insurance-based-benefits/pension/old-age-labor-pension",
       "asOf": "2026-07-01",
-      "note": "Compulsory labour pension: pension = insurance capital / expected payment months, minimum 320 manats; pensions are indexed each year under the Law On Labour Pensions (average assigned pension up 10.5% to 594.4 manats by July 2026, AzStat). Tax treatment not confirmed."
+      "note": "Compulsory labour pension: pension = insurance capital / expected payment months, minimum 320 manats, payable from 65 (sosial.gov.az). Pensions are raised each January (average assigned pension up 10.5% to 594.4 manats by July 2026, AzStat), above recent CPI, but the legal indexation basis and the tax treatment were not confirmed from a source read."
     }
   },
   "instruments": {

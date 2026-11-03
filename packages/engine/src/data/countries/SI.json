@@ -56,8 +56,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovenian banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 0.10% on household overnight deposits (current and most savings accounts) in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Average 0.10% on household overnight deposits (current and most savings accounts) in September 2026, the same as in August."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Banka Slovenije MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (0.75% in August 2026); no separate 3-month rate was found."
+      "note": "ECB/Banka Slovenije MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (0.77% in September 2026); no separate 3-month rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0075,
+      "value": 0.0077,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovenian banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; deposits of 1-2 years paid 1.82% and over 2 years 1.69% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (0.75% in August, 0.77% in September 2026); deposits of 1-2 years paid 1.75% in September 2026."
     },
     "dps_rate": {
       "value": null,
@@ -84,20 +84,20 @@
       "note": "Banks offer instalment savings (obročno varčevanje), but no official average rate for them was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0147,
+      "value": 0.0149,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovenian banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits in August 2026; overnight deposits pay 0.10%."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits in September 2026; overnight deposits pay 0.10%."
     },
     "sanchayapatra_5y_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "No retail savings bond for individuals was found on the Ministry of Finance Treasury Directorate pages, which list only market bond issues in 2026."
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Slovenia: people's bonds RS99, interest rate raised to 3% (news, 23 March 2026)",
+      "sourceUrl": "https://www.gov.si/novice/2026-03-23-dvig-obrestne-mere-za-ljudske-obveznice-na-tri-odstotke/",
+      "asOf": "2026-04-02",
+      "note": "Third issue of people's bonds (ljudske obveznice) RS99: fixed 3.0% a year for 3 years (2 April 2026 to 2 April 2029), sold only to individuals resident in Slovenia, EUR 1,000 to EUR 250,000, raised from 2.6% before the offer closed on 27 March 2026. Issues are yearly (2024, 2025, 2026); none is on sale now."
     },
     "tbill_91d_rate": {
       "value": null,
@@ -105,7 +105,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The Ministry of Finance auctions treasury bills (zakladne menice), but no recent 3-month auction yield could be found on gov.si."
+      "note": "The Ministry of Finance has not auctioned 3-month treasury bills (TZ) since TZ225 on 9 September 2025 (1.90%, before two ECB hikes); in 2026 it issues 12-month bills (DZ125: 2.85% on 8 September 2026) and 18-month bills (OZ25: 3.35% on 6 October 2026)."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -116,12 +116,12 @@
       "note": "No 5-year Slovenian government bond yield was found; Trading Economics shows only the 10-year yield."
     },
     "tbond_10y_rate": {
-      "value": 0.0392,
+      "value": 0.0386,
       "status": "sourced",
-      "sourceName": "Trading Economics, Slovenia 10-year government bond yield",
-      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
-      "asOf": "2026-10-30",
-      "note": "3.92% on 30 October 2026; the ECB long-term convergence yield for Slovenia was 3.86% for September 2026."
+      "sourceName": "ECB long-term interest rate for convergence purposes, Slovenia (10-year government bond yield, monthly average)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.SI.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-09-30",
+      "note": "3.86% average for September 2026 (3.54% in August); Trading Economics showed about 3.9% at the start of November 2026."
     },
     "tax_bank_interest": {
       "value": 0.25,
@@ -132,12 +132,12 @@
       "note": "Interest is taxed at a flat 25%, but interest on bank deposits in Slovenia or elsewhere in the EU is not taxed up to EUR 1,000, so most savers pay nothing."
     },
     "tax_sanchayapatra_profit": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Slovenia has no retail government savings bond, so no specific tax rule applies; interest on other bonds falls under the general 25% rate on interest (PwC)."
+      "value": 0.25,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance of Slovenia: additional explanations on bonds for individuals RS99 (24 March 2026)",
+      "sourceUrl": "https://www.gov.si/assets/ministrstva/MF/Zakladnistvo/Dolg-RS/3-obveznica-za-fizicne-osebe-RS99-2026/Dodatna-pojasnila-o-obveznicah-za-fizicne-osebe-visji-kupon-24.3.2026.pdf",
+      "asOf": "2026-03-24",
+      "note": "Interest on people's bonds issued in 2024-2026 and on bank deposits is tax-free up to EUR 1,000 a year combined; the excess is taxed at 25%. Held in an individual investment account (INR), the yield is taxed at 15%, or nothing on the first withdrawal after 15 years."
     },
     "deposit_insurance_limit": {
       "value": 100000,
@@ -148,12 +148,12 @@
       "note": "EUR 100,000 per eligible depositor per bank."
     },
     "credit_card_rate_cap": {
-      "value": 0.1048,
+      "value": 0.1055,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovenian banks, extended credit card credit to households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.A2Z3.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 10.48% on extended credit card credit in August 2026; this is the typical rate, not a legal cap."
+      "asOf": "2026-09-30",
+      "note": "Average 10.55% on extended credit card credit in September 2026; this is the typical rate, not a legal cap."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -166,10 +166,10 @@
     "equity_return_base": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "SBITOP (Trading Economics); 1-2 year deposits 1.82%; 10-year bond 3.92% less 25% tax = 2.9%",
+      "sourceName": "SBITOP (Trading Economics); 12-month treasury bill 2.85% less 25% tax = 2.1%; 1-2 year deposits 1.75%",
       "sourceUrl": "https://tradingeconomics.com/slovenia/stock-market",
       "asOf": "2026-10-31",
-      "note": "Base case: about 3.7 points over the 1-2 year deposit rate, within the 4-point limit, for a diversified equity fund in euros."
+      "note": "Base case: about 3.5 points over the after-tax safe rate of roughly 2%, within the 4-point limit, for a diversified equity fund in euros."
     },
     "equity_return_high": {
       "value": 0.08,
@@ -206,7 +206,7 @@
     "fixed_income_return_low": {
       "value": 0.007,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 0.75% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
+      "sourceName": "Household deposits up to 1 year 0.77% (ECB MFI statistics, September 2026), tax-free up to EUR 1,000 of interest",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: short bank deposits, which pay very little in Slovenia."
@@ -214,16 +214,16 @@
     "fixed_income_return_base": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "Household deposits of 1-2 years 1.82% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
+      "sourceName": "Household deposits of 1-2 years 1.75% (ECB MFI, September 2026); people's bonds 3.0% and 12-month treasury bills 2.85%, tax-free up to EUR 1,000 of interest",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.G.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case: rolling 1-2 year term deposits, slightly below their current rate."
+      "note": "Base case: rolling 1-2 year term deposits with occasional people's bonds, kept below current rates."
     },
     "fixed_income_return_high": {
       "value": 0.029,
       "status": "assumption",
-      "sourceName": "Slovenia 10-year bond 3.92% less 25% tax = 2.9% (Trading Economics)",
-      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
+      "sourceName": "Slovenia 10-year bond 3.86% less 25% tax = 2.9% (ECB convergence yield, September 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.SI.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: holding long government bonds after tax."
     },
@@ -370,7 +370,7 @@
     "retirement_return_low": {
       "value": 0.007,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 0.75% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
+      "sourceName": "Household deposits up to 1 year 0.77% (ECB MFI statistics, September 2026), tax-free up to EUR 1,000 of interest",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: short deposits only."
@@ -378,23 +378,23 @@
     "retirement_return_base": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "Household deposits of 1-2 years 1.82% (ECB MFI statistics), tax-free up to EUR 1,000 of interest",
-      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SI.B.L22.G.R.A.2250.EUR.N",
+      "sourceName": "12-month treasury bill 2.85% less 25% tax = 2.1% (Ministry of Finance, DZ125, 8 September 2026); 1-2 year deposits 1.75% (ECB MFI)",
+      "sourceUrl": "https://www.gov.si/assets/ministrstva/MF/Zakladnistvo/Dolg-RS/Obvestila-ZM-slo/Rezultati-avkcije-zakladnih-menic-DZ125-1.-izdaja.pdf",
       "asOf": "2026-10-31",
-      "note": "Base case kept below the 1-2 year deposit rate because 1-year deposits pay only 0.75% and no retail state bill rate was found."
+      "note": "Base case kept below the after-tax 12-month treasury bill rate and the 1-2 year deposit rate, because deposits of up to 1 year pay only 0.77%."
     },
     "retirement_return_high": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "Slovenia 10-year bond 3.92% less 25% tax = 2.9% (Trading Economics)",
-      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
+      "sourceName": "Slovenia 10-year bond 3.86% less 25% tax = 2.9% (ECB convergence yield, September 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.SI.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of government bonds held to maturity, below the current after-tax 10-year yield."
     },
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "1-2 year deposits 1.82%; SBITOP record (Trading Economics)",
+      "sourceName": "1-2 year deposits 1.75%; SBITOP record (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/slovenia/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -411,7 +411,7 @@
       "value": 0.055,
       "status": "assumption",
       "sourceName": "10-year bond 2.9% after tax; equity high 8%",
-      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.SI.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
     },
@@ -487,16 +487,18 @@
       "note": "Monthly instalment savings plans offered by banks."
     },
     "sanchayapatra_5y": {
-      "available": false,
-      "localName": null,
-      "localNameEn": "Government savings bond for individuals",
-      "note": "No retail-only government savings bond was found; individuals can buy ordinary government bonds through a bank or broker."
+      "available": true,
+      "localName": "Ljudske obveznice",
+      "localNameEn": "People's bonds (government bonds for individuals)",
+      "note": "Yearly 3-year fixed-rate issues sold only to individuals resident in Slovenia (2024, 2025, 2026); can be sold early on the Ljubljana Stock Exchange.",
+      "sourceUrl": "https://www.gov.si/novice/2026-03-23-dvig-obrestne-mere-za-ljudske-obveznice-na-tri-odstotke/"
     },
     "tbill_91d": {
       "available": true,
       "localName": "Zakladne menice",
       "localNameEn": "Treasury bills",
-      "note": "Auctioned by the Ministry of Finance; individuals usually buy through a bank or broker."
+      "note": "Auctioned by the Ministry of Finance in EUR 1,000 units; no 3-month bill since September 2025, only 12- and 18-month bills in 2026.",
+      "sourceUrl": "https://www.gov.si/assets/ministrstva/MF/Zakladnistvo/Dolg-RS/Obvestila-ZM-slo/Rezultati-avkcije-zakladnih-menic-DZ125-1.-izdaja.pdf"
     },
     "tbond_5y": {
       "available": true,
@@ -507,7 +509,7 @@
       "available": true,
       "localName": "Državne obveznice",
       "localNameEn": "Slovenian government bonds",
-      "sourceUrl": "https://tradingeconomics.com/slovenia/government-bond-yield"
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.SI.L.L40.CI.0000.EUR.N.Z"
     },
     "equity_fund": {
       "available": true,

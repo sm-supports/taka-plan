@@ -51,28 +51,28 @@
       "note": "Bulgaria adopted the euro on 1 January 2026, so ECB rates apply: deposit facility 2.50%, main refinancing 2.65%, held on 29 October 2026 (read via the ECB data API)."
     },
     "savings_account_rate": {
-      "value": 0.0041,
+      "value": 0.0043,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Bulgarian bank rates on household deposits redeemable at notice up to 3 months (new business)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L23.D.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "0.41% in August 2026; overnight (current) deposits pay 0.01%. Read via the ECB data API."
+      "asOf": "2026-09-30",
+      "note": "0.43% in September 2026 (0.41% in August); overnight (current) deposits pay about 0.01%. Read via the ECB data API."
     },
     "fdr_3m_rate": {
-      "value": 0.014,
+      "value": 0.0149,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Bulgarian bank rates on household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "No separate 3-month series is published; the up-to-1-year bucket (1.40% in August 2026, 1.56% in July) is used. Read via the ECB data API."
+      "asOf": "2026-09-30",
+      "note": "No separate 3-month series is published; the up-to-1-year bucket (1.49% in September 2026, 1.40% in August) is used. Read via the ECB data API."
     },
     "fdr_1y_rate": {
-      "value": 0.014,
+      "value": 0.0149,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Bulgarian bank rates on household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "1.40% in August 2026; 1-2 years 1.71%, over 2 years 2.82%. Read via the ECB data API."
+      "asOf": "2026-09-30",
+      "note": "1.49% in September 2026 (1.40% in August); 1-2 years 1.60%, over 2 years 2.86%. Read via the ECB data API."
     },
     "dps_rate": {
       "value": null,
@@ -88,7 +88,7 @@
       "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BG",
       "asOf": "2025-12-31",
-      "note": "0.25% in 2025, weighted towards current accounts; ECB MIR new-business term deposits up to 1 year paid 1.40% in August 2026."
+      "note": "0.25% in 2025, weighted towards current accounts; ECB MIR new-business term deposits up to 1 year paid 1.49% in September 2026."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -147,12 +147,12 @@
       "note": "EUR 100,000 per depositor per bank; up to EUR 125,000 for three months for certain deposits (home sale proceeds, insurance pay-outs, life events)."
     },
     "credit_card_rate_cap": {
-      "value": 0.1349,
+      "value": 0.1351,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Bulgarian bank rates on revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "13.49% in August 2026, an average that includes overdrafts; no specific legal cap on card rates was found."
+      "asOf": "2026-09-30",
+      "note": "13.51% in September 2026 (13.49% in August), an average that includes overdrafts; no specific legal cap on card rates was found."
     },
     "equity_return_low": {
       "value": 0.025,
@@ -165,10 +165,10 @@
     "equity_return_base": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "1-year term deposit 1.40% (tax-free); SOFIX record since 2000",
+      "sourceName": "1-year term deposit 1.49% (tax-free, Sep 2026); SOFIX record since 2000",
       "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
       "asOf": "2026-10-31",
-      "note": "After-tax safe rate of 1.4% plus a 3.6-point premium, kept modest because SOFIX has a weak record since 2007; diversified euro-area funds give similar euro returns."
+      "note": "After-tax safe rate of about 1.5% plus a 3.5-point premium, kept modest because SOFIX has a weak record since 2007; diversified euro-area funds give similar euro returns."
     },
     "equity_return_high": {
       "value": 0.08,
@@ -205,7 +205,7 @@
     "fixed_income_return_low": {
       "value": 0.008,
       "status": "assumption",
-      "sourceName": "ECB MIR: savings 0.41%, term deposits up to 1 year 1.40% (interest tax-free)",
+      "sourceName": "ECB MIR: savings 0.43%, term deposits up to 1 year 1.49% (interest tax-free, Sep 2026)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: savings accounts and short deposits."
@@ -213,7 +213,7 @@
     "fixed_income_return_base": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "ECB MIR: term deposits up to 1 year 1.40%, 1-2 years 1.71%, over 2 years 2.82% (tax-free)",
+      "sourceName": "ECB MIR: term deposits up to 1 year 1.49%, 1-2 years 1.60%, over 2 years 2.86% (tax-free, Sep 2026)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of 1-year and longer term deposits, with no tax on EU bank interest."
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BG",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket share 35.5% of current health expenditure. Latest World Bank year is 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -287,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BG",
       "asOf": "2024-12-31",
-      "note": "Men 72.2, women 79.5; UN WPP 2024 (via populationpyramid.net) gives 76.1 for 2026."
+      "note": "Men 72.2, women 79.5; UN WPP 2024 (via populationpyramid.net) gives 76.1 for 2026. Latest World Bank year is 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -322,8 +323,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/bulgaria/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for the year 2026 (asOf set to mid-year); totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -350,25 +351,25 @@
       "note": "100 / old-age dependency ratio: 35.1 (2025, World Bank), 43.2 (2040) and 54.1 (2065, populationpyramid.net/bulgaria/2065/)."
     },
     "retirement_age_default": {
-      "value": 64.75,
+      "value": 65,
       "status": "sourced",
       "sourceName": "National Social Security Institute (NOI), pension for insurance length and age",
       "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/trudova-deinost-pridobivane-pravo/pensii-za-osig-staj-v-namalen-razmer/",
       "asOf": "2026-01-01",
-      "note": "Men 64 years 9 months with 39 years 10 months of insurance in 2026; women 62 years 6 months with 36 years 10 months. Men reach 65 in 2029, women in 2037."
+      "note": "Rises to 65 for both men and women (men in 2029, women in 2037), so 65 applies to anyone born after 1975; after 2037 it is to be linked to life expectancy. In 2026: men 64 years 9 months with 39 years 10 months of insurance, women 62 years 6 months with 36 years 10 months."
     },
     "retirement_age_government": {
-      "value": 64.75,
+      "value": 65,
       "status": "sourced",
       "sourceName": "National Social Security Institute (NOI), pension for insurance length and age",
       "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/trudova-deinost-pridobivane-pravo/pensii-za-osig-staj-v-namalen-razmer/",
       "asOf": "2026-01-01",
-      "note": "Civil servants retire under the same general pension age (men 64 y 9 m, women 62 y 6 m in 2026); military, police and some other groups have lower ages."
+      "note": "Civil servants retire under the general pension age, 65 for both sexes for anyone born after 1975 (men 64 y 9 m, women 62 y 6 m in 2026); military, police and some other groups have lower ages."
     },
     "retirement_return_low": {
       "value": 0.008,
       "status": "assumption",
-      "sourceName": "ECB MIR: savings 0.41%, term deposits up to 1 year 1.40% (tax-free)",
+      "sourceName": "ECB MIR: savings 0.43%, term deposits up to 1 year 1.49% (tax-free, Sep 2026)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: mostly savings accounts and short deposits."
@@ -376,15 +377,15 @@
     "retirement_return_base": {
       "value": 0.014,
       "status": "assumption",
-      "sourceName": "1-year term deposit 1.40% (tax-free)",
+      "sourceName": "1-year term deposit 1.49% (tax-free, Sep 2026)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BG.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the 1-year term deposit rate, which is untaxed."
+      "note": "Base case kept just under the 1-year term deposit rate, which is untaxed."
     },
     "retirement_return_high": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "10-year government bond 4.09%; deposits over 2 years 2.82% (tax-free)",
+      "sourceName": "10-year government bond 4.09%; deposits over 2 years 2.86% (tax-free)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/IRS/IRS.M.BG.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of government bonds and long deposits."
@@ -392,7 +393,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "1-year term deposit 1.40%; SOFIX index",
+      "sourceName": "1-year term deposit 1.49%; SOFIX index",
       "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -400,7 +401,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "1-year term deposit 1.40%; equity base 5%; 10-year bond 4.09%",
+      "sourceName": "1-year term deposit 1.49%; equity base 5%; 10-year bond 4.09%",
       "sourceUrl": "https://tradingeconomics.com/bulgaria/stock-market",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half shares at 5% and half fixed income at about 2%."
@@ -433,7 +434,7 @@
       "sourceName": "National Social Security Institute (NOI), social old-age pension",
       "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/nesvyrzani-s-trudovata-deinost/socialna-pensiya-za-starost/",
       "asOf": "2026-07-01",
-      "note": "From age 70; yearly family income per member must be below 30% of the poverty line (EUR 390.63 a month in 2026), and the person may not receive any other pension."
+      "note": "From age 70; the person's family income per member over the past year must be below 30% of the poverty line (EUR 390.63 a month in 2026), and the person may not receive any other pension."
     },
     "gratuity_rule": {
       "value": null,
@@ -441,14 +442,14 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No statutory end-of-service payment expressed in days of wages per year of service was found; we could not read the Labour Code retirement-payment rule from an official page."
+      "note": "No statutory end-of-service payment expressed in days of wages per year of service was found. The Labour Code is reported to give a lump-sum payment of gross monthly wages when employment ends after the right to a pension is acquired, which does not fit the days-per-year shape, and it could not be read from an official page (lex.bg returned 403)."
     },
     "public_pension_scheme": {
       "value": null,
       "valueJson": {
         "entryAgeMin": null,
         "entryAgeMax": null,
-        "pensionFromAge": 64.75,
+        "pensionFromAge": 65,
         "nomineeUntilAge": null,
         "inflationLinked": true,
         "taxFree": null
@@ -457,7 +458,7 @@
       "sourceName": "National Social Security Institute (NOI), pension conditions and calculation",
       "sourceUrl": "https://nssi.bg/fizicheski-lica/pensii-bg/trudova-deinost-pridobivane-pravo/razmer-na-pensiite/",
       "asOf": "2026-07-01",
-      "note": "Pay-as-you-go state pension: average insured income x individual coefficient x years x 1.35% per year; pension age 64 y 9 m (men) and 62 y 6 m (women) in 2026. Pensions are raised every 1 July (minimum EUR 322.37 to 347.51 in 2026). Workers born after 1959 also pay into a universal pension fund (second pillar)."
+      "note": "Pay-as-you-go state pension: average insured income x individual coefficient x 1.35% per year of insurance; pension age 65 for both sexes for anyone born after 1975 (64 y 9 m for men and 62 y 6 m for women in 2026). Minimum pension EUR 322.37 to 30 June 2026 and EUR 347.51 from 1 July 2026. Pensions are raised every 1 July under the Social Insurance Code (the cited page does not describe the indexation formula). Workers born after 1959 also pay into a universal pension fund (second pillar)."
     }
   },
   "instruments": {

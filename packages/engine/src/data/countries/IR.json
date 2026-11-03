@@ -20,10 +20,10 @@
     "usdRate": {
       "value": 1871664,
       "status": "sourced",
-      "sourceName": "Central Bank of the Islamic Republic of Iran, exchange rates on the homepage (9 Aban 1405)",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceName": "Central Bank of the Islamic Republic of Iran, official exchange rates (9 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/exrates/rates_fa.aspx",
       "asOf": "2026-10-31",
-      "note": "1,871,664 rials per US dollar dated 9 Aban 1405 (31 October 2026); Trading Economics shows 1,868,414 on 29 October. Prices are often quoted in tomans (10 rials). The World Bank's 42,000 (2023) was the former preferential rate."
+      "note": "1,871,664 rials per US dollar dated 9 Aban 1405 (31 October 2026) as read by the researcher; on re-check the same page showed 1,882,917 for 12 Aban 1405 (3 November 2026), with earlier dates available through its date selector. Prices are often quoted in tomans (10 rials). The World Bank's 42,000 (2023) was the former preferential rate."
     }
   },
   "fields": {
@@ -33,7 +33,7 @@
       "sourceName": "Statistical Centre of Iran annual inflation, July 2026, via Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/iran/inflation-cpi",
       "asOf": "2026-07-31",
-      "note": "87.9% in July 2026 (88.6% in June); food inflation 130.5% in June 2026. Secondary source; the Statistical Centre of Iran site was not read. World Bank 2025 average 42.2%."
+      "note": "87.9% year on year in July 2026 (88.6% in June), Statistical Centre of Iran via Trading Economics (secondary source). The central bank's own series (https://www.cbi.ir/Inflation/Inflation_FA.aspx) shows 68.4% for the 12 months to Shahrivar 1405 (September 2026), a slower-moving average measure. World Bank 2025 average 42.2%."
     },
     "inflation_projection": {
       "value": 0.4,
@@ -41,15 +41,15 @@
       "sourceName": "World Bank CPI inflation 2025 (42.2%); Statistical Centre of Iran 87.9% in July 2026",
       "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=IR",
       "asOf": "2026-10-31",
-      "note": "The central bank has no credible inflation target and inflation has run around 40% for years before the 2026 spike, so 40% is used for long-run planning."
+      "note": "The central bank has no credible inflation target; inflation ran around 35-50% a year before the 2026 spike (central bank annual figure 48.3% for 1404), so 40% is used for long-run planning."
     },
     "policy_rate": {
       "value": 0.23,
       "status": "sourced",
-      "sourceName": "Central Bank of the Islamic Republic of Iran, minimum repurchase agreement rate (7 Aban 1405)",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceName": "Central Bank of the Islamic Republic of Iran, policy rates page: minimum repurchase agreement rate (7 Aban 1405)",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-29",
-      "note": "The central bank's homepage shows the minimum repo (open-market) rate at 23%, the interbank market rate at 24%, the regulated borrowing rate at 24% and the regulated deposit (standing facility) rate at 17%, dated 7 Aban 1405 (29 October 2026). Iran has no single policy rate; the repo rate is the closest equivalent."
+      "note": "The central bank's policy rates page shows the minimum repo rate at 23%, the interbank market rate at 24%, the standing lending facility rate at 24% and the standing deposit facility rate at 17%, dated 7 Aban 1405 (29 October 2026). Iran has no single policy rate; the repo rate is the closest equivalent."
     },
     "savings_account_rate": {
       "value": null,
@@ -167,7 +167,7 @@
       "value": 0.22,
       "status": "assumption",
       "sourceName": "Central bank interbank rate 24%; repo rate 23%; TEDPIX record",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Base case: about the safe rate, below its 4-point cap, because the Tehran index has trailed inflation and trading was disrupted in 2026."
     },
@@ -183,7 +183,7 @@
       "value": 0.2,
       "status": "assumption",
       "sourceName": "Central bank official rate 1,871,664 rials per US dollar (9 Aban 1405)",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/exrates/rates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Low case: flat dollar gold with slower rial depreciation than inflation implies."
     },
@@ -191,7 +191,7 @@
       "value": 0.4,
       "status": "assumption",
       "sourceName": "Central bank exchange rate; inflation assumption 40%; long-run dollar gold trend about 4%",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/exrates/rates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Base case: about 4% dollar gold trend plus rial depreciation of about 35% a year, the gap between the 40% inflation assumption and US inflation."
     },
@@ -207,7 +207,7 @@
       "value": 0.15,
       "status": "assumption",
       "sourceName": "Central bank regulated deposit rate 17% and interbank rate 24% (7 Aban 1405)",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Low case: ordinary deposits earning well below the interbank rate."
     },
@@ -215,7 +215,7 @@
       "value": 0.2,
       "status": "assumption",
       "sourceName": "Central bank repo rate 23% and interbank rate 24% (7 Aban 1405)",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Base case: bank investment deposits a few points below the interbank rate; deposit profit is assumed untaxed (not confirmed)."
     },
@@ -223,7 +223,7 @@
       "value": 0.24,
       "status": "assumption",
       "sourceName": "Central bank interbank rate 24%",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "High case: government Islamic securities near the interbank rate."
     },
@@ -289,7 +289,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Iran",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IR",
       "asOf": "2024-12-31",
-      "note": "77.9 years in 2024 (men 76.0, women 79.8); UN WPP 2024 gives 78.2 for 2026."
+      "note": "77.9 years in 2024 (men 76.0, women 79.8), the latest World Bank year, older than 2025; UN WPP 2024 gives 78.2 for 2026."
     },
     "life_table_remaining": {
       "value": null,
@@ -371,7 +371,7 @@
       "value": 0.14,
       "status": "assumption",
       "sourceName": "Central bank regulated deposit rate 17% (7 Aban 1405)",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Low case: deposit rates fall below today's regulated deposit rate."
     },
@@ -379,7 +379,7 @@
       "value": 0.18,
       "status": "assumption",
       "sourceName": "Central bank repo rate 23%; regulated deposit rate 17%",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Base case: below the rates banks can pay on long deposits, so not above the after-tax safe rate."
     },
@@ -387,7 +387,7 @@
       "value": 0.22,
       "status": "assumption",
       "sourceName": "Central bank interbank rate 24%",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "High case: long deposits and government securities near the interbank rate."
     },
@@ -395,7 +395,7 @@
       "value": 0.15,
       "status": "assumption",
       "sourceName": "Fixed income low 15%; equity low 10%",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Low case: a balanced mix earning about deposit rates."
     },
@@ -403,7 +403,7 @@
       "value": 0.25,
       "status": "assumption",
       "sourceName": "Fixed income base 20%; equity base 22%; gold base 40%",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "Base case: a balanced mix with gold, which has carried most of the protection against rial depreciation."
     },
@@ -411,7 +411,7 @@
       "value": 0.38,
       "status": "assumption",
       "sourceName": "Equity high 40%; gold high 60%",
-      "sourceUrl": "https://www.cbi.ir/",
+      "sourceUrl": "https://www.cbi.ir/PolicyRates/policyrates_fa.aspx",
       "asOf": "2026-10-31",
       "note": "High case: a growth and gold heavy mix during fast depreciation."
     },

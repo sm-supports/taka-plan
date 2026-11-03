@@ -26,12 +26,12 @@
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.032,
+      "value": 0.059,
       "status": "sourced",
-      "sourceName": "Bank of Central African States (BEAC), note on CEMAC inflation, Q2 2026 (national CPI, Equatorial Guinea)",
-      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
-      "asOf": "2026-06-30",
-      "note": "Consumer prices up 3.2% year on year in June 2026 in Equatorial Guinea (BEAC table of national CPIs); the annual average was 2.3%. The national statistics office (INEGE) site was not reachable."
+      "sourceName": "National Institute of Statistics of Equatorial Guinea (INEGE), Tasa de inflación septiembre 2026",
+      "sourceUrl": "https://inege.org/?p=18344",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 5.9% year on year in September 2026 (INEGE, published 20 October 2026); the CEMAC surveillance measure (12-month average) was 3.0%, up from 2.8% in August. The BEAC Q2 2026 note gave 3.2% year on year for June 2026."
     },
     "inflation_projection": {
       "value": 0.03,
@@ -39,7 +39,7 @@
       "sourceName": "BEAC: CEMAC inflation convergence norm of 3%; franc CFA fixed to the euro",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
       "asOf": "2026-10-31",
-      "note": "The franc CFA is fixed to the euro and the BEAC holds CEMAC inflation under a 3% norm; Equatorial Guinea's annual average inflation was 3.4% in 2024 and 2.3% in 2025 (BEAC), so the 3% norm is used."
+      "note": "The franc CFA is fixed to the euro and the BEAC holds CEMAC inflation under a 3% norm; Equatorial Guinea's annual average inflation was 3.4% in 2024 and 2.3% in 2025 (BEAC) and 3.0% in the 12 months to September 2026 (INEGE), and the BEAC projects 2.0-2.5% for 2027-2030, so the 3% norm is used despite the 2026 energy-price spike (5.9% year on year in September 2026)."
     },
     "policy_rate": {
       "value": 0.045,
@@ -156,23 +156,23 @@
     "equity_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "BEAC: franc CFA fixed to the euro; no Equatorial Guinea companies of note on the regional exchange (BVMAC)",
+      "sourceName": "BEAC: franc CFA fixed to the euro; the regional stock exchange lists very few companies and none of note from Equatorial Guinea",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: a weak decade for global equities held in euro (franc CFA) terms; there is no usable local stock index."
     },
     "equity_return_base": {
-      "value": 0.065,
+      "value": 0.06,
       "status": "assumption",
-      "sourceName": "BEAC: franc CFA fixed to the euro; no Equatorial Guinea companies of note on the regional exchange (BVMAC)",
+      "sourceName": "BEAC: franc CFA fixed to the euro; the regional stock exchange lists very few companies and none of note from Equatorial Guinea",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
       "asOf": "2026-10-31",
-      "note": "No local stock index record, so equity means a global index in euro terms, held about 4 points above an after-tax safe saving rate of about 2.5-3%."
+      "note": "No local stock index record, so equity means a global index in euro (franc CFA) terms, held at no more than about 3.5 points above an after-tax safe saving rate of about 2.5-3% (BEAC minimum savings rate 2.45%)."
     },
     "equity_return_high": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "BEAC: franc CFA fixed to the euro; no Equatorial Guinea companies of note on the regional exchange (BVMAC)",
+      "sourceName": "BEAC: franc CFA fixed to the euro; the regional stock exchange lists very few companies and none of note from Equatorial Guinea",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
       "asOf": "2026-10-31",
       "note": "High case: global equities repeat their long-run euro-terms record."
@@ -268,10 +268,10 @@
     "goal_inflation_health": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "BEAC note on CEMAC inflation Q2 2026: health prices +1.5% year on year in June 2026 (CEMAC)",
-      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/Note-sur-l%C3%A9volution-r%C3%A9cente-de-linflation-dans-la-CEMAC-2026Q2.pdf",
+      "sourceName": "INEGE, Tasa de inflación septiembre 2026: health goods and services +4.6%",
+      "sourceUrl": "https://inege.org/?p=18344",
       "asOf": "2026-10-31",
-      "note": "CEMAC health prices rose 1.5% in June 2026, but private and imported care costs run faster, so health goals use 1.5 points above the 3% planning inflation."
+      "note": "INEGE reported health prices up 4.6% in September 2026 and private and imported care costs tend to run above headline inflation, so health goals use 1.5 points above the 3% planning inflation."
     },
     "goal_inflation_education": {
       "value": 0.04,
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Equatorial Guinea",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GQ",
       "asOf": "2024-12-31",
-      "note": "63.9 years in 2024 (men 62.2, women 65.9)."
+      "note": "63.9 years in 2024 (men 62.2, women 65.9); latest available, older than 2025."
     },
     "life_table_remaining": {
       "value": null,
@@ -392,7 +392,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceName": "Safe rate about 3%; global equity base 6% in euro terms; gold base 4.5%",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: mostly bank savings."
@@ -400,7 +400,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceName": "Safe rate about 3%; global equity base 6% in euro terms; gold base 4.5%",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
       "asOf": "2026-10-31",
       "note": "Base case: a balanced mix of deposits, government securities, gold and foreign equity funds."
@@ -408,7 +408,7 @@
     "retirement_accumulation_return_high": {
       "value": 0.065,
       "status": "assumption",
-      "sourceName": "Safe rate about 3%; global equity base 6.5% in euro terms; gold base 4.5%",
+      "sourceName": "Safe rate about 3%; global equity base 6% in euro terms; gold base 4.5%",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf",
       "asOf": "2026-10-31",
       "note": "High case: a growth-leaning mix with more equity."
@@ -479,17 +479,17 @@
       "note": "No government savings certificate for individuals was found."
     },
     "tbill_91d": {
-      "available": false,
+      "available": true,
       "localName": "Bonos del Tesoro asimilables (BTA)",
       "localNameEn": "Treasury bills",
-      "note": "Treasury bills are auctioned through the BEAC to banks and primary dealers (SVT); individuals cannot bid directly.",
+      "note": "Treasury bills (BTA, 13 to 52 weeks) are auctioned through the BEAC to primary dealers (SVT); individuals can buy through them or on the secondary market (2,219 individuals held CEMAC Treasury securities in January 2026, BEAC).",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
     },
     "tbond_5y": {
-      "available": false,
+      "available": true,
       "localName": "Obligaciones del Tesoro asimilables (OTA)",
       "localNameEn": "Treasury bonds",
-      "note": "Treasury bonds are auctioned through the BEAC to primary dealers; Equatorial Guinea issued none in January 2026.",
+      "note": "Treasury bonds (OTA) are auctioned through the BEAC to primary dealers and can be bought by individuals through them; Equatorial Guinea issues them irregularly (last in December 2025 as of the January 2026 statistics).",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2021/10/Statistiques-Mensuelles-du-March%C3%A9-des-valeurs-du-Tr%C3%A9sors-de-la-CEMAC-janvier-2026.pdf"
     },
     "tbond_10y": {
@@ -502,7 +502,7 @@
       "available": false,
       "localName": null,
       "localNameEn": null,
-      "note": "No locally sold diversified equity fund was found; the regional exchange (BVMAC) lists very few companies."
+      "note": "No locally sold diversified equity fund was found; the regional stock exchange lists very few companies."
     },
     "gold": {
       "available": true,
@@ -534,8 +534,7 @@
     },
     "statistics": {
       "name": "National Institute of Statistics of Equatorial Guinea (INEGE)",
-      "url": "https://www.inege.org/",
-      "note": "Site blocks automated access; not read during research."
+      "url": "https://inege.org/"
     }
   },
   "researchedAt": "2026-10-31",

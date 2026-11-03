@@ -15,12 +15,12 @@
     "decimals": 0,
     "compact": "intl",
     "usdRate": {
-      "value": 3723.7,
+      "value": 3782.65,
       "status": "sourced",
-      "sourceName": "Central Bank of Myanmar bank-customer market rate (CSO statistics overview)",
-      "sourceUrl": "https://www.csostat.gov.mm/",
-      "asOf": "2026-10-29",
-      "note": "CBM bank-customer market rate MMK 3,723.70 and money-changer rate 3,670 per dollar; the CBM reference rate is fixed at 2,100 but most transactions use the market rate."
+      "sourceName": "Central Bank of Myanmar, Activities of Interbank Foreign Exchange Market for 30.10.2026 (bank-customer dealing, day weighted average rate)",
+      "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/Activities%20of%20Interbank%20%20for-%2030.10.2026_0.pdf",
+      "asOf": "2026-10-30",
+      "note": "Day weighted average of bank-customer USD trades (traded range 2,106-3,995); the CBM reference rate is fixed at 2,100 but most transactions use the market rate (CSO lists a money-changer rate of 3,670)."
     }
   },
   "fields": {
@@ -46,7 +46,7 @@
       "sourceName": "Central Bank of Myanmar, Central Bank Rate (home page)",
       "sourceUrl": "https://www.cbm.gov.mm/",
       "asOf": "2026-10-31",
-      "note": "9% a year; CBM also sets a 7% minimum deposit rate and a 15% maximum lending rate."
+      "note": "9% a year, shown in the rates panel of the CBM home page (the only official page we found that shows the current rate; the CBM interest-rate statistics file stops in January 2023 at 7%). CBM also sets a 7% minimum deposit rate and a 15% maximum lending rate."
     },
     "savings_account_rate": {
       "value": 0.07,
@@ -86,7 +86,7 @@
       "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MM",
       "asOf": "2020-12-31",
-      "note": "5.83% for 2020, the latest World Bank figure; the CBM minimum deposit rate has since risen to 7%."
+      "note": "5.83% for 2020, the latest World Bank figure (older than 2025); the CBM minimum deposit rate has since risen from 5% to 7%."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -102,7 +102,7 @@
       "sourceName": "Central Bank of Myanmar, market weighted average accepted rates at the treasury bill auction (3-month)",
       "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bill%20List%20%26%20Graph%20%2814.6.23%29_1.pdf",
       "asOf": "2023-05-31",
-      "note": "5.993% at the second May 2023 auction, the latest figure published on the CBM site (6-month 6.54%, 12-month 7.32%). The central bank rate has since risen from 7% to 9%, so current yields are likely higher."
+      "note": "5.993% at the second May 2023 auction, the latest figure published on the CBM site (older than 2025; 6-month 6.539%, 12-month 7.315%). The central bank rate has since risen from 7% to 9%, so current yields are likely higher."
     },
     "tbond_5y_rate": {
       "value": 0.0849,
@@ -110,7 +110,7 @@
       "sourceName": "Central Bank of Myanmar, market weighted average accepted yields at the treasury bond auction (3.5-5.5 years, 7.5% coupon)",
       "sourceUrl": "https://www.cbm.gov.mm/sites/default/files/inline-files/T-Bond%20List%20%26%20Graph%20%2814.6.23%29_2.pdf",
       "asOf": "2023-04-30",
-      "note": "8.493% in April 2023, the latest 5-year-band figure published on the CBM site."
+      "note": "8.493% in April 2023 for the 3.5-5.5-year band (7.5% coupon), the latest 5-year-band figure on the CBM site (older than 2025); the central bank rate has since risen from 7% to 9%."
     },
     "tbond_10y_rate": {
       "value": null,
@@ -126,7 +126,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Myanmar, withholding taxes (reviewed 9 September 2026)",
       "sourceUrl": "https://taxsummaries.pwc.com/myanmar/corporate/withholding-taxes",
       "asOf": "2026-09-09",
-      "note": "No withholding tax on interest paid to residents (15% for non-residents); non-employment income up to MMK 4.8 million a year is tax-free."
+      "note": "0% withholding on interest paid to residents (15% for non-residents). Interest counts as business income for resident individuals and is taxed at progressive rates when non-employment income exceeds MMK 4.8 million a year (PwC, income determination)."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -150,7 +150,7 @@
       "sourceName": "Central Bank of Myanmar, maximum bank lending rate (home page)",
       "sourceUrl": "https://www.cbm.gov.mm/",
       "asOf": "2026-10-31",
-      "note": "CBM caps bank lending rates at 15% a year; we treat this as the cap on bank card credit."
+      "note": "CBM caps bank lending rates at 15% a year (home page rates panel); we treat this general cap as the ceiling on bank card credit, as no card-specific rule was found."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -180,15 +180,15 @@
       "value": 0.06,
       "status": "assumption",
       "sourceName": "US-dollar gold trend; kyat market rate (CSO statistics overview)",
-      "sourceUrl": "https://www.csostat.gov.mm/",
+      "sourceUrl": "https://www.csostat.gov.mm/Statistics/MarketPrice",
       "asOf": "2026-10-31",
-      "note": "Low case if gold stalls in dollars and the kyat holds near 3,700 per dollar."
+      "note": "Low case if gold stalls in dollars and the kyat holds near its current market rate of about 3,700-3,800 per dollar."
     },
     "gold_return_base": {
       "value": 0.13,
       "status": "assumption",
-      "sourceName": "US-dollar gold trend plus expected kyat depreciation; 24-carat gold at MMK 7.1 million per tikal (CSO, 29 Oct 2026)",
-      "sourceUrl": "https://www.csostat.gov.mm/",
+      "sourceName": "US-dollar gold trend plus expected kyat depreciation; CSO market prices (24-carat gold about MMK 7 million per tikal, kyat about 3,600-3,800 per dollar)",
+      "sourceUrl": "https://www.csostat.gov.mm/Statistics/MarketPrice",
       "asOf": "2026-10-31",
       "note": "About 4% dollar gold trend plus about 9% a year kyat depreciation from the inflation gap with the US."
     },
@@ -196,7 +196,7 @@
       "value": 0.2,
       "status": "assumption",
       "sourceName": "US-dollar gold trend plus expected kyat depreciation",
-      "sourceUrl": "https://www.csostat.gov.mm/",
+      "sourceUrl": "https://www.csostat.gov.mm/Statistics/MarketPrice",
       "asOf": "2026-10-31",
       "note": "High case for a strong gold cycle with fast kyat depreciation, as in 2021-2024."
     },
@@ -345,7 +345,7 @@
       "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
       "sourceUrl": "https://www.populationpyramid.net/myanmar/2040/",
       "asOf": "2024-07-31",
-      "note": "100 / old-age dependency ratio: 11.0 in 2025 (World Bank), 16.1 in 2040 and 26.0 in 2065 (UN WPP 2024)."
+      "note": "100 / old-age dependency ratio: OADR 11.0 in 2025 (World Bank SP.POP.DPND.OL), 16.1 in 2040 and 26.0 in 2065 (UN WPP 2024 medium variant via populationpyramid.net)."
     },
     "retirement_age_default": {
       "value": null,
@@ -508,7 +508,7 @@
       "localName": "ရွှေ",
       "localNameEn": "Gold",
       "note": "Gold is widely bought at gold shops; the CSO publishes the 24-carat price per tikal.",
-      "sourceUrl": "https://www.csostat.gov.mm/"
+      "sourceUrl": "https://www.csostat.gov.mm/Statistics/MarketPrice"
     }
   },
   "institutions": {

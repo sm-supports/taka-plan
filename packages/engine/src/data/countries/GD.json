@@ -30,7 +30,7 @@
       "sourceName": "Trading Economics, Grenada inflation rate (Central Statistical Office CPI)",
       "sourceUrl": "https://tradingeconomics.com/grenada/inflation-cpi",
       "asOf": "2026-06-30",
-      "note": "Secondary source: annual CPI inflation 2.03% in June 2026 (2.06% in May); the CSO and ECCB CPI pages could not be read (CSO site lists releases only to 2024, ECCB site blocked)."
+      "note": "Secondary source: annual CPI inflation 2.0% in June 2026 (2.06% in May); the CSO and ECCB CPI pages could not be read (CSO site lists releases only to 2024, ECCB site blocks automated access)."
     },
     "inflation_projection": {
       "value": 0.02,
@@ -97,12 +97,12 @@
       "note": "Searched Government of Grenada and ECCB/RGSM sources: no government savings certificate or retail savings bond for individuals was found; government borrowing is through Treasury bills on the Regional Government Securities Market."
     },
     "tbill_91d_rate": {
-      "value": 0.0347,
-      "status": "sourced",
-      "sourceName": "Regional Government Securities Market news release: Government of Grenada 91-day Treasury bill (8 June 2026)",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
-      "asOf": "2026-06-08",
-      "note": "Uniform-price auction discount rate 3.46972%, EC$30 million raised; earlier 2026 issues were in March. A September 2026 rollover result was not found."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Government of Grenada sells 91-day Treasury bills on the Regional Government Securities Market (a June 2026 auction cleared near 3.5%), but the result is published only by the regional securities exchange company, which may not be cited; the ECCB site blocks automated access."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -155,24 +155,24 @@
     "equity_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026); EC dollar pegged to the US dollar",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB Monetary Council (July 2026): discount rate 3%, minimum savings rate 2%, EC$2.70 per US$1 peg",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "Low case: very small local share market on the regional exchange, so savers mostly rely on global equity funds in pegged US-dollar terms, with a weak decade possible."
+      "note": "Low case: the regional share market is very small, so savers rely on global equity funds in pegged US-dollar terms, and a weak decade is possible."
     },
     "equity_return_base": {
-      "value": 0.065,
+      "value": 0.06,
       "status": "assumption",
-      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026); EC dollar pegged to the US dollar",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB Monetary Council (July 2026): discount rate 3%, minimum savings rate 2%, EC$2.70 per US$1 peg",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "Base case uses a global equity index in EC-dollar terms (pegged to USD): the 3.5% safe rate plus a 3-point premium, as the local market is too thin to have a usable 10-year record."
+      "note": "Base case uses a global equity index in EC-dollar terms (pegged to the US dollar), kept within 4 points of the tax-free 2% minimum savings rate because the local market has no usable 10-year record."
     },
     "equity_return_high": {
       "value": 0.09,
       "status": "assumption",
-      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026); EC dollar pegged to the US dollar",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB Monetary Council (July 2026): discount rate 3%, minimum savings rate 2%, EC$2.70 per US$1 peg",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
       "note": "High case if global equities repeat their strong long-run US-dollar returns."
     },
@@ -201,28 +201,28 @@
       "note": "High case with strong dollar gold prices."
     },
     "fixed_income_return_low": {
-      "value": 0.015,
+      "value": 0.01,
       "status": "assumption",
-      "sourceName": "World Bank average deposit rate 0.95% (2025); ECCB minimum savings rate 2%",
+      "sourceName": "ECCB minimum savings rate 2% and discount rate 3% (July 2026); World Bank average deposit rate 0.95% (2025)",
       "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "Low case: savings and short deposits at 1-2%, tax-free for residents."
+      "note": "Low case: savings and short deposits near the 0.95% average deposit rate (2025), tax-free for residents."
     },
     "fixed_income_return_base": {
-      "value": 0.025,
+      "value": 0.02,
       "status": "assumption",
-      "sourceName": "ECCB minimum savings rate 2%; 91-day Treasury bill 3.47% (June 2026)",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB minimum savings rate 2% and discount rate 3% (July 2026); World Bank average deposit rate 0.95% (2025)",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "Base case: a mix of tax-free savings deposits at 2% and Treasury bills near 3.5%."
+      "note": "Base case: tax-free deposits around the ECCB 2% minimum savings rate."
     },
     "fixed_income_return_high": {
-      "value": 0.035,
+      "value": 0.03,
       "status": "assumption",
-      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026)",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB minimum savings rate 2% and discount rate 3% (July 2026); World Bank average deposit rate 0.95% (2025)",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "High case: rolling Treasury bills at about 3.5%."
+      "note": "High case: longer deposits or government paper at about the 3% ECCB discount rate."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -293,7 +293,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/grenada/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -354,7 +354,7 @@
       "sourceName": "National Insurance (Amendment) (No. 2) Bill 2023, Third Schedule (Parliament of Grenada)",
       "sourceUrl": "https://grenadaparliament.gd/wp-content/uploads/2023/06/National-Insurance_Amendment-No.-2-Bill-2023.docx",
       "asOf": "2024-01-01",
-      "note": "NIS pensionable age rises one year a year from 60 (2023) to 61 (2024), 62 (2025), 63 (2026), 64 (2027) and 65 from 1 January 2028, so 65 applies to anyone born after 1975. In force 1 January 2024 (passed mid-2023; older than 2025)."
+      "note": "National Insurance (Amendment) (No. 2) Act 2023, Third Schedule: pensionable age 61 in 2024, 62 in 2025, 63 in 2026, 64 in 2027 and 65 from 1 January 2028, so 65 applies to anyone born after 1975. In force 1 January 2024 (law from 2023, older than 2025; bill text read)."
     },
     "retirement_age_government": {
       "value": 60,
@@ -365,50 +365,50 @@
       "note": "Attorney General quoted: public officers work until 60 or 26 2/3 years of service; early retirement at 50 with 20 years. A new Public Sector Employees (Pension Fund) scheme was proposed in 2024. News source from 2024 (older than 2025)."
     },
     "retirement_return_low": {
-      "value": 0.015,
+      "value": 0.01,
       "status": "assumption",
-      "sourceName": "World Bank average deposit rate 0.95% (2025); ECCB minimum savings rate 2%",
+      "sourceName": "ECCB minimum savings rate 2% and discount rate 3% (July 2026)",
       "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "Low case: mostly tax-free savings deposits at about 1.5-2%."
+      "note": "Low case: mostly tax-free savings deposits near the 0.95% average deposit rate."
     },
     "retirement_return_base": {
-      "value": 0.025,
+      "value": 0.02,
       "status": "assumption",
-      "sourceName": "ECCB minimum savings rate 2%; 91-day Treasury bill 3.47% (June 2026)",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB minimum savings rate 2% and discount rate 3% (July 2026)",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "Base case below the 3.47% Treasury bill rate: a mix of savings deposits and bills, kept liquid in retirement."
+      "note": "Base case equal to the tax-free 2% minimum savings rate, the best confirmed safe rate, kept liquid in retirement."
     },
     "retirement_return_high": {
-      "value": 0.034,
-      "status": "assumption",
-      "sourceName": "Grenada 91-day Treasury bill 3.47% (June 2026)",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
-      "asOf": "2026-10-31",
-      "note": "High case: rolling Treasury bills at about the latest auction rate."
-    },
-    "retirement_accumulation_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "91-day Treasury bill 3.47%; global equity assumptions in pegged EC dollars",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB minimum savings rate 2% and discount rate 3% (July 2026)",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "asOf": "2026-10-31",
+      "note": "High case: longer deposits or government paper near the 3% ECCB discount rate."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "ECCB minimum savings rate 2% (July 2026); global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if global equities disappoint."
     },
     "retirement_accumulation_return_base": {
-      "value": 0.045,
+      "value": 0.04,
       "status": "assumption",
-      "sourceName": "91-day Treasury bill 3.47%; global equity assumptions in pegged EC dollars",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB minimum savings rate 2% (July 2026); global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
-      "note": "Base case: half global equities at 6.5% and half deposits and bills around 2.5%."
+      "note": "Base case: half global equities at 6% and half tax-free deposits at about 2%."
     },
     "retirement_accumulation_return_high": {
-      "value": 0.065,
+      "value": 0.06,
       "status": "assumption",
-      "sourceName": "91-day Treasury bill 3.47%; global equity assumptions in pegged EC dollars",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf",
+      "sourceName": "ECCB minimum savings rate 2% (July 2026); global equity assumptions in pegged EC dollars",
+      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
       "asOf": "2026-10-31",
       "note": "High case with stronger equity returns."
     },
@@ -436,7 +436,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No statutory retirement gratuity: the Employment Act Cap. 89 s.84 (https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap89-EMPLOYMENT-ACT.pdf) pays a termination allowance of one week's wages per year only on dismissal by the employer, and expressly not to an employee over 60 or at retirement age.",
+      "note": "No statutory retirement gratuity: severance under the Employment Act (s.84 of Cap. 89, https://grenadaparliament.gd/wp-content/uploads/2021/08/Cap89-EMPLOYMENT-ACT.pdf, and s.86 of the Employment Act 2016) is paid only on dismissal and not to an employee over the NIS pensionable age (as amended by the National Insurance (Amendment) (No. 2) Act 2023).",
       "absent": true
     },
     "public_pension_scheme": {
@@ -453,7 +453,7 @@
         "inflationLinked": false,
         "taxFree": null
       },
-      "note": "Compulsory contributory NIS age pension for employed persons from 16 to the pensionable age (rising to 65 by 2028); traditionally 500 weeks of contributions needed (150 paid), else a lump-sum age grant. No automatic indexation was found in the Act; increases are ad hoc. Tax treatment not confirmed. Law dates from 2023 (older than 2025)."
+      "note": "Compulsory contributory NIS age pension for insured persons aged 16 up to the pensionable age (rising to 65 from 2028), per the National Insurance (Amendment) (No. 2) Act 2023. No automatic indexation was found; tax treatment not confirmed. Law from 2023 (older than 2025)."
     }
   },
   "instruments": {
@@ -489,8 +489,7 @@
       "available": true,
       "localName": "Treasury bill",
       "localNameEn": "Government of Grenada 91-day Treasury bill",
-      "note": "Auctioned on the Regional Government Securities Market through licensed intermediaries; mostly bought by institutions.",
-      "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/06/Govt-of-GDA91-day-Treasury-Bill-GDB080926-8jUN26.pdf"
+      "note": "Auctioned on the Regional Government Securities Market through licensed intermediaries; mostly bought by institutions."
     },
     "tbond_5y": {
       "available": false,
@@ -522,11 +521,11 @@
     },
     "insuranceRegulator": {
       "name": "Grenada Authority for the Regulation of Financial Institutions (GARFIN)",
-      "url": "https://www.garfin.org/"
+      "url": "https://garfin.gd/"
     },
     "insuranceComplaints": {
       "name": "Grenada Authority for the Regulation of Financial Institutions (GARFIN)",
-      "url": "https://www.garfin.org/",
+      "url": "https://garfin.gd/",
       "note": "No separate insurance ombudsman; complaints go to GARFIN."
     },
     "pensionScheme": {

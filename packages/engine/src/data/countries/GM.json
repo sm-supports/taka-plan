@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "GM",
+  "iso3": "GMB",
+  "nameEn": "Gambia",
+  "nameNative": "The Gambia",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "mnk",
+    "wo",
+    "ff",
+    "en"
+  ],
+  "currency": {
+    "code": "GMD",
+    "symbol": "D",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 72.92,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Gambia, official exchange rates for valuation purposes, 30 October 2026",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/72f71090-d442-11f1-bfda-02ffeced4a91",
+      "asOf": "2026-10-30",
+      "note": "72.92 dalasi per US dollar on 30 October 2026; World Bank 2025 average 71.29. CLDR gives 'GMD' as symbol; the dalasi is written 'D' locally (e.g. D3.8 billion in CBG releases)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.061,
+      "status": "sourced",
+      "sourceName": "Gambia Bureau of Statistics, Consumer Price Index (all items), September 2026",
+      "sourceUrl": "https://www.gbosdata.org/data/720-consumer-price-index/1871-consumer-price-index-all-items",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year inflation 6.1% in September 2026 (CPI 186.21, January 2020=100); the Central Bank shows 6.5% for August and 7.0% for July 2026, after a 2026 peak of 7.6% in June."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Central Bank of The Gambia implicit inflation target 5%; World Bank CPI inflation 2016-2024",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=GM",
+      "asOf": "2026-10-31",
+      "note": "Inflation has run above the CBG's 5% implicit target for years (11.5% in 2022, 17.0% in 2023, 11.6% in 2024, 6-7.6% in 2026), so 8%, near the 10-year average, is used for long-run plans."
+    },
+    "policy_rate": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Gambia, Monetary Policy Committee press release, 20 August 2026",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/7a57e5cf-9cba-11f1-8725-02e599c15748",
+      "asOf": "2026-08-20",
+      "note": "The MPC kept the Monetary Policy Rate at 14% on 20 August 2026 (cut from 16% in February 2026); standing deposit facility 5%, lending facility 15%. Next meeting 25-26 November 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.011,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Gambia, Annual Report 2024, Table 31: structure of interest rates (savings bank account)",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748",
+      "asOf": "2024-12-31",
+      "note": "Commercial banks paid 0.20-2.0% on savings accounts in December 2024; 1.1% is the midpoint of that published range. Older than 2025: no 2025 or 2026 table was found."
+    },
+    "fdr_3m_rate": {
+      "value": 0.033,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Gambia, Annual Report 2024, key indicators: average 3-month deposit rate",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748",
+      "asOf": "2024-12-31",
+      "note": "Average 3-month deposit rate 3.3% at end-2024 (also 3.3% at end-2023); banks quoted 0.15-6.5% for 3-month time deposits. Older than 2025."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average 1-year deposit rate was found; the CBG Annual Report 2024 (Table 31) gives only a range of 0.20-9.26% for time deposits of 12 months and over in December 2024, too wide to use."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or published rate was found in CBG statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.065,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Gambia",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=GM",
+      "asOf": "2025-12-31",
+      "note": "6.5% in 2025 (IMF International Financial Statistics via the World Bank); the CBG's own average 3-month deposit rate was 3.3% at end-2024, so this series likely reflects longer or larger deposits."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; the government borrows through Treasury and Sukuk al-Salaam bills and 2-5 year bonds auctioned by the CBG (minimum bid for bonds GMD 200,000)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0364,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Gambia, Treasury bill auction results, 28 October 2026",
+      "sourceUrl": "https://www.cbg.gm/auction-results",
+      "asOf": "2026-10-28",
+      "note": "Weighted average yield on 91-day bills 3.64% (182 days 4.36%, 364 days 9.63%; Sukuk al-Salaam 91 days 3.03%). The 91-day yield was 4.0% in June 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1982,
+      "status": "sourced",
+      "sourceName": "Central Bank of The Gambia, auction result FXD 6/2026/5-year bond, 14 October 2026",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4bdcb0b4-c71a-11f1-945a-02e599c15748",
+      "asOf": "2026-10-14",
+      "note": "Coupon set at 19.82%, the weighted average of accepted bids (19.00-20.25%); the previous 5-year issue on 21 September 2026 priced at 19.28%. Only 925 million of the 1.5 billion dalasi offered was taken up."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Gambian government bond exists: the CBG bonds page lists only 2-, 3- and 5-year Gambia Government Bonds."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax rate on bank interest for resident individuals could not be confirmed: PwC Worldwide Tax Summaries has no Gambia page and the GRA FAQs and brochures read cover only contract withholding (10%/15%) and dividends (15%)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists for individuals, and the tax treatment of Treasury bill and bond income for individuals was not confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Gambia has no deposit insurance scheme: the CBG Annual Report 2024 (section 4.2.2.1) says a Deposit Insurance Bill has been validated and banks will pay premiums only once it is passed into law; no enactment was found as of October 2026. Source: https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748",
+      "absent": true
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on card interest exists in CBG publications and no typical credit card rate is published; bank lending rates ranged 12-22% in December 2024 (CBG Annual Report 2024, Table 31)."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "World Bank, official exchange rate GMD per USD (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GM",
+      "asOf": "2026-10-31",
+      "note": "The Gambia has no stock exchange, so equity means a global index fund in dalasi terms; the low case is a weak global decade with slow dalasi depreciation."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "World Bank, official exchange rate GMD per USD (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GM",
+      "asOf": "2026-10-31",
+      "note": "No local stock market: a global index at about 6% in dollars plus dalasi depreciation of about 4-5% a year (42.5 per dollar in 2015, 71.3 in 2025), capped at 3.5 points above the 6.5% safe-rate assumption."
+    },
+    "equity_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "World Bank, official exchange rate GMD per USD (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GM",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities plus faster dalasi depreciation, as in 2022-2024."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of The Gambia, official exchange rates for valuation, 30 October 2026",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/72f71090-d442-11f1-bfda-02ffeced4a91",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slow dalasi depreciation (72.92 per dollar on 30 October 2026)."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "World Bank, official exchange rate GMD per USD (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GM",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend of about 4% a year plus dalasi depreciation of about 5% a year, the 2015-2025 average."
+    },
+    "gold_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "World Bank, official exchange rate GMD per USD (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GM",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years with faster depreciation, as in 2022-2024 when the dalasi lost about 9% a year."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of The Gambia, Annual Report 2024: average 3-month deposit rate 3.3%",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short time deposits, which paid 0.2-3.3% at end-2024."
+    },
+    "fixed_income_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBG Treasury bill auction 28 October 2026 (364 days 9.63%) and Annual Report 2024 deposit rates",
+      "sourceUrl": "https://www.cbg.gm/auction-results",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of 364-day Treasury bills (9.63%, but 7.6-14.8% over 2024-2026) and term deposits (3-6%); the tax on interest is unconfirmed, so the figure is kept conservative."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "CBG auction result, 5-year bond coupon 19.82% (14 October 2026)",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4bdcb0b4-c71a-11f1-945a-02e599c15748",
+      "asOf": "2026-10-31",
+      "note": "High case: more in 364-day bills and 2-5 year government bonds (12-20% coupons in 2026), allowing for lower future yields and the GMD 200,000 minimum bond bid."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life insurance claim settlement ratio was found; the CBG, which supervises insurers under the Insurance Act 2003, publishes no claims statistics on its insurance pages."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life policies are sold (listed on the CBG insurance products page) but no published premium rates per GMD 1,000 of cover were found from the regulator or a credible guide."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a major hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found; the NHIA does not publish NHIS contribution amounts on its membership page."
+    },
+    "oop_health_share": {
+      "value": 0.3378,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GM",
+      "asOf": "2023-12-31",
+      "note": "33.8% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Central Bank of The Gambia CPI health index via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/gambia/cpi-health",
+      "asOf": "2026-10-31",
+      "note": "The health price index rose from 100 (2020) to 159.05 by September 2025, about 8.4% a year, then held flat to September 2026, so health goals use 1 point above the 8% planning inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Central Bank of The Gambia CPI education index via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/gambia/cpi-education",
+      "asOf": "2026-10-31",
+      "note": "The education price index jumped to 509.64 (2020=100) by November 2023 and has not moved since, a one-off rise, so education goals use 1 point above the 8% planning inflation."
+    },
+    "life_expectancy": {
+      "value": 66.057,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=GM",
+      "asOf": "2024-12-31",
+      "note": "66.1 years in 2024 (men 64.4, women 67.8)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.7,
+            "men": 17.0,
+            "women": 18.3
+          },
+          {
+            "age": 65,
+            "total": 14.2,
+            "men": 13.7,
+            "women": 14.7
+          },
+          {
+            "age": 70,
+            "total": 11.0,
+            "men": 10.6,
+            "women": 11.4
+          },
+          {
+            "age": 80,
+            "total": 6.1,
+            "men": 5.8,
+            "women": 6.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/gambia/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals are the mean of men and women except at 65, where the page gives 14.2 for both sexes."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 17.9
+          },
+          {
+            "year": 2040,
+            "value": 13.7
+          },
+          {
+            "year": 2065,
+            "value": 7.8
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=GM",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 5.58 (2025, World Bank), 7.3 (2040, populationpyramid.net/gambia/2040/) and 12.8 (2065, populationpyramid.net/gambia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Labour Act 2023 (Act No. 6 of 2023), section 111; SSHFC National Provident Fund",
+      "sourceUrl": "https://faolex.fao.org/docs/pdf/gam231810.pdf",
+      "asOf": "2023-06-12",
+      "note": "The retirement age for employees is 60 (s.111; contracts may fix a later age), and 60 is the normal retirement age of the National Provident Fund; the same for men and women. The Act dates from 2023 (older than 2025)."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Act 2023 excludes the civil service (s.3) and the retirement age in the Public Service Pensions Act 2022 could not be read from an official source (60 is commonly cited, e.g. a State House statement of 2020, but no statute was found)."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Central Bank of The Gambia, Annual Report 2024: average 3-month deposit rate 3.3%",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings and short time deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "CBG Treasury bill auction, 28 October 2026: 364-day yield 9.63%",
+      "sourceUrl": "https://www.cbg.gm/auction-results",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of time deposits and 364-day Treasury bills, kept well below the 9.63% one-year bill yield to allow for tax and lower future yields."
+    },
+    "retirement_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "CBG Treasury bill auction (28 October 2026) and 5-year bond result (14 October 2026)",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4bdcb0b4-c71a-11f1-945a-02e599c15748",
+      "asOf": "2026-10-31",
+      "note": "High case: mostly one-year bills and government bonds at current high yields."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBG Annual Report 2024 deposit rates and Treasury bill auctions",
+      "sourceUrl": "https://www.cbg.gm/auction-results",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills with a small share of foreign equity."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "CBG Treasury bill auctions; World Bank GMD per USD exchange rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=GM",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of Treasury bills and bonds, gold and global equity in dalasi terms, between the safe and equity base cases."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "CBG 5-year bond result (19.82%, 14 October 2026); World Bank GMD per USD exchange rate",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4bdcb0b4-c71a-11f1-945a-02e599c15748",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more bonds at current yields and more global equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age pension was found. The Family Strengthening Program (Directorate of Social Welfare) paid GMD 1,000 a month in 2024 to about 2,000 social-registry households, including people aged 70+ (The Point, 29 May 2024), but it is a small targeted cash transfer and no 2026 amount was found."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age pension was found; the only related transfer is the targeted Family Strengthening Program (persons 70+ among other groups, selected through the Gambia Social Registry), whose current rules were not found on an official site."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No general retirement gratuity was found: the Labour Act 2023 s.104(6) gives severance of two months' basic pay per year of service only on medical discharge, death in service, winding-up, business transfer and similar terminations (25% of basic pay on fixed-term contracts), and retirement at 60 (s.111) is not a listed case. Source: https://faolex.fao.org/docs/pdf/gam231810.pdf"
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 18,
+        "entryAgeMax": 59,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Social Security and Housing Finance Corporation, National Provident Fund",
+      "sourceUrl": "https://www.sshfc.gm/national-provident-fund",
+      "asOf": "2026-10-31",
+      "note": "Compulsory defined-contribution provident fund for private-sector employees aged 18-59 (SSHFC Act 2015): 15% of basic salary (5% employee, 10% employer), paid as a lump sum with interest at 60, partial withdrawal from 45; part may be converted to an annuity on request. Parastatal staff are in the Federated Pension Scheme (defined benefit, 15% employer-paid); civil servants under the Public Service Pensions Act 2022."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Banks paid 0.20-2.0% in December 2024 (CBG Annual Report 2024).",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit (3 months)",
+      "note": "Average 3-month deposit rate 3.3% at end-2024 (CBG).",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit (12 months)",
+      "note": "Banks quoted 0.20-9.26% for 12 months and over in December 2024 (CBG).",
+      "sourceUrl": "https://www.cbg.gm/downloads-file/4ddc97a8-fb6d-11f0-8725-02e599c15748"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond; Treasury bills and bonds are sold by auction through the CBG."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills (and Sukuk al-Salaam bills)",
+      "note": "Weekly CBG auctions of 91-, 182- and 364-day bills, plus Islamic Sukuk al-Salaam bills.",
+      "sourceUrl": "https://www.cbg.gm/auction-results"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gambia Government Bonds",
+      "note": "2-, 3- and 5-year fixed-coupon bonds auctioned by the CBG; minimum bid GMD 200,000.",
+      "sourceUrl": "https://www.cbg.gm/bonds"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year government bond is issued; the CBG lists only 2-, 3- and 5-year bonds.",
+      "sourceUrl": "https://www.cbg.gm/bonds"
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The Gambia has no stock exchange and no locally licensed retail equity fund was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "No restriction on individuals owning gold was found; gold is mostly bought as jewellery and the CBG issues no bullion coins."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of The Gambia (CBG)",
+      "url": "https://www.cbg.gm/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of The Gambia, insurance supervision (Insurance Act 2003)",
+      "url": "https://www.cbg.gm/insurance"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of The Gambia, insurance supervision",
+      "url": "https://www.cbg.gm/insurance",
+      "note": "No dedicated insurance ombudsman or complaints page was found; the CBG regulates insurers and lists its contact details on this page."
+    },
+    "pensionScheme": {
+      "name": "Social Security and Housing Finance Corporation (SSHFC), National Provident Fund",
+      "url": "https://www.sshfc.gm/national-provident-fund",
+      "note": "SSHFC also runs the Federated Pension Scheme for parastatal employees."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Health Insurance Authority (NHIA), National Health Insurance Scheme",
+      "url": "https://nhia.gm/membership/",
+      "note": "Residents without private cover must join under the NHIS Act 2021; people over 65, pensioners and children under five are exempt from contributions."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Gambia Bureau of Statistics (GBoS)",
+      "url": "https://www.gbosdata.org/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

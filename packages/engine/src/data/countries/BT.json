@@ -50,43 +50,44 @@
       "note": "The RMA has no confirmed published policy rate; an interest rate corridor was still being developed with IMF help in 2025. Trading Economics lists a 'policy rate' of 5.37% (Sep 2026) that we could not confirm with the RMA, whose site failed TLS checks."
     },
     "savings_account_rate": {
-      "value": 0.045,
-      "status": "sourced",
-      "sourceName": "Published deposit rate sheets of two large banks; Kuensel (Mar 2026)",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
-      "asOf": "2026-03-19",
-      "note": "About 4.5% at most banks; up to 4.75%-5.5% on some account tiers. Savings interest is not taxed."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Savings rate of about 4.5% appears only on individual banks' rate sheets (and a Mar 2026 news report not re-read); the RMA site failed TLS checks."
     },
     "fdr_3m_rate": {
-      "value": 0.0475,
-      "status": "sourced",
-      "sourceName": "Published deposit rate sheets of two large banks",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
-      "asOf": "2024-07-01",
-      "note": "3 months to under 1 year: 4.50%-5.00%."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only individual banks' own rate sheets publish this rate, and they cannot be cited; the RMA site (rma.org.bt) failed TLS checks. The World Bank average deposit rate is 4.5% (2025)."
     },
     "fdr_1y_rate": {
-      "value": 0.056,
-      "status": "sourced",
-      "sourceName": "Published deposit rate sheets of two large banks",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
-      "asOf": "2024-07-01",
-      "note": "1 to under 2 years: 4.50%-6.75%; 5-year fixed deposits pay 7.75%-8.00%."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only individual banks' own rate sheets publish this rate, and they cannot be cited; the RMA site (rma.org.bt) failed TLS checks. The World Bank average deposit rate is 4.5% (2025)."
     },
     "dps_rate": {
-      "value": 0.08,
-      "status": "sourced",
-      "sourceName": "Published deposit rate sheets of two large banks (recurring deposits)",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
-      "asOf": "2024-07-01",
-      "note": "Recurring deposits of about 5 years: 7.25%-8.50%."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only individual banks' own rate sheets publish this rate, and they cannot be cited; the RMA site (rma.org.bt) failed TLS checks. The World Bank average deposit rate is 4.5% (2025)."
     },
     "bank_deposit_avg_rate": {
       "value": 0.045,
       "status": "sourced",
       "sourceName": "World Bank WDI FR.INR.DPST",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
-      "asOf": "2025-12-31"
+      "asOf": "2025-12-31",
+      "note": "World Bank deposit interest rate, 2025."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -118,7 +119,7 @@
       "sourceName": "Bhutan Broadcasting Service (RGoB bond issue)",
       "sourceUrl": "https://www.bbs.bt/?p=181100",
       "asOf": "2025-11-20",
-      "note": "Coupon of the latest 10-year RGoB bond (Nu 1.25bn); coupons since 2020 range 3%-6.5%."
+      "note": "Coupon of the latest 10-year RGoB bond issue (Nu 1.25bn), open to banks, corporations and individuals; the article is undated on the page (reported Nov 2025)."
     },
     "tax_bank_interest": {
       "value": 0.1,
@@ -126,7 +127,7 @@
       "sourceName": "The Bhutanese (Income Tax Act of Bhutan 2025)",
       "sourceUrl": "https://thebhutanese.bt/major-changes-in-bhutans-income-tax-from-2026-explained/",
       "asOf": "2026-01-01",
-      "note": "10% on fixed deposit interest above Nu 400,000 a year from 1 Jan 2026; savings and recurring deposit interest is not taxed, and banks withhold provisionally (DRC notification, 29 Jul 2026)."
+      "note": "Income Tax Act 2025, from 1 Jan 2026: the first Nu 400,000 of fixed-deposit interest is exempt and the rest taxed at 10%."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -155,26 +156,26 @@
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "Royal Securities Exchange of Bhutan",
-      "sourceUrl": "https://rsebl.org.bt/",
+      "sourceName": "Royal Securities Exchange of Bhutan; World Bank deposit rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
       "note": "A small, illiquid exchange with few listed firms and a weak, patchy index record."
     },
     "equity_return_base": {
-      "value": 0.075,
+      "value": 0.07,
       "status": "assumption",
-      "sourceName": "Royal Securities Exchange of Bhutan; bank deposit rates",
-      "sourceUrl": "https://rsebl.org.bt/",
+      "sourceName": "Royal Securities Exchange of Bhutan; World Bank deposit rate; RGoB bond coupon",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
-      "note": "Kept below the 5.6% untaxed 1-year deposit rate plus 4 points because the local market is thin and its 10-year record weak."
+      "note": "Kept well within 4 points of the safe rate (4.5% average deposit, 6.5% 10-year bond) because the local market is thin and its 10-year record weak."
     },
     "equity_return_high": {
       "value": 0.11,
       "status": "assumption",
-      "sourceName": "Royal Securities Exchange of Bhutan",
-      "sourceUrl": "https://rsebl.org.bt/",
+      "sourceName": "Royal Securities Exchange of Bhutan; World Bank deposit rate",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
-      "note": "A case where dividends from hydropower and banking stocks grow with nominal GDP."
+      "note": "A case where dividends from hydropower and financial stocks grow with nominal GDP."
     },
     "gold_return_low": {
       "value": 0.02,
@@ -201,28 +202,28 @@
       "note": "Strong dollar gold plus faster rupee depreciation."
     },
     "fixed_income_return_low": {
-      "value": 0.045,
+      "value": 0.04,
       "status": "assumption",
-      "sourceName": "Bank deposit rate sheets",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceName": "World Bank deposit rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
-      "note": "Short fixed deposits and savings at 4.5%, untaxed for most savers."
+      "note": "Short deposits and savings below the 4.5% average deposit rate, untaxed for most savers."
     },
     "fixed_income_return_base": {
-      "value": 0.065,
+      "value": 0.055,
       "status": "assumption",
-      "sourceName": "Bank deposit rate sheets; RGoB bond coupons",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceName": "World Bank deposit rate; RGoB bond coupon",
+      "sourceUrl": "https://www.bbs.bt/?p=181100",
       "asOf": "2026-10-31",
-      "note": "Blend of 1-year (5.6%) and 5-year (7.75%-8%) deposits and the 6.5% 10-year bond, mostly untaxed below the Nu 400,000 exemption."
+      "note": "Blend of bank deposits (4.5% average, more for long terms) and the 6.5% 10-year RGoB bond, mostly untaxed below the Nu 400,000 exemption."
     },
     "fixed_income_return_high": {
-      "value": 0.08,
+      "value": 0.07,
       "status": "assumption",
-      "sourceName": "Bank deposit rate sheets",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceName": "RGoB bond coupon",
+      "sourceUrl": "https://www.bbs.bt/?p=181100",
       "asOf": "2026-10-31",
-      "note": "Long fixed and recurring deposits at about 8%."
+      "note": "Long deposits and RGoB bonds at about 6.5%-7%."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -361,55 +362,55 @@
       "sourceName": "National Pension and Provident Fund, Annual Report 2024",
       "sourceUrl": "https://www.nppf.org.bt/wp-content/uploads/2025/07/Annual-Report_2024.pdf",
       "asOf": "2024-12-31",
-      "note": "Civil service normal retirement age is set by rank: 57, 59, 60 or 63; 60 shown as the middle case."
+      "note": "Civil service normal retirement age is set by rank: 57, 59, 60 or 63 (NPPF Annual Report 2024; older than 2025); 60 shown as the middle case."
     },
     "retirement_return_low": {
-      "value": 0.045,
+      "value": 0.04,
       "status": "assumption",
-      "sourceName": "Bank deposit rate sheets",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceName": "World Bank deposit rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
-      "note": "Savings and short deposits at 4.5%."
+      "note": "Savings and short deposits below the 4.5% average deposit rate."
     },
     "retirement_return_base": {
-      "value": 0.055,
+      "value": 0.045,
       "status": "assumption",
-      "sourceName": "Bank deposit rate sheets",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceName": "World Bank deposit rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
-      "note": "Kept at the typical 1-year deposit rate (about 5.6%, untaxed below Nu 400,000 of interest a year)."
+      "note": "Kept at the 4.5% average deposit rate, untaxed for most savers, since no 1-year deposit or T-bill rate could be cited."
     },
     "retirement_return_high": {
-      "value": 0.07,
+      "value": 0.065,
       "status": "assumption",
-      "sourceName": "Bank deposit rate sheets; RGoB bond coupons",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceName": "RGoB bond coupon",
+      "sourceUrl": "https://www.bbs.bt/?p=181100",
       "asOf": "2026-10-31",
-      "note": "Laddered 5-year deposits and RGoB bonds at 6.5%-8%."
+      "note": "Laddered long deposits and RGoB bonds at about 6.5%."
     },
     "retirement_accumulation_return_low": {
-      "value": 0.05,
+      "value": 0.045,
       "status": "assumption",
       "sourceName": "Deposits, RSEB equity and gold (assumption)",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
       "note": "Mostly deposits with weak equity."
     },
     "retirement_accumulation_return_base": {
-      "value": 0.07,
+      "value": 0.065,
       "status": "assumption",
       "sourceName": "Deposits, RSEB equity and gold (assumption)",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
-      "note": "Balanced mix of long deposits (about 6.5%), local equity (7.5%) and gold (7%)."
+      "note": "Balanced mix of deposits and bonds (about 5.5%), local equity (7%) and gold (7%)."
     },
     "retirement_accumulation_return_high": {
       "value": 0.09,
       "status": "assumption",
       "sourceName": "Deposits, RSEB equity and gold (assumption)",
-      "sourceUrl": "https://bnb.bt/interest-rates/",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=BT",
       "asOf": "2026-10-31",
-      "note": "Long deposits at 8% with equity and gold high cases."
+      "note": "Long deposits and bonds with equity and gold high cases."
     },
     "old_age_allowance_monthly": {
       "value": null,
@@ -449,33 +450,29 @@
       "sourceName": "National Pension and Provident Fund, Annual Report 2024",
       "sourceUrl": "https://www.nppf.org.bt/wp-content/uploads/2025/07/Annual-Report_2024.pdf",
       "asOf": "2024-12-31",
-      "note": "Civil service plan: 40% of last basic pay after at least 23 years; normal retirement age 57-63 by rank; yearly adjustment by CPI capped at 5%; minimum pension Nu 5,510. Covers civil servants, armed forces and state corporations only."
+      "note": "Civil service plan: 40% of last basic pay after at least 23 years; normal retirement age 57-63 by rank; yearly adjustment by CPI capped at 5%; minimum pension Nu 5,510. Covers civil servants, armed forces and state corporations (plus a voluntary provident fund for private and informal workers). 2024 report (older than 2025)."
     }
   },
   "instruments": {
     "savings_account": {
       "available": true,
       "localName": null,
-      "localNameEn": "Savings account",
-      "sourceUrl": "https://bnb.bt/interest-rates/"
+      "localNameEn": "Savings account"
     },
     "fdr_3m": {
       "available": true,
       "localName": null,
-      "localNameEn": "Fixed deposit (3 months)",
-      "sourceUrl": "https://bnb.bt/interest-rates/"
+      "localNameEn": "Fixed deposit (3 months)"
     },
     "fdr_1y": {
       "available": true,
       "localName": null,
-      "localNameEn": "Fixed deposit (1 year)",
-      "sourceUrl": "https://bnb.bt/interest-rates/"
+      "localNameEn": "Fixed deposit (1 year)"
     },
     "dps": {
       "available": true,
       "localName": null,
-      "localNameEn": "Recurring deposit",
-      "sourceUrl": "https://bnb.bt/interest-rates/"
+      "localNameEn": "Recurring deposit"
     },
     "sanchayapatra_5y": {
       "available": false,

@@ -46,7 +46,7 @@
       "sourceName": "Trading Economics, citing the Central Bank of Jordan: main policy rate raised by 25 bps to 6% in September 2026",
       "sourceUrl": "https://tradingeconomics.com/jordan/interest-rate",
       "asOf": "2026-09-30",
-      "note": "Secondary source; the CBJ website could not be reached. The CBJ statistical database shows the main rate at 5.75% through August 2026, with the overnight deposit window 0.25 points lower."
+      "note": "Secondary source; the CBJ website could not be reached. The CBJ statistical database shows the main rate at 5.75% through August 2026; the same Trading Economics page also carries an older headline about a cut to 6.25%, so the September 2026 rise to 6% should be re-checked against a CBJ release."
     },
     "savings_account_rate": {
       "value": 0.0038,
@@ -155,7 +155,7 @@
     "equity_return_low": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "Amman Stock Exchange general index via Trading Economics: still below its June 2008 peak",
+      "sourceName": "Amman share market general index via Trading Economics: still below its June 2008 peak",
       "sourceUrl": "https://tradingeconomics.com/jordan/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: below the after-tax deposit rate, as the Amman index has gained little over the long run."
@@ -171,7 +171,7 @@
     "equity_return_high": {
       "value": 0.095,
       "status": "assumption",
-      "sourceName": "Amman Stock Exchange general index via Trading Economics",
+      "sourceName": "Amman share market general index via Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/jordan/stock-market",
       "asOf": "2026-10-31",
       "note": "High case: a fuller equity premium if the recent recovery continues."
@@ -281,12 +281,12 @@
       "note": "Education prices are now rising faster than the CPI (3.3%), so 1 point above the 2.5% inflation assumption."
     },
     "life_expectancy": {
-      "value": 77.98,
+      "value": 78.3,
       "status": "sourced",
-      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Jordan",
-      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=JO",
-      "asOf": "2024-12-31",
-      "note": "78.0 years in 2024 (men 75.9, women 80.3)."
+      "sourceName": "UN World Population Prospects 2024 (medium variant) via populationpyramid.net, life expectancy at birth, Jordan, 2026",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/jordan/",
+      "asOf": "2026-07-01",
+      "note": "78.3 years in 2026 (men 76.2, women 80.6), UN WPP 2024 medium variant via a secondary site; the World Bank gives 78.0 for 2024."
     },
     "life_table_remaining": {
       "value": null,
@@ -499,7 +499,7 @@
       "available": true,
       "localName": "صناديق الاستثمار المشترك",
       "localNameEn": "Mutual investment funds",
-      "note": "Few local funds exist; shares on the Amman Stock Exchange can also be bought directly."
+      "note": "Few local funds exist; listed Jordanian shares can also be bought directly."
     },
     "gold": {
       "available": true,

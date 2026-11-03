@@ -56,8 +56,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Spanish banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 0.16% on household overnight deposits (current and most savings accounts) in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Average 0.16% on household overnight deposits (current and most savings accounts) in September 2026, the same as in August."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Banco de España MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.01% in August 2026); no separate 3-month rate was found."
+      "note": "ECB/Banco de España MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.29% in September 2026); no separate 3-month rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0201,
+      "value": 0.0229,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Spanish banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; deposits of 1-2 years paid 2.15% and over 2 years 1.67% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (2.01% in August, 2.29% in September 2026); deposits of 1-2 years paid 1.91% in September 2026."
     },
     "dps_rate": {
       "value": null,
@@ -84,12 +84,12 @@
       "note": "Spanish banks have no standard monthly recurring deposit; long-term savings accounts (CIALP) accept regular payments, but no official average rate for them was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0163,
+      "value": 0.017,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Spanish banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits in August 2026; overnight deposits pay 0.16%."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits in September 2026; overnight deposits pay 0.16%."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -142,18 +142,18 @@
     "deposit_insurance_limit": {
       "value": 100000,
       "status": "sourced",
-      "sourceName": "Fondo de Garantía de Depósitos de Entidades de Crédito (FGD)",
-      "sourceUrl": "https://www.fgd.es/",
+      "sourceName": "Fondo de Garantía de Depósitos de Entidades de Crédito (FGD), frequently asked questions",
+      "sourceUrl": "https://www.fgd.es/preguntas-frecuentes/",
       "asOf": "2026-10-31",
       "note": "EUR 100,000 per depositor per institution; some deposits linked to property sales and life events are covered in full for a limited time."
     },
     "credit_card_rate_cap": {
-      "value": 0.1826,
+      "value": 0.1827,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Spanish banks, extended credit card credit to households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.A2Z3.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 18.26% on extended credit card credit in August 2026; Spain has no fixed legal cap (courts apply the usury law case by case)."
+      "asOf": "2026-09-30",
+      "note": "Average 18.27% on extended credit card credit in September 2026; Spain has no fixed legal cap (courts apply the usury law case by case)."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -206,7 +206,7 @@
     "fixed_income_return_low": {
       "value": 0.016,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.01% less 19% tax = 1.6% (ECB MFI statistics)",
+      "sourceName": "Household deposits up to 1 year 2.29% less 19% tax = 1.9% (ECB MFI statistics, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: bank term deposits after tax if ECB rates fall."
@@ -360,17 +360,17 @@
       "note": "From 2027 the ordinary age is 67, or 65 with at least 38 years 6 months of contributions (in 2026: 66 years 10 months, or 65 with 38 years 3 months). Same for men and women."
     },
     "retirement_age_government": {
-      "value": 65,
+      "value": 67,
       "status": "sourced",
-      "sourceName": "Estatuto Básico del Empleado Público, article 67 (BOE consolidated text)",
+      "sourceName": "Estatuto Básico del Empleado Público, article 67.3-67.4 (BOE consolidated text)",
       "sourceUrl": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11719",
       "asOf": "2026-10-03",
-      "note": "Civil servants are compulsorily retired at 65 and may ask to stay until 70; civil servants in the general Social Security scheme (most hired since 2011) retire at that scheme's ordinary age instead (art. 67.4)."
+      "note": "Civil servants in the general Social Security scheme (everyone appointed since 1 January 2011) are compulsorily retired at that scheme's ordinary age, 67 from 2027 (art. 67.4); those still in the older civil-servant scheme (Clases Pasivas) retire at 65 and may ask to stay until 70 (art. 67.3)."
     },
     "retirement_return_low": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.01% less 19% tax = 1.6% (ECB MFI statistics)",
+      "sourceName": "Household deposits up to 1 year 2.29% less 19% tax = 1.9% (ECB MFI statistics, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.ES.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposits after tax if ECB rates fall."

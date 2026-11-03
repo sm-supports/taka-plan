@@ -52,12 +52,12 @@
       "note": "Italy uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026, unchanged on 31 October 2026 (ECB data portal FM.D.U2.EUR.4F.KR.DFR.LEV)."
     },
     "savings_account_rate": {
-      "value": 0.002,
+      "value": 0.0025,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Italian banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight deposits at Italian banks, 0.20% in August 2026; online deposit accounts pay more. Interest taxed at 26%."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight deposits at Italian banks, 0.25% in September 2026 (0.20% in August); online deposit accounts pay more. Interest taxed at 26%."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB and Banca d'Italia MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.46% in August 2026); no separate 3-month term deposit rate was found."
+      "note": "ECB and Banca d'Italia MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.91% in September 2026); no separate 3-month term deposit rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0246,
+      "value": 0.0291,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Italian banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms (conti deposito vincolati) up to one year; interest taxed at 26%."
+      "asOf": "2026-09-30",
+      "note": "2.91% in September 2026 (2.46% in August); the bucket covers all fixed terms (conti deposito vincolati) up to one year; interest taxed at 26%."
     },
     "dps_rate": {
       "value": null,
@@ -84,12 +84,12 @@
       "note": "Italian banks do not offer a standard monthly recurring deposit; regular saving is done through fund accumulation plans (PAC) or by buying postal savings bonds periodically. No published rate was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0268,
+      "value": 0.027,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Italian banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; overnight deposits, which hold most savings, pay about 0.2%. World Bank FR.INR.DPST has no recent figure for Italy."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, 2.70% in September 2026; overnight deposits, which hold most savings, pay about 0.25%. World Bank FR.INR.DPST has no recent figure for Italy."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.0413,
@@ -105,7 +105,7 @@
       "sourceName": "Trading Economics, Italy 3-month bill yield",
       "sourceUrl": "https://tradingeconomics.com/italy/3-month-bill-yield",
       "asOf": "2026-10-30",
-      "note": "Secondary-market yield on 3-month Treasury bills (BOT); the Treasury mainly auctions 6- and 12-month BOT."
+      "note": "Secondary-market yield on 3-month Treasury bills (BOT) on 30 October 2026 (2.63% on 2 November after a 0.02-point fall); the Treasury mainly auctions 6- and 12-month BOT."
     },
     "tbond_5y_rate": {
       "value": 0.0394,
@@ -113,7 +113,7 @@
       "sourceName": "Trading Economics, Italy 5-year BTP yield",
       "sourceUrl": "https://tradingeconomics.com/italy/5-year-note-yield",
       "asOf": "2026-10-30",
-      "note": null
+      "note": "Secondary source; 3.87% on 2 November 2026 after a 0.07-point fall from 30 October."
     },
     "tbond_10y_rate": {
       "value": 0.045,
@@ -121,7 +121,7 @@
       "sourceName": "Trading Economics, Italy 10-year BTP yield",
       "sourceUrl": "https://tradingeconomics.com/italy/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "ECB long-term (10-year) convergence yield for Italy was 4.36% in September 2026 (ECB IRS.M.IT.L.L40.CI.0000.EUR.N.Z)."
+      "note": "Secondary source; 4.41% on 2 November 2026 after a fall of about 0.08 points. ECB long-term (10-year) convergence yield for Italy was 4.36% in September 2026 (ECB IRS.M.IT.L.L40.CI.0000.EUR.N.Z)."
     },
     "tax_bank_interest": {
       "value": 0.26,
@@ -164,12 +164,12 @@
       "note": "Low case: Italian shares, a bank- and energy-heavy market, earn about the after-tax government bond rate, as in 2000-2016."
     },
     "equity_return_base": {
-      "value": 0.065,
+      "value": 0.06,
       "status": "assumption",
-      "sourceName": "FTSE MIB (Trading Economics); BTP 5-year 3.94% before 12.5% tax = 3.45% after tax",
+      "sourceName": "FTSE MIB (Trading Economics); 3-month BOT 2.65% less 12.5% tax = 2.3%; BTP 5-year 3.94% less 12.5% tax = 3.45%",
       "sourceUrl": "https://tradingeconomics.com/italy/stock-market",
       "asOf": "2026-10-31",
-      "note": "The FTSE MIB roughly tripled from about 17,000 in late 2016, but the base is held to the after-tax safe rate of about 3.5% plus 3 points, as a diversified fund would earn."
+      "note": "The FTSE MIB roughly tripled from about 17,000 in late 2016, but the base is held to about 3.7 points above the after-tax Treasury bill rate, as a diversified fund would earn."
     },
     "equity_return_high": {
       "value": 0.085,
@@ -206,15 +206,15 @@
     "fixed_income_return_low": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "1-year deposits 2.46% less 26% tax = 1.8% (ECB MFI statistics)",
+      "sourceName": "1-year deposits 2.91% less 26% tax = 2.15% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Low case: savings stay in term deposits taxed at 26%."
+      "note": "Low case: savings stay in term deposits taxed at 26% and deposit rates drift back below 2.5% before tax."
     },
     "fixed_income_return_base": {
       "value": 0.028,
       "status": "assumption",
-      "sourceName": "1-year deposits 1.8% after tax; BTP Valore about 4.13% less 12.5% tax = 3.6%",
+      "sourceName": "1-year deposits 2.2% after tax; BTP Valore about 4.13% less 12.5% tax = 3.6%",
       "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of term deposits and retail government bonds, which are taxed at only 12.5%."
@@ -284,12 +284,12 @@
       "note": "Public schooling and university fees are low and regulated, so education costs are assumed to rise slightly above the 2% ECB target."
     },
     "life_expectancy": {
-      "value": 83.7,
+      "value": 84.2,
       "status": "sourced",
-      "sourceName": "ISTAT, Indicatori demografici, anno 2025",
-      "sourceUrl": "https://www.istat.it/wp-content/uploads/2026/03/Report_Indicatori-demografici_Anno-2025.pdf",
-      "asOf": "2025-12-31",
-      "note": "Men 81.7, women 85.7 in 2025 (ISTAT estimate); total 83.7 from ISTAT's 2026 health indicators. UN WPP gives 84.2 for 2026 and the World Bank 84.0 for 2024."
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/italy",
+      "asOf": "2026-07-01",
+      "note": "UN WPP estimate for 2026: men 82.1, women 86.1 (secondary source). ISTAT estimates 81.7 for men and 85.7 for women in 2025 (Indicatori demografici, anno 2025) but its report gives no both-sexes figure; World Bank 2024 figure 84.0."
     },
     "life_table_remaining": {
       "value": null,
@@ -356,21 +356,21 @@
       "status": "sourced",
       "sourceName": "INPS, pension requirements updated for 2027 and 2028",
       "sourceUrl": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.03.pensioni-requisiti-aggiornati-per-il-2027-e-il-2028.html",
-      "asOf": "2026-03-31",
-      "note": "Old-age pension (pensione di vecchiaia) age is 67 in 2026, 67 and 1 month in 2027 and 67 and 3 months from 2028, the same for men and women, with 20 years of contributions; it is linked to life expectancy, so people born after 1975 (who reach 67 after 2042) are likely to face a later age."
+      "asOf": "2026-03-17",
+      "note": "Old-age pension (pensione di vecchiaia) age is 67 in 2026; the INPS notice of 17 March 2026 sets 67 and 1 month for 2027 and 67 and 3 months for 2028, with 20 years of contributions, the same for men and women; the age is linked to life expectancy, so people born after 1975 (who reach 67 after 2042) are likely to face a later age than this latest legislated one."
     },
     "retirement_age_government": {
       "value": 67,
       "status": "sourced",
       "sourceName": "INPS, pension requirements updated for 2027 and 2028 (public and private employees)",
       "sourceUrl": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.03.pensioni-requisiti-aggiornati-per-il-2027-e-il-2028.html",
-      "asOf": "2026-03-31",
+      "asOf": "2026-03-17",
       "note": "Public employees reach the old-age pension at the same age (67 in 2026, rising by 1 month in 2027 and 3 months in 2028); press reports (not read in full here) say the Budget Law 2025 moved the public-sector compulsory retirement limit from 65 to this age."
     },
     "retirement_return_low": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "1-year deposits 2.46% less 26% tax = 1.8% (ECB MFI statistics)",
+      "sourceName": "1-year deposits 2.91% less 26% tax = 2.15% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: deposit rates fall back if the ECB cuts."
@@ -378,7 +378,7 @@
     "retirement_return_base": {
       "value": 0.022,
       "status": "assumption",
-      "sourceName": "3-month BOT 2.65% less 12.5% tax = 2.3% (Trading Economics); 1-year deposits 1.8% after tax",
+      "sourceName": "3-month BOT 2.65% less 12.5% tax = 2.3% (Trading Economics); 1-year deposits 2.15% after tax",
       "sourceUrl": "https://tradingeconomics.com/italy/3-month-bill-yield",
       "asOf": "2026-10-31",
       "note": "Base case capped at the after-tax Treasury bill rate."
@@ -400,12 +400,12 @@
       "note": "Low case for a balanced mix if shares lag."
     },
     "retirement_accumulation_return_base": {
-      "value": 0.045,
+      "value": 0.044,
       "status": "assumption",
-      "sourceName": "Fixed income base 2.8% after tax; equity base 6.5%",
+      "sourceName": "Fixed income base 2.8% after tax; equity base 6%",
       "sourceUrl": "https://www.dt.mef.gov.it/it/news/2026/btp_valore_23102026.html",
       "asOf": "2026-10-31",
-      "note": "Base case: roughly half shares at 6.5% and half safe fixed income at about 2.8% after tax."
+      "note": "Base case: roughly half shares at 6% and half safe fixed income at about 2.8% after tax."
     },
     "retirement_accumulation_return_high": {
       "value": 0.06,
@@ -464,7 +464,7 @@
       "status": "sourced",
       "sourceName": "INPS, pension requirements updated for 2027 and 2028",
       "sourceUrl": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.03.pensioni-requisiti-aggiornati-per-il-2027-e-il-2028.html",
-      "asOf": "2026-03-31",
+      "asOf": "2026-03-17",
       "note": "Compulsory earnings-related pension (Assicurazione generale obbligatoria) run by INPS: employees contribute 33% of pay (about 9.19% employee share); the old-age pension needs 20 years of contributions and is paid from 67 (67 and 3 months from 2028); pensions are indexed yearly to prices (perequazione) and are taxable income."
     }
   },

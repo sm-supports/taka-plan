@@ -118,7 +118,7 @@
       "sourceName": "Central Bank of Kuwait, Monthly Monetary Statistical Bulletin, September 2026, Table 8 (public debt instruments, interest rate on new issues, 10 years)",
       "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports",
       "asOf": "2025-10-31",
-      "note": "Latest 10-year issue was in October 2025 at 5.125%, before rates fell; a 7-year bond was issued at 3.625% in September 2026, so the current 10-year yield is likely lower."
+      "note": "Latest 10-year issue was in October 2025 at 5.125%, before rates fell; no 10-year bond has been issued since and a 7-year bond was issued at 3.625% in September 2026, so the current 10-year yield is probably much lower. Treat as stale."
     },
     "tax_bank_interest": {
       "value": 0,
@@ -155,7 +155,7 @@
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "Boursa Kuwait All Share index via Trading Economics (down 6.4% in the year to October 2026)",
+      "sourceName": "Kuwait all-share index via Trading Economics (down 6.4% in the year to October 2026)",
       "sourceUrl": "https://tradingeconomics.com/kuwait/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: below the deposit rate, as in weak years for the oil-linked market."
@@ -163,7 +163,7 @@
     "equity_return_base": {
       "value": 0.065,
       "status": "assumption",
-      "sourceName": "CBK 3-month deposit rate 3.29% (untaxed); Boursa Kuwait record (Trading Economics)",
+      "sourceName": "CBK 3-month deposit rate 3.29% (untaxed); Kuwait share market record (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/kuwait/stock-market",
       "asOf": "2026-10-31",
       "note": "Base case: about 3 points above the untaxed deposit rate, within the 4-point cap, because the market has had a moderate, dividend-driven record."
@@ -171,7 +171,7 @@
     "equity_return_high": {
       "value": 0.09,
       "status": "assumption",
-      "sourceName": "Boursa Kuwait All Share index via Trading Economics",
+      "sourceName": "Kuwait all-share index via Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/kuwait/stock-market",
       "asOf": "2026-10-31",
       "note": "High case: a fuller equity premium, as in strong oil-price years."
@@ -352,15 +352,15 @@
       "value": 55,
       "status": "sourced",
       "sourceName": "Public Institution for Social Security (PIFSS), Insurance guide (دليل التأمينات), edition 10",
-      "sourceUrl": "http://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
+      "sourceUrl": "https://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
       "asOf": "2023-01-03",
-      "note": "Legal retirement age 55 for civilian men and 50 for civilian women (Kuwaiti nationals), with full pension after 30 years of service and a 15-year minimum; the guide dates from January 2023 (older than 2025) and later amendments could not be checked."
+      "note": "Legal retirement age 55 for civilian men and 50 for civilian women (Kuwaiti nationals), with a full pension after 30 years of service and a 15-year minimum; early retirement up to 5 years before with a reduction. The guide dates from January 2023 (older than 2025) and no later amendment could be checked; this is taken as the age for people born after 1975."
     },
     "retirement_age_government": {
       "value": 55,
       "status": "sourced",
       "sourceName": "Public Institution for Social Security (PIFSS), Insurance guide (دليل التأمينات), edition 10",
-      "sourceUrl": "http://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
+      "sourceUrl": "https://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
       "asOf": "2023-01-03",
       "note": "Kuwaiti civil servants are insured with PIFSS under the same civilian rules: 55 for men, 50 for women (military 45); the guide dates from January 2023."
     },
@@ -430,17 +430,11 @@
     },
     "gratuity_rule": {
       "value": null,
-      "valueJson": {
-        "daysPerYear": 15,
-        "daysPerYearAfter": 20,
-        "afterYears": 3,
-        "daysPerMonth": 30
-      },
-      "status": "sourced",
-      "sourceName": "PwC Worldwide Tax Summaries, Kuwait, individual other taxes (terminal indemnity under the Kuwait Labour Law)",
-      "sourceUrl": "https://taxsummaries.pwc.com/kuwait/individual/other-taxes",
-      "asOf": "2026-07-22",
-      "note": "Per PwC: workers who complete three years with an employer get 15 days' pay per year for the first three years and two-thirds of a month's pay (20 of 30 days) per year after that. Mainly relevant to expatriates, who are outside social security; the Labour Law text itself was not read."
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PwC (reviewed July 2026, https://taxsummaries.pwc.com/kuwait/individual/other-taxes) says 15 days' pay a year for the first 3 years and 2/3 of a month after, but this conflicts with the widely cited Article 51 of the private-sector Labour Law (Law 6 of 2010: 15 days a year for the first 5 years, a month a year after, capped at 18 months' pay); the law text (ILO NATLEX, Ministry sites) could not be read to settle it, so no rule is recorded. It mainly matters for expatriates, who are outside social security."
     },
     "public_pension_scheme": {
       "value": null,
@@ -454,7 +448,7 @@
       },
       "status": "sourced",
       "sourceName": "Public Institution for Social Security (PIFSS), Insurance guide (دليل التأمينات), edition 10; PwC Kuwait (no personal income tax)",
-      "sourceUrl": "http://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
+      "sourceUrl": "https://www.pifss.gov.kw/Lists/BriefLegislationGuideList/Attachments/1/%d8%af%d9%84%d9%8a%d9%84%20%d8%a7%d9%84%d8%aa%d8%a7%d9%94%d9%85%d9%8a%d9%86%d8%a7%d8%aa-%20%d8%b9%d8%b1%d8%a8%d9%8a%2010.pdf",
       "asOf": "2023-01-03",
       "note": "Compulsory social insurance for Kuwaiti nationals in government and private jobs (employee 10.5%, employer 11.5% per PwC); pension from 55 for men and 50 for women with 15+ years (best rate at 30 years); increases come from a separate pension-increase fund, not CPI indexation. Guide dated January 2023; non-Kuwaitis are not covered."
     }
@@ -500,24 +494,24 @@
       "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
     },
     "tbond_5y": {
-      "available": true,
+      "available": false,
       "localName": "سندات الخزانة",
       "localNameEn": "Treasury bonds",
-      "note": "Issued through the CBK since 2025 and bought by local banks.",
+      "note": "Treasury bonds are issued through CBK auctions and held by local banks (all holdings in the CBK bulletin are banks); they are not sold to individuals.",
       "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
     },
     "tbond_10y": {
-      "available": true,
+      "available": false,
       "localName": "سندات الخزانة",
       "localNameEn": "Treasury bonds",
-      "note": "Issued through the CBK and bought by local banks.",
+      "note": "Treasury bonds are issued through CBK auctions and held by local banks (all holdings in the CBK bulletin are banks); they are not sold to individuals.",
       "sourceUrl": "https://www.cbk.gov.kw/en/redirects/download?compId=172793&esIndex=reports"
     },
     "equity_fund": {
       "available": true,
       "localName": "صناديق الاستثمار",
       "localNameEn": "Investment funds",
-      "note": "Local equity funds investing on Boursa Kuwait are available."
+      "note": "Local equity funds investing in Kuwaiti listed shares are available."
     },
     "gold": {
       "available": true,

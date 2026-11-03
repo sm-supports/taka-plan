@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "code": "LS",
+  "iso3": "LSO",
+  "nameEn": "Lesotho",
+  "nameNative": "Lesotho",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "st",
+    "en",
+    "zu"
+  ],
+  "currency": {
+    "code": "LSL",
+    "symbol": "M",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 17.889,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Lesotho",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LS",
+      "asOf": "2025-12-31",
+      "note": "2025 average. The loti is pegged one to one to the South African rand, which is also legal tender; the rate was about 16.6 per dollar in late October 2026 (Trading Economics). CLDR lists the rand for this territory; the loti (plural maloti, symbol M) is the national currency."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.026,
+      "status": "sourced",
+      "sourceName": "Central Bank of Lesotho, Statement of the Monetary Policy Committee, 24 September 2026",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/MPC_Statement_24_September_2026-Final.pdf",
+      "asOf": "2026-08-31",
+      "note": "Annual consumer inflation 2.6% in August 2026, down from 2.9% in July (Bureau of Statistics CPI as reported by the central bank)."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Central Bank of Lesotho MPC statement (inflation projected at 4.7% in 2027); South African Reserve Bank 3% target (loti pegged to the rand)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/MPC_Statement_24_September_2026-Final.pdf",
+      "asOf": "2026-10-31",
+      "note": "Lesotho imports South African inflation through the one-to-one rand peg; between the 3% SARB target, the CBL 4.7% projection for 2027 and the World Bank 2025 figure of 4.3%, 4.5% is used for long plans."
+    },
+    "policy_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Central Bank of Lesotho, Statement of the Monetary Policy Committee, 24 September 2026",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/MPC_Statement_24_September_2026-Final.pdf",
+      "asOf": "2026-09-24",
+      "note": "The CBL Rate was raised by 25 basis points to 7.00%, 25 points below the South African Reserve Bank rate of 7.25%."
+    },
+    "savings_account_rate": {
+      "value": 0.0155,
+      "status": "sourced",
+      "sourceName": "Central Bank of Lesotho, Monetary and Financial Stability Indicators: savings deposit rate",
+      "sourceUrl": "https://centralbank.org.ls/financial-stability-indicators/",
+      "asOf": "2024-12-31",
+      "note": "1.55% in December 2024, the latest month the page shows (older than 2025)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Lesotho indicators page shows savings, call and 12-month time deposit rates only; no official 3-month deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0496,
+      "status": "sourced",
+      "sourceName": "Central Bank of Lesotho deposit interest rate (12-month time deposits), July 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/lesotho/deposit-interest-rate",
+      "asOf": "2026-07-31",
+      "note": "Secondary source of a Central Bank of Lesotho series: 4.96% in July 2026 (the CBL indicators page shows the 12-month time deposit rate at 4.72% in December 2024, and the World Bank blended deposit rate is far lower at 2.46%, so this series matches the 12-month rate)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found in Central Bank of Lesotho statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0246,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LS",
+      "asOf": "2024-12-31",
+      "note": "2.46% for 2024 (older than 2025); a blend of savings, call and term deposit rates, so lower than the 12-month rate."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond was found; individuals can buy ordinary Treasury bills (minimum M20,000) and bonds (minimum M50,000) at Central Bank of Lesotho auctions."
+    },
+    "tbill_91d_rate": {
+      "value": 0.071,
+      "status": "sourced",
+      "sourceName": "Central Bank of Lesotho, Treasury bill auction no. 642, 21 October 2026",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bills-Results-642_-21-October-2026.pdf",
+      "asOf": "2026-10-21",
+      "note": "Cut-off yield 7.10% on the 91-day bill (average discount rate 6.98%); 364-day cut-off yield 7.15%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0839,
+      "status": "sourced",
+      "sourceName": "Central Bank of Lesotho, Treasury bond auction no. 62 (LSO GB 9.25 2030 reopening), 17 December 2025",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bonds-Auction-Results_62_17122025.pdf",
+      "asOf": "2025-12-17",
+      "note": "Cut-off yield 8.39% on a bond maturing June 2030 (about 4.5 years); no 5-year bond was auctioned in 2026 up to October."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No bond near 10 years was auctioned in 2025-2026: the June 2026 auction of a 2033 bond (7 years) cleared at 9.75% and the September 2026 reopening of a 2041 bond (about 15 years) at 10.75% (CBL auction results)."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "ACCA Foundations in Taxation, Lesotho tax tables (Income Tax Act 1993): withholding on interest paid by a resident to a resident",
+      "sourceUrl": "https://www.accaglobal.com/content/dam/acca/global/PDF-students/fia/ftx/examdocs/FTX-LSO%20tax%20tables%202023.pdf",
+      "asOf": "2023-04-01",
+      "note": "10% withholding on interest paid to residents (tables for 2023 exams, older than 2025); the CBL 2025 investment brochure confirms 10% for residents on government securities. The Income Tax Act exempts the first M500 of interest from one nominated savings account."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists. For reference, the Central Bank of Lesotho 2025 investment brochure states 10% withholding for residents on Treasury bill and bond interest."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or limit was found in Central Bank of Lesotho legislation or its 2024 Financial Stability Report; a scheme has been discussed since the 2000s."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on credit card rates was found; the CBL homepage shows a prime lending rate of 10.5% (24 September 2026), but no credit card rate statistic was found."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bill auction no. 642 (364-day cut-off yield 7.15%, 21 October 2026)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bills-Results-642_-21-October-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: Lesotho has no meaningful local stock market, so equity means global or South African funds in loti terms; a weak decade for these markets gives about the safe rate less a point."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bill auction no. 642 (364-day yield 7.15%, 6.4% after 10% withholding)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bills-Results-642_-21-October-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a global index in loti (rand) terms, held below the after-tax bill rate plus 4 points (10.4%) because there is no local equity record to rely on."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bill auction no. 642; World Bank official exchange rate history",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LS",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns plus rand weakness lifting returns in loti terms."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank WDI, official exchange rate LSL per USD (17.89 in 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LS",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a stable rand-loti."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "World Bank WDI, official exchange rate LSL per USD; SARB 3% inflation target",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LS",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend of about 4% a year plus loti depreciation of about 2% a year, in line with the inflation gap to the US."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "World Bank WDI, official exchange rate LSL per USD",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LS",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a rand depreciation episode like 2015-2016 or 2020."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "CBL 12-month time deposit rate 4.96% (July 2026), after 10% withholding",
+      "sourceUrl": "https://tradingeconomics.com/lesotho/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix of savings and term deposits after tax, allowing for rate cuts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBL 12-month deposit rate 4.96% (July 2026) and 364-day bill 7.15% (October 2026), after 10% withholding",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bills-Results-642_-21-October-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: between term deposits (4.5% after tax) and one-year Treasury bills (6.4% after tax)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bond auction no. 64 (2033 bond, 9.75%, June 2026)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bonds-Auction-Results_64_17062026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: medium-term government bonds at about 9.75% less 10% withholding, allowing for lower future yields."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Lesotho (insurance supervisor) publishes claims ratios (claims to premiums), not a share of claims paid; no settlement rate was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published indicative term-life premium rates per 1,000 maloti of cover from the regulator or another public source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums per 100,000 maloti of cover from the regulator or another public source were found."
+    },
+    "oop_health_share": {
+      "value": 0.132,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LS",
+      "asOf": "2023-12-31",
+      "note": "13.2% in 2023 (latest year; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Central Bank of Lesotho MPC statement, 24 September 2026 (CPI 2.6%, 4.7% projected for 2027)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/MPC_Statement_24_September_2026-Final.pdf",
+      "asOf": "2026-10-31",
+      "note": "No health CPI series could be read, so medical costs are planned at one point above the 4.5% general assumption, as much private care is bought in South Africa."
+    },
+    "goal_inflation_education": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Central Bank of Lesotho MPC statement, 24 September 2026 (CPI 2.6%, 4.7% projected for 2027)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/MPC_Statement_24_September_2026-Final.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series could be read, so school fees are planned at one point above the 4.5% general assumption."
+    },
+    "life_expectancy": {
+      "value": 57.8,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LS",
+      "asOf": "2024-12-31",
+      "note": "57.8 years in 2024 (men 55.0, women 60.4); UN WPP 2024 gives 58.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.3,
+            "men": 13.8,
+            "women": 16.8
+          },
+          {
+            "age": 65,
+            "total": 13.0,
+            "men": 11.5,
+            "women": 14.0
+          },
+          {
+            "age": 70,
+            "total": 10.5,
+            "men": 9.4,
+            "women": 11.6
+          },
+          {
+            "age": 80,
+            "total": 6.4,
+            "men": 5.7,
+            "women": 7.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/lesotho/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.0
+          },
+          {
+            "year": 2040,
+            "value": 16.9
+          },
+          {
+            "year": 2065,
+            "value": 7.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/lesotho/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.26 (2025, World Bank), 5.9 (2040) and 14.3 (2065, populationpyramid.net/lesotho/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "WageIndicator Foundation summary of the Labour Act 2024 (Act No. 3 of 2024)",
+      "sourceUrl": "https://wageindicator.org/en-ls/ai/work-in-lesotho/labour-law/contracts-and-dismissals/notice-and-severance/",
+      "asOf": "2026-03-18",
+      "note": "There is no national contributory pension and no statutory pension age for private workers; the Labour Act 2024 lets employers set a retirement age of at least 60 (WageIndicator, updated 18 March 2026). The universal old age pension starts at 70."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Lesotho Times report citing section 26(1) of the Public Service Act No. 1 of 2005",
+      "sourceUrl": "https://lestimes.com/?p=16860",
+      "asOf": "2014-06-27",
+      "note": "Secondary source from 2014 (older than 2025): the Public Service Act 2005 fixes the retirement age of public officers at 60; no later change was found."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "CBL 12-month time deposit rate 4.96% (July 2026), 4.5% after 10% withholding",
+      "sourceUrl": "https://tradingeconomics.com/lesotho/deposit-interest-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposits after tax, allowing for rate cuts."
+    },
+    "retirement_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBL 364-day Treasury bill cut-off yield 7.15% (21 October 2026), 6.4% after withholding; 12-month deposit 4.5% after tax",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bills-Results-642_-21-October-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits and Treasury bills, below the 6.4% after-tax one-year bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bond auction no. 64 (2033 bond, 9.75%, June 2026)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bonds-Auction-Results_64_17062026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in government bonds at about 8.8% after withholding."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bill auction no. 642 (364-day 7.15%)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bills-Results-642_-21-October-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills with a small, weak equity share."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bond auction no. 64 (9.75%) and Treasury bill auction no. 642 (7.15%)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bonds-Auction-Results_64_17062026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of government bonds and global or South African equity funds, between the safe and equity base cases."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "CBL Treasury bond auction no. 65 (2041 bond, 10.75%, September 2026)",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Treasury-Bonds-Auction-Results_65_16092026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: more long bonds and equity funds, with yields staying near current levels."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Not confirmed: WageIndicator (updated 18 March 2026, https://wageindicator.org/en-ls/work-in-lesotho/labour-law/social-security) still shows M900 a month from the 2023 notice, while a government news-agency report of an increase to M1,000 for 2026/27 could not be opened (Lesotho government sites did not resolve), so the amount payable today could not be verified."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 70,
+        "womenAge": 70,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "WageIndicator Foundation summary of the Old Age Pensions Act 2005 and Old Age Monthly Pension Notice 2023",
+      "sourceUrl": "https://wageindicator.org/en-ls/work-in-lesotho/labour-law/social-security",
+      "asOf": "2026-03-18",
+      "note": "Government-funded universal pension for citizens aged 70 and above, with no means test mentioned (WageIndicator, updated 18 March 2026; legal basis Old Age Pensions Act 2005 and 2023 notice, older than 2025). Older sources say retired public officers on a public service pension are excluded; not confirmed on this page."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 14,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "WageIndicator Foundation summary of the Labour Act 2024 (Act No. 3 of 2024), sections 136-137",
+      "sourceUrl": "https://wageindicator.org/en-ls/ai/work-in-lesotho/labour-law/contracts-and-dismissals/notice-and-severance/",
+      "asOf": "2026-03-18",
+      "note": "Severance pay of two weeks' wages for each completed year of service, for employees with more than one year of continuous service with the same employer, except when dismissed for misconduct (Labour Act 2024 ss.136-137, WageIndicator updated 18 March 2026); modelled as 14 days of a 30-day month."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national contributory pension for private-sector workers was found: the National Social Security Bill was described as in its final stages in the 2025/26 budget, but its enactment could not be confirmed. Public officers have their own pension fund and everyone aged 70+ gets the universal old age pension."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Savings deposit rate 1.55% (CBL, December 2024).",
+      "sourceUrl": "https://centralbank.org.ls/financial-stability-indicators/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed (time) deposit",
+      "note": "Banks take time deposits; the CBL publishes only the 12-month rate.",
+      "sourceUrl": "https://centralbank.org.ls/financial-stability-indicators/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed (time) deposit, 12 months",
+      "note": "12-month time deposit rate 4.72% (CBL, December 2024); 4.96% in July 2026 via Trading Economics.",
+      "sourceUrl": "https://centralbank.org.ls/financial-stability-indicators/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond; individuals can buy Treasury bills and bonds at CBL auctions."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "91, 182, 273 and 364-day bills auctioned twice a month; individuals can bid with an ID and a local bank account, minimum M20,000.",
+      "sourceUrl": "https://centralbank.org.ls/wp-content/uploads/Investment-Opprtunities-Brochure_2025.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bonds",
+      "note": "Fixed-rate bonds auctioned about every three months, minimum M50,000; no new 5-year issue in 2026 up to October.",
+      "sourceUrl": "https://centralbank.org.ls/tbonds-results/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bonds",
+      "note": "Bonds of up to about 20 years; recent issues mature in 2033 and 2041.",
+      "sourceUrl": "https://centralbank.org.ls/tbonds-results/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Collective investment scheme (unit trust)",
+      "note": "Licensed under the Central Bank of Lesotho (Collective Investment Schemes) Regulations 2018; few local schemes, most marketed schemes are registered abroad.",
+      "sourceUrl": "https://centralbank.org.ls/legislations/"
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No local retail market for investment gold bars or coins was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Lesotho",
+      "url": "https://centralbank.org.ls/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Lesotho (insurance supervision under the Insurance Act 2014)",
+      "url": "https://centralbank.org.ls/legislations/"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of Lesotho, insurance supervision",
+      "url": "https://centralbank.org.ls/",
+      "note": "No separate insurance ombudsman was found; complaints go to the Central Bank as insurance supervisor."
+    },
+    "pensionScheme": null,
+    "oldAgeAllowance": {
+      "name": "Old Age Pension, Ministry of Finance and Development Planning",
+      "url": "https://finance.gov.ls/",
+      "note": "Universal pension for citizens aged 70 and above. Government of Lesotho (.gov.ls) sites did not resolve when checked on 3 November 2026."
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (subsidised public and church-run health facilities)",
+      "url": "https://www.gov.ls/health/",
+      "note": "No national health insurance scheme was found; link is the Government of Lesotho portal page for health."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Bureau of Statistics Lesotho",
+      "url": "https://www.bos.gov.ls/",
+      "note": "The site did not resolve when checked on 31 October 2026."
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

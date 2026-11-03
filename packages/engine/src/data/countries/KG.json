@@ -18,10 +18,10 @@
     "usdRate": {
       "value": 87.4487,
       "status": "sourced",
-      "sourceName": "National Bank of the Kyrgyz Republic, official exchange rates",
-      "sourceUrl": "https://www.nbkr.kg/index1.jsp?item=1562&lang=ENG",
+      "sourceName": "National Bank of the Kyrgyz Republic, official exchange rate of USD (daily file)",
+      "sourceUrl": "https://www.nbkr.kg/EXCEL/dailyeng.xls",
       "asOf": "2026-10-31",
-      "note": "Official rate of 87.4487 som per US dollar set for 31 October 2026; World Bank 2025 average 87.36."
+      "note": "Official rate of 87.4487 som per US dollar for 31 October 2026 (87.4498 on 3 November); World Bank 2025 average 87.36."
     }
   },
   "fields": {
@@ -31,7 +31,7 @@
       "sourceName": "Trading Economics (National Statistical Committee CPI, September 2026)",
       "sourceUrl": "https://tradingeconomics.com/kyrgyzstan/inflation-cpi",
       "asOf": "2026-09-30",
-      "note": "12.2% year on year in September 2026, highest since March 2023 (12.0% in August); the National Bank also shows 12.2% for September 2026. Secondary source because stat.gov.kg release pages could not be read."
+      "note": "12.2% year on year in September 2026, highest since March 2023 (12.0% in August); secondary source because stat.gov.kg release pages could not be read."
     },
     "inflation_projection": {
       "value": 0.08,
@@ -95,7 +95,7 @@
       "sourceName": "24.kg (news), government bonds for the population pilot issue",
       "sourceUrl": "https://24.kg/ekonomika/379655_gosudarstvennyie_obligatsii_kak_kyirgyzstantsyi_mogut_zarabotat_bez_lishnego_riska/",
       "asOf": "2026-06-26",
-      "note": "Pilot retail issue of 2-year som treasury bonds (GKO) for individuals ordered in June 2026: 100-som face value, from 1,000 som, fixed 17% coupon paid quarterly, traded on the Kyrgyz Stock Exchange; secondary source, term is 2 years not 5."
+      "note": "Pilot retail issue of 2-year som treasury bonds (GKO) for individuals ordered in June 2026: 100-som face value, from 1,000 som, fixed 17% coupon paid quarterly, traded on the national stock exchange; secondary source, term is 2 years not 5."
     },
     "tbill_91d_rate": {
       "value": null,
@@ -103,7 +103,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The Ministry of Finance has not auctioned 3-month treasury bills since January 2020 (NBKR auction file); only occasional 12-month bills are issued (10.5% in March 2026 per news reports)."
+      "note": "The Ministry of Finance has not auctioned 3-month treasury bills since January 2020 (NBKR auction file https://www.nbkr.kg/EXCEL/gkv_auction_ats_eng.xls); the last 12-month bill auction in that file was in June 2024."
     },
     "tbond_5y_rate": {
       "value": 0.1532,
@@ -135,7 +135,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Article 191(7)(2) of the Tax Code exempts interest on securities listed in the top categories of the Kyrgyz Stock Exchange, but whether the retail treasury bonds qualify could not be confirmed."
+      "note": "Article 191(7)(2) of the Tax Code exempts interest on securities in the top listing categories of the national stock exchange, but whether the retail treasury bonds qualify could not be confirmed."
     },
     "deposit_insurance_limit": {
       "value": 1000000,
@@ -167,7 +167,7 @@
       "sourceName": "Global equity index in som terms; NBKR 6-12 month deposit rate 11.98% (tax-free)",
       "sourceUrl": "https://www.nbkr.kg/DOC/18092026/000000000067916.xls",
       "asOf": "2026-10-31",
-      "note": "The Kyrgyz Stock Exchange is too small and illiquid to base a forecast on, so the base case is a global index fund at about 7% in dollars plus about 4% a year of som depreciation, kept below the tax-free 1-year deposit rate plus 4 points."
+      "note": "The local stock exchange is too small and illiquid to base a forecast on, so the base case is a global index fund at about 7% in dollars plus about 4% a year of som depreciation, kept below the tax-free 1-year deposit rate plus 4 points."
     },
     "equity_return_high": {
       "value": 0.14,
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KG",
       "asOf": "2024-12-31",
-      "note": "Men 68.4, women 76.6 (2024); UN WPP 2026 estimate 72.1."
+      "note": "Men 68.4, women 76.6 (World Bank 2024; older than 2025, latest World Bank year); UN WPP 2026 estimate 72.1."
     },
     "life_table_remaining": {
       "value": null,
@@ -425,7 +425,7 @@
       "sourceName": "Economist.kg (news), who is entitled to social benefits in Kyrgyzstan",
       "sourceUrl": "https://economist.kg/society/2025/02/28/komu-polozhieny-sotsialnyie-posobiia-v-kyrghyzstanie-i-kak-ikh-oformit/",
       "asOf": "2025-02-28",
-      "note": "Elderly citizens (men from 65, women from 60) who have no right to a contributory pension; no income test is mentioned, but it is paid only to those without a pension."
+      "note": "Elderly citizens (men from 65, women from 60) who have no right to a contributory pension; the source mentions no income test, but the benefit is paid only to those without a pension. Secondary source."
     },
     "gratuity_rule": {
       "value": null,
@@ -449,7 +449,7 @@
       "sourceName": "24.kg (news), citing the Social Fund on the autumn 2026 pension increase",
       "sourceUrl": "https://24.kg/obschestvo/374575_povyishenie_pensii_jdet_kyirgyizstantsev_osenyu_2026_goda/",
       "asOf": "2026-05-20",
-      "note": "State pension social insurance run by the Social Fund (contributory, with a small funded part): pension at 63 for men and 58 for women after at least 6 years of service; pensions are indexed every year taking into account inflation and average wage growth; the minimum pension is 8,800 som from 1 October 2026 (7,100 before), the average about 11,300 som."
+      "note": "State pension social insurance run by the Social Fund (contributory, with a small funded part): pension at 63 for men and 58 for women after at least 6 years of service (economist.kg, January 2026); the Social Fund says pensions are indexed every year taking into account inflation and average wage growth, with the next rise planned for about October 2026; minimum pension 7,100 som and average about 11,300 som in May 2026. Secondary source."
     }
   },
   "instruments": {
@@ -481,7 +481,7 @@
       "available": true,
       "localName": "Калк үчүн мамлекеттик казыналык облигациялар",
       "localNameEn": "Government treasury bonds for the population (pilot)",
-      "note": "2-year som bonds sold to individuals from 1,000 som on the Kyrgyz Stock Exchange from mid-2026 (pilot issue of 500 million som).",
+      "note": "2-year som treasury bonds sold to individuals from 1,000 som on the national stock exchange's trading platform from mid-2026 (pilot issue of 500 million som, 17% coupon paid quarterly); term is 2 years, not 5.",
       "sourceUrl": "https://24.kg/ekonomika/379655_gosudarstvennyie_obligatsii_kak_kyirgyzstantsyi_mogut_zarabotat_bez_lishnego_riska/"
     },
     "tbill_91d": {
@@ -508,7 +508,7 @@
       "available": false,
       "localName": null,
       "localNameEn": "Equity or index fund",
-      "note": "The Kyrgyz Stock Exchange is small and no diversified retail equity or index funds sold locally were confirmed."
+      "note": "The local stock exchange is small and no diversified retail equity or index funds sold locally were confirmed."
     },
     "gold": {
       "available": true,

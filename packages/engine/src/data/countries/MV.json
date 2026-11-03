@@ -27,10 +27,10 @@
     "inflation_cpi": {
       "value": 0.0117,
       "status": "sourced",
-      "sourceName": "Maldives Bureau of Statistics, CPI September 2026 (base Nov 2022), year-on-year",
-      "sourceUrl": "https://statisticsmaldives.gov.mv/cpi-september-2026/",
+      "sourceName": "Maldives Bureau of Statistics, CPI September 2026 release, year-on-year (all groups, Republic)",
+      "sourceUrl": "https://statisticsmaldives.gov.mv/mbs/wp-content/uploads/2026/10/CPI-September-2026.pdf",
       "asOf": "2026-09-30",
-      "note": "Food and beverages +8.59%, tobacco -29.11% year-on-year."
+      "note": "Also shown in MMA Table 1 (1.17%). Food and beverages +8.59%, tobacco -29.11% year-on-year."
     },
     "inflation_projection": {
       "value": 0.025,
@@ -259,13 +259,14 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS (WHO GHED)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MV",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest published figure is for 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.04,
       "status": "assumption",
       "sourceName": "MBS CPI September 2026: health +0.74% year-on-year",
-      "sourceUrl": "https://statisticsmaldives.gov.mv/cpi-september-2026/",
+      "sourceUrl": "https://statisticsmaldives.gov.mv/mbs/wp-content/uploads/2026/10/CPI-September-2026.pdf",
       "asOf": "2026-10-31",
       "note": "Measured health prices barely move because Aasandha covers most care; we plan with general inflation plus 1.5 points for private and overseas treatment."
     },
@@ -273,7 +274,7 @@
       "value": 0.04,
       "status": "assumption",
       "sourceName": "MBS CPI September 2026: education services +0.27% year-on-year",
-      "sourceUrl": "https://statisticsmaldives.gov.mv/cpi-september-2026/",
+      "sourceUrl": "https://statisticsmaldives.gov.mv/mbs/wp-content/uploads/2026/10/CPI-September-2026.pdf",
       "asOf": "2026-10-31",
       "note": "Public schooling is free; we plan with general inflation plus 1.5 points for private and overseas study."
     },
@@ -283,7 +284,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN (UN WPP)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MV",
       "asOf": "2024-12-31",
-      "note": "Men 79.9, women 83.0."
+      "note": "Men 79.9, women 83.0. Latest published figure is for 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -320,10 +321,10 @@
     "retirement_age_default": {
       "value": 65,
       "status": "sourced",
-      "sourceName": "Maldives Pension Administration Office: MRPS pension age",
-      "sourceUrl": "https://www.pension.gov.mv/maldives-pension-system",
+      "sourceName": "Maldives Pension Administration Office, Pension System leaflet: MRPS retirement pension age",
+      "sourceUrl": "https://storage.googleapis.com/staging.mpao-1327.appspot.com/strapi/Pension_System_5621c2df3d/Pension_System_5621c2df3d.pdf",
       "asOf": "2026-10-31",
-      "note": "Same for men and women; members meeting conditions can draw from 55."
+      "note": "Same for men and women, including anyone born after 1975; members who meet the conditions can draw a pension from 55."
     },
     "retirement_age_government": {
       "value": null,
@@ -387,7 +388,7 @@
       "sourceName": "Maldives Pension Administration Office, Pension System leaflet: Old Age Basic Pension",
       "sourceUrl": "https://storage.googleapis.com/staging.mpao-1327.appspot.com/strapi/Pension_System_5621c2df3d/Pension_System_5621c2df3d.pdf",
       "asOf": "2019-03-01",
-      "note": "MVR 5,000 a month since March 2019 for citizens aged 65+; reduced for people who receive another state pension, so total pension income is at least MVR 5,000."
+      "note": "MVR 5,000 a month since March 2019 for citizens aged 65+ (older than 2025: the leaflet is undated and no later change was found); reduced by other state pension income, so total pension income is at least MVR 5,000."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -422,8 +423,8 @@
         "taxFree": null
       },
       "status": "sourced",
-      "sourceName": "Maldives Pension Administration Office: Maldives Retirement Pension Scheme (MRPS)",
-      "sourceUrl": "https://www.pension.gov.mv/mrps",
+      "sourceName": "Maldives Pension Administration Office, Pension System leaflet: Maldives Retirement Pension Scheme (MRPS)",
+      "sourceUrl": "https://storage.googleapis.com/staging.mpao-1327.appspot.com/strapi/Pension_System_5621c2df3d/Pension_System_5621c2df3d.pdf",
       "asOf": "2026-10-31",
       "note": "Defined-contribution scheme: employer and employee each pay 7% of basic salary (14% in all); employees aged 16-65 and the self-employed can join. Pension from 65 (55 under conditions), paid as the account balance spread over 168 months (14 years); the basic pension tops low payouts up to MVR 5,000."
     }

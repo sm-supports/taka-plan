@@ -31,7 +31,7 @@
       "sourceName": "Statistical Institute of Belize, CPI release for September 2026",
       "sourceUrl": "https://sib.org.bz/consumer-prices-up-4-7-percent-imports-down-3-8-percent-domestic-exports-up-11-5-percent-and-consumer-confidence-index-down-9-6-percent-in-september-2026/",
       "asOf": "2026-09-30",
-      "note": "All-items CPI 126.2 in September 2026 against 120.5 a year earlier (4.7%); January-September average 3.1%, driven by transport and fuel."
+      "note": "All-items CPI 126.2 in September 2026 against 120.5 a year earlier (4.7% year on year); January-September 2026 inflation 3.1% against the same period of 2025."
     },
     "inflation_projection": {
       "value": 0.03,
@@ -47,7 +47,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The Central Bank of Belize sets no policy interest rate; under the fixed BZD 2 = USD 1 peg it uses reserve requirements and open market operations (CBB Monthly Economic Highlights, August 2026)."
+      "note": "No policy interest rate is published by the Central Bank of Belize; the Belize dollar is fixed at BZD 2.00 = USD 1.00 (CBB Monthly Economic Highlights, August 2026)."
     },
     "savings_account_rate": {
       "value": 0.026,
@@ -143,7 +143,7 @@
       "sourceName": "Central Bank of Belize, Deposit Insurance Act",
       "sourceUrl": "https://www.centralbank.org.bz/about-the-bank/laws-and-regulations/deposit-insurance-act",
       "asOf": "2020-01-31",
-      "note": "Deposit Insurance Act 2020 covers depositors of domestic banks and credit unions up to BZD 20,000. The Act dates from January 2020 (older than 2025) and the CBB page does not confirm the fund is paying out yet."
+      "note": "Deposit Insurance Act 2020 (signed January 2020): generally BZD 20,000 of an insured deposit is covered. The CBB page describes the fund in the future tense and does not confirm it is operating; the Act dates from 2020 (older than 2025)."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -294,7 +294,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/belize/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -419,7 +419,7 @@
       "sourceName": "Social Security Board, 2025 Actuarial Review (July 2026), section 5.1.5 Non-Contributory Pension",
       "sourceUrl": "https://socialsecurity.org.bz/wp-content/uploads/2026/08/BELIZE-SSB-2025-Actuarial-Review-Final-Report-2026-07-30.pdf",
       "asOf": "2025-12-31",
-      "note": "BZD 100 a month, unchanged since 2007; paid to just over 800 people in 2025."
+      "note": "BZD 100 a month, unchanged since 2007; open to new claims (97 awarded in 2022-2024) and paid to just over 800 people in 2025. Means-tested."
     },
     "old_age_allowance_eligibility": {
       "value": null,

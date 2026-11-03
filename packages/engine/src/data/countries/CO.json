@@ -113,12 +113,12 @@
       "note": "No current 5-year TES yield could be read: the central bank's yield-curve pages blocked automated access and Trading Economics shows only the 10-year yield."
     },
     "tbond_10y_rate": {
-      "value": 0.1302,
+      "value": 0.1303,
       "status": "sourced",
       "sourceName": "Trading Economics, Colombia 10-year government bond yield (secondary source)",
       "sourceUrl": "https://tradingeconomics.com/colombia/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "10-year peso TES yield 13.02% on 30 October 2026."
+      "note": "10-year peso TES yield 13.03% on 30 October 2026 (secondary source; the central bank's yield pages blocked automated access)."
     },
     "tax_bank_interest": {
       "value": 0.19,
@@ -155,7 +155,7 @@
     "equity_return_low": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "MSCI COLCAP 2,490.92 on 30 Oct 2026, up 25% in a year, record 2,627 in September 2026 (Trading Economics)",
+      "sourceName": "COLCAP index 2,490.92 on 30 Oct 2026, up 25% in a year, record 2,627 in September 2026 (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/colombia/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: Colombian shares fall back to their weak 2015-2023 record and earn less than CDTs."
@@ -219,7 +219,7 @@
     "fixed_income_return_high": {
       "value": 0.105,
       "status": "assumption",
-      "sourceName": "10-year TES 13.02% less 19% tax = 10.5% (Trading Economics)",
+      "sourceName": "10-year TES 13.03% less 19% tax = 10.6% (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/colombia/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "High case: locking in today's long TES yields and holding to maturity."
@@ -383,7 +383,7 @@
     "retirement_return_high": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "10-year TES 13.02% less tax (Trading Economics)",
+      "sourceName": "10-year TES 13.03% less tax (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/colombia/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "High case: long TES or long CDTs bought at today's yields and held."

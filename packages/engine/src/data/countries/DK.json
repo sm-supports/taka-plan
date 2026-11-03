@@ -22,7 +22,7 @@
       "sourceName": "Danmarks Nationalbank daily exchange rates (USD)",
       "sourceUrl": "https://www.nationalbanken.dk/api/currencyratesxml?lang=en",
       "asOf": "2026-10-30",
-      "note": "DKK 668.95 per USD 100; World Bank 2025 average 6.62."
+      "note": "DKK 668.95 per USD 100 on 30 Oct 2026; matches the ECB reference cross rate (DKK 7.4735 and USD 1.1172 per euro). World Bank 2025 average 6.62."
     }
   },
   "fields": {
@@ -48,7 +48,7 @@
       "sourceName": "Danmarks Nationalbank current-account rate (StatBank DNRENTD)",
       "sourceUrl": "https://www.statbank.dk/DNRENTD",
       "asOf": "2026-10-29",
-      "note": "Current-account and certificates-of-deposit rate 2.10%, lending rate 2.25%; raised from 1.85% in early September 2026 alongside the ECB."
+      "note": "Current-account and certificates-of-deposit rate 2.10%, lending rate 2.25%; raised from 1.85% in mid-September 2026 after the ECB raised its deposit rate on 16 September."
     },
     "savings_account_rate": {
       "value": 0.004,
@@ -115,12 +115,12 @@
       "note": "No current 5-year Danish government bond yield was found: Trading Economics shows only 2- and 10-year yields and worldgovernmentbonds.com could not be read."
     },
     "tbond_10y_rate": {
-      "value": 0.0312,
+      "value": 0.0329,
       "status": "sourced",
-      "sourceName": "Trading Economics, Denmark 10-year government bond yield",
-      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
-      "asOf": "2026-10-30",
-      "note": "ECB long-term convergence yield for Denmark was 3.29% in September 2026; the 2-year yield was 2.79%."
+      "sourceName": "ECB long-term interest rate for convergence purposes, Denmark (10-year government bond yield)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.DK.L.L40.CI.0000.DKK.N.Z",
+      "asOf": "2026-09-30",
+      "note": "Monthly average for September 2026 (3.01% in August); Trading Economics showed 3.10% on 2 November 2026 and a 2-year yield of 2.79%."
     },
     "tax_bank_interest": {
       "value": 0.37,
@@ -157,7 +157,7 @@
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "Copenhagen stock index 1,633 on 30 Oct 2026, 45% below its June 2024 high of 2,967",
+      "sourceName": "Copenhagen 20 index about 1,646 on 2 Nov 2026, 45% below its June 2024 high of 2,967",
       "sourceUrl": "https://tradingeconomics.com/denmark/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: Danish shares, concentrated in a few large health-care and shipping companies, return little more than safe deposits."
@@ -221,8 +221,8 @@
     "fixed_income_return_high": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "Denmark 10-year government bond 3.12% less 37% tax = 2.0%",
-      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
+      "sourceName": "Denmark 10-year government bond 3.29% (ECB, Sep 2026) less 37% tax = 2.1%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.DK.L.L40.CI.0000.DKK.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: holding long government or mortgage bonds after tax."
     },
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DK",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "Latest World Bank figure is for 2024 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.03,
@@ -287,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DK",
       "asOf": "2024-12-31",
-      "note": "Danmarks Statistik life table 2024-2025 (HISB8): men 80.25, women 83.90."
+      "note": "World Bank figure is for 2024 (older than 2025). Danmarks Statistik life table 2024-2025 (HISB8): men 80.25, women 83.90."
     },
     "life_table_remaining": {
       "value": null,
@@ -350,12 +351,12 @@
       "note": "People aged 15-64 divided by people 65+ in the official 2026 projection; World Bank 2025 old-age dependency 33.4 gives 3.0."
     },
     "retirement_age_default": {
-      "value": 67,
+      "value": 70,
       "status": "sourced",
       "sourceName": "borger.dk, folkepensionsalder",
       "sourceUrl": "https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension",
       "asOf": "2026-10-31",
-      "note": "Folkepension age is 67 for people born 1 July 1955 to 31 December 1962, then 68 (born 1963-66), 69 (1967-70) and 70 (born 1971 or later); same for men and women."
+      "note": "Folkepension age is 70 for everyone born on or after 1 January 1971, so 70 applies to people born after 1975 (and may be raised further with life expectancy); it is 67 for people born 1 July 1955 to 31 December 1962, 68 for 1963-66 and 69 for 1967-70. Same for men and women."
     },
     "retirement_age_government": {
       "value": null,
@@ -384,8 +385,8 @@
     "retirement_return_high": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "Denmark 10-year government bond 3.12% less 37% tax = 2.0%",
-      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
+      "sourceName": "Denmark 10-year government bond 3.29% (ECB, Sep 2026) less 37% tax = 2.1%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.DK.L.L40.CI.0000.DKK.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of longer government and mortgage bonds after tax, slightly below the 10-year yield."
     },
@@ -408,8 +409,8 @@
     "retirement_accumulation_return_high": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "After-tax 10-year bond 2.0%; equity high 7%",
-      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield",
+      "sourceName": "After-tax 10-year bond 2.1%; equity high 7%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.DK.L.L40.CI.0000.DKK.N.Z",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
     },
@@ -419,13 +420,13 @@
       "sourceName": "borger.dk, folkepension rates 2026 (grundbeløb)",
       "sourceUrl": "https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension",
       "asOf": "2026-01-01",
-      "note": "Basic amount of the residence-based folkepension, DKK 7,544 a month before tax in 2026; a means-tested pension supplement adds up to DKK 8,729 (single) or 4,467 (couple)."
+      "note": "Basic amount (grundbeløb) of the residence-based folkepension, DKK 7,544 a month before tax in 2026, not reduced by other income; an income-tested pension supplement adds up to DKK 8,729 (single) or 4,467 (married/cohabiting)."
     },
     "old_age_allowance_eligibility": {
       "value": null,
       "valueJson": {
-        "menAge": 67,
-        "womenAge": 67,
+        "menAge": 70,
+        "womenAge": 70,
         "over90Monthly": null,
         "meansTested": false
       },
@@ -433,7 +434,7 @@
       "sourceName": "borger.dk, folkepension (age, residence and income rules)",
       "sourceUrl": "https://www.borger.dk/pension-og-efterloen/Folkepension-oversigt/foer-du-gaar-paa-folkepension",
       "asOf": "2026-10-31",
-      "note": "Not contributory: needs Danish citizenship or 10 years' residence between 15 and pension age (full rate after 40 years). The basic amount is not reduced by other income; only the supplement is income-tested."
+      "note": "Ages are for people born on or after 1 January 1971 (67-69 for older cohorts). Not contributory: generally needs Danish citizenship, permanent residence and at least 3 years' residence between age 15 and pension age; the full rate needs residence for 9/10 of that period, otherwise it is pro-rated. The basic amount is not reduced by other income; only the supplement is income-tested."
     },
     "gratuity_rule": {
       "value": null,
@@ -448,7 +449,7 @@
       "valueJson": {
         "entryAgeMin": 16,
         "entryAgeMax": null,
-        "pensionFromAge": 67,
+        "pensionFromAge": 70,
         "nomineeUntilAge": null,
         "inflationLinked": true,
         "taxFree": false
@@ -457,7 +458,7 @@
       "sourceName": "borger.dk (folkepension) and lifeindenmark.borger.dk (ATP Livslang Pension)",
       "sourceUrl": "https://lifeindenmark.borger.dk/pension/atp-livslang-pension",
       "asOf": "2026-10-31",
-      "note": "Two public tiers: the residence-based folkepension and the compulsory ATP lifetime pension (contributions from age 16, one-third employee, two-thirds employer, paid from pension age, can be deferred 10 years). Folkepension is adjusted yearly by the rate-adjustment percentage; both are taxed as income."
+      "note": "Two public tiers: the residence-based folkepension and the compulsory ATP lifetime pension (contributions for wage earners aged 16 or more, one-third employee, two-thirds employer, paid automatically from the Danish pension age, which is 70 for people born from 1971). Folkepension is adjusted yearly by the rate-adjustment percentage; both are taxed as income."
     }
   },
   "instruments": {
@@ -506,7 +507,7 @@
       "available": true,
       "localName": "Statsobligationer",
       "localNameEn": "Danish government bonds",
-      "sourceUrl": "https://tradingeconomics.com/denmark/government-bond-yield"
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.DK.L.L40.CI.0000.DKK.N.Z"
     },
     "equity_fund": {
       "available": true,

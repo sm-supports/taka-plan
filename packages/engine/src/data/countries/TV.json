@@ -6,6 +6,7 @@
   "nameNative": "Tuvalu",
   "region": "east_asia_pacific",
   "languages": [
+    "tvl",
     "en"
   ],
   "currency": {
@@ -154,24 +155,24 @@
     "equity_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "Low case for a global index fund in Australian dollars after a weak decade for world shares."
     },
     "equity_return_base": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
-      "note": "There is no local stock market, so the base is a global index in Australian dollars, capped at an assumed 1% safe rate plus under 4 points."
+      "note": "There is no local stock market, so the base is a global index in Australian dollars, held to the assumed 1% safe rate plus under 4 points."
     },
     "equity_return_high": {
       "value": 0.075,
       "status": "assumption",
-      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No local stock exchange; global equity index in Australian dollars; No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "High case near long-run world equity returns in Australian dollars."
     },
@@ -202,24 +203,24 @@
     "fixed_income_return_low": {
       "value": 0.005,
       "status": "assumption",
-      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "Low case: ordinary savings deposits at well under 1%."
     },
     "fixed_income_return_base": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
-      "note": "Base case: term deposits around 1%, as at comparable single-bank Pacific AUD markets; no Tuvalu rate is published."
+      "note": "Base case: term deposits around 1%, in line with deposit rates in other small Pacific markets; no Tuvalu rate is published."
     },
     "fixed_income_return_high": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "High case if local term deposit rates follow Australian rates up."
     },
@@ -256,12 +257,12 @@
       "note": "No private health insurance premium table for Tuvalu was found."
     },
     "oop_health_share": {
-      "value": 0.0004,
+      "value": 0.000446,
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TV",
       "asOf": "2023-12-31",
-      "note": "Out-of-pocket spending is 0.04% of current health expenditure; the government funds health care, including AUD 11.4 million for overseas medical referrals in 2026-27."
+      "note": "Out-of-pocket spending is 0.045% of current health expenditure (2023); the government funds health care, including AUD 11.4 million for overseas medical referrals in 2026-27."
     },
     "goal_inflation_health": {
       "value": 0.045,
@@ -330,48 +331,48 @@
     "retirement_return_low": {
       "value": 0.005,
       "status": "assumption",
-      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "Low case: savings deposits."
     },
     "retirement_return_base": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
-      "note": "Base case at about 1%, the level of 1-year deposits in comparable AUD Pacific markets; no Tuvalu rate is published."
+      "note": "Base case at about 1%, in line with deposit rates in other small Pacific markets; no Tuvalu rate is published, so this cannot be checked against a local after-tax rate."
     },
     "retirement_return_high": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "No published Tuvalu deposit rates; comparable AUD-using Pacific atoll bank 1-year term deposit 1.15% (Kiribati)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "High case if local deposit rates rise with Australian rates."
     },
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars; No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix mostly in local deposits."
     },
     "retirement_accumulation_return_base": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars; No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "Base case: half local deposits at about 1% and half global equity at 4.5%."
     },
     "retirement_accumulation_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Mix of local deposits (about 1%) and global equity in Australian dollars; No published Tuvalu deposit rates; World Bank average deposit rates in nearby small Pacific markets 0.3-1.6% (Vanuatu 2025, Solomon Islands 2023, Samoa 2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=VU-SB-WS",
       "asOf": "2026-10-31",
       "note": "High case with a larger, well-performing global equity share."
     },
@@ -421,19 +422,19 @@
       "available": true,
       "localName": null,
       "localNameEn": "Savings account",
-      "note": "Offered by the national bank; rates not published online."
+      "note": "Offered by the local bank; rates are not published online."
     },
     "fdr_3m": {
       "available": true,
       "localName": null,
       "localNameEn": "3-month term deposit",
-      "note": "Offered by the national bank; rates not published online."
+      "note": "Offered by the local bank; rates are not published online."
     },
     "fdr_1y": {
       "available": true,
       "localName": null,
       "localNameEn": "1-year term deposit",
-      "note": "Offered by the national bank; rates not published online."
+      "note": "Offered by the local bank; rates are not published online."
     },
     "dps": {
       "available": false,

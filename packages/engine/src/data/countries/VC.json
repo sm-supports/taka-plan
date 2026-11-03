@@ -286,14 +286,14 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=VC",
       "asOf": "2024-12-31",
-      "note": "Men 68.8, women 74.5 (2024). UN WPP 2024 via populationpyramid.net gives 71.7 for 2026 (men 69.0, women 74.8)."
+      "note": "Men 68.8, women 74.5 (2024). UN WPP 2024 via populationpyramid.net gives 71.7 for 2026 (men 69.0, women 74.8). The World Bank figure is for 2024, older than 2025 (latest published)."
     },
     "life_table_remaining": {
       "value": null,
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/saint-vincent-and-the-grenadines/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -322,7 +322,7 @@
           }
         ]
       },
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "note": "Secondary source of UN WPP 2024 medium variant for the year 2026 (asOf set to mid-year); sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -418,7 +418,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The only non-contributory old-age pension, the Non-contributory Assistance Age Pension (EC$75 every two weeks), is limited to people who were over 57 (elderly support component: over 47) on 5 January 1987, so no one planning today can receive it (UN ECLAC non-contributory pensions database, https://dds.cepal.org/bpsnc/programa?id=150).",
+      "note": "The only non-contributory old-age pension, the Non-contributory Assistance Age Pension (EC$75 every two weeks), is limited to people who were over 57 (over 47 for the elderly support component; the page states both) on 5 January 1987, i.e. about 75 or older by 2017, so no one planning today can receive it (UN ECLAC non-contributory pensions database, https://dds.cepal.org/bpsnc/programa?id=150).",
       "absent": true
     },
     "old_age_allowance_eligibility": {
@@ -536,7 +536,7 @@
     "depositInsurance": null,
     "statistics": {
       "name": "Statistical Office, Saint Vincent and the Grenadines",
-      "url": "https://stats.gov.vc/subjects/prices-and-price-indices/"
+      "url": "https://stats.gov.vc/"
     }
   },
   "researchedAt": "2026-10-31",

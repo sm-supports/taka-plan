@@ -19,7 +19,7 @@
       "sourceName": "Banco Central de Cuba, official exchange rate, Segment III (households and non-state businesses)",
       "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
       "asOf": "2026-10-31",
-      "note": "CUP 768.00 per US dollar for 31 October 2026 in Segment III, the rate used for household currency exchange; Segment I (state) is fixed at 24 and Segment II at 120. The Segment III rate was 411 in January 2026."
+      "note": "CUP 768.00 per US dollar in Segment III (the floating official rate used for household currency exchange), the rate in force before the BCC moved it to 775.00 on 3 November 2026; Segment I (state) is fixed at 24 and Segment II at 120."
     }
   },
   "fields": {
@@ -29,7 +29,7 @@
       "sourceName": "ONEI (Oficina Nacional de Estadística e Información) CPI, September 2026, as reported by Directorio Cubano (secondary source)",
       "sourceUrl": "https://www.directoriocubano.info/cuba/salario-medio-cuba-inflacion-septiembre-2026/",
       "asOf": "2026-09-30",
-      "note": "Official year-on-year CPI inflation 28.44% in September 2026 (25.19% in August). ONEI's own site could not be reached (certificate error). Independent estimates put real inflation far higher."
+      "note": "Official year-on-year CPI inflation 28.44% in September 2026 (ONEI data reported on 15 October 2026). ONEI's own site could not be reached, so this is a secondary source. Independent estimates put real inflation far higher."
     },
     "inflation_projection": {
       "value": 0.25,
@@ -154,7 +154,7 @@
     "equity_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "No stock exchange in Cuba; Segment III official rate rose from 411 to 768 pesos per US dollar in 2026 (BCC)",
+      "sourceName": "No stock exchange in Cuba; global equity in peso terms; official Segment III rate 768 pesos per US dollar (BCC, October 2026)",
       "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
       "asOf": "2026-10-31",
       "note": "There is no local stock market and no legal way for most residents to buy a global index fund; low case kept just under the assumed safe rate."
@@ -181,45 +181,45 @@
       "sourceName": "Gold USD 3,876/oz on 30 Oct 2026 (Trading Economics); peso depreciation",
       "sourceUrl": "https://tradingeconomics.com/commodity/gold",
       "asOf": "2026-10-31",
-      "note": "Low case: dollar gold flat while the peso keeps losing value more slowly than in 2026."
+      "note": "Low case: dollar gold flat while the peso loses value more slowly than today's inflation."
     },
     "gold_return_base": {
       "value": 0.2,
       "status": "assumption",
-      "sourceName": "Gold USD trend plus peso depreciation: BCC Segment III rate 411 (Jan 2026) to 768 (Oct 2026) pesos per dollar",
+      "sourceName": "Gold USD trend (Trading Economics) plus peso depreciation: BCC Segment III rate 768 pesos per dollar (Oct 2026); official CPI inflation 28.4% (Sep 2026)",
       "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
       "asOf": "2026-10-31",
-      "note": "Base case: gold in pesos rises roughly with the peso's depreciation, assumed at about 20% a year."
+      "note": "Base case: gold in pesos rises roughly with the peso's depreciation, which tracks inflation; assumed at about 20% a year, a little under current official inflation."
     },
     "gold_return_high": {
       "value": 0.35,
       "status": "assumption",
-      "sourceName": "Peso lost almost half its official Segment III value in 2026 (BCC)",
+      "sourceName": "Official CPI inflation 28.4% (Sep 2026) and a weakening Segment III rate (BCC)",
       "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
       "asOf": "2026-10-31",
-      "note": "High case: the peso keeps falling as fast as in 2026."
+      "note": "High case: the peso keeps losing value faster than official inflation."
     },
     "fixed_income_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "BCC sets deposit rates administratively; not published on its site",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceName": "Banco Central de Cuba, monetary policy regulations: the BCC sets bank deposit and lending rates directly; the rates are not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "Low case: an ordinary peso savings account, which pays very little."
     },
     "fixed_income_return_base": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "BCC sets deposit rates administratively; not published on its site",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceName": "Banco Central de Cuba, monetary policy regulations: the BCC sets bank deposit and lending rates directly; the rates are not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "Base case: fixed-term peso deposits at state banks, assumed to pay low single-digit rates far below inflation."
     },
     "fixed_income_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "BCC sets deposit rates administratively; not published on its site",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceName": "Banco Central de Cuba, monetary policy regulations: the BCC sets bank deposit and lending rates directly; the rates are not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "High case: the longest fixed-term peso deposits."
     },
@@ -285,7 +285,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CU",
       "asOf": "2024-12-31",
-      "note": "Men 75.9, women 80.7 (2024)."
+      "note": "Men 75.9, women 80.7 (2024; latest World Bank figure, older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -366,24 +366,24 @@
     "retirement_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "BCC sets deposit rates administratively; not published",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceName": "Banco Central de Cuba, monetary policy regulations: the BCC sets bank deposit and lending rates directly; the rates are not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "Low case: savings account in pesos."
     },
     "retirement_return_base": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "BCC sets deposit rates administratively; not published",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceName": "Banco Central de Cuba, monetary policy regulations: the BCC sets bank deposit and lending rates directly; the rates are not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "Base case: fixed-term peso deposits, assumed low single digits and no higher than the safe rate."
     },
     "retirement_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "BCC sets deposit rates administratively; not published",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceName": "Banco Central de Cuba, monetary policy regulations: the BCC sets bank deposit and lending rates directly; the rates are not published on its site",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "High case: longest fixed-term peso deposits."
     },
@@ -391,7 +391,7 @@
       "value": 0.02,
       "status": "assumption",
       "sourceName": "Peso deposits only; no local stock or bond market for individuals",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "Low case: residents can mostly hold only peso deposits."
     },
@@ -399,7 +399,7 @@
       "value": 0.04,
       "status": "assumption",
       "sourceName": "Peso deposits; equity assumption capped at safe rate plus 4 points",
-      "sourceUrl": "https://www.bc.gob.cu/tasas-de-cambio",
+      "sourceUrl": "https://www.bc.gob.cu/normas-y-regulaciones/regulaciones-de-politica-monetaria",
       "asOf": "2026-10-31",
       "note": "Base case for a mix weighted to peso deposits."
     },

@@ -51,12 +51,12 @@
       "note": "2W repo rate raised from 3.50% to 3.75% with effect from 19 June 2026."
     },
     "savings_account_rate": {
-      "value": 0.0154,
+      "value": 0.0155,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Czech banks, household overnight deposits in CZK (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L21.A.R.A.2250.CZK.N",
-      "asOf": "2026-08-31",
-      "note": "Average 1.54% on household overnight deposits (current and most savings accounts) in August 2026; notice deposits up to 3 months paid 1.94%."
+      "asOf": "2026-09-30",
+      "note": "Average 1.55% on household overnight deposits (current and most savings accounts) in September 2026 (1.54% in August); notice deposits up to 3 months paid 1.94% in August."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -64,15 +64,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/CNB MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (3.38% in August 2026); no 3-month rate was found."
+      "note": "ECB/CNB MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (3.40% in September 2026); no separate 3-month rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0338,
+      "value": 0.034,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Czech banks, household deposits in CZK with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L22.F.R.A.2250.CZK.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 3.56% and over 2 years 3.51% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year; 3.40% in September 2026 (3.38% in August). Re-checked against the ECB data API by the verifier."
     },
     "dps_rate": {
       "value": null,
@@ -205,7 +205,7 @@
     "fixed_income_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 3.38% less 15% tax = 2.9%, with rates drifting lower",
+      "sourceName": "Household deposits up to 1 year 3.40% (September 2026) less 15% tax = 2.9%, with rates drifting lower",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L22.F.R.A.2250.CZK.N",
       "asOf": "2026-10-31",
       "note": "Low case: bank term deposits after tax if CNB rates fall."
@@ -286,8 +286,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/czech-republic",
-      "asOf": "2026-12-31",
-      "note": "Men 77.5, women 83.0 (UN WPP estimate for 2026); World Bank 2024 figure 80.0."
+      "asOf": "2026-07-01",
+      "note": "Men 77.5, women 83.0 (UN WPP estimate for 2026, mid-year); World Bank 2024 figure 80.0."
     },
     "life_table_remaining": {
       "value": null,
@@ -322,7 +322,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/czech-republic",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
     },
     "support_ratio": {
@@ -350,12 +350,12 @@
       "note": "100 / old-age dependency ratio: 33.2 (2025, World Bank), 42.2 (2040) and 51.3 (2065, populationpyramid.net/czech-republic/2065/)."
     },
     "retirement_age_default": {
-      "value": 65,
+      "value": 67,
       "status": "sourced",
       "sourceName": "Czech Social Security Administration (ČSSZ), retirement age",
       "sourceUrl": "https://www.cssz.gov.cz/web/lang/duchodovy-vek",
       "asOf": "2026-04-16",
-      "note": "65 for men born 1965-1971; men born 1962 (retiring in 2026) retire at 64 years 6 months; women's age depends on children raised and is converging; rises gradually to 67 for people born after 1988. 35 insurance years required."
+      "note": "ČSSZ table (updated 16 April 2026): people born 1974-1988 retire at 65 years 8 months plus one month per birth year after 1973 (65y11m for 1976, 66y11m for 1988), and everyone born after 1988 at 67. 67 is used as the age for planners born after 1975; people retiring in 2026 do so at about 64-65. 35 insurance years required."
     },
     "retirement_age_government": {
       "value": null,
@@ -368,7 +368,7 @@
     "retirement_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 3.38% less 15% tax = 2.9%, with rates drifting lower",
+      "sourceName": "Household deposits up to 1 year 3.40% (September 2026) less 15% tax = 2.9%, with rates drifting lower",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CZ.B.L22.F.R.A.2250.CZK.N",
       "asOf": "2026-10-31",
       "note": "Low case: bank term deposits after tax if CNB rates fall."
@@ -414,12 +414,13 @@
       "note": "High case for a growth-leaning balanced mix."
     },
     "old_age_allowance_monthly": {
-      "value": 0,
-      "status": "sourced",
-      "sourceName": "European Commission, Your social security rights in the Czech Republic (July 2026)",
-      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/0b4342bd-0bd0-4b42-b09e-e43733ae8b8e_en",
-      "asOf": "2026-07-31",
-      "note": "Czechia has no non-contributory old-age pension; older people with low income can claim the means-tested state social assistance benefit (dávka státní sociální pomoci) introduced on 1 October 2025."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "absent": true,
+      "note": "Confirmed absent: the European Commission guide 'Your social security rights in the Czech Republic' (July 2026, employment-social-affairs.ec.europa.eu) lists only the contributory old-age pension (minimum CZK 9,800 a month in 2026 with the insurance record) and, for people without income, the means-tested state social assistance benefit (dávka státní sociální pomoci, since 1 October 2025); there is no non-contributory social pension."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -427,7 +428,8 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No non-contributory old-age pension exists in Czechia, so there are no eligibility ages; low-income older people rely on means-tested state social assistance."
+      "note": "Confirmed absent: no non-contributory old-age pension exists in Czechia (European Commission guide 'Your social security rights in the Czech Republic', July 2026); low-income older people rely on the means-tested state social assistance benefit.",
+      "absent": true
     },
     "gratuity_rule": {
       "value": null,
@@ -442,7 +444,7 @@
       "valueJson": {
         "entryAgeMin": null,
         "entryAgeMax": null,
-        "pensionFromAge": 65,
+        "pensionFromAge": 67,
         "nomineeUntilAge": null,
         "inflationLinked": true,
         "taxFree": null
@@ -451,7 +453,7 @@
       "sourceName": "Czech Social Security Administration (ČSSZ), retirement age",
       "sourceUrl": "https://www.cssz.gov.cz/web/lang/duchodovy-vek",
       "asOf": "2026-04-16",
-      "note": "Compulsory pay-as-you-go pension insurance (social security 7.1% employee and 24.8% employer in 2026, per PwC); pension age 65 rising to 67 for those born after 1988. Pensions are raised every January by law (price growth plus part of real wage growth); that rule was not confirmed on a page read."
+      "note": "Compulsory pay-as-you-go pension insurance (social security 7.1% employee and 24.8% employer in 2026, per PwC); pension age rises by birth year to 67 for those born after 1988 (65y11m to 66y11m for those born 1976-1988). Pensions are raised every January by law (price growth plus part of real wage growth); that rule was not confirmed on a page read."
     }
   },
   "instruments": {
@@ -537,9 +539,9 @@
     },
     "oldAgeAllowance": null,
     "publicHealthCover": {
-      "name": "Všeobecná zdravotní pojišťovna (General Health Insurance Company, public health insurance)",
-      "url": "https://www.vzp.cz/",
-      "note": "Largest of the public health insurance funds under compulsory health insurance."
+      "name": "Ministerstvo zdravotnictví (Ministry of Health), compulsory public health insurance",
+      "url": "https://mzd.gov.cz/",
+      "note": "Compulsory public health insurance covers hospital care; it is run by statutory health insurance funds supervised by the Ministry of Health."
     },
     "depositInsurance": {
       "name": "Garanční systém finančního trhu (Financial Market Guarantee System)",

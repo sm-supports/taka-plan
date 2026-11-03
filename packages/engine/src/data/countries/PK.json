@@ -89,13 +89,13 @@
       "sourceName": "World Bank WDI FR.INR.DPST",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=PK",
       "asOf": "2021-12-31",
-      "note": "Latest World Bank value is for 2021 and is outdated; current State Bank of Pakistan figure not reachable"
+      "note": "Latest World Bank value is for 2021 (older than 2025, outdated: policy rate now 12%); current State Bank of Pakistan weighted average deposit rate not reachable"
     },
     "sanchayapatra_5y_rate": {
       "value": 0.1212,
       "status": "sourced",
-      "sourceName": "National Savings Pakistan, profit rates w.e.f. 21 October 2026",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceName": "National Savings Pakistan, Regular Income Certificates (profit rates w.e.f. 21 October 2026)",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-21",
       "note": "Regular Income Certificate (5 years, monthly profit); Behbood and Pensioners' Benefit accounts 12.96%; Special Savings Certificates (3 years) 12% to 12.8%"
     },
@@ -113,15 +113,15 @@
       "sourceName": "Investing.com Pakistan government bond yields",
       "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds",
       "asOf": "2026-10-30",
-      "note": "Secondary market yield; secondary source"
+      "note": "Secondary market yield from a market-data publisher; secondary source because sbp.org.pk blocked automated access (12.68% on 3 November 2026)"
     },
     "tbond_10y_rate": {
       "value": 0.1279,
       "status": "sourced",
-      "sourceName": "Investing.com Pakistan government bond yields",
-      "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds",
+      "sourceName": "Trading Economics, Pakistan 10-year government bond yield",
+      "sourceUrl": "https://tradingeconomics.com/pakistan/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "Secondary market yield; Trading Economics also shows 12.79%"
+      "note": "Secondary market yield; secondary source because sbp.org.pk blocked automated access (12.82% on 2 November 2026 after +0.03 points)"
     },
     "tax_bank_interest": {
       "value": 0.2,
@@ -134,18 +134,18 @@
     "tax_sanchayapatra_profit": {
       "value": 0.15,
       "status": "sourced",
-      "sourceName": "National Savings Pakistan, profit rates w.e.f. 21 October 2026",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceName": "National Savings Pakistan, Regular Income Certificates (Tax & Zakat)",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-21",
-      "note": "15% withholding for filers, 30% for non-filers; PwC lists 15% final tax on interest from other sources"
+      "note": "15% withholding for persons on the Active Taxpayer List, 30% for others, irrespective of amount; RIC is exempt from zakat. PwC also lists 15% final tax on interest from non-bank sources"
     },
     "deposit_insurance_limit": {
-      "value": 500000,
-      "status": "sourced",
-      "sourceName": "Wikipedia, Deposit insurance (Deposit Protection Corporation)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Deposit_insurance",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Rs 500,000 per depositor per bank; Deposit Protection Corporation site blocked automated access, so check for a later increase"
+      "note": "dpc.org.pk and sbp.org.pk blocked automated access; Wikipedia gives Rs 500,000 per depositor without a date, so the current limit could not be confirmed."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -207,7 +207,7 @@
       "value": 0.085,
       "status": "assumption",
       "sourceName": "National Savings short-term certificates 11.12% less 15% tax",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "Low case: short-term certificates after tax at lower future rates."
     },
@@ -215,7 +215,7 @@
       "value": 0.1,
       "status": "assumption",
       "sourceName": "National Savings Regular Income Certificate 12.12% less 15% tax",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "Base case: 5-year government savings certificates after filer tax."
     },
@@ -223,7 +223,7 @@
       "value": 0.11,
       "status": "assumption",
       "sourceName": "Behbood certificates 12.96% less 15% tax",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "High case using the senior and pensioner schemes."
     },
@@ -343,10 +343,10 @@
     "retirement_age_default": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "Employees' Old-Age Benefits Institution",
-      "sourceUrl": "https://www.eobi.gov.pk/",
+      "sourceName": "Employees' Old-Age Benefits Act 1976, section 22 (EOBI)",
+      "sourceUrl": "http://www.eobi.gov.pk/rules/eobilaw.html",
       "asOf": "2026-10-31",
-      "note": "Old-age pension at 60 for men, 55 for women, with 15 years of contributions"
+      "note": "Old-age pension over age 60 for men and 55 for women, with at least 15 years of contributions; EOBI's site serves this page over http only."
     },
     "retirement_age_government": {
       "value": null,
@@ -360,7 +360,7 @@
       "value": 0.08,
       "status": "assumption",
       "sourceName": "National Savings short-term certificates after 15% tax",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "Low case if savings rates fall toward the inflation target."
     },
@@ -368,7 +368,7 @@
       "value": 0.095,
       "status": "assumption",
       "sourceName": "National Savings 1-year short-term certificate 11.72% less 15% tax (9.96%)",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "Kept below the after-tax 1-year government savings rate because bill and deposit rates were not reachable."
     },
@@ -376,7 +376,7 @@
       "value": 0.11,
       "status": "assumption",
       "sourceName": "Behbood and Pensioners' Benefit accounts 12.96% less 15% tax",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "High case using the scheme reserved for seniors and pensioners."
     },
@@ -384,7 +384,7 @@
       "value": 0.08,
       "status": "assumption",
       "sourceName": "Balanced mix of savings certificates and KSE-100 equity",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix."
     },
@@ -392,7 +392,7 @@
       "value": 0.11,
       "status": "assumption",
       "sourceName": "Balanced mix: half fixed income (10%), half equity (13%)",
-      "sourceUrl": "https://savings.gov.pk/",
+      "sourceUrl": "https://savings.gov.pk/regular-income-certificates/",
       "asOf": "2026-10-31",
       "note": "Close to the average of the base fixed-income and equity cases, rounded down."
     },
@@ -432,7 +432,7 @@
       "sourceName": "WageIndicator Pakistan (Standing Orders Ordinance 1968, S.O. 12)",
       "sourceUrl": "https://wageindicator.org/en-pk/work-in-pakistan/labour-law/contracts-and-dismissals/notice-and-severance/",
       "asOf": "2026-04-03",
-      "note": "30 days' wages per completed year of service; not paid on dismissal for misconduct"
+      "note": "30 days' wages per completed year of service under S.O. 12 (WageIndicator lists it as severance); not paid on dismissal for misconduct; similar provisions in the Khyber Pakhtunkhwa and Sindh Standing Orders Acts"
     },
     "public_pension_scheme": {
       "value": null,
@@ -445,10 +445,10 @@
         "taxFree": null
       },
       "status": "sourced",
-      "sourceName": "Employees' Old-Age Benefits Institution",
-      "sourceUrl": "https://www.eobi.gov.pk/",
+      "sourceName": "Employees' Old-Age Benefits Institution, Benefits/Pension and contribution rates",
+      "sourceUrl": "http://www.eobi.gov.pk/introduction/Pension.html",
       "asOf": "2026-10-31",
-      "note": "EOBI: employer 5% plus employee 1% of minimum wage; pension 2% of average wage per year of contribution after 15 years; minimum Rs 11,500 a month from January 2025; women from 55; raised by government decision, not indexed"
+      "note": "EOBI: employer 5% plus employee 1% of the minimum wage; pension = average minimum monthly wage x years of insurable employment / 50 (2% a year) after 15 years; minimum Rs 10,000 a month per the EOBI page (a later increase may apply); women from 55; raised by government decision, not indexed. EOBI's site serves this page over http only."
     }
   },
   "instruments": {
@@ -471,7 +471,7 @@
       "available": true,
       "localName": null,
       "localNameEn": "Recurring deposit",
-      "note": "Some banks offer monthly recurring savings plans"
+      "note": "Monthly recurring savings plans are offered by some banks"
     },
     "sanchayapatra_5y": {
       "available": true,
@@ -489,14 +489,13 @@
     "tbond_5y": {
       "available": true,
       "localName": null,
-      "localNameEn": "Pakistan Investment Bond",
-      "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds"
+      "localNameEn": "Pakistan Investment Bond"
     },
     "tbond_10y": {
       "available": true,
       "localName": null,
       "localNameEn": "Pakistan Investment Bond",
-      "sourceUrl": "https://www.investing.com/rates-bonds/pakistan-government-bonds"
+      "sourceUrl": "https://tradingeconomics.com/pakistan/government-bond-yield"
     },
     "equity_fund": {
       "available": true,
@@ -522,16 +521,18 @@
     },
     "insuranceComplaints": {
       "name": "Federal Insurance Ombudsman",
-      "url": "https://www.fio.gov.pk/"
+      "url": "https://fio.gov.pk/submit-ticket.html"
     },
     "pensionScheme": {
       "name": "Employees' Old-Age Benefits Institution",
-      "url": "https://www.eobi.gov.pk/"
+      "url": "http://www.eobi.gov.pk/introduction/Pension.html",
+      "note": "Site serves over http only"
     },
     "oldAgeAllowance": null,
     "publicHealthCover": {
-      "name": "Sehat Sahulat Program",
-      "url": "https://www.pmhealthprogram.gov.pk/"
+      "name": "Ministry of National Health Services, Regulations and Coordination (Sehat Sahulat Programme)",
+      "url": "https://www.nhsrc.gov.pk/",
+      "note": "The Sehat Sahulat Programme site (pmhealthprogram.gov.pk) was unreachable"
     },
     "depositInsurance": {
       "name": "Deposit Protection Corporation",

@@ -18,20 +18,20 @@
     "usdRate": {
       "value": 360.14,
       "status": "sourced",
-      "sourceName": "Central Bank of Armenia, official exchange rate",
-      "sourceUrl": "https://www.cba.am/en/",
+      "sourceName": "Central Bank of Armenia, exchange rates archive (USD)",
+      "sourceUrl": "https://www.cba.am/en/exchange-rates-archive/",
       "asOf": "2026-10-30",
-      "note": "AMD 360.14 per USD; World Bank 2025 average 387.01."
+      "note": "AMD 360.14 per USD on 30 Oct 2026 (360.50 on 2 Nov 2026); World Bank 2025 average 387.01."
     }
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.043,
+      "value": 0.044,
       "status": "sourced",
-      "sourceName": "Central Bank of Armenia (home page, 12-month inflation)",
-      "sourceUrl": "https://www.cba.am/en/",
-      "asOf": "2026-09-30",
-      "note": "12-month CPI inflation 4.3% in September 2026 (4.4% in August, Trading Economics)."
+      "sourceName": "Statistical Committee of Armenia (Armstat), Consumer Price Index",
+      "sourceUrl": "https://www.armstat.am/en/?nid=12&id=07001",
+      "asOf": "2026-08-31",
+      "note": "CPI August 2026 was 104.4% of August 2025 (4.4% a year). The Central Bank of Armenia reports 4.3% for September 2026 on its home page, but no page with only that figure was found."
     },
     "inflation_projection": {
       "value": 0.035,
@@ -44,10 +44,10 @@
     "policy_rate": {
       "value": 0.0675,
       "status": "sourced",
-      "sourceName": "Central Bank of Armenia, policy (refinancing) rate",
-      "sourceUrl": "https://www.cba.am/en/",
+      "sourceName": "Central Bank of Armenia, press release on the policy rate decision of 15 September 2026",
+      "sourceUrl": "https://www.cba.am/en/press-releases/10606/",
       "asOf": "2026-09-15",
-      "note": "Raised by 25 bp to 6.75% on 15 September 2026 (date from Trading Economics); next decision 3 November 2026."
+      "note": "Raised by 25 bp to 6.75% at the 15 September 2026 meeting (from 6.50%)."
     },
     "savings_account_rate": {
       "value": null,
@@ -71,7 +71,7 @@
       "sourceName": "Central Bank of Armenia, interest rates on attracted deposits (181 days-1 year, AMD)",
       "sourceUrl": "https://www.cba.am/en/statistics/financial-market-interest-rates-monthly/221",
       "asOf": "2026-09-30",
-      "note": "Weighted average rate on new AMD deposits of 181 days to 1 year in September 2026; over 1 year 9.43%. USD deposits pay about 3.3%."
+      "note": "Weighted average rate on new AMD deposits (households and firms) of 181 days to 1 year in September 2026 (file 11_Deposit_rates_eng.xlsx); over 1 year 9.43%. USD deposits pay about 3.3%."
     },
     "dps_rate": {
       "value": null,
@@ -103,7 +103,7 @@
       "sourceName": "Central Bank of Armenia, treasury bill yield curve (90 days, ACT/360)",
       "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
       "asOf": "2026-10-30",
-      "note": "From YC_ENG.xlsx; the 364-day bill sold at a 6.75% weighted average in September 2026."
+      "note": "From YC_ENG.xlsx (treasury bill curve, ACT/360) for 30 Oct 2026; the 2 Nov 2026 curve shows 6.76%. The 364-day bill sold at a 6.75% weighted average in September 2026."
     },
     "tbond_5y_rate": {
       "value": 0.0815,
@@ -111,7 +111,7 @@
       "sourceName": "Central Bank of Armenia, treasury bond yield curve (5-year yield to maturity)",
       "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
       "asOf": "2026-10-30",
-      "note": "Nelson-Siegel curve built from government bond quotes; spot 8.23%."
+      "note": "Nelson-Siegel curve built from government bond quotes, 30 Oct 2026 (spot 8.23%); 8.25% on the 2 Nov 2026 curve."
     },
     "tbond_10y_rate": {
       "value": 0.087,
@@ -119,7 +119,7 @@
       "sourceName": "Central Bank of Armenia, treasury bond yield curve (10-year yield to maturity)",
       "sourceUrl": "https://www.cba.am/en/yield-curves-of-gb/",
       "asOf": "2026-10-30",
-      "note": "Spot 8.92%."
+      "note": "30 Oct 2026 (spot 8.92%); 8.76% on the 2 Nov 2026 curve."
     },
     "tax_bank_interest": {
       "value": 0.2,
@@ -140,10 +140,10 @@
     "deposit_insurance_limit": {
       "value": 16000000,
       "status": "sourced",
-      "sourceName": "Deposit Guarantee Fund of Armenia",
-      "sourceUrl": "https://www.adgf.am/en",
+      "sourceName": "Deposit Guarantee Fund of Armenia, FAQ",
+      "sourceUrl": "https://www.adgf.am/en/faq",
       "asOf": "2026-10-31",
-      "note": "AMD 16,000,000 for dram-only deposits; AMD 7,000,000 for foreign-currency-only deposits."
+      "note": "AMD 16,000,000 for dram deposits; AMD 7,000,000 for foreign-currency deposits, per depositor per bank."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -262,21 +262,22 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AM",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 figure, the latest World Bank value (older than 2025); one of the highest out-of-pocket shares in Europe."
     },
     "goal_inflation_health": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "CBA CPI 4.3% (Sep 2026); 3.5% planning inflation",
-      "sourceUrl": "https://www.cba.am/en/",
+      "sourceName": "Armstat CPI 4.4% (Aug 2026); 3.5% planning inflation",
+      "sourceUrl": "https://www.armstat.am/en/?nid=12&id=07001",
       "asOf": "2026-10-31",
       "note": "No Armenian medical price index was read, so we plan with the 3.5% projection plus one point; most health costs are paid out of pocket."
     },
     "goal_inflation_education": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "CBA CPI 4.3% (Sep 2026); 3.5% planning inflation",
-      "sourceUrl": "https://www.cba.am/en/",
+      "sourceName": "Armstat CPI 4.4% (Aug 2026); 3.5% planning inflation",
+      "sourceUrl": "https://www.armstat.am/en/?nid=12&id=07001",
       "asOf": "2026-10-31",
       "note": "No Armenian education price index was read, so we plan with the 3.5% projection plus one point for fees."
     },
@@ -286,7 +287,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AM",
       "asOf": "2024-12-31",
-      "note": "Men 75.1, women 81.7."
+      "note": "Men 75.1, women 81.7. 2024 figure, the latest World Bank value (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -354,7 +355,7 @@
       "sourceName": "Wikipedia, Retirement age (Armenia)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
       "asOf": "2026-10-31",
-      "note": "Pension age 63 for men and women; secondary source because the Ministry of Labour and Social Affairs pension pages render without text."
+      "note": "Old-age pension age 63 for men and women, with no legislated increase found, so it also applies to someone born after 1975; secondary source because the Ministry of Labour and Social Affairs pension pages render without text."
     },
     "retirement_age_government": {
       "value": null,
@@ -450,7 +451,7 @@
       "sourceName": "Wikipedia, Pensions in Armenia; Wikipedia, Retirement age",
       "sourceUrl": "https://en.wikipedia.org/wiki/Pensions_in_Armenia",
       "asOf": "2026-10-31",
-      "note": "State labour pension from 63 plus a mandatory funded pension for those born after 1973 (5% of pay, or 10% minus AMD 25,000 above AMD 500,000, with state co-financing; administered via cda.am). No automatic inflation indexation rule was found; amounts change by government decision. Secondary source."
+      "note": "State labour pension from 63 plus a mandatory funded pension for employees born after 1973 (5% of pay below AMD 500,000 a month, or 10% minus AMD 25,000 above it, with state co-financing). No automatic inflation indexation rule was found; amounts change by government decision. Secondary source."
     }
   },
   "instruments": {
@@ -524,7 +525,7 @@
     },
     "insuranceRegulator": {
       "name": "Central Bank of Armenia (insurance supervision)",
-      "url": "https://www.cba.am/en/"
+      "url": "https://www.cba.am/en/financial-system-regulation-and-supervision/"
     },
     "insuranceComplaints": {
       "name": "Financial System Mediator",
@@ -532,8 +533,7 @@
     },
     "pensionScheme": {
       "name": "Ministry of Labour and Social Affairs – pensions",
-      "url": "https://welfare.gov.am/en/pensions-1",
-      "note": "Funded pension accounts: Central Depository of Armenia (cda.am)."
+      "url": "https://welfare.gov.am/en/pensions-1"
     },
     "oldAgeAllowance": {
       "name": "Old-age social pension (Ministry of Labour and Social Affairs)",

@@ -51,12 +51,12 @@
       "note": "Lithuania uses the euro; ECB deposit facility rate 2.50% since 16 September 2026 (2.25% from June 2026), confirmed in the ECB FM dataset on 31 October 2026."
     },
     "savings_account_rate": {
-      "value": 0.0025,
+      "value": 0.0026,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, overnight deposits from households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight deposits in Lithuania, August 2026 (0.25% in July, 0.22% in June)."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight deposits in Lithuania, September 2026 (0.25% in August and July)."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -64,15 +64,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Bank of Lithuania MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.43% in August 2026); no separate 3-month term deposit rate was found."
+      "note": "ECB/Bank of Lithuania MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.34% in September 2026); no separate 3-month term deposit rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0243,
+      "value": 0.0234,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (2.07% in July, 1.74% in June); 1-2 year deposits paid 3.31% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (2.43% in August, 2.07% in July); deposits of over 1 and up to 2 years paid 3.60% in September 2026 (ECB MIR M.LT.B.L22.G)."
     },
     "dps_rate": {
       "value": null,
@@ -83,20 +83,20 @@
       "note": "Lithuanian banks offer regular savings deposits (kaupiamasis indėlis), but no average or official rate for them was found in Bank of Lithuania or ECB statistics."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.021,
+      "value": 0.0218,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits (2.06% in July); household overnight deposits paid 0.25%. World Bank FR.INR.DPST has no Lithuania figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026 (2.12% in August); household overnight deposits paid 0.26%. World Bank FR.INR.DPST has no Lithuania figure."
     },
     "sanchayapatra_5y_rate": {
-      "value": 0.034,
-      "status": "sourced",
-      "sourceName": "Ministry of Finance of Lithuania, defence bonds (Government savings notes) issue terms, 27 Oct - 9 Nov 2026",
-      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
-      "asOf": "2026-10-27",
-      "note": "Longest retail issue is 3 years (no 5-year note): 3-year 3.4%, 2-year 3.3%, 1-year 3.2% a year, 6-month 1.55% per half-year, sold to individuals from 27 Oct to 9 Nov 2026. The ministry site blocks automated reading, so the rates were taken from the page text shown in search results; rates are reset for each two-week issue."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Lithuania sells Government savings notes / defence bonds to individuals (terms up to 3 years, no 5-year note), but the current rate could not be confirmed: the Ministry of Finance pages return 403 to automated reading and the researcher's 3.4% (3-year, 27 Oct-9 Nov 2026 issue) came only from a search-result snippet."
     },
     "tbill_91d_rate": {
       "value": null,
@@ -147,12 +147,12 @@
       "note": "EUR 100,000 per depositor per credit institution, all eligible deposits at one bank added together."
     },
     "credit_card_rate_cap": {
-      "value": 0.0991,
+      "value": 0.1025,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Lithuanian banks, revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, August 2026."
+      "asOf": "2026-09-30",
+      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, September 2026 (9.91% in August)."
     },
     "equity_return_low": {
       "value": 0.035,
@@ -163,12 +163,12 @@
       "note": "Low case: the small, concentrated Vilnius market returns only a little more than safe savings over a long period."
     },
     "equity_return_base": {
-      "value": 0.06,
+      "value": 0.058,
       "status": "assumption",
-      "sourceName": "OMX Vilnius (Trading Economics); 3-year savings note 3.4% and 1-year deposit 2.43% less 20% tax = about 2-2.7%",
+      "sourceName": "OMX Vilnius (Trading Economics); 1-year deposit 2.34% less 20% tax = 1.87% (ECB MFI, Sep 2026)",
       "sourceUrl": "https://tradingeconomics.com/lithuania/stock-market",
       "asOf": "2026-10-31",
-      "note": "OMX Vilnius has compounded about 10% a year since 2000, but the market is small and illiquid, so the base is held near the after-tax safe rate plus about 3.5-4 points."
+      "note": "OMX Vilnius has compounded about 10% a year since 2000, but the market is small and illiquid, so the base uses a diversified euro equity fund and is held at the after-tax 1-year deposit rate plus about 4 points."
     },
     "equity_return_high": {
       "value": 0.08,
@@ -205,7 +205,7 @@
     "fixed_income_return_low": {
       "value": 0.013,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.43% (ECB MFI statistics), assuming rates fall, less 20% tax",
+      "sourceName": "Household deposits up to 1 year 2.34% (ECB MFI statistics, Sep 2026), assuming rates fall, less 20% tax",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposit and savings-note rates drift down towards 1.6% before the 20% tax."
@@ -213,18 +213,18 @@
     "fixed_income_return_base": {
       "value": 0.021,
       "status": "assumption",
-      "sourceName": "1-year deposit 2.43% and 1-year savings note 3.2% less 20% tax = 1.9-2.6%",
+      "sourceName": "1-year deposit 2.34% and 1-2 year deposit 3.60% less 20% tax = 1.9-2.9% (ECB MFI, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case: a mix of 1-year term deposits and Government savings notes after the 20% tax (the EUR 500 interest exemption makes small balances effectively tax-free)."
+      "note": "Base case: a mix of term deposits up to 2 years after the 20% tax (the EUR 500 interest exemption makes small balances effectively tax-free)."
     },
     "fixed_income_return_high": {
       "value": 0.027,
       "status": "assumption",
-      "sourceName": "3-year Government savings note 3.4% less 20% tax = 2.7%",
-      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
+      "sourceName": "Household deposits over 1 and up to 2 years 3.60% less 20% tax = 2.9% (ECB MFI, Sep 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.G.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "High case: locking in 2-3 year savings notes or deposits (1-2 year deposits paid 3.31%) after tax."
+      "note": "High case: locking in 1-2 year deposits or Government savings notes after tax, allowing for some fall in rates."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -368,15 +368,15 @@
     "retirement_return_low": {
       "value": 0.013,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.43% (ECB MFI), assuming rates fall, less 20% tax",
+      "sourceName": "Household deposits up to 1 year 2.34% (ECB MFI, Sep 2026), assuming rates fall, less 20% tax",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposit and savings-note rates drift lower."
     },
     "retirement_return_base": {
-      "value": 0.019,
+      "value": 0.018,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.43% less 20% tax = 1.94%",
+      "sourceName": "Household deposits up to 1 year 2.34% less 20% tax = 1.87% (ECB MFI, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case capped at the after-tax 1-year term deposit rate."
@@ -384,15 +384,15 @@
     "retirement_return_high": {
       "value": 0.026,
       "status": "assumption",
-      "sourceName": "Government savings notes 1-3 years 3.2-3.4% less 20% tax = 2.6-2.7%",
-      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
+      "sourceName": "Household deposits over 1 and up to 2 years 3.60% less 20% tax = 2.9% (ECB MFI, Sep 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.G.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "High case: a ladder of Government savings notes and longer deposits after tax."
+      "note": "High case: a ladder of 1-2 year deposits or Government savings notes after tax, allowing for some fall in rates."
     },
     "retirement_accumulation_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.9%; equity low 3.5%",
+      "sourceName": "After-tax 1-year deposit 1.87%; equity low 3.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -400,16 +400,16 @@
     "retirement_accumulation_return_base": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "After-tax safe rate about 2.1%; equity base 6%",
+      "sourceName": "After-tax safe rate about 2.1%; equity base 5.8%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case: roughly half shares at 6% and half safe fixed income at about 2.1% after tax."
+      "note": "Base case: roughly half shares at 5.8% and half safe fixed income at about 2.1% after tax."
     },
     "retirement_accumulation_return_high": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "After-tax 3-year savings note 2.7%; equity high 8%",
-      "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/",
+      "sourceName": "After-tax 1-2 year deposit 2.9%; equity high 8%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LT.B.L22.G.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
     },
@@ -488,7 +488,7 @@
       "available": true,
       "localName": "Vyriausybės taupymo lakštai (gynybos obligacijos)",
       "localNameEn": "Government savings notes (defence bonds)",
-      "note": "Sold to individuals every two weeks with 6-month, 1-, 2- and 3-year terms; no 5-year term.",
+      "note": "Sold to individuals in two-week issues with terms of up to 3 years (no 5-year term); the current rate could not be read from the Ministry of Finance site.",
       "sourceUrl": "https://finmin.lrv.lt/lt/veiklos-sritys/valstybes-skolos-valdymas/vyriausybes-vertybiniai-popieriai/gynybos-obligacijos/"
     },
     "tbill_91d": {

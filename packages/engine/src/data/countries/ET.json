@@ -100,12 +100,12 @@
       "note": "No government savings certificate or retail savings bond for individuals was found on the NBE or Ministry of Finance sites; Treasury bills are auctioned by the NBE."
     },
     "tbill_91d_rate": {
-      "value": 0.03235,
+      "value": 0.02016,
       "status": "sourced",
-      "sourceName": "National Bank of Ethiopia, Treasury bill auction results, Tender No. 1012th/2026 (16 September 2026)",
+      "sourceName": "National Bank of Ethiopia, Treasury bill auction results, Auction No. 1015th/2026 (28 October 2026)",
       "sourceUrl": "https://nbe.gov.et/treasury-bills/",
-      "asOf": "2026-09-16",
-      "note": "91-day weighted average yield 3.235% (28-day 1.958%, 182-day 4.932%, 364-day 7.597%); yields fell sharply through 2026 (91-day 5.53% on 5 August 2026, 11.0% in May 2026 per the MPC)."
+      "asOf": "2026-10-28",
+      "note": "91-day weighted average yield 2.016% (28-day 1.305%, 182-day 3.667%, 364-day 6.016%). Yields have fallen steadily through 2026 (91-day 14.4% in April, 5.5% on 5 August, 3.2% on 16 September) even though the policy rate is 16%."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -225,7 +225,7 @@
       "sourceName": "NBE Annual Report 2024/25 (savings 8.0%, time deposits 7.7%); 10% final withholding tax on interest (PwC); NBE T-bill auctions 2026",
       "sourceUrl": "https://nbe.gov.et/treasury-bills/",
       "asOf": "2026-10-31",
-      "note": "High case: better-paying time deposits or 364-day Treasury bills (7.6-10% in August-September 2026) where accessible."
+      "note": "High case: better-paying time deposits or 364-day Treasury bills (6.0-10.0% at the August-October 2026 auctions) where accessible."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -494,7 +494,7 @@
       "available": false,
       "localName": "የግምጃ ቤት ሰነድ",
       "localNameEn": "Treasury bills",
-      "note": "Treasury bills of 28-364 days are auctioned by the NBE every two weeks; direct access for individuals was not confirmed.",
+      "note": "Treasury bills of 28-364 days are auctioned by the NBE every two weeks; banks bid electronically and non-banks submit bids on paper, but direct access for individuals was not confirmed.",
       "sourceUrl": "https://nbe.gov.et/treasury-bills/"
     },
     "tbond_5y": {

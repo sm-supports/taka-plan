@@ -38,10 +38,10 @@
     "inflation_projection": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "Banco de Guatemala inflation target of 4% +/- 1 point; Guatemala CPI 1.5% in 2025 (World Bank) and 4.7% in September 2026",
+      "sourceName": "Guatemala CPI history (Trading Economics: 4.69% in September 2026; World Bank 1.5% in 2025); Banco de Guatemala's announced 4% +/- 1 point target",
       "sourceUrl": "https://tradingeconomics.com/guatemala/inflation-cpi",
       "asOf": "2026-10-31",
-      "note": "We plan with the central bank's 4% target, which recent inflation (1.5-4.7%) has mostly stayed within."
+      "note": "We plan with the central bank's 4% target (not shown on the linked page; the Banco de Guatemala site was unreachable), which recent inflation of 1.5-4.7% has mostly stayed within."
     },
     "policy_rate": {
       "value": 0.035,
@@ -296,7 +296,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/guatemala/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -534,7 +534,7 @@
     },
     "pensionScheme": {
       "name": "Instituto Guatemalteco de Seguridad Social (IGSS), programa IVS",
-      "url": "https://www.igssgt.org/programa-de-invalidez-vejez-y-sobrevivencia"
+      "url": "https://www.igssgt.org/programa-de-invalidez-vejez-y-sobrevivencia/"
     },
     "oldAgeAllowance": {
       "name": "Programa de Aporte Económico del Adulto Mayor (PAM), Ministerio de Trabajo",

@@ -16,12 +16,12 @@
     "decimals": 3,
     "compact": "intl",
     "usdRate": {
-      "value": 2.9907,
+      "value": 2.9974,
       "status": "sourced",
-      "sourceName": "Trading Economics, USD/TND exchange rate",
-      "sourceUrl": "https://tradingeconomics.com/tunisia/currency",
-      "asOf": "2026-10-30",
-      "note": "2.99 dinars per US dollar on 30 October 2026; secondary source because the Banque Centrale de Tunisie site returned server errors. World Bank 2025 average 3.00."
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Tunisia, 2025 average",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=TN",
+      "asOf": "2025-12-31",
+      "note": "3.00 dinars per US dollar, 2025 average. The Banque Centrale de Tunisie rate page returned server errors; Trading Economics showed 2.99 on 3 November 2026, so the 2025 average is still current."
     }
   },
   "fields": {
@@ -50,12 +50,12 @@
       "note": "Held at 7.00% on 29 July 2026; secondary source because the Banque Centrale de Tunisie site returned server errors."
     },
     "savings_account_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Savings accounts pay at least the central bank's savings remuneration rate (TRE), but its current level could not be read: the Banque Centrale de Tunisie site returned server errors and web search was unavailable."
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "Banque Centrale de Tunisie board decision of 30 December 2025 (minimum savings remuneration rate, TRE), via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/tunisia/interest-rate",
+      "asOf": "2025-12-30",
+      "note": "The central bank lowered the minimum rate banks must pay on savings accounts (TRE) to 6%, in force with the 7% key rate from January 2026; no later change was reported up to the 29 July 2026 meeting. Secondary source because the BCT site returned server errors."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -87,7 +87,7 @@
       "sourceName": "World Bank deposit interest rate, Tunisia, via Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/tunisia/deposit-interest-rate",
       "asOf": "2024-12-31",
-      "note": "8.63%, latest World Bank value shown (series to 2024); older than 2025 and above the 7% policy rate of 2026, so likely higher than today's average."
+      "note": "8.63%, latest World Bank value shown by Trading Economics (series ends 2024); older than 2025 and from before the key rate was cut to 7%, so today's average is likely lower."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -127,7 +127,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Tunisia, withholding taxes (last reviewed 29 June 2026)",
       "sourceUrl": "https://taxsummaries.pwc.com/tunisia/corporate/withholding-taxes",
       "asOf": "2026-06-29",
-      "note": "20% withholding on interest, except interest on deposits in foreign currency or convertible dinars (exempt). Part of savings-account interest may be deductible under domestic law; not confirmed."
+      "note": "20% withholding on interest (PwC corporate withholding page); interest on deposits in foreign currency or convertible dinars is exempt. PwC's individual page says interest otherwise forms part of total taxable income, so the final charge can differ; interest on housing savings contracts is exempt."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -358,12 +358,12 @@
       "note": "The pension age for private-sector workers insured with the CNSS (60, with reforms raising ages since 2019) could not be confirmed from an official source; the CNSS site failed certificate checks and the US SSA country page refused requests."
     },
     "retirement_age_government": {
-      "value": 62,
-      "status": "sourced",
-      "sourceName": "Wikipedia, Retirement age (table lists Tunisia 62–65 from 2019)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Secondary source; the range matches the 2019 public-sector reform (retirement at 62, with an option to work to 65). The CNRPS site refused connections."
+      "note": "Not confirmed: the only source found was an unreferenced Wikipedia table row ('62–65', sector not stated); the CNRPS site refused connections and the US SSA and ISSA country profiles returned 403."
     },
     "retirement_return_low": {
       "value": 0.045,
@@ -419,7 +419,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No age-based social pension was confirmed; poor households, including elderly people, receive the means-tested family cash transfer of the Amen social programme, whose current amount could not be read (the Ministry of Social Affairs site failed certificate checks)."
+      "note": "No age-based social pension was confirmed; poor households, including elderly people, receive the means-tested family cash transfer of the Amen social programme, whose current amount could not be read (the Ministry of Social Affairs site failed certificate checks). Not marked absent because no source confirming the absence of a social pension could be read.."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -496,8 +496,7 @@
       "available": true,
       "localName": "مؤسسات التوظيف الجماعي في الأوراق المالية",
       "localNameEn": "Collective investment funds (OPCVM: SICAV and FCP)",
-      "note": "Supervised by the Conseil du Marché Financier.",
-      "sourceUrl": "https://www.cmf.tn/"
+      "note": "Supervised by the Conseil du Marché Financier."
     },
     "gold": {
       "available": true,
@@ -524,11 +523,7 @@
       "url": "https://www.cnss.tn/",
       "note": "Public-sector employees are covered by the CNRPS (https://www.cnrps.nat.tn/)."
     },
-    "oldAgeAllowance": {
-      "name": "Amen social programme (means-tested cash transfers), Ministry of Social Affairs",
-      "url": "https://www.social.gov.tn/",
-      "note": "Not an age-based pension; targets poor households."
-    },
+    "oldAgeAllowance": null,
     "publicHealthCover": {
       "name": "Caisse Nationale d'Assurance Maladie (CNAM)",
       "url": "https://www.cnam.nat.tn/"

@@ -18,12 +18,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 39.64,
+      "value": 40.37,
       "status": "sourced",
-      "sourceName": "Banque Centrale de Mauritanie, daily reference exchange rates 2008-2025 (USD)",
-      "sourceUrl": "https://bo.bcm.mr/sites/default/files/2026-02/Taux%20de%20change%20journalier%202008%20au%202025%20.xlsx",
-      "asOf": "2025-12-19",
-      "note": "Reference rate of 39.64 ouguiya per dollar on 19 December 2025, the last 2025 value in the BCM file; the 2025 average was 39.75. No 2026 file was reachable."
+      "sourceName": "Banque Centrale de Mauritanie, reference exchange rate USD/MRU (cours de change de référence)",
+      "sourceUrl": "https://connect.bcm.mr/api/cours_change_reference?from=2026-10-29&to=2026-10-29&currency=USD",
+      "asOf": "2026-10-29",
+      "note": "BCM reference rate of 40.37 ouguiya per dollar on 29 October 2026 (40.07-40.41 during 20-29 October), read from the BCM website data feed; the 2025 average was 39.75."
     }
   },
   "fields": {
@@ -31,7 +31,7 @@
       "value": 0.093,
       "status": "sourced",
       "sourceName": "Banque Centrale de Mauritanie (BCM), daily key rates feed (taux d'inflation)",
-      "sourceUrl": "https://bo.bcm.mr/api/taux_journalier",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/taux_journalier",
       "asOf": "2026-10-29",
       "note": "9.3% as displayed by the BCM on 29 October 2026 (latest month not stated); consistent with the IMF WEO projection of 8.0% average and 9.0% end-2026 inflation, after 1.6% in 2025."
     },
@@ -47,9 +47,9 @@
       "value": 0.0675,
       "status": "sourced",
       "sourceName": "BCM daily key rates feed (taux directeur)",
-      "sourceUrl": "https://bo.bcm.mr/api/taux_journalier",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/taux_journalier",
       "asOf": "2026-10-29",
-      "note": "Policy rate 6.75%; overnight deposit facility 2%, repo (lending facility) 7%."
+      "note": "Policy rate 6.75% (BCM feed of 29 October 2026), after a rise from 6% to 6.5% on 18 May 2026 and a further step since; overnight deposit facility 2%, repo (lending facility) 7%."
     },
     "savings_account_rate": {
       "value": null,
@@ -103,7 +103,7 @@
       "value": 0.0458,
       "status": "sourced",
       "sourceName": "BCM, Treasury securities auction rates (bons du Trésor 13 semaines)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-29",
       "note": "13-week Treasury bill rate 4.58% at the auction of 29 October 2026 (26-week 4.09%, 52-week 4.26%)."
     },
@@ -111,7 +111,7 @@
       "value": 0.0482,
       "status": "sourced",
       "sourceName": "BCM, Treasury securities auction rates (obligations du Trésor 5 ans)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-29",
       "note": "5-year Treasury bond rate 4.82% as of 29 October 2026."
     },
@@ -119,7 +119,7 @@
       "value": 0.043,
       "status": "sourced",
       "sourceName": "BCM, Treasury securities auction rates (obligations du Trésor 10 ans)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-29",
       "note": "10-year Treasury bond rate 4.30% as of 29 October 2026 (15-year 5.99%)."
     },
@@ -167,7 +167,7 @@
       "value": 0.075,
       "status": "assumption",
       "sourceName": "No stock exchange in Mauritania; global equities in ouguiya terms",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "Global equities in ouguiya terms, held about 3.4 points above the 4.1% after-tax 13-week bill rate, since access is only through foreign funds."
     },
@@ -175,7 +175,7 @@
       "value": 0.1,
       "status": "assumption",
       "sourceName": "No stock exchange in Mauritania; global equities in ouguiya terms",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "High case: global equities repeat their long-run record plus mild ouguiya depreciation."
     },
@@ -193,7 +193,7 @@
       "sourceName": "BCM ouguiya/dollar reference rates 2025 (about 39.6-39.8 per dollar); gold trend in dollars",
       "sourceUrl": "https://bo.bcm.mr/sites/default/files/2026-02/Taux%20de%20change%20journalier%202008%20au%202025%20.xlsx",
       "asOf": "2026-10-31",
-      "note": "Base case: the long-run dollar gold trend of about 5% plus about 1% a year of ouguiya depreciation."
+      "note": "Base case: the long-run dollar gold trend of about 5% plus about 1% a year of ouguiya depreciation (about 39.6-39.8 per dollar in 2025, 40.4 in October 2026)."
     },
     "gold_return_high": {
       "value": 0.1,
@@ -207,7 +207,7 @@
       "value": 0.03,
       "status": "assumption",
       "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "Low case: shorter bills or deposits after the 10% interest tax."
     },
@@ -215,7 +215,7 @@
       "value": 0.04,
       "status": "assumption",
       "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "Base case: the 13-week bill rate of 4.58% less 10% tax (4.1%), rounded down."
     },
@@ -223,7 +223,7 @@
       "value": 0.05,
       "status": "assumption",
       "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "High case: longer Treasury bonds (5-year 4.82%, 15-year 5.99%) after tax."
     },
@@ -349,29 +349,29 @@
           }
         ]
       },
-      "note": "100 / old-age dependency ratio: 5.97 (2025, World Bank), 6.6 (2040, populationpyramid.net/mauritania/2040/) and 10.4 (2065, populationpyramid.net/mauritania/2065/)."
+      "note": "Working-age people per person 65+, computed as 100 / old-age dependency ratio: ratio 5.97 in 2025 (World Bank) gives 16.7; ratios 6.6 in 2040 and 10.4 in 2065 (UN WPP 2024 via populationpyramid.net/mauritania/2040/ and /2065/) give 15.2 and 9.6."
     },
     "retirement_age_default": {
       "value": 63,
       "status": "sourced",
-      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), FAQ: conditions for an old-age pension",
-      "sourceUrl": "https://www.cnss.mr/fr/services",
-      "asOf": "2026-10-31",
-      "note": "Old-age pension at 63 with at least 20 years of CNSS registration, 60 months of insurance in the last 10 years and stopping salaried work (CNSS site FAQ); no separate age for women is given."
+      "sourceName": "CLEISS, Le régime mauritanien de sécurité sociale (2025 edition); CNSS FAQ",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_mauritanie.html",
+      "asOf": "2025-04-14",
+      "note": "CNSS old-age pension at 63 (58 for premature wear or arduous work) with at least 20 years of registration and 60 months of insurance in the last 10 years; same age for men and women (CLEISS 2025, consistent with the CNSS site FAQ)."
     },
     "retirement_age_government": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The retirement age of civil servants (Caisse des Retraites de l'Etat) could not be confirmed from an official source during this run."
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Loi n° 2020-020 modifiant la loi 93-009 portant statut général des fonctionnaires (Ministère des Finances, recueil des textes)",
+      "sourceUrl": "https://finances.gov.mr/Recueil_des_textes_relatifs_a_la_mission_du_Ministere/TEXTES/EMPLOI/Loi%202020-020%20modif%20loi%2093-009%20SGFP%20fr.pdf",
+      "asOf": "2020-09-30",
+      "note": "Article 72 (new): civil servants retire automatically at the age limit of 63; a special corps statute may set a lower limit. Law from 2020, still the latest text found (older than 2025)."
     },
     "retirement_return_low": {
       "value": 0.03,
       "status": "assumption",
       "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "Low case: deposits and short bills after tax."
     },
@@ -379,7 +379,7 @@
       "value": 0.04,
       "status": "assumption",
       "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "Base case: kept below the 4.1% after-tax 13-week bill rate."
     },
@@ -387,7 +387,7 @@
       "value": 0.045,
       "status": "assumption",
       "sourceName": "BCM Treasury auctions: 13-week bill 4.58% (29 Oct 2026); 10% tax on interest (PwC)",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of Treasury bonds after tax."
     },
@@ -395,7 +395,7 @@
       "value": 0.035,
       "status": "assumption",
       "sourceName": "Safe rate 4.1% after tax; global equity base 7.5%; gold base 6%",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "Low case: mostly deposits and bills."
     },
@@ -403,7 +403,7 @@
       "value": 0.055,
       "status": "assumption",
       "sourceName": "Safe rate 4.1% after tax; global equity base 7.5%; gold base 6%",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "Base case: bills and deposits with some gold and foreign equity funds."
     },
@@ -411,7 +411,7 @@
       "value": 0.075,
       "status": "assumption",
       "sourceName": "Safe rate 4.1% after tax; global equity base 7.5%; gold base 6%",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor",
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor",
       "asOf": "2026-10-31",
       "note": "High case: a growth-leaning mix with foreign equity funds."
     },
@@ -433,19 +433,33 @@
     },
     "gratuity_rule": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "valueJson": {
+        "daysPerYear": 7.5,
+        "daysPerYearAfter": 9,
+        "afterYears": 5,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Convention collective générale du travail, article 31 (Ministère des Finances, recueil des textes)",
+      "sourceUrl": "https://finances.gov.mr/Recueil_des_textes_relatifs_a_la_mission_du_Ministere/TEXTES/EMPLOI/Convention%20collective.pdf",
       "asOf": "2026-10-31",
-      "note": "The Labour Code provisions on dismissal or end-of-service indemnity could not be read from an official source during this run."
+      "note": "Dismissal indemnity per year of service: 25% of average monthly wage for years 1-5 (7.5 days), 30% for years 6-10 (9 days), 35% beyond 10 years (10.5 days, not representable here); on retirement with a CNSS pension the employer pays a retirement indemnity of 30% (1-5 years) to 100% (20+ years) of that amount. The agreement dates from 1974 and remains in force until replaced."
     },
     "public_pension_scheme": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The CNSS pays old-age pensions from 63 (see retirement_age_default), but its indexation, entry rules and tax treatment could not be confirmed from an official source."
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "CLEISS, Le régime mauritanien de sécurité sociale (2025 edition)",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_mauritanie.html",
+      "asOf": "2025-04-14",
+      "note": "CNSS (salaried private-sector workers, compulsory): pension from 63 after 20 years of registration; 20% of the average wage of the best of the last 3 or 5 years plus 1.33% per 12 months of insurance beyond 180 months, capped at 80% of average pay, floor 60% of the minimum wage. No automatic indexation rule was found (the US SSA profile describes periodic ad hoc revaluation), so inflationLinked is false; tax treatment not found."
     }
   },
   "instruments": {
@@ -484,21 +498,21 @@
       "localName": "أذونات الخزينة",
       "localNameEn": "Treasury bills (13 weeks)",
       "note": "13-week bills are auctioned by the BCM; no retail subscription channel for individuals was found.",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor"
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor"
     },
     "tbond_5y": {
       "available": false,
       "localName": "سندات الخزينة (5 سنوات)",
       "localNameEn": "Treasury bonds (5 years)",
       "note": "Bonds are auctioned by the BCM; no retail subscription channel for individuals was found.",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor"
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor"
     },
     "tbond_10y": {
       "available": false,
       "localName": "سندات الخزينة (10 سنوات)",
       "localNameEn": "Treasury bonds (10 years)",
       "note": "Bonds are auctioned by the BCM; no retail subscription channel for individuals was found.",
-      "sourceUrl": "https://bo.bcm.mr/api/valeurs_tresor"
+      "sourceUrl": "https://bo.bcm.mr/fr/api/valeurs_tresor"
     },
     "equity_fund": {
       "available": false,
@@ -518,7 +532,11 @@
       "name": "Banque Centrale de Mauritanie (BCM)",
       "url": "https://www.bcm.mr/"
     },
-    "insuranceRegulator": null,
+    "insuranceRegulator": {
+      "name": "Banque Centrale de Mauritanie (BCM), insurance supervision",
+      "url": "https://www.bcm.mr/",
+      "note": "The BCM took over supervision of insurers from the Ministry of Finance's Direction du Contrôle des Assurances in September 2025 (press reports); no dedicated BCM insurance page was found."
+    },
     "insuranceComplaints": null,
     "pensionScheme": {
       "name": "Caisse Nationale de Sécurité Sociale (CNSS)",

@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "code": "LR",
+  "iso3": "LBR",
+  "nameEn": "Liberia",
+  "nameNative": "Liberia",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "en",
+    "kpe",
+    "vai"
+  ],
+  "currency": {
+    "code": "LRD",
+    "symbol": "L$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 170.47,
+      "status": "sourced",
+      "sourceName": "Central Bank of Liberia, daily buying and selling rates, 31 October 2026",
+      "sourceUrl": "https://www.cbl.org.lr/research/buying-selling-rates",
+      "asOf": "2026-10-31",
+      "note": "Mid-point of the CBL buying (169.4404) and selling (171.4896) rates for 31 October 2026; World Bank 2024 average 191.3. CLDR gives '$'; 'L$' is used to tell it apart from the US dollar, which also circulates widely."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "Central Bank of Liberia, Monetary Policy Committee Communique No. 28, 6 October 2026",
+      "sourceUrl": "https://cbl.org.lr/sites/default/files/documents/COMMUNIQUE%20NO.28_20261007_0001.pdf",
+      "asOf": "2026-09-30",
+      "note": "Headline inflation moderated to an estimated 4.5% in the third quarter of 2026 from 5.4% in the second quarter; the CBL expects about 4.6% in the fourth quarter. Trading Economics shows the LISGIS figure at 5.0% for June 2026."
+    },
+    "inflation_projection": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation for Liberia (8.3% in 2025); CBL MPC Communique No. 28 (4.5% in Q3 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Inflation has fallen to about 4.5% with a stronger Liberian dollar, but averaged 7-10% over 2021-2025, so 6.5% is used for long plans."
+    },
+    "policy_rate": {
+      "value": 0.16,
+      "status": "sourced",
+      "sourceName": "Central Bank of Liberia, Monetary Policy Committee Communique No. 28, 6 October 2026",
+      "sourceUrl": "https://cbl.org.lr/sites/default/files/documents/COMMUNIQUE%20NO.28_20261007_0001.pdf",
+      "asOf": "2026-10-06",
+      "note": "Monetary Policy Rate kept at 16.0% (cut from 16.25% in July 2026); the reserve requirement on US dollar deposits was raised from 10% to 12%."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official current savings account rate was found; the Central Bank of Liberia publishes no recent table of commercial bank deposit rates that could be read (World Bank average deposit rate 3.80% for 2025)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official 3-month time deposit rate was found in Central Bank of Liberia publications."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official 1-year time deposit rate was found in Central Bank of Liberia publications."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.038,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2025-12-31",
+      "note": "3.80% for 2025: average paid by commercial banks on demand, time and savings deposits; most deposits in Liberia are in US dollars."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond with a published rate was found; a central bank savings programme for citizens has been reported but its details could not be read."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recent Government of Liberia 91-day Treasury bill result was found. For reference, the 3-month Central Bank of Liberia bill (a central bank instrument bid by banks, not a Treasury bill and not open to individuals) cleared at 15.12% on 24 September 2026 (CBL bills issuance report)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Government of Liberia 5-year bond yield was found in Central Bank of Liberia publications."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Government of Liberia 10-year bond yield was found; Liberia has no domestic long-term government bond market with published yields."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Liberia, individual income determination and withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/republic-of-liberia/individual/income-determination",
+      "asOf": "2026-09-24",
+      "note": "Non-exempt interest is taxed at 15% and interest paid to residents is subject to 15% withholding (PwC corporate withholding page); interest under LRD 200 a year is excluded. Page last reviewed 24 September 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; interest is generally taxed at 15% (PwC Tax Summaries)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No operating deposit insurance scheme was found; the Central Bank of Liberia has spoken of plans for a Deposit Insurance Scheme, but no law or cover limit was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or official average credit card rate was found."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate 3.80% (2025); no stock exchange in Liberia",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Low case: Liberia has no stock exchange, so equity means a global index fund in Liberian-dollar terms; a weak decade abroad with a stable currency gives about the after-tax deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate 3.80% (2025), 3.2% after 15% tax; no stock exchange in Liberia",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Base case: a global equity index in Liberian-dollar terms, held to the after-tax average deposit rate (3.2%) plus 4 points because there is no local index record and individuals cannot buy central bank bills."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "World Bank WDI, official exchange rate LRD per USD (191 in 2024, 170 in October 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns plus a renewed depreciation episode like 2018-2020."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central Bank of Liberia buying and selling rates (L$169-171 per US$, October 2026)",
+      "sourceUrl": "https://www.cbl.org.lr/research/buying-selling-rates",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a stable Liberian dollar, as in 2025-2026."
+    },
+    "gold_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "World Bank WDI, official exchange rate LRD per USD",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Base case: dollar gold trend of about 4% a year plus Liberian-dollar depreciation of about 2% a year."
+    },
+    "gold_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "World Bank WDI, official exchange rate LRD per USD",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold and a depreciation episode like 2018-2020, when the Liberian dollar lost about a quarter of its value."
+    },
+    "fixed_income_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate 3.80% (2025), 3.2% after 15% withholding",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Low case: average deposits after 15% tax, allowing for lower rates."
+    },
+    "fixed_income_return_base": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate 3.80% (2025), 3.2% after 15% withholding",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Base case: about the average deposit rate after tax (3.2%), slightly higher for Liberian-dollar time deposits; individuals cannot buy central bank bills directly."
+    },
+    "fixed_income_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Liberia bills report, 3-month bill 15.12% (24 September 2026)",
+      "sourceUrl": "https://cbl.org.lr/sites/default/files/documents/CBL%20Bills%20Issuance%20Report%20for%20the%20Week%20Ending%2025%20September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: Liberian-dollar time deposits priced partly off the 15-16% money market rates, after 15% tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Liberia supervises insurers but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published indicative term-life premium rates per 1,000 Liberian dollars of cover from the regulator or another public source were found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums per 100,000 Liberian dollars of cover from the regulator or another public source were found."
+    },
+    "oop_health_share": {
+      "value": 0.6324,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LR",
+      "asOf": "2023-12-31",
+      "note": "63.2% in 2023 (latest year; older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation for Liberia; CBL MPC Communique No. 28",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "No health CPI series could be read, so medical costs are planned at one point above the 6.5% general assumption, as drugs and supplies are imported."
+    },
+    "goal_inflation_education": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "World Bank CPI inflation for Liberia; CBL MPC Communique No. 28",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series could be read, so school fees are planned at one point above the 6.5% general assumption."
+    },
+    "life_expectancy": {
+      "value": 62.3,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LR",
+      "asOf": "2024-12-31",
+      "note": "62.3 years in 2024 (men 61.0, women 63.6); UN WPP 2024 gives 62.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.6,
+            "men": 15.2,
+            "women": 16.0
+          },
+          {
+            "age": 65,
+            "total": 12.4,
+            "men": 12.2,
+            "women": 12.7
+          },
+          {
+            "age": 70,
+            "total": 9.6,
+            "men": 9.5,
+            "women": 9.7
+          },
+          {
+            "age": 80,
+            "total": 5.4,
+            "men": 5.4,
+            "women": 5.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/liberia/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 17.3
+          },
+          {
+            "year": 2040,
+            "value": 15.6
+          },
+          {
+            "year": 2065,
+            "value": 10.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/liberia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 5.79 (2025, World Bank), 6.4 (2040) and 9.8 (2065, populationpyramid.net/liberia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "WageIndicator Foundation summary of the NASSCORP Social Security Law 2017 (s.89) and Decent Work Act 2015",
+      "sourceUrl": "https://wageindicator.org/en-lr/work-in-liberia/labour-law/social-security",
+      "asOf": "2026-03-19",
+      "note": "Old-age pension at 60 for men and women with at least 144 months of contributions; a lump sum at 60 with 12 or more months; retirement deemed at 65. Page updated 19 March 2026."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Ministry of Foreign Affairs of Liberia news item citing Civil Service Agency standing orders and the Government Employees Pension Act",
+      "sourceUrl": "https://mofa.gov.lr/index.php/node/5093",
+      "asOf": "2017-01-31",
+      "note": "Civil servants retire at 65 or after 25 years of service (Civil Service Agency standing orders); the item is from 2017 (older than 2025) and no later change was found."
+    },
+    "retirement_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate 3.80% (2025), 3.2% after 15% withholding",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Low case: average deposits after tax, allowing for lower rates."
+    },
+    "retirement_return_base": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate 3.80% (2025), 3.2% after 15% withholding",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Base case: savings and time deposits at about the 3.2% after-tax average deposit rate; individuals cannot buy central bank bills directly."
+    },
+    "retirement_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Liberia bills report, 3-month bill 15.12% (24 September 2026)",
+      "sourceUrl": "https://cbl.org.lr/sites/default/files/documents/CBL%20Bills%20Issuance%20Report%20for%20the%20Week%20Ending%2025%20September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: more Liberian-dollar time deposits at rates linked to the 15-16% money market."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate 3.80% (2025)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=LR",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits with little growth exposure."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "World Bank WDI deposit rate; CBL bills report (September 2026)",
+      "sourceUrl": "https://cbl.org.lr/sites/default/files/documents/CBL%20Bills%20Issuance%20Report%20for%20the%20Week%20Ending%2025%20September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of time deposits and foreign equity funds, between the safe and equity base cases."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Central Bank of Liberia bills report (3-month 15.12%); World Bank exchange rate history",
+      "sourceUrl": "https://cbl.org.lr/sites/default/files/documents/CBL%20Bills%20Issuance%20Report%20for%20the%20Week%20Ending%2025%20September%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: higher-yield Liberian-dollar deposits and more foreign equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension with a fixed monthly amount was found; the social cash transfer programme targets poor households, not older people as such, and the social protection ministry pages could not be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Decent Work Act 2015 (s.14.5, s.18.4) gives severance of 4 weeks' pay per completed year of service when employment ends for economic reasons (redundancy, closure), per WageIndicator; no general end-of-service or retirement gratuity was found."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "NASSCORP General Regulations 2023 (Schedule I, contribution rates); WageIndicator summary of the Social Security Law 2017",
+      "sourceUrl": "https://liblaw.org/wp-content/uploads/2025/06/NASSCORP-General-Regulations-2023.pdf",
+      "asOf": "2023-12-31",
+      "note": "National Pension Fund run by NASSCORP: employer and employee each pay 4% of earnings (since 13 February 2017); pension at 60 with 144 months of contributions, 25% of average monthly earnings plus 1% per extra 10 months up to 40% (WageIndicator, updated March 2026). No automatic indexation or tax rule was found."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Offered in Liberian and US dollars; no official average rate published recently."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit",
+      "note": "Banks take time deposits; no official rate by maturity was found."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Time deposit, 1 year",
+      "note": "No official rate by maturity was found."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond with a published rate was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills",
+      "note": "Government of Liberia Treasury bill auctions are open only to commercial banks, which may hold bills for clients (2010 CBL guidelines, minimum non-competitive bid L$50,000); recent auctions are mainly central bank bills.",
+      "sourceUrl": "https://www.cbl.org.lr/sites/default/files/documents/guidelinesGoLTBill.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic 5-year government bond open to individuals was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic 10-year government bond was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Liberia has no stock exchange and no locally regulated retail investment funds were found."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail market for investment gold bars or coins was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Liberia",
+      "url": "https://www.cbl.org.lr/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Liberia (insurance supervision under the Insurance Act 2013)",
+      "url": "https://www.cbl.org.lr/publications/document-type/insurance"
+    },
+    "insuranceComplaints": {
+      "name": "Central Bank of Liberia, insurance supervision",
+      "url": "https://www.cbl.org.lr/",
+      "note": "No separate insurance ombudsman was found; complaints go to the Central Bank as insurance supervisor."
+    },
+    "pensionScheme": {
+      "name": "National Social Security and Welfare Corporation (NASSCORP)",
+      "url": "https://www.nasscorp.org.lr/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (free primary care at public facilities)",
+      "url": "https://moh.gov.lr/",
+      "note": "No national health insurance scheme in operation was found."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Liberia Institute of Statistics and Geo-Information Services (LISGIS)",
+      "url": "https://lisgis.gov.lr/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

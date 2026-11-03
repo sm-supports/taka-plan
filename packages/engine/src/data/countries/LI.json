@@ -16,12 +16,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 0.8193,
+      "value": 0.8285,
       "status": "sourced",
-      "sourceName": "Swiss National Bank, monthly average foreign exchange rates (devkum), USD 1",
+      "sourceName": "Swiss National Bank, monthly average foreign exchange rates (devkum), USD 1, October 2026",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/devkum",
-      "asOf": "2026-09-30",
-      "note": "Liechtenstein uses the Swiss franc under its currency treaty with Switzerland. September 2026 average CHF 0.8193 per US dollar; the ECB cross rate on 30 October 2026 was about CHF 0.823; World Bank 2025 average 0.831."
+      "asOf": "2026-10-31",
+      "note": "Liechtenstein uses the Swiss franc under its currency treaty with Switzerland. October 2026 monthly average CHF 0.82854 per US dollar (SNB devkum, published 2 Nov 2026); September 2026 average 0.8193; World Bank 2025 average 0.831."
     }
   },
   "fields": {
@@ -54,24 +54,24 @@
       "status": "sourced",
       "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): savings deposits of private clients, mean",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
-      "asOf": "2026-08-31",
-      "note": "Mean savings deposit rate 0.069% in August 2026 at banks in Switzerland; no separate statistic exists for Liechtenstein banks, which work in the same Swiss-franc market."
+      "asOf": "2026-09-30",
+      "note": "Mean savings deposit rate 0.069% in September 2026 (same in August) at banks in Switzerland; no separate statistic exists for Liechtenstein banks, which work in the same Swiss-franc market."
     },
     "fdr_3m_rate": {
       "value": 0.0003,
       "status": "sourced",
       "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 3 months, mean",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
-      "asOf": "2026-08-31",
-      "note": "Mean 0.026% in August 2026 at banks in Switzerland (Swiss-franc market; no Liechtenstein-only statistic). Covers deposits from CHF 100,000."
+      "asOf": "2026-09-30",
+      "note": "Mean 0.029% in September 2026 (0.026% in August) at banks in Switzerland (Swiss-franc market; no Liechtenstein-only statistic). Covers deposits from CHF 100,000."
     },
     "fdr_1y_rate": {
-      "value": 0.0012,
+      "value": 0.0015,
       "status": "sourced",
       "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 12 months, mean",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
-      "asOf": "2026-08-31",
-      "note": "Mean 0.117% in August 2026 at banks in Switzerland (Swiss-franc market; no Liechtenstein-only statistic); 2-year term deposits averaged 0.377%."
+      "asOf": "2026-09-30",
+      "note": "Mean 0.152% in September 2026 (0.117% in August) at banks in Switzerland (Swiss-franc market; no Liechtenstein-only statistic); 2-year cash bonds (Kassenobligationen) averaged 0.49%."
     },
     "dps_rate": {
       "value": null,
@@ -103,7 +103,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The State of Liechtenstein issues no treasury bills. For reference, 3-month Swiss Confederation money-market debt register claims yielded -0.047% in September 2026 (SNB zimoma)."
+      "note": "The State of Liechtenstein issues no treasury bills. For reference, 3-month Swiss Confederation money-market debt register claims yielded -0.111% in October 2026 (SNB zimoma)."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -164,7 +164,7 @@
     "equity_return_base": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "SMI (Trading Economics); 1-year franc deposit 0.12% (SNB), untaxed",
+      "sourceName": "SMI (Trading Economics); 1-year franc deposit 0.15% (SNB, Sep 2026), not income-taxed",
       "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
       "asOf": "2026-10-31",
       "note": "No local market exists, so the base uses a diversified Swiss/global equity fund in francs, capped at the near-zero safe franc rate plus about 4 points."
@@ -204,7 +204,7 @@
     "fixed_income_return_low": {
       "value": 0,
       "status": "assumption",
-      "sourceName": "SNB: 3-month term deposits 0.03%, 3-month Confederation claims -0.05%",
+      "sourceName": "SNB: 3-month term deposits 0.03% (Sep 2026), 3-month Confederation claims -0.11% (Oct 2026)",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
       "note": "Low case: franc deposit rates stay at about zero (interest is not income-taxed, but the 4% deemed-return wealth tax still applies)."
@@ -212,15 +212,15 @@
     "fixed_income_return_base": {
       "value": 0.002,
       "status": "assumption",
-      "sourceName": "SNB: 1-year term deposits 0.12%, 2-year 0.38%; interest untaxed under SteG Art. 15",
+      "sourceName": "SNB: 1-year term deposits 0.15%, 2-year cash bonds 0.49% (Sep 2026); interest not income-taxed under SteG Art. 15",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
-      "note": "Base case: a mix of 1- and 2-year franc term deposits; actual interest is not taxed as income."
+      "note": "Base case: a mix of 1-year franc term deposits and 2-year cash bonds; actual interest is not taxed as income (the 4% deemed-return wealth tax still applies)."
     },
     "fixed_income_return_high": {
       "value": 0.005,
       "status": "assumption",
-      "sourceName": "Swiss 10-year Confederation bond 0.47% (Trading Economics); SNB 2-year term deposits 0.38%",
+      "sourceName": "Swiss 10-year Confederation bond 0.47% (Trading Economics); SNB 2-year cash bonds 0.49%",
       "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "High case: locking in longer franc deposits or Confederation bonds."
@@ -368,7 +368,7 @@
     "retirement_return_low": {
       "value": 0,
       "status": "assumption",
-      "sourceName": "SNB: 3-month term deposits 0.03%",
+      "sourceName": "SNB: 3-month term deposits 0.03% (Sep 2026)",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
       "note": "Low case: franc deposit rates stay at zero."
@@ -376,7 +376,7 @@
     "retirement_return_base": {
       "value": 0.001,
       "status": "assumption",
-      "sourceName": "SNB: 1-year term deposits 0.117%, untaxed under SteG Art. 15",
+      "sourceName": "SNB: 1-year term deposits 0.15% (Sep 2026), not income-taxed under SteG Art. 15",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
       "note": "Base case capped at the 1-year franc term deposit rate, which is not income-taxed (the deemed-return wealth tax still applies)."
@@ -384,15 +384,15 @@
     "retirement_return_high": {
       "value": 0.004,
       "status": "assumption",
-      "sourceName": "SNB: 2-year term deposits 0.377%",
+      "sourceName": "SNB: 2-year cash bonds (Kassenobligationen) 0.49% (Sep 2026)",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
-      "note": "High case: a ladder of 2-year franc deposits."
+      "note": "High case: a ladder of 2-year franc cash bonds and longer deposits."
     },
     "retirement_accumulation_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Franc deposits about 0.1%; equity low 2%",
+      "sourceName": "Franc deposits about 0.15%; equity low 2%",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."

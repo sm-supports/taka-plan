@@ -32,7 +32,7 @@
       "sourceName": "World Bank WDI, inflation, consumer prices (FP.CPI.TOTL.ZG), West Bank and Gaza",
       "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=PS",
       "asOf": "2025-12-31",
-      "note": "9.8% for 2025 (PCBS: Palestine 10.5%, West Bank -0.1%, Gaza Strip 21.9%). Trading Economics, citing PCBS, reports -25.2% year on year for September 2026 as Gaza prices fell back from wartime peaks, outside the range this field accepts; the West Bank rate is far more stable."
+      "note": "9.8% for 2025, the latest full year, used because the latest monthly figure is outside the range this field accepts: Trading Economics, citing PCBS, reports -25.2% year on year for Palestine in September 2026 as Gaza prices fell back from wartime peaks, while West Bank prices rose 3.3%."
     },
     "inflation_projection": {
       "value": 0.025,

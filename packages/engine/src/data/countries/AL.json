@@ -8,6 +8,7 @@
   "languages": [
     "sq",
     "en",
+    "it",
     "el"
   ],
   "currency": {
@@ -21,7 +22,7 @@
       "sourceName": "Bank of Albania, official exchange rate",
       "sourceUrl": "https://www.bankofalbania.org/Markets/Official_exchange_rate/",
       "asOf": "2026-10-30",
-      "note": "ALL 81.16 per USD (ALL 90.90 per EUR); World Bank 2025 average 86.80. Prices are written with 'L' or 'Lekë'."
+      "note": "ALL 81.16 per USD (ALL 90.90 per EUR) on 30 Oct 2026; 81.12 on 2 Nov 2026. World Bank 2025 average 86.80. Prices are written with 'L' or 'Lekë'."
     }
   },
   "fields": {
@@ -71,7 +72,7 @@
       "sourceName": "Bank of Albania, lek deposit rates offered by banks (comparison table)",
       "sourceUrl": "https://www.bankofalbania.org/Mbikeqyrja/Sistemi_financiar_normat_e_interesit_dhe_komisionet/Normat_e_interesit_te_depozitave/",
       "asOf": "2026-07-31",
-      "note": "12-month lek time deposits typically 1.0-1.4%; the central bank average on new household lek deposits up to 1 year was 1.40% in September 2026."
+      "note": "12-month lek time deposits typically 1.0-1.4% for standard tiers in the July 2026 comparison; the central bank average on new household lek deposits up to 1 year was 1.40% in September 2026 (interest rate statistics, Table 3.1)."
     },
     "dps_rate": {
       "value": null,
@@ -87,7 +88,7 @@
       "sourceName": "Bank of Albania, interest rate statistics (new lek time deposits of households)",
       "sourceUrl": "https://www.bankofalbania.org/Statistikat/Statistikat_e_normave_te_interesit/Statistikat_e_normave_te_interesit_te_institucioneve_monetare_financiare_IMF/",
       "asOf": "2026-09-30",
-      "note": "Weighted average rate on new household lek time deposits, September 2026 (preliminary); outstanding household lek deposits incl. overnight averaged 1.19%. World Bank FR.INR.DPST 1.86% (2024)."
+      "note": "Weighted average rate on new household lek time deposits, September 2026 (preliminary; time-series file 'Statistikat e normave te interesit, Seri kohore, Shtator 2026', Table 3.1); up to 1 year 1.40%. Outstanding household lek overnight deposits paid 0.05%. World Bank FR.INR.DPST 1.86% (2024)."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.051,
@@ -111,7 +112,7 @@
       "sourceName": "Bank of Albania, daily benchmark yield fixing (5Y)",
       "sourceUrl": "https://www.bankofalbania.org/Markets/Government_securities/Benchmark_Securities/Benchmark_rates_fixing/",
       "asOf": "2026-10-30",
-      "note": "5-year benchmark fixing 5.10%; 3-year 4.51%, 4-year 4.66% the same day."
+      "note": "5-year benchmark fixing 5.10% (3-year 4.51%, 4-year 4.66% the same day); unchanged on 2 Nov 2026. The 20 Oct 2026 5-year auction accepted 5.10-5.45%."
     },
     "tbond_10y_rate": {
       "value": null,
@@ -262,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AL",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 figure, the latest World Bank value (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.04,
@@ -286,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AL",
       "asOf": "2024-12-31",
-      "note": "Men 77.9, women 81.6."
+      "note": "Men 77.9, women 81.6. 2024 figure, the latest World Bank value (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -349,20 +351,20 @@
       "note": "100 / old-age dependency ratio: 26.8 (2025, World Bank), 40.4 (2040) and 77.2 (2065, populationpyramid.net/albania/2065/)."
     },
     "retirement_age_default": {
-      "value": 65,
+      "value": 67,
       "status": "sourced",
       "sourceName": "Law 7703 on Social Insurance (ISSH consolidated text 2023), Art. 92",
       "sourceUrl": "https://www.issh.gov.al/wp-content/uploads/2023/09/LIGJ-Nr.-7703-date-11.05.1993_i-perditesuar_2023.pdf",
       "asOf": "2026-01-01",
-      "note": "Men 65 in 2026, rising one month a year from 2033 to 67 in 2056; women 62 in 2026, reaching 63 in 2032 and 67 in 2056. 39 years of insurance for a full pension, 15 years minimum."
+      "note": "Under Law 7703 Art. 92 (as amended by Law 104/2014) the pension age is 65 for men in 2026 (women 62), rising by one month a year from 2033 for men (two months a year for women) until both reach 67 in 2056. Anyone born after 1975 retires at between 65 years 9 months (born 1976) and 67 (born 1989 or later), so 67 is used for planning. 40 years of insurance for a full pension from 2029, 15 years minimum."
     },
     "retirement_age_government": {
-      "value": 65,
+      "value": 67,
       "status": "sourced",
       "sourceName": "Law 7703 on Social Insurance (ISSH consolidated text 2023), Art. 92",
       "sourceUrl": "https://www.issh.gov.al/wp-content/uploads/2023/09/LIGJ-Nr.-7703-date-11.05.1993_i-perditesuar_2023.pdf",
       "asOf": "2026-01-01",
-      "note": "Civil servants retire under the same social insurance pension age (men 65, women 62 in 2026); no separate general retirement age for government employees was found."
+      "note": "Civil servants follow the same social insurance pension age (no separate general retirement age for government employees was found): 65 for men in 2026, rising to 67 by 2056; 67 applies to anyone born from 1989 and is used for planning."
     },
     "retirement_return_low": {
       "value": 0.01,
@@ -440,14 +442,14 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The Albanian Labour Code provides a seniority payment on dismissal, but its text could not be read (ILO NATLEX and EPLex refused automated access), so the days per year of service are not confirmed."
+      "note": "The Albanian Labour Code provides a seniority payment when employment ends, but its text could not be read (ILO NATLEX and EPLex refused automated access, and web search was unavailable to the verifier), so the days per year of service and the conditions are not confirmed."
     },
     "public_pension_scheme": {
       "value": null,
       "valueJson": {
         "entryAgeMin": null,
         "entryAgeMax": null,
-        "pensionFromAge": 65,
+        "pensionFromAge": 67,
         "nomineeUntilAge": null,
         "inflationLinked": true,
         "taxFree": true
@@ -456,7 +458,7 @@
       "sourceName": "Law 7703 on Social Insurance (ISSH consolidated text 2023), Art. 31, 61, 92",
       "sourceUrl": "https://www.issh.gov.al/wp-content/uploads/2023/09/LIGJ-Nr.-7703-date-11.05.1993_i-perditesuar_2023.pdf",
       "asOf": "2026-01-01",
-      "note": "Compulsory pay-as-you-go social insurance pension (ISSH): age 65 for men and 62 for women in 2026, minimum 15 years of insurance; pensions are indexed yearly to prices (Art. 61); social insurance income is exempt from personal income tax (PwC)."
+      "note": "Compulsory pay-as-you-go social insurance pension (ISSH): pension age 65 for men and 62 for women in 2026, rising to 67 for both by 2056 (Art. 92), so 67 for someone born after 1975; minimum 15 years of insurance; pensions are indexed every year for price changes (Art. 61); social insurance income is exempt from personal income tax (PwC)."
     }
   },
   "instruments": {

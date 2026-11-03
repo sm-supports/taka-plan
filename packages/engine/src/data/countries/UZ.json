@@ -22,7 +22,7 @@
       "sourceName": "Trading Economics, USD/UZS exchange rate",
       "sourceUrl": "https://tradingeconomics.com/uzbekistan/currency",
       "asOf": "2026-10-30",
-      "note": "Secondary source: the Central Bank of Uzbekistan site (cbu.uz) could not be reached. World Bank official rate 2025 average 12,579 som per dollar (PA.NUS.FCRF)."
+      "note": "Secondary source: the Central Bank of Uzbekistan site (cbu.uz) refused connections. The page showed 11,944.72 on 3 November 2026 (11,925 on 2 November); the 30 October reading could not be re-read on the page. World Bank official rate 2025 average 12,579 som per dollar (PA.NUS.FCRF)."
     }
   },
   "fields": {
@@ -48,7 +48,7 @@
       "sourceName": "Trading Economics, Uzbekistan interest rate (Central Bank of Uzbekistan policy rate)",
       "sourceUrl": "https://tradingeconomics.com/uzbekistan/interest-rate",
       "asOf": "2026-09-16",
-      "note": "Secondary source (cbu.uz unreachable): the central bank kept its key rate at 14% on 16 September 2026, as at the June and July meetings; next decision 2 November 2026."
+      "note": "Secondary source (cbu.uz unreachable): the central bank kept its key rate at 14% on 16 September 2026, as at the June and July meetings; the next scheduled meeting shown is 16 December 2026."
     },
     "savings_account_rate": {
       "value": null,
@@ -126,15 +126,15 @@
       "value": 0,
       "status": "sourced",
       "sourceName": "Tax Code of the Republic of Uzbekistan, Article 378 (income not subject to tax), item 13",
-      "sourceUrl": "https://lex.uz/docs/4674893",
+      "sourceUrl": "https://lex.uz/ru/docs/4674893",
       "asOf": "2026-10-31",
-      "note": "Interest and winnings on bank deposits of individuals are exempt from personal income tax (Art. 378, item 13); other interest and dividends are taxed at 5% (Art. 381)."
+      "note": "Income on savings certificates and government securities, and interest and winnings on bank deposits, are exempt from personal income tax (Art. 378, item 13; item 12 also exempts interest on government securities). Other interest and dividends are taxed at 5% (Art. 381)."
     },
     "tax_sanchayapatra_profit": {
       "value": 0,
       "status": "sourced",
       "sourceName": "Tax Code of the Republic of Uzbekistan, Article 378, items 12 and 13",
-      "sourceUrl": "https://lex.uz/docs/4674893",
+      "sourceUrl": "https://lex.uz/ru/docs/4674893",
       "asOf": "2026-10-31",
       "note": "Interest on government securities of Uzbekistan and income on savings certificates are exempt from personal income tax."
     },
@@ -143,8 +143,8 @@
       "status": "sourced",
       "sourceName": "Law of the Republic of Uzbekistan No. ZRU-1031 of 18 February 2025 'On guarantees of protection of deposits in banks', Article 26",
       "sourceUrl": "https://lex.uz/ru/docs/7389439",
-      "asOf": "2026-06-29",
-      "note": "Compensation per depositor per bank is the full balance up to 200 million som, all deposits and currencies combined; these provisions took effect on 29 June 2026, replacing the earlier unlimited state guarantee. Paid by the Deposit Guarantee Agency."
+      "asOf": "2025-02-19",
+      "note": "Compensation per depositor per bank is the full balance up to 200 million som, all deposits and currencies combined (Article 26). The law took effect on official publication (19 February 2025, Article 52); under Article 51 the cap does not apply to citizens' deposits made before that date. Paid by the Deposit Guarantee Agency. Amendments by Law ZRU-1126 of 27 March 2026 took effect on 29 June 2026 but did not change the cap."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -356,7 +356,7 @@
       "sourceName": "Law 'On state pension provision of citizens' No. 938-XII, Article 7",
       "sourceUrl": "https://lex.uz/ru/docs/112312",
       "asOf": "2026-10-31",
-      "note": "Old-age pension from 60 for men with at least 25 years of work and 55 for women with at least 20 years; with 7 or more years a proportional pension is paid (Article 8). No legislated increase was found. A draft presidential decree put to public discussion in September 2026 would raise the age by 3 months a year from 1 January 2028 to 63 (men) and 58 (women) by 2039 and lift the minimum record from 7 to 15 years; it had not been adopted by 31 October 2026 (Spot, https://www.spot.uz/en/2026/09/15/pension-age/)."
+      "note": "Old-age pension from 60 for men with at least 25 years of work and 55 for women with at least 20 years; with 7 or more years a proportional pension is paid (Article 8, as amended in 2024). These ages apply to people born after 1975 under current law. A draft presidential decree put to public discussion in September 2026 would end early retirement from 2027 and raise the age by 3 months a year from 2028 to 63 (men) and 58 (women) by 2039; no adoption was found by 31 October 2026 (Spot, https://www.spot.uz/en/2026/09/15/pension-age/)."
     },
     "retirement_age_government": {
       "value": null,
@@ -451,14 +451,14 @@
         "entryAgeMax": null,
         "pensionFromAge": 60,
         "nomineeUntilAge": null,
-        "inflationLinked": false,
+        "inflationLinked": true,
         "taxFree": true
       },
       "status": "sourced",
-      "sourceName": "Law 'On state pension provision of citizens' No. 938-XII (Articles 7, 8, 26 and tax exemption)",
+      "sourceName": "Law 'On state pension provision of citizens' No. 938-XII (Articles 7, 8, 49 and 67)",
       "sourceUrl": "https://lex.uz/ru/docs/112312",
       "asOf": "2026-10-31",
-      "note": "State old-age pension funded by social tax: from 60 for men (25 years' work) and 55 for women (20 years), 55% of average monthly earnings plus increments, not less than the minimum pension (983,000 som a month from 1 July 2026); pensions are exempt from tax. Pensions are raised by presidential decree (7% from 1 July 2026), not by an automatic index. A draft decree (September 2026, not yet adopted) would raise pension ages gradually from 2028 to 63 (men) and 58 (women)."
+      "note": "State old-age pension funded by social tax: from 60 for men (25 years' work) and 55 for women (20 years), 55% of average monthly earnings plus increments, not less than the minimum pension (983,000 som a month from 1 July 2026, Decree UP-115). Pensions are indexed by presidential acts taking account of the year's consumer price inflation (Art. 49, as amended in 2024; 7% from 1 July 2026) and are exempt from tax (Art. 67). A draft decree (September 2026, not found adopted) would raise pension ages gradually from 2028 to 63 (men) and 58 (women)."
     }
   },
   "instruments": {

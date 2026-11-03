@@ -19,10 +19,10 @@
     "usdRate": {
       "value": 4.0635,
       "status": "sourced",
-      "sourceName": "Bank Negara Malaysia, MYR/USD noon midrate",
-      "sourceUrl": "https://www.bnm.gov.my/",
+      "sourceName": "Bank Negara Malaysia, exchange rates (USD middle rate, noon)",
+      "sourceUrl": "https://www.bnm.gov.my/exchange-rates",
       "asOf": "2026-10-30",
-      "note": "Midrate shown on the BNM home page on 31 Oct 2026 (latest business day 30 Oct); Trading Economics close 4.057."
+      "note": "4.0635 ringgit per US dollar on 30 Oct 2026 as read by the researcher; when re-checked on 3 Nov the same BNM page showed 4.0665 (2 Nov) and 4.0750 (3 Nov), consistent with this level."
     }
   },
   "fields": {
@@ -51,28 +51,28 @@
       "note": "Overnight Policy Rate held at 2.75%."
     },
     "savings_account_rate": {
-      "value": 0.0025,
+      "value": 0.0064,
       "status": "sourced",
-      "sourceName": "Published basic savings account rate of a large commercial bank",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/savings-and-current-accounts-interest-rates/",
-      "asOf": "2021-02-11",
-      "note": "0.25% on all balances, effective 11 February 2021 and still shown in October 2026."
+      "sourceName": "Bank Negara Malaysia, Monthly Highlights & Statistics September 2026, Table 2.1 Interest Rates: Banking Institutions (commercial banks)",
+      "sourceUrl": "https://www.bnm.gov.my/documents/20124/23499006/2.1.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Average savings deposit rate of commercial banks 0.64% in September 2026 (weighted average 0.32%)."
     },
     "fdr_3m_rate": {
-      "value": 0.0165,
+      "value": 0.0215,
       "status": "sourced",
-      "sourceName": "Published fixed deposit board rates of a large commercial bank (3 months)",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
-      "asOf": "2026-09-22",
-      "note": "1.65% a year, effective 22 September 2026; promotional and online rates can be higher."
+      "sourceName": "Bank Negara Malaysia, Monthly Highlights & Statistics September 2026, Table 2.1 Interest Rates: Banking Institutions (commercial banks)",
+      "sourceUrl": "https://www.bnm.gov.my/documents/20124/23499006/2.1.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Average 3-month fixed deposit rate of commercial banks 2.15% in September 2026 (weighted average 1.80%); promotional rates can be higher."
     },
     "fdr_1y_rate": {
-      "value": 0.018,
+      "value": 0.0219,
       "status": "sourced",
-      "sourceName": "Published fixed deposit board rates of a large commercial bank (12 months)",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
-      "asOf": "2026-09-22",
-      "note": "1.80% a year, effective 22 September 2026; 24- and 60-month online fixed deposits 1.95%."
+      "sourceName": "Bank Negara Malaysia, Monthly Highlights & Statistics September 2026, Table 2.1 Interest Rates: Banking Institutions (commercial banks)",
+      "sourceUrl": "https://www.bnm.gov.my/documents/20124/23499006/2.1.xlsx",
+      "asOf": "2026-09-30",
+      "note": "Average 12-month fixed deposit rate of commercial banks 2.19% in September 2026 (weighted average 1.92%)."
     },
     "dps_rate": {
       "value": null,
@@ -88,7 +88,7 @@
       "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MY",
       "asOf": "2025-12-31",
-      "note": "2.42% average for 2025."
+      "note": "2.42% average for 2025 (World Bank). BNM Table 2.1 shows the weighted average 12-month fixed deposit rate at 1.92% in September 2026."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -104,7 +104,7 @@
       "sourceName": "Bank Negara Malaysia, government securities yield (Malaysian Treasury Bills, up to 3 months)",
       "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
       "asOf": "2026-10-30",
-      "note": "Last traded rate 2.98%."
+      "note": "Up to 3-month Malaysian Treasury Bill yield 2.98% on the BNM page; still 2.98% when re-checked on 2 Nov 2026."
     },
     "tbond_5y_rate": {
       "value": 0.0368,
@@ -125,15 +125,15 @@
       "status": "sourced",
       "sourceName": "PwC Worldwide Tax Summaries, Malaysia, income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/malaysia/individual/income-determination",
-      "asOf": "2026-10-31",
-      "note": "Interest on deposits with licensed banks and financial institutions is tax-exempt for individuals."
+      "asOf": "2026-06-16",
+      "note": "PwC (last reviewed 16 Jun 2026): interest received by individuals on money deposited in approved institutions (licensed banks and financial institutions) is tax-exempt."
     },
     "tax_sanchayapatra_profit": {
       "value": 0,
       "status": "sourced",
       "sourceName": "PwC Worldwide Tax Summaries, Malaysia, income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/malaysia/individual/income-determination",
-      "asOf": "2026-10-31",
+      "asOf": "2026-06-16",
       "note": "No savings certificate exists; interest from certain bonds and securities (including government securities) is exempt."
     },
     "deposit_insurance_limit": {
@@ -166,7 +166,7 @@
       "sourceName": "5-year MGS 3.68% plus a modest premium; weak KLCI 10-year record",
       "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
       "asOf": "2026-10-31",
-      "note": "Base set about 3 points above the tax-free government bond yield, below the 4-point limit, because the local index record is weak."
+      "note": "Base set about 3.7 points above the tax-free safe rate (about 2.8%), below the 4-point limit, because the KLCI's 10-year record is weak."
     },
     "equity_return_high": {
       "value": 0.09,
@@ -201,20 +201,20 @@
       "note": "High case for a strong gold cycle."
     },
     "fixed_income_return_low": {
-      "value": 0.018,
+      "value": 0.02,
       "status": "assumption",
-      "sourceName": "Fixed deposit board rates (tax-free)",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
+      "sourceName": "BNM average fixed deposit rates (tax-free)",
+      "sourceUrl": "https://www.bnm.gov.my/documents/20124/23499006/2.1.xlsx",
       "asOf": "2026-10-31",
-      "note": "Low case at the 1-year board rate. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+      "note": "Low case just below the 12-month average fixed deposit rate. Safe MYR rates: commercial-bank average fixed deposit 3-month 2.15%, 12-month 2.19% (BNM, Sep 2026); 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (BNM, 30 Oct 2026); OPR 2.75%; interest on bank deposits is tax-exempt for individuals."
     },
     "fixed_income_return_base": {
-      "value": 0.03,
+      "value": 0.028,
       "status": "assumption",
       "sourceName": "Treasury bill and MGS yields (BNM)",
       "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
       "asOf": "2026-10-31",
-      "note": "Base case near the 3-month treasury bill yield, reachable through fixed deposit promotions, bond funds and money market funds. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+      "note": "Base case between the 12-month fixed deposit average and the 3-month treasury bill yield, reachable through deposit promotions and money market funds. Safe MYR rates: commercial-bank average fixed deposit 3-month 2.15%, 12-month 2.19% (BNM, Sep 2026); 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (BNM, 30 Oct 2026); OPR 2.75%; interest on bank deposits is tax-exempt for individuals."
     },
     "fixed_income_return_high": {
       "value": 0.037,
@@ -222,7 +222,7 @@
       "sourceName": "5-year MGS yield (BNM)",
       "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
       "asOf": "2026-10-31",
-      "note": "High case at the 5-year government bond yield. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+      "note": "High case at the 5-year government bond yield. Safe MYR rates: commercial-bank average fixed deposit 3-month 2.15%, 12-month 2.19% (BNM, Sep 2026); 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (BNM, 30 Oct 2026); OPR 2.75%; interest on bank deposits is tax-exempt for individuals."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -261,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MY",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank (WHO GHED) value is for 2023, older than 2025."
     },
     "goal_inflation_health": {
       "value": 0.06,
@@ -285,7 +286,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MY",
       "asOf": "2024-12-31",
-      "note": "Men 74.4, women 79.5 (2024)."
+      "note": "Men 74.4, women 79.5 (2024, older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -345,39 +346,39 @@
       "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net)",
       "sourceUrl": "https://www.populationpyramid.net/malaysia/2040/",
       "asOf": "2024-07-31",
-      "note": "100 / old-age dependency ratio: 11.4 in 2025, 17.6 in 2040 and 38.7 in 2065."
+      "note": "100 / old-age dependency ratio: 11.4 in 2025, 17.6 in 2040 and 38.7 in 2065 (populationpyramid.net year pages)."
     },
     "retirement_age_default": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "Employees Provident Fund (Malaysia), Wikipedia summary of the Minimum Retirement Age Act 2012",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
-      "asOf": "2013-07-01",
-      "note": "Minimum retirement age for private employees is 60; full EPF withdrawal is allowed from 55. Secondary source."
+      "sourceName": "Wikipedia, Retirement age (Malaysia row); secondary source",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Retirement age 60 for private employees (raised from 55 in 2013); EPF savings can be fully withdrawn from 55. Secondary source because official Act and labour ministry pages could not be read."
     },
     "retirement_age_government": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "Employees Provident Fund (Malaysia), Wikipedia (official retirement age 60)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
-      "asOf": "2012-01-01",
-      "note": "Civil servants' compulsory retirement age is 60; secondary source."
+      "sourceName": "Wikipedia, Retirement age (Malaysia note on civil servants); secondary source",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "asOf": "2026-10-31",
+      "note": "Civil servants retire at 60; the public-sector union has asked for 62 but the government has no immediate plan to raise it. Official public service department site failed TLS verification."
     },
     "retirement_return_low": {
-      "value": 0.018,
+      "value": 0.02,
       "status": "assumption",
-      "sourceName": "Fixed deposit board rates (tax-free)",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/",
+      "sourceName": "BNM average fixed deposit rates (tax-free)",
+      "sourceUrl": "https://www.bnm.gov.my/documents/20124/23499006/2.1.xlsx",
       "asOf": "2026-10-31",
-      "note": "Low case at the 1-year fixed deposit board rate. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+      "note": "Low case just below the 12-month average fixed deposit rate. Safe MYR rates: commercial-bank average fixed deposit 3-month 2.15%, 12-month 2.19% (BNM, Sep 2026); 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (BNM, 30 Oct 2026); OPR 2.75%; interest on bank deposits is tax-exempt for individuals."
     },
     "retirement_return_base": {
-      "value": 0.029,
+      "value": 0.027,
       "status": "assumption",
-      "sourceName": "3-month treasury bill yield 2.98% (BNM)",
+      "sourceName": "BNM OPR 2.75%, average 12-month fixed deposit 2.19%, 3-month treasury bill 2.98%",
       "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
       "asOf": "2026-10-31",
-      "note": "Base case just under the tax-free government bill rate. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+      "note": "Base case at about the policy rate, below the tax-free treasury bill yield and above the average 1-year deposit rate. Safe MYR rates: commercial-bank average fixed deposit 3-month 2.15%, 12-month 2.19% (BNM, Sep 2026); 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (BNM, 30 Oct 2026); OPR 2.75%; interest on bank deposits is tax-exempt for individuals."
     },
     "retirement_return_high": {
       "value": 0.037,
@@ -385,12 +386,12 @@
       "sourceName": "5-year MGS yield (BNM)",
       "sourceUrl": "https://www.bnm.gov.my/government-securities-yield",
       "asOf": "2026-10-31",
-      "note": "High case at the 5-year government bond yield. Safe MYR rates: 3-month fixed deposit 1.65%, 1-year 1.80% at a large bank (Sep 2026), 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (30 Oct 2026); interest on bank deposits is tax-exempt for individuals."
+      "note": "High case at the 5-year government bond yield. Safe MYR rates: commercial-bank average fixed deposit 3-month 2.15%, 12-month 2.19% (BNM, Sep 2026); 3-month treasury bill 2.98%, 5-year MGS 3.68%, 10-year MGS 3.89% (BNM, 30 Oct 2026); OPR 2.75%; interest on bank deposits is tax-exempt for individuals."
     },
     "retirement_accumulation_return_low": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "EPF dividend record (5.35%-6.30% in 2021-2025); MGS yields",
+      "sourceName": "EPF dividend record (5.35%-6.30% in 2021-2025, 6.15% for 2025; via Wikipedia); MGS yields",
       "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix with weak equity."
@@ -398,7 +399,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "EPF dividend record (5.35%-6.30% in 2021-2025); MGS yields",
+      "sourceName": "EPF dividend record (5.35%-6.30% in 2021-2025, 6.15% for 2025; via Wikipedia); MGS yields",
       "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
       "asOf": "2026-10-31",
       "note": "Half equity at 6.5% and half bonds near 3.5%, a little below EPF's recent dividends."
@@ -406,7 +407,7 @@
     "retirement_accumulation_return_high": {
       "value": 0.065,
       "status": "assumption",
-      "sourceName": "EPF dividend record (6.15% for 2025)",
+      "sourceName": "EPF dividend record (5.35%-6.30% in 2021-2025, 6.15% for 2025; via Wikipedia); MGS yields",
       "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
       "asOf": "2026-10-31",
       "note": "High case slightly above EPF's recent dividend rates."
@@ -449,27 +450,26 @@
       "sourceName": "Employees Provident Fund (Malaysia), Wikipedia",
       "sourceUrl": "https://en.wikipedia.org/wiki/Employees_Provident_Fund_(Malaysia)",
       "asOf": "2025-12-31",
-      "note": "EPF is a provident fund, not a pension: employees pay 11% and employers 12-13% of wages; the retirement account can be withdrawn from 55. Dividends: 6.15% for 2025, 6.30% for 2024; legal minimum 2.5%."
+      "note": "EPF is a provident fund, not a pension: employees pay 11% and employers 12-13% of wages (rates as of 2012 per source); the retirement account can be withdrawn in full from 55. Dividends 6.15% for 2025, 6.30% for 2024; legal minimum 2.5%. inflationLinked false because benefits are a lump sum."
     }
   },
   "instruments": {
     "savings_account": {
       "available": true,
       "localName": "Akaun simpanan",
-      "localNameEn": "Savings account",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/savings-and-current-accounts-interest-rates/"
+      "localNameEn": "Savings account"
     },
     "fdr_3m": {
       "available": true,
       "localName": "Simpanan tetap",
       "localNameEn": "Fixed deposit",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/"
+      "sourceUrl": "https://www.bnm.gov.my/documents/20124/23499006/2.1.xlsx"
     },
     "fdr_1y": {
       "available": true,
       "localName": "Simpanan tetap",
       "localNameEn": "Fixed deposit",
-      "sourceUrl": "https://www.pbebank.com/en/rates-charges/fixed-deposit/"
+      "sourceUrl": "https://www.bnm.gov.my/documents/20124/23499006/2.1.xlsx"
     },
     "dps": {
       "available": false,
@@ -527,7 +527,8 @@
     },
     "insuranceComplaints": {
       "name": "Financial Markets Ombudsman Service (FMOS)",
-      "url": "https://www.fmos.org.my/"
+      "url": "https://www.fmos.org.my/",
+      "note": "Formed by consolidating the Ombudsman for Financial Services (OFS) and SIDREC; covers insurance and takaful disputes."
     },
     "pensionScheme": {
       "name": "Employees Provident Fund (EPF / KWSP)",

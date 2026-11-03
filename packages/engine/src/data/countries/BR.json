@@ -57,20 +57,20 @@
       "note": "Poupança paid 0.67% a month for deposits made on 28 October 2026 (0.5% a month plus the TR, because the Selic is above 8.5%), about 8.35% a year, exempt from income tax for individuals."
     },
     "fdr_3m_rate": {
-      "value": 0.134,
+      "value": 0.136,
       "status": "sourced",
-      "sourceName": "InvestNews survey of new CDB issues (large banks 98.3% of CDI, 3-12 months, March 2026) applied to the CDI of 13.65% (BCB SGS 4389, 30 Oct 2026)",
+      "sourceName": "InvestNews survey of new CDB issues (large banks paid 99.79% of the CDI at 3 months, March 2026) applied to the CDI of 13.65% (BCB SGS 4389, 30 Oct 2026)",
       "sourceUrl": "https://investnews.com.br/investimentos/cdbs-marco-pagam-mais-guerra/",
       "asOf": "2026-10-30",
-      "note": "Brazilian term deposits (CDB) are mostly priced as a percentage of the CDI overnight rate; large banks paid on average 98.3% of the CDI on 3-12 month issues in March 2026 (secondary source; no central bank series of CDB rates is published), which at today's CDI gives about 13.4% a year before tax."
+      "note": "Brazilian term deposits (CDB) are mostly priced as a percentage of the CDI overnight rate; large banks paid on average 99.79% of the CDI on 3-month issues in March 2026 (secondary news source; the survey is from March 2026 and no central bank series of CDB rates is published), which at today's CDI gives about 13.6% a year before tax (22.5% withholding for terms up to 180 days)."
     },
     "fdr_1y_rate": {
-      "value": 0.134,
+      "value": 0.131,
       "status": "sourced",
-      "sourceName": "InvestNews survey of new CDB issues (large banks 98.3% of CDI, 3-12 months, March 2026) applied to the CDI of 13.65% (BCB SGS 4389, 30 Oct 2026)",
+      "sourceName": "InvestNews survey of new CDB issues (large banks paid 95.94% of the CDI at 12 months, March 2026) applied to the CDI of 13.65% (BCB SGS 4389, 30 Oct 2026)",
       "sourceUrl": "https://investnews.com.br/investimentos/cdbs-marco-pagam-mais-guerra/",
       "asOf": "2026-10-30",
-      "note": "Same survey bucket as the 3-month rate (3-12 month CDBs at large banks, 98.3% of CDI); smaller banks paid about 102% of the CDI. Interest is taxed at source on a sliding scale, 17.5% for a 1-year CDB."
+      "note": "Large banks paid on average 95.94% of the CDI on 12-month CDBs in March 2026 (small and medium banks 101.74%; secondary news source, survey from March 2026), about 13.1% a year at today's CDI. Interest is taxed at source on a sliding scale, 17.5% for a 1-year CDB."
     },
     "dps_rate": {
       "value": null,
@@ -126,7 +126,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Brazil income determination (reviewed 23 Sep 2026)",
       "sourceUrl": "https://taxsummaries.pwc.com/brazil/individual/income-determination",
       "asOf": "2026-09-23",
-      "note": "Interest on Brazilian investments is taxed at source at 22.5% down to 15% depending on the term (22.5% up to 180 days, 20% to 360, 17.5% to 720, 15% beyond); 17.5% applies to a typical 1-year CDB. Poupança interest is exempt for individuals."
+      "note": "PwC confirms interest on Brazilian investments is withheld at source at 15% to 22.5% depending on the term; the bands (22.5% up to 180 days, 20% to 360, 17.5% to 720, 15% beyond) are set by Law 11.033/2004, so 17.5% applies to a typical 1-year CDB. Poupança interest is exempt for individuals."
     },
     "tax_sanchayapatra_profit": {
       "value": 0.15,
@@ -375,7 +375,7 @@
     "retirement_return_base": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "1-year CDB 13.4% less 17.5% tax = 11.1%; 2-month LTN 13.48% less 22.5% tax = 10.4% (Tesouro Direto)",
+      "sourceName": "1-year CDB 13.1% less 17.5% tax = 10.8%; 2-month LTN 13.48% less 22.5% tax = 10.4% (Tesouro Direto)",
       "sourceUrl": "https://www.tesourotransparente.gov.br/ckan/dataset/taxas-dos-titulos-ofertados-pelo-tesouro-direto",
       "asOf": "2026-10-31",
       "note": "Base case kept below the after-tax 1-year deposit and short bill rates, allowing for the Selic to keep falling."
@@ -415,8 +415,8 @@
     "old_age_allowance_monthly": {
       "value": 1621,
       "status": "sourced",
-      "sourceName": "INSS, Benefício assistencial à pessoa idosa (BPC-Loas); Decree 12.797/2025 setting the 2026 minimum wage at R$1,621",
-      "sourceUrl": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-idosa-bpc-loas",
+      "sourceName": "Banco Central do Brasil, minimum wage series (SGS 1619): R$1,621 in 2026; INSS, Benefício assistencial à pessoa idosa (BPC-Loas) pays one minimum wage",
+      "sourceUrl": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1619/dados/ultimos/12?formato=json",
       "asOf": "2026-01-01",
       "note": "BPC pays one minimum wage a month (R$1,621 from 1 January 2026, Decree 12.797 of 23 December 2025) to people aged 65+ whose family income is at most a quarter of the minimum wage per person; no contributions needed, no 13th payment."
     },

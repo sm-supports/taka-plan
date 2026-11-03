@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "code": "ZW",
+  "iso3": "ZWE",
+  "nameEn": "Zimbabwe",
+  "nameNative": "Zimbabwe",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "sn",
+    "en",
+    "nd"
+  ],
+  "currency": {
+    "code": "ZWG",
+    "symbol": "ZiG",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 26.7965,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026), interbank exchange rate end-September 2026",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-09-30",
+      "note": "ZiG26.80 per US dollar at end-September 2026 (Q3 average 26.70; World Bank 2025 average 26.60). Most deposits, prices and wages in Zimbabwe are in US dollars alongside the ZiG."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.037,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026) (ZIMSTAT ZiG CPI)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-09-30",
+      "note": "Annual ZiG CPI inflation 3.7% in September 2026, up from 2.9% in August, the lowest since 1980. The Monetary Policy Committee expects it to end 2026 below 7%."
+    },
+    "inflation_projection": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "SADC 3-7% inflation benchmark cited by the Reserve Bank (Q3 2026 snapshot); history of currency collapses (World Bank CPI inflation 104.7% in 2022)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "ZiG inflation is low in 2026, but the ZiG was devalued in September 2024 and earlier Zimbabwean currencies collapsed, so 9% (2 points above the top of the 3-7% band) is used for long-range ZiG plans."
+    },
+    "policy_rate": {
+      "value": 0.275,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Zimbabwe, Resolutions of the Monetary Policy Committee meeting held on 28 September 2026",
+      "sourceUrl": "https://www.rbz.co.zw/documents/mps/2026/PRESS_STATEMENT-28_SEPTEMBER_2026_.pdf",
+      "asOf": "2026-09-28",
+      "note": "Cut from 30% to 27.5% with immediate effect, a total cut of 7.5 points since June 2026 (it was 35% before). Minimum savings and time deposit rates were left unchanged."
+    },
+    "savings_account_rate": {
+      "value": 0.0435,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-09-30",
+      "note": "Minimum savings deposit rate set by the Reserve Bank: ZiG 4.35% (US dollar deposits 2.15%); banks may pay more, but no average actual rate is published."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0718,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-09-30",
+      "note": "Minimum time deposit rate set by the Reserve Bank: ZiG 7.18% (US dollar 4.41%), maintained by the MPC on 28 September 2026; no published average by term."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0718,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-09-30",
+      "note": "Same Reserve Bank minimum time deposit rate (ZiG 7.18%, US dollar 4.41%); no separate 1-year average is published."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or published rate was found in Reserve Bank of Zimbabwe statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0624,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Zimbabwe",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=ZW",
+      "asOf": "2025-12-31",
+      "note": "6.24% for 2025; the Reserve Bank's statistics pages could not be read (bot check)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regular treasury bill auction yield was found; the Reserve Bank's ZiG-Denominated Term Deposit Facility pays 8% (30 days) and 11% (90 days) but is taken up mainly by banks and corporates (Q3 2026 snapshot)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No market yield for a 5-year government bond was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No market yield for a 10-year government bond was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The withholding tax rate on bank interest could not be read from ZIMRA's tax-rates page; ZIMRA does state that persons aged 55 or more get an annual exemption on interest from deposits with financial institutions."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists."
+    },
+    "deposit_insurance_limit": {
+      "value": 80390,
+      "status": "sourced",
+      "sourceName": "Deposit Protection Corporation, what is deposit protection (cover limit)",
+      "sourceUrl": "https://dpcorp.co.zw/what-is-deposit-protection/",
+      "asOf": "2026-09-30",
+      "note": "ZiG deposits are covered up to the ZiG equivalent of US$3,000 per deposit class per bank (US$2,000 at deposit-taking microfinance institutions); US$3,000 x ZiG26.7965 (end-September 2026 interbank rate) = about ZiG80,390."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or typical credit card rate was found; the Reserve Bank caps banks' all-inclusive on-lending rate under the Targeted Finance Facility at 22.5%, which is not a card rate."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe Q3 2026 snapshot; ZiG minimum time deposit rate 7.18%",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: local shares lose value in real terms, as they repeatedly did in earlier currency crises."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe Q3 2026 snapshot (ZiG minimum time deposit rate 7.18%)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points above the ZiG time deposit floor, below the 4-point cap, because the local index has no meaningful 10-year record in today's currency (the ZiG only began in April 2024)."
+    },
+    "equity_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe Q3 2026 snapshot",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade for local shares or a global index fund in ZiG terms."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate, Zimbabwe (PA.NUS.FCRF); RBZ interbank rate ZiG26.80 per US dollar (September 2026)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZW",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a stable ZiG."
+    },
+    "gold_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate, Zimbabwe (PA.NUS.FCRF); RBZ Q3 2026 snapshot",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZW",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 5% a year of ZiG depreciation (inflation differential with the US dollar)."
+    },
+    "gold_return_high": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate, Zimbabwe (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZW",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and another sharp ZiG devaluation like September 2024."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ZiG savings accounts at about the 4.35% minimum."
+    },
+    "fixed_income_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: ZiG time deposits at about the 7.18% minimum, less some withholding tax on interest."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: ZiG term deposit facility bills (11% for 90 days) for savers with access, after tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Insurance and Pensions Commission (IPEC) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term-life premium rates per ZiG 1,000 of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Zimbabwe was found from an official or international source."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published medical aid premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.1063,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Zimbabwe",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ZW",
+      "asOf": "2023-12-31",
+      "note": "10.6% in 2023 (WHO Global Health Expenditure Database), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "ZIMSTAT, Price statistics August 2026",
+      "sourceUrl": "https://zimstat.co.zw/price-statistics-august-2026/",
+      "asOf": "2026-10-31",
+      "note": "No health price index by division could be read, so private medical costs, which are largely priced in US dollars, are assumed to rise 1 point faster than the 9% ZiG inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "ZIMSTAT, Price statistics August 2026",
+      "sourceUrl": "https://zimstat.co.zw/price-statistics-august-2026/",
+      "asOf": "2026-10-31",
+      "note": "No education price index by division could be read, so school fees are assumed to rise with the 9% ZiG inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 63.064,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Zimbabwe",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ZW",
+      "asOf": "2024-12-31",
+      "note": "63.1 years in 2024 (men 60.5, women 65.3)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.2,
+            "men": 14.8,
+            "women": 17.5
+          },
+          {
+            "age": 65,
+            "total": 13.3,
+            "men": 12.0,
+            "women": 14.4
+          },
+          {
+            "age": 70,
+            "total": 10.6,
+            "men": 9.5,
+            "women": 11.6
+          },
+          {
+            "age": 80,
+            "total": 6.3,
+            "men": 5.6,
+            "women": 6.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/zimbabwe/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 15.77
+          },
+          {
+            "year": 2040,
+            "value": 18.87
+          },
+          {
+            "year": 2065,
+            "value": 10.42
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/zimbabwe/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio. 6.34 for 2025 (World Bank; populationpyramid.net also shows 6.3), 5.3 for 2040 and 9.6 for 2065 (populationpyramid.net/zimbabwe/2065/). The ratio rises to 2040 because the working-age population grows faster than the 65+ population."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The NSSA Pensions and Other Benefits Scheme sets the pension age for private-sector workers, but its rules could not be read: the NSSA website and the law repositories (ZimLII, Veritas, ILO NATLEX) blocked access on 31 October 2026."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The public service retirement age could not be confirmed from an official source that could be read."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ZiG savings accounts at about the 4.35% minimum."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: ZiG time deposits at about the 7.18% minimum less withholding tax on interest; not above the after-tax deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in ZiG term deposit facility bills (8-11%) after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026)",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about ZiG deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026); equity base 10%; gold base 9%",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of ZiG deposits, equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Zimbabwe, Snapshot on monetary, currency, price and financial developments, Q3 2026 (key rates as at 30 September 2026); equity high 16%",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No universal non-contributory old-age pension was found; support for poor older people comes through poverty-targeted programmes of the Ministry of Public Service, Labour and Social Welfare, whose current amounts could not be read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No universal non-contributory old-age pension with a fixed eligibility age was found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity could be confirmed: the Labour Act text could not be read from an official source (law repositories blocked access on 31 October 2026)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The NSSA Pensions and Other Benefits Scheme (compulsory for employees) exists, but its current rules could not be read: the NSSA website and law repositories blocked access on 31 October 2026."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Offered in ZiG and US dollars; the Reserve Bank sets minimum rates.",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Time deposit",
+      "localNameEn": "Time deposit",
+      "note": "Offered in ZiG and US dollars; the Reserve Bank sets a minimum time deposit rate.",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Time deposit",
+      "localNameEn": "Time deposit, 12 months",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No regular retail treasury bill auction was found; the Reserve Bank's ZiG-Denominated Term Deposit Facility (30 and 90 days) is taken up mainly by banks and corporates.",
+      "sourceUrl": "https://www.rbz.co.zw/documents/press/2026/October/Snapshot_Q3_2026_vFinal_.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No traded government bond market for individuals was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No traded government bond market for individuals was found."
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trusts (collective investment schemes)",
+      "note": "Supervised by the Securities and Exchange Commission of Zimbabwe."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Mosi-oa-Tunya gold coin",
+      "localNameEn": "Gold coins issued by the Reserve Bank of Zimbabwe",
+      "note": "The Reserve Bank introduced Mosi-oa-Tunya gold coins for public sale in 2022; their 2026 availability could not be checked (RBZ site behind a bot check). Gold also backs the ZiG."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of Zimbabwe",
+      "url": "https://www.rbz.co.zw/"
+    },
+    "insuranceRegulator": {
+      "name": "Insurance and Pensions Commission (IPEC)",
+      "url": "https://ipec.co.zw/"
+    },
+    "insuranceComplaints": {
+      "name": "IPEC consumer complaints procedure",
+      "url": "https://ipec.co.zw/consumer-complaints-procedure/"
+    },
+    "pensionScheme": {
+      "name": "National Social Security Authority (NSSA), Pensions and Other Benefits Scheme",
+      "url": "https://www.nssa.org.zw/",
+      "note": "Site behind a bot check on 31 October 2026."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health and Child Care (public health facilities)",
+      "url": "https://www.mohcc.gov.zw/",
+      "note": "No national health insurance scheme; site did not respond on 31 October 2026."
+    },
+    "depositInsurance": {
+      "name": "Deposit Protection Corporation (DPC)",
+      "url": "https://dpcorp.co.zw/what-is-deposit-protection/"
+    },
+    "statistics": {
+      "name": "Zimbabwe National Statistics Agency (ZIMSTAT)",
+      "url": "https://zimstat.co.zw/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

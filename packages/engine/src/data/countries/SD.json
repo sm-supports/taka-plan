@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "code": "SD",
+  "iso3": "SDN",
+  "nameEn": "Sudan",
+  "nameNative": "السودان",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "ar",
+    "en",
+    "bej",
+    "fvr"
+  ],
+  "currency": {
+    "code": "SDG",
+    "symbol": "SDG",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 3743.23,
+      "status": "sourced",
+      "sourceName": "Central Bank of Sudan, Economic and Financial Statistics Review Jan-Jun 2026 (weighted average US dollar buying rate at banks and exchange bureaus)",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-06-30",
+      "note": "SDG 3,743.23 per US dollar at the end of June 2026 (3,222.8 in March 2026, 2,230.74 in June 2025); commercial bank buying rates ranged 2,250-4,481 and bureau rates 3,330-4,985. Trading Economics still shows an old official rate of about 601, which is not the market rate."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.261,
+      "status": "sourced",
+      "sourceName": "Central Bureau of Statistics CPI, August 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/sudan/inflation-cpi",
+      "asOf": "2026-08-31",
+      "note": "Secondary source (Trading Economics, citing the Central Bureau of Statistics): annual inflation 26.1% in August 2026, down from 41.6% in July; the Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026 gives 51.3% for June 2026 (40.2% in March, 70.4% in December 2025). The Central Bureau of Statistics site could not be reached."
+    },
+    "inflation_projection": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "IMF World Economic Outlook, Sudan inflation (41.3% projected for 2026, 50.9% for 2027, about 12% from 2029); Central Bank of Sudan CPI table",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/SSD/SDN",
+      "asOf": "2026-10-31",
+      "note": "There is no inflation target and inflation has been above 40% in most years since 2018, so plans use 25%, below recent rates but well above the IMF's hoped-for 12%."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Sudan has no interest-based central bank policy rate: banking follows Islamic principles and the central bank steers lending through murabaha profit margins (weighted average 30.7% in June 2026, Economic and Financial Statistics Review table 22; Trading Economics notes there is no official policy rate)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks in Sudan work on Islamic principles: deposits earn a share of profits rather than fixed interest; the Central Bank of Sudan publishes deposit balances but no average return on savings accounts, and none was found elsewhere."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks in Sudan work on Islamic principles: deposits earn a share of profits rather than fixed interest; no published average return on 3-month investment deposits was found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks in Sudan work on Islamic principles: deposits earn a share of profits rather than fixed interest; no published average return on 1-year investment deposits was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit scheme or published return was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Neither the Central Bank of Sudan nor the World Bank (FR.INR.DPST has no Sudan value) publishes an average deposit return."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No current return on government savings certificates was found; Government Musharaka Certificates (Shahama) have been sold to the public in the past, but no 2025-2026 issue or return could be confirmed."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Sudan issues no interest-bearing treasury bills (Islamic finance); no short-term government certificate yield was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond or sukuk yield was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond or sukuk yield was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax treatment of profits on bank deposits could not be confirmed: PwC Tax Summaries does not cover Sudan and no tax authority schedule could be read."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax treatment of returns on government certificates could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A Deposit Guarantee Fund exists under its own Act (Central Bank of Sudan page), but the cover limit per depositor could not be found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card rate cap or typical rate was found; Islamic banking uses profit margins (murabaha average 30.7% in June 2026) rather than interest."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "IMF World Economic Outlook, Sudan inflation; Central Bank of Sudan Economic and Financial Statistics Review",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/SSD/SDN",
+      "asOf": "2026-10-31",
+      "note": "Low case: the Khartoum market stays disrupted by the war and a global fund bought abroad meets a steadier pound."
+    },
+    "equity_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026 (murabaha margins, exchange rates)",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "The Khartoum Stock Exchange has a weak, war-disrupted record and no current index was found, so the base case is a global index in pound terms capped at 4 points above the assumed 8% safe return, far below what a global index would earn if the pound keeps falling."
+    },
+    "equity_return_high": {
+      "value": 0.3,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026 (dollar rate up from SDG 2,231 to 3,743 in the year to June 2026)",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a global index (about 7% a year in dollars) plus pound depreciation of 20-25% a year."
+    },
+    "gold_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026, table 11 exchange rates",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a much slower fall in the pound."
+    },
+    "gold_return_base": {
+      "value": 0.28,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026, table 11; IMF inflation projections",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus pound depreciation of about 23% a year, close to the gap between the 25% inflation assumption and dollar inflation."
+    },
+    "gold_return_high": {
+      "value": 0.45,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026, table 11",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a pound that keeps falling as fast as in the year to June 2026 (about 68% more pounds per dollar)."
+    },
+    "fixed_income_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: current and savings accounts that share little or no profit."
+    },
+    "fixed_income_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026, table 22 (murabaha margins about 30%)",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No published deposit return was found; investment deposits share bank profits, which are earned at murabaha margins near 30%, but depositors get far less, so 8% is a cautious planning figure."
+    },
+    "fixed_income_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026, table 22",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: longer investment deposits receiving a larger share of bank profits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life (takaful) claim settlement ratio from the insurance supervisor was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life or family takaful premium rates were found from a regulator or other public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found from an official or international source."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premium rates were found; the National Health Insurance Fund covers members by contribution."
+    },
+    "oop_health_share": {
+      "value": 0.5737,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Sudan",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SD",
+      "asOf": "2023-12-31",
+      "note": "57.4% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.28,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan CPI table (Central Bureau of Statistics); IMF inflation projections",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No medical price index was found; medicines are largely imported and priced off the dollar and the war has damaged hospitals, so 3 points above the 25% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan CPI table (Central Bureau of Statistics); IMF inflation projections",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education price index was found, so education costs are assumed to rise with the 25% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 66.521,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Sudan",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SD",
+      "asOf": "2024-12-31",
+      "note": "66.5 years in 2024 (men 63.4, women 69.8); UN WPP 2024 via populationpyramid.net gives 66.9 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.1,
+            "men": 17,
+            "women": 19.2
+          },
+          {
+            "age": 65,
+            "total": 14.4,
+            "men": 13.6,
+            "women": 15.4
+          },
+          {
+            "age": 70,
+            "total": 11.3,
+            "men": 10.6,
+            "women": 12
+          },
+          {
+            "age": 80,
+            "total": 6.2,
+            "men": 5.8,
+            "women": 6.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/sudan/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.65
+          },
+          {
+            "year": 2040,
+            "value": 13.51
+          },
+          {
+            "year": 2065,
+            "value": 7.94
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/sudan/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.0 (2025, World Bank), 7.4 (2040) and 12.6 (2065, populationpyramid.net/sudan/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The pension age under the National Fund for Social Insurance (private sector) could not be confirmed from an official source; its site and the Social Insurance Act could not be loaded."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil service retirement age could not be confirmed from an official source (the National Pension Fund rules could not be loaded)."
+    },
+    "retirement_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts sharing little profit."
+    },
+    "retirement_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026, table 22",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the 8% assumed return on investment deposits, as no published deposit return or government certificate yield was found."
+    },
+    "retirement_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026, table 22",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: longer investment deposits with a larger profit share."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review Jan-Jun 2026",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly pound deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review; gold base 28%; equity base 12%",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of investment deposits, gold and a global fund; gold has kept its value far better than pound deposits."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.25,
+      "status": "assumption",
+      "sourceName": "Central Bank of Sudan Economic and Financial Statistics Review; gold high 45%",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a larger share in gold and foreign assets while the pound keeps falling."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age (social) pension was found; not confirmed absent."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national non-contributory old-age (social) pension was found; not confirmed absent."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The end-of-service benefit rules of the Labour Act could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private-sector workers are covered by the National Fund for Social Insurance and civil servants by the National Pension Fund, but entry and pension ages and indexation could not be confirmed from an official source."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "حساب ادخار",
+      "localNameEn": "Savings account",
+      "note": "Banks in Sudan work on Islamic principles: deposits earn a share of profits rather than fixed interest; no average return is published.",
+      "sourceUrl": "https://cbos.gov.sd/sites/default/files/Econ_stat_rview_%28Jan.-Jun.%292026.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "وديعة استثمارية",
+      "localNameEn": "Investment deposit",
+      "note": "Islamic term (investment) deposits share bank profits; no published return."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "وديعة استثمارية",
+      "localNameEn": "Investment deposit, 12 months",
+      "note": "Islamic term (investment) deposits share bank profits; no published return."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit scheme was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": "شهادات مشاركة الحكومة (شهامة)",
+      "localNameEn": "Government Musharaka Certificates (Shahama)",
+      "note": "Sold to the public in the past, but no current issue or return could be confirmed since the 2023 war."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No interest-bearing treasury bills (Islamic finance)."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 5-year government bond or sukuk available to individuals was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year government bond or sukuk available to individuals was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The Khartoum Stock Exchange has been disrupted by the war and no retail investment fund open to savers was found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "ذهب",
+      "localNameEn": "Gold",
+      "note": "Sudan is a large gold producer and gold is widely bought as jewellery and bars."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Sudan",
+      "url": "https://cbos.gov.sd/en"
+    },
+    "insuranceRegulator": null,
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund (Central Bank of Sudan)",
+      "url": "https://cbos.gov.sd/en/content/deposit-guarantee-fund-act"
+    },
+    "statistics": null
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

@@ -51,28 +51,28 @@
       "note": "ECB held rates on 29 October 2026: deposit facility 2.50%, main refinancing 2.65% (read via the ECB data API, series FM.D.U2.EUR.4F.KR.DFR.LEV)."
     },
     "savings_account_rate": {
-      "value": 0.0072,
+      "value": 0.0074,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Belgian bank rates on household deposits redeemable at notice up to 3 months (new business)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L23.D.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Regulated savings accounts (base rate plus loyalty premium) are reported in this category; 0.72% in August 2026. Ordinary overnight (current) accounts pay 0.06%. Read via the ECB data API."
+      "asOf": "2026-09-30",
+      "note": "Regulated savings accounts (base rate plus loyalty premium) are reported in this category; 0.74% in September 2026 (0.72% in August). Ordinary overnight (current) accounts pay 0.07%. Read via the ECB data API."
     },
     "fdr_3m_rate": {
-      "value": 0.0214,
+      "value": 0.0248,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Belgian bank rates on household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "No separate 3-month series is published; the up-to-1-year bucket (2.14% in August 2026) is used. Read via the ECB data API."
+      "asOf": "2026-09-30",
+      "note": "No separate 3-month series is published; the up-to-1-year bucket (2.48% in September 2026, 2.14% in August) is used. Read via the ECB data API."
     },
     "fdr_1y_rate": {
-      "value": 0.0214,
+      "value": 0.0248,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Belgian bank rates on household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "2.14% in August 2026; 1-2 years 2.92%, over 2 years 2.97%. Read via the ECB data API."
+      "asOf": "2026-09-30",
+      "note": "2.48% in September 2026 (2.14% in August); 1-2 years 3.11%. Read via the ECB data API."
     },
     "dps_rate": {
       "value": null,
@@ -88,7 +88,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "World Bank FR.INR.DPST has no Belgian series and no all-deposit weighted average was found; the ECB MIR series give 0.06% (overnight), 0.72% (savings) and 2.14% (term up to 1 year) for August 2026."
+      "note": "World Bank FR.INR.DPST has no Belgian series and no all-deposit weighted average was found; the ECB MIR series give 0.07% (overnight), 0.74% (savings) and 2.48% (term up to 1 year) for September 2026."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -147,12 +147,12 @@
       "note": "EUR 100,000 per depositor per bank under the EU directive, paid by the Belgian Guarantee Fund for Financial Services."
     },
     "credit_card_rate_cap": {
-      "value": 0.05,
+      "value": 0.0528,
       "status": "sourced",
       "sourceName": "ECB MIR statistics: Belgian bank rates on revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "5.00% in August 2026, an average that includes overdrafts; Belgian law sets maximum annual rates for credit openings (FPS Economy), which could not be read (bot check). Card credit itself usually costs more."
+      "asOf": "2026-09-30",
+      "note": "5.28% in September 2026 (5.00% in August), an average that includes overdrafts; Belgian law sets maximum annual rates for credit openings (FPS Economy), which could not be read (bot check). Card credit itself usually costs more."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -205,7 +205,7 @@
     "fixed_income_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "ECB MIR: savings 0.72% (tax-free to EUR 1,050), term deposits up to 1 year 2.14% less 30%",
+      "sourceName": "ECB MIR: savings 0.74% (tax-free to EUR 1,050), term deposits up to 1 year 2.48% less 30% (Sep 2026)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: a mix of regulated savings and short term deposits after tax."
@@ -213,10 +213,10 @@
     "fixed_income_return_base": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "3-month treasury certificate 2.6% and 1-year term deposit 2.14%, less 30% withholding",
+      "sourceName": "3-month treasury certificate 2.6% and 1-year term deposit 2.48%, less 30% withholding",
       "sourceUrl": "https://tradingeconomics.com/belgium/3-month-bill-yield",
       "asOf": "2026-10-31",
-      "note": "Base case: short treasury certificates and term deposits after 30% withholding tax (about 1.5-1.8%), with some longer deposits."
+      "note": "Base case: short treasury certificates and term deposits after 30% withholding tax (about 1.7-1.8%), with some longer deposits."
     },
     "fixed_income_return_high": {
       "value": 0.03,
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BE",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket share 21.5% of current health expenditure. Latest World Bank year is 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -287,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BE",
       "asOf": "2024-12-31",
-      "note": "Men 80.3, women 84.4; UN WPP 2024 (via populationpyramid.net) gives 82.6 for 2026."
+      "note": "Men 80.3, women 84.4; UN WPP 2024 (via populationpyramid.net) gives 82.6 for 2026. Latest World Bank year is 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -322,8 +323,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/belgium/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for the year 2026 (asOf set to mid-year); totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -350,25 +351,25 @@
       "note": "100 / old-age dependency ratio: 33.1 (2025, World Bank), 43.4 (2040) and 50.4 (2065, populationpyramid.net/belgium/2065/)."
     },
     "retirement_age_default": {
-      "value": 66,
+      "value": 67,
       "status": "sourced",
       "sourceName": "Federal Pension Service, How is the retirement date calculated?",
       "sourceUrl": "https://www.sfpd.fgov.be/en/retirement-age/when",
       "asOf": "2026-10-31",
-      "note": "Statutory age is 66 for people born 1960-1963 (reached in 2026) and 67 for those born from 1964; same for men and women."
+      "note": "Statutory age is 67 for people born on or after 1 January 1964 (66 for those born 1960-1963, who reach it in 2026); same for men and women. A pension reform agreement is still being legislated."
     },
     "retirement_age_government": {
-      "value": 66,
+      "value": 67,
       "status": "sourced",
       "sourceName": "Federal Pension Service, How is the retirement date calculated?",
       "sourceUrl": "https://www.sfpd.fgov.be/en/retirement-age/when",
       "asOf": "2026-10-31",
-      "note": "Civil servants' service ends automatically at the same statutory age (66 now, 67 for those born from 1964); magistrates and soldiers have their own limits."
+      "note": "Civil servants' service ends at the same statutory age: 67 for those born from 1964 (66 for 1960-1963); magistrates and soldiers have their own limits."
     },
     "retirement_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "ECB MIR: regulated savings 0.72%, term deposits up to 1 year 2.14% less 30%",
+      "sourceName": "ECB MIR: regulated savings 0.74%, term deposits up to 1 year 2.48% less 30% (Sep 2026)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: mostly savings accounts and short deposits after tax."
@@ -376,10 +377,10 @@
     "retirement_return_base": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "1-year term deposit 2.14% less 30% withholding = 1.5%",
+      "sourceName": "1-year term deposit 2.48% less 30% withholding = 1.7% (Sep 2026)",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate."
+      "note": "Base case kept just under the after-tax 1-year term deposit rate (1.7%), allowing for months when deposit rates were lower."
     },
     "retirement_return_high": {
       "value": 0.025,
@@ -424,8 +425,8 @@
     "old_age_allowance_eligibility": {
       "value": null,
       "valueJson": {
-        "menAge": 66,
-        "womenAge": 66,
+        "menAge": 67,
+        "womenAge": 67,
         "over90Monthly": null,
         "meansTested": true
       },
@@ -433,7 +434,7 @@
       "sourceName": "Federal Pension Service, Guaranteed Income for Elderly Persons",
       "sourceUrl": "https://www.sfpd.fgov.be/en/entitlement-to-a-pension/giep",
       "asOf": "2026-09-01",
-      "note": "From the statutory retirement age (66 in 2026, rising to 67), subject to a means test covering the household's income and assets."
+      "note": "From the statutory retirement age (67 for anyone born from 1964; 66 for those born 1960-1963), subject to a means test covering pensions, other income, property and savings (savings exempt up to EUR 6,200)."
     },
     "gratuity_rule": {
       "value": null,
@@ -441,14 +442,14 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Belgian law has no statutory gratuity or end-of-service payment for private employees; departing employees get notice or pay in lieu of notice."
+      "note": "No statutory gratuity or end-of-service payment for private employees was found (dismissal brings notice or pay in lieu of notice); not marked absent because no official page confirming this was read."
     },
     "public_pension_scheme": {
       "value": null,
       "valueJson": {
         "entryAgeMin": null,
         "entryAgeMax": null,
-        "pensionFromAge": 66,
+        "pensionFromAge": 67,
         "nomineeUntilAge": null,
         "inflationLinked": true,
         "taxFree": false
@@ -457,7 +458,7 @@
       "sourceName": "Federal Pension Service, How is the retirement date calculated?",
       "sourceUrl": "https://www.sfpd.fgov.be/en/retirement-age/when",
       "asOf": "2026-10-31",
-      "note": "Earnings-related statutory pension from social security contributions, payable from 66 (67 for those born from 1964); pensions follow the health index and are taxable. A pension reform agreed by the government is still being legislated."
+      "note": "Earnings-related statutory pension from social security contributions, payable from 67 for anyone born from 1964 (66 for 1960-1963); pensions follow the health index and are taxable. A pension reform agreed by the government is still being legislated."
     }
   },
   "instruments": {
@@ -465,7 +466,7 @@
       "available": true,
       "localName": "Gereglementeerde spaarrekening",
       "localNameEn": "Regulated savings account",
-      "note": "Base rate plus loyalty premium; interest tax-free up to EUR 1,050 a year per person.",
+      "note": "Base rate plus loyalty premium; interest tax-free up to EUR 1,050 a year per person (income year 2025), then 15%.",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.BE.B.L23.D.R.A.2250.EUR.N"
     },
     "fdr_3m": {
@@ -489,8 +490,8 @@
       "available": false,
       "localName": "Staatsbon",
       "localNameEn": "State Note",
-      "note": "State Notes were sold to individuals from time to time (2023-2025), but none is listed among the Debt Agency's current products for individuals.",
-      "sourceUrl": "https://www.debtagency.be/en"
+      "note": "State Notes were sold to individuals from time to time (2023-2025), but the Debt Agency's products for individuals now list only OLOs and Treasury Certificates (checked November 2026).",
+      "sourceUrl": null
     },
     "tbill_91d": {
       "available": true,

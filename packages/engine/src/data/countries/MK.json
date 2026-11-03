@@ -67,12 +67,12 @@
       "note": "No 3-month denar term deposit rate could be read: the National Bank's interest-rate statistics (nbrm.mk) served a bot check."
     },
     "fdr_1y_rate": {
-      "value": 0.0262,
-      "status": "sourced",
-      "sourceName": "TheGlobalEconomy.com, North Macedonia deposit interest rate (National Bank data: average rate on 1-year household term deposits)",
-      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
-      "asOf": "2026-06-30",
-      "note": "2.62% in June 2026 (2.72% in December 2025). Secondary source because nbrm.mk served a bot check."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The researcher's figure (2.62% for June 2026 from TheGlobalEconomy.com, quoting National Bank data) could not be re-confirmed: that page returned HTTP 429 on every retry and nbrm.mk returned 403. The World Bank average deposit rate was 2.72% in 2025 (bank_deposit_avg_rate)."
     },
     "dps_rate": {
       "value": null,
@@ -165,10 +165,10 @@
     "equity_return_base": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "1-year household deposit 2.62% (tax-free) plus a 3.4-point equity premium",
-      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "sourceName": "Average deposit rate 2.72% in 2025 (World Bank FR.INR.DPST, tax-free) plus a 3.3-point equity premium",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
       "asOf": "2026-10-31",
-      "note": "North Macedonia's stock market is thin, so the base is a diversified global or regional index in denar terms (pegged to the euro), kept within 4 points of the tax-free 1-year deposit rate."
+      "note": "North Macedonia's stock market is thin, so the base is a diversified global or regional index in denar terms (pegged to the euro), kept within 4 points of the tax-free deposit rate."
     },
     "equity_return_high": {
       "value": 0.085,
@@ -213,10 +213,10 @@
     "fixed_income_return_base": {
       "value": 0.026,
       "status": "assumption",
-      "sourceName": "1-year household term deposit 2.62% (National Bank data), interest tax-free",
-      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "sourceName": "Average deposit rate 2.72% in 2025 (World Bank FR.INR.DPST); interest on deposits currently untaxed",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
       "asOf": "2026-10-31",
-      "note": "Base case: rolling 1-year denar term deposits, untaxed while the 10% tax on savings interest is postponed."
+      "note": "Base case: rolling denar term deposits at about the 2025 average deposit rate, untaxed while the 10% tax on savings interest is postponed."
     },
     "fixed_income_return_high": {
       "value": 0.04,
@@ -283,12 +283,12 @@
       "note": "Education prices are rising about 5% a year, which is used for planning."
     },
     "life_expectancy": {
-      "value": 76.62,
+      "value": 77.8,
       "status": "sourced",
-      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
-      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MK",
-      "asOf": "2024-12-31",
-      "note": "Men 74.5, women 78.9 (2024); UN WPP 2024 projects 77.8 for 2026."
+      "sourceName": "UN WPP 2024 medium variant via populationpyramid.net (mortality, 2026)",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/tfyr-macedonia/",
+      "asOf": "2026-01-01",
+      "note": "Secondary source of UN WPP 2024 for 2026: men 75.6, women 80.0; same source as life_table_remaining. World Bank 2024 estimate 76.6 (men 74.5, women 78.9)."
     },
     "life_table_remaining": {
       "value": null,
@@ -377,10 +377,10 @@
     "retirement_return_base": {
       "value": 0.026,
       "status": "assumption",
-      "sourceName": "1-year household term deposit 2.62%, interest tax-free",
-      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "sourceName": "Average deposit rate 2.72% in 2025 (World Bank FR.INR.DPST), interest tax-free",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the tax-free 1-year term deposit rate."
+      "note": "Base case kept just below the tax-free average deposit rate."
     },
     "retirement_return_high": {
       "value": 0.035,
@@ -393,16 +393,16 @@
     "retirement_accumulation_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "1-year deposit 2.62%; global equity in denar terms",
-      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "sourceName": "Average deposit rate 2.72% in 2025 (World Bank); global equity in denar terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
     },
     "retirement_accumulation_return_base": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "1-year deposit 2.62%; equity base 6%",
-      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/",
+      "sourceName": "Average deposit rate 2.72% in 2025 (World Bank); equity base 6%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MK",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half global equity at 6% and half deposits and citizen bonds at about 3%."
     },
@@ -420,7 +420,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The social security benefit for the elderly (Law on Social Security for the Elderly, 2019) started at MKD 6,000 a month and is raised each January by the previous year's cost-of-living increase, but the 2026 amount could not be found on the Ministry's pages."
+      "note": "Law on Social Security for the Elderly (Gazette 104/2019), art. 6: MKD 6,000 a month, raised each January by the previous year's cost-of-living increase (plus MKD 1,000 a month for energy from October to March, art. 7); the 2026 amount could not be found on a readable official page."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -433,8 +433,8 @@
       "status": "sourced",
       "sourceName": "Law on Social Security for the Elderly (Official Gazette 104/2019), Ministry of Social Policy, Demography and Youth",
       "sourceUrl": "https://portal.mdt.gov.mk/post-body-files/regulativa-od-oblasta-na-socijalnata-zastita-file-HrXI.pdf",
-      "asOf": "2025-09-17",
-      "note": "From age 65 for citizens resident for the last 15 years, with no pension, no income in the last 3 months and no property to live from (applies to the spouse too); only one member of a couple can claim. The September 2025 amendment (Gazette 192/2025) changed only procedural articles."
+      "asOf": "2019-05-23",
+      "note": "Law on Social Security for the Elderly (Gazette 104/2019), arts. 3-4: from age 65 for citizens with permanent residence for the last 15 years, no property to live from, no domestic or foreign pension and no income in the last 3 months (conditions also apply to the spouse); only one member of a couple can claim. The law text is from 2019 (older than 2025); later amendments were not re-checked."
     },
     "gratuity_rule": {
       "value": null,
@@ -458,7 +458,7 @@
       "sourceName": "Assembly bill amending the Law on Pension and Disability Insurance (March 2026), citing Gazette 154/2025",
       "sourceUrl": "https://www.mchamber.mk/Upload/Documents/Предлог на закон за изменување и дополнување на Законот за пензиското и инвалидското осигурување, по скратена постапка.pdf",
       "asOf": "2026-03-31",
-      "note": "Compulsory pay-as-you-go pension (Pension and Disability Insurance Fund) from 64 for men and 62 for women with 15 years of service, plus a mandatory funded second pillar for younger workers. Pensions are adjusted twice a year by 50% of CPI growth and 50% of average wage growth."
+      "note": "Compulsory pay-as-you-go pension (Pension and Disability Insurance Fund), plus a mandatory funded second pillar for younger workers. The cited March 2026 bill shows pensions adjusted on 1 September 2025 and 1 March 2026 using 50% of CPI growth and 50% of average wage growth (Gazette 154/25, replacing art. 37 for that period) and proposes a flat MKD 1,000 increase from 1 March 2026. The pension age (64 men, 62 women with 15 years of service) is not in this bill; it comes from the retirement_age_default source."
     }
   },
   "instruments": {
@@ -475,8 +475,7 @@
     "fdr_1y": {
       "available": true,
       "localName": "Орочен депозит",
-      "localNameEn": "Term deposit (1 year)",
-      "sourceUrl": "https://www.theglobaleconomy.com/Macedonia/deposit_interest_rate/"
+      "localNameEn": "Term deposit (1 year)"
     },
     "dps": {
       "available": false,

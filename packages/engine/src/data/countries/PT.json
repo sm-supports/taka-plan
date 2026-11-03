@@ -51,12 +51,12 @@
       "note": "Portugal uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026, unchanged on 31 October 2026 (ECB data portal FM.D.U2.EUR.4F.KR.DFR.LEV)."
     },
     "savings_account_rate": {
-      "value": 0.0004,
+      "value": 0.0003,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by Banco de Portugal): Portuguese banks, overnight euro deposits from households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PT.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight (current and savings) deposits was 0.04% in August 2026 (0.03% in July)."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight (current and savings) deposits was 0.03% in September 2026 (0.04% in August)."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -64,15 +64,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Banco de Portugal and the ECB publish household term deposits up to 1 year as one bucket (1.62% in August 2026); no separate 3-month average was found."
+      "note": "Banco de Portugal and the ECB publish household term deposits up to 1 year as one bucket (1.83% in September 2026); no separate 3-month average was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0162,
+      "value": 0.0183,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by Banco de Portugal): household euro deposits with agreed maturity up to 1 year, new business",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PT.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (1.59% in July 2026); 1-2 year deposits paid 1.49% and over 2 years 2.04% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (1.62% in August 2026). Taxed at 28%."
     },
     "dps_rate": {
       "value": null,
@@ -83,12 +83,12 @@
       "note": "No standard monthly recurring-deposit product with a published average rate was found for Portugal."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0163,
+      "value": 0.0182,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by Banco de Portugal): household deposits with agreed maturity, all maturities, new business",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PT.B.L22.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Weighted average rate on new household term deposits of all maturities was 1.63% in August 2026; the average on all outstanding household term deposits was 1.11%."
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on new household term deposits of all maturities was 1.82% in September 2026 (1.63% in August); the average on all outstanding household term deposits was 1.17%."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.025,
@@ -115,12 +115,12 @@
       "note": "5-year yield 3.39% on 30 October 2026."
     },
     "tbond_10y_rate": {
-      "value": 0.038,
+      "value": 0.0378,
       "status": "sourced",
       "sourceName": "Trading Economics, Portugal 10-year government bond yield (secondary source)",
       "sourceUrl": "https://tradingeconomics.com/portugal/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "10-year yield 3.80% on 30 October 2026; the ECB long-term convergence yield for Portugal was 3.85% in September 2026 (ECB IRS dataset)."
+      "note": "10-year yield about 3.78% at the 30 October 2026 close (Trading Economics shows 3.74% on 2 November, down 0.04 points); the ECB long-term convergence yield for Portugal was 3.85% in September 2026 (ECB IRS dataset)."
     },
     "tax_bank_interest": {
       "value": 0.28,
@@ -136,7 +136,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Portugal income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/portugal/individual/income-determination",
       "asOf": "2026-10-03",
-      "note": "Interest is taxed at the flat 28% rate; the page does not name savings certificates separately, and Certificados de Aforro interest is withheld at the same 28% rate."
+      "note": "PwC gives the flat 28% rate for interest on bank accounts and does not name savings certificates; Certificados de Aforro interest is capital income withheld at the same 28% rate (the IGCP simulator applies the withholding rate chosen by the saver), so 28% is used."
     },
     "deposit_insurance_limit": {
       "value": 100000,
@@ -147,12 +147,12 @@
       "note": "EU rules guarantee deposits up to EUR 100,000 per depositor per bank; in Portugal the cover is paid by the Fundo de Garantia de Depósitos (its own site could not be read)."
     },
     "credit_card_rate_cap": {
-      "value": 0.1607,
+      "value": 0.1604,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by Banco de Portugal): Portuguese banks, extended credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PT.B.A2Z3.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate, not the legal cap: average 16.07% in August 2026. Banco de Portugal also sets a quarterly maximum APR (TAEG) for credit cards, which could not be read."
+      "asOf": "2026-09-30",
+      "note": "Typical rate, not the legal cap: average 16.04% in September 2026 (16.07% in August). Banco de Portugal also sets a quarterly maximum APR (TAEG) for credit cards, which could not be read."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -205,10 +205,10 @@
     "fixed_income_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.62% less 28% tax = 1.2% (ECB MIR)",
+      "sourceName": "Household deposits up to 1 year 1.83% less 28% tax = 1.3% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Low case: after-tax bank term deposits only."
+      "note": "Low case: after-tax bank term deposits only, allowing for some rate cuts."
     },
     "fixed_income_return_base": {
       "value": 0.018,
@@ -221,7 +221,7 @@
     "fixed_income_return_high": {
       "value": 0.027,
       "status": "assumption",
-      "sourceName": "10-year government bond 3.80% less 28% tax = 2.7% (Trading Economics)",
+      "sourceName": "10-year government bond 3.78% less 28% tax = 2.7% (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/portugal/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "High case: locking in medium and long government bonds at today's yields."
@@ -369,7 +369,7 @@
     "retirement_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.2% (ECB MIR)",
+      "sourceName": "After-tax 1-year deposit 1.3% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax deposits with some rate cuts."
@@ -541,11 +541,11 @@
     },
     "pensionScheme": {
       "name": "Segurança Social (Social Security Institute), old-age pension",
-      "url": "https://www.seg-social.pt/"
+      "url": "https://www.seg-social.pt/pensao-de-velhice"
     },
     "oldAgeAllowance": {
       "name": "Pensão social de velhice and Complemento Solidário para Idosos (Segurança Social)",
-      "url": "https://www.seg-social.pt/",
+      "url": "https://www.seg-social.pt/pensao-social-de-velhice",
       "note": "Means-tested non-contributory pension and supplement, claimed from Social Security."
     },
     "publicHealthCover": {

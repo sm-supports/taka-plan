@@ -28,12 +28,12 @@
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.0887,
+      "value": 0.0892,
       "status": "sourced",
       "sourceName": "Banque Centrale du Congo, national consumer price inflation (INS data), year on year",
       "sourceUrl": "https://www.bcc.cd/statistiques/secteur-reel/inflation",
-      "asOf": "2026-10-24",
-      "note": "National CPI up 8.87% year on year in the 4th week of October 2026 (7.20% a week earlier); the jump reflects falling prices in late 2025 when the franc appreciated. Cumulative since January 7.87%."
+      "asOf": "2026-10-31",
+      "note": "National CPI up 8.92% year on year in the 5th week of October 2026 (8.87% the week before); the rise partly reflects falling prices in late 2025 when the franc appreciated."
     },
     "inflation_projection": {
       "value": 0.09,
@@ -124,12 +124,12 @@
       "note": "No 10-year government bond yield was found; the domestic bond market is very thin."
     },
     "tax_bank_interest": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The tax on interest (impôt mobilier) for resident individuals could not be confirmed from a current source; PwC Tax Summaries (reviewed April 2026) says income other than salaries is not subject in practice to personal income tax but does not state the rate on interest."
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Democratic Republic of the Congo, withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/democratic-republic-of-the-congo/corporate/withholding-taxes",
+      "asOf": "2026-04-21",
+      "note": "Standard 20% withholding (movable property tax) on interest paid to residents, on the gross amount; the page gives no separate rate for bank deposit interest of individuals (reviewed 21 April 2026)."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -214,10 +214,10 @@
     "fixed_income_return_base": {
       "value": 0.065,
       "status": "assumption",
-      "sourceName": "BCC average deposit rate in francs 8.24% (September 2026)",
+      "sourceName": "BCC average deposit rate in francs 8.24% (September 2026); 20% withholding on interest (PwC)",
       "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
       "asOf": "2026-10-31",
-      "note": "Base case: franc term deposits at the published average rate less an allowance for a possible 20% tax on interest, which could not be confirmed."
+      "note": "Base case: franc term deposits at the published average rate (8.24%) less the 20% withholding tax on interest, about 6.6%."
     },
     "fixed_income_return_high": {
       "value": 0.085,
@@ -265,7 +265,7 @@
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), DR Congo",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CD",
       "asOf": "2023-12-31",
-      "note": "38.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+      "note": "38.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025 but the latest available."
     },
     "goal_inflation_health": {
       "value": 0.11,
@@ -289,7 +289,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), DR Congo",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CD",
       "asOf": "2024-12-31",
-      "note": "62.1 years in 2024 (men 60.0, women 64.2); UN WPP 2024 gives 62.4 for 2026."
+      "note": "62.1 years in 2024 (men 60.0, women 64.2); older than 2025 but the latest World Bank year. UN WPP 2024 gives 62.4 for 2026."
     },
     "life_table_remaining": {
       "value": null,
@@ -357,7 +357,7 @@
       "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), pension branch",
       "sourceUrl": "https://cnss.cd/?page_id=1421",
       "asOf": "2026-10-31",
-      "note": "Old-age pension from 60 for men and women with at least 180 months of insurance; early pension from 55 reduced 5% per year; 65 is the mandatory retirement limit."
+      "note": "Old-age pension from 60 for men and women with at least 180 months of insurance (same for people born after 1975); early pension from 55 reduced 5% per year; at 65 the insured person is retired automatically."
     },
     "retirement_age_government": {
       "value": null,
@@ -381,7 +381,7 @@
       "sourceName": "BCC average deposit rate in francs 8.24% (September 2026)",
       "sourceUrl": "https://www.bcc.cd/statistiques/secteur-monetaire/taux-interet",
       "asOf": "2026-10-31",
-      "note": "Base case kept below the after-tax franc deposit rate (8.24% less a possible 20% tax on interest is about 6.6%)."
+      "note": "Base case kept below the after-tax franc deposit rate (8.24% less the 20% withholding on interest is about 6.6%)."
     },
     "retirement_return_high": {
       "value": 0.075,
@@ -453,7 +453,7 @@
       "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), pension branch",
       "sourceUrl": "https://cnss.cd/?page_id=1421",
       "asOf": "2026-10-31",
-      "note": "Compulsory for salaried workers (5% employee and 5% employer contribution, PwC Tax Summaries 2026); pension from 60 with 180 months of insurance, else a single lump sum; the CNSS page states no automatic indexation, so inflationLinked is false."
+      "note": "Compulsory for salaried workers (5% employee and 5% employer contribution, PwC Tax Summaries 2026); pension from 60 with 180 months of insurance, else a single lump sum. The CNSS page says nothing about indexation, so inflationLinked is set to false (no automatic indexation confirmed)."
     }
   },
   "instruments": {

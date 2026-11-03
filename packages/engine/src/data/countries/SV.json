@@ -260,12 +260,13 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SV",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank value is for 2023 (older than 2025; no fresher official figure found)."
     },
     "goal_inflation_health": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "Banco Central de Reserva de El Salvador: índice de precios al consumidor: health index up about 2.9% in the year to September 2026",
+      "sourceName": "Banco Central de Reserva de El Salvador: índice de precios al consumidor (health index 118.44 in September 2026 vs 115.12 a year earlier, +2.9%)",
       "sourceUrl": "https://estadisticas.bcr.gob.sv/serie/indice-de-precios-al-consumidor-ipc",
       "asOf": "2026-10-31",
       "note": "Health prices rose about 2.9% in the past year; private care tends to outpace headline, so we plan with 4%."
@@ -284,7 +285,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SV",
       "asOf": "2024-12-31",
-      "note": "UN WPP 2024 (via populationpyramid.net) gives 72.7 for 2026 (men 68.2, women 76.9)."
+      "note": "2024 World Bank value (older than 2025); UN WPP 2024 (via populationpyramid.net) gives 72.7 for 2026 (men 68.2, women 76.9)."
     },
     "life_table_remaining": {
       "value": null,

@@ -48,36 +48,36 @@
       "note": "The 7-day reverse repo is the PBOC's main policy rate; 1-year LPR 3.0%, 5-year LPR 3.5% (20 Oct 2026)."
     },
     "savings_account_rate": {
-      "value": 0.0005,
-      "status": "sourced",
-      "sourceName": "Listed RMB deposit rates of a large state-owned bank (demand deposit)",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
-      "asOf": "2025-05-20",
-      "note": "0.05% on demand deposits; the 2025-05-20 table was still the latest listed on 2026-10-31."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PBOC publishes only the 2015 benchmark rates; actual listed rates (large state banks, table of 20 May 2025, still current in Oct 2026: demand (savings) deposits, 0.05%) were found only on banks' own pages, which we do not cite."
     },
     "fdr_3m_rate": {
-      "value": 0.0065,
-      "status": "sourced",
-      "sourceName": "Listed RMB deposit rates of a large state-owned bank (lump-sum fixed deposit, 3 months)",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
-      "asOf": "2025-05-20",
-      "note": "Still the latest listed table on 2026-10-31; smaller banks pay slightly more."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PBOC publishes only the 2015 benchmark rates; actual listed rates (large state banks, table of 20 May 2025, still current in Oct 2026: 3-month lump-sum fixed deposits, 0.65%) were found only on banks' own pages, which we do not cite."
     },
     "fdr_1y_rate": {
-      "value": 0.0095,
-      "status": "sourced",
-      "sourceName": "Listed RMB deposit rates of a large state-owned bank (lump-sum fixed deposit, 1 year)",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
-      "asOf": "2025-05-20",
-      "note": "2-year 1.05%, 3-year 1.25%, 5-year 1.30%."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PBOC publishes only the 2015 benchmark rates; actual listed rates (large state banks, table of 20 May 2025, still current in Oct 2026: 1-year lump-sum fixed deposits, 0.95%) were found only on banks' own pages, which we do not cite."
     },
     "dps_rate": {
-      "value": 0.0085,
-      "status": "sourced",
-      "sourceName": "Listed RMB deposit rates of a large state-owned bank (installment deposit, 5 years)",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
-      "asOf": "2025-05-20",
-      "note": "零存整取 installment deposit: 1-year 0.65%, 3- and 5-year 0.85%."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PBOC publishes only the 2015 benchmark rates; actual listed rates (large state banks, table of 20 May 2025, still current in Oct 2026: 5-year installment (零存整取) deposits, 0.85%) were found only on banks' own pages, which we do not cite."
     },
     "bank_deposit_avg_rate": {
       "value": 0.015,
@@ -85,7 +85,7 @@
       "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CN",
       "asOf": "2024-12-31",
-      "note": "This series is the PBOC 1-year benchmark deposit rate (unchanged since 2015), not a weighted average; actual 1-year rates at large banks are 0.95%."
+      "note": "This series is the PBOC 1-year benchmark deposit rate (unchanged since 2015), not a weighted average; large banks' listed 1-year rate is about 0.95%. Figure refers to 2024, older than 2025; it is the latest World Bank value."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -140,7 +140,7 @@
       "sourceName": "Deposit Insurance Regulations (State Council, 2015), Article 5",
       "sourceUrl": "https://www.gov.cn/zhengce/content/2015-03/31/content_9562.htm",
       "asOf": "2015-05-01",
-      "note": "Up to 500,000 yuan per depositor per insured bank, principal and interest combined."
+      "note": "Up to 500,000 yuan per depositor per insured bank, principal and interest combined. The regulations date from 2015 (older than 2025) and the limit is unchanged."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -161,10 +161,10 @@
     "equity_return_base": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "1-year deposit 0.95% plus a capped premium; CSI 300 10-year record",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceName": "52-week government bill 1.22% and 1-year deposits about 0.95% plus a capped premium; CSI 300 10-year record",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "Base set about 3.5 points above the untaxed 1-year deposit rate, below the 4-point limit, because the local index record is weak."
+      "note": "Base set about 3.3 points above the untaxed 52-week government bill yield, below the 4-point limit, because the local index record is weak."
     },
     "equity_return_high": {
       "value": 0.08,
@@ -201,18 +201,18 @@
     "fixed_income_return_low": {
       "value": 0.0065,
       "status": "assumption",
-      "sourceName": "Large-bank listed deposit rates",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceName": "Government bond yields (Trading Economics); large-bank listed deposit rates",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "Low case at the 3-month deposit rate. Safe CNY rates: 1-year deposit 0.95% and 3-year 1.25% (large-bank listed rates), 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (Oct 2026); deposit and government bond interest are exempt from income tax."
+      "note": "Low case at the 3-month deposit rate. Safe CNY rates: 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (30 Oct 2026); large-bank listed deposit rates about 0.95% (1 year) and 1.25% (3 years); deposit and government bond interest are exempt from income tax (PwC)."
     },
     "fixed_income_return_base": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Large-bank listed deposit rates and government bond yields",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceName": "Government bond yields (Trading Economics); large-bank listed deposit rates",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "Base case between 1-year deposits (0.95%) and 3-year deposits / 5-year bonds (1.25-1.37%). Safe CNY rates: 1-year deposit 0.95% and 3-year 1.25% (large-bank listed rates), 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (Oct 2026); deposit and government bond interest are exempt from income tax."
+      "note": "Base case between 1-year deposits (0.95%) and 3-year deposits / 5-year bonds (1.25-1.37%). Safe CNY rates: 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (30 Oct 2026); large-bank listed deposit rates about 0.95% (1 year) and 1.25% (3 years); deposit and government bond interest are exempt from income tax (PwC)."
     },
     "fixed_income_return_high": {
       "value": 0.0166,
@@ -220,7 +220,7 @@
       "sourceName": "Government bond yields (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "High case at the 10-year government bond yield. Safe CNY rates: 1-year deposit 0.95% and 3-year 1.25% (large-bank listed rates), 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (Oct 2026); deposit and government bond interest are exempt from income tax."
+      "note": "High case at the 10-year government bond yield. Safe CNY rates: 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (30 Oct 2026); large-bank listed deposit rates about 0.95% (1 year) and 1.25% (3 years); deposit and government bond interest are exempt from income tax (PwC)."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -259,7 +259,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CN",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Figure refers to 2023, older than 2025; it is the latest available."
     },
     "goal_inflation_health": {
       "value": 0.03,
@@ -283,7 +284,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CN",
       "asOf": "2024-12-31",
-      "note": "Men 75.2, women 81.0 (2024)."
+      "note": "Men 75.2, women 81.0 (2024). Figure refers to 2024, older than 2025; it is the latest available."
     },
     "life_table_remaining": {
       "value": null,
@@ -343,39 +344,39 @@
       "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
       "sourceUrl": "https://www.populationpyramid.net/china/2040/",
       "asOf": "2024-07-31",
-      "note": "100 / old-age dependency ratio: 21.4 in 2025 (World Bank), 41.6 in 2040 and 72.2 in 2065 (UN WPP 2024)."
+      "note": "100 / old-age dependency ratio: 21.4 in 2025 (World Bank), 41.6 in 2040 and 72.2 in 2065 (UN WPP 2024). Figure refers to 2024, older than 2025; it is the latest available."
     },
     "retirement_age_default": {
       "value": 63,
       "status": "sourced",
       "sourceName": "NPC Standing Committee decision on gradually raising the statutory retirement age (13 Sep 2024), via Xinhua",
-      "sourceUrl": "http://www.news.cn/politics/20240913/d4d0e417c4204f18a6e0173c45373363/c.html",
+      "sourceUrl": "https://www.news.cn/politics/20240913/d4d0e417c4204f18a6e0173c45373363/c.html",
       "asOf": "2024-09-13",
-      "note": "From 1 Jan 2025 men's statutory age rises from 60 to 63 over 15 years (1 month every 4 months; full for men born from Sep 1976); women's from 50/55 to 55/58. Up to 3 years earlier or later is allowed."
+      "note": "From 1 Jan 2025 men's statutory age rises from 60 to 63 over 15 years (1 month every 4 months; full for men born from Sep 1976); women's from 50/55 to 55/58. Up to 3 years earlier or later is allowed. Figure refers to 2024, older than 2025; it is the latest available."
     },
     "retirement_age_government": {
       "value": 63,
       "status": "sourced",
       "sourceName": "NPC Standing Committee decision on gradually raising the statutory retirement age (13 Sep 2024), via Xinhua",
-      "sourceUrl": "http://www.news.cn/politics/20240913/d4d0e417c4204f18a6e0173c45373363/c.html",
+      "sourceUrl": "https://www.news.cn/politics/20240913/d4d0e417c4204f18a6e0173c45373363/c.html",
       "asOf": "2024-09-13",
-      "note": "Same national statutory ages apply to civil servants: men 60 rising to 63, women cadres 55 rising to 58."
+      "note": "Same national statutory ages apply to civil servants: men 60 rising to 63, women cadres 55 rising to 58. Figure refers to 2024, older than 2025; it is the latest available."
     },
     "retirement_return_low": {
       "value": 0.0065,
       "status": "assumption",
-      "sourceName": "Large-bank listed deposit rates",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceName": "Government bond yields (Trading Economics); large-bank listed deposit rates",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "Low case at the 3-month deposit rate. Safe CNY rates: 1-year deposit 0.95% and 3-year 1.25% (large-bank listed rates), 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (Oct 2026); deposit and government bond interest are exempt from income tax."
+      "note": "Low case at the 3-month deposit rate. Safe CNY rates: 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (30 Oct 2026); large-bank listed deposit rates about 0.95% (1 year) and 1.25% (3 years); deposit and government bond interest are exempt from income tax (PwC)."
     },
     "retirement_return_base": {
       "value": 0.0095,
       "status": "assumption",
-      "sourceName": "Large-bank listed deposit rates",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceName": "Government bond yields (Trading Economics); large-bank listed deposit rates",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "Base case equal to the untaxed 1-year deposit rate, below the 52-week bill yield. Safe CNY rates: 1-year deposit 0.95% and 3-year 1.25% (large-bank listed rates), 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (Oct 2026); deposit and government bond interest are exempt from income tax."
+      "note": "Base case at about the untaxed 1-year deposit rate (0.95%), below the 52-week government bill yield (1.22%). Safe CNY rates: 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (30 Oct 2026); large-bank listed deposit rates about 0.95% (1 year) and 1.25% (3 years); deposit and government bond interest are exempt from income tax (PwC)."
     },
     "retirement_return_high": {
       "value": 0.0166,
@@ -383,13 +384,13 @@
       "sourceName": "Government bond yields (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "High case at the 10-year government bond yield. Safe CNY rates: 1-year deposit 0.95% and 3-year 1.25% (large-bank listed rates), 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (Oct 2026); deposit and government bond interest are exempt from income tax."
+      "note": "High case at the 10-year government bond yield. Safe CNY rates: 52-week government bill 1.22%, 5-year bond 1.37%, 10-year 1.66% (30 Oct 2026); large-bank listed deposit rates about 0.95% (1 year) and 1.25% (3 years); deposit and government bond interest are exempt from income tax (PwC)."
     },
     "retirement_accumulation_return_low": {
       "value": 0.01,
       "status": "assumption",
       "sourceName": "Mix of CNY deposits/bonds and equity",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "About 40% equity at the low case and 60% deposits and bonds."
     },
@@ -397,7 +398,7 @@
       "value": 0.03,
       "status": "assumption",
       "sourceName": "Mix of CNY deposits/bonds and equity",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "About half equity at 4.5% and half deposits/bonds near 1.2%."
     },
@@ -405,7 +406,7 @@
       "value": 0.05,
       "status": "assumption",
       "sourceName": "Mix of CNY deposits/bonds and equity",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html",
+      "sourceUrl": "https://tradingeconomics.com/china/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "About 60% equity at the high case and 40% government bonds."
     },
@@ -445,9 +446,9 @@
       },
       "status": "sourced",
       "sourceName": "NPC Standing Committee decision on gradually raising the statutory retirement age (13 Sep 2024), via Xinhua",
-      "sourceUrl": "http://www.news.cn/politics/20240913/d4d0e417c4204f18a6e0173c45373363/c.html",
+      "sourceUrl": "https://www.news.cn/politics/20240913/d4d0e417c4204f18a6e0173c45373363/c.html",
       "asOf": "2024-09-13",
-      "note": "Urban employees' basic pension: men's pension age rising from 60 to 63 (women 50/55 to 55/58); minimum contribution years rise from 15 to 20 from 2030 (6 months a year). Pensions are raised yearly by government decision, not indexed by law."
+      "note": "Urban employees' basic pension: men's pension age rising from 60 to 63 (women 50/55 to 55/58); minimum contribution years rise from 15 to 20 from 2030 (6 months a year). Pensions are raised yearly by government decision, not indexed by law. Figure refers to 2024, older than 2025; it is the latest available."
     }
   },
   "instruments": {
@@ -455,25 +456,25 @@
       "available": true,
       "localName": "活期存款",
       "localNameEn": "Demand deposit",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html"
+      "sourceUrl": null
     },
     "fdr_3m": {
       "available": true,
       "localName": "整存整取定期存款",
       "localNameEn": "Lump-sum fixed deposit",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html"
+      "sourceUrl": null
     },
     "fdr_1y": {
       "available": true,
       "localName": "整存整取定期存款",
       "localNameEn": "Lump-sum fixed deposit",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html"
+      "sourceUrl": null
     },
     "dps": {
       "available": true,
       "localName": "零存整取",
       "localNameEn": "Installment deposit",
-      "sourceUrl": "https://www.bankofchina.com/fimarkets/lilv/fd31/202505/t20250520_25356440.html"
+      "sourceUrl": null
     },
     "sanchayapatra_5y": {
       "available": true,

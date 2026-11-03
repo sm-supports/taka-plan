@@ -18,12 +18,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 0.8193,
+      "value": 0.8285,
       "status": "sourced",
       "sourceName": "Swiss National Bank, foreign exchange rates, monthly average (cube devkum)",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/devkum",
-      "asOf": "2026-09-30",
-      "note": "CHF 0.81926 per USD, September 2026 average; World Bank 2025 average 0.83."
+      "asOf": "2026-10-31",
+      "note": "CHF 0.82854 per USD, October 2026 monthly average (September 0.81926); World Bank 2025 average 0.83."
     }
   },
   "fields": {
@@ -56,24 +56,24 @@
       "status": "sourced",
       "sourceName": "Swiss National Bank, interest rates on new business by product (cube zikrepro): private clients' savings deposits, mean",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
-      "asOf": "2026-08-31",
-      "note": "Average 0.07% in August 2026; payment accounts without withdrawal restrictions pay about 0%."
+      "asOf": "2026-09-30",
+      "note": "Average 0.069% in September 2026 (0.069% in August); payment accounts without withdrawal restrictions pay about 0%."
     },
     "fdr_3m_rate": {
       "value": 0.0003,
       "status": "sourced",
       "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 3 months, mean",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
-      "asOf": "2026-08-31",
-      "note": "Average 0.03% in August 2026; 1-month term deposits averaged -0.03%. Series covers deposits of at least CHF 100,000."
+      "asOf": "2026-09-30",
+      "note": "Average 0.029% in September 2026; 1-month term deposits averaged -0.03%. Series covers deposits of at least CHF 100,000."
     },
     "fdr_1y_rate": {
-      "value": 0.0012,
+      "value": 0.0015,
       "status": "sourced",
       "sourceName": "Swiss National Bank, interest rates on new business (zikrepro): term deposits of CHF 100,000 or more, 12 months, mean",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
-      "asOf": "2026-08-31",
-      "note": "Average 0.12% in August 2026; bank cash bonds (Kassenobligationen) paid 0.41% for 2 years and 0.61% for 5 years."
+      "asOf": "2026-09-30",
+      "note": "Average 0.152% in September 2026 (0.117% in August); bank cash bonds (Kassenobligationen) paid 0.49% for 2 years and 0.70% for 5 years. Series covers deposits of at least CHF 100,000."
     },
     "dps_rate": {
       "value": null,
@@ -166,7 +166,7 @@
     "equity_return_base": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "SMI (Trading Economics); 1-year term deposit 0.12% after tax about 0.1% (SNB zikrepro)",
+      "sourceName": "SMI (Trading Economics); 1-year term deposit 0.15% after tax about 0.1% (SNB zikrepro)",
       "sourceUrl": "https://tradingeconomics.com/switzerland/stock-market",
       "asOf": "2026-10-31",
       "note": "Base capped at the after-tax safe rate plus 4 points; with near-zero Swiss interest rates and a moderate decade for the SMI, 4% in francs is used."
@@ -214,7 +214,7 @@
     "fixed_income_return_base": {
       "value": 0.001,
       "status": "assumption",
-      "sourceName": "12-month term deposits 0.12% less income tax (SNB zikrepro)",
+      "sourceName": "12-month term deposits 0.15% less income tax (SNB zikrepro, September 2026)",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
       "note": "Base case: the after-tax 1-year deposit rate, about 0.1%."
@@ -222,7 +222,7 @@
     "fixed_income_return_high": {
       "value": 0.004,
       "status": "assumption",
-      "sourceName": "10-year Confederation bond 0.47% and 5-year cash bonds 0.61%, less income tax",
+      "sourceName": "10-year Confederation bond 0.47% and 5-year cash bonds 0.70%, less income tax",
       "sourceUrl": "https://tradingeconomics.com/switzerland/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "High case: locking in longer Confederation bonds or bank cash bonds, after tax."
@@ -378,10 +378,10 @@
     "retirement_return_base": {
       "value": 0.001,
       "status": "assumption",
-      "sourceName": "12-month term deposits 0.12% less tax (SNB zikrepro)",
+      "sourceName": "12-month term deposits 0.15% less tax (SNB zikrepro, September 2026)",
       "sourceUrl": "https://data.snb.ch/en/topics/ziredev/cube/zikrepro",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate."
+      "note": "Base case capped at the after-tax 1-year term deposit rate (about 0.1% after a 25-35% marginal income tax)."
     },
     "retirement_return_high": {
       "value": 0.004,

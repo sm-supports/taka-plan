@@ -44,10 +44,10 @@
     "policy_rate": {
       "value": 0.045,
       "status": "sourced",
-      "sourceName": "BEAC Monetary Policy Committee, press release of 28 September 2026 (Taux d'intérêt des appels d'offres)",
-      "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
+      "sourceName": "BEAC, Monetary Policy Report, September 2026 (decision of the Monetary Policy Committee for the fourth quarter of 2026)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
       "asOf": "2026-09-28",
-      "note": "BEAC tender rate held at 4.50% on 28 September 2026 (marginal lending facility 5.75%, deposit facility 0%); common to all six CEMAC countries."
+      "note": "The BEAC Monetary Policy Committee kept the tender rate (TIAO) at 4.50% for the fourth quarter of 2026 (marginal lending facility 5.75%, deposit facility 0%), as in the press release of 28 September 2026 (scanned PDF); common to all six CEMAC countries."
     },
     "savings_account_rate": {
       "value": 0.0245,

@@ -52,12 +52,12 @@
       "note": "Germany uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026."
     },
     "savings_account_rate": {
-      "value": 0.0051,
+      "value": 0.0052,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: German banks, overnight deposits from households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight deposits (Tagesgeld, current accounts) in Germany, August 2026; savings deposits at up to 3 months' notice (Sparbuch) paid 0.73%."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight deposits (Tagesgeld, current accounts) in Germany, September 2026 (0.51% in August); savings deposits at up to 3 months' notice (Sparbuch) paid 0.76%."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Bundesbank MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.28% in August 2026); no 3-month Festgeld rate from an official source was found."
+      "note": "ECB/Bundesbank MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.39% in September 2026); no 3-month Festgeld rate from an official source was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0228,
+      "value": 0.0239,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: German banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.64% and over 2 years 2.72% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (new business, September 2026; 2.28% in August)."
     },
     "dps_rate": {
       "value": null,
@@ -84,12 +84,12 @@
       "note": "Banks sell monthly savings plans (Banksparplan) and building societies sell Bausparverträge, but no average rate from an official source was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0176,
+      "value": 0.0181,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: German banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; household overnight deposits paid 0.51%. World Bank FR.INR.DPST has no Germany figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026 (1.76% in August); household overnight deposits paid 0.52%. World Bank FR.INR.DPST has no Germany figure."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -142,17 +142,17 @@
       "value": 100000,
       "status": "sourced",
       "sourceName": "Entschädigungseinrichtung deutscher Banken (EdB)",
-      "sourceUrl": "https://www.edb-banken.de/",
+      "sourceUrl": "https://www.edb-banken.de/fragen-und-antworten",
       "asOf": "2026-10-31",
-      "note": "EUR 100,000 per customer per bank; up to EUR 500,000 for six months after certain life events (home sale, marriage, divorce, retirement, severance, death). Savings and cooperative banks are covered by their own protection schemes."
+      "note": "EUR 100,000 per customer per bank, interest included; up to EUR 500,000 when certain life events (home sale, marriage, divorce, death, retirement, severance) occur within six months of the money being credited. Savings and cooperative banks are covered by their own protection schemes."
     },
     "credit_card_rate_cap": {
-      "value": 0.0939,
+      "value": 0.0946,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: German banks, revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "No legal cap beyond the general ban on usurious interest; figure is the average rate on revolving loans, overdrafts and extended credit card credit combined (no card-only series)."
+      "asOf": "2026-09-30",
+      "note": "No legal cap beyond the general ban on usurious interest; figure is the average rate on revolving loans, overdrafts and extended credit card credit combined, September 2026 (no card-only series)."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -205,18 +205,18 @@
     "fixed_income_return_low": {
       "value": 0.008,
       "status": "assumption",
-      "sourceName": "Household savings deposits at notice 0.73% (ECB MFI statistics); online overnight accounts pay more",
+      "sourceName": "Household savings deposits at notice 0.76% (ECB MFI statistics, Sep 2026); online overnight accounts pay more",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L23.D.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: easy-access savings after tax, with rates drifting lower."
     },
     "fixed_income_return_base": {
-      "value": 0.0165,
+      "value": 0.017,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.28% less 26.375% = 1.68%",
+      "sourceName": "Household deposits up to 1 year 2.39% (Sep 2026) less 26.375% = 1.76%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case: just under the after-tax 1-year term deposit rate (the yearly tax-free allowance can lift this for small savers)."
+      "note": "Base case: just under the after-tax 1-year term deposit rate (the yearly EUR 1,000 tax-free allowance can lift this for small savers)."
     },
     "fixed_income_return_high": {
       "value": 0.024,
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DE",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "Latest World Bank figure is for 2024 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -286,7 +287,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/germany",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Men 79.6, women 84.1 (UN WPP estimate for 2026); World Bank 2024 figure 80.8."
     },
     "life_table_remaining": {
@@ -322,8 +323,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/germany",
-      "asOf": "2026-12-31",
-      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate, mid-year)."
     },
     "support_ratio": {
       "value": null,
@@ -352,10 +353,10 @@
     "retirement_age_default": {
       "value": 67,
       "status": "sourced",
-      "sourceName": "Sozialgesetzbuch VI, sections 35 and 235 (gesetze-im-internet.de)",
-      "sourceUrl": "https://www.gesetze-im-internet.de/sgb_6/__235.html",
+      "sourceName": "Sozialgesetzbuch VI, section 35 (standard age 67) and section 235 (transition), gesetze-im-internet.de",
+      "sourceUrl": "https://www.gesetze-im-internet.de/sgb_6/__35.html",
       "asOf": "2026-10-31",
-      "note": "Standard pension age (Regelaltersgrenze) 67 for people born from 1964; transitional ages 66 years 4 months (born 1960), 66 y 6 m (1961), 66 y 8 m (1962), 66 y 10 m (1963); same for men and women; minimum 5 insurance years."
+      "note": "Standard pension age (Regelaltersgrenze) 67 under section 35, which applies to everyone born from 1964 (so to anyone born after 1975); section 235 sets transitional ages of 66 years 4 months (born 1960) to 66 y 10 m (1963); same for men and women; minimum 5 insurance years."
     },
     "retirement_age_government": {
       "value": 67,
@@ -368,18 +369,18 @@
     "retirement_return_low": {
       "value": 0.008,
       "status": "assumption",
-      "sourceName": "Household savings deposits at notice 0.73% (ECB MFI statistics)",
+      "sourceName": "Household savings deposits at notice 0.76% (ECB MFI statistics, Sep 2026); online overnight accounts pay more",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L23.D.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: easy-access savings after tax."
     },
     "retirement_return_base": {
-      "value": 0.0165,
+      "value": 0.017,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.28% less 26.375% = 1.68%",
+      "sourceName": "Household deposits up to 1 year 2.39% (Sep 2026) less 26.375% = 1.76%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate."
+      "note": "Base case capped just under the after-tax 1-year term deposit rate (1.76%)."
     },
     "retirement_return_high": {
       "value": 0.022,
@@ -392,7 +393,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.7%; DAX record (Trading Economics)",
+      "sourceName": "After-tax 1-year deposit 1.76%; DAX record (Trading Economics)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -400,7 +401,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.7%; equity base 5.5%",
+      "sourceName": "After-tax 1-year deposit 1.76%; equity base 5.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.DE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.7-2.4% after tax."
@@ -441,7 +442,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Germany has no general statutory gratuity or end-of-service payment; a severance of half a month's pay per year of service applies only when the employer offers it in a redundancy dismissal (section 1a Kündigungsschutzgesetz) or under a settlement or social plan."
+      "note": "No general statutory gratuity or end-of-service payment was found; section 1a Kündigungsschutzgesetz gives half a month's pay per year of service only when the employer dismisses for operational reasons, offers it in the notice and the employee does not sue (gesetze-im-internet.de/kschg/__1a.html); otherwise severance comes only from a settlement or social plan. Not marked absent because no official page stating that no general entitlement exists was read."
     },
     "public_pension_scheme": {
       "value": null,
@@ -495,7 +496,7 @@
       "localName": "Unverzinsliche Schatzanweisungen (Bubills)",
       "localNameEn": "Federal Treasury discount paper",
       "note": "Auctioned by the Finance Agency mainly to institutions; can be bought through a bank or broker.",
-      "sourceUrl": "https://www.deutsche-finanzagentur.de/"
+      "sourceUrl": "https://tradingeconomics.com/germany/government-bond-yield"
     },
     "tbond_5y": {
       "available": true,

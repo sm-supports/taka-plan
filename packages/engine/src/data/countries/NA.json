@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 1,
+  "code": "NA",
+  "iso3": "NAM",
+  "nameEn": "Namibia",
+  "nameNative": "Namibia",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "af",
+    "kj",
+    "ng",
+    "naq",
+    "en"
+  ],
+  "currency": {
+    "code": "NAD",
+    "symbol": "N$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 16.71,
+      "status": "sourced",
+      "sourceName": "Federal Reserve H.10 (FRED DEXSFUS), South African rand per US dollar, 30 October 2026",
+      "sourceUrl": "https://fred.stlouisfed.org/series/DEXSFUS",
+      "asOf": "2026-10-30",
+      "note": "The Namibia dollar is pegged one to one to the South African rand; R16.7055 per dollar on 30 October 2026 (World Bank 2025 average 17.89). The Bank of Namibia daily rates page could not be read."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.054,
+      "status": "sourced",
+      "sourceName": "Namibia Statistics Agency CPI, September 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/namibia/inflation-cpi/news/590579",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: annual inflation 5.4% in September 2026 (5.0% in August), the highest in over two years, driven by transport; the NSA site shows 5.4% as its latest rate but its bulletin could not be read."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia inflation projections (4.2% for 2026, 4.0% for 2027); NSA CPI averaged about 4.7% a year over 2021-2025",
+      "sourceUrl": "https://tradingeconomics.com/namibia/interest-rate/news/595772",
+      "asOf": "2026-10-31",
+      "note": "The Namibia dollar is pegged to the rand and inflation averaged about 4.7% over 2021-2025, while the Bank of Namibia projects 4.2% for 2026 and 4.0% for 2027 (revised up in October 2026), so 4.5% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.07,
+      "status": "sourced",
+      "sourceName": "Bank of Namibia Monetary Policy Committee, October 2026 decision, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/namibia/interest-rate/news/595772",
+      "asOf": "2026-10-28",
+      "note": "Repo rate raised 25 basis points to 7.00% at the October 2026 meeting (6.75% since June 2026; 6.75% also shown for Q1 2026 in the Bank of Namibia Quarterly Bulletin June 2026). Secondary source; the October statement itself was not read."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Namibia publishes only the weighted average deposit rate (4.19% in March 2026); no official savings-account rate was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official 3-month fixed deposit rate was found; the Bank of Namibia publishes only the weighted average deposit rate (4.19% in March 2026)."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official 1-year fixed deposit rate could be read; an aggregator citing the Bank of Namibia lists about 4.15% for household 1-year term deposits in May 2026 but its page could not be loaded."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or published rate was found in Bank of Namibia statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0419,
+      "status": "sourced",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table II.9 selected interest rates (average deposit rate)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-03-31",
+      "note": "Weighted average deposit rate of banks 4.19% at the end of March 2026 (4.16% in December 2025); later monthly figures were not found."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; government bonds and treasury bills are sold by Bank of Namibia auction."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0716,
+      "status": "sourced",
+      "sourceName": "Bank of Namibia, Treasury bills auction results, 3 September 2026 (91-day bill maturing 4 December 2026)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/f049b13a-3399-44e8-8284-1cd683606a4d/.aspx",
+      "asOf": "2026-09-03",
+      "note": "Weighted average yield 7.163% on the 91-day bill; the 364-day bill averaged 7.649% at the same auction. Later results were not found."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0946,
+      "status": "sourced",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table III.2(a) internal registered stock auctions (GC32, maturing 15 April 2032)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-03-31",
+      "note": "Weighted yield to maturity 9.46% at a March 2026 auction of the 9.00% GC32 (about 6 years to maturity); later bond auction results were not found."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1022,
+      "status": "sourced",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table III.2(a) internal registered stock auctions (GC35, maturing 15 July 2035)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-03-31",
+      "note": "Weighted yield to maturity 10.22% at the second March 2026 auction of the 9.50% GC35 (about 9.3 years); the bulletin's average 10-year government bond yield was 10.08% in the first quarter of 2026. Later bond auction results were not found."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Namibia, individual taxes on personal income (withholding taxes)",
+      "sourceUrl": "https://taxsummaries.pwc.com/republic-of-namibia/individual/taxes-on-personal-income",
+      "asOf": "2026-07-16",
+      "note": "10% withholding tax on gross interest from a Namibian bank or unit trust paid to anyone other than a Namibian company; it is a final tax."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Namibia, individual income determination (interest income)",
+      "sourceUrl": "https://taxsummaries.pwc.com/republic-of-namibia/individual/income-determination",
+      "asOf": "2026-07-16",
+      "note": "There is no savings certificate, but interest on stock or securities issued by the government, including treasury bills, is exempt for natural persons."
+    },
+    "deposit_insurance_limit": {
+      "value": 50000,
+      "status": "sourced",
+      "sourceName": "Government Gazette No. 8842, GN 13 of 2026: Regulations relating to maximum coverage limits for guaranteed deposits (Deposit Guarantee Act, 2018)",
+      "sourceUrl": "https://www.lac.org.na/laws/2026/8842.pdf",
+      "asOf": "2026-02-10",
+      "note": "Maximum coverage N$50,000 per depositor per member institution, up from N$25,000 (GN 24 of 2020, repealed)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap specific to credit cards or official typical credit card rate was found; the prime lending rate was 10.50% after the October 2026 repo increase."
+    },
+    "equity_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table 3.3 NSX summary statistics",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for the local market, with returns near the tax-free treasury bill yield less a little."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table 3.3 NSX summary statistics; treasury bill auction results",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Base case: the NSX Local Index rose from about 511 (March 2022) to 819 (March 2026) but had a flat decade before that and the market is small and dominated by dual-listed South African shares, so equities are put about 3 points above the tax-free 1-year bill yield (7.6%), within the 4-point cap."
+    },
+    "equity_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table 3.3 NSX summary statistics",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade for local and dual-listed shares or a global index fund in Namibia dollar terms."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Federal Reserve H.10 rand per US dollar (Namibia dollar at par)",
+      "sourceUrl": "https://fred.stlouisfed.org/series/DEXSFUS",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a small depreciation of the rand-pegged Namibia dollar."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Federal Reserve H.10 rand per US dollar; World Bank official exchange rate history",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 3% a year of rand (and Namibia dollar) depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Federal Reserve H.10 rand per US dollar",
+      "sourceUrl": "https://fred.stlouisfed.org/series/DEXSFUS",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a weaker rand."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table II.9 (average deposit rate 4.19%)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits at about 4% less the 10% final withholding tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Treasury bills auction results, 3 September 2026; PwC Tax Summaries (government interest exempt for individuals)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/f049b13a-3399-44e8-8284-1cd683606a4d/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of fixed deposits (about 3.8% after tax) and tax-free treasury bills (7.2-7.6%)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Treasury bills auction results, 3 September 2026",
+      "sourceUrl": "https://www.bon.com.na/getattachment/f049b13a-3399-44e8-8284-1cd683606a4d/.aspx",
+      "asOf": "2026-10-31",
+      "note": "High case: 12-month treasury bills (7.65%) or short government bonds, tax-free for individuals."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NAMFISA (the insurance regulator) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per 1,000 Namibia dollars of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Namibia was found from an official or international source."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health cover is provided by medical aid funds, but no published contribution rates by age per 100,000 Namibia dollars of cover were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.0749,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Namibia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NA",
+      "asOf": "2023-12-31",
+      "note": "7.5% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table I.16(a) national CPI by group (health)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "The health price index rose about 3.9% a year from 2020 to March 2026 and 5.3% in the year to September 2026, but private medical costs rise faster than the subsidised public part of the index, so 1.5 points above the 4.5% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table I.16(a) national CPI by group (education)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "The education price index rose about 3.1% a year from 2020 to March 2026 (fees reset each January); private school fees are assumed to rise slightly faster than the 4.5% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 67.516,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Namibia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NA",
+      "asOf": "2024-12-31",
+      "note": "67.5 years in 2024 (men 63.5, women 71.5); UN WPP 2024 gives 67.8 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.9,
+            "men": 15.7,
+            "women": 20.0
+          },
+          {
+            "age": 65,
+            "total": 14.9,
+            "men": 12.7,
+            "women": 16.6
+          },
+          {
+            "age": 70,
+            "total": 11.8,
+            "men": 10.0,
+            "women": 13.5
+          },
+          {
+            "age": 80,
+            "total": 7.0,
+            "men": 5.7,
+            "women": 8.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/namibia/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 15.7
+          },
+          {
+            "year": 2040,
+            "value": 12.05
+          },
+          {
+            "year": 2065,
+            "value": 6.21
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/namibia/2040/",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person aged 65+ = 100 / old-age dependency ratio: ratio 6.37 in 2025 (World Bank) gives 15.7; 8.3 in 2040 (populationpyramid.net/namibia/2040/) gives 12.05; 16.1 in 2065 (populationpyramid.net/namibia/2065/) gives 6.21."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Namibia has no statutory retirement or pension age for private-sector workers: the Labour Act sets none and employers choose (often 60 or 65), per The Namibian, 28 July 2025; there is no public contributory pension."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "The Namibian, 'Labour Act silent on retirement age' (Public Service Act 1995)",
+      "sourceUrl": "https://www.namibian.com.na/labour-actsilent-on-retirement-age",
+      "asOf": "2025-07-28",
+      "note": "Public servants retire at 60 under the Public Service Act 1995; early retirement from 55 with approval. Secondary source (the Act on NamibLII could not be loaded); older than 2025 rule still current."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026, table II.9 (average deposit rate)",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits after the 10% withholding tax."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Treasury bills auction results, 3 September 2026; PwC Tax Summaries",
+      "sourceUrl": "https://www.bon.com.na/getattachment/f049b13a-3399-44e8-8284-1cd683606a4d/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of fixed deposits and tax-free treasury bills, below the 1-year bill yield of 7.65% (tax-free for individuals)."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Treasury bills auction results, 3 September 2026",
+      "sourceUrl": "https://www.bon.com.na/getattachment/f049b13a-3399-44e8-8284-1cd683606a4d/.aspx",
+      "asOf": "2026-10-31",
+      "note": "High case: most of the money in treasury bills and short government bonds, tax-free for individuals."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Low case: a cautious mix earning a little above after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026; equity base 10%; gold base 7%",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of government bonds (9-10%), equity (local and global) unit trusts and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Namibia, Quarterly Bulletin June 2026; equity high 13%",
+      "sourceUrl": "https://www.bon.com.na/getattachment/ddae85e6-f701-4c46-8ada-bacf584a1a2e/.aspx",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 1700,
+      "status": "sourced",
+      "sourceName": "New Era, 'Old-age pension breathes life into Gibeon' (2026/27 Budget)",
+      "sourceUrl": "https://neweralive.na/?p=384459",
+      "asOf": "2026-04-01",
+      "note": "The universal old-age grant was raised by N$100 to N$1,700 a month in the 2026/27 financial year (from April 2026), per New Era, 10 April 2026 (the same article also repeats the earlier N$1,600 level, which applied from April 2024)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "New Era, 'Old-age pension breathes life into Gibeon'; Ministry of Gender Equality old age grant page",
+      "sourceUrl": "https://neweralive.na/?p=384459",
+      "asOf": "2026-04-10",
+      "note": "Paid to citizens and permanent residents aged 60 and older living in Namibia, without a means test (non-contributory); the ministry page could not be loaded (certificate error)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 7,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30.33
+      },
+      "status": "sourced",
+      "sourceName": "Labour Act 11 of 2007, section 35 (severance pay), Legal Assistance Centre annotated statute",
+      "sourceUrl": "https://www.lac.org.na/laws/annoSTAT/Labour%20Act%2011%20of%202007.pdf",
+      "asOf": "2008-11-01",
+      "note": "At least one week's remuneration per year of continuous service after 12 months, paid on dismissal (not for misconduct or poor performance), death, or resignation or retirement at 65; one week = 7/30.33 of a month. Law in force since 2008 (older than 2025, still current)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Namibia has no public contributory old-age pension: the National Pension Fund planned under the Social Security Act has still not been implemented (The Brief and New Era, 2026; ILO actuarial review call); the Social Security Commission covers maternity, sick leave and death benefits only, and civil servants have their own fund (GIPF).",
+      "absent": true
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit",
+      "note": "Banks offer fixed and notice deposits; the Bank of Namibia publishes only an overall average deposit rate."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit, 12 months"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bill",
+      "note": "91, 182, 273 and 364-day bills auctioned by the Bank of Namibia for the government; interest is tax-free for individuals.",
+      "sourceUrl": "https://www.bon.com.na/getattachment/f049b13a-3399-44e8-8284-1cd683606a4d/.aspx"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Internal registered stock",
+      "localNameEn": "Government bond (internal registered stock)",
+      "note": "Fixed-rate GC bonds auctioned by the Bank of Namibia and listed on the Namibian Stock Exchange.",
+      "sourceUrl": "https://www.bon.com.na/CMSTemplates/Bon/Files/bon.com.na/c1/c1ed9c78-8610-492e-99ea-650bc925323b.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Internal registered stock",
+      "localNameEn": "Government bond (internal registered stock)",
+      "note": "Lines maturing 2035, 2037, 2040 and later are on issue (GC35, GC37, GC40).",
+      "sourceUrl": "https://www.bon.com.na/CMSTemplates/Bon/Files/bon.com.na/ed/ed0a9410-ee67-4185-b96c-68a7ea79cec8.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trusts (collective investment schemes)",
+      "note": "Supervised by NAMFISA; interest earned in unit trusts carries the 10% withholding tax."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "Gold is mostly bought as jewellery or imported bullion coins."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Namibia",
+      "url": "https://www.bon.com.na/"
+    },
+    "insuranceRegulator": {
+      "name": "Namibia Financial Institutions Supervisory Authority (NAMFISA)",
+      "url": "https://www.namfisa.com.na/"
+    },
+    "insuranceComplaints": {
+      "name": "NAMFISA consumer complaints",
+      "url": "https://www.namfisa.com.na/consumer-complaints/"
+    },
+    "pensionScheme": null,
+    "oldAgeAllowance": {
+      "name": "Old Age Grant (Ministry of Gender Equality)",
+      "url": "https://mgecw.gov.na/old-age-grants-"
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health and Social Services (public health facilities)",
+      "url": "https://mhss.gov.na/"
+    },
+    "depositInsurance": {
+      "name": "Namibia Deposit Guarantee Authority (NDGA)",
+      "url": "https://www.ndga.com.na/"
+    },
+    "statistics": {
+      "name": "Namibia Statistics Agency",
+      "url": "https://nsa.org.na/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

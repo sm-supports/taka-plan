@@ -53,8 +53,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Greek banks, overnight deposits from households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight deposits in Greece was 0.03% in June-August 2026."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight deposits in Greece was 0.03% every month from April to September 2026."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -62,15 +62,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Bank of Greece MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.17% in August 2026); no separate 3-month rate found and bankofgreece.gr refused automated access."
+      "note": "ECB/Bank of Greece MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.28% in September 2026); no separate 3-month rate found and bankofgreece.gr refused automated access."
     },
     "fdr_1y_rate": {
-      "value": 0.0117,
+      "value": 0.0128,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Greek banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (1.24% in July 2026); deposits of 1-2 years paid 1.43% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year: 1.28% in September 2026 (1.17% in August)."
     },
     "dps_rate": {
       "value": null,
@@ -81,12 +81,12 @@
       "note": "No standard monthly recurring-deposit product with a published average rate was found for Greece."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0119,
+      "value": 0.0122,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Greek banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; overnight deposits paid 0.03%. World Bank FR.INR.DPST has no Greece figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits in September 2026 (1.19% in August); overnight deposits paid 0.03%. World Bank FR.INR.DPST has no Greece figure."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -134,7 +134,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Greece income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/greece/individual/income-determination",
       "asOf": "2026-09-08",
-      "note": "No savings certificate exists; interest on Greek State bonds and promissory notes (treasury bills) acquired by individuals is exempt from income tax."
+      "note": "No savings certificate exists; PwC states that interest on bond loans and promissory notes of the Greek State acquired by individuals is exempt from income tax."
     },
     "deposit_insurance_limit": {
       "value": 100000,
@@ -145,17 +145,17 @@
       "note": "EUR 100,000 per depositor per bank under the EU Deposit Guarantee Schemes Directive, paid by TEKE in Greece; teke.gr did not show the figure to automated access."
     },
     "credit_card_rate_cap": {
-      "value": 0.1687,
+      "value": 0.1688,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Greek banks, extended credit card credit to households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.A2Z3.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate, not a legal cap: average 16.87% on extended credit card debt in August 2026; revolving loans and overdrafts averaged 8.25%."
+      "asOf": "2026-09-30",
+      "note": "Typical rate, not a legal cap: average 16.88% on extended credit card debt in September 2026 (16.87% in August)."
     },
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "Athens General index 2,619 on 30 Oct 2026, up 31% in a year but still 60% below its 1999 high; after-tax 1-year deposit 1.0%",
+      "sourceName": "Athens General index 2,619 on 30 Oct 2026, up about 30% in a year but still 60% below its 1999 high; after-tax 1-year deposit 1.1%",
       "sourceUrl": "https://tradingeconomics.com/greece/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: Greek shares repeat a long flat stretch like 2000-2020 and earn little more than safe instruments."
@@ -203,7 +203,7 @@
     "fixed_income_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.17% less 15% withholding = 1.0% (ECB MFI statistics)",
+      "sourceName": "Household deposits up to 1 year 1.28% (September 2026) less 15% withholding = 1.1% (ECB MFI statistics)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax term deposits only."
@@ -211,7 +211,7 @@
     "fixed_income_return_base": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.0%; tax-free 3-month treasury bill 2.76%",
+      "sourceName": "After-tax 1-year deposit 1.1%; tax-free 3-month treasury bill 2.76%",
       "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of after-tax term deposits and tax-exempt Greek treasury bills, kept below the bill rate."
@@ -262,7 +262,7 @@
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GR",
       "asOf": "2023-12-31",
-      "note": "Out-of-pocket spending was 34.3% of current health expenditure, among the highest in the EU."
+      "note": "Out-of-pocket spending was 34.3% of current health expenditure in 2023, among the highest in the EU (latest available; older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.03,
@@ -354,7 +354,7 @@
       "sourceName": "European Commission, Your social security rights in Greece (July 2026)",
       "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/f476ffdd-db90-48e3-8e1b-cd861a3f82e1_en",
       "asOf": "2026-07-31",
-      "note": "General pension age 67 with at least 15 insurance years (4,500 days); a full pension is also payable from 62 with 40 insurance years."
+      "note": "General pension age 67 with at least 15 insurance years (4,500 days); a full pension is also payable from 62 with 40 insurance years. The July 2026 guide gives no later age for younger cohorts, so 67 is used for people born after 1975 (it may be raised in future if Greece applies its life-expectancy link)."
     },
     "retirement_age_government": {
       "value": 67,
@@ -367,7 +367,7 @@
     "retirement_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.17% less 15% withholding = 1.0%",
+      "sourceName": "Household deposits up to 1 year 1.28% (September 2026) less 15% withholding = 1.1% (ECB MFI statistics)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.GR.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax term deposits only."
@@ -375,7 +375,7 @@
     "retirement_return_base": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.0%; tax-free 3-month treasury bill 2.76%",
+      "sourceName": "After-tax 1-year deposit 1.1%; tax-free 3-month treasury bill 2.76%",
       "sourceUrl": "https://tradingeconomics.com/greece/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of term deposits and tax-exempt treasury bills, kept well below the bill rate."
@@ -391,7 +391,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.0%; Athens General record (Trading Economics)",
+      "sourceName": "After-tax 1-year deposit 1.1%; Athens General record (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/greece/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."

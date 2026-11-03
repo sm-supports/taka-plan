@@ -6,7 +6,9 @@
   "nameNative": "Timór-Leste",
   "region": "east_asia_pacific",
   "languages": [
+    "tet",
     "pt",
+    "id",
     "en"
   ],
   "currency": {
@@ -320,8 +322,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/timor-leste/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026 (rows 60-64, 65-69, 70-74, 80-84); totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -345,7 +347,7 @@
       "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
       "sourceUrl": "https://www.populationpyramid.net/timor-leste/2040/",
       "asOf": "2025-12-31",
-      "note": "100 / old-age dependency ratio: 8.48 (2025, World Bank), 8.8 (2040) and 17.4 (2065, populationpyramid.net/timor-leste/2065/)."
+      "note": "100 / old-age dependency ratio: 8.48 (2025, World Bank) gives 11.8; populationpyramid.net (UN WPP 2024) gives 8.8 for 2040 (11.4) and 17.4 for 2065 (5.7, populationpyramid.net/timor-leste/2065/)."
     },
     "retirement_age_default": {
       "value": 60,
@@ -417,7 +419,7 @@
       "sourceName": "Tatoli (national news agency): INSS plans monthly payments for elderly and disabled",
       "sourceUrl": "https://tatoli.tl/2024/02/22/inss-planeia-halo-pagamentu-ba-idozu-no-invalidez-kada-fulan/",
       "asOf": "2024-02-22",
-      "note": "Social pension US$60 a month at 60-69, US$80 at 70-79 and US$100 at 80+ (Tatoli, 10 January 2024 and 22 February 2024)."
+      "note": "Social pension US$60 a month from 60 (US$80 at 70-79, US$100 at 80+), per Tatoli 10 January and 22 February 2024; figure dates from 2024 (older than 2025) and no 2025-2026 update was found. Not payable alongside income from work."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -431,7 +433,7 @@
       "sourceName": "Tatoli (national news agency): Government adjusts the social pension for the disabled and elderly",
       "sourceUrl": "https://tatoli.tl/2024/01/10/governu-halo-ajustamentu-rejime-juridiku-pensaun-sosial-invalides-no-ferik-katuas/",
       "asOf": "2024-01-10",
-      "note": "Social pension (replaced SAII) from 60 with higher rates at 70 and 80; it cannot be combined with income from work, per Tatoli 22 February 2024."
+      "note": "Non-contributory social pension from 60, with higher rates at 70 and 80; since the 2024 amendment it cannot be combined with income from work (Tatoli 10 January 2024). Figure dates from 2024 (older than 2025)."
     },
     "gratuity_rule": {
       "value": null,
@@ -452,10 +454,10 @@
         "taxFree": null
       },
       "status": "sourced",
-      "sourceName": "Tatoli (national news agency): INSS contributions and the social security regime",
-      "sourceUrl": "https://tatoli.tl/2026/05/14/bobo-apela-ba-traballador-hakat-ba-inss-atu-asesu-ba-remunerasaun/",
-      "asOf": "2026-05-14",
-      "note": "Contributory INSS scheme under Law 12/2016: 4% employee plus 6% employer; old-age pension from 60 (Tatoli 20 July 2026). No automatic indexation rule was confirmed."
+      "sourceName": "Tatoli (national news agency): social security old-age rights from 60; contributions per Tatoli 14 May 2026",
+      "sourceUrl": "https://tatoli.tl/2026/07/20/kfp-esklarese-regra-no-prosedimentu-reforma-ba-funsionariu-publiku-iha-raeoa/",
+      "asOf": "2026-07-20",
+      "note": "Contributory INSS scheme under Law 12/2016: old-age pension from 60 (Tatoli 20 July 2026); 4% employee plus 6% employer contributions (Tatoli 14 May 2026). No automatic indexation rule was confirmed."
     }
   },
   "instruments": {
@@ -538,8 +540,9 @@
       "url": "https://mssi.gov.tl/"
     },
     "publicHealthCover": {
-      "name": "Ministério da Saúde (public health services)",
-      "url": "https://ms.gov.tl/"
+      "name": "Ministério da Saúde (public health services, free at the point of care)",
+      "url": "https://ms.gov.tl/",
+      "note": "The ministry site returned HTTP 502 when checked on 3 November 2026."
     },
     "depositInsurance": null,
     "statistics": {

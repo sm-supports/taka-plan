@@ -6,8 +6,11 @@
   "nameNative": "Pilipinas",
   "region": "east_asia_pacific",
   "languages": [
+    "fil",
     "en",
-    "tl"
+    "ceb",
+    "ilo",
+    "hil"
   ],
   "currency": {
     "code": "PHP",
@@ -102,7 +105,7 @@
       "sourceName": "BSP Selected Economic and Financial Indicators (30 October 2026)",
       "sourceUrl": "https://www.bsp.gov.ph/Statistics/keystat/sefi.pdf",
       "asOf": "2026-10-26",
-      "note": "91-day T-bill auction rate 6.26% on 26 October 2026 (182-day 6.43%, 364-day 6.58%)."
+      "note": "91-day T-bill auction rate 6.26% on 26 October 2026 (182-day 6.43%, 364-day 6.58%), up from a 5.08% January-October average after the October policy rate rise."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -113,12 +116,12 @@
       "note": "No source for the current 5-year benchmark yield was reachable (BVAL and Bureau of the Treasury pages blocked or empty)."
     },
     "tbond_10y_rate": {
-      "value": 0.0815,
+      "value": 0.0821,
       "status": "sourced",
       "sourceName": "Trading Economics (Philippines 10-year government bond yield)",
       "sourceUrl": "https://tradingeconomics.com/philippines/government-bond-yield",
-      "asOf": "2026-10-30",
-      "note": "Secondary source; the page also shows 8.06% for the same date in its history table."
+      "asOf": "2026-10-27",
+      "note": "Secondary source: 10-year yield 8.21% on 27 October 2026, the highest since May 2010 (8.10% on 22 October); the page shows 8.15% on 3 November 2026."
     },
     "tax_bank_interest": {
       "value": 0.2,
@@ -126,7 +129,7 @@
       "sourceName": "PwC Worldwide Tax Summaries: Philippines, individual income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/philippines/individual/income-determination",
       "asOf": "2026-07-02",
-      "note": "Philippine-source interest is subject to a 20% final tax; long-term deposits (5 years or more) can be exempt under conditions; foreign currency deposit interest is taxed at 15%."
+      "note": "Philippine-source interest is subject to a 20% final tax; long-term deposits and investments evidenced by certificates can be exempt under conditions; foreign currency deposit interest is taxed at 15%. Page last reviewed 2 July 2026."
     },
     "tax_sanchayapatra_profit": {
       "value": 0.2,
@@ -140,9 +143,9 @@
       "value": 1000000,
       "status": "sourced",
       "sourceName": "Philippine Deposit Insurance Corporation",
-      "sourceUrl": "https://www.pdic.gov.ph/",
+      "sourceUrl": "https://www.pdic.gov.ph/mdic",
       "asOf": "2025-03-15",
-      "note": "Maximum deposit insurance coverage PHP 1 million per depositor per bank, effective 15 March 2025."
+      "note": "Maximum deposit insurance coverage raised from PHP 500,000 to PHP 1 million per depositor per bank, effective 15 March 2025."
     },
     "credit_card_rate_cap": {
       "value": 0.24,
@@ -150,7 +153,7 @@
       "sourceName": "BSP Circular No. 1098, Series of 2020 (ceiling on credit card interest)",
       "sourceUrl": "https://www.bsp.gov.ph/Regulations/Issuances/2020/c1098.pdf",
       "asOf": "2020-11-03",
-      "note": "Annual cap of 24% (2% a month), effective 3 November 2020, subject to BSP review every six months; later revisions to the cap could not be checked."
+      "note": "Annual cap of 24% on credit card interest (installment loans: 1% a month add-on), effective 3 November 2020 and subject to BSP review every six months; figure older than 2025 and later revisions could not be checked."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -219,10 +222,10 @@
     "fixed_income_return_high": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "10-year government bond yield 8.15% less 20% final tax",
+      "sourceName": "10-year government bond yield 8.21% (27 Oct 2026) less 20% final tax",
       "sourceUrl": "https://tradingeconomics.com/philippines/government-bond-yield",
       "asOf": "2026-10-31",
-      "note": "High case: locking in long government bonds at about 8% (6.5% after tax)."
+      "note": "High case: locking in long government bonds at about 8.2% (6.6% after tax), allowing for some reinvestment at lower rates."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -261,7 +264,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PH",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 figure (older than 2025), latest available in World Bank WDI."
     },
     "goal_inflation_health": {
       "value": 0.06,
@@ -285,7 +289,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PH",
       "asOf": "2024-12-31",
-      "note": "UN WPP 2024 (via populationpyramid.net) gives 70.2 for 2026 (men 67.2, women 73.2)."
+      "note": "2024 figure (older than 2025). UN WPP 2024 (via populationpyramid.net) gives 70.2 for 2026 (men 67.2, women 73.2)."
     },
     "life_table_remaining": {
       "value": null,
@@ -320,8 +324,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/philippines/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026 (mid-year reference); totals at 60, 70 and 80 are the mean of men and women (the page gives a total only at 65, 14.2)."
     },
     "support_ratio": {
       "value": null,
@@ -361,7 +365,7 @@
       "sourceName": "Republic Act No. 8291 (GSIS Act of 1997), Section 13 (via Lawphil)",
       "sourceUrl": "https://lawphil.net/statutes/repacts/ra1997/ra_8291_1997.html",
       "asOf": "1997-05-30",
-      "note": "Compulsory retirement at 65; optional retirement from 60 with at least 15 years of service."
+      "note": "Compulsory retirement at 65 with at least 15 years of service; optional retirement from 60 with at least 15 years of service. The law dates from 1997 (older than 2025) and still applies."
     },
     "retirement_return_low": {
       "value": 0.035,
@@ -382,7 +386,7 @@
     "retirement_return_high": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "10-year government bond yield 8.15% less 20% final tax",
+      "sourceName": "10-year government bond yield 8.21% (27 Oct 2026) less 20% final tax",
       "sourceUrl": "https://tradingeconomics.com/philippines/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "High case: laddered Retail Treasury Bonds and long government bonds after tax."
@@ -417,7 +421,7 @@
       "sourceName": "Republic Act No. 11916 (Social Pension for Indigent Senior Citizens) via Lawphil",
       "sourceUrl": "https://lawphil.net/statutes/repacts/ra2022/ra_11916_2022.html",
       "asOf": "2022-07-30",
-      "note": "Indigent senior citizens receive a monthly stipend of not less than PHP 1,000 (doubled from PHP 500), paid through DSWD."
+      "note": "Indigent senior citizens (60 and over) receive a monthly stipend of not less than PHP 1,000 (doubled from PHP 500), paid through DSWD; the law dates from 2022 (older than 2025) and no later change to the amount was found. Only for seniors who pass the DSWD indigency test."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -431,7 +435,7 @@
       "sourceName": "Republic Act No. 11916 (Social Pension for Indigent Senior Citizens) via Lawphil",
       "sourceUrl": "https://lawphil.net/statutes/repacts/ra2022/ra_11916_2022.html",
       "asOf": "2022-07-30",
-      "note": "Senior citizens are people aged 60 and over (RA 7432 as amended); the stipend is only for seniors who qualify as indigent under DSWD's means test."
+      "note": "Senior citizens are people aged 60 and over (RA 7432 as amended); the stipend is only for seniors who qualify as indigent under DSWD's means test. Law dates from 2022 (older than 2025)."
     },
     "gratuity_rule": {
       "value": null,
@@ -445,7 +449,7 @@
       "sourceName": "Republic Act No. 7641 (Retirement Pay Law, Labor Code Art. 302) via Lawphil",
       "sourceUrl": "https://lawphil.net/statutes/repacts/ra1992/ra_7641_1992.html",
       "asOf": "1992-12-09",
-      "note": "Where no company plan exists, employees retiring at 60-65 with at least 5 years' service get half a month's salary per year: 15 days plus 1/12 of the 13th-month pay plus 5 days' service incentive leave = 22.5 days. Daily rate taken as monthly salary / 26 working days (common practice for a six-day week)."
+      "note": "Where no company plan exists, employees aged 60-65 with at least 5 years' service get half a month's salary per year: 15 days plus 1/12 of the 13th-month pay plus up to 5 days' service incentive leave = 22.5 days (law of 1992, older than 2025, still in force; retail, service and agricultural firms with 10 or fewer workers are exempt). Daily rate taken as monthly salary / 26 working days (common practice for a six-day week)."
     },
     "public_pension_scheme": {
       "value": null,

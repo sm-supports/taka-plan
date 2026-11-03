@@ -20,7 +20,7 @@
       "value": 9.2302,
       "status": "sourced",
       "sourceName": "Norges Bank exchange rates (USD/NOK)",
-      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
       "asOf": "2026-10-30",
       "note": "NOK 9.2302 per US dollar on 30 October 2026 (read via the Norges Bank data API); World Bank 2025 average 10.40."
     }
@@ -46,9 +46,9 @@
       "value": 0.045,
       "status": "sourced",
       "sourceName": "Norges Bank key policy rate (data.norges-bank.no, series IR B.KPRA.SD.R)",
-      "sourceUrl": "https://data.norges-bank.no/api/data/IR/B.KPRA.SD.R?lastNObservations=1&format=csv",
-      "asOf": "2026-10-29",
-      "note": "Policy rate 4.50% (read via the Norges Bank data API)."
+      "sourceUrl": "https://data.norges-bank.no/api/data/IR/B.KPRA.SD.R?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
+      "asOf": "2026-10-30",
+      "note": "Policy rate 4.50% on 30 October 2026 (read via the Norges Bank data API)."
     },
     "savings_account_rate": {
       "value": 0.0288,
@@ -64,7 +64,7 @@
       "sourceName": "SSB table 11018: interest rates on household deposits with conditions (fixed-term and notice)",
       "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
       "asOf": "2026-09-30",
-      "note": "No breakdown by maturity is published; deposits with conditions (fixed-term and notice accounts) averaged 4.60% in September 2026. The 3-month treasury bill yielded 4.73%."
+      "note": "No breakdown by maturity is published; deposits with conditions (fixed-term and notice accounts) averaged 4.60% in September 2026. The 3-month treasury bill yielded 4.72% on 30 October 2026."
     },
     "fdr_1y_rate": {
       "value": 0.046,
@@ -72,7 +72,7 @@
       "sourceName": "SSB table 11018: interest rates on household deposits with conditions (fixed-term and notice)",
       "sourceUrl": "https://www.ssb.no/en/statbank/table/11018",
       "asOf": "2026-09-30",
-      "note": "4.60% in September 2026 for fixed-term and notice deposits (no maturity breakdown); the 12-month treasury bill yielded 4.81% on 29 October 2026."
+      "note": "4.60% in September 2026 for fixed-term and notice deposits (no maturity breakdown); the 12-month treasury bill yielded 4.80% on 30 October 2026."
     },
     "dps_rate": {
       "value": null,
@@ -99,28 +99,28 @@
       "note": "Norway has no government savings certificate or retail savings bond sold to individuals; government bonds and bills trade through banks and brokers."
     },
     "tbill_91d_rate": {
-      "value": 0.0473,
+      "value": 0.04723,
       "status": "sourced",
       "sourceName": "Norges Bank, generic government interest rates (3-month treasury bill)",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
-      "asOf": "2026-10-29",
-      "note": "4.73% on 29 October 2026 (6-month 4.73%, 12-month 4.81%); read via the Norges Bank data API."
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
+      "asOf": "2026-10-30",
+      "note": "4.723% on 30 October 2026 (4.731% on 29 October; 12-month 4.804%); read via the Norges Bank data API."
     },
     "tbond_5y_rate": {
-      "value": 0.04603,
+      "value": 0.04597,
       "status": "sourced",
       "sourceName": "Norges Bank, generic government interest rates (5-year government bond)",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
-      "asOf": "2026-10-29",
-      "note": "4.603% on 29 October 2026; read via the Norges Bank data API."
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
+      "asOf": "2026-10-30",
+      "note": "4.597% on 30 October 2026 (4.603% on 29 October); read via the Norges Bank data API."
     },
     "tbond_10y_rate": {
-      "value": 0.0444,
+      "value": 0.04435,
       "status": "sourced",
       "sourceName": "Norges Bank, generic government interest rates (10-year government bond)",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
-      "asOf": "2026-10-29",
-      "note": "4.444% on 29 October 2026; read via the Norges Bank data API."
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
+      "asOf": "2026-10-30",
+      "note": "4.435% on 30 October 2026 (4.444% on 29 October); read via the Norges Bank data API."
     },
     "tax_bank_interest": {
       "value": 0.22,
@@ -128,7 +128,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Norway income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/norway/individual/income-determination",
       "asOf": "2026-09-03",
-      "note": "No withholding: interest is net capital income, taxed at 22% in the annual assessment; net wealth tax may also apply to large deposits."
+      "note": "No withholding: net positive capital income, including interest, is taxed at 22% in the annual assessment (PwC states the 22% rate for net capital income); net wealth tax may also apply to large deposits."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -182,7 +182,7 @@
       "value": 0.015,
       "status": "assumption",
       "sourceName": "Norges Bank USD/NOK exchange rate",
-      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
       "asOf": "2026-10-31",
       "note": "Low case: weak dollar gold price and a stronger krone."
     },
@@ -190,7 +190,7 @@
       "value": 0.05,
       "status": "assumption",
       "sourceName": "Norges Bank USD/NOK exchange rate; long-run dollar gold trend",
-      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
       "asOf": "2026-10-31",
       "note": "Long-run dollar gold trend of about 4-5% with no expected trend in the krone against the dollar."
     },
@@ -198,7 +198,7 @@
       "value": 0.09,
       "status": "assumption",
       "sourceName": "Norges Bank USD/NOK exchange rate",
-      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?lastNObservations=1&format=csv",
+      "sourceUrl": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
       "asOf": "2026-10-31",
       "note": "High case with strong dollar gold and a weaker krone, as in 2013-2023."
     },
@@ -221,8 +221,8 @@
     "fixed_income_return_high": {
       "value": 0.0375,
       "status": "assumption",
-      "sourceName": "Norges Bank: 12-month treasury bill 4.81% less 22% tax = 3.75%",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
+      "sourceName": "Norges Bank: 12-month treasury bill 4.80% less 22% tax = 3.75%",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
       "asOf": "2026-10-31",
       "note": "High case: short government paper and the best deposit rates after tax."
     },
@@ -385,8 +385,8 @@
     "retirement_return_high": {
       "value": 0.0375,
       "status": "assumption",
-      "sourceName": "Norges Bank: 12-month treasury bill 4.81% less 22% tax",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv",
+      "sourceName": "Norges Bank: 12-month treasury bill 4.80% less 22% tax",
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv",
       "asOf": "2026-10-31",
       "note": "High case: short government paper and best deposit rates after tax."
     },
@@ -497,19 +497,19 @@
       "localName": "Statskasseveksler",
       "localNameEn": "Treasury bills",
       "note": "Issued by Norges Bank for the state, mainly to institutions.",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv"
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv"
     },
     "tbond_5y": {
       "available": true,
       "localName": "Statsobligasjoner",
       "localNameEn": "Norwegian government bonds",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv"
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv"
     },
     "tbond_10y": {
       "available": true,
       "localName": "Statsobligasjoner",
       "localNameEn": "Norwegian government bonds",
-      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?lastNObservations=1&format=csv"
+      "sourceUrl": "https://data.norges-bank.no/api/data/GOVT_GENERIC_RATES/B.3M+12M+5Y+10Y.TBIL+GBON?startPeriod=2026-10-30&endPeriod=2026-10-30&format=csv"
     },
     "equity_fund": {
       "available": true,

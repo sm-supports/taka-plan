@@ -64,7 +64,7 @@
       "sourceName": "Fortune Indonesia survey of the four largest banks' deposit rates",
       "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg",
       "asOf": "2026-10-27",
-      "note": "3-month rupiah deposit: 2.25-3.00% across the four largest banks (mean about 2.6%); BI data for all banks show 5.8% for new 3-month deposits in August 2026, lifted by special rates."
+      "note": "3-month rupiah deposit: 2.25-3.00% across the four largest banks (mean about 2.6%), 27 October 2026. Deposits paying more than the LPS guarantee rate (3.75%) are not guaranteed."
     },
     "fdr_1y_rate": {
       "value": 0.026,
@@ -72,7 +72,7 @@
       "sourceName": "Fortune Indonesia survey of the four largest banks' deposit rates",
       "sourceUrl": "https://www.fortuneidn.com/finance/bunga-deposito-bank-tertinggi-oktober-2026-d7w02-00-yyq45-pk2kcg",
       "asOf": "2026-10-27",
-      "note": "12-month rupiah deposit: 2.50-3.00% across the four largest banks (mean about 2.6%). LPS guarantees only deposits paying up to 3.75%."
+      "note": "12-month rupiah deposit: 2.50-3.00% across the four largest banks (mean about 2.6%), 27 October 2026. Deposits paying more than the LPS guarantee rate (3.75%) are not guaranteed."
     },
     "dps_rate": {
       "value": null,
@@ -88,7 +88,7 @@
       "sourceName": "OJK, weighted average rupiah third-party funds rate (via Infobank)",
       "sourceUrl": "https://infobanknews.com/ojk-nilai-tren-penurunan-suku-bunga-kredit-bank-berlanjut",
       "asOf": "2026-03-31",
-      "note": "Weighted average across current, savings and time deposits; World Bank FR.INR.DPST (time deposits) was 5.41% for 2025. Rates rose after BI hikes from June 2026."
+      "note": "OJK weighted average across current, savings and time deposits, reported 8 May 2026 (Infobank). World Bank FR.INR.DPST (time deposits) was 5.41% for 2025."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.058,
@@ -111,14 +111,16 @@
       "status": "sourced",
       "sourceName": "Trading Economics, Indonesia 5-year government bond yield (secondary source)",
       "sourceUrl": "https://tradingeconomics.com/indonesia/government-bond-yield",
-      "asOf": "2026-10-30"
+      "asOf": "2026-10-30",
+      "note": "Secondary source; Trading Economics showed 7.71% on 2 November 2026 after a 0.19-point rise, consistent with about 7.52% on 30 October."
     },
     "tbond_10y_rate": {
       "value": 0.0764,
       "status": "sourced",
       "sourceName": "Trading Economics, Indonesia 10-year government bond yield (secondary source)",
       "sourceUrl": "https://tradingeconomics.com/indonesia/government-bond-yield",
-      "asOf": "2026-10-30"
+      "asOf": "2026-10-30",
+      "note": "Secondary source; previous close 7.64% (30 October 2026), 7.71% on 2 November."
     },
     "tax_bank_interest": {
       "value": 0.2,
@@ -131,26 +133,26 @@
     "tax_sanchayapatra_profit": {
       "value": 0.1,
       "status": "sourced",
-      "sourceName": "Bareksa: ORI030 schedule and terms",
-      "sourceUrl": "https://www.bareksa.com/berita/sbn/2026-06-29/jadwal-lengkap-ori030-kupon-diumumkan-3-juli-penawaran-dibuka-6-juli-2026",
-      "asOf": "2026-06-29",
-      "note": "Retail government bond (ORI/SR) coupons carry 10% final income tax."
+      "sourceName": "PwC Worldwide Tax Summaries, Indonesia individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/indonesia/individual/income-determination",
+      "asOf": "2026-06-11",
+      "note": "Interest on bonds, including retail government bonds (ORI/SR), is subject to 10% final income tax withheld by the payer."
     },
     "deposit_insurance_limit": {
       "value": 2000000000,
       "status": "sourced",
-      "sourceName": "Industry.co.id, citing LPS deposit guarantee",
-      "sourceUrl": "https://www.industry.co.id/read/152894/bunga-deposito-juli-2026-perbandingan-bri-bni-mandiri-bca-mana-paling-untung",
-      "asOf": "2026-07-10",
-      "note": "LPS guarantees up to Rp 2 billion per depositor per bank, only if the deposit rate does not exceed the LPS guarantee rate (3.75% for commercial banks to 31 January 2027). The LPS site was not reachable."
+      "sourceName": "Lembaga Penjamin Simpanan (LPS), press release 23/GKLM/2026",
+      "sourceUrl": "https://lps.go.id/konten/unggahan/2026/06/Siaran-Pers-TBP-LPS-Okt-26.pdf",
+      "asOf": "2026-09-29",
+      "note": "Under the LPS Law, deposits up to Rp 2 billion per depositor per bank are guaranteed, provided the rate paid does not exceed the LPS guarantee rate (3.75% for rupiah deposits at commercial banks, 1 October 2026 to 31 January 2027)."
     },
     "credit_card_rate_cap": {
-      "value": 0.21,
-      "status": "sourced",
-      "sourceName": "Cermati, citing Bank Indonesia credit card rate cap",
-      "sourceUrl": "https://www.cermati.com/artikel/suku-bunga-kartu-kredit-di-indonesia",
-      "asOf": "2025-10-20",
-      "note": "Bank Indonesia cap of 1.75% a month (about 21% a year) since 1 July 2021 (Kompas TV, 26 May 2021)."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A Bank Indonesia cap of 1.75% a month (about 21% a year) since July 2021 is widely reported, but the only page read was a company page, which this dataset does not cite; the Bank Indonesia page could not be found."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -261,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ID",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025); latest World Bank value."
     },
     "goal_inflation_health": {
       "value": 0.045,
@@ -285,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ID",
       "asOf": "2024-12-31",
-      "note": "UN WPP 2024 (via populationpyramid.net) gives 71.6 for 2026."
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 71.6 for 2026. World Bank figure is for 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -320,8 +323,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/indonesia/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there). Values are the UN WPP 2024 estimates for calendar 2026 (mid-year date used)."
     },
     "support_ratio": {
       "value": null,
@@ -348,12 +351,12 @@
       "note": "100 / old-age dependency ratio: 11.06 (2025, World Bank), 18.0 (2040) and 28.6 (2065, populationpyramid.net/indonesia/2065/)."
     },
     "retirement_age_default": {
-      "value": 59,
+      "value": 65,
       "status": "sourced",
-      "sourceName": "Wikipedia: Retirement age (Indonesia), citing PP 45/2015",
+      "sourceName": "Wikipedia: Retirement age (Indonesia), citing Government Regulation 45/2015 Article 15 (secondary source)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
-      "asOf": "2025-01-01",
-      "note": "Jaminan Pensiun age started at 56 in 2015 and rises one year every three years (59 from 2025, 60 from 2028) to 65 in 2043; same for men and women. JHT lump sum at 56."
+      "asOf": "2026-10-31",
+      "note": "Jaminan Pensiun age was 56 at the start, 57 from 2019, then rises one year every three years to 65 in 2043 (59 in 2025-2027). Someone born after 1975 reaches pension age in 2040 or later, so 65 applies (64 for people born 1976-1978); same for men and women. The official regulation page (peraturan.bpk.go.id) returned 403."
     },
     "retirement_age_government": {
       "value": null,
@@ -440,7 +443,7 @@
       "valueJson": {
         "entryAgeMin": null,
         "entryAgeMax": null,
-        "pensionFromAge": 59,
+        "pensionFromAge": 65,
         "nomineeUntilAge": null,
         "inflationLinked": true,
         "taxFree": null
@@ -449,7 +452,7 @@
       "sourceName": "BPJS Ketenagakerjaan, Jaminan Pensiun for wage earners",
       "sourceUrl": "https://www.bpjsketenagakerjaan.go.id/penerima-upah.html",
       "asOf": "2026-01-01",
-      "note": "Jaminan Pensiun: 2% employer plus 1% employee on wages up to Rp 10,547,400; monthly pension after 15 years of contributions, Rp 411,400 to 4,932,300 a month in 2026 (limits raised yearly). Pension age 59 from 2025 (Wikipedia, PP 45/2015). Separate JHT savings: 3.7% employer plus 2% employee."
+      "note": "Jaminan Pensiun (BPJS Ketenagakerjaan): 2% employer plus 1% employee on wages up to Rp 10,547,400; monthly pension Rp 411,400 to 4,932,300 in 2026 (limits raised yearly, hence inflationLinked). Pension age is 59 in 2025-2027 and rises to 65 by 2043 (Government Regulation 45/2015), so 65 is used for people born after 1975. Separate JHT savings: 3.7% employer plus 2% employee."
     }
   },
   "instruments": {
@@ -513,7 +516,7 @@
       "available": true,
       "localName": "Emas batangan",
       "localNameEn": "Gold bars",
-      "note": "Gold bars and coins are freely bought; also sold in small grams via pawnshop and bank gold savings."
+      "note": "Gold bars and coins are freely bought; also sold in small gram amounts through gold savings accounts."
     }
   },
   "institutions": {

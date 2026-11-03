@@ -31,7 +31,7 @@
       "sourceName": "Kenya National Bureau of Statistics (KNBS) CPI, October 2026, via Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/kenya/inflation-cpi",
       "asOf": "2026-10-31",
-      "note": "Secondary source (the KNBS site failed a TLS check). Annual inflation 7.3% in October 2026, up from 6.8% in September (CBK also shows 6.8% for September); food inflation 10.2%."
+      "note": "Secondary source (the KNBS site failed a TLS check). Annual inflation 7.3% in October 2026, up from 6.8% in September; the Central Bank of Kenya website also shows 7.3% for October 2026."
     },
     "inflation_projection": {
       "value": 0.055,
@@ -66,12 +66,12 @@
       "note": "The CBK headline table gives one weighted average deposit rate (6.94%, September 2026), not a 3-month rate; no official 3-month term-deposit rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0694,
-      "status": "sourced",
-      "sourceName": "Central Bank of Kenya, commercial banks' weighted average interest rates, deposit rate, September 2026",
-      "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv",
-      "asOf": "2026-09-30",
-      "note": "Weighted average deposit rate across maturities (not 1 year only), 6.94% in September 2026; rates fell from 11.2% in September 2024 as the CBR was cut."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CBK publishes one weighted average deposit rate across all maturities (6.94%, September 2026, shown under bank_deposit_avg_rate), not a 1-year term-deposit rate; no official 1-year rate was found."
     },
     "dps_rate": {
       "value": null,
@@ -358,12 +358,12 @@
       "note": "Pensionable age is 60 for men and women; early retirement pension from 50 (section 36). The NSSF benefits page also mentions an age benefit at 55 under the old provident fund rules."
     },
     "retirement_age_government": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The mandatory retirement age for public servants (widely reported as 60, 65 for persons with disabilities) could not be read from an official source: the Public Service Superannuation Fund site did not resolve."
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Citizen Digital report of the High Court ruling upholding the public service retirement age (Public Service Commission Regulations 2020)",
+      "sourceUrl": "https://citizen.digital/article/high-court-dismisses-petition-to-scrap-mandatory-retirement-age-n367968",
+      "asOf": "2025-08-14",
+      "note": "Secondary source: public officers retire at 60 (65 for registered persons with disabilities); a Public Service Commission (Amendment) Bill to put these ages in the Act was not found to be enacted."
     },
     "retirement_return_low": {
       "value": 0.05,
@@ -414,20 +414,26 @@
       "note": "High case: more long bonds and shares, with yields staying near current levels."
     },
     "old_age_allowance_monthly": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Kenya runs the Inua Jamii older persons cash transfer, but the State Department for Social Protection site refused connections and the current amount could not be read from an official source."
+      "value": 2000,
+      "status": "sourced",
+      "sourceName": "Citizen Digital report of the Ministry of Labour and Social Protection statement on the June 2026 Inua Jamii payment cycle",
+      "sourceUrl": "https://citizen.digital/article/government-releases-ksh243-billion-for-june-inua-jamii-cash-transfers-n387738",
+      "asOf": "2026-06-30",
+      "note": "Secondary source dated 5 August 2026 (the State Department for Social Protection site refused connections): KES 2,000 per beneficiary for the June 2026 payment cycle, for persons aged 70 and above; a Treasury proposal to lower the age to 60 had not been enacted."
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Eligibility rules of the Inua Jamii older persons cash transfer could not be read from an official source (site unreachable)."
+      "valueJson": {
+        "menAge": 70,
+        "womenAge": 70,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Citizen Digital report of the Ministry of Labour and Social Protection statement on the June 2026 Inua Jamii payment cycle",
+      "sourceUrl": "https://citizen.digital/article/government-releases-ksh243-billion-for-june-inua-jamii-cash-transfers-n387738",
+      "asOf": "2026-06-30",
+      "note": "Secondary source: Kenyan citizens aged 70 and above with a national ID; designed as a universal (not means-tested) social pension since 2017, but people already receiving a public service pension are excluded and new enrolment happens only in registration drives."
     },
     "gratuity_rule": {
       "value": null,
@@ -473,7 +479,7 @@
       "available": true,
       "localName": "Amana ya muda maalum (mwaka 1)",
       "localNameEn": "Fixed deposit, 1 year",
-      "note": "CBK publishes one weighted average deposit rate (6.94%, September 2026).",
+      "note": "No official 1-year rate; CBK publishes one weighted average deposit rate (6.94%, September 2026).",
       "sourceUrl": "https://www.centralbank.go.ke/uploads/interest_rates/1654955992_Commercial%20banks%20Weighted%20Average%20Rates.csv"
     },
     "dps": {
@@ -545,7 +551,7 @@
     "oldAgeAllowance": {
       "name": "Inua Jamii older persons cash transfer, State Department for Social Protection",
       "url": "https://www.socialprotection.go.ke/",
-      "note": "Site unreachable when checked on 31 October 2026."
+      "note": "Site refused connections when checked on 31 October 2026."
     },
     "publicHealthCover": {
       "name": "Social Health Authority (SHA)",

@@ -48,15 +48,15 @@
       "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
       "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
       "asOf": "2026-09-16",
-      "note": "Estonia uses the euro; ECB deposit facility rate 2.50% since 16 September 2026 (2.25% from June 2026), confirmed in the ECB FM dataset on 31 October 2026."
+      "note": "Estonia uses the euro; ECB deposit facility rate 2.50% since 16 September 2026 (2.25% from 17 June 2026, 2.00% before), per the ECB FM dataset."
     },
     "savings_account_rate": {
       "value": 0.0032,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Estonian banks, overnight deposits from households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight deposits in Estonia, August 2026 (0.31% in July)."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight deposits in Estonia, September 2026 (0.32% in August)."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -64,15 +64,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Eesti Pank MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.35% in August 2026); no separate 3-month term deposit rate was found."
+      "note": "ECB/Eesti Pank MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.41% in September 2026); no separate 3-month term deposit rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0235,
+      "value": 0.0241,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Estonian banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 3.08% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year; September 2026 (2.34% in August); 1-2 years paid 3.24% in September."
     },
     "dps_rate": {
       "value": null,
@@ -83,12 +83,12 @@
       "note": "Estonian banks sell regular monthly savings deposits (kogumishoius), but no average or official rate for them was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0231,
+      "value": 0.0236,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Estonian banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; household overnight deposits paid 0.32%. World Bank FR.INR.DPST has no Estonia figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026; household overnight deposits paid 0.32%. World Bank FR.INR.DPST has no Estonia figure."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -147,17 +147,17 @@
       "note": "EUR 100,000 per depositor per credit institution, plus up to a further EUR 100,000 for six months for funds from property sales, redundancy, retirement and similar events."
     },
     "credit_card_rate_cap": {
-      "value": 0.1792,
+      "value": 0.1801,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Estonian banks, revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, August 2026."
+      "asOf": "2026-09-30",
+      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, September 2026 (17.92% in August)."
     },
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "OMX Tallinn total return index 2,255 on 30 Oct 2026, up 19% in a year",
+      "sourceName": "OMX Tallinn index about 2,241 on 2 Nov 2026, up 16.5% in a year",
       "sourceUrl": "https://tradingeconomics.com/estonia/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: the small Tallinn market returns little more than safe deposits over a long period."
@@ -165,7 +165,7 @@
     "equity_return_base": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "OMX Tallinn (Trading Economics); 1-year deposit 2.35% less 22% tax = 1.8%",
+      "sourceName": "OMX Tallinn (Trading Economics); deposits up to 1 year 2.41% less 22% tax = 1.9%",
       "sourceUrl": "https://tradingeconomics.com/estonia/stock-market",
       "asOf": "2026-10-31",
       "note": "Base capped near the after-tax safe rate plus about 4 points because the Tallinn exchange is small and concentrated, even though its recent record is strong."
@@ -205,7 +205,7 @@
     "fixed_income_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.35% (ECB MFI statistics), assuming rates fall, less 22% tax",
+      "sourceName": "Household deposits up to 1 year 2.41% (ECB MFI, Sep 2026), assuming rates fall, less 22% tax",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposit rates drift down towards 1.5% before the 22% tax."
@@ -213,7 +213,7 @@
     "fixed_income_return_base": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.35% less 22% tax = 1.8%",
+      "sourceName": "Household deposits up to 1 year 2.41% (ECB MFI, Sep 2026) less 22% tax = 1.88%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: after-tax 1-year term deposit rate."
@@ -221,7 +221,7 @@
     "fixed_income_return_high": {
       "value": 0.024,
       "status": "assumption",
-      "sourceName": "Household deposits 1-2 years 3.08% less 22% tax = 2.4%",
+      "sourceName": "Household deposits 1-2 years 3.24% (ECB MFI, Sep 2026) less 22% tax = 2.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.H.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "High case: locking in longer term deposits after tax."
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=EE",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "Latest World Bank figure is for 2024 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.05,
@@ -354,7 +355,7 @@
       "sourceName": "Sotsiaalkindlustusamet (Social Insurance Board), retirement age",
       "sourceUrl": "https://www.sotsiaalkindlustusamet.ee/en/pension-and-benefits/applying-pension/retirement-age",
       "asOf": "2026-10-31",
-      "note": "Pension age reached 65 in 2026 (people born in 1961), same for men and women; from 2027 it follows life expectancy at 65: 65y1m in 2027, 65y3m in 2028, 65y4m in 2029. Old-age pension needs 15 years of qualifying service."
+      "note": "Pension age reached 65 in 2026 (people born in 1961), same for men and women. From 2027 it is 65 plus an adjustment for life expectancy at 65 (at most 3 months a year, set two years ahead): 65y1m in 2027, 65y3m in 2028, 65y4m in 2029. People born after 1975 will reach pension age after 2040, so their age will be at least 65 and likely higher, but no official figure for those cohorts exists; 65 is the statutory base. Old-age pension needs 15 years of qualifying service."
     },
     "retirement_age_government": {
       "value": null,
@@ -367,7 +368,7 @@
     "retirement_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.35% (ECB MFI), assuming rates fall, less 22% tax",
+      "sourceName": "Household deposits up to 1 year 2.41% (ECB MFI, Sep 2026), assuming rates fall, less 22% tax",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposit rates drift lower."
@@ -375,7 +376,7 @@
     "retirement_return_base": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.35% less 22% tax = 1.8%",
+      "sourceName": "Household deposits up to 1 year 2.41% (ECB MFI, Sep 2026) less 22% tax = 1.88%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case capped at the after-tax 1-year term deposit rate."
@@ -383,7 +384,7 @@
     "retirement_return_high": {
       "value": 0.024,
       "status": "assumption",
-      "sourceName": "Household deposits 1-2 years 3.08% less 22% tax = 2.4%",
+      "sourceName": "Household deposits 1-2 years 3.24% (ECB MFI, Sep 2026) less 22% tax = 2.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.H.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of longer term deposits after tax."
@@ -391,7 +392,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.8%; OMX Tallinn record",
+      "sourceName": "After-tax 1-year deposit 1.9%; OMX Tallinn record",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -399,7 +400,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.8%; equity base 5.5%",
+      "sourceName": "After-tax 1-year deposit 1.9%; equity base 5.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.8-2.4% after tax."
@@ -407,7 +408,7 @@
     "retirement_accumulation_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "After-tax 1-2 year deposit 2.4%; equity high 7.5%",
+      "sourceName": "After-tax 1-2 year deposit 2.5%; equity high 7.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.EE.B.L22.H.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
@@ -418,7 +419,7 @@
       "sourceName": "Sotsiaalkindlustusamet (Social Insurance Board), national pension (rahvapension)",
       "sourceUrl": "https://www.sotsiaalkindlustusamet.ee/en/pension-and-benefits/types-pensions/national-pension",
       "asOf": "2026-04-01",
-      "note": "National pension EUR 414.10 a month (rate after the April 2026 indexation; page updated 15 October 2026); paid only to people without the 15 years of service needed for an old-age pension."
+      "note": "National pension EUR 414.10 a month as shown by the Social Insurance Board (rates are indexed each 1 April); paid only to people without the 15 years of service needed for an old-age pension."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -432,7 +433,7 @@
       "sourceName": "Sotsiaalkindlustusamet, national pension conditions",
       "sourceUrl": "https://www.sotsiaalkindlustusamet.ee/en/pension-and-benefits/types-pensions/national-pension",
       "asOf": "2026-10-31",
-      "note": "Paid from pension age to people who lack 15 years of pensionable service, have lived in Estonia for at least 5 years immediately before applying, and get no pension from another country; not income-tested."
+      "note": "Paid from pension age (65 in 2026, then linked to life expectancy) to people who lack the 15 years of pensionable service, have lived in Estonia for at least 5 years immediately before applying, and get no pension from another country; not income-tested."
     },
     "gratuity_rule": {
       "value": null,

@@ -29,7 +29,7 @@
       "value": 0.027,
       "status": "sourced",
       "sourceName": "IMF World Economic Outlook, inflation (average consumer prices), Turkmenistan",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2025-12-31",
       "note": "IMF estimate for 2025 (projection 5.6% for 2026); Turkmenistan does not publish a regular CPI. SESRIC, via Trading Economics, gives 8.0% for 2025, so the figure is uncertain. Latest year 2025."
     },
@@ -37,7 +37,7 @@
       "value": 0.05,
       "status": "assumption",
       "sourceName": "IMF WEO projections for Turkmenistan (4.1-4.6% in 2027-2030); 2021-2025 average about 7%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "There is no published inflation target; 5% sits between the IMF's medium-term projections and the higher 2021-2025 record, allowing for poor price data."
     },
@@ -205,7 +205,7 @@
       "value": 0.03,
       "status": "assumption",
       "sourceName": "IMF WEO inflation projections for Turkmenistan (4.1-4.6% in 2027-2030)",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "Low case: bank deposits pay below inflation, as is common under administered interest rates."
     },
@@ -213,7 +213,7 @@
       "value": 0.05,
       "status": "assumption",
       "sourceName": "IMF WEO inflation projections for Turkmenistan; inflation projection 5%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "No deposit rate statistics are published, so the base case assumes manat deposits roughly keep pace with the 5% inflation assumption."
     },
@@ -221,7 +221,7 @@
       "value": 0.07,
       "status": "assumption",
       "sourceName": "IMF WEO inflation projections for Turkmenistan; inflation projection 5%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "High case: deposits earn about 2 points above inflation."
     },
@@ -277,7 +277,7 @@
       "value": 0.06,
       "status": "assumption",
       "sourceName": "IMF WEO inflation projections for Turkmenistan",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "No education price index is published; tuition and study costs (often abroad) are assumed to rise 1 point faster than general inflation."
     },
@@ -369,7 +369,7 @@
       "value": 0.03,
       "status": "assumption",
       "sourceName": "IMF WEO inflation projections for Turkmenistan",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "Low case: a retiree's manat deposits earn below inflation."
     },
@@ -377,7 +377,7 @@
       "value": 0.045,
       "status": "assumption",
       "sourceName": "IMF WEO inflation projections; fixed income base 5%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "Base case slightly below the assumed safe deposit return, since no deposit or bill rate is published to check against."
     },
@@ -385,7 +385,7 @@
       "value": 0.065,
       "status": "assumption",
       "sourceName": "Fixed income high 7%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "High case: deposits keep earning a little above inflation."
     },
@@ -393,7 +393,7 @@
       "value": 0.03,
       "status": "assumption",
       "sourceName": "Fixed income low 3%; equity low 3%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if both deposits and shares lag inflation."
     },
@@ -401,7 +401,7 @@
       "value": 0.055,
       "status": "assumption",
       "sourceName": "Fixed income base 5%; equity base 6.5%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM",
       "asOf": "2026-10-31",
       "note": "Base case: mostly manat deposits with some global shares, since local investment options are very limited."
     },

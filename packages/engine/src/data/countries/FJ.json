@@ -6,9 +6,9 @@
   "nameNative": "Viti",
   "region": "east_asia_pacific",
   "languages": [
-    "en",
-    "hi",
-    "fj"
+    "fj",
+    "hif",
+    "en"
   ],
   "currency": {
     "code": "FJD",
@@ -55,7 +55,7 @@
       "sourceName": "Reserve Bank of Fiji statistics table 2.8 (commercial banks' savings deposit rate)",
       "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.8-Commercial-Banks-Lending-and-Deposit-Rates.xlsx",
       "asOf": "2026-08-31",
-      "note": "Weighted average savings deposit rate 0.31% in August 2026; one large bank's posted savings rate is 0.05%."
+      "note": "Weighted average savings deposit rate 0.31% in August 2026 (RBF table 2.8)."
     },
     "fdr_3m_rate": {
       "value": 0.0015,
@@ -63,7 +63,7 @@
       "sourceName": "Reserve Bank of Fiji statistics table 2.9 (carded time deposit rates)",
       "sourceUrl": "https://www.rbf.gov.fj/wp-content/uploads/2026/10/2.9-Commercial-Banks-Time-Deposit-Rates.xlsx",
       "asOf": "2026-08-31",
-      "note": "Carded 3-month rate range across banks 0.05-0.25%; midpoint used. Negotiated rates for large deposits run up to 2.7%."
+      "note": "Carded 3-month rate range across banks 0.05-0.25% in August 2026; midpoint used. Negotiated rates for large deposits run up to 2.69%."
     },
     "fdr_1y_rate": {
       "value": 0.0015,
@@ -87,7 +87,7 @@
       "sourceName": "World Bank WDI FR.INR.DPST (deposit interest rate)",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=FJ",
       "asOf": "2024-12-31",
-      "note": "RBF table 2.8 shows the weighted average time deposit rate at 2.01% and savings at 0.31% in August 2026; it has no combined average."
+      "note": "RBF table 2.8 shows the weighted average time deposit rate at 2.01% and savings at 0.31% in August 2026; it has no combined average. Figure is for 2024 (older than 2025)."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.03,
@@ -144,12 +144,12 @@
       "note": "Searched RBF, IMF and World Bank material: no deposit insurance scheme for Fiji was found, and no source stating its absence."
     },
     "credit_card_rate_cap": {
-      "value": 0.205,
-      "status": "sourced",
-      "sourceName": "Posted credit card rate of a large commercial bank in Fiji",
-      "sourceUrl": "https://www.anz.com/fiji/en/interest-rates/",
-      "asOf": "2026-09-23",
-      "note": "No legal cap found; standard card rate 20.50% p.a. at one large bank."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap on card interest was found; the only published card rate seen was one commercial bank's posted rate, which this dataset does not cite (company page). RBF table 2.8 gives no card rate."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -249,38 +249,19 @@
     },
     "health_premium_table": {
       "value": null,
-      "valueJson": {
-        "per": 100000,
-        "bands": [
-          {
-            "maxAge": 35,
-            "low": 652,
-            "high": 981
-          },
-          {
-            "maxAge": 50,
-            "low": 1088,
-            "high": 1460
-          },
-          {
-            "maxAge": 65,
-            "low": 2014,
-            "high": 4263
-          }
-        ]
-      },
-      "status": "sourced",
-      "sourceName": "Published premium table of a Fiji medical insurer (comprehensive plan, FJD 120,000 limit per condition)",
-      "sourceUrl": "https://www.bsplife.com.fj/wp-content/uploads/2025/10/Straight-Spread-Premier-Care-Brochure.pdf",
-      "asOf": "2025-10-01",
-      "note": "Single annual premiums scaled to 100,000 cover (19-23: 783; 24-38: 1,083-1,177; 39-53: 1,306-1,752; 54-64+: 2,417-5,116 per 120,000). Entry to age 55, cover ends at 65; no band beyond 65."
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The only premium table found was one insurer's own brochure, which this dataset does not cite (company source); no regulator or industry-wide premium guide was found."
     },
     "oop_health_share": {
       "value": 0.0831,
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=FJ",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Figure is for 2023 (older than 2025); latest World Bank value."
     },
     "goal_inflation_health": {
       "value": 0.045,
@@ -304,7 +285,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=FJ",
       "asOf": "2024-12-31",
-      "note": "UN WPP 2024 (via populationpyramid.net) gives 67.8 for 2026."
+      "note": "UN WPP 2024 (via populationpyramid.net) gives 67.8 for 2026. World Bank figure is for 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -339,8 +320,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/fiji/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there). Values are the UN WPP 2024 estimates for calendar 2026 (mid-year date used)."
     },
     "support_ratio": {
       "value": null,
@@ -371,8 +352,8 @@
       "status": "sourced",
       "sourceName": "Fiji Sun: FNPF retirement withdrawal age stays at 55",
       "sourceUrl": "https://fijisun.com.fj/news/nation/retirement-withdrawal-age-stays-at-55-dpm-prasad-clarifies",
-      "asOf": "2025-08-31",
-      "note": "FNPF full withdrawal age is 55 for men and women; no statutory private-sector retirement age."
+      "asOf": "2025-08-23",
+      "note": "FNPF entitlement (full withdrawal) age is 55 for men and women, confirmed by the Finance Minister on 23 August 2025; there is no statutory private-sector retirement age. Applies equally to people born after 1975."
     },
     "retirement_age_government": {
       "value": 60,
@@ -380,7 +361,7 @@
       "sourceName": "Fiji Times: civil service retirement age revised to 60",
       "sourceUrl": "https://www.fijitimes.com.fj/?p=622432",
       "asOf": "2023-01-01",
-      "note": "Civil Service (General) (Amendment) Regulations 2023: retirement at 60, optional at 55; extensions to 62 for scarce-skill posts."
+      "note": "Civil Service (General) (Amendment) Regulations 2023: retirement at 60, optional at 55; extensions to 62 for scarce-skill posts. Source is from January 2023 (older than 2025); no later change was found."
     },
     "retirement_return_low": {
       "value": 0.005,
@@ -409,7 +390,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "FNPF credited 8.75% (2025) and 9.5% (2026); safe rates 1-4%",
+      "sourceName": "FNPF credited 9.5% for 2026 (Fiji Sun, 26 June 2026); safe rates 1-4%",
       "sourceUrl": "https://fijisun.com.fj/news/economy/fnpf-declares-95-interest-payout",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if FNPF crediting rates fall back toward bond yields."
@@ -417,15 +398,15 @@
     "retirement_accumulation_return_base": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "FNPF credited 8.75% (2025) and 9.5% (2026); safe rates 1-4%",
+      "sourceName": "FNPF credited 9.5% for 2026 (Fiji Sun, 26 June 2026); safe rates 1-4%",
       "sourceUrl": "https://fijisun.com.fj/news/economy/fnpf-declares-95-interest-payout",
       "asOf": "2026-10-31",
-      "note": "Base case well below recent record FNPF credits, closer to its long-run 6-7% record."
+      "note": "Base case well below the recent 9.5% FNPF credit, allowing for a balanced mix and lower future credits."
     },
     "retirement_accumulation_return_high": {
       "value": 0.08,
       "status": "assumption",
-      "sourceName": "FNPF credited 8.75% (2025) and 9.5% (2026); safe rates 1-4%",
+      "sourceName": "FNPF credited 9.5% for 2026 (Fiji Sun, 26 June 2026); safe rates 1-4%",
       "sourceUrl": "https://fijisun.com.fj/news/economy/fnpf-declares-95-interest-payout",
       "asOf": "2026-10-31",
       "note": "High case near recent FNPF credited rates."
@@ -436,7 +417,7 @@
       "sourceName": "Fiji Times: 2023-2024 Budget social welfare allowance increases",
       "sourceUrl": "https://www.fijitimes.com.fj/?p=663261",
       "asOf": "2023-08-01",
-      "note": "Social Pension Scheme FJD 115 a month at 65-69 and 125 at 70+; the 2025-26 budget added 5% for all welfare recipients (exact new amounts not found)."
+      "note": "Social Pension Scheme: FJD 115 a month at 65-69 and FJD 125 at 70+, effective August 2023 (announced 30 June 2023). Source is older than 2025: a later increase was reported but its amount could not be confirmed from a source read in this pass."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -450,7 +431,7 @@
       "sourceName": "Fijivillage: Social Pension Scheme eligibility clarified by the Ministry",
       "sourceUrl": "https://www.fijivillage.com/news/sayed-khaiyum-raises-concerns-over-social-pension-cuts-kiran-clarifies-eligibility-87075d/",
       "asOf": "2026-10-26",
-      "note": "Citizens 65+ who do not receive an FNPF pension or other superannuation, subject to eligibility (asset) checks; higher rate from 70. 59,918 recipients in 2025-26."
+      "note": "Ministry (26 October 2026): Fiji citizens aged 65 and over qualify if they do not receive an FNPF pension or other qualifying superannuation (a pension test, recorded as meansTested); the Ministry said asset tests belong to the separate Family Assistance Scheme. Higher rate from 70. 59,918 recipients in 2025-26."
     },
     "gratuity_rule": {
       "value": null,
@@ -458,7 +439,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Fiji's Employment Relations Act has no statutory gratuity or end-of-service payment for private employees; retirement savings run through FNPF."
+      "note": "No statutory gratuity or end-of-service payment for private employees was found (retirement savings run through FNPF), but no source read in this pass states its absence, so it is not marked absent."
     },
     "public_pension_scheme": {
       "value": null,
@@ -473,8 +454,8 @@
       "status": "sourced",
       "sourceName": "Fiji Sun: FNPF retirement withdrawal age stays at 55",
       "sourceUrl": "https://fijisun.com.fj/news/nation/retirement-withdrawal-age-stays-at-55-dpm-prasad-clarifies",
-      "asOf": "2025-08-31",
-      "note": "FNPF is a defined-contribution provident fund: 8% employee plus 10% employer (employer cut to 8% for 12 months from 1 August 2026); lump sum or pension from 55; balances credited 9.5% for 2025-26."
+      "asOf": "2025-08-23",
+      "note": "FNPF is a defined-contribution provident fund, not an indexed pension: lump sum or pension from the entitlement age of 55 (Fiji Sun, 23 August 2025). Members' balances were credited 9.5% for 2026 (Fiji Sun, 26 June 2026)."
     }
   },
   "instruments": {

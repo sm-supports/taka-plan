@@ -288,7 +288,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Comoros",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KM",
       "asOf": "2024-12-31",
-      "note": "67.0 years in 2024 (men 65.0, women 69.2)."
+      "note": "67.0 years in 2024 (men 65.0, women 69.2); latest World Bank value, older than 2025."
     },
     "life_table_remaining": {
       "value": null,

@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "code": "MG",
+  "iso3": "MDG",
+  "nameEn": "Madagascar",
+  "nameNative": "Madagasikara",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "mg",
+    "fr",
+    "en"
+  ],
+  "currency": {
+    "code": "MGA",
+    "symbol": "Ar",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 4571.5,
+      "status": "sourced",
+      "sourceName": "Banky Foiben'i Madagasikara, interbank foreign exchange market (MID rate), 30 October 2026",
+      "sourceUrl": "https://www.banky-foibe.mg/marche_marche-de-change/",
+      "asOf": "2026-10-30",
+      "note": "US dollar MID rate on the interbank market; 4,572.79 on 2 November 2026. World Bank 2025 average 4,529.8."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.086,
+      "status": "sourced",
+      "sourceName": "Banky Foiben'i Madagasikara (BFM), inflation rate (year-on-year change of the consumer price index, base 2016), August 2026",
+      "sourceUrl": "https://www.banky-foibe.mg/origine_indices-des-prix-par-origine-des-produits/",
+      "asOf": "2026-08-31",
+      "note": "8.6% year on year in August 2026 (INSTAT index, shown by the central bank); World Bank 2025 average 8.05%."
+    },
+    "inflation_projection": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BFM medium-term inflation objective (5%); World Bank CPI 2021-2025 (about 6-10% a year)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MG",
+      "asOf": "2026-10-31",
+      "note": "Inflation has run at 7-10% a year since 2022 (8.05% in 2025, 8.6% in August 2026) against the central bank's 5% medium-term aim, so a rounded 7% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.125,
+      "status": "sourced",
+      "sourceName": "BFM, key indicators (taux directeur), valid from 5 August 2026",
+      "sourceUrl": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/10/Indicateurs-cles.pdf",
+      "asOf": "2026-08-05",
+      "note": "Raised from 12.00% to 12.50% by the Monetary Committee on 4 August 2026, effective 5 August 2026."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical rate on ordinary savings accounts was found; BFM publishes only an average bank deposit rate (3.99% in August 2026) and per-bank minimum/maximum tables that could not be read."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical 3-month term deposit rate was found; BFM's interest-rate structure tables (Structure des taux d'intérêts 2026) could not be opened."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical 1-year term deposit rate was found; BFM's interest-rate structure tables could not be opened."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0399,
+      "status": "sourced",
+      "sourceName": "BFM, key indicators (weighted average deposit rate of banks, taux créditeur des banques), August 2026",
+      "sourceUrl": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/10/Indicateurs-cles.pdf",
+      "asOf": "2026-08-31",
+      "note": "Weighted average rate banks pay on deposits; average lending rate 13.34% in the same month. The World Bank's 2025 deposit-rate figure (12.1%) is not used because it disagrees with the central bank's series."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Direction Générale du Trésor, Bons du Trésor Fihary (BTF) issue of 1-15 October 2026",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-01",
+      "note": "3-year BTF at 10.00% (1 year 7.30%, 2 years 8.80%); BTF are sold to individuals from 1 million ariary at Treasury offices and are the longest retail government security (no 5-year issue). The November 2026 issue keeps the same rates. Treasury site is served over http only."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0285,
+      "status": "sourced",
+      "sourceName": "BFM, results of the last 5 Treasury bill (BTA) auctions, 12-week bill on 9 October 2026",
+      "sourceUrl": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/10/RESULTAT-5-D.-SEANCES_2026-10-09-002.pdf",
+      "asOf": "2026-10-09",
+      "note": "Weighted average rate on the 12-week (84-day) BTA; 3.05% on 28 September 2026. The 52-week BTA yielded 7.23% on 9 October 2026. Short bill yields sit far below the 12.5% policy rate because the Treasury allots little at short tenors; the BFM key-indicators sheet gives 5.13% as the average Treasury bill rate on 21 October 2026."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year government bond is issued on the domestic market; the Treasury issues bills (BTA, up to 52 weeks) and BTF of 1-3 years only."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond is issued on the domestic market; the Treasury issues bills (BTA, up to 52 weeks) and BTF of 1-3 years only."
+    },
+    "tax_bank_interest": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "Code Général des Impôts 2026 (Loi de finances 2026), articles 01.04.03, 01.04.04 and 01.04.10 (IRCM)",
+      "sourceUrl": "https://www.impots.mg/explorer?path=/legislation/Codes%20et%20Manuels/CDI-LFI%202026.pdf",
+      "asOf": "2026-01-01",
+      "note": "Interest on bank placements is subject to the tax on income from movable capital (IRCM) at 20%, withheld by the payer and final; interest on demand (current) deposits is exempt."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.2,
+      "status": "sourced",
+      "sourceName": "Code Général des Impôts 2026, article 01.04.03 (IRCM on Bons du Trésor Fihary and BTA)",
+      "sourceUrl": "https://www.impots.mg/explorer?path=/legislation/Codes%20et%20Manuels/CDI-LFI%202026.pdf",
+      "asOf": "2026-01-01",
+      "note": "Income from BTA and BTF is expressly subject to IRCM at 20%."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No operating deposit guarantee scheme or cover limit was found on the central bank's banking-supervision pages (banking law 2020-011)."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.1334,
+      "status": "sourced",
+      "sourceName": "BFM, key indicators (weighted average lending rate of banks, taux débiteur des banques), August 2026",
+      "sourceUrl": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/10/Indicateurs-cles.pdf",
+      "asOf": "2026-08-31",
+      "note": "Average rate across all bank lending, not card-specific; no legal cap or card rate is published."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Madagascar; global equities in ariary terms (BFM exchange rates)",
+      "sourceUrl": "https://www.banky-foibe.mg/marche_marche-de-change/",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global equities with a stable ariary."
+    },
+    "equity_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "No stock exchange in Madagascar; global equities in ariary terms; BTF 1-year 7.3% (5.8% after IRCM)",
+      "sourceUrl": "https://www.banky-foibe.mg/marche_marche-de-change/",
+      "asOf": "2026-10-31",
+      "note": "Madagascar has no stock market, so the base uses a global index in ariary terms (about 7% in dollars plus 3-4% ariary depreciation), capped at the 5.8% after-tax 1-year Treasury rate plus 4 points."
+    },
+    "equity_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Global equities in ariary terms (BFM exchange rates)",
+      "sourceUrl": "https://www.banky-foibe.mg/marche_marche-de-change/",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities and faster ariary depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BFM exchange rates (ariary per US dollar)",
+      "sourceUrl": "https://www.banky-foibe.mg/marche_marche-de-change/",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slow ariary depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BFM exchange rates (about 4,570 ariary per dollar in October 2026, against about 4,530 on average in 2025 and 3,300 in 2016)",
+      "sourceUrl": "https://www.banky-foibe.mg/marche_marche-de-change/",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 4% a year ariary depreciation against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "BFM exchange rates",
+      "sourceUrl": "https://www.banky-foibe.mg/marche_marche-de-change/",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and faster ariary depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BFM key indicators (average deposit rate 3.99%, August 2026); IRCM 20%",
+      "sourceUrl": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/10/Indicateurs-cles.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary bank deposits at about 4% less 20% IRCM."
+    },
+    "fixed_income_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Treasury BTF October 2026 (1 year 7.30%); BFM BTA 52-week 7.23%; IRCM 20%",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year BTF or 52-week bills at about 7.3% less 20% IRCM (about 5.8%), rounded down."
+    },
+    "fixed_income_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Treasury BTF October 2026 (3 years 10.00%); IRCM 20%",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 3-year BTF at 10% less 20% IRCM (8%), rounded down."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance supervisor (CSBF at the central bank) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published indicative term-life premium rates per 1,000 ariary of cover were found from the supervisor or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Madagascar was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.2742,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Madagascar",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MG",
+      "asOf": "2023-12-31",
+      "note": "27.4% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BFM inflation (8.6%, August 2026); inflation assumption 7%",
+      "sourceUrl": "https://www.banky-foibe.mg/origine_indices-des-prix-par-origine-des-produits/",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series was read; private medical costs usually rise faster than general prices, so 2 points above the 7% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BFM inflation (8.6%, August 2026); inflation assumption 7%",
+      "sourceUrl": "https://www.banky-foibe.mg/origine_indices-des-prix-par-origine-des-produits/",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series was read; private school fees usually rise faster than general prices, so 2 points above the 7% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 63.835,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Madagascar",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MG",
+      "asOf": "2024-12-31",
+      "note": "63.8 years in 2024 (men 62.1, women 65.6); UN WPP 2024 gives 64.3 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.5,
+            "men": 16.8,
+            "women": 18.1
+          },
+          {
+            "age": 65,
+            "total": 14.0,
+            "men": 13.4,
+            "women": 14.5
+          },
+          {
+            "age": 70,
+            "total": 10.8,
+            "men": 10.4,
+            "women": 11.2
+          },
+          {
+            "age": 80,
+            "total": 6.0,
+            "men": 5.8,
+            "women": 6.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/madagascar/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; by-sex values are the 5-year age-band figures; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.58
+          },
+          {
+            "year": 2040,
+            "value": 13.7
+          },
+          {
+            "year": 2065,
+            "value": 8.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/madagascar/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 6.03 (2025, World Bank), 7.3 (2040) and 11.5 (2065, populationpyramid.net/madagascar/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "CLEISS (French social security liaison body), Madagascar social security scheme, 2026",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_madagascar.html",
+      "asOf": "2026-01-08",
+      "note": "CNaPS old-age pension at 60 for men and women, with 15 years of affiliation and 28 quarters of contributions in the last 10 years; up to 5 years earlier for 60%+ incapacity. No different rule for people born after 1975 was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The current retirement age for civil servants (Caisse de Retraite Civile et Militaire) could not be confirmed from an official source; a 2016 press report of a rise to 65 was not verified."
+    },
+    "retirement_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BFM key indicators (average deposit rate 3.99%, August 2026); IRCM 20%",
+      "sourceUrl": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/10/Indicateurs-cles.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary bank deposits less 20% IRCM."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Treasury BTF October 2026 (1 year 7.30%); IRCM 20%",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about the 1-year BTF or 52-week bill yield after 20% IRCM (5.8%), rounded down; not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Treasury BTF October 2026 (2 years 8.80%, 3 years 10.00%); IRCM 20%",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in 2-3 year BTF at 7-8% after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Treasury BTF and BFM deposit rates; IRCM 20%",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about after-tax Treasury and deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Treasury BTF October 2026; equity base 9.5%; gold base 8%",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of BTF, global equities held in ariary terms and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Treasury BTF October 2026; equity high 13%",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/download.php?path=wp-content%2Fthemes%2Ftresor-public%2Fstatik-content%2Ftresor-public%2Fservice%2Fpdf%2F&file=BTF_10_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension open to people planning today was found; the CNaPS 'allocation de solidarité' is a closed legacy benefit for people employed in 1964-1968 (CLEISS 2026)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Labour Code's rules on a retirement or end-of-service indemnity for private employees could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "pensionFromAge": 60,
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "CLEISS, Madagascar social security scheme (CNaPS old-age pension), 2026",
+      "sourceUrl": "https://www.cleiss.fr/docs/regimes/regime_madagascar.html",
+      "asOf": "2026-01-08",
+      "note": "Compulsory CNaPS pension for private employees from 60: 30% of the annual minimum wage plus 20% of revalued average pay of the last 10 years plus 1% per extra 4 quarters, floor 60% of the minimum wage, cap 75% of average pay. Past wages are revalued but no automatic indexation of pensions is described, so inflationLinked is false; tax treatment not stated."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account",
+      "note": "Banking products are sold in French; interest is subject to 20% IRCM except on demand deposits."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (DAT)"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme",
+      "localNameEn": "Term deposit (DAT), 1 year"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Bons du Trésor Fihary",
+      "localNameEn": "Fihary Treasury bonds (BTF)",
+      "note": "Issued monthly by the Treasury for 1, 2 and 3 years from 1 million ariary; bought at Treasury offices in Antananarivo and the regions.",
+      "sourceUrl": "http://www.tresorpublic.mg/tresorpublic/wp-content/themes/tresor-public/statik-content/tresor-public/service/fihary.php"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bons du Trésor par Adjudication",
+      "localNameEn": "Treasury bills (BTA), 12 weeks",
+      "note": "Auctioned every two weeks at the central bank for 4-52 weeks; minimum bid 20 million ariary, open to individuals.",
+      "sourceUrl": "https://www.banky-foibe.mg/admin/wp-content/uploads/2026/10/RESULTAT-5-D.-SEANCES_2026-10-09-002.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 5-year government bond on the domestic market; the longest retail security is the 3-year BTF."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year government bond on the domestic market."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Madagascar has no stock exchange and no retail equity funds were found."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Volamena",
+      "localNameEn": "Gold",
+      "note": "Gold is mainly bought as jewellery; the central bank describes its gold operations at https://www.banky-foibe.mg/operations-sur-lor/."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banky Foiben'i Madagasikara (BFM)",
+      "url": "https://www.banky-foibe.mg/"
+    },
+    "insuranceRegulator": {
+      "name": "Commission de Supervision Bancaire et Financière (CSBF)",
+      "url": "https://www.banky-foibe.mg/autorite-de-supervision-la-csbf/",
+      "note": "Supervises insurers under the insurance law 2020-005; housed at the central bank."
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": {
+      "name": "Caisse Nationale de Prévoyance Sociale (CNaPS)",
+      "url": "https://www.cnaps.mg/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Institut National de la Statistique (INSTAT)",
+      "url": "https://www.instat.mg/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

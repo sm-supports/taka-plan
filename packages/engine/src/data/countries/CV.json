@@ -45,8 +45,8 @@
       "status": "sourced",
       "sourceName": "Trading Economics, citing the Banco de Cabo Verde reference rate (taxa de referência)",
       "sourceUrl": "https://tradingeconomics.com/cape-verde/interest-rate",
-      "asOf": "2026-09-30",
-      "note": "Secondary source because the Banco de Cabo Verde site refused connections on 31 October 2026; 2.50% reference rate as last recorded for September 2026."
+      "asOf": "2026-10-31",
+      "note": "Secondary source because the Banco de Cabo Verde site refused connections on 31 October 2026; reference rate 2.50%, unchanged in the October 2026 reading."
     },
     "savings_account_rate": {
       "value": null,

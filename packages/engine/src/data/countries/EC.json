@@ -116,9 +116,9 @@
       "value": 0.08975,
       "status": "sourced",
       "sourceName": "Ministerio de Economía y Finanzas, Bulletin 061 (eurobond issue)",
-      "sourceUrl": "https://ire.finanzas.gob.ec/content\\2026\\01\\2026.01.27_61.pdf",
+      "sourceUrl": "https://ire.finanzas.gob.ec/content/2026/01/2026.01.27_61.pdf",
       "asOf": "2026-01-26",
-      "note": "US-dollar eurobonds maturing 2034 and 2039 issued in January 2026 at an average yield of 8.975%; used as the closest available figure to a 10-year government yield."
+      "note": "US-dollar eurobonds maturing 2034 (about 8 years) and 2039 (about 13 years) issued on 26 January 2026 at an average yield of 8.975%; used as the closest available figure to a 10-year government yield (issue yield, not a current market yield)."
     },
     "tax_bank_interest": {
       "value": 0,
@@ -261,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=EC",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank value is for 2023 (older than 2025; no fresher official figure found)."
     },
     "goal_inflation_health": {
       "value": 0.03,
@@ -285,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=EC",
       "asOf": "2024-12-31",
-      "note": "UN WPP 2024 (via populationpyramid.net) gives 77.9 for 2026 (men 75.3, women 80.6)."
+      "note": "2024 World Bank value (older than 2025); UN WPP 2024 (via populationpyramid.net) gives 77.9 for 2026 (men 75.3, women 80.6)."
     },
     "life_table_remaining": {
       "value": null,
@@ -449,7 +450,7 @@
       "sourceName": "Expreso: IESS old-age retirement rules 2026",
       "sourceUrl": "https://www.expreso.ec/tramites-y-servicios/todo-lo-que-debes-saber-sobre-la-jubilacion-del-iess-en-ecuador-este-2026-282288.html",
       "asOf": "2026-05-17",
-      "note": "IESS defined-benefit pension: employee 9.45% plus employer 12.15% of pay (PwC Tax Summaries, July 2026); pension from 60 with 360 contributions (or 65/180, 70/120, any age/480); minimum 50% of the basic wage (USD 241 in 2026); the sources read do not describe how pensions in payment are adjusted."
+      "note": "IESS defined-benefit pension: employee 9.45% plus employer 12.15% of pay (PwC Tax Summaries, July 2026); pension from 60 with 360 contributions (or 65/180, 70/120, any age/480); minimum 50% of the basic wage (USD 241 in 2026), maximum 5.5 times the basic wage. inflationLinked is false only because no indexation rule could be confirmed in the sources read (IESS and Ministry sites were unreachable)."
     }
   },
   "instruments": {
@@ -501,7 +502,7 @@
       "localName": "Bonos del Estado",
       "localNameEn": "Government bonds",
       "note": "Long government bonds are mainly international dollar eurobonds.",
-      "sourceUrl": "https://ire.finanzas.gob.ec/content\\2026\\01\\2026.01.27_61.pdf"
+      "sourceUrl": "https://ire.finanzas.gob.ec/content/2026/01/2026.01.27_61.pdf"
     },
     "equity_fund": {
       "available": false,

@@ -351,12 +351,12 @@
       "note": "100 / old-age dependency ratio: 4.77 (2025, World Bank), 5.1 (2040) and 9.0 (2065, populationpyramid.net/burundi/2065/)."
     },
     "retirement_age_default": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The pension age of the private-sector scheme (INSS) could not be read from an official source: the INSS site did not respond and ILO and SSA country pages refused access."
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa 2019, Burundi (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20260417213804/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/burundi.html",
+      "asOf": "2019-12-31",
+      "note": "INSS old-age pension at 60 for men and women with at least 15 years of coverage (55 if prematurely aged, 45 in arduous work), under the 2002 pension law. Source is from 2019 (older than 2025) because the INSS site did not respond and the live SSA page refused access; no later change was found, but a newer code was not checked."
     },
     "retirement_age_government": {
       "value": null,
@@ -440,11 +440,18 @@
     },
     "public_pension_scheme": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "Rules of the INSS contributory pension (private employees) could not be read: the INSS site did not respond and ILO/SSA country profiles refused access."
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa 2019, Burundi (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20260417213804/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/burundi.html",
+      "asOf": "2019-12-31",
+      "note": "Compulsory INSS pension for salaried workers (civil servants have a separate scheme): 30% of average monthly earnings in the last 3 or 5 years plus 2% per 12 months of coverage beyond 180 months, at most 80%; contributions 4% employee and 6% employer. Benefits are adjusted only when the scheme's finances allow (last adjustment 2010 per the source), so not inflation-linked. Source is from 2019 (older than 2025)."
     }
   },
   "instruments": {
@@ -522,8 +529,7 @@
     },
     "insuranceRegulator": {
       "name": "Agence de Régulation et de Contrôle des Assurances (ARCA)",
-      "url": "https://www.arca.bi/",
-      "note": "Site unavailable when checked on 31 October 2026."
+      "url": "https://www.arca.bi/"
     },
     "insuranceComplaints": null,
     "pensionScheme": {

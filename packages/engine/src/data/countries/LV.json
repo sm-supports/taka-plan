@@ -32,7 +32,7 @@
       "sourceName": "Latvijas Vēstnesis portal (lvportals.lv), citing the Central Statistical Bureau, September 2026 CPI",
       "sourceUrl": "https://lvportals.lv/dienaskartiba/395581-septembri-cenu-kapumu-galvenokart-noteica-dargaka-degviela-2026",
       "asOf": "2026-09-30",
-      "note": "Consumer prices rose 3.2% year on year in September 2026 (also 3.2% in August); read on the state legal information portal because the CSB release page was not found."
+      "note": "Consumer prices rose 3.2% in September 2026 compared with September 2025; read on the state legal information portal (lvportals.lv) reporting the Central Statistical Bureau release, because the CSB release page was not found."
     },
     "inflation_projection": {
       "value": 0.025,
@@ -55,8 +55,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics, Latvia, overnight deposits from households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LV.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight (demand) deposits in August 2026, which includes ordinary savings accounts."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight (demand) deposits, new business, September 2026 (0.42% also in August); includes ordinary savings accounts."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -64,15 +64,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Latvijas Banka and the ECB publish household term-deposit rates only for the up-to-1-year bucket (2.52% in August 2026), not 3 months separately."
+      "note": "Latvijas Banka and the ECB publish household term-deposit rates only for the up-to-1-year bucket (2.75% in September 2026), not 3 months separately."
     },
     "fdr_1y_rate": {
-      "value": 0.0252,
+      "value": 0.0275,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics, Latvia, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LV.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "New household term deposits up to 1 year, August 2026 (2.31% in July); over 2 years: 3.02%."
+      "asOf": "2026-09-30",
+      "note": "New household term deposits with agreed maturity up to 1 year, September 2026 (2.52% in August, 2.31% in July)."
     },
     "dps_rate": {
       "value": null,
@@ -83,12 +83,12 @@
       "note": "No published average rate for monthly recurring deposits in Latvia."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0248,
+      "value": 0.0257,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics, Latvia, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LV.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on the stock of household term deposits in August 2026; new household term deposits averaged 2.55%."
+      "asOf": "2026-09-30",
+      "note": "Average rate on the stock of household deposits with agreed maturity (outstanding amounts), September 2026 (2.48% in August)."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.0385,
@@ -147,17 +147,17 @@
       "note": "Up to EUR 100,000 per depositor per bank or credit union (page updated 3 June 2025)."
     },
     "credit_card_rate_cap": {
-      "value": 0.1751,
+      "value": 0.1758,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics, Latvia, revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LV.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "No specific card-rate cap found; this is the average rate on household revolving loans, overdrafts and extended credit card credit in August 2026."
+      "asOf": "2026-09-30",
+      "note": "No specific card-rate cap found; this is the average rate on household revolving loans, overdrafts and extended credit card credit in September 2026 (17.51% in August)."
     },
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "Global equity index in euro terms (S&P 500 +10.8% in a year to Oct 2026); Nasdaq Riga is very small",
+      "sourceName": "Global equity index in euro terms (S&P 500 +10.8% in a year to Oct 2026); Latvia's own stock exchange is very small",
       "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: a global index fund in euros delivers little more than safe euro rates over a long stretch, as after 2000 and 2008."
@@ -205,10 +205,10 @@
     "fixed_income_return_low": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "ECB MIR Latvia: 1-year household deposits 2.52% (Aug 2026) less 25.5% tax",
+      "sourceName": "ECB MIR Latvia: household deposits up to 1 year 2.75% (Sep 2026) less 25.5% tax",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LV.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Low case: bank term deposits after the 25.5% tax on interest (about 1.9%)."
+      "note": "Low case: bank term deposits after the 25.5% tax on interest (about 2.0%), with some time in near-zero overnight deposits."
     },
     "fixed_income_return_base": {
       "value": 0.028,
@@ -288,7 +288,7 @@
       "sourceName": "Eurostat, life expectancy by age and sex (demo_mlexpec)",
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_mlexpec?geo=LV&age=Y60&age=Y65&age=Y70&age=Y80&age=Y_LT1&sex=T&sex=M&sex=F&lastTimePeriod=1",
       "asOf": "2024-12-31",
-      "note": "Men 71.4, women 81.2 in 2024 (latest Eurostat year; World Bank 2024 also 76.4)."
+      "note": "Men 71.4, women 81.2 in 2024 (latest Eurostat year; older than 2025). World Bank 2024 also 76.4."
     },
     "life_table_remaining": {
       "value": null,
@@ -324,7 +324,7 @@
       "sourceName": "Eurostat, life expectancy by age and sex (demo_mlexpec)",
       "sourceUrl": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_mlexpec?geo=LV&age=Y60&age=Y65&age=Y70&age=Y80&age=Y_LT1&sex=T&sex=M&sex=F&lastTimePeriod=1",
       "asOf": "2024-12-31",
-      "note": "Remaining life expectancy at each age in 2024, the latest year published."
+      "note": "Remaining life expectancy at each age in 2024, the latest year Eurostat publishes (older than 2025)."
     },
     "support_ratio": {
       "value": null,
@@ -356,7 +356,7 @@
       "sourceName": "State Social Insurance Agency (VSAA), granting and payment of the old-age pension",
       "sourceUrl": "https://www.vsaa.gov.lv/en/services/granting-and-payment-old-age-pension",
       "asOf": "2025-01-01",
-      "note": "Retirement age is 65 from 2025 for men and women, with at least 20 years of insurance."
+      "note": "Retirement age is 65 for men and women from 2025 (Law on State Pensions, transitional provisions), with at least 20 years of insurance; no further increase is legislated, so it applies to people born after 1975."
     },
     "retirement_age_government": {
       "value": 65,
@@ -369,7 +369,7 @@
     "retirement_return_low": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "ECB MIR Latvia: household deposits up to 1 year 2.52% less 25.5% tax",
+      "sourceName": "ECB MIR Latvia: household deposits up to 1 year 2.75% (Sep 2026) less 25.5% tax",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LV.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: a retiree holding mostly bank deposits after the 25.5% interest tax."
@@ -415,12 +415,12 @@
       "note": "High case for a growth-leaning balanced mix."
     },
     "old_age_allowance_monthly": {
-      "value": 166.04,
+      "value": 187.0,
       "status": "sourced",
       "sourceName": "State Social Insurance Agency (VSAA), state social security benefit",
-      "sourceUrl": "https://www.vsaa.gov.lv/en/services/granting-and-disbursement-state-social-security-benefit",
-      "asOf": "2025-01-01",
-      "note": "For people of retirement age without a pension: 22% of the income median (EUR 754.74 a month), about EUR 166.04 a month from 1 January 2025; the page shows no 2026 figure, so the 2026 amount (re-based on the updated income median) may be higher."
+      "sourceUrl": "https://www.vsaa.gov.lv/lv/pakalpojumi/valsts-sociala-nodrosinajuma-pabalsta-pieskirsana-un-izmaksasana",
+      "asOf": "2026-01-01",
+      "note": "For people of pension age with no pension of their own: 22% of the income median (VSAA English page); from 1 January 2026 the income median used is EUR 850.02 a month (VSAA Latvian page), so the benefit is about EUR 187.00 a month (EUR 166.04 in 2025). The euro amount is calculated from these two official figures."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -434,7 +434,7 @@
       "sourceName": "State Social Insurance Agency (VSAA), state social security benefit",
       "sourceUrl": "https://www.vsaa.gov.lv/en/services/granting-and-disbursement-state-social-security-benefit",
       "asOf": "2025-01-01",
-      "note": "Paid from the state pension age (65) to permanent residents with at least 60 months of residence (the last 12 continuous) who have no old-age, disability or survivor's pension; no income or asset test, but foreign pensions reduce it."
+      "note": "Paid from the state pension age (65) to permanent residents with at least 60 months of residence (the last 12 continuous) who do not qualify for an old-age, disability or survivor's pension; no income or asset test, but a foreign pension reduces it."
     },
     "gratuity_rule": {
       "value": null,
@@ -455,10 +455,10 @@
         "taxFree": false
       },
       "status": "sourced",
-      "sourceName": "State Social Insurance Agency (VSAA), granting and payment of the old-age pension",
-      "sourceUrl": "https://www.vsaa.gov.lv/en/services/granting-and-payment-old-age-pension",
+      "sourceName": "Law on State Pensions (Sections 11 and 26), likumi.lv; VSAA old-age pension page for tax",
+      "sourceUrl": "https://likumi.lv/ta/en/en/id/38048-on-state-pensions",
       "asOf": "2025-01-01",
-      "note": "Mandatory notional-account state pension (1st tier) plus funded 2nd tier: pension from 65 with at least 20 insurance years; pensions above the EUR 1,000 monthly non-taxable minimum are taxed at 25.5%. VSAA confirms annual indexation of pension capital; payments are indexed each year by inflation plus part of real wage growth under the Law on State Pensions (law text not reachable for this check)."
+      "note": "Mandatory notional-account state pension (1st tier) plus funded 2nd tier: pension from 65 with at least 20 insurance years (Section 11; 65 from 1 January 2025). Pensions are reviewed every 1 October by the actual CPI plus 50-80% of contribution wage growth depending on insurance years (Section 26). VSAA: pensions above the EUR 1,000 monthly non-taxable minimum are taxed at 25.5%. The English translation read is the 2024 consolidated version."
     }
   },
   "instruments": {

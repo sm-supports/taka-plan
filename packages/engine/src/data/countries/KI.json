@@ -6,6 +6,7 @@
   "nameNative": "Kiribati",
   "region": "east_asia_pacific",
   "languages": [
+    "gil",
     "en"
   ],
   "currency": {
@@ -48,28 +49,28 @@
       "note": "Kiribati has no central bank or monetary policy of its own; it uses the Australian dollar, so the Reserve Bank of Australia cash rate applies indirectly."
     },
     "savings_account_rate": {
-      "value": 0.001,
-      "status": "sourced",
-      "sourceName": "Rate sheet of the main commercial bank in Kiribati (Pacific savings account)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
-      "asOf": "2026-09-23",
-      "note": "0.10% p.a. on balances of A$100 and above; Kiribati has one commercial bank plus the state Development Bank."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only a commercial bank's own rate sheet publishes this (about 0.10% in Sep 2026); company pages are not used as sources and no central bank or statistics office publishes deposit rates for Kiribati."
     },
     "fdr_3m_rate": {
-      "value": 0.006,
-      "status": "sourced",
-      "sourceName": "Rate sheet of the main commercial bank in Kiribati (3-month term deposit)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
-      "asOf": "2026-09-23",
-      "note": "90-179 days, A$2,000 to A$250,000."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only a commercial bank's own rate sheet publishes this (about 0.60% for 90-179 days in Sep 2026); company pages are not used as sources and no official deposit rate series exists for Kiribati."
     },
     "fdr_1y_rate": {
-      "value": 0.0115,
-      "status": "sourced",
-      "sourceName": "Rate sheet of the main commercial bank in Kiribati (12-month term deposit)",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
-      "asOf": "2026-09-23",
-      "note": "365-729 days, A$2,000 to A$250,000."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only a commercial bank's own rate sheet publishes this (about 1.15% for 12 months in Sep 2026); company pages are not used as sources and no official deposit rate series exists for Kiribati."
     },
     "dps_rate": {
       "value": null,
@@ -155,23 +156,23 @@
       "value": 0.02,
       "status": "assumption",
       "sourceName": "No local stock market; global equity index in Australian dollar terms",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
       "asOf": "2026-10-31",
       "note": "Low case for a global index fund held in AUD after weak decades and currency swings."
     },
     "equity_return_base": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "Global equity in AUD, capped at safe rate plus 4 points; Main commercial bank 12-month term deposit 1.15% (Sep 2026); no government bills or bonds",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Global equity in AUD, capped at the local safe rate (about 1% on 12-month deposits) plus 4 points",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
       "asOf": "2026-10-31",
-      "note": "Kiribati has no stock exchange, so equity means a global index in AUD; the base is held to the 1.15% safe rate plus about 4 points."
+      "note": "Kiribati has no stock exchange, so equity means a global index held in AUD; the base is held to the roughly 1% safe rate plus about 4 points."
     },
     "equity_return_high": {
       "value": 0.08,
       "status": "assumption",
       "sourceName": "Long-run global equity return in AUD terms",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceUrl": "https://www.rba.gov.au/statistics/frequency/exchange-rates.html",
       "asOf": "2026-10-31",
       "note": "High case close to the long-run nominal return of global equities in Australian dollars."
     },
@@ -202,24 +203,24 @@
     "fixed_income_return_low": {
       "value": 0.005,
       "status": "assumption",
-      "sourceName": "Main commercial bank 12-month term deposit 1.15% (Sep 2026); no government bills or bonds",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Local 12-month term deposits pay about 1% (bank rate sheets, Sep 2026; not cited as they are company pages); no government bills or bonds (IMF 2026 Article IV)",
+      "sourceUrl": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
       "asOf": "2026-10-31",
-      "note": "Low case near current savings and short deposit rates (0.1-0.6%)."
+      "note": "Low case near current savings and short deposit rates (about 0.1-0.6%)."
     },
     "fixed_income_return_base": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Main commercial bank 12-month term deposit 1.15% (Sep 2026); no government bills or bonds",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Local 12-month term deposits pay about 1% (bank rate sheets, Sep 2026; not cited as they are company pages); no government bills or bonds (IMF 2026 Article IV)",
+      "sourceUrl": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
       "asOf": "2026-10-31",
-      "note": "Base close to the 1.15% 12-month deposit rate; first A$250 of interest is tax-exempt so tax drag is small for most savers."
+      "note": "Base close to the roughly 1% 12-month deposit rate; the first A$250 of interest is tax-exempt, so tax drag is small for most savers."
     },
     "fixed_income_return_high": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "Main commercial bank 12-month term deposit 1.15% (Sep 2026); no government bills or bonds; possible higher rates abroad",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Local 12-month term deposits pay about 1% (bank rate sheets, Sep 2026; not cited as they are company pages); no government bills or bonds (IMF 2026 Article IV)",
+      "sourceUrl": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
       "asOf": "2026-10-31",
       "note": "High case if Australian-linked deposit rates rise."
     },
@@ -245,7 +246,7 @@
       "sourceName": "Government of Kiribati statement to UN Commission on Population and Development (2024)",
       "sourceUrl": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_cpd57_statement_kiribati.pdf",
       "asOf": "2024-04-30",
-      "note": "Health care is free for all cases treatable locally, with overseas referral for non-terminal patients; there are no private hospitals. Out-of-pocket share is about 3% of health spending."
+      "note": "Government statement: health care is free for all cases treatable locally, with overseas referral for non-terminal patients; out-of-pocket share is about 3% of health spending. Source dated 2024 (older than 2025)."
     },
     "health_premium_table": {
       "value": null,
@@ -328,7 +329,7 @@
       "sourceName": "UN WPP 2024 medium variant via PopulationPyramid.net; World Bank SP.POP.DPND.OL",
       "sourceUrl": "https://www.populationpyramid.net/kiribati/2040/",
       "asOf": "2025-12-31",
-      "note": "100 / old-age dependency ratio: 7.14 (2025, World Bank), 9.8 (2040) and 15.5 (2065, populationpyramid.net/kiribati/2065/)."
+      "note": "100 / old-age dependency ratio: 7.14 (2025, World Bank SP.POP.DPND.OL), 9.8 (2040) and 15.5 (2065, populationpyramid.net/kiribati/2065/)."
     },
     "retirement_age_default": {
       "value": 50,
@@ -336,71 +337,71 @@
       "sourceName": "ISSA country profile: Kiribati (policies as of 1 January 2022)",
       "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Kiribati%202022%20-%20ISSA%20country%20profile.pdf",
       "asOf": "2022-01-01",
-      "note": "No statutory pension age; the Kiribati Provident Fund pays its old-age lump sum from age 50 (45 if retired permanently)."
+      "note": "No statutory pension age; the Kiribati Provident Fund pays its old-age lump sum from age 50 (early withdrawal at 45 if retired). Policies as of 1 January 2022 (older than 2025)."
     },
     "retirement_age_government": {
-      "value": 55,
-      "status": "sourced",
-      "sourceName": "Compulsory Retirement (Statutory Corporations and Government Owned Companies) (Amendment) Act 2016, explanatory memorandum",
-      "sourceUrl": "https://paclii.org/ki/legis/num_act/crcagoca2016947",
-      "asOf": "2016-12-31",
-      "note": "Memorandum aligns the government retirement policy for permanent employees, raised from 50 to 55, with state bodies; read via PacLII search index (direct fetch blocked)."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A 2016 amendment reportedly raised the public-service retirement age from 50 to 55, but the act on PacLII returns 403 and no other source could be read to confirm it."
     },
     "retirement_return_low": {
       "value": 0.005,
       "status": "assumption",
-      "sourceName": "Main commercial bank 12-month term deposit 1.15% (Sep 2026); no government bills or bonds",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Local 12-month term deposits pay about 1% (bank rate sheets, Sep 2026; not cited as they are company pages); no government bills or bonds (IMF 2026 Article IV)",
+      "sourceUrl": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
       "asOf": "2026-10-31",
       "note": "Low case near short deposit rates."
     },
     "retirement_return_base": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Main commercial bank 12-month term deposit 1.15% (Sep 2026); no government bills or bonds",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Local 12-month term deposits pay about 1% (bank rate sheets, Sep 2026; not cited as they are company pages); no government bills or bonds (IMF 2026 Article IV)",
+      "sourceUrl": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
       "asOf": "2026-10-31",
-      "note": "Held below the 1.15% 12-month deposit rate, the best safe rate available locally."
+      "note": "Held at about the 1% 12-month deposit rate, the best safe rate available locally."
     },
     "retirement_return_high": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "Main commercial bank 12-month term deposit 1.15% (Sep 2026); no government bills or bonds",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/",
+      "sourceName": "Local 12-month term deposits pay about 1% (bank rate sheets, Sep 2026; not cited as they are company pages); no government bills or bonds (IMF 2026 Article IV)",
+      "sourceUrl": "https://www.imf.org/en/news/articles/2026/05/14/pr26153-kiribati-imf-executive-board-concludes-2026-article-iv-consultation",
       "asOf": "2026-10-31",
       "note": "High case if deposit rates rise or part is held in higher-yield deposits."
     },
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "Kiribati Provident Fund crediting rate (5.5% in FY2021-22; minimum 4%) and local deposit rates",
-      "sourceUrl": "https://www.kpf.com.ki/",
+      "sourceName": "Kiribati Provident Fund crediting rate (ISSA 2022 profile: 5% in 2017, board reviews yearly, minimum 4%; fund site shows 5.5% for FY2021-22)",
+      "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Kiribati%202022%20-%20ISSA%20country%20profile.pdf",
       "asOf": "2026-10-31",
       "note": "Low case for a mix of local deposits and global funds."
     },
     "retirement_accumulation_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "Kiribati Provident Fund crediting rate (5.5% in FY2021-22; minimum 4%) and local deposit rates",
-      "sourceUrl": "https://www.kpf.com.ki/",
+      "sourceName": "Kiribati Provident Fund crediting rate (ISSA 2022 profile: 5% in 2017, board reviews yearly, minimum 4%; fund site shows 5.5% for FY2021-22)",
+      "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Kiribati%202022%20-%20ISSA%20country%20profile.pdf",
       "asOf": "2026-10-31",
-      "note": "Balanced mix of 1.15% deposits and about 5% global equity in AUD gives roughly 3.5%, below the provident fund's recent crediting rate."
+      "note": "A balanced mix of about 1% deposits and about 5% global equity in AUD gives roughly 3.5%, below the provident fund's recent crediting rate."
     },
     "retirement_accumulation_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "Kiribati Provident Fund crediting rate (5.5% in FY2021-22)",
-      "sourceUrl": "https://www.kpf.com.ki/",
+      "sourceName": "Kiribati Provident Fund crediting rate (ISSA 2022 profile: 5% in 2017, board reviews yearly, minimum 4%; fund site shows 5.5% for FY2021-22)",
+      "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Kiribati%202022%20-%20ISSA%20country%20profile.pdf",
       "asOf": "2026-10-31",
       "note": "High case in line with the provident fund's recent crediting rate."
     },
     "old_age_allowance_monthly": {
-      "value": 200,
+      "value": 217,
       "status": "sourced",
       "sourceName": "Government of Kiribati statement to UN Commission on Population and Development (2024)",
       "sourceUrl": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_cpd57_statement_kiribati.pdf",
       "asOf": "2024-04-30",
-      "note": "Statement: seniors aged 60+ receive $100 a fortnight; the Senior Citizen Allowance Act 2020 sets a flat A$200 a month; 2026 budget spends A$22m on over 9,500 elders (about A$193 a month each)."
+      "note": "The government's 2024 statement says citizens aged 60 and over receive $100 a fortnight, i.e. about A$217 a month (100 x 26 / 12). Source dated 2024 (older than 2025); the 2020 Act and later budget figures could not be read directly."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -414,7 +415,7 @@
       "sourceName": "Government of Kiribati statement to UN Commission on Population and Development (2024)",
       "sourceUrl": "https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2024_cpd57_statement_kiribati.pdf",
       "asOf": "2024-04-30",
-      "note": "Universal for citizens aged 60 and over (Senior Citizen Allowance Act 2020); not means-tested."
+      "note": "Statement: senior citizens aged 60 and over are entitled to the allowance; no means test is mentioned. ISSA 2022 still lists the older 2004 rule (age 65, A$50-60 a month), which the 2024 government statement supersedes. Source dated 2024 (older than 2025)."
     },
     "gratuity_rule": {
       "value": null,
@@ -438,27 +439,24 @@
       "sourceName": "ISSA country profile: Kiribati (policies as of 1 January 2022)",
       "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Kiribati%202022%20-%20ISSA%20country%20profile.pdf",
       "asOf": "2022-01-01",
-      "note": "Kiribati Provident Fund: employees and employers each pay 7.5% of gross wages; paid as a lump sum (not a pension) from age 50; interest set yearly by the board (5.5% FY2021-22, minimum 4%)."
+      "note": "Kiribati Provident Fund: employees and employers each pay 7.5% of gross wages; paid as a lump sum (not a pension) from age 50; interest set yearly by the board (5% in 2017 per ISSA; fund site shows 5.5% for FY2021-22). ISSA profile is as of 2022 (older than 2025)."
     }
   },
   "instruments": {
     "savings_account": {
       "available": true,
       "localName": null,
-      "localNameEn": "Savings account",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/"
+      "localNameEn": "Savings account"
     },
     "fdr_3m": {
       "available": true,
       "localName": null,
-      "localNameEn": "3-month term deposit",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/"
+      "localNameEn": "3-month term deposit"
     },
     "fdr_1y": {
       "available": true,
       "localName": null,
-      "localNameEn": "12-month term deposit",
-      "sourceUrl": "https://www.anz.com/kiribati/en/interest-rates/"
+      "localNameEn": "1-year term deposit"
     },
     "dps": {
       "available": false,

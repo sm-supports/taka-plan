@@ -29,16 +29,16 @@
     "inflation_cpi": {
       "value": 0.06,
       "status": "sourced",
-      "sourceName": "Agency for Statistics of BiH (BHAS), CPI September 2026",
-      "sourceUrl": "https://bhas.gov.ba/?lang=en",
+      "sourceName": "Agency for Statistics of BiH (BHAS), CPI time series (PRI_01)",
+      "sourceUrl": "https://bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
       "asOf": "2026-09-30",
-      "note": "Annual CPI 6.0% in September 2026 (4.9% in August), released 27 October 2026; index 138.75 vs 130.93 a year earlier in the BHAS CPI time series."
+      "note": "Annual CPI 6.0% in September 2026 (index 138.75 vs 130.93 a year earlier); also shown on the BHAS home page as 'Inflation (CPI) IX-2026/IX-2025: 6.0%'."
     },
     "inflation_projection": {
       "value": 0.035,
       "status": "assumption",
       "sourceName": "BHAS CPI time series (5-year average about 6.3% a year, Sep 2021-Sep 2026); convertible mark pegged to the euro (ECB 2% target)",
-      "sourceUrl": "https://www.bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
+      "sourceUrl": "https://bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
       "asOf": "2026-10-31",
       "note": "The euro peg anchors inflation near euro-area rates in the long run, but recent inflation has run well above them, so 3.5% is used for planning."
     },
@@ -263,13 +263,14 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BA",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Out-of-pocket share 31.0% of current health expenditure. Latest World Bank year is 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.045,
       "status": "assumption",
       "sourceName": "BHAS CPI time series: health division up 5.8% (Sep 2026 vs Sep 2025)",
-      "sourceUrl": "https://www.bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
+      "sourceUrl": "https://bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
       "asOf": "2026-10-31",
       "note": "Health prices rose faster than headline CPI in the past year, so the 3.5% projection plus one point is used."
     },
@@ -277,7 +278,7 @@
       "value": 0.035,
       "status": "assumption",
       "sourceName": "BHAS CPI time series: education division up 2.3% (Sep 2026 vs Sep 2025)",
-      "sourceUrl": "https://www.bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
+      "sourceUrl": "https://bhas.gov.ba/data/Publikacije/VremenskeSerije/PRI_01.xlsx",
       "asOf": "2026-10-31",
       "note": "Education prices rose less than headline CPI, so the 3.5% projection is used."
     },
@@ -287,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BA",
       "asOf": "2024-12-31",
-      "note": "Men 74.6, women 81.1; UN WPP 2024 (via populationpyramid.net) gives 78.4 for 2026."
+      "note": "Men 74.6, women 81.1; UN WPP 2024 (via populationpyramid.net) gives 78.4 for 2026. Latest World Bank year is 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -322,8 +323,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/bosnia-and-herzegovina/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for the year 2026 (asOf set to mid-year); totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -355,7 +356,7 @@
       "sourceName": "Federal Pension and Disability Insurance Institute (FZ MIO/PIO), pensioners",
       "sourceUrl": "https://www.fzmiopio.ba/penzioneri/",
       "asOf": "2026-10-31",
-      "note": "FBiH old-age pension at 65 with at least 15 years of insurance (or 20 years of pension service), or at any age after 40 years of insurance; same for men and women. Republika Srpska also uses 65 (Wikipedia, Retirement age)."
+      "note": "FBiH old-age pension at 65 with at least 15 years of insurance (or 20 years of pension service), or at any age after 40 years of insurance; same for men and women and for anyone born after 1975. Republika Srpska also uses 65 (not checked on an official RS page)."
     },
     "retirement_age_government": {
       "value": 65,

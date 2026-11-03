@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "code": "MZ",
+  "iso3": "MOZ",
+  "nameEn": "Mozambique",
+  "nameNative": "Moçambique",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "pt",
+    "vmw",
+    "ndc",
+    "ts",
+    "seh"
+  ],
+  "currency": {
+    "code": "MZN",
+    "symbol": "MT",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 63.91,
+      "status": "sourced",
+      "sourceName": "Banco de Moçambique, reference exchange rates bulletin 170/02/26 (4 September 2026)",
+      "sourceUrl": "https://bancomoc.mz/media/1ltp4ejr/taxas-de-c%C3%A2mbio-de-refer%C3%AAncia-09h30_04092026.pdf",
+      "asOf": "2026-09-04",
+      "note": "Mid rate 63.91 meticais per dollar (buy 63.27, sell 64.54); the latest official bulletin that could be read."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0631,
+      "status": "sourced",
+      "sourceName": "INE Moçambique CPI, September 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/mozambique/inflation-cpi/news/590844",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year inflation 6.31% in September 2026, down from 6.45% in August and 7.51% in June (fuel price shock in May); secondary source as the INE release was not reachable."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Banco de Moçambique aims for single-digit inflation; 2021-2025 CPI average about 6%",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MZ",
+      "asOf": "2026-10-31",
+      "note": "No numeric target is published; the 2021-2025 average of about 6% (World Bank) matches the 2026 level, so 6% is used."
+    },
+    "policy_rate": {
+      "value": 0.0925,
+      "status": "sourced",
+      "sourceName": "Banco de Moçambique, MIMO policy rate unchanged at 9.25% (30 September 2026)",
+      "sourceUrl": "https://www.bancomoc.mz/en/media/highlights/mimo-policy-rate-unchanged-at-9-25-30-09-26/",
+      "asOf": "2026-09-30",
+      "note": "MIMO rate held at 9.25% since the cut from 9.50% on 28 January 2026; standing deposit facility 6.25%, lending facility 12.25% (Diário dos Mercados, July 2026)."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Banco de Moçambique publishes only the 1-year deposit and loan rates on balances; no savings account rate was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate was found in Banco de Moçambique statistics."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0434,
+      "status": "sourced",
+      "sourceName": "Banco de Moçambique, Resumo Mensal de Informação Estatística (June 2026 issue), Quadro 4 (average nominal 1-year deposit rate on balances)",
+      "sourceUrl": "https://www.bancomoc.mz/media/athimwmy/resumo-mensal-de-informa%C3%A7%C3%A3o-estat%C3%ADstica-junho2026.pdf",
+      "asOf": "2026-05-31",
+      "note": "Average 1-year deposit rate 4.34% in May 2026, down from 6.60% a year earlier as the policy rate was cut."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product or rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0577,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Mozambique",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=MZ",
+      "asOf": "2025-12-31",
+      "note": "Average for 2025 (5.77%); the Banco de Moçambique 1-year deposit rate fell to 4.34% by May 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate for individuals was found; individuals can subscribe to Treasury bonds (Obrigações do Tesouro) through the stock exchange."
+    },
+    "tbill_91d_rate": {
+      "value": 0.1215,
+      "status": "sourced",
+      "sourceName": "Banco de Moçambique, Diário dos Mercados, 26 August 2026, type A Treasury bill auctions",
+      "sourceUrl": "https://bancomoc.mz/media/yardn043/di%C3%A1rio-dos-mercados-26-08-2026.pdf",
+      "asOf": "2026-08-26",
+      "note": "91-day weighted average 12.15% (182-day 12.22%, 364-day 12.15%); the latest daily bulletin that could be read."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1325,
+      "status": "sourced",
+      "sourceName": "Forbes Africa Lusófona (Lusa), Treasury bond exchange operations 2026",
+      "sourceUrl": "https://forbesafricalusofona.com/?p=178111",
+      "asOf": "2026-09-30",
+      "note": "Secondary source: the latest Treasury bonds (OT 2026 series, maturing September 2032, about 6 years) carry a fixed 13.25% coupon, as did the 3-year OT-2026-S2 (April 2026); no exact 5-year yield was published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year domestic Treasury bond issue or yield was found for 2025-2026; recent issues run 3 to 6 years."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Mozambique, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/mozambique/individual/income-determination",
+      "asOf": "2026-08-11",
+      "note": "Interest from bank deposits and income from debt bonds is withheld at 10% (other capital income 20%); secondary source."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no government savings certificate; income from debt bonds is withheld at 10% (PwC)."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A deposit guarantee fund (Fundo de Garantia de Depósitos) exists, but its cover limit per depositor could not be read from an official source; its website was unreachable and the search budget ran out."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap was found; credit is priced off the prime rate (15.50% in May 2026, BdM Resumo Mensal June 2026) plus a bank spread."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "No liquid local equity index (Bolsa de Valores de Moçambique is small); global equities in metical terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MZ",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global shares with a stable metical."
+    },
+    "equity_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "No liquid local equity index (Bolsa de Valores de Moçambique is small); global equities in metical terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MZ",
+      "asOf": "2026-10-31",
+      "note": "With no liquid local index, equity means global shares in metical terms: about 7% in dollars plus about 2% a year of metical depreciation, below the roughly 11% after-tax bill rate."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "No liquid local equity index (Bolsa de Valores de Moçambique is small); global equities in metical terms",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MZ",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global markets plus faster metical depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; metical about 63.9 per dollar (BdM, September 2026), stable since 2021 after large falls in 2016-2017",
+      "sourceUrl": "https://bancomoc.mz/media/1ltp4ejr/taxas-de-c%C3%A2mbio-de-refer%C3%AAncia-09h30_04092026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold prices with a stable metical."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; metical about 63.9 per dollar (BdM, September 2026), stable since 2021 after large falls in 2016-2017",
+      "sourceUrl": "https://bancomoc.mz/media/1ltp4ejr/taxas-de-c%C3%A2mbio-de-refer%C3%AAncia-09h30_04092026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a long-run dollar gold trend of about 5% plus about 3% a year of metical depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; metical about 63.9 per dollar (BdM, September 2026), stable since 2021 after large falls in 2016-2017",
+      "sourceUrl": "https://bancomoc.mz/media/1ltp4ejr/taxas-de-c%C3%A2mbio-de-refer%C3%AAncia-09h30_04092026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a renewed metical slide."
+    },
+    "fixed_income_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BdM: 1-year deposits 4.34% (May 2026), 91-day and 364-day bills about 12.2% (Aug 2026); 10% tax on deposit and bond interest (PwC)",
+      "sourceUrl": "https://www.bancomoc.mz/media/athimwmy/resumo-mensal-de-informa%C3%A7%C3%A3o-estat%C3%ADstica-junho2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits only, at about 4.3% before the 10% tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BdM: 1-year deposits 4.34% (May 2026), 91-day and 364-day bills about 12.2% (Aug 2026); 10% tax on deposit and bond interest (PwC)",
+      "sourceUrl": "https://bancomoc.mz/media/yardn043/di%C3%A1rio-dos-mercados-26-08-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-paid deposits (3.9%) and Treasury bills and bonds (11-12% after tax), allowing for bill rates falling with the policy rate."
+    },
+    "fixed_income_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "BdM: 1-year deposits 4.34% (May 2026), 91-day and 364-day bills about 12.2% (Aug 2026); 10% tax on deposit and bond interest (PwC)",
+      "sourceUrl": "https://forbesafricalusofona.com/?p=178111",
+      "asOf": "2026-10-31",
+      "note": "High case: Treasury bonds at 13.25% held to maturity, after the 10% tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The insurance supervisor ISSM publishes market bulletins, but no industry life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official source publishing term life premiums per MT 1,000 of cover was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical out-of-pocket cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official source publishing private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.1037,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Mozambique",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MZ",
+      "asOf": "2023-12-31",
+      "note": "10.4% in 2023 (WHO Global Health Expenditure Database), the latest available; low because public care is nearly free and donors fund much of health spending. Older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 6%; private care and medicines largely imported",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MZ",
+      "asOf": "2026-10-31",
+      "note": "No medical price projection was found; private medical costs are planned 1.5 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 6%; no education CPI projection found",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=MZ",
+      "asOf": "2026-10-31",
+      "note": "Private school and university fees are planned 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 63.797,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Mozambique",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MZ",
+      "asOf": "2024-12-31",
+      "note": "63.8 years in 2024 (men 60.5, women 66.7)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.8,
+            "men": 14.7,
+            "women": 16.9
+          },
+          {
+            "age": 65,
+            "total": 12.7,
+            "men": 11.7,
+            "women": 13.2
+          },
+          {
+            "age": 70,
+            "total": 9.5,
+            "men": 9.0,
+            "women": 9.9
+          },
+          {
+            "age": 80,
+            "total": 5.2,
+            "men": 5.0,
+            "women": 5.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/mozambique/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals are the mean of men and women except at 65, where the page gives 12.7."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 19.4
+          },
+          {
+            "year": 2040,
+            "value": 20.4
+          },
+          {
+            "year": 2065,
+            "value": 12.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=MZ",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+, computed as 100 / old-age dependency ratio: 5.15 in 2025 (World Bank) gives 19.4; 4.9 in 2040 and 8.2 in 2065 (populationpyramid.net/mozambique/2040/ and /2065/) give 20.4 and 12.2."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "WageIndicator Mozambique, Segurança Social (Decree 51/2017, articles 29-35)",
+      "sourceUrl": "https://wageindicator.org/pt-mz/trabalho-em-mocambique/lei-do-trabalho/seguranca-social",
+      "asOf": "2026-10-31",
+      "note": "INSS old-age pension at 60 for men and 55 for women with 240 months of contributions (or any age with 420 months); 50% reduced pension with 120 months; no change for later birth cohorts was found. Secondary source summarising Decree 51/2017."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "AIM (Agência de Informação de Moçambique), parliament approves mandatory retirement at 65 in the civil service",
+      "sourceUrl": "https://aimnews.org/2026/04/29/parlamento-aprova-reforma-obrigatoria-aos-65-anos-na-funcao-publica/",
+      "asOf": "2026-04-29",
+      "note": "Revision of the civil service statute (EGFAE) raising mandatory retirement from 60 to 65 for men and women, extendable to 70 for strategic careers (diplomats, lecturers, doctors, researchers); approved in general by parliament on 29 April 2026 per AIM. Final promulgation (reported as Law 10/2026) could not be confirmed from an official text. Secondary source."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BdM: 1-year deposits 4.34% (May 2026), 91-day and 364-day bills about 12.2% (Aug 2026); 10% tax on deposit and bond interest (PwC)",
+      "sourceUrl": "https://www.bancomoc.mz/media/athimwmy/resumo-mensal-de-informa%C3%A7%C3%A3o-estat%C3%ADstica-junho2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits after tax."
+    },
+    "retirement_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "BdM: 1-year deposits 4.34% (May 2026), 91-day and 364-day bills about 12.2% (Aug 2026); 10% tax on deposit and bond interest (PwC)",
+      "sourceUrl": "https://bancomoc.mz/media/yardn043/di%C3%A1rio-dos-mercados-26-08-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of deposits and Treasury bills after tax, kept well below the roughly 11% after-tax bill rate because bill rates are expected to fall."
+    },
+    "retirement_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "BdM: 1-year deposits 4.34% (May 2026), 91-day and 364-day bills about 12.2% (Aug 2026); 10% tax on deposit and bond interest (PwC)",
+      "sourceUrl": "https://forbesafricalusofona.com/?p=178111",
+      "asOf": "2026-10-31",
+      "note": "High case: mostly Treasury bills and bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Safe mix about 7%; global equity base 9%; gold base 8%",
+      "sourceUrl": "https://bancomoc.mz/media/yardn043/di%C3%A1rio-dos-mercados-26-08-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Safe mix about 7%; global equity base 9%; gold base 8%",
+      "sourceUrl": "https://bancomoc.mz/media/yardn043/di%C3%A1rio-dos-mercados-26-08-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: Treasury securities and deposits with some foreign equity and gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Safe mix about 7%; global equity base 9%; gold base 8%",
+      "sourceUrl": "https://bancomoc.mz/media/yardn043/di%C3%A1rio-dos-mercados-26-08-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Programa Subsídio Social Básico (INAS) is a poverty-targeted household transfer for older people unable to work, not a pension anyone can plan on: amounts (reported at 540 MT for a one-person household since 2018) are not published officially and only about 5% of its 2024 budget was paid (CIP report, July 2025)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "PSSB eligibility is poverty-targeted; the 2004 regulation set 55 for women and 60 for men, while later studies describe 60 for both, so current official ages could not be confirmed."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory retirement gratuity was found; Labour Law 13/2023 (art. 141) gives dismissal compensation in days of pay per year of service by salary band (30 days up to 7 minimum wages per secondary sources), which is not paid on retirement."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "WageIndicator Mozambique, Segurança Social (Decree 51/2017)",
+      "sourceUrl": "https://wageindicator.org/pt-mz/trabalho-em-mocambique/lei-do-trabalho/seguranca-social",
+      "asOf": "2026-10-31",
+      "note": "INSS compulsory scheme for employees (voluntary for the self-employed): pension from 60 (men) or 55 (women) after 240 months of contributions, floor 90% of the lowest minimum wage. No automatic indexation was found (pensioners were demanding adjustments in December 2025, AIM), so inflationLinked is false; tax treatment not found."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conta poupança",
+      "localNameEn": "Savings account",
+      "note": "Offered by banks; interest is withheld at 10%."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a prazo (3 meses)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Offered by banks; no published average rate."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a prazo (1 ano)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Average 4.34% in May 2026 (Banco de Moçambique).",
+      "sourceUrl": "https://www.bancomoc.mz/media/athimwmy/resumo-mensal-de-informa%C3%A7%C3%A3o-estat%C3%ADstica-junho2026.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals; retail investors can buy Treasury bonds instead."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bilhetes do Tesouro (91 dias)",
+      "localNameEn": "Treasury bills (91 days)",
+      "note": "Auctioned by the Banco de Moçambique; companies and individuals held about MT 10.9 billion of bills on 26 August 2026.",
+      "sourceUrl": "https://bancomoc.mz/media/yardn043/di%C3%A1rio-dos-mercados-26-08-2026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obrigações do Tesouro",
+      "localNameEn": "Treasury bonds",
+      "note": "Treasury bonds are issued and listed through the stock exchange (BVM); recent issues run 3 to 6 years at 13.25%. Retail access is through banks and brokers registered with the BVM.",
+      "sourceUrl": "https://forbesafricalusofona.com/?p=178111"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year domestic Treasury bond issue was found for 2025-2026."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "The stock exchange is small and no diversified retail equity fund was found."
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail channel for investment gold bars or coins was found; gold is bought mainly as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco de Moçambique",
+      "url": "https://www.bancomoc.mz/"
+    },
+    "insuranceRegulator": {
+      "name": "Instituto de Supervisão de Seguros de Moçambique (ISSM)",
+      "url": "https://www.issm.gov.mz/"
+    },
+    "insuranceComplaints": {
+      "name": "ISSM consumer service portal (Portal de Atendimento ao Consumidor)",
+      "url": "https://www.bsa.issm.gov.mz/cps"
+    },
+    "pensionScheme": {
+      "name": "Instituto Nacional de Segurança Social (INSS)",
+      "url": "https://www.inss.gov.mz/"
+    },
+    "oldAgeAllowance": {
+      "name": "Instituto Nacional de Acção Social (INAS), Programa Subsídio Social Básico",
+      "url": "https://www.inas.gov.mz/",
+      "note": "Poverty-targeted transfer for older people and others unable to work."
+    },
+    "publicHealthCover": {
+      "name": "Ministério da Saúde (national health service)",
+      "url": "https://misau.gov.mz/",
+      "note": "Public care is free or charged at nominal fees."
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Instituto Nacional de Estatística (INE)",
+      "url": "https://www.ine.gov.mz/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

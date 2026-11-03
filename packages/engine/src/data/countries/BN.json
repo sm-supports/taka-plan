@@ -50,12 +50,12 @@
       "note": "Brunei runs a currency board (BND = SGD) and has no policy rate; this is the BDCB overnight Standing Facility Deposit Rate (lending rate 1.5%)."
     },
     "savings_account_rate": {
-      "value": 0.0015,
-      "status": "sourced",
-      "sourceName": "Published savings rates of a large local Islamic bank (expected profit rate, general savings)",
-      "sourceUrl": "https://bibd.com.bn/rates/",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Typical ordinary savings rate 0.15% p.a.; page undated, read 2026-10-31. BDCB does not publish an average savings rate."
+      "note": "BDCB publishes no average savings rate; the only published savings rates found were individual banks' own rate pages, which we do not cite (ordinary savings pay roughly 0.1-0.2%)."
     },
     "fdr_3m_rate": {
       "value": 0.00265,
@@ -138,12 +138,12 @@
       "note": "No personal income tax; any government security income of individuals is untaxed (no savings certificate exists)."
     },
     "deposit_insurance_limit": {
-      "value": 50000,
-      "status": "sourced",
-      "sourceName": "Deposit Protection Order 2010, as disclosed on a member bank's deposit page",
-      "sourceUrl": "https://www.sc.com/bn/save/brunei-dollars-and-foreign-currency-fixed-deposits/",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "B$50,000 per depositor per member institution, principal and interest, administered by the Brunei Darussalam Deposit Protection Corporation (official site was unreachable)."
+      "note": "A deposit protection scheme exists (Deposit Protection Order 2010, Brunei Darussalam Deposit Protection Corporation) and the cover is widely reported as B$50,000 per depositor per member, but the BDPC website was unreachable (connection refused) and only a member bank's page showed the figure, so it is not cited."
     },
     "credit_card_rate_cap": {
       "value": 0.18,
@@ -151,7 +151,7 @@
       "sourceName": "BDCB (then AMBD) Notice to Banks BU/N-12/2017/47 on Credit Cards, section 6.1",
       "sourceUrl": "https://cms.bdcb.gov.bn/storage/uploads/regulatories/17111192061105880.pdf",
       "asOf": "2017-09-14",
-      "note": "Interest on credit cards may not exceed 1.5% per month on the outstanding amount (18% a year simple)."
+      "note": "Interest on credit cards may not exceed 1.5% per month on the outstanding amount (18% a year simple). Notice dates from 2017, older than 2025, and is still the rule BDCB publishes."
     },
     "equity_return_low": {
       "value": 0.01,
@@ -262,7 +262,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BN",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Figure refers to 2023, older than 2025; it is the latest available."
     },
     "goal_inflation_health": {
       "value": 0.02,
@@ -286,7 +287,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BN",
       "asOf": "2024-12-31",
-      "note": "Men 73.5, women 77.7 (2024)."
+      "note": "Men 73.5, women 77.7 (2024). Figure refers to 2024, older than 2025; it is the latest available."
     },
     "life_table_remaining": {
       "value": null,
@@ -346,7 +347,7 @@
       "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
       "sourceUrl": "https://www.populationpyramid.net/brunei-darussalam/2040/",
       "asOf": "2024-07-31",
-      "note": "100 / old-age dependency ratio: 10.0 in 2025 (World Bank), 20.2 in 2040 and 42.3 in 2065 (UN WPP 2024)."
+      "note": "100 / old-age dependency ratio: 10.0 in 2025 (World Bank), 20.2 in 2040 and 42.3 in 2065 (UN WPP 2024). Figure refers to 2024, older than 2025; it is the latest available."
     },
     "retirement_age_default": {
       "value": 60,
@@ -362,7 +363,7 @@
       "sourceName": "Global Voices report on the Sultan's decree raising the retirement age from 55 to 60",
       "sourceUrl": "https://globalvoices.org/2009/08/07/brunei-retirement-age-now-at-60/",
       "asOf": "2009-08-07",
-      "note": "Secondary source; the Retirement Age Order 2010 applies age 60 across employment including the civil service."
+      "note": "Secondary source (2009 report of the Sultan's decree raising the retirement age from 55 to 60); the Retirement Age Order 2010 applies age 60 across employment including the civil service. Figure dates from 2009, older than 2025; no later change found."
     },
     "retirement_return_low": {
       "value": 0.003,
@@ -418,7 +419,7 @@
       "sourceName": "ISSA country profile Brunei Darussalam 2022: Old-age pension (universal)",
       "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Brunei%20Darussalam%202022%20-%20ISSA%20country%20profile.pdf",
       "asOf": "2022-12-31",
-      "note": "Flat B$250 a month, adjusted ad hoc only; still B$250 in later reports (The Scoop, 2021) and no increase found for 2025-2026."
+      "note": "Universal flat B$250 a month from age 60 for citizens and stateless permanent residents with the residency qualification, adjusted ad hoc only (ISSA, policies as of 1 Jan 2022, older than 2025); no increase found for 2025-2026."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -432,7 +433,7 @@
       "sourceName": "ISSA country profile Brunei Darussalam 2022; Old Age and Disability Pensions Act amendment 2021",
       "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Brunei%20Darussalam%202022%20-%20ISSA%20country%20profile.pdf",
       "asOf": "2022-12-31",
-      "note": "Universal, non-contributory, from age 60 for citizens and stateless permanent residents meeting residency rules; foreign-citizen PRs excluded since 1 Oct 2021."
+      "note": "Universal, non-contributory, from age 60 for citizens and stateless permanent residents with 10 years' residence before the claim (30 if born abroad); foreign-citizen PRs excluded since 1 Oct 2021. ISSA profile reflects policies as of 1 Jan 2022, older than 2025."
     },
     "gratuity_rule": {
       "value": null,
@@ -464,7 +465,7 @@
       "available": true,
       "localName": "Akaun Simpanan",
       "localNameEn": "Savings account",
-      "sourceUrl": "https://bibd.com.bn/rates/"
+      "sourceUrl": null
     },
     "fdr_3m": {
       "available": true,

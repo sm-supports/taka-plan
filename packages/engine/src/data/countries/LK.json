@@ -16,12 +16,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 332.5,
+      "value": 332.59,
       "status": "sourced",
-      "sourceName": "Interbank spot USD/LKR close, via EconomyNext",
-      "sourceUrl": "https://economynext.com/sri-lanka-rupee-closes-at-332-50-62-to-us-dollar-spot-bond-yields-steady-288371/",
+      "sourceName": "CBSL Weekly Economic Indicators, 30 Oct 2026: US dollar average rate (commercial bank buying 328.04, selling 337.14)",
+      "sourceUrl": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/wei/WEI_20261030_e.pdf",
       "asOf": "2026-10-30",
-      "note": "CBSL's indicative spot page loads dynamically and could not be read; 2025 average 300.85 (World Bank PA.NUS.FCRF)."
+      "note": "Week ago 332.35, year ago 304.45; the rupee depreciated 6.8% against the dollar in 2026 to 30 October. 2025 average 300.85 (World Bank PA.NUS.FCRF)."
     }
   },
   "fields": {
@@ -31,7 +31,7 @@
       "sourceName": "Department of Census and Statistics, CCPI (2021=100) year-on-year",
       "sourceUrl": "https://www.statistics.gov.lk/WebReleases/CCPI_20261030E",
       "asOf": "2026-10-31",
-      "note": "October 2026; September 8.0%. NCPI (national) 8.1% in September 2026. Above the CBSL 5% target (band 3-7%) for four months."
+      "note": "October 2026 (September 8.0%), confirmed in the CBSL Weekly Economic Indicators of 30 October 2026; core 5.6%. Above the CBSL 5% target."
     },
     "inflation_projection": {
       "value": 0.06,
@@ -127,7 +127,7 @@
       "sourceName": "Inland Revenue Department tax chart 2025/26: WHT/AIT on interest to resident individuals",
       "sourceUrl": "https://www.ird.gov.lk/en/publications/SitePages/tax_chart_2526.aspx?menuid=140408",
       "asOf": "2025-04-01",
-      "note": "10% withheld from 1 April 2025; interest is part of taxable income (6%-36% slabs, Rs 1.8 million personal relief) and the WHT is creditable."
+      "note": "10% withheld from 1 April 2025; interest is part of taxable income (6%-36% slabs) and the WHT is creditable. The IRD site returned HTTP 503 when this was re-checked on 3 Nov 2026."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -262,15 +262,16 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS (WHO GHED)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LK",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest published figure is for 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.08,
       "status": "assumption",
-      "sourceName": "DCS CCPI health index 190.2 (Oct 2025) to 195.1 (Oct 2026), +2.6%; +95% since 2021",
+      "sourceName": "DCS CCPI (2021=100) October 2026 release; headline 8.3%",
       "sourceUrl": "https://www.statistics.gov.lk/WebReleases/CCPI_20261030E",
       "asOf": "2026-10-31",
-      "note": "Health prices rose about 13% a year through the 2022 crisis and 2.6% last year; we plan with 2 points above general inflation."
+      "note": "Health prices rose much faster than average through the 2022 crisis; we plan with 2 points above our 6% general inflation."
     },
     "goal_inflation_education": {
       "value": 0.08,
@@ -286,7 +287,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN (UN WPP)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LK",
       "asOf": "2024-12-31",
-      "note": "Men 74.4, women 80.7."
+      "note": "Men 74.4, women 80.7. Latest published figure is for 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -414,15 +415,15 @@
         "entryAgeMin": 18,
         "entryAgeMax": 59,
         "pensionFromAge": 60,
-        "nomineeUntilAge": null,
+        "nomineeUntilAge": 80,
         "inflationLinked": false,
         "taxFree": null
       },
       "status": "sourced",
       "sourceName": "Sri Lanka Social Security Board, Surekuma pension scheme",
-      "sourceUrl": "https://www.ssb.gov.lk/",
+      "sourceUrl": "https://www.ssb.gov.lk/surekuma.html",
       "asOf": "2026-10-31",
-      "note": "Voluntary contributory pension for informal and self-employed workers, join at 18-59, pension from 60. The page states no indexation, contribution amounts or projections. Formal-sector workers get a lump sum from EPF (https://epf.lk/) instead."
+      "note": "Voluntary contributory pension for people aged 18-59 without a government pension; full pension monthly from 60 for life if contributions are complete; if the member dies, the spouse or nominee gets the pension until the member would have been 80. No indexation, contribution amounts, tax treatment or pension examples are stated. Formal-sector workers get a lump sum from EPF instead."
     }
   },
   "instruments": {
@@ -505,8 +506,8 @@
       "note": "Free; complain to the insurer first."
     },
     "pensionScheme": {
-      "name": "Sri Lanka Social Security Board",
-      "url": "https://www.ssb.gov.lk/",
+      "name": "Sri Lanka Social Security Board (Surekuma pension scheme)",
+      "url": "https://www.ssb.gov.lk/surekuma.html",
       "note": "Formal-sector workers: Employees' Provident Fund (https://epf.lk/)."
     },
     "oldAgeAllowance": {

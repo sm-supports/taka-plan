@@ -30,7 +30,7 @@
       "sourceName": "Trading Economics, citing the General Authority for Statistics (GASTAT), CPI September 2026",
       "sourceUrl": "https://tradingeconomics.com/saudi-arabia/inflation-cpi",
       "asOf": "2026-09-30",
-      "note": "Consumer prices up 1.9% year on year in September 2026 (1.8% in August); secondary source because the GASTAT release was not read. World Bank 2025 average 2.0%."
+      "note": "Consumer prices up 1.9% year on year in September 2026 (1.8% in August); the GASTAT home page shows the same 1.9% for September 2026 under its main indicators. World Bank 2025 average 2.0%."
     },
     "inflation_projection": {
       "value": 0.02,
@@ -354,7 +354,7 @@
       "sourceName": "Trading Economics, retirement age for men, Saudi Arabia (citing the Ministry of Labour)",
       "sourceUrl": "https://tradingeconomics.com/saudi-arabia/retirement-age-men",
       "asOf": "2026-10-31",
-      "note": "65 in 2026 under the Social Insurance Law in force since July 2024, which applies 65 to new entrants and raises the age gradually for existing contributors; same age for women. Secondary source because GOSI pages could not be read."
+      "note": "Trading Economics gives 65 for 2026 (unchanged from 2025), citing the Ministry of Labour; the same age applies to women. Secondary source because GOSI pages load only with JavaScript, so the transition rules for people insured before the Social Insurance Law of July 2024 could not be checked; 65 is used for someone born after 1975."
     },
     "retirement_age_government": {
       "value": null,
@@ -474,7 +474,7 @@
       "available": true,
       "localName": "صح",
       "localNameEn": "Sah government savings sukuk",
-      "note": "A 1-year government savings sukuk for individuals with a fixed return set each monthly issue, from SAR 1,000, profit paid at maturity; shorter than 5 years.",
+      "note": "A 1-year government savings sukuk with a fixed return set for each monthly issue, from SAR 1,000 up to SAR 200,000 per person, profit paid at maturity; Saudi citizens aged 18 and over only; shorter than 5 years.",
       "sourceUrl": "https://sukuk.ndmc.gov.sa/"
     },
     "tbill_91d": {
@@ -520,9 +520,9 @@
       "url": "https://www.ia.gov.sa/"
     },
     "insuranceComplaints": {
-      "name": "Insurance Authority, complaints",
-      "url": "https://www.ia.gov.sa/",
-      "note": "Complaints about insurers go to the Insurance Authority."
+      "name": "Insurance Authority, complaints portal",
+      "url": "https://icare.ia.gov.sa/",
+      "note": "Complaints about insurers go to the Insurance Authority (linked from its Help and Support menu)."
     },
     "pensionScheme": {
       "name": "General Organization for Social Insurance (GOSI)",

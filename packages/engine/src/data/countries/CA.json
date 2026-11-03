@@ -109,18 +109,20 @@
       "note": "Average yield at the 20 October 2026 auction, before the 28 October policy rate rise; 2.41% on 6 October."
     },
     "tbond_5y_rate": {
-      "value": 0.0358,
+      "value": 0.0351,
       "status": "sourced",
       "sourceName": "Bank of Canada, Government of Canada 5-year benchmark bond yield (BD.CDN.5YR.DQ.YLD)",
       "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.5YR.DQ.YLD/json?recent=5",
-      "asOf": "2026-10-29"
+      "asOf": "2026-10-30",
+      "note": "Daily benchmark yield 3.51% on 30 October 2026 (3.58% on 29 October)."
     },
     "tbond_10y_rate": {
-      "value": 0.0384,
+      "value": 0.0378,
       "status": "sourced",
       "sourceName": "Bank of Canada, Government of Canada 10-year benchmark bond yield (BD.CDN.10YR.DQ.YLD)",
       "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.10YR.DQ.YLD/json?recent=5",
-      "asOf": "2026-10-29"
+      "asOf": "2026-10-30",
+      "note": "Daily benchmark yield 3.78% on 30 October 2026 (3.84% on 29 October)."
     },
     "tax_bank_interest": {
       "value": 0.2,
@@ -222,7 +224,7 @@
     "fixed_income_return_high": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "5-year Government of Canada bond 3.58%; 3-year GIC 3.20% (Bank of Canada)",
+      "sourceName": "5-year Government of Canada bond 3.51%; 3-year GIC 3.20% (Bank of Canada)",
       "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.5YR.DQ.YLD/json?recent=5",
       "asOf": "2026-10-31",
       "note": "High case: locking in 3-5 year government bonds or GICs inside a TFSA, so little tax is paid."
@@ -264,7 +266,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CA",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "15.3% in 2024, the latest World Bank year."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -385,7 +388,7 @@
     "retirement_return_high": {
       "value": 0.028,
       "status": "assumption",
-      "sourceName": "3-year GIC 3.20% and 5-year Government of Canada bond 3.58% (Bank of Canada)",
+      "sourceName": "3-year GIC 3.20% and 5-year Government of Canada bond 3.51% (Bank of Canada)",
       "sourceUrl": "https://www.bankofcanada.ca/valet/observations/BD.CDN.5YR.DQ.YLD/json?recent=5",
       "asOf": "2026-10-31",
       "note": "High case: a retiree ladders GICs and government bonds, partly inside a TFSA, at about today's rates."

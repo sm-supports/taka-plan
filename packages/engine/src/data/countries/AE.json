@@ -357,7 +357,7 @@
       "sourceName": "UAE Government portal, Pensions and social security for UAE citizens (updated 14 October 2026)",
       "sourceUrl": "https://u.ae/en/information-and-services/jobs/Sector-of-employment/working-in-uae-government-sector/pensions-and-social-security-for-uae-citizens",
       "asOf": "2026-10-14",
-      "note": "Applies to UAE and GCC nationals only: 60 with 15 years of insured service if registered before 31 October 2023; those joining since then may retire from 55 with at least 30 years. Expatriates have no public pension and receive an end-of-service gratuity instead."
+      "note": "Applies to UAE and GCC nationals only: 60 with 15 years of insured service for those registered before 31 October 2023 (most people born after 1975); first-time workers since then may retire from 55 with at least 30 years. Expatriates have no public pension and receive an end-of-service gratuity instead."
     },
     "retirement_age_government": {
       "value": null,
@@ -443,7 +443,7 @@
       "sourceName": "UAE Government portal, End of service benefits for workers in the private sector (updated 15 October 2026)",
       "sourceUrl": "https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/end-of-service-benefits-for-employees-in-the-private-sector",
       "asOf": "2026-10-15",
-      "note": "Expatriate private-sector workers with at least one year of service get 21 days of basic wage per year for the first 5 years and 30 days per year after, capped at 2 years' wage. The page does not give the daily-wage divisor; 30 days a month is assumed. Employers may opt into a savings scheme instead."
+      "note": "Workers with at least one year of continuous service get 21 days of last basic wage per year for the first 5 years and 30 days per year after, capped at 2 years' wage (applies to non-national private-sector workers; nationals are in the GPSSA pension). The page gives no daily-wage divisor; 30 days a month is used as the planning convention and is not confirmed. Employers may opt into an approved savings scheme instead."
     },
     "public_pension_scheme": {
       "value": null,
@@ -459,7 +459,7 @@
       "sourceName": "UAE Government portal, Pensions and social security for UAE citizens (updated 14 October 2026)",
       "sourceUrl": "https://u.ae/en/information-and-services/jobs/Sector-of-employment/working-in-uae-government-sector/pensions-and-social-security-for-uae-citizens",
       "asOf": "2026-10-14",
-      "note": "GPSSA covers UAE and GCC nationals only (Abu Dhabi nationals: Abu Dhabi Pension Fund). Registration at 18 to 60; pension at 60 with 15 years if registered before 31 October 2023, or from 55 with 30 years for new members; contributions 26% (employee 11%, employer 15%). The page mentions no indexation; pensions are untaxed."
+      "note": "GPSSA covers UAE and GCC nationals only (Abu Dhabi nationals: Abu Dhabi Pension Fund); expatriates get an end-of-service gratuity instead. Registration at 18 to 60; pension at 60 with 15 years for those registered before 31 October 2023 (Federal Law 7 of 1999), or from 55 with 30 years for first-time workers since then (Decree-Law 57 of 2023); contributions 26% (employee 11%, employer 15%). The page mentions no automatic indexation, so inflationLinked is set false (not confirmed); pensions are untaxed because there is no personal income tax (PwC Worldwide Tax Summaries)."
     }
   },
   "instruments": {
@@ -492,7 +492,7 @@
     },
     "tbill_91d": {
       "available": false,
-      "localName": "شهادات الإيداع النقدية",
+      "localName": null,
       "localNameEn": "Monetary bills (M-Bills)",
       "note": "Issued by the Central Bank of the UAE to banks, not sold directly to individuals."
     },
@@ -512,8 +512,7 @@
       "available": true,
       "localName": "صناديق الاستثمار",
       "localNameEn": "Investment funds",
-      "note": "Funds are regulated by the Securities and Commodities Authority.",
-      "sourceUrl": "https://www.sca.gov.ae/"
+      "note": "Funds are regulated by the Securities and Commodities Authority."
     },
     "gold": {
       "available": true,

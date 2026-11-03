@@ -128,7 +128,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Mexico, withholding taxes (0.90% of invested capital)",
       "sourceUrl": "https://taxsummaries.pwc.com/mexico/corporate/withholding-taxes",
       "asOf": "2026-08-06",
-      "note": "Banks withhold income tax at 0.90% a year of the capital invested, not of the interest; at a 6.2% deposit rate that is about 14.5% of the interest. The final tax is on real (inflation-adjusted) interest at the saver's marginal rate in the annual return. Page reviewed 6 August 2026."
+      "note": "Financial institutions withhold income tax at 0.90% a year of the capital invested, not of the interest; at about a 6.2% yield that is roughly 14.5% of the interest (about 12.6% at the 7.12% one-year CETES yield). The final tax is on real (inflation-adjusted) interest at the saver's marginal rate in the annual return. PwC page last reviewed 6 August 2026."
     },
     "tax_sanchayapatra_profit": {
       "value": 0.145,
@@ -144,7 +144,7 @@
       "sourceName": "IPAB, ¿Qué hacemos? (400,000 UDIs); UDI value from Banco de México SIE CP150",
       "sourceUrl": "https://www.gob.mx/ipab/que-hacemos",
       "asOf": "2026-10-31",
-      "note": "IPAB covers bank deposits up to 400,000 UDIs per person per bank; with the UDI at about 8.89 pesos (Banxico CP150, early November 2026) that is about MXN 3.55 million."
+      "note": "IPAB's bank deposit insurance covers up to 400,000 UDIs (per person per bank); the UDI was about 8.89 pesos at the end of October 2026 (8.8977 on 10 November 2026, Banxico SIE CP150), so the cover is about MXN 3.555 million."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -157,7 +157,7 @@
     "equity_return_low": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "Mexican stock index (S&P/BMV IPC) weak 10-year record; CETES 364-day 7.12% gross (Banxico CF107)",
+      "sourceName": "Mexican stock exchange main index (IPC), weak 10-year record; CETES 364-day 7.12% gross (Banxico CF107)",
       "sourceUrl": "https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?sector=22&accion=consultarCuadro&idCuadro=CF107&locale=es",
       "asOf": "2026-10-31",
       "note": "Low case: the local index repeats its weak decade, leaving equities below after-tax government bills."
@@ -288,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MX",
       "asOf": "2024-12-31",
-      "note": "Men 72.4, women 78.0 (2024)."
+      "note": "Men 72.4, women 78.0 (2024; latest World Bank figure, older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -448,7 +448,7 @@
         "afterYears": null,
         "daysPerMonth": 30
       },
-      "note": "Prima de antigüedad: 12 days' wages per year of service for permanent workers, paid on dismissal (justified or not), on justified separation, and on voluntary resignation after at least 15 years; the daily wage counted is capped at twice the minimum wage. The text read is the 2015 consolidated version (older than 2025); article 162 has not changed since. Separate severance (3 months plus 20 days per year) applies to unjustified dismissal."
+      "note": "Prima de antigüedad (LFT art. 162): 12 days' wages per year of service for permanent workers, paid on dismissal (justified or not), on justified separation, and on voluntary resignation after at least 15 years; under art. 486 the daily wage counted is capped at twice the minimum wage. Text read is the consolidated version last reformed 12 June 2015 (older than 2025); later amendments could not be checked because the Chamber of Deputies law library could not be reached. Separate severance (3 months plus 20 days per year) applies to unjustified dismissal."
     },
     "public_pension_scheme": {
       "value": null,

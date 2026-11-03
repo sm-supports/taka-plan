@@ -41,7 +41,7 @@
       "sourceName": "BEAC monetary policy committee, 28 September 2026 (CEMAC inflation norm 3%); World Bank CPI inflation 2021-2025",
       "sourceUrl": "https://www.beac.int/wp-content/uploads/2016/10/COMMUNIQUE-DE-PRESSE-CPM-DU-28-SEPTEMBRE-2026.pdf",
       "asOf": "2026-10-31",
-      "note": "The CFA franc is pegged to the euro and the CEMAC norm is 3%, but Cameroon's inflation averaged about 5% over 2021-2025, so 3.5% a year is used for long-range plans."
+      "note": "The CFA franc is pegged to the euro and the CEMAC norm is 3% (BEAC forecasts 2.9% for Cameroon in 2026), but inflation averaged about 5% over 2021-2025, so 3.5% a year is used for long-range plans."
     },
     "policy_rate": {
       "value": 0.045,
@@ -52,12 +52,12 @@
       "note": "Tender rate (taux d'intérêt des appels d'offres) held at 4.50% after a cut from 4.75% on 29 June 2026; marginal lending facility 5.75%, deposit facility 0%. BEAC sets rates for all six CEMAC countries."
     },
     "savings_account_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "BEAC sets a minimum creditor rate (TCM) for passbook savings up to 5 million FCFA, but its current value was not given on the BEAC pages that could be read."
+      "value": 0.0245,
+      "status": "sourced",
+      "sourceName": "BEAC Monetary Policy Report, September 2026, annex: Taux Créditeur Minimum (TCM)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
+      "asOf": "2026-09-30",
+      "note": "Minimum rate banks in CEMAC must pay on passbook savings of individuals up to 5 million FCFA, 2.45%, unchanged since 8 July 2014; banks usually pay this floor."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -140,12 +140,12 @@
       "note": "The tax treatment of interest on public bond offerings and Treasury securities for individuals could not be confirmed from an official source; PwC gives the general 16.5% on investment income without mentioning government securities."
     },
     "deposit_insurance_limit": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "value": 8000000,
+      "status": "sourced",
+      "sourceName": "Deposit Guarantee Fund of Central Africa (FOGADAC), FAQ",
+      "sourceUrl": "https://www.fogadac.com/faq",
       "asOf": "2026-10-31",
-      "note": "A regional deposit guarantee fund (FOGADAC) exists for CEMAC banks, but its cover per depositor could not be read: its site did not respond."
+      "note": "FOGADAC repays guaranteed deposits up to 8 million FCFA for individuals (15 million for legal persons); it covers banks in all six CEMAC countries, including Cameroon."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -206,8 +206,8 @@
     "fixed_income_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "World Bank deposit rate 2.45% (BEAC minimum savings rate), taxed at 16.5% (PwC)",
-      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CM",
+      "sourceName": "BEAC minimum savings rate (TCM) 2.45%, taxed at 16.5% (PwC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: passbook savings at about the regulated minimum, after tax."
     },
@@ -370,8 +370,8 @@
     "retirement_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "World Bank deposit rate 2.45% (BEAC minimum savings rate), taxed at 16.5% (PwC)",
-      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=CM",
+      "sourceName": "BEAC minimum savings rate (TCM) 2.45%, taxed at 16.5% (PwC)",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: passbook savings after tax."
     },
@@ -460,8 +460,8 @@
       "available": true,
       "localName": "Compte d'épargne (livret)",
       "localNameEn": "Savings account (passbook)",
-      "note": "BEAC sets a minimum rate (TCM) on passbook savings up to 5 million FCFA.",
-      "sourceUrl": "https://www.beac.int/politique-monetaire/structure-taux-dinteret/"
+      "note": "Banks must pay at least the BEAC minimum savings rate (TCM, 2.45%) on passbook savings up to 5 million FCFA.",
+      "sourceUrl": "https://www.beac.int/wp-content/uploads/2018/11/Rapport-sur-La-Politique-Mon%C3%A9taire-de-la-BEAC_Sept-2026_vf_new2_Publiable.pdf"
     },
     "fdr_3m": {
       "available": true,
@@ -545,7 +545,10 @@
       "name": "Couverture Santé Universelle (CSU), Ministry of Public Health",
       "url": "https://csu.minsante.cm/"
     },
-    "depositInsurance": null,
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund of Central Africa (Fonds de Garantie des Dépôts en Afrique Centrale, FOGADAC)",
+      "url": "https://www.fogadac.com/"
+    },
     "statistics": {
       "name": "Institut National de la Statistique (INS)",
       "url": "https://ins-cameroun.cm/"

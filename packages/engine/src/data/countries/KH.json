@@ -57,20 +57,20 @@
       "note": "Average savings deposit rate, July 2026; secondary source because the NBC site was not reachable."
     },
     "fdr_3m_rate": {
-      "value": 0.027,
-      "status": "sourced",
-      "sourceName": "Published riel fixed deposit rates of a large commercial bank (3 months, interest at maturity)",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "KHR 2.70% (USD 1.95%); page undated, read 2026-10-31."
+      "note": "NBC tenor-level deposit rates were not reachable (nbc.gov.kh returned 403); the only published 3-month riel term deposit rates found were individual banks' own pages (about 2.7% at a large bank, Oct 2026), which we do not cite."
     },
     "fdr_1y_rate": {
-      "value": 0.041,
-      "status": "sourced",
-      "sourceName": "Published riel fixed deposit rates of a large commercial bank (12 months, interest at maturity)",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "KHR 4.10% (USD 3.70%); page undated, read 2026-10-31."
+      "note": "NBC tenor-level deposit rates were not reachable (nbc.gov.kh returned 403); the only published 12-month riel term deposit rates found were individual banks' own pages (about 4.1% at a large bank, Oct 2026), which we do not cite."
     },
     "dps_rate": {
       "value": null,
@@ -86,7 +86,7 @@
       "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST)",
       "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=KH",
       "asOf": "2025-12-31",
-      "note": "1.29% for 2025."
+      "note": "1.29% for 2025. Trading Economics reports a simple average riel savings deposit rate of the 10 largest banks of 1.21% for June 2026."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -121,20 +121,20 @@
       "note": "Average coupon 4.60% in 2025; no yield published, coupons are set at auction."
     },
     "tax_bank_interest": {
-      "value": 0.06,
-      "status": "sourced",
-      "sourceName": "Withholding tax note on a large bank's fixed deposit page (Cambodian Law on Taxation)",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "6% final withholding on fixed deposit interest for residents; 4% on savings accounts; 14% for non-residents."
+      "note": "The Law on Taxation sets a final withholding tax on bank interest paid to resident individuals (commonly reported as 6% on term deposits and 4% on savings accounts), but we found it only on bank and law-firm pages; PwC Tax Summaries for Cambodia does not state it."
     },
     "tax_sanchayapatra_profit": {
-      "value": 0.03,
-      "status": "sourced",
-      "sourceName": "Ministry of Economy and Finance Notification 007 (21 July 2026) on tax incentives for 2026 government securities (DFDL summary)",
-      "sourceUrl": "https://www.dfdl.com/insights/legal-and-tax-updates/cambodia-introduces-2026-government-securities-tax-incentives/",
-      "asOf": "2026-07-21",
-      "note": "No savings certificate exists; for government securities issued in 2026 withholding on interest is cut from 6% to 3% and the interest is exempt from tax on income."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists. MEF Notification 007 (21 Jul 2026) reportedly halves withholding on interest from 2026 government securities to 3% for residents, but only a law-firm summary was found, not the official text."
     },
     "deposit_insurance_limit": {
       "value": 0,
@@ -142,7 +142,7 @@
       "sourceName": "Cambodia Investment Review, AMRO report on bank liquidity (July 2026)",
       "sourceUrl": "https://cambodiainvestmentreview.com/2026/07/28/amro-warns-cambodia-banks-dollar-liquidity-buffers-have-fallen-to-record-low-in-2026-as-funds-shift-overseas/",
       "asOf": "2026-07-28",
-      "note": "No formal deposit insurance scheme exists in Cambodia (AMRO also noted this in 2024)."
+      "note": "No formal deposit insurance scheme exists in Cambodia (AMRO, as reported July 2026: 'no formal deposit insurance scheme currently exists'), so the limit is 0."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -155,24 +155,24 @@
     "equity_return_low": {
       "value": 0.0,
       "status": "assumption",
-      "sourceName": "Cambodia Securities Exchange record; bank deposit rates",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceName": "Cambodia Securities Exchange record; government bond yields (NBC Annual Report 2025)",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
       "note": "The local exchange is small and illiquid with a weak record since its 2018 high, so the low case is zero in riel terms."
     },
     "equity_return_base": {
-      "value": 0.065,
+      "value": 0.055,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 3.85% plus a modest premium",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceName": "After-tax 1-year government bond yield (about 2.9%) plus a modest premium",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
-      "note": "Weak, thin local market: base set only about 2.5 points above the after-tax 1-year deposit rate, well under the 4-point limit."
+      "note": "Weak, thin local market: base set about 2.5 points above the after-tax 1-year government bond yield, under the 4-point limit."
     },
     "equity_return_high": {
-      "value": 0.1,
+      "value": 0.09,
       "status": "assumption",
-      "sourceName": "After-tax deposit rate plus a full equity premium",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceName": "After-tax safe rate plus a full equity premium",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
       "note": "High case if listings deepen and regional equity returns are achieved."
     },
@@ -201,28 +201,28 @@
       "note": "High case for a strong gold cycle."
     },
     "fixed_income_return_low": {
-      "value": 0.025,
+      "value": 0.012,
       "status": "assumption",
-      "sourceName": "Riel fixed deposit rates after 6% withholding",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceName": "Average bank deposit rate (World Bank FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=KH",
       "asOf": "2026-10-31",
-      "note": "Low case near the after-tax 3-month deposit rate (2.5%). Safe KHR rates: 3-month deposit 2.7%, 1-year 4.1% at a large bank (6% withholding tax on fixed deposits), 5-year government bond yield 4.5% (2025 average, 3% withholding for 2026 issues)."
+      "note": "Low case near the average riel deposit rate. Safe KHR rates: average deposit rate 1.29% (World Bank, 2025); government bonds, average winning yields in 2025: 1-year 3.15%, 3-year 3.99%, 5-year 4.50% (NBC Annual Report 2025); interest is subject to a withholding tax of a few percent."
     },
     "fixed_income_return_base": {
-      "value": 0.0385,
+      "value": 0.029,
       "status": "assumption",
-      "sourceName": "Riel fixed deposit rates after 6% withholding",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
-      "asOf": "2026-10-31",
-      "note": "Base case at the after-tax 1-year deposit rate (4.1% x 0.94). Safe KHR rates: 3-month deposit 2.7%, 1-year 4.1% at a large bank (6% withholding tax on fixed deposits), 5-year government bond yield 4.5% (2025 average, 3% withholding for 2026 issues)."
-    },
-    "fixed_income_return_high": {
-      "value": 0.045,
-      "status": "assumption",
-      "sourceName": "Government bond yields (NBC Annual Report 2025)",
+      "sourceName": "Government bond yields, NBC Annual Report 2025 (via Vietstock)",
       "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
-      "note": "High case near the after-tax 5- to 10-year government bond yield. Safe KHR rates: 3-month deposit 2.7%, 1-year 4.1% at a large bank (6% withholding tax on fixed deposits), 5-year government bond yield 4.5% (2025 average, 3% withholding for 2026 issues)."
+      "note": "Base case at the 1-year government bond yield (3.15%) less withholding tax. Safe KHR rates: average deposit rate 1.29% (World Bank, 2025); government bonds, average winning yields in 2025: 1-year 3.15%, 3-year 3.99%, 5-year 4.50% (NBC Annual Report 2025); interest is subject to a withholding tax of a few percent."
+    },
+    "fixed_income_return_high": {
+      "value": 0.042,
+      "status": "assumption",
+      "sourceName": "Government bond yields, NBC Annual Report 2025 (via Vietstock)",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
+      "asOf": "2026-10-31",
+      "note": "High case near the 5-year government bond yield (4.5%) less withholding tax. Safe KHR rates: average deposit rate 1.29% (World Bank, 2025); government bonds, average winning yields in 2025: 1-year 3.15%, 3-year 3.99%, 5-year 4.50% (NBC Annual Report 2025); interest is subject to a withholding tax of a few percent."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -261,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=KH",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Figure refers to 2023, older than 2025; it is the latest available."
     },
     "goal_inflation_health": {
       "value": 0.05,
@@ -285,7 +286,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KH",
       "asOf": "2024-12-31",
-      "note": "Men 68.1, women 73.4 (2024)."
+      "note": "Men 68.1, women 73.4 (2024). Figure refers to 2024, older than 2025; it is the latest available."
     },
     "life_table_remaining": {
       "value": null,
@@ -345,15 +346,15 @@
       "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
       "sourceUrl": "https://www.populationpyramid.net/cambodia/2040/",
       "asOf": "2024-07-31",
-      "note": "100 / old-age dependency ratio: 9.9 in 2025 (World Bank), 13.3 in 2040 and 24.0 in 2065 (UN WPP 2024)."
+      "note": "100 / old-age dependency ratio: 9.9 in 2025 (World Bank), 13.3 in 2040 and 24.0 in 2065 (UN WPP 2024). Figure refers to 2024, older than 2025; it is the latest available."
     },
     "retirement_age_default": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "Sub-decree 32 on the Social Security Scheme on Pension (NSSF), Article 13 (unofficial translation)",
-      "sourceUrl": "https://ibccambodia.com/wp-content/uploads/2021/05/Sub-decree-32-on-Social-Security-Scheme-on-Pension-Eng.pdf",
-      "asOf": "2021-03-01",
-      "note": "Old-age pension from age 60 with at least 12 months of contributions; same for men and women."
+      "sourceName": "ISSA country profile Cambodia 2022: Old-age pension, Social Security (NSSF)",
+      "sourceUrl": "https://www.issa.int/sites/default/files/documents/2024-01/Cambodia%202022%20-%20ISSA%20country%20profile.pdf",
+      "asOf": "2022-12-31",
+      "note": "Old-age pension from age 60 with at least 12 months of contributions, same for men and women; ISSA lists no legislated increase, so 60 also applies to people born after 1975 (Sub-decree 32 of 2021, Art. 13). Profile reflects 2022 policies, older than 2025."
     },
     "retirement_age_government": {
       "value": 60,
@@ -361,53 +362,53 @@
       "sourceName": "Open Development Cambodia, Ministry of Civil Service Letter 5420 (25 Nov 2019)",
       "sourceUrl": "https://opendevelopmentcambodia.net/news/government-raises-retirement-age-for-civil-servants-to-60/",
       "asOf": "2019-11-25",
-      "note": "All civil servants retire at 60 regardless of framework (previously 55, 58 or 60)."
+      "note": "All civil servants retire at 60 regardless of framework (previously 55, 58 or 60). Figure refers to 2019, older than 2025; it is the latest available."
     },
     "retirement_return_low": {
-      "value": 0.025,
+      "value": 0.012,
       "status": "assumption",
-      "sourceName": "Riel fixed deposit rates after 6% withholding",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceName": "Average bank deposit rate (World Bank FR.INR.DPST)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=KH",
       "asOf": "2026-10-31",
-      "note": "Low case near the after-tax 3-month deposit rate. Safe KHR rates: 3-month deposit 2.7%, 1-year 4.1% at a large bank (6% withholding tax on fixed deposits), 5-year government bond yield 4.5% (2025 average, 3% withholding for 2026 issues)."
+      "note": "Low case near the average riel deposit rate. Safe KHR rates: average deposit rate 1.29% (World Bank, 2025); government bonds, average winning yields in 2025: 1-year 3.15%, 3-year 3.99%, 5-year 4.50% (NBC Annual Report 2025); interest is subject to a withholding tax of a few percent."
     },
     "retirement_return_base": {
-      "value": 0.0375,
+      "value": 0.029,
       "status": "assumption",
-      "sourceName": "Riel fixed deposit rates after 6% withholding",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
-      "asOf": "2026-10-31",
-      "note": "Base case just under the after-tax 1-year deposit rate (3.85%). Safe KHR rates: 3-month deposit 2.7%, 1-year 4.1% at a large bank (6% withholding tax on fixed deposits), 5-year government bond yield 4.5% (2025 average, 3% withholding for 2026 issues)."
-    },
-    "retirement_return_high": {
-      "value": 0.045,
-      "status": "assumption",
-      "sourceName": "Government bond yields (NBC Annual Report 2025)",
+      "sourceName": "Government bond yields, NBC Annual Report 2025 (via Vietstock)",
       "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
-      "note": "High case near after-tax longer government bond yields. Safe KHR rates: 3-month deposit 2.7%, 1-year 4.1% at a large bank (6% withholding tax on fixed deposits), 5-year government bond yield 4.5% (2025 average, 3% withholding for 2026 issues)."
+      "note": "Base case at the after-tax 1-year government bond yield (3.15% less withholding), the safe rate a retiree can lock in. Safe KHR rates: average deposit rate 1.29% (World Bank, 2025); government bonds, average winning yields in 2025: 1-year 3.15%, 3-year 3.99%, 5-year 4.50% (NBC Annual Report 2025); interest is subject to a withholding tax of a few percent."
+    },
+    "retirement_return_high": {
+      "value": 0.042,
+      "status": "assumption",
+      "sourceName": "Government bond yields, NBC Annual Report 2025 (via Vietstock)",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
+      "asOf": "2026-10-31",
+      "note": "High case near the after-tax 5-year government bond yield. Safe KHR rates: average deposit rate 1.29% (World Bank, 2025); government bonds, average winning yields in 2025: 1-year 3.15%, 3-year 3.99%, 5-year 4.50% (NBC Annual Report 2025); interest is subject to a withholding tax of a few percent."
     },
     "retirement_accumulation_return_low": {
-      "value": 0.03,
+      "value": 0.02,
       "status": "assumption",
       "sourceName": "Mix of riel deposits, government bonds and equity",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
-      "note": "About 40% equity at the low case, 60% deposits and bonds."
+      "note": "About 40% equity at the low case and 60% deposits and bonds."
     },
     "retirement_accumulation_return_base": {
-      "value": 0.05,
+      "value": 0.042,
       "status": "assumption",
       "sourceName": "Mix of riel deposits, government bonds and equity",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
-      "note": "About half equity at 6.5% and half deposits/bonds near 3.9%."
+      "note": "About half equity at 5.5% and half bonds/deposits near 2.9%."
     },
     "retirement_accumulation_return_high": {
-      "value": 0.07,
+      "value": 0.065,
       "status": "assumption",
       "sourceName": "Mix of riel deposits, government bonds and equity",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account",
+      "sourceUrl": "https://en.vietstock.vn/2026/01/nbc-supports-govt-bond-market-with-410b-riel-and-70m-52000-628833.htm",
       "asOf": "2026-10-31",
       "note": "About 60% equity at the high case and 40% bonds."
     },
@@ -429,17 +430,11 @@
     },
     "gratuity_rule": {
       "value": null,
-      "valueJson": {
-        "daysPerYear": 15,
-        "daysPerYearAfter": null,
-        "afterYears": null,
-        "daysPerMonth": 26
-      },
-      "status": "sourced",
-      "sourceName": "Labour Ministry Prakas 443 (2018) and MLVT instruction on seniority indemnity (Tilleke & Gibbins summary)",
-      "sourceUrl": "https://www.tilleke.com/insights/labor-law-updates-cambodia-q1-and-q2-2019/8/",
-      "asOf": "2019-06-30",
-      "note": "Seniority indemnity of 15 days of average wages and benefits a year, paid as 7.5 days each June and December; a month counts as 26 working days."
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A statutory seniority indemnity exists (Prakas 443 of 2018: 15 days of wages a year, paid half-yearly), but we found it only in law-firm summaries; the ILO EPLex page was blocked (403), so the rule is not cited."
     },
     "public_pension_scheme": {
       "value": null,
@@ -455,7 +450,7 @@
       "sourceName": "Sub-decree 32 on the Social Security Scheme on Pension (NSSF), unofficial translation",
       "sourceUrl": "https://ibccambodia.com/wp-content/uploads/2021/05/Sub-decree-32-on-Social-Security-Scheme-on-Pension-Eng.pdf",
       "asOf": "2021-03-01",
-      "note": "NSSF pension for workers under the Labour Law (from Oct 2022): 4% of wages (2% employer, 2% employee) for the first 5 years, then stepping up; accrual 1.75% a year for the first 15 years and 1.25% after; benefits adjusted yearly by the official CPI."
+      "note": "NSSF pension for workers under the Labour Law (from Oct 2022): 2% employee plus 2% employer, rising to 5.37% each by 2041 (ISSA); accrual 1.75% a year for the first 15 years and 1.25% after, capped at 70%; benefits adjusted yearly by the official commodity price index (Sub-decree 32, ch. on benefit adjustment). Sub-decree dates from 2021, older than 2025, and is still in force."
     }
   },
   "instruments": {
@@ -469,13 +464,13 @@
       "available": true,
       "localName": "ប្រាក់បញ្ញើមានកាលកំណត់",
       "localNameEn": "Fixed deposit",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account"
+      "sourceUrl": null
     },
     "fdr_1y": {
       "available": true,
       "localName": "ប្រាក់បញ្ញើមានកាលកំណត់",
       "localNameEn": "Fixed deposit",
-      "sourceUrl": "https://www.canadiabank.com.kh/business/fixed-deposit-account"
+      "sourceUrl": null
     },
     "dps": {
       "available": true,

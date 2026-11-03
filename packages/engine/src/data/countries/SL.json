@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "code": "SL",
+  "iso3": "SLE",
+  "nameEn": "Sierra Leone",
+  "nameNative": "Salone",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "kri",
+    "en",
+    "men",
+    "tem"
+  ],
+  "currency": {
+    "code": "SLE",
+    "symbol": "Le",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 22.8065,
+      "status": "sourced",
+      "sourceName": "Bank of Sierra Leone, reference rates as at 30 October 2026",
+      "sourceUrl": "https://bsl.gov.sl/Indicative%20Exchange%20Rates%2030-10-2026.pdf",
+      "asOf": "2026-10-30",
+      "note": "New leone (SLE) per US dollar; the World Bank series (21.30 for 2023) is older."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.1566,
+      "status": "sourced",
+      "sourceName": "Statistics Sierra Leone, CPI press release August 2026",
+      "sourceUrl": "https://www.statistics.sl/images/StatisticsSL/Documents/cpi/2026/August-2026-CPI_Press_Release.pdf",
+      "asOf": "2026-08-31",
+      "note": "Year-on-year national CPI inflation 15.66% in August 2026 (14.89% in July), up from 4.35% in December 2025; non-food inflation 23.54%, food 5.82%."
+    },
+    "inflation_projection": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Bank of Sierra Leone Monetary Policy Report, September 2026 (inflation expected to rise toward the low 20s by end-2026); CPI 2021-2025",
+      "sourceUrl": "https://bsl.gov.sl/MPR_Current.pdf",
+      "asOf": "2026-10-31",
+      "note": "The 2021-2025 average (about 24%) is inflated by the 2022-2023 currency crisis and no credible numeric target exists, so we plan with 15%, near current inflation, between the BSL's near-term outlook and its single-digit medium-term objective under the IMF programme."
+    },
+    "policy_rate": {
+      "value": 0.1725,
+      "status": "sourced",
+      "sourceName": "Bank of Sierra Leone, Monetary Policy Report September 2026 (MPC decision)",
+      "sourceUrl": "https://bsl.gov.sl/MPR_Current.pdf",
+      "asOf": "2026-09-24",
+      "note": "The MPC raised the Monetary Policy Rate by 0.25 points to 17.25% (SLF 21.25%, SDF 11.75%) at its Q3 2026 meeting (24 September 2026 per the BSL MPC calendar), after a rise to 17% in June 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0179,
+      "status": "sourced",
+      "sourceName": "Bank of Sierra Leone, Monetary Policy Report September 2026, Table 3 (interest rates)",
+      "sourceUrl": "https://bsl.gov.sl/MPR_Current.pdf",
+      "asOf": "2026-07-31",
+      "note": "Average savings deposit rate 1.79% in July 2026, unchanged since January 2026."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BSL Monetary Policy Report and interest rate file publish savings and lending rates only; no 3-month time deposit rate was found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BSL Monetary Policy Report and interest rate file publish savings and lending rates only; no 1-year time deposit rate was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a monthly recurring deposit product was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0704,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Sierra Leone",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SL",
+      "asOf": "2025-12-31",
+      "note": "7.04% for 2025 (IMF IFS via World Bank); the BSL reports a savings rate of 1.79% in mid-2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate was found; individuals can buy Treasury bills and short bonds through commercial banks at BSL auctions."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The 91-day Treasury bill has not been issued since 2025 (BSL Monetary Policy Report September 2026, Table 3 shows 0). Latest auction (29 October 2026): 182-day 13.21%, 364-day 16.96%."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year bond auction was found; 2026 bond issues were mostly 2- to 3-year bonds priced at 18% (weighted average cost 17.69%, BSL Monetary Policy Report September 2026)."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year government bond is issued in the domestic market; issuance is concentrated at 2-3 years (BSL Monetary Policy Report September 2026)."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "National Revenue Authority, NRA Tax Guide 2022 (withholding tax on interest, Income Tax Act 2000 s.119)",
+      "sourceUrl": "https://webtestcms.nra.gov.sl/uploads/2022_NRA_TAX_GUIDE_83dc12b316.pdf",
+      "asOf": "2022-12-31",
+      "note": "The NRA guide lists a 15% withholding tax on interest payments (Income Tax Act 2000, s.119). The guide is from 2022, older than 2025, and is hosted on an NRA content server; no newer official rate table was reachable, and whether the tax is final for resident individuals is not stated."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists. The Income Tax Act 2000 s.119(2) exempts interest on Government Development Stocks from withholding; the treatment of Treasury bill discounts for individuals was not confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "A Deposit Protection Fund Act exists, but the BSL 2025 Financial Stability Report says the Fund awaits enactment of a revised Act; no cover limit was published."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published credit card rate was found; the BSL reports an average lending rate of 22.75% (June 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "No usable local equity index; global equity in leone terms",
+      "sourceUrl": "https://bsl.gov.sl/Indicative%20Exchange%20Rates%2030-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global equity returns with slower leone depreciation."
+    },
+    "equity_return_base": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Global equity in leone terms; after-tax 364-day bill about 14.4%",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Sierra Leone's exchange lists very few companies, so equity means a global index in leone terms (about 7% in dollars plus expected depreciation), kept close to the after-tax bill rate rather than above it by a full premium."
+    },
+    "equity_return_high": {
+      "value": 0.19,
+      "status": "assumption",
+      "sourceName": "Global equity in leone terms",
+      "sourceUrl": "https://bsl.gov.sl/Indicative%20Exchange%20Rates%2030-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equities and faster leone depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; leone 22.81 per US dollar on 30 October 2026 (BSL)",
+      "sourceUrl": "https://bsl.gov.sl/Indicative%20Exchange%20Rates%2030-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with a stable leone, as in 2025-2026."
+    },
+    "gold_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; leone 22.81 per US dollar on 30 October 2026 (BSL)",
+      "sourceUrl": "https://bsl.gov.sl/Indicative%20Exchange%20Rates%2030-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 4.5% dollar gold trend plus about 8% a year of leone depreciation, in line with an inflation gap of roughly 10-12 points."
+    },
+    "gold_return_high": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; leone 22.81 per US dollar on 30 October 2026 (BSL)",
+      "sourceUrl": "https://bsl.gov.sl/Indicative%20Exchange%20Rates%2030-10-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a repeat of the sharp depreciation of 2022-2023."
+    },
+    "fixed_income_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BSL: 364-day T-bill yield 16.96% (29 Oct 2026); savings deposits 1.79% (Jul 2026); 15% withholding tax on interest (NRA)",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: bill yields fall back as inflation is brought down, and savers mix bills with low-paying deposits."
+    },
+    "fixed_income_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "BSL: 364-day T-bill yield 16.96% (29 Oct 2026); savings deposits 1.79% (Jul 2026); 15% withholding tax on interest (NRA)",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 364-day Treasury bills (about 14.4% after 15% tax), rounded down for reinvestment risk."
+    },
+    "fixed_income_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "BSL: 364-day T-bill yield 16.96% (29 Oct 2026); savings deposits 1.79% (Jul 2026); 15% withholding tax on interest (NRA)",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 2- to 3-year Treasury bonds at about 18% before tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No industry-wide life claim settlement ratio from the Sierra Leone Insurance Commission was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official source publishing indicative term-life premiums was found."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for the cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official source publishing private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.5447,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Sierra Leone",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SL",
+      "asOf": "2023-12-31",
+      "note": "54.5% in 2023 (WHO Global Health Expenditure Database), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.165,
+      "status": "assumption",
+      "sourceName": "Statistics Sierra Leone: health CPI up 11.75% year on year (August 2026); inflation assumption 15%",
+      "sourceUrl": "https://www.statistics.sl/images/StatisticsSL/Documents/cpi/2026/August-2026-CPI_Press_Release.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health costs are planned 1.5 points above general inflation, as most care is paid out of pocket and medicines are imported."
+    },
+    "goal_inflation_education": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "Statistics Sierra Leone: education services CPI up 8.59% year on year (August 2026); inflation assumption 15%",
+      "sourceUrl": "https://www.statistics.sl/images/StatisticsSL/Documents/cpi/2026/August-2026-CPI_Press_Release.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education fees have risen more slowly than prices lately, so they are planned at the general inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 61.96,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Sierra Leone",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SL",
+      "asOf": "2024-12-31",
+      "note": "62.0 years in 2024 (men 60.2, women 63.7); UN WPP 2024 projects 62.3 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.0,
+            "men": 15.2,
+            "women": 16.8
+          },
+          {
+            "age": 65,
+            "total": 12.7,
+            "men": 12.0,
+            "women": 13.3
+          },
+          {
+            "age": 70,
+            "total": 9.7,
+            "men": 9.2,
+            "women": 10.1
+          },
+          {
+            "age": 80,
+            "total": 5.4,
+            "men": 5.1,
+            "women": 5.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/sierra-leone/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals are the mean of men and women except at 65, where the page gives 12.7."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 18.0
+          },
+          {
+            "year": 2040,
+            "value": 14.7
+          },
+          {
+            "year": 2065,
+            "value": 8.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=SL",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+, computed as 100 / old-age dependency ratio: 5.6 in 2025 (World Bank) gives 18.0; 6.8 in 2040 and 12.1 in 2065 (populationpyramid.net/sierra-leone/2040/ and /2065/) give 14.7 and 8.3."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "NASSIT, FAQs and Benefits (old-age pension qualifying conditions)",
+      "sourceUrl": "https://nassit.org.sl/faqs",
+      "asOf": "2026-10-31",
+      "note": "Full NASSIT old-age pension at 60, described as the National Retirement Age, after at least 180 months of contributions; a reduced pension is possible from 55."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official statement of the civil service retirement age was found; NASSIT's National Retirement Age of 60 applies to its pension, not necessarily to the end of public service."
+    },
+    "retirement_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "BSL: 364-day T-bill yield 16.96% (29 Oct 2026); savings deposits 1.79% (Jul 2026); 15% withholding tax on interest (NRA)",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: falling bill yields and low-paying deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BSL: 364-day T-bill yield 16.96% (29 Oct 2026); savings deposits 1.79% (Jul 2026); 15% withholding tax on interest (NRA)",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the 364-day bill yield after 15% tax (about 14.4%), allowing for yields to fall as inflation eases."
+    },
+    "retirement_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "BSL: 364-day T-bill yield 16.96% (29 Oct 2026); savings deposits 1.79% (Jul 2026); 15% withholding tax on interest (NRA)",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: rolling 2- to 3-year Treasury bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Safe rate about 13%; equity base 14%; gold base 13%",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly bills and deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Safe rate about 13%; equity base 14%; gold base 13%",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of Treasury bills, bonds, gold and global equity."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Safe rate about 13%; equity base 14%; gold base 13%",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more global equity and gold."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension was found; NASSIT benefits require 15 years of contributions."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age (social) pension was found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The private-sector end-of-service benefit rule in the Employment Act could not be read from an official source; NASSIT pays a separate retirement gratuity of 12 months of initial pension."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "NASSIT, Benefits and Contributions pages",
+      "sourceUrl": "https://nassit.org.sl/our-services/benefits",
+      "asOf": "2026-10-31",
+      "note": "Mandatory for formal employees: 5% employee plus 10% employer contributions (https://nassit.org.sl/our-services/contributions). Full pension from 60 after 180 months of contributions, reduced pension at 55-59: 30% of the best 60 months' average earnings plus 2% per extra 12 months, up to 80%, plus a retirement gratuity of 12 months' initial pension. No automatic indexation is stated."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Average savings rate 1.79% (July 2026); 15% withholding tax on interest.",
+      "sourceUrl": "https://bsl.gov.sl/MPR_Current.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed (time) deposit (3 months)",
+      "note": "Offered by banks; no published average rate."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed (time) deposit (1 year)",
+      "note": "Offered by banks; no published average rate."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail government savings certificate was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Treasury bills (91 days)",
+      "note": "Not issued since 2025; 182-day and 364-day bills are auctioned weekly and the public can apply through banks from NLe 5,000.",
+      "sourceUrl": "https://bsl.gov.sl/Announcement%20%2029%2010%202026.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "Domestic bonds are mostly 2- to 3-year issues."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year domestic government bond."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No locally sold diversified equity fund was confirmed; the local exchange lists very few companies."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery and from artisanal mining; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Sierra Leone",
+      "url": "https://bsl.gov.sl/"
+    },
+    "insuranceRegulator": {
+      "name": "Sierra Leone Insurance Commission (SLICOM)",
+      "url": "https://slicom.org.sl/"
+    },
+    "insuranceComplaints": {
+      "name": "Sierra Leone Insurance Commission (SLICOM), contact",
+      "url": "https://slicom.org.sl/contact-us-v-2/",
+      "note": "No dedicated complaints page was found; complaints go to the Commission."
+    },
+    "pensionScheme": {
+      "name": "National Social Security and Insurance Trust (NASSIT)",
+      "url": "https://nassit.org.sl/our-services/benefits"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Statistics Sierra Leone",
+      "url": "https://www.statistics.sl/index.php/cpi.html"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

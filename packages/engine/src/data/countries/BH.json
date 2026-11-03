@@ -18,10 +18,10 @@
     "usdRate": {
       "value": 0.376,
       "status": "sourced",
-      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Bahrain",
-      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=BH",
-      "asOf": "2025-12-31",
-      "note": "The dinar is pegged at 0.376 per US dollar; the Central Bank of Bahrain daily rate on 29 October 2026 was 0.376081. CLDR gives no narrow symbol; 'BD' is the usual local abbreviation."
+      "sourceName": "Central Bank of Bahrain, Monthly Statistical Bulletin, August 2026, Table 6 (BD exchange rates against selected currencies)",
+      "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "The dinar is pegged at 0.376 per US dollar, unchanged in every period of the table; World Bank PA.NUS.FCRF 2025 also 0.376. CLDR gives no narrow symbol; 'BD' is the usual local abbreviation."
     }
   },
   "fields": {
@@ -47,7 +47,7 @@
       "sourceName": "Central Bank of Bahrain press release, 28 October 2026: overnight deposit rate unchanged",
       "sourceUrl": "https://www.cbb.gov.bh/media-center/cbb-maintains-overnight-interest-rate-unchanged-at-4-50/",
       "asOf": "2026-10-28",
-      "note": "The CBB kept its overnight deposit rate at 4.50%; its daily rates on 29 October 2026 show the one-week deposit rate at 4.75% and the overnight repo rate at 5.50%."
+      "note": "The CBB kept its overnight deposit rate, its key policy rate, unchanged at 4.50%. Its August 2026 bulletin shows the average repo rate at 5.25% in Q2 2026."
     },
     "savings_account_rate": {
       "value": 0.0018,
@@ -481,7 +481,7 @@
       "available": true,
       "localName": "أذونات الخزانة",
       "localNameEn": "Treasury bills",
-      "note": "91-day bills are auctioned weekly by the CBB to banks, the Social Insurance Organisation and other institutions; Islamic Al-Salam sukuk are also issued monthly.",
+      "note": "91-day bills are auctioned weekly by the CBB to eligible institutions; individuals can take part through their retail banks or Bahrain Bourse. Al Salam sukuk are also issued monthly.",
       "sourceUrl": "https://www.cbb.gov.bh/government-securities/"
     },
     "tbond_5y": {
@@ -502,7 +502,7 @@
       "available": true,
       "localName": "صناديق الاستثمار",
       "localNameEn": "Mutual funds",
-      "note": "About 1,750 collective investment undertakings are registered with the CBB.",
+      "note": "The CBB bulletin counts 1,683 mutual funds registered in Bahrain in Q2 2026, with USD 11.5 billion invested.",
       "sourceUrl": "https://www.cbb.gov.bh/wp-content/uploads/2026/09/Aug-2026.pdf"
     },
     "gold": {

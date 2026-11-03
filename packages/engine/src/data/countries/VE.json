@@ -14,28 +14,28 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 887.4798,
+      "value": 889.5754,
       "status": "sourced",
-      "sourceName": "USD/VES exchange rate (Trading Economics)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "sourceName": "Banco Central de Venezuela, tipo de cambio de referencia (SMC), US dollar selling rate, operation date 30 October 2026",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tipo-cambio-de-referencia-smc",
       "asOf": "2026-10-30",
-      "note": "VES 887.48 per US dollar on 30 October 2026; the bolívar lost about three-quarters of its dollar value in a year. Secondary source because the Banco Central de Venezuela website could not be reached (certificate error); the World Bank series stops in 2017. Trading Economics does not state whether this is the BCV official rate."
+      "note": "Bs. 889.5754 per US dollar (buying 887.3515) on 30 October 2026, against 223.96 on 31 October 2025, so the bolívar lost about three-quarters of its dollar value in a year. World Bank series stops in 2017."
     }
   },
   "fields": {
     "inflation_cpi": {
       "value": 4.656,
       "status": "sourced",
-      "sourceName": "Banco Central de Venezuela, Índice Nacional de Precios al Consumidor, September 2026 (as reported by Trading Economics)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "sourceName": "Banco Central de Venezuela, Índice Nacional de Precios al Consumidor (INPC), monthly series base December 2007",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/consumidor",
       "asOf": "2026-09-30",
-      "note": "Consumer prices rose 465.6% in the 12 months to September 2026 (534.2% in August; 8.4% in the month). Secondary source because the Banco Central de Venezuela website could not be reached (certificate error); World Bank has no figure after 2016."
+      "note": "The INPC rose 465.6% in the 12 months to September 2026 (index 690,967,674,312,665 against 122,169,616,603,139 in September 2025); 8.4% in the month, 534.2% year on year in August. World Bank has no figure after 2016."
     },
     "inflation_projection": {
       "value": 1.0,
       "status": "assumption",
-      "sourceName": "BCV CPI 465.6% (September 2026); Trading Economics forecasts about 600% for 2027 and 180% for 2028",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "sourceName": "BCV INPC +465.6% year on year (September 2026); annual inflation was about 475% in 2025 (BCV)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/consumidor",
       "asOf": "2026-10-31",
       "note": "Venezuela has had double- or triple-digit inflation almost every year for a decade and has no inflation target, so planning uses 100% a year, well below today's rate but far above any stable economy."
     },
@@ -45,23 +45,23 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Venezuela has no conventional policy rate; the BCV manages money mainly through reserve requirements and exchange-market sales, and the Banco Central de Venezuela website could not be reached (certificate error)."
+      "note": "Venezuela has no single conventional policy rate; the BCV manages money mainly through reserve requirements, open-market instruments and exchange-market sales."
     },
     "savings_account_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "No published typical savings-account rate could be read; the Banco Central de Venezuela website could not be reached (certificate error)."
+      "value": 0.379,
+      "status": "sourced",
+      "sourceName": "Banco Central de Venezuela, tasas de interés pasivas anuales nominales promedio ponderadas, bancos universales: depósitos de ahorro",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
+      "asOf": "2026-09-30",
+      "note": "37.9% nominal a year in September 2026 (provisional), up from 32% in most earlier months; far below inflation."
     },
     "fdr_3m_rate": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "No reliable published 3-month term deposit rate was found; Trading Economics shows a daily '90-day deposit rate' of 60% (October 2026) attributed to the BCV, but its definition and history are unclear, so it is not used."
+      "value": 0.46,
+      "status": "sourced",
+      "sourceName": "Banco Central de Venezuela, tasas de interés pasivas anuales nominales promedio ponderadas, bancos universales: depósitos a plazo, 90 días",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
+      "asOf": "2026-09-30",
+      "note": "46% nominal a year in September 2026 (provisional); the 90-day market is thin and no rate was reported in several recent months; all term deposits averaged 60.4%."
     },
     "fdr_1y_rate": {
       "value": null,
@@ -69,7 +69,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No published 1-year term deposit rate was found; the Banco Central de Venezuela website could not be reached (certificate error)."
+      "note": "The BCV publishes term-deposit rates up to 'more than 90 days', and no rate was reported in that bucket for September 2026; no 1-year rate was found."
     },
     "dps_rate": {
       "value": null,
@@ -85,7 +85,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No reliable weighted average deposit rate was found; the World Bank series stops in 2017 (14.7%) and the Banco Central de Venezuela website could not be reached (certificate error)."
+      "note": "The BCV publishes weighted averages by product (September 2026: savings 37.9%, all term deposits 60.4%, nominative sight deposits 60.2%) but no single average across all deposits; the World Bank series stops in 2017 (14.7%)."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -149,37 +149,37 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The BCV sets maximum lending and credit card rates by resolution, but the Banco Central de Venezuela website could not be reached (certificate error), so the current cap could not be read."
+      "note": "The BCV sets maximum lending and credit card rates by resolution, but the current credit card cap was not confirmed."
     },
     "equity_return_low": {
       "value": 0.2,
       "status": "assumption",
-      "sourceName": "No reliable safe bolívar rate; Trading Economics '90-day deposit rate' 60% (October 2026), inflation 465.6%",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
       "note": "Low case: Caracas-listed shares lose heavily in real terms, as bolívar assets usually have."
     },
     "equity_return_base": {
       "value": 0.5,
       "status": "assumption",
-      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); planning safe rate 50%",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
       "note": "The Caracas stock exchange is small and illiquid with no long reliable record, so the base case stays at the 50% planning safe rate, well below the 100% inflation assumption."
     },
     "equity_return_high": {
       "value": 1.0,
       "status": "assumption",
-      "sourceName": "Dollar-linked share prices rising with bolívar depreciation (Trading Economics USD/VES, bolívar down about 75% in a year)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "sourceName": "Dollar-linked share prices rising with bolívar depreciation (BCV reference rate 223.96 to 889.58 per US dollar, October 2025 to October 2026)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tipo-cambio-de-referencia-smc",
       "asOf": "2026-10-31",
       "note": "High case: share prices keep pace with the dollar, so returns roughly match inflation."
     },
     "gold_return_low": {
       "value": 0.6,
       "status": "assumption",
-      "sourceName": "USD/VES 887.5 on 30 October 2026, bolívar down sharply in a year (Trading Economics); gold USD 3,876/oz",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "sourceName": "BCV reference rate 889.58 per US dollar on 30 October 2026, up from 223.96 a year earlier; gold about USD 3,900/oz",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tipo-cambio-de-referencia-smc",
       "asOf": "2026-10-31",
       "note": "Low case: gold is flat in dollars and the bolívar loses about 40% of its value a year."
     },
@@ -194,34 +194,34 @@
     "gold_return_high": {
       "value": 1.6,
       "status": "assumption",
-      "sourceName": "Bolívar depreciation of about 75% in the year to October 2026 (Trading Economics USD/VES)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "sourceName": "Bolívar depreciation of about 75% in the year to October 2026 (BCV reference rate)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tipo-cambio-de-referencia-smc",
       "asOf": "2026-10-31",
       "note": "High case: the bolívar keeps falling at recent speed and gold rises in dollars."
     },
     "fixed_income_return_low": {
       "value": 0.3,
       "status": "assumption",
-      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); savings and fixed-deposit interest tax-exempt (PwC)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
-      "note": "Low case: ordinary savings accounts pay far less than term deposits and far less than inflation."
+      "note": "Low case: ordinary savings accounts (37.9% in September 2026, 32% for most of the past two years) pay far less than inflation."
     },
     "fixed_income_return_base": {
       "value": 0.5,
       "status": "assumption",
-      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026), tax-exempt",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
-      "note": "Base case: bolívar deposits keep paying well below inflation, as under the BCV's controls for years; 50%, below the indicative 60%."
+      "note": "Base case: bolívar deposits keep paying well below inflation, as under the BCV's controls for years; 50%, between the savings and term-deposit averages."
     },
     "fixed_income_return_high": {
       "value": 0.6,
       "status": "assumption",
-      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
-      "note": "High case: term deposits at the current indicative rate."
+      "note": "High case: term deposits near the current 60% average."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -266,18 +266,18 @@
     "goal_inflation_health": {
       "value": 1.0,
       "status": "assumption",
-      "sourceName": "BCV CPI 465.6% (September 2026, Trading Economics); health care weight 4.3% of the CPI basket",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "sourceName": "BCV INPC +465.6% year on year (September 2026)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/consumidor",
       "asOf": "2026-10-31",
-      "note": "No separate health price index was available, so health goals use the 100% general inflation assumption."
+      "note": "No separate health price index was used, so health goals use the 100% general inflation assumption."
     },
     "goal_inflation_education": {
       "value": 1.0,
       "status": "assumption",
-      "sourceName": "BCV CPI 465.6% (September 2026, Trading Economics); education weight 2.7% of the CPI basket",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/inflation-cpi",
+      "sourceName": "BCV INPC +465.6% year on year (September 2026)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/consumidor",
       "asOf": "2026-10-31",
-      "note": "No separate education price index was available, so education goals use the 100% general inflation assumption."
+      "note": "No separate education price index was used, so education goals use the 100% general inflation assumption."
     },
     "life_expectancy": {
       "value": 72.673,
@@ -350,10 +350,10 @@
     "retirement_age_default": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "Wikipedia, Retirement age (citing the Instituto Venezolano de los Seguros Sociales, Pensión por Vejez)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
+      "sourceName": "Instituto Venezolano de los Seguros Sociales (IVSS), tipos de pensiones: Pensión por Vejez",
+      "sourceUrl": "https://www.ivss.gob.ve/pensionado/tipos-pensiones",
       "asOf": "2026-10-31",
-      "note": "IVSS old-age pension at 60 for men and 55 for women. Secondary source because the IVSS website could not be reached; the cited IVSS page is an archived 2018 copy, older than 2025."
+      "note": "IVSS old-age pension from 60 for men and 55 for women with at least 750 weekly contributions; the same rule applies to people born after 1975."
     },
     "retirement_age_government": {
       "value": null,
@@ -366,32 +366,32 @@
     "retirement_return_low": {
       "value": 0.3,
       "status": "assumption",
-      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); tax-exempt",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
       "note": "Low case: mostly savings accounts paying well below term deposits."
     },
     "retirement_return_base": {
       "value": 0.45,
       "status": "assumption",
-      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026); tax-exempt (PwC)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
-      "note": "Base case: bolívar term deposits, kept below the 50% planning safe rate and the indicative 60% deposit rate."
+      "note": "Base case: bolívar savings and term deposits, kept below the 46% 90-day deposit rate and the 50% planning safe rate."
     },
     "retirement_return_high": {
       "value": 0.6,
       "status": "assumption",
-      "sourceName": "Indicative bolívar deposit rate 60% (Trading Economics, October 2026)",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceName": "BCV weighted average rates, September 2026: savings deposits 37.9%, term deposits 60.4% (90-day 46%); interest tax-exempt (PwC)",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
-      "note": "High case: term deposits at the current indicative rate."
+      "note": "High case: term deposits at the current average rate."
     },
     "retirement_accumulation_return_low": {
       "value": 0.3,
       "status": "assumption",
       "sourceName": "Fixed income low 30%; equity low 20%",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
       "note": "Low case for a mix of bolívar deposits and local shares."
     },
@@ -399,15 +399,15 @@
       "value": 0.5,
       "status": "assumption",
       "sourceName": "Fixed income base 50%; equity base 50%",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/deposit-interest-rate",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tasas-de-interes",
       "asOf": "2026-10-31",
-      "note": "Base case: a mix of bolívar deposits and shares, well below the 100% inflation assumption (most Venezuelans save in dollars instead)."
+      "note": "Base case: a mix of bolívar deposits and shares, well below the 100% inflation assumption (many Venezuelans save in dollars instead)."
     },
     "retirement_accumulation_return_high": {
       "value": 0.9,
       "status": "assumption",
       "sourceName": "Equity high 100%; gold base 100%",
-      "sourceUrl": "https://tradingeconomics.com/venezuela/currency",
+      "sourceUrl": "https://www.bcv.org.ve/estadisticas/tipo-cambio-de-referencia-smc",
       "asOf": "2026-10-31",
       "note": "High case: dollar-linked assets such as shares and gold keep pace with bolívar depreciation."
     },
@@ -437,11 +437,19 @@
     },
     "public_pension_scheme": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Instituto Venezolano de los Seguros Sociales (IVSS), tipos de pensiones: Pensión por Vejez",
+      "sourceUrl": "https://www.ivss.gob.ve/pensionado/tipos-pensiones",
       "asOf": "2026-10-31",
-      "note": "The IVSS old-age pension (from 60 for men, 55 for women) is the main public scheme, but its contribution rules, indexation and tax treatment could not be confirmed because the IVSS website could not be reached."
+      "note": "Compulsory social insurance for employees; old-age pension from 60 (men) or 55 (women) with at least 750 weekly contributions, otherwise a one-off payment of 10% of the wages on which contributions were paid. The IVSS page states no automatic indexation, so the pension is treated as not inflation-linked; tax treatment is not stated."
     }
   },
   "instruments": {
@@ -520,9 +528,8 @@
       "note": "Free line 0800 7832734."
     },
     "pensionScheme": {
-      "name": "Instituto Venezolano de los Seguros Sociales (IVSS)",
-      "url": "https://www.ivss.gob.ve/",
-      "note": "The site could not be reached during research."
+      "name": "Instituto Venezolano de los Seguros Sociales (IVSS), pensión por vejez",
+      "url": "https://www.ivss.gob.ve/pensionado/tipos-pensiones"
     },
     "oldAgeAllowance": null,
     "publicHealthCover": {

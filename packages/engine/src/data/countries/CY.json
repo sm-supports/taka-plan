@@ -54,8 +54,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Cypriot banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 0.00% on household overnight deposits in August 2026; notice deposits up to 3 months paid 0.03%."
+      "asOf": "2026-09-30",
+      "note": "Average 0.00% on household overnight deposits in September 2026 (also 0.00% in August); notice deposits up to 3 months paid 0.03% in August."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -63,15 +63,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/CBC MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.35% in August 2026); no 3-month rate was found."
+      "note": "ECB/CBC MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.62% in September 2026); no separate 3-month rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0135,
+      "value": 0.0162,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Cypriot banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 0.51% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year; 1.62% in September 2026 (1.35% in August). Re-checked against the ECB data API by the verifier."
     },
     "dps_rate": {
       "value": null,
@@ -82,12 +82,12 @@
       "note": "No monthly recurring deposit product with a published average rate was found for Cyprus."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0086,
+      "value": 0.0089,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Cypriot banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST has no Cyprus figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026 (0.86% in August); World Bank FR.INR.DPST has no Cyprus figure."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -164,7 +164,7 @@
     "equity_return_base": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "CSE General index (Trading Economics); after-tax 1-year deposit 1.1%",
+      "sourceName": "CSE General index (Trading Economics); after-tax 1-year deposit 1.3%",
       "sourceUrl": "https://tradingeconomics.com/cyprus/stock-market",
       "asOf": "2026-10-31",
       "note": "Base case kept within 4 points of the after-tax safe rate because the local index has a very weak long record; most savers would use a diversified euro equity fund."
@@ -204,7 +204,7 @@
     "fixed_income_return_low": {
       "value": 0.008,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC, with rates drifting lower",
+      "sourceName": "Household deposits up to 1 year 1.62% (September 2026) less 17% SDC = 1.3%, with rates drifting lower",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: bank deposits after tax if rates fall further."
@@ -212,10 +212,10 @@
     "fixed_income_return_base": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC = 1.1%; 10-year bond 3.92% less 3% SDC",
+      "sourceName": "Household deposits up to 1 year 1.62% less 17% SDC = 1.3%; 10-year bond 3.92% less 3% SDC",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case: mostly term deposits at about 1.1% after tax with some government bonds taxed at only 3%."
+      "note": "Base case: mostly term deposits at about 1.3% after tax with some government bonds taxed at only 3%."
     },
     "fixed_income_return_high": {
       "value": 0.035,
@@ -263,7 +263,7 @@
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CY",
       "asOf": "2023-12-31",
-      "note": "Out-of-pocket spending fell sharply after GeSY started in 2019-2020."
+      "note": "Latest World Bank/WHO figure is for 2023 (older than 2025); out-of-pocket spending fell sharply after GeSY started in 2019-2020."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -286,8 +286,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/cyprus",
-      "asOf": "2026-12-31",
-      "note": "Men 80.2, women 84.1 (UN WPP estimate for 2026); World Bank 2024 figure 81.8."
+      "asOf": "2026-07-01",
+      "note": "Men 80.2, women 84.1 (UN WPP estimate for 2026, mid-year); World Bank 2024 figure 81.8."
     },
     "life_table_remaining": {
       "value": null,
@@ -322,7 +322,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/cyprus",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
     },
     "support_ratio": {
@@ -368,18 +368,18 @@
     "retirement_return_low": {
       "value": 0.008,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC, with rates drifting lower",
+      "sourceName": "Household deposits up to 1 year 1.62% (September 2026) less 17% SDC = 1.3%, with rates drifting lower",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: bank deposits after tax if rates fall further."
     },
     "retirement_return_base": {
-      "value": 0.011,
+      "value": 0.013,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.35% less 17% SDC = 1.1%",
+      "sourceName": "Household deposits up to 1 year 1.62% (September 2026) less 17% SDC = 1.34%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate, as no treasury bill yield was found."
+      "note": "Base case capped at the after-tax 1-year term deposit rate, as no treasury bill yield could be found."
     },
     "retirement_return_high": {
       "value": 0.03,
@@ -392,7 +392,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.1%; CSE General record",
+      "sourceName": "After-tax 1-year deposit 1.3%; CSE General record",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -400,7 +400,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "After-tax deposits 1.1%, government bonds 3.8% after SDC; equity base 5%",
+      "sourceName": "After-tax deposits 1.3%, government bonds 3.8% after SDC; equity base 5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.CY.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half shares at 5% and half deposits and bonds at about 1.5-3.5% after tax."
@@ -528,8 +528,8 @@
     },
     "insuranceRegulator": {
       "name": "Insurance Companies Control Service (Ministry of Finance)",
-      "url": "https://www.mof.gov.cy/mof/iccs/iccs.nsf/index_en/index_en",
-      "note": "Ministry of Finance pages now redirect to gov.cy and were not reachable during research."
+      "url": "https://www.gov.cy/mof/",
+      "note": "The Insurance Companies Control Service is part of the Ministry of Finance; EIOPA lists mof.gov.cy, which now redirects to this gov.cy page. The older mof.gov.cy/iccs address returns 404."
     },
     "insuranceComplaints": {
       "name": "Financial Ombudsman of the Republic of Cyprus",
@@ -537,11 +537,12 @@
     },
     "pensionScheme": {
       "name": "Social Insurance Services (Ministry of Labour)",
-      "url": "https://www.gov.cy/mlsi/"
+      "url": "https://www.mlsi.gov.cy/mlsi/sid/sidv2.nsf/index_en/index_en?opendocument"
     },
     "oldAgeAllowance": {
       "name": "Social pension (Social Insurance Services)",
-      "url": "https://www.gov.cy/mlsi/"
+      "url": "https://www.mlsi.gov.cy/mlsi/sid/sidv2.nsf/index_en/index_en?opendocument",
+      "note": "Social pension claims go to Social Insurance Services (European Commission guide, July 2026)."
     },
     "publicHealthCover": {
       "name": "General Healthcare System (ΓεΣΥ / GeSY), Health Insurance Organisation",

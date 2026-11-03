@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "code": "ZA",
+  "iso3": "ZAF",
+  "nameEn": "South Africa",
+  "nameNative": "iNingizimu Afrika",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "zu",
+    "xh",
+    "af",
+    "en",
+    "nso"
+  ],
+  "currency": {
+    "code": "ZAR",
+    "symbol": "R",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 16.71,
+      "status": "sourced",
+      "sourceName": "Federal Reserve H.10 (FRED DEXSFUS), South African rand per US dollar, 30 October 2026",
+      "sourceUrl": "https://fred.stlouisfed.org/series/DEXSFUS",
+      "asOf": "2026-10-30",
+      "note": "R16.7055 per dollar on 30 October 2026; the SARB shows R16.6795 on 2 November 2026 (World Bank 2025 average 17.89)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.045,
+      "status": "sourced",
+      "sourceName": "South African Reserve Bank, key indicators (Stats SA headline CPI, year on year), September 2026",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/HomePageRates",
+      "asOf": "2026-09-30",
+      "note": "Headline consumer inflation 4.5% in September 2026 (4.4% in August, per Trading Economics); the Stats SA release page itself could not be read."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "SARB inflation target (3-6% range, now steering towards 3%) as reported by Trading Economics; SARB key indicators CPI 4.5% (September 2026)",
+      "sourceUrl": "https://tradingeconomics.com/south-africa/interest-rate",
+      "asOf": "2026-10-31",
+      "note": "The SARB is steering towards the low end of its 3-6% range but CPI is 4.5% today and has averaged about 5% in recent years, so 4.5% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.0725,
+      "status": "sourced",
+      "sourceName": "South African Reserve Bank, current market rates (SARB policy rate)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-09-23",
+      "note": "SARB policy (repo) rate 7.25% on the SARB current market rates page; it was raised by 25 basis points from 7.00% on 23 September 2026 (Trading Economics, secondary, for the date). Prime lending rate 10.75%."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The SARB current market rates and key indicators publish no retail savings-account rate, and no other official figure was found; only bank-specific rate sheets exist, which cannot be used."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official typical 3-month retail fixed deposit rate was found; the SARB publishes only the wholesale 3-month NCD rate (7.25% on 30 October 2026), which is not a retail rate."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official typical 1-year retail fixed deposit rate was found; the SARB publishes only the wholesale 12-month NCD rate (8.03% on 30 October 2026), which is not a retail rate."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit scheme with a published rate was found; the nearest public product is the RSA Top Up Retail Savings Bond (8.50%, interest capitalised, see sanchayapatra_5y)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0748,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), South Africa",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=ZA",
+      "asOf": "2025-12-31",
+      "note": "7.48% average for 2025 (IMF International Financial Statistics via World Bank); no fresher official average deposit rate was found. The repo rate is 7.25% in October 2026."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.09,
+      "status": "sourced",
+      "sourceName": "National Treasury, RSA Retail Savings Bonds rates page (5-year fixed rate bond)",
+      "sourceUrl": "https://www.rsaretailbonds.gov.za/rates.aspx",
+      "asOf": "2026-10-31",
+      "note": "5-year fixed rate retail savings bond pays 9.00% for bonds bought 1-30 November 2026 (2-year 8.25%, 3-year 8.50%); inflation-linked 5-year bond 4.50% above CPI (1 June-30 November 2026); Top Up bond 8.50% (1 October-31 December 2026)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0716,
+      "status": "sourced",
+      "sourceName": "South African Reserve Bank, current market rates (Treasury bills 91-day tender rate)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-30",
+      "note": "91-day tender rate 7.16% on 30 October 2026; 182-day 7.40%, 364-day 7.46%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.08005,
+      "status": "sourced",
+      "sourceName": "South African Reserve Bank, current market rates (8.00% 2030 R2030 closing yield)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-30",
+      "note": "Closing yield on the R2030 bond (matures January 2030, about 3.3 years) 8.005% on 30 October 2026, the closest benchmark the SARB publishes; the 5-10 year average bond yield was 8.54%. Trading Economics shows a 5-year yield of 8.13% on 2 November 2026."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0871,
+      "status": "sourced",
+      "sourceName": "South African Reserve Bank, current market rates (6.25% 2036 R209 closing yield)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-30",
+      "note": "Closing yield on the R209 bond (matures March 2036, about 9.4 years) 8.71% on 30 October 2026; average yield on bonds of 10 years and longer 8.74%."
+    },
+    "tax_bank_interest": {
+      "value": 0.26,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, South Africa, income determination and taxes on personal income (2026/27)",
+      "sourceUrl": "https://taxsummaries.pwc.com/south-africa/individual/income-determination",
+      "asOf": "2026-05-29",
+      "note": "No withholding tax for residents: interest above the yearly exemption (R23,800 under 65, R34,500 from 65) is taxed at the marginal rate, 26% in the R245,101-R383,100 band used here (18% to 45% overall, see https://taxsummaries.pwc.com/south-africa/individual/taxes-on-personal-income)."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.26,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, South Africa, income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/south-africa/individual/income-determination",
+      "asOf": "2026-05-29",
+      "note": "RSA Retail Savings Bond interest is ordinary interest: it shares the R23,800 (R34,500 from 65) yearly interest exemption and the excess is taxed at the marginal rate (26% band used here); government bond interest is not on PwC's list of exempt income."
+    },
+    "deposit_insurance_limit": {
+      "value": 100000,
+      "status": "sourced",
+      "sourceName": "Wikipedia, Deposit insurance (Corporation for Deposit Insurance, South Africa)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Deposit_insurance",
+      "asOf": "2024-04-01",
+      "note": "Secondary source: the Corporation for Deposit Insurance (CODI), a SARB subsidiary launched in April 2024, covers up to R100,000 per depositor per bank (Wikipedia, citing EWN 25 April 2024); the limit dates from 2024 (older than 2025) and no later change was found; the SARB and CODI pages could not be loaded."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.2125,
+      "status": "sourced",
+      "sourceName": "Department of Trade and Industry, Review of Limitations on Fees and Interest Rates Regulations (National Credit Act), Government Gazette 39379, 6 November 2015",
+      "sourceUrl": "https://www.ncr.org.za/documents/pages/Acts/SKM_C284e15110908440.compressed.pdf",
+      "asOf": "2026-09-23",
+      "note": "Table A of the 2015 regulations sets the maximum prescribed rate for credit facilities (credit cards, overdrafts) at the repo rate plus 14% a year: 7.25% + 14% = 21.25% since the 23 September 2026 repo change; the regulations date from 2015 (older than 2025) and remain the published cap."
+    },
+    "equity_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "South African Reserve Bank current market rates (government bond yields as the safe-rate reference)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for JSE shares, about level with pre-tax government bond yields."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "South African Reserve Bank current market rates; RSA Retail Savings Bond 5-year 9.00%",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-31",
+      "note": "Base case: the JSE has a long record of returns above inflation but a patchy last decade, so equities are put about 3.3 points above the after-tax 5-year retail bond yield (9.00% less 26% tax = 6.7%), inside the 4-point cap."
+    },
+    "equity_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "South African Reserve Bank current market rates",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade for local shares or a global index fund in rand terms."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Federal Reserve H.10, South African rand per US dollar",
+      "sourceUrl": "https://fred.stlouisfed.org/series/DEXSFUS",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a small rand depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate history (rand per US dollar); SARB London gold price in rand",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 3% a year of rand depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Federal Reserve H.10, South African rand per US dollar",
+      "sourceUrl": "https://fred.stlouisfed.org/series/DEXSFUS",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a weaker rand."
+    },
+    "fixed_income_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank deposit interest rate 2025 (7.48%); PwC Tax Summaries (26% marginal band)",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=ZA",
+      "asOf": "2026-10-31",
+      "note": "Low case: ordinary bank deposits at about 6% less 26% tax on interest above the yearly exemption."
+    },
+    "fixed_income_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "RSA Retail Savings Bonds rates (8.25-9.00%); SARB treasury bill tender rates (7.16-7.46%)",
+      "sourceUrl": "https://www.rsaretailbonds.gov.za/rates.aspx",
+      "asOf": "2026-10-31",
+      "note": "Base case: retail savings bonds and treasury bills at 7.5-9% less 26% tax on interest above the exemption, about 5.5-6.7% after tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "RSA Retail Savings Bonds rates (5-year fixed 9.00%)",
+      "sourceUrl": "https://www.rsaretailbonds.gov.za/rates.aspx",
+      "asOf": "2026-10-31",
+      "note": "High case: savers whose interest stays within the R23,800 exemption (R34,500 from 65) and so pay no tax on 7.5-9% yields."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The FSCA and Prudential Authority publish no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per 1,000 rand of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay was found from an official or international source."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Private health cover is provided by medical schemes with community-rated contributions (not priced per 100,000 rand of cover by age); no usable published table was found."
+    },
+    "oop_health_share": {
+      "value": 0.0669,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), South Africa",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ZA",
+      "asOf": "2023-12-31",
+      "note": "6.7% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Stats SA CPI via SARB key indicators; medical scheme contributions usually rise faster than CPI",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/HomePageRates",
+      "asOf": "2026-10-31",
+      "note": "Medical scheme contributions and private hospital tariffs have risen several points faster than headline CPI for many years, so 2.5 points above the 4.5% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Stats SA CPI via SARB key indicators (education fees reset each year)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/HomePageRates",
+      "asOf": "2026-10-31",
+      "note": "School and university fees have risen faster than headline CPI, so 1.5 points above the 4.5% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 66.312,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), South Africa",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ZA",
+      "asOf": "2024-12-31",
+      "note": "66.3 years in 2024 (men 62.8, women 69.8); UN WPP 2024 via populationpyramid.net gives 66.7 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 18.5,
+            "men": 16.5,
+            "women": 20.4
+          },
+          {
+            "age": 65,
+            "total": 15.7,
+            "men": 13.9,
+            "women": 17.1
+          },
+          {
+            "age": 70,
+            "total": 12.9,
+            "men": 11.7,
+            "women": 14.1
+          },
+          {
+            "age": 80,
+            "total": 8.6,
+            "men": 8,
+            "women": 9.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/south-africa/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 9.79
+          },
+          {
+            "year": 2040,
+            "value": 7.58
+          },
+          {
+            "year": 2065,
+            "value": 4.59
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/south-africa/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 10.2 (2025, World Bank), 13.2 (2040) and 21.8 (2065, populationpyramid.net/south-africa/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "South African Government, Old age pension (Older Persons Grant) service page",
+      "sourceUrl": "https://www.gov.za/services/social-benefits-retirement-and-old-age/old-age-pension",
+      "asOf": "2026-10-31",
+      "note": "There is no statutory retirement age for private-sector workers (employers and their retirement funds set it, often 60-65) and no public contributory pension; the state Older Persons Grant is payable from 60 for men and women, so 60 is used."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Government Employees Pension Fund, Retiring from the public service",
+      "sourceUrl": "https://www.gepf.co.za/retiring-from-the-public-service/",
+      "asOf": "2026-10-31",
+      "note": "Normal retirement age for public servants in the GEPF is 60; early retirement from 55 with the employer's permission. Public servants may usually stay on to 65, which the page does not state."
+    },
+    "retirement_return_low": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "World Bank deposit interest rate 2025; PwC Tax Summaries",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=ZA",
+      "asOf": "2026-10-31",
+      "note": "Low case: bank deposits after tax above the R34,500 over-65 interest exemption."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "SARB treasury bill tender rates (364-day 7.46%); PwC Tax Summaries (26% marginal band)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-31",
+      "note": "Base case: equal to the 1-year treasury bill yield after 26% tax (7.46% x 0.74 = 5.5%); retirees whose interest stays under the R34,500 exemption can do better."
+    },
+    "retirement_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "RSA Retail Savings Bonds rates (2-year 8.25%, 5-year 9.00%)",
+      "sourceUrl": "https://www.rsaretailbonds.gov.za/rates.aspx",
+      "asOf": "2026-10-31",
+      "note": "High case: retail savings bonds with interest mostly inside the over-65 exemption."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "SARB current market rates (bond yields 8.0-8.7%)",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-31",
+      "note": "Low case: a cautious mix earning a little above after-tax bond yields."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "SARB current market rates; equity base 10%; gold base 7%",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of government bonds (8-9%), local and global equity funds and a little gold, as in a typical retirement annuity or tax-free savings account."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "SARB current market rates; equity high 13%",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": 2400,
+      "status": "sourced",
+      "sourceName": "National Treasury, 2026 Budget Speech (social grants)",
+      "sourceUrl": "https://archive.treasury.gov.za/documents/national%20budget/2026/speech/speech.pdf",
+      "asOf": "2026-04-01",
+      "note": "The old age grant rose by R80 to R2,400 a month in April 2026; people aged 75 and over get R2,420 (gov.za old age pension page)."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": true
+      },
+      "status": "sourced",
+      "sourceName": "South African Government, Old age pension (Older Persons Grant) service page",
+      "sourceUrl": "https://www.gov.za/services/social-benefits-retirement-and-old-age/old-age-pension",
+      "asOf": "2026-10-31",
+      "note": "Citizens, permanent residents and refugees aged 60 and over; means-tested (income up to R86,280 a year single or R172,560 married; assets up to R1,227,600 single or R2,455,200 married). Over-75s get R20 more."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "South Africa has no statutory gratuity or end-of-service benefit on retirement or resignation: the Basic Conditions of Employment Act section 41 only requires severance pay of one week's remuneration per completed year of service when an employee is dismissed for operational requirements (retrenchment) (https://www.labour.gov.za/DocumentCenter/Acts/Basic%20Conditions%20of%20Employment/Amended%20Act%20-%20Basic%20Conditions%20of%20Employment.pdf).",
+      "absent": true
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No public contributory old-age pension was found: the state provides the tax-funded, means-tested Older Persons Grant, retirement savings are through employer and private funds (the two-pot system), and the Unemployment Insurance Fund pays no old-age benefit; a source stating outright that no such scheme exists could not be loaded, so this is not marked absent."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit, 3 months",
+      "note": "Banks offer fixed and notice deposits; no official typical rate is published."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit, 12 months"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit scheme was found; the RSA Top Up Retail Savings Bond accepts additions from R100."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "RSA Retail Savings Bond",
+      "localNameEn": "RSA Retail Savings Bond (fixed rate, 5 years)",
+      "note": "Sold by National Treasury to South African citizens with an ID number and a local bank account; 2, 3 and 5-year fixed rate, 3, 5 and 10-year inflation-linked, and a Top Up bond; early withdrawal after 12 months with a penalty.",
+      "sourceUrl": "https://www.rsaretailbonds.gov.za/rates.aspx"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bill",
+      "note": "91, 182, 273 and 364-day bills auctioned weekly by the SARB for National Treasury; mostly bought by institutions.",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "RSA government bond (fixed rate)",
+      "note": "Fixed-rate bonds such as the R2030 are traded on the JSE.",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "RSA government bond",
+      "note": "Benchmarks include the R209 (2036).",
+      "sourceUrl": "https://custom.resbank.co.za/SarbWebApi/WebIndicators/CurrentMarketRates"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": "Unit trusts (collective investment schemes) and exchange-traded funds",
+      "note": "Regulated by the FSCA; can be held in a tax-free savings account."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold coins and bars",
+      "note": "Gold bullion coins and bars are legally bought and held by individuals."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "South African Reserve Bank",
+      "url": "https://www.resbank.co.za/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Sector Conduct Authority (FSCA)",
+      "url": "https://www.fsca.co.za/",
+      "note": "Insurers are also prudentially supervised by the Prudential Authority within the SARB."
+    },
+    "insuranceComplaints": {
+      "name": "FSCA complaints and enquiries",
+      "url": "https://www2.fsca.co.za/CRM_Web_Extentions/enquiry.aspx",
+      "note": "Disputes with an insurer usually go first to the National Financial Ombud Scheme."
+    },
+    "pensionScheme": null,
+    "oldAgeAllowance": {
+      "name": "Older Persons Grant (SASSA)",
+      "url": "https://www.gov.za/services/social-benefits-retirement-and-old-age/old-age-pension"
+    },
+    "publicHealthCover": {
+      "name": "National Department of Health (public hospitals and clinics)",
+      "url": "https://www.health.gov.za/"
+    },
+    "depositInsurance": {
+      "name": "Corporation for Deposit Insurance (CODI)",
+      "url": "https://www.codi.co.za/"
+    },
+    "statistics": {
+      "name": "Statistics South Africa",
+      "url": "https://www.statssa.gov.za/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

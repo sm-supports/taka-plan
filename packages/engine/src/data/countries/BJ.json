@@ -21,7 +21,7 @@
       "sourceName": "BCEAO, rates of foreign currencies against the CFA franc for transfers, 30 October 2026",
       "sourceUrl": "https://www.bceao.int/fr/cours/cours-des-devises-contre-Franc-CFA-appliquer-aux-transferts",
       "asOf": "2026-10-30",
-      "note": "Mid-point of the buying (585.50) and selling (592.50) rates for the US dollar; the CFA franc is pegged at 655.957 per euro. World Bank 2025 average 581.9."
+      "note": "Mid-point of the buying (585.50) and selling (592.50) rates for the US dollar; the CFA franc is pegged at 655.957 per euro. World Bank 2025 average 581.9. The page is updated daily; on 2 November 2026 it showed 582.50 buying and 589.50 selling (mid 586)."
     }
   },
   "fields": {
@@ -44,10 +44,10 @@
     "policy_rate": {
       "value": 0.03,
       "status": "sourced",
-      "sourceName": "BCEAO, key rates (minimum bid rate for refinancing tenders), effective 16 March 2026",
-      "sourceUrl": "https://www.bceao.int/fr/content/taux-directeurs",
-      "asOf": "2026-03-16",
-      "note": "Main policy rate 3.00%, held at the 9 September 2026 committee; the marginal lending facility rate is 5.00%. Common to all eight UMOA countries."
+      "sourceName": "BCEAO, monthly economic note for UMOA countries, September 2026 (Monetary Policy Committee of 9 September 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-09-09",
+      "note": "Main policy rate (rate at which the BCEAO refinances banks) 3.00%, left unchanged by the 9 September 2026 committee; the marginal lending facility rate is 5.00%. Common to all eight UMOA countries. The previously cited BCEAO key-rates page now returns 404."
     },
     "savings_account_rate": {
       "value": null,

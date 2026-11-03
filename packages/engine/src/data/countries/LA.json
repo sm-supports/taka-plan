@@ -26,18 +26,18 @@
     "inflation_cpi": {
       "value": 0.077,
       "status": "sourced",
-      "sourceName": "Lao Statistics Bureau, consumer price index",
-      "sourceUrl": "https://www.lsb.gov.la/",
+      "sourceName": "Lao Statistics Bureau CPI, October 2026 (via Laotian Times)",
+      "sourceUrl": "https://laotiantimes.com/2026/10/28/laos-inflation-eases-to-7-7-percent-as-electricity-costs-remain-high/",
       "asOf": "2026-10-31",
-      "note": "7.7% year on year in October 2026 (CPI 279.5), down from 7.8% in September."
+      "note": "7.7% year on year in October 2026 (CPI 279.5 vs 259.6 a year earlier), down from 7.8% in September; the Lao Statistics Bureau home page shows the same figures but its report page could not be reached."
     },
     "inflation_projection": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "ADB Asian Development Outlook September 2026 forecasts (8.0% 2026, 6.5% 2027); Bank of the Lao PDR",
+      "sourceName": "ADB Asian Development Outlook September 2026 (8.0% 2026, 6.5% 2027); Bank of the Lao PDR 2027 aim of 5.5-5.8%",
       "sourceUrl": "https://www.adb.org/where-we-work/lao-pdr/economy",
       "asOf": "2026-10-31",
-      "note": "Inflation was above 20% in 2022-2024 and is easing toward ADB's 6.5% forecast for 2027, so we plan with a rounded 6% rather than the distorted 5-year average."
+      "note": "Inflation was above 20% in 2022-2024 and is easing (7.7% in Oct 2026); with ADB at 6.5% and the central bank aiming for 5.5-5.8% in 2027, we plan with a rounded 6% rather than the distorted 5-year average."
     },
     "policy_rate": {
       "value": 0.07,
@@ -124,15 +124,15 @@
       "status": "sourced",
       "sourceName": "PwC Worldwide Tax Summaries, Lao PDR, income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/lao-pdr/individual/income-determination",
-      "asOf": "2026-10-31",
-      "note": "Interest on bank deposits and bonds is not subject to personal income tax."
+      "asOf": "2026-08-07",
+      "note": "PwC (last reviewed 7 Aug 2026): interest on bank deposits and bonds is not subject to personal income tax."
     },
     "tax_sanchayapatra_profit": {
       "value": 0,
       "status": "sourced",
       "sourceName": "PwC Worldwide Tax Summaries, Lao PDR, income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/lao-pdr/individual/income-determination",
-      "asOf": "2026-10-31",
+      "asOf": "2026-08-07",
       "note": "No savings certificate exists; interest on bonds is not subject to personal income tax."
     },
     "deposit_insurance_limit": {
@@ -260,7 +260,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=LA",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank (WHO GHED) value is for 2023, older than 2025."
     },
     "goal_inflation_health": {
       "value": 0.08,
@@ -284,7 +285,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LA",
       "asOf": "2024-12-31",
-      "note": "Men 67.0, women 71.5 (2024)."
+      "note": "Men 67.0, women 71.5 (2024, older than 2025); UN WPP via georank gives 69.7 for 2026."
     },
     "life_table_remaining": {
       "value": null,
@@ -352,15 +353,15 @@
       "sourceName": "Lao pension rules effective 2 June 2025 (Laotian Times)",
       "sourceUrl": "https://laotiantimes.com/2025/06/23/lao-pension-rules-updated-25-year-contribution-required/",
       "asOf": "2025-06-02",
-      "note": "Full pension at 60 with 25 years of social security contributions; the rules allow retirement from 57 for men and 55 for women in some circumstances."
+      "note": "Normal pension age 60 with 25 years of social security contributions (rules effective 2 June 2025); men may retire from 57 and women from 55 depending on circumstances, with a 1% cut per missing contribution year down to 23 years."
     },
     "retirement_age_government": {
-      "value": 60,
-      "status": "sourced",
-      "sourceName": "Lao pension rules effective 2 June 2025 (Laotian Times)",
-      "sourceUrl": "https://laotiantimes.com/2025/06/23/lao-pension-rules-updated-25-year-contribution-required/",
-      "asOf": "2025-06-02",
-      "note": "Civil servants are covered by the same national social security scheme; the article does not give a separate civil-service age, so verify (women may retire from 55)."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The 2025 pension-rule article cited for the private-sector age does not address civil servants (only that military and police follow separate laws); no official civil-service retirement age could be confirmed."
     },
     "retirement_return_low": {
       "value": 0.04,
@@ -448,7 +449,7 @@
       "sourceName": "Lao pension rules effective 2 June 2025 (Laotian Times)",
       "sourceUrl": "https://laotiantimes.com/2025/06/23/lao-pension-rules-updated-25-year-contribution-required/",
       "asOf": "2025-06-02",
-      "note": "National social security pension (LSSO): full pension at 60 with 25 years of contributions, 1% cut per missing year down to 23 years; otherwise a lump sum of 85% x 1.5 months of final salary per contribution year. No automatic indexation is described."
+      "note": "National social security pension (LSSO): full pension at 60 with 25 years of contributions, 1% cut per missing year down to 23 years; otherwise a lump sum of 85% x 1.5 months of final salary per contribution year. inflationLinked is false because the source describes no automatic indexation; entry ages and tax treatment were not found."
     }
   },
   "instruments": {

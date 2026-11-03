@@ -19,7 +19,7 @@
       "value": 587.14,
       "status": "sourced",
       "sourceName": "BCEAO reference rate of the US dollar against the CFA franc",
-      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "sourceUrl": "https://www.bceao.int/fr/cours/get_all_reference_by_date?dateJour=2026-10-30",
       "asOf": "2026-10-30",
       "note": "587.14 francs per dollar on 30 October 2026; the franc is fixed at 655.957 per euro. World Bank 2025 average 581.9."
     }
@@ -31,15 +31,15 @@
       "sourceName": "Trading Economics, citing the Institut National de la Statistique (INS) of Côte d'Ivoire, CPI September 2026",
       "sourceUrl": "https://tradingeconomics.com/ivory-coast/inflation-cpi",
       "asOf": "2026-09-30",
-      "note": "Consumer prices up 1.6% year on year in September 2026 (1.2% in August, which the BCEAO's September 2026 economic note confirms); secondary source because the INS site could not be reached."
+      "note": "Consumer prices up 1.6% year on year in September 2026 (1.2% in August, after 1.9%, which the BCEAO's September 2026 economic note confirms); secondary source because the INS site's certificate is misconfigured."
     },
     "inflation_projection": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "BCEAO inflation target range of 1-3% (centre 2%); UEMOA inflation 3.5% in 2024, 0.0% in 2025, 1.0% expected for 2026",
+      "sourceName": "BCEAO inflation target range of 1-3% (centre 2%); UEMOA inflation 0.0% in 2025, 1.0% expected for 2026 (CPM, 9 September 2026)",
       "sourceUrl": "https://www.bceao.int/fr/communique-presse/communique-de-presse-de-la-reunion-ordinaire-du-comite-de-politique-monetaire-19",
       "asOf": "2026-10-31",
-      "note": "The franc is pegged to the euro and the BCEAO aims at 2% within a 1-3% band, which matches the recent average, so 2% is used for planning."
+      "note": "The franc is pegged to the euro and the BCEAO aims at 2% within a 1-3% band; Union inflation was 0.0% in 2025 and is expected at 1.0% in 2026, so 2% is a rounded planning rate."
     },
     "policy_rate": {
       "value": 0.03,
@@ -181,7 +181,7 @@
       "value": 0.0,
       "status": "assumption",
       "sourceName": "Franc fixed at 655.957 per euro (BCEAO reference rates)",
-      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "sourceUrl": "https://www.bceao.int/fr/cours/get_all_reference_by_date?dateJour=2026-10-30",
       "asOf": "2026-10-31",
       "note": "Low case: flat gold prices in euro terms."
     },
@@ -189,7 +189,7 @@
       "value": 0.04,
       "status": "assumption",
       "sourceName": "Long-run gold trend in euro terms; franc fixed to the euro",
-      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "sourceUrl": "https://www.bceao.int/fr/cours/get_all_reference_by_date?dateJour=2026-10-30",
       "asOf": "2026-10-31",
       "note": "Base case: the long-run gold trend of about 4% a year, with no currency gain under the peg."
     },
@@ -197,7 +197,7 @@
       "value": 0.08,
       "status": "assumption",
       "sourceName": "Gold in euro terms",
-      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "sourceUrl": "https://www.bceao.int/fr/cours/get_all_reference_by_date?dateJour=2026-10-30",
       "asOf": "2026-10-31",
       "note": "High case: strong gold years."
     },
@@ -263,7 +263,7 @@
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Côte d'Ivoire",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=CI",
       "asOf": "2023-12-31",
-      "note": "32.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025, the latest available."
+      "note": "32.0% in 2023 (WHO Global Health Expenditure Database via the World Bank); older than 2025 but the latest available."
     },
     "goal_inflation_health": {
       "value": 0.04,
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Côte d'Ivoire",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CI",
       "asOf": "2024-12-31",
-      "note": "62.1 years in 2024 (men 60.2, women 64.3); UN WPP 2024 gives 62.4 for 2026."
+      "note": "62.1 years in 2024 (men 60.2, women 64.3); older than 2025 but the latest World Bank year. UN WPP 2024 gives 62.4 for 2026."
     },
     "life_table_remaining": {
       "value": null,
@@ -355,7 +355,7 @@
       "sourceName": "Caisse Nationale de Prévoyance Sociale (CNPS), old-age insurance factsheet",
       "sourceUrl": "https://www.cnps.ci/wp-content/uploads/2022/11/ASSURANCE-VIEILLESSE-V2.pdf",
       "asOf": "2026-10-31",
-      "note": "Pension from 60 with at least 15 years of insured salaried work; early pension from 55 reduced 5% per year of anticipation."
+      "note": "Pension from 60 with at least 15 years of insured salaried work (applies to people born after 1975); early pension from 55 reduced 5% per year of anticipation. The factsheet dates from 2021 (older than 2025); no later change was found."
     },
     "retirement_age_government": {
       "value": null,
@@ -451,7 +451,7 @@
       "sourceName": "Caisse Nationale de Prévoyance Sociale (CNPS), old-age insurance factsheet",
       "sourceUrl": "https://www.cnps.ci/wp-content/uploads/2022/11/ASSURANCE-VIEILLESSE-V2.pdf",
       "asOf": "2026-10-31",
-      "note": "Compulsory for private-sector employees (6.3% employee and 7.7% employer, PwC Tax Summaries 2026); pension from 60 after 15 years, equal to the average of the best 15 years' salary times 1.33% or 1.70% per year of career, plus 10% per dependent child (up to 3); the factsheet states no automatic indexation, so inflationLinked is false."
+      "note": "Compulsory for private-sector employees (6.3% employee and 7.7% employer, PwC Tax Summaries 2026); pension from 60 after 15 years, equal to the average of the best 15 years' salary times 1.33% or 1.70% per year of career, plus 10% per dependent child (up to 3). The 2021 factsheet says nothing about indexation, so inflationLinked is set to false (no automatic indexation confirmed)."
     }
   },
   "instruments": {
@@ -480,7 +480,7 @@
       "available": true,
       "localName": "Emprunt obligataire de l'État par appel public à l'épargne",
       "localNameEn": "Government bond sold to the public",
-      "note": "Treasury bonds sold to individuals through licensed brokers; income is tax-exempt for individuals. The current issue's rate could not be confirmed."
+      "note": "The Treasury sells bonds to the public by public offering (appel public à l'épargne), bought through licensed brokers and listed on the regional exchange; income is tax-exempt for individuals. The current issue's rate could not be confirmed from an official page."
     },
     "tbill_91d": {
       "available": false,
@@ -533,7 +533,11 @@
       "url": "https://www.cnps.ci/"
     },
     "oldAgeAllowance": null,
-    "publicHealthCover": null,
+    "publicHealthCover": {
+      "name": "National Health Insurance Fund (Caisse Nationale d'Assurance Maladie, CNAM): Universal Health Coverage (CMU)",
+      "url": "https://ipscnam.ci/enrolement-cmu/",
+      "note": "Contribution of 1,000 francs per person per month."
+    },
     "depositInsurance": null,
     "statistics": {
       "name": "National Institute of Statistics (Institut National de la Statistique, INS)",

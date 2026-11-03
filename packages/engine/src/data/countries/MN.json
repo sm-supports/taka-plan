@@ -8,7 +8,6 @@
   "languages": [
     "mn",
     "kk",
-    "zh",
     "ru",
     "en"
   ],
@@ -23,7 +22,7 @@
       "sourceName": "Bank of Mongolia rate (via Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/mongolia/currency",
       "asOf": "2026-10-30",
-      "note": "Secondary source because the Bank of Mongolia rate page renders by script; World Bank average for 2025 was 3,545."
+      "note": "Secondary source (Trading Economics, Bank of Mongolia rate) because the Bank of Mongolia rate page renders by script; the Bank of Mongolia home page showed 3,598.99 on 2 November 2026; World Bank average for 2025 was 3,545."
     }
   },
   "fields": {
@@ -348,7 +347,7 @@
       "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
       "sourceUrl": "https://www.populationpyramid.net/mongolia/2040/",
       "asOf": "2024-07-31",
-      "note": "100 / old-age dependency ratio: 8.6 in 2025 (World Bank), 14.8 in 2040 and 22.8 in 2065 (UN WPP 2024)."
+      "note": "100 / old-age dependency ratio: OADR 8.6 in 2025 (World Bank SP.POP.DPND.OL), 14.8 in 2040 and 22.8 in 2065 (UN WPP 2024 medium variant via populationpyramid.net)."
     },
     "retirement_age_default": {
       "value": 65,
@@ -356,7 +355,7 @@
       "sourceName": "General Office of Social Insurance, old-age pension insurance",
       "sourceUrl": "https://www.ndaatgal.mn/daatgal/%d1%82%d1%8d%d1%82%d0%b3%d1%8d%d0%b2%d1%80%d0%b8%d0%b9%d0%bd-%d0%b4%d0%b0%d0%b0%d1%82%d0%b3%d0%b0%d0%bb/",
       "asOf": "2026-10-31",
-      "note": "Pension age rises 3 months per birth year: men from 60 (born 1957) to 65 (born 1977 or later); women from 55 (born 1962) to 65 (born 2002 or later), e.g. 60 for women born 1982. 65 is the age for today's younger workers."
+      "note": "Pension age rises with birth year: men from 60 (born 1957 or earlier) to 65 (born 1977 or later); women from 55 (born 1962 or earlier) to 60 for those born 1982, 62 for 1990 and 65 for 2002 or later. 65 applies to men born after 1976; women born 1976-2001 have a lower age (about 58.5-64.75). Early pension on request at 60 (men) or 55 (women) with enough contribution years."
     },
     "retirement_age_government": {
       "value": null,
@@ -452,7 +451,7 @@
       "sourceName": "General Office of Social Insurance, old-age pension insurance",
       "sourceUrl": "https://www.ndaatgal.mn/daatgal/%d1%82%d1%8d%d1%82%d0%b3%d1%8d%d0%b2%d1%80%d0%b8%d0%b9%d0%bd-%d0%b4%d0%b0%d0%b0%d1%82%d0%b3%d0%b0%d0%bb/",
       "asOf": "2026-10-31",
-      "note": "Social insurance pension: 8.5% employee + 8.5% employer (11.5% for voluntary contributors); pension age rising to 65 for both sexes; full pension needs 22 years 3 months of contributions in 2026, rising to 25 years by 2037 (10-19 years gives a reduced pension); 45% of the best 60 months' average wage in the last 20 years plus 0.125% a month beyond 20 years; minimum full pension MNT 769,000 a month. The page describes no automatic inflation indexation."
+      "note": "Social insurance pension: 8.5% employee + 8.5% employer (11.5% for voluntary contributors); pension age rising to 65 for both sexes; full pension needs 22 years 3 months of contributions in 2026, rising to 25 years by 2037 (10-19 years gives a partial pension of 0.1875% of average wage per contribution month); full pension = average wage of the best 60 months in the last 20 years x (45% + 0.125% per month beyond 20 years; 0.167% from 2029); minimum full pension MNT 769,000 a month (partial MNT 652,400). The page describes no automatic inflation indexation, so inflationLinked is false; tax treatment not stated."
     }
   },
   "instruments": {

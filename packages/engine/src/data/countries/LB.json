@@ -49,7 +49,7 @@
       "sourceName": "Trading Economics, Lebanon interest rate (Banque du Liban data)",
       "sourceUrl": "https://tradingeconomics.com/lebanon/interest-rate",
       "asOf": "2026-07-31",
-      "note": "Benchmark rate 25% in July 2026, unchanged; secondary source because bdl.gov.lb refused automated access. Banque du Liban manages the currency mainly through its exchange-rate policy, so this rate has little effect on deposit rates."
+      "note": "Benchmark rate 25% (latest reading July 2026); secondary source because bdl.gov.lb refused automated access. Banque du Liban manages the currency mainly through its exchange-rate policy, so this rate has little effect on deposit rates."
     },
     "savings_account_rate": {
       "value": null,
@@ -89,7 +89,7 @@
       "sourceName": "Trading Economics, Lebanon deposit interest rate (Banque du Liban data)",
       "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
       "asOf": "2026-07-31",
-      "note": "Average rate paid by commercial banks on deposits, 4.55% in July 2026 (5.19% in June); secondary source because bdl.gov.lb refused access. The page does not say whether it covers pound or dollar deposits."
+      "note": "Average rate paid by commercial banks on deposits, 4.55% in July 2026 (5.19% in June); secondary source because bdl.gov.lb refused access. The page does not say whether it covers pound or dollar deposits; far below the 25% policy rate because the central bank steers the currency through the exchange rate, not interest rates."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -158,7 +158,7 @@
     "equity_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "BLOM Stock Index 1,640 on 29 Oct 2026, down 18.7% in a year and about 40% below its January 2025 high",
+      "sourceName": "Beirut Stock Exchange main index (Trading Economics): about 1,648 in early Nov 2026, down 18.6% in a year and about 40% below its January 2025 high",
       "sourceUrl": "https://tradingeconomics.com/lebanon/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: the small Beirut market (a handful of bank and property shares) keeps its weak record and earns about half the deposit rate."
@@ -166,7 +166,7 @@
     "equity_return_base": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "BLOM Stock Index (Trading Economics); average deposit rate 4.55% less 10% tax = 4.1%",
+      "sourceName": "Beirut Stock Exchange main index (Trading Economics); average deposit rate 4.55% less 10% tax = 4.1%",
       "sourceUrl": "https://tradingeconomics.com/lebanon/stock-market",
       "asOf": "2026-10-31",
       "note": "Base case kept within 2 points of the after-tax deposit rate because the local index is tiny, illiquid and has a weak record; shares there are priced in dollars."
@@ -174,7 +174,7 @@
     "equity_return_high": {
       "value": 0.09,
       "status": "assumption",
-      "sourceName": "BLOM Stock Index (Trading Economics); long-run global equity returns",
+      "sourceName": "Beirut Stock Exchange main index (Trading Economics); long-run global equity returns",
       "sourceUrl": "https://tradingeconomics.com/lebanon/stock-market",
       "asOf": "2026-10-31",
       "note": "High case: a diversified (largely foreign) equity holding earning global equity returns of about 8-9% with a stable pound."
@@ -288,8 +288,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/lebanon",
-      "asOf": "2026-12-31",
-      "note": "Men 76.2, women 80.1 (UN WPP estimate for 2026); World Bank 2024 figure 77.9."
+      "asOf": "2026-07-01",
+      "note": "Men 76.2, women 80.1 (UN WPP estimate for 2026, mid-year); World Bank 2024 figure 77.9. Re-checked on georank 2026-11-03."
     },
     "life_table_remaining": {
       "value": null,
@@ -324,7 +324,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/lebanon",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
     },
     "support_ratio": {
@@ -394,7 +394,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "After-tax deposits about 4.1%; BLOM index weak record",
+      "sourceName": "After-tax deposits about 4.1%; weak record of the Beirut Stock Exchange index",
       "sourceUrl": "https://tradingeconomics.com/lebanon/deposit-interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares and deposit rates both disappoint."

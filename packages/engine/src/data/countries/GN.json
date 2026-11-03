@@ -144,7 +144,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No deposit guarantee for commercial banks was found; the BCRG's deposit guarantee and resolution fund covers only inclusive financial institutions (microfinance), up to GNF 5 million per client per institution, indexed each year to inflation (BCRG instruction, 2019)."
+      "note": "No deposit guarantee for commercial banks was found; the BCRG's deposit guarantee and resolution fund page covers only inclusive financial (microfinance) institutions and shows no coverage amount on the page that could be read."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -348,7 +348,7 @@
           }
         ]
       },
-      "note": "100 / old-age dependency ratio: 6.20 (2025, World Bank), 6.4 (2040, populationpyramid.net/guinea/2040/) and 11.2 (2065, populationpyramid.net/guinea/2065/)."
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio. Old-age dependency ratios used: 6.20% in 2025 (World Bank), 6.4% in 2040 (populationpyramid.net/guinea/2040/) and 11.2% in 2065 (populationpyramid.net/guinea/2065/), giving 16.12, 15.63 and 8.93."
     },
     "retirement_age_default": {
       "value": 60,
@@ -364,7 +364,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The retirement age of civil servants under the public service statute could not be confirmed from an official source."
+      "note": "The retirement age under the Statut général des agents de l'État (law L/2019/027/AN of 7 June 2019) could not be read from an official source."
     },
     "retirement_return_low": {
       "value": 0.03,
@@ -540,7 +540,7 @@
     "depositInsurance": {
       "name": "Fonds de garantie des dépôts et de résolution des IFI (BCRG)",
       "url": "https://www.bcrg-guinee.org/missions/supervision/institutions-de-microfinances/reglementations-des-imf/fonds-de-garantie-des-depots-et-de-resolution-des-ifi/",
-      "note": "Covers microfinance (inclusive financial) institutions only, up to GNF 5 million per client per institution, indexed yearly to inflation."
+      "note": "Covers inclusive financial (microfinance) institutions only; no cover for commercial bank deposits was found."
     },
     "statistics": {
       "name": "Institut National de la Statistique (INS)",

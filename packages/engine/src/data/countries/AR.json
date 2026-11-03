@@ -126,7 +126,7 @@
       "sourceName": "PwC Worldwide Tax Summaries: Argentina, individual income determination (last reviewed 16 June 2026)",
       "sourceUrl": "https://taxsummaries.pwc.com/argentina/individual/income-determination",
       "asOf": "2026-06-16",
-      "note": "Interest on savings accounts in Argentine banks is exempt from personal income tax; PwC states other interest income is taxable at the progressive 5-35% rates."
+      "note": "PwC: interest on savings accounts in Argentine banks is exempt from personal income tax, and the exemption for individuals' term deposits was extended to foreign-currency deposits from fiscal years starting 1 January 2026; other interest income is taxable at the progressive rates."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -413,12 +413,12 @@
       "note": "High case with strong equities and high peso yields."
     },
     "old_age_allowance_monthly": {
-      "value": 348599,
-      "status": "sourced",
-      "sourceName": "Universal Old-Age Pension (PUAM, Law 27.260): 80% of the minimum pension; minimum pension per news report (October 2026)",
-      "sourceUrl": "https://www.rankia.com.ar/noticias/subsidios/7491336-jubilacion-minima-octubre-bono-70-000-cobras-505-748-51-8",
-      "asOf": "2026-10-01",
-      "note": "PUAM pays 80% of the minimum retirement pension (argentina.gob.ar Ley Simple). A news headline gives ARS 505,748.51 for October 2026 including the ARS 70,000 bonus, so the minimum is ARS 435,748.51 and PUAM about ARS 348,599 before any bonus; ANSES pages could not be read."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Universal Old-Age Pension (PUAM, Law 27.260) exists and pays 80% of the minimum retirement pension (argentina.gob.ar Derecho Fácil), but no official figure for the current minimum pension could be read: ANSES pages returned errors or empty content, and the only October 2026 figure found was a commercial news headline whose article did not state the minimum pension or the PUAM amount."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -440,7 +440,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Argentina has no statutory gratuity on retirement or resignation: Labour Contract Law art. 252 ends the contract at retirement without any seniority indemnity; the only statutory payment is the art. 245 dismissal indemnity of one month's best pay per year of service when the employer dismisses without just cause.",
+      "note": "Argentina has no statutory gratuity on retirement or resignation: Labour Contract Law 20.744 art. 252 lets the employer end the contract once the worker is 70 and qualifies for the pension, without paying the seniority indemnity; the only statutory payment is the art. 245 dismissal indemnity of one month's best pay per year of service on dismissal without just cause (InfoLEG consolidated text, https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25552/texact.htm).",
       "absent": true
     },
     "public_pension_scheme": {

@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "code": "SC",
+  "iso3": "SYC",
+  "nameEn": "Seychelles",
+  "nameNative": "Sesel",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "crs",
+    "en",
+    "fr"
+  ],
+  "currency": {
+    "code": "SCR",
+    "symbol": "SR",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 14.6681,
+      "status": "sourced",
+      "sourceName": "Central Bank of Seychelles, consolidated average exchange rates of authorised dealers",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/CAR.html",
+      "asOf": "2026-10-30",
+      "note": "Consolidated average USD mid rate SR 14.6681 on 30 October 2026 (buy 14.5286, sell 14.8347); the World Bank 2025 average was 14.73."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.0122,
+      "status": "sourced",
+      "sourceName": "Central Bank of Seychelles, inflation (NBS CPI), September 2026",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/Inflation.html",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year CPI inflation 1.22% in September 2026 (0.93% in August); the 12-month average was 0.36%. Figures are the National Bureau of Statistics CPI as republished by the CBS."
+    },
+    "inflation_projection": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "CBS inflation series: 12-month average 9.8% (2021), 2.6% (2022), -1.0% (2023), 0.3% (2024), 0.3% (2025)",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/Inflation.html",
+      "asOf": "2026-10-31",
+      "note": "No published numeric inflation target was found, so we plan with 2.5%, close to the 2021-2025 average of about 2.4%, as the CBS expects inflation to rise from its current low level with higher fuel and food prices."
+    },
+    "policy_rate": {
+      "value": 0.0175,
+      "status": "sourced",
+      "sourceName": "Central Bank of Seychelles, press release 30 September 2026 (monetary policy rate for Q4 2026)",
+      "sourceUrl": "https://www.cbs.sc/Downloads/Pressrelease/To%20Lentere%20Polisi%20Moneter%20i%20reste%201.75%20poursan%20pour%20katriyenm%20kar%202026.pdf",
+      "asOf": "2026-09-24",
+      "note": "The Board kept the monetary policy rate at 1.75% for the fourth quarter of 2026 at its 24 September 2026 meeting (release in Seychellois Creole); standing deposit facility 0.25%, standing credit facility 3.25%."
+    },
+    "savings_account_rate": {
+      "value": 0.014,
+      "status": "sourced",
+      "sourceName": "Central Bank of Seychelles, indicative rates on deposits and lending, week of 26-31 October 2026",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-26",
+      "note": "Savings rates of the eight listed banks and deposit-taking institutions ranged 1.15-1.60%; median 1.40%. The 2026 Budget Speech gave an average savings rate of 1.39% in December 2025."
+    },
+    "fdr_3m_rate": {
+      "value": 0.015,
+      "status": "sourced",
+      "sourceName": "Central Bank of Seychelles, indicative rates on deposits and lending, week of 26-31 October 2026",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-26",
+      "note": "3-month fixed-term rates ranged 1.10-1.75% across seven institutions; median 1.50%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.02,
+      "status": "sourced",
+      "sourceName": "Central Bank of Seychelles, indicative rates on deposits and lending, week of 26-31 October 2026",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-26",
+      "note": "12-month fixed-term rates ranged 1.25-2.25% across seven institutions; median 2.00%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The CBS weekly indicative rate sheet lists savings, call and fixed-term deposits only; no monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0247,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Seychelles",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=SC",
+      "asOf": "2025-12-31",
+      "note": "2.47% for 2025 (IMF IFS via World Bank). The 2026 Budget Speech gives average savings and fixed-term rates of 1.39% and 3.0% in December 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate was found; individuals can buy Treasury bills and bonds through the non-competitive part of CBS auctions instead."
+    },
+    "tbill_91d_rate": {
+      "value": 0.023,
+      "status": "sourced",
+      "sourceName": "Central Bank of Seychelles, Treasury bill rates, 30 October 2026",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/TBILL.html",
+      "asOf": "2026-10-30",
+      "note": "91-day bill 2.30%, 182-day 2.48% and 365-day 2.50% as published by the CBS for 30 October 2026."
+    },
+    "tbond_5y_rate": {
+      "value": 0.038,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, press release: issuance of a 5-year Treasury bond, September 2026",
+      "sourceUrl": "https://www.finance.gov.sc/wp-content/uploads/2026/08/260825-Press-Release-September-2026-T-Bond-Issuance.pdf",
+      "asOf": "2026-09-07",
+      "note": "Fixed coupon of 3.8% on the 5-year bond auctioned on 7 September 2026 (the June 2026 5-year bond also paid 3.8%); the auction yield was not published."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Treasury bond was issued in 2026; the longest 2026 issue found was a 7-year bond at a 4.8% fixed coupon (Ministry of Finance, March 2026)."
+    },
+    "tax_bank_interest": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "Seychelles Revenue Commission, Seychelles tax system: withholding tax rates",
+      "sourceUrl": "https://src.gov.sc/seychelles-tax-system/",
+      "asOf": "2026-10-31",
+      "note": "Withholding tax is 5% on interest on current, fixed and call deposits of residents and 0% on savings account interest; withholding tax is a final tax."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail government savings certificate exists. For reference, the SRC withholding table taxes Treasury bill interest at 15% for recipients other than financial institutions and insurers; the treatment of Treasury bond coupons was not stated."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover limit was found on the Central Bank of Seychelles website (legislation, financial stability and consumer pages)."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; the CBS weekly sheet shows unsecured personal lending at 14.5-21.75% (October 2026) but no card rate."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No usable local equity index; global equity in rupee terms",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: weak global equity decade with a stable rupee."
+    },
+    "equity_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Global equity in rupee terms; after-tax safe rate about 2%",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Seychelles has no local stock index with a usable record, so equity means a global index fund in rupee terms, held about 3.5 points above the roughly 2% after-tax safe rate."
+    },
+    "equity_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Global equity history in rupee terms",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/CAR.html",
+      "asOf": "2026-10-31",
+      "note": "High case: strong global equity returns plus some rupee depreciation."
+    },
+    "gold_return_low": {
+      "value": 0.005,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; rupee about 14.7 per US dollar in October 2026 (CBS)",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/CAR.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold prices and a stable rupee."
+    },
+    "gold_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; rupee about 14.7 per US dollar in October 2026 (CBS)",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/CAR.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: a long-run dollar gold trend of about 4.5% plus about 1% a year of rupee depreciation."
+    },
+    "gold_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; rupee about 14.7 per US dollar in October 2026 (CBS)",
+      "sourceUrl": "https://www.cbs.sc/marketinfo/CAR.html",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and faster rupee depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.013,
+      "status": "assumption",
+      "sourceName": "CBS: 1-year deposits about 2.0% (Oct 2026, 5% withholding), 365-day bill 2.50% (30 Oct 2026, 15% withholding), 5-year bond 3.8% (Sep 2026)",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly savings accounts (about 1.4%, untaxed) and short deposits, allowing for rates to drift lower."
+    },
+    "fixed_income_return_base": {
+      "value": 0.019,
+      "status": "assumption",
+      "sourceName": "CBS: 1-year deposits about 2.0% (Oct 2026, 5% withholding), 365-day bill 2.50% (30 Oct 2026, 15% withholding), 5-year bond 3.8% (Sep 2026)",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 1-year fixed deposits at about 2.0% after the 5% withholding tax, close to the 365-day bill after its 15% withholding."
+    },
+    "fixed_income_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBS: 1-year deposits about 2.0% (Oct 2026, 5% withholding), 365-day bill 2.50% (30 Oct 2026, 15% withholding), 5-year bond 3.8% (Sep 2026)",
+      "sourceUrl": "https://www.finance.gov.sc/wp-content/uploads/2026/08/260825-Press-Release-September-2026-T-Bond-Issuance.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 5- to 7-year Treasury bonds at 3.8-4.8% coupons."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Financial Services Authority publishes insurance statistics but no industry-wide life claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official source publishing indicative term-life premiums per SR 1,000 of cover was found; only company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public hospital care is free at the point of use; no official figure for the cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official source publishing private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.2796,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Seychelles",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SC",
+      "asOf": "2023-12-31",
+      "note": "28.0% in 2023 (WHO Global Health Expenditure Database), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 2.5%; NBS health CPI (health prices fell 3.2% year on year in July 2026, via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/seychelles/inflation-cpi/news/590098",
+      "asOf": "2026-10-31",
+      "note": "Public care is free, but private and imported medical costs are planned 1.5 points above general inflation as the recent health CPI is too volatile to use."
+    },
+    "goal_inflation_education": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "NBS education CPI up 2.49% year on year in September 2026 (via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/seychelles/inflation-cpi/news/590098",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose about twice as fast as the CPI in 2026, so education is planned 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 76.3,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Seychelles",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SC",
+      "asOf": "2024-12-31",
+      "note": "76.3 years in 2024 (men 72.1, women 80.7). UN WPP 2024 projects a lower 73.3 years for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 19.3,
+            "men": 17.2,
+            "women": 21.3
+          },
+          {
+            "age": 65,
+            "total": 15.6,
+            "men": 13.9,
+            "women": 17.3
+          },
+          {
+            "age": 70,
+            "total": 12.3,
+            "men": 11.0,
+            "women": 13.6
+          },
+          {
+            "age": 80,
+            "total": 6.9,
+            "men": 6.3,
+            "women": 7.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/seychelles/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals are the mean of men and women except at 65, where the page gives 15.6."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 8.2
+          },
+          {
+            "year": 2040,
+            "value": 4.8
+          },
+          {
+            "year": 2065,
+            "value": 2.3
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=SC",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+, computed as 100 / old-age dependency ratio: 12.2 in 2025 (World Bank) gives 8.2; 21.0 in 2040 and 44.3 in 2065 (populationpyramid.net/seychelles/2040/ and /2065/) give 4.8 and 2.3."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Seychelles Pension Fund, Age pension (effective 1 January 2025)",
+      "sourceUrl": "https://pensionfund.sc/pensions-refunds/retirement-pension/",
+      "asOf": "2025-01-01",
+      "note": "The SPF age pension is payable from 65, with a reduced early pension from 60 if the member stops working. The non-contributory Social Security retirement benefit starts at 63 from 1 January 2026."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official statement of the public service retirement age was found."
+    },
+    "retirement_return_low": {
+      "value": 0.013,
+      "status": "assumption",
+      "sourceName": "CBS: 1-year deposits about 2.0% (Oct 2026, 5% withholding), 365-day bill 2.50% (30 Oct 2026, 15% withholding), 5-year bond 3.8% (Sep 2026)",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and short deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.019,
+      "status": "assumption",
+      "sourceName": "CBS: 1-year deposits about 2.0% (Oct 2026, 5% withholding), 365-day bill 2.50% (30 Oct 2026, 15% withholding), 5-year bond 3.8% (Sep 2026)",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept at the after-tax 1-year deposit rate of about 1.9%."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "CBS: 1-year deposits about 2.0% (Oct 2026, 5% withholding), 365-day bill 2.50% (30 Oct 2026, 15% withholding), 5-year bond 3.8% (Sep 2026)",
+      "sourceUrl": "https://www.finance.gov.sc/wp-content/uploads/2026/08/260825-Press-Release-September-2026-T-Bond-Issuance.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of 5- to 7-year Treasury bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Safe rate about 2%; equity base 5.5%; gold base 5.5%",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and Treasury bonds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Safe rate about 2%; equity base 5.5%; gold base 5.5%",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of bonds, deposits and global equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Safe rate about 2%; equity base 5.5%; gold base 5.5%",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with global equity funds."
+    },
+    "old_age_allowance_monthly": {
+      "value": 6950,
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Budget Speech 2025 (benefit levels from April 2025) and Budget Speech 2026 (SR 800 increase from 1 January 2026)",
+      "sourceUrl": "https://www.finance.gov.sc/wp-content/uploads/2026/02/2026-Budget-Speech-English-Version.pdf",
+      "asOf": "2026-01-01",
+      "note": "Social Security retirement benefit (Agency for Social Protection) for someone who also gets an SPF pension above SR 3,250: SR 6,150 from April 2025 (2025 Budget Speech, https://www.finance.gov.sc/wp-content/uploads/2025/08/2025-Budget-Speech.pdf) plus the SR 800 rise from 1 January 2026 (2026 Budget Speech) gives SR 6,950. With an SPF pension below SR 3,250 it is SR 7,200, and with no SPF pension SR 7,450; the Government aims for SR 10,000 by 2029."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 63,
+        "womenAge": 63,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Finance, Budget Speech 2026 (age of eligibility for Social Security retirement benefit)",
+      "sourceUrl": "https://www.finance.gov.sc/wp-content/uploads/2026/02/2026-Budget-Speech-English-Version.pdf",
+      "asOf": "2026-01-01",
+      "note": "The age of eligibility was lowered from 65 to 63 on 1 January 2026; the benefit is paid to all eligible residents at three levels depending on their SPF pension (Budget Speech 2025), not by a means test."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The 2026 Budget Speech covers public-sector service gratuities only; the private-sector rule in the Employment Act (compensation for length of service) could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 65,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Seychelles Pension Fund, Age pension and FAQ",
+      "sourceUrl": "https://pensionfund.sc/pensions-refunds/retirement-pension/",
+      "asOf": "2025-01-01",
+      "note": "Mandatory for employees (5% employee plus 5% employer contribution, per the SPF FAQ); pension = average adjusted wage x accrual rate (1.21% in 2026) x years of contribution, payable from 65 after 20 years of contributions or the last 10 years continuously; withdrawals carry no tax or fees (SPF FAQ). No automatic indexation of pensions in payment is stated."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Banks pay about 1.15-1.60% (October 2026); savings interest carries no withholding tax.",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed-term deposit (3 months)",
+      "note": "About 1.10-1.75% in October 2026; 5% withholding tax on interest.",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed-term deposit (12 months)",
+      "note": "About 1.25-2.25% in October 2026; 5% withholding tax on interest.",
+      "sourceUrl": "https://www.cbs.sc/Downloads/publications/interestrate/Banks'%20Interest%20Rates%20Web_26%20October,%202026%20-%2031%20October,%202026.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail government savings certificate; individuals can bid non-competitively for Treasury bills and bonds."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills (91 days)",
+      "note": "Auctioned weekly by the CBS for the Government; individuals with a rupee account can apply.",
+      "sourceUrl": "https://www.cbs.sc/GovernmentDebt/treasurybills.html"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bond (5 years)",
+      "note": "Issued a few times a year in multiples of SR 1,000; individuals bid non-competitively.",
+      "sourceUrl": "https://www.finance.gov.sc/wp-content/uploads/2026/08/260825-Press-Release-September-2026-T-Bond-Issuance.pdf"
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year Treasury bond was issued in 2026; the longest was 7 years."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No locally marketed diversified equity fund for residents was confirmed; investors mainly use foreign funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Seychelles",
+      "url": "https://www.cbs.sc/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Authority (FSA)",
+      "url": "https://fsaseychelles.sc/regulated-entities/insurance"
+    },
+    "insuranceComplaints": {
+      "name": "Financial Services Authority, complaint handling",
+      "url": "https://fsaseychelles.sc/complaint-handling"
+    },
+    "pensionScheme": {
+      "name": "Seychelles Pension Fund",
+      "url": "https://pensionfund.sc/pensions-refunds/retirement-pension/"
+    },
+    "oldAgeAllowance": {
+      "name": "Social Security retirement benefit (Agency for Social Protection)",
+      "url": "https://www.socialaffairs.gov.sc/",
+      "note": "Paid from age 63 since January 2026."
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health (free public health care)",
+      "url": "https://www.health.gov.sc/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Bureau of Statistics",
+      "url": "https://www.nbs.gov.sc/statistics/consumer-price-indices"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

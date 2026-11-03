@@ -8,7 +8,8 @@
   "languages": [
     "ca",
     "es",
-    "fr"
+    "fr",
+    "pt"
   ],
   "currency": {
     "code": "EUR",
@@ -31,7 +32,7 @@
       "sourceName": "IMF World Economic Outlook (DataMapper), Andorra inflation, average consumer prices",
       "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/AND",
       "asOf": "2025-12-31",
-      "note": "2025 average 2.4% (end-2025 2.7%); the IMF projects 4.0% for 2026. Secondary source because the Andorra statistics portal (estadistica.ad) is a script-only map application that could not be read; the World Bank has no CPI series for Andorra."
+      "note": "2025 average 2.4% (end-2025 2.7%); the IMF projects 4.0% for 2026. Secondary source because the Andorra statistics portal (estadistica.ad) is a script-only map application that could not be read; the World Bank has no CPI series for Andorra. Checked against the IMF DataMapper API (PCPIPCH, AND)."
     },
     "inflation_projection": {
       "value": 0.025,
@@ -47,7 +48,7 @@
       "sourceName": "European Central Bank, key ECB interest rates (deposit facility)",
       "sourceUrl": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html",
       "asOf": "2026-09-16",
-      "note": "Andorra uses the euro under a monetary agreement with the EU and has no own policy rate; ECB deposit facility 2.50%, main refinancing 2.65% from 16 September 2026."
+      "note": "Andorra uses the euro under a monetary agreement with the EU and has no own policy rate; ECB deposit facility 2.50%, main refinancing 2.65% from 16 September 2026 (raised from 2.25% on 17 June 2026)."
     },
     "savings_account_rate": {
       "value": null,
@@ -262,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AD",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 figure, the latest World Bank value (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -286,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AD",
       "asOf": "2024-12-31",
-      "note": "Men 82.3, women 86.2."
+      "note": "Men 82.3, women 86.2. 2024 figure, the latest World Bank value (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,

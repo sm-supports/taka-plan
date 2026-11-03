@@ -21,7 +21,7 @@
       "sourceName": "Trading Economics, USD/EGP exchange rate",
       "sourceUrl": "https://tradingeconomics.com/egypt/currency",
       "asOf": "2026-10-30",
-      "note": "56.00 Egyptian pounds per US dollar on 30 October 2026; secondary source because the Central Bank of Egypt exchange-rate page rejected requests. World Bank 2025 average 49.23."
+      "note": "56.00 Egyptian pounds per US dollar on 30 October 2026 as read by the researcher; on re-check the same page showed 55.46 on 3 November 2026 (previous session 55.35), so the figure is within about 1% of the latest. Secondary source because the Central Bank of Egypt exchange-rate page rejected requests. World Bank 2025 average 49.23."
     }
   },
   "fields": {
@@ -82,12 +82,12 @@
       "note": "No industry-wide rate for monthly recurring savings plans was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.145,
+      "value": 0.148,
       "status": "sourced",
       "sourceName": "IMF International Financial Statistics deposit rate, Egypt, via Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
-      "asOf": "2026-08-31",
-      "note": "14.50% in August 2026 (14.60% in July). World Bank FR.INR.DPST gives 19.16% for 2024."
+      "asOf": "2026-09-30",
+      "note": "14.80% in September 2026 (14.50% in August), IMF series as shown by Trading Economics. World Bank FR.INR.DPST gives 19.16% for 2024."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -156,7 +156,7 @@
     "equity_return_low": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "EGX30 index about 49,600 points in October 2026 (Trading Economics); after-tax deposit rate about 14.5%",
+      "sourceName": "EGX30 index about 49,600 points in October 2026 (Trading Economics); after-tax deposit rate about 14.8%",
       "sourceUrl": "https://tradingeconomics.com/egypt/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: equities lag the after-tax deposit rate, as can happen when currency-driven rallies reverse."
@@ -164,15 +164,15 @@
     "equity_return_base": {
       "value": 0.17,
       "status": "assumption",
-      "sourceName": "After-tax average deposit rate 14.5% (bank interest untaxed); EGX30 long-run record",
+      "sourceName": "After-tax average deposit rate 14.8% (September 2026; bank interest untaxed); EGX30 long-run record",
       "sourceUrl": "https://tradingeconomics.com/egypt/stock-market",
       "asOf": "2026-10-31",
-      "note": "Base case: about 2.5 points over the untaxed deposit rate, within the 4-point cap, since much of the EGX30's 10-year rise reflects pound devaluation rather than real growth."
+      "note": "Base case: about 2 points over the untaxed deposit rate, within the 4-point cap, since much of the EGX30's 10-year rise reflects pound devaluation rather than real growth."
     },
     "equity_return_high": {
       "value": 0.22,
       "status": "assumption",
-      "sourceName": "EGX30 index record; deposit rate 14.5%",
+      "sourceName": "EGX30 index record; deposit rate 14.8%",
       "sourceUrl": "https://tradingeconomics.com/egypt/stock-market",
       "asOf": "2026-10-31",
       "note": "High case: equities beat deposits by about 7 points a year, as in periods of devaluation-driven nominal gains."
@@ -204,7 +204,7 @@
     "fixed_income_return_low": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "IMF deposit rate 14.5% (August 2026); policy rate 20%",
+      "sourceName": "IMF deposit rate 14.8% (September 2026); policy rate 20%",
       "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case: rates fall as inflation eases toward the central bank target, and savings balances earn less than the average."
@@ -212,7 +212,7 @@
     "fixed_income_return_base": {
       "value": 0.14,
       "status": "assumption",
-      "sourceName": "IMF deposit rate 14.5% (August 2026); bank interest untaxed (PwC)",
+      "sourceName": "IMF deposit rate 14.8% (September 2026); bank interest untaxed (PwC)",
       "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
       "asOf": "2026-10-31",
       "note": "Base case: about the average deposit rate, which is tax-free for residents, rounded down."
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Egypt",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=EG",
       "asOf": "2024-12-31",
-      "note": "71.8 years in 2024 (men 69.7, women 74.0); UN WPP 2024 gives 72.2 for 2026."
+      "note": "71.8 years in 2024 (men 69.7, women 74.0), the latest World Bank year, older than 2025; UN WPP 2024 gives 72.2 for 2026."
     },
     "life_table_remaining": {
       "value": null,
@@ -368,7 +368,7 @@
     "retirement_return_low": {
       "value": 0.09,
       "status": "assumption",
-      "sourceName": "IMF deposit rate 14.5% (August 2026)",
+      "sourceName": "IMF deposit rate 14.8% (September 2026)",
       "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case: deposit rates fall as inflation eases."
@@ -376,7 +376,7 @@
     "retirement_return_base": {
       "value": 0.13,
       "status": "assumption",
-      "sourceName": "IMF deposit rate 14.5% (August 2026); bank interest untaxed (PwC)",
+      "sourceName": "IMF deposit rate 14.8% (September 2026); bank interest untaxed (PwC)",
       "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
       "asOf": "2026-10-31",
       "note": "Base case: a little below the untaxed average deposit rate, so not above the after-tax safe rate."
@@ -392,7 +392,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "Deposit rate 14.5%; equity low 10%",
+      "sourceName": "Deposit rate 14.8%; equity low 10%",
       "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case: a balanced mix earning below today's deposit rate."
@@ -400,7 +400,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.15,
       "status": "assumption",
-      "sourceName": "Deposit rate 14.5%; equity base 17%; gold base 11%",
+      "sourceName": "Deposit rate 14.8%; equity base 17%; gold base 11%",
       "sourceUrl": "https://tradingeconomics.com/egypt/deposit-interest-rate",
       "asOf": "2026-10-31",
       "note": "Base case: a balanced mix of deposits, equities and gold."
@@ -423,17 +423,11 @@
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "valueJson": {
-        "menAge": 65,
-        "womenAge": 65,
-        "over90Monthly": null,
-        "meansTested": true
-      },
-      "status": "sourced",
-      "sourceName": "Arabic Wikipedia, Takaful and Karama programme (citing the Ministry of Social Solidarity)",
-      "sourceUrl": "https://ar.wikipedia.org/wiki/تكافل_وكرامة",
-      "asOf": "2022-10-04",
-      "note": "Karama is for people aged 65 and over (also people with disabilities or chronic illness) without an insurance pension or a job insured above EGP 400; means-tested. Secondary source; the eligibility description is older than 2025."
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Karama, the means-tested cash transfer of the Takaful and Karama programme (Ministry of Social Solidarity), is described as covering poor people aged 65 and over, but the only page found was Arabic Wikipedia text from 2022-2023, not an official or accepted secondary source, and the rules may have changed since; the ministry site gave no eligibility page."
     },
     "gratuity_rule": {
       "value": null,

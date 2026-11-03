@@ -30,7 +30,7 @@
       "sourceName": "Statistics Iceland, consumer price index (annual change)",
       "sourceUrl": "https://www.statice.is/statistics/economy/prices/consumer-price-index/",
       "asOf": "2026-10-31",
-      "note": "CPI 12-month rise 5.9% in October 2026, unchanged from September (released 29 October 2026); the Central Bank's target is 2.5%."
+      "note": "CPI 12-month rise 5.9% in October 2026 (shown on the Statistics Iceland CPI chart; the Central Bank statement of 7 October also cites 5.9%); the Central Bank target is 2.5%."
     },
     "inflation_projection": {
       "value": 0.04,
@@ -43,10 +43,10 @@
     "policy_rate": {
       "value": 0.08,
       "status": "sourced",
-      "sourceName": "Central Bank of Iceland, key interest rate (7-day term deposits)",
-      "sourceUrl": "https://cb.is/statistics/interest-rates/",
+      "sourceName": "Central Bank of Iceland, Statement of the Monetary Policy Committee, 7 October 2026",
+      "sourceUrl": "https://cb.is/news-and-publications/article/statement-of-the-monetary-policy-committee-october-7-2026",
       "asOf": "2026-10-07",
-      "note": "Key rate 8.00%, raised from 7.75% on 19 August 2026 and held on 7 October 2026 (valid from 7 October; next decision 18 November 2026)."
+      "note": "Key rate (seven-day term deposit rate) kept at 8.00% on 7 October 2026; the statement notes inflation at 5.9% and underlying inflation just over 4%. Next decision 18 November 2026."
     },
     "savings_account_rate": {
       "value": null,
@@ -142,7 +142,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Deposits are covered by the Depositors' and Investors' Guarantee Fund (TIF) under Act 98/2019, but tif.is and the law text on althingi.is refused automated access, so the cover amount could not be read."
+      "note": "Deposits are covered by the Depositors' and Investors' Guarantee Fund (TIF) under Act 98/2019, but tif.is returned 403 and the law text on althingi.is is behind a bot check, so the cover amount could not be read."
     },
     "credit_card_rate_cap": {
       "value": null,

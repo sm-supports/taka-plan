@@ -31,7 +31,7 @@
       "sourceName": "Hungarian Central Statistical Office (KSH), consumer price index flash release, September 2026",
       "sourceUrl": "https://www.ksh.hu/gyorstajekoztatok/far/far2609.html",
       "asOf": "2026-09-30",
-      "note": "Consumer prices were 1.6% higher than a year earlier in September 2026 (1.3% in August), released 7 October 2026. HICP averaged 4.4% in 2025."
+      "note": "Consumer prices were 1.6% higher than a year earlier in September 2026 (up 0.2% on August), released 7 October 2026. HICP averaged 4.4% in 2025 (ECB)."
     },
     "inflation_projection": {
       "value": 0.035,
@@ -44,18 +44,18 @@
     "policy_rate": {
       "value": 0.055,
       "status": "sourced",
-      "sourceName": "Magyar Nemzeti Bank, MNB Decree of 25 August 2026 on the central bank base rate",
-      "sourceUrl": "https://www.mnb.hu/letoltes/mnb-rendelet-20260825-en.pdf",
+      "sourceName": "Magyar Nemzeti Bank, central bank base rate history",
+      "sourceUrl": "https://www.mnb.hu/Jegybanki_alapkamat_alakulasa",
       "asOf": "2026-08-26",
-      "note": "Base rate cut to 5.50% in August 2026 and held at the 22 September and 20 October 2026 Monetary Council meetings (corridor 4.50-6.50%)."
+      "note": "Base rate 5.50% since 26 August 2026, still in force at the start of November 2026 (MNB base-rate table)."
     },
     "savings_account_rate": {
       "value": 0.0017,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by the MNB): Hungarian banks, overnight forint deposits from households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L21.A.R.A.2250.HUF.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight (sight and savings) forint deposits was 0.17% in August 2026 (0.21% in July)."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight (sight and savings) forint deposits was 0.17% in August and September 2026 (0.21% in July)."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -63,15 +63,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The MNB and ECB publish household term deposits up to 1 year as one bucket (4.05% in August 2026); no separate 3-month average was found."
+      "note": "The MNB and ECB publish household term deposits up to 1 year as one bucket (4.23% in September 2026); no separate 3-month average was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0405,
+      "value": 0.0423,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by the MNB): household forint deposits with agreed maturity up to 1 year, new business",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L22.F.R.A.2250.HUF.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (4.24% in July 2026); 1-2 year deposits paid 3.40% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year: 4.23% in September 2026 (4.41% in August, 4.67% in July). The earlier figure of 4.05% did not match the ECB series and was corrected."
     },
     "dps_rate": {
       "value": null,
@@ -95,7 +95,7 @@
       "sourceName": "Government Debt Management Agency (ÁKK) retail bond MÁP Plusz series from 17 July 2026, as reported by economx.hu",
       "sourceUrl": "https://www.economx.hu/befektetes/2026/07/14/allampapir-akk-kamatcsokkentes-befektetes/",
       "asOf": "2026-07-17",
-      "note": "New 5-year Hungarian Government Security Plus series pays a stepped rate rising from 5.00% to 6.00% (5.00, 5.25, 5.50, 5.75, 6.00%), 5.48% a year on average; secondary source because the ÁKK offering page loads by script. Third cut in 2026."
+      "note": "The 5-year Hungarian Government Security Plus series sold from 17 July 2026 pays a fixed stepped rate rising from 5% to 6%, 5.48% a year on average; secondary source (news report on the ÁKK announcement) because the ÁKK offering page loads by script. The rate may have been changed again after the August base-rate cut; this could not be checked."
     },
     "tbill_91d_rate": {
       "value": 0.0514,
@@ -146,17 +146,17 @@
       "note": "EUR 100,000 per depositor per bank, paid in forints at the MNB rate of the day before payout; converted at EUR 1 = HUF 365.80 (MNB, 30 October 2026). An extra EUR 50,000 covers certain temporary high balances."
     },
     "credit_card_rate_cap": {
-      "value": 0.2412,
+      "value": 0.2376,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by the MNB): Hungarian banks, extended credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.A2Z3.A.R.A.2250.HUF.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate, not the legal cap: average 24.12% in August 2026. By law the APR (THM) on credit cards may not exceed the MNB base rate plus 39 percentage points."
+      "asOf": "2026-09-30",
+      "note": "Typical rate, not a legal cap: average 23.76% on extended credit card credit to households in September 2026 (24.12% in August). A legal APR ceiling linked to the base rate exists but its current level was not read."
     },
     "equity_return_low": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "BUX index 145,257 on 30 Oct 2026, up 35% in a year (Trading Economics); after-tax 1-year deposit about 2.9%",
+      "sourceName": "BUX index 145,257 on 30 Oct 2026, up about 35% in a year (Trading Economics); after-tax 1-year deposit about 3.0%",
       "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: Hungarian shares give back recent gains and earn only a little more than tax-free government securities."
@@ -202,9 +202,9 @@
       "note": "High case: a repeat of gold's strong 2005-2025 trend in forint terms."
     },
     "fixed_income_return_low": {
-      "value": 0.029,
+      "value": 0.03,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 4.05% less 28% tax = 2.9% (ECB MIR)",
+      "sourceName": "Household deposits up to 1 year 4.23% (September 2026) less 28% tax = 3.0% (ECB MIR)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L22.F.R.A.2250.HUF.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax bank term deposits only."
@@ -212,7 +212,7 @@
     "fixed_income_return_base": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 2.9%; tax-free MÁP Plusz 5.48% average",
+      "sourceName": "After-tax 1-year deposit 3.0%; tax-free MÁP Plusz 5.48% average",
       "sourceUrl": "https://www.economx.hu/befektetes/2026/07/14/allampapir-akk-kamatcsokkentes-befektetes/",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of tax-free retail government securities and after-tax deposits, allowing for further rate cuts."
@@ -368,7 +368,7 @@
     "retirement_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 2.9% (ECB MIR)",
+      "sourceName": "After-tax 1-year deposit 3.0% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HU.B.L22.F.R.A.2250.HUF.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax deposits with some further rate cuts."
@@ -376,7 +376,7 @@
     "retirement_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "3-month treasury bill 5.14% less 28% tax = 3.7% (ÁKK); after-tax 1-year deposit 2.9%",
+      "sourceName": "3-month treasury bill 5.14% less 28% tax = 3.7% (ÁKK); after-tax 1-year deposit 3.0%",
       "sourceUrl": "https://www.akk.hu/hu/statisztika/hozamok-indexek-forgalmi-adatok/referenciahozamok",
       "asOf": "2026-10-31",
       "note": "Base case: kept below the after-tax treasury bill rate, with some tax-free retail government securities in the mix."
@@ -392,7 +392,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "After-tax deposits 2.9%; BUX record (Trading Economics)",
+      "sourceName": "After-tax deposits 3.0%; BUX record (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/hungary/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -419,21 +419,21 @@
       "sourceName": "European Commission, Your social security rights in Hungary (July 2026): old-age allowance (időskorúak járadéka)",
       "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/cda27b4f-ad1c-419d-b4c4-28222a5d2c34_en",
       "asOf": "2026-07-31",
-      "note": "HUF 43,700 a month for a single person from pension age to 74 with no income (HUF 37,165 per person in a couple, HUF 58,990 alone at 75+); income is deducted. The government plans to roughly double these amounts from January 2027."
+      "note": "HUF 43,700 a month for a person living alone between pension age and 74 with no income (HUF 37,165 per person if living with a spouse or partner; HUF 58,990 alone at 75+, given as 58,900 in another paragraph of the guide); any income is deducted, so this is the maximum."
     },
     "old_age_allowance_eligibility": {
       "value": null,
       "status": "sourced",
-      "sourceName": "Act III of 1993 on social administration, sections 32/B-32/C (National Legislation Database)",
-      "sourceUrl": "https://njt.jog.gov.hu/jogszabaly/1993-3-00-00",
-      "asOf": "2026-10-01",
+      "sourceName": "European Commission, Your social security rights in Hungary (July 2026): old-age allowance (időskorúak járadéka)",
+      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/cda27b4f-ad1c-419d-b4c4-28222a5d2c34_en",
+      "asOf": "2026-07-31",
       "valueJson": {
         "menAge": 65,
         "womenAge": 65,
         "over90Monthly": null,
         "meansTested": true
       },
-      "note": "Pension age (65), income below the allowance amount (100% of the minimum pension base for singles under 75, 85% per person for couples, 135% for singles 75+), legal residence in Hungary."
+      "note": "Paid from legal retirement age (65) to residents whose monthly income is below HUF 43,700 (living alone, under 75), HUF 37,165 per person (couples) or HUF 58,990 (alone, 75+); not paid to people living abroad more than 3 months. Legal basis: Act III of 1993, sections 32/B-32/C."
     },
     "gratuity_rule": {
       "value": null,
@@ -455,9 +455,9 @@
         "pensionFromAge": 65,
         "nomineeUntilAge": null,
         "inflationLinked": true,
-        "taxFree": true
+        "taxFree": null
       },
-      "note": "Compulsory earnings-related state pension: pension age 65 with at least 20 years of service (minimum pension HUF 28,500, to rise to HUF 120,000 from January 2027); raised each January by forecast CPI with later correction. Pensions are tax-exempt income under the Personal Income Tax Act."
+      "note": "Compulsory earnings-related state pension: pension age 65 with at least 20 years of service (minimum pension HUF 28,500 a month); raised each January in line with forecast inflation. Pensions are widely reported as not subject to personal income tax, but no official page confirming this was read, so taxFree is left blank."
     }
   },
   "instruments": {

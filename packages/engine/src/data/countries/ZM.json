@@ -1,0 +1,563 @@
+{
+  "schemaVersion": 1,
+  "code": "ZM",
+  "iso3": "ZMB",
+  "nameEn": "Zambia",
+  "nameNative": "Zambia",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "bem",
+    "en",
+    "ny",
+    "loz"
+  ],
+  "currency": {
+    "code": "ZMW",
+    "symbol": "K",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 20.2297,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, daily ZMW/USD rates feed (Bank of Zambia Exchange Rates page), 30 October 2026, 15:30",
+      "sourceUrl": "https://www.boz.zm/api/v1/views/boz_zmw_usd_daily_exchange_rates",
+      "asOf": "2026-10-30",
+      "note": "Mid rate K20.2297 per US dollar on 30 October 2026 (buying 20.2047, selling 20.2547), from the Bank of Zambia's daily rate feed behind its exchange-rate page (https://www.boz.zm/markets-securities/boz-exchange-rates, which shows only the latest day). The World Bank 2025 average was 25.28."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.063,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, inflation rates (Zambia Statistics Agency CPI), October 2026",
+      "sourceUrl": "https://www.boz.zm/monetary-policy/inflation",
+      "asOf": "2026-10-31",
+      "note": "Annual CPI inflation 6.3% in October 2026 (BoZ page updated 29 October 2026), up from 6.1% in September (ZamStats, The Monthly, October 2026). It has been inside the Bank of Zambia's 6-8% target band since February 2026 (7.5%), after 11.2% in December 2025."
+    },
+    "inflation_projection": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia 6-8% inflation target band (MPC statement, September 2026); CPI averaged about 14% a year over 2021-2025",
+      "sourceUrl": "https://www.boz.zm/monetary-policy/monetary-policy-rate",
+      "asOf": "2026-10-31",
+      "note": "Inflation only came back into the 6-8% band in 2026 after averaging roughly 14% a year in 2021-2025, so the top of the band (8%) is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.1075,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, Monetary Policy Rate (decision announced 30 September 2026)",
+      "sourceUrl": "https://www.boz.zm/monetary-policy/monetary-policy-rate",
+      "asOf": "2026-09-30",
+      "note": "Cut by 250 basis points to 10.75%, effective 30 September 2026 (13.25% since May 2026). Next decision due 27 November 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0283,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-09",
+      "note": "Average retail savings-account rate 2.83% in the week ending 9 October 2026 (non-retail 3.48%). September 2026 retail average 2.81%. Current accounts pay 1.75%."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0547,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-09",
+      "note": "Average retail 3-month time deposit rate 5.47% in the week ending 9 October 2026 (non-retail 6.75%)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.1017,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-09",
+      "note": "Average retail 12-month time deposit rate 10.17% in the week ending 9 October 2026 (non-retail 9.72%); 6-month 7.14%, 9-month 8.74%. Rates may fall after the September 2026 policy rate cut."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or published rate was found in Bank of Zambia statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0872,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Zambia",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=ZM",
+      "asOf": "2020-12-31",
+      "note": "8.72% for 2020, the latest World Bank figure (older than 2025); the Bank of Zambia publishes only simple averages by product (retail savings 2.83%, 12-month retail 10.17% in October 2026)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals can bid for treasury bills and government bonds at Bank of Zambia auctions."
+    },
+    "tbill_91d_rate": {
+      "value": 0.085,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, Treasury bill auction results, tender 22/2026 (29 October 2026)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/Treasury-Bills-Results-Tender-No-22-2026-29-10-2026.pdf",
+      "asOf": "2026-10-29",
+      "note": "Cut-off yield 8.50% on the 91-day bill (9.00% in September); 182-day 9.10%, 273-day 9.50%, 364-day 10.00%."
+    },
+    "tbond_5y_rate": {
+      "value": 0.1498,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21, table 06 GRZ bond yield rates (February 2026 auction)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-02-28",
+      "note": "The 5-year bond was last auctioned in February 2026 at 14.98% and has not been offered since; at the September 2026 auction the 3-year yielded 12.59% and the 7-year 13.75%, so current 5-year yields are likely near 13%."
+    },
+    "tbond_10y_rate": {
+      "value": 0.145,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, GRZ bond auction results, tender 07/2026/BA (25 September 2026)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-09/Bonds-Press-Results-07-2026-BA.pdf",
+      "asOf": "2026-09-25",
+      "note": "Cut-off yield 14.50% on the 10-year bond (16.60% coupon), down from 15.50% in August 2026; 15-year 15.45%."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Zambia, individual income determination",
+      "sourceUrl": "https://taxsummaries.pwc.com/zambia/individual/income-determination",
+      "asOf": "2026-07-24",
+      "note": "Since 1 January 2022 interest earned by individuals on interest-earning accounts at banks and financial institutions licensed under the Banking and Financial Services Act is exempt (page reviewed 24 July 2026); other interest bears 15% final withholding tax."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists; for reference, coupon interest on government bonds bears 15% withholding tax (PwC Tax Summaries, reviewed 24 July 2026)."
+    },
+    "deposit_insurance_limit": {
+      "value": 250000,
+      "status": "sourced",
+      "sourceName": "Bank of Zambia, Deposit Insurance Scheme: What is the Deposit Insurance Scheme? (coverage limit)",
+      "sourceUrl": "https://www.boz.zm/financial-stability/what-is-the-deposit-insurance-scheme",
+      "asOf": "2026-10-31",
+      "note": "Coverage limit K250,000 per depositor per member institution, with all accounts at one institution added together (interest included). Foreign currency deposits are covered but paid out in kwacha. The page gives no date for the limit, so asOf is the research date."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap or published typical credit card rate was found; the Bank of Zambia publishes only the average retail lending rate (27.3% in the week ending 9 October 2026)."
+    },
+    "equity_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Monetary Policy Report August 2026 (LuSE All-Share Index)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/Monetary%20Policy%20Report%202026%20%28August%20Edition%29.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: the small, concentrated local market goes through a flat decade like 2015-2020 and returns little more than inflation."
+    },
+    "equity_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Monetary Policy Report August 2026 (LuSE All-Share Index 27,328 in June 2026); 12-month deposit rate 10.17% (tax free)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/Monetary%20Policy%20Report%202026%20%28August%20Edition%29.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3 points above the tax-free 1-year deposit rate (10.2%), under the 4-point cap, because the strong 2021-2026 rally came after a flat 2015-2020 and the market is small and illiquid."
+    },
+    "equity_return_high": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Monetary Policy Report August 2026 (LuSE All-Share Index)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/Monetary%20Policy%20Report%202026%20%28August%20Edition%29.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a repeat of the strong mining-led gains of 2021-2026."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate, Zambia (PA.NUS.FCRF); Bank of Zambia exchange rates",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZM",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and a kwacha that stays near its 2026 level."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate, Zambia (PA.NUS.FCRF): about K10 per dollar in 2016, K25.3 in 2025 average, K20.2 in October 2026",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZM",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 4% a year of kwacha depreciation (the kwacha lost about 7% a year over 2016-2026)."
+    },
+    "gold_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate, Zambia (PA.NUS.FCRF)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZM",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a renewed fall in the kwacha."
+    },
+    "fixed_income_return_low": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: 3-month time deposits (5.47%) and retail savings accounts (2.83%), tax free for individuals."
+    },
+    "fixed_income_return_base": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates; treasury bill auction 29 October 2026",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: 12-month retail deposits at 10.17% (interest tax free) and 364-day bills at 10.00% (8.5% after 15% withholding if it applies), trimmed for the falling rate cycle."
+    },
+    "fixed_income_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, GRZ bond auction results, tender 07/2026/BA (25 September 2026)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-09/Bonds-Press-Results-07-2026-BA.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 10-year government bonds at 14.50% less 15% withholding tax on coupons (about 12.3%)."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Pensions and Insurance Authority publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no published premium rates per K1,000 of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Zambia was found from an official or international source."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source; the National Health Insurance Scheme (NHIMA) is funded by a 1% employer and 1% employee contribution, not an age-rated premium."
+    },
+    "oop_health_share": {
+      "value": 0.1029,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Zambia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ZM",
+      "asOf": "2023-12-31",
+      "note": "10.3% in 2023 (WHO Global Health Expenditure Database), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "Zambia Statistics Agency, The Monthly, October 2026, health CPI (table 1.2)",
+      "sourceUrl": "https://www.zamstats.gov.zm/wp-content/uploads/2026/10/Vol-283-of-2026-The-Monthly-October.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 8.9% in the year to October 2026 and about 9.3% a year since January 2023 (index 286.2 to 400.0), so 1.5 points above the 8% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Zambia Statistics Agency, The Monthly, October 2026, education CPI (table 1.2)",
+      "sourceUrl": "https://www.zamstats.gov.zm/wp-content/uploads/2026/10/Vol-283-of-2026-The-Monthly-October.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 4.6% in the year to October 2026 and about 5.8% a year since January 2023, below general inflation; fees jump each January, so the 8% inflation assumption is used."
+    },
+    "life_expectancy": {
+      "value": 66.528,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Zambia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ZM",
+      "asOf": "2024-12-31",
+      "note": "66.5 years in 2024 (men 64.1, women 68.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.4,
+            "men": 15.4,
+            "women": 17.4
+          },
+          {
+            "age": 65,
+            "total": 12.9,
+            "men": 12.0,
+            "women": 13.6
+          },
+          {
+            "age": 70,
+            "total": 9.7,
+            "men": 9.0,
+            "women": 10.3
+          },
+          {
+            "age": 80,
+            "total": 5.3,
+            "men": 4.9,
+            "women": 5.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/zambia/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 28.51
+          },
+          {
+            "year": 2040,
+            "value": 18.18
+          },
+          {
+            "year": 2065,
+            "value": 9.35
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/zambia/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 3.51 (2025, World Bank), 5.5 (2040) and 10.7 (2065, populationpyramid.net/zambia/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Pension Scheme Act No. 72 of 2026, sections 2 and 29",
+      "sourceUrl": "https://www.parliament.gov.zm/sites/default/files/documents/acts/Act%20No.%2072%2C%20The%20National%20Pension%20Scheme%20Act%20%281%29.pdf",
+      "asOf": "2026-06-04",
+      "note": "Pensionable age is 60 for men and women; early retirement at 55 and late retirement at 65 with 12 months' notice; a pension needs at least 180 monthly contributions. Act assented 4 June 2026."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Public Service Pensions Act No. 73 of 2026, sections 2 and 26",
+      "sourceUrl": "https://www.parliament.gov.zm/sites/default/files/documents/acts/Act%20No.%2073%20of%202026%2C%20Public%20Service%20Pensions.pdf",
+      "asOf": "2026-06-04",
+      "note": "Public servants retire at the pensionable age of 60; early pensionable age 55 and late pensionable age 65 with notice and consent."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: 3- to 6-month deposits (5.5-7.1%), tax free."
+    },
+    "retirement_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates; treasury bill auction 29 October 2026",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: mostly 12-month deposits (10.17%, tax free) and treasury bills, trimmed for the falling rate cycle; below the after-tax 1-year deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, GRZ bond auction results, tender 07/2026/BA (25 September 2026)",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-09/Bonds-Press-Results-07-2026-BA.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in 2- to 3-year government bonds (12.0-12.6%, about 10.2-10.7% after 15% withholding tax) and some 10-year bonds (14.5%, about 12.3% after tax)."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, Fortnightly Statistics Vol. 33 No. 21 (27 October 2026), table 07 commercial banks' interest rates",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, GRZ bond auction results 25 September 2026; equity base 13%; gold base 8%",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-09/Bonds-Press-Results-07-2026-BA.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of government bonds, local equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Bank of Zambia, GRZ bond auction results 25 September 2026; equity high 17%",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-09/Bonds-Press-Results-07-2026-BA.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Zambia has no universal non-contributory old-age pension; the Social Cash Transfer (Ministry of Community Development and Social Services) is a poverty-targeted household transfer that includes elderly-headed households, and its current amount was not found on an official page."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Social Cash Transfer is targeted at poor households (including those with older members) rather than paid at a fixed age, and its current eligibility rules were not found on an official page."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 91.25,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30.42
+      },
+      "status": "sourced",
+      "sourceName": "Employment Code Act No. 3 of 2019, sections 54 and 73",
+      "sourceUrl": "https://www.parliament.gov.zm/sites/default/files/documents/acts/The%20Employment%20Code%20Act%20No.%203%20of%202019.pdf",
+      "asOf": "2019-04-11",
+      "note": "Section 73: at the end of a long-term (fixed-term) contract, the employer pays a gratuity of at least 25% of the basic pay earned during the contract. That is 3 months' pay per year, or 91.25 days counted at 30.42 days a month. Section 54: redundancy pays 2 months' basic pay per year served. The law dates from 2019 (older than 2025); later amendments were not checked."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": 16,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "National Pension Scheme Act No. 72 of 2026 (sections 2, 16, 29, 30, 48)",
+      "sourceUrl": "https://www.parliament.gov.zm/sites/default/files/documents/acts/Act%20No.%2072%2C%20The%20National%20Pension%20Scheme%20Act%20%281%29.pdf",
+      "asOf": "2026-06-04",
+      "note": "NAPSA is compulsory social insurance for employees from age 16. The pension starts at 60 (early 55, late 65) after 180 monthly contributions. The minimum pension is 25% of national average earnings (s.30). Pensions are adjusted every year by an index based on national average earnings (s.48), which is set to inflationLinked true as the closest match. The Act does not state the tax treatment."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Time deposit",
+      "localNameEn": "Time deposit, 3 months",
+      "note": "The Bank of Zambia publishes average retail and non-retail rates for 1, 3, 6, 9 and 12-month time deposits.",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Time deposit",
+      "localNameEn": "Time deposit, 12 months",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/StatisticsFortnightly2026Vol33IssueNo_21.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals can buy treasury bills and bonds at Bank of Zambia auctions."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": "Treasury bill",
+      "note": "91, 182, 273 and 364-day bills auctioned fortnightly by the Bank of Zambia for the government.",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-10/Treasury-Bills-Results-Tender-No-22-2026-29-10-2026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "GRZ bond",
+      "localNameEn": "Government bond",
+      "note": "The 5-year tenor was last offered in February 2026; 2, 3, 7, 10 and 15-year bonds are auctioned regularly.",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-09/Bonds-Press-Results-07-2026-BA.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "GRZ bond",
+      "localNameEn": "Government bond",
+      "sourceUrl": "https://www.boz.zm/sites/default/files/2026-09/Bonds-Press-Results-07-2026-BA.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Collective investment scheme",
+      "localNameEn": "Collective investment schemes (unit trusts)",
+      "note": "Supervised by the Securities and Exchange Commission of Zambia."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "No official retail bullion product was found; gold is mostly bought as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Zambia",
+      "url": "https://www.boz.zm/"
+    },
+    "insuranceRegulator": {
+      "name": "Pensions and Insurance Authority (PIA)",
+      "url": "https://www.pia.org.zm/"
+    },
+    "insuranceComplaints": {
+      "name": "Pensions and Insurance Authority, complaints procedure",
+      "url": "https://www.pia.org.zm/?page_id=9647"
+    },
+    "pensionScheme": {
+      "name": "National Pension Scheme Authority (NAPSA)",
+      "url": "https://www.napsa.co.zm/",
+      "note": "Site behind a bot check on 31 October 2026; the scheme is governed by the National Pension Scheme Act No. 72 of 2026."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Health Insurance Management Authority (NHIMA)",
+      "url": "https://www.nhima.co.zm/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Scheme (Bank of Zambia)",
+      "url": "https://www.boz.zm/financial-stability/what-is-the-deposit-insurance-scheme"
+    },
+    "statistics": {
+      "name": "Zambia Statistics Agency (ZamStats)",
+      "url": "https://www.zamstats.gov.zm/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

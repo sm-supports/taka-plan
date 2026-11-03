@@ -96,7 +96,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Israel has no government savings certificate or retail savings bond for individuals; savers buy tradable government bonds and Makam bills on the Tel Aviv Stock Exchange."
+      "note": "Israel has no government savings certificate or retail savings bond for individuals; savers buy tradable government bonds and Makam bills on the stock exchange."
     },
     "tbill_91d_rate": {
       "value": 0.0304,
@@ -128,7 +128,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Israel, income determination (interest income)",
       "sourceUrl": "https://taxsummaries.pwc.com/israel/individual/income-determination",
       "asOf": "2026-10-31",
-      "note": "15% on interest that is not linked to the CPI (ordinary shekel deposits); CPI-linked interest is taxed at 25%; a 2% surtax applies to capital income above ILS 721,560 a year (2026)."
+      "note": "15% on interest that is not linked to the CPI (ordinary shekel deposits, per PwC 'may be eligible for a 15% rate'); the general rate on interest is 25%, which applies to CPI-linked interest. High earners pay a 3% surtax on income above ILS 721,560 (2026) plus a further 2% on capital income above that level."
     },
     "tax_sanchayapatra_profit": {
       "value": 0.15,
@@ -147,12 +147,12 @@
       "note": "No deposit insurance scheme for Israeli banks was found; an official source confirming its absence could not be read (Bank of Israel site refused access), so it is not marked absent."
     },
     "credit_card_rate_cap": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "value": 0.1825,
+      "status": "sourced",
+      "sourceName": "Fair Credit Law (חוק אשראי הוגן), section 5 and First Schedule item 1: maximum credit cost = Bank of Israel rate + 15 points (text on Hebrew Wikisource); Bank of Israel rate 3.25%",
+      "sourceUrl": "https://he.wikisource.org/wiki/חוק_אשראי_הוגן",
       "asOf": "2026-10-31",
-      "note": "The Fair Credit Law caps the cost of credit, but its current level could not be read from an official page (gov.il refused access)."
+      "note": "Legal cap on the actual cost of shekel credit for any lender, banks included: the Bank of Israel rate (3.25% on 31 October 2026) plus 15 percentage points = 18.25%; loans above about ILS 1 million are exempt. Typical card credit costs less than the cap."
     },
     "equity_return_low": {
       "value": 0.035,
@@ -160,12 +160,12 @@
       "sourceName": "Bank of Israel Makam 3-month yield 3.04%; 10-year nominal government yield 4.06% (September 2026)",
       "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv",
       "asOf": "2026-10-31",
-      "note": "Low case: equities return no more than a long government bond after tax, after a strong run (TA-125 up 17% in the year to October 2026)."
+      "note": "Low case: equities return no more than a long government bond after tax, after a strong run (the main Tel Aviv index was up about 17% in the year to October 2026)."
     },
     "equity_return_base": {
       "value": 0.065,
       "status": "assumption",
-      "sourceName": "Bank of Israel Makam yield 3.04% (2.58% after 15% tax); TA-125 index record via Trading Economics",
+      "sourceName": "Bank of Israel Makam yield 3.04% (2.58% after 15% tax); Tel Aviv main share index record via Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/israel/stock-market",
       "asOf": "2026-10-31",
       "note": "Base case: about 4 points above the after-tax Makam yield, in line with the cap; the Tel Aviv market has had a strong 10-year record."
@@ -173,10 +173,10 @@
     "equity_return_high": {
       "value": 0.09,
       "status": "assumption",
-      "sourceName": "TA-125 index record (Trading Economics); 10-year government yield 4.06%",
+      "sourceName": "Tel Aviv main share index record (Trading Economics); 10-year government yield 4.06%",
       "sourceUrl": "https://tradingeconomics.com/israel/stock-market",
       "asOf": "2026-10-31",
-      "note": "High case: a fuller equity premium over the 4% long bond yield, as the TA-125 has delivered over the past decade."
+      "note": "High case: a fuller equity premium over the 4% long bond yield, as the main Tel Aviv index has delivered over the past decade."
     },
     "gold_return_low": {
       "value": 0.0,
@@ -283,12 +283,12 @@
       "note": "Education services prices rise a little faster than the CPI, so 1 point above the 2% inflation assumption."
     },
     "life_expectancy": {
-      "value": 83.2,
+      "value": 82.9,
       "status": "sourced",
-      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Israel",
-      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IL",
-      "asOf": "2024-12-31",
-      "note": "83.2 years in 2024 (men 81.1, women 85.4)."
+      "sourceName": "UN World Population Prospects 2024 (medium variant) via populationpyramid.net, life expectancy at birth, Israel, 2026",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/israel/",
+      "asOf": "2026-07-01",
+      "note": "82.9 years in 2026 (men 80.8, women 84.9), UN WPP 2024 medium variant via a secondary site; the World Bank gives 83.2 for 2024."
     },
     "life_table_remaining": {
       "value": null,
@@ -356,7 +356,7 @@
       "sourceName": "Retirement Age Law 2004 (חוק גיל פרישה), sections 3 and 6 (text on Hebrew Wikisource)",
       "sourceUrl": "https://he.wikisource.org/wiki/חוק_גיל_פרישה",
       "asOf": "2026-10-31",
-      "note": "Retirement age is 67 for men; for women born in 1970 or later it is 65 (the transition schedule for women ends with those born in December 1969 at 64 years 9 months). Early retirement age for occupational pensions is 60."
+      "note": "Retirement age is 67 for men and 65 for women born in 1970 or later (section 3; the transition schedule in section 6 ends with women born in December 1969), so 67 for men and 65 for women born after 1975. Early retirement age for occupational pensions is 60."
     },
     "retirement_age_government": {
       "value": 67,
@@ -420,7 +420,7 @@
       "sourceName": "National Insurance Law (חוק הביטוח הלאומי), section 244 (pension 17.7% of the basic amount) and section 1 (basic amount ILS 10,382 in 2026), text on Hebrew Wikisource",
       "sourceUrl": "https://he.wikisource.org/wiki/חוק_הביטוח_הלאומי",
       "asOf": "2026-01-01",
-      "note": "17.7% of the 2026 basic amount of ILS 10,382 = about ILS 1,838 a month for a single person, before the 2% a year seniority increment (up to 50%) and dependant supplements; it rises to 18.7% from age 80. Every resident aged 18+ is insured by the National Insurance Institute (a qualifying period of contributions or residence applies), so this is the basic flat pension, not a means-tested allowance."
+      "note": "17.7% of the 2026 basic amount for benefits in paragraph (3) of section 1, ILS 10,382 = about ILS 1,838 a month for a single person, before the 2% a year seniority increment (up to 50%) and dependant supplements; it rises to 18.7% from age 80 (section 247A). It is the flat National Insurance old-age pension that nearly every resident receives after a qualifying period (residence-based contributions), not a means-tested allowance; its rules are also in public_pension_scheme."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -501,28 +501,28 @@
       "available": true,
       "localName": "מק\"ם (מלווה קצר מועד)",
       "localNameEn": "Makam (short-term Bank of Israel bills)",
-      "note": "Issued by the Bank of Israel and traded on the Tel Aviv Stock Exchange, open to retail investors.",
+      "note": "Issued by the Bank of Israel and traded on the stock exchange, open to retail investors.",
       "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/SECDWH/1.0/DWH_SRC_0342?lastNObservations=1&format=csv"
     },
     "tbond_5y": {
       "available": true,
       "localName": "אגרות חוב ממשלתיות (שחר / גליל)",
       "localNameEn": "Government bonds (unlinked Shahar / CPI-linked Galil)",
-      "note": "Traded on the Tel Aviv Stock Exchange.",
+      "note": "Traded on the stock exchange.",
       "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_05Y_MA?lastNObservations=1&format=csv"
     },
     "tbond_10y": {
       "available": true,
       "localName": "אגרות חוב ממשלתיות (שחר / גליל)",
       "localNameEn": "Government bonds (unlinked Shahar / CPI-linked Galil)",
-      "note": "Traded on the Tel Aviv Stock Exchange.",
+      "note": "Traded on the stock exchange.",
       "sourceUrl": "https://edge.boi.gov.il/FusionEdgeServer/sdmx/v2/data/dataflow/BOI.STATISTICS/ZCM/1.0/ZC_TSB_ZND_10Y_MA?lastNObservations=1&format=csv"
     },
     "equity_fund": {
       "available": true,
       "localName": "קרנות נאמנות וקרנות סל",
       "localNameEn": "Mutual funds and exchange-traded funds",
-      "note": "Index funds tracking the TA-35, TA-125 and global indices are widely available."
+      "note": "Index funds tracking Israeli and global share indices are widely available."
     },
     "gold": {
       "available": true,

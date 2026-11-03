@@ -23,17 +23,17 @@
       "sourceName": "Bank of Algeria, daily exchange rate quotation of 30 October 2026",
       "sourceUrl": "https://www.bank-of-algeria.dz/taux-de-change-journalier/",
       "asOf": "2026-10-30",
-      "note": "Bank of Algeria quotation of the dinar against the US dollar for 30 October 2026 (135.2075 on 29 October); World Bank 2025 average 131.61. CLDR gives no narrow symbol; 'DA' is how prices are written locally."
+      "note": "Bank of Algeria quotation of the dinar against the US dollar for 30 October 2026. The verifier could not open the Bank of Algeria page (TLS certificate error), but Trading Economics showed USD/DZD at 135.79 on 3 November 2026, which agrees with it. World Bank 2025 average: 131.61. CLDR gives no narrow symbol; 'DA' is how prices are written locally."
     }
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.083,
+      "value": 0.0801,
       "status": "sourced",
-      "sourceName": "Office National des Statistiques (ONS), consumer price index of Algiers, August 2026",
-      "sourceUrl": "https://www.ons.dz/IMG/pdf/IPC_Aout2026.pdf",
+      "sourceName": "Trading Economics, citing the Office National des Statistiques (ONS), national CPI August 2026",
+      "sourceUrl": "https://tradingeconomics.com/algeria/inflation-cpi",
       "asOf": "2026-08-31",
-      "note": "Consumer prices in Algiers up 8.3% on August 2025 (food +9.4%, manufactured goods +9.5%, services +1.5%); the 12-month average rate was 3.9%. World Bank 2025 average 1.4%."
+      "note": "Annual inflation rose to 8.01% in August 2026 from 6.73% in July. This is a secondary source because the ONS site could not be opened (TLS certificate error). The verifier replaced an unconfirmed ONS Algiers figure of 8.3%. World Bank 2025 average 1.4%."
     },
     "inflation_projection": {
       "value": 0.05,
@@ -41,7 +41,7 @@
       "sourceName": "World Bank CPI inflation 2021-2025 (about 6% average); ONS 12-month average 3.9% to August 2026",
       "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=DZ",
       "asOf": "2026-10-31",
-      "note": "The Bank of Algeria publishes no numeric inflation target, so a rounded 5% sits between the 2021-2025 average of about 6% and the recent 12-month average of 3.9%."
+      "note": "The Bank of Algeria publishes no numeric inflation target, so a rounded 5% is used: below the 2021-2025 average of about 6% and the 8.0% reading of August 2026, but above the 1.4% of 2025."
     },
     "policy_rate": {
       "value": 0.025,
@@ -270,18 +270,18 @@
     "goal_inflation_health": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "ONS CPI August 2026: health and personal care +1.6% on a year earlier; inflation assumption 5%",
-      "sourceUrl": "https://www.ons.dz/IMG/pdf/IPC_Aout2026.pdf",
+      "sourceName": "Trading Economics CPI (8.0% in August 2026); World Bank CPI 2021-2025; inflation assumption 5%",
+      "sourceUrl": "https://tradingeconomics.com/algeria/inflation-cpi",
       "asOf": "2026-10-31",
-      "note": "Health prices in the CPI rose slowly recently, but private care costs usually outpace general prices, so 1 point above the 5% inflation assumption is used."
+      "note": "Private care costs usually outpace general prices, so 1 point above the 5% inflation assumption is used; no health CPI series could be read."
     },
     "goal_inflation_education": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "ONS CPI August 2026: education, culture and leisure -3.0% on a year earlier; inflation assumption 5%",
-      "sourceUrl": "https://www.ons.dz/IMG/pdf/IPC_Aout2026.pdf",
+      "sourceName": "Trading Economics CPI (8.0% in August 2026); World Bank CPI 2021-2025; inflation assumption 5%",
+      "sourceUrl": "https://tradingeconomics.com/algeria/inflation-cpi",
       "asOf": "2026-10-31",
-      "note": "Public education is free and the CPI group fell recently, so education costs are planned at the general 5% inflation assumption."
+      "note": "Public education is free and no education CPI series could be read, so education costs are planned at the general 5% inflation assumption."
     },
     "life_expectancy": {
       "value": 76.475,
@@ -357,7 +357,7 @@
       "sourceName": "Law No. 16-15 of 31 December 2016 amending Law No. 83-12 on retirement (Journal officiel No. 78, 2016)",
       "sourceUrl": "https://www.joradp.dz/FTP/jo-francais/2016/F2016078.pdf",
       "asOf": "2017-01-01",
-      "note": "Pension at 60 with at least 15 years of work (7.5 years of contributions minimum); women may retire from 55 on request. Early retirement without age condition was abolished; the law is older than 2025 but still in force."
+      "note": "Law 16-15 (Art. 6 of Law 83-12 as amended) sets the pension age at 60 with at least 15 years of work; women may retire from 55 at their request. Retirement without an age condition ended on 1 January 2019. The law is older than 2025 but still in force, and it applies to anyone born after 1975."
     },
     "retirement_age_government": {
       "value": 60,
@@ -453,7 +453,7 @@
       "sourceName": "Law No. 16-15 of 31 December 2016 amending Law No. 83-12 on retirement",
       "sourceUrl": "https://www.joradp.dz/FTP/jo-francais/2016/F2016078.pdf",
       "asOf": "2017-01-01",
-      "note": "Compulsory pay-as-you-go pension for salaried workers run by the Caisse Nationale des Retraites (CNR): pension at 60 (women from 55) after 15 years' work. The law sets no automatic price indexation (revaluations are decided yearly); tax treatment not checked."
+      "note": "Compulsory pay-as-you-go pension for salaried workers, run by the Caisse Nationale des Retraites (CNR). Under Law 16-15 (Art. 6 of Law 83-12 as amended), the pension starts at 60 after at least 15 years of work; women may retire from 55 at their request. Law 16-15 abolished retirement without an age condition from 2019. The law contains no automatic price-indexation rule, so inflationLinked is false (conservative); tax treatment was not checked. The law is older than 2025 but still in force."
     }
   },
   "instruments": {
@@ -508,8 +508,7 @@
       "available": false,
       "localName": null,
       "localNameEn": null,
-      "note": "No diversified equity or index fund sold to retail investors was found; the Algiers Stock Exchange (supervised by COSOB) lists only a few companies.",
-      "sourceUrl": "https://www.cosob.org/"
+      "note": "No diversified equity or index fund sold to retail investors was found. The Algiers Stock Exchange, supervised by COSOB, lists only a few companies. This was not confirmed by a source saying none exists."
     },
     "gold": {
       "available": true,

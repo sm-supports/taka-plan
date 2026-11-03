@@ -18,7 +18,7 @@
       "value": 2.9462,
       "status": "sourced",
       "sourceName": "National Bank of the Republic of Belarus, official USD rate (API)",
-      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2",
+      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2&ondate=2026-10-31",
       "asOf": "2026-10-31",
       "note": "Official rate BYN 2.9462 per US dollar on 31 October 2026; World Bank 2025 average 3.07."
     }
@@ -35,10 +35,10 @@
     "inflation_projection": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "National Bank medium-term inflation target about 5%; CPI 4.6% (Sep 2026), 6.6% in 2025 (World Bank)",
+      "sourceName": "Belstat CPI 4.6% (Sep 2026); World Bank CPI 6.6% in 2025",
       "sourceUrl": "https://www.belstat.gov.by/upload-belstat/upload-belstat-excel/Oficial_statistika/2026/express_info-2609-en.xlsx",
       "asOf": "2026-10-31",
-      "note": "Inflation has run near or a little above the National Bank's target with price controls in place, so 6% is used for planning."
+      "note": "Inflation has recently run at about 5-7% with price controls in place and Belarus has a long record of higher inflation, so 6% is used for planning."
     },
     "policy_rate": {
       "value": 0.0925,
@@ -54,7 +54,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No average demand-deposit rate found; a comparison site notes demand rates of about 0.01-1% (applied on early withdrawal) and nbrb.by refused connections."
+      "note": "No average demand-deposit rate found; nbrb.by interest-rate statistics were unreachable."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -62,15 +62,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No 3-month BYN term deposit rate found: nbrb.by was unreachable and the comparison site lists only multi-term ranges."
+      "note": "No 3-month BYN term deposit rate found: nbrb.by interest-rate statistics were unreachable."
     },
     "fdr_1y_rate": {
-      "value": 0.12,
-      "status": "sourced",
-      "sourceName": "myfin.by deposit comparison (Belarusian ruble deposits)",
-      "sourceUrl": "https://myfin.by/vklady",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Advertised 12-13 month BYN irrevocable deposits paid about 11.9-12.6% on 31 October 2026; these are the better offers, so typical rates may be lower."
+      "note": "The only figure found (about 12% on 12-13 month BYN irrevocable deposits) came from a commercial deposit-comparison site listing individual banks' offers, which cannot be cited; nbrb.by interest-rate statistics were unreachable. The all-deposit average was 5.92% in September 2026 (IMF) and the refinancing rate 9.25%."
     },
     "dps_rate": {
       "value": null,
@@ -142,7 +142,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Wikipedia (Deposit insurance) says the Agency for Deposit Compensation guarantees 100% of individuals' deposits with no fixed cap; adc.by was unreachable to confirm current limits for foreign-currency deposits."
+      "note": "A general encyclopedia states that the Agency for Deposit Compensation guarantees individuals' deposits in full with no fixed cap, but adc.by and nbrb.by were unreachable to confirm the current rules, so no figure is given."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -156,23 +156,23 @@
       "value": 0.06,
       "status": "assumption",
       "sourceName": "Global equity index in US dollar terms; BYN 2.95 per USD (NBRB)",
-      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2",
+      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2&ondate=2026-10-31",
       "asOf": "2026-10-31",
       "note": "Belarus has no liquid local stock market, so equity is a global index in rubles; low case is a weak decade for world shares with mild ruble depreciation."
     },
     "equity_return_base": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "Global equity long-run return in USD plus about 3% a year expected ruble depreciation; 1-year BYN deposit about 12%",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "Global equity long-run return in USD plus about 3% a year expected ruble depreciation; refinancing rate 9.25% (NBRB)",
+      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2&ondate=2026-10-31",
       "asOf": "2026-10-31",
-      "note": "Base on a global index in Belarusian ruble terms: about 7% in dollars plus about 3% depreciation, below the deposit rate plus 4 points."
+      "note": "Belarus has no liquid local stock market, so the base is a global index in Belarusian ruble terms (about 7% in dollars plus about 3% depreciation), within 4 points of the after-tax safe rate of about 7.5-8%."
     },
     "equity_return_high": {
       "value": 0.13,
       "status": "assumption",
-      "sourceName": "Global equity long-run return in USD plus ruble depreciation",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "Global equity long-run return in USD plus faster ruble depreciation; BYN 2.95 per USD (NBRB)",
+      "sourceUrl": "https://api.nbrb.by/exrates/rates/USD?parammode=2&ondate=2026-10-31",
       "asOf": "2026-10-31",
       "note": "High case: strong world shares plus faster ruble depreciation, as in 2020-2024."
     },
@@ -209,20 +209,20 @@
       "note": "Low case: the average across all deposits, including low-paying ones."
     },
     "fixed_income_return_base": {
-      "value": 0.09,
+      "value": 0.08,
       "status": "assumption",
-      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by); refinancing rate 9.25%",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "NBRB refinancing rate 9.25% (since 1 Jun 2026); IMF average deposit rate 5.92% (Sep 2026)",
+      "sourceUrl": "https://api.nbrb.by/refinancingrate?ondate=2026-10-31",
       "asOf": "2026-10-31",
-      "note": "Base case set below advertised 1-year rates because rates are expected to fall toward the refinancing rate and tax may apply to some deposits."
+      "note": "Base case: BYN term deposits pay above the all-deposit average (which includes near-zero demand deposits) and track the refinancing rate, but rates are expected to fall and tax may apply to shorter deposits, so 8% is used."
     },
     "fixed_income_return_high": {
-      "value": 0.11,
+      "value": 0.1,
       "status": "assumption",
-      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by)",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "NBRB refinancing rate 9.25% (since 1 Jun 2026)",
+      "sourceUrl": "https://api.nbrb.by/refinancingrate?ondate=2026-10-31",
       "asOf": "2026-10-31",
-      "note": "High case: locking in current 1-year and longer BYN deposits."
+      "note": "High case: locking in longer BYN term deposits at or slightly above the refinancing rate."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -261,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=BY",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 is the latest year in the World Bank series (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.07,
@@ -280,12 +281,12 @@
       "note": "Paid tuition fees tend to rise faster than headline CPI, so 7% is used."
     },
     "life_expectancy": {
-      "value": 74.37,
+      "value": 75.0,
       "status": "sourced",
-      "sourceName": "World Bank WDI SP.DYN.LE00.IN",
-      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=BY",
-      "asOf": "2024-12-31",
-      "note": "Men 69.7, women 79.2 (2024); UN WPP estimate for 2026 is 75.0."
+      "sourceName": "UN World Population Prospects via georank.org",
+      "sourceUrl": "https://georank.org/life-expectancy/belarus",
+      "asOf": "2026-07-01",
+      "note": "Men 70.1, women 79.5 (UN WPP estimate for 2026, mid-year date used); World Bank 2024 figure 74.4."
     },
     "life_table_remaining": {
       "value": null,
@@ -320,8 +321,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/belarus",
-      "asOf": "2026-12-31",
-      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate, mid-year date used)."
     },
     "support_ratio": {
       "value": null,
@@ -353,7 +354,7 @@
       "sourceName": "Wikipedia, Retirement age (Belarus)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
       "asOf": "2026-10-31",
-      "note": "Men 63, women 58; secondary source because the Ministry of Labour and Social Protection Fund sites were unreachable."
+      "note": "Men 63, women 58 (applies to people born after 1975 under current law); secondary source because the Ministry of Labour and Social Protection Fund sites were unreachable."
     },
     "retirement_age_government": {
       "value": null,
@@ -372,20 +373,20 @@
       "note": "Low case: average deposit returns."
     },
     "retirement_return_base": {
-      "value": 0.09,
+      "value": 0.075,
       "status": "assumption",
-      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by); refinancing rate 9.25%",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "NBRB refinancing rate 9.25%; IMF average deposit rate 5.92% (Sep 2026)",
+      "sourceUrl": "https://api.nbrb.by/refinancingrate?ondate=2026-10-31",
       "asOf": "2026-10-31",
-      "note": "Base case kept well below the 1-year deposit rate because rates are expected to fall and tax may apply."
+      "note": "Base case kept below the fixed-income base because a retiree holds mostly shorter, more liquid deposits."
     },
     "retirement_return_high": {
-      "value": 0.11,
+      "value": 0.095,
       "status": "assumption",
-      "sourceName": "1-year BYN irrevocable deposits about 12% (myfin.by)",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "NBRB refinancing rate 9.25% (since 1 Jun 2026)",
+      "sourceUrl": "https://api.nbrb.by/refinancingrate?ondate=2026-10-31",
       "asOf": "2026-10-31",
-      "note": "High case: locking in current long BYN deposits."
+      "note": "High case: longer BYN term deposits near the refinancing rate."
     },
     "retirement_accumulation_return_low": {
       "value": 0.065,
@@ -396,18 +397,18 @@
       "note": "Low case for a balanced mix of BYN deposits and global shares."
     },
     "retirement_accumulation_return_base": {
-      "value": 0.095,
+      "value": 0.09,
       "status": "assumption",
-      "sourceName": "Fixed income base 9%; global equity base 10% in BYN terms",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "Fixed income base 8%; global equity base 10% in BYN terms",
+      "sourceUrl": "https://api.nbrb.by/refinancingrate?ondate=2026-10-31",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half BYN deposits and half global shares in ruble terms."
     },
     "retirement_accumulation_return_high": {
-      "value": 0.12,
+      "value": 0.115,
       "status": "assumption",
-      "sourceName": "Fixed income high 11%; global equity high 13%",
-      "sourceUrl": "https://myfin.by/vklady",
+      "sourceName": "Fixed income high 10%; global equity high 13%",
+      "sourceUrl": "https://api.nbrb.by/refinancingrate?ondate=2026-10-31",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning mix."
     },
@@ -454,14 +455,12 @@
     "fdr_3m": {
       "available": true,
       "localName": "Срочный вклад",
-      "localNameEn": "Term deposit (3 months)",
-      "sourceUrl": "https://myfin.by/vklady"
+      "localNameEn": "Term deposit (3 months)"
     },
     "fdr_1y": {
       "available": true,
       "localName": "Безотзывный срочный вклад",
-      "localNameEn": "Irrevocable term deposit (1 year)",
-      "sourceUrl": "https://myfin.by/vklady"
+      "localNameEn": "Irrevocable term deposit (1 year)"
     },
     "dps": {
       "available": false,

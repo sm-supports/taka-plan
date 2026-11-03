@@ -25,20 +25,20 @@
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.0366,
+      "value": 0.07,
       "status": "sourced",
-      "sourceName": "Eastern Caribbean Central Bank, Consumer Price Index - Antigua and Barbuda (Statistics Division data)",
-      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-antigua-and-barbuda/m",
-      "asOf": "2026-06-30",
-      "note": "All-items index 129.81 in June 2026 against 125.23 in June 2025 (2019 = 100), so 3.7% year on year; June 2026 is the latest month published. December-to-December inflation was 3.1% in 2025."
+      "sourceName": "Statistics Division, Ministry of Finance and Corporate Governance: Consumer Price Index for September 2026 (release of 2 October 2026)",
+      "sourceUrl": "https://statistics.gov.ag/consumer-price-index-cpi-for-july-2026-increased-by-7-0/",
+      "asOf": "2026-09-30",
+      "note": "CPI rose 7.0% in the twelve months to September 2026 (1.1% in the month); the year-on-year rate climbed from 3.7% in June 2026, and was 3.1% in December 2025 (Statistics Division monthly inflation table)."
     },
     "inflation_projection": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "ECCB CPI table: 2018-2025 average about 3.6% a year; EC dollar pegged to the US dollar at 2.70",
-      "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/other-real-sector/consumer-price-index-antigua-and-barbuda/m",
+      "sourceName": "Statistics Division monthly year-on-year CPI rates (2019-2026); EC dollar pegged to the US dollar at 2.70",
+      "sourceUrl": "https://statistics.gov.ag/subjects/consumer-price-index/monthly-consumer-price-inflation-rates/",
       "asOf": "2026-10-31",
-      "note": "The ECCB has no inflation target but the fixed US-dollar peg anchors prices, and the 2018-2025 average (3.6%) includes the 2022 import-price spike, so we plan with 3%."
+      "note": "The ECCB has no inflation target but the fixed US-dollar peg anchors prices; year-on-year inflation swung between about -1% and 7% in 2025-2026 and averaged about 3% over the longer run, so we plan with 3% despite the September 2026 spike."
     },
     "policy_rate": {
       "value": 0.03,
@@ -46,7 +46,7 @@
       "sourceName": "Eastern Caribbean Central Bank, interest rates on deposits and loans (ECCB table, country Antigua and Barbuda)",
       "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m",
       "asOf": "2026-08-31",
-      "note": "ECCB discount rate for short-term credit 3.0% (4.5% for long-term credit), unchanged since November 2023; confirmed at the 112th Monetary Council meeting in February 2026."
+      "note": "ECCB discount rate for short-term credit 3.0%, unchanged through August 2026 in the ECCB table (Antigua and Barbuda selected)."
     },
     "savings_account_rate": {
       "value": 0.0205,
@@ -70,7 +70,7 @@
       "sourceName": "Eastern Caribbean Central Bank, interest rates on deposits and loans (ECCB table, country Antigua and Barbuda)",
       "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-on-deposits-and-loans/m",
       "asOf": "2026-08-31",
-      "note": "12-month EC-dollar time deposits quoted from 0.10% to 2.50%; the weighted average on all EC-dollar time deposits is 1.87% (June 2026), so 2.0% is used as typical."
+      "note": "12-month EC-dollar time deposits quoted from 0.10% to 2.50% (August 2026); the weighted average on all EC-dollar time deposits was 1.87% (June 2026), so 2.0% is used as typical."
     },
     "dps_rate": {
       "value": null,
@@ -126,7 +126,7 @@
       "sourceName": "Caribbean Journal (news): Antigua and Barbuda abolishes personal income tax",
       "sourceUrl": "https://www.caribjournal.com/2016/01/21/antigua-and-barbuda-is-abolishing-its-personal-income-tax/",
       "asOf": "2016-04-01",
-      "note": "Personal income tax was abolished from April 2016, so resident individuals pay no tax on bank interest (a withholding tax applies only to non-residents). Secondary source from 2016; no later reintroduction found."
+      "note": "Personal income tax was abolished from April 2016, so resident individuals pay no tax on bank interest (a withholding tax applies to non-residents). Secondary source from 2016 (older than 2025); the Inland Revenue Department's list of taxes (October 2026) still shows no personal income tax."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -166,7 +166,7 @@
       "sourceName": "No liquid local equity index; global equities in EC-dollar terms; 365-day T-bill 4.50% (Sep 2026)",
       "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/regional-government-securities-market/weighted-average-interest-rates-on-the-rgsm/m",
       "asOf": "2026-10-31",
-      "note": "The regional exchange lists only a handful of thinly traded shares, so equity is a global index fund in EC-dollar terms at about 6.5%, within 4 points of the roughly 3% untaxed safe rate."
+      "note": "The regional exchange lists only a handful of thinly traded shares, so equity is a global index fund in EC-dollar terms at about 6.5%, within 4 points of the untaxed 4.5% 1-year government bill rate."
     },
     "equity_return_high": {
       "value": 0.09,

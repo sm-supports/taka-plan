@@ -1,0 +1,557 @@
+{
+  "schemaVersion": 1,
+  "code": "NG",
+  "iso3": "NGA",
+  "nameEn": "Nigeria",
+  "nameNative": "Najeriya",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "ha",
+    "en",
+    "pcm",
+    "yo",
+    "ig"
+  ],
+  "currency": {
+    "code": "NGN",
+    "symbol": "₦",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1345.76,
+      "status": "sourced",
+      "sourceName": "Central Bank of Nigeria, exchange rates by currency (US dollar central rate), 30 October 2026",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+      "asOf": "2026-10-30",
+      "note": "Central rate N1,345.7565 per US dollar (buying 1,345.2565, selling 1,346.2565); World Bank 2025 average 1,518.4."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.1463,
+      "status": "sourced",
+      "sourceName": "National Bureau of Statistics CPI, September 2026, via Voice of Nigeria",
+      "sourceUrl": "https://von.gov.ng/nigerias-headline-inflation-drops-to-14-63-per-cent/",
+      "asOf": "2026-09-30",
+      "note": "Headline inflation 14.63% year on year in September 2026 (15.39% in August; 20.98% in September 2025); food inflation 19.59%. NBS report released 15 October 2026, read through the state broadcaster."
+    },
+    "inflation_projection": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "NBS CPI via Voice of Nigeria (14.63% in September 2026); World Bank CPI inflation 2021-2025",
+      "sourceUrl": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=NG",
+      "asOf": "2026-10-31",
+      "note": "Inflation ran between about 15% and 33% a year over 2021-2025 (23.0% in 2025) and has fallen to 14.6%, while the central bank's 6-9% target band (as listed by the BCEAO, September 2026) has not been reached in recent years, so 14% is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.23,
+      "status": "sourced",
+      "sourceName": "Central Bank of Nigeria, key decisions of the Monetary Policy Committee, 21-22 September 2026",
+      "sourceUrl": "https://www.cbn.gov.ng/MonetaryPolicy/Decisions.html",
+      "asOf": "2026-09-22",
+      "note": "MPR reset to 23% from 26.5% at the 307th MPC meeting; standing facilities corridor +50/-300 basis points around the MPR."
+    },
+    "savings_account_rate": {
+      "value": 0.0536,
+      "status": "sourced",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026 (savings deposit rate)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-09-30",
+      "note": "Average savings deposit rate 5.36% in September 2026 (7.46% in August)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.1033,
+      "status": "sourced",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026 (3-month deposit rate)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-09-30",
+      "note": "Average 3-month deposit rate 10.33% in September 2026 (10.34% in August)."
+    },
+    "fdr_1y_rate": {
+      "value": 0.105,
+      "status": "sourced",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026 (12-month deposit rate)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-09-30",
+      "note": "Average 12-month deposit rate 10.50% in September 2026 (10.30% in August)."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published rate was found in Central Bank of Nigeria statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.1127,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Nigeria",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=NG",
+      "asOf": "2025-12-31",
+      "note": "11.27% average for 2025; CBN monthly averages by term in September 2026 were 5.36% (savings) to 12.20% (1 month)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": 0.1407,
+      "status": "sourced",
+      "sourceName": "Debt Management Office, FGN Savings Bond offer for subscription, October 2026 (3-year bond due 14 October 2029)",
+      "sourceUrl": "https://www.dmo.gov.ng/6092-fgn-savings-bond-offer-for-subscription-october-2026/file",
+      "asOf": "2026-10-05",
+      "note": "Retail FGN Savings Bonds are offered monthly from N5,000 (maximum N50 million) with quarterly interest: 14.071% for 3 years and 13.071% for 2 years in the October 2026 offer (opened 5 October, settled 14 October). No 5-year tenor is offered, so the 3-year rate is used."
+    },
+    "tbill_91d_rate": {
+      "value": 0.154,
+      "status": "sourced",
+      "sourceName": "Central Bank of Nigeria, government securities: Nigerian Treasury Bills primary auction of 28 October 2026 (91 days)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/govtsecurities.html",
+      "asOf": "2026-10-28",
+      "note": "Stop (discount) rate 15.40% on the 91-day bill, about a 16.0% yield; the 364-day bill stopped at 15.80% (about 18.8% yield)."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No FGN bond with about 5 years to maturity was auctioned in 2026 that could be read: DMO auctions from July to October 2026 offered only 2034-2038 maturities."
+    },
+    "tbond_10y_rate": {
+      "value": 0.1729,
+      "status": "sourced",
+      "sourceName": "Debt Management Office, October 2026 FGN bond auction result (16.79% FGN SEP 2036)",
+      "sourceUrl": "https://www.dmo.gov.ng/6122-summary-of-fgn-bond-auction-results-for-october-2026/file",
+      "asOf": "2026-10-19",
+      "note": "Marginal rate 17.29% on the 16.79% FGN September 2036 bond (9 years 10 months to maturity); the 2034 and 2038 bonds cleared at 16.99% and 17.19%."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Nigeria, corporate withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/nigeria/corporate/withholding-taxes",
+      "asOf": "2026-05-29",
+      "note": "Interest paid to resident individuals and companies is subject to 10% withholding tax; the page does not say whether it is a final tax for individuals."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.0,
+      "status": "sourced",
+      "sourceName": "Debt Management Office, FGN Savings Bond offer for subscription, October 2026 (status of the bond)",
+      "sourceUrl": "https://www.dmo.gov.ng/6092-fgn-savings-bond-offer-for-subscription-october-2026/file",
+      "asOf": "2026-10-05",
+      "note": "The offer states the bond qualifies as a government security under the Companies Income Tax Act and Personal Income Tax Act for tax exemption; individual holders are therefore treated as exempt. The offer still cites the pre-2026 acts, so confirm under the Nigeria Tax Act in force from 2026."
+    },
+    "deposit_insurance_limit": {
+      "value": 5000000,
+      "status": "sourced",
+      "sourceName": "Nigeria Deposit Insurance Corporation, frequently asked questions (insured limits)",
+      "sourceUrl": "https://ndic.gov.ng/faq/",
+      "asOf": "2026-10-31",
+      "note": "Current insured limits: N5,000,000 per depositor in deposit money banks (including non-interest banks) and primary mortgage banks, N2,000,000 in microfinance banks; the same N5,000,000 applies per subscriber per bank under pass-through cover. The page is undated, so asOf is the research date."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.3262,
+      "status": "sourced",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026 (maximum lending rate)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-09-30",
+      "note": "Average maximum lending rate of banks 32.62% in September 2026 (prime lending 19.04%); no card-specific cap or rate is published."
+    },
+    "equity_return_low": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026; NGN per US dollar (CBN)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: Nigerian shares lag inflation, as they did in naira-weak years, returning about the after-tax deposit rate."
+    },
+    "equity_return_base": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026; CBN treasury bill auctions (91-day 15.40%, 364-day 15.80% discount)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/govtsecurities.html",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 2 points above the 14% inflation assumption and below the tax-exempt treasury bill yield (16-19%), well within the 4-point cap; the 10-year index record was not read and the market swings with the naira."
+    },
+    "equity_return_high": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade for Nigerian shares in naira terms, as in 2023-2025."
+    },
+    "gold_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria exchange rates (NGN per US dollar)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold and slower naira depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria exchange rates; World Bank official exchange rate history",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=NG",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 9% a year of naira depreciation, roughly the gap between Nigerian and US inflation."
+    },
+    "gold_return_high": {
+      "value": 0.2,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria exchange rates",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/ExchRateByCurrency.html",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a sharp naira devaluation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026 (12-month deposit 10.50%)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: 12-month deposits at about 10.5% less 10% withholding tax."
+    },
+    "fixed_income_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026; DMO FGN Savings Bond offer, October 2026 (14.071%)",
+      "sourceUrl": "https://www.dmo.gov.ng/6092-fgn-savings-bond-offer-for-subscription-october-2026/file",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits (about 9.5% after tax), FGN Savings Bonds (13-14%) and treasury bills (16-19% yield)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "CBN treasury bill auction of 28 October 2026; DMO October 2026 bond auction",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/govtsecurities.html",
+      "asOf": "2026-10-31",
+      "note": "High case: treasury bills and FGN bonds at 16-17% less possible tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "NAICOM (the insurance regulator) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life and group life cover are sold, but no published premium rates per 1,000 naira of cover by age were found from NAICOM or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Nigeria was found from an official or international source."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age per 100,000 naira of cover were found from NHIA or another public source."
+    },
+    "oop_health_share": {
+      "value": 0.719,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Nigeria",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NG",
+      "asOf": "2023-12-31",
+      "note": "71.9% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.155,
+      "status": "assumption",
+      "sourceName": "NBS CPI via Voice of Nigeria; inflation assumption 14%",
+      "sourceUrl": "https://von.gov.ng/nigerias-headline-inflation-drops-to-14-63-per-cent/",
+      "asOf": "2026-10-31",
+      "note": "No national health CPI figure was read; imported drugs and equipment follow the naira, so 1.5 points above the 14% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "NBS CPI via Voice of Nigeria; inflation assumption 14%",
+      "sourceUrl": "https://von.gov.ng/nigerias-headline-inflation-drops-to-14-63-per-cent/",
+      "asOf": "2026-10-31",
+      "note": "No national education CPI figure was read; private school fees usually rise faster than general prices, so 1 point above the 14% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 54.635,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Nigeria",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG",
+      "asOf": "2024-12-31",
+      "note": "54.6 years in 2024 (men 54.3, women 54.9); UN WPP 2024 gives 55.0 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 15.3,
+            "men": 15.1,
+            "women": 15.5
+          },
+          {
+            "age": 65,
+            "total": 12.2,
+            "men": 12.0,
+            "women": 12.4
+          },
+          {
+            "age": 70,
+            "total": 9.5,
+            "men": 9.3,
+            "women": 9.6
+          },
+          {
+            "age": 80,
+            "total": 5.3,
+            "men": 5.1,
+            "women": 5.4
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/nigeria/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 18.38
+          },
+          {
+            "year": 2040,
+            "value": 16.67
+          },
+          {
+            "year": 2065,
+            "value": 11.9
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/nigeria/2040/",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person aged 65+ = 100 / old-age dependency ratio: ratio 5.44 in 2025 (World Bank) gives 18.38; 6.0 in 2040 gives 16.67; 8.4 in 2065 (populationpyramid.net/nigeria/2065/) gives 11.9."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Pension Reform Act 2014 (section 7) sets no retirement age: savings in the retirement savings account become payable on retirement under the terms of employment or at 50, whichever is later; employers set their own retirement ages."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The federal public service retirement age (commonly cited as 60, or 35 years of service) could not be read from an official text."
+    },
+    "retirement_return_low": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026 (12-month deposit 10.50%)",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: term deposits after the 10% withholding tax."
+    },
+    "retirement_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026; DMO FGN Savings Bond offer, October 2026",
+      "sourceUrl": "https://www.dmo.gov.ng/6092-fgn-savings-bond-offer-for-subscription-october-2026/file",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of term deposits (about 9.5% after tax) and tax-exempt FGN Savings Bonds (13-14%), below the 1-year treasury bill yield (about 18.8%)."
+    },
+    "retirement_return_high": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "CBN treasury bill auction of 28 October 2026",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/govtsecurities.html",
+      "asOf": "2026-10-31",
+      "note": "High case: most of the money in treasury bills and savings bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Central Bank of Nigeria, money market indicators, September 2026",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html",
+      "asOf": "2026-10-31",
+      "note": "Low case: a cautious mix earning about after-tax deposit and savings bond rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Debt Management Office, October 2026 FGN bond auction result; equity base 16%; gold base 13%",
+      "sourceUrl": "https://www.dmo.gov.ng/6122-summary-of-fgn-bond-auction-results-for-october-2026/file",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of FGN bonds (about 17%), Nigerian equity funds and some gold, similar to a retirement savings account fund."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.18,
+      "status": "assumption",
+      "sourceName": "Debt Management Office, October 2026 FGN bond auction result; equity high 22%",
+      "sourceUrl": "https://www.dmo.gov.ng/6122-summary-of-fgn-bond-auction-results-for-october-2026/file",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No federal non-contributory old-age pension a person could claim was found in the sources read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No federal non-contributory old-age pension was found in the sources read."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory gratuity or end-of-service rate for private employees was found: the Pension Reform Act 2014 only lets employers agree additional benefits on retirement (section 4(4)); the Labour Act text was not read."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 50,
+        "inflationLinked": false,
+        "taxFree": true
+      },
+      "status": "sourced",
+      "sourceName": "Pension Reform Act 2014 (National Pension Commission), sections 4, 7 and 10",
+      "sourceUrl": "https://www.pencom.gov.ng/wp-content/uploads/2018/01/PRA_2014.pdf",
+      "asOf": "2014-07-01",
+      "note": "Contributory Pension Scheme for public and private employees: at least 10% of monthly emoluments from the employer and 8% from the employee into a retirement savings account; benefits (lump sum plus programmed withdrawal or annuity) on retirement or at 50, whichever is later. Contributions are tax-deductible and retirement benefits are not taxable. Benefits depend on fund returns, so not inflation-linked. Law from 2014 (older than 2025), still in force."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed (term) deposit, 3 months",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed (term) deposit, 12 months",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/mnymktind.html"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "FGN Savings Bond",
+      "localNameEn": "Federal Government of Nigeria Savings Bond",
+      "note": "Retail bond offered monthly by the Debt Management Office from N5,000 (maximum N50 million), in 2 and 3-year tenors with quarterly interest; sold through appointed distribution agents.",
+      "sourceUrl": "https://www.dmo.gov.ng/6092-fgn-savings-bond-offer-for-subscription-october-2026/file"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Nigerian Treasury Bill",
+      "localNameEn": "Nigerian Treasury Bill (NTB)",
+      "note": "91, 182 and 364-day bills auctioned by the Central Bank of Nigeria; individuals buy through banks and brokers.",
+      "sourceUrl": "https://www.cbn.gov.ng/rates/govtsecurities.html"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "FGN Bond",
+      "localNameEn": "Federal Government of Nigeria bond",
+      "note": "Bonds of several maturities trade on the secondary market; 2026 auctions offered 2034-2038 maturities only.",
+      "sourceUrl": "https://www.dmo.gov.ng/fgn-bonds/auction"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "FGN Bond",
+      "localNameEn": "Federal Government of Nigeria bond",
+      "note": "Auctioned monthly by the Debt Management Office (FGN SEP 2036 reopened in October 2026).",
+      "sourceUrl": "https://www.dmo.gov.ng/6122-summary-of-fgn-bond-auction-results-for-october-2026/file"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Mutual funds (collective investment schemes)",
+      "note": "Registered with the Securities and Exchange Commission; equity and index funds invest on the Nigerian Exchange."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold",
+      "note": "Gold is mainly bought as jewellery; bullion bars and coins are uncommon for retail savers."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Nigeria",
+      "url": "https://www.cbn.gov.ng/"
+    },
+    "insuranceRegulator": {
+      "name": "National Insurance Commission (NAICOM)",
+      "url": "https://naicom.gov.ng/"
+    },
+    "insuranceComplaints": {
+      "name": "NAICOM complaints portal",
+      "url": "https://complaints.naicom.gov.ng/"
+    },
+    "pensionScheme": {
+      "name": "Contributory Pension Scheme (National Pension Commission, PenCom)",
+      "url": "https://www.pencom.gov.ng/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Health Insurance Authority (NHIA)",
+      "url": "https://www.nhia.gov.ng/"
+    },
+    "depositInsurance": {
+      "name": "Nigeria Deposit Insurance Corporation (NDIC)",
+      "url": "https://ndic.gov.ng/"
+    },
+    "statistics": {
+      "name": "National Bureau of Statistics",
+      "url": "https://nigerianstat.gov.ng/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

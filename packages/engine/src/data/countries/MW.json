@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "code": "MW",
+  "iso3": "MWI",
+  "nameEn": "Malawi",
+  "nameNative": "Malaŵi",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "ny",
+    "en",
+    "tum",
+    "yao"
+  ],
+  "currency": {
+    "code": "MWK",
+    "symbol": "K",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1734.0118,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, major foreign exchange rates (US dollar middle rate), 30 October 2026",
+      "sourceUrl": "https://www.rbm.mw/Statistics/MajorRates/",
+      "asOf": "2026-10-30",
+      "note": "Official middle rate (buying 1,717.02, selling 1,751.00), unchanged through late October 2026; parallel-market rates are much higher. World Bank's last annual figure is 1,161.1 for 2023."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.194,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, inflation rates (National Statistical Office CPI), September 2026",
+      "sourceUrl": "https://www.rbm.mw/Statistics/InflationRates/",
+      "asOf": "2026-09-30",
+      "note": "Headline inflation 19.4% year on year in September 2026 (food 12.5%, non-food 31.5%), down from 28.4% average in 2025."
+    },
+    "inflation_projection": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "RBM Monetary Policy Committee, 28 October 2026 (5% medium-term objective; 22% projected for 2026, 20% for 2027); RBM inflation series",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63843",
+      "asOf": "2026-10-31",
+      "note": "Inflation has averaged over 20% since 2022 and the central bank projects 20% for 2027 against a 5% objective, so 15% is used as a long-run planning rate that assumes partial disinflation."
+    },
+    "policy_rate": {
+      "value": 0.24,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, Monetary Policy Committee statement, fourth meeting of 2026",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63843",
+      "asOf": "2026-10-28",
+      "note": "Policy rate held at 24.0% on 28 October 2026; the Lombard rate was raised to 26.0%."
+    },
+    "savings_account_rate": {
+      "value": 0.0427,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, commercial bank rates (savings deposit rate)",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/",
+      "asOf": "2023-10-31",
+      "note": "Latest savings deposit rate the central bank publishes is 4.27% for October 2023 (older than 2025; no newer figure)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.0603,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, commercial bank rates (3-month fixed deposit rate), June 2026",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/",
+      "asOf": "2026-06-30",
+      "note": "Average 3-month fixed deposit rate 6.03% (6-month also 6.03%, 30-day call 5.88%), far below inflation."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The central bank publishes 3- and 6-month fixed deposit rates only (6.03% in June 2026); no 1-year rate was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No weighted average deposit rate across banks was found; the central bank lists separate savings, call and fixed deposit rates, and the World Bank series has no recent Malawi value."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; the government borrows through Treasury bill and note auctions run by the central bank."
+    },
+    "tbill_91d_rate": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, results of Treasury bills auction held on 27 October 2026",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-27",
+      "note": "Average yield on the 91-day bill 12.00% (182-day 14.50% at the previous auction, 364-day 16.00%)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.32,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, results of 2, 3, 5, 7 and 10-year Treasury notes reopening auction, 18 December 2025",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=62152",
+      "asOf": "2025-12-18",
+      "note": "Yield 32.00% on the 5-year note (coupon 12.50%); no 5-year auction was held in 2026 up to October, and shorter yields have since fallen (2-year from 28.75% to 18.00% by October 2026), so this figure is likely stale."
+    },
+    "tbond_10y_rate": {
+      "value": 0.35,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, results of 2, 3, 5, 7 and 10-year Treasury notes reopening auction, 18 December 2025",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=62152",
+      "asOf": "2025-12-18",
+      "note": "Yield 35.00% on the 10-year note (coupon 15.00%); no 10-year auction was held in 2026 up to October, and shorter yields have since fallen, so this figure is likely stale."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax authority's website content could not be read and PwC Tax Summaries has no Malawi page, so the withholding rate on bank interest could not be confirmed from an official source."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the tax on interest from Treasury securities for individuals could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover limit was found on the central bank's website."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.318,
+      "status": "sourced",
+      "sourceName": "Reserve Bank of Malawi, commercial bank rates (maximum lending rate), August 2026",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/",
+      "asOf": "2026-08-31",
+      "note": "Highest lending rate charged by banks (minimum 20.8%, equal to the reference rate); not card-specific and not a legal cap."
+    },
+    "equity_return_low": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi, Treasury bill auction of 27 October 2026; inflation series",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "Low case: Malawi Stock Exchange shares lag inflation for a long stretch, as after its 2023-2025 boom."
+    },
+    "equity_return_base": {
+      "value": 0.15,
+      "status": "assumption",
+      "sourceName": "RBM Treasury bill auction of 27 October 2026 (364-day 16%); inflation assumption 15%",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "Base case: about the inflation assumption and below the 364-day bill yield plus 4 points, because the local index's strong nominal record mostly reflects inflation and currency depreciation."
+    },
+    "equity_return_high": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "RBM inflation series and Treasury yields",
+      "sourceUrl": "https://www.rbm.mw/Statistics/InflationRates/",
+      "asOf": "2026-10-31",
+      "note": "High case: equities beat inflation by several points, as in 2023-2025."
+    },
+    "gold_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi exchange rates (about 1,734 kwacha per dollar in October 2026)",
+      "sourceUrl": "https://www.rbm.mw/Statistics/MajorRates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slow kwacha depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi exchange rates (about 1,734 kwacha per dollar in October 2026 against about 730 in 2016)",
+      "sourceUrl": "https://www.rbm.mw/Statistics/MajorRates/",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus about 10% a year kwacha depreciation against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.22,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi exchange rates",
+      "sourceUrl": "https://www.rbm.mw/Statistics/MajorRates/",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and a sharp kwacha devaluation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi commercial bank rates (3-month fixed deposits 6.03%, June 2026)",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: fixed deposits at about 6% (tax on interest unconfirmed)."
+    },
+    "fixed_income_return_base": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi, Treasury bill auction of 27 October 2026 (91-day 12%, 364-day 16%)",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "Base case: Treasury bills between the 91-day (12%) and 364-day (16%) yields, less a possible withholding tax."
+    },
+    "fixed_income_return_high": {
+      "value": 0.16,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi, Treasury bill and note auctions (364-day 16%, 2-year 18% in October 2026)",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "High case: 364-day bills or 2-year notes at 16-18%, less a possible tax."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Registrar of Financial Institutions (Reserve Bank of Malawi) publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published indicative term-life premium rates per 1,000 kwacha of cover were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Malawi was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Malawi",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MW",
+      "asOf": "2023-12-31",
+      "note": "12.0% in 2023 (WHO Global Health Expenditure Database); older than 2025, the latest available. Low because public facilities are free and donors fund much of health spending."
+    },
+    "goal_inflation_health": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "RBM inflation (non-food 31.5%, September 2026); inflation assumption 15%",
+      "sourceUrl": "https://www.rbm.mw/Statistics/InflationRates/",
+      "asOf": "2026-10-31",
+      "note": "No medical CPI series was read; non-food prices, including imported medicines, rise faster than food, so 2 points above the 15% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "RBM inflation series; inflation assumption 15%",
+      "sourceUrl": "https://www.rbm.mw/Statistics/InflationRates/",
+      "asOf": "2026-10-31",
+      "note": "No education CPI series was read; private school fees usually rise faster than general prices, so 2 points above the 15% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 67.561,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Malawi",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MW",
+      "asOf": "2024-12-31",
+      "note": "67.6 years in 2024 (men 64.3, women 70.8); UN WPP 2024 gives 67.9 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.4,
+            "men": 15.8,
+            "women": 18.9
+          },
+          {
+            "age": 65,
+            "total": 14.2,
+            "men": 12.7,
+            "women": 15.4
+          },
+          {
+            "age": 70,
+            "total": 11.1,
+            "men": 10.0,
+            "women": 12.1
+          },
+          {
+            "age": 80,
+            "total": 6.4,
+            "men": 5.8,
+            "women": 7.0
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/malawi/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 22.13
+          },
+          {
+            "year": 2040,
+            "value": 19.23
+          },
+          {
+            "year": 2065,
+            "value": 8.55
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/malawi/2040/",
+      "asOf": "2025-12-31",
+      "note": "100 / old-age dependency ratio: 4.52 (2025, World Bank), 5.2 (2040) and 11.7 (2065, populationpyramid.net/malawi/2065/)."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Pension Act 2023 lets members retire between 50 and 70 under fund rules (WageIndicator, updated March 2026); no single statutory pension age for private-sector workers was found."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The retirement age for civil servants under the Government Public Pension Scheme could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi commercial bank rates (fixed deposits 6.03%)",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/",
+      "asOf": "2026-10-31",
+      "note": "Low case: fixed deposits at about 6%."
+    },
+    "retirement_return_base": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi, Treasury bill auction of 27 October 2026 (91-day 12%, 364-day 16%)",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "Base case: Treasury bills after a possible 20% withholding tax (about 12.8% on 364-day bills), rounded down; not above the after-tax safe rate."
+    },
+    "retirement_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Reserve Bank of Malawi, Treasury bill and note auctions (364-day 16%, 2-year 18%)",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "High case: longer bills and short notes."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "RBM Treasury and deposit rates",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about deposit and short bill rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "RBM Treasury auctions; equity base 15%; gold base 14%",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of Treasury bills and notes, local equities and some foreign-linked assets."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.17,
+      "status": "assumption",
+      "sourceName": "RBM Treasury auctions; equity high 22%",
+      "sourceUrl": "https://www.rbm.mw/Home/GetContentFile/?ContentID=63839",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found; the Social Cash Transfer Programme targets poor households, not older people by age, and no official source on a social pension was read."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment Act's severance or end-of-service rules as they apply on retirement (alongside the mandatory pension) could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "There is no state-run contributory pension for private-sector workers: the Pension Act 2023 makes employers enrol staff in licensed pension funds (minimum 10% employer, 5% employee) supervised by the Reserve Bank, and civil servants are in the Government Public Pension Scheme; no official scheme rules (pension age, indexation) could be read."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Savings account",
+      "localNameEn": null,
+      "note": "Average savings rate last published by the central bank: 4.27% (October 2023).",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": null,
+      "note": "3-month fixed deposits average 6.03% (June 2026).",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Fixed deposit",
+      "localNameEn": null,
+      "note": "The central bank publishes 3- and 6-month fixed deposit rates only.",
+      "sourceUrl": "https://www.rbm.mw/Statistics/BankRates/"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Treasury bill",
+      "localNameEn": null,
+      "note": "91, 182 and 364-day bills auctioned by the Reserve Bank; open to individuals through banks.",
+      "sourceUrl": "https://www.rbm.mw/FinancialMarkets/TreasuryBills/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Treasury note",
+      "localNameEn": null,
+      "note": "2, 3, 5, 7 and 10-year notes auctioned by the Reserve Bank; only 2-year notes were auctioned in 2026 up to October.",
+      "sourceUrl": "https://www.rbm.mw/FinancialMarkets/TreasuryNotes/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Treasury note",
+      "localNameEn": null,
+      "note": "Last 10-year auction in 2025.",
+      "sourceUrl": "https://www.rbm.mw/FinancialMarkets/TreasuryNotes/"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Unit trust",
+      "localNameEn": null,
+      "note": "Collective investment schemes are licensed and supervised by the Reserve Bank as capital-markets regulator; shares trade on the Malawi Stock Exchange.",
+      "sourceUrl": "https://www.rbm.mw/Supervision/MicrofinanceandCapitalMarkets/?activeTab=MCSUCapitalMarkets"
+    },
+    "gold": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No retail market in gold bars or coins for savers was found; gold is mainly bought as jewellery."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Reserve Bank of Malawi",
+      "url": "https://www.rbm.mw/"
+    },
+    "insuranceRegulator": {
+      "name": "Reserve Bank of Malawi, Pensions and Insurance Supervision (Registrar of Financial Institutions)",
+      "url": "https://www.rbm.mw/Supervision/PensionsandInsurance/?activeTab=PISUInsurance"
+    },
+    "insuranceComplaints": {
+      "name": "Reserve Bank of Malawi, consumer protection and complaints handling",
+      "url": "https://www.rbm.mw/FinancialSectorRegulation/Consumer/"
+    },
+    "pensionScheme": {
+      "name": "Mandatory pension under the Pension Act 2023 (supervised by the Reserve Bank of Malawi)",
+      "url": "https://www.rbm.mw/Supervision/PensionsandInsurance/?activeTab=PISUPensions",
+      "note": "Employer-provided pension funds, not a state-run scheme."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Ministry of Health (free care at public health facilities)",
+      "url": "https://www.health.gov.mw/"
+    },
+    "depositInsurance": null,
+    "statistics": {
+      "name": "National Statistical Office of Malawi",
+      "url": "https://www.nsomalawi.mw/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

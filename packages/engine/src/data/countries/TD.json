@@ -6,9 +6,9 @@
   "nameNative": "Tchad",
   "region": "sub_saharan_africa",
   "languages": [
+    "shu",
     "fr",
-    "ar",
-    "shu"
+    "ar"
   ],
   "currency": {
     "code": "XAF",
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Chad",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TD",
       "asOf": "2024-12-31",
-      "note": "55.2 years in 2024 (men 53.4, women 57.2)."
+      "note": "55.2 years in 2024 (men 53.4, women 57.2); latest World Bank value, older than 2025."
     },
     "life_table_remaining": {
       "value": null,

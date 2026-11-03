@@ -7,6 +7,7 @@
   "region": "latin_america_caribbean",
   "languages": [
     "en",
+    "bah",
     "ht"
   ],
   "currency": {
@@ -25,12 +26,12 @@
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.031,
+      "value": 0.037,
       "status": "sourced",
-      "sourceName": "Central Bank of The Bahamas Quarterly Statistical Digest (August 2026), table 8.2: Retail Price Index (Bahamas National Statistical Institute)",
-      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
-      "asOf": "2026-03-31",
-      "note": "All-Bahamas retail price index 126.04 at end-March 2026 against 122.23 at end-March 2025 (November 2014 = 100), up 3.1%; the index was 126.76 in April 2026. December-to-December inflation was 2.3% in 2025."
+      "sourceName": "Central Bank of The Bahamas: Monthly Economic and Financial Developments, September 2026 (retail price index from the Bahamas National Statistical Institute)",
+      "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/Monthly-Economic-and-Financial-Developments-September-2026-1793300706-BqgnOF.pdf",
+      "asOf": "2026-07-31",
+      "note": "Retail price index 127.3 in July 2026 against 122.8 in July 2025, up 3.7% year on year (latest month shown). The end-of-period index in the CBOB Quarterly Statistical Digest rose 2.3% in December 2025 on a year earlier."
     },
     "inflation_projection": {
       "value": 0.025,
@@ -38,7 +39,7 @@
       "sourceName": "CBOB QSD table 8.2: retail price index 2016-2025 average about 2.2% a year; Bahamian dollar fixed at par with the US dollar",
       "sourceUrl": "https://cdn.centralbankbahamas.com/tenantcbob_prod/assets/documents/CBOB-Quarterly-Digest---August-2026Revised-1792176978-o8JHkd.pdf",
       "asOf": "2026-10-31",
-      "note": "The one-to-one US-dollar peg anchors prices and inflation averaged about 2.2% over 2016-2025 (2.8% since 2020), so we plan with 2.5%."
+      "note": "The one-to-one US-dollar peg anchors prices; the retail price index rose about 2.2% a year over 2016-2025 (2.8% since 2020) and 3.7% in the year to July 2026, so we plan with 2.5%."
     },
     "policy_rate": {
       "value": 0.04,
@@ -354,7 +355,7 @@
       "sourceName": "National Insurance Board of The Bahamas: long-term benefits (Retirement Benefit)",
       "sourceUrl": "https://www.nib-bahamas.com/benefits/long-term",
       "asOf": "2026-10-31",
-      "note": "Full NIB retirement benefit from 65 with at least 500 weekly contributions; it can be taken from 60 at a reduced rate. No separate statutory private-sector retirement age found."
+      "note": "Full NIB Retirement Benefit from 65 with at least 500 weekly contributions; it can be taken from 60 at a reduced rate. No separate statutory private-sector retirement age found."
     },
     "retirement_age_government": {
       "value": null,
@@ -453,10 +454,10 @@
         "taxFree": true
       },
       "status": "sourced",
-      "sourceName": "National Insurance Board of The Bahamas: long-term benefits (Retirement Benefit)",
+      "sourceName": "National Insurance Board of The Bahamas: long-term benefits (Retirement Benefit and Retirement Grant)",
       "sourceUrl": "https://www.nib-bahamas.com/benefits/long-term",
       "asOf": "2026-10-31",
-      "note": "Compulsory National Insurance: monthly Retirement Benefit from 65 (reduced from 60) of 30-60% of average insurable wage with at least 500 contributions; a one-off Retirement Grant with 150-499 contributions. Insurable wage ceiling B$810 a week (July 2024). No automatic indexation found; untaxed as there is no income tax."
+      "note": "Compulsory National Insurance: monthly Retirement Benefit, payable for life, from 65 (from 60 at a reduced rate) of 30-60% of average insurable wage with at least 500 weekly contributions; a one-off Retirement Grant at 65 with 150-499 contributions. No automatic indexation found; untaxed as there is no personal income tax."
     }
   },
   "instruments": {

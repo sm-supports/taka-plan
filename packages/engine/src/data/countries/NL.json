@@ -55,24 +55,24 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Netherlands, household deposits redeemable at notice up to 3 months",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L23.D.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Dutch savings accounts (spaarrekeningen) are reported as notice deposits; 1.26% in August 2026. Overnight (current-account) deposits paid 0.14%."
+      "asOf": "2026-09-30",
+      "note": "Dutch savings accounts (spaarrekeningen) are reported as household deposits redeemable at notice; 1.26% in September 2026 (also 1.26% in August), read via the ECB data API."
     },
     "fdr_3m_rate": {
-      "value": 0.0254,
+      "value": 0.0265,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Netherlands, new household deposits with agreed maturity up to 1 year",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "No separate 3-month series is published; the up-to-1-year bucket (2.54% in August 2026) is used."
+      "asOf": "2026-09-30",
+      "note": "No separate 3-month series is published; the new-business household deposits with agreed maturity up to 1 year bucket (2.65% in September 2026, 2.54% in August) is used. Read via the ECB data API."
     },
     "fdr_1y_rate": {
-      "value": 0.0254,
+      "value": 0.0265,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Netherlands, new household deposits with agreed maturity up to 1 year",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "2.54% in August 2026; 1-2 years 2.41%, over 2 years 2.82% (new business). Read via the ECB data API."
+      "asOf": "2026-09-30",
+      "note": "New-business household deposits with agreed maturity up to 1 year: 2.65% in September 2026 (2.54% in August). Read via the ECB data API."
     },
     "dps_rate": {
       "value": null,
@@ -104,7 +104,7 @@
       "sourceName": "Trading Economics, Netherlands 3-month bill yield (bond table)",
       "sourceUrl": "https://tradingeconomics.com/netherlands/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "Secondary source: Dutch Treasury Certificates (DTC) are auctioned by the DSTA; 6-month 2.66% the same day."
+      "note": "Secondary source: Dutch Treasury Certificates (DTC) are auctioned by the DSTA; the page showed 2.64% on 2 November 2026 when re-checked, consistent with the 30 October figure; ECB deposit facility rate 2.50%."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -120,7 +120,7 @@
       "sourceName": "Trading Economics, Netherlands 10-year government bond yield",
       "sourceUrl": "https://tradingeconomics.com/netherlands/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "ECB long-term convergence yield for the Netherlands was 3.56% in September 2026 (IRS.M.NL.L.L40.CI.0000.EUR.N.Z); 2-year 3.08%."
+      "note": "Secondary source; re-checked 3.39% on 3 November 2026. The ECB long-term convergence yield for the Netherlands (monthly average, primary) was 3.56% in September 2026 (IRS.M.NL.L.L40.CI.0000.EUR.N.Z); 2-year 3.07-3.08%."
     },
     "tax_bank_interest": {
       "value": 0.36,
@@ -128,7 +128,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Netherlands income determination (Box 3)",
       "sourceUrl": "https://taxsummaries.pwc.com/netherlands/individual/income-determination",
       "asOf": "2026-05-29",
-      "note": "No withholding tax on interest: savings are taxed in Box 3 at 36% on a deemed return (provisional 1.28% for bank balances in 2026) on assets above EUR 59,357 per person; taxpayers may instead declare their actual return if it is lower. Effective tax on actual interest is therefore usually well under 36%."
+      "note": "No withholding tax on interest (PwC): savings are taxed in Box 3 at 36% on a deemed return rather than on actual interest, on assets above EUR 59,357 per person (2026); taxpayers may instead declare their actual return if it is lower. The provisional 2026 deemed return on bank balances (about 1.28%) is not shown on the PwC page. Effective tax on actual interest is therefore usually well under 36%, and zero below the exemption."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -136,7 +136,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No retail government savings certificate exists; Dutch State Loans held by individuals fall in Box 3 (36% on a deemed return of 6% for other assets in 2026)."
+      "note": "No retail government savings certificate exists; Dutch State Loans held by individuals fall in Box 3 (36% on a deemed return for other assets)."
     },
     "deposit_insurance_limit": {
       "value": 100000,
@@ -157,7 +157,7 @@
     "equity_return_low": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "AEX index 1,134 on 30 Oct 2026 (Trading Economics); 1-year deposit 2.54%",
+      "sourceName": "AEX index 1,134 on 30 Oct 2026 (Trading Economics); 1-year deposit 2.65% (Sep 2026)",
       "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: a decade of weak European share returns, a little above safe deposits."
@@ -165,7 +165,7 @@
     "equity_return_base": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "AEX index (Trading Economics); 1-year deposit 2.54% less Box 3 tax of about 0.46% = 2.1% after tax",
+      "sourceName": "AEX index (Trading Economics); 1-year deposit 2.65% (Sep 2026) less Box 3 tax of about 0.46% = 2.2% after tax",
       "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
       "asOf": "2026-10-31",
       "note": "The AEX has risen from about 450 in 2016 to 1,134 (a strong record), but the base case is kept at the after-tax safe rate plus about 4 points, before the yearly Box 3 tax on investments."
@@ -213,7 +213,7 @@
     "fixed_income_return_base": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "ECB MIR: Dutch household deposits up to 1 year 2.54%, less Box 3 tax of about 0.46%",
+      "sourceName": "ECB MIR: Dutch household deposits up to 1 year 2.65% (Sep 2026), less Box 3 tax of about 0.46%",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: rolling 1-year term deposits after the Box 3 charge (36% of the 1.28% deemed return)."
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NL",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "Latest available year is 2024 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -363,7 +364,7 @@
       "sourceName": "P-Direkt (central government HR service), end of employment at AOW age",
       "sourceUrl": "https://www.p-direkt.nl/informatie-rijkspersoneel-2020/mijn-werk/einde-dienstverband/einde-dienstverband-bij-aow-leeftijd",
       "asOf": "2026-10-31",
-      "note": "Central government employment ends automatically at the AOW age (67 in 2026, rising with life expectancy); the page is from the 2020 information set, so older than 2025."
+      "note": "Central government employment ends automatically at the AOW age (P-Direkt: 'stopt je dienstverband automatisch van rechtswege'), 67 in 2026 and rising with the AOW age; the page belongs to the 2020 information set, so the source is older than 2025."
     },
     "retirement_return_low": {
       "value": 0.01,
@@ -376,10 +377,10 @@
     "retirement_return_base": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "ECB MIR: Dutch household deposits up to 1 year 2.54%, less Box 3 tax of about 0.46%",
+      "sourceName": "ECB MIR: Dutch household deposits up to 1 year 2.65% (Sep 2026), less Box 3 tax of about 0.46%",
       "sourceUrl": "https://data.ecb.europa.eu/data/datasets/MIR/MIR.M.NL.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate (about 2.1%)."
+      "note": "Base case capped at the after-tax 1-year term deposit rate (about 2.2%)."
     },
     "retirement_return_high": {
       "value": 0.028,
@@ -392,7 +393,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "AEX index record; after-tax 1-year deposit about 2.1%",
+      "sourceName": "AEX index record; after-tax 1-year deposit about 2.2%",
       "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -400,7 +401,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "AEX index record; after-tax 1-year deposit about 2.1%",
+      "sourceName": "AEX index record; after-tax 1-year deposit about 2.2%",
       "sourceUrl": "https://tradingeconomics.com/netherlands/stock-market",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half shares at 6% and half fixed income at about 2-2.5%."
@@ -416,10 +417,10 @@
     "old_age_allowance_monthly": {
       "value": 1662.16,
       "status": "sourced",
-      "sourceName": "Sociale Verzekeringsbank (SVB), AOW amounts from 1 July 2026",
-      "sourceUrl": "https://www.svb.nl/nl/aow/bedragen-aow/aow-bedragen",
+      "sourceName": "Ministry of Social Affairs and Employment (SZW), Bijlagen Rekenregels per 1 juli 2026, Bijlage 3 (AOW amounts)",
+      "sourceUrl": "https://open.overheid.nl/documenten/abc6961b-4af1-4405-853d-f2a9d13e3321/file",
       "asOf": "2026-07-01",
-      "note": "Full AOW for a person living alone, EUR 1,662.16 gross a month (EUR 1,139.39 each for a couple), plus EUR 104.78 holiday pay a month paid in May. AOW is residence-based: 2% of the full amount accrues for each year lived in the Netherlands from age 17 (rising with the AOW age); a means-tested AIO supplement tops up an incomplete AOW."
+      "note": "Full AOW for a person living alone (70% of the reference minimum wage), EUR 1,662.16 gross a month from 1 July 2026 (EUR 1,139.39 each for a couple), plus EUR 104.78 holiday pay a month paid in May (official SZW calculation rules; the SVB amounts page blocked automated reading). AOW is residence-based: 2% of the full amount accrues for each year lived in the Netherlands in the 50 years before AOW age; a means-tested AIO supplement tops up an incomplete AOW."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -430,7 +431,7 @@
         "meansTested": false
       },
       "status": "sourced",
-      "sourceName": "Rijksoverheid, AOW-leeftijd; SVB AOW amounts",
+      "sourceName": "Rijksoverheid, AOW-leeftijd; SZW Rekenregels per 1 juli 2026",
       "sourceUrl": "https://www.rijksoverheid.nl/onderwerpen/algemene-ouderdomswet-aow/aow-leeftijd",
       "asOf": "2026-10-31",
       "note": "Paid from the AOW age (67 in 2026, 67 years 3 months from 2028) to residents and former residents, with no means test; only the AIO top-up for incomplete AOW is means-tested."

@@ -70,7 +70,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Vatican City has no national statistics office, banking-statistics series or securities market of its own; no 1-year term deposit rate was found. Euro-area banks paid households 2.13% on deposits fixed up to 1 year in August 2026 (ECB)."
+      "note": "Vatican City has no national statistics office, banking-statistics series or securities market of its own; no 1-year term deposit rate was found. Euro-area banks paid households 2.33% on new deposits fixed up to 1 year in September 2026 (ECB MIR)."
     },
     "dps_rate": {
       "value": null,
@@ -155,7 +155,7 @@
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB, Aug 2026); global equity in euros",
+      "sourceName": "Euro-area household deposits up to 1 year 2.33% (ECB, Sep 2026); global equity in euros",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "With no local stock market, the low case assumes a global equity fund in euros earns only about 1 point more than euro deposits."
@@ -163,7 +163,7 @@
     "equity_return_base": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB, Aug 2026); global equity in euros",
+      "sourceName": "Euro-area household deposits up to 1 year 2.33% (ECB, Sep 2026); global equity in euros",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Vatican City has no stock market, so the base uses a diversified global equity index in euro terms, held to the euro safe rate plus about 3.5 points."
@@ -203,7 +203,7 @@
     "fixed_income_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026)",
+      "sourceName": "Euro-area household deposits up to 1 year 2.33% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: euro deposit rates drift lower if the ECB cuts again."
@@ -211,7 +211,7 @@
     "fixed_income_return_base": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026); ECB deposit rate 2.50%",
+      "sourceName": "Euro-area household deposits up to 1 year 2.33% (ECB MFI statistics, Sep 2026); ECB deposit rate 2.50%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: euro term deposits a little below today's rate, as no local safe instrument or tax rule was found."
@@ -310,7 +310,7 @@
       "sourceName": "Avvenire (news), 'Il Vaticano alza l'età e i contributi' (Vatican Pension Fund reform in force 1 January 2010)",
       "sourceUrl": "https://www.avvenire.it/rubriche/pensioni-e-previdenza/il-vaticano-alza-leta-e-i-contributi_5232",
       "asOf": "2010-01-01",
-      "note": "Secondary source, older than 2025: since 2010 lay staff of the Holy See and Vatican City State retire at 67 (clergy and religious not before 72); there is no private-sector labour market, the Holy See and the State being the employers. No later change to the general age was found."
+      "note": "Secondary source, older than 2025 (article of 5 August 2009): since 1 January 2010 lay staff of the Holy See and Vatican City State hired from 2010 retire at 67 (clergy and religious not before 72); there is no private-sector labour market, the Holy See and the State being the employers. No later change to the general age was confirmed."
     },
     "retirement_age_government": {
       "value": 67,
@@ -318,12 +318,12 @@
       "sourceName": "Avvenire (news), 'Il Vaticano alza l'età e i contributi' (Vatican Pension Fund reform in force 1 January 2010)",
       "sourceUrl": "https://www.avvenire.it/rubriche/pensioni-e-previdenza/il-vaticano-alza-leta-e-i-contributi_5232",
       "asOf": "2010-01-01",
-      "note": "Secondary source, older than 2025: lay employees retire at 67 and clergy and religious at 72; lay heads, secretaries and directors of Curia bodies leave at 70 (Regolamento del Personale della Curia Romana, in force 1 January 2026, Art. 71 §2); cardinals heading dicasteries at 75."
+      "note": "Secondary source, older than 2025: under the reform in force from 1 January 2010, lay employees hired from 2010 retire at 67 and clergy and religious not before 72; cardinals and bishops heading Curia dicasteries keep the age limit of 75. No later change to the general age was confirmed."
     },
     "retirement_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026)",
+      "sourceName": "Euro-area household deposits up to 1 year 2.33% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: euro deposit rates fall back after ECB cuts."
@@ -331,7 +331,7 @@
     "retirement_return_base": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "Euro-area household deposits up to 1 year 2.13% (ECB MFI statistics, Aug 2026)",
+      "sourceName": "Euro-area household deposits up to 1 year 2.33% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.U2.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case kept below the euro-area 1-year deposit rate, as no local safe instrument exists."
@@ -390,7 +390,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Holy See staff receive an end-of-service payment (trattamento di fine rapporto) under separate 'Norme per la liquidazione' (Regolamento del Personale della Curia Romana 2026, Art. 88), but the formula could not be read."
+      "note": "Holy See staff are reported to receive an end-of-service payment (liquidazione) under the Curia staff regulations, but no official text with the formula could be read, so it is left missing."
     },
     "public_pension_scheme": {
       "value": null,
@@ -398,7 +398,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Staff of the Holy See and Vatican City State are covered by the Vatican Pension Fund (Fondo Pensioni): lay staff retire at 67 (Avvenire, 2009), a pension needs at least 20 years' service (Secretariat of State rescript of 16 January 2010, https://www.vatican.va/roman_curia/labour_office/docs/documents/ulsa_b17_2_it.html) and contributions are 26% of pay; the benefit formula and whether pensions are indexed to prices were not found, so the scheme is not filled in."
+      "note": "Staff of the Holy See and Vatican City State are covered by the Vatican Pension Fund (Fondo Pensioni): lay staff retire at 67 (Avvenire, 5 August 2009), a pension needs at least 20 years' service (Secretariat of State rescript of 16 January 2010, https://www.vatican.va/roman_curia/labour_office/docs/documents/ulsa_b17_2_it.html) and the ordinary contribution rate rose from 25% to 26% of pay in 2010 (Avvenire); the benefit formula and whether pensions are indexed to prices were not found, so the scheme is not filled in."
     }
   },
   "instruments": {

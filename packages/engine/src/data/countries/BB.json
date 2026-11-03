@@ -35,10 +35,10 @@
     "inflation_projection": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "CBB review Jan-Sep 2026: inflation 2021-2025 of 1.5, 4.3, 3.2, 1.5, 0.9%; projection 1.5-2% for end-2026",
+      "sourceName": "CBB review Jan-Sep 2026 (inflation expected at 1.5-2% by end-2026); World Bank CPI 2023-2025: 3.2, 1.4, 0.8%",
       "sourceUrl": "https://www.centralbank.org.bb/news/economic-reviews/economic-review-january-september-2026",
       "asOf": "2026-10-31",
-      "note": "Barbados has no inflation target (the dollar is pegged to the US dollar); the 2021-2025 average is about 2.3%, rounded up to 2.5% to allow for imported energy and freight shocks."
+      "note": "Barbados has no inflation target (the dollar is pegged to the US dollar); the CBB expects 1.5-2% for 2026 and recent years averaged about 2-3%, so we plan with 2.5% to allow for imported energy and freight shocks."
     },
     "policy_rate": {
       "value": 0.02,
@@ -125,8 +125,8 @@
       "status": "sourced",
       "sourceName": "PwC Worldwide Tax Summaries, Barbados: Individual - Income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/barbados/individual/income-determination",
-      "asOf": "2026-07-01",
-      "note": "15% final withholding tax on local interest over BBD 100 paid to residents; no tax is withheld from interest paid to pensioners aged 60 and over."
+      "asOf": "2026-10-09",
+      "note": "15% final withholding tax on local interest over BBD 100 paid to residents; no tax is withheld from interest paid to pensioners aged 60 and over (PwC page last reviewed 9 October 2026)."
     },
     "tax_sanchayapatra_profit": {
       "value": 0.0,
@@ -293,7 +293,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/barbados/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -351,10 +351,10 @@
     "retirement_age_default": {
       "value": 68,
       "status": "sourced",
-      "sourceName": "National Insurance and Social Security (Amendment) Act 2023 (Parliament of Barbados); NIS reform summary",
-      "sourceUrl": "https://www.barbadosparliament.com/bills/details/722",
-      "asOf": "2023-08-09",
-      "note": "NIS pensionable age is 67 now, rises to 67.5 in 2028 and 68 in 2034, so 68 applies to anyone born after 1975 (reduced early pension from 61, rising to 63 by 2031). There is no statutory private-sector retirement age."
+      "sourceName": "National Insurance Scheme, Embracing changes: Towards a new NIS (2023 reform summary; enacted as the NIS (Amendment) Act 2023)",
+      "sourceUrl": "https://www.nis.gov.bb/wp-content/uploads/2023/07/NIS2-PDF.pdf",
+      "asOf": "2023-07-28",
+      "note": "NIS pensionable age is 67 now, rises to 67.5 in 2028 and 68 in 2034, so 68 applies to anyone born after 1975. There is no statutory private-sector retirement age. Source dates from 2023 (older than 2025) but the schedule is still the legislated path (Act passed by the Senate 9 August 2023, https://www.barbadosparliament.com/bills/details/722)."
     },
     "retirement_age_government": {
       "value": 67,
@@ -417,15 +417,15 @@
       "status": "sourced",
       "sourceName": "National Insurance and Social Security Service, Non-Contributory Old Age Pension",
       "sourceUrl": "https://www.nis.gov.bb/non-contributory-old-age-pension",
-      "asOf": "2025-12-15",
-      "note": "BBD 230 a week (same for all), converted as 230 x 52 / 12. A temporary BBD 100 a month cost-of-living credit applies for one year from 1 April 2026 (2026 budget); the page has no date for the rate, so it may be older."
+      "asOf": "2026-10-31",
+      "note": "NIS page says the rate is currently BBD 230 a week (same for all), converted as 230 x 52 / 12; the page gives no effective date for the rate, so asOf is the date it was read."
     },
     "old_age_allowance_eligibility": {
       "value": null,
       "status": "sourced",
       "sourceName": "National Insurance and Social Security Service, Non-Contributory Old Age Pension",
       "sourceUrl": "https://www.nis.gov.bb/non-contributory-old-age-pension",
-      "asOf": "2025-12-15",
+      "asOf": "2026-10-31",
       "valueJson": {
         "menAge": 67,
         "womenAge": 67,
@@ -450,14 +450,14 @@
       "sourceUrl": "https://www.nis.gov.bb/wp-content/uploads/2023/07/NIS2-PDF.pdf",
       "asOf": "2023-07-28",
       "valueJson": {
-        "entryAgeMin": 16,
+        "entryAgeMin": null,
         "entryAgeMax": null,
         "pensionFromAge": 68,
         "nomineeUntilAge": null,
         "inflationLinked": false,
         "taxFree": null
       },
-      "note": "Compulsory contributory NIS old-age pension for employed and self-employed people from 16: 750 weeks of contributions needed; pension age 67 now, 67.5 from 2028 and 68 from 2034; pensions get up to 1.5% a year cost-of-living increases (not full indexation); best 10 years of earnings. Reform document from 2023."
+      "note": "Compulsory contributory NIS old-age pension for employed and self-employed people. Reform summary (2023, older than 2025): pension age 67 now, 67.5 from 2028 and 68 from 2034; contributions needed rise from 500 to 750 weeks by 2031; best 10 years of earnings; pensions get up to 1.5% a year cost-of-living increases (not full indexation). Minimum entry age not stated in the source read, so left null."
     }
   },
   "instruments": {

@@ -47,8 +47,8 @@
       "status": "sourced",
       "sourceName": "National Bank of Kazakhstan, base rate decisions schedule",
       "sourceUrl": "https://nationalbank.kz/en/news/grafik-prinyatiya-resheniy-po-bazovoy-stavke/rubrics/2365",
-      "asOf": "2026-10-23",
-      "note": "Base rate cut to 15.75% (corridor 14.75-16.75%) at the October 2026 decision (23 October per NBK statements and Trading Economics; the schedule page lists 27.10.2026); next decision 4 December 2026."
+      "asOf": "2026-10-27",
+      "note": "Base rate cut from 16.25% to 15.75% (corridor 14.75-16.75%) at the decision of 27 October 2026 shown on the NBK schedule page; next announcement 4 December 2026."
     },
     "savings_account_rate": {
       "value": 0.1508,
@@ -112,7 +112,7 @@
       "sourceName": "Ministry of Finance MEUKAM placement results published by KASE (MUM072_0016, 5.3 years to maturity)",
       "sourceUrl": "https://kase.kz/ru/information/news/show/1577327",
       "asOf": "2026-10-06",
-      "note": "Yield to maturity at the 6 October 2026 placement."
+      "note": "Clearing yield to maturity for buyers at the 6 October 2026 Ministry of Finance placement (weighted average of all bids 14.23%); results published by the exchange where the Ministry auctions its bonds."
     },
     "tbond_10y_rate": {
       "value": 0.1389,
@@ -120,7 +120,7 @@
       "sourceName": "Ministry of Finance MEUKAM placement results published by KASE (MUM156_0008, 11.6 years to maturity)",
       "sourceUrl": "https://kase.kz/ru/information/news/show/1577329",
       "asOf": "2026-10-06",
-      "note": "Yield to maturity at the 6 October 2026 placement of a bond with 11.6 years left; no exact 10-year benchmark is published."
+      "note": "Yield to maturity for satisfied orders at the 6 October 2026 Ministry of Finance placement of a bond with 11.6 years left (bid average 13.93%); no exact 10-year benchmark is published."
     },
     "tax_bank_interest": {
       "value": 0.0,
@@ -426,7 +426,7 @@
       "value": null,
       "valueJson": {
         "menAge": 63,
-        "womenAge": 61,
+        "womenAge": 63,
         "over90Monthly": null,
         "meansTested": false
       },
@@ -434,7 +434,7 @@
       "sourceName": "eGov (gov.kz), Pension age; Ministry of Labour 2026 amounts",
       "sourceUrl": "https://www.gov.kz/situations/5/25?lang=ru",
       "asOf": "2026-10-31",
-      "note": "Basic pension payment from pension age: men 63, women 61 (rising to 63 by 2031); not means-tested; the amount depends on years of pension-system service."
+      "note": "Basic pension payment from pension age, not means-tested; the amount depends on years of pension-system service. Men 63; women 61 today, rising by half a year each January from 2028 to 63 in 2031, so 63 applies to women born after 1968 and to anyone planning today."
     },
     "gratuity_rule": {
       "value": null,
@@ -522,7 +522,7 @@
       "available": true,
       "localName": "Аффинирленген алтын құймалары",
       "localNameEn": "Refined gold bars",
-      "note": "Legal to buy and hold; refined gold bars produced for the National Bank have been sold to the public through banks (not re-checked in this research)."
+      "note": "Legal to buy and hold; refined gold bars produced for the National Bank are sold to the public (not re-checked against an official page in this verification)."
     }
   },
   "institutions": {
@@ -535,9 +535,9 @@
       "url": "https://www.gov.kz/memleket/entities/ardfm"
     },
     "insuranceComplaints": {
-      "name": "Insurance Ombudsman",
-      "url": "https://www.omb.kz/",
-      "note": "Mandatory first step before going to court in insurance disputes since 1 January 2024 (ARDFM)."
+      "name": "Agency for Regulation and Development of the Financial Market (ARDFM), consumer rights protection",
+      "url": "https://www.gov.kz/org/ardfm/activities/1001",
+      "note": "Insurance disputes go first to the Insurance Ombudsman (mandatory pre-court step since 1 January 2024); its own website could not be reached from outside Kazakhstan, so the regulator's consumer protection page is given."
     },
     "pensionScheme": {
       "name": "Unified Accumulative Pension Fund (ENPF)",

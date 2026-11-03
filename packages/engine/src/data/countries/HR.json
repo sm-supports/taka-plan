@@ -54,8 +54,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Croatian banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 0.02% on household sight (a vista) deposits in August 2026; notice deposits up to 3 months paid 2.04%."
+      "asOf": "2026-09-30",
+      "note": "Average 0.02% on household sight (a vista) deposits in September 2026 (also 0.02% in August), ECB MFI interest rate statistics."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -63,15 +63,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/HNB MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.29% in August 2026); hnb.hr was unreachable and no 3-month rate was found."
+      "note": "ECB/HNB MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.55% in September 2026); hnb.hr was unreachable and no separate 3-month rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0129,
+      "value": 0.0155,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Croatian banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 0.94% and over 2 years 0.82% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year; 1.55% in September 2026 (1.29% in August). Re-checked against the ECB data API by the verifier."
     },
     "dps_rate": {
       "value": null,
@@ -82,12 +82,12 @@
       "note": "Croatia's regular-deposit savings product is housing savings (stambena štednja) at building societies with a state premium; no current average rate was found from an official source."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0129,
+      "value": 0.0128,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Croatian banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST last reported 1.35% for 2014."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026 (1.29% in August); World Bank FR.INR.DPST last reported 1.35% for 2014."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -114,12 +114,12 @@
       "note": "No 5-year Croatian government bond yield found: Trading Economics shows only the 10-year yield and the Ministry of Finance bond pages read gave no secondary-market yields."
     },
     "tbond_10y_rate": {
-      "value": 0.0414,
+      "value": 0.0359,
       "status": "sourced",
-      "sourceName": "Trading Economics, Croatia 10-year government bond yield",
-      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
-      "asOf": "2026-10-29",
-      "note": "ECB long-term (10-year) convergence yield for Croatia was 3.59% in September 2026."
+      "sourceName": "European Central Bank, long-term interest rate for convergence purposes (10-year government bond), Croatia",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.HR.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-09-30",
+      "note": "Official monthly average for September 2026 (3.58% in July and August). Trading Economics shows a market quote of 4.14% on 30 October 2026, which could not be reconciled with the official series, so the ECB figure is used."
     },
     "tax_bank_interest": {
       "value": 0.12,
@@ -159,7 +159,7 @@
       "sourceName": "CROBEX 4,471 on 30 Oct 2026, up 17% in a year but still below its 2007 peak of 5,393",
       "sourceUrl": "https://tradingeconomics.com/croatia/stock-market",
       "asOf": "2026-10-31",
-      "note": "Low case: Croatian shares earn little more than tax-free treasury bills over long periods, as in the 17 years since the 2007 peak."
+      "note": "Low case: Croatian shares earn little more than tax-free treasury bills over long periods, as in the 19 years since the 2007 peak."
     },
     "equity_return_base": {
       "value": 0.06,
@@ -167,7 +167,7 @@
       "sourceName": "CROBEX (Trading Economics); 91-day treasury bill 2.6% tax-free",
       "sourceUrl": "https://tradingeconomics.com/croatia/stock-market",
       "asOf": "2026-10-31",
-      "note": "Base case: about 3.5 points over the tax-free treasury bill rate, kept modest because the CROBEX is small, illiquid and has not regained its 2007 high."
+      "note": "Base case: about 3.4 points over the tax-free treasury bill rate, kept modest because the CROBEX is small, illiquid and has not regained its 2007 high."
     },
     "equity_return_high": {
       "value": 0.08,
@@ -204,10 +204,10 @@
     "fixed_income_return_low": {
       "value": 0.011,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.29% less 12% tax (ECB MFI statistics)",
+      "sourceName": "Household deposits up to 1 year 1.55% (September 2026) less 12% tax = 1.36% (ECB MFI statistics)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Low case: bank term deposits after the 12% interest tax."
+      "note": "Low case: bank term deposits after the 12% interest tax, allowing for deposit rates to slip back."
     },
     "fixed_income_return_base": {
       "value": 0.025,
@@ -220,10 +220,10 @@
     "fixed_income_return_high": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "Croatia 10-year government bond 4.14%, interest tax-free",
-      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
+      "sourceName": "Croatia 10-year government bond 3.59% (ECB, September 2026), interest tax-free",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.HR.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
-      "note": "High case: holding longer Croatian government bonds, whose interest is untaxed, below the current 10-year yield."
+      "note": "High case: holding longer Croatian government bonds, whose interest is untaxed, just below the current 10-year yield."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -262,7 +262,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=HR",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank/WHO figure is for 2023 (older than 2025); no newer official figure was found."
     },
     "goal_inflation_health": {
       "value": 0.045,
@@ -285,8 +286,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/croatia",
-      "asOf": "2026-12-31",
-      "note": "Men 76.0, women 82.1 (UN WPP estimate for 2026); World Bank 2024 figure 78.9."
+      "asOf": "2026-07-01",
+      "note": "Men 76.0, women 82.1 (UN WPP estimate for 2026, mid-year); World Bank 2024 figure 78.9."
     },
     "life_table_remaining": {
       "value": null,
@@ -321,7 +322,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/croatia",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
     },
     "support_ratio": {
@@ -354,23 +355,23 @@
       "sourceName": "Croatian Pension Insurance Institute (HZMO), old-age pension",
       "sourceUrl": "https://www.mirovinsko.hr/hr/starosna-mirovina/166",
       "asOf": "2026-10-31",
-      "note": "Men 65 with at least 15 years of insurance; women 64 years 0 months in 2026, rising to 65 from 1 January 2030. The Labour Act also ends employment at 65 with 15 years of pension service unless agreed otherwise."
+      "note": "65 with at least 15 years of insurance for anyone born after 1975, men and women; women retiring in 2026 can go at 64 years 0 months, rising to 65 from 1 January 2030. The Labour Act also ends employment at 65 with 15 years of pension service unless agreed otherwise."
     },
     "retirement_age_government": {
       "value": 65,
       "status": "sourced",
       "sourceName": "Civil Servants Act (Zakon o državnim službenicima, NN 155/23, 85/24), Article 152",
       "sourceUrl": "https://www.zakon.hr/z/108/zakon-o-drzavnim-sluzbenicima",
-      "asOf": "2024-07-20",
-      "note": "Civil service ends by law at 65 with at least 15 years of pension service; it can be extended by agreement up to age 67."
+      "asOf": "2026-10-31",
+      "note": "Article 152: civil service ends at 65 with at least 15 years of pension service, extendable by agreement up to 67; consolidated text current to NN 119/26 (re-checked on zakon.hr)."
     },
     "retirement_return_low": {
       "value": 0.011,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 1.29% less 12% tax",
+      "sourceName": "Household deposits up to 1 year 1.55% (September 2026) less 12% tax = 1.36% (ECB MFI statistics)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.HR.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Low case: bank term deposits after tax."
+      "note": "Low case: bank term deposits after tax, allowing for deposit rates to slip back."
     },
     "retirement_return_base": {
       "value": 0.025,
@@ -383,8 +384,8 @@
     "retirement_return_high": {
       "value": 0.033,
       "status": "assumption",
-      "sourceName": "Croatia 10-year government bond 4.14%, interest tax-free",
-      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
+      "sourceName": "Croatia 10-year government bond 3.59% (ECB, September 2026), interest tax-free",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.HR.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of tax-free Croatian government bonds, below the current 10-year yield."
     },
@@ -407,8 +408,8 @@
     "retirement_accumulation_return_high": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "10-year bond 4.14% tax-free; equity high 8%",
-      "sourceUrl": "https://tradingeconomics.com/croatia/government-bond-yield",
+      "sourceName": "10-year government bond 3.59% tax-free (ECB); equity high 8%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.HR.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
     },

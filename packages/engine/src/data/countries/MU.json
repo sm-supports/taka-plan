@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 1,
+  "code": "MU",
+  "iso3": "MUS",
+  "nameEn": "Mauritius",
+  "nameNative": "Moris",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "mfe",
+    "en",
+    "fr",
+    "bho"
+  ],
+  "currency": {
+    "code": "MUR",
+    "symbol": "Rs",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 47.2,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, consolidated indicative exchange rates",
+      "sourceUrl": "https://www.bom.mu/markets/foreign-exchange/consolidated-indicative-exchange-rates",
+      "asOf": "2026-10-30",
+      "note": "Mid-point of the consolidated indicative USD buying (46.41, notes) and selling (47.99) rates on 30 October 2026; the BoM page showed 46.42/47.99 again on 3 November 2026."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.057,
+      "status": "sourced",
+      "sourceName": "Statistics Mauritius CPI, September 2026, via Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/mauritius/inflation-cpi/news/590162",
+      "asOf": "2026-09-30",
+      "note": "Year-on-year inflation 5.7% in September 2026 (4.9% in August), released by Statistics Mauritius on 7 October 2026; secondary source as the official release page was not reachable. The 12-month average headline rate was about 4.1%."
+    },
+    "inflation_projection": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Bank of Mauritius inflation objective range 2-5%; 2026 forecast about 5%",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/media_release_mpc_decision_12_august_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Planned at 4.5%, near the top of the central bank's 2-5% range, because the 2021-2025 average (about 5.8%) and the 2026 forecast (about 5%) sit above its midpoint."
+    },
+    "policy_rate": {
+      "value": 0.0475,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, MPC media release 12 August 2026",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/media_release_mpc_decision_12_august_2026.pdf",
+      "asOf": "2026-08-12",
+      "note": "Key Rate kept at 4.75% after a 25 bp rise on 20 May 2026; still shown as current on the BoM site on 30 October 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.034,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, Monthly Statistical Bulletin August 2026, Table 17a (banks' interest rates on new rupee deposits)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Savings deposit rates ranged 3.15-3.65% in June and July 2026 (raised from 2.95-3.40% in May 2026 after the Key Rate rise); midpoint used. Interest on an individual's savings or fixed deposit is tax-exempt."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BoM only publishes ranges by term band: new rupee time deposits up to 6 months ranged 1.25-4.35% in July 2026 (MSB August 2026, Table 17a), too wide to give a typical 3-month rate."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BoM only publishes ranges: new rupee time deposits of 6-12 months ranged 0.55-4.70% and 12-24 months 3.25-4.70% in July 2026 (MSB August 2026, Table 17a); no typical 1-year rate is published."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published rate for a standard monthly recurring deposit product was found in BoM statistics."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0267,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, Monthly Statistical Bulletin August 2026, Table 18 (weighted average rupee deposits rate of banks)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Weighted average rate on all rupee deposits of banks, 2.67% in July 2026 (includes low-rate savings and demand deposits). World Bank FR.INR.DPST gives 4.54% for 2025 on a different basis."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail Government savings bond is on sale: the last, the 3.5% Four-Year Government of Mauritius Savings Bond (prospectus at bom.mu), closed on 14 February 2025, and no 2026 issue was found."
+    },
+    "tbill_91d_rate": {
+      "value": 0.043,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, auction results of 91-day BOM Bills, 22 October 2026",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/results_-_91d_bom_bills_22_oct_2026.pdf",
+      "asOf": "2026-10-22",
+      "note": "Weighted average yield 4.30% (range 4.24-4.44%). These are Bank of Mauritius bills; Government Treasury bill yields were similar (91-day about 4.0% in August 2026)."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0535,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, Monthly Statistical Bulletin August 2026, Table 40c (switch auction into the new 5.35% Five-Year Government of Mauritius Bonds)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-08-19",
+      "note": "Weighted yield 5.35% at the 19 August 2026 switch auction into the new 5.35% five-year benchmark bond; the 7 August 2026 switch into the 5.15% bond yielded 5.32%, and the last regular 5-year auction (20 May 2026) 4.99%."
+    },
+    "tbond_10y_rate": {
+      "value": 0.056,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, Monthly Statistical Bulletin August 2026, Table 40a (Ten-Year Government of Mauritius Bonds)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-08-14",
+      "note": "Weighted yield 5.60% at the 14 August 2026 auction of the 5.55% ten-year bond (5.62% in April 2026)."
+    },
+    "tax_bank_interest": {
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "Mauritius Revenue Authority, Exempt income (individuals)",
+      "sourceUrl": "https://www.mra.mu/index.php/individuals/exempt-income",
+      "asOf": "2026-10-31",
+      "note": "Interest on a savings or fixed deposit account held by an individual with a bank or non-bank deposit-taking institution is exempt income (Income Tax Act, Second Schedule, Part II); other interest is taxed in income at 0%, 10% or 20%. The MRA page was unreachable on 3 November 2026 for re-checking; PwC Tax Summaries (deductions) lists this interest separately in the housing-relief income test, consistent with its exempt status."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No retail savings bond is currently on sale and the tax treatment of savings-bond interest is not stated in the last prospectus or on the MRA exempt-income page."
+    },
+    "deposit_insurance_limit": {
+      "value": 300000,
+      "status": "sourced",
+      "sourceName": "Bank of Mauritius, Mauritius Deposit Insurance Corporation FAQ",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/Frequently%20Asked%20Questions%20-%20MDIC.pdf",
+      "asOf": "2024-06-14",
+      "note": "Rs 300,000 per depositor per Scheme member, under the Mauritius Deposit Insurance Scheme Act 2019 operative from 14 June 2024; confirmed in the MDIC Annual Report 2024-2025."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No legal cap was found; the BoM bulletin publishes card volumes but no credit card interest rate."
+    },
+    "equity_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "SEMDEX near 2,266 in July 2026, about 2,000-2,500 for most of the past decade",
+      "sourceUrl": "https://tradingeconomics.com/mauritius/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: the local market keeps its flat price record and investors earn mostly dividends."
+    },
+    "equity_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "SEMDEX 10-year record weak; safe after-tax rate about 4%",
+      "sourceUrl": "https://tradingeconomics.com/mauritius/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Held 2.5 points above the roughly 4% tax-free deposit and bill rate because the SEMDEX price index has gained little in ten years and returns come mostly from dividends."
+    },
+    "equity_return_high": {
+      "value": 0.095,
+      "status": "assumption",
+      "sourceName": "SEMDEX record high 2,530 (February 2025); global equity history",
+      "sourceUrl": "https://tradingeconomics.com/mauritius/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: a diversified local and global equity fund with rupee depreciation lifting foreign returns."
+    },
+    "gold_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; rupee about 35 per dollar in 2016 and 47.2 in October 2026 (BoM)",
+      "sourceUrl": "https://www.bom.mu/markets/foreign-exchange/indicative-exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold prices with mild rupee depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; rupee about 35 per dollar in 2016 and 47.2 in October 2026 (BoM)",
+      "sourceUrl": "https://www.bom.mu/markets/foreign-exchange/indicative-exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "Base case: a long-run dollar gold trend of about 5% plus about 2.5% a year of rupee depreciation, its pace over the last decade."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Gold trend in dollars; rupee about 35 per dollar in 2016 and 47.2 in October 2026 (BoM)",
+      "sourceUrl": "https://www.bom.mu/markets/foreign-exchange/indicative-exchange-rate",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years and faster rupee depreciation."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BoM: 91-day bill 4.30% (22 Oct 2026), 364-day bill 4.32% and 10-year bond 5.60% (Aug 2026); bank 1-year deposits up to about 4.7%, interest on individuals' bank deposits tax-exempt (MRA)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/results_-_91d_bom_bills_22_oct_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts (about 3.4%) and short deposits after rate cuts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BoM: 91-day bill 4.30% (22 Oct 2026), 364-day bill 4.32% and 10-year bond 5.60% (Aug 2026); bank 1-year deposits up to about 4.7%, interest on individuals' bank deposits tax-exempt (MRA)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/results_-_91d_bom_bills_22_oct_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: tax-free 1-year bank deposits and bills of about 4.0-4.3%, rounded down."
+    },
+    "fixed_income_return_high": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "BoM: 91-day bill 4.30% (22 Oct 2026), 364-day bill 4.32% and 10-year bond 5.60% (Aug 2026); bank 1-year deposits up to about 4.7%, interest on individuals' bank deposits tax-exempt (MRA)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: 5- to 10-year Government bonds at 5.3-5.6%, taxed at a low marginal rate."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Financial Services Commission publishes long-term claims amounts by insurer but no industry claim settlement ratio was found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold, but no regulator or official source publishes indicative premiums per Rs 1,000 of cover; only company quotes exist."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Public hospital care is free; no official figure for the out-of-pocket cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No regulator or official source publishing private health insurance premiums by age was found."
+    },
+    "oop_health_share": {
+      "value": 0.4524,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Mauritius",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MU",
+      "asOf": "2023-12-31",
+      "note": "45.2% in 2023 (WHO Global Health Expenditure Database), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 4.5%; private health costs largely imported",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/media_release_mpc_decision_12_august_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "No separate medical price projection was found; private medical costs are planned 1.5 points above general inflation."
+    },
+    "goal_inflation_education": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Inflation assumption 4.5%; education CPI up 6.3% year on year in September 2026 (Statistics Mauritius via Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/mauritius/inflation-cpi/news/590162",
+      "asOf": "2026-10-31",
+      "note": "Public schooling is free, but education prices rose 6.3% in the year to September 2026, faster than the CPI, so education is planned 1 point above general inflation."
+    },
+    "life_expectancy": {
+      "value": 73.79,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Mauritius",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MU",
+      "asOf": "2024-12-31",
+      "note": "73.8 years in 2024 (men 70.4, women 77.4), from Statistics Mauritius via the World Bank."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 21.1,
+            "men": 19.3,
+            "women": 22.9
+          },
+          {
+            "age": 65,
+            "total": 17.4,
+            "men": 15.9,
+            "women": 18.9
+          },
+          {
+            "age": 70,
+            "total": 14.1,
+            "men": 12.9,
+            "women": 15.3
+          },
+          {
+            "age": 80,
+            "total": 8.4,
+            "men": 7.7,
+            "women": 9.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/mauritius/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals are the mean of men and women except at 65, where the page gives 17.4. The Statistics Mauritius 2021-2023 life table gives similar values (men 17.9, women 21.7 at 60-64)."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 5.1
+          },
+          {
+            "year": 2040,
+            "value": 3.1
+          },
+          {
+            "year": 2065,
+            "value": 1.6
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=MU",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+, computed as 100 / old-age dependency ratio: 19.8 in 2025 (World Bank) gives 5.1; 32.0 in 2040 and 63.3 in 2065 (populationpyramid.net/mauritius/2040/ and /2065/) give 3.1 and 1.6."
+    },
+    "retirement_age_default": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "Workers' Rights Act 2019 (consolidated to Act 13 of 2026), section 2 and section 109, MRA",
+      "sourceUrl": "https://www.mra.mu/download/WorkersRightsAct2019.pdf",
+      "asOf": "2026-08-13",
+      "note": "The Act defines retirement age as 65 and bars employers from requiring retirement earlier; the Basic Retirement Pension age is also rising to 65 for everyone turning 60 from 1 September 2029 (Finance Act 2025), so 65 applies to anyone born after 1975."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "News on Sunday (defimedia.info), Pension reforms: a bitter necessity",
+      "sourceUrl": "https://defimedia.info/pension-reforms-bitter-necessity",
+      "asOf": "2017-01-24",
+      "note": "Secondary source: the civil service retirement age was raised gradually from 60 to 65; no official Pensions Act text was reachable. Older than 2025."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BoM: 91-day bill 4.30% (22 Oct 2026), 364-day bill 4.32% and 10-year bond 5.60% (Aug 2026); bank 1-year deposits up to about 4.7%, interest on individuals' bank deposits tax-exempt (MRA)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/results_-_91d_bom_bills_22_oct_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts and short deposits."
+    },
+    "retirement_return_base": {
+      "value": 0.0375,
+      "status": "assumption",
+      "sourceName": "BoM: 91-day bill 4.30% (22 Oct 2026), 364-day bill 4.32% and 10-year bond 5.60% (Aug 2026); bank 1-year deposits up to about 4.7%, interest on individuals' bank deposits tax-exempt (MRA)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/results_-_91d_bom_bills_22_oct_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept below the roughly 4% tax-free 1-year deposit and 364-day bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BoM: 91-day bill 4.30% (22 Oct 2026), 364-day bill 4.32% and 10-year bond 5.60% (Aug 2026); bank 1-year deposits up to about 4.7%, interest on individuals' bank deposits tax-exempt (MRA)",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a ladder of 5- to 10-year Government bonds."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Safe rate about 4%; equity base 6.5%; gold base 7.5%",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and Government bonds."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Safe rate about 4%; equity base 6.5%; gold base 7.5%",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of bonds, deposits and equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Safe rate about 4%; equity base 6.5%; gold base 7.5%",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with local and global equity funds."
+    },
+    "old_age_allowance_monthly": {
+      "value": 15000,
+      "status": "sourced",
+      "sourceName": "Ministry of Social Integration, Social Security and National Solidarity, Basic Retirement Pension",
+      "sourceUrl": "https://socialsecurity.govmu.org/socialsecurity/?page_id=5209",
+      "asOf": "2025-01-01",
+      "note": "Basic Retirement Pension of Rs 15,000 a month for ages 60-89 from January 2025, still the amount on the ministry page last updated February 2026; a Rs 15,555 figure in a July 2026 press article is only a reference pension used in projections, so no 2026 increase could be confirmed. Universal, no means test (the minister said the means test was abandoned, L'Express July 2026); to become the State Age Pension from 2027."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "valueJson": {
+        "menAge": 65,
+        "womenAge": 65,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "Ministry of Social Security, Basic Retirement Pension; Finance Act 2025 age schedule (L'Express via AllAfrica)",
+      "sourceUrl": "https://socialsecurity.govmu.org/socialsecurity/?page_id=5209",
+      "asOf": "2026-01-09",
+      "note": "BRP is paid to residents meeting residence rules (citizens under 70: 12 years since age 18) without a means test; its age rises from 60 to 65 in steps, reaching 65 for anyone turning 60 from 1 September 2029 (fr.allafrica.com/stories/202601090287.html), so 65 applies to anyone planning today. Ages 90-99 receive a higher rate (Rs 22,710 from January 2025)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 15,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 26
+      },
+      "status": "sourced",
+      "sourceName": "Workers' Rights Act 2019 (consolidated to Act 13 of 2026), section 109, MRA",
+      "sourceUrl": "https://www.mra.mu/download/WorkersRightsAct2019.pdf",
+      "asOf": "2026-08-13",
+      "note": "Gratuity on retirement after 12 months' service: 15 days' remuneration per year of continuous employment, daily rate on 26 days a month; paid through the Portable Retirement Gratuity Fund for service since 2020, and the employer may offset part of an employer-funded pension."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The contributory layer is in transition: National Pensions Fund contributions were replaced by the CSG in 2020, and Budget 2026-27 announced a new defined-contribution National Pensions Fund from 1 July 2027; its rules were not yet published. The universal Basic Retirement Pension is reported under old_age_allowance."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Banks pay 3.15-3.65% (July 2026); interest is tax-exempt for individuals.",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit (3 months)",
+      "note": "Short fixed deposits are offered; the BoM only publishes rate ranges.",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Fixed deposit (1 year)",
+      "note": "One-year fixed deposits are offered, up to about 4.7% in July 2026.",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": "Government of Mauritius Savings Bond",
+      "note": "Retail savings bonds are issued from time to time through banks; the last (3.5%, four years) closed in February 2025.",
+      "sourceUrl": "https://bom.mu/sites/default/files/prospectus_-_4y_gom_savings_bond_0.pdf"
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bills / Bank of Mauritius bills (91 days)",
+      "note": "Auctioned weekly by the BoM; individuals can buy through banks and primary dealers.",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/results_-_91d_bom_bills_22_oct_2026.pdf"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Five-Year Government of Mauritius Bonds",
+      "note": "Auctioned by the BoM; individuals can buy through banks and primary dealers or on the stock exchange.",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Ten-Year Government of Mauritius Bonds",
+      "note": "Auctioned by the BoM; individuals can buy through banks and primary dealers or on the stock exchange.",
+      "sourceUrl": "https://www.bom.mu/sites/default/files/pdf/Research_and_Publications/Monthly_Statistical_Bulletin/msb_aug_2026.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Collective investment scheme (unit trust)",
+      "note": "Collective investment schemes are licensed by the Financial Services Commission."
+    },
+    "gold": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Gold coins and bars",
+      "note": "The Bank of Mauritius sells gold coins to the public; gold bars are also sold."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Mauritius",
+      "url": "https://www.bom.mu/"
+    },
+    "insuranceRegulator": {
+      "name": "Financial Services Commission (FSC)",
+      "url": "https://www.fscmauritius.org/en"
+    },
+    "insuranceComplaints": {
+      "name": "Office of the Ombudsperson for Financial Services",
+      "url": "https://ofsmauritius.govmu.org/ofsmauritius/",
+      "note": "Complaints about insurers go here after the insurer's own process; the FSC also explains complaints handling at fscmauritius.org/en/consumer-protection/complaints-handling."
+    },
+    "pensionScheme": {
+      "name": "Ministry of Social Security (National Pensions Fund and CSG retirement benefits)",
+      "url": "https://socialsecurity.govmu.org/socialsecurity/",
+      "note": "A new defined-contribution National Pensions Fund is due from July 2027."
+    },
+    "oldAgeAllowance": {
+      "name": "Basic Retirement Pension (Ministry of Social Security)",
+      "url": "https://socialsecurity.govmu.org/socialsecurity/?page_id=5209",
+      "note": "Universal pension; age rising from 60 to 65 by 2034; to be renamed State Age Pension from 2027."
+    },
+    "publicHealthCover": {
+      "name": "Ministry of Health and Wellness (free public health care)",
+      "url": "https://health.govmu.org/health/"
+    },
+    "depositInsurance": {
+      "name": "Mauritius Deposit Insurance Corporation (via Bank of Mauritius)",
+      "url": "https://www.bom.mu/sites/default/files/Frequently%20Asked%20Questions%20-%20MDIC.pdf"
+    },
+    "statistics": {
+      "name": "Statistics Mauritius",
+      "url": "https://statsmauritius.govmu.org/SitePages/Index.aspx"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

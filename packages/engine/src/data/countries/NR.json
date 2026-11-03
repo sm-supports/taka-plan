@@ -6,8 +6,8 @@
   "nameNative": "Naoero",
   "region": "east_asia_pacific",
   "languages": [
-    "en",
-    "na"
+    "na",
+    "en"
   ],
   "currency": {
     "code": "AUD",
@@ -30,15 +30,15 @@
       "sourceName": "Nauru Bureau of Statistics, CPI March 2025 quarter",
       "sourceUrl": "https://stats.gov.nr/2026/06/10/consumer-price-index-march-2025/",
       "asOf": "2025-03-31",
-      "note": "CPI up 4.4% in the year to March 2025 (latest release, published June 2026). The 2026-27 Budget (IMF WEO April 2026) gives period-average inflation of 6.1% for 2024-25 and 5.5% for 2025-26."
+      "note": "CPI up 4.4% in the year to March 2025 (latest release, published June 2026; the figure is 19 months old). The 2026-27 Budget Paper 1 (IMF WEO April 2026) gives period-average inflation of 6.1% for 2024-25 and 5.5% for 2025-26."
     },
     "inflation_projection": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "2026-27 Budget Paper 1 (IMF WEO April 2026): CPI 4.2% for 2026-27; IMF WEO path to 2.5% by 2030",
+      "sourceName": "2026-27 Budget Paper 1 (IMF WEO April 2026): CPI 4.2% for 2026-27; IMF WEO path 5.7% (2026) to 2.5% by 2030",
       "sourceUrl": "https://naurufinance.info/wp-content/uploads/2026/08/BP1_Final_Jul_26_22.07_Website-1.pdf",
       "asOf": "2026-10-31",
-      "note": "Nauru imports almost everything and uses the Australian dollar, so inflation should settle toward Australia's 2-3% band plus import-cost shocks; 3.5% is used."
+      "note": "IMF WEO projects 5.7% (2026), 4.3% (2027), then 3.4%, 2.7% and 2.5% by 2030; as an AUD user that imports almost everything, Nauru should settle toward Australia's 2-3% band plus import-cost shocks, so 3.5% is used for long-run planning."
     },
     "policy_rate": {
       "value": 0.046,
@@ -46,7 +46,7 @@
       "sourceName": "Trading Economics (Reserve Bank of Australia cash rate target)",
       "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-09-29",
-      "note": "Nauru has no central bank and uses the Australian dollar; the RBA cash rate (raised to 4.60% on 29 September 2026) is the policy rate for its currency."
+      "note": "Nauru has no central bank and uses the Australian dollar; the RBA cash rate target (raised to 4.60% on 29 September 2026) is the policy rate for its currency. It was raised again to 4.85% on 3 November 2026, after this date."
     },
     "savings_account_rate": {
       "value": null,
@@ -54,7 +54,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The only bank presence is a CommBank agency (since August 2025) offering basic and online saver accounts; no Nauru-specific interest rate is published."
+      "note": "Since August 2025 the only bank presence is the agency of an Australian bank, offering basic and saver accounts; no Nauru-specific interest rate is published by a public body."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -62,7 +62,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No term deposits are listed for Nauru customers at the CommBank agency, the only bank on the island."
+      "note": "No term deposits were found to be offered to Nauru customers by the single bank agency on the island; no rate is published."
     },
     "fdr_1y_rate": {
       "value": null,
@@ -70,7 +70,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No term deposits are listed for Nauru customers at the CommBank agency, the only bank on the island."
+      "note": "No term deposits were found to be offered to Nauru customers by the single bank agency on the island; no rate is published."
     },
     "dps_rate": {
       "value": null,
@@ -142,7 +142,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No Nauru deposit insurance scheme was found; whether Australia's Financial Claims Scheme covers deposits taken through the CommBank Nauru agency is not stated on its page."
+      "note": "No Nauru deposit insurance scheme was found; whether Australia's Financial Claims Scheme covers deposits taken through the Australian bank's Nauru agency is not stated by APRA or the Ministry of Finance pages read."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -150,29 +150,29 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No credit card products or rate cap for Nauru were found; the CommBank agency lists only debit cards."
+      "note": "No credit card products or rate cap for Nauru were found; the bank agency on the island lists only debit cards."
     },
     "equity_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "No local stock market; global equity in AUD terms. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "No local stock market; global equity index in AUD terms, capped at the assumed local safe rate (about 0.5%) plus 4 points; RBA cash rate 4.60%",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case for a global index fund held from Nauru in Australian dollars after a weak decade."
     },
     "equity_return_base": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "No local stock market; global equity in AUD terms. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "No local stock market; global equity index in AUD terms, capped at the assumed local safe rate (about 0.5%) plus 4 points; RBA cash rate 4.60%",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "No local exchange exists, so base equity is a global index in AUD, held to the safe rate (about 0.5%) plus 4 points."
     },
     "equity_return_high": {
       "value": 0.08,
       "status": "assumption",
-      "sourceName": "No local stock market; global equity in AUD terms. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "No local stock market; global equity index in AUD terms, capped at the assumed local safe rate (about 0.5%) plus 4 points; RBA cash rate 4.60%",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "High case near the long-run return of global shares in Australian dollars."
     },
@@ -203,26 +203,26 @@
     "fixed_income_return_low": {
       "value": 0.0,
       "status": "assumption",
-      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "RBA cash rate 4.60% (AUD ceiling); no local term deposits or government securities, so local savings are assumed to earn little",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case: cash held in a basic account earning nothing."
     },
     "fixed_income_return_base": {
       "value": 0.005,
       "status": "assumption",
-      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "RBA cash rate 4.60% (AUD ceiling); no local term deposits or government securities, so local savings are assumed to earn little",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "Base case: a saver account at a low rate; no term deposits or government paper are sold locally."
     },
     "fixed_income_return_high": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "RBA cash rate 4.60% (AUD ceiling); no local term deposits or government securities, so local savings are assumed to earn little",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
-      "note": "High case: online saver with bonus interest, if available to Nauru customers."
+      "note": "High case: a saver account with bonus interest, if available to Nauru customers."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -262,7 +262,7 @@
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NR",
       "asOf": "2023-12-31",
-      "note": "Out-of-pocket spending is 0.73% of current health expenditure; care is free for citizens."
+      "note": "2023 figure, the latest World Bank year (older than 2025). Out-of-pocket spending is 0.73% of current health expenditure; care is free for citizens."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -286,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NR",
       "asOf": "2024-12-31",
-      "note": "Men 60.4, women 64.2."
+      "note": "2024 figure, the latest World Bank year (older than 2025). Men 60.4, women 64.2."
     },
     "life_table_remaining": {
       "value": null,
@@ -331,48 +331,48 @@
     "retirement_return_low": {
       "value": 0.0,
       "status": "assumption",
-      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "RBA cash rate 4.60% (AUD ceiling); no local term deposits or government securities, so local savings are assumed to earn little",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case: cash earning nothing."
     },
     "retirement_return_base": {
       "value": 0.005,
       "status": "assumption",
-      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "RBA cash rate 4.60% (AUD ceiling); no local term deposits or government securities, so local savings are assumed to earn little",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "Base case capped at what a basic saver account is likely to pay; no term deposits or government paper exist locally."
     },
     "retirement_return_high": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "RBA cash rate 4.60% (AUD ceiling); no local term deposits or government securities, so local savings are assumed to earn little",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
-      "note": "High case: online saver with bonus interest."
+      "note": "High case: a saver account with bonus interest."
     },
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "No local market; balanced global mix in AUD. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "No local market; balanced mix of a global equity index in AUD and local cash; RBA cash rate 4.60%",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix of global shares and cash."
     },
     "retirement_accumulation_return_base": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "No local market; balanced global mix in AUD. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "No local market; balanced mix of a global equity index in AUD and local cash; RBA cash rate 4.60%",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "Base case: half global shares at 4.5% and half cash at 0.5-1%."
     },
     "retirement_accumulation_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "No local market; balanced global mix in AUD. CommBank Nauru agency offers only basic and online saver accounts (no term deposits); no published rate",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html",
+      "sourceName": "No local market; balanced mix of a global equity index in AUD and local cash; RBA cash rate 4.60%",
+      "sourceUrl": "https://tradingeconomics.com/australia/interest-rate",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning global mix."
     },
@@ -382,7 +382,7 @@
       "sourceName": "Government of Naoero, 2026-27 Budget Speech (revised aged pension rates)",
       "sourceUrl": "https://naurufinance.info/wp-content/uploads/2026/07/APPROPRIATION-BILL-2026-SRS_V07.pdf",
       "asOf": "2026-07-20",
-      "note": "Aged pension AUD 400 at 60-69, 500 at 70-74 and 600 at 75+ (from the 2025 Truuk Memorial revision). The speech does not give the period; the Social Welfare Division page lists the earlier rates (250/300) as fortnightly, so 400 a fortnight = about 867 a month."
+      "note": "Aged pension AUD 400 at 60-69, 500 at 70-74 and 600 at 75+ (revised in 2025, confirmed for 2026-27 in the Budget Speech; Budget Paper 1 also lists $400-$600 by age). The speech does not give the period; the Social Welfare Division page lists the earlier rates (250/300) as fortnightly and payments are made fortnightly, so 400 a fortnight x 26 / 12 = about 867 a month for age 60-69. Not paid to people with a job or other regular income."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -412,28 +412,25 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The Nauru Superannuation Scheme (employer 10% from 1 February 2026, employee 5%) is a provident fund; its withdrawal age and payout rules are not stated on the Ministry of Finance page."
+      "note": "The Nauru Superannuation Scheme is a mandatory defined-contribution fund (employer 10% from 1 February 2026, employee 5%), not a pension; the Ministry of Finance page does not state its withdrawal age or payout rules."
     }
   },
   "instruments": {
     "savings_account": {
       "available": true,
-      "localName": "Savings account",
-      "localNameEn": "Saver account (bank agency)",
-      "note": "Offered through the bank agency that opened in August 2025.",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html"
+      "localName": null,
+      "localNameEn": "Savings account",
+      "note": "Basic and saver accounts offered through the single bank agency that opened in August 2025."
     },
     "fdr_3m": {
       "available": false,
       "localName": null,
-      "note": "No term deposits are offered to Nauru customers.",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html"
+      "note": "No term deposits were found to be offered to Nauru customers."
     },
     "fdr_1y": {
       "available": false,
       "localName": null,
-      "note": "No term deposits are offered to Nauru customers.",
-      "sourceUrl": "https://www.commbank.com.au/nauru.html"
+      "note": "No term deposits were found to be offered to Nauru customers."
     },
     "dps": {
       "available": false,

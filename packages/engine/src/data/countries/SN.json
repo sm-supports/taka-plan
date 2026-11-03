@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "code": "SN",
+  "iso3": "SEN",
+  "nameEn": "Senegal",
+  "nameNative": "Senegaal",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "wo",
+    "fr",
+    "ff",
+    "srr"
+  ],
+  "currency": {
+    "code": "XOF",
+    "symbol": "F CFA",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 581.93,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Senegal, 2025 average",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SN",
+      "asOf": "2025-12-31",
+      "note": "581.93 CFA francs per dollar on average in 2025; the BCEAO reference rate was 584.84 on 2 November 2026. The franc is fixed at 655.957 per euro."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.01,
+      "status": "sourced",
+      "sourceName": "Agence nationale de la Statistique et de la Démographie (ANSD), Indice harmonisé des prix à la consommation, September 2026",
+      "sourceUrl": "https://www.ansd.sn/sites/default/files/2026-10/IHPC_base2023_Sept%2026_VF_Rev.pdf",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 1.0% year on year in September 2026 (1.2% in August per the BCEAO); core inflation also 1.0%."
+    },
+    "inflation_projection": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "BCEAO inflation target band of 1-3%; CFA franc pegged to the euro",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Senegal's inflation has stayed low under the euro peg (1.0% in September 2026), so the 2% centre of the BCEAO's 1-3% target band is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.03,
+      "status": "sourced",
+      "sourceName": "BCEAO, Note de conjoncture économique des pays de l'UEMOA, September 2026 (Monetary Policy Committee of 9 September 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-09-09",
+      "note": "Main policy rate held at 3.00% (marginal lending facility 5.00%) by the Monetary Policy Committee on 9 September 2026; common to all eight UMOA countries."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No average rate on ordinary savings accounts in Senegal was found; the BCEAO bank-conditions survey (first half 2026) lists term-deposit and contractual-savings rates only."
+    },
+    "fdr_3m_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Senegal)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median of the minimum term-deposit rates (taux DAT minimum) declared to the BCEAO by the 29 Senegalese credit institutions that reported one, range 0-5%; the minimum usually applies to small, short deposits. Not a tenor-specific average."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCEAO bank-conditions survey gives only minimum (median 3.5%) and maximum (median about 6.5%, range 3.5-7.51%) term-deposit rates per institution in Senegal for the first half of 2026, not a 1-year rate."
+    },
+    "dps_rate": {
+      "value": 0.035,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Senegal) (épargne contractuelle)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median rate on contractual savings plans declared by Senegalese credit institutions in the first half of 2026; most declare 3.50% (range about 3.5-4.75%)."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0515,
+      "status": "sourced",
+      "sourceName": "BCEAO, Note de conjoncture économique des pays de l'UEMOA, September 2026 (bank deposit rates, July 2026)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-07-31",
+      "note": "Average deposit rate across UMOA banks, 5.15% in July 2026; Senegal's rose 0.26 points in the month, but the BCEAO does not publish the country level in this note. The World Bank series for Senegal stops in 2016 (6.9%)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The State sells bonds to the public by public offering (appel public à l'épargne), but the rate of a current issue could not be confirmed from an official page."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0627,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres (UEMOA public securities agency), Senegal yield curve (zero coupon) at 23 October 2026",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-23",
+      "note": "3-month zero-coupon rate 6.27% (6.95% after smoothing); 1-year 8.15%. Yields are high because of Senegal's debt difficulties since 2024."
+    },
+    "tbond_5y_rate": {
+      "value": 0.0829,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres (UEMOA public securities agency), Senegal yield curve (zero coupon) at 23 October 2026",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-23",
+      "note": "5-year zero-coupon rate 8.29% (8.23% after smoothing)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.0775,
+      "status": "sourced",
+      "sourceName": "UMOA-Titres (UEMOA public securities agency), Senegal yield curve (zero coupon) at 23 October 2026",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-23",
+      "note": "10-year zero-coupon rate 7.75% (7.27% after smoothing)."
+    },
+    "tax_bank_interest": {
+      "value": 0.08,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Senegal, corporate withholding taxes (reviewed 7 August 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/senegal/corporate/withholding-taxes",
+      "asOf": "2026-08-07",
+      "note": "8% withholding on interest from deposits and bank accounts; 16% on other interest such as loans."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.06,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Senegal, corporate withholding taxes (reviewed 7 August 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/senegal/corporate/withholding-taxes",
+      "asOf": "2026-08-07",
+      "note": "Bond interest is taxed at 6% for bonds of 5 years or more and 13% under 5 years; individual public bond issues may carry their own exemptions, which were not checked."
+    },
+    "deposit_insurance_limit": {
+      "value": 1400000,
+      "status": "sourced",
+      "sourceName": "UMOA Council of Ministers, Decision of 30 June 2017 on FGD-UMOA contribution rates and compensation ceilings",
+      "sourceUrl": "https://www.fgd-umoa.org/wp-content/uploads/2024/10/Decision-du-CM-relative-aux-taux-de-contribution-et-aux-plafonds-d-indemnistation-2-1.pdf",
+      "asOf": "2017-06-30",
+      "note": "Deposits are guaranteed up to 1,400,000 FCFA per depositor per bank (300,000 FCFA at a microfinance institution) by the regional deposit guarantee fund; the decision dates from 2017 (older than 2025), and no later change was found."
+    },
+    "credit_card_rate_cap": {
+      "value": 0.14,
+      "status": "sourced",
+      "sourceName": "BCEAO, conditions débitrices of UMOA credit institutions, first half 2026 (Senegal)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-06-30",
+      "note": "Median maximum lending rate (taux débiteur maximum) declared by Senegal's 27 banks for the first half of 2026 (range 7-14%); it applies to all bank credit, including cards. No card-specific rate is published."
+    },
+    "equity_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (regional stock exchange BRVM); UMOA-Titres Senegal yield curve",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: regional (BRVM) equities return about the bank deposit rate, as in their weak 2016-2020 years."
+    },
+    "equity_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026; after-tax deposit rate about 4.7% (5.15% less 8% tax)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 3.3 points above the after-tax deposit rate, within the 4-point cap; Senegal shares trade on the regional BRVM, whose 10-year record is mixed."
+    },
+    "equity_return_high": {
+      "value": 0.12,
+      "status": "assumption",
+      "sourceName": "BCEAO monthly economic note, September 2026 (regional stock exchange BRVM)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: the BRVM repeats a strong decade like 2023-2026."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "BCEAO reference rates (CFA franc pegged at 655.957 per euro); dollar gold trend",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO reference rates (CFA franc pegged at 655.957 per euro); dollar gold trend",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4% a year plus a small allowance for the euro-pegged franc weakening against the dollar."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCEAO reference rates (CFA franc pegged at 655.957 per euro)",
+      "sourceUrl": "https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years such as 2024-2025."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Senegal)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at about 3.5%, less the 8% tax on interest."
+    },
+    "fixed_income_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "BCEAO: UMOA average deposit rate 5.15% (July 2026) less 8% tax; Senegal 1-year bill 8.15%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits at about the Union average rate after tax (about 4.7%), rounded down."
+    },
+    "fixed_income_return_high": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres (UEMOA public securities agency), Senegal yield curve (zero coupon) at 23 October 2026",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: 3-5 year Treasury bonds at about 8%, less 6-13% tax and an allowance for Senegal's higher credit risk."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "CIMA (the regional insurance regulator) and Senegal's insurance directorate publish no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Temporary death cover is sold under the CIMA code, but no published premium rates per 1,000 FCFA of cover by age were found from a public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Senegal was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.4433,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Senegal",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SN",
+      "asOf": "2023-12-31",
+      "note": "44.3% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "ANSD IHPC September 2026: health prices +2.0% a year; 2% planning inflation",
+      "sourceUrl": "https://www.ansd.sn/sites/default/files/2026-10/IHPC_base2023_Sept%2026_VF_Rev.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices rose 2.0% in the past year, but private and imported care tends to rise faster, so 1.5 points above the 2% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "ANSD IHPC; 2% planning inflation",
+      "sourceUrl": "https://www.ansd.sn/sites/default/files/2026-10/IHPC_base2023_Sept%2026_VF_Rev.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education price trend was read beyond the monthly note; private school fees usually rise faster than general prices, so 2 points above the 2% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 68.924,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Senegal",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SN",
+      "asOf": "2024-12-31",
+      "note": "68.9 years in 2024 (men 67.0, women 71.0)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.4,
+            "men": 16.4,
+            "women": 18.3
+          },
+          {
+            "age": 65,
+            "total": 13.7,
+            "men": 12.9,
+            "women": 14.4
+          },
+          {
+            "age": 70,
+            "total": 10.4,
+            "men": 9.8,
+            "women": 10.9
+          },
+          {
+            "age": 80,
+            "total": 5.3,
+            "men": 5.0,
+            "women": 5.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/senegal/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the both-sexes figure at 65 is published, the others are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 16.07
+          },
+          {
+            "year": 2040,
+            "value": 13.51
+          },
+          {
+            "year": 2065,
+            "value": 6.85
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=SN",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio. Dependency ratios used: 6.22 per 100 in 2025 (World Bank), 7.4 in 2040 (populationpyramid.net/senegal/2040/) and 14.6 in 2065 (populationpyramid.net/senegal/2065/, UN WPP 2024 medium variant)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa, 2019, Senegal (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20260607223054/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/senegal.html",
+      "asOf": "2019-07-01",
+      "note": "IPRES general-scheme pension at 55 to 60 depending on the type of employment (55 for arduous work), with at least 400 points; 60 is the normal age for most employees, early pension from 53 with a 5% cut per year. Secondary source read through the Internet Archive (ssa.gov and the IPRES site could not be reached); 2019 edition, older than 2025."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Civil servants have a separate scheme (Fonds National de Retraite); their retirement age could not be confirmed from an official source (the fund's site could not be reached)."
+    },
+    "retirement_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Senegal)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: small term deposits or contractual savings at about 3.5%, less the 8% tax on interest."
+    },
+    "retirement_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCEAO: UMOA average deposit rate 5.15% (July 2026) less 8% tax = about 4.7%",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the after-tax deposit rate."
+    },
+    "retirement_return_high": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres (UEMOA public securities agency), Senegal yield curve (zero coupon) at 23 October 2026",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: part of the money in Treasury bonds or public bond offers held to maturity."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "BCEAO, conditions créditrices of UMOA credit institutions, first half 2026 (Senegal)",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a mix earning about after-tax deposit rates."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Senegal yield curve; regional equity and gold assumptions above",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits or Treasury bonds, regional equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "UMOA-Titres Senegal yield curve; regional equity and gold assumptions above",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age cash pension was found; people aged 60 and over get free care in public health facilities under Plan Sésame (US SSA 2019), which is not a cash benefit, and family security grants go to poor households, not to older people as such."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age cash pension was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official text on a statutory end-of-service or retirement indemnity for private employees could be read (the Labour Code and the interprofessional collective agreement were not reached), so the rule is unconfirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa, 2019, Senegal (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20260607223054/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/senegal.html",
+      "asOf": "2019-07-01",
+      "note": "Compulsory IPRES points scheme for private-sector employees and non-civil-servant public employees: pension = points x point value set each year by IPRES, payable at 55-60 depending on employment, with at least 400 points (early from 53); a lump sum below 400 points. Point values are set by IPRES rather than indexed automatically, so inflationLinked is false. Civil servants have a separate scheme. 2019 edition, older than 2025."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Compte d'épargne",
+      "localNameEn": "Savings account",
+      "note": "Banks offer savings accounts; no average rate is published."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Dépôt à terme (3 mois)",
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Minimum term-deposit rates of 0-5% declared to the BCEAO (first half 2026, median 3.5%).",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Dépôt à terme (1 an)",
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Maximum term-deposit rates of 3.5-7.51% declared to the BCEAO (first half 2026); no 1-year average is published.",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "dps": {
+      "available": true,
+      "localName": "Épargne contractuelle",
+      "localNameEn": "Contractual savings plan",
+      "note": "Contractual savings at about 3.50% (BCEAO bank-conditions survey, first half 2026).",
+      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf"
+    },
+    "sanchayapatra_5y": {
+      "available": true,
+      "localName": "Emprunt obligataire de l'État par appel public à l'épargne",
+      "localNameEn": "Government bond sold to the public",
+      "note": "State bonds offered to individuals through licensed brokers and banks; the rate of a current issue could not be confirmed."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Bon assimilable du Trésor (BAT)",
+      "localNameEn": "Treasury bill",
+      "note": "Auctioned through UMOA-Titres to banks and primary dealers; individuals buy through a bank or broker.",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Obligation assimilable du Trésor (OAT, 5 ans)",
+      "localNameEn": "Treasury bond (5 years)",
+      "note": "Auctioned through UMOA-Titres; individuals buy through a bank or broker.",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Obligation assimilable du Trésor (OAT, 10 ans)",
+      "localNameEn": "Treasury bond (10 years)",
+      "note": "Senegal's yield curve extends to 15 years; individuals buy through a bank or broker.",
+      "sourceUrl": "https://www.umoatitres.org/wp-content/uploads/2026/10/COURBES-DE-TAUX.au_.23.10.2026.xlsx"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "OPCVM (FCP ou SICAV)",
+      "localNameEn": "Mutual fund",
+      "note": "Funds regulated by the regional financial markets authority invest in shares listed on the regional exchange (BRVM)."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Or",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banque Centrale des États de l'Afrique de l'Ouest (BCEAO)",
+      "url": "https://www.bceao.int/"
+    },
+    "insuranceRegulator": {
+      "name": "Commission Régionale de Contrôle des Assurances (CIMA)",
+      "url": "https://cima-afrique.org/",
+      "note": "Regional insurance regulator for the CIMA member states, Senegal included."
+    },
+    "insuranceComplaints": {
+      "name": "CIMA policyholder requests and complaints form",
+      "url": "https://cima-afrique.org/faites-votre-requetes-ici-2/"
+    },
+    "pensionScheme": {
+      "name": "Institution de Prévoyance Retraite du Sénégal (IPRES)",
+      "url": "https://www.ipres.sn/",
+      "note": "The site could not be reached when checked."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Agence de la Couverture Maladie Universelle (CMU), including Plan Sésame for people aged 60 and over",
+      "url": "https://www.agencecmu.sn/",
+      "note": "The site could not be reached when checked."
+    },
+    "depositInsurance": {
+      "name": "Fonds de Garantie des Dépôts et de Résolution dans l'UMOA (FGDR-UMOA)",
+      "url": "https://www.fgd-umoa.org/"
+    },
+    "statistics": {
+      "name": "Agence nationale de la Statistique et de la Démographie (ANSD)",
+      "url": "https://www.ansd.sn/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

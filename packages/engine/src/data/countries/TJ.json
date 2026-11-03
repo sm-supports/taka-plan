@@ -44,10 +44,10 @@
     "policy_rate": {
       "value": 0.07,
       "status": "sourced",
-      "sourceName": "Trading Economics, National Bank of Tajikistan refinancing rate (secondary source)",
-      "sourceUrl": "https://tradingeconomics.com/tajikistan/interest-rate",
-      "asOf": "2026-09-30",
-      "note": "The National Bank of Tajikistan site (nbt.tj), which publishes bank interest-rate statistics, refused connections; IMF 2025 Article IV gave 9% at end-2024/early 2025."
+      "sourceName": "Asia-Plus (news, secondary source): National Bank of Tajikistan keeps refinancing rate at 7%",
+      "sourceUrl": "https://asiaplus.news/en/2026/11/02/tajikistans-national-bank-keeps-interest-rate-at-7/",
+      "asOf": "2026-10-29",
+      "note": "The NBT Monetary Policy Committee kept the refinancing rate at 7.0% on 29 October 2026, unchanged since February 2026; Trading Economics also shows 7%. The NBT site (nbt.tj) refused connections."
     },
     "savings_account_rate": {
       "value": null,
@@ -352,10 +352,10 @@
     "retirement_age_default": {
       "value": 63,
       "status": "sourced",
-      "sourceName": "Wikipedia, retirement age by country (secondary source)",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
-      "asOf": "2026-10-31",
-      "note": "Old-age pension age 63 for men and 58 for women; secondary source because the pension agency and legal-database sites could not be reached. No change for later cohorts was found."
+      "sourceName": "Asia-Plus (news, secondary source), citing the Agency for Social Insurance and Pensions",
+      "sourceUrl": "https://asiaplus.news/en/2026/10/23/tajik-authorities-comment-on-adb-proposal-to-raise-retirement-age/",
+      "asOf": "2026-10-23",
+      "note": "Pension age 63 for men and 58 for women under current law; on 22 October 2026 the Agency for Social Insurance and Pensions said an ADB proposal to raise it (women to 63, or 65 for all) is advisory and changes nothing until legislated. Minimum insurance record 25 years (men) and 20 years (women)."
     },
     "retirement_age_government": {
       "value": null,
@@ -414,12 +414,12 @@
       "note": "High case for a growth-leaning mix."
     },
     "old_age_allowance_monthly": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "A social pension for elderly people without an insurance record is believed to exist, but its current amount could not be found: the pension agency site was unreachable and the Ministry of Health and Social Protection pages had no figure."
+      "value": 412.6,
+      "status": "sourced",
+      "sourceName": "Asia-Plus (news, secondary source), citing the Agency for Social Insurance and Pensions",
+      "sourceUrl": "https://asiaplus.news/en/2026/10/21/adb-proposes-tajikistan-consider-raising-retirement-age/",
+      "asOf": "2026-09-01",
+      "note": "Average social pension 412.60 somoni a month after the 1 September 2026 indexation (at least +15%); social pensions go to people who do not qualify for an insurance pension. This is an average across social pensions, not a fixed old-age rate; the agency site could not be reached."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -439,11 +439,19 @@
     },
     "public_pension_scheme": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "A state insurance pension exists (Law on Insurance and State Pensions), paid from 63 for men and 58 for women, but its entry ages, indexation and tax treatment could not be confirmed: the Agency for Social Insurance and Pensions site was unreachable."
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": true,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Asia-Plus (news, secondary source), citing the Agency for Social Insurance and Pensions and an ADB report",
+      "sourceUrl": "https://asiaplus.news/en/2026/10/21/adb-proposes-tajikistan-consider-raising-retirement-age/",
+      "asOf": "2026-10-21",
+      "note": "State insurance pension financed by the social tax on employers, employees and the self-employed; paid from 63 (men) and 58 (women) with a minimum record of 25 and 20 years. Pensions are indexed by presidential decree: on 1 September 2026 at the 2025 inflation rate but not less than 15% (Asia-Plus, 1 Sep 2026); 2025 indexation was 10%. Average insurance pension 591.06 somoni after indexation. Entry ages and tax treatment not confirmed."
     }
   },
   "instruments": {

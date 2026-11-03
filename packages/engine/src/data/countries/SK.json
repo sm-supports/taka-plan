@@ -56,8 +56,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovak banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 0.07% on household overnight deposits (current and most savings accounts) in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Average 0.07% on household overnight deposits (current and most savings accounts) in September 2026, the same as in August."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/NBS MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.18% in August 2026); no separate 3-month rate was found."
+      "note": "ECB/NBS MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.43% in September 2026); no separate 3-month rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0218,
+      "value": 0.0243,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovak banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.91% and over 2 years 2.87% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (2.18% in August, 2.43% in September 2026); 1-2 years paid 2.98% in September 2026."
     },
     "dps_rate": {
       "value": null,
@@ -84,12 +84,12 @@
       "note": "Slovakia's regular-saving product is building savings (stavebné sporenie) with a state premium; no official average rate for it was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0187,
+      "value": 0.019,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovak banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits in August 2026; overnight deposits pay 0.07%."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits in September 2026; overnight deposits pay 0.07%."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.03,
@@ -113,7 +113,7 @@
       "sourceName": "ARDAL, auction results for state bond ŠD 251 H (maturing 6 November 2031)",
       "sourceUrl": "https://www.ardal.sk/_img/Documents/Vysledky_aukcie/VA_SD_251_20260518.pdf",
       "asOf": "2026-05-18",
-      "note": "Average accepted yield 3.2634% on 18 May 2026, the latest auction of a bond with about 5 years to run; it predates the ECB hikes of June and September 2026, and a 2029 bond yielded 3.59% on 19 October 2026."
+      "note": "Average accepted yield 3.2634% on 18 May 2026, the latest auction of a bond with about 5 years to run; it predates the ECB hikes of June and September 2026. More recent ARDAL auctions bracket the current 5-year yield: ŠD 255 (June 2029) at 3.5875% on 19 October 2026 and ŠD 247 (June 2033) at 3.9048% on 21 September 2026."
     },
     "tbond_10y_rate": {
       "value": 0.0436,
@@ -148,12 +148,12 @@
       "note": "EUR 100,000 per depositor per bank; some deposits (inheritance, severance pay, sale of a home and similar) are protected in full for one year."
     },
     "credit_card_rate_cap": {
-      "value": 0.1895,
+      "value": 0.1893,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Slovak banks, extended credit card credit to households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.A2Z3.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 18.95% on extended credit card credit in August 2026; this is the typical rate, not a legal cap."
+      "asOf": "2026-09-30",
+      "note": "Average 18.93% on extended credit card credit in September 2026; this is the typical rate, not a legal cap."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -166,10 +166,10 @@
     "equity_return_base": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "SAX index (Trading Economics); retail state bond 3.0% tax-free; 1-year deposit 2.18% less 19% tax",
+      "sourceName": "SAX index (Trading Economics); retail state bond 3.0% tax-free (ARDAL); 1-year deposit 2.43% less 19% tax (ECB MFI)",
       "sourceUrl": "https://tradingeconomics.com/slovakia/stock-market",
       "asOf": "2026-10-31",
-      "note": "The SAX has a weak long-run record and few listed firms, so the base case assumes a diversified global equity fund in euros earning about 3 points over the after-tax safe rate of roughly 2.5% (2-year state bond 3.34% less 19% tax)."
+      "note": "The SAX has a weak long-run record and few listed firms, so the base case assumes a diversified global equity fund in euros earning about 3.5 points over the after-tax safe rate of roughly 2.0% (1-year deposits 2.43% less 19% tax)."
     },
     "equity_return_high": {
       "value": 0.08,
@@ -206,7 +206,7 @@
     "fixed_income_return_low": {
       "value": 0.015,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.18% less 19% tax = 1.8% (ECB MFI statistics)",
+      "sourceName": "Household deposits up to 1 year 2.43% less 19% tax = 2.0% (ECB MFI statistics, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: bank term deposits after tax if ECB rates fall back."
@@ -214,7 +214,7 @@
     "fixed_income_return_base": {
       "value": 0.022,
       "status": "assumption",
-      "sourceName": "1-year deposits 1.8% after tax; retail state bonds 2.7-3.0% tax-free (ARDAL)",
+      "sourceName": "1-year deposits 2.0% after tax; retail state bonds 2.7-3.0% tax-free (ARDAL)",
       "sourceUrl": "https://dlhopisypreludi.ardal.sk/fileadmin/2026/SD_259_Prehlad.pdf",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of term deposits and the occasional tax-free retail state bond."
@@ -357,7 +357,7 @@
       "sourceName": "Sociálna poisťovňa (Social Insurance Agency), retirement age",
       "sourceUrl": "https://www.socpoist.sk/socialne-poistenie/dochodkove-poistenie/vseobecne-informacie/dochodkovy-vek",
       "asOf": "2026-07-01",
-      "note": "64 years 2 months for men and childless women born in 1968, the latest cohort set (women with children retire up to 18 months earlier). For people born after 1966 the age rises with life expectancy and is fixed six years ahead, so the age for those born after 1975 is not yet set and will be higher."
+      "note": "64 years 2 months for men and childless women born in 1968, the latest cohort set by decree (women with children retire 6 months earlier per child, up to 18 months). For people born after 1966 the age rises with life expectancy and is set only a few years ahead, so the age for people born after 1975 is not yet fixed and will be higher; 64.17 is the floor."
     },
     "retirement_age_government": {
       "value": null,
@@ -370,7 +370,7 @@
     "retirement_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.18% less 19% tax = 1.8% (ECB MFI statistics)",
+      "sourceName": "Household deposits up to 1 year 2.43% less 19% tax = 2.0% (ECB MFI statistics, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposits after tax if ECB rates fall."
@@ -378,7 +378,7 @@
     "retirement_return_base": {
       "value": 0.017,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.18% less 19% tax = 1.8% (ECB MFI statistics)",
+      "sourceName": "Household deposits up to 1 year 2.43% less 19% tax = 2.0% (ECB MFI statistics, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.SK.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case kept just below the after-tax 1-year deposit rate, since tax-free retail state bonds are sold only occasionally."
@@ -394,7 +394,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "1-year deposit 1.8% after tax; SAX record (Trading Economics)",
+      "sourceName": "1-year deposit 2.0% after tax; SAX record (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/slovakia/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -455,7 +455,7 @@
       "sourceName": "Sociálna poisťovňa (Social Insurance Agency): retirement age; pension valorisation from 1 January 2027",
       "sourceUrl": "https://www.socpoist.sk/socialne-poistenie/dochodkove-poistenie/vseobecne-informacie/dochodkovy-vek",
       "asOf": "2026-10-28",
-      "note": "Compulsory pay-as-you-go pension insurance (1st pillar) plus the funded old-age saving pillar; 15 insurance years needed. Pension age about 64 and rising with life expectancy. Pensions rise every January by pensioner-household inflation (3.4% from 1 January 2027, per the agency's 28 October 2026 notice)."
+      "note": "Compulsory pay-as-you-go pension insurance (1st pillar) plus the funded old-age saving pillar; 15 insurance years needed. Pension age 64 years 2 months for the 1968 cohort and rising with life expectancy for later cohorts. Pensions rise every January by pensioner-household inflation: 3.4% from 1 January 2027 per the agency notice of 28 October 2026 (https://www.socpoist.sk/news/socialna-poistovna-od-1-januara-2027-zvysi-dochodky-o-34-automaticky-dochodcovia-nemusia-o-nic)."
     }
   },
   "instruments": {

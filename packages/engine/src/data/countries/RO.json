@@ -20,7 +20,7 @@
       "value": 4.7698,
       "status": "sourced",
       "sourceName": "National Bank of Romania reference exchange rate (USD)",
-      "sourceUrl": "https://curs.bnr.ro/nbrfxrates.xml",
+      "sourceUrl": "https://curs.bnr.ro/files/xml/years/nbrfxrates2026.xml",
       "asOf": "2026-10-30",
       "note": "RON 4.7698 per US dollar on 30 October 2026 (EUR 5.3426); World Bank 2025 average 4.47."
     }
@@ -37,7 +37,7 @@
     "inflation_projection": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "BNR inflation target 2.5% +/- 1 point; BNR projection 3.4% for end-2027; Romanian HICP 2021-2025 average 7.7% (ECB ICP)",
+      "sourceName": "BNR inflation target 2.5% +/- 1 point; Romanian HICP 2021-2025 average 7.7% (ECB ICP)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/ICP/A.RO.N.000000.4.AVR",
       "asOf": "2026-10-31",
       "note": "The BNR targets 2.5% but inflation averaged 7.7% over 2021-2025 and is 6.6% now, so planning uses 4.5%, above the target band."
@@ -51,12 +51,12 @@
       "note": "Policy rate held at 6.50% at the 8 October 2026 board meeting, unchanged since August 2024; next decision 12 November 2026. Secondary source because the BNR pages load their figures by script."
     },
     "savings_account_rate": {
-      "value": 0.0051,
+      "value": 0.0052,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by the BNR): Romanian banks, overnight leu deposits from households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L21.A.R.A.2250.RON.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight (current and savings) leu deposits was 0.51% in August 2026 (0.51% in July)."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight (current and savings) leu deposits was 0.52% in September 2026 (0.51% in August)."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -64,15 +64,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The BNR and ECB publish household term deposits up to 1 year as one bucket (5.04% in August 2026); no separate 3-month average was found."
+      "note": "The BNR and ECB publish household term deposits up to 1 year as one bucket (5.08% in September 2026); no separate 3-month average was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0504,
+      "value": 0.0508,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by the BNR): household leu deposits with agreed maturity up to 1 year, new business",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (5.04% in July 2026 too); 1-2 year deposits paid 5.83% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (5.04% in August 2026); 1-2 year deposits paid 5.95% in September 2026."
     },
     "dps_rate": {
       "value": null,
@@ -83,12 +83,12 @@
       "note": "No standard monthly recurring-deposit product with a published average rate was found for Romania."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0504,
+      "value": 0.0508,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by the BNR): household leu deposits with agreed maturity up to 1 year, new business",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
-      "asOf": "2026-08-31",
-      "note": "No all-maturity average is published for Romania in the ECB dataset; deposits up to 1 year make up nearly all new household term deposits, so their weighted average (5.04%, August 2026) is used. World Bank FR.INR.DPST gives 5.23% for 2025."
+      "asOf": "2026-09-30",
+      "note": "No all-maturity average is published for Romania in the ECB dataset; deposits up to 1 year were RON 20.7 billion of new household term deposits in September 2026 against RON 0.2 billion for 1-2 years, so their weighted average (5.08%) is used. World Bank FR.INR.DPST gives 5.23% for 2025."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -147,17 +147,17 @@
       "note": "EU rules guarantee deposits up to EUR 100,000 per depositor per bank, paid in lei by the Bank Deposit Guarantee Fund (FGDB, whose site could not be read); converted at the BNR rate of 30 October 2026."
     },
     "credit_card_rate_cap": {
-      "value": 0.2773,
+      "value": 0.2757,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by the BNR): Romanian banks, extended credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.A2Z3.A.R.A.2250.RON.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate, not a legal cap: average 27.73% in August 2026 (27.76% in July)."
+      "asOf": "2026-09-30",
+      "note": "Typical rate, not a legal cap: average 27.57% in September 2026 (27.73% in August)."
     },
     "equity_return_low": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "BET index 34,822 on 29 Oct 2026, up about 55% in a year (Trading Economics); after-tax 1-year deposit 4.5%",
+      "sourceName": "BET index (Trading Economics); after-tax 1-year deposit 5.08% x 0.9 = 4.6%",
       "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
       "asOf": "2026-10-31",
       "note": "Low case: Romanian shares give back much of the 2025-26 rally and earn only a little more than after-tax deposits."
@@ -165,10 +165,10 @@
     "equity_return_base": {
       "value": 0.08,
       "status": "assumption",
-      "sourceName": "BET index (Trading Economics); after-tax 1-year deposit 5.04% x 0.9 = 4.5%",
+      "sourceName": "BET index (Trading Economics); after-tax 1-year deposit 5.08% x 0.9 = 4.6%",
       "sourceUrl": "https://tradingeconomics.com/romania/stock-market",
       "asOf": "2026-10-31",
-      "note": "Base case: about 3.5 points over the after-tax deposit rate, well below the BET's strong recent record because the index is concentrated in 10 stocks, mostly energy and banks."
+      "note": "Base case: about 3.4 points over the after-tax deposit rate, well below the BET's strong recent record because the index is concentrated in a few stocks, mostly energy and banks."
     },
     "equity_return_high": {
       "value": 0.11,
@@ -205,7 +205,7 @@
     "fixed_income_return_low": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 5.04% less 10% tax = 4.5% (ECB MIR)",
+      "sourceName": "Household deposits up to 1 year 5.08% less 10% tax = 4.6% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax bank term deposits, with rates falling as inflation eases."
@@ -213,7 +213,7 @@
     "fixed_income_return_base": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 4.5% (ECB MIR); 1-2 year deposits 5.83%",
+      "sourceName": "After-tax 1-year deposit 4.6% (ECB MIR); 1-2 year deposits 5.95% (September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.G.R.A.2250.RON.N",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of term deposits and retail government bonds, allowing for policy-rate cuts."
@@ -369,7 +369,7 @@
     "retirement_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 4.5% (ECB MIR)",
+      "sourceName": "After-tax 1-year deposit 4.6% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax deposits after the policy rate is cut as inflation falls."
@@ -377,7 +377,7 @@
     "retirement_return_base": {
       "value": 0.0425,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 5.04% less 10% tax = 4.5% (ECB MIR)",
+      "sourceName": "Household deposits up to 1 year 5.08% less 10% tax = 4.6% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.RO.B.L22.F.R.A.2250.RON.N",
       "asOf": "2026-10-31",
       "note": "Base case: kept below the after-tax 1-year deposit rate."
@@ -385,7 +385,7 @@
     "retirement_return_high": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "1-2 year deposits 5.83% and 10-year government bond 7.20% (ECB MIR; Trading Economics)",
+      "sourceName": "1-2 year deposits 5.95% (ECB MIR) and 10-year government bond 7.20% (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/romania/government-bond-yield",
       "asOf": "2026-10-31",
       "note": "High case: medium-term deposits and government bonds bought at today's yields and held to maturity."
@@ -489,7 +489,7 @@
       "available": true,
       "localName": "Titluri de stat TEZAUR / FIDELIS",
       "localNameEn": "Retail government bonds (TEZAUR, FIDELIS)",
-      "note": "Sold by the Ministry of Finance to individuals: TEZAUR through the State Treasury, post offices and online, FIDELIS through the Bucharest stock exchange; maturities of 1 to about 10 years."
+      "note": "Sold by the Ministry of Finance to individuals: TEZAUR through the State Treasury, post offices and online, FIDELIS listed on the stock exchange; maturities of 1 to about 10 years."
     },
     "tbill_91d": {
       "available": false,

@@ -20,25 +20,25 @@
       "value": 2.5992,
       "status": "sourced",
       "sourceName": "National Bank of Georgia official exchange rate (USD)",
-      "sourceUrl": "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD",
+      "sourceUrl": "https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD&date=2026-10-31",
       "asOf": "2026-10-31",
       "note": "GEL 2.5992 per US dollar, set on 30 October 2026 and valid from 31 October 2026; World Bank 2025 average 2.743."
     }
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.056,
+      "value": 0.059,
       "status": "sourced",
-      "sourceName": "National Statistics Office of Georgia (Geostat), consumer price index",
-      "sourceUrl": "https://www.geostat.ge/en",
-      "asOf": "2026-09-30",
-      "note": "Annual CPI inflation 5.6% in September 2026, same as August (Geostat headline; confirmed by Trading Economics); October figure not yet published. World Bank 2025 average 3.9%."
+      "sourceName": "National Statistics Office of Georgia (Geostat), Inflation Rate in Georgia, October 2026",
+      "sourceUrl": "https://geostat.ge/media/83801/Inflation-Rate-in-Georgia%2C-October-2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Annual CPI inflation 5.9% in October 2026 (5.6% in September; core 4.0%), published 3 November 2026. World Bank 2025 average 3.9%."
     },
     "inflation_projection": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "National Bank of Georgia 3% inflation target; CPI 5.6% (Sep 2026), 3.9% in 2025 (World Bank)",
-      "sourceUrl": "https://www.geostat.ge/en",
+      "sourceName": "National Bank of Georgia 3% inflation target; CPI 5.9% (Oct 2026, Geostat), 3.9% in 2025 (World Bank)",
+      "sourceUrl": "https://geostat.ge/media/83801/Inflation-Rate-in-Georgia%2C-October-2026.pdf",
       "asOf": "2026-10-31",
       "note": "Inflation has averaged well above the 3% target over the last five years (including 10-12% in 2021-22), so 4.5% is used for planning."
     },
@@ -83,12 +83,12 @@
       "note": "Banks offer accumulative savings deposits with regular top-ups, but the NBG comparison table does not list them and no published rate was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.093,
+      "value": 0.0909,
       "status": "sourced",
       "sourceName": "Trading Economics (IMF), Georgia deposit interest rate",
       "sourceUrl": "https://tradingeconomics.com/georgia/deposit-interest-rate",
-      "asOf": "2026-07-31",
-      "note": "Average rate paid by commercial banks on deposits, July 2026 (9.36% in June); World Bank FR.INR.DPST 2025 average 10.6%."
+      "asOf": "2026-08-31",
+      "note": "Average rate paid by commercial banks on deposits, August 2026 (9.30% in July); secondary source citing the IMF; World Bank FR.INR.DPST 2025 average 10.6%."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -263,30 +263,31 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=GE",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank figure is for 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "Geostat CPI 5.6% (Sep 2026); out-of-pocket share of health spending 59% (World Bank)",
-      "sourceUrl": "https://www.geostat.ge/en",
+      "sourceName": "Geostat: health prices up 8.4% year on year in October 2026 (out-patient services 11.7%); out-of-pocket share of health spending 59% (World Bank)",
+      "sourceUrl": "https://geostat.ge/media/83801/Inflation-Rate-in-Georgia%2C-October-2026.pdf",
       "asOf": "2026-10-31",
-      "note": "Medicine and private care prices are mostly paid out of pocket and have risen faster than headline inflation, so 6% is used."
+      "note": "Medicine and private care are mostly paid out of pocket and health prices are rising faster than headline inflation, but 8.4% reflects the current spike, so 6% is used for the long run."
     },
     "goal_inflation_education": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "Geostat CPI 5.6% (Sep 2026); planning inflation 4.5%",
-      "sourceUrl": "https://www.geostat.ge/en",
+      "sourceName": "Geostat October 2026: school education prices up 6.6-8.8% year on year, tertiary down 32.9%; planning inflation 4.5%",
+      "sourceUrl": "https://geostat.ge/media/83801/Inflation-Rate-in-Georgia%2C-October-2026.pdf",
       "asOf": "2026-10-31",
-      "note": "Private school and university fees tend to rise faster than headline inflation, so 6% is used."
+      "note": "Pre-primary, primary and secondary fees are rising well above headline inflation while the tertiary fall reflects a one-off policy change, so 6% is used."
     },
     "life_expectancy": {
       "value": 75.0,
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/georgia",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Men 70.1, women 79.5 (UN WPP estimate for 2026); World Bank 2024 figure 74.7."
     },
     "life_table_remaining": {
@@ -322,8 +323,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/georgia",
-      "asOf": "2026-12-31",
-      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
+      "asOf": "2026-07-01",
+      "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate, mid-year)."
     },
     "support_ratio": {
       "value": null,
@@ -354,8 +355,8 @@
       "status": "sourced",
       "sourceName": "Trading Economics (Social Service Agency of Georgia), retirement age men and women",
       "sourceUrl": "https://tradingeconomics.com/georgia/retirement-age-men",
-      "asOf": "2026-12-31",
-      "note": "State pension age 65 for men and 60 for women, unchanged since 2011."
+      "asOf": "2026-10-31",
+      "note": "State pension age 65 for men and 60 for women (Trading Economics citing the Social Service Agency, 2026); the Funded Pension Law (Art. 2(q)) uses the same age, defined by the Law on State Pensions."
     },
     "retirement_age_government": {
       "value": null,
@@ -423,17 +424,11 @@
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "valueJson": {
-        "menAge": 65,
-        "womenAge": 60,
-        "over90Monthly": null,
-        "meansTested": false
-      },
-      "status": "sourced",
-      "sourceName": "Trading Economics (Social Service Agency of Georgia), retirement age men and women",
-      "sourceUrl": "https://tradingeconomics.com/georgia/retirement-age-women",
-      "asOf": "2026-12-31",
-      "note": "The state pension is a flat, non-contributory pension paid from the state pension age (65 men, 60 women), not means-tested; residence and other conditions could not be confirmed because the Social Service Agency site refused automated access."
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Georgia pays a flat state pension from age 65 (men) and 60 (women) (Trading Economics citing the Social Service Agency), but no readable source confirmed whether it is means-tested or its residence conditions: the Social Service Agency and Ministry of Health sites refused automated access."
     },
     "gratuity_rule": {
       "value": null,
@@ -457,7 +452,7 @@
       "sourceName": "Law of Georgia on Funded Pension (matsne.gov.ge); retirement ages via Trading Economics",
       "sourceUrl": "https://matsne.gov.ge/en/document/view/4280127",
       "asOf": "2026-10-31",
-      "note": "Mandatory funded pension (Pension Agency) since 2019: 2% of salary from the employee, 2% from the employer and 2% from the state (1% for income GEL 24,000-60,000); savings can be drawn at the state pension age (65 men, 60 women); returns depend on the fund, so payouts are not inflation-linked. Employees aged 40+ at launch could opt out."
+      "note": "Mandatory funded pension (Pension Agency) since 2019 for employees: 2% of salary from the employee, 2% from the employer and 2% from the state (1% on income GEL 24,000-60,000, none above) (Art. 3(6)); savings can be drawn at the state pension age (Art. 2(q), 24), 65 for men and 60 for women; returns depend on investment, so payouts are not inflation-linked. Employees aged 40+ at launch could opt out (Art. 22)."
     }
   },
   "instruments": {

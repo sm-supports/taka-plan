@@ -126,7 +126,7 @@
       "sourceName": "Inland Revenue Division, Dominica, current income tax rates",
       "sourceUrl": "https://ird.gov.dm/customer-service/current-income-tax-rates",
       "asOf": "2026-10-31",
-      "note": "Residents add interest to taxable income: the first XCD 30,000 is tax-free, then 15%, 25% and 35%. 15% is the first taxable band; there is no withholding for residents (15% withholding applies to non-residents)."
+      "note": "The IRD personal income tax page lists interest among taxable income for residents (https://ird.gov.dm/tax-laws/personal-income-tax); chargeable income is taxed at 0% on the first XCD 30,000 (resident allowance), then 15%, 25% and 35%. 15% is the first taxable band, so savers with income under XCD 30,000 pay nothing; 15% withholding applies only to non-residents."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -286,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DM",
       "asOf": "2024-12-31",
-      "note": "Men 68.4, women 74.7 (2024)."
+      "note": "Men 68.4, women 74.7 (2024; latest World Bank figure, older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -442,7 +442,7 @@
         "inflationLinked": false,
         "taxFree": null
       },
-      "note": "Compulsory social security for employees and the self-employed: age pension at 65 with at least 500 weekly credits (reduced pension from 60); 50-499 credits give a lump-sum age grant. The DSS pages state no automatic inflation indexation."
+      "note": "Compulsory social security for employees and the self-employed: age pension at 65 with at least 500 credits (reduced pension from 60, 0.5% less per month early); 50-499 credits give a lump-sum age grant (DSS benefits page https://dss.dm/benefits/benefits-info/). The DSS pages state no automatic inflation indexation."
     }
   },
   "instruments": {

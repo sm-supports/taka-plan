@@ -7,6 +7,8 @@
   "region": "south_asia",
   "languages": [
     "ne",
+    "mai",
+    "bho",
     "en",
     "hi"
   ],
@@ -19,7 +21,7 @@
       "value": 153.24,
       "status": "sourced",
       "sourceName": "Nepal Rastra Bank, Current Macroeconomic and Financial Situation (two months of 2026/27)",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-09-16",
       "note": "Buying rate per US dollar, mid-September 2026; rupee pegged to the Indian rupee at 1.6"
     }
@@ -29,7 +31,7 @@
       "value": 0.0634,
       "status": "sourced",
       "sourceName": "Nepal Rastra Bank, Current Macroeconomic and Financial Situation (two months of 2026/27)",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-09-16",
       "note": "Year-on-year CPI, mid-September 2026; food 7.54%, non-food and services 5.69%"
     },
@@ -42,50 +44,50 @@
       "note": "The central bank's 5.5% target sits close to the 5-year CPI average, so we plan with it."
     },
     "policy_rate": {
-      "value": 0.045,
+      "value": 0.0425,
       "status": "sourced",
-      "sourceName": "The Rising Nepal (Monetary Policy 2026/27, Nepal Rastra Bank)",
-      "sourceUrl": "https://risingnepaldaily.com/news/83134",
-      "asOf": "2026-07-08",
-      "note": "Unchanged in the 2026/27 monetary policy; standing deposit facility 2.75%"
+      "sourceName": "Nepal Rastra Bank, NRB Policy Rates",
+      "sourceUrl": "https://www.nrb.org.np/cmfm_rates/policy_rates",
+      "asOf": "2025-12-02",
+      "note": "Policy (overnight repo) rate 4.25% since 2 December 2025, still shown as current on the NRB page in November 2026; standing deposit facility 2.75%, standing liquidity facility 5.75%. A Rising Nepal report on the 2026/27 monetary policy says 4.50%, which does not match the NRB page."
     },
     "savings_account_rate": {
-      "value": 0.0275,
+      "value": 0.0292,
       "status": "sourced",
-      "sourceName": "Published deposit rate schedules of large commercial banks (via NEPSE Trading notices)",
-      "sourceUrl": "https://nepsetrading.com/news/nimb-new-interest-rates-on-deposits-and-loans?lang=np",
-      "asOf": "2026-09-17",
-      "note": "Ordinary savings accounts at large commercial banks pay 2.75% to 2.80% (Bhadra to Ashwin 2083 notices)"
+      "sourceName": "Nepal Rastra Bank, Deposit/Lending Rates (weighted average saving deposit rate)",
+      "sourceUrl": "https://www.nrb.org.np/cmfm_rates/lending_rates",
+      "asOf": "2026-04-06",
+      "note": "Weighted average rate on saving deposits, last updated 6 April 2026; the overall weighted average deposit rate of commercial banks fell from 3.45% to 3.11% by mid-September 2026, so current savings rates may be slightly lower."
     },
     "fdr_3m_rate": {
-      "value": 0.029,
-      "status": "sourced",
-      "sourceName": "Published deposit rate schedules of large commercial banks (via NEPSE Trading notices)",
-      "sourceUrl": "https://nepsetrading.com/news/nimb-new-interest-rates-on-deposits-and-loans?lang=np",
-      "asOf": "2026-09-17",
-      "note": "Individual fixed deposits of 3 months to under 1 year: 2.76% to 2.90%"
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only individual banks' published rate notices give 3-month fixed deposit rates (about 2.8% to 2.9% in Bhadra to Ashwin 2083); Nepal Rastra Bank publishes only a weighted average on all outstanding fixed deposits (5.11%, April 2026), which is not term-specific."
     },
     "fdr_1y_rate": {
-      "value": 0.031,
-      "status": "sourced",
-      "sourceName": "Published deposit rate schedules of large commercial banks (via NEPSE Trading notices)",
-      "sourceUrl": "https://nepsetrading.com/news/nepal-sbi-bank-new-interest-rates-on-deposits-and-loans?lang=np",
-      "asOf": "2026-08-17",
-      "note": "Individual 1 to 2 year fixed deposits: 3.00% to 3.20%; maximum individual FD rates (5 years and longer) range 3.50% to 4.55%"
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Only individual banks' published rate notices give 1-year fixed deposit rates (about 3.0% to 3.2% in Bhadra 2083); Nepal Rastra Bank publishes only a weighted average on all outstanding fixed deposits (5.11%, April 2026), which is not term-specific."
     },
     "dps_rate": {
-      "value": 0.035,
-      "status": "sourced",
-      "sourceName": "Published deposit rate schedules of large commercial banks (via NEPSE Trading notices)",
-      "sourceUrl": "https://nepsetrading.com/news/nimb-new-interest-rates-on-deposits-and-loans?lang=np",
-      "asOf": "2026-09-17",
-      "note": "Recurring deposits pay about 2.8% to 4.0% depending on term (13 to 25 months shown); 5-year recurring rates are not published separately"
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Recurring deposit rates appear only in individual banks' rate notices; no regulator or statistics-office figure found."
     },
     "bank_deposit_avg_rate": {
       "value": 0.0311,
       "status": "sourced",
       "sourceName": "Nepal Rastra Bank, Current Macroeconomic and Financial Situation (two months of 2026/27)",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-09-16",
       "note": "Weighted average deposit rate of commercial banks; development banks 3.48%, finance companies 4.04%"
     },
@@ -101,7 +103,7 @@
       "value": 0.0135,
       "status": "sourced",
       "sourceName": "Nepal Rastra Bank, Current Macroeconomic and Financial Situation (two months of 2026/27)",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-09-16",
       "note": "Weighted average 91-day treasury bill rate"
     },
@@ -138,42 +140,42 @@
       "note": "Searched issue notices for Citizen Savings Bonds 2086 and 2087; they do not state the tax on the interest."
     },
     "deposit_insurance_limit": {
-      "value": 500000,
-      "status": "sourced",
-      "sourceName": "Deposit and Credit Guarantee Fund (profile via CollegeNP)",
-      "sourceUrl": "https://www.collegenp.com/institute/deposit-and-credit-guarantee-fund",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Rs 5 lakh per natural individual depositor per member institution, savings and fixed deposits combined; secondary source, official site unreachable"
+      "note": "The Deposit and Credit Guarantee Fund site (dcgf.gov.np) refused connections and the NRB Financial Stability Report 2024/25 does not state the per-depositor limit; only a non-official directory page gives Rs 500,000."
     },
     "credit_card_rate_cap": {
-      "value": 0.24,
-      "status": "sourced",
-      "sourceName": "State-owned commercial bank credit card terms",
-      "sourceUrl": "https://nepalbank.com.np/services/credit-card",
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Typical card rate 2% a month (24% a year); no published Nepal Rastra Bank cap found"
+      "note": "No Nepal Rastra Bank cap or regulator statistic on credit card rates found; only individual banks' card terms publish a rate."
     },
     "equity_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "NEPSE index level (2,591.80 on 2026-10-11) versus about 1,800 to 1,900 ten years earlier",
-      "sourceUrl": "https://www.sharesansar.com/",
+      "sourceName": "Nepal Rastra Bank, Current Macroeconomic and Financial Situation (two months of 2026/27): NEPSE index 2,612 in mid-September 2026 versus 2,672 a year earlier",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
-      "note": "NEPSE price gains have been about 3% a year over 10 years with large swings, so the low case is near zero real return."
+      "note": "NEPSE was about 1,800 to 1,900 in 2016 and 2,612 in September 2026, roughly 3% a year in price with large swings, so the low case is near zero real return."
     },
     "equity_return_base": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "NEPSE 10-year record; after-tax 1-year deposit about 2.9%",
-      "sourceUrl": "https://www.sharesansar.com/",
+      "sourceName": "Nepal Rastra Bank, Current Macroeconomic and Financial Situation (two months of 2026/27): NEPSE index; after-tax weighted average deposit rate about 2.9%",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Set below the after-tax safe rate plus 4 points because the NEPSE 10-year record (about 3% a year in price plus dividends) is weak."
     },
     "equity_return_high": {
       "value": 0.1,
       "status": "assumption",
-      "sourceName": "NEPSE 10-year record and nominal GDP growth",
-      "sourceUrl": "https://www.sharesansar.com/",
+      "sourceName": "Nepal Rastra Bank, Current Macroeconomic and Financial Situation (two months of 2026/27): NEPSE index; nominal GDP growth",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Upper case if earnings follow nominal GDP growth of around 9 to 10%."
     },
@@ -181,7 +183,7 @@
       "value": 0.02,
       "status": "assumption",
       "sourceName": "Rupee pegged to the Indian rupee; dollar gold long-run trend",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: flat dollar gold with mild rupee depreciation."
     },
@@ -189,7 +191,7 @@
       "value": 0.07,
       "status": "assumption",
       "sourceName": "Dollar gold long-run trend plus rupee depreciation through the INR peg",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "About 4% dollar gold trend plus about 3% expected rupee depreciation against the dollar."
     },
@@ -197,23 +199,23 @@
       "value": 0.11,
       "status": "assumption",
       "sourceName": "Dollar gold long-run trend plus rupee depreciation",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "High case with strong dollar gold and faster rupee depreciation."
     },
     "fixed_income_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "1-year deposit 3.0% to 3.2% less 6% withholding",
-      "sourceUrl": "https://nepsetrading.com/news/nepal-sbi-bank-new-interest-rates-on-deposits-and-loans?lang=np",
+      "sourceName": "Weighted average deposit rate of commercial banks 3.11% (mid-September 2026) less 6% withholding",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
-      "note": "Low case: short deposits after 6% tax."
+      "note": "Low case: short deposits after 6% tax, about 2.5% to 2.9%."
     },
     "fixed_income_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "Mix of 1 to 5 year deposits (3.0% to 4.1%) and citizen savings bonds (6.5%) after 6% tax",
-      "sourceUrl": "https://nepsetrading.com/news/nepal-sbi-bank-new-interest-rates-on-deposits-and-loans?lang=np",
+      "sourceName": "Commercial bank deposit rates (weighted average 3.11%, outstanding fixed deposits 5.11%) and Citizen Savings Bond 6.5%, after 6% tax",
+      "sourceUrl": "https://www.nrb.org.np/cmfm_rates/lending_rates",
       "asOf": "2026-10-31",
       "note": "Base case: a ladder of term deposits with some savings bonds when issued."
     },
@@ -268,7 +270,7 @@
       "value": 0.07,
       "status": "assumption",
       "sourceName": "Nepal CPI (non-food and services 5.7%) and 5.5% inflation target",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Medical costs usually rise faster than headline CPI, so we add 1.5 points to the target."
     },
@@ -276,7 +278,7 @@
       "value": 0.08,
       "status": "assumption",
       "sourceName": "Nepal CPI and 5.5% inflation target",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Private school and college fees have risen faster than headline CPI, so we add 2.5 points to the target."
     },
@@ -341,10 +343,10 @@
     "retirement_age_default": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "Social Security Fund old-age protection scheme (Pioneer Law summary)",
-      "sourceUrl": "https://pioneerlaw.com/resource/social-security-system-in-nepal/",
-      "asOf": "2022-01-06",
-      "note": "Old-age pension from 60 after 180 months of contributions; same for men and women"
+      "sourceName": "Social Security Fund, Social Security Operation Procedure 2075 (5th amendment 2081)",
+      "sourceUrl": "https://ssf.gov.np/list/act_regulation/social-security-operation-procedure-2075-with-5th-ammendment",
+      "asOf": "2024-12-25",
+      "note": "Old-age pension from age 60 after at least 180 months of contributions, same for men and women; procedure amended 2081/09/10 (25 December 2024), older than 2025 but still in force."
     },
     "retirement_age_government": {
       "value": 58,
@@ -357,24 +359,24 @@
     "retirement_return_low": {
       "value": 0.025,
       "status": "assumption",
-      "sourceName": "1-year deposit after 6% tax",
-      "sourceUrl": "https://nepsetrading.com/news/nepal-sbi-bank-new-interest-rates-on-deposits-and-loans?lang=np",
+      "sourceName": "Weighted average deposit rate 3.11% less 6% withholding",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: short deposits only."
     },
     "retirement_return_base": {
       "value": 0.029,
       "status": "assumption",
-      "sourceName": "1-year deposit 3.1% less 6% withholding",
-      "sourceUrl": "https://nepsetrading.com/news/nepal-sbi-bank-new-interest-rates-on-deposits-and-loans?lang=np",
+      "sourceName": "Weighted average deposit rate of commercial banks 3.11% (mid-September 2026) less 6% withholding = 2.92%",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
-      "note": "Kept at the after-tax 1-year deposit rate."
+      "note": "Kept at about the after-tax average deposit rate; the 91-day treasury bill (1.35%) is lower but is bought mostly by banks."
     },
     "retirement_return_high": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "Longer deposits (4.1% to 4.5%) and savings bonds after tax",
-      "sourceUrl": "https://risingnepaldaily.com/news/71169",
+      "sourceName": "Outstanding fixed deposits (5.11% weighted average) and Citizen Savings Bond 6.5%, after 6% tax",
+      "sourceUrl": "https://www.nrb.org.np/cmfm_rates/lending_rates",
       "asOf": "2026-10-31",
       "note": "High case using longer deposits and savings bonds."
     },
@@ -382,7 +384,7 @@
       "value": 0.03,
       "status": "assumption",
       "sourceName": "Balanced mix of deposits and NEPSE equity",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix while rates stay low."
     },
@@ -390,7 +392,7 @@
       "value": 0.045,
       "status": "assumption",
       "sourceName": "Balanced mix: half safe fixed income (3.5%), half equity (6%)",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "Average of the base fixed-income and equity cases."
     },
@@ -398,7 +400,7 @@
       "value": 0.07,
       "status": "assumption",
       "sourceName": "Balanced mix with higher equity returns",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/",
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf",
       "asOf": "2026-10-31",
       "note": "High case for a balanced mix."
     },
@@ -422,7 +424,7 @@
       "sourceName": "The Rising Nepal (senior citizens' allowance)",
       "sourceUrl": "https://risingnepaldaily.com/news/78466",
       "asOf": "2026-04-09",
-      "note": "Age 60 for Dalits and residents of Karnali; the age was 68 for a short period before returning to 70"
+      "note": "Age 60 for Dalits and residents of the Karnali region; categorical, no means test"
     },
     "gratuity_rule": {
       "value": null,
@@ -433,10 +435,10 @@
         "daysPerMonth": 30
       },
       "status": "sourced",
-      "sourceName": "Labour Act 2074 gratuity of 8.33% of basic salary (Pioneer Law summary)",
-      "sourceUrl": "https://pioneerlaw.com/resource/social-security-system-in-nepal/",
-      "asOf": "2022-01-06",
-      "note": "8.33% of monthly basic salary is one month per year of service; paid into the Social Security Fund for enrolled employees"
+      "sourceName": "Labour Act 2074, section 53 (copy published by the Social Security Fund)",
+      "sourceUrl": "https://ssf.gov.np/images/news/16430171669623_labor-act-2074.pdf",
+      "asOf": "2017-09-04",
+      "note": "Employers must deposit 8.33% of basic remuneration every month as gratuity, which is one month (30 days) per year of service; for enrolled employees it goes into the Social Security Fund. Act of 2017, older than 2025 but still in force."
     },
     "public_pension_scheme": {
       "value": null,
@@ -449,10 +451,10 @@
         "taxFree": null
       },
       "status": "sourced",
-      "sourceName": "Social Security Fund old-age protection scheme (Pioneer Law summary)",
-      "sourceUrl": "https://pioneerlaw.com/resource/social-security-system-in-nepal/",
-      "asOf": "2022-01-06",
-      "note": "Contribution-based: employee 11% plus employer 20% of basic salary, 28.33% to old age; pension = balance / 180 months, paid for life after 180 months of contributions"
+      "sourceName": "Social Security Fund, Social Security Operation Procedure 2075 (5th amendment 2081)",
+      "sourceUrl": "https://ssf.gov.np/list/act_regulation/social-security-operation-procedure-2075-with-5th-ammendment",
+      "asOf": "2024-12-25",
+      "note": "Contribution-based: employee 11% plus employer 20% of basic salary (31%), of which 28.33% goes to the old-age protection scheme; pension from 60 after 180 months of contributions. Procedure amended December 2024, older than 2025 but still in force."
     }
   },
   "instruments": {
@@ -460,26 +462,25 @@
       "available": true,
       "localName": "बचत खाता",
       "localNameEn": "Savings account",
-      "sourceUrl": "https://nepsetrading.com/news/nimb-new-interest-rates-on-deposits-and-loans?lang=np"
+      "sourceUrl": "https://www.nrb.org.np/cmfm_rates/lending_rates"
     },
     "fdr_3m": {
       "available": true,
       "localName": "मुद्दती निक्षेप",
       "localNameEn": "Fixed deposit",
-      "sourceUrl": "https://nepsetrading.com/news/nimb-new-interest-rates-on-deposits-and-loans?lang=np"
+      "sourceUrl": "https://www.nrb.org.np/cmfm_rates/lending_rates"
     },
     "fdr_1y": {
       "available": true,
       "localName": "मुद्दती निक्षेप",
       "localNameEn": "Fixed deposit",
-      "sourceUrl": "https://nepsetrading.com/news/nimb-new-interest-rates-on-deposits-and-loans?lang=np"
+      "sourceUrl": "https://www.nrb.org.np/cmfm_rates/lending_rates"
     },
     "dps": {
       "available": true,
       "localName": "आवधिक बचत",
       "localNameEn": "Recurring deposit",
-      "note": "Recurring deposits are offered for terms of about 1 to 5 years",
-      "sourceUrl": "https://nepsetrading.com/news/nimb-new-interest-rates-on-deposits-and-loans?lang=np"
+      "note": "Recurring deposits are offered for terms of about 1 to 5 years"
     },
     "sanchayapatra_5y": {
       "available": true,
@@ -493,7 +494,7 @@
       "localName": "ट्रेजरी बिल",
       "localNameEn": "Treasury bill",
       "note": "Auctioned by Nepal Rastra Bank; bought mostly by banks and financial institutions",
-      "sourceUrl": "https://www.nrb.org.np/red/current-macroeconomic-and-financial-situation-english-based-on-two-months-data-of-2026-27/"
+      "sourceUrl": "https://www.nrb.org.np/contents/uploads/2026/10/Current-Macroeconomic-and-Financial-Situation-English-Based-on-Two-Months-data-of-2026.27.pdf"
     },
     "tbond_5y": {
       "available": true,

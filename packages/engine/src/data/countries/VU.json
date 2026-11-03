@@ -47,7 +47,7 @@
       "sourceName": "IMF 2025 Article IV staff report (RBV policy rate)",
       "sourceUrl": "https://www.imf.org/-/media/files/publications/cr/2025/english/1vutea2025001-source-pdf.pdf.md",
       "asOf": "2025-08-12",
-      "note": "RBV policy rate unchanged at 2.75% since tightening in 2024Q3; RBV site was not reachable (certificate error), so a secondary source is used and a later change cannot be ruled out."
+      "note": "RBV policy rate unchanged at 2.75% since tightening in 2024Q3 (IMF, data to August 2025); RBV site was not reachable (certificate error), so a later change cannot be ruled out."
     },
     "savings_account_rate": {
       "value": null,
@@ -263,7 +263,7 @@
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=VU",
       "asOf": "2023-12-31",
-      "note": "8.4% for 2023."
+      "note": "8.4% for 2023, the latest World Bank value; older than 2025."
     },
     "goal_inflation_health": {
       "value": 0.05,
@@ -282,12 +282,12 @@
       "note": "Education CPI rose 7.8% in the year to June 2026 (school fees), so we plan 2 points above general inflation."
     },
     "life_expectancy": {
-      "value": 71.7,
+      "value": 72.0,
       "status": "sourced",
-      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
-      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=VU",
-      "asOf": "2024-12-31",
-      "note": "Men 69.6, women 74.1 (2024)."
+      "sourceName": "UN World Population Prospects (via georank.org)",
+      "sourceUrl": "https://georank.org/life-expectancy/vanuatu",
+      "asOf": "2026-07-08",
+      "note": "Men 69.9, women 74.5 (2026 estimate); secondary source. World Bank gives 71.7 for 2024."
     },
     "life_table_remaining": {
       "value": null,
@@ -451,29 +451,26 @@
       "sourceName": "Vanuatu National Provident Fund, Withdrawals and Voluntary Membership pages",
       "sourceUrl": "https://www.vnpf.com.vu/withdrawals.html",
       "asOf": "2026-10-31",
-      "note": "VNPF is a provident fund paying a lump sum at 55, not an annuity; voluntary members can join from age 10 with VT 1,000 a month; interest is declared yearly (5% recently quoted on the VNPF site)."
+      "note": "VNPF is a provident fund: members withdraw their savings at 55 (up to 50% at 47); no annuity is described. Voluntary members can join from age 10 with VT 1,000 a month; interest is declared yearly."
     }
   },
   "instruments": {
     "savings_account": {
       "available": true,
       "localName": null,
-      "localNameEn": "Savings account",
-      "sourceUrl": "https://www.bsp.com.vu/personal-banking/savings-accounts-term-deposits/"
+      "localNameEn": "Savings account"
     },
     "fdr_3m": {
       "available": true,
       "localName": null,
       "localNameEn": "Term deposit",
-      "note": "Banks offer terms from one month to one year.",
-      "sourceUrl": "https://www.bsp.com.vu/personal-banking/savings-accounts-term-deposits/term-deposit/"
+      "note": "Banks offer terms from one month to one year."
     },
     "fdr_1y": {
       "available": true,
       "localName": null,
       "localNameEn": "Term deposit",
-      "note": "Banks offer terms from one month to one year.",
-      "sourceUrl": "https://www.bsp.com.vu/personal-banking/savings-accounts-term-deposits/term-deposit/"
+      "note": "Banks offer terms from one month to one year."
     },
     "dps": {
       "available": false,

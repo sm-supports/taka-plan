@@ -54,8 +54,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Maltese banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average 0.07% on household overnight deposits in August 2026; deposits redeemable at up to 3 months' notice paid 1.74%."
+      "asOf": "2026-09-30",
+      "note": "Average 0.07% on household overnight deposits in September 2026 (also 0.07% in July and August)."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -63,15 +63,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/Central Bank of Malta MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.24% in August 2026); no 3-month rate was found."
+      "note": "ECB/Central Bank of Malta MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.39% in September 2026); no separate 3-month rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0224,
+      "value": 0.0239,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Maltese banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (1.99% in June, 2.12% in July 2026)."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year: 2.39% in September 2026 (2.13% in July, 2.24% in August)."
     },
     "dps_rate": {
       "value": null,
@@ -82,12 +82,12 @@
       "note": "No monthly recurring deposit product with a published average rate was found for Malta."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0207,
+      "value": 0.0208,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Maltese banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST has no Malta figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, 2.08% in September 2026 (2.05% in August); World Bank FR.INR.DPST has no Malta figure."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -164,10 +164,10 @@
     "equity_return_base": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "MSE Share Index (Trading Economics); 1-year deposit 2.24% less an assumed 15% tax = 1.9%",
+      "sourceName": "MSE Share Index (Trading Economics); 1-year deposit 2.39% less 15-25% tax = about 1.8-2.0%",
       "sourceUrl": "https://tradingeconomics.com/malta/stock-market",
       "asOf": "2026-10-31",
-      "note": "Base case kept within about 3 points of the after-tax safe rate because the local index has a weak 10-year record; most savers would use a diversified euro equity fund."
+      "note": "Base case about 3 points above the after-tax safe rate because the local index has a weak 10-year record (still far below its 2020 high); most savers would use a diversified euro equity fund."
     },
     "equity_return_high": {
       "value": 0.075,
@@ -204,7 +204,7 @@
     "fixed_income_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.24% (Aug 2026) less an assumed 15% final tax, with ECB rates able to fall",
+      "sourceName": "Household deposits up to 1 year 2.39% (Sep 2026) less 15-25% tax, with ECB rates able to fall",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposits after tax if rates fall back."
@@ -212,15 +212,15 @@
     "fixed_income_return_base": {
       "value": 0.022,
       "status": "assumption",
-      "sourceName": "Deposits up to 1 year 2.24% and 10-year government bond 4.19%, both less an assumed 15% tax",
+      "sourceName": "Deposits up to 1 year 2.39% and 10-year government bond 4.19%, both less 15-25% tax",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case: mostly term deposits at about 1.9% after tax, with some Malta Government Stocks."
+      "note": "Base case: mostly term deposits at about 1.8-2.0% after tax, with some Malta Government Stocks at about 3.1-3.6% after tax; the tax on interest is unconfirmed (PwC's withholding table shows 25%, the usual final withholding is 15%)."
     },
     "fixed_income_return_high": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "Malta 10-year government bond 4.19% (Sep 2026) less an assumed 15% tax = 3.6%",
+      "sourceName": "Malta 10-year government bond 4.19% (Sep 2026) less 15-25% tax = 3.1-3.6%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.MT.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: holding long Malta Government Stocks."
@@ -286,8 +286,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/malta",
-      "asOf": "2026-12-31",
-      "note": "Men 81.9, women 85.6 (UN WPP estimate for 2026); World Bank 2024 figure 83.0."
+      "asOf": "2026-07-01",
+      "note": "Men 81.9, women 85.6 (UN WPP estimate for 2026, mid-year); World Bank 2024 figure 83.0. Re-checked on georank 2026-11-03."
     },
     "life_table_remaining": {
       "value": null,
@@ -322,7 +322,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/malta",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
     },
     "support_ratio": {
@@ -355,36 +355,36 @@
       "sourceName": "European Commission, Your social security rights in Malta (July 2026)",
       "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/b920adf8-38c1-4a1c-9579-7f8a62bc6ef6_en",
       "asOf": "2026-07-31",
-      "note": "Pensionable age is 65 for everyone born on or after 1 January 1962, men and women; early pension from 61 needs 42 years of contributions (35 paid) for those born from 1976."
+      "note": "Pensionable age is 65 for everyone born on or after 1 January 1962, men and women (so 65 for anyone born after 1975); early pension from 61 needs 42 years of contributions (35 paid) for those born from 1976."
     },
     "retirement_age_government": {
-      "value": 65,
-      "status": "sourced",
-      "sourceName": "European Commission, Your social security rights in Malta (July 2026)",
-      "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/b920adf8-38c1-4a1c-9579-7f8a62bc6ef6_en",
-      "asOf": "2026-07-31",
-      "note": "Public employees are insured under the same Social Security Act two-thirds pension, so the same pensionable age of 65 applies; the guide does not give a separate civil-service age, and older Treasury service pensions apply only to long-serving staff."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The European Commission guide gives no separate retirement age for public employees (it mentions Service Pensions only in passing); no official public-service retirement rule could be read (gov.mt pages refused automated access). Public employees in the Social Security Act scheme reach pensionable age at 65 like everyone else."
     },
     "retirement_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.24% less an assumed 15% tax, with rates able to fall",
+      "sourceName": "Household deposits up to 1 year 2.39% less 15-25% tax, with rates able to fall",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: bank deposits after tax if ECB rates fall."
     },
     "retirement_return_base": {
-      "value": 0.019,
+      "value": 0.018,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.24% (Aug 2026) less an assumed 15% tax = 1.9%",
+      "sourceName": "Household deposits up to 1 year 2.39% (Sep 2026) less 15-25% tax = 1.8-2.0%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate, as no treasury bill yield was found."
+      "note": "Base case capped at the after-tax 1-year term deposit rate under the higher 25% tax reading, as no treasury bill yield was found and the tax on interest is unconfirmed (PwC's withholding table shows 25%, the usual final withholding is 15%)."
     },
     "retirement_return_high": {
       "value": 0.032,
       "status": "assumption",
-      "sourceName": "Malta 10-year government bond 4.19% less an assumed 15% tax = 3.6%",
+      "sourceName": "Malta 10-year government bond 4.19% less 15-25% tax = 3.1-3.6%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.MT.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of Malta Government Stocks and retail savings bonds, below the current after-tax 10-year yield."
@@ -392,7 +392,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.9%; MSE index weak record",
+      "sourceName": "After-tax 1-year deposit about 1.8-2.0%; MSE index weak record",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -400,7 +400,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "After-tax deposits 1.9%, government bonds 3.6%; equity base 5%",
+      "sourceName": "After-tax deposits about 1.8-2.0%, government bonds 3.1-3.6%; equity base 5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.MT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: roughly half shares at 5% and half deposits and bonds at about 2-3.5% after tax."
@@ -408,7 +408,7 @@
     "retirement_accumulation_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "10-year bond 3.6% after tax; equity high 7.5%",
+      "sourceName": "10-year bond 3.1-3.6% after tax; equity high 7.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.MT.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
@@ -457,7 +457,7 @@
       "sourceName": "European Commission, Your social security rights in Malta (July 2026)",
       "sourceUrl": "https://employment-social-affairs.ec.europa.eu/document/download/b920adf8-38c1-4a1c-9579-7f8a62bc6ef6_en",
       "asOf": "2026-07-31",
-      "note": "Contributory two-thirds Retirement Pension under the Social Security Act (employee and employer 10% each in 2026 per PwC), based on the best 10 of the last 41-42 years; the guide says pensions get yearly cost-of-living increases (survivors') and invalidity rates follow cost of living and income."
+      "note": "Contributory two-thirds Retirement Pension under the Social Security Act (employee and employer 10% each in 2026 per PwC), from age 65 for those born from 1962, based on the best 10 of the last 41-42 years. Inflation-linked is inferred: the guide states yearly cost-of-living increases for survivors' pensions (two-thirds of the retirement pension) and invalidity pensions, but does not say so for the retirement pension in words."
     }
   },
   "instruments": {

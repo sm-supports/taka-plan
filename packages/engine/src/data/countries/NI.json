@@ -31,7 +31,7 @@
       "sourceName": "INIDE, Nota de prensa: Índice de Precios al Consumidor, julio 2026",
       "sourceUrl": "https://www.inide.gob.ni/docs/ipc/ipc_2026/ipc_jul26/Nota_de_Prensa_de_Inflaci%c3%b3n_julio_2026.pdf",
       "asOf": "2026-07-31",
-      "note": "Year-on-year CPI inflation 4.0% in July 2026 (0.64% a year earlier); core 2.84% (published 13 August 2026). Later monthly notes could not be reached; World Bank 2025 average 2.08%."
+      "note": "Year-on-year CPI inflation 4.0% in July 2026 (0.64% a year earlier); core 2.84% (INIDE press note of 13 August 2026). The August and September notes were not found at INIDE; Trading Economics also shows July 2026 (4.0%) as the latest. World Bank 2025 average 2.08%."
     },
     "inflation_projection": {
       "value": 0.04,
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NI",
       "asOf": "2024-12-31",
-      "note": "Men 72.5, women 77.6 (2024)."
+      "note": "Men 72.5, women 77.6 (2024; latest World Bank figure, older than 2025)."
     },
     "life_table_remaining": {
       "value": null,

@@ -37,7 +37,7 @@
       "value": 0.08,
       "status": "assumption",
       "sourceName": "NBU 5% inflation target; IMF WEO path for Ukraine (8.9% 2026, 5.0% 2030); 2021-2025 average about 12%",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/TKM/TUR/UKR",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/UKR",
       "asOf": "2026-10-31",
       "note": "The NBU targets 5% and the IMF projects a return to 5% by 2030, but wartime inflation averaged about 12% in 2021-2025 and is 10% now, so 8% is used between the target and the record."
     },
@@ -355,7 +355,7 @@
       "sourceName": "Pension Fund of Ukraine, conditions for an old-age pension",
       "sourceUrl": "https://www.pfu.gov.ua/33642-umovy-pryznachennya/",
       "asOf": "2026-01-01",
-      "note": "Pension at 60 with at least 33 years of insurance record in 2026, rising one year each year to 35 years from 2028; otherwise at 63 with a shorter record (25 years for those turning 60 in 2026) or at 65 with at least 15 years. Same ages for men and women."
+      "note": "Pension at 60 with at least 33 years of insurance record in 2026, rising one year each year to 35 years from 2028 (Law 1058-IV, Article 26); otherwise at 63 with at least 23 years in 2026 (25 from 2028) or at 65 with at least 15 years. Same ages for men and women; someone born after 1975 reaches 60 after 2028 and needs 35 years for a pension at 60."
     },
     "retirement_age_government": {
       "value": 65,

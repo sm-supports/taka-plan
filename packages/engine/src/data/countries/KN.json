@@ -16,10 +16,10 @@
     "usdRate": {
       "value": 2.7,
       "status": "sourced",
-      "sourceName": "ECCB Monetary Council, communique of the 113th meeting (10 July 2026), reported by Discover MNI",
-      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
-      "asOf": "2026-07-10",
-      "note": "Fixed exchange rate of EC$2.70 per US dollar, in place for 50 years; the 114th communique (30 October 2026) says the EC dollar remains strong and stable; World Bank PA.NUS.FCRF gives 2.7 for 2025."
+      "sourceName": "World Bank WDI PA.NUS.FCRF (official exchange rate)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KN",
+      "asOf": "2025-12-31",
+      "note": "Fixed peg of EC$2.70 per US dollar since 1976; the ECCB Monetary Council's 113th communique (July 2026) marked the peg's 50th anniversary."
     }
   },
   "fields": {
@@ -45,7 +45,7 @@
       "sourceName": "ECCB Monetary Council, communique of the 114th meeting (30 October 2026)",
       "sourceUrl": "https://www.eccb-centralbank.org/news/communique-114th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank",
       "asOf": "2026-10-30",
-      "note": "ECCB discount rate kept at 3.0% for short-term credit (4.5% long-term); applies to all ECCU members including St Kitts and Nevis."
+      "note": "ECCB discount rate kept at 3.0% for short-term credit (4.5% long-term), unchanged from the 113th meeting (July 2026); applies to all ECCU members including St Kitts and Nevis."
     },
     "savings_account_rate": {
       "value": 0.0215,
@@ -53,7 +53,7 @@
       "sourceName": "ECCB statistics: interest rates and weighted average rates on deposits, St Kitts and Nevis",
       "sourceUrl": "https://www.eccb-centralbank.org/statistics-category/mfs-interest-rates/interest-rates-and-weighted-averages-rates-on-deposits-and-loans/q?country_code%5B%5D=6",
       "asOf": "2026-06-30",
-      "note": "Weighted average rate on local-currency savings deposits, June 2026 (posted range 2.00-2.75%; ECCB minimum savings rate 2%)."
+      "note": "Weighted average rate on local-currency savings deposits, June 2026 (posted range 2.00-2.75%; ECCB minimum savings rate 2%). On re-check (November 2026) the ECCB statistics pages refused automated access; World Bank FR.INR.DPST gives 2.15% for 2025."
     },
     "fdr_3m_rate": {
       "value": 0.02,
@@ -101,7 +101,7 @@
       "sourceName": "Household Savings Bond prospectus, Appendix III: outstanding Government securities (91-day T-bill)",
       "sourceUrl": "https://www.ecseonline.com/wp-content/uploads/2026/10/Government_of_St_Kitts_and_Nevis_Household_Savings_Bond-v2.cleaned.pdf",
       "asOf": "2025-10-28",
-      "note": "Government of St Kitts and Nevis 91-day over-the-counter Treasury bill at 3.75% (issued 28 October 2025); 182-day bills 3.85% and 365-day bills 4.00%. Bills are rolled over at set rates; no later 91-day rate was found."
+      "note": "Government of St Kitts and Nevis 91-day over-the-counter Treasury bill at 3.75% (issued 28 October 2025); 182-day bills 3.85% and 365-day bills 4.00%. Bills are rolled over at set rates; no later 91-day rate was found (figure from 2025)."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -120,12 +120,12 @@
       "note": "No current 10-year Government of St Kitts and Nevis bond yield is published; the prospectus lists only a 20-year US-dollar bond (2032) and a 45-year bond (2057) from 2012."
     },
     "tax_bank_interest": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "value": 0,
+      "status": "sourced",
+      "sourceName": "St Kitts and Nevis Inland Revenue Department: Corporate Income Tax page",
+      "sourceUrl": "https://www.sknird.com/corporate-income-tax/",
       "asOf": "2026-10-31",
-      "note": "St Kitts and Nevis collects withholding taxes and corporate income tax, but no readable official source on how bank interest received by resident individuals is taxed was found (Inland Revenue site unreachable; PwC has no St Kitts and Nevis summary)."
+      "note": "The Inland Revenue Department states that income tax on individuals was abolished in 1980, so resident individuals pay no income tax on bank interest; withholding tax rules for non-residents were not checked."
     },
     "tax_sanchayapatra_profit": {
       "value": 0,
@@ -178,24 +178,24 @@
     "gold_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate",
-      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "sourceName": "World Bank PA.NUS.FCRF: EC$2.70 per US$1 (fixed peg)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KN",
       "asOf": "2026-10-31",
       "note": "Low case: weak dollar gold price; the 50-year peg means no currency boost."
     },
     "gold_return_base": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate",
-      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "sourceName": "World Bank PA.NUS.FCRF: EC$2.70 per US$1 (fixed peg)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KN",
       "asOf": "2026-10-31",
       "note": "Long-run dollar gold trend of about 4-5% a year, with no expected depreciation of the pegged EC dollar."
     },
     "gold_return_high": {
       "value": 0.08,
       "status": "assumption",
-      "sourceName": "ECCB: EC$2.70 per US$1 fixed exchange rate",
-      "sourceUrl": "https://discovermni.com/2026/07/13/communique-of-the-113th-meeting-of-the-monetary-council-of-the-eastern-caribbean-central-bank/",
+      "sourceName": "World Bank PA.NUS.FCRF: EC$2.70 per US$1 (fixed peg)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=KN",
       "asOf": "2026-10-31",
       "note": "High case with strong dollar gold prices."
     },
@@ -524,8 +524,8 @@
     },
     "insuranceComplaints": {
       "name": "Financial Services Regulatory Commission (FSRC), St Kitts and Nevis",
-      "url": "https://www.fsrc.kn/",
-      "note": "No separate insurance ombudsman; complaints go to the FSRC."
+      "url": "https://www.fsrc.kn/contact",
+      "note": "No separate insurance ombudsman or complaints form; contact the FSRC."
     },
     "pensionScheme": {
       "name": "St Christopher and Nevis Social Security Board",

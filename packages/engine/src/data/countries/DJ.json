@@ -22,17 +22,17 @@
       "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Djibouti",
       "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DJ",
       "asOf": "2025-12-31",
-      "note": "The franc is fixed at 177.721 per US dollar under a currency board; the Banque Centrale de Djibouti site shows the same parity. CLDR gives no narrow symbol; 'Fdj' is the local abbreviation."
+      "note": "The franc has been fixed to the US dollar under a currency board since 1949, and the parity has not changed since 1973. The Banque Centrale de Djibouti currency-board page states the historical 1949 parity, not the current rate, so the World Bank figure of 177.721 is used. CLDR gives no narrow symbol; 'Fdj' is the local abbreviation."
     }
   },
   "fields": {
     "inflation_cpi": {
-      "value": 0.019,
+      "value": 0.009,
       "status": "sourced",
-      "sourceName": "Trading Economics, citing the National Institute of Statistics of Djibouti (INSTAD), CPI August 2026",
+      "sourceName": "Trading Economics, citing the National Institute of Statistics of Djibouti (INSTAD), CPI September 2026",
       "sourceUrl": "https://tradingeconomics.com/djibouti/inflation-cpi",
-      "asOf": "2026-08-31",
-      "note": "Consumer prices up 1.9% year on year in August 2026 (3.8% in July); secondary source because the INSTAD site loads its data by script. World Bank 2025 average -0.3%."
+      "asOf": "2026-09-30",
+      "note": "Consumer prices up 0.9% year on year in September 2026 (1.9% in August). This is a secondary source because the INSTAD site loads its data by script. World Bank 2025 average: -0.3%."
     },
     "inflation_projection": {
       "value": 0.025,
@@ -351,12 +351,12 @@
       "note": "100 / old-age dependency ratio: 7.51 (2025, World Bank), 11.8 (2040) and 18.6 (2065, populationpyramid.net/djibouti/2065/)."
     },
     "retirement_age_default": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), normal retirement pension conditions",
+      "sourceUrl": "https://cnss.dj/pensions-de-retraite-normale/",
       "asOf": "2026-10-31",
-      "note": "The pension age of the Caisse Nationale de Sécurité Sociale (CNSS) could not be confirmed; its site could not be reached."
+      "note": "Normal pension at 60 full years. People born in 1951 or later need 25 years of contributions. The pension is based on the average capped salary of the last 10 years and pays 30-81% of declared salary. An early pension from age 50 is paid only for work accidents or unfitness for work."
     },
     "retirement_age_government": {
       "value": null,
@@ -440,11 +440,19 @@
     },
     "public_pension_scheme": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Caisse Nationale de Sécurité Sociale (CNSS), normal retirement pension conditions",
+      "sourceUrl": "https://cnss.dj/pensions-de-retraite-normale/",
       "asOf": "2026-10-31",
-      "note": "A contributory pension is run by the Caisse Nationale de Sécurité Sociale (CNSS), but its pension age and indexation rules could not be read (site unreachable)."
+      "note": "Compulsory contributory pension for salaried workers, run by the CNSS. It pays from 60 after 25 years of contributions (for people born in 1951 or later). For years from 2007 it accrues 1.5% a year of the last-10-year average capped salary. The CNSS page states no automatic indexation, so inflationLinked is false (conservative); tax treatment unknown."
     }
   },
   "instruments": {
@@ -518,12 +526,12 @@
     "insuranceComplaints": null,
     "pensionScheme": {
       "name": "National Social Security Fund (Caisse Nationale de Sécurité Sociale, CNSS)",
-      "url": "https://www.cnss.dj/"
+      "url": "https://cnss.dj/"
     },
     "oldAgeAllowance": null,
     "publicHealthCover": {
-      "name": "Universal Health Insurance (Assurance Maladie Universelle), run by the CNSS; public care through the Ministry of Health",
-      "url": "https://www.sante.gouv.dj/"
+      "name": "Universal Health Insurance (Assurance Maladie Universelle, AMU), run by the CNSS, with the PASS solidarity scheme for people without income",
+      "url": "https://cnss.dj/assurance-maladie-universelle/"
     },
     "depositInsurance": null,
     "statistics": {

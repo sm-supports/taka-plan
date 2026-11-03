@@ -20,7 +20,7 @@
       "sourceName": "Banco Central del Paraguay, reference exchange rate (non-financial clients market), close 30 October 2026",
       "sourceUrl": "https://www.bcp.gov.py/webapps/web/cotizacion/referencial-fluctuante",
       "asOf": "2026-10-30",
-      "note": "Mid of the closing buy 5,910.01 and sell 5,929.37 guaranies per dollar; the guarani appreciated sharply in 2026 (World Bank average 7,545 for 2025)."
+      "note": "Mid of the closing buy 5,910.01 and sell 5,929.37 guaranies per dollar on 30 October 2026. On re-check (3 November 2026) the BCP page only showed the 2 November close (about 5,965-5,981) and Trading Economics gave 5,917 on 3 November, consistent with this level; the guarani appreciated sharply in 2026 (World Bank average 7,545 for 2025)."
     }
   },
   "fields": {
@@ -126,7 +126,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Paraguay individual taxes on personal income (reviewed 19 October 2026)",
       "sourceUrl": "https://taxsummaries.pwc.com/paraguay/individual/taxes-on-personal-income",
       "asOf": "2026-10-19",
-      "note": "Personal income tax (IRP) on capital income is 8%, and PwC lists interest on deposits among capital income; PwC lists no exemption for deposit interest, but special exemptions in Law 6380/2019 could not be checked (tax authority site unreachable)."
+      "note": "PwC lists interest on money deposits among capital income (rentas del capital), whose personal income tax (IRP) rate is 8%; exemptions in Law 6380/2019 (e.g. for some securities) could not be checked because the tax authority site was unreachable."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -362,7 +362,7 @@
       "sourceName": "Ministerio de Economia y Finanzas, Caja Fiscal presentation (January 2026): ordinary retirement parameters by sector",
       "sourceUrl": "https://www.mef.gov.py/sites/default/files/2026-01/PresCajaFiscal.pdf",
       "asOf": "2026-01-01",
-      "note": "General public administration (Caja Fiscal): minimum age 62 with 20-40 years of contributions (47-100% replacement); the 2026 reform (Law 7633/2026) kept these parameters and set 57 for teachers, police and military."
+      "note": "General public administration (Caja Fiscal): minimum ordinary retirement age 62 with 20-40 years of contributions (47-100% replacement). A January 2026 reform bill proposes uniform rules (62 with 30 years); whether it has been enacted was not confirmed."
     },
     "retirement_return_low": {
       "value": 0.035,
@@ -456,7 +456,7 @@
         "inflationLinked": false,
         "taxFree": null
       },
-      "note": "IPS compulsory contributory scheme for private employees: ordinary pension at 60 with 25 years of contributions (100% of the reference wage). Automatic indexation and tax treatment could not be confirmed (IPS site unreachable), so inflationLinked is set false."
+      "note": "IPS compulsory contributory scheme for private employees: ordinary pension at 60 with 25 years of contributions (100% of the reference wage); early pension from 55 with 30 years. Automatic indexation and tax treatment could not be confirmed (IPS site unreachable), so inflationLinked is set false; a 2026 reform bill proposes indexing public-sector pensions to the minimum wage."
     }
   },
   "instruments": {

@@ -20,17 +20,17 @@
       "sourceName": "National Reserve Bank of Tonga daily exchange rates (USD/TOP mid 0.4175)",
       "sourceUrl": "https://www.reservebank.to/index.php/financial-system/financial-markets/exchange-rates",
       "asOf": "2026-10-30",
-      "note": "TOP 1 = USD 0.4175, so TOP 2.40 per US dollar."
+      "note": "TOP 1 = USD 0.4175 on 30 October 2026, so TOP 2.40 per US dollar; the same page showed 0.4170 on 1 November 2026 and NRBT Monetary Policy Data gives 0.4185 for July 2026."
     }
   },
   "fields": {
     "inflation_cpi": {
       "value": 0.121,
       "status": "sourced",
-      "sourceName": "Tonga Statistics Department (headline annual inflation)",
-      "sourceUrl": "https://tongastats.gov.to/",
+      "sourceName": "Tonga Statistics Department, Statistical Bulletin: Consumer Price Index September 2026",
+      "sourceUrl": "https://tongastats.gov.to/download/498/2026/13851/cpi-report-september-2026.pdf",
       "asOf": "2026-09-30",
-      "note": "Annual inflation 12.1% in September 2026; NRBT reports 9.3% in July 2026, driven by imported fuel and domestic food prices."
+      "note": "All-items CPI 146.3 in September 2026 vs 130.6 a year earlier: 12.1% annual inflation (12.0% in August, 9.3% in July), led by food, transport, housing and restaurants."
     },
     "inflation_projection": {
       "value": 0.05,
@@ -38,7 +38,7 @@
       "sourceName": "NRBT 5% inflation reference rate (press release 27 August 2026)",
       "sourceUrl": "https://www.reservebank.to/index.php/news/public-notice-tonga-maintains-neutral-stance-while-strengthening-monetary-policy-transmission",
       "asOf": "2026-10-31",
-      "note": "The NRBT steers by a 5% inflation reference rate and recent inflation has swung between about 2% and 12%, so we plan with the 5% reference."
+      "note": "The NRBT steers by a 5% inflation reference rate; annual inflation ran 2-5.5% in 2025 before a fuel and food spike to 12.1% in September 2026, so we plan with the 5% reference."
     },
     "policy_rate": {
       "value": 0.02,
@@ -265,18 +265,18 @@
     "goal_inflation_health": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "NRBT 5% inflation reference rate; no medical sub-index found",
-      "sourceUrl": "https://www.reservebank.to/index.php/news/public-notice-tonga-maintains-neutral-stance-while-strengthening-monetary-policy-transmission",
+      "sourceName": "NRBT 5% inflation reference rate; Tonga CPI September 2026 (health group 0.0% y/y)",
+      "sourceUrl": "https://tongastats.gov.to/download/498/2026/13851/cpi-report-september-2026.pdf",
       "asOf": "2026-10-31",
-      "note": "No medical CPI figure was found, so we plan with the 5% headline projection plus one point."
+      "note": "The September 2026 CPI health group was flat year on year (weight 0.2%) but that index is too small to plan with, so we use the 5% headline projection plus one point."
     },
     "goal_inflation_education": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "NRBT 5% inflation reference rate; no education sub-index found",
-      "sourceUrl": "https://www.reservebank.to/index.php/news/public-notice-tonga-maintains-neutral-stance-while-strengthening-monetary-policy-transmission",
+      "sourceName": "NRBT 5% inflation reference rate; Tonga CPI September 2026 (education group +4.0% y/y)",
+      "sourceUrl": "https://tongastats.gov.to/download/498/2026/13851/cpi-report-september-2026.pdf",
       "asOf": "2026-10-31",
-      "note": "No education CPI figure was found, so we plan with the 5% headline projection plus half a point."
+      "note": "Education prices rose 4.0% year on year in the September 2026 CPI; we plan with the 5% headline projection plus half a point."
     },
     "life_expectancy": {
       "value": 73.07,
@@ -319,8 +319,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/tonga/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026 (rows 60-64, 65-69, 70-74, 80-84); totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -344,15 +344,15 @@
       "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
       "sourceUrl": "https://www.populationpyramid.net/tonga/2040/",
       "asOf": "2025-12-31",
-      "note": "100 / old-age dependency ratio: 11.76 (2025, World Bank), 16.1 (2040) and 14.1 (2065, populationpyramid.net/tonga/2065/)."
+      "note": "100 / old-age dependency ratio: 11.76 (2025, World Bank) gives 8.5; populationpyramid.net (UN WPP 2024) gives 16.1 for 2040 (6.2) and 14.1 for 2065 (7.1, populationpyramid.net/tonga/2065/)."
     },
     "retirement_age_default": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "National Retirement Benefits Fund (NRBF)",
-      "sourceUrl": "https://www.nrbf.to/",
+      "sourceName": "National Retirement Benefits Fund (NRBF), Our Services",
+      "sourceUrl": "https://www.nrbf.to/services.php",
       "asOf": "2026-10-31",
-      "note": "NRBF retirement benefit is paid when a member aged 60-70 stops work; no separate statutory private-sector retirement age was found."
+      "note": "NRBF normal retirement: member must be 60 and no longer employed (benefit available between 60 and 70); no separate statutory private-sector retirement age was found."
     },
     "retirement_age_government": {
       "value": null,
@@ -411,20 +411,26 @@
       "note": "High case with a larger, well-performing global equity share."
     },
     "old_age_allowance_monthly": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "value": 90,
+      "status": "sourced",
+      "sourceName": "National Retirement Benefits Fund (administers the Government Social Welfare Scheme), Our Services",
+      "sourceUrl": "https://www.nrbf.to/services.php",
       "asOf": "2026-10-31",
-      "note": "Tonga runs a Social Welfare Scheme for the elderly (payments shown on the NRBF welfare page), but no official page stating the current monthly amount was readable."
+      "note": "Social Welfare Scheme pays TOP 90 a month at ages 67-79 and TOP 110 from 80, to Tongan citizens living in Tonga (registered after 3 months' residence); paid monthly until death. Eligibility rule effective 1 July 2024."
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "valueJson": {
+        "menAge": 67,
+        "womenAge": 67,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "National Retirement Benefits Fund (administers the Government Social Welfare Scheme), Our Services",
+      "sourceUrl": "https://www.nrbf.to/services.php",
       "asOf": "2026-10-31",
-      "note": "The eligibility age for Tonga's elderly welfare scheme was not stated on any official page we could read."
+      "note": "From 1 July 2024 every Tongan citizen aged 67+ may register regardless of work income or other pensions (not means-tested); higher rate of TOP 110 from age 80, no separate over-90 rate."
     },
     "gratuity_rule": {
       "value": null,
@@ -445,10 +451,10 @@
         "taxFree": null
       },
       "status": "sourced",
-      "sourceName": "National Retirement Benefits Fund (NRBF)",
-      "sourceUrl": "https://www.nrbf.to/",
+      "sourceName": "National Retirement Benefits Fund (NRBF), Our Services",
+      "sourceUrl": "https://www.nrbf.to/services.php",
       "asOf": "2026-10-31",
-      "note": "Defined-contribution fund for employees aged 18-70: 5% employee plus 7.5% employer; benefits from 60 as lump sum, instalments or both; voluntary contributors allowed."
+      "note": "Defined-contribution fund for private-sector employees: 5% employee plus at least 7.5% employer; normal retirement benefit from 60 once employment ends; voluntary contributors allowed. Membership ages 18-70 per the NRBF information guide on nrbf.to."
     }
   },
   "instruments": {
@@ -523,8 +529,8 @@
       "url": "https://www.nrbf.to/"
     },
     "oldAgeAllowance": {
-      "name": "Social Welfare Scheme for the elderly (payments via NRBF)",
-      "url": "https://www.nrbf.to/welfare.php"
+      "name": "Social Welfare Scheme (Government of Tonga, administered by NRBF)",
+      "url": "https://www.nrbf.to/services.php"
     },
     "publicHealthCover": {
       "name": "Ministry of Health (public hospitals)",

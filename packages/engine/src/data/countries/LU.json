@@ -52,12 +52,12 @@
       "note": "Luxembourg uses the euro; ECB deposit facility rate 2.50% since 16 September 2026 (2.25% from June 2026), confirmed in the ECB FM dataset on 31 October 2026."
     },
     "savings_account_rate": {
-      "value": 0.006,
+      "value": 0.0062,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, overnight deposits from households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight deposits in Luxembourg, August 2026 (0.59% in July)."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight deposits in Luxembourg, September 2026 (0.60% in August)."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB/BCL MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.00% in August 2026); no separate 3-month term deposit rate was found."
+      "note": "ECB/BCL MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (2.20% in September 2026); no separate 3-month term deposit rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.02,
+      "value": 0.022,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (1.81% in July); 1-2 year deposits paid 2.55% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (2.00% in August); deposits of over 1 and up to 2 years paid 2.68% in September 2026 (ECB MIR M.LU.B.L22.G)."
     },
     "dps_rate": {
       "value": null,
@@ -84,12 +84,12 @@
       "note": "Banks sell monthly savings plans, but no average or official rate for them was found in BCL or ECB statistics."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0194,
+      "value": 0.0206,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits (1.86% in July); household overnight deposits paid 0.60%. World Bank FR.INR.DPST has no Luxembourg figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026 (1.94% in August); household overnight deposits paid 0.62%. World Bank FR.INR.DPST has no Luxembourg figure."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -148,17 +148,17 @@
       "note": "EUR 100,000 per person per bank; certain temporary high balances (property sales, life events) are protected up to EUR 2,500,000."
     },
     "credit_card_rate_cap": {
-      "value": 0.1017,
+      "value": 0.1033,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Luxembourg banks, revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, August 2026."
+      "asOf": "2026-09-30",
+      "note": "Typical rate, not a cap: average rate on household revolving loans, overdrafts and credit card credit, September 2026 (10.17% in August)."
     },
     "equity_return_low": {
       "value": 0.03,
       "status": "assumption",
-      "sourceName": "1-year deposit 2.00% less 20% tax = 1.6% (ECB MFI); long-run euro-area equity returns",
+      "sourceName": "1-year deposit 2.20% less 20% tax = 1.76% (ECB MFI, Sep 2026); long-run euro-area equity returns",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: a diversified euro equity fund earns little more than safe savings over a long period."
@@ -166,7 +166,7 @@
     "equity_return_base": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "1-year deposit 2.00% less 20% tax = 1.6% (ECB MFI) plus an equity premium of about 4 points",
+      "sourceName": "1-year deposit 2.20% less 20% tax = 1.76% (ECB MFI, Sep 2026) plus an equity premium of under 4 points",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "The local LuxX index is tiny and concentrated, so the base uses a diversified euro/global equity fund in euros, capped at the after-tax safe rate plus about 4 points."
@@ -206,24 +206,24 @@
     "fixed_income_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.00% (ECB MFI statistics), assuming rates fall, less 20% withholding",
+      "sourceName": "Household deposits up to 1 year 2.20% (ECB MFI statistics, Sep 2026), assuming rates fall, less 20% withholding",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposit rates drift down towards 1.25% before the 20% withholding."
     },
     "fixed_income_return_base": {
-      "value": 0.016,
+      "value": 0.017,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.00% less 20% withholding = 1.6%",
+      "sourceName": "Household deposits up to 1 year 2.20% less 20% withholding = 1.76% (ECB MFI, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: after-tax 1-year term deposit rate."
     },
     "fixed_income_return_high": {
-      "value": 0.02,
+      "value": 0.021,
       "status": "assumption",
-      "sourceName": "Household deposits 1-2 years 2.55% less 20% withholding = 2.0%",
-      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.H.R.A.2250.EUR.N",
+      "sourceName": "Household deposits over 1 and up to 2 years 2.68% less 20% withholding = 2.1% (ECB MFI, Sep 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.G.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "High case: locking in longer term deposits after tax."
     },
@@ -369,31 +369,31 @@
     "retirement_return_low": {
       "value": 0.01,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.00% (ECB MFI), assuming rates fall, less 20% withholding",
+      "sourceName": "Household deposits up to 1 year 2.20% (ECB MFI, Sep 2026), assuming rates fall, less 20% withholding",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: term deposit rates drift lower."
     },
     "retirement_return_base": {
-      "value": 0.016,
+      "value": 0.017,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.00% less 20% withholding = 1.6%",
+      "sourceName": "Household deposits up to 1 year 2.20% less 20% withholding = 1.76% (ECB MFI, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case capped at the after-tax 1-year term deposit rate."
     },
     "retirement_return_high": {
-      "value": 0.02,
+      "value": 0.021,
       "status": "assumption",
-      "sourceName": "Household deposits 1-2 years 2.55% less 20% withholding = 2.0%",
-      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.H.R.A.2250.EUR.N",
+      "sourceName": "Household deposits over 1 and up to 2 years 2.68% less 20% withholding = 2.1% (ECB MFI, Sep 2026)",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.G.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of longer term deposits after tax."
     },
     "retirement_accumulation_return_low": {
       "value": 0.022,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.6%; equity low 3%",
+      "sourceName": "After-tax 1-year deposit 1.76%; equity low 3%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case for a balanced mix if shares lag."
@@ -401,16 +401,16 @@
     "retirement_accumulation_return_base": {
       "value": 0.035,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 1.6%; equity base 5.5%",
+      "sourceName": "After-tax 1-year deposit 1.76%; equity base 5.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.6-2% after tax."
+      "note": "Base case: roughly half shares at 5.5% and half safe fixed income at about 1.7-2.1% after tax."
     },
     "retirement_accumulation_return_high": {
       "value": 0.048,
       "status": "assumption",
-      "sourceName": "After-tax 1-2 year deposit 2.0%; equity high 7.5%",
-      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.H.R.A.2250.EUR.N",
+      "sourceName": "After-tax 1-2 year deposit 2.1%; equity high 7.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.LU.B.L22.G.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
     },

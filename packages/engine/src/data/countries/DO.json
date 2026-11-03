@@ -52,24 +52,24 @@
       "status": "sourced",
       "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
       "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
-      "asOf": "2026-10-29",
-      "note": "Weighted average rate on savings deposits at multiple banks, average of 1-29 October 2026 (preliminary)."
+      "asOf": "2026-10-30",
+      "note": "Weighted average rate on savings deposits at multiple banks, average of 1-30 October 2026 (preliminary)."
     },
     "fdr_3m_rate": {
-      "value": 0.0742,
+      "value": 0.0743,
       "status": "sourced",
       "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
       "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
-      "asOf": "2026-10-29",
-      "note": "Certificates and time deposits of 61-90 days, weighted average at multiple banks, 1-29 October 2026 (preliminary); 0-30 days 7.68%, 91-180 days 7.22%."
+      "asOf": "2026-10-30",
+      "note": "Certificates and time deposits of 61-90 days, weighted average at multiple banks, 1-30 October 2026 (preliminary); 0-30 days 7.69%, 91-180 days 7.36%."
     },
     "fdr_1y_rate": {
-      "value": 0.0652,
+      "value": 0.0649,
       "status": "sourced",
       "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
       "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
-      "asOf": "2026-10-29",
-      "note": "Certificates and time deposits of 181-360 days, weighted average at multiple banks, 1-29 October 2026 (preliminary); 361 days-2 years 6.28%."
+      "asOf": "2026-10-30",
+      "note": "Certificates and time deposits of 181-360 days, weighted average at multiple banks, 1-30 October 2026 (preliminary); 361 days-2 years 6.30%."
     },
     "dps_rate": {
       "value": null,
@@ -80,12 +80,12 @@
       "note": "The BCRD rate tables have no series for monthly recurring (programmed) savings; no official rate found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0702,
+      "value": 0.0709,
       "status": "sourced",
       "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
       "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
-      "asOf": "2026-10-29",
-      "note": "Weighted average rate on financial certificates and time deposits in pesos at multiple banks, 1-29 October 2026 (preliminary); it fell from about 9.6% in mid-2025."
+      "asOf": "2026-10-30",
+      "note": "Weighted average rate on financial certificates and time deposits in pesos at multiple banks, 1-30 October 2026 (preliminary); it fell from about 9.7% in mid-2025."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -162,7 +162,7 @@
     "equity_return_base": {
       "value": 0.09,
       "status": "assumption",
-      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar); BCRD deposit rates (181-360 days 6.52%, 5.9% after 10% tax)",
+      "sourceName": "World Bank PA.NUS.FCRF (peso per dollar); BCRD deposit rates (181-360 days 6.49%, 5.8% after 10% tax)",
       "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=DO",
       "asOf": "2026-10-31",
       "note": "The local stock market trades almost no shares, so we use a global equity index of about 7% a year in dollars plus about 2% yearly peso depreciation, kept under the after-tax 1-year deposit rate plus 4 points."
@@ -213,7 +213,7 @@
       "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
       "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
       "asOf": "2026-10-31",
-      "note": "Base case: 1-year deposits at 6.5% (5.9% after tax) and BCRD bills at about 8% (7.5% after tax)."
+      "note": "Base case: 1-year deposits at 6.5% (5.8% after tax) and BCRD bills at about 8% (7.5% after tax)."
     },
     "fixed_income_return_high": {
       "value": 0.075,
@@ -260,7 +260,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=DO",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank value is for 2023 (older than 2025; no fresher official figure found)."
     },
     "goal_inflation_health": {
       "value": 0.06,
@@ -284,7 +285,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=DO",
       "asOf": "2024-12-31",
-      "note": "UN WPP 2024 (via populationpyramid.net) gives 74.1 for 2026 (men 70.9, women 77.4)."
+      "note": "2024 World Bank value (older than 2025); UN WPP 2024 (via populationpyramid.net) gives 74.1 for 2026 (men 70.9, women 77.4)."
     },
     "life_table_remaining": {
       "value": null,
@@ -376,7 +377,7 @@
       "sourceName": "Banco Central de la República Dominicana: tasas de interés pasivas de los bancos múltiples (promedio ponderado)",
       "sourceUrl": "https://cdn.bancentral.gov.do/documents/estadisticas/sector-monetario-y-financiero/documents/tbm_pasivad.xlsx",
       "asOf": "2026-10-31",
-      "note": "Base case below the after-tax 1-year deposit rate of about 5.9% (6.52% less 10%)."
+      "note": "Base case below the after-tax 1-year deposit rate of about 5.8% (6.49% less the 10% withholding)."
     },
     "retirement_return_high": {
       "value": 0.07,
@@ -415,8 +416,8 @@
       "status": "sourced",
       "sourceName": "elDinero: solidarity pensions of the subsidised regime (Sistema Dominicano de Seguridad Social)",
       "sourceUrl": "https://eldinero.com.do/?p=347908",
-      "asOf": "2025-09-30",
-      "note": "Secondary source: each solidarity pension pays RD$6,000 a month plus a Christmas payment; granted by decree in limited batches (57,242 beneficiaries by September 2025)."
+      "asOf": "2025-12-23",
+      "note": "Secondary source (published 23 December 2025): each solidarity pension pays RD$6,000 a month plus a Christmas payment; means-tested and granted by decree in limited batches (57,242 beneficiaries by September 2025), so not every eligible person receives it."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -444,7 +445,7 @@
       "sourceName": "Revista Mercado: auxilio de cesantía under art. 80 of the Labour Code (Ley 16-92)",
       "sourceUrl": "https://revistamercado.do/money-invest/republica-dominicana/cesantia-laboral-en-rd-cuanto-te-corresponde-segun-tu-salario-y-antiguedad/",
       "asOf": "2026-02-10",
-      "note": "Secondary source: severance (cesantía) when the employer ends the contract without cause: 21 days' ordinary wage per year for 1-5 years of service and 23 days per year after more than 5 years (shorter scales under 1 year); daily wage = monthly wage / 23.83. Not paid on resignation."
+      "note": "Secondary source: severance (cesantía) when the employer ends the contract without cause: 21 days' ordinary wage per year for 1-5 years of service and 23 days per year after more than 5 years (shorter scales under 1 year); daily wage = monthly wage / 23.83. Not paid on resignation. This is severance on dismissal, not a payment on retirement or resignation."
     },
     "public_pension_scheme": {
       "value": null,

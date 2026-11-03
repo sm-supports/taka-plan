@@ -128,7 +128,7 @@
       "sourceName": "Income Tax Law 2009, Article 46 (ARD unofficial translation)",
       "sourceUrl": "https://www.acbar.org/upload/1493209950200.pdf",
       "asOf": "2009-03-18",
-      "note": "Legal persons withhold 20% from interest; in practice banks now pay no interest under the interest ban."
+      "note": "Article 46(1)(2): legal persons withhold 20% from interest. Law text dated 2009 (older than 2025); no later change to the rate found. In practice banks now pay no interest under the interest ban."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -232,7 +232,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No industry claim settlement data published by the General Directorate of Takaful and Insurance; life insurance volume is negligible (Axco)."
+      "note": "No industry claim settlement ratio published by the General Directorate of Takaful and Insurance (Ministry of Finance); life insurance is barely sold."
     },
     "insurance_term_premium_table": {
       "value": null,
@@ -240,7 +240,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No retail term life market: only one insurer has offered life cover, as a special case (Moore Afghanistan insurance overview); no premium quotes found."
+      "note": "No retail term life premium quotes found; life cover is offered only in rare special cases. Not marked absent because no official source confirming the absence was found."
     },
     "health_hospitalisation_cost": {
       "value": null,
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AF",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank value is for 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.07,
@@ -287,7 +288,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AF",
       "asOf": "2024-12-31",
-      "note": "Men 64.7, women 67.8 (World Bank 2024)."
+      "note": "Men 64.7, women 67.8 (World Bank 2024; older than 2025, latest available)."
     },
     "life_table_remaining": {
       "value": null,
@@ -331,11 +332,11 @@
         "points": [
           {
             "year": 2026,
-            "value": 22.6
+            "value": 22.7
           },
           {
             "year": 2040,
-            "value": 18.8
+            "value": 18.9
           },
           {
             "year": 2065,
@@ -347,7 +348,7 @@
       "sourceName": "PopulationPyramid.net (UN WPP 2024, medium variant)",
       "sourceUrl": "https://www.populationpyramid.net/afghanistan/2040/",
       "asOf": "2026-10-31",
-      "note": "People aged 15-64 per person 65+, computed from the UN WPP 2024 age structure; World Bank old-age dependency 4.41 (2025) gives 22.7."
+      "note": "100 / old-age dependency ratio shown on PopulationPyramid.net (UN WPP 2024): 4.4 in 2026, 5.3 in 2040 (this page), 9.9 in 2065."
     },
     "retirement_age_default": {
       "value": 65,
@@ -355,7 +356,7 @@
       "sourceName": "Pajhwok (Labour Law, Article 138)",
       "sourceUrl": "https://pajhwok.com/?p=411494",
       "asOf": "2021-07-29",
-      "note": "Mandatory retirement age for employees is 65; private workers get a lump sum of 10 months' last pay rather than a pension (US SSA, May 2024)."
+      "note": "Labour Law Article 138: mandatory retirement age 65 for employees; private workers get a lump sum rather than a pension. Source article is from 2021 (older than 2025); no later change found."
     },
     "retirement_age_government": {
       "value": 65,
@@ -363,7 +364,7 @@
       "sourceName": "Pajhwok (Labour Law, Article 138; civil service commission)",
       "sourceUrl": "https://pajhwok.com/?p=411494",
       "asOf": "2021-07-29",
-      "note": "Civil servants: 65 or 40 years of service; a decree extended it by two years in some institutions (Amu TV)."
+      "note": "Civil servants retire at 65 (Labour Law Article 138, upheld by the civil service commission). Source article is from 2021 (older than 2025); a later decree reportedly extended service by two years in some institutions."
     },
     "retirement_return_low": {
       "value": 0.0,
@@ -414,12 +415,12 @@
       "note": "Gold and global equity high cases with a stable afghani."
     },
     "old_age_allowance_monthly": {
-      "value": 0,
-      "status": "sourced",
-      "sourceName": "US Social Security Administration, International Update May 2024",
-      "sourceUrl": "https://www.ssa.gov/policy/docs/progdesc/intl_update/2024-05/index.html",
-      "asOf": "2024-05-31",
-      "note": "No non-contributory old-age pension; the SSA says Afghanistan lacks any programme giving long-term old-age benefits to many residents (page read via search excerpts; direct fetch blocked)."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension found. The researcher cited a US SSA International Update (May 2024) saying none exists, but the page returns 403 and could not be read, so absence is not confirmed."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -427,7 +428,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No non-contributory old-age pension exists (US SSA, May 2024), so no eligibility rules."
+      "note": "No non-contributory old-age pension found (the US SSA May 2024 update that reportedly says so could not be read), so no eligibility rules."
     },
     "gratuity_rule": {
       "value": null,
@@ -435,7 +436,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No days-per-year gratuity: private employers must pay 10 months of last monthly earnings as a lump sum when a worker leaves at 65 (US SSA, May 2024), which does not fit the per-year rule."
+      "note": "No days-per-year gratuity found. Private employers reportedly pay 10 months of last monthly earnings as a lump sum when a worker retires at 65 (US SSA, May 2024; page could not be re-read), which does not fit the per-year shape."
     },
     "public_pension_scheme": {
       "value": null,
@@ -443,7 +444,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The public-sector pension scheme (8% employee, 8% state, age 65) was suspended in 2021 and ended in 2024; payments to about 150,000 existing retirees resumed from Aug 2025 (Arab News), but no scheme takes new members and private workers have never had one."
+      "note": "The public-sector pension scheme (8% employee, 8% state, age 65) was reportedly suspended in 2021 and closed to new members in 2024, with payments to existing retirees resumed in 2025 (news reports, not re-verified); private workers have never had a public pension. Not marked absent because no official source was read."
     }
   },
   "instruments": {
@@ -522,7 +523,8 @@
     },
     "depositInsurance": {
       "name": "Afghanistan Deposits Protection Fund (Da Afghanistan Bank)",
-      "url": "https://www.dab.gov.af/node/1868"
+      "url": "https://www.dab.gov.af/",
+      "note": "The fund's own page blocks automated access; linked through the central bank."
     },
     "statistics": {
       "name": "National Statistics and Information Authority",

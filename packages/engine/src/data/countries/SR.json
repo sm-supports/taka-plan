@@ -289,14 +289,14 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SR",
       "asOf": "2024-12-31",
-      "note": "Men 70.6, women 77.0 (2024). UN WPP 2024 via populationpyramid.net gives 74.0 for 2026 (men 70.9, women 77.3)."
+      "note": "Men 70.6, women 77.0 (2024). UN WPP 2024 via populationpyramid.net gives 74.0 for 2026 (men 70.9, women 77.3). The World Bank figure is for 2024, older than 2025 (latest published)."
     },
     "life_table_remaining": {
       "value": null,
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/suriname/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -325,7 +325,7 @@
           }
         ]
       },
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "note": "Secondary source of UN WPP 2024 medium variant for the year 2026 (asOf set to mid-year); sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -418,10 +418,10 @@
     "old_age_allowance_monthly": {
       "value": 2250,
       "status": "sourced",
-      "sourceName": "Ministry of Finance and Planning, Government of Suriname: 'Ministerie verduidelijkt uitbetaling sociale uitkeringen'",
-      "sourceUrl": "https://gov.sr/ministerie-verduidelijkt-uitbetaling-sociale-uitkeringen/",
+      "sourceName": "UN ECLAC non-contributory pensions database: Universal Old Age Pension (AOV), Suriname; Ministry of Finance and Planning (31 May 2026)",
+      "sourceUrl": "https://dds.cepal.org/bpsnc/programme?id=270",
       "asOf": "2026-05-31",
-      "note": "The universal AOV (Algemene Oudedagsvoorziening) is SRD 2,250 a month (raised from SRD 1,750 in March 2025) and was not increased in 2026; a separate temporary supplement of SRD 1,000 was paid in some months of 2026."
+      "note": "The universal AOV (Algemene Oudedagsvoorziening) is SRD 2,250 a month since March 2025 (ECLAC). The Ministry of Finance and Planning confirmed on 31 May 2026 that AOV was not increased in 2026 (https://gov.sr/ministerie-verduidelijkt-uitbetaling-sociale-uitkeringen/); a separate temporary supplement of SRD 1,000 was paid in some months of 2026."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -459,7 +459,7 @@
         "inflationLinked": false,
         "taxFree": null
       },
-      "note": "Compulsory general pension for all working residents (in force 8 December 2014), run by the Algemeen Pensioenfonds: premium example 3% of wages, at least half paid by the employer; pension from 60 after at least 5 years of premiums, separate from the AOV. No indexation is stated; tax treatment not confirmed. Page dated April 2022 (older than 2025)."
+      "note": "Compulsory general pension for all working residents (in force 8 December 2014), run by the Algemeen Pensioenfonds: premium example 3% of wages, at least half paid by the employer; pension from 60 after at least 5 years of premiums, separate from the AOV (the page also cites a minimum of SRD 825 a month including an AOV of SRD 525, an outdated AOV level). No indexation is stated; tax treatment not confirmed. Page dated April 2022 (older than 2025)."
     }
   },
   "instruments": {

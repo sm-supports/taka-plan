@@ -129,7 +129,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Serbia income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/serbia/individual/income-determination",
       "asOf": "2026-08-07",
-      "note": "Interest on dinar savings is tax-free; interest on foreign-currency savings counts as investment income, taxed at 15% of the gross amount."
+      "note": "PwC: 'tax is not payable on the interest accrued from savings in Serbian dinars'; other interest on savings and deposits (including foreign-currency savings) is investment income taxed at 15% of the gross amount."
     },
     "tax_sanchayapatra_profit": {
       "value": 0,
@@ -524,7 +524,7 @@
     },
     "insuranceRegulator": {
       "name": "National Bank of Serbia, insurance supervision",
-      "url": "https://www.nbs.rs/en/"
+      "url": "https://www.nbs.rs/en/finansijske-institucije/osiguranje/"
     },
     "insuranceComplaints": {
       "name": "National Bank of Serbia, Financial Consumer Protection",

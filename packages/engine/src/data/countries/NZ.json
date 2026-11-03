@@ -46,31 +46,31 @@
       "sourceName": "Trading Economics (RBNZ Official Cash Rate decision)",
       "sourceUrl": "https://tradingeconomics.com/new-zealand/interest-rate",
       "asOf": "2026-10-28",
-      "note": "OCR held at 2.75% on 28 October 2026 (4-3 vote); secondary source because rbnz.govt.nz refused automated access."
+      "note": "OCR held at 2.75% on 28 October 2026 (4-3 vote); secondary source because rbnz.govt.nz refused automated access. The market expects a hike at the next meeting."
     },
     "savings_account_rate": {
       "value": 0.0015,
       "status": "sourced",
-      "sourceName": "interest.co.nz savings (call) account rate table",
+      "sourceName": "interest.co.nz (financial news site) savings (call) account rate table",
       "sourceUrl": "https://www.interest.co.nz/saving/call-account",
       "asOf": "2026-10-31",
-      "note": "Ordinary call/savings accounts at large banks pay about 0.05-0.25%; midpoint used. Online and bonus saver accounts pay more."
+      "note": "Ordinary savings/call accounts at the large banks pay about 0.05-0.25% (online and bonus saver accounts 0.5-2.2%); 0.15% used. Read 31 October 2026. Source is a financial news site's rate table (RBNZ retail rate tables refused automated access)."
     },
     "fdr_3m_rate": {
       "value": 0.0295,
       "status": "sourced",
-      "sourceName": "interest.co.nz term deposit rate table (under 1 year)",
+      "sourceName": "interest.co.nz (financial news site) term deposit rate table (under 1 year)",
       "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-9-months",
       "asOf": "2026-10-31",
-      "note": "Major banks' 3-month rates 2.85-3.05%; midpoint used. Table date not shown; read 31 October 2026."
+      "note": "Major banks' 3-month rates 2.85-3.05%; midpoint used. Table date not shown; read 31 October 2026. Source is a financial news site's rate table (RBNZ retail rate tables refused automated access)."
     },
     "fdr_1y_rate": {
       "value": 0.0403,
       "status": "sourced",
-      "sourceName": "interest.co.nz term deposit rate table (1-5 years)",
+      "sourceName": "interest.co.nz (financial news site) term deposit rate table (1-5 years)",
       "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years",
       "asOf": "2026-10-31",
-      "note": "Major banks' 1-year rates 4.00-4.05%; 5-year 4.70-5.00%. Table date not shown; read 31 October 2026."
+      "note": "Major banks' 1-year rates 4.00-4.05%; 5-year 4.70-5.00%. Table date not shown; read 31 October 2026. Source is a financial news site's rate table (RBNZ retail rate tables refused automated access)."
     },
     "dps_rate": {
       "value": null,
@@ -102,7 +102,7 @@
       "sourceName": "Trading Economics, New Zealand 3-month bill yield",
       "sourceUrl": "https://tradingeconomics.com/new-zealand/3-month-bill-yield",
       "asOf": "2026-10-30",
-      "note": "Secondary source; RBNZ wholesale rate tables refused automated access."
+      "note": "Secondary source; RBNZ wholesale rate tables refused automated access. 3.18% on 3 November 2026."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -147,10 +147,10 @@
     "credit_card_rate_cap": {
       "value": 0.2095,
       "status": "sourced",
-      "sourceName": "interest.co.nz credit card rate table",
+      "sourceName": "interest.co.nz (financial news site) credit card rate table",
       "sourceUrl": "https://www.interest.co.nz/borrowing/credit-cards",
       "asOf": "2026-10-31",
-      "note": "No legal cap; 20.95% is the most common standard purchase rate at major banks (low-rate cards 12.9-13.9%)."
+      "note": "No legal cap; 20.95% is the most common standard purchase rate at major banks (low-rate cards 12.9-13.9%). Source is a financial news site's rate table (RBNZ retail rate tables refused automated access)."
     },
     "equity_return_low": {
       "value": 0.035,
@@ -261,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=NZ",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "2024 figure, the latest World Bank year (older than 2025); public hospital care is free for residents."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -285,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NZ",
       "asOf": "2024-12-31",
-      "note": "Men 80.4, women 83.7; UN WPP 2024 (via populationpyramid.net) gives 82.5 for 2026."
+      "note": "2024 figure, the latest World Bank year (older than 2025). Men 80.4, women 83.7; UN WPP 2024 (via populationpyramid.net) gives 82.5 for 2026."
     },
     "life_table_remaining": {
       "value": null,
@@ -320,8 +321,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/new-zealand/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant projection for 2026 (mid-year); totals at 60, 70 and 80 are the mean of men and women (the page publishes a total only at 65)."
     },
     "support_ratio": {
       "value": null,
@@ -350,10 +351,10 @@
     "retirement_age_default": {
       "value": 65,
       "status": "sourced",
-      "sourceName": "Work and Income, NZ Superannuation",
-      "sourceUrl": "https://www.workandincome.govt.nz/products/a-z-benefits/nz-superannuation.html",
-      "asOf": "2026-07-13",
-      "note": "NZ Super is paid from 65 to men and women; there is no compulsory retirement age for private-sector workers."
+      "sourceName": "Work and Income, NZ Super eligibility",
+      "sourceUrl": "https://www.workandincome.govt.nz/eligibility/seniors/superannuation",
+      "asOf": "2026-10-31",
+      "note": "NZ Super is paid from 65 to men and women, including people born after 1975 under current law (the Work and Income eligibility page shows no legislated change to the age); there is no compulsory retirement age."
     },
     "retirement_age_government": {
       "value": 65,
@@ -361,7 +362,7 @@
       "sourceName": "Wikipedia, Mandatory retirement (New Zealand)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Mandatory_retirement",
       "asOf": "2026-10-31",
-      "note": "No compulsory retirement age for public servants; 65 is the normal retirement age because NZ Super starts then (judges retire at 70)."
+      "note": "No compulsory retirement age for public servants (only judges retire at 70); 65 is the normal retirement age because NZ Super starts then. Secondary source."
     },
     "retirement_return_low": {
       "value": 0.02,
@@ -417,7 +418,7 @@
       "sourceName": "Work and Income, benefit rates from 1 April 2026 (NZ Superannuation)",
       "sourceUrl": "https://www.workandincome.govt.nz/products/benefit-rates/benefit-rates-april-2026.html",
       "asOf": "2026-04-01",
-      "note": "NZ Super single living alone NZD 647.37 a week gross (555.15 net at tax code M) = about 2,805 a month gross; married couples get 492.14 a week each gross."
+      "note": "NZ Super, single living alone, NZD 647.37 a week gross (555.15 net at tax code M) = about 2,805 a month gross (x52/12); people in a couple get 492.14 a week each gross. Paid fortnightly."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -428,18 +429,19 @@
         "meansTested": false
       },
       "status": "sourced",
-      "sourceName": "Wikipedia, Superannuation in New Zealand; Work and Income NZ Super page",
-      "sourceUrl": "https://en.wikipedia.org/wiki/Superannuation_in_New_Zealand",
-      "asOf": "2026-07-13",
-      "note": "Universal, not means-tested: age 65 and 10 years' residence after age 20 (5 after 50); the amount is taxable."
+      "sourceName": "Work and Income, NZ Super eligibility",
+      "sourceUrl": "https://www.workandincome.govt.nz/eligibility/seniors/superannuation",
+      "asOf": "2026-10-31",
+      "note": "Universal from 65; the page says it does not depend on income or assets (the amount is taxable). Residence: citizen or permanent resident; the required years in NZ after age 20 are rising from 10 to 20 for people turning 65 from 1 July 2024 (Fair Residency amendment, phased in by birth year)."
     },
     "gratuity_rule": {
       "value": null,
       "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "absent": true,
+      "sourceName": "Employment New Zealand (MBIE), Redundancy",
+      "sourceUrl": "https://www.employment.govt.nz/ending-employment/redundancy",
       "asOf": "2026-10-31",
-      "note": "New Zealand employment law has no statutory gratuity or end-of-service payment; redundancy pay is only by contract."
+      "note": "Confirmed absent: Employment New Zealand states an employer does not have to provide redundancy compensation unless it is in the employment agreement or policy; no statutory gratuity or end-of-service payment exists."
     },
     "public_pension_scheme": {
       "value": null,
@@ -455,27 +457,24 @@
       "sourceName": "Wikipedia, Superannuation in New Zealand; Work and Income NZ Super page",
       "sourceUrl": "https://en.wikipedia.org/wiki/Superannuation_in_New_Zealand",
       "asOf": "2026-07-13",
-      "note": "NZ Super is a tax-funded flat pension from 65 (no contributions), adjusted yearly with prices and held at 65-66% of the net average wage for a couple; it is taxable. KiwiSaver is the voluntary contributory scheme (employee 3-10%, employer 3%)."
+      "note": "NZ Super is the universal, tax-funded flat pension from 65 (no contributions, so no entry ages); it is the same benefit as old_age_allowance_monthly, so do not count it twice. Adjusted yearly with prices and held at 65-66% of the net average wage for a couple; taxable. KiwiSaver is the voluntary contributory savings scheme (lump sum from 65), not a pension. Secondary source for the indexation rule."
     }
   },
   "instruments": {
     "savings_account": {
       "available": true,
       "localName": "Savings account",
-      "localNameEn": "Savings (call) account",
-      "sourceUrl": "https://www.interest.co.nz/saving/call-account"
+      "localNameEn": "Savings (call) account"
     },
     "fdr_3m": {
       "available": true,
       "localName": "Term deposit",
-      "localNameEn": "3-month term deposit",
-      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-9-months"
+      "localNameEn": "3-month term deposit"
     },
     "fdr_1y": {
       "available": true,
       "localName": "Term deposit",
-      "localNameEn": "1-year term deposit",
-      "sourceUrl": "https://www.interest.co.nz/saving/term-deposits-1-to-5-years"
+      "localNameEn": "1-year term deposit"
     },
     "dps": {
       "available": false,
@@ -542,7 +541,7 @@
     },
     "publicHealthCover": {
       "name": "Health New Zealand – Te Whatu Ora (free public hospital care)",
-      "url": "https://www.tewhatuora.govt.nz/"
+      "url": "https://www.healthnz.govt.nz/"
     },
     "depositInsurance": {
       "name": "Depositor Compensation Scheme (Reserve Bank of New Zealand)",

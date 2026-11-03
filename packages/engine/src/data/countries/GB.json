@@ -18,12 +18,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 0.7477,
+      "value": 0.7464,
       "status": "sourced",
       "sourceName": "Bank of England, spot exchange rate US dollar into sterling (XUDLUSS)",
       "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=XUDLUSS&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
-      "asOf": "2026-10-29",
-      "note": "USD 1.3375 per pound on 29 October 2026, so about GBP 0.748 per US dollar; World Bank 2025 average 0.759."
+      "asOf": "2026-10-30",
+      "note": "USD 1.3397 per pound on 30 October 2026, so about GBP 0.746 per US dollar; World Bank 2025 average 0.759."
     }
   },
   "fields": {
@@ -105,23 +105,23 @@
       "sourceName": "Trading Economics, United Kingdom 3-month bill yield",
       "sourceUrl": "https://tradingeconomics.com/united-kingdom/3-month-bill-yield",
       "asOf": "2026-10-30",
-      "note": "Secondary source; the Debt Management Office tender reports could not be read. SONIA was 3.73% on 28 October 2026 (Bank of England IUDSOIA)."
+      "note": "Secondary source; the Debt Management Office tender reports could not be read and the Bank of England 3-month Treasury bill series (IUMAJNB) has no 2026 data. Trading Economics showed 4.20% (also 4.20% on 2 November 2026); this is above Bank Rate (3.75%) and SONIA (3.73% on 29 October 2026), reflecting market pricing."
     },
     "tbond_5y_rate": {
-      "value": 0.0496,
+      "value": 0.0491,
       "status": "sourced",
       "sourceName": "Bank of England, 5-year nominal par yield on British government stock (IUDSNPY)",
       "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDSNPY&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
-      "asOf": "2026-10-28",
-      "note": "Daily yield 4.96% on 28 October 2026."
+      "asOf": "2026-10-29",
+      "note": "Daily yield 4.91% on 29 October 2026 (4.96% on 28 October)."
     },
     "tbond_10y_rate": {
-      "value": 0.0531,
+      "value": 0.0526,
       "status": "sourced",
       "sourceName": "Bank of England, 10-year nominal par yield on British government stock (IUDMNPY)",
       "sourceUrl": "https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDMNPY&CSVF=TT&UsingCodes=Y&VPD=Y&VFD=N",
-      "asOf": "2026-10-28",
-      "note": "Daily yield 5.31% on 28 October 2026."
+      "asOf": "2026-10-29",
+      "note": "Daily yield 5.26% on 29 October 2026 (5.31% on 28 October)."
     },
     "tax_bank_interest": {
       "value": 0.2,
@@ -222,7 +222,7 @@
     "fixed_income_return_high": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "NS&I 5-year Guaranteed Growth Bonds 5.17% gross; 5-year gilt 4.96% (Bank of England)",
+      "sourceName": "NS&I 5-year Guaranteed Growth Bonds 5.17% gross; 5-year gilt 4.91% (Bank of England)",
       "sourceUrl": "https://www.nsandi.com/products/guaranteed-growth-bonds",
       "asOf": "2026-10-31",
       "note": "High case: locking in today's 5-year rates inside an ISA or within the personal savings allowance, so little tax is paid."
@@ -356,7 +356,7 @@
       "sourceName": "GOV.UK, State Pension age timetable (Pensions Acts 2007 and 2014)",
       "sourceUrl": "https://www.gov.uk/government/publications/state-pension-age-timetable/state-pension-age-timetable",
       "asOf": "2026-10-31",
-      "note": "State Pension age is 68 for anyone born on or after 6 April 1978 (reached in stages for those born 6 April 1977 to 5 April 1978) and 67 for those born 6 April 1960 to 5 April 1977; it is 66 today and the same for men and women. A third State Pension age review is under way. There is no compulsory retirement age for private employees."
+      "note": "State Pension age is 68 for anyone born on or after 6 April 1978 (reached in stages for those born 6 April 1977 to 5 April 1978) and 67 for those born 6 April 1960 to 5 April 1977, so people born in 1976 and early 1977 have 67; 68 covers most people born after 1975. It is 66 today and the same for men and women. A third State Pension age review is under way. There is no compulsory retirement age for private employees."
     },
     "retirement_age_government": {
       "value": 68,
@@ -385,7 +385,7 @@
     "retirement_return_high": {
       "value": 0.042,
       "status": "assumption",
-      "sourceName": "NS&I Guaranteed Growth Bonds 4.99-5.17%; 5-year gilt 4.96% (Bank of England)",
+      "sourceName": "NS&I Guaranteed Growth Bonds 4.99-5.17%; 5-year gilt 4.91% (Bank of England)",
       "sourceUrl": "https://www.nsandi.com/products/guaranteed-growth-bonds",
       "asOf": "2026-10-31",
       "note": "High case: a retiree ladders gilts and fixed-rate bonds, partly inside ISAs, at about today's rates."

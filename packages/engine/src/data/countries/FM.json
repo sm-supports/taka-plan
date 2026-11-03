@@ -6,7 +6,11 @@
   "nameNative": "Federated States of Micronesia",
   "region": "east_asia_pacific",
   "languages": [
-    "en"
+    "chk",
+    "en",
+    "pon",
+    "kos",
+    "yap"
   ],
   "currency": {
     "code": "USD",
@@ -29,7 +33,7 @@
       "sourceName": "IMF World Economic Outlook (October 2026 database), CPI inflation, average",
       "sourceUrl": "https://www.imf.org/external/datamapper/PCPIPCH@WEO/FSM",
       "asOf": "2025-12-31",
-      "note": "2.8% for 2025 (5.4% in 2024); IMF forecasts 3.2% for 2026 and ADB 3.8% (ADO September 2026). The national statistics site was not reachable."
+      "note": "2.8% for 2025 (5.4% in 2024); IMF forecasts 3.2% for 2026. Annual figure; the national statistics site was not reachable. Also in the IMF DataMapper API (PCPIPCH/FSM)."
     },
     "inflation_projection": {
       "value": 0.03,
@@ -82,10 +86,10 @@
     "bank_deposit_avg_rate": {
       "value": 0.0058,
       "status": "sourced",
-      "sourceName": "FDIC call report data, interest on deposits / total deposits of the FSM-chartered commercial bank",
+      "sourceName": "FDIC call report data (Statistics on Depository Institutions), interest on deposits / total deposits of the commercial bank chartered in the FSM",
       "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC",
       "asOf": "2025-12-31",
-      "note": "US$1.38 million of interest on about US$236 million of deposits in 2025 (about 0.58%); World Bank FR.INR.DPST shows 0.04% for 2021. Computed by us from the FDIC figures."
+      "note": "US$1.38 million of interest expense on about US$236 million of deposits in 2025 (about 0.58%; 0.74 million on 245 million in the first half of 2026); computed by us from FDIC data. World Bank FR.INR.DPST shows 0.04% for 2021 (older than 2025)."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -317,7 +321,7 @@
       "sourceName": "UN World Population Prospects 2024, medium variant (via populationpyramid.net); World Bank SP.POP.DPND.OL",
       "sourceUrl": "https://www.populationpyramid.net/micronesia-fed-states-of/2040/",
       "asOf": "2024-07-31",
-      "note": "100 / old-age dependency ratio: 9.9 in 2025 (World Bank), 11.6 in 2040 and 16.9 in 2065 (UN WPP 2024)."
+      "note": "100 / old-age dependency ratio: OADR 9.9 in 2025 (World Bank SP.POP.DPND.OL), 11.6 in 2040 and 16.9 in 2065 (UN WPP 2024 medium variant via populationpyramid.net)."
     },
     "retirement_age_default": {
       "value": 65,
@@ -418,18 +422,17 @@
         "taxFree": null
       },
       "status": "sourced",
-      "sourceName": "FSM Social Security Administration, benefits and FAQ",
+      "sourceName": "FSM Social Security Administration, benefits",
       "sourceUrl": "https://www.fsmssa.fm/benefits",
       "asOf": "2026-10-31",
-      "note": "Compulsory social security: 7.5% employee + 7.5% employer on wages up to US$7,000 a quarter; full benefit at 65 (50% from 60) after 50 quarters; annual benefit 16.5% of the first US$10,000 of cumulative covered earnings, 3% of the next US$30,000, 2% of the next US$262,500, 1% above; minimum US$100 a month. No automatic cost-of-living adjustment is described."
+      "note": "Compulsory FSM Social Security: 100% of benefits at 65 (subject to an earnings test) or 50% from 60 without it; needs at least 50 quarters of coverage and US$2,500 of contributions; annual benefit 16.5% of the first US$10,000 of cumulative covered earnings, 3% of the next US$30,000, 2% of the next US$262,500 and 1% above, divided by 12; minimum US$100 a month. The benefits page describes no cost-of-living adjustment, so inflationLinked is false."
     }
   },
   "instruments": {
     "savings_account": {
       "available": true,
       "localName": null,
-      "localNameEn": "Savings account",
-      "sourceUrl": "https://api.fdic.gov/banks/financials?filters=CERT:26539&fields=REPDTE,DEP,EDEPDOM&sort_by=REPDTE&sort_order=DESC"
+      "localNameEn": "Savings account"
     },
     "fdr_3m": {
       "available": true,

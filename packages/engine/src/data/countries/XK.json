@@ -151,7 +151,7 @@
       "sourceName": "Central Bank of the Republic of Kosovo, Monthly Statistics Bulletin May 2026 (Table 15.2.2, household overdrafts)",
       "sourceUrl": "https://bqk-kos.org/wp-content/uploads/2026/07/CBK_MSB_297_En.pdf",
       "asOf": "2026-05-31",
-      "note": "No legal cap found; the CBK publishes no separate credit card rate, so this is the average rate on household overdrafts (outstanding), the closest revolving-credit series."
+      "note": "No legal cap found; the CBK publishes no separate credit card rate, so this is the average rate on household overdrafts in May 2026 (Table 15.2.2), the closest revolving-credit series."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=XK",
       "asOf": "2024-12-31",
-      "note": "Men 76.0, women 80.3 (World Bank 2024); UN WPP includes Kosovo within Serbia, so no UN estimate is available separately."
+      "note": "Men 76.0, women 80.3 (World Bank 2024; older than 2025, latest available); UN WPP includes Kosovo within Serbia, so no UN estimate is available separately."
     },
     "life_table_remaining": {
       "value": null,

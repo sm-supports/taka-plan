@@ -3,9 +3,10 @@
   "code": "SB",
   "iso3": "SLB",
   "nameEn": "Solomon Islands",
-  "nameNative": "Solomon Islands",
+  "nameNative": "Solomon Aelan",
   "region": "east_asia_pacific",
   "languages": [
+    "pis",
     "en"
   ],
   "currency": {
@@ -53,7 +54,7 @@
       "sourceName": "CBSI Money and Banking Statistics, Table 1.7 Interest Rates (commercial banks)",
       "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-07/Money-and-Banking-Statistics.xlsx",
       "asOf": "2026-03-31",
-      "note": "Savings deposits weighted average 0.79% (range 0.60-1.39%) in March 2026."
+      "note": "Savings deposits weighted average 0.79% (range 0.60-1.39%) in March 2026, the latest clearly dated month in the workbook."
     },
     "fdr_3m_rate": {
       "value": 0.012,
@@ -101,7 +102,7 @@
       "sourceName": "Central Bank of Solomon Islands, Monthly Economic Bulletin September 2026",
       "sourceUrl": "https://www.cbsi.com.sb/sites/default/files/2026-10/MEB-September%202026.pdf",
       "asOf": "2026-09-30",
-      "note": "Weighted average yield on 91-day T-bills 1.13% (182-day 2.33%) in September 2026."
+      "note": "Weighted average yield on 91-day T-bills 1.13% (182-day 2.33%) in September 2026 (CBSI MEB key indicators table)."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -260,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SB",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank figure is for 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.045,
@@ -284,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SB",
       "asOf": "2024-12-31",
-      "note": "Men 69.4, women 72.2."
+      "note": "Men 69.4, women 72.2. Latest World Bank figure is for 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -319,7 +321,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/solomon-islands/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {

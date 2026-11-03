@@ -18,9 +18,9 @@
       "value": 2.7646,
       "status": "sourced",
       "sourceName": "Central Bank of Samoa daily exchange rates",
-      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "sourceUrl": "https://www.cbs.gov.ws/daily-exchange-rates",
       "asOf": "2026-10-30",
-      "note": "WST 1 = USD 0.36171 on 30 October 2026, so 2.76 tala per US dollar."
+      "note": "WST 1 = USD 0.36171 on 30 October 2026 in the CBS historical daily rates file linked from this page, so 2.76 tala per US dollar."
     }
   },
   "fields": {
@@ -30,7 +30,7 @@
       "sourceName": "Central Bank of Samoa statistics table 2 (Samoa Bureau of Statistics headline CPI)",
       "sourceUrl": "https://cbs.gov.ws/media/T2---Headline---CPI---August---2026.xlsx",
       "asOf": "2026-08-31",
-      "note": "Headline CPI up 3.6% on a year earlier in August 2026 (5.7% in June); the annual-average rate the CBS headlines was 1.2% in August and September 2026."
+      "note": "Headline CPI up 3.6% on a year earlier in August 2026 (5.7% in June); the 12-month annual-average rate was 1.2% in August, and the CBS home page shows 1.2% for September 2026."
     },
     "inflation_projection": {
       "value": 0.035,
@@ -41,12 +41,12 @@
       "note": "The CBS aims for annual average inflation around 3% in line with trading partners, and recent prices have swung from -2% to +6%, so we plan with 3.5%."
     },
     "policy_rate": {
-      "value": 0.0318,
+      "value": 0.0342,
       "status": "sourced",
-      "sourceName": "Central Bank of Samoa (official interest rate, home page key indicators)",
-      "sourceUrl": "https://www.cbs.gov.ws/",
-      "asOf": "2026-08-31",
-      "note": "Official interest rate (weighted average yield on CBS securities) 3.18% in August 2026; the 2026/27 Monetary Policy Statement gives 3.42% at end April 2026 against a neutral 2-3% range."
+      "sourceName": "Central Bank of Samoa Monetary Policy Statement 2026/2027 (Table 1A)",
+      "sourceUrl": "https://cbs.gov.ws/media/MPS-2026-2027.pdf",
+      "asOf": "2026-04-30",
+      "note": "CBS official interest rate (weighted average yield on CBS securities) 3.42% at end April 2026, above the 2-3% neutral target range; the CBS home page shows 3.18% for August 2026."
     },
     "savings_account_rate": {
       "value": 0.01,
@@ -102,7 +102,7 @@
       "sourceName": "Central Bank of Samoa, tender results T-17/2026 (CBS Securities)",
       "sourceUrl": "https://cbs.gov.ws/media/Results-------------T17-------26-----------22-------October-----------2026.pdf",
       "asOf": "2026-10-22",
-      "note": "91-day CBS Securities weighted average yield 3.30% (182-day 3.69%). Samoa has no regular government Treasury bills; CBS Securities are open to registered members of the public from SAT 1,000."
+      "note": "91-day CBS Securities weighted average yield 3.30% (182-day 3.69%). Samoa has no regular government Treasury bills; CBS Securities, open to registered members of the public, stand in for them."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -180,7 +180,7 @@
       "value": 0.02,
       "status": "assumption",
       "sourceName": "CBS daily exchange rates (tala per US dollar about 2.6 in 2016 and 2.76 in October 2026)",
-      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "sourceUrl": "https://www.cbs.gov.ws/daily-exchange-rates",
       "asOf": "2026-10-31",
       "note": "Low case: weak dollar gold under a stable basket-pegged tala."
     },
@@ -188,7 +188,7 @@
       "value": 0.05,
       "status": "assumption",
       "sourceName": "CBS daily exchange rates (tala per US dollar about 2.6 in 2016 and 2.76 in October 2026)",
-      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "sourceUrl": "https://www.cbs.gov.ws/daily-exchange-rates",
       "asOf": "2026-10-31",
       "note": "Long-run dollar gold trend of about 4-5% plus little expected tala depreciation under the basket peg."
     },
@@ -196,7 +196,7 @@
       "value": 0.08,
       "status": "assumption",
       "sourceName": "CBS daily exchange rates (tala per US dollar about 2.6 in 2016 and 2.76 in October 2026)",
-      "sourceUrl": "https://cbs.gov.ws/media/Historical-Daily-Rates301026-1.xlsx",
+      "sourceUrl": "https://www.cbs.gov.ws/daily-exchange-rates",
       "asOf": "2026-10-31",
       "note": "High case with strong dollar gold and some tala weakening."
     },
@@ -261,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=WS",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 figure (older than 2025), latest available in World Bank WDI."
     },
     "goal_inflation_health": {
       "value": 0.045,
@@ -285,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=WS",
       "asOf": "2024-12-31",
-      "note": "UN WPP 2024 (via populationpyramid.net) gives 72.1 for 2026 (men 70.2, women 74.1)."
+      "note": "2024 figure (older than 2025). UN WPP 2024 (via populationpyramid.net) gives 72.1 for 2026 (men 70.2, women 74.1)."
     },
     "life_table_remaining": {
       "value": null,
@@ -320,8 +321,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/samoa/",
-      "asOf": "2026-12-31",
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026 (mid-year reference); totals at 60, 70 and 80 are the mean of men and women (the page gives a total only at 65, 14.9)."
     },
     "support_ratio": {
       "value": null,

@@ -53,7 +53,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No current published rate; Daily NK (Oct 2023) reported provincial bank savings products paying 4% to 9% depending on branch."
+      "note": "No current published rate; Daily NK (Oct 2023) reported provincial bank savings products paying 4% to 9% depending on branch. The 2023 report is older than 2025."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -69,7 +69,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No published rate; Daily NK (Oct 2023) reported 1- to 10-year savings products at 4% to 9% by branch."
+      "note": "No published rate; Daily NK (Oct 2023) reported 1- to 10-year savings products at 4% to 9% by branch. The 2023 report is older than 2025."
     },
     "dps_rate": {
       "value": null,
@@ -125,7 +125,7 @@
       "sourceName": "Taxation in North Korea (Wikipedia, citing the 1974 law 'On Abolishing the Tax System')",
       "sourceUrl": "https://en.wikipedia.org/wiki/Taxation_in_North_Korea",
       "asOf": "1974-04-01",
-      "note": "Personal income taxes were abolished in 1974; the state raises revenue through enterprise levies and fees instead."
+      "note": "Personal income taxes were abolished in 1974 and no tax on interest is described; the state raises revenue through enterprise levies and fees. Legal basis dates from 1974 (older than 2025); secondary source."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -337,7 +337,7 @@
       "sourceName": "Korea Times (13 May 2026) on North Korea's Labour Law and its 2024 revision",
       "sourceUrl": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20260513/n-korea-extends-retirement-age-for-office-workers-by-3-years-amid-population-aging",
       "asOf": "2026-05-13",
-      "note": "Manual workers and farmers: men 60, women 55 (1978 Labour Law, unchanged in 2024). Office workers: men 63, women 58 since the 2024 revision."
+      "note": "The 2024 revision raised office workers' pension age to men 63, women 58 (from 60 and 55 under the 1978 Labour Law) and left manual workers and farmers unchanged, so they stay at men 60 (women 55)."
     },
     "retirement_age_government": {
       "value": 63,
@@ -401,7 +401,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No separate non-contributory social pension documented; the state pension is tied to years of work and KIHASA reports it largely no longer functions."
+      "note": "No separate non-contributory social pension documented; the only old-age pension found is the work-linked state pension, whose amounts are not published."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -430,10 +430,10 @@
         "taxFree": true
       },
       "status": "sourced",
-      "sourceName": "Korea Times (13 May 2026) on North Korea's Labour Law (Article 74, state elderly pension)",
+      "sourceName": "Korea Times (13 May 2026) on North Korea's Labour Law and its 2024 revision",
       "sourceUrl": "https://www.koreatimes.co.kr/amp/foreignaffairs/northkorea/20260513/n-korea-extends-retirement-age-for-office-workers-by-3-years-amid-population-aging",
       "asOf": "2026-05-13",
-      "note": "State elderly pension for men from 60 and women from 55 with enough years of work (office workers 63/58 since 2024); amounts are not published, no indexation is documented and KIHASA reports the system largely no longer functions."
+      "note": "State elderly pension for workers with enough years of work: men from 60 and women from 55 under the 1978 Labour Law, office workers 63/58 since the 2024 revision; amounts, funding and indexation are not published. taxFree because personal taxes were abolished in 1974."
     }
   },
   "instruments": {

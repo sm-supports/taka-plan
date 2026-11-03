@@ -418,21 +418,21 @@
       "sourceName": "Pensionsmyndigheten, garantipension",
       "sourceUrl": "https://www.pensionsmyndigheten.se/forsta-din-pension/sa-fungerar-pensionen/garantipension",
       "asOf": "2026-01-01",
-      "note": "Maximum guarantee pension SEK 11,988 a month before tax for a single person and SEK 10,853 for a married person in 2026, for 40 years' residence; it is reduced as income-based pension rises."
+      "note": "Maximum guarantee pension SEK 11,988 a month before tax for a single person and SEK 10,853 for a married person (2026; 2.43 and 2.20 price base amounts of SEK 59,200 divided by 12), for 40 years' residence; it is reduced as income-based pension rises, so it is an income-tested top-up rather than a flat pension."
     },
     "old_age_allowance_eligibility": {
       "value": null,
       "valueJson": {
-        "menAge": 67,
-        "womenAge": 67,
+        "menAge": 68,
+        "womenAge": 68,
         "over90Monthly": null,
         "meansTested": true
       },
       "status": "sourced",
-      "sourceName": "Pensionsmyndigheten, garantipension",
-      "sourceUrl": "https://www.pensionsmyndigheten.se/forsta-din-pension/sa-fungerar-pensionen/garantipension",
+      "sourceName": "Pensionsmyndigheten, pensionsåldrar och riktålder; garantipension",
+      "sourceUrl": "https://www.pensionsmyndigheten.se/ga-i-pension/planera-din-pension/pensionsaldrar-och-riktalder",
       "asOf": "2026-10-31",
-      "note": "Paid from the riktålder (67 from 2026, rising with life expectancy for later cohorts); needs at least 3 years' residence, full amount after 40 years from age 16. Not means-tested on assets, but reduced against the person's own income-based pension."
+      "note": "Guarantee pension is paid from the riktålder: 67 for people born 1960-1966, forecast 68 for those born 1970-1981 and 69 for 1982-1997 (recalculated yearly), so 68 is used for a planner born after 1975. Needs at least 3 years' residence, full amount after 40 years from age 16; not asset-tested but reduced against the person's own income-based pension."
     },
     "gratuity_rule": {
       "value": null,

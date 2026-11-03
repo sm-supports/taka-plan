@@ -54,7 +54,7 @@
       "sourceName": "Ministry of Finance, Budget Speech 2026 (para 3.36)",
       "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
       "asOf": "2025-12-31",
-      "note": "Commercial banks' small savings rate stayed at 0.81% through 2025 (Bank of Guyana data)."
+      "note": "Commercial banks' small savings rate stayed at 0.81% through 2025 (Bank of Guyana data). Figure is for 2025."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -102,7 +102,7 @@
       "sourceName": "Ministry of Finance, Budget Speech 2026 (para 3.36)",
       "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
       "asOf": "2025-12-31",
-      "note": "The 91-day Treasury bill yield stayed at 1.10% in 2025 (364-day 1.09%, 182-day 0.99%); 2026 auction results could not be read (the Bank of Guyana site blocks automated reading behind a verification page)."
+      "note": "The 91-day Treasury bill yield stayed at 1.10% through 2025 (364-day 1.09%, 182-day 0.99%); 2026 auction results could not be read (the Bank of Guyana site blocks automated reading). Figure is for 2025."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -161,12 +161,12 @@
       "note": "Low case: the local stock exchange is small and thinly traded, so savers rely on global funds in Guyana dollars, and a weak decade is possible."
     },
     "equity_return_base": {
-      "value": 0.05,
+      "value": 0.048,
       "status": "assumption",
       "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%, small savings rate 0.81%",
       "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
       "asOf": "2026-10-31",
-      "note": "Base case uses a global equity index in Guyana-dollar terms (the rate has held near 208.5 per dollar), capped at the 1.1% safe rate plus 4 points because there is no usable local index record."
+      "note": "Base case uses a global equity index in Guyana-dollar terms (the rate has held near 208.5 per dollar), kept within 4 points of the after-tax Treasury bill rate (about 0.9%) because there is no usable local index record."
     },
     "equity_return_high": {
       "value": 0.08,
@@ -209,12 +209,12 @@
       "note": "Low case: savings deposits at 0.81% less 20% tax."
     },
     "fixed_income_return_base": {
-      "value": 0.009,
+      "value": 0.0085,
       "status": "assumption",
       "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%, small savings rate 0.81%",
       "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
       "asOf": "2026-10-31",
-      "note": "Base case: a mix of savings deposits and Treasury bills, about 0.9% after tax."
+      "note": "Base case: a mix of savings deposits and Treasury bills, about 0.85% after the 20% withholding tax."
     },
     "fixed_income_return_high": {
       "value": 0.015,
@@ -293,7 +293,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/guyana/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -373,12 +373,12 @@
       "note": "Low case: savings deposits after the 20% tax."
     },
     "retirement_return_base": {
-      "value": 0.009,
+      "value": 0.0085,
       "status": "assumption",
       "sourceName": "Budget Speech 2026: 91-day Treasury bill 1.10%",
       "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
       "asOf": "2026-10-31",
-      "note": "Base case below the 1.10% Treasury bill rate, with part held in savings deposits."
+      "note": "Base case at about the 1.10% Treasury bill rate less the 20% withholding tax, with part held in savings deposits."
     },
     "retirement_return_high": {
       "value": 0.015,
@@ -397,12 +397,12 @@
       "note": "Low case for a balanced mix if global equities disappoint."
     },
     "retirement_accumulation_return_base": {
-      "value": 0.03,
+      "value": 0.028,
       "status": "assumption",
       "sourceName": "91-day Treasury bill 1.10%; global equity assumptions in Guyana dollars",
       "sourceUrl": "https://finance.gov.gy/wp-content/uploads/2026/01/Budget_Speech_2026.pdf",
       "asOf": "2026-10-31",
-      "note": "Base case: half global equities at 5% and half deposits and bills near 1%."
+      "note": "Base case: half global equities at 4.8% and half deposits and bills near 0.85%."
     },
     "retirement_accumulation_return_high": {
       "value": 0.05,
@@ -456,7 +456,7 @@
         "inflationLinked": false,
         "taxFree": null
       },
-      "note": "Compulsory NIS for employees aged 16 to 60 (14% of wages: 5.6% employee, 8.4% employer; self-employed 12.5%). Pension from 60 with 750 contributions: 40% of average insurable earnings plus 1% per 50 contributions above 750, up to 60%; minimum G$43,075 a month from 1 January 2025. No automatic indexation stated; tax treatment not confirmed."
+      "note": "Compulsory NIS for employed persons aged 16 to 60 (https://www.nis.org.gy/information_on_contributions: 14% of wages, 5.6% employee and 8.4% employer; self-employed 12.5%). Pension from 60 with 750 contributions (150 paid): 40% of average weekly insurable earnings plus 1% per 50 contributions above 750, up to 60%, and at least 50% of the public service minimum wage. No automatic indexation stated; tax treatment not confirmed."
     }
   },
   "instruments": {

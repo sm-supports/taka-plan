@@ -21,7 +21,7 @@
       "value": 3.9251,
       "status": "sourced",
       "sourceName": "Narodowy Bank Polski, average exchange rate table A (USD)",
-      "sourceUrl": "https://api.nbp.pl/api/exchangerates/rates/a/usd/last/2/?format=json",
+      "sourceUrl": "https://api.nbp.pl/api/exchangerates/rates/a/usd/2026-10-30/?format=json",
       "asOf": "2026-10-30",
       "note": "PLN 3.9251 per US dollar on 30 October 2026 (table 212/A/NBP/2026); World Bank 2025 average 3.76."
     }
@@ -52,12 +52,12 @@
       "note": "Reference rate 3.75% in force since 5 March 2026 (lombard 4.25%, deposit 3.25%); the NBP rates feed still showed it unchanged at end-October 2026."
     },
     "savings_account_rate": {
-      "value": 0.0048,
+      "value": 0.0049,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by NBP): Polish banks, overnight zloty deposits from households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L21.A.R.A.2250.PLN.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight (current and savings) zloty deposits was 0.48% in August 2026 (0.48% in July). Promotional savings accounts pay more for new money."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight (current and savings) zloty deposits was 0.49% in September 2026 (0.48% in August). Promotional savings accounts pay more for new money."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -65,15 +65,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "NBP and the ECB publish household term deposits up to 1 year as one bucket (2.94% in August 2026); no separate 3-month average was found."
+      "note": "NBP and the ECB publish household term deposits up to 1 year as one bucket (2.95% in September 2026); no separate 3-month average was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0294,
+      "value": 0.0295,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by NBP): household zloty deposits with agreed maturity up to 1 year, new business",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year (3.00% in July 2026); 1-2 year deposits paid 1.96% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "Bucket covers all fixed terms up to one year (2.94% in August 2026); 1-2 year deposits paid 1.91% in September 2026."
     },
     "dps_rate": {
       "value": null,
@@ -84,12 +84,12 @@
       "note": "No standard monthly recurring-deposit product with a published average rate was found for Poland."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0294,
+      "value": 0.0295,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by NBP): household zloty deposits with agreed maturity up to 1 year, new business",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
-      "asOf": "2026-08-31",
-      "note": "No all-maturity average is published for Poland in the ECB dataset; deposits up to 1 year make up nearly all new household term deposits, so their weighted average (2.94%, August 2026) is used. The World Bank has no FR.INR.DPST figure for Poland."
+      "asOf": "2026-09-30",
+      "note": "No all-maturity new-business average is published for Poland in the ECB dataset; deposits up to 1 year were PLN 92.6 billion of new household term deposits in September 2026 against PLN 0.5 billion for 1-2 years, so their weighted average (2.95%) is used. The rate on all outstanding household term deposits up to 2 years was 2.74% (ECB MIR). The World Bank has no FR.INR.DPST figure for Poland."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.0475,
@@ -97,7 +97,7 @@
       "sourceName": "Ministry of Finance, Polish retail treasury savings bonds: 4-year indexed bonds COI1030",
       "sourceUrl": "https://www.obligacjeskarbowe.pl/oferta-obligacji/obligacje-4-letnie-coi/",
       "asOf": "2026-10-01",
-      "note": "4-year COI series sold 1-31 October 2026: 4.75% in year 1, then CPI + 1.50% (interest paid yearly). Same month: 6-year ROS 5.00% (family bond), 10-year EDO 5.35%, 3-year fixed TOS 4.40%, 1-year ROR 4.00%."
+      "note": "4-year COI series sold 1-31 October 2026: 4.75% in year 1, then CPI + 1.50% (interest paid yearly); the November series COI1130 keeps the same terms. Same offer: 6-year ROS 5.00% (family bond), 10-year EDO 5.35%, 3-year fixed TOS 4.40%, 2-year DOR 4.15%, 1-year ROR 4.00%."
     },
     "tbill_91d_rate": {
       "value": null,
@@ -148,12 +148,12 @@
       "note": "Zloty equivalent of EUR 100,000 per depositor per bank, converted at the NBP mid rate EUR 1 = PLN 4.3955 (30 October 2026). Up to EUR 200,000 for some temporary high balances (home sale, inheritance, insurance payouts)."
     },
     "credit_card_rate_cap": {
-      "value": 0.1518,
+      "value": 0.1543,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics (reported by NBP): Polish banks, extended credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.A2Z3.A.R.A.2250.PLN.N",
-      "asOf": "2026-08-31",
-      "note": "Typical rate: average 15.18% in August 2026. The Civil Code caps contractual interest at twice the sum of the NBP reference rate and 3.5 points, which is 14.5% with the reference rate at 3.75%; the average may include older contracts."
+      "asOf": "2026-09-30",
+      "note": "Typical rate: average 15.43% in September 2026 (15.18% in August). The Civil Code caps contractual interest at twice the sum of the NBP reference rate and 3.5 points, 14.5% a year with the reference rate at 3.75%; the ECB series is an annualised (compounded) rate, so it can sit slightly above the nominal cap."
     },
     "equity_return_low": {
       "value": 0.04,
@@ -206,7 +206,7 @@
     "fixed_income_return_low": {
       "value": 0.024,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.94% less 19% tax = 2.4% (ECB MIR)",
+      "sourceName": "Household deposits up to 1 year 2.95% less 19% tax = 2.4% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax bank term deposits only."
@@ -370,7 +370,7 @@
     "retirement_return_low": {
       "value": 0.02,
       "status": "assumption",
-      "sourceName": "After-tax 1-year deposit 2.4% (ECB MIR)",
+      "sourceName": "After-tax 1-year deposit 2.4% (ECB MIR, September 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.PL.B.L22.F.R.A.2250.PLN.N",
       "asOf": "2026-10-31",
       "note": "Low case: after-tax deposits with some further rate cuts."
@@ -421,7 +421,7 @@
       "sourceName": "Ministry of Family, Labour and Social Policy, permanent allowance (zasiłek stały)",
       "sourceUrl": "https://www.gov.pl/web/rodzina/zasilek-staly",
       "asOf": "2025-01-01",
-      "note": "Maximum for a single person from 1 January 2025: 130% of the single-person income threshold minus own income, capped at PLN 1,229 a month (minimum PLN 100). Paid by the municipal social assistance centre to people unable to work because of age (pension age) or disability. Poland has no universal social pension."
+      "note": "Maximum for a single person: 130% of the single-person income threshold minus own income, capped at PLN 1,229 a month (minimum PLN 100); the cap set from 1 January 2025 is still the one shown by the ministry in 2026 (thresholds are reviewed every three years). Paid by the municipal social assistance centre to people unable to work because of age (pension age) or disability. Poland has no universal social pension."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -497,8 +497,7 @@
       "available": false,
       "localName": "Bony skarbowe",
       "localNameEn": "Treasury bills",
-      "note": "Treasury bills are sold only at wholesale auctions; individuals can buy the 3-month retail OTS savings bond instead.",
-      "sourceUrl": "https://www.obligacjeskarbowe.pl/"
+      "note": "Treasury bills are sold only at wholesale auctions; individuals can buy the 3-month retail OTS savings bond instead."
     },
     "tbond_5y": {
       "available": true,

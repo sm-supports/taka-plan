@@ -7,6 +7,7 @@
   "region": "east_asia_pacific",
   "languages": [
     "zh",
+    "nan",
     "en"
   ],
   "currency": {
@@ -142,7 +143,7 @@
       "sourceName": "Central Deposit Insurance Corporation (CDIC), Deposit Insurance System overview",
       "sourceUrl": "https://www.cdic.gov.tw/main_en/List.aspx?uid=243&pid=83",
       "asOf": "2011-01-01",
-      "note": "Maximum coverage NT$3 million per depositor per insured institution since 1 Jan 2011."
+      "note": "Maximum coverage NT$3 million per depositor per insured institution, unchanged since 1 Jan 2011 and still shown as current on the CDIC page (read Oct 2026)."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -338,7 +339,7 @@
       "sourceName": "Bureau of Labor Insurance, Labor Insurance old-age benefits",
       "sourceUrl": "https://www.bli.gov.tw/en/0007461.html",
       "asOf": "2020-12-22",
-      "note": "Old-age pension age is 65 for people born in 1962 or later (60 for 1957 and before, rising a year per birth year); at least 15 insured years for the pension; claim up to 5 years early at -4% a year or defer at +4% a year."
+      "note": "Labor Insurance old-age pension age is 65 for people born in 1962 or later (so 65 for anyone born after 1975); at least 15 insured years; claim up to 5 years early at -4% a year or defer at +4% a year. Page last updated 2020, rule still in force."
     },
     "retirement_age_government": {
       "value": null,
@@ -397,26 +398,20 @@
       "note": "About 60% equity at the high case and 40% deposits and bonds."
     },
     "old_age_allowance_monthly": {
-      "value": 4049,
-      "status": "sourced",
-      "sourceName": "Bureau of Labor Insurance, National Pension Old-age Basic Guaranteed Pension",
-      "sourceUrl": "https://www.bli.gov.tw/en/0011315.html",
-      "asOf": "2024-01-01",
-      "note": "NT$4,049 a month from 1 Jan 2024; only for people already 65 when the National Pension Act took effect (1 Oct 2008), with income and property tests. Younger people get this amount as the fixed part of the contributory National Pension (Method A)."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Old-age Basic Guaranteed Pension (NT$4,049, BLI) is closed: only people already 65 on 1 Oct 2008 qualify, so someone planning today cannot receive it. A means-tested living allowance for low-income seniors exists, but its official page (sfaa.gov.tw) was unreachable, so no amount is given."
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "valueJson": {
-        "menAge": 65,
-        "womenAge": 65,
-        "over90Monthly": null,
-        "meansTested": true
-      },
-      "status": "sourced",
-      "sourceName": "Bureau of Labor Insurance, National Pension Old-age Basic Guaranteed Pension",
-      "sourceUrl": "https://www.bli.gov.tw/en/0011315.html",
-      "asOf": "2024-01-01",
-      "note": "Age 65 or older on 1 Oct 2008; resident 183+ days a year for 3 years; income up to NT$500,000 a year and land and houses up to NT$5,000,000."
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No open universal non-contributory pension; the Old-age Basic Guaranteed Pension only covers people aged 65 by 1 Oct 2008 (BLI). The low-income senior living allowance rules could not be read (sfaa.gov.tw unreachable)."
     },
     "gratuity_rule": {
       "value": null,
@@ -517,10 +512,7 @@
       "name": "Bureau of Labor Insurance (Labor Insurance and Labor Pension)",
       "url": "https://www.bli.gov.tw/en/"
     },
-    "oldAgeAllowance": {
-      "name": "Bureau of Labor Insurance, National Pension (Old-age Basic Guaranteed Pension)",
-      "url": "https://www.bli.gov.tw/en/0011315.html"
-    },
+    "oldAgeAllowance": null,
     "publicHealthCover": {
       "name": "National Health Insurance Administration",
       "url": "https://www.nhi.gov.tw/en/"

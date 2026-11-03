@@ -30,7 +30,7 @@
       "sourceName": "Asian Development Bank, Asian Development Outlook September 2026 (Marshall Islands economy page)",
       "sourceUrl": "https://www.adb.org/where-we-work/marshall-islands/economy",
       "asOf": "2026-09-30",
-      "note": "ADB forecast for 2026 (4.7% for 2027); the IMF projects 7.4% for 2026. The statistics office (EPPSO) has published no recent CPI report (last 2023 Q4), so a forecast is used."
+      "note": "ADB Asian Development Outlook (Sep 2026) estimate for calendar 2026, not a measured CPI reading (ADB forecasts 4.7% for 2027); the statistics office (EPPSO) has published no recent CPI report, so this published estimate is used."
     },
     "inflation_projection": {
       "value": 0.03,
@@ -262,7 +262,7 @@
       "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure, SH.XPD.OOPC.CH.ZS)",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=MH",
       "asOf": "2023-12-31",
-      "note": "About 1.1%: public and donor funding cover almost all health spending."
+      "note": "About 1.1%: public and donor funding cover almost all health spending. Latest World Bank (WHO GHED) value is for 2023, older than 2025."
     },
     "goal_inflation_health": {
       "value": 0.04,
@@ -286,7 +286,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=MH",
       "asOf": "2024-12-31",
-      "note": "Men 65.0, women 69.5 (2024)."
+      "note": "Men 65.0, women 69.5 (2024, older than 2025); UN WPP via georank gives 67.3 for 2026."
     },
     "life_table_remaining": {
       "value": null,
@@ -338,15 +338,15 @@
       "sourceName": "World Bank WDI, age dependency ratio, old (SP.POP.DPND.OL)",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=MH",
       "asOf": "2025-12-31",
-      "note": "100 / 7.96 (2025); no 2040 or 2065 projection could be read."
+      "note": "100 / 7.96 old-age dependency ratio (2025); populationpyramid.net has no Marshall Islands pages, so no 2040 or 2065 projection could be read."
     },
     "retirement_age_default": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "value": 63,
+      "status": "sourced",
+      "sourceName": "Marshall Islands Social Security Administration (MISSA), Retirement benefits",
+      "sourceUrl": "https://www.rmissa.net/retirement/",
       "asOf": "2026-10-31",
-      "note": "The Marshall Islands Social Security Administration (MISSA) pays old-age pensions, but we could not read its rules or the Social Security Act to confirm the pension age."
+      "note": "Normal retirement age 63 with at least 12 quarters of coverage (P.L. 2021-36 capped the normal retirement age at 63); early and deferred retirement were abolished in March 2017. MISSA also lists a Bill No. 45 on changing the retirement age whose content could not be read."
     },
     "retirement_age_government": {
       "value": null,
@@ -405,20 +405,26 @@
       "note": "High case with about 60% equity."
     },
     "old_age_allowance_monthly": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "No old-age social pension amount found. Enra, a universal basic income run by MISSA, pays about $200 per citizen per quarter (May 2026), and a planned non-contributory stipend for retirement-age people without a pension had no confirmed amount."
+      "value": 100,
+      "status": "sourced",
+      "sourceName": "MISSA, Social Support Scheme FAQs",
+      "sourceUrl": "https://www.rmissa.net/2025/08/27/social-support-scheme-faqs/",
+      "asOf": "2025-10-01",
+      "note": "Non-contributory Social Support Scheme pension of $100 a month for citizens aged 60+ who receive no MISSA or other retirement pension, paid since October 2025 as a three-year pilot, so it may change or end after FY2028."
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "A non-contributory stipend for retirement-age Marshallese who never contributed was announced in 2024, but its age rule and start could not be confirmed."
+      "valueJson": {
+        "menAge": 60,
+        "womenAge": 60,
+        "over90Monthly": null,
+        "meansTested": false
+      },
+      "status": "sourced",
+      "sourceName": "MISSA, Social Support Scheme FAQs",
+      "sourceUrl": "https://www.rmissa.net/2025/08/27/social-support-scheme-faqs/",
+      "asOf": "2025-10-01",
+      "note": "Age 60+, RMI citizenship, one year's residence; no income test is described, but anyone receiving a MISSA or other retirement pension is excluded. Three-year pilot from October 2025."
     },
     "gratuity_rule": {
       "value": null,
@@ -430,11 +436,19 @@
     },
     "public_pension_scheme": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 63,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Marshall Islands Social Security Administration (MISSA), Retirement and General Provisions",
+      "sourceUrl": "https://www.rmissa.net/retirement/",
       "asOf": "2026-10-31",
-      "note": "MISSA runs the contributory old-age pension, but we could not read its current pension age, contribution rates or indexation."
+      "note": "Contributory MISSA retirement pension from 63 (fully insured: 12 to 38 quarters of coverage); monthly benefit = 1/12 of (2% of indexed covered earnings + a social element of 14.5% of the first $11,000 and 0.7% of cumulative earnings from $11,000 to $44,000), minimum $128.99, with cuts above $299.99 since 2017. No cost-of-living adjustment is described, so inflationLinked is false; contribution rates and tax treatment were not stated."
     }
   },
   "instruments": {
@@ -503,8 +517,14 @@
     "centralBank": null,
     "insuranceRegulator": null,
     "insuranceComplaints": null,
-    "pensionScheme": null,
-    "oldAgeAllowance": null,
+    "pensionScheme": {
+      "name": "Marshall Islands Social Security Administration (MISSA)",
+      "url": "https://www.rmissa.net/"
+    },
+    "oldAgeAllowance": {
+      "name": "MISSA Social Support Scheme",
+      "url": "https://www.rmissa.net/2025/08/27/social-support-scheme-faqs/"
+    },
     "publicHealthCover": {
       "name": "Ministry of Health and Human Services (MOHHS)",
       "url": "https://www.rmihealth.org/"

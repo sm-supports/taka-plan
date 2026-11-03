@@ -31,7 +31,7 @@
       "sourceName": "INEC Panamá, Índice de Precios al Consumidor, as reported by Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/panama/inflation-cpi",
       "asOf": "2026-09-30",
-      "note": "Year-on-year CPI inflation 2.8% in September 2026 (2.2% in August), published by INEC on 14 October 2026; the INEC site shows the same 2.8%. 2025 annual average -0.1%."
+      "note": "Year-on-year CPI inflation 2.8% in September 2026 (2.2% in August), from INEC via Trading Economics (secondary source). World Bank 2025 average -0.19%."
     },
     "inflation_projection": {
       "value": 0.02,
@@ -103,7 +103,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Treasury bills (Letras del Tesoro) are generally 12-month instruments sold at periodic auctions (MEF, October 2026); no 3-month yield was found, and the MEF yield-curve page did not show figures."
+      "note": "Treasury bills (Letras del Tesoro) are generally 12-month instruments sold at periodic auctions (Ministry of Economy and Finance, October 2026); no 3-month yield was found, and the MEF yield-curve page did not show figures."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -287,7 +287,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PA",
       "asOf": "2024-12-31",
-      "note": "Men 76.9, women 82.7 (2024)."
+      "note": "Men 76.9, women 82.7 (2024; latest World Bank figure, older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -481,15 +481,15 @@
       "available": false,
       "localName": null,
       "localNameEn": "3-month treasury bill",
-      "note": "Letras del Tesoro are generally 12-month bills sold at periodic auctions (MEF, October 2026); a regular 3-month bill was not found.",
-      "sourceUrl": "https://www.mef.gob.pa/2026/10/moodys-asigna-calificacion-de-riesgo-a-los-programas-de-letras-y-notas-del-tesoro-de-panama/"
+      "note": "Letras del Tesoro are short-term bills sold at periodic auctions, generally with a 12-month term (Ministry of Economy and Finance announcement, October 2026); a regular 3-month bill was not found.",
+      "sourceUrl": null
     },
     "tbond_5y": {
       "available": true,
       "localName": "Notas del Tesoro",
       "localNameEn": "Treasury notes (medium term)",
-      "note": "Medium-term notes are sold at auction with term and coupon set each time; yields could not be sourced.",
-      "sourceUrl": "https://www.mef.gob.pa/2026/10/moodys-asigna-calificacion-de-riesgo-a-los-programas-de-letras-y-notas-del-tesoro-de-panama/"
+      "note": "Notas del Tesoro are medium-term notes sold at auction with the term and coupon set each time (Ministry of Economy and Finance, October 2026); yields could not be sourced.",
+      "sourceUrl": null
     },
     "tbond_10y": {
       "available": true,

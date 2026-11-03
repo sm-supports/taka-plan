@@ -286,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CR",
       "asOf": "2024-12-31",
-      "note": "Men 78.4, women 83.6 (2024)."
+      "note": "Men 78.4, women 83.6 (2024; latest World Bank figure, older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -327,7 +327,7 @@
     "support_ratio": {
       "value": null,
       "status": "sourced",
-      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP via populationpyramid.net (2040, 2065)",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP medium variant via populationpyramid.net (2040 and 2065 pages)",
       "sourceUrl": "https://www.populationpyramid.net/costa-rica/2065/",
       "asOf": "2025-12-31",
       "valueJson": {
@@ -354,7 +354,7 @@
       "sourceName": "CCSS, Reglamento del Seguro de Invalidez, Vejez y Muerte, article 5 (SCIJ)",
       "sourceUrl": "https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=26485&param2=148515&param3=1",
       "asOf": "2026-10-31",
-      "note": "Ordinary old-age pension at 65 with 300 monthly contributions (proportional pension at 65 with 180-299). Women may retire early from 63 with 405 contributions; early retirement for men was abolished in the 2023 reform."
+      "note": "Ordinary old-age pension at 65 with 300 monthly contributions (proportional pension at 65 with fewer, from 180). Article 5 (last amended 23 October 2025) allows early retirement only for women, under its table of ages and contributions, or by drawing on voluntary pension savings (Law 7983, art. 26); 65 applies to people born after 1975."
     },
     "retirement_age_government": {
       "value": 65,
@@ -462,7 +462,7 @@
         "inflationLinked": true,
         "taxFree": null
       },
-      "note": "Mandatory for all employees and the self-employed. Pension at 65 with 300 contributions, based on the best 300 monthly wages updated by CPI; pensions in payment are revalued periodically by the CCSS board in line, as far as possible, with the cost of living. A mandatory individual account (ROP) adds to it."
+      "note": "Mandatory for all employees and the self-employed. Pension at 65 with 300 contributions, based on the best 300 monthly wages updated by CPI (art. 24); under art. 28 the CCSS board revalues pensions in payment periodically, in line as far as possible with wages and the cost of living. A mandatory individual account (ROP) adds to it."
     }
   },
   "instruments": {

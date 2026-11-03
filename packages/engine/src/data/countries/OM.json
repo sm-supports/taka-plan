@@ -351,20 +351,20 @@
       "note": "100 / old-age dependency ratio: 3.68 (2025, World Bank), 5.2 (2040) and 14.0 (2065, populationpyramid.net/oman/2065/); the large migrant workforce keeps the ratio high."
     },
     "retirement_age_default": {
-      "value": 60,
+      "value": 63,
       "status": "sourced",
-      "sourceName": "Gov.om (official government portal), Get old-age pension, Social Protection Fund service, updated 21 September 2026",
-      "sourceUrl": "https://gov.om/w/-get-old-age-pension",
-      "asOf": "2026-09-21",
-      "note": "The Social Protection Fund pays the old-age pension from age 60 to insured Omanis with a period of service; the page does not give a different age for women. Expatriates are not covered."
+      "sourceName": "Social Protection Law (Royal Decree 52/2023), text on qanoon.om, Articles 6 and 72",
+      "sourceUrl": "https://qanoon.om/p/2023/rd2023052/",
+      "asOf": "2024-01-01",
+      "note": "Under Articles 6 and 72 of the Social Protection Law the old-age pension is paid at the 'elderly age', 60 from 1 January 2024 (confirmed on gov.om, 21 September 2026), rising by one year every seven years until 65 (61 from 2031, 62 from 2038, 63 from 2045, 64 from 2052, 65 from 2059). For people born after 1975 this means 61 to 65; 63 applies to those born about 1982-1988 and is used here. Women have the same age. Law text from 2023 (older than 2025) but in force."
     },
     "retirement_age_government": {
-      "value": 60,
+      "value": 63,
       "status": "sourced",
-      "sourceName": "Gov.om (official government portal), Get old-age pension, Social Protection Fund service, updated 21 September 2026",
-      "sourceUrl": "https://gov.om/w/-get-old-age-pension",
-      "asOf": "2026-09-21",
-      "note": "Since the 2023 Social Protection Law the Social Protection Fund runs one old-age pension for civil and private-sector Omanis, paid from 60; the page gives no separate civil-service age."
+      "sourceName": "Social Protection Law (Royal Decree 52/2023), text on qanoon.om, Articles 6 and 72",
+      "sourceUrl": "https://qanoon.om/p/2023/rd2023052/",
+      "asOf": "2024-01-01",
+      "note": "Since 2024 the Social Protection Fund runs one old-age pension for civil and private-sector Omanis, so the same rising elderly age applies (60 now, 63 for people born about 1982-1988, 65 from 2059); transitional rights of members of the former government pension funds were not checked."
     },
     "retirement_return_low": {
       "value": 0.025,
@@ -415,49 +415,55 @@
       "note": "High case: a growth-leaning mix."
     },
     "old_age_allowance_monthly": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The Social Protection Fund's elderly benefit (منفعة كبار السن) is confirmed on gov.om for Omanis aged 60+, but the page gives no monthly amount and the Fund's site could not be reached."
+      "value": 115,
+      "status": "sourced",
+      "sourceName": "Social Protection Law (Royal Decree 52/2023), text on qanoon.om, Article 29 (elderly benefit)",
+      "sourceUrl": "https://qanoon.om/p/2023/rd2023052/",
+      "asOf": "2024-01-01",
+      "note": "OMR 115 a month for every Omani resident in Oman who has reached the elderly age; gov.om (2026) confirms the benefit is open for applications. Article 24 lets the amount be reviewed every two years; no change was found. Law from 2023 (older than 2025)."
     },
     "old_age_allowance_eligibility": {
       "value": null,
       "valueJson": {
-        "menAge": 60,
-        "womenAge": 60,
+        "menAge": 63,
+        "womenAge": 63,
         "over90Monthly": null,
         "meansTested": false
       },
       "status": "sourced",
-      "sourceName": "Gov.om (official government portal), Register for the elderly benefit, Social Protection Fund service",
-      "sourceUrl": "https://gov.om/w/get-old-age-benefit",
-      "asOf": "2026-10-31",
-      "note": "Monthly support for people who have reached 60; the only conditions listed are Omani nationality and residence in Oman, so it is treated as not means-tested."
+      "sourceName": "Social Protection Law (Royal Decree 52/2023), text on qanoon.om, Articles 6 and 29; gov.om elderly benefit service",
+      "sourceUrl": "https://qanoon.om/p/2023/rd2023052/",
+      "asOf": "2024-01-01",
+      "note": "Article 29: Omani, resident in Oman, and of elderly age; no income test. The elderly age is 60 now (gov.om) and rises one year every seven years to 65 by 2059 (Article 6); 63 is used to match the pension age for people born about 1982-1988. Law from 2023 (older than 2025)."
     },
     "gratuity_rule": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The Labour Law (Royal Decree 53/2023) gives non-Omani employees an end-of-service gratuity (Omanis are covered by the Social Protection Fund), but the law text on the Ministry of Labour site refused access, so the days per year could not be confirmed."
+      "valueJson": {
+        "daysPerYear": 30,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Labour Law (Royal Decree 53/2023), Article 61, text on qanoon.om",
+      "sourceUrl": "https://qanoon.om/p/2023/rd2023053/",
+      "asOf": "2023-07-25",
+      "note": "At least one month's basic wage for each year of service, part years pro rata, on the last basic wage; it applies only to workers not covered by the Social Protection Law, which in practice means non-Omani employees (Omanis get the Social Protection Fund pension instead). Article 48 lets an employer savings plan of equal value replace it. Law from 2023 (older than 2025) but in force."
     },
     "public_pension_scheme": {
       "value": null,
       "valueJson": {
-        "pensionFromAge": 60,
+        "pensionFromAge": 63,
         "entryAgeMin": null,
         "entryAgeMax": null,
         "inflationLinked": false,
         "taxFree": null
       },
       "status": "sourced",
-      "sourceName": "Gov.om (official government portal), Get old-age pension, Social Protection Fund service, updated 21 September 2026",
-      "sourceUrl": "https://gov.om/w/-get-old-age-pension",
-      "asOf": "2026-09-21",
-      "note": "Compulsory Social Protection Fund pension for Omani employees (PwC: contributions 14.5% employer and 8% employee), paid from 60 with a period of service. No indexation rule could be read, so it is treated as not inflation-linked; pensions will count as income under the personal income tax from 2028."
+      "sourceName": "Social Protection Law (Royal Decree 52/2023), text on qanoon.om, Articles 6, 61, 70 and 72",
+      "sourceUrl": "https://qanoon.om/p/2023/rd2023052/",
+      "asOf": "2024-01-01",
+      "note": "Compulsory Social Protection Fund pension for Omani employees (Article 70: 11% employer and 7.5% employee contributions; wage ceiling OMR 3,000 a month), paid at the elderly age, 60 now and rising to 65 by 2059 (63 for people born about 1982-1988). Article 61 allows yearly increases set by the Fund's board on actuarial advice, not automatic indexation, so it is treated as not inflation-linked. Pensions will count as income under the personal income tax from 2028. Law from 2023 (older than 2025) but in force."
     }
   },
   "instruments": {

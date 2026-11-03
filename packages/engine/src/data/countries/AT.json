@@ -52,12 +52,12 @@
       "note": "Austria uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026, held on 29 October 2026."
     },
     "savings_account_rate": {
-      "value": 0.0045,
+      "value": 0.0046,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Austrian banks, overnight deposits from households (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.AT.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight deposits in Austria, August 2026; notice deposits up to 3 months (typical online savings accounts) paid 1.94%."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight deposits in Austria, September 2026 (0.45% in August); notice deposits up to 3 months (typical online savings accounts) paid 2.05%."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -68,12 +68,12 @@
       "note": "ECB/OeNB MFI statistics only publish deposits with agreed maturity up to 1 year as one bucket (2.15% in August 2026); no 3-month term deposit rate found; OeNB tables and comparison sites were not reachable."
     },
     "fdr_1y_rate": {
-      "value": 0.0215,
+      "value": 0.0218,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Austrian banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.AT.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; 1-2 years paid 2.18% and over 2 years 2.05% in August 2026."
+      "asOf": "2026-09-30",
+      "note": "September 2026 new business (2.15% in August); the bucket covers all fixed terms up to one year."
     },
     "dps_rate": {
       "value": null,
@@ -84,12 +84,12 @@
       "note": "Austria's monthly-deposit savings contract is the Bausparvertrag (building-society savings with a state premium); no current average rate was found from an official source."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0152,
+      "value": 0.0155,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Austrian banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.AT.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; household overnight deposits paid 0.45%. World Bank FR.INR.DPST has no Austria figure."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, September 2026 (1.52% in August); household overnight deposits paid 0.46%. World Bank FR.INR.DPST has no Austria figure."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -116,12 +116,12 @@
       "note": "No 5-year Austrian government bond yield found: Trading Economics and worldgovernmentbonds.com pages read showed no 5-year figure and OeNB publishes only a weighted average (3.59% at 13.98 years residual maturity, 23 Oct 2026)."
     },
     "tbond_10y_rate": {
-      "value": 0.0361,
+      "value": 0.0369,
       "status": "sourced",
-      "sourceName": "Trading Economics, Austria 10-year government bond yield",
-      "sourceUrl": "https://tradingeconomics.com/austria/government-bond-yield",
-      "asOf": "2026-10-30",
-      "note": "ECB long-term (10-year) convergence yield for Austria was 3.69% in September 2026."
+      "sourceName": "European Central Bank, long-term interest rate for convergence purposes (10-year government bond yield), Austria",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.AT.L.L40.CI.0000.EUR.N.Z",
+      "asOf": "2026-09-30",
+      "note": "Monthly average 3.69% in September 2026 (3.41% in August); official ECB series used instead of a market quote. Market yield was about 3.6% in late October 2026 (Trading Economics)."
     },
     "tax_bank_interest": {
       "value": 0.25,
@@ -134,16 +134,16 @@
     "tax_sanchayapatra_profit": {
       "value": 0.275,
       "status": "sourced",
-      "sourceName": "Bundesschatz (Austrian Treasury) FAQ; PwC Worldwide Tax Summaries",
-      "sourceUrl": "https://www.bundesschatz.at/",
+      "sourceName": "Bundesschatz (Austrian Treasury / Republic of Austria), frequently asked questions",
+      "sourceUrl": "https://www.bundesschatz.at/haeufige-fragen",
       "asOf": "2026-10-31",
-      "note": "27.5% KESt is withheld automatically on Bundesschatz interest for Austrian residents."
+      "note": "27.5% KESt under s.27a EStG is withheld automatically on Bundesschatz interest for Austrian residents, because Bundesschatz claims count as securities; savings-account interest is taxed at 25%."
     },
     "deposit_insurance_limit": {
       "value": 100000,
       "status": "sourced",
-      "sourceName": "Einlagensicherung AUSTRIA",
-      "sourceUrl": "https://www.einlagensicherung.at/en/",
+      "sourceName": "Einlagensicherung AUSTRIA, deposit protection",
+      "sourceUrl": "https://www.einlagensicherung.at/en/prot-deposits.php",
       "asOf": "2026-10-31",
       "note": "EUR 100,000 per depositor per bank; up to EUR 500,000 in special cases set out in the scheme rules."
     },
@@ -166,7 +166,7 @@
     "equity_return_base": {
       "value": 0.055,
       "status": "assumption",
-      "sourceName": "ATX price index (Trading Economics); 1-year deposit 2.15% less 25% KESt = 1.6%",
+      "sourceName": "ATX price index (Trading Economics); 1-year deposit 2.18% less 25% KESt = 1.6%",
       "sourceUrl": "https://tradingeconomics.com/austria/stock-market",
       "asOf": "2026-10-31",
       "note": "The ATX has done well over 10 years, but the base is capped at the after-tax safe rate plus about 4 points because the index is small and bank- and energy-heavy."
@@ -206,15 +206,15 @@
     "fixed_income_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household notice deposits 1.94% less 25% KESt (ECB MFI statistics)",
+      "sourceName": "Household notice deposits 2.05% (Sep 2026) less 25% KESt = 1.5% (ECB MFI statistics)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.AT.B.L23.D.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Low case: easy-access savings after tax, with rates drifting lower."
+      "note": "Low case: easy-access savings after tax (about 1.5%), with rates drifting lower over time."
     },
     "fixed_income_return_base": {
       "value": 0.016,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.15% less 25% KESt = 1.6%",
+      "sourceName": "Household deposits up to 1 year 2.18% (Sep 2026) less 25% KESt = 1.6%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.AT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Base case: after-tax 1-year term deposit rate."
@@ -222,10 +222,10 @@
     "fixed_income_return_high": {
       "value": 0.026,
       "status": "assumption",
-      "sourceName": "Austria 10-year government bond 3.61% less 27.5% KESt = 2.6%",
-      "sourceUrl": "https://tradingeconomics.com/austria/government-bond-yield",
+      "sourceName": "Austria 10-year government bond 3.69% (ECB, Sep 2026) less 27.5% KESt = 2.7%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.AT.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
-      "note": "High case: holding long government bonds or long Bundesschatz terms after tax."
+      "note": "High case: holding long government bonds or long Bundesschatz terms after tax, a little below the current after-tax 10-year yield."
     },
     "life_claim_settlement_rate": {
       "value": null,
@@ -264,7 +264,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=AT",
-      "asOf": "2024-12-31"
+      "asOf": "2024-12-31",
+      "note": "2024 is the latest year in the World Bank series (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.04,
@@ -287,8 +288,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/austria",
-      "asOf": "2026-12-31",
-      "note": "Men 80.2, women 84.7 (UN WPP estimate for 2026); World Bank 2024 figure 82.0."
+      "asOf": "2026-07-01",
+      "note": "Men 80.2, women 84.7 (UN WPP estimate for 2026, mid-year date used); World Bank 2024 figure 82.0."
     },
     "life_table_remaining": {
       "value": null,
@@ -323,7 +324,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/austria",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
     },
     "support_ratio": {
@@ -356,7 +357,7 @@
       "sourceName": "Pensionsversicherungsanstalt, Alterspension",
       "sourceUrl": "https://www.pv.at/web/pension/pensionsarten/alterspension",
       "asOf": "2026-10-31",
-      "note": "Regular pension age 65; women's age rises by half a year every 6 months from 2024 (61-61.5 in 2026) and reaches 65 for women born from 1 July 1968. Minimum 15 insurance years."
+      "note": "Regular pension age 65 for anyone born after 1975 (men and women); the women's age is rising by half a year every 6 months from 2024 and reaches 65 for women born from 1 July 1968. Minimum 15 insurance years."
     },
     "retirement_age_government": {
       "value": null,
@@ -364,12 +365,12 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Federal civil servants retire under the Civil Service Act (BDG 1979 s.13); the RIS legal database blocked automated access and no other source read stated the age."
+      "note": "Federal civil servants retire under the Civil Service Act (BDG 1979 s.13(1), which sets retirement at the end of the month of the 65th birthday in the statute text read), but the official RIS legal database was unavailable (HTTP 503) so no official page could be cited."
     },
     "retirement_return_low": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "Household notice deposits 1.94% less 25% KESt",
+      "sourceName": "Household notice deposits 2.05% (Sep 2026) less 25% KESt = 1.5%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.AT.B.L23.D.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: easy-access savings after tax."
@@ -377,16 +378,16 @@
     "retirement_return_base": {
       "value": 0.016,
       "status": "assumption",
-      "sourceName": "Household deposits up to 1 year 2.15% less 25% KESt = 1.6%",
+      "sourceName": "Household deposits up to 1 year 2.18% (Sep 2026) less 25% KESt = 1.6%",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.AT.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate."
+      "note": "Base case capped at the after-tax 1-year term deposit rate (1.64%)."
     },
     "retirement_return_high": {
       "value": 0.024,
       "status": "assumption",
-      "sourceName": "Austria 10-year government bond 3.61% less 27.5% KESt = 2.6%",
-      "sourceUrl": "https://tradingeconomics.com/austria/government-bond-yield",
+      "sourceName": "Austria 10-year government bond 3.69% (ECB, Sep 2026) less 27.5% KESt = 2.7%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.AT.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case: a ladder of longer government bonds and Bundesschatz terms after tax, slightly below the 10-year yield."
     },
@@ -409,32 +410,28 @@
     "retirement_accumulation_return_high": {
       "value": 0.05,
       "status": "assumption",
-      "sourceName": "After-tax 10-year bond 2.6%; equity high 7.5%",
-      "sourceUrl": "https://tradingeconomics.com/austria/government-bond-yield",
+      "sourceName": "After-tax 10-year bond 2.7% (ECB, Sep 2026); equity high 7.5%",
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.AT.L.L40.CI.0000.EUR.N.Z",
       "asOf": "2026-10-31",
       "note": "High case for a growth-leaning balanced mix."
     },
     "old_age_allowance_monthly": {
-      "value": 1308.39,
-      "status": "sourced",
-      "sourceName": "Pensionsversicherungsanstalt, Ausgleichszulage (equalisation supplement) 2026",
-      "sourceUrl": "https://www.pv.at/web/pension/in-der-pension/ausgleichszulage-ausgleichszulagenbonus-und-pensionsbonus",
-      "asOf": "2026-01-01",
-      "note": "Not a separate social pension: a means-tested top-up that raises a pension to EUR 1,308.39 a month (single person, 2026); requires legal residence. Rates rise 3.3% in 2027."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Austria has no non-contributory old-age (social) pension: the Ausgleichszulage is only paid to people who already draw a statutory pension and tops their total income up to a reference rate (EUR 1,308.39 a month for a single person in 2026), which is a means-test threshold, not an amount a person without a pension could receive (Pensionsversicherungsanstalt, https://www.pv.at/web/pension/in-der-pension/ausgleichszulage-ausgleichszulagenbonus-und-pensionsbonus). Social assistance (Sozialhilfe) is general, not an old-age pension.",
+      "absent": true
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "valueJson": {
-        "menAge": 65,
-        "womenAge": 61.5,
-        "over90Monthly": null,
-        "meansTested": true
-      },
-      "status": "sourced",
-      "sourceName": "Pensionsversicherungsanstalt, Ausgleichszulage and Alterspension",
-      "sourceUrl": "https://www.pv.at/web/pension/in-der-pension/ausgleichszulage-ausgleichszulagenbonus-und-pensionsbonus",
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Paid only to people who draw a pension and whose total income is below the reference rate; ages shown are the regular pension ages (women's age rising to 65 by 2033)."
+      "note": "No non-contributory old-age pension exists; the Ausgleichszulage requires drawing a statutory pension, lawful residence and income below the reference rate (Pensionsversicherungsanstalt, https://www.pv.at/web/pension/in-der-pension/ausgleichszulage-ausgleichszulagenbonus-und-pensionsbonus).",
+      "absent": true
     },
     "gratuity_rule": {
       "value": null,
@@ -448,7 +445,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Austria other taxes (employee provision fund 1.53%)",
       "sourceUrl": "https://taxsummaries.pwc.com/austria/corporate/other-taxes",
       "asOf": "2026-07-23",
-      "note": "Severance pay (Abfertigung neu): employers pay 1.53% of gross pay, including the 13th and 14th salaries, into an employee provision fund; 1.53% x 14 monthly salaries = about 6.4 days of pay per year of service, plus fund returns."
+      "note": "Severance pay (Abfertigung neu): employers pay 1.53% of monthly gross pay, including the 13th and 14th salaries, into an employee provision fund (PwC calls it the mandatory employee pension fund); 1.53% x 14 monthly salaries = about 6.4 days of pay per year of service, plus fund returns, paid out on termination after 3 contribution years."
     },
     "public_pension_scheme": {
       "value": null,
@@ -464,7 +461,7 @@
       "sourceName": "Pensionsversicherungsanstalt (Alterspension; Pensionsanpassung)",
       "sourceUrl": "https://www.pv.at/web/pension/in-der-pension/pensionsanpassung-und-pensionserhoehung",
       "asOf": "2026-10-31",
-      "note": "Compulsory statutory pension insurance (employee 10.25%, employer 12.55% of gross pay); pensions are adjusted yearly by consumer-price inflation from August to July (2.95% for 2027 up to EUR 6,930 a month) and taxed as income."
+      "note": "Compulsory statutory pension insurance (employee 10.25%, employer 12.55% of gross pay, PwC); pensions are adjusted every 1 January by consumer-price inflation from August to July (2.95% for 2027 up to EUR 6,930 a month, Pensionsversicherungsanstalt) and taxed as income."
     }
   },
   "instruments": {
@@ -497,14 +494,13 @@
       "localName": "Bundesschatz",
       "localNameEn": "Federal savings product of the Republic of Austria",
       "note": "Sold online directly by the Austrian Treasury to individuals, fixed terms from 1 month to 10 years; 27.5% KESt withheld.",
-      "sourceUrl": "https://www.bundesschatz.at/"
+      "sourceUrl": "https://www.bundesschatz.at/haeufige-fragen"
     },
     "tbill_91d": {
       "available": true,
       "localName": "Austrian Treasury Bills",
       "localNameEn": "Austrian Treasury Bills (ATB)",
-      "note": "Auctioned by the Austrian Treasury mainly to institutions.",
-      "sourceUrl": "https://www.oebfa.at/en/"
+      "note": "Auctioned by the Austrian Treasury mainly to institutions."
     },
     "tbond_5y": {
       "available": true,
@@ -515,7 +511,7 @@
       "available": true,
       "localName": "Bundesanleihe",
       "localNameEn": "Republic of Austria Government Bond",
-      "sourceUrl": "https://tradingeconomics.com/austria/government-bond-yield"
+      "sourceUrl": "https://data-api.ecb.europa.eu/service/data/IRS/M.AT.L.L40.CI.0000.EUR.N.Z"
     },
     "equity_fund": {
       "available": true,
@@ -549,17 +545,14 @@
       "name": "Pensionsversicherungsanstalt (statutory pension insurance)",
       "url": "https://www.pv.at/"
     },
-    "oldAgeAllowance": {
-      "name": "Ausgleichszulage (means-tested pension supplement)",
-      "url": "https://www.pv.at/web/pension/in-der-pension/ausgleichszulage-ausgleichszulagenbonus-und-pensionsbonus"
-    },
+    "oldAgeAllowance": null,
     "publicHealthCover": {
       "name": "Österreichische Gesundheitskasse (statutory health insurance)",
       "url": "https://www.gesundheitskasse.at/"
     },
     "depositInsurance": {
       "name": "Einlagensicherung AUSTRIA",
-      "url": "https://www.einlagensicherung.at/"
+      "url": "https://www.einlagensicherung.at/en/prot-deposits.php"
     },
     "statistics": {
       "name": "Statistik Austria",

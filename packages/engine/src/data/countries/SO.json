@@ -1,0 +1,532 @@
+{
+  "schemaVersion": 1,
+  "code": "SO",
+  "iso3": "SOM",
+  "nameEn": "Somalia",
+  "nameNative": "Soomaaliya",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "so",
+    "ar",
+    "en"
+  ],
+  "currency": {
+    "code": "USD",
+    "symbol": "$",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1,
+      "status": "sourced",
+      "sourceName": "Central Bank of Somalia, Spillover Effects of Foreign Aid Reductions on Somalia's Macro-Financial Stability (October 2026)",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-05",
+      "note": "Somalia is fully dollarized: the US dollar is the medium of exchange, unit of account and store of value for all formal transactions, bank deposits and credit, while the Somali shilling (SOS) survives only for small informal payments. Plans are therefore made in US dollars."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.068,
+      "status": "sourced",
+      "sourceName": "Somalia National Bureau of Statistics, Consumer Price Index September 2026",
+      "sourceUrl": "https://nbs.gov.so/wp-content/uploads/2026/10/CPI-2026_September.pdf",
+      "asOf": "2026-09-30",
+      "note": "Prices rose 6.8% over the twelve months to September 2026 (6.9% in August, 6.7% in July); the CPI tracks prices in a dollarized economy."
+    },
+    "inflation_projection": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "SNBS CPI (6.7-6.9% in mid-2026); full dollarization (Central Bank of Somalia, October 2026)",
+      "sourceUrl": "https://nbs.gov.so/wp-content/uploads/2026/10/CPI-2026_September.pdf",
+      "asOf": "2026-10-31",
+      "note": "With no inflation target and prices set in US dollars, we plan with 5%, below the current oil- and import-driven rate but above US inflation to allow for import costs and supply shocks."
+    },
+    "policy_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Central Bank of Somalia does not set a policy interest rate; its October 2026 paper says the economy is fully dollarized and the shilling carries no monetary policy relevance."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks operate under Islamic finance with profit-sharing accounts; no published average return on savings accounts was found."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published return on 3-month Islamic investment deposits was found."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published return on 1-year Islamic investment deposits was found."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product with a published return was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No recent average deposit return is published; the World Bank FR.INR.DPST series for Somalia ends in 1989."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail bond is issued; Somalia has no domestic government securities market."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Government does not issue Treasury bills."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Government does not issue domestic bonds."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Government does not issue domestic bonds."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Banks pay profit shares rather than interest, and no withholding tax rule on deposit returns for individuals was found."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit insurance scheme or cover limit was found in Central Bank of Somalia publications."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No credit card rate cap or published card rate was found; Islamic banks do not charge interest."
+    },
+    "equity_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "No local stock index with a usable record; global equity in US dollars",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global equities, earned in dollars."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Global equity in US dollars; assumed safe dollar return about 2.5%",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "No local index with a record exists, so equity means a global index fund in dollars, held 3.5 points above the assumed safe dollar return."
+    },
+    "equity_return_high": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Global equity history in US dollars",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: global equities repeat their long-run dollar returns."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "Gold trend in US dollars; economy fully dollarized",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold prices."
+    },
+    "gold_return_base": {
+      "value": 0.045,
+      "status": "assumption",
+      "sourceName": "Gold trend in US dollars; economy fully dollarized",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run dollar gold trend of about 4.5%, with no currency effect because savings are held in dollars."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Gold trend in US dollars; economy fully dollarized",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "No published local deposit returns; dollarized economy",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: dollar savings earning little. Somalia is fully dollarized and has no government securities market, so safe returns are dollar returns on bank deposits held abroad or in local Islamic accounts."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "No published local deposit returns; dollarized economy",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a modest dollar return on profit-sharing deposits. Somalia is fully dollarized and has no government securities market, so safe returns are dollar returns on bank deposits held abroad or in local Islamic accounts."
+    },
+    "fixed_income_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "No published local deposit returns; dollarized economy",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: dollar term investment accounts or short dollar bonds held abroad."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Takaful is nascent (Central Bank of Somalia, October 2026) and no claim settlement ratio is published."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life or family takaful premium data was found; the takaful market is nascent."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official figure for the cost of a private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published health takaful premium data was found."
+    },
+    "oop_health_share": {
+      "value": 0.3078,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Somalia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SO",
+      "asOf": "2023-12-31",
+      "note": "30.8% in 2023 (WHO Global Health Expenditure Database), the latest available; older than 2025. Much of the rest is donor-funded."
+    },
+    "goal_inflation_health": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "SNBS CPI September 2026: health prices up 9.6% over twelve months; inflation assumption 5%",
+      "sourceUrl": "https://nbs.gov.so/wp-content/uploads/2026/10/CPI-2026_September.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health costs are planned 1.5 points above general inflation as they have recently risen faster than the CPI."
+    },
+    "goal_inflation_education": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "SNBS CPI September 2026: education services up 11.5% over twelve months; inflation assumption 5%",
+      "sourceUrl": "https://nbs.gov.so/wp-content/uploads/2026/10/CPI-2026_September.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education costs are planned 1.5 points above general inflation as school fees have recently risen much faster than the CPI."
+    },
+    "life_expectancy": {
+      "value": 58.97,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Somalia",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SO",
+      "asOf": "2024-12-31",
+      "note": "59.0 years in 2024 (men 56.5, women 61.6), UN WPP estimates via the World Bank; UN WPP 2024 projects 59.3 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 16.9,
+            "men": 16.1,
+            "women": 17.6
+          },
+          {
+            "age": 65,
+            "total": 13.5,
+            "men": 12.9,
+            "women": 14.0
+          },
+          {
+            "age": 70,
+            "total": 10.5,
+            "men": 10.0,
+            "women": 10.9
+          },
+          {
+            "age": 80,
+            "total": 5.9,
+            "men": 5.6,
+            "women": 6.1
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/somalia/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals are the mean of men and women except at 65, where the page gives 13.5."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 19.4
+          },
+          {
+            "year": 2040,
+            "value": 18.9
+          },
+          {
+            "year": 2065,
+            "value": 12.7
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=SO",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+, computed as 100 / old-age dependency ratio: 5.1 in 2025 (World Bank) gives 19.4; 5.3 in 2040 and 7.9 in 2065 (populationpyramid.net/somalia/2040/ and /2065/) give 18.9 and 12.7."
+    },
+    "retirement_age_default": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national contributory pension with a pension age covers private-sector workers, and no statutory private-sector retirement age was found in official sources."
+    },
+    "retirement_age_government": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The civil service retirement age could not be confirmed from an official source."
+    },
+    "retirement_return_low": {
+      "value": 0.01,
+      "status": "assumption",
+      "sourceName": "No published local deposit returns; dollarized economy",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: dollar savings earning little."
+    },
+    "retirement_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "No published local deposit returns; dollarized economy",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept at the assumed safe dollar return of about 2.5%. Somalia is fully dollarized and has no government securities market, so safe returns are dollar returns on bank deposits held abroad or in local Islamic accounts."
+    },
+    "retirement_return_high": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "No published local deposit returns; dollarized economy",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: dollar term investments."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Safe dollar return about 2.5%; equity base 6%; gold base 4.5%",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly dollar deposits."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Safe dollar return about 2.5%; equity base 6%; gold base 4.5%",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of dollar deposits, gold and global equity funds."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Safe dollar return about 2.5%; equity base 6%; gold base 4.5%",
+      "sourceUrl": "https://centralbank.gov.so/wp-content/uploads/2026/10/Spillover-Effects-of-Foreign-Aid-Reductions-on-Somalias-Macro-Financial-Stability.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix with more global equity."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found; national cash transfers target poor and vulnerable households rather than older people by age."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The private-sector end-of-service rule in the Labour Code could not be read from an official source."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No national contributory pension scheme for private-sector workers was found in official sources."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Savings account (Islamic, in US dollars)",
+      "note": "Banks offer Shariah-compliant dollar savings accounts; returns are not published."
+    },
+    "fdr_3m": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard 3-month term deposit with published returns was found."
+    },
+    "fdr_1y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard 1-year term deposit with published returns was found."
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No Treasury bills are issued."
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic government bonds."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No domestic government bonds."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No locally sold diversified equity fund was found; investors can only use foreign funds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Dahab",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Central Bank of Somalia",
+      "url": "https://centralbank.gov.so/"
+    },
+    "insuranceRegulator": {
+      "name": "Central Bank of Somalia (takaful regulator under the Takaful Act, Law No. 39 of 2025)",
+      "url": "https://centralbank.gov.so/wp-content/uploads/2026/10/Takaful-Act.-Law-No-39_2025.pdf"
+    },
+    "insuranceComplaints": null,
+    "pensionScheme": null,
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Somalia National Bureau of Statistics",
+      "url": "https://nbs.gov.so/consumer-price-index-cpi-sept-2026/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

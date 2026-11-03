@@ -6,6 +6,7 @@
   "nameNative": "Belau",
   "region": "east_asia_pacific",
   "languages": [
+    "pau",
     "en"
   ],
   "currency": {
@@ -26,7 +27,7 @@
     "inflation_cpi": {
       "value": 0.03,
       "status": "sourced",
-      "sourceName": "Palau Office of Planning and Statistics (Ministry of Finance), CPI 2026 Q2 key figures",
+      "sourceName": "Bureau of Budget and Planning (Ministry of Finance), CPI 2026 Q2 key figures",
       "sourceUrl": "https://www.palaugov.pw/consumer-price-index-cpi/",
       "asOf": "2026-06-30",
       "note": "All-groups CPI up 3.0% year on year in the June 2026 quarter (2.2% on the quarter). World Bank gives -0.4% for 2025."
@@ -35,7 +36,7 @@
       "value": 0.025,
       "status": "assumption",
       "sourceName": "IMF WEO CPI projections for Palau (1.7% 2026, 3.7% 2027, 2.1-2.5% 2028-2030); dollar economy",
-      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/NRU/PLW",
+      "sourceUrl": "https://www.imf.org/external/datamapper/api/v1/PCPIPCH/PLW",
       "asOf": "2026-10-31",
       "note": "Palau uses the US dollar and imports most goods, so we plan with 2.5%, a little above the Federal Reserve's 2% goal, in line with the IMF medium-term path."
     },
@@ -101,7 +102,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Palau issues no treasury bills (it uses the US dollar); US 3-month bills yielded 4.09% on 30 Oct 2026."
+      "note": "Palau issues no treasury bills (it uses the US dollar); US 3-month bills yielded about 4.09% on 30 Oct 2026 (4.08% on 2 Nov)."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -260,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=PW",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "2023 figure, the latest World Bank year (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.035,
@@ -284,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=PW",
       "asOf": "2024-12-31",
-      "note": "Men 67.3, women 71.9."
+      "note": "2024 figure, the latest World Bank year (older than 2025). Men 67.3, women 71.9."
     },
     "life_table_remaining": {
       "value": null,
@@ -473,7 +475,7 @@
     },
     "depositInsurance": null,
     "statistics": {
-      "name": "Office of Planning and Statistics, Bureau of Budget and Planning, Ministry of Finance",
+      "name": "Bureau of Budget and Planning, Ministry of Finance (statistics: CPI, national accounts, census)",
       "url": "https://www.palaugov.pw/executive-branch/ministries/finance/budgetandplanning/"
     }
   },

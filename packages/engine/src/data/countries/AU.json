@@ -47,7 +47,7 @@
       "sourceName": "Reserve Bank of Australia, Statistical Table F1 (cash rate target)",
       "sourceUrl": "https://www.rba.gov.au/statistics/cash-rate/",
       "asOf": "2026-10-29",
-      "note": "Cash rate target 4.60%; last raised 0.25 points (effective 30 September 2026)"
+      "note": "Cash rate target 4.60%; last raised 0.25 points on 6 May 2026 (RBA Table F1)"
     },
     "savings_account_rate": {
       "value": 0.031,
@@ -103,23 +103,23 @@
       "sourceName": "Reserve Bank of Australia, Statistical Table F1 (3-month bank accepted bills/NCDs)",
       "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f01d.xlsx",
       "asOf": "2026-10-29",
-      "note": "3-month bank bill rate used as the bill benchmark; Treasury Notes are issued irregularly"
+      "note": "3-month bank accepted bill rate (4.918% on 29 October 2026) used as the bill benchmark; RBA stopped publishing 3-month Treasury Note yields in 2013 and Treasury Notes are issued to institutions only"
     },
     "tbond_5y_rate": {
       "value": 0.0495,
       "status": "sourced",
       "sourceName": "Reserve Bank of Australia, Statistical Table F2 Capital Market Yields",
       "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx",
-      "asOf": "2026-10-29",
-      "note": "Australian Government 5-year bond"
+      "asOf": "2026-10-28",
+      "note": "Australian Government 5-year bond, 4.946% on 28 October 2026"
     },
     "tbond_10y_rate": {
       "value": 0.0521,
       "status": "sourced",
       "sourceName": "Reserve Bank of Australia, Statistical Table F2 Capital Market Yields",
       "sourceUrl": "https://www.rba.gov.au/statistics/tables/xls/f02d.xlsx",
-      "asOf": "2026-10-29",
-      "note": "Australian Government 10-year bond"
+      "asOf": "2026-10-28",
+      "note": "Australian Government 10-year bond, 5.208% on 28 October 2026"
     },
     "tax_bank_interest": {
       "value": 0.32,
@@ -228,10 +228,10 @@
     "life_claim_settlement_rate": {
       "value": 0.97,
       "status": "sourced",
-      "sourceName": "Australian Prudential Regulation Authority, Life insurance claims and disputes statistics (June 2026)",
-      "sourceUrl": "https://www.apra.gov.au/life-insurance-claims-and-disputes-statistics",
+      "sourceName": "Australian Prudential Regulation Authority, Life insurance claims and disputes data June 2026 (Industry_Level_Results)",
+      "sourceUrl": "https://www.apra.gov.au/system/files/2026-10/Life%20insurance%20claims%20and%20disputes%20data%20June%202026.xlsx",
       "asOf": "2026-06-30",
-      "note": "Death cover admittance rate, individual advised, year to June 2026; non-advised 90.9%, group super 98.5%; TPD 71% to 91%"
+      "note": "Death cover admittance rate (admitted / finalised claims), individual advised, year to June 2026: 97.1%; individual non-advised 90.9%, group super 98.5%, group ordinary 98.8%"
     },
     "insurance_term_premium_table": {
       "value": null,
@@ -344,7 +344,7 @@
       "sourceName": "Wikipedia, Age Pension (Australia) and Retirement age",
       "sourceUrl": "https://en.wikipedia.org/wiki/Age_Pension_(Australia)",
       "asOf": "2023-07-01",
-      "note": "Age Pension age 67 from 1 July 2023 for men and women; super can be accessed from preservation age 60"
+      "note": "Age Pension age 67 from 1 July 2023 for men and women, so it applies to anyone born after 1975; source page dated 2023 (older than 2025) but the age is unchanged; super can be accessed from preservation age 60"
     },
     "retirement_age_government": {
       "value": null,
@@ -408,7 +408,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Age Pension maximum rate: Services Australia and DSS pages could not be reached; Wikipedia gives no current rate."
+      "note": "The Age Pension is a means-tested benefit a person can receive at 67, but its current maximum rate could not be confirmed: Services Australia and DSS pages timed out or blocked access."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -422,7 +422,7 @@
       "sourceName": "Wikipedia, Age Pension (Australia)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Age_Pension_(Australia)",
       "asOf": "2023-07-01",
-      "note": "Income and assets tests; 10 years of residence required"
+      "note": "Age 67 since 1 July 2023 (older than 2025, still current); income and assets tests; 10 years of residence required"
     },
     "gratuity_rule": {
       "value": null,

@@ -60,20 +60,20 @@
       "note": "Average nominal rate on new interest-bearing demand (sight) deposits of individuals in lei 0.90%; foreign currency 0.83%."
     },
     "fdr_3m_rate": {
-      "value": 0.0544,
+      "value": 0.0442,
       "status": "sourced",
-      "sourceName": "National Bank of Moldova, bank deposit market in September 2026 (new term deposits of individuals in MDL, up to 6 months)",
-      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "sourceName": "National Bank of Moldova, interactive database: weighted average rates on new deposits (individuals, MDL, 1 to 3 months), September 2026",
+      "sourceUrl": "https://www.bnm.md/bdi/pages/reports/dpmc/DPMC9.xhtml",
       "asOf": "2026-09-30",
-      "note": "BNM publishes rates by maturity band; 5.44% is the average for new lei term deposits of individuals with maturity up to 6 months (no separate 3-month figure)."
+      "note": "Average rate on new lei term deposits of individuals with maturity of 1 to 3 months 4.42% in September 2026 (3-6 months 6.04%); figures shown after selecting monthly data, MDL, individuals in the BNM report DPMC9."
     },
     "fdr_1y_rate": {
       "value": 0.0593,
       "status": "sourced",
-      "sourceName": "National Bank of Moldova, bank deposit market in September 2026 (new term deposits of individuals in MDL, 6-12 months)",
-      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
+      "sourceName": "National Bank of Moldova, interactive database: weighted average rates on new deposits (individuals, MDL, 6 to 12 months), September 2026",
+      "sourceUrl": "https://www.bnm.md/bdi/pages/reports/dpmc/DPMC9.xhtml",
       "asOf": "2026-09-30",
-      "note": "Average for new lei term deposits of individuals with maturity of 6 to 12 months; 1-2 years 6.50%; foreign-currency 6-12 months 1.24%."
+      "note": "Average rate on new lei term deposits of individuals with maturity of 6 to 12 months 5.93% in September 2026; 1-2 years 6.50% (BNM report DPMC9)."
     },
     "dps_rate": {
       "value": null,
@@ -89,7 +89,7 @@
       "sourceName": "National Bank of Moldova, bank deposit market in September 2026 (average rate on new term deposits of individuals, MDL)",
       "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026",
       "asOf": "2026-09-30",
-      "note": "Weighted average on all new lei term deposits of individuals; World Bank FR.INR.DPST 2025 average 4.76%."
+      "note": "Weighted average on all new lei term deposits of individuals 6.11% in September 2026 (also in BNM report DPMC9); World Bank FR.INR.DPST 2025 average 4.76%."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.0805,
@@ -129,7 +129,7 @@
       "sourceName": "PwC Worldwide Tax Summaries, Moldova withholding taxes (reviewed 24 June 2026)",
       "sourceUrl": "https://taxsummaries.pwc.com/moldova/corporate/withholding-taxes",
       "asOf": "2026-06-24",
-      "note": "6% final withholding on interest paid to resident individuals by banks; a draft 2027 tax package proposes raising it to 7%."
+      "note": "6% final withholding on interest paid to resident individuals by banks and savings and loan associations."
     },
     "tax_sanchayapatra_profit": {
       "value": 0,
@@ -288,8 +288,8 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/moldova",
-      "asOf": "2026-12-31",
-      "note": "Men 67.0, women 75.9 (UN WPP estimate for 2026); World Bank 2024 figure 71.3."
+      "asOf": "2026-07-01",
+      "note": "Men 67.0, women 75.9 (UN WPP estimate for the year 2026, dated mid-year); World Bank 2024 figure 71.3."
     },
     "life_table_remaining": {
       "value": null,
@@ -324,7 +324,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects via georank.org",
       "sourceUrl": "https://georank.org/life-expectancy/moldova",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Remaining years computed from georank's expected age at death by current age (UN WPP 2026 estimate)."
     },
     "support_ratio": {
@@ -354,10 +354,10 @@
     "retirement_age_default": {
       "value": 63,
       "status": "sourced",
-      "sourceName": "Logos Press report on the 1 July 2026 retirement age step (Law 156/1998 on state social insurance pensions)",
-      "sourceUrl": "https://logos-pres.md/noutati/o-noua-majorare-a-varstei-de-pensionare-pentru-femei/",
+      "sourceName": "National Social Insurance House (CNAS), old-age pension conditions",
+      "sourceUrl": "https://cnas.gov.md/ro/servicii/servicii/pensii/pensie-pentru-limita-de-varsta",
       "asOf": "2026-07-01",
-      "note": "Men 63; women 62 from 1 July 2026, rising to 62.5 in July 2027 and 63 from 1 July 2028, so 63 applies to everyone born after 1975."
+      "note": "Standard retirement age 63 for men; women 62 from 1 July 2026, 62 years 6 months from July 2027 and 63 from 1 July 2028, so 63 applies to everyone born after 1975; at least 15 years of contributions for a partial pension."
     },
     "retirement_age_government": {
       "value": null,
@@ -416,26 +416,26 @@
       "note": "High case for a growth-leaning mix."
     },
     "old_age_allowance_monthly": {
-      "value": 1527.83,
+      "value": 1632.33,
       "status": "sourced",
-      "sourceName": "National Social Insurance House (CNAS), beneficiaries of pensions and state social allowances at 1 January 2026",
-      "sourceUrl": "https://cnas.gov.md/sites/default/files/2026-01/Informatie%20privind%20benef%20de%20pensii%2C%20aloca%C5%A3ii%20sociale%20de%20stat%20%C5%9Fi%20%C3%AEndemn.%20adr%20familiilor%20cu%20copii%20la%20sit%2001.01.2026.pdf",
-      "asOf": "2026-01-01",
-      "note": "State social allowance for elderly people who do not qualify for a contributory pension (25,205 recipients, same amount for men and women); pensions and social benefits were indexed by 6.84% from 1 April 2026, which would make it about MDL 1,632, but no post-indexation figure was published."
+      "sourceName": "CNAS state social allowances (50% of the minimum old-age pension); Moldpres: minimum old-age pension MDL 3,264.66 from 1 April 2026",
+      "sourceUrl": "https://cnas.gov.md/ro/servicii/servicii/alocatii/alocatii-sociale-de-stat",
+      "asOf": "2026-04-01",
+      "note": "The state social allowance for elderly people who do not qualify for a contributory pension is 50% of the indexed minimum old-age pension (CNAS); the minimum is MDL 3,264.66 from 1 April 2026 (moldpres.md), giving MDL 1,632.33; it was MDL 1,527.83 at 1 January 2026 (CNAS beneficiaries report, 25,205 recipients)."
     },
     "old_age_allowance_eligibility": {
       "value": null,
       "valueJson": {
         "menAge": 63,
-        "womenAge": 62,
+        "womenAge": 63,
         "over90Monthly": null,
         "meansTested": false
       },
       "status": "sourced",
-      "sourceName": "CNAS beneficiaries report (1 Jan 2026); retirement ages per Logos Press (1 July 2026)",
-      "sourceUrl": "https://logos-pres.md/noutati/o-noua-majorare-a-varstei-de-pensionare-pentru-femei/",
+      "sourceName": "CNAS state social allowances; CNAS old-age pension conditions (retirement ages)",
+      "sourceUrl": "https://cnas.gov.md/ro/servicii/servicii/alocatii/alocatii-sociale-de-stat",
       "asOf": "2026-07-01",
-      "note": "Paid from the standard retirement age to people who do not meet the conditions for a contributory pension (e.g. too few contribution years); not income-tested. Women's age rises to 63 by July 2028."
+      "note": "Paid from the standard retirement age to Moldovan citizens and legal residents who do not meet the conditions for a contributory pension; no income test is mentioned. Women's age is 62 in 2026 and reaches 63 from July 2028, so 63 is used for anyone planning today."
     },
     "gratuity_rule": {
       "value": null,
@@ -459,7 +459,7 @@
       "sourceName": "Moldpres: pensions and social benefits indexed by 6.84% from 1 April 2026; CNAS",
       "sourceUrl": "https://moldpres.md/eng/official/pensiile-si-prestatiile-sociale-vor-fi-indexate-cu-684-de-la-1-aprilie-2026-eng",
       "asOf": "2026-04-01",
-      "note": "Mandatory pay-as-you-go state social insurance pension (CNAS) from age 63 (women 62, rising to 63 by 2028), indexed every 1 April (6.84% in 2026); minimum old-age pension MDL 3,264.66 with a full 34-year record (3,525.72 with 40 years)."
+      "note": "Mandatory pay-as-you-go state social insurance pension (CNAS) from age 63 (women 62 in 2026, 63 from July 2028), indexed every 1 April (6.84% in 2026); minimum old-age pension MDL 3,264.66 from 1 April 2026 (MDL 3,525.72 with at least 40 years of contributions)."
     }
   },
   "instruments": {
@@ -473,14 +473,14 @@
     "fdr_3m": {
       "available": true,
       "localName": "Depozit la termen",
-      "localNameEn": "Term deposit (up to 6 months)",
-      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026"
+      "localNameEn": "Term deposit (1-3 months)",
+      "sourceUrl": "https://www.bnm.md/bdi/pages/reports/dpmc/DPMC9.xhtml"
     },
     "fdr_1y": {
       "available": true,
       "localName": "Depozit la termen",
       "localNameEn": "Term deposit (6-12 months)",
-      "sourceUrl": "https://www.bnm.md/ro/print/content/evolutia-pietei-depozitelor-bancare-luna-septembrie-2026"
+      "sourceUrl": "https://www.bnm.md/bdi/pages/reports/dpmc/DPMC9.xhtml"
     },
     "dps": {
       "available": true,
@@ -538,9 +538,9 @@
       "url": "https://www.bnm.md/en/content/international-association-insurance-supervisors-iais"
     },
     "insuranceComplaints": {
-      "name": "National Bank of Moldova: where to turn when your rights as a consumer of financial services are breached",
+      "name": "National Commission for Financial Markets (CNPF), consumer complaints about insurers (explained on the National Bank of Moldova page)",
       "url": "https://www.bnm.md/ro/content/unde-te-adresezi-cand-ti-se-incalca-dreptul-de-consumator-al-serviciilor-financiare",
-      "note": "Consumer-protection complaints about insurers go to the National Commission for Financial Markets (CNPF)."
+      "note": "The National Bank supervises insurers since July 2023, but consumer complaints about insurers and insurance intermediaries go to the CNPF."
     },
     "pensionScheme": {
       "name": "National Social Insurance House (CNAS)",

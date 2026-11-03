@@ -17,12 +17,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 17.889,
+      "value": 16.23,
       "status": "sourced",
-      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Eswatini",
-      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=SZ",
-      "asOf": "2025-12-31",
-      "note": "2025 average. The lilangeni is pegged one to one to the South African rand, which also circulates as legal tender."
+      "sourceName": "Central Bank of Eswatini, Recent Economic Developments August/September 2026 (exchange rate section)",
+      "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
+      "asOf": "2026-09-30",
+      "note": "Average of E16.23 per US dollar in September 2026 (World Bank 2025 average 17.89). The lilangeni is pegged one to one to the South African rand, which also circulates as legal tender."
     }
   },
   "fields": {
@@ -128,7 +128,7 @@
       "sourceName": "Eswatini Revenue Service, Rates and Thresholds (withholding tax on interest paid to residents)",
       "sourceUrl": "https://www.ers.org.sz/IncomeTax/RatesandThres",
       "asOf": "2026-10-31",
-      "note": "Withholding tax of 10% on interest paid to residents (page read 31 October 2026)."
+      "note": "Withholding tax of 10% on interest paid to residents, due by the 15th of the following month (ERS Rates and Thresholds, re-read on verification)."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -163,12 +163,12 @@
       "note": "Low case: a weak decade for South African and global equities in rand terms."
     },
     "equity_return_base": {
-      "value": 0.09,
+      "value": 0.085,
       "status": "assumption",
       "sourceName": "Central Bank of Eswatini: very small local stock exchange; retail unit trusts invest mostly in South African and global markets; lilangeni pegged to the rand",
       "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
       "asOf": "2026-10-31",
-      "note": "The local exchange is too small to guide, so equity means rand-based unit trusts tracking South African and global shares; held at about 4 points above the after-tax 1-year deposit rate (about 4.5%)."
+      "note": "The local exchange is too small to guide, so equity means rand-based unit trusts tracking South African and global shares; held at about 4 points above the after-tax 12-month deposit rate (5.03% less 10% withholding, about 4.5%)."
     },
     "equity_return_high": {
       "value": 0.12,
@@ -288,7 +288,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Eswatini",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=SZ",
       "asOf": "2024-12-31",
-      "note": "64.3 years in 2024 (men 61.3, women 67.1)."
+      "note": "64.3 years in 2024 (men 61.3, women 67.1); latest available, older than 2025."
     },
     "life_table_remaining": {
       "value": null,
@@ -393,7 +393,7 @@
     "retirement_accumulation_return_low": {
       "value": 0.045,
       "status": "assumption",
-      "sourceName": "Safe rate about 5%; rand-based equity base 9%; gold base 6.5%",
+      "sourceName": "Safe rate about 4.5-5%; rand-based equity base 8.5%; gold base 6.5%",
       "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/RED-August_September-2026.pdf",
       "asOf": "2026-10-31",
       "note": "Low case: mostly deposits and bills."
@@ -401,7 +401,7 @@
     "retirement_accumulation_return_base": {
       "value": 0.07,
       "status": "assumption",
-      "sourceName": "Safe rate about 5%; rand-based equity base 9%; gold base 6.5%",
+      "sourceName": "Safe rate about 4.5-5%; rand-based equity base 8.5%; gold base 6.5%",
       "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
       "asOf": "2026-10-31",
       "note": "Base case: a balanced mix of government bonds, deposits and rand-based equity unit trusts."
@@ -409,7 +409,7 @@
     "retirement_accumulation_return_high": {
       "value": 0.09,
       "status": "assumption",
-      "sourceName": "Safe rate about 5%; rand-based equity base 9%; gold base 6.5%",
+      "sourceName": "Safe rate about 4.5-5%; rand-based equity base 8.5%; gold base 6.5%",
       "sourceUrl": "https://www.centralbank.org.sz/wp-content/uploads/2021/04/Annual-Economic-Review-Report-1.pdf",
       "asOf": "2026-10-31",
       "note": "High case: a growth-leaning mix with more equity."

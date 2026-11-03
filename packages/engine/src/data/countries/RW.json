@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "code": "RW",
+  "iso3": "RWA",
+  "nameEn": "Rwanda",
+  "nameNative": "Rwanda",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "rw",
+    "en",
+    "fr",
+    "sw"
+  ],
+  "currency": {
+    "code": "RWF",
+    "symbol": "RF",
+    "decimals": 0,
+    "compact": "intl",
+    "usdRate": {
+      "value": 1428.48,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, official exchange rate (PA.NUS.FCRF), Rwanda, 2025 average",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=RW",
+      "asOf": "2025-12-31",
+      "note": "1,428.48 francs per dollar on average in 2025; market quotes in October 2026 were about 1,473-1,476. The BNR's daily rates could not be read (its rate service needs an API key)."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.172,
+      "status": "sourced",
+      "sourceName": "National Institute of Statistics of Rwanda (NISR), Consumer Price Index, September 2026 (urban CPI, the headline index)",
+      "sourceUrl": "https://statistics.gov.rw/sites/default/files/documents/2026-10/SEPTEMBER%202026%20CPI%20Report%20English.pdf",
+      "asOf": "2026-09-30",
+      "note": "Urban consumer prices up 17.2% year on year in September 2026 (15.7% in August); rural CPI +22.0% and all-Rwanda CPI +20.0%. The 12-month average urban inflation rate was 11.5%."
+    },
+    "inflation_projection": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "National Bank of Rwanda medium-term inflation objective of 5% within a 2-8% target range (MPC statement of 27 August 2026, as reported by The New Times)",
+      "sourceUrl": "https://www.newtimes.co.rw/article/38480/news/finance/how-875-central-bank-interest-rate-will-influence-household-business-decisions",
+      "asOf": "2026-10-31",
+      "note": "Inflation is far above the band in 2026 and the BNR itself expects it to return inside the band only in the second half of 2027, so planning uses 6%, a little above the 5% objective."
+    },
+    "policy_rate": {
+      "value": 0.0875,
+      "status": "sourced",
+      "sourceName": "National Bank of Rwanda Monetary Policy Committee decision of 27 August 2026, as reported by The New Times",
+      "sourceUrl": "https://www.newtimes.co.rw/article/38480/news/finance/how-875-central-bank-interest-rate-will-influence-household-business-decisions",
+      "asOf": "2026-08-27",
+      "note": "Central Bank Rate raised by 50 basis points from 8.25% to 8.75% on 27 August 2026; the BNR expects inflation to return to its 2-8% range in the second half of 2027. Secondary source because the BNR site could not be read."
+    },
+    "savings_account_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical savings-account rate for Rwanda was found; the BNR interest-rate statistics could not be read (the site loads only through a script)."
+    },
+    "fdr_3m_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 3-month term deposit rate for Rwanda was found from the BNR or another official source."
+    },
+    "fdr_1y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published 1-year term deposit rate for Rwanda was found; the World Bank's average deposit rate (10.33% in 2024) is not split by term."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No standard monthly recurring deposit rate was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.1033,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, deposit interest rate (FR.INR.DPST), Rwanda, from IMF International Financial Statistics",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=RW",
+      "asOf": "2024-12-31",
+      "note": "Average deposit rate 10.33% in 2024 (9.65% in 2023); older than 2025, because no 2026 figure could be read from the BNR. Rates have probably risen since, as the policy rate went from 6.5% to 8.75%."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Rwanda has no separate government savings certificate; individuals buy ordinary Treasury bonds through banks or brokers from FRW 100,000 (see tbond_5y and tbond_10y)."
+    },
+    "tbill_91d_rate": {
+      "value": 0.0823,
+      "status": "sourced",
+      "sourceName": "KT Press, citing the National Bank of Rwanda Weekly Bulletin of 8 June 2026 (Treasury bill auction of 4 June 2026)",
+      "sourceUrl": "https://www.ktpress.rw/2026/06/investors-rush-to-lend-rwanda-govt-money-as-demand-for-treasury-bills-hits-440/",
+      "asOf": "2026-06-04",
+      "note": "Average 91-day bill rate 8.23% (28-day 8.10%, 182-day 8.37%, 364-day 8.96%); secondary source, and no later auction result could be read. The policy rate has risen 50 basis points since, so current yields are probably higher."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year bond was auctioned in 2026 that could be found; the nearest, a 6.4-year reopening on 11 February 2026, cleared at 11.30% (coupon 11.50%, BNR results)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.12,
+      "status": "sourced",
+      "sourceName": "KT Press on the June 2026 reopening of the 10-year Treasury bond FXD1/2026/10Yrs (maturing 4 January 2036); BNR prospectus of 12 January 2026",
+      "sourceUrl": "https://www.ktpress.rw/2026/05/government-opens-another-high-yield-treasury-bond-offering-with-12-interest-rate/",
+      "asOf": "2026-06-19",
+      "note": "Coupon 12% a year paid twice yearly, offered again in June 2026 (settlement 19 June 2026); this is the coupon set at the January 2026 book building, not a market yield. For comparison, a 6.42-year bond reopened on 11 February 2026 cleared at a yield of 11.30% (BNR results). Secondary source for the coupon."
+    },
+    "tax_bank_interest": {
+      "value": 0.15,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Rwanda, corporate withholding taxes (reviewed 23 September 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/rwanda/corporate/withholding-taxes",
+      "asOf": "2026-09-23",
+      "note": "15% final withholding tax on interest; interest on deposits held in a financial institution for at least one year is exempt, and interest on Treasury bonds of 3 years or more and on listed securities is taxed at 5%."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": 0.05,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Rwanda, corporate withholding taxes (reviewed 23 September 2026)",
+      "sourceUrl": "https://taxsummaries.pwc.com/rwanda/corporate/withholding-taxes",
+      "asOf": "2026-09-23",
+      "note": "There is no savings certificate; this is the 5% withholding tax on interest from Treasury bonds of at least 3 years, the government security individuals can buy (also stated in the BNR 10-year bond prospectus)."
+    },
+    "deposit_insurance_limit": {
+      "value": 1000000,
+      "status": "sourced",
+      "sourceName": "KT Press on BNR Regulation No. 93/2025 on the operations of the Deposit Guarantee Fund",
+      "sourceUrl": "https://www.ktpress.rw/2025/12/central-bank-moves-to-protect-small-bank-depositors-with-guarantee-fund/",
+      "asOf": "2025-12-01",
+      "note": "Deposits are covered for the first FRW 1,000,000 per depositor in each licensed institution under BNR Regulation No. 93/2025; the report says the 2016 system had no fixed ceiling. Secondary source because the BNR text could not be read."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Rwanda has no legal cap on card interest and no published typical card rate was found; the average bank lending rate was about 16% (World Bank, 2024)."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Rwanda Stock Exchange, a small market with few listed shares; BNR bond yields 11-12%",
+      "sourceUrl": "https://www.bnr.rw/documents/Reopen_Treasury_Bond_Issuance_FXD3-2025-7YR_-_SUMMARY_MARKET_RESULTS_11_FEBRUARY_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for the small local market, earning less than safe bonds."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "After-tax safe rate about 8.5% (1-year deposits tax-exempt, Treasury bills 8.2-9% less 15%, bonds 11-12% less 5%)",
+      "sourceUrl": "https://www.ktpress.rw/2026/06/investors-rush-to-lend-rwanda-govt-money-as-demand-for-treasury-bills-hits-440/",
+      "asOf": "2026-10-31",
+      "note": "Base case kept about 1.5 points above the after-tax safe rate, well under the 4-point cap, because the local stock market is thin and its 10-year record is weak."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Treasury bond yields of 11-13% (BNR, KT Press)",
+      "sourceUrl": "https://www.ktpress.rw/2026/05/government-opens-another-high-yield-treasury-bond-offering-with-12-interest-rate/",
+      "asOf": "2026-10-31",
+      "note": "High case: equities beat long government bonds after their 5% tax."
+    },
+    "gold_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate series (franc about 1,428 per dollar in 2025, after steady depreciation)",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=RW",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with slow franc depreciation."
+    },
+    "gold_return_base": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate series; long-run dollar gold trend about 4%",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=RW",
+      "asOf": "2026-10-31",
+      "note": "Base case: the dollar gold trend of about 4% a year plus franc depreciation of about 4% a year, as in 2025-2026."
+    },
+    "gold_return_high": {
+      "value": 0.13,
+      "status": "assumption",
+      "sourceName": "World Bank official exchange rate series",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=RW",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years with faster franc depreciation, as in 2023 when the franc fell about 18%."
+    },
+    "fixed_income_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Treasury bills 8.1-9.0% (June 2026) less 15% withholding tax",
+      "sourceUrl": "https://www.ktpress.rw/2026/06/investors-rush-to-lend-rwanda-govt-money-as-demand-for-treasury-bills-hits-440/",
+      "asOf": "2026-10-31",
+      "note": "Low case: short Treasury bills or shorter deposits after the 15% tax, about 7%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Average deposit rate 10.3% (2024; 1-year deposits tax-exempt); 1-year bills 8.96% less 15% tax",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=RW",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of tax-exempt 1-year deposits and Treasury bills, kept below the average deposit rate because small depositors earn less."
+    },
+    "fixed_income_return_high": {
+      "value": 0.105,
+      "status": "assumption",
+      "sourceName": "10-year Treasury bond coupon 12% less 5% withholding tax (BNR prospectus)",
+      "sourceUrl": "https://www.bnr.rw/documents/PROSPECTUS_OF_10-YEAR_BOND_ISSUANCE_ON_JANUARY_12th_2026.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: long Treasury bonds held to maturity, about 11.4% after tax, less an allowance for reinvestment at lower rates."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BNR, which supervises insurers, publishes no industry-wide life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Term life cover is sold in Rwanda, but no published premium rates per FRW 1,000 of cover by age were found from the BNR or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major private hospital stay in Rwanda was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found from a public source."
+    },
+    "oop_health_share": {
+      "value": 0.041,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), Rwanda",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=RW",
+      "asOf": "2023-12-31",
+      "note": "4.1% in 2023 (WHO Global Health Expenditure Database via the World Bank), low because most people are covered by community-based health insurance; older than 2025, the latest available."
+    },
+    "goal_inflation_health": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "NISR CPI September 2026: urban health prices +1.3% a year; inflation assumption 6%",
+      "sourceUrl": "https://statistics.gov.rw/sites/default/files/documents/2026-10/SEPTEMBER%202026%20CPI%20Report%20English.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health prices are largely set by public insurance tariffs and rose only 1.3% in the past year, so medical goals are planned 1 point above the 6% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "NISR CPI September 2026: urban education prices +8.6% a year",
+      "sourceUrl": "https://statistics.gov.rw/sites/default/files/documents/2026-10/SEPTEMBER%202026%20CPI%20Report%20English.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education prices rose 8.6% in the past year, so school goals are planned 2 points above the 6% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 68.017,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Rwanda",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=RW",
+      "asOf": "2024-12-31",
+      "note": "68.0 years in 2024 (men 65.7, women 70.1)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.3,
+            "men": 16.3,
+            "women": 18.3
+          },
+          {
+            "age": 65,
+            "total": 14.1,
+            "men": 13.2,
+            "women": 14.8
+          },
+          {
+            "age": 70,
+            "total": 10.9,
+            "men": 10.3,
+            "women": 11.5
+          },
+          {
+            "age": 80,
+            "total": 6.3,
+            "men": 6.0,
+            "women": 6.5
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/rwanda/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the both-sexes figure at 65 is published, the others are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 14.65
+          },
+          {
+            "year": 2040,
+            "value": 14.08
+          },
+          {
+            "year": 2065,
+            "value": 7.41
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=RW",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio. Dependency ratios used: 6.83 per 100 in 2025 (World Bank), 7.1 in 2040 (populationpyramid.net/rwanda/2040/) and 13.5 in 2065 (populationpyramid.net/rwanda/2065/, UN WPP 2024 medium variant)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Rwanda Social Security Board (RSSB), pension scheme FAQ",
+      "sourceUrl": "https://rssb.rw/schemes/pension-scheme",
+      "asOf": "2026-10-31",
+      "note": "RSSB states 60 as the statutory age for an old-age pension with sufficient contributions (15 years under the 2015 pension law), the same for men and women; no change for younger cohorts was found."
+    },
+    "retirement_age_government": {
+      "value": 65,
+      "status": "sourced",
+      "sourceName": "The New Times on Law No. 017/2020 establishing the general statute governing public servants (article 85)",
+      "sourceUrl": "https://www.newtimes.co.rw/article/179078/News/lawmakers-propose-early-access-to-pension-benefits",
+      "asOf": "2020-10-07",
+      "note": "Public servants retire at 65 and may ask for early retirement from 60; secondary source from 2020 (older than 2025), and no later change was found."
+    },
+    "retirement_return_low": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Treasury bills 8.1-9.0% (June 2026) less 15% tax",
+      "sourceUrl": "https://www.ktpress.rw/2026/06/investors-rush-to-lend-rwanda-govt-money-as-demand-for-treasury-bills-hits-440/",
+      "asOf": "2026-10-31",
+      "note": "Low case: short bills and deposits after tax, with rates falling back as inflation eases."
+    },
+    "retirement_return_base": {
+      "value": 0.075,
+      "status": "assumption",
+      "sourceName": "1-year Treasury bills 8.96% less 15% tax = about 7.6% (June 2026)",
+      "sourceUrl": "https://www.ktpress.rw/2026/06/investors-rush-to-lend-rwanda-govt-money-as-demand-for-treasury-bills-hits-440/",
+      "asOf": "2026-10-31",
+      "note": "Base case kept just under the after-tax 1-year bill rate."
+    },
+    "retirement_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Tax-exempt 1-year deposits (average deposit rate 10.3%, 2024) and long bonds at 12% less 5% tax",
+      "sourceUrl": "https://data.worldbank.org/indicator/FR.INR.DPST?locations=RW",
+      "asOf": "2026-10-31",
+      "note": "High case: tax-exempt 1-year deposits and long Treasury bonds held to maturity."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Safe rate after tax about 7-8.5%; equity low 5%",
+      "sourceUrl": "https://www.ktpress.rw/2026/06/investors-rush-to-lend-rwanda-govt-money-as-demand-for-treasury-bills-hits-440/",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills, with weak equity and gold years."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Safe rate after tax 8.5%, equity base 10%, gold base 8%, bonds 11.4% after tax",
+      "sourceUrl": "https://www.ktpress.rw/2026/05/government-opens-another-high-yield-treasury-bond-offering-with-12-interest-rate/",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of deposits, Treasury bonds, local equity funds and some gold."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.115,
+      "status": "assumption",
+      "sourceName": "Equity high 14%; bonds 11.4% after tax",
+      "sourceUrl": "https://www.ktpress.rw/2026/05/government-opens-another-high-yield-treasury-bond-offering-with-12-interest-rate/",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension was found: the main cash transfer, VUP direct support, goes to extremely poor households without labour capacity, not to older people as such, and its current amount could not be confirmed from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension with its own age rule was found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "valueJson": {
+        "daysPerYear": 7,
+        "daysPerYearAfter": null,
+        "afterYears": null,
+        "daysPerMonth": 30
+      },
+      "status": "sourced",
+      "sourceName": "Law No. 66/2018 regulating labour in Rwanda, articles 31-32 (Official Gazette special of 6 September 2018)",
+      "sourceUrl": "https://www.minijust.gov.rw/fileadmin/user_upload/Minijust/Publications/Laws/Labour_law_2018.pdf",
+      "asOf": "2018-09-06",
+      "note": "A retiring employee gets a lump sum calculated like terminal benefits (art. 32): 2 months' average salary under 5 years with the employer, then 3, 4, 5 and 6 months for each further 5-year band, and 7 months after 25 years. 7 days a year approximates this for 25-30 year careers (7 months at 30 years); law from 2018, older than 2025."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "Rwanda Social Security Board (RSSB), pension scheme FAQ",
+      "sourceUrl": "https://rssb.rw/schemes/pension-scheme",
+      "asOf": "2026-10-31",
+      "note": "Compulsory RSSB pension for employees (the RSSB page gives 7.5% employee plus 7.5% employer); old-age pension from 60 after the minimum contribution period set by law. The RSSB page says nothing about indexation and no automatic indexation was confirmed, so inflationLinked is false. Ejo Heza is a separate voluntary long-term savings scheme."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Konti yo kuzigama",
+      "localNameEn": "Savings account",
+      "note": "Offered by banks and microfinance institutions; no average rate is published that could be read."
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Term deposit (3 months)",
+      "note": "Interest on deposits held under one year is taxed at 15%."
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Term deposit (1 year)",
+      "note": "Interest on deposits held for at least one year is exempt from withholding tax.",
+      "sourceUrl": "https://taxsummaries.pwc.com/rwanda/corporate/withholding-taxes"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with a published rate was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate exists; individuals buy Treasury bonds instead."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bill (91 days)",
+      "note": "Auctioned weekly by the BNR for 28, 91, 182 and 364 days; individuals bid through a bank or broker.",
+      "sourceUrl": "https://www.ktpress.rw/2026/06/investors-rush-to-lend-rwanda-govt-money-as-demand-for-treasury-bills-hits-440/"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bond (5 years)",
+      "note": "5-year bonds are issued from time to time (last found June 2025, maturing 2030); minimum FRW 100,000 for non-competitive bids.",
+      "sourceUrl": "https://www.ktpress.rw/2025/06/rwanda-issues-rwf-10-billion-5-year-bond-good-fo-first-time-investors/"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Treasury bond (10 years)",
+      "note": "Issued January 2026 and reopened June 2026; minimum FRW 100,000 for non-competitive bids, listed on the Rwanda Stock Exchange, 5% tax on interest.",
+      "sourceUrl": "https://www.bnr.rw/documents/PROSPECTUS_OF_10-YEAR_BOND_ISSUANCE_ON_JANUARY_12th_2026.pdf"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": null,
+      "localNameEn": "Collective investment scheme (unit trust)",
+      "note": "Unit trusts licensed by the Capital Market Authority invest in local shares and bonds."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Zahabu",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "National Bank of Rwanda (Banki Nkuru y'u Rwanda, BNR)",
+      "url": "https://www.bnr.rw/"
+    },
+    "insuranceRegulator": {
+      "name": "National Bank of Rwanda (BNR), insurance supervision",
+      "url": "https://www.bnr.rw/",
+      "note": "The BNR licenses and supervises insurers."
+    },
+    "insuranceComplaints": {
+      "name": "National Bank of Rwanda, e-correspondence service for complaints",
+      "url": "https://e-correspondence.bnr.rw/services",
+      "note": "Complain to the insurer first; unresolved complaints go to the BNR's financial consumer protection unit."
+    },
+    "pensionScheme": {
+      "name": "Rwanda Social Security Board (RSSB), pension scheme",
+      "url": "https://rssb.rw/schemes/pension-scheme"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "Community-Based Health Insurance (Mutuelle de Santé), managed by RSSB",
+      "url": "https://rssb.rw/schemes/cbhi-scheme"
+    },
+    "depositInsurance": {
+      "name": "Deposit Guarantee Fund (managed by the National Bank of Rwanda)",
+      "url": "https://www.bnr.rw/",
+      "note": "Covers the first FRW 1,000,000 per depositor per institution (Regulation No. 93/2025)."
+    },
+    "statistics": {
+      "name": "National Institute of Statistics of Rwanda (NISR)",
+      "url": "https://statistics.gov.rw/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

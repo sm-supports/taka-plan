@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "code": "TZ",
+  "iso3": "TZA",
+  "nameEn": "Tanzania",
+  "nameNative": "Tanzania",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "sw",
+    "en",
+    "suk"
+  ],
+  "currency": {
+    "code": "TZS",
+    "symbol": "TSh",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 2642.3,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, Monthly Economic Review October 2026 (end-of-period exchange rate, September 2026)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-09-30",
+      "note": "TZS 2,642.3 per dollar at the end of September 2026 (monthly average 2,654.91); World Bank 2024 average 2,597.9. CLDR gives 'TZS' as symbol; 'TSh' is the local abbreviation."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.043,
+      "status": "sourced",
+      "sourceName": "National Bureau of Statistics (NBS), Consumer Price Index, September 2026",
+      "sourceUrl": "https://www.nbs.go.tz/statistics/topic/consumer-price-index-2026",
+      "asOf": "2026-09-30",
+      "note": "Annual headline inflation unchanged at 4.3% in September 2026 (August 4.3%); the Bank of Tanzania Monthly Economic Review of October 2026 gives the same figure. Mainland Tanzania series."
+    },
+    "inflation_projection": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania inflation target 3-5% (Monetary Policy Report, October 2026); World Bank CPI inflation 2021-2025",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monetary%20policy%20report/en/2026101312511941.pdf",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Tanzania targets 3-5% and inflation stayed between about 3% and 4.4% over 2021-2026, so the 4% centre of the band is used for long-range plans."
+    },
+    "policy_rate": {
+      "value": 0.0625,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, Monetary Policy Report October 2026: MPC decision of 7 October 2026",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monetary%20policy%20report/en/2026101312511941.pdf",
+      "asOf": "2026-10-07",
+      "note": "The MPC kept the Central Bank Rate at 6.25% for the quarter ending December 2026, after raising it from 5.75% in July 2026."
+    },
+    "savings_account_rate": {
+      "value": 0.0295,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, Monthly Economic Review October 2026, Table A4 (savings deposit rate)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-09-30",
+      "note": "Average savings deposit rate in shillings, 2.95% in September 2026 (2.77% in August)."
+    },
+    "fdr_3m_rate": {
+      "value": 0.1019,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, Monthly Economic Review October 2026, Table A4 (3-month time deposit rate)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-09-30",
+      "note": "Average 3-month shilling time deposit rate across banks, 10.19% in September 2026 (9.74% in August); the 1-month rate was 9.71%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0959,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, Monthly Economic Review October 2026, Table A4 (12-month deposit rate)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-09-30",
+      "note": "Average 12-month shilling time deposit rate, 9.59% in September 2026 (9.36% in August); negotiated deposits for large sums averaged 11.00%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Bank of Tanzania interest rate table has no rate for a monthly recurring deposit product, and no industry-wide figure was found."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0903,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, Monthly Economic Review October 2026, Table A4 (overall time deposits rate)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-09-30",
+      "note": "Overall shilling time deposit rate 9.03% in September 2026 (the text rounds it to 9.02%); the savings deposit rate is much lower at 2.95%. World Bank FR.INR.DPST is 2020 only (6.68%)."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals buy ordinary Treasury bills and bonds at Bank of Tanzania auctions."
+    },
+    "tbill_91d_rate": {
+      "value": 0.036357,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, Treasury bills auction No. 1209 held on 21 October 2026 (auction summary)",
+      "sourceUrl": "https://www.bot.go.tz/TBills",
+      "asOf": "2026-10-21",
+      "note": "Weighted average yield 3.6357% on 91-day bills; 35 days 3.54%, 182 days 5.57%, 364 days 6.13%. Short bill yields fell from about 6.8% in September 2025 as liquidity rose."
+    },
+    "tbond_5y_rate": {
+      "value": 0.095275,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, 10.25% 5-year Treasury bond, auction No. 700 reopened on 16 September 2026 (auction summary)",
+      "sourceUrl": "https://www.bot.go.tz/TBonds",
+      "asOf": "2026-09-16",
+      "note": "Weighted average yield to maturity 9.5275% (coupon 10.25%, matures 30 April 2031)."
+    },
+    "tbond_10y_rate": {
+      "value": 0.106924,
+      "status": "sourced",
+      "sourceName": "Bank of Tanzania, 11.25% 10-year Treasury bond, auction No. 711 reopened on 2 September 2026 (auction summary)",
+      "sourceUrl": "https://www.bot.go.tz/TBonds",
+      "asOf": "2026-09-02",
+      "note": "Weighted average yield to maturity 10.6924% (coupon 11.25%, matures 23 July 2036); the Monthly Economic Review gives 10.69% for September 2026."
+    },
+    "tax_bank_interest": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "PwC Worldwide Tax Summaries, Tanzania, withholding taxes (interest, residents)",
+      "sourceUrl": "https://taxsummaries.pwc.com/tanzania/corporate/withholding-taxes",
+      "asOf": "2026-09-09",
+      "note": "10% withholding on interest paid to residents; for individuals it is a final tax unless the interest is business income (PwC individual income determination page). Page last reviewed 9 September 2026."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists. The tax treatment of interest on Treasury bonds for individuals could not be confirmed from an official source; PwC mentions relief only for listed corporate, municipal and exchange-listed bonds of 3 years or more."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Deposit Insurance Board website is a JavaScript application whose cover limit could not be read, and no other official page stating the current limit per depositor was found."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Tanzania has no legal cap on lending rates and no official credit card rate was found; for reference the Bank of Tanzania overall lending rate was 15.54% in September 2026."
+    },
+    "equity_return_low": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Trading Economics, Dar es Salaam Stock Exchange All Share Index (DSEI)",
+      "sourceUrl": "https://tradingeconomics.com/tanzania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "Low case: the DSEI moved little for most of the decade before 2024, so a repeat of a flat-price decade plus dividends gives about 5%."
+    },
+    "equity_return_base": {
+      "value": 0.1,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania 12-month deposit rate 9.59% (September 2026), 8.6% after 10% withholding; DSEI history",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: about 1.5 points above the after-tax one-year deposit rate, well inside the 4-point cap, because the index's 10-year record is weak despite a 76% rise in the year to November 2026."
+    },
+    "equity_return_high": {
+      "value": 0.14,
+      "status": "assumption",
+      "sourceName": "Trading Economics, DSEI (+76% over the year to 2 November 2026)",
+      "sourceUrl": "https://tradingeconomics.com/tanzania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: the recent re-rating continues alongside dividend yields of several percent."
+    },
+    "gold_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania, Monthly Economic Review October 2026 (TZS per USD, end of period)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat dollar gold with the shilling weakening about 2% a year, as over 2018-2026 (annual average 2,264 in 2018 to 2,642 at the end of September 2026)."
+    },
+    "gold_return_base": {
+      "value": 0.065,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania exchange rate data; inflation target 3-5%",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: a dollar gold trend of about 4% a year plus shilling depreciation of 2-3% a year, in line with the inflation gap to the US."
+    },
+    "gold_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania exchange rate data (shilling down 7.4% in the year to September 2026)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: strong dollar gold years combined with faster depreciation like 2023-2024 (annual average 2,382 to 2,597 per dollar)."
+    },
+    "fixed_income_return_low": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania savings deposit rate 2.95% and 91-day bill 3.64% (2026)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings accounts or short bills after 10% withholding, about 3%."
+    },
+    "fixed_income_return_base": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania 12-month deposit rate 9.59% and 364-day bill 6.13%, after 10% withholding",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Base case: between one-year bills (5.5% after tax) and one-year bank deposits (8.6% after tax)."
+    },
+    "fixed_income_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania 5-year and 10-year bond auctions (9.53% and 10.69%, 2026)",
+      "sourceUrl": "https://www.bot.go.tz/TBonds",
+      "asOf": "2026-10-31",
+      "note": "High case: 5-10 year Treasury bonds held to maturity, less withholding, allowing for lower future yields."
+    },
+    "life_claim_settlement_rate": {
+      "value": 0.863,
+      "status": "sourced",
+      "sourceName": "Tanzania Insurance Regulatory Authority (TIRA), Annual Insurance Market Performance Report 2025, Table 3.11",
+      "sourceUrl": "https://www.tira.go.tz/uploads/documents/en-Annual%20Insurance%20Market%20Performance%20Report%202025.pdf",
+      "asOf": "2025-12-31",
+      "note": "Life insurers paid TZS 100.3 billion of TZS 116.3 billion claims reported in 2025 (86.3%; 85.8% in 2024); individual life 99.9%, group life 83.6%."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Individual term assurance is sold (TIRA reports term assurance claims in 2025), but no published premium rates per 1,000 TZS of cover by age were found from the regulator or another public source."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No official typical cost of a major private hospital stay was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums per 100,000 TZS of cover by age were found from the regulator or another public source."
+    },
+    "oop_health_share": {
+      "value": 0.2793,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), SH.XPD.OOPC.CH.ZS",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TZ",
+      "asOf": "2023-12-31",
+      "note": "27.9% in 2023, the latest year (older than 2025)."
+    },
+    "goal_inflation_health": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania Monthly Economic Review October 2026, Table A9 (health CPI); inflation assumption 4%",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Health CPI rose only 1-2% a year in 2025-2026, but private hospital and drug costs follow imports and the exchange rate, so one point above the 4% inflation assumption is used."
+    },
+    "goal_inflation_education": {
+      "value": 0.05,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania Monthly Economic Review October 2026, Table A9 (education services CPI); inflation assumption 4%",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Education services CPI rose about 3% a year in 2024-2025 with yearly fee increases each January, so private school costs are planned one point above the 4% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 67.212,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TZ",
+      "asOf": "2024-12-31",
+      "note": "67.2 years in 2024 (men 64.4, women 70.0), the latest World Bank year (older than 2025); UN WPP 2024 gives 67.6 for 2026."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/united-republic-of-tanzania/",
+      "asOf": "2026-07-01",
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.9,
+            "men": 16.1,
+            "women": 19.7
+          },
+          {
+            "age": 65,
+            "total": 14.9,
+            "men": 13.1,
+            "women": 16.4
+          },
+          {
+            "age": 70,
+            "total": 11.9,
+            "men": 10.4,
+            "women": 13.4
+          },
+          {
+            "age": 80,
+            "total": 7.2,
+            "men": 6.0,
+            "women": 8.3
+          }
+        ]
+      },
+      "note": "Secondary source of UN WPP 2024 (medium variant) for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+    },
+    "support_ratio": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://www.populationpyramid.net/united-republic-of-tanzania/2040/",
+      "asOf": "2025-12-31",
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 17.96
+          },
+          {
+            "year": 2040,
+            "value": 16.39
+          },
+          {
+            "year": 2065,
+            "value": 10.1
+          }
+        ]
+      },
+      "note": "100 / old-age dependency ratio: 5.57 (2025, World Bank), 6.1 (2040) and 9.9 (2065, populationpyramid.net/united-republic-of-tanzania/2065/)."
+    },
+    "retirement_age_default": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "National Social Security Fund Act (Cap. 50 R.E. 2023), section 2: pensionable age",
+      "sourceUrl": "https://www.nssf.go.tz/uploads/publications/en-1771921274-NSSF%20ACT%20CAP%2050%20RE.%202023.pdf",
+      "asOf": "2026-10-31",
+      "note": "Pensionable age is 60 for men and women; early retirement pension from 55 with at least 180 monthly contributions (NSSF old-age pension page)."
+    },
+    "retirement_age_government": {
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "Public Service Social Security Fund (PSSSF), retirement benefit page (PSSSF Act No. 2 of 2018, section 25)",
+      "sourceUrl": "https://www.psssf.go.tz/benefits/retirement-benefit",
+      "asOf": "2026-10-31",
+      "note": "Compulsory retirement at 60, voluntary from 55, unless the terms of employment set another age."
+    },
+    "retirement_return_low": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania 364-day bill 6.13% (21 October 2026) and savings rates, after 10% withholding",
+      "sourceUrl": "https://www.bot.go.tz/TBills",
+      "asOf": "2026-10-31",
+      "note": "Low case: short bills and deposits after tax if yields stay low."
+    },
+    "retirement_return_base": {
+      "value": 0.055,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania 364-day Treasury bill 6.13% (21 October 2026), 5.5% after 10% withholding",
+      "sourceUrl": "https://www.bot.go.tz/TBills",
+      "asOf": "2026-10-31",
+      "note": "Base case: kept at the after-tax one-year bill rate, the lower of the two safe one-year rates (one-year deposits give 8.6% after tax)."
+    },
+    "retirement_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania 12-month deposit rate 9.59% (September 2026) and 5-year bond 9.53%",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "High case: one-year deposits and medium Treasury bonds after tax."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania deposit and bill rates (2026)",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits and bills with a small, weak equity share."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.085,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania Treasury bond auctions (9.5-10.7%) and equity base 10%",
+      "sourceUrl": "https://www.bot.go.tz/TBonds",
+      "asOf": "2026-10-31",
+      "note": "Base case: a balanced mix of Treasury bonds, deposits and local shares, between the safe and equity base cases."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.11,
+      "status": "assumption",
+      "sourceName": "Bank of Tanzania 10-year bond 10.69% and DSEI (Trading Economics)",
+      "sourceUrl": "https://tradingeconomics.com/tanzania/stock-market",
+      "asOf": "2026-10-31",
+      "note": "High case: more long bonds and shares with yields staying near current levels."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension for Mainland Tanzania was found; Zanzibar has its own universal pension for older residents, but its current amount could not be read from an official source."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "See old_age_allowance_monthly: no Mainland scheme was found and the Zanzibar scheme's rules could not be read from an official source."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The Employment and Labour Relations Act 2004 provides severance pay on termination, but the official text could not be read (TanzLII and ILO NATLEX refused access), so the rule and whether it applies at retirement are not confirmed."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "status": "sourced",
+      "sourceName": "National Social Security Fund Act (Cap. 50 R.E. 2023) and NSSF old-age pension page",
+      "sourceUrl": "https://www.nssf.go.tz/benefits/old-age-pension",
+      "asOf": "2026-10-31",
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "note": "Compulsory for private employees: 20% of wages (employee up to 10%). Pension at 60 (early from 55) after 180 monthly contributions: 1/580 x months x average of best 3 of last 10 years' pay, 33% commuted as a lump sum (x12.5) and 67% paid monthly; minimum 40% of the minimum wage, maximum 72.5%. Benefits are adjusted after actuarial valuations (Act s.50), not indexed by law; tax on pensions not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Akaunti ya akiba",
+      "localNameEn": "Savings account",
+      "note": "Average savings deposit rate 2.95% in September 2026 (Bank of Tanzania).",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Amana ya muda maalum (miezi 3)",
+      "localNameEn": "Fixed deposit, 3 months",
+      "note": "Average 3-month rate 10.19% in September 2026 (Bank of Tanzania).",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Amana ya muda maalum (mwaka 1)",
+      "localNameEn": "Fixed deposit, 12 months",
+      "note": "Average 12-month rate 9.59% in September 2026 (Bank of Tanzania).",
+      "sourceUrl": "https://www.bot.go.tz/Publications/Regular/Monthly%20Economic%20Review/en/2026102918183001.pdf"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No standard monthly recurring deposit product with published rates was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals; individuals can bid for ordinary Treasury bills and bonds."
+    },
+    "tbill_91d": {
+      "available": true,
+      "localName": "Dhamana za Serikali za muda mfupi",
+      "localNameEn": "Treasury bills",
+      "note": "Bank of Tanzania auctions every two weeks (35, 91, 182 and 364 days); individuals can bid through banks and brokers.",
+      "sourceUrl": "https://www.bot.go.tz/TBills"
+    },
+    "tbond_5y": {
+      "available": true,
+      "localName": "Hatifungani za Serikali",
+      "localNameEn": "Treasury bonds",
+      "note": "2 to 25 year bonds auctioned by the Bank of Tanzania; the 5-year bond was reopened on 16 September 2026.",
+      "sourceUrl": "https://www.bot.go.tz/TBonds"
+    },
+    "tbond_10y": {
+      "available": true,
+      "localName": "Hatifungani za Serikali",
+      "localNameEn": "Treasury bonds",
+      "note": "The 10-year bond was reopened on 2 September 2026.",
+      "sourceUrl": "https://www.bot.go.tz/TBonds"
+    },
+    "equity_fund": {
+      "available": true,
+      "localName": "Mifuko ya uwekezaji wa pamoja",
+      "localNameEn": "Collective investment schemes (unit trusts)",
+      "note": "Unit trusts are licensed by the Capital Markets and Securities Authority."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Dhahabu",
+      "localNameEn": "Gold",
+      "note": "Gold is mainly bought as jewellery; no official retail market for investment bars or coins was confirmed."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Bank of Tanzania (Benki Kuu ya Tanzania)",
+      "url": "https://www.bot.go.tz/"
+    },
+    "insuranceRegulator": {
+      "name": "Tanzania Insurance Regulatory Authority (TIRA)",
+      "url": "https://www.tira.go.tz/"
+    },
+    "insuranceComplaints": {
+      "name": "Tanzania Insurance Ombudsman, under TIRA",
+      "url": "https://www.tira.go.tz/contacts",
+      "note": "The Insurance Ombudsman (Insurance Ombudsman Regulations, 2013) handles complaints against insurers; TIRA's site has no separate ombudsman page."
+    },
+    "pensionScheme": {
+      "name": "National Social Security Fund (NSSF)",
+      "url": "https://www.nssf.go.tz/benefits/old-age-pension",
+      "note": "Public servants belong to the Public Service Social Security Fund (https://www.psssf.go.tz/)."
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": {
+      "name": "National Health Insurance Fund (NHIF)",
+      "url": "https://www.nhif.or.tz/"
+    },
+    "depositInsurance": {
+      "name": "Deposit Insurance Board (DIB)",
+      "url": "https://www.dib.go.tz/",
+      "note": "The site is a JavaScript application; its pages could not be read as text on 3 November 2026."
+    },
+    "statistics": {
+      "name": "National Bureau of Statistics (NBS)",
+      "url": "https://www.nbs.go.tz/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

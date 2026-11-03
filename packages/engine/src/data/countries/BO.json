@@ -22,7 +22,7 @@
       "sourceName": "Banco Central de Bolivia, official exchange rate (tipo de cambio oficial)",
       "sourceUrl": "https://www.bcb.gob.bo/?q=content/tipo-de-cambio-oficial-del-d%C3%B3lar-estadounidense",
       "asOf": "2026-10-31",
-      "note": "Official rate Bs 12.09 per US dollar for 31 October to 3 November 2026, now set daily as the weighted average of banks' dollar purchases under the flexible regime adopted in June 2026 (BCB financial stability report, July 2026); it was fixed at 6.96 until 2025."
+      "note": "Official rate (TCO) Bs 12.09 per US dollar for 31 October to 3 November 2026, shown on the BCB site; since June 2026 it is set daily as the weighted average of banks' dollar purchases from clients (Resolución Ministerial 245/2026, BCB financial stability report, July 2026). It was fixed at 6.96 until 2025."
     }
   },
   "fields": {
@@ -128,8 +128,8 @@
       "status": "sourced",
       "sourceName": "PwC Worldwide Tax Summaries, Bolivia: Individual - Income determination and Taxes on personal income",
       "sourceUrl": "https://taxsummaries.pwc.com/bolivia/individual/income-determination",
-      "asOf": "2026-07-01",
-      "note": "Bolivian-source investment income is taxed as ordinary income under RC-IVA at 13%. Specific exemptions for some long-term deposits in bolivianos may apply but were not verified."
+      "asOf": "2026-07-21",
+      "note": "Bolivian-source investment income is taxed as ordinary income under RC-IVA, whose rate is 13% (https://taxsummaries.pwc.com/bolivia/individual/taxes-on-personal-income, last reviewed 21 July 2026). PwC does not mention any exemption for term deposits; none was verified."
     },
     "tax_sanchayapatra_profit": {
       "value": null,
@@ -145,7 +145,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Searched BCB and ASFI material: no per-depositor deposit insurance limit for Bolivia was found (a depositor protection fund exists for bank resolution, but no cover amount was confirmed)."
+      "note": "Searched BCB and ASFI material: no per-depositor deposit insurance limit for Bolivia was found (a depositor protection fund exists for bank resolution, but no cover amount was confirmed). Verifier (2026-11-03) could not fill this either: web search budget exhausted and the APS, Gestora, SSA and ILO pages returned 403/404."
     },
     "credit_card_rate_cap": {
       "value": null,
@@ -296,7 +296,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/bolivia-plurinational-state-of/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -357,7 +357,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The Sistema Integral de Pensiones (Ley 065 of 2010) sets the old-age pension age, but the law text on the APS site and the Gestora site could not be opened, so the age was not confirmed from a source."
+      "note": "The Sistema Integral de Pensiones (Ley 065 of 2010) sets the old-age pension age, but the law text on the APS site and the Gestora site could not be opened, so the age was not confirmed from a source. Verifier (2026-11-03) could not fill this either: web search budget exhausted and the APS, Gestora, SSA and ILO pages returned 403/404."
     },
     "retirement_age_government": {
       "value": null,
@@ -365,7 +365,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No source read on a compulsory retirement age for Bolivian public servants; public employees are covered by the same Sistema Integral de Pensiones."
+      "note": "No source read on a compulsory retirement age for Bolivian public servants; public employees are covered by the same Sistema Integral de Pensiones. Verifier (2026-11-03) could not fill this either: web search budget exhausted and the APS, Gestora, SSA and ILO pages returned 403/404."
     },
     "retirement_return_low": {
       "value": 0.04,
@@ -421,7 +421,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Bolivia pays the universal non-contributory Renta Dignidad (the APS publishes its statistics at https://www.aps.gob.bo/estadisticas/estadisticas-de-renta-dignidad/), but the current monthly amount could not be read from an official page."
+      "note": "Bolivia pays the universal non-contributory Renta Dignidad (the APS publishes its statistics at https://www.aps.gob.bo/estadisticas/estadisticas-de-renta-dignidad/), but the current monthly amount could not be read from an official page. Verifier (2026-11-03) could not fill this either: web search budget exhausted and the APS, Gestora, SSA and ILO pages returned 403/404."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -429,7 +429,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Renta Dignidad exists (APS statistics page), but its eligibility rules could not be read from an official page (decree DS 29400 on the APS site did not open)."
+      "note": "Renta Dignidad exists (APS statistics page), but its eligibility rules could not be read from an official page (decree DS 29400 on the APS site did not open). Verifier (2026-11-03) could not fill this either: web search budget exhausted and the APS, Gestora, SSA and ILO pages returned 403/404."
     },
     "gratuity_rule": {
       "value": null,
@@ -437,7 +437,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "Bolivian labour law provides a length-of-service indemnity (Ley General del Trabajo art. 13), but the legal text and its current rules could not be opened from an official source, so the rule was not recorded."
+      "note": "Bolivian labour law provides a length-of-service indemnity (Ley General del Trabajo art. 13), but the legal text and its current rules could not be opened from an official source, so the rule was not recorded. Verifier (2026-11-03) could not fill this either: web search budget exhausted and the APS, Gestora, SSA and ILO pages returned 403/404."
     },
     "public_pension_scheme": {
       "value": null,
@@ -445,7 +445,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The contributory Sistema Integral de Pensiones (Ley 065, run by the public Gestora) exists, but its rules could not be read from an official page (APS law PDFs and the Gestora site did not open)."
+      "note": "The contributory Sistema Integral de Pensiones (Ley 065, run by the public Gestora) exists, but its rules could not be read from an official page (APS law PDFs and the Gestora site did not open). Verifier (2026-11-03) could not fill this either: web search budget exhausted and the APS, Gestora, SSA and ILO pages returned 403/404."
     }
   },
   "instruments": {

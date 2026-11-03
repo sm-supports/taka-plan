@@ -286,7 +286,7 @@
       "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), Central African Republic",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CF",
       "asOf": "2024-12-31",
-      "note": "57.7 years in 2024 (men 55.5, women 59.6)."
+      "note": "57.7 years in 2024 (men 55.5, women 59.6); latest World Bank value, older than 2025."
     },
     "life_table_remaining": {
       "value": null,

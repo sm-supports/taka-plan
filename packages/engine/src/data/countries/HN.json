@@ -14,12 +14,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 26.8784,
+      "value": 25.9527,
       "status": "sourced",
-      "sourceName": "Trading Economics: USD/HNL exchange rate",
-      "sourceUrl": "https://tradingeconomics.com/honduras/currency",
-      "asOf": "2026-10-30",
-      "note": "Secondary source (BCH site could not be read); World Bank PA.NUS.FCRF gives 25.95 for 2025."
+      "sourceName": "World Bank WDI PA.NUS.FCRF",
+      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=HN",
+      "asOf": "2025-12-31",
+      "note": "2025 average official rate. The Banco Central de Honduras site could not be read by machine; Trading Economics (secondary) showed about 26.88 lempiras per dollar in early November 2026, but the researcher's 30 October figure could not be confirmed, so the World Bank figure is used."
     }
   },
   "fields": {
@@ -44,8 +44,8 @@
       "status": "sourced",
       "sourceName": "Trading Economics: Honduras interest rate (BCH tasa de política monetaria)",
       "sourceUrl": "https://tradingeconomics.com/honduras/interest-rate",
-      "asOf": "2026-09-30",
-      "note": "Secondary source; unchanged from the previous reading."
+      "asOf": "2026-10-31",
+      "note": "Secondary source (BCH site could not be read by machine); reference period October 2026, unchanged from the previous reading."
     },
     "savings_account_rate": {
       "value": null,
@@ -140,8 +140,8 @@
       "status": "sourced",
       "sourceName": "FOSEDE: Resolución No. 341/18-02-2025, suma máxima asegurada para el año 2025",
       "sourceUrl": "https://fosede.hn/wp-content/uploads/2025/06/Resolucion-Suma-Maxima-Asugurada-para-el-ano-2025.pdf",
-      "asOf": "2025-01-01",
-      "note": "L245,715 per depositor per institution for 2025 (the legal USD 9,632.92 base at the BCH selling rate of L25.5069); the amount is reset each January and no 2026 resolution was found."
+      "asOf": "2025-02-18",
+      "note": "L245,715 per depositor per institution for 2025 (Resolution 341/18-02-2025: the legal USD 9,632.92 base at the BCH selling rate of L25.5069). The amount is reset each year; the FOSEDE resolutions page lists no 2026 resolution, so this 2025 amount is the latest found."
     },
     "credit_card_rate_cap": {
       "value": null,

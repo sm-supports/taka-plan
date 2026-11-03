@@ -6,8 +6,8 @@
   "nameNative": "Jamaica",
   "region": "latin_america_caribbean",
   "languages": [
-    "en",
-    "jam"
+    "jam",
+    "en"
   ],
   "currency": {
     "code": "JMD",
@@ -20,7 +20,7 @@
       "sourceName": "World Bank WDI PA.NUS.FCRF",
       "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=JM",
       "asOf": "2025-12-31",
-      "note": "2025 average; the Bank of Jamaica reported a weighted average selling rate of J$159.66 on 30 October 2026."
+      "note": "2025 average official rate. The Bank of Jamaica FX spot trading summary (boj.org.jm/wp-content/uploads/2022/06/FX-Press-Summary-1.pdf) gave a weighted average USD selling rate of J$159.55 for 2 November 2026, after the cut-off date, so the World Bank figure is kept."
     }
   },
   "fields": {
@@ -53,24 +53,24 @@
       "status": "sourced",
       "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
       "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
-      "asOf": "2026-08-31",
-      "note": "Weighted average rate on savings deposits, August 2026."
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on savings deposits, September 2026 (0.969%)."
     },
     "fdr_3m_rate": {
-      "value": 0.0491,
+      "value": 0.049,
       "status": "sourced",
       "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
       "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
-      "asOf": "2026-08-31",
-      "note": "Weighted average rate on time deposits of 3 to less than 6 months, August 2026 (1-3 months: 4.38%)."
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on time deposits of 3 to less than 6 months, September 2026 (1 to 3 months: 4.58%)."
     },
     "fdr_1y_rate": {
-      "value": 0.0478,
+      "value": 0.0467,
       "status": "sourced",
       "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
       "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
-      "asOf": "2026-08-31",
-      "note": "Weighted average rate on time deposits of 12 months and over, August 2026 (6-12 months: 4.94%)."
+      "asOf": "2026-09-30",
+      "note": "Weighted average rate on time deposits of 12 months and over, September 2026 (6 to 12 months: 4.92%)."
     },
     "dps_rate": {
       "value": null,
@@ -81,12 +81,12 @@
       "note": "No official series for monthly recurring deposits was found."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.02,
+      "value": 0.0195,
       "status": "sourced",
       "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
       "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
-      "asOf": "2026-08-31",
-      "note": "Overall weighted average rate on all local-currency deposits (time 4.53%, savings 0.97%, demand 1.51%), August 2026."
+      "asOf": "2026-09-30",
+      "note": "Overall weighted average rate on all local-currency deposits (time 4.63%, savings 0.97%, demand 1.14%), September 2026."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -206,7 +206,7 @@
       "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
       "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
       "asOf": "2026-10-31",
-      "note": "Low case: 1-3 month deposits at about 4.4%, less 25% tax."
+      "note": "Low case: 1-3 month deposits at about 4.4-4.6%, less 25% tax."
     },
     "fixed_income_return_base": {
       "value": 0.04,
@@ -377,7 +377,7 @@
       "sourceName": "Bank of Jamaica: commercial banks' domestic currency deposit rates (IR.CB.00)",
       "sourceUrl": "https://boj.org.jm/wp-content/uploads/2020/10/IR.CB.00.xls",
       "asOf": "2026-10-31",
-      "note": "Base case just below the after-tax 1-year deposit rate (4.78% less 25% = 3.6%)."
+      "note": "Base case at the after-tax 1-year deposit rate (4.67% in September 2026 less 25% tax = 3.5%), below the after-tax 3-month T-bill rate of about 4.1%."
     },
     "retirement_return_high": {
       "value": 0.045,
@@ -417,7 +417,7 @@
       "sourceName": "Jamaica Information Service: Nearly 15,000 seniors registered on the Social Pension Programme (31 May 2024)",
       "sourceUrl": "https://jis.gov.jm/nearly-15000-seniors-registered-on-the-social-pension-programme/",
       "asOf": "2024-05-01",
-      "note": "Social Pension paid every two months: J$12,000 per payment from May 2024 (up from J$6,800), i.e. J$6,000 a month. Older than 2025; no later amount found."
+      "note": "Social Pension paid every two months: J$12,000 per payment from May 2024 (up from J$6,800), i.e. J$6,000 a month; the article says 'bimonthly' and the earlier J$6,800 equals two months of the original J$3,400. Older than 2025; no later amount found (the JIS article of September 2025 gives no amount)."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -511,7 +511,7 @@
       "localName": "Unit trust",
       "localNameEn": "Unit trust or mutual fund",
       "note": "Collective investment schemes are supervised by the Financial Services Commission.",
-      "sourceUrl": "https://www.fscjamaica.org/"
+      "sourceUrl": "https://www.fscjamaica.org/industry/securities/"
     },
     "gold": {
       "available": true,

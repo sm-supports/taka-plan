@@ -286,14 +286,14 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=LC",
       "asOf": "2024-12-31",
-      "note": "Men 69.5, women 76.5 (2024). UN WPP 2024 via populationpyramid.net gives 73.2 for 2026 (men 69.7, women 76.7)."
+      "note": "Men 69.5, women 76.5 (2024). UN WPP 2024 via populationpyramid.net gives 73.2 for 2026 (men 69.7, women 76.7). The World Bank figure is for 2024, older than 2025 (latest published)."
     },
     "life_table_remaining": {
       "value": null,
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/saint-lucia/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "valueJson": {
         "rows": [
           {
@@ -322,7 +322,7 @@
           }
         ]
       },
-      "note": "Secondary source of UN WPP 2024 medium variant for 2026; sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
+      "note": "Secondary source of UN WPP 2024 medium variant for the year 2026 (asOf set to mid-year); sex-specific values are for the 5-year age groups starting at each age; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
       "value": null,
@@ -436,7 +436,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No statutory retirement gratuity: the Labour Code 2006 (https://www.govt.lc/media.govt.lc/www/resources/legislation/SaintLuciaLabourCode2006.pdf) gives redundancy pay only on redundancy (s.160) and not to an employee who chooses to retire (s.162(1)(g)); severance is left to collective agreements until regulations are made (s.161).",
+      "note": "No statutory retirement gratuity: Division 11 (Termination Benefits) of the Labour Code 2006 (https://www.govt.lc/media.govt.lc/www/resources/legislation/SaintLuciaLabourCode2006.pdf) provides only redundancy pay on termination due to redundancy (s.160) and leaves severance to Regulations not yet made and to existing collective agreements (s.161); s.159 sets retirement at the NIC pensionable age with no payment on retirement.",
       "absent": true
     },
     "public_pension_scheme": {

@@ -27,9 +27,9 @@
       "value": 0.029,
       "status": "sourced",
       "sourceName": "Bank of Korea ECOS, consumer price index (all items, 2020=100), from Ministry of Data and Statistics",
-      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202509/202609/0",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202608/202609/0",
       "asOf": "2026-09-30",
-      "note": "Index 117.06 (Sep 2025) to 120.43 (Sep 2026) = 2.9% year on year."
+      "note": "Index 120.43 in Sep 2026 against 117.06 in Sep 2025 (same series, https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/901Y009/M/202509/202509/0) = 2.9% year on year."
     },
     "inflation_projection": {
       "value": 0.025,
@@ -43,7 +43,7 @@
       "value": 0.03,
       "status": "sourced",
       "sourceName": "Bank of Korea base rate (ECOS 722Y001)",
-      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/722Y001/M/202606/202610/0101000",
+      "sourceUrl": "https://ecos.bok.or.kr/api/StatisticSearch/sample/json/kr/1/10/722Y001/D/20261020/20261029/0101000",
       "asOf": "2026-10-22",
       "note": "Raised to 2.75% in July and 3.00% in August 2026; held at 3.00% on 22 October 2026."
     },
@@ -53,7 +53,7 @@
       "sourceName": "Dealsite (Nov 2024): low-cost demand deposits pay about 0.1% a year",
       "sourceUrl": "https://dealsite.co.kr/articles/131688",
       "asOf": "2024-11-20",
-      "note": "Ordinary demand (passbook) deposits at commercial banks pay about 0.1%; internet-bank parking accounts pay around 2% with conditions."
+      "note": "Article says low-cost deposits (ordinary demand and passbook deposits) pay about 0.1% a year; internet-bank parking accounts pay around 2% with conditions. Source dated November 2024 (older than 2025)."
     },
     "fdr_3m_rate": {
       "value": 0.0316,
@@ -90,9 +90,9 @@
     "sanchayapatra_5y_rate": {
       "value": 0.04325,
       "status": "sourced",
-      "sourceName": "Ministry of Economy and Finance October 2026 retail government bond issue (via SBS Biz)",
+      "sourceName": "Ministry of Economy and Finance October 2026 retail government bond issue (via SBS Biz, 30 Sep 2026)",
       "sourceUrl": "https://biz.sbs.co.kr/amp/article/20000337585",
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-01",
       "note": "5-year retail government bond: 4.275% coupon (September 5-year auction rate) plus 0.05 point bonus, compounded and paid at maturity; 10-year 4.79%, 20-year 4.95%."
     },
     "tbill_91d_rate": {
@@ -124,8 +124,8 @@
       "status": "sourced",
       "sourceName": "PwC Worldwide Tax Summaries: Korea, individual income determination",
       "sourceUrl": "https://taxsummaries.pwc.com/republic-of-korea/individual/income-determination",
-      "asOf": "2026-10-31",
-      "note": "14% national plus 1.4% local income tax withheld at source; final unless interest and dividends exceed KRW 20 million a year."
+      "asOf": "2026-07-02",
+      "note": "15.4% withheld at source (14% national plus 1.4% local income tax); final unless interest and dividends exceed KRW 20 million a year. PwC page last reviewed 2 July 2026."
     },
     "tax_sanchayapatra_profit": {
       "value": 0.154,
@@ -133,23 +133,23 @@
       "sourceName": "Newsis (Mar 2023) on retail government bond tax rules",
       "sourceUrl": "https://www.newsis.com/view/NISX20230330_0002247546",
       "asOf": "2023-03-30",
-      "note": "Interest is taxed separately at 14% (plus 1.4% local tax) on up to KRW 200 million per person if held to maturity; early redemption loses the benefit."
+      "note": "Interest is taxed separately at 14% (plus 1.4% local tax) on up to KRW 200 million of purchases per person if held to maturity; early redemption loses the benefit. Source dated March 2023 (older than 2025)."
     },
     "deposit_insurance_limit": {
       "value": 100000000,
       "status": "sourced",
-      "sourceName": "Korea Deposit Insurance Corporation",
-      "sourceUrl": "https://www.kdic.or.kr/",
+      "sourceName": "Korea Deposit Insurance Corporation, protection limit page",
+      "sourceUrl": "https://www.kdic.or.kr/sp/dpstrprot/ProtSystProtLmts/selectScrn.do",
       "asOf": "2025-09-01",
-      "note": "Raised from KRW 50 million to KRW 100 million (principal plus interest) per depositor per institution from 1 September 2025."
+      "note": "KRW 100 million (principal plus interest) per depositor per financial institution; raised from KRW 50 million from 1 September 2025 (KDIC home page notice)."
     },
     "credit_card_rate_cap": {
       "value": 0.2,
       "status": "sourced",
       "sourceName": "Regulation on the maximum interest rate under the Interest Limitation Act",
-      "sourceUrl": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B4%EC%9E%90%EC%A0%9C%ED%95%9C%EB%B2%95_%EC%A0%9C2%EC%A1%B0%EC%A0%9C1%ED%95%AD%EC%9D%98_%EC%B5%9C%EA%B3%A0%EC%9D%B4%EC%9E%90%EC%9C%A8%EC%97%90_%EA%B4%80%ED%95%9C_%EA%B7%9C%EC%A0%95",
+      "sourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%9D%B4%EC%9E%90%EC%A0%9C%ED%95%9C%EB%B2%95%EC%A0%9C2%EC%A1%B0%EC%A0%9C1%ED%95%AD%EC%9D%98%EC%B5%9C%EA%B3%A0%EC%9D%B4%EC%9E%90%EC%9C%A8%EC%97%90%EA%B4%80%ED%95%9C%EA%B7%9C%EC%A0%95",
       "asOf": "2021-07-07",
-      "note": "Legal maximum interest rate of 20% a year since July 2021, which also caps card loans and revolving balances."
+      "note": "Legal maximum interest rate of 20% a year on loan contracts since 7 July 2021; card loans and revolving balances are held to the same statutory ceiling. Rule dates from 2021 (older than 2025) and is still in force."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -331,20 +331,20 @@
       "note": "100 / old-age dependency ratio: 29.3 (2025, World Bank), 57.9 (2040) and 97.6 (2065, populationpyramid.net/republic-of-korea/2065/)."
     },
     "retirement_age_default": {
-      "value": 63,
+      "value": 65,
       "status": "sourced",
       "sourceName": "National Pension pension age schedule (Korean Wikipedia, National Pension of South Korea)",
       "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88",
       "asOf": "2026-10-31",
-      "note": "Old-age pension starts at 63 for those born 1961-64, 64 for 1965-68 and 65 from 1969 (reached in 2033); the legal minimum mandatory retirement age in firms is 60."
+      "note": "National Pension old-age pension starts at 65 for anyone born in 1969 or later (63 for 1961-64, 64 for 1965-68); the legal minimum mandatory retirement age in firms is 60. Secondary source (Korean Wikipedia)."
     },
     "retirement_age_government": {
       "value": 60,
       "status": "sourced",
       "sourceName": "State Public Officials Act, Article 74",
-      "sourceUrl": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EB%B2%95/%EC%A0%9C74%EC%A1%B0",
-      "asOf": "2009-01-01",
-      "note": "Public officials retire at 60 unless another law says otherwise, on 30 June or 31 December of that year."
+      "sourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EB%B2%95/%EC%A0%9C74%EC%A1%B0",
+      "asOf": "2026-10-31",
+      "note": "Article 74(1): public officials retire at 60 unless another law says otherwise, leaving on 30 June or 31 December of that year (current text)."
     },
     "retirement_return_low": {
       "value": 0.02,
@@ -398,9 +398,9 @@
       "value": 349700,
       "status": "sourced",
       "sourceName": "Ministry of Health and Welfare, Basic Pension (기초연금) 2026 standard amount",
-      "sourceUrl": "https://basicpension.mohw.go.kr/",
+      "sourceUrl": "https://basicpension.mohw.go.kr/board.es?mid=a10401000000&bid=0002&list_no=21872&act=view",
       "asOf": "2026-01-01",
-      "note": "Standard monthly amount for a single recipient in 2026; couples receive 20% less each."
+      "note": "Notice of 23 January 2026: standard monthly amount KRW 349,700 for a single recipient in 2026; couples receive 20% less each."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -414,7 +414,7 @@
       "sourceName": "Pensions in South Korea (Wikipedia); Ministry of Health and Welfare Basic Pension site",
       "sourceUrl": "https://en.wikipedia.org/wiki/Pensions_in_South_Korea",
       "asOf": "2026-01-01",
-      "note": "Basic Pension goes to people 65+ in the bottom 70% by income and assets; 2026 selection threshold KRW 2.47 million a month for a single person (basicpension.mohw.go.kr)."
+      "note": "Basic Pension goes to people aged 65+ in the bottom 70% by income and assets; 2026 selection threshold KRW 2.47 million a month for a single person and KRW 3.952 million for a couple (basicpension.mohw.go.kr notice of 23 January 2026)."
     },
     "gratuity_rule": {
       "value": null,
@@ -426,16 +426,16 @@
       },
       "status": "sourced",
       "sourceName": "Employee Retirement Benefit Security Act, Article 8",
-      "sourceUrl": "https://casenote.kr/%EB%B2%95%EB%A0%B9/%EA%B7%BC%EB%A1%9C%EC%9E%90%ED%87%B4%EC%A7%81%EA%B8%89%EC%97%AC_%EB%B3%B4%EC%9E%A5%EB%B2%95/%EC%A0%9C8%EC%A1%B0",
+      "sourceUrl": "https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EA%B7%BC%EB%A1%9C%EC%9E%90%ED%87%B4%EC%A7%81%EA%B8%89%EC%97%AC%EB%B3%B4%EC%9E%A5%EB%B2%95/%EC%A0%9C8%EC%A1%B0",
       "asOf": "2026-10-31",
-      "note": "At least 30 days of average wages per year of continuous service (average wage = last 3 months' pay / calendar days); many employers use a DB or DC retirement pension instead."
+      "note": "Article 8(1): at least 30 days of average wages per year of continuous service (average wage = last 3 months' pay / calendar days); many employers use a DB or DC retirement pension instead."
     },
     "public_pension_scheme": {
       "value": null,
       "valueJson": {
         "entryAgeMin": 18,
         "entryAgeMax": 59,
-        "pensionFromAge": 63,
+        "pensionFromAge": 65,
         "nomineeUntilAge": null,
         "inflationLinked": true,
         "taxFree": false
@@ -444,7 +444,7 @@
       "sourceName": "National Pension (Korean Wikipedia, National Pension of South Korea)",
       "sourceUrl": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EA%B5%AD%EB%AF%BC%EC%97%B0%EA%B8%88",
       "asOf": "2026-10-31",
-      "note": "Residents 18 to under 60 must join; pension age 63 for those born 1961-64, rising to 65; benefits are adjusted yearly by CPI and taxed as pension income; the 2025 reform raises contributions from 9% toward 13% of pay from 2026."
+      "note": "Residents 18 to under 60 must join; pension age 65 for anyone born in 1969 or later (63 for 1961-64, 64 for 1965-68); National Pension Act Article 51(2) adjusts pension amounts by the national CPI change after committee review; benefits are taxed as pension income."
     }
   },
   "instruments": {
@@ -505,8 +505,9 @@
     },
     "gold": {
       "available": true,
-      "localName": "금 (골드바·KRX 금시장)",
-      "localNameEn": "Gold bars and KRX Gold Market"
+      "localName": "금 (골드바)",
+      "localNameEn": "Gold bars",
+      "note": "Physical gold bars are sold to individuals; gold can also be traded on the exchange's regulated gold market."
     }
   },
   "institutions": {

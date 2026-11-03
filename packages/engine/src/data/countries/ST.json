@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "code": "ST",
+  "iso3": "STP",
+  "nameEn": "São Tomé and Príncipe",
+  "nameNative": "São Tomé e Príncipe",
+  "region": "sub_saharan_africa",
+  "languages": [
+    "pt",
+    "cri"
+  ],
+  "currency": {
+    "code": "STN",
+    "symbol": "Db",
+    "decimals": 2,
+    "compact": "intl",
+    "usdRate": {
+      "value": 21.63,
+      "status": "sourced",
+      "sourceName": "Banco Central de São Tomé e Príncipe, official exchange rates (monthly average), July 2026",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-07-31",
+      "note": "21.634 dobras per US dollar on average in July 2026 (21.349 at end-July); the dobra is pegged at 24.5 per euro. World Bank 2025 average 21.75."
+    }
+  },
+  "fields": {
+    "inflation_cpi": {
+      "value": 0.083,
+      "status": "sourced",
+      "sourceName": "Instituto Nacional de Estatística (INE), Índice de Preços no Consumidor, September 2026 (published 12 October 2026)",
+      "sourceUrl": "https://www.ine.st/phocadownload/userupload/Documentos/IPC_Ano/Ano_2026/Setembro/Nota_Explicativa_IPC_Setembro.pdf",
+      "asOf": "2026-09-30",
+      "note": "Consumer prices in the city of São Tomé rose 8.3% year on year in September 2026 (9.5% in July; 12.8% in September 2025); monthly change 0.2%."
+    },
+    "inflation_projection": {
+      "value": 0.07,
+      "status": "assumption",
+      "sourceName": "IMF second ECF review (December 2025): inflation 7.8% in 2025, programme projections 12.2% for 2026, 6.1% for 2027 and 9.7% for 2028; dobra pegged to the euro",
+      "sourceUrl": "https://www.imf.org/en/news/articles/2025/12/19/pr-25438-dem-rep-of-stp-imf-completes-2nd-rev-under-ecf-arrange-appr-req-ext-and-aug-of-arrange",
+      "asOf": "2026-10-31",
+      "note": "The euro peg should pull inflation down over time, but it has run at 8-13% in recent years and the IMF projects 6-10% ahead, so 7% is used for planning."
+    },
+    "policy_rate": {
+      "value": 0.1,
+      "status": "sourced",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series (reference rate of the central bank)",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-07-31",
+      "note": "Taxa de juro de referência of 10% in every month from December 2025 to July 2026, the latest in the series published by the BCSTP."
+    },
+    "savings_account_rate": {
+      "value": 0.025,
+      "status": "sourced",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series (savings deposits, 1 to 180 days)",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-07-31",
+      "note": "Average rate on savings deposits (poupança) of 1-180 days, 2.50% in July 2026; 2.63% for savings over one year."
+    },
+    "fdr_3m_rate": {
+      "value": 0.02375,
+      "status": "sourced",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series (term deposits, 91 to 180 days)",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-07-31",
+      "note": "Average rate on term deposits of 91-180 days, 2.38% in July 2026; the shortest band published."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0253,
+      "status": "sourced",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series (term deposits, 181 days to 1 year)",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-07-31",
+      "note": "Average rate on term deposits of 181 days to 1 year, 2.53% in July 2026; over one year 3.06%."
+    },
+    "dps_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No monthly recurring deposit product or rate was found; the BCSTP publishes only savings and term deposit rates."
+    },
+    "bank_deposit_avg_rate": {
+      "value": 0.0254,
+      "status": "sourced",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series (average of all maturities, deposits)",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-07-31",
+      "note": "Average rate on deposits (operações passivas) across maturities, 2.54% in July 2026 (term deposits 2.45%, savings 2.63%). World Bank gives 2.37% for 2025."
+    },
+    "sanchayapatra_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate or retail savings bond for individuals was found."
+    },
+    "tbill_91d_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 91-day bill was issued in 2025-2026: the BCSTP issue list shows irregular bills of 30 days to 1 year with one to five bidders each (40-day bill at 6.0% in July 2026, 1-year bill at 5.00% in May 2026); no channel for individuals was found."
+    },
+    "tbond_5y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 5-year Treasury bond issue was found."
+    },
+    "tbond_10y_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No 10-year Treasury bond issue was found."
+    },
+    "tax_bank_interest": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The tax on bank interest for resident individuals could not be confirmed from an official source: PwC Worldwide Tax Summaries has no São Tomé page and the tax authority's IRS code was not reached."
+    },
+    "tax_sanchayapatra_profit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No government savings certificate exists, and the tax on government security income for individuals could not be confirmed."
+    },
+    "deposit_insurance_limit": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No deposit guarantee scheme in operation was found; a 2022 bill revising the central bank's organic law gave the BCSTP the task of promoting a deposit guarantee fund, but its creation could not be confirmed."
+    },
+    "credit_card_rate_cap": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No card-specific rate or legal cap was found; bank overdraft rates were 21-24.5% in July 2026 (BCSTP interest rate statistics)."
+    },
+    "equity_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "No stock exchange in São Tomé and Príncipe; global equities in euro terms (dobra pegged at 24.5 per euro, BCSTP)",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: a weak decade for global shares in euro terms, after fund costs."
+    },
+    "equity_return_base": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Global equity index in euro terms; dobra pegged to the euro; after-tax safe rate about 2.5% (BCSTP)",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "There is no local market, so base is a global index fund in local-currency terms (the peg makes this euro terms), capped at about 4 points above the 2.5% deposit rate even though global shares have done better."
+    },
+    "equity_return_high": {
+      "value": 0.09,
+      "status": "assumption",
+      "sourceName": "Global equity index in euro terms",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: a strong decade for global shares."
+    },
+    "gold_return_low": {
+      "value": 0.0,
+      "status": "assumption",
+      "sourceName": "BCSTP official rates: dobra fixed at 24.5 per euro",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: flat gold in euro terms."
+    },
+    "gold_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "BCSTP official rates: dobra fixed at 24.5 per euro; long-run gold trend",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: the long-run gold trend of about 4% a year with no currency gain under the euro peg."
+    },
+    "gold_return_high": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "BCSTP official rates: dobra fixed at 24.5 per euro",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: strong gold years."
+    },
+    "fixed_income_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: short deposits at about 2.4% less a possible tax on interest."
+    },
+    "fixed_income_return_base": {
+      "value": 0.025,
+      "status": "assumption",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: term deposits of up to a year at about 2.5%; the tax on interest is unconfirmed, so this may be slightly high."
+    },
+    "fixed_income_return_high": {
+      "value": 0.035,
+      "status": "assumption",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: term deposits of over one year (3.06%) or negotiated rates on larger deposits."
+    },
+    "life_claim_settlement_rate": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The BCSTP, which supervises insurers, publishes no life claim settlement ratio that could be found."
+    },
+    "insurance_term_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published term life premium rates per 1,000 dobras of cover were found; the life insurance market is very small."
+    },
+    "health_hospitalisation_cost": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published typical cost of a major hospital stay in São Tomé and Príncipe was found."
+    },
+    "health_premium_table": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No published private health insurance premiums by age were found."
+    },
+    "oop_health_share": {
+      "value": 0.1666,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, out-of-pocket expenditure (% of current health expenditure), São Tomé and Príncipe",
+      "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=ST",
+      "asOf": "2023-12-31",
+      "note": "16.7% in 2023 (WHO Global Health Expenditure Database via the World Bank), the latest available; older than 2025."
+    },
+    "goal_inflation_health": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "INE CPI (health among the faster-rising classes in 2026); inflation assumption 7%",
+      "sourceUrl": "https://www.ine.st/phocadownload/userupload/Documentos/IPC_Ano/Ano_2026/Setembro/Nota_Explicativa_IPC_Setembro.pdf",
+      "asOf": "2026-10-31",
+      "note": "No health price index series was read beyond monthly notes; medical goals are planned 1 point above the 7% inflation assumption."
+    },
+    "goal_inflation_education": {
+      "value": 0.08,
+      "status": "assumption",
+      "sourceName": "INE CPI; inflation assumption 7%",
+      "sourceUrl": "https://www.ine.st/phocadownload/userupload/Documentos/IPC_Ano/Ano_2026/Setembro/Nota_Explicativa_IPC_Setembro.pdf",
+      "asOf": "2026-10-31",
+      "note": "No education price index series was read; school goals are planned 1 point above the 7% inflation assumption."
+    },
+    "life_expectancy": {
+      "value": 69.905,
+      "status": "sourced",
+      "sourceName": "World Bank WDI, life expectancy at birth, total (SP.DYN.LE00.IN), São Tomé and Príncipe",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=ST",
+      "asOf": "2024-12-31",
+      "note": "69.9 years in 2024 (men 66.4, women 73.9)."
+    },
+    "life_table_remaining": {
+      "value": null,
+      "valueJson": {
+        "rows": [
+          {
+            "age": 60,
+            "total": 17.8,
+            "men": 15.6,
+            "women": 20.0
+          },
+          {
+            "age": 65,
+            "total": 14.5,
+            "men": 12.7,
+            "women": 16.3
+          },
+          {
+            "age": 70,
+            "total": 11.5,
+            "men": 10.1,
+            "women": 12.8
+          },
+          {
+            "age": 80,
+            "total": 6.6,
+            "men": 5.9,
+            "women": 7.2
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
+      "sourceUrl": "https://www.populationpyramid.net/mortality/sao-tome-and-principe/",
+      "asOf": "2026-07-01",
+      "note": "Secondary source of UN WPP 2024 medium variant for 2026; the both-sexes figure at 65 is published, the others are the mean of men and women."
+    },
+    "support_ratio": {
+      "value": null,
+      "valueJson": {
+        "points": [
+          {
+            "year": 2025,
+            "value": 14.86
+          },
+          {
+            "year": 2040,
+            "value": 12.05
+          },
+          {
+            "year": 2065,
+            "value": 7.87
+          }
+        ]
+      },
+      "status": "sourced",
+      "sourceName": "World Bank SP.POP.DPND.OL (2025); UN WPP 2024 via populationpyramid.net (2040, 2065)",
+      "sourceUrl": "https://data.worldbank.org/indicator/SP.POP.DPND.OL?locations=ST",
+      "asOf": "2025-12-31",
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio. Dependency ratios used: 6.73 per 100 in 2025 (World Bank), 8.3 in 2040 (populationpyramid.net/sao-tome-and-principe/2040/) and 12.7 in 2065 (populationpyramid.net/sao-tome-and-principe/2065/, UN WPP 2024 medium variant)."
+    },
+    "retirement_age_default": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa, 2019, São Tomé and Príncipe (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20260209210807/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/sao-tome-and-principe.html",
+      "asOf": "2019-07-01",
+      "note": "Old-age pension (pensão de velhice) of the INSS at 62 with at least 180 months of contributions and 240 months of enrolment; women may retire early from 57. Secondary source read through the Internet Archive (ssa.gov refused access); the 2019 edition is older than 2025, and no later change to the age was found."
+    },
+    "retirement_age_government": {
+      "value": 62,
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa, 2019, São Tomé and Príncipe (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20260209210807/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/sao-tome-and-principe.html",
+      "asOf": "2019-07-01",
+      "note": "Civil servants are covered by the same INSS old-age pension, payable at 62; no separate civil-service retirement age was found. 2019 edition, older than 2025."
+    },
+    "retirement_return_low": {
+      "value": 0.015,
+      "status": "assumption",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: savings and short deposits at about 2.4-2.5%, less a possible tax on interest."
+    },
+    "retirement_return_base": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case kept below the 1-year term deposit rate of 2.53% (July 2026) to allow for a possible tax on interest."
+    },
+    "retirement_return_high": {
+      "value": 0.03,
+      "status": "assumption",
+      "sourceName": "Banco Central de São Tomé e Príncipe (BCSTP), interest rate statistics in national currency, monthly series",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: deposits of over one year at about 3%."
+    },
+    "retirement_accumulation_return_low": {
+      "value": 0.02,
+      "status": "assumption",
+      "sourceName": "Deposit rates about 2.5% (BCSTP); equity low 2%",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Low case: mostly deposits, with weak equity and gold years."
+    },
+    "retirement_accumulation_return_base": {
+      "value": 0.04,
+      "status": "assumption",
+      "sourceName": "Deposit rates about 2.5% (BCSTP); global equity base 6%; gold base 4%",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "Base case: a mix of local deposits, gold and, where it can be bought, a global equity fund."
+    },
+    "retirement_accumulation_return_high": {
+      "value": 0.06,
+      "status": "assumption",
+      "sourceName": "Global equity high 9%; gold high 8%",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxa%20de%20C%C3%A2mbio%20do%20Banco%20Central_2019-2026.xlsx",
+      "asOf": "2026-10-31",
+      "note": "High case: a growth-leaning mix."
+    },
+    "old_age_allowance_monthly": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension with a confirmed amount was found: the non-contributory programmes run by the Directorate of Social Protection focus mostly on children, and the minimum pension raised to 1,400 dobras in July 2026 (news report) could not be tied to a non-contributory scheme."
+    },
+    "old_age_allowance_eligibility": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No non-contributory old-age pension rules were found (see old_age_allowance_monthly)."
+    },
+    "gratuity_rule": {
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No statutory end-of-service payment on retirement was found; the 2019 Labour Code gives severance of one month's pay per year of service (minimum three months) only on dismissal for economic reasons or without just cause (US SSA 2019)."
+    },
+    "public_pension_scheme": {
+      "value": null,
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 62,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa, 2019, São Tomé and Príncipe (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20260209210807/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/sao-tome-and-principe.html",
+      "asOf": "2019-07-01",
+      "note": "Compulsory INSS social insurance for employees, civil servants included (4% employee and 6% employer in the 2019 source): pension from 62 after 180 months of contributions, equal to 2.5% of average earnings in the best 10 of the last 15 years per year of contributions, up to 80%; minimum 40% of the civil-service minimum wage. Benefits are adjusted with reference to the CPI or other indicators, not automatically, so inflationLinked is false. 2019 edition, older than 2025; later contribution changes were not confirmed."
+    }
+  },
+  "instruments": {
+    "savings_account": {
+      "available": true,
+      "localName": "Conta poupança",
+      "localNameEn": "Savings account",
+      "note": "Average 2.5% a year (BCSTP, July 2026).",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx"
+    },
+    "fdr_3m": {
+      "available": true,
+      "localName": "Depósito a prazo (91 a 180 dias)",
+      "localNameEn": "Term deposit (91-180 days)",
+      "note": "Average 2.38% a year (BCSTP, July 2026).",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx"
+    },
+    "fdr_1y": {
+      "available": true,
+      "localName": "Depósito a prazo (181 dias a 1 ano)",
+      "localNameEn": "Term deposit (181 days to 1 year)",
+      "note": "Average 2.53% a year (BCSTP, July 2026).",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ES/Taxas%20de%20Juro_Moeda%20Nacional_2013-2026.xlsx"
+    },
+    "dps": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No monthly recurring deposit product was found."
+    },
+    "sanchayapatra_5y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No government savings certificate for individuals was found."
+    },
+    "tbill_91d": {
+      "available": false,
+      "localName": "Bilhetes do Tesouro",
+      "localNameEn": "Treasury bills",
+      "note": "Issued irregularly (30 days to 1 year) to a handful of institutional bidders (BCSTP issue list); no channel for individuals was found.",
+      "sourceUrl": "https://www.bcstp.st/Upload/New_DOC/ME/BT%20total%20resumo_26.pdf"
+    },
+    "tbond_5y": {
+      "available": false,
+      "localName": "Obrigações do Tesouro",
+      "localNameEn": "Treasury bonds",
+      "note": "No 5-year bond issue was found."
+    },
+    "tbond_10y": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "No 10-year bond issue was found."
+    },
+    "equity_fund": {
+      "available": false,
+      "localName": null,
+      "localNameEn": null,
+      "note": "There is no stock exchange or locally sold mutual fund; global funds would have to be bought abroad."
+    },
+    "gold": {
+      "available": true,
+      "localName": "Ouro",
+      "localNameEn": "Gold",
+      "note": "Gold is sold mainly as jewellery; no official bullion or coin scheme was found."
+    }
+  },
+  "institutions": {
+    "centralBank": {
+      "name": "Banco Central de São Tomé e Príncipe (BCSTP)",
+      "url": "https://www.bcstp.st/"
+    },
+    "insuranceRegulator": {
+      "name": "Banco Central de São Tomé e Príncipe (BCSTP), insurance supervision",
+      "url": "https://www.bcstp.st/",
+      "note": "The BCSTP licenses and supervises insurance companies."
+    },
+    "insuranceComplaints": {
+      "name": "BCSTP complaints form (Ficha de Reclamação)",
+      "url": "https://www.bcstp.st/Reclamacoes"
+    },
+    "pensionScheme": {
+      "name": "Instituto Nacional de Segurança Social (INSS)",
+      "url": "https://www.seg-social-stp.net/"
+    },
+    "oldAgeAllowance": null,
+    "publicHealthCover": null,
+    "depositInsurance": null,
+    "statistics": {
+      "name": "Instituto Nacional de Estatística (INE)",
+      "url": "https://www.ine.st/"
+    }
+  },
+  "researchedAt": "2026-10-31",
+  "reviewedBy": "research-workflow"
+}

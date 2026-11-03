@@ -20,7 +20,7 @@
       "sourceName": "Banque de la République d'Haïti (BRH): taux du jour (taux de référence)",
       "sourceUrl": "https://www.brh.ht/taux-du-jour/",
       "asOf": "2026-10-31",
-      "note": "Reference rate; bank buying 130.4580 and selling 131.6921 gourdes on the same day. The CLDR file lists USD for Haiti; the national currency is the gourde (HTG)."
+      "note": "Reference rate; bank buying 130.4580 and selling 131.6921 gourdes. Verifier re-read the BRH page on 2 November 2026 and it showed the same 130.7348 reference rate. The CLDR file lists USD for Haiti; the national currency is the gourde (HTG)."
     }
   },
   "fields": {
@@ -54,7 +54,7 @@
       "sourceName": "Banque de la République d'Haïti (BRH): taux d'intérêt sur les opérations en gourdes",
       "sourceUrl": "https://www.brh.ht/wp-content/uploads/tauxinteretgourdes.pdf",
       "asOf": "2025-09-28",
-      "note": "Average gourde savings deposit rate (min 0.03%, max 1.00%) for the week of 28 September 2025, the latest in the series read; older than 2025-10."
+      "note": "Average gourde savings deposit rate (min 0.03%, max 1.00%) for the week of 28 September 2025, the latest week in the BRH series; older than one year, no 2026 figure published."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -524,7 +524,7 @@
     "depositInsurance": null,
     "statistics": {
       "name": "Institut Haïtien de Statistique et d'Informatique (IHSI)",
-      "url": "https://www.ihsi.ht/"
+      "url": "https://www.ihsi.gouv.ht/"
     }
   },
   "researchedAt": "2026-10-31",

@@ -49,12 +49,12 @@
       "note": "Ireland uses the euro; ECB deposit facility rate 2.50% (main refinancing 2.65%) since 16 September 2026."
     },
     "savings_account_rate": {
-      "value": 0.0022,
+      "value": 0.0023,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Irish banks, household overnight deposits (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IE.B.L21.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on household overnight (instant-access) deposits at Irish banks; notice and online savings accounts pay more."
+      "asOf": "2026-09-30",
+      "note": "Average rate on household overnight (instant-access) deposits at Irish banks, 0.23% in September 2026 (0.22% in August); notice and online savings accounts pay more."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -62,15 +62,15 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "ECB and Central Bank of Ireland MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.81% in August 2026); no 3-month fixed-term rate was found."
+      "note": "ECB and Central Bank of Ireland MFI statistics publish household deposits with agreed maturity up to 1 year as one bucket (1.99% in September 2026); no 3-month fixed-term rate was found."
     },
     "fdr_1y_rate": {
-      "value": 0.0181,
+      "value": 0.0199,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Irish banks, household deposits with agreed maturity up to 1 year (new business)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IE.B.L22.F.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Bucket covers all fixed terms up to one year; interest is subject to 33% DIRT."
+      "asOf": "2026-09-30",
+      "note": "1.99% in September 2026 (1.81% in August); the bucket covers all fixed terms up to one year; interest is subject to 33% DIRT."
     },
     "dps_rate": {
       "value": 0.0233,
@@ -85,8 +85,8 @@
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Irish banks, household deposits with agreed maturity (outstanding amounts)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IE.B.L22.A.R.A.2250.EUR.O",
-      "asOf": "2026-08-31",
-      "note": "Average rate on all outstanding household term deposits; World Bank FR.INR.DPST has no recent figure for Ireland."
+      "asOf": "2026-09-30",
+      "note": "Average rate on all outstanding household term deposits, 2.19% in September 2026; World Bank FR.INR.DPST has no recent figure for Ireland."
     },
     "sanchayapatra_5y_rate": {
       "value": 0.0229,
@@ -118,7 +118,7 @@
       "sourceName": "Trading Economics, Ireland 10-year government bond yield",
       "sourceUrl": "https://tradingeconomics.com/ireland/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "ECB long-term (10-year) convergence yield for Ireland was 3.59% in September 2026."
+      "note": "Secondary source; Trading Economics showed 3.47% on 2 November 2026 after 3.48% in the previous session. The ECB long-term (10-year) convergence yield for Ireland was 3.59% in September 2026 (ECB IRS.M.IE.L.L40.CI.0000.EUR.N.Z)."
     },
     "tax_bank_interest": {
       "value": 0.33,
@@ -145,12 +145,12 @@
       "note": "EUR 100,000 for eligible deposits, paid automatically; the EU-wide limit applies per depositor per bank."
     },
     "credit_card_rate_cap": {
-      "value": 0.0915,
+      "value": 0.0914,
       "status": "sourced",
       "sourceName": "ECB MFI interest rate statistics: Irish banks, revolving loans, overdrafts and credit card credit to households",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IE.B.A2Z.A.R.A.2250.EUR.N",
-      "asOf": "2026-08-31",
-      "note": "Average rate on revolving loans, overdrafts and extended credit card credit combined; Ireland has no legal cap on card rates and card APRs are typically higher."
+      "asOf": "2026-09-30",
+      "note": "Average rate on revolving loans, overdrafts and extended credit card credit combined, 9.14% in September 2026; Ireland has no legal cap on card rates and card APRs are typically higher."
     },
     "equity_return_low": {
       "value": 0.03,
@@ -166,7 +166,7 @@
       "sourceName": "ISEQ (Trading Economics); 5-year Savings Certificates 2.29% tax-free (State Savings)",
       "sourceUrl": "https://tradingeconomics.com/ireland/stock-market",
       "asOf": "2026-10-31",
-      "note": "The ISEQ is at a record high after a strong decade, but the base is held to the tax-free safe rate of about 2% plus 3.5 points, as a diversified fund would earn."
+      "note": "The ISEQ is at a record high after a strong decade, but the base is held to the tax-free 3-year State Savings rate of about 2% plus 3.5 points, as a diversified fund would earn."
     },
     "equity_return_high": {
       "value": 0.075,
@@ -203,7 +203,7 @@
     "fixed_income_return_low": {
       "value": 0.011,
       "status": "assumption",
-      "sourceName": "1-year deposits 1.81% less 33% DIRT = 1.2% (ECB MFI statistics)",
+      "sourceName": "1-year deposits 1.99% less 33% DIRT = 1.3% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: deposit and State Savings rates drift lower if the ECB cuts again."
@@ -211,7 +211,7 @@
     "fixed_income_return_base": {
       "value": 0.018,
       "status": "assumption",
-      "sourceName": "State Savings 1.96-2.29% tax-free; 1-year deposits 1.81% less 33% DIRT = 1.2%",
+      "sourceName": "State Savings 1.96-2.29% tax-free; 1-year deposits 1.99% less 33% DIRT = 1.3%",
       "sourceUrl": "https://www.ntma.ie/news/ntma-to-increase-ireland-state-savings-rates",
       "asOf": "2026-10-31",
       "note": "Base case: a mix of tax-free State Savings products and term deposits after DIRT."
@@ -366,7 +366,7 @@
     "retirement_return_low": {
       "value": 0.008,
       "status": "assumption",
-      "sourceName": "1-year deposits 1.81% less 33% DIRT = 1.2% (ECB MFI statistics)",
+      "sourceName": "1-year deposits 1.99% less 33% DIRT = 1.3% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
       "note": "Low case: deposit rates fall back after ECB cuts."
@@ -374,10 +374,10 @@
     "retirement_return_base": {
       "value": 0.012,
       "status": "assumption",
-      "sourceName": "1-year deposits 1.81% less 33% DIRT = 1.2% (ECB MFI statistics)",
+      "sourceName": "1-year deposits 1.99% less 33% DIRT = 1.3% (ECB MFI statistics, Sep 2026)",
       "sourceUrl": "https://data-api.ecb.europa.eu/service/data/MIR/M.IE.B.L22.F.R.A.2250.EUR.N",
       "asOf": "2026-10-31",
-      "note": "Base case capped at the after-tax 1-year term deposit rate."
+      "note": "Base case kept just below the after-tax 1-year term deposit rate of about 1.3%."
     },
     "retirement_return_high": {
       "value": 0.022,

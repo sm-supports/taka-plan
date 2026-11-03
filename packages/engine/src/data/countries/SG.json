@@ -95,8 +95,8 @@
       "status": "sourced",
       "sourceName": "MAS Singapore Savings Bonds, November 2026 issue (GX26110X)",
       "sourceUrl": "https://eservices.mas.gov.sg/ssb/public/api/v1/bonds/GX26110X",
-      "asOf": "2026-11-02",
-      "note": "Average return 2.45% a year if held 10 years (1.67% in year 1, stepping up); the 5-year average is not published by this endpoint. Redeemable any month without penalty; tax-exempt."
+      "asOf": "2026-10-31",
+      "note": "November 2026 issue (issued 2 November 2026, rates set in October): average return 2.45% a year if held 10 years (1.67% in year 1, stepping up); the 5-year average is not shown by this endpoint. Redeemable any month without penalty; tax-exempt."
     },
     "tbill_91d_rate": {
       "value": 0.0187,
@@ -104,7 +104,7 @@
       "sourceName": "Trading Economics, Singapore 3-month yield (secondary source)",
       "sourceUrl": "https://tradingeconomics.com/singapore/government-bond-yield",
       "asOf": "2026-10-30",
-      "note": "3-month SGS/MAS bill yield 1.87%. Individuals can buy 6-month (1.90%) and 1-year T-bills; SingStat shows the 1-year T-bill at 1.73% at end-September 2026."
+      "note": "3-month SGS/MAS bill yield 1.87% (Trading Economics, 30 Oct 2026; secondary source, no official 3-month series found on SingStat). Individuals can buy only 6-month and 1-year T-bills; SingStat M700071 shows the 1-year T-bill at 1.73% and 3-month compounded SORA at 1.23% at end-September 2026."
     },
     "tbond_5y_rate": {
       "value": 0.0224,
@@ -141,8 +141,8 @@
     "deposit_insurance_limit": {
       "value": 100000,
       "status": "sourced",
-      "sourceName": "Singapore Deposit Insurance Corporation",
-      "sourceUrl": "https://www.sdic.org.sg/",
+      "sourceName": "Singapore Deposit Insurance Corporation, Deposit Insurance FAQ",
+      "sourceUrl": "https://www.sdic.org.sg/di_faq/",
       "asOf": "2026-10-31",
       "note": "Insured deposits with each scheme member are aggregated and covered up to S$100,000 per depositor."
     },
@@ -263,7 +263,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=SG",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank figure is for 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.03,
@@ -322,7 +323,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/singapore/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women. SingStat gives 21.6 years at 65 for residents in 2025 (men 19.9, women 23.1)."
     },
     "support_ratio": {
@@ -355,15 +356,15 @@
       "sourceName": "CPF Board, CPF LIFE (payouts from age 65)",
       "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/monthly-payouts/cpf-life",
       "asOf": "2026-10-31",
-      "note": "CPF LIFE payouts start from 65 (deferrable to 70). The statutory minimum retirement age is 64 from 1 July 2026 under the Retirement and Re-employment Act (MOM), with re-employment offered beyond it."
+      "note": "CPF LIFE payouts start from 65 (deferrable to 70), which applies to members born after 1975. The statutory minimum retirement age under the Retirement and Re-employment Act is 64 from 1 July 2026 (MOM), with re-employment beyond it."
     },
     "retirement_age_government": {
-      "value": 64,
-      "status": "sourced",
-      "sourceName": "Ministry of Manpower, Retirement (statutory minimum retirement age 64 from 1 July 2026)",
-      "sourceUrl": "https://www.mom.gov.sg/employment-practices/retirement",
-      "asOf": "2026-07-01",
-      "note": "The Retirement and Re-employment Act minimum retirement age; public officers are treated as the same statutory minimum here (no separate civil-service age was confirmed)."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No separate civil-service retirement age was confirmed from an official page; the statutory minimum retirement age for employees is 64 from 1 July 2026 (MOM, https://www.mom.gov.sg/employment-practices/retirement), which public officers are believed to follow."
     },
     "retirement_return_low": {
       "value": 0.012,
@@ -419,7 +420,7 @@
       "sourceName": "CPF Board, Silver Support Scheme",
       "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/government-support/silver-support-scheme",
       "asOf": "2026-10-31",
-      "note": "Means-tested quarterly payouts: S$1,080 a quarter (S$360 a month) for 1- and 2-room flat dwellers with per capita household income up to S$1,500, down to S$215 a quarter for 5-room flats with higher income."
+      "note": "Silver Support Scheme, means-tested quarterly payouts (raised in 2025): up to S$1,080 a quarter (S$360 a month) for 1- and 2-room HDB flat dwellers with per capita household income up to S$1,500, down to S$215 a quarter for 5-room flats with income S$1,500-2,300. Paid automatically to eligible citizens from 65."
     },
     "old_age_allowance_eligibility": {
       "value": null,
@@ -438,10 +439,11 @@
     "gratuity_rule": {
       "value": null,
       "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
+      "sourceName": "Ministry of Manpower, Responsible retrenchment",
+      "sourceUrl": "https://www.mom.gov.sg/employment-practices/retrenchment/responsible-retrenchment",
       "asOf": "2026-10-31",
-      "note": "Singapore has no statutory gratuity or end-of-service benefit for private employees; retrenchment benefits depend on contract or collective agreement."
+      "note": "No statutory gratuity or end-of-service benefit: MOM's Responsible retrenchment guidance says the retrenchment benefit depends on the employment contract or collective agreement, or must be negotiated (norm 2 weeks to 1 month's salary per year of service for 2+ years' service); no law sets one.",
+      "absent": true
     },
     "public_pension_scheme": {
       "value": null,
@@ -454,10 +456,10 @@
         "taxFree": true
       },
       "status": "sourced",
-      "sourceName": "CPF Board, CPF LIFE",
+      "sourceName": "CPF Board, CPF LIFE; PwC Worldwide Tax Summaries (CPF benefits excluded from taxable retirement benefits)",
       "sourceUrl": "https://www.cpf.gov.sg/member/retirement-income/monthly-payouts/cpf-life",
       "asOf": "2026-10-31",
-      "note": "CPF is a mandatory contributory scheme for citizen and PR employees; CPF LIFE pays a monthly annuity for life from 65 (Standard plan fixed; Escalating plan rises 2% a year; neither is indexed to inflation). PwC notes CPF benefits are excluded from taxable retirement benefits. Official payout examples were not retrieved."
+      "note": "CPF is a mandatory contributory scheme for citizen and PR employees; CPF LIFE pays a monthly annuity for life from 65 (Standard plan level; Escalating plan rises 2% a year; neither is indexed to inflation). PwC: 'All retirement benefits other than CPF benefits ... are generally taxable' (https://taxsummaries.pwc.com/singapore/individual/income-determination). Official payout examples were not retrieved."
     }
   },
   "instruments": {
@@ -538,7 +540,8 @@
     },
     "publicHealthCover": {
       "name": "Ministry of Health (MediShield Life)",
-      "url": "https://www.moh.gov.sg/"
+      "url": "https://www.moh.gov.sg/",
+      "note": "MediShield Life, the universal basic health insurance run with the CPF Board."
     },
     "depositInsurance": {
       "name": "Singapore Deposit Insurance Corporation",

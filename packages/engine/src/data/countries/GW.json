@@ -84,12 +84,12 @@
       "note": "Median rate on contractual savings plans declared by Guinea-Bissau's banks in the first half of 2026; five of six declare 3.50% (range 3.50-3.75%)."
     },
     "bank_deposit_avg_rate": {
-      "value": 0.0515,
-      "status": "sourced",
-      "sourceName": "BCEAO, Note de conjoncture économique des pays de l'UEMOA, September 2026 (bank deposit rates, July 2026)",
-      "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Note%20de%20conjoncture%20%C3%A9conomique%20des%20pays%20de%20l%27UEMOA_Septembre%202026.pdf",
-      "asOf": "2026-07-31",
-      "note": "Average deposit rate across UMOA banks, 5.15% in July 2026; Guinea-Bissau's rate fell 1.46 points in the month, but the BCEAO does not publish the country level in this note. The World Bank series for Guinea-Bissau stops in 2016 (6.9%)."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "No Guinea-Bissau average deposit rate was found: the BCEAO Note de conjoncture (September 2026) gives only the UMOA-wide average (5.15% in July 2026) and says Guinea-Bissau's rate fell 1.46 points in the month without giving its level; the World Bank FR.INR.DPST series for Guinea-Bissau stops in 2016 (6.9%)."
     },
     "sanchayapatra_5y_rate": {
       "value": null,
@@ -349,15 +349,15 @@
           }
         ]
       },
-      "note": "100 / old-age dependency ratio: 5.54 (2025, World Bank), 6.8 (2040, populationpyramid.net/guinea-bissau/2040/) and 12.2 (2065, populationpyramid.net/guinea-bissau/2065/)."
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio. Old-age dependency ratios used: 5.54% in 2025 (World Bank), 6.8% in 2040 (populationpyramid.net/guinea-bissau/2040/) and 12.2% in 2065 (populationpyramid.net/guinea-bissau/2065/), giving 18.05, 14.71 and 8.2."
     },
     "retirement_age_default": {
-      "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "The pension age of the National Social Security Institute (INPS) could not be confirmed: its website was unreachable and the ISSA, ILO and US SSA country pages refused access."
+      "value": 60,
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa, 2019, Guinea-Bissau (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20251210050304/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/guinea-bissau.html",
+      "asOf": "2019-07-01",
+      "note": "Old-age pension (pensão de velhice) of the National Social Security Institute (INPS) at 60 with at least 10 years of contributions, same for men and women; a lump sum is paid with fewer than 10 years. Secondary source read through the Internet Archive because ssa.gov refused access and the INPS site was unreachable; the 2019 edition is older than 2025 and no later change was found."
     },
     "retirement_age_government": {
       "value": null,
@@ -381,7 +381,7 @@
       "sourceName": "BCEAO bank-conditions survey, first half 2026; UMOA-Titres Guinea-Bissau curve (1-year 5.61%)",
       "sourceUrl": "https://www.bceao.int/sites/default/files/2026-10/Conditions%20de%20banque%20premi%C3%A8re%20semestre%202026.pdf",
       "asOf": "2026-10-31",
-      "note": "Base case: term deposits at 3.25-6.4% less tax on interest; below the after-tax 1-year deposit and Treasury bill rates."
+      "note": "Base case: term deposits at 3.25-6.4% less a possible tax on interest, kept below the after-tax 1-year deposit and Treasury bill rates."
     },
     "retirement_return_high": {
       "value": 0.055,
@@ -441,11 +441,19 @@
     },
     "public_pension_scheme": {
       "value": null,
-      "status": "missing",
-      "sourceName": "",
-      "sourceUrl": "",
-      "asOf": "2026-10-31",
-      "note": "A contributory pension for private-sector employees is run by the National Social Security Institute (Instituto Nacional de Previdência Social, INPS), but its pension age, benefit formula and indexation could not be read from an official or international source."
+      "valueJson": {
+        "entryAgeMin": null,
+        "entryAgeMax": null,
+        "pensionFromAge": 60,
+        "nomineeUntilAge": null,
+        "inflationLinked": false,
+        "taxFree": null
+      },
+      "status": "sourced",
+      "sourceName": "US Social Security Administration, Social Security Programs Throughout the World: Africa, 2019, Guinea-Bissau (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20251210050304/https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/guinea-bissau.html",
+      "asOf": "2019-07-01",
+      "note": "Compulsory INPS social insurance for private-sector employees (8% employee, 14% employer, also funding sickness benefits; laws of 1986 and 2007): pension from 60 after 10 years of contributions equal to 2% of average monthly earnings (best two of the last five years) per year of contributions, up to 80%; the source gives no automatic indexation of pensions and no tax rule. Civil servants have a separate scheme. 2019 edition, older than 2025."
     }
   },
   "instruments": {

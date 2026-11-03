@@ -48,36 +48,36 @@
       "note": "Repo rate held at 9.50% in the Oct-Dec 2026 quarterly statement (SLF 11.00%, SDF 7.50%)."
     },
     "savings_account_rate": {
-      "value": 0.02,
+      "value": 0.0325,
       "status": "sourced",
-      "sourceName": "Published deposit rate sheets of three private banks",
-      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
-      "asOf": "2026-09-30",
-      "note": "Typical 2%; range 1.25%-3% across published rate sheets."
+      "sourceName": "Bangladesh Bank, scheduled banks' announced deposit rates",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/financialactivity/interestdeposit",
+      "asOf": "2026-10-01",
+      "note": "October 2026 chart, savings deposits under Tk 1 crore: median about 3.25% across scheduled banks, most between 2.5% and 4.5%."
     },
     "fdr_3m_rate": {
-      "value": 0.07,
-      "status": "sourced",
-      "sourceName": "Published deposit rate sheets of three private banks",
-      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
-      "asOf": "2026-09-30",
-      "note": "Typical 7%; range 6.25%-8%."
-    },
-    "fdr_1y_rate": {
       "value": 0.075,
       "status": "sourced",
-      "sourceName": "Published deposit rate sheets of three private banks",
-      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
-      "asOf": "2026-09-30",
-      "note": "Typical 7.5%; range 6.75%-8.25%."
+      "sourceName": "Bangladesh Bank, scheduled banks' announced deposit rates",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/financialactivity/interestdeposit",
+      "asOf": "2026-10-01",
+      "note": "October 2026 chart, fixed deposits of 3 to under 6 months: median about 7.4% across scheduled banks, most between 7% and 9%."
+    },
+    "fdr_1y_rate": {
+      "value": 0.0825,
+      "status": "sourced",
+      "sourceName": "Bangladesh Bank, scheduled banks' announced deposit rates",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/financialactivity/interestdeposit",
+      "asOf": "2026-10-01",
+      "note": "October 2026 chart, fixed deposits of 1 to under 2 years: median about 8.25% across scheduled banks, most between 7% and 10%."
     },
     "dps_rate": {
-      "value": 0.09,
-      "status": "sourced",
-      "sourceName": "Published deposit rate sheets of three private banks",
-      "sourceUrl": "https://southeastbank.com.bd/documents/deposit_rates/All_Deposit_list_of_SEBPLC.pdf",
-      "asOf": "2026-09-30",
-      "note": "5-year DPS typical 9%; range 8.25%-10.5%."
+      "value": null,
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "Bangladesh Bank's deposit-rate chart has no DPS column; the only DPS rates found were individual banks' own rate sheets (about 8.25%-10.5% for 5 years), which cannot be cited."
     },
     "bank_deposit_avg_rate": {
       "value": 0.0616,
@@ -95,35 +95,36 @@
       "note": "5-year Bangladesh Sanchayapatra, Jul-Dec 2026, holdings up to the tier cap; 11.80% above it."
     },
     "tbill_91d_rate": {
-      "value": 0.085,
+      "value": 0.0856,
       "status": "sourced",
       "sourceName": "Bangladesh Bank auctions",
       "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
       "asOf": "2026-10-26",
-      "note": "Auction cut-off 8.56%"
+      "note": "Auction cut-off 8.56% on 26 Oct 2026; the next auction (2 Nov 2026) cut off at 8.37%."
     },
     "tbond_5y_rate": {
-      "value": 0.085,
+      "value": 0.0847,
       "status": "sourced",
       "sourceName": "Bangladesh Bank auctions",
       "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
       "asOf": "2026-10-14",
-      "note": "Auction cut-off 8.47%"
+      "note": "Auction cut-off 8.47% on 14 Oct 2026."
     },
     "tbond_10y_rate": {
-      "value": 0.0925,
+      "value": 0.0927,
       "status": "sourced",
       "sourceName": "Bangladesh Bank auctions",
       "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
       "asOf": "2026-10-25",
-      "note": "Auction cut-off 9.27%"
+      "note": "Auction cut-off 9.27% on 25 Oct 2026."
     },
     "tax_bank_interest": {
       "value": 0.1,
       "status": "sourced",
-      "sourceName": "TRW",
-      "sourceUrl": "https://trw.co/withholding-tax-bangladesh/",
-      "asOf": "2026-10-20"
+      "sourceName": "PwC Tax Summaries, Bangladesh withholding taxes",
+      "sourceUrl": "https://taxsummaries.pwc.com/bangladesh/corporate/withholding-taxes",
+      "asOf": "2026-07-31",
+      "note": "10% on interest from savings and fixed deposits for individuals; 15% (50% more) when the payee cannot show proof of return submission. Secondary source; last reviewed 31 Jul 2026."
     },
     "tax_sanchayapatra_profit": {
       "value": 0.1,
@@ -138,7 +139,7 @@
       "sourceName": "BSS",
       "sourceUrl": "https://www.bssnews.net/js-session/376349",
       "asOf": "2026-04-10",
-      "note": "Deposit Protection Bill 2026 raised cover from Tk 100,000 to Tk 200,000 per depositor."
+      "note": "Deposit Protection Bill 2026, passed 10 Apr 2026, raised cover from Tk 100,000 to Tk 200,000 per depositor; the limit is reviewed every three years."
     },
     "credit_card_rate_cap": {
       "value": 0.25,
@@ -151,7 +152,7 @@
       "value": 0.02,
       "status": "assumption",
       "sourceName": "Dhaka Stock Exchange (DSEX)",
-      "sourceUrl": "https://www.dse.com.bd/",
+      "sourceUrl": "https://www.dse.com.bd/indices/DSEX",
       "asOf": "2026-10-31",
       "note": "DSEX rose only about 1.5% a year (price only) over the last 10 years."
     },
@@ -159,15 +160,15 @@
       "value": 0.09,
       "status": "assumption",
       "sourceName": "Dhaka Stock Exchange (DSEX); Sanchayapatra and T-bill after tax",
-      "sourceUrl": "https://www.dse.com.bd/",
+      "sourceUrl": "https://www.dse.com.bd/indices/DSEX",
       "asOf": "2026-10-31",
-      "note": "Weak 10-year DSEX record, so the base is kept below the 10.6% after-tax Sanchayapatra rate and within 4 points of the 7.65% after-tax T-bill."
+      "note": "Weak 10-year DSEX record, so the base is kept below the 10.6% after-tax Sanchayapatra rate and within 4 points of the 7.7% after-tax 91-day T-bill."
     },
     "equity_return_high": {
       "value": 0.14,
       "status": "assumption",
       "sourceName": "Dhaka Stock Exchange (DSEX)",
-      "sourceUrl": "https://www.dse.com.bd/",
+      "sourceUrl": "https://www.dse.com.bd/indices/DSEX",
       "asOf": "2026-10-31",
       "note": "A recovery case with dividends and earnings growth near nominal GDP growth."
     },
@@ -198,10 +199,10 @@
     "fixed_income_return_low": {
       "value": 0.065,
       "status": "assumption",
-      "sourceName": "Bank FDR and T-bill rates after tax",
-      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "sourceName": "Bangladesh Bank deposit-rate chart; 10% tax on interest",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/financialactivity/interestdeposit",
       "asOf": "2026-10-31",
-      "note": "1-year FDR 7.5% less 10% tax is 6.75%, rounded down."
+      "note": "1-year fixed deposit about 8.25% less 10% tax is 7.4%; the low case allows for rate cuts."
     },
     "fixed_income_return_base": {
       "value": 0.085,
@@ -209,7 +210,7 @@
       "sourceName": "Sanchayapatra, DPS and T-bill rates after tax",
       "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
       "asOf": "2026-10-31",
-      "note": "Blend of DPS (8.1% after tax), T-bills (7.65%) and Sanchayapatra (10.6%) after tax."
+      "note": "Blend of 1-year fixed deposits (7.4% after tax), 91-day T-bills (7.7%) and 5-year Sanchayapatra (10.6%) after tax."
     },
     "fixed_income_return_high": {
       "value": 0.105,
@@ -225,7 +226,7 @@
       "sourceName": "Financial Express (IDRA)",
       "sourceUrl": "https://thefinancialexpress.com.bd/stock/idra-targets-75pc-claim-settlement-rate-amid-tk-70b-backlog",
       "asOf": "2026-06-30",
-      "note": "৳70 bn unpaid"
+      "note": "57% of claims settled as of June 2026 (IDRA target 75%), amid a Tk 70 bn backlog of unpaid life claims; the article may mean the whole sector rather than life only."
     },
     "insurance_term_premium_table": {
       "value": null,
@@ -280,7 +281,7 @@
       "sourceName": "Prothom Alo / BBS SVRS 2023",
       "sourceUrl": "https://en.prothomalo.com/bangladesh/cqjsjk3buz",
       "asOf": "2023-12-31",
-      "note": "BBS SVRS 2023; men 70.8, women 73.8. UN WPP/World Bank give 74.9 for 2024."
+      "note": "BBS Sample Vital Statistics 2023 (published Mar 2024; older than 2025, latest BBS figure found); men 70.8, women 73.8. UN WPP/World Bank give 74.9 for 2024."
     },
     "life_table_remaining": {
       "value": null,
@@ -300,16 +301,23 @@
             "total": 16,
             "men": 15.1,
             "women": 16.9,
-            "projected": 17.4
+            "projected": 17.4,
+            "projectedMen": 16.3,
+            "projectedWomen": 18.5
           },
           {
             "age": 70,
-            "total": 13
+            "total": 13,
+            "projected": 13.9,
+            "projectedMen": 12.9,
+            "projectedWomen": 14.9
           },
           {
             "age": 80,
             "total": 8.9,
-            "projected": 8.1
+            "projected": 8.1,
+            "projectedMen": 7.4,
+            "projectedWomen": 8.7
           }
         ]
       },
@@ -317,7 +325,7 @@
       "sourceName": "BBS SVRS 2020 life table; UN WPP 2026 projection",
       "sourceUrl": "https://georank.org/life-expectancy/bangladesh",
       "asOf": "2026-10-30",
-      "note": "Explainer only; never the plan-to age"
+      "note": "Explainer only; never the plan-to age. total/men/women are the BBS SVRS 2020 life table carried over from the rates seed (older than 2025; not re-verified); projected values are UN WPP 2026 as shown on georank.org (expected age at death minus current age)."
     },
     "support_ratio": {
       "value": null,
@@ -346,9 +354,10 @@
     "retirement_age_default": {
       "value": 60,
       "status": "sourced",
-      "sourceName": "Bangladesh Labour Act 2006, s.28",
-      "sourceUrl": "https://cdn2.ogrlegal.com/files/labour/act/Bangladesh-Labour-Act-2006_English-Upto-2018.pdf",
-      "asOf": "2026-10-30"
+      "sourceName": "Bangladesh Labour Act 2006, s.28 (official English text, Ministry of Law)",
+      "sourceUrl": "https://bdlaws.minlaw.gov.bd/upload/act/2022-01-31-10-23-59-49.The-Bangladesh-Labour-Act,-2006.pdf",
+      "asOf": "2026-10-31",
+      "note": "Workers retire on completing 60 years of age; law in force as amended."
     },
     "retirement_age_government": {
       "value": 59,
@@ -356,15 +365,15 @@
       "sourceName": "Daily Observer (Public Servants (Retirement) Act 1974, amended 2011)",
       "sourceUrl": "https://observerbd.com/news/494603",
       "asOf": "2024-10-12",
-      "note": "Raised from 57 to 59 in 2011."
+      "note": "Public Servants (Retirement) Act 1974, raised from 57 to 59 in 2011. Source article is from 2024 (older than 2025); no later change found."
     },
     "retirement_return_low": {
       "value": 0.065,
       "status": "assumption",
-      "sourceName": "Bank FDR rates after tax",
-      "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
+      "sourceName": "Bangladesh Bank deposit-rate chart; 10% tax on interest",
+      "sourceUrl": "https://www.bb.org.bd/en/index.php/financialactivity/interestdeposit",
       "asOf": "2026-10-31",
-      "note": "1-year FDR 7.5% less 10% tax, rounded down."
+      "note": "1-year fixed deposit about 8.25% less 10% tax is 7.4%, rounded down for possible rate cuts."
     },
     "retirement_return_base": {
       "value": 0.075,
@@ -372,7 +381,7 @@
       "sourceName": "Bangladesh Bank T-bill auctions; 10% withholding on securities interest",
       "sourceUrl": "https://www.bb.org.bd/en/index.php/monetaryactivity/treasury",
       "asOf": "2026-10-31",
-      "note": "91-day T-bill 8.5% less the 10% withholding on securities interest is 7.65%, so the base is held at 7.5%; the rates seed uses 10% based on Sanchayapatra."
+      "note": "91-day T-bill 8.56% less the 10% withholding on securities interest is 7.7%, so the base is held at 7.5%; the rates seed uses 10% based on Sanchayapatra."
     },
     "retirement_return_high": {
       "value": 0.105,
@@ -396,7 +405,7 @@
       "sourceName": "Sanchayapatra, DSEX and gold assumptions",
       "sourceUrl": "https://thefinancialexpress.com.bd/home/bangladesh-keeps-national-savings-certificate-interest-rates-unchanged-for-jul-dec",
       "asOf": "2026-10-31",
-      "note": "Balanced mix of Sanchayapatra/DPS (about 8.5% after tax), equity (9%) and gold (8%)."
+      "note": "Balanced mix of fixed deposits, T-bills and Sanchayapatra (about 8.5% after tax), equity (9%) and gold (8%)."
     },
     "retirement_accumulation_return_high": {
       "value": 0.11,
@@ -412,21 +421,15 @@
       "sourceName": "TBS, Jun 2026",
       "sourceUrl": "https://www.tbsnews.net/node/1460791",
       "asOf": "2026-07-01",
-      "note": "Tk 1,000 over age 90; means-tested; never counted in the plan"
+      "note": "Raised by Tk 50 to Tk 700 a month in the FY2026-27 budget (from July 2026), for 6.2 million recipients; means-tested; never counted in the plan."
     },
     "old_age_allowance_eligibility": {
       "value": null,
-      "valueJson": {
-        "menAge": 65,
-        "womenAge": 62,
-        "over90Monthly": 1000,
-        "meansTested": true
-      },
-      "status": "sourced",
-      "sourceName": "Department of Social Services",
-      "sourceUrl": "https://dss.kushtia.gov.bd/",
-      "asOf": "2026-07-01",
-      "note": "Income ceiling may be outdated"
+      "status": "missing",
+      "sourceName": "",
+      "sourceUrl": "",
+      "asOf": "2026-10-31",
+      "note": "The rates seed gives men 65, women 62, means-tested, Tk 1,000 over age 90, citing only a district office home page; dss.gov.bd failed TLS checks and no page confirming these rules could be read."
     },
     "gratuity_rule": {
       "value": null,
@@ -437,9 +440,10 @@
         "daysPerMonth": 30
       },
       "status": "sourced",
-      "sourceName": "Bangladesh Labour Act 2006, s.2(10)",
-      "sourceUrl": "https://cdn2.ogrlegal.com/files/labour/act/Bangladesh-Labour-Act-2006_English-Upto-2018.pdf",
-      "asOf": "2026-10-30"
+      "sourceName": "Bangladesh Labour Act 2006, s.2(10) (official English text, Ministry of Law)",
+      "sourceUrl": "https://bdlaws.minlaw.gov.bd/upload/act/2022-01-31-10-23-59-49.The-Bangladesh-Labour-Act,-2006.pdf",
+      "asOf": "2026-10-31",
+      "note": "At least 30 days' last wages per completed year of service, or 45 days per year for service over 10 years (clause substituted in 2013); law in force."
     },
     "public_pension_scheme": {
       "value": null,
@@ -447,7 +451,7 @@
         "entryAgeMin": 18,
         "entryAgeMax": 50,
         "pensionFromAge": 60,
-        "nomineeUntilAge": 80,
+        "nomineeUntilAge": 75,
         "inflationLinked": false,
         "taxFree": true,
         "projections": [
@@ -467,7 +471,7 @@
       "sourceName": "upension.gov.bd / Prothom Alo, Sep 2026",
       "sourceUrl": "https://www.upension.gov.bd/Public/PensionBriefEn",
       "asOf": "2026-09-30",
-      "note": "No guaranteed rate; fixed amount for life"
+      "note": "No guaranteed rate; fixed amount for life. The official brief says the nominee receives the pension until the member would have turned 75 (the seed had 80). Entry 18-50 pays until 60; over 50 pays 10 years. Projections are from Prothom Alo, Sep 2026 (not re-verified)."
     }
   },
   "instruments": {

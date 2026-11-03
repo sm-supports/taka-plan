@@ -15,12 +15,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 6.7593,
+      "value": 6.7701,
       "status": "sourced",
-      "sourceName": "Central Bank of Trinidad and Tobago, exchange rates (US dollar selling rate)",
-      "sourceUrl": "https://www.central-bank.org.tt/",
-      "asOf": "2026-10-30",
-      "note": "TT$6.7593 per US dollar (selling; buying 6.6491) on 30 October 2026; August 2026 average 6.7701 (CBTT DataPack); World Bank 2025 average 6.75."
+      "sourceName": "Central Bank of Trinidad and Tobago, Economic DataPack September 2026, exchange rates: US dollar selling rate (monthly average)",
+      "sourceUrl": "https://www.central-bank.org.tt/wp-content/uploads/2026/10/economic-datapack-september-2026.pdf",
+      "asOf": "2026-08-31",
+      "note": "TT$6.7701 per US dollar, August 2026 average selling rate (6.7786 in August 2025); the rate has been managed near 6.77 for years. The Central Bank's daily selling rate was 6.7749 on 3 November 2026. World Bank 2025 average 6.75."
     }
   },
   "fields": {
@@ -179,7 +179,7 @@
     "gold_return_low": {
       "value": 0.0,
       "status": "assumption",
-      "sourceName": "Gold USD 3,876/oz on 30 October 2026, down 3% in a year and well below its January 2026 peak (Trading Economics)",
+      "sourceName": "Gold about USD 3,900/oz at the start of November 2026, little changed in a year and well below its January 2026 peak of USD 5,608 (Trading Economics)",
       "sourceUrl": "https://tradingeconomics.com/commodity/gold",
       "asOf": "2026-10-31",
       "note": "Low case: gold stays flat in dollars and the managed TT dollar does not weaken."
@@ -354,7 +354,7 @@
       "sourceName": "National Insurance Board of Trinidad and Tobago, Retirement (Grant/Pension)",
       "sourceUrl": "https://www.nibtt.net/benefits_09/ben_retirement.html",
       "asOf": "2026-10-31",
-      "note": "The NIS retirement pension can be claimed from 60 if retired from insurable employment, or at 65 whether retired or not, with at least 750 weekly contributions."
+      "note": "The NIS retirement pension can be claimed from 60 if retired from insurable employment, or at 65 whether retired or not, with at least 750 weekly contributions; the same rule applies to people born after 1975."
     },
     "retirement_age_government": {
       "value": null,
@@ -456,7 +456,7 @@
       "sourceName": "National Insurance Board of Trinidad and Tobago, Retirement (Grant/Pension)",
       "sourceUrl": "https://www.nibtt.net/benefits_09/ben_retirement.html",
       "asOf": "2026-10-31",
-      "note": "National Insurance is compulsory for employees. Pension from 60 (if retired) or 65 with 750 weekly contributions; fewer contributions give a one-off retirement grant (minimum TT$3,000). The NIB says benefit levels have been raised from time to time, not indexed automatically; minimum pension TT$3,000 a month since 2013; tax treatment not confirmed."
+      "note": "National Insurance is compulsory for employees. Pension from 60 (if retired from insurable employment) or 65 whether retired or not, with at least 750 weekly contributions; fewer contributions give a one-off retirement grant (minimum TT$3,000). The NIB page states no automatic indexation, so the pension is treated as not inflation-linked; tax treatment is not stated."
     }
   },
   "instruments": {

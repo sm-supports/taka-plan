@@ -349,7 +349,7 @@
           }
         ]
       },
-      "note": "100 / old-age dependency ratio: 6.23 (2025, World Bank), 9.0 (2040, populationpyramid.net/ghana/2040/) and 14.7 (2065, populationpyramid.net/ghana/2065/)."
+      "note": "Working-age people per person 65+ = 100 / old-age dependency ratio. Old-age dependency ratios used: 6.23% in 2025 (World Bank), 9.0% in 2040 (populationpyramid.net/ghana/2040/) and 14.7% in 2065 (populationpyramid.net/ghana/2065/), giving 16.05, 11.11 and 6.8."
     },
     "retirement_age_default": {
       "value": 60,
@@ -365,7 +365,7 @@
       "sourceName": "Constitution of Ghana, article 199 (Constitute Project text)",
       "sourceUrl": "https://www.constituteproject.org/constitution/Ghana_1996?lang=en",
       "asOf": "1996-12-31",
-      "note": "A public officer retires from the public service at 60 (voluntary retirement possible from 45); the constitutional rule dates from 1992, amended 1996."
+      "note": "A public officer retires from the public service at 60 (voluntary retirement possible from 45) under article 199 of the 1992 Constitution (text as amended in 1996); the rule predates 2025 but is still in force."
     },
     "retirement_return_low": {
       "value": 0.05,
@@ -437,7 +437,8 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No official text on a statutory end-of-service gratuity for private employees under the Labour Act, 2003 (Act 651) could be read; redundancy pay is negotiated, and many collective agreements add end-of-service benefits."
+      "absent": true,
+      "note": "The Labour Act, 2003 (Act 651, official text hosted by the Ghana Investment Promotion Centre at gipc.gov.gh/wp-content/uploads/2024/07/LABOUR-ACT-2003-Act-651.pdf) has no gratuity or end-of-service payment for private employees; section 65 only requires redundancy pay whose amount is negotiated, and gratuities exist only in contracts or collective agreements."
     },
     "public_pension_scheme": {
       "value": null,
@@ -446,14 +447,14 @@
       "sourceUrl": "https://www.ssnit.org.gh/old-age-benefit/",
       "asOf": "2026-10-31",
       "valueJson": {
-        "entryAgeMin": 15,
+        "entryAgeMin": null,
         "entryAgeMax": null,
         "pensionFromAge": 60,
         "nomineeUntilAge": null,
         "inflationLinked": false,
         "taxFree": true
       },
-      "note": "Compulsory first-tier SSNIT pension under Act 766: 37.5% of the average of the best three years' salaries after 180 months of contributions, plus 1.125% per extra year, up to 60% after 420 months; full pension at 60, reduced from 55, paid until death. Pensions are reviewed yearly by the SSNIT board rather than linked to the CPI by law; the Constitution exempts pensions from tax."
+      "note": "Compulsory first-tier SSNIT pension under Act 766: 37.5% of the average of the best three years' salaries after 180 months of contributions, plus 1.125% per extra year, up to 60% after 420 months; full pension at 60, reduced from 55, paid until death. Pensions are reviewed yearly by the SSNIT board rather than linked to the CPI by law; the Constitution exempts pensions from tax. The SSNIT page states no minimum entry age, so entryAgeMin is left empty."
     }
   },
   "instruments": {

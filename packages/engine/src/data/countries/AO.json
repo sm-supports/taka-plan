@@ -17,12 +17,12 @@
     "decimals": 2,
     "compact": "intl",
     "usdRate": {
-      "value": 911.99,
+      "value": 913,
       "status": "sourced",
-      "sourceName": "World Bank WDI PA.NUS.FCRF (official exchange rate, period average)",
-      "sourceUrl": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=AO",
-      "asOf": "2025-12-31",
-      "note": "2025 average AOA 912 per US dollar; Trading Economics shows AOA 919.70 on 30 October 2026 (https://tradingeconomics.com/angola/currency)."
+      "sourceName": "Banco Nacional de Angola, reference exchange rate (taxa de referência, venda) USD",
+      "sourceUrl": "https://www.bna.ao/service/rest/taxas/get/taxa/referencia?moeda=usd&tipocambio=b",
+      "asOf": "2026-10-30",
+      "note": "BNA reference selling rate AOA 913 per US dollar on 30 October 2026 (the BNA website's exchange-rate feed); World Bank 2025 average AOA 912 (PA.NUS.FCRF)."
     }
   },
   "fields": {
@@ -56,7 +56,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No published typical savings account rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+      "note": "No published typical savings account rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and the securities exchange statistics pages, which showed no rendered figures."
     },
     "fdr_3m_rate": {
       "value": null,
@@ -64,7 +64,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No published 3-month term deposit (depósito a prazo) rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+      "note": "No published 3-month term deposit (depósito a prazo) rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and the securities exchange statistics pages, which showed no rendered figures."
     },
     "fdr_1y_rate": {
       "value": null,
@@ -72,7 +72,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No published 1-year term deposit rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures. The World Bank average deposit rate was 7.98% in 2025."
+      "note": "No published 1-year term deposit rate was found. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and the securities exchange statistics pages, which showed no rendered figures. The World Bank average deposit rate was 7.98% in 2025."
     },
     "dps_rate": {
       "value": null,
@@ -96,7 +96,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No government savings certificate or retail savings bond for individuals was found; individuals can buy Treasury bills and bonds through banks and BODIVA."
+      "note": "No government savings certificate or retail savings bond for individuals was found; individuals can buy Treasury bills and bonds through banks and the securities exchange."
     },
     "tbill_91d_rate": {
       "value": null,
@@ -104,7 +104,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No current 91-day Treasury bill (Bilhetes do Tesouro) auction yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+      "note": "No current 91-day Treasury bill (Bilhetes do Tesouro) auction yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and the securities exchange statistics pages, which showed no rendered figures."
     },
     "tbond_5y_rate": {
       "value": null,
@@ -112,7 +112,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No current 5-year Treasury bond (Obrigações do Tesouro) yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+      "note": "No current 5-year Treasury bond (Obrigações do Tesouro) yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and the securities exchange statistics pages, which showed no rendered figures."
     },
     "tbond_10y_rate": {
       "value": null,
@@ -120,7 +120,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "No current 10-year Treasury bond yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and BODIVA statistics pages, which showed no rendered figures."
+      "note": "No current 10-year Treasury bond yield could be read. Searched the Banco Nacional de Angola site (a script-rendered app that could not be read), the Treasury debt office (UGD) portal and the securities exchange statistics pages, which showed no rendered figures."
     },
     "tax_bank_interest": {
       "value": null,
@@ -157,18 +157,18 @@
     "equity_return_low": {
       "value": 0.06,
       "status": "assumption",
-      "sourceName": "No local stock index (BODIVA lists only a few shares); S&P 500 as a global proxy (Trading Economics); World Bank deposit rate 7.98% (2025)",
+      "sourceName": "No local stock index (the Angolan securities exchange lists only a few shares); S&P 500 as a global proxy (Trading Economics); World Bank deposit rate 7.98% (2025)",
       "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
       "asOf": "2026-10-31",
-      "note": "Low case: global shares earn well below their record in dollars and the kwanza stays near AOA 920 per dollar, so returns trail deposits."
+      "note": "Low case: global shares earn well below their record in dollars and the kwanza stays near AOA 913 per dollar, so returns trail deposits."
     },
     "equity_return_base": {
-      "value": 0.11,
+      "value": 0.105,
       "status": "assumption",
-      "sourceName": "Global equity index in kwanza terms (S&P 500 via Trading Economics); after-tax safe rate about 7% (deposit rate 7.98% less about 10% tax, World Bank)",
+      "sourceName": "Global equity index in kwanza terms (S&P 500 via Trading Economics); after-tax safe rate about 6.8% (World Bank deposit rate 7.98% less up to 15% Investment Income Tax)",
       "sourceUrl": "https://tradingeconomics.com/united-states/stock-market",
       "asOf": "2026-10-31",
-      "note": "Base case: Angola has no diversified local equity index, so this is a global equity index in kwanza terms (about 7% in dollars plus 4-5% a year of expected kwanza depreciation), capped at 4 points over the after-tax deposit rate."
+      "note": "Angola has no diversified local equity index, so this is a global equity index in kwanza terms, capped at about 4 points over the after-tax average deposit rate (6.8% after 15% tax)."
     },
     "equity_return_high": {
       "value": 0.15,
@@ -181,26 +181,26 @@
     "gold_return_low": {
       "value": 0.04,
       "status": "assumption",
-      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026 (Trading Economics); kwanza stable at AOA 912-920 per dollar in 2025-26",
+      "sourceName": "Gold USD 3,876/oz on 30 Oct 2026 (Trading Economics); kwanza stable at AOA 912-913 per dollar in 2025-26 (BNA, World Bank)",
       "sourceUrl": "https://tradingeconomics.com/commodity/gold",
       "asOf": "2026-10-31",
       "note": "Low case: dollar gold drifts after the 2025-26 spike and the kwanza holds its value."
     },
     "gold_return_base": {
-      "value": 0.08,
+      "value": 0.1,
       "status": "assumption",
       "sourceName": "Gold price history (Trading Economics); expected kwanza depreciation",
       "sourceUrl": "https://tradingeconomics.com/commodity/gold",
       "asOf": "2026-10-31",
-      "note": "Base case: dollar gold rises about 3.5% a year plus about 4-5% a year of kwanza depreciation."
+      "note": "Base case: dollar gold rises about 3% a year plus about 7% a year of kwanza depreciation, consistent with planning inflation of 12% against about 2.5% US inflation."
     },
     "gold_return_high": {
-      "value": 0.13,
+      "value": 0.16,
       "status": "assumption",
       "sourceName": "Gold price history (Trading Economics); kwanza depreciation history (World Bank PA.NUS.FCRF)",
       "sourceUrl": "https://tradingeconomics.com/commodity/gold",
       "asOf": "2026-10-31",
-      "note": "High case: strong dollar gold and faster kwanza depreciation, as in past devaluation episodes."
+      "note": "High case: strong dollar gold and faster kwanza depreciation, as in the 2016-2024 devaluation episodes."
     },
     "fixed_income_return_low": {
       "value": 0.05,
@@ -481,13 +481,13 @@
       "available": true,
       "localName": "Bilhetes do Tesouro",
       "localNameEn": "Treasury bills",
-      "note": "Issued by the Ministry of Finance; individuals buy them through banks or BODIVA members. No current yield could be read."
+      "note": "Issued by the Ministry of Finance; individuals buy them through banks or exchange members. No current yield could be read."
     },
     "tbond_5y": {
       "available": true,
       "localName": "Obrigações do Tesouro",
       "localNameEn": "Treasury bonds",
-      "note": "Treasury bonds are traded on BODIVA, the Angolan securities exchange. No current yield could be read."
+      "note": "Treasury bonds are traded on the Angolan securities exchange. No current yield could be read."
     },
     "tbond_10y": {
       "available": false,
@@ -498,7 +498,7 @@
     "equity_fund": {
       "available": false,
       "localName": null,
-      "note": "No diversified equity mutual or index fund for retail investors was found; BODIVA lists only a few shares."
+      "note": "No diversified equity mutual or index fund for retail investors was found; the Angolan securities exchange lists only a few shares."
     },
     "gold": {
       "available": false,

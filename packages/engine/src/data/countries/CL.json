@@ -28,8 +28,8 @@
     "inflation_cpi": {
       "value": 0.041,
       "status": "sourced",
-      "sourceName": "Instituto Nacional de Estadísticas (INE), IPC September 2026",
-      "sourceUrl": "https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/10/08/%C3%ADndice-de-precios-al-consumidor-%28ipc%29-de-septiembre-present%C3%B3-una-variaci%C3%B3n-mensual-de-0-4",
+      "sourceName": "Instituto Nacional de Estadísticas (INE), Boletín estadístico IPC septiembre 2026 (edition 335, 8 Oct 2026)",
+      "sourceUrl": "https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/boletines/espa%C3%B1ol/2026/boletin-%C3%ADndice-de-precios-al-consumidor-septiembre-2026.pdf",
       "asOf": "2026-09-30",
       "note": "CPI rose 0.4% in September 2026, 4.0% so far in 2026 and 4.1% over 12 months (released 8 October 2026). World Bank 2025 average 4.2%."
     },

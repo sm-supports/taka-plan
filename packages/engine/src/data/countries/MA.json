@@ -212,12 +212,12 @@
       "note": "Low case: the passbook savings rate after the 30% tax on interest (1.82% x 0.7 = 1.3%), rounded down."
     },
     "fixed_income_return_base": {
-      "value": 0.018,
+      "value": 0.0175,
       "status": "assumption",
       "sourceName": "Bank Al-Maghrib, 12-month term deposits 2.56% (September 2026), taxed at 30%",
       "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme",
       "asOf": "2026-10-31",
-      "note": "Base case: the 12-month deposit rate after the 30% tax on interest (2.56% x 0.7 = 1.8%)."
+      "note": "Base case: the 12-month deposit rate after the 30% tax on interest (2.56% x 0.7 = 1.79%), rounded down."
     },
     "fixed_income_return_high": {
       "value": 0.026,
@@ -376,12 +376,12 @@
       "note": "Low case: savings accounts after tax."
     },
     "retirement_return_base": {
-      "value": 0.018,
+      "value": 0.0175,
       "status": "assumption",
       "sourceName": "Bank Al-Maghrib, 12-month term deposits 2.56% (September 2026), taxed at 30%",
       "sourceUrl": "https://www.bkam.ma/Marches/Taux-d-interet/Taux-des-depots-a-terme",
       "asOf": "2026-10-31",
-      "note": "Base case: the after-tax 12-month deposit rate (1.8%); not above the after-tax safe rate."
+      "note": "Base case: the after-tax 12-month deposit rate (2.56% x 0.7 = 1.79%), rounded down so it stays at or below the after-tax safe rate."
     },
     "retirement_return_high": {
       "value": 0.025,

@@ -7,7 +7,8 @@
   "region": "east_asia_pacific",
   "languages": [
     "th",
-    "en"
+    "en",
+    "tts"
   ],
   "currency": {
     "code": "THB",
@@ -43,10 +44,10 @@
     "policy_rate": {
       "value": 0.01,
       "status": "sourced",
-      "sourceName": "Bank of Thailand, MPC decisions table (as of 28 October 2026)",
-      "sourceUrl": "https://www.bot.or.th/en/our-roles/monetary-policy/mpc-publication/policy-interest-rate.html",
+      "sourceName": "Bank of Thailand, MPC decisions table (MPC 5/2026)",
+      "sourceUrl": "https://www.bot.or.th/content/dam/bot/documents/en/our-roles/monetary-policy/mpc-publication/policy-interest-rate/table-mpc-2026-5-5FWvBPSf.xlsx",
       "asOf": "2026-10-28",
-      "note": "The MPC held the 1-day bilateral repurchase rate at 1.00% on 28 October 2026 (cut to 1.00% on 25 February 2026)."
+      "note": "The MPC held the 1-day bilateral repurchase rate at 1.00% on 28 October 2026 (cut from 1.25% to 1.00% on 25 February 2026; held in April, June and August)."
     },
     "savings_account_rate": {
       "value": 0.001,
@@ -160,12 +161,12 @@
       "note": "Low case near the after-tax safe rate; the SET index has a weak 10-year record."
     },
     "equity_return_base": {
-      "value": 0.045,
+      "value": 0.04,
       "status": "assumption",
       "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
       "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
       "asOf": "2026-10-31",
-      "note": "After-tax safe rate of about 0.9% plus a 3.6-point premium, kept modest because the SET index has gone nowhere over ten years."
+      "note": "After-tax safe rate of about 0.9% plus a 3.1-point premium, kept low because the SET index has gone nowhere over ten years."
     },
     "equity_return_high": {
       "value": 0.075,
@@ -260,7 +261,8 @@
       "status": "sourced",
       "sourceName": "World Bank WDI SH.XPD.OOPC.CH.ZS",
       "sourceUrl": "https://data.worldbank.org/indicator/SH.XPD.OOPC.CH.ZS?locations=TH",
-      "asOf": "2023-12-31"
+      "asOf": "2023-12-31",
+      "note": "Latest World Bank figure is for 2023 (older than 2025)."
     },
     "goal_inflation_health": {
       "value": 0.04,
@@ -284,7 +286,7 @@
       "sourceName": "World Bank WDI SP.DYN.LE00.IN",
       "sourceUrl": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TH",
       "asOf": "2024-12-31",
-      "note": "Men 72.3, women 81.0."
+      "note": "Men 72.3, women 81.0. Latest World Bank figure is for 2024 (older than 2025)."
     },
     "life_table_remaining": {
       "value": null,
@@ -319,7 +321,7 @@
       "status": "sourced",
       "sourceName": "UN World Population Prospects 2024 via populationpyramid.net",
       "sourceUrl": "https://www.populationpyramid.net/mortality/thailand/",
-      "asOf": "2026-12-31",
+      "asOf": "2026-07-01",
       "note": "Secondary source of UN WPP 2024 medium variant for 2026; totals at 60, 70 and 80 are the mean of men and women (only the 65 total is published there)."
     },
     "support_ratio": {
@@ -352,7 +354,7 @@
       "sourceName": "Social Security Office, old-age benefit conditions",
       "sourceUrl": "https://www.sso.go.th/wpr/main/privilege/%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B8%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1_sub_category_list-text-photo_1_125_695",
       "asOf": "2026-10-31",
-      "note": "Social Security old-age pension from age 55 after at least 180 months of contributions, once insured employment ends; men and women alike."
+      "note": "Social Security old-age pension from age 55 after at least 180 months of contributions, once insured employment ends; men and women alike. No enacted increase was found, so 55 also applies to people born after 1975."
     },
     "retirement_age_government": {
       "value": 60,
@@ -360,7 +362,7 @@
       "sourceName": "Wikipedia, Retirement age (secondary source)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Retirement_age",
       "asOf": "2026-10-31",
-      "note": "Thai civil servants retire at 60 (university presidents may work beyond 60)."
+      "note": "Thai civil servants retire at 60 (university presidents may work beyond 60); secondary source only, the Office of the Civil Service Commission page was not checked."
     },
     "retirement_return_low": {
       "value": 0.006,
@@ -395,12 +397,12 @@
       "note": "Low case for a balanced mix if equities only match bonds."
     },
     "retirement_accumulation_return_base": {
-      "value": 0.03,
+      "value": 0.028,
       "status": "assumption",
       "sourceName": "BOT: 12-month time deposits 0.75-1.40% and 1-year government yield 1.00% (Sep 2026), less 15% withholding tax",
       "sourceUrl": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=1033&language=ENG",
       "asOf": "2026-10-31",
-      "note": "Base case: roughly half equity at 4.5% and half bonds at 1-1.7%, with tax-advantaged funds where possible."
+      "note": "Base case: roughly half equity at 4% and half bonds at 1-1.7% after tax, with some uplift from tax-advantaged funds."
     },
     "retirement_accumulation_return_high": {
       "value": 0.05,
@@ -432,7 +434,7 @@
       "sourceName": "",
       "sourceUrl": "",
       "asOf": "2026-10-31",
-      "note": "The Labour Protection Act sets severance pay in tiers by length of service rather than days per year; the tiers were not confirmed from a reachable official page in this pass."
+      "note": "The Labour Protection Act sets severance pay (also due on retirement) as a lump sum in tiers by length of service rather than days of wages per year of service, so it does not fit this rule's shape; the tier amounts were not confirmed from a reachable official page in this pass."
     },
     "public_pension_scheme": {
       "value": null,
