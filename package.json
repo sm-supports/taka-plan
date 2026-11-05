@@ -41,7 +41,8 @@
     "smoke": "sh scripts/smoke.sh",
     "countries:gen-seed": "node scripts/gen-country-seed.mjs"
   },
-  "description": "Taka Plan: a free Bangla/English personal-finance planner for Bangladesh",
+  "description": "Taka Plan: a free personal-finance planner for every country, in Bangla, English and ten more languages.",
+  "license": "MIT",
   "engines": {
     "node": ">=24.22"
   }

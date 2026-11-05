@@ -1,7 +1,7 @@
 {
   "name": "Taka Plan",
   "short_name": "Taka Plan",
-  "description": "A free Bangla/English personal-finance planner for Bangladesh.",
+  "description": "A free personal-finance planner for every country, in Bangla, English and ten more languages.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

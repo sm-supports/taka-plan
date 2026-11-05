@@ -119,20 +119,26 @@ test.describe("switching country mid-plan", () => {
   });
 });
 
-test("a country without researched data says so under the header; Bangladesh does not", async ({ page }) => {
-  // Every country has a data file now: make Bolivia's unreachable to exercise the fallback.
-  await page.route(/\/(data\/countries\/BO\.json|api\/countries\/BO)(\?.*)?$/, (route) => route.fulfill({ status: 404, body: "" }));
-  await seed(page, v2({ country: "BO" }), { tp_locale: "en", tp_country: "BO" });
-  await page.goto("/en/plan");
-  const notice = page.getByTestId("country-notice");
-  await expect(notice).toBeVisible({ timeout: 15_000 });
-  await expect(notice).toContainText("We don't have researched figures for Bolivia yet, so amounts use Bangladesh's figures and taka.");
-  await expect(notice.getByRole("link", { name: "Change country" })).toHaveAttribute("href", "/?change=country");
+test.describe("country data notice", () => {
+  // page.route cannot see requests a service worker makes, and once the worker controls the page
+  // Bolivia's real file would load. Without this the test fails whenever the worker wins that race.
+  test.use({ serviceWorkers: "block" });
 
-  await seed(page, v2(), { tp_locale: "en", tp_country: "BD" });
-  await page.goto("/en/plan");
-  await expect(page.getByText(HEADLINE).first()).toBeVisible();
-  await expect(page.getByTestId("country-notice")).toHaveCount(0);
+  test("a country without researched data says so under the header; Bangladesh does not", async ({ page }) => {
+    // Every country has a data file now: make Bolivia's unreachable to exercise the fallback.
+    await page.route(/\/(data\/countries\/BO\.json|api\/countries\/BO)(\?.*)?$/, (route) => route.fulfill({ status: 404, body: "" }));
+    await seed(page, v2({ country: "BO" }), { tp_locale: "en", tp_country: "BO" });
+    await page.goto("/en/plan");
+    const notice = page.getByTestId("country-notice");
+    await expect(notice).toBeVisible({ timeout: 15_000 });
+    await expect(notice).toContainText("We don't have researched figures for Bolivia yet, so amounts use Bangladesh's figures and taka.");
+    await expect(notice.getByRole("link", { name: "Change country" })).toHaveAttribute("href", "/?change=country");
+
+    await seed(page, v2(), { tp_locale: "en", tp_country: "BD" });
+    await page.goto("/en/plan");
+    await expect(page.getByText(HEADLINE).first()).toBeVisible();
+    await expect(page.getByTestId("country-notice")).toHaveCount(0);
+  });
 });
 
 test.describe("broken storage", () => {

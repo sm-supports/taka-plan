@@ -1,6 +1,6 @@
 # Taka Plan — architecture (as built, MVP)
 
-Taka Plan is a free, mobile-first Bangla/English personal-finance planner for Bangladesh. The product spec is [PRD.md](PRD.md); the contracts every module codes against are in [ARCHITECTURE-CONTRACTS.md](ARCHITECTURE-CONTRACTS.md); verified commands live in [TOOLING.md](TOOLING.md); Bangla conventions in [BANGLA-STYLE.md](BANGLA-STYLE.md).
+Taka Plan is a free, mobile-first personal-finance planner for every country, in Bangla, English and ten more languages. It began as a Bangladesh-only MVP: the sections up to "Version 2" describe that base, and "Version 2" describes what made it worldwide. The product spec is [PRD.md](PRD.md); the contracts every module codes against are in [ARCHITECTURE-CONTRACTS.md](ARCHITECTURE-CONTRACTS.md); verified commands live in [TOOLING.md](TOOLING.md); Bangla conventions in [BANGLA-STYLE.md](BANGLA-STYLE.md).
 
 ## Shape
 
@@ -53,4 +53,4 @@ Contracts and rules for v2 are in [CONTRACTS-V2.md](CONTRACTS-V2.md); the PRDs a
 
 ## Out of scope in this cut
 
-M2 insurance, M6 allocation, M7 retirement (the engine keeps hooks in `PlanInput`), phone sign-in and saved plans, reminders, share images, halal mode, analytics (a no-op `track()` keeps call sites ready).
+Phone sign-in and saved plans, reminders, share images, halal mode, analytics (a no-op `track()` keeps call sites ready).
