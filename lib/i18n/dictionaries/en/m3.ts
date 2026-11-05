@@ -52,7 +52,7 @@ export const m3 = {
     noDebt: "No loans or cards. Nothing to fix here — keep it that way.",
     highInterestDebts: "Debt above {threshold} a year",
     payoffOrder: "Payoff order",
-    payoffOrderHint: "Highest rate first. Pay the minimum on everything else and throw every spare taka at the top of the list.",
+    payoffOrderHint: "Highest rate first. Pay the minimum on everything else and put all your spare money toward the top of the list.",
     avalanche: "Highest rate first",
     snowball: "Smallest balance first",
     interestSaved: "Interest saved by going highest-rate first",

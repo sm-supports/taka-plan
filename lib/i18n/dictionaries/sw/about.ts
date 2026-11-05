@@ -3,7 +3,7 @@ import type { Dictionary } from "../../types";
 /** /{locale}/about. Every rates number is a {placeholder}; see ../en/about.ts. */
 export const about: Dictionary["about"] = {
   title: "Kuhusu Taka Plan",
-  lead: "Kikokotoo cha bure kinachomweleza mpokeaji kipato wa Bangladesh kiasi kinachohitajika kwa kila lengo na mahali pa kuweka pesa kila mwezi. Kinafundisha na kukokotoa; wewe unachukua hatua kupitia benki yako, akaunti yako ya BO au kampuni yako ya bima.",
+  lead: "Kikokotoo cha bure kinachokueleza kiasi kinachohitajika kwa kila lengo na mahali pa kuweka pesa kila mwezi. Kinafundisha na kukokotoa; wewe unachukua hatua kupitia benki yako, dalali wako au kampuni yako ya bima.",
   disclaimer: { heading: "Tahadhari" },
   method: {
     heading: "Jinsi mpango unavyojengwa",

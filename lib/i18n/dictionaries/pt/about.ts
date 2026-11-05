@@ -2,7 +2,7 @@ import type { Dictionary } from "../../types";
 
 export const about: Dictionary["about"] = {
   title: "Sobre o Taka Plan",
-  lead: "Uma calculadora gratuita que mostra a quem ganha a vida em Bangladesh quanto cada objetivo exige e onde colocar o dinheiro todo mês. Ela ensina e calcula; quem age é você, pelo seu banco, sua conta BO ou sua seguradora.",
+  lead: "Uma calculadora gratuita que mostra quanto cada objetivo exige e onde colocar o dinheiro todo mês. Ela ensina e calcula; quem age é você, pelo seu banco, sua corretora ou sua seguradora.",
   disclaimer: { heading: "Aviso" },
   method: {
     heading: "Como o plano é montado",

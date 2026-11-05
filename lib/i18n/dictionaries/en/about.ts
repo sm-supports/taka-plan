@@ -5,7 +5,7 @@
  */
 export const about = {
   title: "About Taka Plan",
-  lead: "A free calculator that tells a Bangladeshi earner how much each goal needs and where to put the money every month. It teaches and calculates; you act through your own bank, BO account or insurer.",
+  lead: "A free calculator that tells you how much each goal needs and where to put the money every month. It teaches and calculates; you act through your own bank, broker or insurer.",
   disclaimer: { heading: "Disclaimer" },
   method: {
     heading: "How the plan is built",
@@ -17,7 +17,7 @@ export const about = {
     returns:
       "Every return is shown twice trimmed: first after the tax deducted at source, then after inflation. The headline rate is not the question; what you keep, and what it will still buy, is. An instrument can pay interest and still lose to inflation, and the app says so in red when it does.",
     exampleCaption: "With today's rates table:",
-    rounding: "Results are rounded to a nearby round figure because a twenty-year projection is never exact to the taka. Ranges (low, expected, high) are shown where the future return is uncertain.",
+    rounding: "Results are rounded to a nearby round figure because a twenty-year projection is never exact to the last coin. Ranges (low, expected, high) are shown where the future return is uncertain.",
     onDevice: "All maths runs on your phone, and your answers stay there. The server only keeps the rates table and each country's figures.",
   },
   sources: {

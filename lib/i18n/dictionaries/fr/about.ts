@@ -3,7 +3,7 @@ import type { Dictionary } from "../../types";
 /** /{locale}/about: every number from the rates table is a {placeholder}; see ../en/about.ts. */
 export const about: Dictionary["about"] = {
   title: "À propos de Taka Plan",
-  lead: "Un calculateur gratuit qui indique à une personne qui travaille au Bangladesh combien chaque objectif demande et où placer l'argent chaque mois. Il explique et calcule ; c'est vous qui agissez, via votre propre banque, votre compte BO ou votre assureur.",
+  lead: "Un calculateur gratuit qui vous indique combien chaque objectif demande et où placer l'argent chaque mois. Il explique et calcule ; c'est vous qui agissez, via votre propre banque, votre courtier ou votre assureur.",
   disclaimer: { heading: "Avertissement" },
   method: {
     heading: "Comment le plan est construit",

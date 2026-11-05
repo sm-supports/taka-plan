@@ -27,7 +27,7 @@ import {
   LOCALES,
 } from "@taka/engine";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { defaultLocale, isLocale, LOCALE_META, locales } from "@/lib/i18n/config";
+import { defaultLocale, isLocale, LOCALE_META, locales, type Locale } from "@/lib/i18n/config";
 import { bn } from "@/lib/i18n/dictionaries/bn";
 import { en } from "@/lib/i18n/dictionaries/en";
 import { getDictionary } from "@/lib/i18n/server";
@@ -234,6 +234,40 @@ describe.each(names)("engine keys resolve in %s", (name) => {
     expect(slots("plan.reason.debt")).toEqual(["amount", "months", "rate"]);
     expect(slots("m3.result.maxLoanNote")).toEqual(["emi", "loan", "months", "rate"]);
     expect(getPath(dict, "plan.demoBanner")).not.toContain("?demo");
+  });
+});
+
+describe("text every country sees does not assume Bangladesh", () => {
+  // The currency's name in each language. Bangla is left out: there টাকা is simply the word for money.
+  const TAKA_WORD: Partial<Record<Locale, RegExp>> = {
+    en: /\btakas?\b/i,
+    es: /\btakas?\b/i,
+    fr: /\btakas?\b/i,
+    pt: /\btakas?\b/i,
+    id: /\btakas?\b/i,
+    sw: /\btakas?\b/i,
+    ar: /تاكا/,
+    ur: /(?<![\u0600-\u06FF])ٹک(?:ا|ے|وں)(?![\u0600-\u06FF])/,
+    hi: /(?<![\u0900-\u097F])ट(?:का|के)(?![\u0900-\u097F])/,
+    zh: /塔卡/,
+    ru: /(?<![а-яё-])так[аеиу](?![а-яё])/i,
+  };
+  // Allowed: the admin, the notice that really does fall back to taka, and the list shown only for Bangladesh.
+  const allowed = (key: string) => key.startsWith("admin.") || key === "common.countryNotice.noData" || key.startsWith("about.sources.unverified");
+
+  it("no text outside the allowed places names the taka", async () => {
+    for (const l of locales) {
+      const pattern = TAKA_WORD[l];
+      if (!pattern) continue;
+      const d = await getDictionary(l);
+      const bad = leafPaths(d).filter((k) => !allowed(k) && pattern.test(String(getPath(d, k)).replace(/Taka Plan/g, "")));
+      expect(bad, `${l} names the taka`).toEqual([]);
+    }
+  });
+
+  it("the about page's opening line is not addressed to Bangladesh", async () => {
+    expect(en.about.lead).not.toMatch(/Bangladesh/);
+    for (const l of locales) expect((await getDictionary(l)).about.lead, `${l} lead`).not.toMatch(/\bBO\b|বিও/);
   });
 });
 

@@ -3,7 +3,7 @@ import type { Dictionary } from "../../types";
 /** /{locale}/about: title, lead, methodology and the sources-table chrome (see en/about.ts). */
 export const about: Dictionary["about"] = {
   title: "Tentang Taka Plan",
-  lead: "Kalkulator gratis yang memberi tahu pekerja di Bangladesh berapa yang dibutuhkan tiap tujuan dan ke mana menaruh uangnya setiap bulan. Aplikasi ini mengajarkan dan menghitung; Anda yang bertindak melalui bank, rekening BO, atau perusahaan asuransi Anda sendiri.",
+  lead: "Kalkulator gratis yang memberi tahu Anda berapa yang dibutuhkan tiap tujuan dan ke mana menaruh uangnya setiap bulan. Aplikasi ini mengajarkan dan menghitung; Anda yang bertindak melalui bank, pialang, atau perusahaan asuransi Anda sendiri.",
   disclaimer: { heading: "Penafian" },
   method: {
     heading: "Cara rencana disusun",

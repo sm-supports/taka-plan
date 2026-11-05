@@ -3,7 +3,7 @@ import type { Dictionary } from "../../types";
 /** /{locale}/about (see en/about.ts): every rates-table number is a `{placeholder}`. */
 export const about: Dictionary["about"] = {
   title: "Acerca de Taka Plan",
-  lead: "Una calculadora gratuita que le dice a quien trabaja en Bangladés cuánto necesita cada meta y dónde poner el dinero cada mes. Enseña y calcula; tú actúas a través de tu propio banco, cuenta BO o aseguradora.",
+  lead: "Una calculadora gratuita que te dice cuánto necesita cada meta y dónde poner el dinero cada mes. Enseña y calcula; tú actúas a través de tu propio banco, corredor de bolsa o aseguradora.",
   disclaimer: { heading: "Aviso" },
   method: {
     heading: "Cómo se arma el plan",
@@ -15,7 +15,7 @@ export const about: Dictionary["about"] = {
     returns:
       "Cada rentabilidad se muestra con dos recortes: primero después del impuesto retenido en la fuente y luego después de la inflación. La tasa nominal no es lo que importa; lo que importa es lo que te queda y lo que aún podrá comprar. Un instrumento puede pagar intereses y aun así perder frente a la inflación, y la app lo indica en rojo cuando pasa.",
     exampleCaption: "Con la tabla de tasas de hoy:",
-    rounding: "Los resultados se redondean a una cifra cercana, porque una proyección a veinte años nunca es exacta al último taka. Se muestran rangos (bajo, esperado, alto) donde la rentabilidad futura es incierta.",
+    rounding: "Los resultados se redondean a una cifra cercana, porque una proyección a veinte años nunca es exacta al detalle. Se muestran rangos (bajo, esperado, alto) donde la rentabilidad futura es incierta.",
     onDevice: "Todos los cálculos se hacen en tu teléfono, y tus respuestas se quedan ahí. El servidor solo guarda la tabla de tasas y los datos de cada país.",
   },
   sources: {

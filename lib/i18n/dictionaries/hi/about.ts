@@ -3,7 +3,7 @@ import type { Dictionary } from "../../types";
 /** /{locale}/about: every number from the rates table is a `{placeholder}` filled at render time. */
 export const about: Dictionary["about"] = {
   title: "Taka Plan के बारे में",
-  lead: "एक मुफ़्त कैलकुलेटर जो बांग्लादेश में कमाने वाले व्यक्ति को बताता है कि हर लक्ष्य के लिए कितना चाहिए और हर महीने पैसा कहाँ रखें। यह सिखाता और हिसाब लगाता है; कदम आप अपने बैंक, BO खाते या बीमा कंपनी के ज़रिए उठाते हैं।",
+  lead: "एक मुफ़्त कैलकुलेटर जो आपको बताता है कि हर लक्ष्य के लिए कितना चाहिए और हर महीने पैसा कहाँ रखें। यह सिखाता और हिसाब लगाता है; कदम आप अपने बैंक, ब्रोकर या बीमा कंपनी के ज़रिए उठाते हैं।",
   disclaimer: { heading: "अस्वीकरण" },
   method: {
     heading: "प्लान कैसे बनता है",

@@ -54,7 +54,7 @@ export const m3: Dictionary["m3"] = {
     noDebt: "Sin préstamos ni tarjetas. Nada que arreglar aquí: sigue así.",
     highInterestDebts: "Deuda por encima del {threshold} anual",
     payoffOrder: "Orden de pago",
-    payoffOrderHint: "Primero la tasa más alta. Paga el mínimo en todo lo demás y destina cada taka que te sobre a la primera de la lista.",
+    payoffOrderHint: "Primero la tasa más alta. Paga el mínimo en todo lo demás y destina todo el dinero que te sobre a la primera de la lista.",
     avalanche: "Primero la tasa más alta",
     snowball: "Primero el saldo más pequeño",
     interestSaved: "Intereses ahorrados al empezar por la tasa más alta",
