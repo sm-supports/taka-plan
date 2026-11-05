@@ -23,11 +23,11 @@ No sign-up. No ads. Nothing to install.
 
 <br>
 
-<img src="docs/images/country-picker.png" alt="Country picker asking where you live, with Bangladesh shown in Bangla" width="160">&nbsp;
-<img src="docs/images/plan-english-brazil.png" alt="A plan in English for Brazil: save R$1,200 a month, starting with an emergency fund" width="160">&nbsp;
-<img src="docs/images/plan-bangla.png" alt="The same kind of plan in Bangla, in taka, with Bangla digits" width="160">&nbsp;
-<img src="docs/images/plan-arabic.png" alt="A plan in Arabic for Saudi Arabia, laid out right to left" width="160">&nbsp;
-<img src="docs/images/retirement-kenya.png" alt="Retirement comparison for Kenya: what it takes to plan to age 80 versus age 100" width="160">
+<img src="docs/images/country-picker.png" alt="Country picker asking where you live, with Bangladesh shown in Bangla" width="150">&nbsp;
+<img src="docs/images/plan-english-brazil.png" alt="A plan in English for Brazil: save R$1,200 a month, starting with an emergency fund" width="150">&nbsp;
+<img src="docs/images/plan-bangla.png" alt="The same kind of plan in Bangla, in taka, with Bangla digits" width="150">&nbsp;
+<img src="docs/images/plan-arabic.png" alt="A plan in Arabic for Saudi Arabia, laid out right to left" width="150">&nbsp;
+<img src="docs/images/retirement-kenya.png" alt="Retirement comparison for Kenya: what it takes to plan to age 80 versus age 100" width="150">
 
 <sub>Sample answers, not real people's money.</sub>
 
@@ -104,21 +104,22 @@ This is what would help most:
 
 ```mermaid
 flowchart LR
-  subgraph Device["Your browser (installable PWA)"]
-    UI["React pages, 12 languages"]
-    Engine["Finance engine: pure TypeScript"]
-    Store[("Answers and drafts: localStorage")]
-    UI <--> Engine
-    UI <--> Store
-  end
   subgraph CF["Cloudflare"]
-    Pages["Pages: prebuilt static site and country files"]
-    Fn["Pages Functions: /api/*"]
+    direction TB
+    Pages["Pages: static site and country files"]
+    Fn["Functions: /api"]
     D1[("D1: rates and country data")]
-    Fn <--> D1
+    Fn --- D1
   end
-  Pages -- "pages and country data" --> UI
-  Fn -- "published rates and country data" --> UI
+  subgraph Device["Your browser (installable PWA)"]
+    direction TB
+    UI["React pages in 12 languages"]
+    Engine["Finance engine in TypeScript"]
+    Store[("Your answers and drafts, in localStorage")]
+    UI --- Engine
+    UI --- Store
+  end
+  CF -- "pages, rates and country data" --> Device
 ```
 
 Your answers never leave the browser. The server only publishes rates and country data, edited through a password-protected admin.
