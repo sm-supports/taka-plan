@@ -102,9 +102,9 @@ export const common: Dictionary["common"] = {
 
   instrument: {
     savings_account: "储蓄账户",
-    fdr_3m: "3个月期 FDR",
-    fdr_1y: "1年期 FDR",
-    dps: "DPS",
+    fdr_3m: "3个月期定期存款",
+    fdr_1y: "1年期定期存款",
+    dps: "零存整取",
     sanchayapatra_5y: "政府储蓄券",
     tbill_91d: "91天期短期国库券",
     tbond_5y: "5年期国债",

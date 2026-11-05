@@ -48,7 +48,7 @@ export const m7: Dictionary["m7"] = {
     },
     retiredSavings: {
       title: "Una akiba gani sasa?",
-      hint: "Malipo yako ya mfuko wa akiba ya wafanyakazi na kiinua mgongo, FDR, hati za akiba na chochote kingine unachoishi nacho.",
+      hint: "Malipo yako ya mfuko wa akiba ya wafanyakazi na kiinua mgongo, amana za muda maalum, hati za akiba na chochote kingine unachoishi nacho.",
       label: "Akiba sasa",
     },
     otherIncome: {
@@ -121,7 +121,7 @@ export const m7: Dictionary["m7"] = {
     retireeType: "Ulikostaafu",
     retiredSavings: {
       label: "Akiba sasa",
-      hint: "Kila kitu unachoishi nacho: malipo ya kustaafu, FDR, hati za akiba.",
+      hint: "Kila kitu unachoishi nacho: malipo ya kustaafu, amana za muda maalum, hati za akiba.",
     },
     otherIncome: {
       label: "Kipato kingine kwa mwezi",
@@ -258,7 +258,7 @@ export const m7: Dictionary["m7"] = {
     },
     pot: {
       title: "Kanuni ya vyungu viwili",
-      body: "Weka {amount} — utoaji wa miaka {years} — kwenye FDR na hati za hazina unazoweza kufikia haraka. Kinachobaki kinabaki kimewekezwa na kujaza chungu hiki mara moja kwa mwaka.",
+      body: "Weka {amount} — utoaji wa miaka {years} — kwenye amana za muda maalum na hati za hazina unazoweza kufikia haraka. Kinachobaki kinabaki kimewekezwa na kujaza chungu hiki mara moja kwa mwaka.",
     },
     options: {
       title: "Njia za kugeuza akiba kuwa kipato thabiti",
@@ -310,7 +310,7 @@ export const m7: Dictionary["m7"] = {
     pensionerCertificate: "Hati ya akiba ya wastaafu: faida ya kila mwezi, kwa wastaafu wa serikali, mashirika ya umma na majeshi tu, hadi kikomo fulani.",
     savingsCertificate: "Hati ya akiba ya serikali: faida isiyobadilika inayodhaminiwa na serikali.",
     tbonds: "Hatifungani za serikali: zinadhaminiwa na serikali, zikiwa na riba isiyobadilika kila miezi sita.",
-    depositLadder: "Ngazi ya FDR: amana zinazokomaa moja baada ya nyingine, ili pesa fulani iwe huru kila mwaka.",
+    depositLadder: "Ngazi ya amana: amana zinazokomaa moja baada ya nyingine, ili pesa fulani iwe huru kila mwaka.",
     annuity: "Malipo ya maisha yote (annuity) kutoka kampuni ya bima ya serikali: pensheni ya maisha yote hata uishi muda gani. Upande wa pili: pesa haiwezi kurithishwa.",
   },
 };

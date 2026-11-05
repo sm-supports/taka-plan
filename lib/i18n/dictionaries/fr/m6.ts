@@ -199,7 +199,7 @@ export const m6: Dictionary["m6"] = {
     equityFund:
       "Choisissez un fonds ouvert diversifié et lancez un plan mensuel auprès de la société de gestion ou d'une banque qui vend ses parts. Apportez votre pièce d'identité et un relevé de compte bancaire. Répartissez sur de nombreuses entreprises ; ne mettez jamais cette part dans une seule action.",
     directShares:
-      "Il vous faut un compte BO auprès d'un courtier. Détenez au moins dix grandes entreprises dans cinq secteurs ou plus, sans qu'une seule action dépasse un dixième de cette part. Prévoyez de les suivre vous-même.",
+      "Il vous faut un compte-titres auprès d'un courtier. Détenez au moins dix grandes entreprises dans cinq secteurs ou plus, sans qu'une seule action dépasse un dixième de cette part. Prévoyez de les suivre vous-même.",
     gold: "Achetez des lingots ou des pièces 22 carats chez un bijoutier membre de l'association des bijoutiers, et gardez le reçu. Les bijoux coûtent des frais de façon et se revendent moins cher : ils sont faits pour être portés, pas pour investir.",
   },
 };

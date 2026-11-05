@@ -55,9 +55,9 @@ export const common = {
 
   instrument: {
     savings_account: "Savings account",
-    fdr_3m: "3-month FDR",
-    fdr_1y: "1-year FDR",
-    dps: "DPS",
+    fdr_3m: "3-month fixed deposit",
+    fdr_1y: "1-year fixed deposit",
+    dps: "Recurring deposit",
     sanchayapatra_5y: "Government savings certificate",
     tbill_91d: "91-day treasury bill",
     tbond_5y: "5-year treasury bond",

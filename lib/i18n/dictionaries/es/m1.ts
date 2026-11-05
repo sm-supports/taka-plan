@@ -65,10 +65,10 @@ export const m1: Dictionary["m1"] = {
       title: "Dónde guardarlo",
       savingsAccount: "Cuenta de ahorro de retiro inmediato",
       savingsAccountHint: "Un mes de gastos esenciales que puedes retirar el mismo día.",
-      fdrLadder: "Escalera de FDR a 3 meses",
-      fdrLadderHint: "El resto, en tres FDR abiertos con un mes de diferencia para que venza uno cada mes.",
-      fdrPerSlice: "Cada FDR",
-      fdrSlices: "Tres FDR de {amount} cada uno, abriendo uno cada mes.",
+      fdrLadder: "Escalera de depósitos a 3 meses",
+      fdrLadderHint: "El resto, en tres depósitos a plazo fijo abiertos con un mes de diferencia para que venza uno cada mes.",
+      fdrPerSlice: "Cada depósito",
+      fdrSlices: "Tres depósitos de {amount} cada uno, abriendo uno cada mes.",
       banksNeeded: "Bancos entre los que repartirlo",
       banksNeededHint: "El seguro de depósitos solo cubre {limit} por banco, así que no guardes más que eso en un mismo banco.",
       sanchayapatraLayer: "Tercera capa: {product}",
@@ -79,7 +79,7 @@ export const m1: Dictionary["m1"] = {
   rule: {
     noStocks: "Nada de acciones ni fondos de renta variable para este dinero. Tiene que estar ahí, con todo su valor, en un mal día.",
     sanchayapatraThirdLayer: "Usa {product} solo como tercera capa para un colchón muy grande: paga más, pero cobrarlo antes te cuesta parte del rendimiento.",
-    cardBridge: "Una tarjeta de crédito puede cubrir los uno o dos días que tarda en cobrarse un FDR, solo si pagas el total dentro del período de gracia.",
+    cardBridge: "Una tarjeta de crédito puede cubrir los uno o dos días que tarda en cobrarse un depósito a plazo fijo, solo si pagas el total dentro del período de gracia.",
     refill: "¿Usaste el fondo? Repónlo antes de poner dinero en cualquier otra cosa.",
     notAnEmergency: "Unas vacaciones, un teléfono o un regalo de boda no son una emergencia. Ahorra para eso como metas.",
   },
@@ -87,8 +87,8 @@ export const m1: Dictionary["m1"] = {
   next: {
     openSavings: "Abre una cuenta de ahorro en cualquier banco con tu documento de identidad; pasa ahí un mes de gastos esenciales y programa la transferencia automática para el resto.",
     fdrLadder: "Ve a cualquier banco con tu documento de identidad y tu número fiscal; pide {product} a 3 meses. Abre uno cada mes durante tres meses para que venza uno cada mes.",
-    splitBanks: "Tu fondo supera el límite del seguro de depósitos de un banco. Abre FDR en un segundo banco para que ninguno tenga más que el límite.",
-    full: "Tu fondo está completo. Sigue renovando los FDR y repón el fondo después de cualquier retiro antes de ahorrar en otra cosa.",
+    splitBanks: "Tu fondo supera el límite del seguro de depósitos de un banco. Abre depósitos a plazo fijo en un segundo banco para que ninguno tenga más que el límite.",
+    full: "Tu fondo está completo. Sigue renovando los depósitos y repón el fondo después de cualquier retiro antes de ahorrar en otra cosa.",
   },
 
   status: {

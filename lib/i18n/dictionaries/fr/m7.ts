@@ -51,7 +51,7 @@ export const m7: Dictionary["m7"] = {
     },
     retiredSavings: {
       title: "Quelle épargne avez-vous aujourd'hui ?",
-      hint: "Vos versements de caisse de prévoyance et d'indemnité de fin de service, vos FDR, vos bons d'épargne et tout ce dont vous vivez.",
+      hint: "Vos versements de caisse de prévoyance et d'indemnité de fin de service, vos dépôts à terme, vos bons d'épargne et tout ce dont vous vivez.",
       label: "Épargne actuelle",
     },
     otherIncome: {
@@ -124,7 +124,7 @@ export const m7: Dictionary["m7"] = {
     retireeType: "Secteur de départ à la retraite",
     retiredSavings: {
       label: "Épargne actuelle",
-      hint: "Tout ce dont vous vivez : versements, FDR, bons d'épargne.",
+      hint: "Tout ce dont vous vivez : versements, dépôts à terme, bons d'épargne.",
     },
     otherIncome: {
       label: "Autres revenus par mois",
@@ -261,7 +261,7 @@ export const m7: Dictionary["m7"] = {
     },
     pot: {
       title: "La règle des deux poches",
-      body: "Gardez {amount} ({years} années de retraits) en FDR et en bons du Trésor accessibles rapidement. Le reste demeure investi et réalimente cette poche une fois par an.",
+      body: "Gardez {amount} ({years} années de retraits) en dépôts à terme et en bons du Trésor accessibles rapidement. Le reste demeure investi et réalimente cette poche une fois par an.",
     },
     options: {
       title: "Comment transformer l'épargne en revenu régulier",
@@ -313,7 +313,7 @@ export const m7: Dictionary["m7"] = {
     pensionerCertificate: "Bon d'épargne pour retraités : revenu mensuel, réservé aux retraités de la fonction publique, du parapublic et des forces armées, dans une certaine limite.",
     savingsCertificate: "Bon d'épargne d'État : un revenu fixe garanti par l'État.",
     tbonds: "Obligations d'État : garanties par l'État, avec un coupon fixe tous les six mois.",
-    depositLadder: "Échelle de FDR : des dépôts qui arrivent à échéance l'un après l'autre, pour libérer de l'argent chaque année.",
+    depositLadder: "Échelle de dépôts : des dépôts qui arrivent à échéance l'un après l'autre, pour libérer de l'argent chaque année.",
     annuity: "Rente viagère de l'assureur public : une pension à vie, quelle que soit votre longévité. La contrepartie : l'argent ne peut pas être transmis.",
   },
 };

@@ -91,9 +91,9 @@ export const common: Dictionary["common"] = {
 
   instrument: {
     savings_account: "بچت اکاؤنٹ",
-    fdr_3m: "3 ماہ کا FDR",
-    fdr_1y: "1 سال کا FDR",
-    dps: "DPS",
+    fdr_3m: "3 ماہ کا میعادی ڈپازٹ",
+    fdr_1y: "1 سال کا میعادی ڈپازٹ",
+    dps: "ماہانہ بچت اسکیم",
     sanchayapatra_5y: "سرکاری بچت سرٹیفکیٹ",
     tbill_91d: "91 دن کا ٹریژری بل",
     tbond_5y: "5 سال کا ٹریژری بانڈ",

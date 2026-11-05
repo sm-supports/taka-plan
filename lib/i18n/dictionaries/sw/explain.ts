@@ -34,8 +34,8 @@ export const explain: Dictionary["explain"] = {
       body: "Mahitaji muhimu ya mwezi mmoja yanabaki kwenye akaunti ya akiba unayoweza kutoa leo: {essentials} = {result}. Hii ndiyo pesa ya wiki ya kwanza ya dharura yoyote.",
     },
     tier2: {
-      title: "Tabaka la 2: ngazi ya FDR za miezi 3",
-      body: "Kila kitu juu ya tabaka la 1 kinaenda kwenye FDR: {target} − {tier1} = {result}, kikigawanywa katika FDR tatu zilizofunguliwa kwa tofauti ya mwezi mmoja ili moja ikomae kila mwezi.",
+      title: "Tabaka la 2: ngazi ya amana za miezi 3",
+      body: "Kila kitu juu ya tabaka la 1 kinaenda kwenye amana za muda maalum: {target} − {tier1} = {result}, kikigawanywa katika amana tatu zilizofunguliwa kwa tofauti ya mwezi mmoja ili moja ikomae kila mwezi.",
     },
     banks: {
       title: "Benki zinazohitajika",

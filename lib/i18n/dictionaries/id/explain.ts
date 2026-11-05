@@ -34,8 +34,8 @@ export const explain: Dictionary["explain"] = {
       body: "Kebutuhan pokok satu bulan tetap di rekening tabungan yang bisa Anda tarik hari ini: {essentials} = {result}. Inilah uang untuk minggu pertama keadaan darurat apa pun.",
     },
     tier2: {
-      title: "Lapisan 2: tangga FDR 3 bulan",
-      body: "Semua di atas lapisan 1 masuk ke FDR: {target} − {tier1} = {result}, dibagi ke tiga FDR yang dibuka berselang satu bulan agar satu jatuh tempo setiap bulan.",
+      title: "Lapisan 2: tangga deposito 3 bulan",
+      body: "Semua di atas lapisan 1 masuk ke deposito berjangka: {target} − {tier1} = {result}, dibagi ke tiga deposito yang dibuka berselang satu bulan agar satu jatuh tempo setiap bulan.",
     },
     banks: {
       title: "Jumlah bank yang dibutuhkan",

@@ -198,7 +198,7 @@ export const m6: Dictionary["m6"] = {
     equityFund:
       "Escolha um fundo aberto diversificado e comece um plano mensal com a gestora do fundo ou com um banco que venda suas cotas. Leve seu documento de identidade e tenha uma conta bancária. Diversifique entre muitas empresas; nunca coloque esta parte numa única ação.",
     directShares:
-      "Você precisa de uma conta BO numa corretora. Tenha pelo menos dez grandes empresas de cinco ou mais setores, sem nenhuma ação acima de um décimo desta parte. Conte com acompanhá-las por conta própria.",
+      "Você precisa de uma conta em corretora. Tenha pelo menos dez grandes empresas de cinco ou mais setores, sem nenhuma ação acima de um décimo desta parte. Conte com acompanhá-las por conta própria.",
     gold: "Compre barras ou moedas de 22 quilates de um joalheiro filiado à associação de joalheiros e guarde o recibo. Joias têm custo de feitio e são revendidas por menos, então servem para usar, não para investir.",
   },
 };

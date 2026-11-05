@@ -46,19 +46,19 @@ export const m4: Dictionary["m4"] = {
     },
     percentOfEachPayment: "Versez {percent} de chaque paiement sur votre épargne le jour où il arrive",
     instrument: "Où le placer",
-    instrumentHint: "Un DPS est prélevé automatiquement à jour fixe : l'épargne se fait avant que vous puissiez dépenser.",
+    instrumentHint: "L'argent part automatiquement à jour fixe : l'épargne se fait avant que vous puissiez dépenser.",
     transferDay: "Virement permanent le {day} de chaque mois",
     transferDayUnknown: "Indiquez votre jour de paie et nous proposerons une date de virement.",
   },
 
   next: {
-    dps: "Demandez à votre banque d'ouvrir un DPS avec prélèvement automatique le {day} de chaque mois, le lendemain du versement de votre salaire. Tout montant convient ; l'habitude compte plus que la somme.",
-    dpsNoPayday: "Demandez à votre banque d'ouvrir un DPS avec prélèvement automatique le lendemain du versement de votre salaire. Tout montant convient ; l'habitude compte plus que la somme.",
-    percentOfEachPayment: "Le jour où un paiement arrive, versez-en {percent} sur un compte d'épargne séparé avant d'en dépenser la moindre partie. Gardez la même part les bons et les mauvais mois ; une fois le solde stable, transformez-le en DPS.",
+    dps: "Demandez à votre banque d'ouvrir ce produit : {product}, avec prélèvement automatique le {day} de chaque mois, le lendemain du versement de votre salaire. Tout montant convient ; l'habitude compte plus que la somme.",
+    dpsNoPayday: "Demandez à votre banque d'ouvrir ce produit : {product}, avec prélèvement automatique le lendemain du versement de votre salaire. Tout montant convient ; l'habitude compte plus que la somme.",
+    percentOfEachPayment: "Le jour où un paiement arrive, versez-en {percent} sur un compte d'épargne séparé avant d'en dépenser la moindre partie. Gardez la même part les bons et les mauvais mois ; une fois le solde stable, passez à un virement mensuel fixe.",
   },
 
   note: {
-    instrumentDps: "Nous proposons un DPS car il est prélevé automatiquement à jour fixe : l'épargne se fait avant que vous puissiez dépenser.",
+    instrumentDps: "Nous proposons un virement mensuel automatique car il part à jour fixe : l'épargne se fait avant que vous puissiez dépenser.",
   },
 
   status: {

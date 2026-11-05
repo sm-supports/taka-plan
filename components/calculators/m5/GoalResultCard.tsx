@@ -4,6 +4,7 @@ import type { GoalResult, Status } from "@taka/engine";
 import { Card } from "@/components/ui/Card";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { Term } from "@/components/ui/Term";
+import { useProductName } from "@/components/ui/useProductName";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
 import { WhyButton } from "@/components/explain/WhyButton";
@@ -30,7 +31,8 @@ export function GoalResultCard({ name, result, shown }: GoalResultCardProps) {
   const f = useFormat();
   const years = Math.round(result.months / 12);
   const yearsLabel = `${f.number(years)} ${t(years === 1 ? "common.unit.year" : "common.unit.years")}`;
-  const instrumentName = t(`common.instrument.${result.instrument}`);
+  const names = useProductName();
+  const instrumentName = names.label(result.instrument);
   const term = TERM_FOR_INSTRUMENT[result.instrument];
   const others = result.candidates.filter((c) => c !== result.instrument);
   /* The red "below inflation" line is the one red element; the pill is red only when this goal is the shown red. */
@@ -66,7 +68,7 @@ export function GoalResultCard({ name, result, shown }: GoalResultCardProps) {
             <Row
               label={t("m5.result.instrument")}
               value={term ? <Term k={term}>{instrumentName}</Term> : instrumentName}
-              hint={others.length > 0 ? `${t("m5.result.candidates")}: ${others.map((c) => t(`common.instrument.${c}`)).join(", ")}` : undefined}
+              hint={others.length > 0 ? `${t("m5.result.candidates")}: ${others.map((c) => names.label(c)).join(", ")}` : undefined}
             />
             <Row label={t("m5.result.monthlyLow")} value={f.money(result.monthly.low)} />
             <Row label={t("m5.result.monthlyBase")} value={f.money(result.monthly.base)} />

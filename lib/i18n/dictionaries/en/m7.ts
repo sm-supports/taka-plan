@@ -50,7 +50,7 @@ export const m7 = {
     },
     retiredSavings: {
       title: "What savings do you have now?",
-      hint: "Your provident fund and gratuity payouts, FDRs, savings certificates and anything else you live on.",
+      hint: "Your provident fund and gratuity payouts, fixed deposits, savings certificates and anything else you live on.",
       label: "Savings now",
     },
     otherIncome: {
@@ -123,7 +123,7 @@ export const m7 = {
     retireeType: "Where you retired from",
     retiredSavings: {
       label: "Savings now",
-      hint: "Everything you live on: payouts, FDRs, savings certificates.",
+      hint: "Everything you live on: payouts, fixed deposits, savings certificates.",
     },
     otherIncome: {
       label: "Other income a month",
@@ -260,7 +260,7 @@ export const m7 = {
     },
     pot: {
       title: "The two-pot rule",
-      body: "Keep {amount} — {years} years of withdrawals — in FDRs and treasury bills you can reach quickly. The rest stays invested and refills this pot once a year.",
+      body: "Keep {amount} — {years} years of withdrawals — in fixed deposits and treasury bills you can reach quickly. The rest stays invested and refills this pot once a year.",
     },
     options: {
       title: "Ways to turn savings into steady income",
@@ -312,7 +312,7 @@ export const m7 = {
     pensionerCertificate: "Pensioner savings certificate: monthly profit, for government, semi-government and armed-forces retirees only, up to a limit.",
     savingsCertificate: "Government savings certificate: a fixed profit backed by the state.",
     tbonds: "Treasury bonds: government-backed, with a fixed coupon every six months.",
-    depositLadder: "FDR ladder: deposits that mature one after another, so some money comes free every year.",
+    depositLadder: "Deposit ladder: deposits that mature one after another, so some money comes free every year.",
     annuity: "Lifetime annuity from the state insurer: a pension for life however long you live. The trade-off: the money cannot be passed on.",
   },
 } as const;

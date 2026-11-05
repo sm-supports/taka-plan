@@ -46,19 +46,19 @@ export const m4: Dictionary["m4"] = {
     },
     percentOfEachPayment: "Pasa el {percent} de cada pago al ahorro el mismo día que llega",
     instrument: "Ponlo en",
-    instrumentHint: "Un DPS se debita automáticamente un día fijo, así que el ahorro ocurre antes de que puedas gastarlo.",
+    instrumentHint: "El dinero se mueve automáticamente un día fijo, así que el ahorro ocurre antes de que puedas gastarlo.",
     transferDay: "Transferencia automática el día {day} de cada mes",
     transferDayUnknown: "Dinos tu día de pago y te sugeriremos una fecha de transferencia.",
   },
 
   next: {
-    dps: "Pide a tu banco abrir un DPS con débito automático el día {day} de cada mes, el día después de que llegue tu sueldo. Cualquier monto sirve; el hábito importa más que la cantidad.",
-    dpsNoPayday: "Pide a tu banco abrir un DPS con débito automático el día después de que llegue tu sueldo. Cualquier monto sirve; el hábito importa más que la cantidad.",
-    percentOfEachPayment: "El día que llegue un pago, pasa el {percent} a una cuenta de ahorro aparte antes de gastar nada. Mantén la misma parte en los meses buenos y en los flojos; cuando el saldo sea estable, conviértelo en un DPS.",
+    dps: "Pide a tu banco que abra este producto: {product}, con débito automático el día {day} de cada mes, el día después de que llegue tu sueldo. Cualquier monto sirve; el hábito importa más que la cantidad.",
+    dpsNoPayday: "Pide a tu banco que abra este producto: {product}, con débito automático el día después de que llegue tu sueldo. Cualquier monto sirve; el hábito importa más que la cantidad.",
+    percentOfEachPayment: "El día que llegue un pago, pasa el {percent} a una cuenta de ahorro aparte antes de gastar nada. Mantén la misma parte en los meses buenos y en los flojos; cuando el saldo sea estable, cambia a una transferencia mensual fija.",
   },
 
   note: {
-    instrumentDps: "Sugerimos un DPS porque se debita automáticamente un día fijo, así que el ahorro ocurre antes de que puedas gastarlo.",
+    instrumentDps: "Sugerimos una transferencia mensual automática porque se hace un día fijo, así que el ahorro ocurre antes de que puedas gastarlo.",
   },
 
   status: {

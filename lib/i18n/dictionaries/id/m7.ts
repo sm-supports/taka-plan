@@ -51,7 +51,7 @@ export const m7: Dictionary["m7"] = {
     },
     retiredSavings: {
       title: "Tabungan apa yang Anda miliki sekarang?",
-      hint: "Pencairan dana hari tua dan pesangon, FDR, sertifikat tabungan, dan apa pun yang menjadi sumber hidup Anda.",
+      hint: "Pencairan dana hari tua dan pesangon, deposito berjangka, sertifikat tabungan, dan apa pun yang menjadi sumber hidup Anda.",
       label: "Tabungan saat ini",
     },
     otherIncome: {
@@ -124,7 +124,7 @@ export const m7: Dictionary["m7"] = {
     retireeType: "Pensiun dari",
     retiredSavings: {
       label: "Tabungan saat ini",
-      hint: "Semua sumber hidup Anda: pencairan, FDR, sertifikat tabungan.",
+      hint: "Semua sumber hidup Anda: pencairan, deposito berjangka, sertifikat tabungan.",
     },
     otherIncome: {
       label: "Penghasilan lain sebulan",
@@ -261,7 +261,7 @@ export const m7: Dictionary["m7"] = {
     },
     pot: {
       title: "Aturan dua wadah",
-      body: "Simpan {amount} — penarikan untuk {years} tahun — di FDR dan surat perbendaharaan negara yang bisa cepat dicairkan. Sisanya tetap diinvestasikan dan mengisi ulang wadah ini setahun sekali.",
+      body: "Simpan {amount} — penarikan untuk {years} tahun — di deposito berjangka dan surat perbendaharaan negara yang bisa cepat dicairkan. Sisanya tetap diinvestasikan dan mengisi ulang wadah ini setahun sekali.",
     },
     options: {
       title: "Cara mengubah tabungan menjadi penghasilan rutin",
@@ -313,7 +313,7 @@ export const m7: Dictionary["m7"] = {
     pensionerCertificate: "Sertifikat tabungan pensiunan: keuntungan bulanan, khusus pensiunan pemerintah, semi-pemerintah, dan angkatan bersenjata, sampai batas tertentu.",
     savingsCertificate: "Sertifikat tabungan pemerintah: keuntungan tetap yang dijamin negara.",
     tbonds: "Obligasi negara: dijamin pemerintah, dengan kupon tetap setiap enam bulan.",
-    depositLadder: "Tangga FDR: deposito yang jatuh tempo bergantian, sehingga sebagian uang bisa dipakai setiap tahun.",
+    depositLadder: "Tangga deposito: deposito yang jatuh tempo bergantian, sehingga sebagian uang bisa dipakai setiap tahun.",
     annuity: "Anuitas seumur hidup dari perusahaan asuransi milik negara: uang pensiun seumur hidup, berapa pun panjang usia Anda. Konsekuensinya: uangnya tidak bisa diwariskan.",
   },
 };

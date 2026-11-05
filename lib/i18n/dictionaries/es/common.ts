@@ -103,9 +103,9 @@ export const common: Dictionary["common"] = {
 
   instrument: {
     savings_account: "Cuenta de ahorro",
-    fdr_3m: "FDR a 3 meses",
-    fdr_1y: "FDR a 1 año",
-    dps: "DPS",
+    fdr_3m: "Depósito a plazo fijo a 3 meses",
+    fdr_1y: "Depósito a plazo fijo a 1 año",
+    dps: "Ahorro programado",
     sanchayapatra_5y: "Certificado de ahorro del Estado",
     tbill_91d: "Letra del Tesoro a 91 días",
     tbond_5y: "Bono del Tesoro a 5 años",

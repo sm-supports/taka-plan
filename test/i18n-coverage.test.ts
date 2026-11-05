@@ -28,6 +28,7 @@ import {
 } from "@taka/engine";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { defaultLocale, isLocale, LOCALE_META, locales, type Locale } from "@/lib/i18n/config";
+import { bangladeshEn } from "@/lib/i18n/dictionaries/en/bangladesh";
 import { bn } from "@/lib/i18n/dictionaries/bn";
 import { en } from "@/lib/i18n/dictionaries/en";
 import { getDictionary } from "@/lib/i18n/server";
@@ -263,6 +264,25 @@ describe("text every country sees does not assume Bangladesh", () => {
       const bad = leafPaths(d).filter((k) => !allowed(k) && pattern.test(String(getPath(d, k)).replace(/Taka Plan/g, "")));
       expect(bad, `${l} names the taka`).toEqual([]);
     }
+  });
+
+  // Bangla is left out: it keeps the names people in Bangladesh know, as its glossary test below requires.
+  it("no text outside the allowed places uses Bangladeshi product names or institutions", async () => {
+    const names = /\b(?:FDRs?|DPS|CIB|BO)\b|Sanchayapatra|سنچیاپترا|Bangladesh Bank|بنك بنغلاديش|बांग्लादेश बैंक|بنگلہ دیش بینک/;
+    const allowedHere = (key: string) => allowed(key) || key.startsWith("about.sources.group");
+    for (const l of locales) {
+      if (l === "bn") continue;
+      const d = await getDictionary(l);
+      const bad = leafPaths(d).filter((k) => !allowedHere(k) && names.test(String(getPath(d, k))));
+      expect(bad, `${l} uses Bangladeshi names`).toEqual([]);
+    }
+  });
+
+  it("Bangladesh in English keeps a glossary entry for every name the generic text replaced", () => {
+    expect(Object.keys(bangladeshEn.terms).sort()).toEqual(["bo_account", "cib", "dps", "fdr", "ladder", "real_return", "sanchayapatra", "tbill", "tbond"]);
+    for (const [k, v] of Object.entries(bangladeshEn.terms)) expect(leafPaths(en), k).toContain(`terms.${k}.title`), expect(v.body.length).toBeGreaterThan(0);
+    expect(bangladeshEn.terms.fdr.title).toMatch(/^FDR/);
+    expect(bangladeshEn.terms.cib.body).toMatch(/Bangladesh Bank/);
   });
 
   it("the about page's opening line is not addressed to Bangladesh", async () => {

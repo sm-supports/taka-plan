@@ -99,9 +99,9 @@ export const common: Dictionary["common"] = {
 
   instrument: {
     savings_account: "Rekening tabungan",
-    fdr_3m: "FDR 3 bulan",
-    fdr_1y: "FDR 1 tahun",
-    dps: "DPS",
+    fdr_3m: "Deposito berjangka 3 bulan",
+    fdr_1y: "Deposito berjangka 1 tahun",
+    dps: "Tabungan berencana",
     sanchayapatra_5y: "Sertifikat tabungan pemerintah",
     tbill_91d: "Surat perbendaharaan negara 91 hari",
     tbond_5y: "Obligasi negara 5 tahun",

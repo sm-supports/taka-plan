@@ -47,7 +47,7 @@ export const m7: Dictionary["m7"] = {
     },
     retiredSavings: {
       title: "Quanto você tem de poupança agora?",
-      hint: "O que recebeu do fundo de previdência e da gratificação por tempo de serviço, FDRs, certificados de poupança e tudo o mais de que você vive.",
+      hint: "O que recebeu do fundo de previdência e da gratificação por tempo de serviço, depósitos a prazo, certificados de poupança e tudo o mais de que você vive.",
       label: "Poupança agora",
     },
     otherIncome: {
@@ -120,7 +120,7 @@ export const m7: Dictionary["m7"] = {
     retireeType: "De onde você se aposentou",
     retiredSavings: {
       label: "Poupança agora",
-      hint: "Tudo de que você vive: valores recebidos, FDRs, certificados de poupança.",
+      hint: "Tudo de que você vive: valores recebidos, depósitos a prazo, certificados de poupança.",
     },
     otherIncome: {
       label: "Outra renda por mês",
@@ -257,7 +257,7 @@ export const m7: Dictionary["m7"] = {
     },
     pot: {
       title: "A regra dos dois potes",
-      body: "Deixe {amount} — {years} anos de retiradas — em FDRs e letras do Tesouro que você possa acessar rápido. O resto continua investido e reabastece este pote uma vez por ano.",
+      body: "Deixe {amount} — {years} anos de retiradas — em depósitos a prazo e letras do Tesouro que você possa acessar rápido. O resto continua investido e reabastece este pote uma vez por ano.",
     },
     options: {
       title: "Formas de transformar poupança em renda estável",
@@ -309,7 +309,7 @@ export const m7: Dictionary["m7"] = {
     pensionerCertificate: "Certificado de poupança para aposentados: rendimento mensal, só para aposentados do governo, de empresas públicas e das Forças Armadas, até um limite.",
     savingsCertificate: "Certificado de poupança do governo: rendimento fixo garantido pelo Estado.",
     tbonds: "Títulos do Tesouro: garantidos pelo governo, com cupom fixo a cada seis meses.",
-    depositLadder: "Escada de FDR: depósitos que vencem um depois do outro, para liberar algum dinheiro todo ano.",
+    depositLadder: "Escada de depósitos: depósitos que vencem um depois do outro, para liberar algum dinheiro todo ano.",
     annuity: "Renda vitalícia da seguradora estatal: uma pensão por toda a vida, por mais que você viva. A contrapartida: o dinheiro não pode ser deixado como herança.",
   },
 };

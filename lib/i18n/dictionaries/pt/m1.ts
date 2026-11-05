@@ -64,10 +64,10 @@ export const m1: Dictionary["m1"] = {
       title: "Onde guardar",
       savingsAccount: "Conta poupança com saque no mesmo dia",
       savingsAccountHint: "Um mês de gastos essenciais que você pode sacar no mesmo dia.",
-      fdrLadder: "Escada de FDR de 3 meses",
-      fdrLadderHint: "O restante, em três FDRs abertos com um mês de diferença, para que um vença todo mês.",
-      fdrPerSlice: "Cada FDR",
-      fdrSlices: "Três FDRs de {amount} cada, um aberto a cada mês.",
+      fdrLadder: "Escada de depósitos de 3 meses",
+      fdrLadderHint: "O restante, em três depósitos a prazo abertos com um mês de diferença, para que um vença todo mês.",
+      fdrPerSlice: "Cada depósito",
+      fdrSlices: "Três depósitos de {amount} cada, um aberto a cada mês.",
       banksNeeded: "Bancos para dividir",
       banksNeededHint: "O seguro de depósitos cobre só {limit} por banco, então não deixe mais que isso em nenhum banco.",
       sanchayapatraLayer: "Terceira camada: {product}",
@@ -78,7 +78,7 @@ export const m1: Dictionary["m1"] = {
   rule: {
     noStocks: "Nada de ações ou fundos de ações para este dinheiro. Ele precisa estar lá, com valor cheio, num dia ruim.",
     sanchayapatraThirdLayer: "{product} é só uma terceira camada para uma reserva muito grande: rende mais, mas resgatar antes do prazo custa parte do ganho.",
-    cardBridge: "Um cartão de crédito pode cobrir os um ou dois dias que um FDR leva para ser resgatado — só se você pagar a fatura inteira dentro do período sem juros.",
+    cardBridge: "Um cartão de crédito pode cobrir os um ou dois dias que um depósito a prazo leva para ser resgatado — só se você pagar a fatura inteira dentro do período sem juros.",
     refill: "Usou a reserva? Reponha antes de colocar dinheiro em qualquer outro lugar.",
     notAnEmergency: "Uma viagem, um celular ou um presente de casamento não é emergência. Poupe para eles como objetivos.",
   },
@@ -86,8 +86,8 @@ export const m1: Dictionary["m1"] = {
   next: {
     openSavings: "Abra uma conta poupança em qualquer banco com seu documento de identidade; transfira para ela um mês de gastos essenciais e programe a transferência automática do restante.",
     fdrLadder: "Vá a qualquer banco com seu documento de identidade e seu número fiscal e peça um {product} de 3 meses. Abra um por mês durante três meses, para que um vença todo mês.",
-    splitBanks: "Sua reserva é maior que o limite do seguro de depósitos para um banco. Abra FDRs num segundo banco, para que nenhum banco guarde mais que o limite.",
-    full: "Sua reserva está completa. Continue renovando os FDRs e, depois de qualquer saque, reponha a reserva antes de poupar para outra coisa.",
+    splitBanks: "Sua reserva é maior que o limite do seguro de depósitos para um banco. Abra depósitos a prazo num segundo banco, para que nenhum banco guarde mais que o limite.",
+    full: "Sua reserva está completa. Continue renovando os depósitos e, depois de qualquer saque, reponha a reserva antes de poupar para outra coisa.",
   },
 
   status: {

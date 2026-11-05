@@ -85,7 +85,7 @@ export const m3 = {
     },
     card_utilisation: {
       title: "Card use above {threshold} of the limit",
-      body: "You are using {value} of your card limit. Keep it under half: it lowers the bill, protects your CIB record and leaves room for a real emergency.",
+      body: "You are using {value} of your card limit. Keep it under half: it lowers the bill, protects your credit record and leaves room for a real emergency.",
     },
     emi_ratio: {
       title: "EMIs above {threshold} of take-home",

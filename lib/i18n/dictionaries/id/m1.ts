@@ -65,10 +65,10 @@ export const m1: Dictionary["m1"] = {
       title: "Di mana menyimpannya",
       savingsAccount: "Rekening tabungan (tarik hari itu juga)",
       savingsAccountHint: "Kebutuhan pokok satu bulan yang bisa Anda tarik hari itu juga.",
-      fdrLadder: "Tangga FDR 3 bulan",
-      fdrLadderHint: "Sisanya, di tiga FDR yang dibuka berselang satu bulan agar satu jatuh tempo setiap bulan.",
-      fdrPerSlice: "Tiap FDR",
-      fdrSlices: "Tiga FDR masing-masing {amount}, satu dibuka setiap bulan.",
+      fdrLadder: "Tangga deposito 3 bulan",
+      fdrLadderHint: "Sisanya, di tiga deposito berjangka yang dibuka berselang satu bulan agar satu jatuh tempo setiap bulan.",
+      fdrPerSlice: "Tiap deposito",
+      fdrSlices: "Tiga deposito masing-masing {amount}, satu dibuka setiap bulan.",
       banksNeeded: "Jumlah bank untuk menyebarnya",
       banksNeededHint: "Penjaminan simpanan hanya menanggung {limit} per bank, jadi jangan simpan lebih dari itu di satu bank.",
       sanchayapatraLayer: "Lapisan ketiga: {product}",
@@ -79,7 +79,7 @@ export const m1: Dictionary["m1"] = {
   rule: {
     noStocks: "Jangan taruh uang ini di saham atau reksa dana saham. Uang ini harus ada, dengan nilai penuh, di hari yang buruk.",
     sanchayapatraThirdLayer: "{product} hanya lapisan ketiga untuk dana darurat yang sangat besar: bunganya lebih tinggi, tetapi mencairkannya lebih awal memotong sebagian keuntungan.",
-    cardBridge: "Kartu kredit bisa menjembatani satu atau dua hari yang dibutuhkan untuk mencairkan FDR — hanya bila Anda melunasi tagihannya penuh dalam masa bebas bunga.",
+    cardBridge: "Kartu kredit bisa menjembatani satu atau dua hari yang dibutuhkan untuk mencairkan deposito berjangka — hanya bila Anda melunasi tagihannya penuh dalam masa bebas bunga.",
     refill: "Dana sudah terpakai? Isi lagi sebelum menaruh uang di tempat lain.",
     notAnEmergency: "Liburan, ponsel, atau kado pernikahan bukan keadaan darurat. Tabung untuk itu sebagai tujuan.",
   },
@@ -87,8 +87,8 @@ export const m1: Dictionary["m1"] = {
   next: {
     openSavings: "Buka rekening tabungan di bank mana saja dengan kartu identitas Anda; pindahkan kebutuhan pokok satu bulan ke sana dan atur transfer rutin untuk sisanya.",
     fdrLadder: "Datangi bank mana saja dengan kartu identitas dan nomor pajak Anda; minta {product} 3 bulan. Buka satu setiap bulan selama tiga bulan agar satu jatuh tempo setiap bulan.",
-    splitBanks: "Dana Anda lebih besar dari batas penjaminan simpanan untuk satu bank. Buka FDR di bank kedua agar tidak ada bank yang menyimpan lebih dari batas itu.",
-    full: "Dana Anda sudah penuh. Biarkan FDR terus diperpanjang, dan isi lagi dana setelah ada penarikan sebelum menabung untuk hal lain.",
+    splitBanks: "Dana Anda lebih besar dari batas penjaminan simpanan untuk satu bank. Buka deposito berjangka di bank kedua agar tidak ada bank yang menyimpan lebih dari batas itu.",
+    full: "Dana Anda sudah penuh. Biarkan deposito terus diperpanjang, dan isi lagi dana setelah ada penarikan sebelum menabung untuk hal lain.",
   },
 
   status: {

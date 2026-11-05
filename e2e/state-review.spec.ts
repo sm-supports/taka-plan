@@ -171,6 +171,37 @@ for (const [country, locale] of [["US", "en"], ["LV", "ru"], ["UG", "sw"]]) {
   });
 }
 
+test.describe("banking terms follow the country", () => {
+  const open = async (page: Page, country: string, path: string) => {
+    await seed(page, v2({ country }), { tp_locale: "en", tp_country: country });
+    await page.goto(path);
+    await page.waitForLoadState("networkidle");
+  };
+
+  test("Bangladesh keeps DPS and its own glossary entry", async ({ page }) => {
+    await open(page, "BD", "/en/m4?demo=1");
+    await page.getByRole("button", { name: "DPS", exact: true }).click();
+    await expect(page.getByRole("dialog")).toContainText("deposit pension scheme");
+  });
+
+  test("India sees its recurring deposit and a glossary that fits it", async ({ page }) => {
+    await open(page, "IN", "/en/m4?demo=1");
+    await page.getByRole("button", { name: /Recurring deposit/ }).click();
+    await expect(page.getByRole("dialog")).toContainText("Recurring deposit");
+    await expect(page.getByRole("dialog")).not.toContainText("DPS");
+  });
+
+  test("Brazil has no recurring deposit, so it gets a savings account, and never sees FDR or DPS", async ({ page }) => {
+    await open(page, "BR", "/en/m4?demo=1");
+    await expect(page.getByRole("button", { name: /Recurring deposit/ })).toHaveCount(0);
+    await expect(page.locator("main")).toContainText(/savings|poupan/i);
+    await expect(page.locator("main")).not.toContainText(/\bDPS\b|\bFDRs?\b/);
+    await open(page, "BR", "/en/m1?demo=1");
+    await expect(page.locator("main")).toContainText("deposit ladder");
+    await expect(page.locator("main")).not.toContainText(/\bDPS\b|\bFDRs?\b/);
+  });
+});
+
 test.describe("broken storage", () => {
   test("a corrupted store blob starts fresh instead of a skeleton forever", async ({ page }) => {
     await seed(page, '{"state":{"schemaVersion":2,"coun', { tp_locale: "en" });

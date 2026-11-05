@@ -44,19 +44,19 @@ export const m4 = {
     },
     percentOfEachPayment: "Move {percent} of each payment to savings the day it arrives",
     instrument: "Put it in",
-    instrumentHint: "A DPS auto-debits on a fixed day, so the saving happens before you can spend it.",
+    instrumentHint: "The money moves automatically on a fixed day, so the saving happens before you can spend it.",
     transferDay: "Standing transfer on day {day} of each month",
     transferDayUnknown: "Tell us your payday and we will suggest a transfer date.",
   },
 
   next: {
-    dps: "Ask your bank to open a DPS with auto-debit on day {day} of each month, the day after your salary lands. Any amount is fine; the habit matters more than the size.",
-    dpsNoPayday: "Ask your bank to open a DPS with auto-debit on the day after your salary lands. Any amount is fine; the habit matters more than the size.",
-    percentOfEachPayment: "The day a payment lands, move {percent} of it to a separate savings account before you spend any of it. Keep the share the same in big months and small ones; once the balance is steady, turn it into a DPS.",
+    dps: "Ask your bank to open a {product} with auto-debit on day {day} of each month, the day after your salary lands. Any amount is fine; the habit matters more than the size.",
+    dpsNoPayday: "Ask your bank to open a {product} with auto-debit on the day after your salary lands. Any amount is fine; the habit matters more than the size.",
+    percentOfEachPayment: "The day a payment lands, move {percent} of it to a separate savings account before you spend any of it. Keep the share the same in big months and small ones; once the balance is steady, switch to a fixed monthly transfer.",
   },
 
   note: {
-    instrumentDps: "We suggest a DPS because it auto-debits on a fixed day, so the saving happens before you can spend it.",
+    instrumentDps: "We suggest an automatic monthly transfer because it happens on a fixed day, so the saving happens before you can spend it.",
   },
 
   status: {

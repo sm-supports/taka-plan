@@ -65,10 +65,10 @@ export const m1: Dictionary["m1"] = {
       title: "放在哪里",
       savingsAccount: "当天可取的储蓄账户",
       savingsAccountHint: "一个月的必要开支，当天就能取出。",
-      fdrLadder: "3个月期 FDR 阶梯",
-      fdrLadderHint: "其余部分分成三笔 FDR，连续三个月每月开一笔，这样每个月都有一笔到期。",
-      fdrPerSlice: "每笔 FDR",
-      fdrSlices: "三笔 FDR，每笔 {amount}，每月开一笔。",
+      fdrLadder: "3个月期存款阶梯",
+      fdrLadderHint: "其余部分分成三笔定期存款，连续三个月每月开一笔，这样每个月都有一笔到期。",
+      fdrPerSlice: "每笔存款",
+      fdrSlices: "三笔存款，每笔 {amount}，每月开一笔。",
       banksNeeded: "需要分散到的银行数",
       banksNeededHint: "存款保险每家银行只保障 {limit}，所以任何一家银行的存款都不要超过这个数。",
       sanchayapatraLayer: "第三层：{product}",
@@ -79,7 +79,7 @@ export const m1: Dictionary["m1"] = {
   rule: {
     noStocks: "这笔钱不要放股票或股票基金。哪怕在最糟的日子，它也必须足额都在。",
     sanchayapatraThirdLayer: "{product}只适合作为超大储备的第三层：收益更高，但提前兑付会损失部分收益。",
-    cardBridge: "FDR 兑现需要一两天，这期间可以用信用卡过渡——前提是在免息期内全额还清账单。",
+    cardBridge: "定期存款兑现需要一两天，这期间可以用信用卡过渡——前提是在免息期内全额还清账单。",
     refill: "用过这笔基金？先把它补满，再把钱放到其他地方。",
     notAnEmergency: "度假、买手机或婚礼礼金都不算紧急情况。请把它们当作目标来存钱。",
   },
@@ -87,8 +87,8 @@ export const m1: Dictionary["m1"] = {
   next: {
     openSavings: "带上身份证去任意一家银行开一个储蓄账户；把一个月的必要开支转进去，其余部分设置定期转账。",
     fdrLadder: "带上身份证和税号去任意一家银行，申请一笔3个月期{product}。连续三个月每月开一笔，这样每个月都有一笔到期。",
-    splitBanks: "您的基金超过了单家银行的存款保险上限。到第二家银行开 FDR，让每家银行的存款都不超过上限。",
-    full: "您的基金已存满。让 FDR 继续滚存；每次取用后，先补满基金，再做其他储蓄。",
+    splitBanks: "您的基金超过了单家银行的存款保险上限。到第二家银行开定期存款，让每家银行的存款都不超过上限。",
+    full: "您的基金已存满。让存款继续滚存；每次取用后，先补满基金，再做其他储蓄。",
   },
 
   status: {

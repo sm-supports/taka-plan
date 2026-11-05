@@ -45,19 +45,19 @@ export const m4: Dictionary["m4"] = {
     },
     percentOfEachPayment: "Transfira {percent} de cada pagamento para a poupança no dia em que ele chegar",
     instrument: "Coloque em",
-    instrumentHint: "Um DPS debita automaticamente num dia fixo, então a poupança acontece antes que você possa gastar.",
+    instrumentHint: "O dinheiro sai automaticamente num dia fixo, então a poupança acontece antes que você possa gastar.",
     transferDay: "Transferência automática no dia {day} de cada mês",
     transferDayUnknown: "Diga o dia do seu pagamento e sugerimos uma data de transferência.",
   },
 
   next: {
-    dps: "Peça ao seu banco para abrir um DPS com débito automático no dia {day} de cada mês, o dia seguinte ao do seu salário. Qualquer valor serve; o hábito importa mais que o tamanho.",
-    dpsNoPayday: "Peça ao seu banco para abrir um DPS com débito automático no dia seguinte ao do seu salário. Qualquer valor serve; o hábito importa mais que o tamanho.",
-    percentOfEachPayment: "No dia em que um pagamento cair, transfira {percent} dele para uma conta poupança separada antes de gastar qualquer parte. Mantenha a mesma proporção nos meses bons e nos fracos; quando o saldo estiver estável, transforme-o num DPS.",
+    dps: "Peça ao seu banco para abrir este produto: {product}, com débito automático no dia {day} de cada mês, o dia seguinte ao do seu salário. Qualquer valor serve; o hábito importa mais que o tamanho.",
+    dpsNoPayday: "Peça ao seu banco para abrir este produto: {product}, com débito automático no dia seguinte ao do seu salário. Qualquer valor serve; o hábito importa mais que o tamanho.",
+    percentOfEachPayment: "No dia em que um pagamento cair, transfira {percent} dele para uma conta poupança separada antes de gastar qualquer parte. Mantenha a mesma proporção nos meses bons e nos fracos; quando o saldo estiver estável, passe para uma transferência mensal fixa.",
   },
 
   note: {
-    instrumentDps: "Sugerimos um DPS porque ele debita automaticamente num dia fixo, então a poupança acontece antes que você possa gastar.",
+    instrumentDps: "Sugerimos uma transferência mensal automática porque ela sai num dia fixo, então a poupança acontece antes que você possa gastar.",
   },
 
   status: {

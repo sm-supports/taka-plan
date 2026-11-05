@@ -87,7 +87,7 @@ export const m3: Dictionary["m3"] = {
     },
     card_utilisation: {
       title: "Pemakaian kartu di atas {threshold} dari limit",
-      body: "Anda memakai {value} dari limit kartu. Jaga di bawah setengah: tagihan lebih kecil, catatan CIB Anda terlindungi, dan masih ada ruang untuk keadaan darurat sungguhan.",
+      body: "Anda memakai {value} dari limit kartu. Jaga di bawah setengah: tagihan lebih kecil, catatan kredit Anda terlindungi, dan masih ada ruang untuk keadaan darurat sungguhan.",
     },
     emi_ratio: {
       title: "Cicilan di atas {threshold} dari penghasilan bersih",

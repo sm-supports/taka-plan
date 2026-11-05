@@ -51,7 +51,7 @@ export const m7: Dictionary["m7"] = {
     },
     retiredSavings: {
       title: "¿Qué ahorros tienes ahora?",
-      hint: "Lo que cobraste del fondo de previsión y la indemnización por antigüedad, FDR, certificados de ahorro y todo lo demás de lo que vives.",
+      hint: "Lo que cobraste del fondo de previsión y la indemnización por antigüedad, depósitos a plazo fijo, certificados de ahorro y todo lo demás de lo que vives.",
       label: "Ahorros actuales",
     },
     otherIncome: {
@@ -124,7 +124,7 @@ export const m7: Dictionary["m7"] = {
     retireeType: "De dónde te jubilaste",
     retiredSavings: {
       label: "Ahorros actuales",
-      hint: "Todo lo que te da para vivir: liquidaciones, FDR, certificados de ahorro.",
+      hint: "Todo lo que te da para vivir: liquidaciones, depósitos a plazo fijo, certificados de ahorro.",
     },
     otherIncome: {
       label: "Otros ingresos al mes",
@@ -261,7 +261,7 @@ export const m7: Dictionary["m7"] = {
     },
     pot: {
       title: "La regla de las dos bolsas",
-      body: "Guarda {amount} ({years} años de retiros) en FDR y letras del Tesoro a los que puedas acceder rápido. El resto sigue invertido y rellena esta bolsa una vez al año.",
+      body: "Guarda {amount} ({years} años de retiros) en depósitos a plazo fijo y letras del Tesoro a los que puedas acceder rápido. El resto sigue invertido y rellena esta bolsa una vez al año.",
     },
     options: {
       title: "Formas de convertir ahorros en un ingreso estable",
@@ -313,7 +313,7 @@ export const m7: Dictionary["m7"] = {
     pensionerCertificate: "Certificado de ahorro para pensionados: rendimiento mensual, solo para jubilados del sector público, de entidades semipúblicas y de las fuerzas armadas, hasta un límite.",
     savingsCertificate: "Certificado de ahorro del Estado: un rendimiento fijo respaldado por el Estado.",
     tbonds: "Bonos del Tesoro: respaldados por el Estado, con un cupón fijo cada seis meses.",
-    depositLadder: "Escalera de FDR: depósitos que vencen uno tras otro, para que cada año quede libre algo de dinero.",
+    depositLadder: "Escalera de depósitos: depósitos que vencen uno tras otro, para que cada año quede libre algo de dinero.",
     annuity: "Renta vitalicia de la aseguradora estatal: una pensión de por vida, vivas lo que vivas. A cambio, el dinero no se puede heredar.",
   },
 };

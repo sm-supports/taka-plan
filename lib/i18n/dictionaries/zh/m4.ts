@@ -46,19 +46,19 @@ export const m4: Dictionary["m4"] = {
     },
     percentOfEachPayment: "每笔收入到账当天，把其中的 {percent} 转入储蓄",
     instrument: "存到",
-    instrumentHint: "DPS 在固定日期自动扣款，钱在您花掉之前就存起来了。",
+    instrumentHint: "钱会在固定日期自动转走，在您花掉之前就存起来了。",
     transferDay: "每月 {day} 日定期转账",
     transferDayUnknown: "告诉我们您的发薪日，我们会建议一个转账日期。",
   },
 
   next: {
-    dps: "请银行为您开一个 DPS，设定每月 {day} 日自动扣款，也就是工资到账的第二天。金额多少都行，养成习惯比金额大小更重要。",
-    dpsNoPayday: "请银行为您开一个 DPS，设定在工资到账后第二天自动扣款。金额多少都行，养成习惯比金额大小更重要。",
-    percentOfEachPayment: "每笔收入到账当天，在花任何钱之前，先把其中的 {percent} 转入一个单独的储蓄账户。收入多的月份和少的月份都保持同样的比例；等余额稳定后，再改成 DPS。",
+    dps: "请银行为您开一个{product}，设定每月 {day} 日自动扣款，也就是工资到账的第二天。金额多少都行，养成习惯比金额大小更重要。",
+    dpsNoPayday: "请银行为您开一个{product}，设定在工资到账后第二天自动扣款。金额多少都行，养成习惯比金额大小更重要。",
+    percentOfEachPayment: "每笔收入到账当天，在花任何钱之前，先把其中的 {percent} 转入一个单独的储蓄账户。收入多的月份和少的月份都保持同样的比例；等余额稳定后，再改成每月固定转账。",
   },
 
   note: {
-    instrumentDps: "我们建议用 DPS，因为它在固定日期自动扣款，钱在您花掉之前就存起来了。",
+    instrumentDps: "我们建议每月自动转账，因为它在固定日期进行，钱在您花掉之前就存起来了。",
   },
 
   status: {

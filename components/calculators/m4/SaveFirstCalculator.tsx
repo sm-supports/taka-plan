@@ -7,7 +7,7 @@
  * `?demo=1` (salaried) / `?demo=freelance` render local fixtures instead of the engine (see ./demo.ts).
  */
 import { useMemo, useState } from "react";
-import { computeSaveFirst, type IncomeType, type M4Input, type M4Result, type Money } from "@taka/engine";
+import { computeSaveFirst, type IncomeType, type Instrument, type M4Input, type M4Result, type Money } from "@taka/engine";
 import { StartOverButton } from "@/components/drafts/StartOverButton";
 import { BigNumber } from "@/components/ui/BigNumber";
 import { Button } from "@/components/ui/Button";
@@ -18,9 +18,10 @@ import { MoneyInput } from "@/components/ui/MoneyInput";
 import { SliderWithNumber } from "@/components/ui/SliderWithNumber";
 import { StatusPill } from "@/components/ui/StatusPill";
 import { Term } from "@/components/ui/Term";
+import { useProductName } from "@/components/ui/useProductName";
 import { useFormat } from "@/lib/i18n/useFormat";
 import { useT } from "@/lib/i18n/useT";
-import { useCountryRates } from "@/lib/country/useCountry";
+import { useCountry, useCountryRates } from "@/lib/country/useCountry";
 import { useTakaStore } from "@/lib/store/store";
 import { calcErrorKey, type CalcErrorKey } from "../shared/engineError";
 import { DemoBanner, Field, FigureList, Section, type Figure } from "../shared/Figures";
@@ -49,6 +50,11 @@ function padIncomes(list: readonly Money[] | undefined): Array<Money | null> {
 export function SaveFirstCalculator() {
   const { t } = useT();
   const f = useFormat();
+  const names = useProductName();
+  const { context } = useCountry();
+  // A recurring deposit where the country has one, otherwise a monthly transfer into a savings account.
+  const dpsOffered = !context.unavailable.includes("dps");
+  const savingsSlot: Instrument = dpsOffered ? "dps" : "savings_account";
   const snapshot = useCountryRates();
   const today = useToday();
   const demo = useDemoMode();
@@ -219,7 +225,7 @@ export function SaveFirstCalculator() {
               <div className="mt-3 border-t border-brand-200 pt-3">
                 <p className="text-sm text-brand-900/80">{t("m4.result.instrument")}</p>
                 <p className="mt-0.5 text-lg font-semibold text-brand-900">
-                  <Term k="dps">{t(`common.instrument.${result.instrument}`)}</Term>
+                  {dpsOffered ? <Term k="dps">{names.label(savingsSlot)}</Term> : names.label(savingsSlot)}
                 </p>
                 <p className="mt-1 text-sm text-brand-900/80">{t("m4.result.instrumentHint")}</p>
                 {result.mode === "fixed" && (
@@ -233,8 +239,8 @@ export function SaveFirstCalculator() {
                 {result.mode === "percentOfEachPayment"
                   ? t("m4.next.percentOfEachPayment", { percent: f.percent(result.percentOfEachPayment ?? result.savingsRate, 0) })
                   : result.transferDay === null
-                    ? t("m4.next.dpsNoPayday")
-                    : t("m4.next.dps", { day: f.number(result.transferDay) })}
+                    ? t("m4.next.dpsNoPayday", { product: names.prose(savingsSlot) })
+                    : t("m4.next.dps", { day: f.number(result.transferDay), product: names.prose(savingsSlot) })}
               </p>
             </Card>
 

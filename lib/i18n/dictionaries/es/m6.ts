@@ -202,7 +202,7 @@ export const m6: Dictionary["m6"] = {
     equityFund:
       "Elige un fondo abierto diversificado e inicia un plan mensual con la gestora del fondo o con un banco que venda sus participaciones. Lleva tu documento de identidad y una cuenta bancaria. Reparte entre muchas empresas; nunca pongas esta parte en una sola acción.",
     directShares:
-      "Necesitas una cuenta BO en una casa de bolsa. Ten al menos diez empresas grandes de cinco o más sectores, sin que ninguna acción supere una décima parte de esta porción. Prepárate para seguirlas tú mismo.",
+      "Necesitas una cuenta en una casa de bolsa. Ten al menos diez empresas grandes de cinco o más sectores, sin que ninguna acción supere una décima parte de esta porción. Prepárate para seguirlas tú mismo.",
     gold: "Compra lingotes o monedas de 22 quilates a un joyero miembro de la asociación de joyeros y guarda el comprobante. Las joyas tienen un costo de fabricación y se revenden por menos, así que son para llevar, no para invertir.",
   },
 };

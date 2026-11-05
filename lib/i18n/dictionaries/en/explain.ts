@@ -71,8 +71,8 @@ export const explain = {
       body: "One month of essentials stays in a savings account you can withdraw from today: {essentials} = {result}. This is the money for the first week of any emergency.",
     },
     tier2: {
-      title: "Tier 2: 3-month FDR ladder",
-      body: "Everything above tier 1 goes into FDRs: {target} − {tier1} = {result}, split into three FDRs opened a month apart so one matures every month.",
+      title: "Tier 2: 3-month deposit ladder",
+      body: "Everything above tier 1 goes into fixed deposits: {target} − {tier1} = {result}, split into three deposits opened a month apart so one matures every month.",
     },
     banks: {
       title: "Banks needed",

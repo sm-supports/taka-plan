@@ -47,7 +47,7 @@ describe("formatInput naming convention", () => {
   });
 
   it("translates instrument ids and passes other strings through", () => {
-    expect(formatInput("instrument", "dps", fEn, tEn)).toBe("DPS");
+    expect(formatInput("instrument", "dps", fEn, tEn)).toBe("Recurring deposit");
     expect(formatInput("instrument", "sanchayapatra_5y", fBn, tBn)).toBe("৫ বছর মেয়াদি সঞ্চয়পত্র");
     expect(formatInput("name", "Motorbike", fEn, tEn)).toBe("Motorbike");
     expect(formatInput("source", "suggested", fEn, tEn)).toBe("suggested");

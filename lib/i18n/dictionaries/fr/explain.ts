@@ -34,8 +34,8 @@ export const explain: Dictionary["explain"] = {
       body: "Un mois de dépenses essentielles reste sur un compte d'épargne retirable aujourd'hui : {essentials} = {result}. C'est l'argent de la première semaine de toute urgence.",
     },
     tier2: {
-      title: "Niveau 2 : échelle de FDR à 3 mois",
-      body: "Tout ce qui dépasse le niveau 1 va en FDR : {target} − {tier1} = {result}, réparti en trois FDR ouverts à un mois d'écart, pour que l'un arrive à échéance chaque mois.",
+      title: "Niveau 2 : échelle de dépôts à 3 mois",
+      body: "Tout ce qui dépasse le niveau 1 va en dépôts à terme : {target} − {tier1} = {result}, réparti en trois dépôts ouverts à un mois d'écart, pour que l'un arrive à échéance chaque mois.",
     },
     banks: {
       title: "Banques nécessaires",

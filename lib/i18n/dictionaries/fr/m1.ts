@@ -65,10 +65,10 @@ export const m1: Dictionary["m1"] = {
       title: "Où le garder",
       savingsAccount: "Compte d'épargne disponible le jour même",
       savingsAccountHint: "Un mois de dépenses essentielles, retirable le jour même.",
-      fdrLadder: "Échelle de FDR à 3 mois",
-      fdrLadderHint: "Le reste, dans trois FDR ouverts à un mois d'écart, pour que l'un arrive à échéance chaque mois.",
-      fdrPerSlice: "Chaque FDR",
-      fdrSlices: "Trois FDR de {amount} chacun, un ouvert chaque mois.",
+      fdrLadder: "Échelle de dépôts à 3 mois",
+      fdrLadderHint: "Le reste, dans trois dépôts à terme ouverts à un mois d'écart, pour que l'un arrive à échéance chaque mois.",
+      fdrPerSlice: "Chaque dépôt",
+      fdrSlices: "Trois dépôts de {amount} chacun, un ouvert chaque mois.",
       banksNeeded: "Banques à utiliser",
       banksNeededHint: "La garantie des dépôts ne couvre que {limit} par banque : ne gardez donc pas plus que cela dans une même banque.",
       sanchayapatraLayer: "Troisième niveau : {product}",
@@ -79,7 +79,7 @@ export const m1: Dictionary["m1"] = {
   rule: {
     noStocks: "Pas d'actions ni de fonds actions pour cet argent. Il doit être là, à sa pleine valeur, même un mauvais jour.",
     sanchayapatraThirdLayer: "Le placement en {product} n'est qu'un troisième niveau, pour une très grosse réserve : il rapporte plus, mais un retrait anticipé vous coûte une partie du gain.",
-    cardBridge: "Une carte de crédit peut faire le lien pendant le jour ou les deux jours qu'il faut pour retirer un FDR, à condition de payer la facture en entier pendant la période sans intérêts.",
+    cardBridge: "Une carte de crédit peut faire le lien pendant le jour ou les deux jours qu'il faut pour retirer un dépôt à terme, à condition de payer la facture en entier pendant la période sans intérêts.",
     refill: "Vous avez puisé dans le fonds ? Reconstituez-le avant de placer de l'argent ailleurs.",
     notAnEmergency: "Des vacances, un téléphone ou un cadeau de mariage ne sont pas des urgences. Traitez-les comme des objectifs d'épargne.",
   },
@@ -87,8 +87,8 @@ export const m1: Dictionary["m1"] = {
   next: {
     openSavings: "Ouvrez un compte d'épargne dans n'importe quelle banque avec votre pièce d'identité ; versez-y un mois de dépenses essentielles et mettez en place un virement permanent pour le reste.",
     fdrLadder: "Rendez-vous dans une banque avec votre pièce d'identité et votre numéro fiscal ; demandez un {product} à 3 mois. Ouvrez-en un chaque mois pendant trois mois, pour qu'il y en ait un qui arrive à échéance chaque mois.",
-    splitBanks: "Votre fonds dépasse le plafond de garantie des dépôts d'une banque. Ouvrez des FDR dans une deuxième banque pour qu'aucune ne détienne plus que ce plafond.",
-    full: "Votre fonds est plein. Renouvelez les FDR au fil des échéances, et reconstituez le fonds après tout retrait avant d'épargner ailleurs.",
+    splitBanks: "Votre fonds dépasse le plafond de garantie des dépôts d'une banque. Ouvrez des dépôts à terme dans une deuxième banque pour qu'aucune ne détienne plus que ce plafond.",
+    full: "Votre fonds est plein. Renouvelez les dépôts au fil des échéances, et reconstituez le fonds après tout retrait avant d'épargner ailleurs.",
   },
 
   status: {

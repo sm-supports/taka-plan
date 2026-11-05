@@ -201,7 +201,7 @@ export const m6 = {
     equityFund:
       "Choose a diversified open-end fund and start a monthly plan with the fund manager or a bank that sells its units. Bring your national ID and a bank account. Spread over many companies; never put this part in one share.",
     directShares:
-      "You need a BO account with a brokerage. Hold at least ten large companies across five or more sectors, with no single share above a tenth of this part. Expect to watch them yourself.",
+      "You need a brokerage account. Hold at least ten large companies across five or more sectors, with no single share above a tenth of this part. Expect to watch them yourself.",
     gold: "Buy 22-carat bars or coins from a jeweller who is a member of the jewellers' association, and keep the receipt. Jewellery costs a making charge and sells back for less, so it is for wearing, not investing.",
   },
 } as const;

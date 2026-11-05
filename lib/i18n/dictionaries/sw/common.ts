@@ -106,9 +106,9 @@ export const common: Dictionary["common"] = {
 
   instrument: {
     savings_account: "Akaunti ya akiba",
-    fdr_3m: "FDR ya miezi 3",
-    fdr_1y: "FDR ya mwaka 1",
-    dps: "DPS",
+    fdr_3m: "Amana ya muda maalum ya miezi 3",
+    fdr_1y: "Amana ya muda maalum ya mwaka 1",
+    dps: "Amana ya kila mwezi",
     sanchayapatra_5y: "Hati ya akiba ya serikali",
     tbill_91d: "Hati ya hazina ya siku 91",
     tbond_5y: "Hatifungani ya serikali ya miaka 5",

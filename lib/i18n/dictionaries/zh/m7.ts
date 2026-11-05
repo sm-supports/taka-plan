@@ -51,7 +51,7 @@ export const m7: Dictionary["m7"] = {
     },
     retiredSavings: {
       title: "您现在有哪些储蓄？",
-      hint: "您的公积金和离职金、FDR、储蓄券，以及其他用来生活的钱。",
+      hint: "您的公积金和离职金、定期存款、储蓄券，以及其他用来生活的钱。",
       label: "现有储蓄",
     },
     otherIncome: {
@@ -124,7 +124,7 @@ export const m7: Dictionary["m7"] = {
     retireeType: "您从哪里退休",
     retiredSavings: {
       label: "现有储蓄",
-      hint: "您用来生活的所有钱：一次性领取的款项、FDR、储蓄券。",
+      hint: "您用来生活的所有钱：一次性领取的款项、定期存款、储蓄券。",
     },
     otherIncome: {
       label: "每月其他收入",
@@ -261,7 +261,7 @@ export const m7: Dictionary["m7"] = {
     },
     pot: {
       title: "两个钱袋法则",
-      body: "把 {amount}——{years} 年的取款额——放在能很快取出的 FDR 和国库券里。其余部分继续投资，每年为这个钱袋补充一次。",
+      body: "把 {amount}——{years} 年的取款额——放在能很快取出的定期存款和国库券里。其余部分继续投资，每年为这个钱袋补充一次。",
     },
     options: {
       title: "把储蓄变成稳定收入的方式",
@@ -313,7 +313,7 @@ export const m7: Dictionary["m7"] = {
     pensionerCertificate: "退休人员储蓄券：按月付息，仅限政府、半政府机构和军队的退休人员，有购买上限。",
     savingsCertificate: "政府储蓄券：由国家担保的固定收益。",
     tbonds: "国债：有政府担保，每六个月支付一次固定利息。",
-    depositLadder: "FDR 阶梯：一笔接一笔到期的存款，所以每年都有一些钱可以动用。",
+    depositLadder: "存款阶梯：一笔接一笔到期的存款，所以每年都有一些钱可以动用。",
     annuity: "国有保险公司的终身年金：无论活多久都能终身领取。代价是：这笔钱不能传给后人。",
   },
 };

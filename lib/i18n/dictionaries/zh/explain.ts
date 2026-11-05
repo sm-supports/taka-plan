@@ -34,8 +34,8 @@ export const explain: Dictionary["explain"] = {
       body: "一个月的必要开支放在今天就能取出的储蓄账户里：{essentials} = {result}。这是任何紧急情况第一周要用的钱。",
     },
     tier2: {
-      title: "第二层：3个月期 FDR 阶梯",
-      body: "第一层以外的部分都放进 FDR：{target} − {tier1} = {result}，分成三笔 FDR，连续三个月每月开一笔，这样每个月都有一笔到期。",
+      title: "第二层：3个月期存款阶梯",
+      body: "第一层以外的部分都放进定期存款：{target} − {tier1} = {result}，分成三笔存款，连续三个月每月开一笔，这样每个月都有一笔到期。",
     },
     banks: {
       title: "需要的银行数",

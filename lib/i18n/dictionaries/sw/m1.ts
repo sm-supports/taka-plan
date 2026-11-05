@@ -65,10 +65,10 @@ export const m1: Dictionary["m1"] = {
       title: "Mahali pa kuiweka",
       savingsAccount: "Akaunti ya akiba ya siku hiyohiyo",
       savingsAccountHint: "Mahitaji muhimu ya mwezi mmoja unayoweza kutoa siku hiyohiyo.",
-      fdrLadder: "Ngazi ya FDR za miezi 3",
-      fdrLadderHint: "Kinachobaki, katika FDR tatu zilizofunguliwa kwa tofauti ya mwezi mmoja ili moja ikomae kila mwezi.",
-      fdrPerSlice: "Kila FDR",
-      fdrSlices: "FDR tatu za {amount} kila moja, moja ikifunguliwa kila mwezi.",
+      fdrLadder: "Ngazi ya amana za miezi 3",
+      fdrLadderHint: "Kinachobaki, katika amana tatu za muda maalum zilizofunguliwa kwa tofauti ya mwezi mmoja ili moja ikomae kila mwezi.",
+      fdrPerSlice: "Kila amana",
+      fdrSlices: "Amana tatu za {amount} kila moja, moja ikifunguliwa kila mwezi.",
       banksNeeded: "Benki za kugawanya",
       banksNeededHint: "Bima ya amana inalinda {limit} tu kwa kila benki, kwa hiyo usiweke zaidi ya hapo kwenye benki moja.",
       sanchayapatraLayer: "Tabaka la tatu: {product}",
@@ -79,7 +79,7 @@ export const m1: Dictionary["m1"] = {
   rule: {
     noStocks: "Hakuna hisa wala mifuko ya hisa kwa pesa hii. Lazima iwepo, kwa thamani kamili, siku mbaya.",
     sanchayapatraThirdLayer: "{product} ni tabaka la tatu tu kwa akiba kubwa sana: inalipa zaidi, lakini kuitoa mapema kunakupotezea sehemu ya faida.",
-    cardBridge: "Kadi ya mkopo inaweza kuziba siku moja au mbili zinazohitajika kutoa FDR — ikiwa tu unalipa bili yote ndani ya kipindi bila riba.",
+    cardBridge: "Kadi ya mkopo inaweza kuziba siku moja au mbili zinazohitajika kutoa amana ya muda maalum — ikiwa tu unalipa bili yote ndani ya kipindi bila riba.",
     refill: "Umetumia akiba? Ijaze tena kabla ya kuweka pesa mahali pengine popote.",
     notAnEmergency: "Likizo, simu au zawadi ya harusi si dharura. Ziwekee akiba kama malengo.",
   },
@@ -87,8 +87,8 @@ export const m1: Dictionary["m1"] = {
   next: {
     openSavings: "Fungua akaunti ya akiba kwenye benki yoyote kwa kitambulisho chako cha taifa; hamishia humo mahitaji muhimu ya mwezi mmoja na weka uhamisho wa kudumu kwa kinachobaki.",
     fdrLadder: "Tembelea benki yoyote ukiwa na kitambulisho cha taifa na namba ya mlipakodi; omba {product} ya miezi 3. Fungua moja kila mwezi kwa miezi mitatu ili moja ikomae kila mwezi.",
-    splitBanks: "Akiba yako ni kubwa kuliko kikomo cha bima ya amana kwa benki moja. Fungua FDR kwenye benki ya pili ili hakuna benki inayoshika zaidi ya kikomo.",
-    full: "Akiba yako imejaa. Endelea kuhuisha FDR, na ijaze tena akiba baada ya kila utoaji kabla ya kuweka akiba mahali pengine.",
+    splitBanks: "Akiba yako ni kubwa kuliko kikomo cha bima ya amana kwa benki moja. Fungua amana za muda maalum kwenye benki ya pili ili hakuna benki inayoshika zaidi ya kikomo.",
+    full: "Akiba yako imejaa. Endelea kuhuisha amana, na ijaze tena akiba baada ya kila utoaji kabla ya kuweka akiba mahali pengine.",
   },
 
   status: {

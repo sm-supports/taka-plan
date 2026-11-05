@@ -46,19 +46,19 @@ export const m4: Dictionary["m4"] = {
     },
     percentOfEachPayment: "Hamishia {percent} ya kila malipo kwenye akiba siku yanapoingia",
     instrument: "Iweke kwenye",
-    instrumentHint: "DPS inakata kiotomatiki siku maalum, kwa hiyo akiba inafanyika kabla hujaweza kuitumia.",
+    instrumentHint: "Pesa zinahamishwa kiotomatiki siku maalum, kwa hiyo akiba inafanyika kabla hujaweza kuitumia.",
     transferDay: "Uhamisho wa kudumu siku ya {day} ya kila mwezi",
     transferDayUnknown: "Tuambie siku ya mshahara wako na tutapendekeza tarehe ya uhamisho.",
   },
 
   next: {
-    dps: "Omba benki yako ikufungulie DPS yenye makato ya kiotomatiki siku ya {day} ya kila mwezi, siku moja baada ya mshahara kuingia. Kiasi chochote kinafaa; tabia ni muhimu kuliko ukubwa.",
-    dpsNoPayday: "Omba benki yako ikufungulie DPS yenye makato ya kiotomatiki siku moja baada ya mshahara kuingia. Kiasi chochote kinafaa; tabia ni muhimu kuliko ukubwa.",
-    percentOfEachPayment: "Siku malipo yanapoingia, hamishia {percent} yake kwenye akaunti tofauti ya akiba kabla ya kutumia chochote. Weka sehemu ileile katika miezi mikubwa na midogo; salio likishatulia, ligeuze kuwa DPS.",
+    dps: "Omba benki yako ikufungulie {product} kwa makato ya kiotomatiki siku ya {day} ya kila mwezi, siku moja baada ya mshahara kuingia. Kiasi chochote kinafaa; tabia ni muhimu kuliko ukubwa.",
+    dpsNoPayday: "Omba benki yako ikufungulie {product} kwa makato ya kiotomatiki siku moja baada ya mshahara kuingia. Kiasi chochote kinafaa; tabia ni muhimu kuliko ukubwa.",
+    percentOfEachPayment: "Siku malipo yanapoingia, hamishia {percent} yake kwenye akaunti tofauti ya akiba kabla ya kutumia chochote. Weka sehemu ileile katika miezi mikubwa na midogo; salio likishatulia, hamia kwenye uhamisho wa kiasi maalum kila mwezi.",
   },
 
   note: {
-    instrumentDps: "Tunapendekeza DPS kwa sababu inakata kiotomatiki siku maalum, kwa hiyo akiba inafanyika kabla hujaweza kuitumia.",
+    instrumentDps: "Tunapendekeza uhamisho wa kiotomatiki wa kila mwezi kwa sababu unafanyika siku maalum, kwa hiyo akiba inafanyika kabla hujaweza kuitumia.",
   },
 
   status: {

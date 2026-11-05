@@ -87,7 +87,7 @@ export const m3: Dictionary["m3"] = {
     },
     card_utilisation: {
       title: "Matumizi ya kadi zaidi ya {threshold} ya kikomo",
-      body: "Unatumia {value} ya kikomo cha kadi yako. Yaweke chini ya nusu: hilo linapunguza bili, linalinda rekodi yako ya CIB na linaacha nafasi kwa dharura ya kweli.",
+      body: "Unatumia {value} ya kikomo cha kadi yako. Yaweke chini ya nusu: hilo linapunguza bili, linalinda rekodi yako ya mikopo na linaacha nafasi kwa dharura ya kweli.",
     },
     emi_ratio: {
       title: "EMI zaidi ya {threshold} ya kipato halisi",

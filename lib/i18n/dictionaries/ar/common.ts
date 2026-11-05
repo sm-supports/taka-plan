@@ -97,9 +97,9 @@ export const common: Dictionary["common"] = {
 
   instrument: {
     savings_account: "حساب توفير",
-    fdr_3m: "FDR لمدة 3 أشهر",
-    fdr_1y: "FDR لمدة سنة",
-    dps: "DPS",
+    fdr_3m: "وديعة لأجل لمدة 3 أشهر",
+    fdr_1y: "وديعة لأجل لمدة سنة",
+    dps: "وديعة ادخار شهرية",
     sanchayapatra_5y: "شهادة ادخار حكومية",
     tbill_91d: "إذن خزانة لمدة 91 يومًا",
     tbond_5y: "سند خزانة لمدة 5 سنوات",

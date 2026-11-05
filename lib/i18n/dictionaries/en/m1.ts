@@ -63,10 +63,10 @@ export const m1 = {
       title: "Where to keep it",
       savingsAccount: "Same-day savings account",
       savingsAccountHint: "One month of essentials you can withdraw the same day.",
-      fdrLadder: "3-month FDR ladder",
-      fdrLadderHint: "The rest, in three FDRs opened a month apart so one matures every month.",
-      fdrPerSlice: "Each FDR",
-      fdrSlices: "Three FDRs of {amount} each, one opened every month.",
+      fdrLadder: "3-month deposit ladder",
+      fdrLadderHint: "The rest, in three fixed deposits opened a month apart so one matures every month.",
+      fdrPerSlice: "Each deposit",
+      fdrSlices: "Three deposits of {amount} each, one opened every month.",
       banksNeeded: "Banks to spread across",
       banksNeededHint: "Deposit insurance covers only {limit} per bank, so keep no more than that in any one bank.",
       sanchayapatraLayer: "Third layer: {product}",
@@ -77,7 +77,7 @@ export const m1 = {
   rule: {
     noStocks: "No shares or equity funds for this money. It must be there, at full value, on a bad day.",
     sanchayapatraThirdLayer: "A {product} is only a third layer for a very large buffer: it pays more, but cashing it early costs you part of the profit.",
-    cardBridge: "A credit card can bridge the one or two days an FDR takes to cash — only if you pay the bill in full inside the grace period.",
+    cardBridge: "A credit card can bridge the one or two days a fixed deposit takes to cash — only if you pay the bill in full inside the grace period.",
     refill: "Used the fund? Refill it before you put money anywhere else.",
     notAnEmergency: "A holiday, a phone or a wedding gift is not an emergency. Save for those as goals.",
   },
@@ -85,8 +85,8 @@ export const m1 = {
   next: {
     openSavings: "Open a savings account at any bank with your national ID; move one month of essentials into it and set up the standing transfer for the rest.",
     fdrLadder: "Visit any bank with your national ID and tax number; ask for a 3-month {product}. Open one each month for three months so one matures every month.",
-    splitBanks: "Your fund is bigger than the deposit-insurance limit for one bank. Open FDRs at a second bank so no bank holds more than the limit.",
-    full: "Your fund is full. Keep the FDRs rolling, and refill the fund after any withdrawal before saving elsewhere.",
+    splitBanks: "Your fund is bigger than the deposit-insurance limit for one bank. Open fixed deposits at a second bank so no bank holds more than the limit.",
+    full: "Your fund is full. Keep the deposits rolling, and refill the fund after any withdrawal before saving elsewhere.",
   },
 
   status: {

@@ -1,6 +1,8 @@
 "use client";
-/** Dotted-underline jargon button (FDR, DPS, …) that opens a TermSheet with the plain-words explanation. */
+/** Dotted-underline jargon button that opens a TermSheet with the plain-words explanation. */
 import { useState, type ReactNode } from "react";
+import { useCountry } from "@/lib/country/useCountry";
+import { bangladeshEn } from "@/lib/i18n/dictionaries/en/bangladesh";
 import { useT } from "@/lib/i18n/useT";
 import { Sheet } from "./Sheet";
 
@@ -16,11 +18,14 @@ export interface TermSheetProps {
 }
 
 export function TermSheet({ k, open, onClose }: TermSheetProps) {
-  const { t } = useT();
+  const { t, locale } = useT();
+  const { code } = useCountry();
+  // Bangladesh in English keeps its own names (FDR, DPS, CIB…); everywhere else reads the dictionary.
+  const local = code === "BD" && locale === "en" ? (bangladeshEn.terms as Record<string, { title: string; body: string }>)[k] : undefined;
   return (
-    <Sheet open={open} onClose={onClose} title={t(`terms.${k}.title`)}>
+    <Sheet open={open} onClose={onClose} title={local?.title ?? t(`terms.${k}.title`)}>
       <p dir="auto" className="whitespace-pre-line text-start leading-relaxed">
-        {t(`terms.${k}.body`)}
+        {local?.body ?? t(`terms.${k}.body`)}
       </p>
     </Sheet>
   );

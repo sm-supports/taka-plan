@@ -86,7 +86,7 @@ export const m3: Dictionary["m3"] = {
     },
     card_utilisation: {
       title: "Uso do cartão acima de {threshold} do limite",
-      body: "Você está usando {value} do limite do cartão. Mantenha abaixo da metade: isso reduz a fatura, protege seu registro no CIB e deixa espaço para uma emergência de verdade.",
+      body: "Você está usando {value} do limite do cartão. Mantenha abaixo da metade: isso reduz a fatura, protege seu histórico de crédito e deixa espaço para uma emergência de verdade.",
     },
     emi_ratio: {
       title: "Parcelas acima de {threshold} da renda líquida",

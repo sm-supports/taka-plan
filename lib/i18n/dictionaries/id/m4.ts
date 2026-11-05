@@ -46,19 +46,19 @@ export const m4: Dictionary["m4"] = {
     },
     percentOfEachPayment: "Pindahkan {percent} dari setiap pembayaran ke tabungan pada hari uangnya masuk",
     instrument: "Taruh di",
-    instrumentHint: "DPS mendebit otomatis pada tanggal tetap, jadi tabungan terjadi sebelum sempat Anda belanjakan.",
+    instrumentHint: "Uangnya berpindah otomatis pada tanggal tetap, jadi tabungan terjadi sebelum sempat Anda belanjakan.",
     transferDay: "Transfer rutin pada tanggal {day} setiap bulan",
     transferDayUnknown: "Beri tahu tanggal gajian Anda dan kami akan menyarankan tanggal transfer.",
   },
 
   next: {
-    dps: "Minta bank Anda membuka DPS dengan debit otomatis pada tanggal {day} setiap bulan, sehari setelah gaji masuk. Berapa pun jumlahnya tidak masalah; kebiasaannya lebih penting daripada besarnya.",
-    dpsNoPayday: "Minta bank Anda membuka DPS dengan debit otomatis sehari setelah gaji masuk. Berapa pun jumlahnya tidak masalah; kebiasaannya lebih penting daripada besarnya.",
-    percentOfEachPayment: "Pada hari pembayaran masuk, pindahkan {percent} darinya ke rekening tabungan terpisah sebelum membelanjakan sedikit pun. Pertahankan porsinya sama di bulan besar maupun kecil; setelah saldonya stabil, ubah menjadi DPS.",
+    dps: "Minta bank Anda membuka {product} dengan debit otomatis pada tanggal {day} setiap bulan, sehari setelah gaji masuk. Berapa pun jumlahnya tidak masalah; kebiasaannya lebih penting daripada besarnya.",
+    dpsNoPayday: "Minta bank Anda membuka {product} dengan debit otomatis sehari setelah gaji masuk. Berapa pun jumlahnya tidak masalah; kebiasaannya lebih penting daripada besarnya.",
+    percentOfEachPayment: "Pada hari pembayaran masuk, pindahkan {percent} darinya ke rekening tabungan terpisah sebelum membelanjakan sedikit pun. Pertahankan porsinya sama di bulan besar maupun kecil; setelah saldonya stabil, beralihlah ke transfer bulanan tetap.",
   },
 
   note: {
-    instrumentDps: "Kami menyarankan DPS karena mendebit otomatis pada tanggal tetap, jadi tabungan terjadi sebelum sempat Anda belanjakan.",
+    instrumentDps: "Kami menyarankan transfer bulanan otomatis karena berjalan pada tanggal tetap, jadi tabungan terjadi sebelum sempat Anda belanjakan.",
   },
 
   status: {

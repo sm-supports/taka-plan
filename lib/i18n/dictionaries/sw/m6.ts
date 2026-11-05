@@ -199,7 +199,7 @@ export const m6: Dictionary["m6"] = {
     equityFund:
       "Chagua mfuko wa wazi uliotawanywa na anza mpango wa kila mwezi na msimamizi wa mfuko au benki inayouza vipande vyake. Beba kitambulisho chako cha taifa na akaunti ya benki. Tawanya kwenye kampuni nyingi; usiweke kamwe sehemu hii kwenye hisa moja.",
     directShares:
-      "Unahitaji akaunti ya BO kwa dalali. Miliki angalau kampuni kumi kubwa katika sekta tano au zaidi, bila hisa moja kuzidi sehemu ya kumi ya sehemu hii. Tarajia kuzifuatilia mwenyewe.",
+      "Unahitaji akaunti ya udalali. Miliki angalau kampuni kumi kubwa katika sekta tano au zaidi, bila hisa moja kuzidi sehemu ya kumi ya sehemu hii. Tarajia kuzifuatilia mwenyewe.",
     gold: "Nunua vipande au sarafu za karati 22 kutoka kwa sonara aliye mwanachama wa chama cha masonara, na uhifadhi risiti. Mapambo yana gharama ya utengenezaji na yanauzwa tena kwa bei ndogo, kwa hiyo ni ya kuvaa, si ya kuwekeza.",
   },
 };

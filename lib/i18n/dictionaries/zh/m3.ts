@@ -87,7 +87,7 @@ export const m3: Dictionary["m3"] = {
     },
     card_utilisation: {
       title: "信用卡使用超过额度的 {threshold}",
-      body: "您已用掉信用额度的 {value}。请控制在一半以下：这能降低账单、保护您的 CIB 信用记录，并为真正的紧急情况留出余地。",
+      body: "您已用掉信用额度的 {value}。请控制在一半以下：这能降低账单、保护您的信用记录，并为真正的紧急情况留出余地。",
     },
     emi_ratio: {
       title: "月供超过到手收入的 {threshold}",

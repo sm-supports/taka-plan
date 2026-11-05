@@ -9,6 +9,7 @@
  */
 import type { Instrument } from "@taka/engine";
 import { useCountry } from "@/lib/country/useCountry";
+import { bangladeshEn } from "@/lib/i18n/dictionaries/en/bangladesh";
 import { useT } from "@/lib/i18n/useT";
 
 /**
@@ -44,10 +45,13 @@ export function useProductName(): ProductNames {
     return locale === mainLanguage ? (names.local ?? null) : null;
   };
   return {
-    // Bangladesh labels stay the dictionary's ("3-month FDR", "5-year treasury bond"), which are more
-    // precise than the country file's; only the savings-certificate slot, generic in the dictionary,
-    // takes the local name.
-    label: (slot) => (context.code === "BD" && slot !== "sanchayapatra_5y" ? null : english(slot)) ?? t(`common.instrument.${slot}`),
+    // Bangladesh labels stay "3-month FDR", "DPS" and the dictionary's "5-year treasury bond", which are
+    // more precise than the country file's; only the savings-certificate slot takes the local name.
+    label: (slot) => {
+      if (context.code !== "BD") return english(slot) ?? t(`common.instrument.${slot}`);
+      const known = locale === "en" ? (bangladeshEn.instrument as Partial<Record<Instrument, string>>)[slot] : undefined;
+      return known ?? (slot === "sanchayapatra_5y" ? english(slot) : null) ?? t(`common.instrument.${slot}`);
+    },
     prose: (slot) => {
       const en = english(slot);
       return en ? proseForm(en) : t(`common.productProse.${slot}`);

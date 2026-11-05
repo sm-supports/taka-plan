@@ -202,7 +202,7 @@ export const m6: Dictionary["m6"] = {
     equityFund:
       "Pilih reksa dana terbuka yang terdiversifikasi dan mulai rencana bulanan dengan manajer investasinya atau bank yang menjual unitnya. Bawa kartu identitas dan rekening bank. Sebar ke banyak perusahaan; jangan taruh bagian ini di satu saham.",
     directShares:
-      "Anda butuh rekening BO di perusahaan sekuritas. Pegang setidaknya sepuluh perusahaan besar di lima sektor atau lebih, dengan tidak ada satu saham pun melebihi sepersepuluh bagian ini. Bersiaplah memantaunya sendiri.",
+      "Anda butuh rekening efek. Pegang setidaknya sepuluh perusahaan besar di lima sektor atau lebih, dengan tidak ada satu saham pun melebihi sepersepuluh bagian ini. Bersiaplah memantaunya sendiri.",
     gold: "Beli emas batangan atau koin 22 karat dari toko emas yang menjadi anggota asosiasi pedagang emas, dan simpan kuitansinya. Perhiasan dikenai ongkos pembuatan dan dijual kembali lebih murah, jadi untuk dipakai, bukan untuk investasi.",
   },
 };
