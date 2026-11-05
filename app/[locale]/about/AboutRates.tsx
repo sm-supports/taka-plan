@@ -82,33 +82,35 @@ export function ReturnsExample() {
     });
   if (rows.length === 0) return null;
   return (
-    <table className="mt-2 w-full text-sm">
+    <table className="mt-2 w-full table-fixed text-sm">
       <thead>
-        <tr className="text-start text-xs text-text-muted">
-          <th scope="col" className="py-1 pe-2 font-medium" />
-          <th scope="col" className="py-1 pe-2 text-end font-medium">
+        <tr className="text-xs text-text-muted">
+          {/* Equal columns under the headings; each product's name gets a full line, so a long one never squeezes the numbers. */}
+          <th scope="col" className="py-1 pe-2 text-end align-bottom font-medium hyphens-auto [overflow-wrap:anywhere]">
             {t("common.headline")}
           </th>
-          <th scope="col" className="py-1 pe-2 text-end font-medium">
+          <th scope="col" className="py-1 pe-2 text-end align-bottom font-medium hyphens-auto [overflow-wrap:anywhere]">
             {t("common.afterTax")}
           </th>
-          <th scope="col" className="py-1 text-end font-medium">
+          <th scope="col" className="py-1 text-end align-bottom font-medium hyphens-auto [overflow-wrap:anywhere]">
             {t("common.afterInflation")}
           </th>
         </tr>
       </thead>
-      <tbody>
-        {rows.map((row) => (
-          <tr key={row.instrument} className="border-t border-line">
-            <th scope="row" className="py-2 pe-2 text-start font-medium text-text">
+      {rows.map((row) => (
+        <tbody key={row.instrument} className="border-t border-line">
+          <tr>
+            <th scope="rowgroup" colSpan={3} className="pt-2 text-start font-medium text-text [overflow-wrap:anywhere]">
               <bdi>{instrumentName(snapshot, row.instrument, locale, t)}</bdi>
             </th>
-            <td className="py-2 pe-2 text-end tabular-nums">{sourcePercent(row.headline, f.digits)}</td>
-            <td className="py-2 pe-2 text-end tabular-nums">{f.percent(row.afterTax)}</td>
-            <td className={`py-2 text-end font-semibold tabular-nums ${row.real < 0 ? "text-status-red" : "text-status-green"}`}>{f.percent(row.real)}</td>
           </tr>
-        ))}
-      </tbody>
+          <tr>
+            <td className="whitespace-nowrap pb-2 pe-2 pt-1 text-end tabular-nums">{sourcePercent(row.headline, f.digits)}</td>
+            <td className="whitespace-nowrap pb-2 pe-2 pt-1 text-end tabular-nums">{f.percent(row.afterTax)}</td>
+            <td className={`whitespace-nowrap pb-2 pt-1 text-end font-semibold tabular-nums ${row.real < 0 ? "text-status-red" : "text-status-green"}`}>{f.percent(row.real)}</td>
+          </tr>
+        </tbody>
+      ))}
     </table>
   );
 }
@@ -311,13 +313,13 @@ export function SourcesList() {
                   <li key={row.key}>
                     <Card className="p-3">
                       <div className="flex items-start justify-between gap-3">
-                        <p className="font-medium text-text">{label}</p>
+                        <p className="min-w-0 font-medium text-text [overflow-wrap:anywhere]">{label}</p>
                         <div className="flex shrink-0 flex-wrap justify-end gap-1">
                           {row.isAppAssumption && <span className="rounded-md bg-surface-muted px-1.5 py-0.5 text-xs text-text-muted">{t("common.ourAssumption")}</span>}
                           {stale && <span className="rounded-md bg-surface-muted px-1.5 py-0.5 text-xs text-text-muted">{t("common.mayBeOutdated")}</span>}
                         </div>
                       </div>
-                      <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm">
+                      <dl className="mt-2 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 text-sm">
                         <dt className="text-text-muted">{copy.sources.value}</dt>
                         <dd className="min-w-0 font-semibold text-text tabular-nums [overflow-wrap:anywhere]">
                           {row.unit === "json" ? <JsonValue row={row} f={f} c={c} dict={dict} /> : formatValue(row, f, c, t)}
@@ -326,11 +328,11 @@ export function SourcesList() {
                           )}
                         </dd>
                         <dt className="sr-only">{copy.sources.dates}</dt>
-                        <dd className="col-span-2 text-text-muted tabular-nums">
+                        <dd className="col-span-2 min-w-0 text-text-muted tabular-nums [overflow-wrap:anywhere]">
                           {t("common.asOf", { date: f.asOf(row.asOf) })} · {copy.sources.nextReview}: {f.asOf(row.nextReview)}
                         </dd>
                         <dt className="text-text-muted">{t("common.source")}</dt>
-                        <dd className="min-w-0 break-words text-text">
+                        <dd className="min-w-0 text-text [overflow-wrap:anywhere]">
                           {isHttp ? (
                             <a href={row.sourceUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center py-1 font-medium text-brand-700 underline decoration-dotted underline-offset-4">
                               <bdi>{sourceName}</bdi>
@@ -342,7 +344,7 @@ export function SourcesList() {
                         {row.note && (
                           <>
                             <dt className="text-text-muted">{copy.sources.note}</dt>
-                            <dd className="text-text-muted" lang="en">
+                            <dd className="min-w-0 text-text-muted [overflow-wrap:anywhere]" lang="en">
                               {row.note}
                             </dd>
                           </>

@@ -152,9 +152,22 @@ for (const width of [320, 360]) {
     await expect(chip).toHaveAccessibleName(/Indonesia/);
     const overflow = await chip.evaluate((el) => {
       const row = el.closest("header")!.firstElementChild!;
-      return { row: row.scrollWidth - row.clientWidth, page: document.documentElement.scrollWidth - window.innerWidth };
+      return { row: row.scrollWidth - row.clientWidth, page: document.documentElement.scrollWidth - document.documentElement.clientWidth };
     });
     expect(overflow).toEqual({ row: 0, page: 0 });
+  });
+}
+
+// The widest cases found by scanning every country: long source names in English, long table headings in Russian and Swahili.
+for (const [country, locale] of [["US", "en"], ["LV", "ru"], ["UG", "sw"]]) {
+  test(`the about page fits a 320px phone: ${country} in ${locale}`, async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 700 });
+    await seed(page, v2({ country, locale }), { tp_locale: locale, tp_country: country });
+    await page.goto(`/${locale}/about`);
+    await page.waitForLoadState("networkidle");
+    await expect(page.locator("table").first()).toBeVisible();
+    // clientWidth, not innerWidth: on an emulated phone innerWidth grows with the content and hides the overflow.
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0);
   });
 }
 
