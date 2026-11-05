@@ -126,7 +126,7 @@ export const common = {
       "Estimates for education only; not financial, tax or legal advice. Rates change — check with your bank or insurer before acting. Past returns don't predict future returns.",
     title: "Before you start",
     body:
-      "Taka Plan gives estimates for education only. It is not financial, tax or legal advice, and it never names a bank, fund or insurer. Rates and tax rules change several times a year, so check with your bank or insurer before acting on any number here. Past returns don't predict future returns. Your answers stay on your phone unless you choose to save a plan.",
+      "Taka Plan gives estimates for education only. It is not financial, tax or legal advice, and it never names a bank, fund or insurer. Rates and tax rules change several times a year, so check with your bank or insurer before acting on any number here. Past returns don't predict future returns. Your answers stay on your phone.",
     accept: "I understand",
   },
 

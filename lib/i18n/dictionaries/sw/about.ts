@@ -16,7 +16,7 @@ export const about: Dictionary["about"] = {
       "Kila faida inaonyeshwa ikiwa imepunguzwa mara mbili: kwanza baada ya kodi ya zuio, kisha baada ya mfumuko wa bei. Swali si kiwango kilichotangazwa; ni kile unachobaki nacho, na kile kitakachoweza bado kununua. Bidhaa inaweza kulipa riba na bado ikashindwa na mfumuko wa bei, na programu inasema hivyo kwa rangi nyekundu inapotokea.",
     exampleCaption: "Kwa jedwali la viwango la leo:",
     rounding: "Matokeo yanazungushwa hadi namba ya karibu iliyo rahisi, kwa sababu makadirio ya miaka ishirini hayawezi kuwa sahihi hadi senti ya mwisho. Viwango (chini, kinachotarajiwa, juu) vinaonyeshwa pale ambapo faida ya baadaye haina uhakika.",
-    onDevice: "Hesabu zote zinafanyika kwenye simu yako. Seva inahifadhi tu jedwali la viwango na, ukichagua kuingia, mpango wako uliohifadhiwa.",
+    onDevice: "Hesabu zote zinafanyika kwenye simu yako, na majibu yako yanabaki humo. Seva inahifadhi tu jedwali la viwango na data za kila nchi.",
   },
   sources: {
     heading: "Vyanzo na makisio",

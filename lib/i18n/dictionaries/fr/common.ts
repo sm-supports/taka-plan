@@ -174,7 +174,7 @@ export const common: Dictionary["common"] = {
       "Estimations à but éducatif uniquement ; ni conseil financier, fiscal ou juridique. Les taux changent : vérifiez auprès de votre banque ou assureur avant d'agir. Les rendements passés ne préjugent pas des rendements futurs.",
     title: "Avant de commencer",
     body:
-      "Taka Plan donne des estimations à but éducatif uniquement. Ce n'est ni un conseil financier, ni fiscal, ni juridique, et l'application ne cite jamais de banque, de fonds ou d'assureur. Les taux et les règles fiscales changent plusieurs fois par an : vérifiez auprès de votre banque ou assureur avant d'agir sur un chiffre affiché ici. Les rendements passés ne préjugent pas des rendements futurs. Vos réponses restent sur votre téléphone, sauf si vous choisissez d'enregistrer un plan.",
+      "Taka Plan donne des estimations à but éducatif uniquement. Ce n'est ni un conseil financier, ni fiscal, ni juridique, et l'application ne cite jamais de banque, de fonds ou d'assureur. Les taux et les règles fiscales changent plusieurs fois par an : vérifiez auprès de votre banque ou assureur avant d'agir sur un chiffre affiché ici. Les rendements passés ne préjugent pas des rendements futurs. Vos réponses restent sur votre téléphone.",
     accept: "J'ai compris",
   },
 

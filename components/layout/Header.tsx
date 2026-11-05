@@ -1,8 +1,8 @@
 "use client";
 /**
- * Top bar: app name linking to the locale home, rates version + offline badges, then the country
- * (its short name in the UI language, linking to the picker on "/?change=country") and the language
- * menu at the end.
+ * Top bar: app name linking to the locale home, the offline badge, then the country and the language
+ * menu at the end. The country shows as its two-letter code, linking to the picker on
+ * "/?change=country": a full name doesn't fit next to the rest on a phone. Its label says the full name.
  */
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
@@ -11,7 +11,6 @@ import { useT } from "@/lib/i18n/useT";
 import { useHydrated, useTakaStore } from "@/lib/store/store";
 import { LocaleSwitch } from "./LocaleSwitch";
 import { OfflineBadge } from "./OfflineBadge";
-import { RatesVersionBadge } from "./RatesVersionBadge";
 
 const ONE_YEAR = 60 * 60 * 24 * 365;
 
@@ -59,18 +58,15 @@ export function Header() {
         </Link>
         <div className="flex min-w-0 items-center gap-2">
           <OfflineBadge className="shrink-0" />
-          <RatesVersionBadge className="min-w-0 justify-end text-end" />
           {hydrated ? (
             <Link
               href="/?change=country"
               aria-label={t("common.countryLink", { country: countryLabel })}
               title={t("common.changeCountry")}
-              className="tap inline-flex min-w-0 max-w-[7.5rem] shrink items-center justify-center rounded-xl border border-line bg-surface px-2 text-sm font-semibold text-text hover:bg-surface-muted"
+              className="tap inline-flex shrink-0 items-center justify-center rounded-xl border border-line bg-surface px-2 text-sm font-semibold text-text hover:bg-surface-muted"
               data-country={country}
             >
-              <span className="truncate" dir="auto">
-                {countryLabel}
-              </span>
+              {country}
             </Link>
           ) : (
             <span className="tap inline-block shrink-0" aria-hidden="true" />

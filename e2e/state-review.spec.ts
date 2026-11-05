@@ -141,6 +141,23 @@ test.describe("country data notice", () => {
   });
 });
 
+for (const width of [320, 360]) {
+  test(`the header fits a ${width}px phone: nothing is cut off and the country shows as its code`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 700 });
+    // Indonesia in Bahasa Indonesia has the longest language name in the menu.
+    await seed(page, v2({ country: "ID", locale: "id" }), { tp_locale: "id", tp_country: "ID" });
+    await page.goto("/id/plan");
+    const chip = page.locator("header a[data-country]");
+    await expect(chip).toHaveText("ID");
+    await expect(chip).toHaveAccessibleName(/Indonesia/);
+    const overflow = await chip.evaluate((el) => {
+      const row = el.closest("header")!.firstElementChild!;
+      return { row: row.scrollWidth - row.clientWidth, page: document.documentElement.scrollWidth - window.innerWidth };
+    });
+    expect(overflow).toEqual({ row: 0, page: 0 });
+  });
+}
+
 test.describe("broken storage", () => {
   test("a corrupted store blob starts fresh instead of a skeleton forever", async ({ page }) => {
     await seed(page, '{"state":{"schemaVersion":2,"coun', { tp_locale: "en" });

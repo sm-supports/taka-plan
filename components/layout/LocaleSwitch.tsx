@@ -94,7 +94,7 @@ export function LocaleSwitch() {
   const current = LOCALE_META[locale];
 
   return (
-    <div ref={rootRef} className="relative shrink-0">
+    <div ref={rootRef} className="relative min-w-0">
       <button
         ref={buttonRef}
         type="button"
@@ -108,9 +108,9 @@ export function LocaleSwitch() {
         aria-expanded={open}
         aria-controls={menuId}
         aria-label={t("common.languageMenu", { language: current.nativeName })}
-        className="tap inline-flex max-w-[8.5rem] items-center justify-center gap-1 rounded-xl border border-line bg-surface px-3 text-sm font-semibold text-text hover:bg-surface-muted"
+        className="tap inline-flex w-full max-w-[8.5rem] items-center justify-center gap-1 rounded-xl border border-line bg-surface px-3 text-sm font-semibold text-text hover:bg-surface-muted"
       >
-        <svg className="h-4 w-4 shrink-0 text-text-muted" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <svg className="hidden h-4 w-4 shrink-0 text-text-muted min-[360px]:block" viewBox="0 0 20 20" fill="none" aria-hidden="true">
           <circle cx="10" cy="10" r="7.25" stroke="currentColor" strokeWidth="1.5" />
           <path d="M2.75 10h14.5M10 2.75c2 2.1 2.9 4.5 2.9 7.25S12 15.15 10 17.25M10 2.75C8 4.85 7.1 7.25 7.1 10s.9 5.15 2.9 7.25" stroke="currentColor" strokeWidth="1.5" />
         </svg>

@@ -16,7 +16,7 @@ export const about: Dictionary["about"] = {
       "Setiap imbal hasil ditampilkan setelah dua kali dipotong: pertama setelah pajak yang dipotong langsung, lalu setelah inflasi. Yang penting bukan bunga tertera, melainkan berapa yang Anda simpan dan apa yang masih bisa dibelinya. Sebuah instrumen bisa memberi bunga tetapi tetap kalah dari inflasi, dan aplikasi menandainya dengan merah bila itu terjadi.",
     exampleCaption: "Dengan tabel suku bunga hari ini:",
     rounding: "Hasil dibulatkan ke angka bulat terdekat karena proyeksi dua puluh tahun tidak pernah tepat sampai satuan terkecil. Rentang (rendah, perkiraan, tinggi) ditampilkan bila imbal hasil masa depan tidak pasti.",
-    onDevice: "Semua perhitungan berjalan di ponsel Anda. Server hanya menyimpan tabel suku bunga dan, bila Anda memilih masuk, rencana yang Anda simpan.",
+    onDevice: "Semua perhitungan berjalan di ponsel Anda, dan jawaban Anda tetap di sana. Server hanya menyimpan tabel suku bunga dan data tiap negara.",
   },
   sources: {
     heading: "Sumber dan asumsi",

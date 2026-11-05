@@ -16,7 +16,7 @@ export const about: Dictionary["about"] = {
       "Cada rentabilidad se muestra con dos recortes: primero después del impuesto retenido en la fuente y luego después de la inflación. La tasa nominal no es lo que importa; lo que importa es lo que te queda y lo que aún podrá comprar. Un instrumento puede pagar intereses y aun así perder frente a la inflación, y la app lo indica en rojo cuando pasa.",
     exampleCaption: "Con la tabla de tasas de hoy:",
     rounding: "Los resultados se redondean a una cifra cercana, porque una proyección a veinte años nunca es exacta al último taka. Se muestran rangos (bajo, esperado, alto) donde la rentabilidad futura es incierta.",
-    onDevice: "Todos los cálculos se hacen en tu teléfono. El servidor solo guarda la tabla de tasas y, si decides iniciar sesión, tu plan guardado.",
+    onDevice: "Todos los cálculos se hacen en tu teléfono, y tus respuestas se quedan ahí. El servidor solo guarda la tabla de tasas y los datos de cada país.",
   },
   sources: {
     heading: "Fuentes y supuestos",

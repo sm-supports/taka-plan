@@ -16,7 +16,7 @@ export const about: Dictionary["about"] = {
       "Chaque rendement est réduit deux fois : d'abord de l'impôt prélevé à la source, puis de l'inflation. La question n'est pas le taux affiché, mais ce que vous gardez et ce que cela pourra encore acheter. Un placement peut verser des intérêts et perdre quand même face à l'inflation : l'application l'indique alors en rouge.",
     exampleCaption: "Avec le tableau des taux actuel :",
     rounding: "Les résultats sont arrondis à un chiffre rond proche, car une projection sur vingt ans n'est jamais exacte à l'unité près. Des fourchettes (basse, attendue, haute) sont affichées quand le rendement futur est incertain.",
-    onDevice: "Tous les calculs se font sur votre téléphone. Le serveur ne garde que le tableau des taux et, si vous choisissez de vous connecter, votre plan enregistré.",
+    onDevice: "Tous les calculs se font sur votre téléphone, et vos réponses y restent. Le serveur ne garde que le tableau des taux et les données de chaque pays.",
   },
   sources: {
     heading: "Sources et hypothèses",

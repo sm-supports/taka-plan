@@ -15,7 +15,7 @@ export const about: Dictionary["about"] = {
       "Todo rendimento aparece com dois descontos: primeiro após o imposto retido na fonte, depois após a inflação. A pergunta não é a taxa nominal, e sim o que você fica e o que isso ainda vai comprar. Um investimento pode pagar juros e mesmo assim perder para a inflação, e o app avisa em vermelho quando isso acontece.",
     exampleCaption: "Com a tabela de taxas de hoje:",
     rounding: "Os resultados são arredondados para um valor redondo próximo, porque uma projeção de vinte anos nunca é exata até o último centavo. Faixas (baixa, esperada, alta) aparecem quando o rendimento futuro é incerto.",
-    onDevice: "Todos os cálculos rodam no seu celular. O servidor guarda apenas a tabela de taxas e, se você decidir entrar, o seu plano salvo.",
+    onDevice: "Todos os cálculos rodam no seu celular, e suas respostas ficam nele. O servidor guarda apenas a tabela de taxas e os dados de cada país.",
   },
   sources: {
     heading: "Fontes e premissas",

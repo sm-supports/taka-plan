@@ -174,7 +174,7 @@ export const common: Dictionary["common"] = {
       "Estimativas apenas para fins educativos; não é aconselhamento financeiro, fiscal ou jurídico. As taxas mudam — confirme com seu banco ou seguradora antes de agir. Rendimentos passados não garantem rendimentos futuros.",
     title: "Antes de começar",
     body:
-      "O Taka Plan dá estimativas apenas para fins educativos. Não é aconselhamento financeiro, fiscal ou jurídico, e nunca indica um banco, fundo ou seguradora. Taxas e regras de impostos mudam várias vezes por ano, então confirme com seu banco ou seguradora antes de agir com base em qualquer número daqui. Rendimentos passados não garantem rendimentos futuros. Suas respostas ficam no seu celular, a menos que você decida salvar um plano.",
+      "O Taka Plan dá estimativas apenas para fins educativos. Não é aconselhamento financeiro, fiscal ou jurídico, e nunca indica um banco, fundo ou seguradora. Taxas e regras de impostos mudam várias vezes por ano, então confirme com seu banco ou seguradora antes de agir com base em qualquer número daqui. Rendimentos passados não garantem rendimentos futuros. Suas respostas ficam no seu celular.",
     accept: "Entendi",
   },
 

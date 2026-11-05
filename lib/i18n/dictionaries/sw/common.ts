@@ -177,7 +177,7 @@ export const common: Dictionary["common"] = {
       "Makadirio kwa ajili ya kujifunza tu; si ushauri wa kifedha, wa kodi wala wa kisheria. Viwango hubadilika — wasiliana na benki au kampuni yako ya bima kabla ya kuchukua hatua. Faida za zamani hazitabiri faida za baadaye.",
     title: "Kabla hujaanza",
     body:
-      "Taka Plan inatoa makadirio kwa ajili ya kujifunza tu. Si ushauri wa kifedha, wa kodi wala wa kisheria, na haitaji kamwe jina la benki, mfuko au kampuni ya bima. Viwango na sheria za kodi hubadilika mara kadhaa kwa mwaka, kwa hiyo wasiliana na benki au kampuni yako ya bima kabla ya kutumia namba yoyote hapa. Faida za zamani hazitabiri faida za baadaye. Majibu yako yanabaki kwenye simu yako isipokuwa ukichagua kuhifadhi mpango.",
+      "Taka Plan inatoa makadirio kwa ajili ya kujifunza tu. Si ushauri wa kifedha, wa kodi wala wa kisheria, na haitaji kamwe jina la benki, mfuko au kampuni ya bima. Viwango na sheria za kodi hubadilika mara kadhaa kwa mwaka, kwa hiyo wasiliana na benki au kampuni yako ya bima kabla ya kutumia namba yoyote hapa. Faida za zamani hazitabiri faida za baadaye. Majibu yako yanabaki kwenye simu yako.",
     accept: "Nimeelewa",
   },
 

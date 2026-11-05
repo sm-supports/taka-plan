@@ -174,7 +174,7 @@ export const common: Dictionary["common"] = {
       "Estimaciones solo con fines educativos; no es asesoría financiera, fiscal ni legal. Las tasas cambian: consulta con tu banco o aseguradora antes de actuar. Las rentabilidades pasadas no predicen las futuras.",
     title: "Antes de empezar",
     body:
-      "Taka Plan ofrece estimaciones solo con fines educativos. No es asesoría financiera, fiscal ni legal, y nunca recomienda un banco, fondo o aseguradora. Las tasas y las normas fiscales cambian varias veces al año, así que consulta con tu banco o aseguradora antes de actuar según cualquier cifra de aquí. Las rentabilidades pasadas no predicen las futuras. Tus respuestas se quedan en tu teléfono, salvo que decidas guardar un plan.",
+      "Taka Plan ofrece estimaciones solo con fines educativos. No es asesoría financiera, fiscal ni legal, y nunca recomienda un banco, fondo o aseguradora. Las tasas y las normas fiscales cambian varias veces al año, así que consulta con tu banco o aseguradora antes de actuar según cualquier cifra de aquí. Las rentabilidades pasadas no predicen las futuras. Tus respuestas se quedan en tu teléfono.",
     accept: "Entendido",
   },
 

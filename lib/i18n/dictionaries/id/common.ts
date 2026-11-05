@@ -170,7 +170,7 @@ export const common: Dictionary["common"] = {
       "Perkiraan untuk edukasi saja; bukan nasihat keuangan, pajak, atau hukum. Suku bunga berubah — tanyakan ke bank atau perusahaan asuransi Anda sebelum bertindak. Imbal hasil masa lalu tidak menjamin imbal hasil masa depan.",
     title: "Sebelum Anda mulai",
     body:
-      "Taka Plan memberi perkiraan untuk edukasi saja. Ini bukan nasihat keuangan, pajak, atau hukum, dan tidak pernah menyebut nama bank, reksa dana, atau perusahaan asuransi. Suku bunga dan aturan pajak berubah beberapa kali setahun, jadi tanyakan ke bank atau perusahaan asuransi Anda sebelum bertindak berdasarkan angka di sini. Imbal hasil masa lalu tidak menjamin imbal hasil masa depan. Jawaban Anda tetap di ponsel Anda kecuali Anda memilih menyimpan rencana.",
+      "Taka Plan memberi perkiraan untuk edukasi saja. Ini bukan nasihat keuangan, pajak, atau hukum, dan tidak pernah menyebut nama bank, reksa dana, atau perusahaan asuransi. Suku bunga dan aturan pajak berubah beberapa kali setahun, jadi tanyakan ke bank atau perusahaan asuransi Anda sebelum bertindak berdasarkan angka di sini. Imbal hasil masa lalu tidak menjamin imbal hasil masa depan. Jawaban Anda tetap di ponsel Anda.",
     accept: "Saya mengerti",
   },
 
